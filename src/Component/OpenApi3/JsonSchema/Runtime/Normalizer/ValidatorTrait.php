@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Runtime\Normalizer;
+
+use Symfony\Component\Validator\Constraint;
+
+trait ValidatorTrait
+{
+    /** @param array<mixed> $data */
+    protected function validate(array $data, Constraint $constraint): void
+    {
+        $validator  = \Symfony\Component\Validator\Validation::createValidator();
+        $violations = $validator->validate($data, $constraint);
+        if ($violations->count() > 0) {
+            throw new ValidationException($violations);
+        }
+    }
+}

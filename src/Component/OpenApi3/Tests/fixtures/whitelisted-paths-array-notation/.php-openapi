@@ -1,0 +1,11 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ . '/openapi.json',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+    'whitelisted-paths' => [
+        ['\/tweets$'],
+        ['\/filter\/rules$', ['POST']]
+    ],
+];

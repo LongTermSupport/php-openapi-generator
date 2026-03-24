@@ -1,0 +1,14 @@
+<?php
+
+return [
+    'mapping' => [
+        __DIR__ . '/swagger_one.yaml' => [
+            'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\One',
+            'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__) . '/One',
+        ],
+        __DIR__ . '/swagger_two.yaml' => [
+            'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\Two',
+            'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__) . '/Two',
+        ],
+    ],
+];

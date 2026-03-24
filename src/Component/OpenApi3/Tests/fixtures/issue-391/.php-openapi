@@ -1,0 +1,10 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ . '/swagger.yaml',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391',
+    'date-prefer-interface' => true,
+    'date-format' => DATE_ATOM,
+    'strict' => true,
+];

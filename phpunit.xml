@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.0/phpunit.xsd"
+    colors="true"
+    bootstrap="vendor/autoload.php"
+    cacheDirectory="var/qa/cache"
+    failOnRisky="false"
+    failOnWarning="false"
+>
+    <testsuites>
+        <testsuite name="All Tests">
+            <directory>src/Component/GeneratorCore/Tests</directory>
+            <!-- JaneBaseTest excluded: no GeneratorCore fixtures exist yet; remove exclude when fixtures are added -->
+            <exclude>src/Component/GeneratorCore/Tests/JaneBaseTest.php</exclude>
+            <directory>src/Component/OpenApi3/Tests</directory>
+            <directory>src/Component/OpenApiCommon/Tests</directory>
+            <directory>src/Component/OpenApiRuntime/Tests</directory>
+            <exclude>src/Component/OpenApi3/Tests/fixtures</exclude>
+            <exclude>src/Component/OpenApi3/Tests/client</exclude>
+            <exclude>src/Component/OpenApi3/Tests/fixture-boilerplate</exclude>
+        </testsuite>
+    </testsuites>
+
+    <groups>
+        <exclude>
+            <group>prism</group>
+        </exclude>
+    </groups>
+
+    <coverage>
+        <include>
+            <directory suffix=".php">src/Component/GeneratorCore</directory>
+            <directory suffix=".php">src/Component/OpenApi3</directory>
+            <directory suffix=".php">src/Component/OpenApiCommon</directory>
+            <directory suffix=".php">src/Component/OpenApiRuntime</directory>
+        </include>
+        <exclude>
+            <directory>src/Component/GeneratorCore/Tests</directory>
+            <directory>src/Component/OpenApi3/Tests</directory>
+            <directory>src/Component/OpenApiCommon/Tests</directory>
+            <directory>src/Component/OpenApiRuntime/Tests</directory>
+            <directory>src/Component/GeneratorCore/Generator/Runtime/data</directory>
+            <directory>src/Component/OpenApiCommon/Generator/Runtime/data</directory>
+        </exclude>
+    </coverage>
+</phpunit>

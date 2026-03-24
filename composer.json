@@ -1,0 +1,107 @@
+{
+    "name": "lts/php-openapi-generator",
+    "description": "PHP OpenAPI 3.1+ code generator",
+    "homepage": "https://github.com/LongTermSupport/php-openapi-generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Long Term Support Ltd",
+            "email": "joseph@ltscommerce.dev",
+            "homepage": "https://ltscommerce.dev"
+        },
+        {
+            "name": "Joel Wurtz",
+            "email": "jwurtz@jolicode.com",
+            "role": "Original author (janephp/janephp)"
+        },
+        {
+            "name": "Baptiste Leduc",
+            "email": "baptiste.leduc@gmail.com",
+            "role": "Original contributor (janephp/janephp)"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-json": "*",
+        "doctrine/inflector": "^2.0",
+        "league/uri": "^6.7.2 || ^7.4",
+        "nikic/php-parser": "^5.1",
+        "php-http/client-common": "^2.7",
+        "php-http/discovery": "^1.19",
+        "php-http/multipart-stream-builder": "^1.3",
+        "php-jsonpointer/php-jsonpointer": "^4.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "thecodingmachine/safe": "^3.0",
+        "symfony/console": "^6.4 || ^7.0 || ^8.0",
+        "symfony/filesystem": "^6.4 || ^7.0 || ^8.0",
+        "symfony/options-resolver": "^6.4 || ^7.0 || ^8.0",
+        "symfony/property-info": "^6.4 || ^7.0 || ^8.0",
+        "symfony/serializer": "^6.4 || ^7.0 || ^8.0",
+        "symfony/string": "^6.4 || ^7.0 || ^8.0",
+        "symfony/validator": "^6.4 || ^7.0 || ^8.0",
+        "symfony/var-dumper": "^6.4 || ^7.0 || ^8.0",
+        "symfony/yaml": "^6.4 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "doctrine/annotations": "^2.0",
+        "lts/php-qa-ci": "dev-php8.4@dev",
+        "lts/strict-openapi-validator": "dev-main",
+        "friendsofphp/php-cs-fixer": "^3.59",
+        "jms/serializer": "^3.28",
+        "moneyphp/money": "^3.3",
+        "nyholm/psr7": "^1.8",
+        "phpbench/phpbench": "^1.3",
+        "phpdocumentor/reflection-docblock": "^5.3",
+        "phpunit/phpunit": "^11.0",
+        "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.0",
+        "symfony/http-client": "^6.4 || ^7.0 || ^8.0",
+        "symfony/uid": "^6.4 || ^7.0 || ^8.0"
+    },
+    "suggest": {
+        "friendsofphp/php-cs-fixer": "Allow to automatically fix cs on generated code for better visualisation",
+        "phpdocumentor/reflection-docblock": "Allow to extract informations from PHP Doc blocks"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "LongTermSupport\\OpenApiGenerator\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "*/Tests/fixtures"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "src/Component/OpenApi3/Tests/"
+        ],
+        "psr-4": {
+            "LongTermSupport\\OpenApiGenerator\\Component\\GeneratorCore\\Tests\\": "src/Component/GeneratorCore/Tests/",
+            "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Client\\": "var/test-generated/client/",
+            "QaConfig\\": [
+                "qaConfig/"
+            ]
+        }
+    },
+    "bin": [
+        "src/Component/OpenApiCommon/bin/php-openapi"
+    ],
+    "config": {
+        "process-timeout": 1800,
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": false,
+            "lts/php-qa-ci": true,
+            "phpstan/extension-installer": true
+        },
+        "audit": {
+            "block-insecure": false
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

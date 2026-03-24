@@ -1,0 +1,14 @@
+<?php
+
+return [
+    'mapping' => [
+        __DIR__ . '/swagger1.json' => [
+            'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1',
+            'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__) . '/Api1',
+        ],
+        __DIR__ . '/swagger2.json' => [
+            'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api2',
+            'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__) . '/Api2',
+        ],
+    ],
+];

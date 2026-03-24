@@ -1,0 +1,7 @@
+<?php
+
+return [
+    'openapi-file' => 'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/cb37ec78d088430b51fb6610257b2534701c6133/_archive_/schemas/v3.0/pass/petstore.yaml',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+];

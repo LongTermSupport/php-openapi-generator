@@ -1,0 +1,10 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ . '/openapi.yaml',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+    'whitelisted-paths' => [
+        '\/foo$',
+    ],
+];

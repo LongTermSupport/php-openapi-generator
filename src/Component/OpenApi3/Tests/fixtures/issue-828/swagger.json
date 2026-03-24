@@ -1,0 +1,58 @@
+{
+    "openapi": "3.1.0",
+    "paths": {
+        "/test-simple": {
+            "post": {
+                "operationId": "testSimple",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {"200": {"description": "Success"}}
+            }
+        },
+        "/test-simple-array-ref": {
+            "post": {
+                "operationId": "testSimpleClassArray",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Bar"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {"200": {"description": "Success"}}
+            }
+        }
+    },
+    "info": {
+        "version": "",
+        "title": ""
+    },
+    "components": {
+        "schemas": {
+            "Bar": {
+                "type": "object",
+                "properties": {
+                    "baz": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

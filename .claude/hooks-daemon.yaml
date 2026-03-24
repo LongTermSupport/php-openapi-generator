@@ -1,0 +1,227 @@
+version: '2.0'
+daemon:
+  idle_timeout_seconds: 600
+  log_level: INFO
+  project_root: ../../
+  input_validation:
+    enabled: true
+    strict_mode: true
+    log_validation_errors: true
+handlers:
+  pre_tool_use:
+    destructive_git:
+      enabled: true
+      priority: 10
+    daemon_location_guard:
+      enabled: true
+      priority: 11
+    sed_blocker:
+      enabled: true
+      priority: 11
+    absolute_path:
+      enabled: true
+      priority: 12
+    error_hiding_blocker:
+      enabled: true
+      priority: 13
+    curl_pipe_shell:
+      enabled: true
+      priority: 14
+    security_antipattern:
+      enabled: true
+      priority: 15
+    pipe_blocker:
+      enabled: true
+      priority: 15
+      options:
+        command_redirection: true
+    worktree_file_copy:
+      enabled: true
+      priority: 16
+    git_stash:
+      enabled: true
+      priority: 17
+      options:
+        mode: deny
+    dangerous_permissions:
+      enabled: true
+      priority: 18
+    lock_file_edit_blocker:
+      enabled: true
+      priority: 19
+    pip_break_system:
+      enabled: true
+      priority: 20
+    sudo_pip:
+      enabled: true
+      priority: 21
+    daemon_restart_verifier:
+      enabled: false
+      priority: 22
+    ask_user_question_blocker:
+      enabled: false
+      priority: 23
+    qa_suppression:
+      enabled: true
+      priority: 30
+    tdd_enforcement:
+      enabled: true
+      priority: 32
+    task_tdd_advisor:
+      enabled: true
+      priority: 36
+    lsp_enforcement:
+      enabled: false
+      priority: 38
+      options:
+        mode: block_once
+        no_lsp_mode: block
+    plan_number_helper:
+      enabled: true
+      priority: 33
+      options:
+        track_plans_in_project: CLAUDE/Plan
+    validate_plan_number:
+      enabled: true
+      priority: 38
+    gh_issue_comments:
+      enabled: true
+      priority: 40
+      options:
+        command_redirection: true
+    global_npm_advisor:
+      enabled: true
+      priority: 42
+    plan_time_estimates:
+      enabled: true
+      priority: 45
+    plan_workflow:
+      enabled: true
+      priority: 44
+    plan_completion_advisor:
+      enabled: true
+      priority: 48
+    validate_instruction_content:
+      enabled: true
+      priority: 49
+    npm_command:
+      enabled: false
+      priority: 50
+      options:
+        command_redirection: true
+    markdown_organization:
+      enabled: true
+      priority: 51
+      options:
+        track_plans_in_project: null
+        plan_workflow_docs: null
+        monorepo_subproject_patterns: null
+    web_search_year:
+      enabled: true
+      priority: 55
+    british_english:
+      enabled: false
+      priority: 60
+  post_tool_use:
+    bash_error_detector:
+      enabled: true
+      priority: 10
+    validate_eslint_on_write:
+      enabled: false
+      priority: 20
+    lint_on_edit:
+      enabled: true
+      priority: 25
+  session_start:
+    yolo_container_detection:
+      enabled: true
+      priority: 10
+    optimal_config_checker:
+      enabled: true
+      priority: 52
+    git_filemode_checker:
+      enabled: true
+      priority: 53
+    suggest_status_line:
+      enabled: true
+      priority: 55
+    version_check:
+      enabled: true
+      priority: 56
+    workflow_state_restoration:
+      enabled: true
+      priority: 60
+  pre_compact:
+    transcript_archiver:
+      enabled: true
+      priority: 10
+    workflow_state_pre_compact:
+      enabled: true
+      priority: 20
+  session_end:
+    cleanup:
+      enabled: true
+      priority: 10
+  subagent_stop:
+    subagent_completion_logger:
+      enabled: false
+      priority: 10
+    remind_prompt_library:
+      enabled: false
+      priority: 20
+  user_prompt_submit:
+    git_context_injector:
+      enabled: true
+      priority: 10
+    critical_thinking_advisory:
+      enabled: true
+      priority: 55
+  permission_request:
+    auto_approve_reads:
+      enabled: true
+      priority: 10
+  notification:
+    notification_logger:
+      enabled: false
+      priority: 10
+  stop:
+    auto_continue_stop:
+      enabled: true
+      priority: 10
+    task_completion_checker:
+      enabled: true
+      priority: 20
+    hedging_language_detector:
+      enabled: true
+      priority: 30
+    dismissive_language_detector:
+      enabled: true
+      priority: 58
+  status_line:
+    model_context:
+      enabled: true
+      priority: 10
+    thinking_mode:
+      enabled: true
+      priority: 12
+    current_time:
+      enabled: true
+      priority: 14
+    git_branch:
+      enabled: true
+      priority: 20
+    git_repo_name:
+      enabled: true
+      priority: 25
+    working_directory:
+      enabled: true
+      priority: 25
+    daemon_stats:
+      enabled: true
+      priority: 30
+    account_display:
+      enabled: true
+      priority: 40
+    usage_tracking:
+      enabled: true
+      priority: 60

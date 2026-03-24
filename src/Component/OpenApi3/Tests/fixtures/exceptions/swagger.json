@@ -1,0 +1,59 @@
+{
+    "openapi": "3.1.0",
+    "paths": {
+        "/test-exception": {
+            "get": {
+                "operationId": "Test No Tag",
+                "responses": {
+                    "400": {
+                        "description": "Bad request on test exception",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found get"
+                    },
+                    "500": {
+                        "description": "Internal server error on test exception"
+                    },
+                    "600": {
+                        "description": "New update available",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "/"
+        }
+    ],
+    "info": {
+        "version": "",
+        "title": ""
+    },
+    "components": {
+        "schemas": {
+            "Message": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

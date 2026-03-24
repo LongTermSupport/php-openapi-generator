@@ -1,0 +1,126 @@
+{
+    "openapi": "3.1.0",
+    "paths": {
+        "/test-simple": {
+            "post": {
+                "operationId": "Test Simple Body Parameter",
+                "responses": {
+                    "200": {
+                        "description": "no error"
+                    }
+                },
+                "tags": [
+                    "Test."
+                ],
+                "requestBody": {
+                    "content": {
+                        "text/plain": {
+                            "schema": {
+                                "type": "string",
+                                "format": "binary"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/test-object": {
+            "post": {
+                "operationId": "Test Object Body Parameter",
+                "responses": {
+                    "200": {
+                        "description": "no error"
+                    }
+                },
+                "tags": [
+                    "Test 🍩"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Schema"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/test-object-list": {
+            "post": {
+                "operationId": "Test Object List Body Parameter",
+                "responses": {
+                    "200": {
+                        "description": "no error"
+                    }
+                },
+                "tags": [
+                    "Test 🌠"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Schema"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        }
+    },
+    "info": {
+        "version": "",
+        "title": ""
+    },
+    "components": {
+        "schemas": {
+            "Schema": {
+                "type": "object",
+                "properties": {
+                    "stringProperty": {
+                        "type": "string"
+                    },
+                    "dateProperty": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "integerProperty": {
+                        "type": "integer"
+                    },
+                    "floatProperty": {
+                        "type": "number"
+                    },
+                    "arrayProperty": {
+                        "type": "array",
+                        "items": {
+                        }
+                    },
+                    "mapProperty": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "objectProperty": {
+                        "type": "object",
+                        "properties": {
+                            "stringProperty": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "objectRefProperty": {
+                        "$ref": "#/components/schemas/Schema"
+                    }
+                }
+            }
+        }
+    }
+}

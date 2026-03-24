@@ -1,0 +1,7 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ . '/openapi3.yaml',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+];

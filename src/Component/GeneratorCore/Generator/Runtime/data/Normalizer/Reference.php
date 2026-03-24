@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Lightweight runtime Reference for generated SDK code.
+ *
+ * Holds a JSON $ref pointer and its origin document — just enough for
+ * normalizers to round-trip references without pulling in the full
+ * spec-resolution machinery (league/uri, json-pointer, symfony/yaml).
+ */
+class Reference
+{
+    public function __construct(
+        private readonly string $reference,
+        private readonly string $origin,
+    ) {
+    }
+
+    /**
+     * @return string The raw $ref URI
+     */
+    public function getReferenceUri(): string
+    {
+        return $this->reference;
+    }
+
+    /**
+     * @return string The document-origin URI
+     */
+    public function getOriginUri(): string
+    {
+        return $this->origin;
+    }
+}

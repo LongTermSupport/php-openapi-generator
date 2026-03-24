@@ -1,0 +1,9 @@
+<?php
+
+// digitalocean.php
+return [
+    # 'openapi-file' => 'https://api-engineering.nyc3.cdn.digitaloceanspaces.com/spec-ci/DigitalOcean-public.v2.yaml', // changes way too often, let's download it once and commit it to the repo
+    'openapi-file' => __DIR__ . '/DigitalOcean-public.v2.yaml',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+];

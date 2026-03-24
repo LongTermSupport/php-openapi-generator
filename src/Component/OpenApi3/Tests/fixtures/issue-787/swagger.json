@@ -1,0 +1,37 @@
+{
+    "openapi": "3.1.0",
+    "info": {"title": "Issue 787", "version": "1.0.0"},
+    "paths": {
+        "/foo": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "testBoolean",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "no error"
+                    }
+                }
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {}
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    }
+                }
+            }
+        }
+    }
+}

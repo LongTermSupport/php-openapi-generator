@@ -1,0 +1,7 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ .  '/openapi.yaml',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client',
+    'directory' => \dirname(__DIR__, 5) . '/var/test-generated/client',
+];

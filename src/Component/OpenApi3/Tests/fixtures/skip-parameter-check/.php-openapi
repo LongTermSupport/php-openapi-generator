@@ -1,0 +1,7 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ .  '/swagger.json',
+    'namespace' => 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\SkipParameterCheck',
+    'directory' => \dirname(__DIR__, 6) . '/var/test-generated/' . \basename(__DIR__),
+];

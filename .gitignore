@@ -1,0 +1,17 @@
+/vendor/
+/var/
+/.php-cs-fixer.cache
+/untracked/
+*.log
+.phpunit.result.cache
+
+# Generator test output now goes to var/test-generated/ (covered by /var/ above)
+
+# Symfony test kernel writes cache/logs to ./var/cache/symfony/ and ./var/logs/symfony/,
+# but keep this exclusion as a safety net in case it's ever reverted
+src/Bundle/OpenApiBundle/Tests/Resources/var/
+
+# Claude Code
+.claude/hooks-daemon/
+.claude/worktrees/
+qaConfig/.qa-lock/

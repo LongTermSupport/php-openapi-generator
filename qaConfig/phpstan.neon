@@ -1,0 +1,124 @@
+# ============================================================================
+# expected/ IS SCANNED — the whole point of this project is generating
+# PHPStan-max-level code. If expected/ has errors, the GENERATOR is broken.
+# Fix the generator, regenerate expected/, never exclude it from PHPStan.
+# ============================================================================
+
+includes:
+    - ../vendor/lts/php-qa-ci/configDefaults/generic/phpstan.neon
+
+rules:
+    # Project-specific rules
+    - QaConfig\PHPStan\Rules\ForbidInlineVarAnnotationRule
+    - QaConfig\PHPStan\Rules\ForbidAssertCallRule
+    - QaConfig\PHPStan\Rules\ForbidGeneratedAssertRule
+    - QaConfig\PHPStan\Rules\RequireStrictComparisonRule
+    # php-qa-ci rules — security
+    - LTS\PHPQA\PHPStan\Rules\ForbidDangerousFunctionsRule
+    # php-qa-ci rules — error handling
+    - LTS\PHPQA\PHPStan\Rules\ForbidEmptyCatchBlockRule
+    - LTS\PHPQA\PHPStan\Rules\ForbidSilentCatchRule
+    # php-qa-ci rules — type safety
+    - LTS\PHPQA\PHPStan\Rules\ForbidEmptyLanguageConstructRule
+    # php-qa-ci rules — PHP 8.4 compatibility
+    - LTS\PHPQA\PHPStan\Rules\ForbidDeprecatedSerializableRule
+    - LTS\PHPQA\PHPStan\Rules\ForbidNewDateTimeRule
+    # php-qa-ci rules — code quality
+    - LTS\PHPQA\PHPStan\Rules\ForbidInlinePhpstanIgnoreRule
+    - LTS\PHPQA\PHPStan\Rules\RequireDeclareStrictTypesRule
+
+parameters:
+    scanDirectories:
+        - ../qaConfig/PHPStan/Rules
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        # Naming conventions: existing codebase uses unsuffixed traits/interfaces throughout.
+        # Renaming would break the entire public API surface. Suppress until a major version rename.
+        - identifier: phpqaci.traitSuffix
+        - identifier: phpqaci.interfaceSuffix
+        # PHPUnit assertion methods — static methods called as instance methods ($this->assertXxx)
+        - identifier: staticMethod.dynamicCall
+        # new static() in factory methods — intentional for inheritance support
+        - identifier: new.static
+        # Symfony DenormalizerInterface/NormalizerInterface conditional return types —
+        # interface design limitation, not a code defect
+        - identifier: method.childReturnType
+        # (string) cast on foreach key PHPStan already narrows to string
+        - identifier: cast.useless
+        # Runtime template traits only used in generated code, not scanned source
+        - identifier: trait.unused
+        # Complex nested array assignment — PHPStan cannot track type through dynamic keys
+        -
+            identifier: offsetAssign.dimType
+            path: ../src/Component/OpenApiCommon/Console/Command/GenerateCommand.php
+        # assertInstanceOf valid even when PHPStan considers type already narrowed
+        -
+            identifier: method.alreadyNarrowedType
+            path: ../src/Component/OpenApi3/Tests/JaneOpenApiResourceTest.php
+        # InvalidSpecVersionException can be thrown at runtime by strict-openapi-validator
+        -
+            identifier: catch.neverThrown
+            path: ../src/Component/OpenApi3/Tests/OpenApiSpecValidationTest.php
+        # SubObjectValidator: getMergedUri().__toString() returns mixed due to PSR-7 v1 lacking native return types
+        -
+            identifier: method.nonObject
+            path: ../src/Component/GeneratorCore/Guesser/Validator/Object_/SubObjectValidator.php
+        -
+            identifier: argument.type
+            path: ../src/Component/GeneratorCore/Guesser/Validator/Object_/SubObjectValidator.php
+        # AnyOfReferencefGuesser: same PSR-7 v1 issue + resolve() returns object
+        -
+            identifier: instanceof.alwaysTrue
+            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
+        -
+            identifier: method.nonObject
+            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
+        -
+            identifier: assignOp.invalid
+            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
+        -
+            identifier: argument.type
+            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
+        # OpenApi3 JsonSchema normalizers — auto-generated, ArrayObject→array mismatch
+        -
+            identifier: function.impossibleType
+            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
+        -
+            identifier: argument.type
+            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
+        -
+            identifier: offsetAssign.valueType
+            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
+        -
+            identifier: return.type
+            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
+        -
+            identifier: assign.propertyType
+            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
+        # BaseEndpointTest — getQueryString() on anonymous class, PHPStan sees `object`
+        -
+            identifier: method.notFound
+            path: ../src/Component/OpenApiCommon/Tests/Generator/Runtime/data/Client/BaseEndpointTest.php
+        # Config boundary: $options['mapping'] — PHPStan cannot narrow to array<string,mixed>
+        -
+            identifier: argument.type
+            path: ../src/Component/GeneratorCore/Console/Command/GenerateCommand.php
+        # OptionsResolver::resolve() returns array, not array<string, mixed>
+        -
+            identifier: return.type
+            path: ../src/Component/GeneratorCore/Console/Loader/ConfigLoader.php
+        # ServerPluginGenerator: parse_url() returns mixed values, casts are safe
+        -
+            identifier: cast.string
+            path: ../src/Component/OpenApi3/Generator/Client/ServerPluginGenerator.php
+        -
+            identifier: argument.type
+            path: ../src/Component/OpenApi3/Generator/Client/ServerPluginGenerator.php
+        # Reference::__construct — parse_url/UriString::parse values are mixed with treatPhpDocTypesAsCertain: false
+        -
+            identifier: cast.string
+            path: ../src/Component/OpenApiRuntime/Reference.php
+        # AuthenticationRegistry test — array<int, ConcreteAuth> vs array<AuthPlugin>
+        -
+            identifier: argument.type
+            path: ../src/Component/OpenApi3/Tests/JaneOpenApiResourceTest.php

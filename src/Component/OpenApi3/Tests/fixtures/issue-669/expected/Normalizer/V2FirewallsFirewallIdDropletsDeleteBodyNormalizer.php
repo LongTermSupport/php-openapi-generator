@@ -32,9 +32,11 @@ class V2FirewallsFirewallIdDropletsDeleteBodyNormalizer implements DenormalizerI
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2FirewallsFirewallIdDropletsDeleteBody::class;
     }
     /**
-     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2FirewallsFirewallIdDropletsDeleteBody|Reference
+     * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2FirewallsFirewallIdDropletsDeleteBody or a Reference.
+     * Native return type is `mixed` for Symfony interface covariance — callers
+     * must narrow via TypeValidator::assertInstanceOf.
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2FirewallsFirewallIdDropletsDeleteBody|Reference
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2FirewallsFirewallIdDropletsDeleteBody();
         if (null === $data || false === \is_array($data)) {

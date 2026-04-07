@@ -32,9 +32,11 @@ class SchemaFieldIdAlreadyExistsInSchemaHierarchyExceptionNormalizer implements 
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaFieldIdAlreadyExistsInSchemaHierarchyException::class;
     }
     /**
-     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaFieldIdAlreadyExistsInSchemaHierarchyException|Reference
+     * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaFieldIdAlreadyExistsInSchemaHierarchyException or a Reference.
+     * Native return type is `mixed` for Symfony interface covariance — callers
+     * must narrow via TypeValidator::assertInstanceOf.
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaFieldIdAlreadyExistsInSchemaHierarchyException|Reference
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaFieldIdAlreadyExistsInSchemaHierarchyException();
         if (null === $data || false === \is_array($data)) {

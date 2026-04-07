@@ -32,9 +32,11 @@ class ReposOwnerRepoContentsPathDeleteBodyAuthorNormalizer implements Denormaliz
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathDeleteBodyAuthor::class;
     }
     /**
-     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathDeleteBodyAuthor|Reference
+     * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathDeleteBodyAuthor or a Reference.
+     * Native return type is `mixed` for Symfony interface covariance — callers
+     * must narrow via TypeValidator::assertInstanceOf.
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathDeleteBodyAuthor|Reference
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathDeleteBodyAuthor();
         if (null === $data || false === \is_array($data)) {

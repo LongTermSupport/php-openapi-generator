@@ -32,9 +32,11 @@ class ResponseAvailableUpgradesNormalizer implements DenormalizerInterface, Norm
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAvailableUpgrades::class;
     }
     /**
-     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAvailableUpgrades|Reference
+     * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAvailableUpgrades or a Reference.
+     * Native return type is `mixed` for Symfony interface covariance — callers
+     * must narrow via TypeValidator::assertInstanceOf.
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAvailableUpgrades|Reference
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAvailableUpgrades();
         if (null === $data || false === \is_array($data)) {

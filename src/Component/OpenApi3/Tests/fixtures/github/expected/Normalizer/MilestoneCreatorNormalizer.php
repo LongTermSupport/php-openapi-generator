@@ -32,9 +32,11 @@ class MilestoneCreatorNormalizer implements DenormalizerInterface, NormalizerInt
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MilestoneCreator::class;
     }
     /**
-     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MilestoneCreator|Reference
+     * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MilestoneCreator or a Reference.
+     * Native return type is `mixed` for Symfony interface covariance — callers
+     * must narrow via TypeValidator::assertInstanceOf.
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MilestoneCreator|Reference
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MilestoneCreator();
         if (null === $data || false === \is_array($data)) {

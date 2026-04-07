@@ -32,9 +32,11 @@ class GistsGistIdCommentsPostBodyNormalizer implements DenormalizerInterface, No
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdCommentsPostBody::class;
     }
     /**
-     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdCommentsPostBody|Reference
+     * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdCommentsPostBody or a Reference.
+     * Native return type is `mixed` for Symfony interface covariance — callers
+     * must narrow via TypeValidator::assertInstanceOf.
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdCommentsPostBody|Reference
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdCommentsPostBody();
         if (null === $data || false === \is_array($data)) {

@@ -37,9 +37,15 @@ parameters:
         - identifier: staticMethod.dynamicCall
         # new static() in factory methods — intentional for inheritance support
         - identifier: new.static
-        # Symfony DenormalizerInterface/NormalizerInterface conditional return types —
-        # interface design limitation, not a code defect
-        - identifier: method.childReturnType
+        # issue-669 fixture: model has a `flags` property which collides with
+        # ArrayObject::getFlags(): int. The model emits getFlags(): ?int which
+        # is not covariant. This is a real generator template bug — when a
+        # property name collides with an ArrayObject built-in method, the
+        # generator should rename or skip the accessor. Until that's fixed,
+        # the issue-669 fixture must ignore this identifier.
+        -
+            identifier: method.childReturnType
+            path: ../src/Component/OpenApi3/Tests/fixtures/issue-669/expected/Model/*
         # (string) cast on foreach key over ArrayObject<string, mixed> — PHPStan thinks the cast
         # is useless because the @template says string, but PHP COERCES numeric-string keys to int
         # when stored in ArrayObject/array, so the cast is genuinely needed at runtime under
@@ -88,9 +94,6 @@ parameters:
             path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
         -
             identifier: offsetAssign.valueType
-            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
-        -
-            identifier: return.type
             path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
         -
             identifier: assign.propertyType

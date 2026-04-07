@@ -38,7 +38,10 @@ class SimpleResponseNormalizer implements DenormalizerInterface, NormalizerInter
         return \is_object($data) && \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Model\SimpleResponse::class === $data::class;
     }
 
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    /**
+     * @return ($type is class-string<object> ? object : mixed)
+     */
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Model\SimpleResponse();
         if (null === $data || false === \is_array($data)) {

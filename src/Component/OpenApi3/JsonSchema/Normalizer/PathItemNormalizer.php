@@ -35,7 +35,7 @@ class PathItemNormalizer implements DenormalizerInterface, NormalizerInterface, 
     }
 
     /**
-     * @return object
+     * @return ($type is class-string<object> ? object : mixed)
      */
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {

@@ -17,7 +17,6 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Param;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
-use PhpParser\Node\UnionType;
 
 trait DenormalizerGenerator
 {
@@ -273,23 +272,28 @@ trait DenormalizerGenerator
 
         $statements[] = new Stmt\Return_($objectVariable);
 
-        // Compound return type: the denormalize method always returns the specific
-        // model class. When $ref handling is enabled, it may also return a Reference
-        // sentinel that the caller resolves later. Both cases are explicit in the type.
-        $modelTypeNode = new Name\FullyQualified(ltrim($modelFqdn, '\\'));
-        $modelDocFqdn  = '\\' . ltrim($modelFqdn, '\\');
-
-        if ($this->useReference) {
-            $returnTypeNode = new UnionType([$modelTypeNode, new Name('Reference')]);
-            $returnDoc      = "/**\n * @return " . $modelDocFqdn . "|Reference\n */";
-        } else {
-            $returnTypeNode = $modelTypeNode;
-            $returnDoc      = "/**\n * @return " . $modelDocFqdn . "\n */";
-        }
+        // Native return type MUST be `mixed` and there must be NO `@return`
+        // phpdoc, so that PHPStan's method.childReturnType covariance check
+        // passes against Symfony's DenormalizerInterface::denormalize(), whose
+        // return type is the conditional
+        //   `($type is class-string<TObject> ? TObject : mixed)`.
+        //
+        // A narrower return (e.g. `Bar|Reference`) is NOT covariant with the
+        // parent's conditional, because in the true branch the parent expects
+        // `TObject` (= `Bar` for this normalizer) and `Reference` is not a
+        // subtype of `Bar`. The only correct return type is `mixed`.
+        //
+        // Callers recover the concrete type via `TypeValidator::assertInstanceOf`
+        // in the generated `transformResponseBody`, so no type information is
+        // lost at the boundary.
+        $modelDocFqdn = '\\' . ltrim($modelFqdn, '\\');
+        $returnDoc    = $this->useReference
+            ? "/**\n * The denormalized result is either a " . $modelDocFqdn . " or a Reference.\n * Native return type is `mixed` for Symfony interface covariance — callers\n * must narrow via TypeValidator::assertInstanceOf.\n */"
+            : "/**\n * The denormalized result is a " . $modelDocFqdn . ".\n * Native return type is `mixed` for Symfony interface covariance — callers\n * must narrow via TypeValidator::assertInstanceOf.\n */";
 
         return new Stmt\ClassMethod('denormalize', [
             'flags'      => Modifiers::PUBLIC,
-            'returnType' => $returnTypeNode,
+            'returnType' => new Identifier('mixed'),
             'params'     => [
                 new Param($dataVariable, type: new Identifier('mixed')),
                 new Param(new Expr\Variable('type'), type: new Identifier('string')),

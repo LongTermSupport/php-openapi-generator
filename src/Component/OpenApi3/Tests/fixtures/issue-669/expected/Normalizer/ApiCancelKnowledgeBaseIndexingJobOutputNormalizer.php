@@ -47,12 +47,16 @@ class ApiCancelKnowledgeBaseIndexingJobOutputNormalizer implements DenormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('job', $data)) {
-            $object->setJob($data['job']);
+            $value = $this->denormalizer->denormalize($data['job'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob, got ' . get_debug_type($value));
+            }
+            $object->setJob($value);
             unset($data['job']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ApiCancelKnowledgeBaseIndexingJobOutputNormalizer implements DenormalizerI
         }
         $dataArray = [];
         if ($data->isInitialized('job')) {
-            $dataArray['job'] = $data->getJob();
+            $dataArray['job'] = $this->normalizer->normalize($data->getJob(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

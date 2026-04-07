@@ -21,7 +21,7 @@ class TestGetBody extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $foo;
-    protected mixed $bar = null;
+    protected Bar $bar;
     protected TestGetBodyBaz $baz;
     public function getFoo(): string
     {
@@ -33,11 +33,11 @@ class TestGetBody extends \ArrayObject
         $this->foo = $foo;
         return $this;
     }
-    public function getBar(): mixed
+    public function getBar(): Bar
     {
         return $this->bar;
     }
-    public function setBar(mixed $bar): self
+    public function setBar(Bar $bar): self
     {
         $this->initialized['bar'] = true;
         $this->bar = $bar;

@@ -47,7 +47,11 @@ class NotificationEventNormalizer implements DenormalizerInterface, NormalizerIn
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('company', $data)) {
-            $object->setCompany($data['company']);
+            $value = $this->denormalizer->denormalize($data['company'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\Company::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\Company) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\Company, got ' . get_debug_type($value));
+            }
+            $object->setCompany($value);
             unset($data['company']);
         }
         if (\array_key_exists('eventId', $data)) {
@@ -78,9 +82,9 @@ class NotificationEventNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setRuleName(TypeValidator::assertString($data['ruleName'], 'ruleName'));
             unset($data['ruleName']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -96,7 +100,7 @@ class NotificationEventNormalizer implements DenormalizerInterface, NormalizerIn
         }
         $dataArray = [];
         if ($data->isInitialized('company')) {
-            $dataArray['company'] = $data->getCompany();
+            $dataArray['company'] = $this->normalizer->normalize($data->getCompany(), 'json', $context);
         }
         if ($data->isInitialized('eventId')) {
             $dataArray['eventId'] = $data->getEventId();

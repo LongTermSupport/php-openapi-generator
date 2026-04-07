@@ -24,47 +24,47 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    protected mixed $comments = null;
+    protected Link $comments;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $commits = null;
+    protected Link $commits;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $statuses = null;
+    protected Link $statuses;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $html = null;
+    protected Link $html;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $issue = null;
+    protected Link $issue;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $reviewComments = null;
+    protected Link $reviewComments;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $reviewComment = null;
+    protected Link $reviewComment;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $self = null;
+    protected Link $self;
     /**
      * Hypermedia Link
      *
      */
-    public function getComments(): mixed
+    public function getComments(): Link
     {
         return $this->comments;
     }
@@ -74,7 +74,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setComments(mixed $comments): self
+    public function setComments(Link $comments): self
     {
         $this->initialized['comments'] = true;
         $this->comments = $comments;
@@ -84,7 +84,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getCommits(): mixed
+    public function getCommits(): Link
     {
         return $this->commits;
     }
@@ -94,7 +94,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setCommits(mixed $commits): self
+    public function setCommits(Link $commits): self
     {
         $this->initialized['commits'] = true;
         $this->commits = $commits;
@@ -104,7 +104,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getStatuses(): mixed
+    public function getStatuses(): Link
     {
         return $this->statuses;
     }
@@ -114,7 +114,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setStatuses(mixed $statuses): self
+    public function setStatuses(Link $statuses): self
     {
         $this->initialized['statuses'] = true;
         $this->statuses = $statuses;
@@ -124,7 +124,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getHtml(): mixed
+    public function getHtml(): Link
     {
         return $this->html;
     }
@@ -134,7 +134,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setHtml(mixed $html): self
+    public function setHtml(Link $html): self
     {
         $this->initialized['html'] = true;
         $this->html = $html;
@@ -144,7 +144,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getIssue(): mixed
+    public function getIssue(): Link
     {
         return $this->issue;
     }
@@ -154,7 +154,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setIssue(mixed $issue): self
+    public function setIssue(Link $issue): self
     {
         $this->initialized['issue'] = true;
         $this->issue = $issue;
@@ -164,7 +164,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getReviewComments(): mixed
+    public function getReviewComments(): Link
     {
         return $this->reviewComments;
     }
@@ -174,7 +174,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setReviewComments(mixed $reviewComments): self
+    public function setReviewComments(Link $reviewComments): self
     {
         $this->initialized['reviewComments'] = true;
         $this->reviewComments = $reviewComments;
@@ -184,7 +184,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getReviewComment(): mixed
+    public function getReviewComment(): Link
     {
         return $this->reviewComment;
     }
@@ -194,7 +194,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setReviewComment(mixed $reviewComment): self
+    public function setReviewComment(Link $reviewComment): self
     {
         $this->initialized['reviewComment'] = true;
         $this->reviewComment = $reviewComment;
@@ -204,7 +204,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getSelf(): mixed
+    public function getSelf(): Link
     {
         return $this->self;
     }
@@ -214,7 +214,7 @@ class PullRequestSimpleLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setSelf(mixed $self): self
+    public function setSelf(Link $self): self
     {
         $this->initialized['self'] = true;
         $this->self = $self;

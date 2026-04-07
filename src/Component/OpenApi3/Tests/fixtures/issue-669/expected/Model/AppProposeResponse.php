@@ -44,7 +44,7 @@ class AppProposeResponse extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec = null;
+    protected AppSpec $spec;
     /**
      * The monthly cost of the proposed app in USD.
      *
@@ -141,7 +141,7 @@ class AppProposeResponse extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    public function getSpec(): mixed
+    public function getSpec(): AppSpec
     {
         return $this->spec;
     }
@@ -151,7 +151,7 @@ class AppProposeResponse extends \ArrayObject
      *
      * @return self
      */
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

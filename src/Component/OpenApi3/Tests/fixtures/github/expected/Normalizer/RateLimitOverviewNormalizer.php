@@ -58,12 +58,16 @@ class RateLimitOverviewNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['resources']);
         }
         if (\array_key_exists('rate', $data)) {
-            $object->setRate($data['rate']);
+            $value_1 = $this->denormalizer->denormalize($data['rate'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value_1));
+            }
+            $object->setRate($value_1);
             unset($data['rate']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -79,7 +83,7 @@ class RateLimitOverviewNormalizer implements DenormalizerInterface, NormalizerIn
         }
         $dataArray = [];
         $dataArray['resources'] = $this->normalizer->normalize($data->getResources(), 'json', $context);
-        $dataArray['rate'] = $data->getRate();
+        $dataArray['rate'] = $this->normalizer->normalize($data->getRate(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

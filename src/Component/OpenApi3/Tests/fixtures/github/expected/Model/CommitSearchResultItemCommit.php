@@ -26,7 +26,7 @@ class CommitSearchResultItemCommit extends \ArrayObject
     protected string $message;
     protected CommitSearchResultItemCommitTree $tree;
     protected string $url;
-    protected mixed $verification = null;
+    protected Verification $verification;
     public function getAuthor(): CommitSearchResultItemCommitAuthor
     {
         return $this->author;
@@ -87,11 +87,11 @@ class CommitSearchResultItemCommit extends \ArrayObject
         $this->url = $url;
         return $this;
     }
-    public function getVerification(): mixed
+    public function getVerification(): Verification
     {
         return $this->verification;
     }
-    public function setVerification(mixed $verification): self
+    public function setVerification(Verification $verification): self
     {
         $this->initialized['verification'] = true;
         $this->verification = $verification;

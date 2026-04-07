@@ -86,12 +86,16 @@ class GitTagNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['object']);
         }
         if (\array_key_exists('verification', $data)) {
-            $object->setVerification($data['verification']);
+            $value_2 = $this->denormalizer->denormalize($data['verification'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Verification::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Verification) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Verification, got ' . get_debug_type($value_2));
+            }
+            $object->setVerification($value_2);
             unset($data['verification']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -114,7 +118,7 @@ class GitTagNormalizer implements DenormalizerInterface, NormalizerInterface, De
         $dataArray['tagger'] = $this->normalizer->normalize($data->getTagger(), 'json', $context);
         $dataArray['object'] = $this->normalizer->normalize($data->getObject(), 'json', $context);
         if ($data->isInitialized('verification')) {
-            $dataArray['verification'] = $data->getVerification();
+            $dataArray['verification'] = $this->normalizer->normalize($data->getVerification(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

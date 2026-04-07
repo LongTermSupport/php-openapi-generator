@@ -47,24 +47,40 @@ class AppIngressSpecRuleNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('match', $data)) {
-            $object->setMatch($data['match']);
+            $value = $this->denormalizer->denormalize($data['match'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch, got ' . get_debug_type($value));
+            }
+            $object->setMatch($value);
             unset($data['match']);
         }
         if (\array_key_exists('cors', $data)) {
-            $object->setCors($data['cors']);
+            $value_1 = $this->denormalizer->denormalize($data['cors'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy, got ' . get_debug_type($value_1));
+            }
+            $object->setCors($value_1);
             unset($data['cors']);
         }
         if (\array_key_exists('component', $data)) {
-            $object->setComponent($data['component']);
+            $value_2 = $this->denormalizer->denormalize($data['component'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent, got ' . get_debug_type($value_2));
+            }
+            $object->setComponent($value_2);
             unset($data['component']);
         }
         if (\array_key_exists('redirect', $data)) {
-            $object->setRedirect($data['redirect']);
+            $value_3 = $this->denormalizer->denormalize($data['redirect'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect, got ' . get_debug_type($value_3));
+            }
+            $object->setRedirect($value_3);
             unset($data['redirect']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -80,16 +96,16 @@ class AppIngressSpecRuleNormalizer implements DenormalizerInterface, NormalizerI
         }
         $dataArray = [];
         if ($data->isInitialized('match')) {
-            $dataArray['match'] = $data->getMatch();
+            $dataArray['match'] = $this->normalizer->normalize($data->getMatch(), 'json', $context);
         }
         if ($data->isInitialized('cors')) {
-            $dataArray['cors'] = $data->getCors();
+            $dataArray['cors'] = $this->normalizer->normalize($data->getCors(), 'json', $context);
         }
         if ($data->isInitialized('component')) {
-            $dataArray['component'] = $data->getComponent();
+            $dataArray['component'] = $this->normalizer->normalize($data->getComponent(), 'json', $context);
         }
         if ($data->isInitialized('redirect')) {
-            $dataArray['redirect'] = $data->getRedirect();
+            $dataArray['redirect'] = $this->normalizer->normalize($data->getRedirect(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

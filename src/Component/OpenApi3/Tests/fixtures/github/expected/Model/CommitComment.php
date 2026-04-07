@@ -33,7 +33,7 @@ class CommitComment extends \ArrayObject
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected string $authorAssociation;
-    protected mixed $reactions = null;
+    protected ReactionRollup $reactions;
     public function getHtmlUrl(): string
     {
         return $this->htmlUrl;
@@ -164,11 +164,11 @@ class CommitComment extends \ArrayObject
         $this->authorAssociation = $authorAssociation;
         return $this;
     }
-    public function getReactions(): mixed
+    public function getReactions(): ReactionRollup
     {
         return $this->reactions;
     }
-    public function setReactions(mixed $reactions): self
+    public function setReactions(ReactionRollup $reactions): self
     {
         $this->initialized['reactions'] = true;
         $this->reactions = $reactions;

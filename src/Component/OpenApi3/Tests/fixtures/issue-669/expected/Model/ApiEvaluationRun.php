@@ -91,7 +91,7 @@ class ApiEvaluationRun extends \ArrayObject
      *
      */
     protected string $runName;
-    protected mixed $starMetricResult = null;
+    protected ApiEvaluationMetricResult $starMetricResult;
     /**
      * Run start time.
      *
@@ -420,11 +420,11 @@ class ApiEvaluationRun extends \ArrayObject
         $this->runName = $runName;
         return $this;
     }
-    public function getStarMetricResult(): mixed
+    public function getStarMetricResult(): ApiEvaluationMetricResult
     {
         return $this->starMetricResult;
     }
-    public function setStarMetricResult(mixed $starMetricResult): self
+    public function setStarMetricResult(ApiEvaluationMetricResult $starMetricResult): self
     {
         $this->initialized['starMetricResult'] = true;
         $this->starMetricResult = $starMetricResult;

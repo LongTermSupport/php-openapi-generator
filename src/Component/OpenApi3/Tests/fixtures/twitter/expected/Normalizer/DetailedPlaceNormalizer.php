@@ -85,12 +85,16 @@ class DetailedPlaceNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['contained_within']);
         }
         if (\array_key_exists('geo', $data)) {
-            $object->setGeo($data['geo']);
+            $value_1 = $this->denormalizer->denormalize($data['geo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Geo::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Geo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Geo, got ' . get_debug_type($value_1));
+            }
+            $object->setGeo($value_1);
             unset($data['geo']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -122,7 +126,7 @@ class DetailedPlaceNormalizer implements DenormalizerInterface, NormalizerInterf
             $dataArray['contained_within'] = $values;
         }
         if ($data->isInitialized('geo')) {
-            $dataArray['geo'] = $data->getGeo();
+            $dataArray['geo'] = $this->normalizer->normalize($data->getGeo(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -20,12 +20,12 @@ class AppsDeploymentResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $deployment = null;
-    public function getDeployment(): mixed
+    protected AppsDeployment $deployment;
+    public function getDeployment(): AppsDeployment
     {
         return $this->deployment;
     }
-    public function setDeployment(mixed $deployment): self
+    public function setDeployment(AppsDeployment $deployment): self
     {
         $this->initialized['deployment'] = true;
         $this->deployment = $deployment;

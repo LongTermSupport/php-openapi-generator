@@ -24,12 +24,12 @@ class ApiUnlinkAgentFunctionOutput extends \ArrayObject
      * An Agent
      *
      */
-    protected mixed $agent = null;
+    protected ApiAgent $agent;
     /**
      * An Agent
      *
      */
-    public function getAgent(): mixed
+    public function getAgent(): ApiAgent
     {
         return $this->agent;
     }
@@ -39,7 +39,7 @@ class ApiUnlinkAgentFunctionOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setAgent(mixed $agent): self
+    public function setAgent(ApiAgent $agent): self
     {
         $this->initialized['agent'] = true;
         $this->agent = $agent;

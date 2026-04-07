@@ -65,11 +65,19 @@ class AutoscalePoolNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['config']);
         }
         if (\array_key_exists('droplet_template', $data)) {
-            $object->setDropletTemplate($data['droplet_template']);
+            $value_1 = $this->denormalizer->denormalize($data['droplet_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate, got ' . get_debug_type($value_1));
+            }
+            $object->setDropletTemplate($value_1);
             unset($data['droplet_template']);
         }
         if (\array_key_exists('current_utilization', $data)) {
-            $object->setCurrentUtilization($data['current_utilization']);
+            $value_2 = $this->denormalizer->denormalize($data['current_utilization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\CurrentUtilization::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\CurrentUtilization) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\CurrentUtilization, got ' . get_debug_type($value_2));
+            }
+            $object->setCurrentUtilization($value_2);
             unset($data['current_utilization']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -88,9 +96,9 @@ class AutoscalePoolNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setActiveResourcesCount(TypeValidator::assertInt($data['active_resources_count'], 'active_resources_count'));
             unset($data['active_resources_count']);
         }
-        foreach ($data as $key_1 => $value_1) {
+        foreach ($data as $key_1 => $value_3) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_1;
+                $object[$key_1] = $value_3;
             }
         }
         return $object;
@@ -112,9 +120,9 @@ class AutoscalePoolNormalizer implements DenormalizerInterface, NormalizerInterf
             $values[(string) $key] = $value;
         }
         $dataArray['config'] = $values;
-        $dataArray['droplet_template'] = $data->getDropletTemplate();
+        $dataArray['droplet_template'] = $this->normalizer->normalize($data->getDropletTemplate(), 'json', $context);
         if ($data->isInitialized('currentUtilization')) {
-            $dataArray['current_utilization'] = $data->getCurrentUtilization();
+            $dataArray['current_utilization'] = $this->normalizer->normalize($data->getCurrentUtilization(), 'json', $context);
         }
         $dataArray['created_at'] = $data->getCreatedAt()->format('Y-m-d\TH:i:sP');
         $dataArray['updated_at'] = $data->getUpdatedAt()->format('Y-m-d\TH:i:sP');

@@ -29,7 +29,7 @@ class LabelSearchResultItem extends \ArrayObject
     protected ?string $description = null;
     protected int $score;
     /**
-     * @var list<mixed>
+     * @var list<SearchResultTextMatchesItem>
      */
     protected array $textMatches;
     public function getId(): int
@@ -113,14 +113,14 @@ class LabelSearchResultItem extends \ArrayObject
         return $this;
     }
     /**
-     * @return list<mixed>
+     * @return list<SearchResultTextMatchesItem>
      */
     public function getTextMatches(): array
     {
         return $this->textMatches;
     }
     /**
-     * @param list<mixed> $textMatches
+     * @param list<SearchResultTextMatchesItem> $textMatches
      *
      * @return self
      */

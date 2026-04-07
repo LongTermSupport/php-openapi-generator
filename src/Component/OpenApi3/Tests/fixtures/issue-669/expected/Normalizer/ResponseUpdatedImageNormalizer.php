@@ -47,12 +47,16 @@ class ResponseUpdatedImageNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('image', $data)) {
-            $object->setImage($data['image']);
+            $value = $this->denormalizer->denormalize($data['image'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Image::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Image) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Image, got ' . get_debug_type($value));
+            }
+            $object->setImage($value);
             unset($data['image']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -67,7 +71,7 @@ class ResponseUpdatedImageNormalizer implements DenormalizerInterface, Normalize
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseUpdatedImage, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['image'] = $data->getImage();
+        $dataArray['image'] = $this->normalizer->normalize($data->getImage(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

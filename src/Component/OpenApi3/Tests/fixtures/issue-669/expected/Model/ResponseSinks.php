@@ -20,12 +20,12 @@ class ResponseSinks extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $sink = null;
-    public function getSink(): mixed
+    protected SinksResponse $sink;
+    public function getSink(): SinksResponse
     {
         return $this->sink;
     }
-    public function setSink(mixed $sink): self
+    public function setSink(SinksResponse $sink): self
     {
         $this->initialized['sink'] = true;
         $this->sink = $sink;

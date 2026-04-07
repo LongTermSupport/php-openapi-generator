@@ -141,7 +141,7 @@ class V2DatabasesPostBody extends \ArrayObject
      *
      */
     protected DatabaseClusterAutoscale $autoscale;
-    protected mixed $backupRestore = null;
+    protected DatabaseBackup $backupRestore;
     /**
      * A unique ID that can be used to identify and reference a database cluster.
      *
@@ -654,11 +654,11 @@ class V2DatabasesPostBody extends \ArrayObject
         $this->autoscale = $autoscale;
         return $this;
     }
-    public function getBackupRestore(): mixed
+    public function getBackupRestore(): DatabaseBackup
     {
         return $this->backupRestore;
     }
-    public function setBackupRestore(mixed $backupRestore): self
+    public function setBackupRestore(DatabaseBackup $backupRestore): self
     {
         $this->initialized['backupRestore'] = true;
         $this->backupRestore = $backupRestore;

@@ -21,7 +21,7 @@ class RateLimitOverview extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected RateLimitOverviewResources $resources;
-    protected mixed $rate = null;
+    protected RateLimit $rate;
     public function getResources(): RateLimitOverviewResources
     {
         return $this->resources;
@@ -32,11 +32,11 @@ class RateLimitOverview extends \ArrayObject
         $this->resources = $resources;
         return $this;
     }
-    public function getRate(): mixed
+    public function getRate(): RateLimit
     {
         return $this->rate;
     }
-    public function setRate(mixed $rate): self
+    public function setRate(RateLimit $rate): self
     {
         $this->initialized['rate'] = true;
         $this->rate = $rate;

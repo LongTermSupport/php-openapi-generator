@@ -24,17 +24,17 @@ class ApiGetAgentUsageOutput extends \ArrayObject
      * Resource Usage Description
      *
      */
-    protected mixed $logInsightsUsage = null;
+    protected ApiResourceUsage $logInsightsUsage;
     /**
      * Resource Usage Description
      *
      */
-    protected mixed $usage = null;
+    protected ApiResourceUsage $usage;
     /**
      * Resource Usage Description
      *
      */
-    public function getLogInsightsUsage(): mixed
+    public function getLogInsightsUsage(): ApiResourceUsage
     {
         return $this->logInsightsUsage;
     }
@@ -44,7 +44,7 @@ class ApiGetAgentUsageOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setLogInsightsUsage(mixed $logInsightsUsage): self
+    public function setLogInsightsUsage(ApiResourceUsage $logInsightsUsage): self
     {
         $this->initialized['logInsightsUsage'] = true;
         $this->logInsightsUsage = $logInsightsUsage;
@@ -54,7 +54,7 @@ class ApiGetAgentUsageOutput extends \ArrayObject
      * Resource Usage Description
      *
      */
-    public function getUsage(): mixed
+    public function getUsage(): ApiResourceUsage
     {
         return $this->usage;
     }
@@ -64,7 +64,7 @@ class ApiGetAgentUsageOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setUsage(mixed $usage): self
+    public function setUsage(ApiResourceUsage $usage): self
     {
         $this->initialized['usage'] = true;
         $this->usage = $usage;

@@ -31,6 +31,8 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
         
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Baz::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Normalizer\BazNormalizer::class,
         
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Normalizer\SubBazNormalizer::class,
+        
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Runtime\Normalizer\Reference::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Runtime\Normalizer\ReferenceNormalizer::class,
     ];
     /**
@@ -102,6 +104,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
             
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Foo::class => false,
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Baz::class => false,
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz::class => false,
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Runtime\Normalizer\Reference::class => false,
         ];
     }

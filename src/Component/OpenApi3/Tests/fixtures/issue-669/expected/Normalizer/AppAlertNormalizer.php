@@ -55,14 +55,18 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['component_name']);
         }
         if (\array_key_exists('spec', $data)) {
-            $object->setSpec($data['spec']);
+            $value = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec, got ' . get_debug_type($value));
+            }
+            $object->setSpec($value);
             unset($data['spec']);
         }
         if (\array_key_exists('emails', $data)) {
             $values = [];
             if (\is_array($data['emails'])) {
-                foreach ($data['emails'] as $value) {
-                    $values[] = TypeValidator::assertString($value, 'value');
+                foreach ($data['emails'] as $value_1) {
+                    $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
             $object->setEmails($values);
@@ -71,12 +75,12 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('slack_webhooks', $data)) {
             $values_1 = [];
             if (\is_array($data['slack_webhooks'])) {
-                foreach ($data['slack_webhooks'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook, got ' . get_debug_type($value_2));
+                foreach ($data['slack_webhooks'] as $value_2) {
+                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook::class, 'json', $context);
+                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook, got ' . get_debug_type($value_3));
                     }
-                    $values_1[] = $value_2;
+                    $values_1[] = $value_3;
                 }
             }
             $object->setSlackWebhooks($values_1);
@@ -87,12 +91,16 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['phase']);
         }
         if (\array_key_exists('progress', $data)) {
-            $object->setProgress($data['progress']);
+            $value_4 = $this->denormalizer->denormalize($data['progress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress, got ' . get_debug_type($value_4));
+            }
+            $object->setProgress($value_4);
             unset($data['progress']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_5) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_5;
             }
         }
         return $object;
@@ -111,7 +119,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $dataArray['component_name'] = $data->getComponentName();
         }
         if ($data->isInitialized('spec')) {
-            $dataArray['spec'] = $data->getSpec();
+            $dataArray['spec'] = $this->normalizer->normalize($data->getSpec(), 'json', $context);
         }
         if ($data->isInitialized('emails')) {
             $values = [];
@@ -131,7 +139,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $dataArray['phase'] = $data->getPhase();
         }
         if ($data->isInitialized('progress')) {
-            $dataArray['progress'] = $data->getProgress();
+            $dataArray['progress'] = $this->normalizer->normalize($data->getProgress(), 'json', $context);
         }
         foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {

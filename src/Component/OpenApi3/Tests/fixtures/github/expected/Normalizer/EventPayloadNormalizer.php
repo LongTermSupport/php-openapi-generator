@@ -54,30 +54,38 @@ class EventPayloadNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['action']);
         }
         if (\array_key_exists('issue', $data)) {
-            $object->setIssue($data['issue']);
+            $value = $this->denormalizer->denormalize($data['issue'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimple::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimple) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimple, got ' . get_debug_type($value));
+            }
+            $object->setIssue($value);
             unset($data['issue']);
         }
         if (\array_key_exists('comment', $data)) {
-            $object->setComment($data['comment']);
+            $value_1 = $this->denormalizer->denormalize($data['comment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueComment::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueComment) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueComment, got ' . get_debug_type($value_1));
+            }
+            $object->setComment($value_1);
             unset($data['comment']);
         }
         if (\array_key_exists('pages', $data)) {
             $values = [];
             if (\is_array($data['pages'])) {
-                foreach ($data['pages'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayloadPagesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayloadPagesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayloadPagesItem, got ' . get_debug_type($value_1));
+                foreach ($data['pages'] as $value_2) {
+                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayloadPagesItem::class, 'json', $context);
+                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayloadPagesItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayloadPagesItem, got ' . get_debug_type($value_3));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_3;
                 }
             }
             $object->setPages($values);
             unset($data['pages']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -96,10 +104,10 @@ class EventPayloadNormalizer implements DenormalizerInterface, NormalizerInterfa
             $dataArray['action'] = $data->getAction();
         }
         if ($data->isInitialized('issue')) {
-            $dataArray['issue'] = $data->getIssue();
+            $dataArray['issue'] = $this->normalizer->normalize($data->getIssue(), 'json', $context);
         }
         if ($data->isInitialized('comment')) {
-            $dataArray['comment'] = $data->getComment();
+            $dataArray['comment'] = $this->normalizer->normalize($data->getComment(), 'json', $context);
         }
         if ($data->isInitialized('pages')) {
             $values = [];

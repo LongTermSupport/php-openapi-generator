@@ -73,16 +73,20 @@ class ApiCreateEvaluationTestCaseInputPublicNormalizer implements DenormalizerIn
             unset($data['name']);
         }
         if (\array_key_exists('star_metric', $data)) {
-            $object->setStarMetric($data['star_metric']);
+            $value_1 = $this->denormalizer->denormalize($data['star_metric'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiStarMetric::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiStarMetric) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiStarMetric, got ' . get_debug_type($value_1));
+            }
+            $object->setStarMetric($value_1);
             unset($data['star_metric']);
         }
         if (\array_key_exists('workspace_uuid', $data)) {
             $object->setWorkspaceUuid(TypeValidator::assertString($data['workspace_uuid'], 'workspace_uuid'));
             unset($data['workspace_uuid']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -117,7 +121,7 @@ class ApiCreateEvaluationTestCaseInputPublicNormalizer implements DenormalizerIn
             $dataArray['name'] = $data->getName();
         }
         if ($data->isInitialized('starMetric')) {
-            $dataArray['star_metric'] = $data->getStarMetric();
+            $dataArray['star_metric'] = $this->normalizer->normalize($data->getStarMetric(), 'json', $context);
         }
         if ($data->isInitialized('workspaceUuid')) {
             $dataArray['workspace_uuid'] = $data->getWorkspaceUuid();

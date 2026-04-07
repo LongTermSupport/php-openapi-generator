@@ -45,7 +45,7 @@ class Page extends \ArrayObject
      *
      */
     protected string $htmlUrl;
-    protected mixed $source = null;
+    protected PagesSourceHash $source;
     /**
      * The API address for accessing this Page resource.
      *
@@ -146,11 +146,11 @@ class Page extends \ArrayObject
         $this->htmlUrl = $htmlUrl;
         return $this;
     }
-    public function getSource(): mixed
+    public function getSource(): PagesSourceHash
     {
         return $this->source;
     }
-    public function setSource(mixed $source): self
+    public function setSource(PagesSourceHash $source): self
     {
         $this->initialized['source'] = true;
         $this->source = $source;

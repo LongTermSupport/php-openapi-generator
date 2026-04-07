@@ -104,12 +104,16 @@ class HookNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['ping_url']);
         }
         if (\array_key_exists('last_response', $data)) {
-            $object->setLastResponse($data['last_response']);
+            $value_2 = $this->denormalizer->denormalize($data['last_response'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse, got ' . get_debug_type($value_2));
+            }
+            $object->setLastResponse($value_2);
             unset($data['last_response']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -139,7 +143,7 @@ class HookNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         $dataArray['url'] = $data->getUrl();
         $dataArray['test_url'] = $data->getTestUrl();
         $dataArray['ping_url'] = $data->getPingUrl();
-        $dataArray['last_response'] = $data->getLastResponse();
+        $dataArray['last_response'] = $this->normalizer->normalize($data->getLastResponse(), 'json', $context);
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value_1;

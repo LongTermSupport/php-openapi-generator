@@ -47,12 +47,16 @@ class ResponseExistingAutoscalePoolNormalizer implements DenormalizerInterface, 
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('autoscale_pool', $data)) {
-            $object->setAutoscalePool($data['autoscale_pool']);
+            $value = $this->denormalizer->denormalize($data['autoscale_pool'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePool::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePool) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePool, got ' . get_debug_type($value));
+            }
+            $object->setAutoscalePool($value);
             unset($data['autoscale_pool']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseExistingAutoscalePoolNormalizer implements DenormalizerInterface, 
         }
         $dataArray = [];
         if ($data->isInitialized('autoscalePool')) {
-            $dataArray['autoscale_pool'] = $data->getAutoscalePool();
+            $dataArray['autoscale_pool'] = $this->normalizer->normalize($data->getAutoscalePool(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -20,12 +20,12 @@ class ResponseDatabaseCluster extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $database = null;
-    public function getDatabase(): mixed
+    protected DatabaseClusterRead $database;
+    public function getDatabase(): DatabaseClusterRead
     {
         return $this->database;
     }
-    public function setDatabase(mixed $database): self
+    public function setDatabase(DatabaseClusterRead $database): self
     {
         $this->initialized['database'] = true;
         $this->database = $database;

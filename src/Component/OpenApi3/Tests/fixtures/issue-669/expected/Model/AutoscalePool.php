@@ -36,8 +36,8 @@ class AutoscalePool extends \ArrayObject
      * @var array<string, mixed>
      */
     protected array $config;
-    protected mixed $dropletTemplate = null;
-    protected mixed $currentUtilization = null;
+    protected AutoscalePoolDropletTemplate $dropletTemplate;
+    protected CurrentUtilization $currentUtilization;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was created.
      *
@@ -120,21 +120,21 @@ class AutoscalePool extends \ArrayObject
         $this->config = $config;
         return $this;
     }
-    public function getDropletTemplate(): mixed
+    public function getDropletTemplate(): AutoscalePoolDropletTemplate
     {
         return $this->dropletTemplate;
     }
-    public function setDropletTemplate(mixed $dropletTemplate): self
+    public function setDropletTemplate(AutoscalePoolDropletTemplate $dropletTemplate): self
     {
         $this->initialized['dropletTemplate'] = true;
         $this->dropletTemplate = $dropletTemplate;
         return $this;
     }
-    public function getCurrentUtilization(): mixed
+    public function getCurrentUtilization(): CurrentUtilization
     {
         return $this->currentUtilization;
     }
-    public function setCurrentUtilization(mixed $currentUtilization): self
+    public function setCurrentUtilization(CurrentUtilization $currentUtilization): self
     {
         $this->initialized['currentUtilization'] = true;
         $this->currentUtilization = $currentUtilization;

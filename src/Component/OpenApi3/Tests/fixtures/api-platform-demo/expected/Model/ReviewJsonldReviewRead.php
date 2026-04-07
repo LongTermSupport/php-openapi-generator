@@ -41,7 +41,7 @@ class ReviewJsonldReviewRead extends \ArrayObject
      *
      */
     protected ?string $letter = null;
-    protected mixed $book = null;
+    protected BookJsonldReviewRead $book;
     /**
      * The author of the review.
      *
@@ -156,11 +156,11 @@ class ReviewJsonldReviewRead extends \ArrayObject
         $this->letter = $letter;
         return $this;
     }
-    public function getBook(): mixed
+    public function getBook(): BookJsonldReviewRead
     {
         return $this->book;
     }
-    public function setBook(mixed $book): self
+    public function setBook(BookJsonldReviewRead $book): self
     {
         $this->initialized['book'] = true;
         $this->book = $book;

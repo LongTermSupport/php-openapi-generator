@@ -24,7 +24,7 @@ class ApiModelPublic extends \ArrayObject
      * Agreement Description
      *
      */
-    protected mixed $agreement = null;
+    protected ApiAgreement $agreement;
     /**
      * Creation date / time
      *
@@ -89,12 +89,12 @@ class ApiModelPublic extends \ArrayObject
      * Version Information about a Model
      *
      */
-    protected mixed $version = null;
+    protected ApiModelVersion $version;
     /**
      * Agreement Description
      *
      */
-    public function getAgreement(): mixed
+    public function getAgreement(): ApiAgreement
     {
         return $this->agreement;
     }
@@ -104,7 +104,7 @@ class ApiModelPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setAgreement(mixed $agreement): self
+    public function setAgreement(ApiAgreement $agreement): self
     {
         $this->initialized['agreement'] = true;
         $this->agreement = $agreement;
@@ -354,7 +354,7 @@ class ApiModelPublic extends \ArrayObject
      * Version Information about a Model
      *
      */
-    public function getVersion(): mixed
+    public function getVersion(): ApiModelVersion
     {
         return $this->version;
     }
@@ -364,7 +364,7 @@ class ApiModelPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setVersion(mixed $version): self
+    public function setVersion(ApiModelVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;

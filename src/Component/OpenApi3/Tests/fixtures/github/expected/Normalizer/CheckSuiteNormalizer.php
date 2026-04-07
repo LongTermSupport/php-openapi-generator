@@ -114,7 +114,11 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setApp(null);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_3 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_3));
+            }
+            $object->setRepository($value_3);
             unset($data['repository']);
         }
         if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
@@ -132,7 +136,11 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('head_commit', $data)) {
-            $object->setHeadCommit($data['head_commit']);
+            $value_4 = $this->denormalizer->denormalize($data['head_commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit, got ' . get_debug_type($value_4));
+            }
+            $object->setHeadCommit($value_4);
             unset($data['head_commit']);
         }
         if (\array_key_exists('latest_check_runs_count', $data)) {
@@ -143,9 +151,9 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setCheckRunsUrl(TypeValidator::assertString($data['check_runs_url'], 'check_runs_url'));
             unset($data['check_runs_url']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_5) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_5;
             }
         }
         return $object;
@@ -210,7 +218,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
         } else {
             $dataArray['app'] = null;
         }
-        $dataArray['repository'] = $data->getRepository();
+        $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         $val_7 = $data->getCreatedAt();
         if (null !== $val_7) {
             $dataArray['created_at'] = $val_7->format('Y-m-d\TH:i:sP');
@@ -223,7 +231,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
         } else {
             $dataArray['updated_at'] = null;
         }
-        $dataArray['head_commit'] = $data->getHeadCommit();
+        $dataArray['head_commit'] = $this->normalizer->normalize($data->getHeadCommit(), 'json', $context);
         $dataArray['latest_check_runs_count'] = $data->getLatestCheckRunsCount();
         $dataArray['check_runs_url'] = $data->getCheckRunsUrl();
         foreach ($data as $key => $value_1) {

@@ -47,7 +47,11 @@ class RegistrysubscriptionNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('tier', $data)) {
-            $object->setTier($data['tier']);
+            $value = $this->denormalizer->denormalize($data['tier'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SubscriptionTierBase::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SubscriptionTierBase) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SubscriptionTierBase, got ' . get_debug_type($value));
+            }
+            $object->setTier($value);
             unset($data['tier']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -58,9 +62,9 @@ class RegistrysubscriptionNormalizer implements DenormalizerInterface, Normalize
             $object->setUpdatedAt(TypeValidator::assertDateTime($data['updated_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['updated_at']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -76,7 +80,7 @@ class RegistrysubscriptionNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray = [];
         if ($data->isInitialized('tier')) {
-            $dataArray['tier'] = $data->getTier();
+            $dataArray['tier'] = $this->normalizer->normalize($data->getTier(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -50,40 +50,72 @@ class PullRequestLinksNormalizer implements DenormalizerInterface, NormalizerInt
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\PullRequestLinksConstraint());
         }
         if (\array_key_exists('comments', $data)) {
-            $object->setComments($data['comments']);
+            $value = $this->denormalizer->denormalize($data['comments'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value));
+            }
+            $object->setComments($value);
             unset($data['comments']);
         }
         if (\array_key_exists('commits', $data)) {
-            $object->setCommits($data['commits']);
+            $value_1 = $this->denormalizer->denormalize($data['commits'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_1));
+            }
+            $object->setCommits($value_1);
             unset($data['commits']);
         }
         if (\array_key_exists('statuses', $data)) {
-            $object->setStatuses($data['statuses']);
+            $value_2 = $this->denormalizer->denormalize($data['statuses'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_2));
+            }
+            $object->setStatuses($value_2);
             unset($data['statuses']);
         }
         if (\array_key_exists('html', $data)) {
-            $object->setHtml($data['html']);
+            $value_3 = $this->denormalizer->denormalize($data['html'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_3));
+            }
+            $object->setHtml($value_3);
             unset($data['html']);
         }
         if (\array_key_exists('issue', $data)) {
-            $object->setIssue($data['issue']);
+            $value_4 = $this->denormalizer->denormalize($data['issue'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_4));
+            }
+            $object->setIssue($value_4);
             unset($data['issue']);
         }
         if (\array_key_exists('review_comments', $data)) {
-            $object->setReviewComments($data['review_comments']);
+            $value_5 = $this->denormalizer->denormalize($data['review_comments'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_5));
+            }
+            $object->setReviewComments($value_5);
             unset($data['review_comments']);
         }
         if (\array_key_exists('review_comment', $data)) {
-            $object->setReviewComment($data['review_comment']);
+            $value_6 = $this->denormalizer->denormalize($data['review_comment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_6));
+            }
+            $object->setReviewComment($value_6);
             unset($data['review_comment']);
         }
         if (\array_key_exists('self', $data)) {
-            $object->setSelf($data['self']);
+            $value_7 = $this->denormalizer->denormalize($data['self'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Link, got ' . get_debug_type($value_7));
+            }
+            $object->setSelf($value_7);
             unset($data['self']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_8) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_8;
             }
         }
         return $object;
@@ -98,14 +130,14 @@ class PullRequestLinksNormalizer implements DenormalizerInterface, NormalizerInt
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestLinks, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['comments'] = $data->getComments();
-        $dataArray['commits'] = $data->getCommits();
-        $dataArray['statuses'] = $data->getStatuses();
-        $dataArray['html'] = $data->getHtml();
-        $dataArray['issue'] = $data->getIssue();
-        $dataArray['review_comments'] = $data->getReviewComments();
-        $dataArray['review_comment'] = $data->getReviewComment();
-        $dataArray['self'] = $data->getSelf();
+        $dataArray['comments'] = $this->normalizer->normalize($data->getComments(), 'json', $context);
+        $dataArray['commits'] = $this->normalizer->normalize($data->getCommits(), 'json', $context);
+        $dataArray['statuses'] = $this->normalizer->normalize($data->getStatuses(), 'json', $context);
+        $dataArray['html'] = $this->normalizer->normalize($data->getHtml(), 'json', $context);
+        $dataArray['issue'] = $this->normalizer->normalize($data->getIssue(), 'json', $context);
+        $dataArray['review_comments'] = $this->normalizer->normalize($data->getReviewComments(), 'json', $context);
+        $dataArray['review_comment'] = $this->normalizer->normalize($data->getReviewComment(), 'json', $context);
+        $dataArray['self'] = $this->normalizer->normalize($data->getSelf(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

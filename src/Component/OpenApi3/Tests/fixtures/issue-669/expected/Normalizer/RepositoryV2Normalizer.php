@@ -55,7 +55,11 @@ class RepositoryV2Normalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['name']);
         }
         if (\array_key_exists('latest_manifest', $data)) {
-            $object->setLatestManifest($data['latest_manifest']);
+            $value = $this->denormalizer->denormalize($data['latest_manifest'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest, got ' . get_debug_type($value));
+            }
+            $object->setLatestManifest($value);
             unset($data['latest_manifest']);
         }
         if (\array_key_exists('tag_count', $data)) {
@@ -66,9 +70,9 @@ class RepositoryV2Normalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setManifestCount(TypeValidator::assertInt($data['manifest_count'], 'manifest_count'));
             unset($data['manifest_count']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -90,7 +94,7 @@ class RepositoryV2Normalizer implements DenormalizerInterface, NormalizerInterfa
             $dataArray['name'] = $data->getName();
         }
         if ($data->isInitialized('latestManifest')) {
-            $dataArray['latest_manifest'] = $data->getLatestManifest();
+            $dataArray['latest_manifest'] = $this->normalizer->normalize($data->getLatestManifest(), 'json', $context);
         }
         if ($data->isInitialized('tagCount')) {
             $dataArray['tag_count'] = $data->getTagCount();

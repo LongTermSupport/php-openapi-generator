@@ -20,12 +20,12 @@ class ResponseSshKeysNew extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $sshKey = null;
-    public function getSshKey(): mixed
+    protected SshKeys $sshKey;
+    public function getSshKey(): SshKeys
     {
         return $this->sshKey;
     }
-    public function setSshKey(mixed $sshKey): self
+    public function setSshKey(SshKeys $sshKey): self
     {
         $this->initialized['sshKey'] = true;
         $this->sshKey = $sshKey;

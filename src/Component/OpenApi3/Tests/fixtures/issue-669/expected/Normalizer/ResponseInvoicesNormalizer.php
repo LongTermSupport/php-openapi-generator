@@ -61,24 +61,32 @@ class ResponseInvoicesNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['invoices']);
         }
         if (\array_key_exists('invoice_preview', $data)) {
-            $object->setInvoicePreview($data['invoice_preview']);
+            $value_2 = $this->denormalizer->denormalize($data['invoice_preview'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoicePreview::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoicePreview) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoicePreview, got ' . get_debug_type($value_2));
+            }
+            $object->setInvoicePreview($value_2);
             unset($data['invoice_preview']);
         }
         if (\array_key_exists('links', $data)) {
-            $object->setLinks($data['links']);
+            $value_3 = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PageLinks::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PageLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PageLinks, got ' . get_debug_type($value_3));
+            }
+            $object->setLinks($value_3);
             unset($data['links']);
         }
         if (\array_key_exists('meta', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MetaMeta::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MetaMeta) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MetaMeta, got ' . get_debug_type($value_2));
+            $value_4 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MetaMeta::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MetaMeta) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MetaMeta, got ' . get_debug_type($value_4));
             }
-            $object->setMeta($value_2);
+            $object->setMeta($value_4);
             unset($data['meta']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_5) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_5;
             }
         }
         return $object;
@@ -101,10 +109,10 @@ class ResponseInvoicesNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['invoices'] = $values;
         }
         if ($data->isInitialized('invoicePreview')) {
-            $dataArray['invoice_preview'] = $data->getInvoicePreview();
+            $dataArray['invoice_preview'] = $this->normalizer->normalize($data->getInvoicePreview(), 'json', $context);
         }
         if ($data->isInitialized('links')) {
-            $dataArray['links'] = $data->getLinks();
+            $dataArray['links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);
         }
         $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         foreach ($data as $key => $value_1) {

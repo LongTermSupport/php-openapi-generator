@@ -20,12 +20,12 @@ class ResponseKeyCreate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected Key $key;
-    public function getKey(): Key
+    protected KeyCreateResponse $key;
+    public function getKey(): KeyCreateResponse
     {
         return $this->key;
     }
-    public function setKey(Key $key): self
+    public function setKey(KeyCreateResponse $key): self
     {
         $this->initialized['key'] = true;
         $this->key = $key;

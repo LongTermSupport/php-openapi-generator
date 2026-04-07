@@ -62,7 +62,11 @@ class IssueEventForIssueNormalizer implements DenormalizerInterface, NormalizerI
             unset($data['url']);
         }
         if (\array_key_exists('actor', $data) && $data['actor'] !== null) {
-            $object->setActor($data['actor']);
+            $value = $this->denormalizer->denormalize($data['actor'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value));
+            }
+            $object->setActor($value);
             unset($data['actor']);
         }
         elseif (\array_key_exists('actor', $data) && $data['actor'] === null) {
@@ -136,9 +140,9 @@ class IssueEventForIssueNormalizer implements DenormalizerInterface, NormalizerI
             $object->setBodyText(TypeValidator::assertString($data['body_text'], 'body_text'));
             unset($data['body_text']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -164,7 +168,7 @@ class IssueEventForIssueNormalizer implements DenormalizerInterface, NormalizerI
         }
         $val = $data->getActor();
         if ($data->isInitialized('actor') && null !== $val) {
-            $dataArray['actor'] = $val;
+            $dataArray['actor'] = $this->normalizer->normalize($val, 'json', $context);
         }
         if ($data->isInitialized('event')) {
             $dataArray['event'] = $data->getEvent();

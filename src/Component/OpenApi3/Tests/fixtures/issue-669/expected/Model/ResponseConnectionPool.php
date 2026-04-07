@@ -20,12 +20,12 @@ class ResponseConnectionPool extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $pool = null;
-    public function getPool(): mixed
+    protected ConnectionPool $pool;
+    public function getPool(): ConnectionPool
     {
         return $this->pool;
     }
-    public function setPool(mixed $pool): self
+    public function setPool(ConnectionPool $pool): self
     {
         $this->initialized['pool'] = true;
         $this->pool = $pool;

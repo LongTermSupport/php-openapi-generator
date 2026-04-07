@@ -420,11 +420,19 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setOrganization(null);
         }
         if (\array_key_exists('parent', $data)) {
-            $object->setParent($data['parent']);
+            $value_6 = $this->denormalizer->denormalize($data['parent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_6));
+            }
+            $object->setParent($value_6);
             unset($data['parent']);
         }
         if (\array_key_exists('source', $data)) {
-            $object->setSource($data['source']);
+            $value_7 = $this->denormalizer->denormalize($data['source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_7));
+            }
+            $object->setSource($value_7);
             unset($data['source']);
         }
         if (\array_key_exists('forks', $data)) {
@@ -447,9 +455,9 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setAnonymousAccessEnabled(TypeValidator::assertBool($data['anonymous_access_enabled'], 'anonymous_access_enabled'));
             unset($data['anonymous_access_enabled']);
         }
-        foreach ($data as $key => $value_6) {
+        foreach ($data as $key => $value_8) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_6;
+                $object[$key] = $value_8;
             }
         }
         return $object;
@@ -607,10 +615,10 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $dataArray['organization'] = $this->normalizer->normalize($val_8, 'json', $context);
         }
         if ($data->isInitialized('parent')) {
-            $dataArray['parent'] = $data->getParent();
+            $dataArray['parent'] = $this->normalizer->normalize($data->getParent(), 'json', $context);
         }
         if ($data->isInitialized('source')) {
-            $dataArray['source'] = $data->getSource();
+            $dataArray['source'] = $this->normalizer->normalize($data->getSource(), 'json', $context);
         }
         $dataArray['forks'] = $data->getForks();
         if ($data->isInitialized('masterBranch')) {

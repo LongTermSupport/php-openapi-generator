@@ -47,12 +47,16 @@ class ResponseKafkaTopicNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('topic', $data)) {
-            $object->setTopic($data['topic']);
+            $value = $this->denormalizer->denormalize($data['topic'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicVerbose::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicVerbose) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicVerbose, got ' . get_debug_type($value));
+            }
+            $object->setTopic($value);
             unset($data['topic']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseKafkaTopicNormalizer implements DenormalizerInterface, NormalizerI
         }
         $dataArray = [];
         if ($data->isInitialized('topic')) {
-            $dataArray['topic'] = $data->getTopic();
+            $dataArray['topic'] = $this->normalizer->normalize($data->getTopic(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

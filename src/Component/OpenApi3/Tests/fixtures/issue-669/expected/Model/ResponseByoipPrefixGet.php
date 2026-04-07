@@ -20,12 +20,12 @@ class ResponseByoipPrefixGet extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $byoipPrefix = null;
-    public function getByoipPrefix(): mixed
+    protected ByoipPrefix $byoipPrefix;
+    public function getByoipPrefix(): ByoipPrefix
     {
         return $this->byoipPrefix;
     }
-    public function setByoipPrefix(mixed $byoipPrefix): self
+    public function setByoipPrefix(ByoipPrefix $byoipPrefix): self
     {
         $this->initialized['byoipPrefix'] = true;
         $this->byoipPrefix = $byoipPrefix;

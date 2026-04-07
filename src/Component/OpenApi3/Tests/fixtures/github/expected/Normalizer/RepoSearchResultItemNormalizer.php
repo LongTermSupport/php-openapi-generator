@@ -385,7 +385,11 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             $values_1 = [];
             if (\is_array($data['text_matches'])) {
                 foreach ($data['text_matches'] as $value_4) {
-                    $values_1[] = $value_4;
+                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
+                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_5));
+                    }
+                    $values_1[] = $value_5;
                 }
             }
             $object->setTextMatches($values_1);
@@ -411,9 +415,9 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             $object->setDeleteBranchOnMerge(TypeValidator::assertBool($data['delete_branch_on_merge'], 'delete_branch_on_merge'));
             unset($data['delete_branch_on_merge']);
         }
-        foreach ($data as $key => $value_5) {
+        foreach ($data as $key => $value_6) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_5;
+                $object[$key] = $value_6;
             }
         }
         return $object;
@@ -548,7 +552,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if ($data->isInitialized('textMatches')) {
             $values_1 = [];
             foreach ($data->getTextMatches() as $value_1) {
-                $values_1[] = $value_1;
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
             $dataArray['text_matches'] = $values_1;
         }

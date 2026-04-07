@@ -73,7 +73,7 @@ class Droplet extends \ArrayObject
      * @deprecated
      *
      */
-    protected mixed $kernel = null;
+    protected ?Kernel $kernel = null;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Droplet was created.
      *
@@ -105,7 +105,7 @@ class Droplet extends \ArrayObject
      * @var list<string>
      */
     protected array $volumeIds;
-    protected mixed $size = null;
+    protected Size $size;
     /**
      * The unique slug identifier for the size of this Droplet.
      *
@@ -116,7 +116,7 @@ class Droplet extends \ArrayObject
      *
      */
     protected DropletNetworks $networks;
-    protected mixed $region = null;
+    protected Region $region;
     /**
      * An array of Tags the Droplet has been tagged with.<br>Requires `tag:read` scope.
      *
@@ -132,7 +132,7 @@ class Droplet extends \ArrayObject
      * An object containing information about the GPU capabilities of Droplets created with this size.
      *
      */
-    protected mixed $gpuInfo = null;
+    protected GpuInfo $gpuInfo;
     /**
      * A unique identifier for each Droplet instance. This is automatically generated upon Droplet creation.
      *
@@ -307,7 +307,7 @@ class Droplet extends \ArrayObject
      * @deprecated
      *
      */
-    public function getKernel(): mixed
+    public function getKernel(): ?Kernel
     {
         return $this->kernel;
     }
@@ -325,7 +325,7 @@ class Droplet extends \ArrayObject
     *
     * @return self
     */
-    public function setKernel(mixed $kernel): self
+    public function setKernel(?Kernel $kernel): self
     {
         $this->initialized['kernel'] = true;
         $this->kernel = $kernel;
@@ -459,11 +459,11 @@ class Droplet extends \ArrayObject
         $this->volumeIds = $volumeIds;
         return $this;
     }
-    public function getSize(): mixed
+    public function getSize(): Size
     {
         return $this->size;
     }
-    public function setSize(mixed $size): self
+    public function setSize(Size $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;
@@ -509,11 +509,11 @@ class Droplet extends \ArrayObject
         $this->networks = $networks;
         return $this;
     }
-    public function getRegion(): mixed
+    public function getRegion(): Region
     {
         return $this->region;
     }
-    public function setRegion(mixed $region): self
+    public function setRegion(Region $region): self
     {
         $this->initialized['region'] = true;
         $this->region = $region;
@@ -565,7 +565,7 @@ class Droplet extends \ArrayObject
      * An object containing information about the GPU capabilities of Droplets created with this size.
      *
      */
-    public function getGpuInfo(): mixed
+    public function getGpuInfo(): GpuInfo
     {
         return $this->gpuInfo;
     }
@@ -575,7 +575,7 @@ class Droplet extends \ArrayObject
      *
      * @return self
      */
-    public function setGpuInfo(mixed $gpuInfo): self
+    public function setGpuInfo(GpuInfo $gpuInfo): self
     {
         $this->initialized['gpuInfo'] = true;
         $this->gpuInfo = $gpuInfo;

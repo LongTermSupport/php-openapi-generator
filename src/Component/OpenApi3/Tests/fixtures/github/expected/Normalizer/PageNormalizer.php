@@ -70,12 +70,16 @@ class PageNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['html_url']);
         }
         if (\array_key_exists('source', $data)) {
-            $object->setSource($data['source']);
+            $value = $this->denormalizer->denormalize($data['source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PagesSourceHash::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PagesSourceHash) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PagesSourceHash, got ' . get_debug_type($value));
+            }
+            $object->setSource($value);
             unset($data['source']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -108,7 +112,7 @@ class PageNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             $dataArray['html_url'] = $data->getHtmlUrl();
         }
         if ($data->isInitialized('source')) {
-            $dataArray['source'] = $data->getSource();
+            $dataArray['source'] = $this->normalizer->normalize($data->getSource(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -31,7 +31,7 @@ class AppsDeploymentProgressStep extends \ArrayObject
      */
     protected string $messageBase;
     protected string $name;
-    protected mixed $reason = null;
+    protected AppsDeploymentProgressStepReason $reason;
     protected \DateTime $startedAt;
     protected string $status = 'UNKNOWN';
     /**
@@ -94,11 +94,11 @@ class AppsDeploymentProgressStep extends \ArrayObject
         $this->name = $name;
         return $this;
     }
-    public function getReason(): mixed
+    public function getReason(): AppsDeploymentProgressStepReason
     {
         return $this->reason;
     }
-    public function setReason(mixed $reason): self
+    public function setReason(AppsDeploymentProgressStepReason $reason): self
     {
         $this->initialized['reason'] = true;
         $this->reason = $reason;

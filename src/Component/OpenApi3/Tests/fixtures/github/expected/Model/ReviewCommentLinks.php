@@ -24,22 +24,22 @@ class ReviewCommentLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    protected mixed $self = null;
+    protected Link $self;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $html = null;
+    protected Link $html;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $pullRequest = null;
+    protected Link $pullRequest;
     /**
      * Hypermedia Link
      *
      */
-    public function getSelf(): mixed
+    public function getSelf(): Link
     {
         return $this->self;
     }
@@ -49,7 +49,7 @@ class ReviewCommentLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setSelf(mixed $self): self
+    public function setSelf(Link $self): self
     {
         $this->initialized['self'] = true;
         $this->self = $self;
@@ -59,7 +59,7 @@ class ReviewCommentLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getHtml(): mixed
+    public function getHtml(): Link
     {
         return $this->html;
     }
@@ -69,7 +69,7 @@ class ReviewCommentLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setHtml(mixed $html): self
+    public function setHtml(Link $html): self
     {
         $this->initialized['html'] = true;
         $this->html = $html;
@@ -79,7 +79,7 @@ class ReviewCommentLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    public function getPullRequest(): mixed
+    public function getPullRequest(): Link
     {
         return $this->pullRequest;
     }
@@ -89,7 +89,7 @@ class ReviewCommentLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setPullRequest(mixed $pullRequest): self
+    public function setPullRequest(Link $pullRequest): self
     {
         $this->initialized['pullRequest'] = true;
         $this->pullRequest = $pullRequest;

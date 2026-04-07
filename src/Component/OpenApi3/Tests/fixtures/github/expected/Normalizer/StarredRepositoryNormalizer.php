@@ -54,12 +54,16 @@ class StarredRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['starred_at']);
         }
         if (\array_key_exists('repo', $data)) {
-            $object->setRepo($data['repo']);
+            $value = $this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value));
+            }
+            $object->setRepo($value);
             unset($data['repo']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -75,7 +79,7 @@ class StarredRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
         }
         $dataArray = [];
         $dataArray['starred_at'] = $data->getStarredAt()->format('Y-m-d\TH:i:sP');
-        $dataArray['repo'] = $data->getRepo();
+        $dataArray['repo'] = $this->normalizer->normalize($data->getRepo(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

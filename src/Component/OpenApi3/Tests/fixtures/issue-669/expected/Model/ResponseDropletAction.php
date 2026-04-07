@@ -20,12 +20,12 @@ class ResponseDropletAction extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $action = null;
-    public function getAction(): mixed
+    protected Action $action;
+    public function getAction(): Action
     {
         return $this->action;
     }
-    public function setAction(mixed $action): self
+    public function setAction(Action $action): self
     {
         $this->initialized['action'] = true;
         $this->action = $action;

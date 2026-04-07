@@ -242,12 +242,16 @@ class V2DatabasesPostBodyNormalizer implements DenormalizerInterface, Normalizer
             unset($data['autoscale']);
         }
         if (\array_key_exists('backup_restore', $data)) {
-            $object->setBackupRestore($data['backup_restore']);
+            $value_16 = $this->denormalizer->denormalize($data['backup_restore'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseBackup::class, 'json', $context);
+            if (!$value_16 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseBackup) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseBackup, got ' . get_debug_type($value_16));
+            }
+            $object->setBackupRestore($value_16);
             unset($data['backup_restore']);
         }
-        foreach ($data as $key => $value_16) {
+        foreach ($data as $key => $value_17) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_16;
+                $object[$key] = $value_17;
             }
         }
         return $object;
@@ -319,7 +323,7 @@ class V2DatabasesPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $dataArray['autoscale'] = $this->normalizer->normalize($data->getAutoscale(), 'json', $context);
         }
         if ($data->isInitialized('backupRestore')) {
-            $dataArray['backup_restore'] = $data->getBackupRestore();
+            $dataArray['backup_restore'] = $this->normalizer->normalize($data->getBackupRestore(), 'json', $context);
         }
         foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {

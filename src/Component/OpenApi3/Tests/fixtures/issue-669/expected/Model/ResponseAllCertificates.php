@@ -24,7 +24,7 @@ class ResponseAllCertificates extends \ArrayObject
      * @var list<Certificate>
      */
     protected array $certificates;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<Certificate>
@@ -44,11 +44,11 @@ class ResponseAllCertificates extends \ArrayObject
         $this->certificates = $certificates;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

@@ -24,7 +24,7 @@ class ResponseInvoice extends \ArrayObject
      * @var list<InvoiceItem>
      */
     protected array $invoiceItems;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<InvoiceItem>
@@ -44,11 +44,11 @@ class ResponseInvoice extends \ArrayObject
         $this->invoiceItems = $invoiceItems;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

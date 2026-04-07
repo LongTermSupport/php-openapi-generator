@@ -55,22 +55,30 @@ class AppsDomainNormalizer implements DenormalizerInterface, NormalizerInterface
             unset($data['phase']);
         }
         if (\array_key_exists('progress', $data)) {
-            $object->setProgress($data['progress']);
+            $value = $this->denormalizer->denormalize($data['progress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDomainProgress::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDomainProgress) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDomainProgress, got ' . get_debug_type($value));
+            }
+            $object->setProgress($value);
             unset($data['progress']);
         }
         if (\array_key_exists('spec', $data)) {
-            $object->setSpec($data['spec']);
+            $value_1 = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainSpec::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainSpec, got ' . get_debug_type($value_1));
+            }
+            $object->setSpec($value_1);
             unset($data['spec']);
         }
         if (\array_key_exists('validations', $data)) {
             $values = [];
             if (\is_array($data['validations'])) {
-                foreach ($data['validations'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainValidation::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainValidation) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainValidation, got ' . get_debug_type($value_1));
+                foreach ($data['validations'] as $value_2) {
+                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainValidation::class, 'json', $context);
+                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainValidation) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppDomainValidation, got ' . get_debug_type($value_3));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_3;
                 }
             }
             $object->setValidations($values);
@@ -84,9 +92,9 @@ class AppsDomainNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setCertificateExpiresAt(TypeValidator::assertDateTime($data['certificate_expires_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['certificate_expires_at']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -108,10 +116,10 @@ class AppsDomainNormalizer implements DenormalizerInterface, NormalizerInterface
             $dataArray['phase'] = $data->getPhase();
         }
         if ($data->isInitialized('progress')) {
-            $dataArray['progress'] = $data->getProgress();
+            $dataArray['progress'] = $this->normalizer->normalize($data->getProgress(), 'json', $context);
         }
         if ($data->isInitialized('spec')) {
-            $dataArray['spec'] = $data->getSpec();
+            $dataArray['spec'] = $this->normalizer->normalize($data->getSpec(), 'json', $context);
         }
         if ($data->isInitialized('validations')) {
             $values = [];

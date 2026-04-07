@@ -70,7 +70,11 @@ class OrganizationInvitationNormalizer implements DenormalizerInterface, Normali
             unset($data['created_at']);
         }
         if (\array_key_exists('inviter', $data) && $data['inviter'] !== null) {
-            $object->setInviter($data['inviter']);
+            $value = $this->denormalizer->denormalize($data['inviter'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value));
+            }
+            $object->setInviter($value);
             unset($data['inviter']);
         }
         elseif (\array_key_exists('inviter', $data) && $data['inviter'] === null) {
@@ -92,9 +96,9 @@ class OrganizationInvitationNormalizer implements DenormalizerInterface, Normali
             $object->setInvitationTeamsUrl(TypeValidator::assertString($data['invitation_teams_url'], 'invitation_teams_url'));
             unset($data['invitation_teams_url']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -128,7 +132,7 @@ class OrganizationInvitationNormalizer implements DenormalizerInterface, Normali
         }
         $val_2 = $data->getInviter();
         if ($data->isInitialized('inviter') && null !== $val_2) {
-            $dataArray['inviter'] = $val_2;
+            $dataArray['inviter'] = $this->normalizer->normalize($val_2, 'json', $context);
         }
         if ($data->isInitialized('teamCount')) {
             $dataArray['team_count'] = $data->getTeamCount();

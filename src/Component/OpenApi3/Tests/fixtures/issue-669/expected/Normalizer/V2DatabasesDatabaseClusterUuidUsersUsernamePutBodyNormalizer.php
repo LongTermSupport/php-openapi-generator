@@ -47,12 +47,16 @@ class V2DatabasesDatabaseClusterUuidUsersUsernamePutBodyNormalizer implements De
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('settings', $data)) {
-            $object->setSettings($data['settings']);
+            $value = $this->denormalizer->denormalize($data['settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings, got ' . get_debug_type($value));
+            }
+            $object->setSettings($value);
             unset($data['settings']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class V2DatabasesDatabaseClusterUuidUsersUsernamePutBodyNormalizer implements De
         }
         $dataArray = [];
         if ($data->isInitialized('settings')) {
-            $dataArray['settings'] = $data->getSettings();
+            $dataArray['settings'] = $this->normalizer->normalize($data->getSettings(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

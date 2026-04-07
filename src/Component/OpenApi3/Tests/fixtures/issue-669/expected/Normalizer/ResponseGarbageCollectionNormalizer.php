@@ -47,12 +47,16 @@ class ResponseGarbageCollectionNormalizer implements DenormalizerInterface, Norm
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('garbage_collection', $data)) {
-            $object->setGarbageCollection($data['garbage_collection']);
+            $value = $this->denormalizer->denormalize($data['garbage_collection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection, got ' . get_debug_type($value));
+            }
+            $object->setGarbageCollection($value);
             unset($data['garbage_collection']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseGarbageCollectionNormalizer implements DenormalizerInterface, Norm
         }
         $dataArray = [];
         if ($data->isInitialized('garbageCollection')) {
-            $dataArray['garbage_collection'] = $data->getGarbageCollection();
+            $dataArray['garbage_collection'] = $this->normalizer->normalize($data->getGarbageCollection(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

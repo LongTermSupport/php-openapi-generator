@@ -24,7 +24,7 @@ class AppAlertProgressStep extends \ArrayObject
     protected string $status = 'UNKNOWN';
     protected \DateTime $startedAt;
     protected \DateTime $endedAt;
-    protected mixed $reason = null;
+    protected AppAlertProgressStepReason $reason;
     public function getName(): string
     {
         return $this->name;
@@ -65,11 +65,11 @@ class AppAlertProgressStep extends \ArrayObject
         $this->endedAt = $endedAt;
         return $this;
     }
-    public function getReason(): mixed
+    public function getReason(): AppAlertProgressStepReason
     {
         return $this->reason;
     }
-    public function setReason(mixed $reason): self
+    public function setReason(AppAlertProgressStepReason $reason): self
     {
         $this->initialized['reason'] = true;
         $this->reason = $reason;

@@ -75,7 +75,11 @@ class DefaultUserNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['verified']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $object->setWithheld($data['withheld']);
+            $value = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld, got ' . get_debug_type($value));
+            }
+            $object->setWithheld($value);
             unset($data['withheld']);
         }
         if (\array_key_exists('profile_image_url', $data)) {
@@ -95,11 +99,11 @@ class DefaultUserNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['description']);
         }
         if (\array_key_exists('entities', $data)) {
-            $value = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities, got ' . get_debug_type($value_1));
             }
-            $object->setEntities($value);
+            $object->setEntities($value_1);
             unset($data['entities']);
         }
         if (\array_key_exists('most_recent_tweet_id', $data)) {
@@ -110,9 +114,9 @@ class DefaultUserNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setPinnedTweetId(TypeValidator::assertString($data['pinned_tweet_id'], 'pinned_tweet_id'));
             unset($data['pinned_tweet_id']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -137,7 +141,7 @@ class DefaultUserNormalizer implements DenormalizerInterface, NormalizerInterfac
         $dataArray['protected'] = $data->getProtected();
         $dataArray['verified'] = $data->getVerified();
         if ($data->isInitialized('withheld')) {
-            $dataArray['withheld'] = $data->getWithheld();
+            $dataArray['withheld'] = $this->normalizer->normalize($data->getWithheld(), 'json', $context);
         }
         if ($data->isInitialized('profileImageUrl')) {
             $dataArray['profile_image_url'] = $data->getProfileImageUrl();

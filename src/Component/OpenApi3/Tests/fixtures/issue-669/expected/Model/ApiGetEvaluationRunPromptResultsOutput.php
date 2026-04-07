@@ -20,12 +20,12 @@ class ApiGetEvaluationRunPromptResultsOutput extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $prompt = null;
-    public function getPrompt(): mixed
+    protected ApiPrompt $prompt;
+    public function getPrompt(): ApiPrompt
     {
         return $this->prompt;
     }
-    public function setPrompt(mixed $prompt): self
+    public function setPrompt(ApiPrompt $prompt): self
     {
         $this->initialized['prompt'] = true;
         $this->prompt = $prompt;

@@ -24,12 +24,12 @@ class ApiUpdateModelAPIKeyOutput extends \ArrayObject
      * Model API Key Info
      *
      */
-    protected mixed $apiKeyInfo = null;
+    protected ApiModelAPIKeyInfo $apiKeyInfo;
     /**
      * Model API Key Info
      *
      */
-    public function getApiKeyInfo(): mixed
+    public function getApiKeyInfo(): ApiModelAPIKeyInfo
     {
         return $this->apiKeyInfo;
     }
@@ -39,7 +39,7 @@ class ApiUpdateModelAPIKeyOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setApiKeyInfo(mixed $apiKeyInfo): self
+    public function setApiKeyInfo(ApiModelAPIKeyInfo $apiKeyInfo): self
     {
         $this->initialized['apiKeyInfo'] = true;
         $this->apiKeyInfo = $apiKeyInfo;

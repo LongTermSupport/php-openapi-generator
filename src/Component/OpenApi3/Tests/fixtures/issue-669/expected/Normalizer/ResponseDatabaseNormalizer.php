@@ -47,12 +47,16 @@ class ResponseDatabaseNormalizer implements DenormalizerInterface, NormalizerInt
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('db', $data)) {
-            $object->setDb($data['db']);
+            $value = $this->denormalizer->denormalize($data['db'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Database::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Database) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Database, got ' . get_debug_type($value));
+            }
+            $object->setDb($value);
             unset($data['db']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -67,7 +71,7 @@ class ResponseDatabaseNormalizer implements DenormalizerInterface, NormalizerInt
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDatabase, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['db'] = $data->getDb();
+        $dataArray['db'] = $this->normalizer->normalize($data->getDb(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

@@ -20,13 +20,13 @@ class ResponseFloatingIpCreated extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $floatingIp = null;
+    protected FloatingIp $floatingIp;
     protected ResponseFloatingIpCreatedLinks $links;
-    public function getFloatingIp(): mixed
+    public function getFloatingIp(): FloatingIp
     {
         return $this->floatingIp;
     }
-    public function setFloatingIp(mixed $floatingIp): self
+    public function setFloatingIp(FloatingIp $floatingIp): self
     {
         $this->initialized['floatingIp'] = true;
         $this->floatingIp = $floatingIp;

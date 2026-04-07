@@ -85,15 +85,19 @@ class LabelSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $values = [];
             if (\is_array($data['text_matches'])) {
                 foreach ($data['text_matches'] as $value) {
-                    $values[] = $value;
+                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
+                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_1));
+                    }
+                    $values[] = $value_1;
                 }
             }
             $object->setTextMatches($values);
             unset($data['text_matches']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -124,7 +128,7 @@ class LabelSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
         if ($data->isInitialized('textMatches')) {
             $values = [];
             foreach ($data->getTextMatches() as $value) {
-                $values[] = $value;
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
             $dataArray['text_matches'] = $values;
         }

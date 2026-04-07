@@ -20,12 +20,12 @@ class V2DatabasesMetricsCredentialsPutBody extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $credentials = null;
-    public function getCredentials(): mixed
+    protected DatabasesBasicAuthCredentials $credentials;
+    public function getCredentials(): DatabasesBasicAuthCredentials
     {
         return $this->credentials;
     }
-    public function setCredentials(mixed $credentials): self
+    public function setCredentials(DatabasesBasicAuthCredentials $credentials): self
     {
         $this->initialized['credentials'] = true;
         $this->credentials = $credentials;

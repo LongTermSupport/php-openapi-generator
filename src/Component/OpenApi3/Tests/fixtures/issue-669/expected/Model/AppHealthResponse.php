@@ -20,12 +20,12 @@ class AppHealthResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $appHealth = null;
-    public function getAppHealth(): mixed
+    protected AppHealth $appHealth;
+    public function getAppHealth(): AppHealth
     {
         return $this->appHealth;
     }
-    public function setAppHealth(mixed $appHealth): self
+    public function setAppHealth(AppHealth $appHealth): self
     {
         $this->initialized['appHealth'] = true;
         $this->appHealth = $appHealth;

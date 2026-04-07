@@ -47,12 +47,16 @@ class ResponseCreateDomainResponseNormalizer implements DenormalizerInterface, N
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('domain', $data)) {
-            $object->setDomain($data['domain']);
+            $value = $this->denormalizer->denormalize($data['domain'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domain::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domain) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domain, got ' . get_debug_type($value));
+            }
+            $object->setDomain($value);
             unset($data['domain']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseCreateDomainResponseNormalizer implements DenormalizerInterface, N
         }
         $dataArray = [];
         if ($data->isInitialized('domain')) {
-            $dataArray['domain'] = $data->getDomain();
+            $dataArray['domain'] = $this->normalizer->normalize($data->getDomain(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

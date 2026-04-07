@@ -239,7 +239,11 @@ class PostgresAdvancedConfigNormalizer implements DenormalizerInterface, Normali
             unset($data['shared_buffers_percentage']);
         }
         if (\array_key_exists('pgbouncer', $data)) {
-            $object->setPgbouncer($data['pgbouncer']);
+            $value = $this->denormalizer->denormalize($data['pgbouncer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig, got ' . get_debug_type($value));
+            }
+            $object->setPgbouncer($value);
             unset($data['pgbouncer']);
         }
         if (\array_key_exists('work_mem', $data)) {
@@ -247,7 +251,11 @@ class PostgresAdvancedConfigNormalizer implements DenormalizerInterface, Normali
             unset($data['work_mem']);
         }
         if (\array_key_exists('timescaledb', $data)) {
-            $object->setTimescaledb($data['timescaledb']);
+            $value_1 = $this->denormalizer->denormalize($data['timescaledb'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig, got ' . get_debug_type($value_1));
+            }
+            $object->setTimescaledb($value_1);
             unset($data['timescaledb']);
         }
         if (\array_key_exists('synchronous_replication', $data)) {
@@ -270,9 +278,9 @@ class PostgresAdvancedConfigNormalizer implements DenormalizerInterface, Normali
             $object->setMaxSlotWalKeepSize(TypeValidator::assertInt($data['max_slot_wal_keep_size'], 'max_slot_wal_keep_size'));
             unset($data['max_slot_wal_keep_size']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -432,13 +440,13 @@ class PostgresAdvancedConfigNormalizer implements DenormalizerInterface, Normali
             $dataArray['shared_buffers_percentage'] = $data->getSharedBuffersPercentage();
         }
         if ($data->isInitialized('pgbouncer')) {
-            $dataArray['pgbouncer'] = $data->getPgbouncer();
+            $dataArray['pgbouncer'] = $this->normalizer->normalize($data->getPgbouncer(), 'json', $context);
         }
         if ($data->isInitialized('workMem')) {
             $dataArray['work_mem'] = $data->getWorkMem();
         }
         if ($data->isInitialized('timescaledb')) {
-            $dataArray['timescaledb'] = $data->getTimescaledb();
+            $dataArray['timescaledb'] = $this->normalizer->normalize($data->getTimescaledb(), 'json', $context);
         }
         if ($data->isInitialized('synchronousReplication')) {
             $dataArray['synchronous_replication'] = $data->getSynchronousReplication();

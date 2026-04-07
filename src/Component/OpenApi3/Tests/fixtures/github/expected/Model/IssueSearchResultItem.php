@@ -49,7 +49,7 @@ class IssueSearchResultItem extends \ArrayObject
     protected \DateTime $updatedAt;
     protected ?\DateTime $closedAt = null;
     /**
-     * @var list<mixed>
+     * @var list<SearchResultTextMatchesItem>
      */
     protected array $textMatches;
     protected IssueSearchResultItemPullRequest $pullRequest;
@@ -61,7 +61,7 @@ class IssueSearchResultItem extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository = null;
+    protected Repository $repository;
     protected string $bodyHtml;
     protected string $bodyText;
     protected string $timelineUrl;
@@ -303,14 +303,14 @@ class IssueSearchResultItem extends \ArrayObject
         return $this;
     }
     /**
-     * @return list<mixed>
+     * @return list<SearchResultTextMatchesItem>
      */
     public function getTextMatches(): array
     {
         return $this->textMatches;
     }
     /**
-     * @param list<mixed> $textMatches
+     * @param list<SearchResultTextMatchesItem> $textMatches
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class IssueSearchResultItem extends \ArrayObject
      * A git repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): Repository
     {
         return $this->repository;
     }
@@ -384,7 +384,7 @@ class IssueSearchResultItem extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(Repository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;

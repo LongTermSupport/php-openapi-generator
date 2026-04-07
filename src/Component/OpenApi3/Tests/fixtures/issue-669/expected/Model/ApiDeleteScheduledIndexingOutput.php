@@ -24,12 +24,12 @@ class ApiDeleteScheduledIndexingOutput extends \ArrayObject
      * Metadata for scheduled indexing entries
      *
      */
-    protected mixed $indexingInfo = null;
+    protected ApiScheduledIndexingInfo $indexingInfo;
     /**
      * Metadata for scheduled indexing entries
      *
      */
-    public function getIndexingInfo(): mixed
+    public function getIndexingInfo(): ApiScheduledIndexingInfo
     {
         return $this->indexingInfo;
     }
@@ -39,7 +39,7 @@ class ApiDeleteScheduledIndexingOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setIndexingInfo(mixed $indexingInfo): self
+    public function setIndexingInfo(ApiScheduledIndexingInfo $indexingInfo): self
     {
         $this->initialized['indexingInfo'] = true;
         $this->indexingInfo = $indexingInfo;

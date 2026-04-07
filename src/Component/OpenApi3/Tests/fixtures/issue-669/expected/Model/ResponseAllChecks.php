@@ -24,7 +24,7 @@ class ResponseAllChecks extends \ArrayObject
      * @var list<array<string, mixed>>
      */
     protected array $checks;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<array<string, mixed>>
@@ -44,11 +44,11 @@ class ResponseAllChecks extends \ArrayObject
         $this->checks = $checks;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

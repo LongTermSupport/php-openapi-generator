@@ -55,12 +55,16 @@ class DestinationRequestNormalizer implements DenormalizerInterface, NormalizerI
             unset($data['type']);
         }
         if (\array_key_exists('config', $data)) {
-            $object->setConfig($data['config']);
+            $value = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigRequest::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigRequest) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigRequest, got ' . get_debug_type($value));
+            }
+            $object->setConfig($value);
             unset($data['config']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -79,7 +83,7 @@ class DestinationRequestNormalizer implements DenormalizerInterface, NormalizerI
             $dataArray['name'] = $data->getName();
         }
         $dataArray['type'] = $data->getType();
-        $dataArray['config'] = $data->getConfig();
+        $dataArray['config'] = $this->normalizer->normalize($data->getConfig(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

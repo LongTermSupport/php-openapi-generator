@@ -39,7 +39,7 @@ class ReviewJsonhalReviewRead extends \ArrayObject
      *
      */
     protected ?string $letter = null;
-    protected mixed $book = null;
+    protected BookJsonhalReviewRead $book;
     /**
      * The author of the review.
      *
@@ -134,11 +134,11 @@ class ReviewJsonhalReviewRead extends \ArrayObject
         $this->letter = $letter;
         return $this;
     }
-    public function getBook(): mixed
+    public function getBook(): BookJsonhalReviewRead
     {
         return $this->book;
     }
-    public function setBook(mixed $book): self
+    public function setBook(BookJsonhalReviewRead $book): self
     {
         $this->initialized['book'] = true;
         $this->book = $book;

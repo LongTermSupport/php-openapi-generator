@@ -63,7 +63,11 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
             unset($data['created_by_user_id']);
         }
         if (\array_key_exists('dataset', $data)) {
-            $object->setDataset($data['dataset']);
+            $value = $this->denormalizer->denormalize($data['dataset'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationDataset::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationDataset) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationDataset, got ' . get_debug_type($value));
+            }
+            $object->setDataset($value);
             unset($data['dataset']);
         }
         if (\array_key_exists('dataset_name', $data)) {
@@ -85,12 +89,12 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
         if (\array_key_exists('metrics', $data)) {
             $values = [];
             if (\is_array($data['metrics'])) {
-                foreach ($data['metrics'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetric::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetric) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetric, got ' . get_debug_type($value_1));
+                foreach ($data['metrics'] as $value_1) {
+                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetric::class, 'json', $context);
+                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetric) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetric, got ' . get_debug_type($value_2));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_2;
                 }
             }
             $object->setMetrics($values);
@@ -101,7 +105,11 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
             unset($data['name']);
         }
         if (\array_key_exists('star_metric', $data)) {
-            $object->setStarMetric($data['star_metric']);
+            $value_3 = $this->denormalizer->denormalize($data['star_metric'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiStarMetric::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiStarMetric) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiStarMetric, got ' . get_debug_type($value_3));
+            }
+            $object->setStarMetric($value_3);
             unset($data['star_metric']);
         }
         if (\array_key_exists('test_case_uuid', $data)) {
@@ -128,9 +136,9 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
             $object->setVersion(TypeValidator::assertInt($data['version'], 'version'));
             unset($data['version']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -158,7 +166,7 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
             $dataArray['created_by_user_id'] = $data->getCreatedByUserId();
         }
         if ($data->isInitialized('dataset')) {
-            $dataArray['dataset'] = $data->getDataset();
+            $dataArray['dataset'] = $this->normalizer->normalize($data->getDataset(), 'json', $context);
         }
         if ($data->isInitialized('datasetName')) {
             $dataArray['dataset_name'] = $data->getDatasetName();
@@ -183,7 +191,7 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
             $dataArray['name'] = $data->getName();
         }
         if ($data->isInitialized('starMetric')) {
-            $dataArray['star_metric'] = $data->getStarMetric();
+            $dataArray['star_metric'] = $this->normalizer->normalize($data->getStarMetric(), 'json', $context);
         }
         if ($data->isInitialized('testCaseUuid')) {
             $dataArray['test_case_uuid'] = $data->getTestCaseUuid();

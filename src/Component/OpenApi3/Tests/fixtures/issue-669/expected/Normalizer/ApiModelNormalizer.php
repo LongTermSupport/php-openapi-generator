@@ -47,7 +47,11 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('agreement', $data)) {
-            $object->setAgreement($data['agreement']);
+            $value = $this->denormalizer->denormalize($data['agreement'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgreement::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgreement) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgreement, got ' . get_debug_type($value));
+            }
+            $object->setAgreement($value);
             unset($data['agreement']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -81,8 +85,8 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('metadata', $data)) {
             $values = [];
             if (\is_array($data['metadata'])) {
-                foreach ($data['metadata'] as $key => $value) {
-                    $values[(string) $key] = $value;
+                foreach ($data['metadata'] as $key => $value_1) {
+                    $values[(string) $key] = $value_1;
                 }
             }
             $object->setMetadata($values);
@@ -115,8 +119,8 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('usecases', $data)) {
             $values_1 = [];
             if (\is_array($data['usecases'])) {
-                foreach ($data['usecases'] as $value_1) {
-                    $values_1[] = TypeValidator::assertString($value_1, 'value');
+                foreach ($data['usecases'] as $value_2) {
+                    $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
             $object->setUsecases($values_1);
@@ -127,12 +131,16 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['uuid']);
         }
         if (\array_key_exists('version', $data)) {
-            $object->setVersion($data['version']);
+            $value_3 = $this->denormalizer->denormalize($data['version'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelVersion::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelVersion) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelVersion, got ' . get_debug_type($value_3));
+            }
+            $object->setVersion($value_3);
             unset($data['version']);
         }
-        foreach ($data as $key_1 => $value_2) {
+        foreach ($data as $key_1 => $value_4) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_2;
+                $object[$key_1] = $value_4;
             }
         }
         return $object;
@@ -148,7 +156,7 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
         $dataArray = [];
         if ($data->isInitialized('agreement')) {
-            $dataArray['agreement'] = $data->getAgreement();
+            $dataArray['agreement'] = $this->normalizer->normalize($data->getAgreement(), 'json', $context);
         }
         if ($data->isInitialized('createdAt')) {
             $dataArray['created_at'] = $data->getCreatedAt()->format('Y-m-d\TH:i:sP');
@@ -207,7 +215,7 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $dataArray['uuid'] = $data->getUuid();
         }
         if ($data->isInitialized('version')) {
-            $dataArray['version'] = $data->getVersion();
+            $dataArray['version'] = $this->normalizer->normalize($data->getVersion(), 'json', $context);
         }
         foreach ($data as $key_1 => $value_2) {
             if (preg_match('/.*/', (string) $key_1) === 1) {

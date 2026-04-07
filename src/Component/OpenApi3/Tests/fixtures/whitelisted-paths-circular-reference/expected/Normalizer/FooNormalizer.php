@@ -51,12 +51,16 @@ class FooNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             unset($data['label']);
         }
         if (\array_key_exists('parent', $data)) {
-            $object->setParent($data['parent']);
+            $value = $this->denormalizer->denormalize($data['parent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Foo::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Foo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Foo, got ' . get_debug_type($value));
+            }
+            $object->setParent($value);
             unset($data['parent']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -75,7 +79,7 @@ class FooNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             $dataArray['label'] = $data->getLabel();
         }
         if ($data->isInitialized('parent')) {
-            $dataArray['parent'] = $data->getParent();
+            $dataArray['parent'] = $this->normalizer->normalize($data->getParent(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

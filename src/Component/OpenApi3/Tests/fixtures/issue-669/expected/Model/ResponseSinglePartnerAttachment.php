@@ -20,12 +20,12 @@ class ResponseSinglePartnerAttachment extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $partnerAttachment = null;
-    public function getPartnerAttachment(): mixed
+    protected PartnerAttachment $partnerAttachment;
+    public function getPartnerAttachment(): PartnerAttachment
     {
         return $this->partnerAttachment;
     }
-    public function setPartnerAttachment(mixed $partnerAttachment): self
+    public function setPartnerAttachment(PartnerAttachment $partnerAttachment): self
     {
         $this->initialized['partnerAttachment'] = true;
         $this->partnerAttachment = $partnerAttachment;

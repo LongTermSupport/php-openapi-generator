@@ -42,7 +42,7 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $starMetric = null;
+    protected ApiStarMetric $starMetric;
     /**
      * The workspace uuid.
      *
@@ -140,11 +140,11 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
         $this->name = $name;
         return $this;
     }
-    public function getStarMetric(): mixed
+    public function getStarMetric(): ApiStarMetric
     {
         return $this->starMetric;
     }
-    public function setStarMetric(mixed $starMetric): self
+    public function setStarMetric(ApiStarMetric $starMetric): self
     {
         $this->initialized['starMetric'] = true;
         $this->starMetric = $starMetric;

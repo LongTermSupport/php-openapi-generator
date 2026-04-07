@@ -213,23 +213,27 @@ class IssueSimpleNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['timeline_url']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_8 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_8));
+            }
+            $object->setRepository($value_8);
             unset($data['repository']);
         }
         if (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] !== null) {
-            $value_8 = $this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimplePerformedViaGithubApp::class, 'json', $context);
-            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimplePerformedViaGithubApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimplePerformedViaGithubApp, got ' . get_debug_type($value_8));
+            $value_9 = $this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimplePerformedViaGithubApp::class, 'json', $context);
+            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimplePerformedViaGithubApp) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSimplePerformedViaGithubApp, got ' . get_debug_type($value_9));
             }
-            $object->setPerformedViaGithubApp($value_8);
+            $object->setPerformedViaGithubApp($value_9);
             unset($data['performed_via_github_app']);
         }
         elseif (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] === null) {
             $object->setPerformedViaGithubApp(null);
         }
-        foreach ($data as $key => $value_9) {
+        foreach ($data as $key => $value_10) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_9;
+                $object[$key] = $value_10;
             }
         }
         return $object;
@@ -317,7 +321,7 @@ class IssueSimpleNormalizer implements DenormalizerInterface, NormalizerInterfac
             $dataArray['timeline_url'] = $data->getTimelineUrl();
         }
         if ($data->isInitialized('repository')) {
-            $dataArray['repository'] = $data->getRepository();
+            $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         }
         $val_6 = $data->getPerformedViaGithubApp();
         if ($data->isInitialized('performedViaGithubApp') && null !== $val_6) {

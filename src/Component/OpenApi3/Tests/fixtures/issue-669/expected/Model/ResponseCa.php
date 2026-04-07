@@ -20,12 +20,12 @@ class ResponseCa extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $ca = null;
-    public function getCa(): mixed
+    protected Ca $ca;
+    public function getCa(): Ca
     {
         return $this->ca;
     }
-    public function setCa(mixed $ca): self
+    public function setCa(Ca $ca): self
     {
         $this->initialized['ca'] = true;
         $this->ca = $ca;

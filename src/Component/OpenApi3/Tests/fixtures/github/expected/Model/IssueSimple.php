@@ -58,7 +58,7 @@ class IssueSimple extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository = null;
+    protected Repository $repository;
     protected ?IssueSimplePerformedViaGithubApp $performedViaGithubApp = null;
     public function getId(): int
     {
@@ -360,7 +360,7 @@ class IssueSimple extends \ArrayObject
      * A git repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): Repository
     {
         return $this->repository;
     }
@@ -370,7 +370,7 @@ class IssueSimple extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(Repository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;

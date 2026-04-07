@@ -101,11 +101,19 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['forwarding_rules']);
         }
         if (\array_key_exists('health_check', $data)) {
-            $object->setHealthCheck($data['health_check']);
+            $value_2 = $this->denormalizer->denormalize($data['health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck, got ' . get_debug_type($value_2));
+            }
+            $object->setHealthCheck($value_2);
             unset($data['health_check']);
         }
         if (\array_key_exists('sticky_sessions', $data)) {
-            $object->setStickySessions($data['sticky_sessions']);
+            $value_3 = $this->denormalizer->denormalize($data['sticky_sessions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions, got ' . get_debug_type($value_3));
+            }
+            $object->setStickySessions($value_3);
             unset($data['sticky_sessions']);
         }
         if (\array_key_exists('redirect_http_to_https', $data)) {
@@ -133,7 +141,11 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['disable_lets_encrypt_dns_records']);
         }
         if (\array_key_exists('firewall', $data)) {
-            $object->setFirewall($data['firewall']);
+            $value_4 = $this->denormalizer->denormalize($data['firewall'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall, got ' . get_debug_type($value_4));
+            }
+            $object->setFirewall($value_4);
             unset($data['firewall']);
         }
         if (\array_key_exists('network', $data)) {
@@ -151,26 +163,30 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
         if (\array_key_exists('domains', $data)) {
             $values_1 = [];
             if (\is_array($data['domains'])) {
-                foreach ($data['domains'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains, got ' . get_debug_type($value_3));
+                foreach ($data['domains'] as $value_5) {
+                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains::class, 'json', $context);
+                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains, got ' . get_debug_type($value_6));
                     }
-                    $values_1[] = $value_3;
+                    $values_1[] = $value_6;
                 }
             }
             $object->setDomains($values_1);
             unset($data['domains']);
         }
         if (\array_key_exists('glb_settings', $data)) {
-            $object->setGlbSettings($data['glb_settings']);
+            $value_7 = $this->denormalizer->denormalize($data['glb_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings, got ' . get_debug_type($value_7));
+            }
+            $object->setGlbSettings($value_7);
             unset($data['glb_settings']);
         }
         if (\array_key_exists('target_load_balancer_ids', $data)) {
             $values_2 = [];
             if (\is_array($data['target_load_balancer_ids'])) {
-                foreach ($data['target_load_balancer_ids'] as $value_4) {
-                    $values_2[] = TypeValidator::assertString($value_4, 'value');
+                foreach ($data['target_load_balancer_ids'] as $value_8) {
+                    $values_2[] = TypeValidator::assertString($value_8, 'value');
                 }
             }
             $object->setTargetLoadBalancerIds($values_2);
@@ -180,9 +196,9 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setTlsCipherPolicy(TypeValidator::assertString($data['tls_cipher_policy'], 'tls_cipher_policy'));
             unset($data['tls_cipher_policy']);
         }
-        foreach ($data as $key => $value_5) {
+        foreach ($data as $key => $value_9) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_5;
+                $object[$key] = $value_9;
             }
         }
         return $object;
@@ -218,10 +234,10 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
         }
         $dataArray['forwarding_rules'] = $values;
         if ($data->isInitialized('healthCheck')) {
-            $dataArray['health_check'] = $data->getHealthCheck();
+            $dataArray['health_check'] = $this->normalizer->normalize($data->getHealthCheck(), 'json', $context);
         }
         if ($data->isInitialized('stickySessions')) {
-            $dataArray['sticky_sessions'] = $data->getStickySessions();
+            $dataArray['sticky_sessions'] = $this->normalizer->normalize($data->getStickySessions(), 'json', $context);
         }
         if ($data->isInitialized('redirectHttpToHttps')) {
             $dataArray['redirect_http_to_https'] = $data->getRedirectHttpToHttps();
@@ -242,7 +258,7 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['disable_lets_encrypt_dns_records'] = $data->getDisableLetsEncryptDnsRecords();
         }
         if ($data->isInitialized('firewall')) {
-            $dataArray['firewall'] = $data->getFirewall();
+            $dataArray['firewall'] = $this->normalizer->normalize($data->getFirewall(), 'json', $context);
         }
         if ($data->isInitialized('network')) {
             $dataArray['network'] = $data->getNetwork();
@@ -261,7 +277,7 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['domains'] = $values_1;
         }
         if ($data->isInitialized('glbSettings')) {
-            $dataArray['glb_settings'] = $data->getGlbSettings();
+            $dataArray['glb_settings'] = $this->normalizer->normalize($data->getGlbSettings(), 'json', $context);
         }
         if ($data->isInitialized('targetLoadBalancerIds')) {
             $values_2 = [];

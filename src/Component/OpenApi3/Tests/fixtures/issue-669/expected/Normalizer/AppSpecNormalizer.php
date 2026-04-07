@@ -165,24 +165,40 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['databases']);
         }
         if (\array_key_exists('ingress', $data)) {
-            $object->setIngress($data['ingress']);
+            $value_14 = $this->denormalizer->denormalize($data['ingress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpec::class, 'json', $context);
+            if (!$value_14 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpec, got ' . get_debug_type($value_14));
+            }
+            $object->setIngress($value_14);
             unset($data['ingress']);
         }
         if (\array_key_exists('egress', $data)) {
-            $object->setEgress($data['egress']);
+            $value_15 = $this->denormalizer->denormalize($data['egress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppEgressSpec::class, 'json', $context);
+            if (!$value_15 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppEgressSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppEgressSpec, got ' . get_debug_type($value_15));
+            }
+            $object->setEgress($value_15);
             unset($data['egress']);
         }
         if (\array_key_exists('maintenance', $data)) {
-            $object->setMaintenance($data['maintenance']);
+            $value_16 = $this->denormalizer->denormalize($data['maintenance'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMaintenanceSpec::class, 'json', $context);
+            if (!$value_16 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMaintenanceSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMaintenanceSpec, got ' . get_debug_type($value_16));
+            }
+            $object->setMaintenance($value_16);
             unset($data['maintenance']);
         }
         if (\array_key_exists('vpc', $data)) {
-            $object->setVpc($data['vpc']);
+            $value_17 = $this->denormalizer->denormalize($data['vpc'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsVpc::class, 'json', $context);
+            if (!$value_17 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsVpc) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsVpc, got ' . get_debug_type($value_17));
+            }
+            $object->setVpc($value_17);
             unset($data['vpc']);
         }
-        foreach ($data as $key => $value_14) {
+        foreach ($data as $key => $value_18) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_14;
+                $object[$key] = $value_18;
             }
         }
         return $object;
@@ -260,13 +276,13 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $dataArray['databases'] = $values_6;
         }
         if ($data->isInitialized('ingress')) {
-            $dataArray['ingress'] = $data->getIngress();
+            $dataArray['ingress'] = $this->normalizer->normalize($data->getIngress(), 'json', $context);
         }
         if ($data->isInitialized('egress')) {
-            $dataArray['egress'] = $data->getEgress();
+            $dataArray['egress'] = $this->normalizer->normalize($data->getEgress(), 'json', $context);
         }
         if ($data->isInitialized('maintenance')) {
-            $dataArray['maintenance'] = $data->getMaintenance();
+            $dataArray['maintenance'] = $this->normalizer->normalize($data->getMaintenance(), 'json', $context);
         }
         foreach ($data as $key => $value_7) {
             if (preg_match('/.*/', (string) $key) === 1) {

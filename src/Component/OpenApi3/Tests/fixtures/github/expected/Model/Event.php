@@ -26,13 +26,13 @@ class Event extends \ArrayObject
      * Actor
      *
      */
-    protected mixed $actor = null;
+    protected Actor $actor;
     protected EventRepo $repo;
     /**
      * Actor
      *
      */
-    protected mixed $org = null;
+    protected Actor $org;
     protected EventPayload $payload;
     protected bool $public;
     protected ?\DateTime $createdAt = null;
@@ -60,7 +60,7 @@ class Event extends \ArrayObject
      * Actor
      *
      */
-    public function getActor(): mixed
+    public function getActor(): Actor
     {
         return $this->actor;
     }
@@ -70,7 +70,7 @@ class Event extends \ArrayObject
      *
      * @return self
      */
-    public function setActor(mixed $actor): self
+    public function setActor(Actor $actor): self
     {
         $this->initialized['actor'] = true;
         $this->actor = $actor;
@@ -90,7 +90,7 @@ class Event extends \ArrayObject
      * Actor
      *
      */
-    public function getOrg(): mixed
+    public function getOrg(): Actor
     {
         return $this->org;
     }
@@ -100,7 +100,7 @@ class Event extends \ArrayObject
      *
      * @return self
      */
-    public function setOrg(mixed $org): self
+    public function setOrg(Actor $org): self
     {
         $this->initialized['org'] = true;
         $this->org = $org;

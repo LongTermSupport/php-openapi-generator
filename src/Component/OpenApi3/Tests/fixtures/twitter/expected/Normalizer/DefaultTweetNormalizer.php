@@ -93,24 +93,32 @@ class DefaultTweetNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['attachments']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $object->setWithheld($data['withheld']);
+            $value_3 = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld, got ' . get_debug_type($value_3));
+            }
+            $object->setWithheld($value_3);
             unset($data['withheld']);
         }
         if (\array_key_exists('geo', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['geo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo, got ' . get_debug_type($value_3));
+            $value_4 = $this->denormalizer->denormalize($data['geo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo, got ' . get_debug_type($value_4));
             }
-            $object->setGeo($value_3);
+            $object->setGeo($value_4);
             unset($data['geo']);
         }
         if (\array_key_exists('entities', $data)) {
-            $object->setEntities($data['entities']);
+            $value_5 = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities, got ' . get_debug_type($value_5));
+            }
+            $object->setEntities($value_5);
             unset($data['entities']);
         }
-        foreach ($data as $key => $value_4) {
+        foreach ($data as $key => $value_6) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_4;
+                $object[$key] = $value_6;
             }
         }
         return $object;
@@ -146,13 +154,13 @@ class DefaultTweetNormalizer implements DenormalizerInterface, NormalizerInterfa
             $dataArray['attachments'] = $this->normalizer->normalize($data->getAttachments(), 'json', $context);
         }
         if ($data->isInitialized('withheld')) {
-            $dataArray['withheld'] = $data->getWithheld();
+            $dataArray['withheld'] = $this->normalizer->normalize($data->getWithheld(), 'json', $context);
         }
         if ($data->isInitialized('geo')) {
             $dataArray['geo'] = $this->normalizer->normalize($data->getGeo(), 'json', $context);
         }
         if ($data->isInitialized('entities')) {
-            $dataArray['entities'] = $data->getEntities();
+            $dataArray['entities'] = $this->normalizer->normalize($data->getEntities(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

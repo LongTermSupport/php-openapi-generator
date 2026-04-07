@@ -47,12 +47,16 @@ class ResponseSinglePartnerAttachmentNormalizer implements DenormalizerInterface
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('partner_attachment', $data)) {
-            $object->setPartnerAttachment($data['partner_attachment']);
+            $value = $this->denormalizer->denormalize($data['partner_attachment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment, got ' . get_debug_type($value));
+            }
+            $object->setPartnerAttachment($value);
             unset($data['partner_attachment']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseSinglePartnerAttachmentNormalizer implements DenormalizerInterface
         }
         $dataArray = [];
         if ($data->isInitialized('partnerAttachment')) {
-            $dataArray['partner_attachment'] = $data->getPartnerAttachment();
+            $dataArray['partner_attachment'] = $this->normalizer->normalize($data->getPartnerAttachment(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

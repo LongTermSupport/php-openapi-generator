@@ -75,20 +75,24 @@ class TriggerInfoNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['updated_at']);
         }
         if (\array_key_exists('scheduled_details', $data)) {
-            $object->setScheduledDetails($data['scheduled_details']);
+            $value = $this->denormalizer->denormalize($data['scheduled_details'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails, got ' . get_debug_type($value));
+            }
+            $object->setScheduledDetails($value);
             unset($data['scheduled_details']);
         }
         if (\array_key_exists('scheduled_runs', $data)) {
-            $value = $this->denormalizer->denormalize($data['scheduled_runs'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['scheduled_runs'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns, got ' . get_debug_type($value_1));
             }
-            $object->setScheduledRuns($value);
+            $object->setScheduledRuns($value_1);
             unset($data['scheduled_runs']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -125,7 +129,7 @@ class TriggerInfoNormalizer implements DenormalizerInterface, NormalizerInterfac
             $dataArray['updated_at'] = $data->getUpdatedAt();
         }
         if ($data->isInitialized('scheduledDetails')) {
-            $dataArray['scheduled_details'] = $data->getScheduledDetails();
+            $dataArray['scheduled_details'] = $this->normalizer->normalize($data->getScheduledDetails(), 'json', $context);
         }
         if ($data->isInitialized('scheduledRuns')) {
             $dataArray['scheduled_runs'] = $this->normalizer->normalize($data->getScheduledRuns(), 'json', $context);

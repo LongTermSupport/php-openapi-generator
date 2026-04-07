@@ -20,23 +20,23 @@ class Endpoint2GetResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $field2 = null;
-    protected mixed $field2Bis = null;
-    public function getField2(): mixed
+    protected SubLevel1 $field2;
+    protected SubLevel2 $field2Bis;
+    public function getField2(): SubLevel1
     {
         return $this->field2;
     }
-    public function setField2(mixed $field2): self
+    public function setField2(SubLevel1 $field2): self
     {
         $this->initialized['field2'] = true;
         $this->field2 = $field2;
         return $this;
     }
-    public function getField2Bis(): mixed
+    public function getField2Bis(): SubLevel2
     {
         return $this->field2Bis;
     }
-    public function setField2Bis(mixed $field2Bis): self
+    public function setField2Bis(SubLevel2 $field2Bis): self
     {
         $this->initialized['field2Bis'] = true;
         $this->field2Bis = $field2Bis;

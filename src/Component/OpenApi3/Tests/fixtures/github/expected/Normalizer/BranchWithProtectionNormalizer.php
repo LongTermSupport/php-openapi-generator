@@ -54,15 +54,19 @@ class BranchWithProtectionNormalizer implements DenormalizerInterface, Normalize
             unset($data['name']);
         }
         if (\array_key_exists('commit', $data)) {
-            $object->setCommit($data['commit']);
+            $value = $this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit, got ' . get_debug_type($value));
+            }
+            $object->setCommit($value);
             unset($data['commit']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchWithProtectionLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchWithProtectionLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchWithProtectionLinks, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchWithProtectionLinks::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchWithProtectionLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchWithProtectionLinks, got ' . get_debug_type($value_1));
             }
-            $object->setLinks($value);
+            $object->setLinks($value_1);
             unset($data['_links']);
         }
         if (\array_key_exists('protected', $data)) {
@@ -70,7 +74,11 @@ class BranchWithProtectionNormalizer implements DenormalizerInterface, Normalize
             unset($data['protected']);
         }
         if (\array_key_exists('protection', $data)) {
-            $object->setProtection($data['protection']);
+            $value_2 = $this->denormalizer->denormalize($data['protection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection, got ' . get_debug_type($value_2));
+            }
+            $object->setProtection($value_2);
             unset($data['protection']);
         }
         if (\array_key_exists('protection_url', $data)) {
@@ -85,9 +93,9 @@ class BranchWithProtectionNormalizer implements DenormalizerInterface, Normalize
             $object->setRequiredApprovingReviewCount(TypeValidator::assertInt($data['required_approving_review_count'], 'required_approving_review_count'));
             unset($data['required_approving_review_count']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -103,10 +111,10 @@ class BranchWithProtectionNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray = [];
         $dataArray['name'] = $data->getName();
-        $dataArray['commit'] = $data->getCommit();
+        $dataArray['commit'] = $this->normalizer->normalize($data->getCommit(), 'json', $context);
         $dataArray['_links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);
         $dataArray['protected'] = $data->getProtected();
-        $dataArray['protection'] = $data->getProtection();
+        $dataArray['protection'] = $this->normalizer->normalize($data->getProtection(), 'json', $context);
         $dataArray['protection_url'] = $data->getProtectionUrl();
         if ($data->isInitialized('pattern')) {
             $dataArray['pattern'] = $data->getPattern();

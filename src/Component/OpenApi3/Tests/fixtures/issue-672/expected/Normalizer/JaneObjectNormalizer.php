@@ -29,6 +29,12 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
         
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint2GetResponse::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Normalizer\Endpoint2GetResponseNormalizer::class,
         
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Normalizer\SubLevel1Normalizer::class,
+        
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Normalizer\SubLevel2Normalizer::class,
+        
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel3::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Normalizer\SubLevel3Normalizer::class,
+        
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint3GetResponse200::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Normalizer\Endpoint3GetResponse200Normalizer::class,
         
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Runtime\Normalizer\Reference::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Runtime\Normalizer\ReferenceNormalizer::class,
@@ -101,6 +107,9 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
         return [
             
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint2GetResponse::class => false,
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1::class => false,
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class => false,
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel3::class => false,
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint3GetResponse200::class => false,
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Runtime\Normalizer\Reference::class => false,
         ];

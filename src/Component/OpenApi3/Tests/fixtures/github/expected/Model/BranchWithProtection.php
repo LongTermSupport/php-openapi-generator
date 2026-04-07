@@ -25,14 +25,14 @@ class BranchWithProtection extends \ArrayObject
      * Commit
      *
      */
-    protected mixed $commit = null;
+    protected Commit $commit;
     protected BranchWithProtectionLinks $links;
     protected bool $protected;
     /**
      * Branch Protection
      *
      */
-    protected mixed $protection = null;
+    protected BranchProtection $protection;
     protected string $protectionUrl;
     protected string $pattern;
     protected int $requiredApprovingReviewCount;
@@ -50,7 +50,7 @@ class BranchWithProtection extends \ArrayObject
      * Commit
      *
      */
-    public function getCommit(): mixed
+    public function getCommit(): Commit
     {
         return $this->commit;
     }
@@ -60,7 +60,7 @@ class BranchWithProtection extends \ArrayObject
      *
      * @return self
      */
-    public function setCommit(mixed $commit): self
+    public function setCommit(Commit $commit): self
     {
         $this->initialized['commit'] = true;
         $this->commit = $commit;
@@ -90,7 +90,7 @@ class BranchWithProtection extends \ArrayObject
      * Branch Protection
      *
      */
-    public function getProtection(): mixed
+    public function getProtection(): BranchProtection
     {
         return $this->protection;
     }
@@ -100,7 +100,7 @@ class BranchWithProtection extends \ArrayObject
      *
      * @return self
      */
-    public function setProtection(mixed $protection): self
+    public function setProtection(BranchProtection $protection): self
     {
         $this->initialized['protection'] = true;
         $this->protection = $protection;

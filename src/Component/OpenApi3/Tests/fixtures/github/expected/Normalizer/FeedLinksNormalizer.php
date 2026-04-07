@@ -50,50 +50,78 @@ class FeedLinksNormalizer implements DenormalizerInterface, NormalizerInterface,
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FeedLinksConstraint());
         }
         if (\array_key_exists('timeline', $data)) {
-            $object->setTimeline($data['timeline']);
+            $value = $this->denormalizer->denormalize($data['timeline'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value));
+            }
+            $object->setTimeline($value);
             unset($data['timeline']);
         }
         if (\array_key_exists('user', $data)) {
-            $object->setUser($data['user']);
+            $value_1 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_1));
+            }
+            $object->setUser($value_1);
             unset($data['user']);
         }
         if (\array_key_exists('security_advisories', $data)) {
-            $object->setSecurityAdvisories($data['security_advisories']);
+            $value_2 = $this->denormalizer->denormalize($data['security_advisories'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_2));
+            }
+            $object->setSecurityAdvisories($value_2);
             unset($data['security_advisories']);
         }
         if (\array_key_exists('current_user', $data)) {
-            $object->setCurrentUser($data['current_user']);
+            $value_3 = $this->denormalizer->denormalize($data['current_user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_3));
+            }
+            $object->setCurrentUser($value_3);
             unset($data['current_user']);
         }
         if (\array_key_exists('current_user_public', $data)) {
-            $object->setCurrentUserPublic($data['current_user_public']);
+            $value_4 = $this->denormalizer->denormalize($data['current_user_public'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_4));
+            }
+            $object->setCurrentUserPublic($value_4);
             unset($data['current_user_public']);
         }
         if (\array_key_exists('current_user_actor', $data)) {
-            $object->setCurrentUserActor($data['current_user_actor']);
+            $value_5 = $this->denormalizer->denormalize($data['current_user_actor'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_5));
+            }
+            $object->setCurrentUserActor($value_5);
             unset($data['current_user_actor']);
         }
         if (\array_key_exists('current_user_organization', $data)) {
-            $object->setCurrentUserOrganization($data['current_user_organization']);
+            $value_6 = $this->denormalizer->denormalize($data['current_user_organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_6));
+            }
+            $object->setCurrentUserOrganization($value_6);
             unset($data['current_user_organization']);
         }
         if (\array_key_exists('current_user_organizations', $data)) {
             $values = [];
             if (\is_array($data['current_user_organizations'])) {
-                foreach ($data['current_user_organizations'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_1));
+                foreach ($data['current_user_organizations'] as $value_7) {
+                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
+                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_8));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_8;
                 }
             }
             $object->setCurrentUserOrganizations($values);
             unset($data['current_user_organizations']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_9) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_9;
             }
         }
         return $object;
@@ -108,22 +136,22 @@ class FeedLinksNormalizer implements DenormalizerInterface, NormalizerInterface,
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FeedLinks, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['timeline'] = $data->getTimeline();
-        $dataArray['user'] = $data->getUser();
+        $dataArray['timeline'] = $this->normalizer->normalize($data->getTimeline(), 'json', $context);
+        $dataArray['user'] = $this->normalizer->normalize($data->getUser(), 'json', $context);
         if ($data->isInitialized('securityAdvisories')) {
-            $dataArray['security_advisories'] = $data->getSecurityAdvisories();
+            $dataArray['security_advisories'] = $this->normalizer->normalize($data->getSecurityAdvisories(), 'json', $context);
         }
         if ($data->isInitialized('currentUser')) {
-            $dataArray['current_user'] = $data->getCurrentUser();
+            $dataArray['current_user'] = $this->normalizer->normalize($data->getCurrentUser(), 'json', $context);
         }
         if ($data->isInitialized('currentUserPublic')) {
-            $dataArray['current_user_public'] = $data->getCurrentUserPublic();
+            $dataArray['current_user_public'] = $this->normalizer->normalize($data->getCurrentUserPublic(), 'json', $context);
         }
         if ($data->isInitialized('currentUserActor')) {
-            $dataArray['current_user_actor'] = $data->getCurrentUserActor();
+            $dataArray['current_user_actor'] = $this->normalizer->normalize($data->getCurrentUserActor(), 'json', $context);
         }
         if ($data->isInitialized('currentUserOrganization')) {
-            $dataArray['current_user_organization'] = $data->getCurrentUserOrganization();
+            $dataArray['current_user_organization'] = $this->normalizer->normalize($data->getCurrentUserOrganization(), 'json', $context);
         }
         if ($data->isInitialized('currentUserOrganizations')) {
             $values = [];

@@ -47,12 +47,16 @@ class ResponseReservedIpNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('reserved_ip', $data)) {
-            $object->setReservedIp($data['reserved_ip']);
+            $value = $this->denormalizer->denormalize($data['reserved_ip'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIp::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIp) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIp, got ' . get_debug_type($value));
+            }
+            $object->setReservedIp($value);
             unset($data['reserved_ip']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseReservedIpNormalizer implements DenormalizerInterface, NormalizerI
         }
         $dataArray = [];
         if ($data->isInitialized('reservedIp')) {
-            $dataArray['reserved_ip'] = $data->getReservedIp();
+            $dataArray['reserved_ip'] = $this->normalizer->normalize($data->getReservedIp(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

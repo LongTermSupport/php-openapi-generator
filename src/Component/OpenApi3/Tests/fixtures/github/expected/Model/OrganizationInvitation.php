@@ -29,7 +29,7 @@ class OrganizationInvitation extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $inviter = null;
+    protected ?SimpleUser $inviter = null;
     protected int $teamCount;
     protected string $invitationTeamUrl;
     protected string $nodeId;
@@ -88,7 +88,7 @@ class OrganizationInvitation extends \ArrayObject
      * Simple User
      *
      */
-    public function getInviter(): mixed
+    public function getInviter(): ?SimpleUser
     {
         return $this->inviter;
     }
@@ -98,7 +98,7 @@ class OrganizationInvitation extends \ArrayObject
      *
      * @return self
      */
-    public function setInviter(mixed $inviter): self
+    public function setInviter(?SimpleUser $inviter): self
     {
         $this->initialized['inviter'] = true;
         $this->inviter = $inviter;

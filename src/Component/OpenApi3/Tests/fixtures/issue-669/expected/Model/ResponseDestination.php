@@ -20,12 +20,12 @@ class ResponseDestination extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $destination = null;
-    public function getDestination(): mixed
+    protected DestinationOmitCredentials $destination;
+    public function getDestination(): DestinationOmitCredentials
     {
         return $this->destination;
     }
-    public function setDestination(mixed $destination): self
+    public function setDestination(DestinationOmitCredentials $destination): self
     {
         $this->initialized['destination'] = true;
         $this->destination = $destination;

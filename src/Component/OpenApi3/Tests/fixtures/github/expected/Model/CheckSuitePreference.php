@@ -25,7 +25,7 @@ class CheckSuitePreference extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository = null;
+    protected Repository $repository;
     public function getPreferences(): CheckSuitePreferencePreferences
     {
         return $this->preferences;
@@ -40,7 +40,7 @@ class CheckSuitePreference extends \ArrayObject
      * A git repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): Repository
     {
         return $this->repository;
     }
@@ -50,7 +50,7 @@ class CheckSuitePreference extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(Repository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;

@@ -24,7 +24,7 @@ class TweetSearchResponse extends \ArrayObject
      * @var list<mixed>
      */
     protected array $data;
-    protected mixed $includes = null;
+    protected Expansions $includes;
     /**
      * @var list<mixed>
      */
@@ -48,11 +48,11 @@ class TweetSearchResponse extends \ArrayObject
         $this->data = $data;
         return $this;
     }
-    public function getIncludes(): mixed
+    public function getIncludes(): Expansions
     {
         return $this->includes;
     }
-    public function setIncludes(mixed $includes): self
+    public function setIncludes(Expansions $includes): self
     {
         $this->initialized['includes'] = true;
         $this->includes = $includes;

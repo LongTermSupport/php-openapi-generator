@@ -108,12 +108,16 @@ class TeamDiscussionCommentNormalizer implements DenormalizerInterface, Normaliz
             unset($data['url']);
         }
         if (\array_key_exists('reactions', $data)) {
-            $object->setReactions($data['reactions']);
+            $value_1 = $this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup, got ' . get_debug_type($value_1));
+            }
+            $object->setReactions($value_1);
             unset($data['reactions']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -151,7 +155,7 @@ class TeamDiscussionCommentNormalizer implements DenormalizerInterface, Normaliz
         $dataArray['updated_at'] = $data->getUpdatedAt()->format('Y-m-d\TH:i:sP');
         $dataArray['url'] = $data->getUrl();
         if ($data->isInitialized('reactions')) {
-            $dataArray['reactions'] = $data->getReactions();
+            $dataArray['reactions'] = $this->normalizer->normalize($data->getReactions(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

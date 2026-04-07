@@ -24,12 +24,12 @@ class NfsSnapshotGetResponse extends \ArrayObject
      * Represents an NFS snapshot.
      *
      */
-    protected mixed $snapshot = null;
+    protected NfsSnapshotResponse $snapshot;
     /**
      * Represents an NFS snapshot.
      *
      */
-    public function getSnapshot(): mixed
+    public function getSnapshot(): NfsSnapshotResponse
     {
         return $this->snapshot;
     }
@@ -39,7 +39,7 @@ class NfsSnapshotGetResponse extends \ArrayObject
      *
      * @return self
      */
-    public function setSnapshot(mixed $snapshot): self
+    public function setSnapshot(NfsSnapshotResponse $snapshot): self
     {
         $this->initialized['snapshot'] = true;
         $this->snapshot = $snapshot;

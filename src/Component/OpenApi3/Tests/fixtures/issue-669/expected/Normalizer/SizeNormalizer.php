@@ -107,12 +107,16 @@ class SizeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['disk_info']);
         }
         if (\array_key_exists('gpu_info', $data)) {
-            $object->setGpuInfo($data['gpu_info']);
+            $value_3 = $this->denormalizer->denormalize($data['gpu_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo, got ' . get_debug_type($value_3));
+            }
+            $object->setGpuInfo($value_3);
             unset($data['gpu_info']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -149,7 +153,7 @@ class SizeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             $dataArray['disk_info'] = $values_1;
         }
         if ($data->isInitialized('gpuInfo')) {
-            $dataArray['gpu_info'] = $data->getGpuInfo();
+            $dataArray['gpu_info'] = $this->normalizer->normalize($data->getGpuInfo(), 'json', $context);
         }
         foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {

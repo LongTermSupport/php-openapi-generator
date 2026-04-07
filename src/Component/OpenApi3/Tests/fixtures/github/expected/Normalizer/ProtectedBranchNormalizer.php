@@ -54,64 +54,72 @@ class ProtectedBranchNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['url']);
         }
         if (\array_key_exists('required_status_checks', $data)) {
-            $object->setRequiredStatusChecks($data['required_status_checks']);
+            $value = $this->denormalizer->denormalize($data['required_status_checks'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StatusCheckPolicy::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StatusCheckPolicy) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StatusCheckPolicy, got ' . get_debug_type($value));
+            }
+            $object->setRequiredStatusChecks($value);
             unset($data['required_status_checks']);
         }
         if (\array_key_exists('required_pull_request_reviews', $data)) {
-            $value = $this->denormalizer->denormalize($data['required_pull_request_reviews'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviews::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviews) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviews, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['required_pull_request_reviews'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviews::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviews) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviews, got ' . get_debug_type($value_1));
             }
-            $object->setRequiredPullRequestReviews($value);
+            $object->setRequiredPullRequestReviews($value_1);
             unset($data['required_pull_request_reviews']);
         }
         if (\array_key_exists('required_signatures', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['required_signatures'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures, got ' . get_debug_type($value_1));
+            $value_2 = $this->denormalizer->denormalize($data['required_signatures'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures, got ' . get_debug_type($value_2));
             }
-            $object->setRequiredSignatures($value_1);
+            $object->setRequiredSignatures($value_2);
             unset($data['required_signatures']);
         }
         if (\array_key_exists('enforce_admins', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['enforce_admins'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchEnforceAdmins::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchEnforceAdmins) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchEnforceAdmins, got ' . get_debug_type($value_2));
+            $value_3 = $this->denormalizer->denormalize($data['enforce_admins'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchEnforceAdmins::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchEnforceAdmins) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchEnforceAdmins, got ' . get_debug_type($value_3));
             }
-            $object->setEnforceAdmins($value_2);
+            $object->setEnforceAdmins($value_3);
             unset($data['enforce_admins']);
         }
         if (\array_key_exists('required_linear_history', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['required_linear_history'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredLinearHistory::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredLinearHistory) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredLinearHistory, got ' . get_debug_type($value_3));
+            $value_4 = $this->denormalizer->denormalize($data['required_linear_history'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredLinearHistory::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredLinearHistory) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredLinearHistory, got ' . get_debug_type($value_4));
             }
-            $object->setRequiredLinearHistory($value_3);
+            $object->setRequiredLinearHistory($value_4);
             unset($data['required_linear_history']);
         }
         if (\array_key_exists('allow_force_pushes', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['allow_force_pushes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowForcePushes::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowForcePushes) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowForcePushes, got ' . get_debug_type($value_4));
+            $value_5 = $this->denormalizer->denormalize($data['allow_force_pushes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowForcePushes::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowForcePushes) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowForcePushes, got ' . get_debug_type($value_5));
             }
-            $object->setAllowForcePushes($value_4);
+            $object->setAllowForcePushes($value_5);
             unset($data['allow_force_pushes']);
         }
         if (\array_key_exists('allow_deletions', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['allow_deletions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowDeletions::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowDeletions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowDeletions, got ' . get_debug_type($value_5));
+            $value_6 = $this->denormalizer->denormalize($data['allow_deletions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowDeletions::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowDeletions) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchAllowDeletions, got ' . get_debug_type($value_6));
             }
-            $object->setAllowDeletions($value_5);
+            $object->setAllowDeletions($value_6);
             unset($data['allow_deletions']);
         }
         if (\array_key_exists('restrictions', $data)) {
-            $object->setRestrictions($data['restrictions']);
+            $value_7 = $this->denormalizer->denormalize($data['restrictions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicy::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicy) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicy, got ' . get_debug_type($value_7));
+            }
+            $object->setRestrictions($value_7);
             unset($data['restrictions']);
         }
-        foreach ($data as $key => $value_6) {
+        foreach ($data as $key => $value_8) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_6;
+                $object[$key] = $value_8;
             }
         }
         return $object;
@@ -128,7 +136,7 @@ class ProtectedBranchNormalizer implements DenormalizerInterface, NormalizerInte
         $dataArray = [];
         $dataArray['url'] = $data->getUrl();
         if ($data->isInitialized('requiredStatusChecks')) {
-            $dataArray['required_status_checks'] = $data->getRequiredStatusChecks();
+            $dataArray['required_status_checks'] = $this->normalizer->normalize($data->getRequiredStatusChecks(), 'json', $context);
         }
         if ($data->isInitialized('requiredPullRequestReviews')) {
             $dataArray['required_pull_request_reviews'] = $this->normalizer->normalize($data->getRequiredPullRequestReviews(), 'json', $context);
@@ -149,7 +157,7 @@ class ProtectedBranchNormalizer implements DenormalizerInterface, NormalizerInte
             $dataArray['allow_deletions'] = $this->normalizer->normalize($data->getAllowDeletions(), 'json', $context);
         }
         if ($data->isInitialized('restrictions')) {
-            $dataArray['restrictions'] = $data->getRestrictions();
+            $dataArray['restrictions'] = $this->normalizer->normalize($data->getRestrictions(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -24,7 +24,7 @@ class ResponseAllLoadBalancers extends \ArrayObject
      * @var list<LoadBalancer>
      */
     protected array $loadBalancers;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<LoadBalancer>
@@ -44,11 +44,11 @@ class ResponseAllLoadBalancers extends \ArrayObject
         $this->loadBalancers = $loadBalancers;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

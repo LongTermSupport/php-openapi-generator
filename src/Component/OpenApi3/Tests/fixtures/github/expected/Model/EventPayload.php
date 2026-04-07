@@ -25,12 +25,12 @@ class EventPayload extends \ArrayObject
      * Issue Simple
      *
      */
-    protected mixed $issue = null;
+    protected IssueSimple $issue;
     /**
      * Comments provide a way for people to collaborate on an issue.
      *
      */
-    protected mixed $comment = null;
+    protected IssueComment $comment;
     /**
      * @var list<EventPayloadPagesItem>
      */
@@ -49,7 +49,7 @@ class EventPayload extends \ArrayObject
      * Issue Simple
      *
      */
-    public function getIssue(): mixed
+    public function getIssue(): IssueSimple
     {
         return $this->issue;
     }
@@ -59,7 +59,7 @@ class EventPayload extends \ArrayObject
      *
      * @return self
      */
-    public function setIssue(mixed $issue): self
+    public function setIssue(IssueSimple $issue): self
     {
         $this->initialized['issue'] = true;
         $this->issue = $issue;
@@ -69,7 +69,7 @@ class EventPayload extends \ArrayObject
      * Comments provide a way for people to collaborate on an issue.
      *
      */
-    public function getComment(): mixed
+    public function getComment(): IssueComment
     {
         return $this->comment;
     }
@@ -79,7 +79,7 @@ class EventPayload extends \ArrayObject
      *
      * @return self
      */
-    public function setComment(mixed $comment): self
+    public function setComment(IssueComment $comment): self
     {
         $this->initialized['comment'] = true;
         $this->comment = $comment;

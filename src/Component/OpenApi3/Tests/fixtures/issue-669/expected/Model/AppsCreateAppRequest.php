@@ -24,7 +24,7 @@ class AppsCreateAppRequest extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec = null;
+    protected AppSpec $spec;
     /**
      * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
      * <br><br>Requires `project:update` scope.
@@ -36,7 +36,7 @@ class AppsCreateAppRequest extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    public function getSpec(): mixed
+    public function getSpec(): AppSpec
     {
         return $this->spec;
     }
@@ -46,7 +46,7 @@ class AppsCreateAppRequest extends \ArrayObject
      *
      * @return self
      */
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

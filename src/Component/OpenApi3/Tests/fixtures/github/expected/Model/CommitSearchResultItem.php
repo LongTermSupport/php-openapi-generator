@@ -35,11 +35,11 @@ class CommitSearchResultItem extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository = null;
+    protected MinimalRepository $repository;
     protected int $score;
     protected string $nodeId;
     /**
-     * @var list<mixed>
+     * @var list<SearchResultTextMatchesItem>
      */
     protected array $textMatches;
     public function getUrl(): string
@@ -134,7 +134,7 @@ class CommitSearchResultItem extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): MinimalRepository
     {
         return $this->repository;
     }
@@ -144,7 +144,7 @@ class CommitSearchResultItem extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(MinimalRepository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;
@@ -171,14 +171,14 @@ class CommitSearchResultItem extends \ArrayObject
         return $this;
     }
     /**
-     * @return list<mixed>
+     * @return list<SearchResultTextMatchesItem>
      */
     public function getTextMatches(): array
     {
         return $this->textMatches;
     }
     /**
-     * @param list<mixed> $textMatches
+     * @param list<SearchResultTextMatchesItem> $textMatches
      *
      * @return self
      */

@@ -47,7 +47,11 @@ class AlertPolicyRequestNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('alerts', $data)) {
-            $object->setAlerts($data['alerts']);
+            $value = $this->denormalizer->denormalize($data['alerts'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Alerts::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Alerts) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Alerts, got ' . get_debug_type($value));
+            }
+            $object->setAlerts($value);
             unset($data['alerts']);
         }
         if (\array_key_exists('compare', $data)) {
@@ -65,8 +69,8 @@ class AlertPolicyRequestNormalizer implements DenormalizerInterface, NormalizerI
         if (\array_key_exists('entities', $data)) {
             $values = [];
             if (\is_array($data['entities'])) {
-                foreach ($data['entities'] as $value) {
-                    $values[] = TypeValidator::assertString($value, 'value');
+                foreach ($data['entities'] as $value_1) {
+                    $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
             $object->setEntities($values);
@@ -75,8 +79,8 @@ class AlertPolicyRequestNormalizer implements DenormalizerInterface, NormalizerI
         if (\array_key_exists('tags', $data)) {
             $values_1 = [];
             if (\is_array($data['tags'])) {
-                foreach ($data['tags'] as $value_1) {
-                    $values_1[] = TypeValidator::assertString($value_1, 'value');
+                foreach ($data['tags'] as $value_2) {
+                    $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
             $object->setTags($values_1);
@@ -94,9 +98,9 @@ class AlertPolicyRequestNormalizer implements DenormalizerInterface, NormalizerI
             $object->setWindow(TypeValidator::assertString($data['window'], 'window'));
             unset($data['window']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -111,7 +115,7 @@ class AlertPolicyRequestNormalizer implements DenormalizerInterface, NormalizerI
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AlertPolicyRequest, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['alerts'] = $data->getAlerts();
+        $dataArray['alerts'] = $this->normalizer->normalize($data->getAlerts(), 'json', $context);
         $dataArray['compare'] = $data->getCompare();
         $dataArray['description'] = $data->getDescription();
         $dataArray['enabled'] = $data->getEnabled();

@@ -47,12 +47,16 @@ class AppHealthResponseNormalizer implements DenormalizerInterface, NormalizerIn
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('app_health', $data)) {
-            $object->setAppHealth($data['app_health']);
+            $value = $this->denormalizer->denormalize($data['app_health'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealth::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealth) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealth, got ' . get_debug_type($value));
+            }
+            $object->setAppHealth($value);
             unset($data['app_health']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class AppHealthResponseNormalizer implements DenormalizerInterface, NormalizerIn
         }
         $dataArray = [];
         if ($data->isInitialized('appHealth')) {
-            $dataArray['app_health'] = $data->getAppHealth();
+            $dataArray['app_health'] = $this->normalizer->normalize($data->getAppHealth(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

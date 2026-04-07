@@ -20,12 +20,12 @@ class NfsCreateResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $share = null;
-    public function getShare(): mixed
+    protected NfsResponse $share;
+    public function getShare(): NfsResponse
     {
         return $this->share;
     }
-    public function setShare(mixed $share): self
+    public function setShare(NfsResponse $share): self
     {
         $this->initialized['share'] = true;
         $this->share = $share;

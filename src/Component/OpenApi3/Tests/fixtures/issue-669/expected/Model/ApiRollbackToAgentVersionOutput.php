@@ -24,7 +24,7 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
      * An alternative way to provide auth information. for internal use only.
      *
      */
-    protected mixed $auditHeader = null;
+    protected ApiAuditHeader $auditHeader;
     /**
      * Unique identifier
      *
@@ -34,7 +34,7 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
      * An alternative way to provide auth information. for internal use only.
      *
      */
-    public function getAuditHeader(): mixed
+    public function getAuditHeader(): ApiAuditHeader
     {
         return $this->auditHeader;
     }
@@ -44,7 +44,7 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setAuditHeader(mixed $auditHeader): self
+    public function setAuditHeader(ApiAuditHeader $auditHeader): self
     {
         $this->initialized['auditHeader'] = true;
         $this->auditHeader = $auditHeader;

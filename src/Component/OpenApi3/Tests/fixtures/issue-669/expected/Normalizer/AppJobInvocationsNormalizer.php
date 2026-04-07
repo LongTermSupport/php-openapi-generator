@@ -61,12 +61,16 @@ class AppJobInvocationsNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['job_invocations']);
         }
         if (\array_key_exists('links', $data)) {
-            $object->setLinks($data['links']);
+            $value_2 = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PageLinks::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PageLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PageLinks, got ' . get_debug_type($value_2));
+            }
+            $object->setLinks($value_2);
             unset($data['links']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -89,7 +93,7 @@ class AppJobInvocationsNormalizer implements DenormalizerInterface, NormalizerIn
             $dataArray['job_invocations'] = $values;
         }
         if ($data->isInitialized('links')) {
-            $dataArray['links'] = $data->getLinks();
+            $dataArray['links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -20,12 +20,12 @@ class ResponseAutoscalePoolCreate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $autoscalePool = null;
-    public function getAutoscalePool(): mixed
+    protected AutoscalePool $autoscalePool;
+    public function getAutoscalePool(): AutoscalePool
     {
         return $this->autoscalePool;
     }
-    public function setAutoscalePool(mixed $autoscalePool): self
+    public function setAutoscalePool(AutoscalePool $autoscalePool): self
     {
         $this->initialized['autoscalePool'] = true;
         $this->autoscalePool = $autoscalePool;

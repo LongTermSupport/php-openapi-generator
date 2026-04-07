@@ -22,7 +22,7 @@ class AppAlert extends \ArrayObject
     }
     protected string $id;
     protected string $componentName;
-    protected mixed $spec = null;
+    protected AppAlertSpec $spec;
     /**
      * @var list<string>
      */
@@ -32,7 +32,7 @@ class AppAlert extends \ArrayObject
      */
     protected array $slackWebhooks;
     protected string $phase = 'UNKNOWN';
-    protected mixed $progress = null;
+    protected AppAlertProgress $progress;
     public function getId(): string
     {
         return $this->id;
@@ -53,11 +53,11 @@ class AppAlert extends \ArrayObject
         $this->componentName = $componentName;
         return $this;
     }
-    public function getSpec(): mixed
+    public function getSpec(): AppAlertSpec
     {
         return $this->spec;
     }
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppAlertSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -109,11 +109,11 @@ class AppAlert extends \ArrayObject
         $this->phase = $phase;
         return $this;
     }
-    public function getProgress(): mixed
+    public function getProgress(): AppAlertProgress
     {
         return $this->progress;
     }
-    public function setProgress(mixed $progress): self
+    public function setProgress(AppAlertProgress $progress): self
     {
         $this->initialized['progress'] = true;
         $this->progress = $progress;

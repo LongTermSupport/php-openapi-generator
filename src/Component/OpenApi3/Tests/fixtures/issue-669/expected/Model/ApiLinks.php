@@ -24,12 +24,12 @@ class ApiLinks extends \ArrayObject
      * Information about how to reach other pages
      *
      */
-    protected mixed $pages = null;
+    protected ApiPages $pages;
     /**
      * Information about how to reach other pages
      *
      */
-    public function getPages(): mixed
+    public function getPages(): ApiPages
     {
         return $this->pages;
     }
@@ -39,7 +39,7 @@ class ApiLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setPages(mixed $pages): self
+    public function setPages(ApiPages $pages): self
     {
         $this->initialized['pages'] = true;
         $this->pages = $pages;

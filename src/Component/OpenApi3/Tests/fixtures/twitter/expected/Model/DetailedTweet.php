@@ -61,13 +61,13 @@ class DetailedTweet extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    protected mixed $withheld = null;
+    protected TweetWithheld $withheld;
     /**
      * The location tagged on the Tweet, if the user provided one.
      *
      */
     protected DefaultTweetFieldsGeo $geo;
-    protected mixed $entities = null;
+    protected FullTextEntities $entities;
     /**
      * Engagement metrics for the Tweet at the time of the request.
      *
@@ -248,7 +248,7 @@ class DetailedTweet extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    public function getWithheld(): mixed
+    public function getWithheld(): TweetWithheld
     {
         return $this->withheld;
     }
@@ -258,7 +258,7 @@ class DetailedTweet extends \ArrayObject
      *
      * @return self
      */
-    public function setWithheld(mixed $withheld): self
+    public function setWithheld(TweetWithheld $withheld): self
     {
         $this->initialized['withheld'] = true;
         $this->withheld = $withheld;
@@ -284,11 +284,11 @@ class DetailedTweet extends \ArrayObject
         $this->geo = $geo;
         return $this;
     }
-    public function getEntities(): mixed
+    public function getEntities(): FullTextEntities
     {
         return $this->entities;
     }
-    public function setEntities(mixed $entities): self
+    public function setEntities(FullTextEntities $entities): self
     {
         $this->initialized['entities'] = true;
         $this->entities = $entities;

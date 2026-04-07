@@ -24,7 +24,7 @@ class ResponseRepositoryTags extends \ArrayObject
      * @var list<RepositoryTag>
      */
     protected array $tags;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<RepositoryTag>
@@ -44,11 +44,11 @@ class ResponseRepositoryTags extends \ArrayObject
         $this->tags = $tags;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

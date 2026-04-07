@@ -47,18 +47,22 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('chatbot', $data)) {
-            $object->setChatbot($data['chatbot']);
+            $value = $this->denormalizer->denormalize($data['chatbot'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot, got ' . get_debug_type($value));
+            }
+            $object->setChatbot($value);
             unset($data['chatbot']);
         }
         if (\array_key_exists('chatbot_identifiers', $data)) {
             $values = [];
             if (\is_array($data['chatbot_identifiers'])) {
-                foreach ($data['chatbot_identifiers'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier, got ' . get_debug_type($value_1));
+                foreach ($data['chatbot_identifiers'] as $value_1) {
+                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier::class, 'json', $context);
+                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier, got ' . get_debug_type($value_2));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_2;
                 }
             }
             $object->setChatbotIdentifiers($values);
@@ -69,7 +73,11 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['created_at']);
         }
         if (\array_key_exists('deployment', $data)) {
-            $object->setDeployment($data['deployment']);
+            $value_3 = $this->denormalizer->denormalize($data['deployment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment, got ' . get_debug_type($value_3));
+            }
+            $object->setDeployment($value_3);
             unset($data['deployment']);
         }
         if (\array_key_exists('description', $data)) {
@@ -93,7 +101,11 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['max_tokens']);
         }
         if (\array_key_exists('model', $data)) {
-            $object->setModel($data['model']);
+            $value_4 = $this->denormalizer->denormalize($data['model'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel, got ' . get_debug_type($value_4));
+            }
+            $object->setModel($value_4);
             unset($data['model']);
         }
         if (\array_key_exists('name', $data)) {
@@ -135,8 +147,8 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
         if (\array_key_exists('tags', $data)) {
             $values_1 = [];
             if (\is_array($data['tags'])) {
-                foreach ($data['tags'] as $value_2) {
-                    $values_1[] = TypeValidator::assertString($value_2, 'value');
+                foreach ($data['tags'] as $value_5) {
+                    $values_1[] = TypeValidator::assertString($value_5, 'value');
                 }
             }
             $object->setTags($values_1);
@@ -147,7 +159,11 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['temperature']);
         }
         if (\array_key_exists('template', $data)) {
-            $object->setTemplate($data['template']);
+            $value_6 = $this->denormalizer->denormalize($data['template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate, got ' . get_debug_type($value_6));
+            }
+            $object->setTemplate($value_6);
             unset($data['template']);
         }
         if (\array_key_exists('top_p', $data)) {
@@ -174,9 +190,9 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setVersionHash(TypeValidator::assertString($data['version_hash'], 'version_hash'));
             unset($data['version_hash']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_7) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_7;
             }
         }
         return $object;
@@ -192,7 +208,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
         }
         $dataArray = [];
         if ($data->isInitialized('chatbot')) {
-            $dataArray['chatbot'] = $data->getChatbot();
+            $dataArray['chatbot'] = $this->normalizer->normalize($data->getChatbot(), 'json', $context);
         }
         if ($data->isInitialized('chatbotIdentifiers')) {
             $values = [];
@@ -205,7 +221,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             $dataArray['created_at'] = $data->getCreatedAt()->format('Y-m-d\TH:i:sP');
         }
         if ($data->isInitialized('deployment')) {
-            $dataArray['deployment'] = $data->getDeployment();
+            $dataArray['deployment'] = $this->normalizer->normalize($data->getDeployment(), 'json', $context);
         }
         if ($data->isInitialized('description')) {
             $dataArray['description'] = $data->getDescription();
@@ -223,7 +239,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             $dataArray['max_tokens'] = $data->getMaxTokens();
         }
         if ($data->isInitialized('model')) {
-            $dataArray['model'] = $data->getModel();
+            $dataArray['model'] = $this->normalizer->normalize($data->getModel(), 'json', $context);
         }
         if ($data->isInitialized('name')) {
             $dataArray['name'] = $data->getName();
@@ -263,7 +279,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             $dataArray['temperature'] = $data->getTemperature();
         }
         if ($data->isInitialized('template')) {
-            $dataArray['template'] = $data->getTemplate();
+            $dataArray['template'] = $this->normalizer->normalize($data->getTemplate(), 'json', $context);
         }
         if ($data->isInitialized('topP')) {
             $dataArray['top_p'] = $data->getTopP();

@@ -30,7 +30,7 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
      * Configure Username and/or Password for Basic authentication.
      *
      */
-    protected mixed $basicAuth = null;
+    protected AppLogDestinationOpenSearchSpecBasicAuth $basicAuth;
     /**
      * The index name to use for the logs. If not set, the default index name is "logs".
      *
@@ -68,7 +68,7 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
      * Configure Username and/or Password for Basic authentication.
      *
      */
-    public function getBasicAuth(): mixed
+    public function getBasicAuth(): AppLogDestinationOpenSearchSpecBasicAuth
     {
         return $this->basicAuth;
     }
@@ -78,7 +78,7 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
      *
      * @return self
      */
-    public function setBasicAuth(mixed $basicAuth): self
+    public function setBasicAuth(AppLogDestinationOpenSearchSpecBasicAuth $basicAuth): self
     {
         $this->initialized['basicAuth'] = true;
         $this->basicAuth = $basicAuth;

@@ -20,12 +20,12 @@ class Pagination extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $links = null;
-    public function getLinks(): mixed
+    protected PageLinks $links;
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

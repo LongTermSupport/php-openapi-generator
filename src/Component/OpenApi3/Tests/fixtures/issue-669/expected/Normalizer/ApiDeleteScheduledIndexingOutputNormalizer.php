@@ -47,12 +47,16 @@ class ApiDeleteScheduledIndexingOutputNormalizer implements DenormalizerInterfac
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('indexing_info', $data)) {
-            $object->setIndexingInfo($data['indexing_info']);
+            $value = $this->denormalizer->denormalize($data['indexing_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiScheduledIndexingInfo::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiScheduledIndexingInfo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiScheduledIndexingInfo, got ' . get_debug_type($value));
+            }
+            $object->setIndexingInfo($value);
             unset($data['indexing_info']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ApiDeleteScheduledIndexingOutputNormalizer implements DenormalizerInterfac
         }
         $dataArray = [];
         if ($data->isInitialized('indexingInfo')) {
-            $dataArray['indexing_info'] = $data->getIndexingInfo();
+            $dataArray['indexing_info'] = $this->normalizer->normalize($data->getIndexingInfo(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -51,24 +51,40 @@ class AppLogDestinationDefinitionNormalizer implements DenormalizerInterface, No
             unset($data['name']);
         }
         if (\array_key_exists('papertrail', $data)) {
-            $object->setPapertrail($data['papertrail']);
+            $value = $this->denormalizer->denormalize($data['papertrail'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec, got ' . get_debug_type($value));
+            }
+            $object->setPapertrail($value);
             unset($data['papertrail']);
         }
         if (\array_key_exists('datadog', $data)) {
-            $object->setDatadog($data['datadog']);
+            $value_1 = $this->denormalizer->denormalize($data['datadog'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec, got ' . get_debug_type($value_1));
+            }
+            $object->setDatadog($value_1);
             unset($data['datadog']);
         }
         if (\array_key_exists('logtail', $data)) {
-            $object->setLogtail($data['logtail']);
+            $value_2 = $this->denormalizer->denormalize($data['logtail'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec, got ' . get_debug_type($value_2));
+            }
+            $object->setLogtail($value_2);
             unset($data['logtail']);
         }
         if (\array_key_exists('open_search', $data)) {
-            $object->setOpenSearch($data['open_search']);
+            $value_3 = $this->denormalizer->denormalize($data['open_search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec, got ' . get_debug_type($value_3));
+            }
+            $object->setOpenSearch($value_3);
             unset($data['open_search']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -85,16 +101,16 @@ class AppLogDestinationDefinitionNormalizer implements DenormalizerInterface, No
         $dataArray = [];
         $dataArray['name'] = $data->getName();
         if ($data->isInitialized('papertrail')) {
-            $dataArray['papertrail'] = $data->getPapertrail();
+            $dataArray['papertrail'] = $this->normalizer->normalize($data->getPapertrail(), 'json', $context);
         }
         if ($data->isInitialized('datadog')) {
-            $dataArray['datadog'] = $data->getDatadog();
+            $dataArray['datadog'] = $this->normalizer->normalize($data->getDatadog(), 'json', $context);
         }
         if ($data->isInitialized('logtail')) {
-            $dataArray['logtail'] = $data->getLogtail();
+            $dataArray['logtail'] = $this->normalizer->normalize($data->getLogtail(), 'json', $context);
         }
         if ($data->isInitialized('openSearch')) {
-            $dataArray['open_search'] = $data->getOpenSearch();
+            $dataArray['open_search'] = $this->normalizer->normalize($data->getOpenSearch(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

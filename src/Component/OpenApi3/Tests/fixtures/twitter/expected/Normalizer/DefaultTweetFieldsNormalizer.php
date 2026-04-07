@@ -55,12 +55,16 @@ class DefaultTweetFieldsNormalizer implements DenormalizerInterface, NormalizerI
             unset($data['geo']);
         }
         if (\array_key_exists('entities', $data)) {
-            $object->setEntities($data['entities']);
+            $value_1 = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities, got ' . get_debug_type($value_1));
+            }
+            $object->setEntities($value_1);
             unset($data['entities']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -79,7 +83,7 @@ class DefaultTweetFieldsNormalizer implements DenormalizerInterface, NormalizerI
             $dataArray['geo'] = $this->normalizer->normalize($data->getGeo(), 'json', $context);
         }
         if ($data->isInitialized('entities')) {
-            $dataArray['entities'] = $data->getEntities();
+            $dataArray['entities'] = $this->normalizer->normalize($data->getEntities(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

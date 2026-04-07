@@ -153,24 +153,36 @@ class WorkflowRunNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['workflow_url']);
         }
         if (\array_key_exists('head_commit', $data)) {
-            $object->setHeadCommit($data['head_commit']);
+            $value_2 = $this->denormalizer->denormalize($data['head_commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit, got ' . get_debug_type($value_2));
+            }
+            $object->setHeadCommit($value_2);
             unset($data['head_commit']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_3 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_3));
+            }
+            $object->setRepository($value_3);
             unset($data['repository']);
         }
         if (\array_key_exists('head_repository', $data)) {
-            $object->setHeadRepository($data['head_repository']);
+            $value_4 = $this->denormalizer->denormalize($data['head_repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_4));
+            }
+            $object->setHeadRepository($value_4);
             unset($data['head_repository']);
         }
         if (\array_key_exists('head_repository_id', $data)) {
             $object->setHeadRepositoryId(TypeValidator::assertInt($data['head_repository_id'], 'head_repository_id'));
             unset($data['head_repository_id']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_5) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_5;
             }
         }
         return $object;
@@ -235,9 +247,9 @@ class WorkflowRunNormalizer implements DenormalizerInterface, NormalizerInterfac
         $dataArray['cancel_url'] = $data->getCancelUrl();
         $dataArray['rerun_url'] = $data->getRerunUrl();
         $dataArray['workflow_url'] = $data->getWorkflowUrl();
-        $dataArray['head_commit'] = $data->getHeadCommit();
-        $dataArray['repository'] = $data->getRepository();
-        $dataArray['head_repository'] = $data->getHeadRepository();
+        $dataArray['head_commit'] = $this->normalizer->normalize($data->getHeadCommit(), 'json', $context);
+        $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
+        $dataArray['head_repository'] = $this->normalizer->normalize($data->getHeadRepository(), 'json', $context);
         if ($data->isInitialized('headRepositoryId')) {
             $dataArray['head_repository_id'] = $data->getHeadRepositoryId();
         }

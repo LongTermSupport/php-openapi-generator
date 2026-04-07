@@ -99,36 +99,44 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
             unset($data['phase_last_updated_at']);
         }
         if (\array_key_exists('progress', $data)) {
-            $object->setProgress($data['progress']);
+            $value_4 = $this->denormalizer->denormalize($data['progress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgress::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgress) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgress, got ' . get_debug_type($value_4));
+            }
+            $object->setProgress($value_4);
             unset($data['progress']);
         }
         if (\array_key_exists('services', $data)) {
             $values_2 = [];
             if (\is_array($data['services'])) {
-                foreach ($data['services'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentService::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentService) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentService, got ' . get_debug_type($value_5));
+                foreach ($data['services'] as $value_5) {
+                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentService::class, 'json', $context);
+                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentService) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentService, got ' . get_debug_type($value_6));
                     }
-                    $values_2[] = $value_5;
+                    $values_2[] = $value_6;
                 }
             }
             $object->setServices($values_2);
             unset($data['services']);
         }
         if (\array_key_exists('spec', $data)) {
-            $object->setSpec($data['spec']);
+            $value_7 = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec, got ' . get_debug_type($value_7));
+            }
+            $object->setSpec($value_7);
             unset($data['spec']);
         }
         if (\array_key_exists('static_sites', $data)) {
             $values_3 = [];
             if (\is_array($data['static_sites'])) {
-                foreach ($data['static_sites'] as $value_6) {
-                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentStaticSite::class, 'json', $context);
-                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentStaticSite) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentStaticSite, got ' . get_debug_type($value_7));
+                foreach ($data['static_sites'] as $value_8) {
+                    $value_9 = $this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentStaticSite::class, 'json', $context);
+                    if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentStaticSite) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentStaticSite, got ' . get_debug_type($value_9));
                     }
-                    $values_3[] = $value_7;
+                    $values_3[] = $value_9;
                 }
             }
             $object->setStaticSites($values_3);
@@ -145,20 +153,20 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
         if (\array_key_exists('workers', $data)) {
             $values_4 = [];
             if (\is_array($data['workers'])) {
-                foreach ($data['workers'] as $value_8) {
-                    $value_9 = $this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentWorker::class, 'json', $context);
-                    if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentWorker) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentWorker, got ' . get_debug_type($value_9));
+                foreach ($data['workers'] as $value_10) {
+                    $value_11 = $this->denormalizer->denormalize($value_10, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentWorker::class, 'json', $context);
+                    if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentWorker) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentWorker, got ' . get_debug_type($value_11));
                     }
-                    $values_4[] = $value_9;
+                    $values_4[] = $value_11;
                 }
             }
             $object->setWorkers($values_4);
             unset($data['workers']);
         }
-        foreach ($data as $key => $value_10) {
+        foreach ($data as $key => $value_12) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_10;
+                $object[$key] = $value_12;
             }
         }
         return $object;
@@ -206,7 +214,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
             $dataArray['phase_last_updated_at'] = $data->getPhaseLastUpdatedAt()->format('Y-m-d\TH:i:sP');
         }
         if ($data->isInitialized('progress')) {
-            $dataArray['progress'] = $data->getProgress();
+            $dataArray['progress'] = $this->normalizer->normalize($data->getProgress(), 'json', $context);
         }
         if ($data->isInitialized('services')) {
             $values_2 = [];
@@ -216,7 +224,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
             $dataArray['services'] = $values_2;
         }
         if ($data->isInitialized('spec')) {
-            $dataArray['spec'] = $data->getSpec();
+            $dataArray['spec'] = $this->normalizer->normalize($data->getSpec(), 'json', $context);
         }
         if ($data->isInitialized('staticSites')) {
             $values_3 = [];

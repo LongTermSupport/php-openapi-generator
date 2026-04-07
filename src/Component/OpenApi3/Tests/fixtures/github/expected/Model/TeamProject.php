@@ -34,7 +34,7 @@ class TeamProject extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $creator = null;
+    protected ?SimpleUser $creator = null;
     protected string $createdAt;
     protected string $updatedAt;
     protected string $organizationPermission;
@@ -144,7 +144,7 @@ class TeamProject extends \ArrayObject
      * Simple User
      *
      */
-    public function getCreator(): mixed
+    public function getCreator(): ?SimpleUser
     {
         return $this->creator;
     }
@@ -154,7 +154,7 @@ class TeamProject extends \ArrayObject
      *
      * @return self
      */
-    public function setCreator(mixed $creator): self
+    public function setCreator(?SimpleUser $creator): self
     {
         $this->initialized['creator'] = true;
         $this->creator = $creator;

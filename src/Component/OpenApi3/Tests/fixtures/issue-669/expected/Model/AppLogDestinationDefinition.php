@@ -25,22 +25,22 @@ class AppLogDestinationDefinition extends \ArrayObject
      * Papertrail configuration.
      *
      */
-    protected mixed $papertrail = null;
+    protected AppLogDestinationPapertrailSpec $papertrail;
     /**
      * DataDog configuration.
      *
      */
-    protected mixed $datadog = null;
+    protected AppLogDestinationDatadogSpec $datadog;
     /**
      * Logtail configuration.
      *
      */
-    protected mixed $logtail = null;
+    protected AppLogDestinationLogtailSpec $logtail;
     /**
      * OpenSearch configuration.
      *
      */
-    protected mixed $openSearch = null;
+    protected AppLogDestinationOpenSearchSpec $openSearch;
     public function getName(): string
     {
         return $this->name;
@@ -55,7 +55,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      * Papertrail configuration.
      *
      */
-    public function getPapertrail(): mixed
+    public function getPapertrail(): AppLogDestinationPapertrailSpec
     {
         return $this->papertrail;
     }
@@ -65,7 +65,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      *
      * @return self
      */
-    public function setPapertrail(mixed $papertrail): self
+    public function setPapertrail(AppLogDestinationPapertrailSpec $papertrail): self
     {
         $this->initialized['papertrail'] = true;
         $this->papertrail = $papertrail;
@@ -75,7 +75,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      * DataDog configuration.
      *
      */
-    public function getDatadog(): mixed
+    public function getDatadog(): AppLogDestinationDatadogSpec
     {
         return $this->datadog;
     }
@@ -85,7 +85,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      *
      * @return self
      */
-    public function setDatadog(mixed $datadog): self
+    public function setDatadog(AppLogDestinationDatadogSpec $datadog): self
     {
         $this->initialized['datadog'] = true;
         $this->datadog = $datadog;
@@ -95,7 +95,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      * Logtail configuration.
      *
      */
-    public function getLogtail(): mixed
+    public function getLogtail(): AppLogDestinationLogtailSpec
     {
         return $this->logtail;
     }
@@ -105,7 +105,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      *
      * @return self
      */
-    public function setLogtail(mixed $logtail): self
+    public function setLogtail(AppLogDestinationLogtailSpec $logtail): self
     {
         $this->initialized['logtail'] = true;
         $this->logtail = $logtail;
@@ -115,7 +115,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      * OpenSearch configuration.
      *
      */
-    public function getOpenSearch(): mixed
+    public function getOpenSearch(): AppLogDestinationOpenSearchSpec
     {
         return $this->openSearch;
     }
@@ -125,7 +125,7 @@ class AppLogDestinationDefinition extends \ArrayObject
      *
      * @return self
      */
-    public function setOpenSearch(mixed $openSearch): self
+    public function setOpenSearch(AppLogDestinationOpenSearchSpec $openSearch): self
     {
         $this->initialized['openSearch'] = true;
         $this->openSearch = $openSearch;

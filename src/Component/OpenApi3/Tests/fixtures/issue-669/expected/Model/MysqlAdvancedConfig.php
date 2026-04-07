@@ -197,7 +197,7 @@ class MysqlAdvancedConfig extends \ArrayObject
      * MySQL Incremental Backup configuration settings
      *
      */
-    protected mixed $mysqlIncrementalBackup = null;
+    protected MysqlIncrementalBackup $mysqlIncrementalBackup;
     /**
      * The hour of day (in UTC) when backup for the service starts. New backup only starts if previous backup has already completed.
      *
@@ -888,7 +888,7 @@ class MysqlAdvancedConfig extends \ArrayObject
      * MySQL Incremental Backup configuration settings
      *
      */
-    public function getMysqlIncrementalBackup(): mixed
+    public function getMysqlIncrementalBackup(): MysqlIncrementalBackup
     {
         return $this->mysqlIncrementalBackup;
     }
@@ -898,7 +898,7 @@ class MysqlAdvancedConfig extends \ArrayObject
      *
      * @return self
      */
-    public function setMysqlIncrementalBackup(mixed $mysqlIncrementalBackup): self
+    public function setMysqlIncrementalBackup(MysqlIncrementalBackup $mysqlIncrementalBackup): self
     {
         $this->initialized['mysqlIncrementalBackup'] = true;
         $this->mysqlIncrementalBackup = $mysqlIncrementalBackup;

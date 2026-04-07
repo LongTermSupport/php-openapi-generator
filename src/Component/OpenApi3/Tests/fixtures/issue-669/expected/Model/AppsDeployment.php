@@ -34,7 +34,7 @@ class AppsDeployment extends \ArrayObject
     protected array $functions;
     protected string $phase = 'UNKNOWN';
     protected \DateTime $phaseLastUpdatedAt;
-    protected mixed $progress = null;
+    protected AppsDeploymentProgress $progress;
     /**
      * @var list<AppsDeploymentService>
      */
@@ -43,7 +43,7 @@ class AppsDeployment extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec = null;
+    protected AppSpec $spec;
     /**
      * @var list<AppsDeploymentStaticSite>
      */
@@ -150,11 +150,11 @@ class AppsDeployment extends \ArrayObject
         $this->phaseLastUpdatedAt = $phaseLastUpdatedAt;
         return $this;
     }
-    public function getProgress(): mixed
+    public function getProgress(): AppsDeploymentProgress
     {
         return $this->progress;
     }
-    public function setProgress(mixed $progress): self
+    public function setProgress(AppsDeploymentProgress $progress): self
     {
         $this->initialized['progress'] = true;
         $this->progress = $progress;
@@ -182,7 +182,7 @@ class AppsDeployment extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    public function getSpec(): mixed
+    public function getSpec(): AppSpec
     {
         return $this->spec;
     }
@@ -192,7 +192,7 @@ class AppsDeployment extends \ArrayObject
      *
      * @return self
      */
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

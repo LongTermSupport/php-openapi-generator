@@ -20,12 +20,12 @@ class ResponseAddonsCreate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $resource = null;
-    public function getResource(): mixed
+    protected AddonsResource $resource;
+    public function getResource(): AddonsResource
     {
         return $this->resource;
     }
-    public function setResource(mixed $resource): self
+    public function setResource(AddonsResource $resource): self
     {
         $this->initialized['resource'] = true;
         $this->resource = $resource;

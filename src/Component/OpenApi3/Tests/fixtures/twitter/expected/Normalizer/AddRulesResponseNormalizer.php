@@ -61,12 +61,16 @@ class AddRulesResponseNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['data']);
         }
         if (\array_key_exists('meta', $data)) {
-            $object->setMeta($data['meta']);
+            $value_2 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RulesResponseMetadata::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RulesResponseMetadata) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RulesResponseMetadata, got ' . get_debug_type($value_2));
+            }
+            $object->setMeta($value_2);
             unset($data['meta']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -86,7 +90,7 @@ class AddRulesResponseNormalizer implements DenormalizerInterface, NormalizerInt
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $dataArray['data'] = $values;
-        $dataArray['meta'] = $data->getMeta();
+        $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value_1;

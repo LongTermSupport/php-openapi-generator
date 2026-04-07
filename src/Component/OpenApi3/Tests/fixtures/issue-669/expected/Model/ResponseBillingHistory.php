@@ -24,12 +24,12 @@ class ResponseBillingHistory extends \ArrayObject
      * @var list<BillingHistory>
      */
     protected array $billingHistory;
-    protected mixed $links = null;
+    protected PageLinks $links;
     /**
      * Information about the response itself.
      *
      */
-    protected mixed $meta = null;
+    protected MetaProperties $meta;
     /**
      * @return list<BillingHistory>
      */
@@ -48,11 +48,11 @@ class ResponseBillingHistory extends \ArrayObject
         $this->billingHistory = $billingHistory;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;
@@ -62,7 +62,7 @@ class ResponseBillingHistory extends \ArrayObject
      * Information about the response itself.
      *
      */
-    public function getMeta(): mixed
+    public function getMeta(): MetaProperties
     {
         return $this->meta;
     }
@@ -72,7 +72,7 @@ class ResponseBillingHistory extends \ArrayObject
      *
      * @return self
      */
-    public function setMeta(mixed $meta): self
+    public function setMeta(MetaProperties $meta): self
     {
         $this->initialized['meta'] = true;
         $this->meta = $meta;

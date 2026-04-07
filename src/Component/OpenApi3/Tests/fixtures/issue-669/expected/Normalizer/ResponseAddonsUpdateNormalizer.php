@@ -47,12 +47,16 @@ class ResponseAddonsUpdateNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('resource', $data)) {
-            $object->setResource($data['resource']);
+            $value = $this->denormalizer->denormalize($data['resource'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsResource::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsResource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsResource, got ' . get_debug_type($value));
+            }
+            $object->setResource($value);
             unset($data['resource']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseAddonsUpdateNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray = [];
         if ($data->isInitialized('resource')) {
-            $dataArray['resource'] = $data->getResource();
+            $dataArray['resource'] = $this->normalizer->normalize($data->getResource(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

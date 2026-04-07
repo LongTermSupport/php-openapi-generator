@@ -66,16 +66,20 @@ class ShortBranchNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['protected']);
         }
         if (\array_key_exists('protection', $data)) {
-            $object->setProtection($data['protection']);
+            $value_1 = $this->denormalizer->denormalize($data['protection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection, got ' . get_debug_type($value_1));
+            }
+            $object->setProtection($value_1);
             unset($data['protection']);
         }
         if (\array_key_exists('protection_url', $data)) {
             $object->setProtectionUrl(TypeValidator::assertString($data['protection_url'], 'protection_url'));
             unset($data['protection_url']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -94,7 +98,7 @@ class ShortBranchNormalizer implements DenormalizerInterface, NormalizerInterfac
         $dataArray['commit'] = $this->normalizer->normalize($data->getCommit(), 'json', $context);
         $dataArray['protected'] = $data->getProtected();
         if ($data->isInitialized('protection')) {
-            $dataArray['protection'] = $data->getProtection();
+            $dataArray['protection'] = $this->normalizer->normalize($data->getProtection(), 'json', $context);
         }
         if ($data->isInitialized('protectionUrl')) {
             $dataArray['protection_url'] = $data->getProtectionUrl();

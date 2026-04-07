@@ -91,12 +91,16 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['objectProperty']);
         }
         if (\array_key_exists('objectRefProperty', $data)) {
-            $object->setObjectRefProperty($data['objectRefProperty']);
+            $value_3 = $this->denormalizer->denormalize($data['objectRefProperty'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Model\Schema::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Model\Schema) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Model\Schema, got ' . get_debug_type($value_3));
+            }
+            $object->setObjectRefProperty($value_3);
             unset($data['objectRefProperty']);
         }
-        foreach ($data as $key_1 => $value_3) {
+        foreach ($data as $key_1 => $value_4) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_3;
+                $object[$key_1] = $value_4;
             }
         }
         return $object;
@@ -141,7 +145,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $dataArray['objectProperty'] = $this->normalizer->normalize($data->getObjectProperty(), 'json', $context);
         }
         if ($data->isInitialized('objectRefProperty')) {
-            $dataArray['objectRefProperty'] = $data->getObjectRefProperty();
+            $dataArray['objectRefProperty'] = $this->normalizer->normalize($data->getObjectRefProperty(), 'json', $context);
         }
         foreach ($data as $key_1 => $value_2) {
             if (preg_match('/.*/', (string) $key_1) === 1) {

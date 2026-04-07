@@ -118,12 +118,12 @@ class FullRepository extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $parent = null;
+    protected Repository $parent;
     /**
      * A git repository
      *
      */
-    protected mixed $source = null;
+    protected Repository $source;
     protected int $forks;
     protected string $masterBranch;
     protected int $openIssues;
@@ -995,7 +995,7 @@ class FullRepository extends \ArrayObject
      * A git repository
      *
      */
-    public function getParent(): mixed
+    public function getParent(): Repository
     {
         return $this->parent;
     }
@@ -1005,7 +1005,7 @@ class FullRepository extends \ArrayObject
      *
      * @return self
      */
-    public function setParent(mixed $parent): self
+    public function setParent(Repository $parent): self
     {
         $this->initialized['parent'] = true;
         $this->parent = $parent;
@@ -1015,7 +1015,7 @@ class FullRepository extends \ArrayObject
      * A git repository
      *
      */
-    public function getSource(): mixed
+    public function getSource(): Repository
     {
         return $this->source;
     }
@@ -1025,7 +1025,7 @@ class FullRepository extends \ArrayObject
      *
      * @return self
      */
-    public function setSource(mixed $source): self
+    public function setSource(Repository $source): self
     {
         $this->initialized['source'] = true;
         $this->source = $source;

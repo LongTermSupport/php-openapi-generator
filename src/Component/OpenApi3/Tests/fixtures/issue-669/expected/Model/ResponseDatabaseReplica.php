@@ -20,12 +20,12 @@ class ResponseDatabaseReplica extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $replica = null;
-    public function getReplica(): mixed
+    protected DatabaseReplicaRead $replica;
+    public function getReplica(): DatabaseReplicaRead
     {
         return $this->replica;
     }
-    public function setReplica(mixed $replica): self
+    public function setReplica(DatabaseReplicaRead $replica): self
     {
         $this->initialized['replica'] = true;
         $this->replica = $replica;

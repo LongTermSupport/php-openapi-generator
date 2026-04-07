@@ -20,12 +20,12 @@ class ResponseAccount extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $account = null;
-    public function getAccount(): mixed
+    protected Account $account;
+    public function getAccount(): Account
     {
         return $this->account;
     }
-    public function setAccount(mixed $account): self
+    public function setAccount(Account $account): self
     {
         $this->initialized['account'] = true;
         $this->account = $account;

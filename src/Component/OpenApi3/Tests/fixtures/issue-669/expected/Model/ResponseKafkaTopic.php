@@ -20,12 +20,12 @@ class ResponseKafkaTopic extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $topic = null;
-    public function getTopic(): mixed
+    protected KafkaTopicVerbose $topic;
+    public function getTopic(): KafkaTopicVerbose
     {
         return $this->topic;
     }
-    public function setTopic(mixed $topic): self
+    public function setTopic(KafkaTopicVerbose $topic): self
     {
         $this->initialized['topic'] = true;
         $this->topic = $topic;

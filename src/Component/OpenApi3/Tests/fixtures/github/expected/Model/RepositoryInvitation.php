@@ -29,7 +29,7 @@ class RepositoryInvitation extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository = null;
+    protected MinimalRepository $repository;
     protected ?RepositoryInvitationInvitee $invitee = null;
     protected ?RepositoryInvitationInviter $inviter = null;
     /**
@@ -69,7 +69,7 @@ class RepositoryInvitation extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): MinimalRepository
     {
         return $this->repository;
     }
@@ -79,7 +79,7 @@ class RepositoryInvitation extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(MinimalRepository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;

@@ -24,7 +24,7 @@ class ResponseReservedIpv6List extends \ArrayObject
      * @var list<ReservedIpv6ListReservedIpv6sItem>
      */
     protected array $reservedIpv6s;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<ReservedIpv6ListReservedIpv6sItem>
@@ -44,11 +44,11 @@ class ResponseReservedIpv6List extends \ArrayObject
         $this->reservedIpv6s = $reservedIpv6s;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

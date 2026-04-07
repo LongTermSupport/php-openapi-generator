@@ -24,7 +24,7 @@ class ResponseAllCdnEndpoints extends \ArrayObject
      * @var list<CdnEndpoint>
      */
     protected array $endpoints;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<CdnEndpoint>
@@ -44,11 +44,11 @@ class ResponseAllCdnEndpoints extends \ArrayObject
         $this->endpoints = $endpoints;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

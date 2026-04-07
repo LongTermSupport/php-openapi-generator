@@ -24,7 +24,7 @@ class ResponseKeyList extends \ArrayObject
      * @var list<Key>
      */
     protected array $keys;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<Key>
@@ -44,11 +44,11 @@ class ResponseKeyList extends \ArrayObject
         $this->keys = $keys;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

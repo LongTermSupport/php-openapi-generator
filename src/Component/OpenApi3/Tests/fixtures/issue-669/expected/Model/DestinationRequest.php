@@ -32,7 +32,7 @@ class DestinationRequest extends \ArrayObject
      *
      */
     protected string $type;
-    protected mixed $config = null;
+    protected OpensearchConfigRequest $config;
     /**
      * destination name
      *
@@ -77,11 +77,11 @@ class DestinationRequest extends \ArrayObject
         $this->type = $type;
         return $this;
     }
-    public function getConfig(): mixed
+    public function getConfig(): OpensearchConfigRequest
     {
         return $this->config;
     }
-    public function setConfig(mixed $config): self
+    public function setConfig(OpensearchConfigRequest $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

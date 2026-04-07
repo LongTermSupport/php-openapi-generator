@@ -67,20 +67,28 @@ class V2DatabasesDatabaseClusterUuidUsersPostBodyNormalizer implements Denormali
             unset($data['access_key']);
         }
         if (\array_key_exists('mysql_settings', $data)) {
-            $object->setMysqlSettings($data['mysql_settings']);
+            $value = $this->denormalizer->denormalize($data['mysql_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings, got ' . get_debug_type($value));
+            }
+            $object->setMysqlSettings($value);
             unset($data['mysql_settings']);
         }
         if (\array_key_exists('settings', $data)) {
-            $object->setSettings($data['settings']);
+            $value_1 = $this->denormalizer->denormalize($data['settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings, got ' . get_debug_type($value_1));
+            }
+            $object->setSettings($value_1);
             unset($data['settings']);
         }
         if (\array_key_exists('readonly', $data)) {
             $object->setReadonly(TypeValidator::assertBool($data['readonly'], 'readonly'));
             unset($data['readonly']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -97,10 +105,10 @@ class V2DatabasesDatabaseClusterUuidUsersPostBodyNormalizer implements Denormali
         $dataArray = [];
         $dataArray['name'] = $data->getName();
         if ($data->isInitialized('mysqlSettings')) {
-            $dataArray['mysql_settings'] = $data->getMysqlSettings();
+            $dataArray['mysql_settings'] = $this->normalizer->normalize($data->getMysqlSettings(), 'json', $context);
         }
         if ($data->isInitialized('settings')) {
-            $dataArray['settings'] = $data->getSettings();
+            $dataArray['settings'] = $this->normalizer->normalize($data->getSettings(), 'json', $context);
         }
         if ($data->isInitialized('readonly')) {
             $dataArray['readonly'] = $data->getReadonly();

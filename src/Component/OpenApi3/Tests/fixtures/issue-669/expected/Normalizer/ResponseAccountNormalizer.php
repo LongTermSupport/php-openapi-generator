@@ -47,12 +47,16 @@ class ResponseAccountNormalizer implements DenormalizerInterface, NormalizerInte
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('account', $data)) {
-            $object->setAccount($data['account']);
+            $value = $this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Account::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Account) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Account, got ' . get_debug_type($value));
+            }
+            $object->setAccount($value);
             unset($data['account']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseAccountNormalizer implements DenormalizerInterface, NormalizerInte
         }
         $dataArray = [];
         if ($data->isInitialized('account')) {
-            $dataArray['account'] = $data->getAccount();
+            $dataArray['account'] = $this->normalizer->normalize($data->getAccount(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

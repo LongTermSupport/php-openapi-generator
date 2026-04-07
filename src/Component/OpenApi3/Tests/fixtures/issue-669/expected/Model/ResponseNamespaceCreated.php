@@ -20,12 +20,12 @@ class ResponseNamespaceCreated extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $namespace = null;
-    public function getNamespace(): mixed
+    protected NamespaceInfo $namespace;
+    public function getNamespace(): NamespaceInfo
     {
         return $this->namespace;
     }
-    public function setNamespace(mixed $namespace): self
+    public function setNamespace(NamespaceInfo $namespace): self
     {
         $this->initialized['namespace'] = true;
         $this->namespace = $namespace;

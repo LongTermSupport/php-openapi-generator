@@ -49,10 +49,10 @@ class AppFunctionsSpec extends \ArrayObject
      * @var list<AppVariableDefinition>
      */
     protected array $envs;
-    protected mixed $git = null;
-    protected mixed $github = null;
-    protected mixed $gitlab = null;
-    protected mixed $bitbucket = null;
+    protected AppsGitSourceSpec $git;
+    protected AppsGithubSourceSpec $github;
+    protected AppsGitlabSourceSpec $gitlab;
+    protected AppsBitbucketSourceSpec $bitbucket;
     /**
      * A list of configured log forwarding destinations.
      *
@@ -175,41 +175,41 @@ class AppFunctionsSpec extends \ArrayObject
         $this->envs = $envs;
         return $this;
     }
-    public function getGit(): mixed
+    public function getGit(): AppsGitSourceSpec
     {
         return $this->git;
     }
-    public function setGit(mixed $git): self
+    public function setGit(AppsGitSourceSpec $git): self
     {
         $this->initialized['git'] = true;
         $this->git = $git;
         return $this;
     }
-    public function getGithub(): mixed
+    public function getGithub(): AppsGithubSourceSpec
     {
         return $this->github;
     }
-    public function setGithub(mixed $github): self
+    public function setGithub(AppsGithubSourceSpec $github): self
     {
         $this->initialized['github'] = true;
         $this->github = $github;
         return $this;
     }
-    public function getGitlab(): mixed
+    public function getGitlab(): AppsGitlabSourceSpec
     {
         return $this->gitlab;
     }
-    public function setGitlab(mixed $gitlab): self
+    public function setGitlab(AppsGitlabSourceSpec $gitlab): self
     {
         $this->initialized['gitlab'] = true;
         $this->gitlab = $gitlab;
         return $this;
     }
-    public function getBitbucket(): mixed
+    public function getBitbucket(): AppsBitbucketSourceSpec
     {
         return $this->bitbucket;
     }
-    public function setBitbucket(mixed $bitbucket): self
+    public function setBitbucket(AppsBitbucketSourceSpec $bitbucket): self
     {
         $this->initialized['bitbucket'] = true;
         $this->bitbucket = $bitbucket;

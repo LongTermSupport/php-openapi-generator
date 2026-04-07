@@ -81,7 +81,7 @@ class Size extends \ArrayObject
      * An object containing information about the GPU capabilities of Droplets created with this size.
      *
      */
-    protected mixed $gpuInfo = null;
+    protected GpuInfo $gpuInfo;
     /**
      * A human-readable string that is used to uniquely identify each size.
      *
@@ -310,7 +310,7 @@ class Size extends \ArrayObject
      * An object containing information about the GPU capabilities of Droplets created with this size.
      *
      */
-    public function getGpuInfo(): mixed
+    public function getGpuInfo(): GpuInfo
     {
         return $this->gpuInfo;
     }
@@ -320,7 +320,7 @@ class Size extends \ArrayObject
      *
      * @return self
      */
-    public function setGpuInfo(mixed $gpuInfo): self
+    public function setGpuInfo(GpuInfo $gpuInfo): self
     {
         $this->initialized['gpuInfo'] = true;
         $this->gpuInfo = $gpuInfo;

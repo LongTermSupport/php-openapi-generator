@@ -20,12 +20,12 @@ class V2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostBody extends \Arra
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $mysqlSettings = null;
-    public function getMysqlSettings(): mixed
+    protected MysqlSettings $mysqlSettings;
+    public function getMysqlSettings(): MysqlSettings
     {
         return $this->mysqlSettings;
     }
-    public function setMysqlSettings(mixed $mysqlSettings): self
+    public function setMysqlSettings(MysqlSettings $mysqlSettings): self
     {
         $this->initialized['mysqlSettings'] = true;
         $this->mysqlSettings = $mysqlSettings;

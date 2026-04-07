@@ -45,7 +45,7 @@ class Member extends \ArrayObject
      *
      */
     protected string $status;
-    protected mixed $currentUtilization = null;
+    protected MemberCurrentUtilization $currentUtilization;
     /**
      * The unique identifier of the Droplet.
      *
@@ -146,11 +146,11 @@ class Member extends \ArrayObject
         $this->status = $status;
         return $this;
     }
-    public function getCurrentUtilization(): mixed
+    public function getCurrentUtilization(): MemberCurrentUtilization
     {
         return $this->currentUtilization;
     }
-    public function setCurrentUtilization(mixed $currentUtilization): self
+    public function setCurrentUtilization(MemberCurrentUtilization $currentUtilization): self
     {
         $this->initialized['currentUtilization'] = true;
         $this->currentUtilization = $currentUtilization;

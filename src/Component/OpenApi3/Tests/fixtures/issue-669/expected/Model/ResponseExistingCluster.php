@@ -20,12 +20,12 @@ class ResponseExistingCluster extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $kubernetesCluster = null;
-    public function getKubernetesCluster(): mixed
+    protected ClusterRead $kubernetesCluster;
+    public function getKubernetesCluster(): ClusterRead
     {
         return $this->kubernetesCluster;
     }
-    public function setKubernetesCluster(mixed $kubernetesCluster): self
+    public function setKubernetesCluster(ClusterRead $kubernetesCluster): self
     {
         $this->initialized['kubernetesCluster'] = true;
         $this->kubernetesCluster = $kubernetesCluster;

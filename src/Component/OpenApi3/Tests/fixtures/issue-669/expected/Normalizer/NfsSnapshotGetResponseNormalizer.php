@@ -47,12 +47,16 @@ class NfsSnapshotGetResponseNormalizer implements DenormalizerInterface, Normali
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('snapshot', $data)) {
-            $object->setSnapshot($data['snapshot']);
+            $value = $this->denormalizer->denormalize($data['snapshot'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsSnapshotResponse::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsSnapshotResponse) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsSnapshotResponse, got ' . get_debug_type($value));
+            }
+            $object->setSnapshot($value);
             unset($data['snapshot']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class NfsSnapshotGetResponseNormalizer implements DenormalizerInterface, Normali
         }
         $dataArray = [];
         if ($data->isInitialized('snapshot')) {
-            $dataArray['snapshot'] = $data->getSnapshot();
+            $dataArray['snapshot'] = $this->normalizer->normalize($data->getSnapshot(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

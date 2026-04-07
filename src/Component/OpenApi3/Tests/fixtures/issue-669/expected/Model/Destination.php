@@ -37,7 +37,7 @@ class Destination extends \ArrayObject
      *
      */
     protected string $type;
-    protected mixed $config = null;
+    protected OpensearchConfig $config;
     /**
      * A unique identifier for a destination.
      *
@@ -102,11 +102,11 @@ class Destination extends \ArrayObject
         $this->type = $type;
         return $this;
     }
-    public function getConfig(): mixed
+    public function getConfig(): OpensearchConfig
     {
         return $this->config;
     }
-    public function setConfig(mixed $config): self
+    public function setConfig(OpensearchConfig $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

@@ -81,7 +81,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying the maintenance window policy for the Kubernetes cluster.
      *
      */
-    protected mixed $maintenancePolicy = null;
+    protected ?MaintenancePolicy $maintenancePolicy = null;
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
      *
@@ -127,37 +127,37 @@ class ClusterRead extends \ArrayObject
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
      *
      */
-    protected mixed $controlPlaneFirewall = null;
+    protected ?ControlPlaneFirewall $controlPlaneFirewall = null;
     /**
      * An object specifying custom cluster autoscaler configuration.
      *
      */
-    protected mixed $clusterAutoscalerConfiguration = null;
+    protected ?ClusterAutoscalerConfiguration $clusterAutoscalerConfiguration = null;
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
      *
      */
-    protected mixed $routingAgent = null;
+    protected ?RoutingAgent $routingAgent = null;
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
      *
      */
-    protected mixed $amdGpuDevicePlugin = null;
+    protected ?AmdGpuDevicePlugin $amdGpuDevicePlugin = null;
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
      *
      */
-    protected mixed $amdGpuDeviceMetricsExporterPlugin = null;
+    protected ?AmdGpuDeviceMetricsExporterPlugin $amdGpuDeviceMetricsExporterPlugin = null;
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
      *
      */
-    protected mixed $nvidiaGpuDevicePlugin = null;
+    protected ?NvidiaGpuDevicePlugin $nvidiaGpuDevicePlugin = null;
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
      *
      */
-    protected mixed $rdmaSharedDevPlugin = null;
+    protected ?RdmaSharedDevPlugin $rdmaSharedDevPlugin = null;
     /**
      * A unique ID that can be used to identify and reference a Kubernetes cluster.
      *
@@ -386,7 +386,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying the maintenance window policy for the Kubernetes cluster.
      *
      */
-    public function getMaintenancePolicy(): mixed
+    public function getMaintenancePolicy(): ?MaintenancePolicy
     {
         return $this->maintenancePolicy;
     }
@@ -396,7 +396,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setMaintenancePolicy(mixed $maintenancePolicy): self
+    public function setMaintenancePolicy(?MaintenancePolicy $maintenancePolicy): self
     {
         $this->initialized['maintenancePolicy'] = true;
         $this->maintenancePolicy = $maintenancePolicy;
@@ -568,7 +568,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
      *
      */
-    public function getControlPlaneFirewall(): mixed
+    public function getControlPlaneFirewall(): ?ControlPlaneFirewall
     {
         return $this->controlPlaneFirewall;
     }
@@ -578,7 +578,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setControlPlaneFirewall(mixed $controlPlaneFirewall): self
+    public function setControlPlaneFirewall(?ControlPlaneFirewall $controlPlaneFirewall): self
     {
         $this->initialized['controlPlaneFirewall'] = true;
         $this->controlPlaneFirewall = $controlPlaneFirewall;
@@ -588,7 +588,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying custom cluster autoscaler configuration.
      *
      */
-    public function getClusterAutoscalerConfiguration(): mixed
+    public function getClusterAutoscalerConfiguration(): ?ClusterAutoscalerConfiguration
     {
         return $this->clusterAutoscalerConfiguration;
     }
@@ -598,7 +598,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setClusterAutoscalerConfiguration(mixed $clusterAutoscalerConfiguration): self
+    public function setClusterAutoscalerConfiguration(?ClusterAutoscalerConfiguration $clusterAutoscalerConfiguration): self
     {
         $this->initialized['clusterAutoscalerConfiguration'] = true;
         $this->clusterAutoscalerConfiguration = $clusterAutoscalerConfiguration;
@@ -608,7 +608,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
      *
      */
-    public function getRoutingAgent(): mixed
+    public function getRoutingAgent(): ?RoutingAgent
     {
         return $this->routingAgent;
     }
@@ -618,7 +618,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setRoutingAgent(mixed $routingAgent): self
+    public function setRoutingAgent(?RoutingAgent $routingAgent): self
     {
         $this->initialized['routingAgent'] = true;
         $this->routingAgent = $routingAgent;
@@ -628,7 +628,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
      *
      */
-    public function getAmdGpuDevicePlugin(): mixed
+    public function getAmdGpuDevicePlugin(): ?AmdGpuDevicePlugin
     {
         return $this->amdGpuDevicePlugin;
     }
@@ -638,7 +638,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setAmdGpuDevicePlugin(mixed $amdGpuDevicePlugin): self
+    public function setAmdGpuDevicePlugin(?AmdGpuDevicePlugin $amdGpuDevicePlugin): self
     {
         $this->initialized['amdGpuDevicePlugin'] = true;
         $this->amdGpuDevicePlugin = $amdGpuDevicePlugin;
@@ -648,7 +648,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
      *
      */
-    public function getAmdGpuDeviceMetricsExporterPlugin(): mixed
+    public function getAmdGpuDeviceMetricsExporterPlugin(): ?AmdGpuDeviceMetricsExporterPlugin
     {
         return $this->amdGpuDeviceMetricsExporterPlugin;
     }
@@ -658,7 +658,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setAmdGpuDeviceMetricsExporterPlugin(mixed $amdGpuDeviceMetricsExporterPlugin): self
+    public function setAmdGpuDeviceMetricsExporterPlugin(?AmdGpuDeviceMetricsExporterPlugin $amdGpuDeviceMetricsExporterPlugin): self
     {
         $this->initialized['amdGpuDeviceMetricsExporterPlugin'] = true;
         $this->amdGpuDeviceMetricsExporterPlugin = $amdGpuDeviceMetricsExporterPlugin;
@@ -668,7 +668,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
      *
      */
-    public function getNvidiaGpuDevicePlugin(): mixed
+    public function getNvidiaGpuDevicePlugin(): ?NvidiaGpuDevicePlugin
     {
         return $this->nvidiaGpuDevicePlugin;
     }
@@ -678,7 +678,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setNvidiaGpuDevicePlugin(mixed $nvidiaGpuDevicePlugin): self
+    public function setNvidiaGpuDevicePlugin(?NvidiaGpuDevicePlugin $nvidiaGpuDevicePlugin): self
     {
         $this->initialized['nvidiaGpuDevicePlugin'] = true;
         $this->nvidiaGpuDevicePlugin = $nvidiaGpuDevicePlugin;
@@ -688,7 +688,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
      *
      */
-    public function getRdmaSharedDevPlugin(): mixed
+    public function getRdmaSharedDevPlugin(): ?RdmaSharedDevPlugin
     {
         return $this->rdmaSharedDevPlugin;
     }
@@ -698,7 +698,7 @@ class ClusterRead extends \ArrayObject
      *
      * @return self
      */
-    public function setRdmaSharedDevPlugin(mixed $rdmaSharedDevPlugin): self
+    public function setRdmaSharedDevPlugin(?RdmaSharedDevPlugin $rdmaSharedDevPlugin): self
     {
         $this->initialized['rdmaSharedDevPlugin'] = true;
         $this->rdmaSharedDevPlugin = $rdmaSharedDevPlugin;

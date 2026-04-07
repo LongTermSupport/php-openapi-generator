@@ -30,7 +30,7 @@ class KafkaTopicUpdate extends \ArrayObject
      *
      */
     protected int $partitionCount;
-    protected mixed $config = null;
+    protected KafkaTopicConfig $config;
     /**
      * The number of nodes to replicate data across the cluster.
      *
@@ -71,11 +71,11 @@ class KafkaTopicUpdate extends \ArrayObject
         $this->partitionCount = $partitionCount;
         return $this;
     }
-    public function getConfig(): mixed
+    public function getConfig(): KafkaTopicConfig
     {
         return $this->config;
     }
-    public function setConfig(mixed $config): self
+    public function setConfig(KafkaTopicConfig $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

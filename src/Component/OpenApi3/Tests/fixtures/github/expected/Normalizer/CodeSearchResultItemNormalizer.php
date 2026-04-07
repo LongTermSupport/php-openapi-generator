@@ -74,7 +74,11 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             unset($data['html_url']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value));
+            }
+            $object->setRepository($value);
             unset($data['repository']);
         }
         if (\array_key_exists('score', $data)) {
@@ -96,8 +100,8 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if (\array_key_exists('line_numbers', $data)) {
             $values = [];
             if (\is_array($data['line_numbers'])) {
-                foreach ($data['line_numbers'] as $value) {
-                    $values[] = TypeValidator::assertString($value, 'value');
+                foreach ($data['line_numbers'] as $value_1) {
+                    $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
             $object->setLineNumbers($values);
@@ -106,16 +110,20 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if (\array_key_exists('text_matches', $data)) {
             $values_1 = [];
             if (\is_array($data['text_matches'])) {
-                foreach ($data['text_matches'] as $value_1) {
-                    $values_1[] = $value_1;
+                foreach ($data['text_matches'] as $value_2) {
+                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
+                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_3));
+                    }
+                    $values_1[] = $value_3;
                 }
             }
             $object->setTextMatches($values_1);
             unset($data['text_matches']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -136,7 +144,7 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         $dataArray['url'] = $data->getUrl();
         $dataArray['git_url'] = $data->getGitUrl();
         $dataArray['html_url'] = $data->getHtmlUrl();
-        $dataArray['repository'] = $data->getRepository();
+        $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         $dataArray['score'] = $data->getScore();
         if ($data->isInitialized('fileSize')) {
             $dataArray['file_size'] = $data->getFileSize();
@@ -158,7 +166,7 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if ($data->isInitialized('textMatches')) {
             $values_1 = [];
             foreach ($data->getTextMatches() as $value_1) {
-                $values_1[] = $value_1;
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
             $dataArray['text_matches'] = $values_1;
         }

@@ -121,7 +121,11 @@ class ApiEvaluationRunNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['run_name']);
         }
         if (\array_key_exists('star_metric_result', $data)) {
-            $object->setStarMetricResult($data['star_metric_result']);
+            $value_2 = $this->denormalizer->denormalize($data['star_metric_result'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult, got ' . get_debug_type($value_2));
+            }
+            $object->setStarMetricResult($value_2);
             unset($data['star_metric_result']);
         }
         if (\array_key_exists('started_at', $data)) {
@@ -148,9 +152,9 @@ class ApiEvaluationRunNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setTestCaseVersion(TypeValidator::assertInt($data['test_case_version'], 'test_case_version'));
             unset($data['test_case_version']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -218,7 +222,7 @@ class ApiEvaluationRunNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['run_name'] = $data->getRunName();
         }
         if ($data->isInitialized('starMetricResult')) {
-            $dataArray['star_metric_result'] = $data->getStarMetricResult();
+            $dataArray['star_metric_result'] = $this->normalizer->normalize($data->getStarMetricResult(), 'json', $context);
         }
         if ($data->isInitialized('startedAt')) {
             $dataArray['started_at'] = $data->getStartedAt()->format('Y-m-d\TH:i:sP');

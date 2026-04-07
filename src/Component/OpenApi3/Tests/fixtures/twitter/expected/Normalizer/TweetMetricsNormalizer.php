@@ -51,16 +51,24 @@ class TweetMetricsNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['tweet_id']);
         }
         if (\array_key_exists('tweet', $data)) {
-            $object->setTweet($data['tweet']);
+            $value = $this->denormalizer->denormalize($data['tweet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics, got ' . get_debug_type($value));
+            }
+            $object->setTweet($value);
             unset($data['tweet']);
         }
         if (\array_key_exists('video', $data)) {
-            $object->setVideo($data['video']);
+            $value_1 = $this->denormalizer->denormalize($data['video'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics, got ' . get_debug_type($value_1));
+            }
+            $object->setVideo($value_1);
             unset($data['video']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -76,9 +84,9 @@ class TweetMetricsNormalizer implements DenormalizerInterface, NormalizerInterfa
         }
         $dataArray = [];
         $dataArray['tweet_id'] = $data->getTweetId();
-        $dataArray['tweet'] = $data->getTweet();
+        $dataArray['tweet'] = $this->normalizer->normalize($data->getTweet(), 'json', $context);
         if ($data->isInitialized('video')) {
-            $dataArray['video'] = $data->getVideo();
+            $dataArray['video'] = $this->normalizer->normalize($data->getVideo(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

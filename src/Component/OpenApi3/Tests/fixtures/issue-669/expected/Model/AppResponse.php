@@ -24,12 +24,12 @@ class AppResponse extends \ArrayObject
      * An application's configuration and status.
      *
      */
-    protected mixed $app = null;
+    protected App $app;
     /**
      * An application's configuration and status.
      *
      */
-    public function getApp(): mixed
+    public function getApp(): App
     {
         return $this->app;
     }
@@ -39,7 +39,7 @@ class AppResponse extends \ArrayObject
      *
      * @return self
      */
-    public function setApp(mixed $app): self
+    public function setApp(App $app): self
     {
         $this->initialized['app'] = true;
         $this->app = $app;

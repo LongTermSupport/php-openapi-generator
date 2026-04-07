@@ -20,12 +20,12 @@ class DeleteRulesResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $meta = null;
-    public function getMeta(): mixed
+    protected RulesResponseMetadata $meta;
+    public function getMeta(): RulesResponseMetadata
     {
         return $this->meta;
     }
-    public function setMeta(mixed $meta): self
+    public function setMeta(RulesResponseMetadata $meta): self
     {
         $this->initialized['meta'] = true;
         $this->meta = $meta;

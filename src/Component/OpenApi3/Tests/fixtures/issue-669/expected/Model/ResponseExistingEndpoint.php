@@ -20,12 +20,12 @@ class ResponseExistingEndpoint extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $endpoint = null;
-    public function getEndpoint(): mixed
+    protected CdnEndpoint $endpoint;
+    public function getEndpoint(): CdnEndpoint
     {
         return $this->endpoint;
     }
-    public function setEndpoint(mixed $endpoint): self
+    public function setEndpoint(CdnEndpoint $endpoint): self
     {
         $this->initialized['endpoint'] = true;
         $this->endpoint = $endpoint;

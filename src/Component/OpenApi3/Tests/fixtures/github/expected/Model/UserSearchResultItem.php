@@ -51,7 +51,7 @@ class UserSearchResultItem extends \ArrayObject
     protected bool $siteAdmin;
     protected ?bool $hireable = null;
     /**
-     * @var list<mixed>
+     * @var list<SearchResultTextMatchesItem>
      */
     protected array $textMatches;
     protected ?string $blog = null;
@@ -358,14 +358,14 @@ class UserSearchResultItem extends \ArrayObject
         return $this;
     }
     /**
-     * @return list<mixed>
+     * @return list<SearchResultTextMatchesItem>
      */
     public function getTextMatches(): array
     {
         return $this->textMatches;
     }
     /**
-     * @param list<mixed> $textMatches
+     * @param list<SearchResultTextMatchesItem> $textMatches
      *
      * @return self
      */

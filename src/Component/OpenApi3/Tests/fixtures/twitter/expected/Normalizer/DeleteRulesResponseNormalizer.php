@@ -47,12 +47,16 @@ class DeleteRulesResponseNormalizer implements DenormalizerInterface, Normalizer
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('meta', $data)) {
-            $object->setMeta($data['meta']);
+            $value = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RulesResponseMetadata::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RulesResponseMetadata) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RulesResponseMetadata, got ' . get_debug_type($value));
+            }
+            $object->setMeta($value);
             unset($data['meta']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -67,7 +71,7 @@ class DeleteRulesResponseNormalizer implements DenormalizerInterface, Normalizer
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DeleteRulesResponse, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['meta'] = $data->getMeta();
+        $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

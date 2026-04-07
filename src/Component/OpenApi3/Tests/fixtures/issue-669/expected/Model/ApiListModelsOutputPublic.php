@@ -24,12 +24,12 @@ class ApiListModelsOutputPublic extends \ArrayObject
      * Links to other pages
      *
      */
-    protected mixed $links = null;
+    protected ApiLinks $links;
     /**
      * Meta information about the data set
      *
      */
-    protected mixed $meta = null;
+    protected ApiMeta $meta;
     /**
      * The models
      *
@@ -40,7 +40,7 @@ class ApiListModelsOutputPublic extends \ArrayObject
      * Links to other pages
      *
      */
-    public function getLinks(): mixed
+    public function getLinks(): ApiLinks
     {
         return $this->links;
     }
@@ -50,7 +50,7 @@ class ApiListModelsOutputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setLinks(mixed $links): self
+    public function setLinks(ApiLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;
@@ -60,7 +60,7 @@ class ApiListModelsOutputPublic extends \ArrayObject
      * Meta information about the data set
      *
      */
-    public function getMeta(): mixed
+    public function getMeta(): ApiMeta
     {
         return $this->meta;
     }
@@ -70,7 +70,7 @@ class ApiListModelsOutputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setMeta(mixed $meta): self
+    public function setMeta(ApiMeta $meta): self
     {
         $this->initialized['meta'] = true;
         $this->meta = $meta;

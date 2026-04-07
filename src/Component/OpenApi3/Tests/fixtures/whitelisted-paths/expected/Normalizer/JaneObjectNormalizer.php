@@ -27,7 +27,13 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
      */
     protected array $normalizers = [
         
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\Expansions::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Normalizer\ExpansionsNormalizer::class,
+        
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\TweetLookupResponse::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Normalizer\TweetLookupResponseNormalizer::class,
+        
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\Poll::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Normalizer\PollNormalizer::class,
+        
+        \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\PollOption::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Normalizer\PollOptionNormalizer::class,
         
         \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Runtime\Normalizer\Reference::class => \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Runtime\Normalizer\ReferenceNormalizer::class,
     ];
@@ -98,7 +104,10 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     {
         return [
             
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\Expansions::class => false,
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\TweetLookupResponse::class => false,
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\Poll::class => false,
+            \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Model\PollOption::class => false,
             \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Runtime\Normalizer\Reference::class => false,
         ];
     }

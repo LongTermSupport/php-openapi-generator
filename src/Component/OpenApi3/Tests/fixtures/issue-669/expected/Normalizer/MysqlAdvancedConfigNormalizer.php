@@ -183,12 +183,16 @@ class MysqlAdvancedConfigNormalizer implements DenormalizerInterface, Normalizer
             unset($data['log_output']);
         }
         if (\array_key_exists('mysql_incremental_backup', $data)) {
-            $object->setMysqlIncrementalBackup($data['mysql_incremental_backup']);
+            $value = $this->denormalizer->denormalize($data['mysql_incremental_backup'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup, got ' . get_debug_type($value));
+            }
+            $object->setMysqlIncrementalBackup($value);
             unset($data['mysql_incremental_backup']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -306,7 +310,7 @@ class MysqlAdvancedConfigNormalizer implements DenormalizerInterface, Normalizer
             $dataArray['log_output'] = $data->getLogOutput();
         }
         if ($data->isInitialized('mysqlIncrementalBackup')) {
-            $dataArray['mysql_incremental_backup'] = $data->getMysqlIncrementalBackup();
+            $dataArray['mysql_incremental_backup'] = $this->normalizer->normalize($data->getMysqlIncrementalBackup(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

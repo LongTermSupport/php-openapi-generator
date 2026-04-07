@@ -63,7 +63,11 @@ class AppProposeResponseNormalizer implements DenormalizerInterface, NormalizerI
             unset($data['existing_static_apps']);
         }
         if (\array_key_exists('spec', $data)) {
-            $object->setSpec($data['spec']);
+            $value = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec, got ' . get_debug_type($value));
+            }
+            $object->setSpec($value);
             unset($data['spec']);
         }
         if (\array_key_exists('app_cost', $data)) {
@@ -74,9 +78,9 @@ class AppProposeResponseNormalizer implements DenormalizerInterface, NormalizerI
             $object->setAppTierDowngradeCost(TypeValidator::assertInt($data['app_tier_downgrade_cost'], 'app_tier_downgrade_cost'));
             unset($data['app_tier_downgrade_cost']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -104,7 +108,7 @@ class AppProposeResponseNormalizer implements DenormalizerInterface, NormalizerI
             $dataArray['existing_static_apps'] = $data->getExistingStaticApps();
         }
         if ($data->isInitialized('spec')) {
-            $dataArray['spec'] = $data->getSpec();
+            $dataArray['spec'] = $this->normalizer->normalize($data->getSpec(), 'json', $context);
         }
         if ($data->isInitialized('appCost')) {
             $dataArray['app_cost'] = $data->getAppCost();

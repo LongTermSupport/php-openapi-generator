@@ -20,12 +20,12 @@ class ResponseDefaultProject extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $project = null;
-    public function getProject(): mixed
+    protected Project $project;
+    public function getProject(): Project
     {
         return $this->project;
     }
-    public function setProject(mixed $project): self
+    public function setProject(Project $project): self
     {
         $this->initialized['project'] = true;
         $this->project = $project;

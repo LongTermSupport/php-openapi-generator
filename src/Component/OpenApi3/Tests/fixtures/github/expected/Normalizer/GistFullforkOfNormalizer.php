@@ -124,7 +124,11 @@ class GistFullforkOfNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['comments_url']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $object->setOwner($data['owner']);
+            $value_2 = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value_2));
+            }
+            $object->setOwner($value_2);
             unset($data['owner']);
         }
         elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
@@ -134,9 +138,9 @@ class GistFullforkOfNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setTruncated(TypeValidator::assertBool($data['truncated'], 'truncated'));
             unset($data['truncated']);
         }
-        foreach ($data as $key_1 => $value_2) {
+        foreach ($data as $key_1 => $value_3) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_2;
+                $object[$key_1] = $value_3;
             }
         }
         return $object;
@@ -207,7 +211,7 @@ class GistFullforkOfNormalizer implements DenormalizerInterface, NormalizerInter
         }
         $val_2 = $data->getOwner();
         if ($data->isInitialized('owner') && null !== $val_2) {
-            $dataArray['owner'] = $val_2;
+            $dataArray['owner'] = $this->normalizer->normalize($val_2, 'json', $context);
         }
         if ($data->isInitialized('truncated')) {
             $dataArray['truncated'] = $data->getTruncated();

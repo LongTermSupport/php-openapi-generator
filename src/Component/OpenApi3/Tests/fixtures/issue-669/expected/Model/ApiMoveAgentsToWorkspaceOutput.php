@@ -20,12 +20,12 @@ class ApiMoveAgentsToWorkspaceOutput extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $workspace = null;
-    public function getWorkspace(): mixed
+    protected ApiWorkspace $workspace;
+    public function getWorkspace(): ApiWorkspace
     {
         return $this->workspace;
     }
-    public function setWorkspace(mixed $workspace): self
+    public function setWorkspace(ApiWorkspace $workspace): self
     {
         $this->initialized['workspace'] = true;
         $this->workspace = $workspace;

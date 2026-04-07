@@ -47,12 +47,16 @@ class ApiCreateKnowledgeBaseDataSourceOutputNormalizer implements DenormalizerIn
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('knowledge_base_data_source', $data)) {
-            $object->setKnowledgeBaseDataSource($data['knowledge_base_data_source']);
+            $value = $this->denormalizer->denormalize($data['knowledge_base_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBaseDataSource::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBaseDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBaseDataSource, got ' . get_debug_type($value));
+            }
+            $object->setKnowledgeBaseDataSource($value);
             unset($data['knowledge_base_data_source']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ApiCreateKnowledgeBaseDataSourceOutputNormalizer implements DenormalizerIn
         }
         $dataArray = [];
         if ($data->isInitialized('knowledgeBaseDataSource')) {
-            $dataArray['knowledge_base_data_source'] = $data->getKnowledgeBaseDataSource();
+            $dataArray['knowledge_base_data_source'] = $this->normalizer->normalize($data->getKnowledgeBaseDataSource(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

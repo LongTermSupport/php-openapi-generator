@@ -24,7 +24,7 @@ class ResponseReservedIpList extends \ArrayObject
      * @var list<ReservedIp>
      */
     protected array $reservedIps;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<ReservedIp>
@@ -44,11 +44,11 @@ class ResponseReservedIpList extends \ArrayObject
         $this->reservedIps = $reservedIps;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

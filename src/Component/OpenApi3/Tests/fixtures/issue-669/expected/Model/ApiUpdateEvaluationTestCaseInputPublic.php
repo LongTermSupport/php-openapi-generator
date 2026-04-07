@@ -30,13 +30,13 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
      *
      */
     protected string $description;
-    protected mixed $metrics = null;
+    protected ApiEvaluationTestCaseMetricList $metrics;
     /**
      * Name of the test case.
      *
      */
     protected string $name;
-    protected mixed $starMetric = null;
+    protected ApiStarMetric $starMetric;
     /**
      * Test-case UUID to update
      *
@@ -82,11 +82,11 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
         $this->description = $description;
         return $this;
     }
-    public function getMetrics(): mixed
+    public function getMetrics(): ApiEvaluationTestCaseMetricList
     {
         return $this->metrics;
     }
-    public function setMetrics(mixed $metrics): self
+    public function setMetrics(ApiEvaluationTestCaseMetricList $metrics): self
     {
         $this->initialized['metrics'] = true;
         $this->metrics = $metrics;
@@ -112,11 +112,11 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
         $this->name = $name;
         return $this;
     }
-    public function getStarMetric(): mixed
+    public function getStarMetric(): ApiStarMetric
     {
         return $this->starMetric;
     }
-    public function setStarMetric(mixed $starMetric): self
+    public function setStarMetric(ApiStarMetric $starMetric): self
     {
         $this->initialized['starMetric'] = true;
         $this->starMetric = $starMetric;

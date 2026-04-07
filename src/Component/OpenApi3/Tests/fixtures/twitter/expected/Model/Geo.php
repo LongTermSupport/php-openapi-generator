@@ -29,7 +29,7 @@ class Geo extends \ArrayObject
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
      *
      */
-    protected mixed $geometry = null;
+    protected Point $geometry;
     /**
      * @var array<string, mixed>
      */
@@ -66,7 +66,7 @@ class Geo extends \ArrayObject
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
      *
      */
-    public function getGeometry(): mixed
+    public function getGeometry(): Point
     {
         return $this->geometry;
     }
@@ -76,7 +76,7 @@ class Geo extends \ArrayObject
      *
      * @return self
      */
-    public function setGeometry(mixed $geometry): self
+    public function setGeometry(Point $geometry): self
     {
         $this->initialized['geometry'] = true;
         $this->geometry = $geometry;

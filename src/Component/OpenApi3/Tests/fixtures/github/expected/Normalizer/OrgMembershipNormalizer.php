@@ -66,31 +66,35 @@ class OrgMembershipNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['organization_url']);
         }
         if (\array_key_exists('organization', $data)) {
-            $object->setOrganization($data['organization']);
+            $value = $this->denormalizer->denormalize($data['organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple, got ' . get_debug_type($value));
+            }
+            $object->setOrganization($value);
             unset($data['organization']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser, got ' . get_debug_type($value_1));
             }
-            $object->setUser($value);
+            $object->setUser($value_1);
             unset($data['user']);
         }
         elseif (\array_key_exists('user', $data) && $data['user'] === null) {
             $object->setUser(null);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions, got ' . get_debug_type($value_1));
+            $value_2 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions, got ' . get_debug_type($value_2));
             }
-            $object->setPermissions($value_1);
+            $object->setPermissions($value_2);
             unset($data['permissions']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -109,7 +113,7 @@ class OrgMembershipNormalizer implements DenormalizerInterface, NormalizerInterf
         $dataArray['state'] = $data->getState();
         $dataArray['role'] = $data->getRole();
         $dataArray['organization_url'] = $data->getOrganizationUrl();
-        $dataArray['organization'] = $data->getOrganization();
+        $dataArray['organization'] = $this->normalizer->normalize($data->getOrganization(), 'json', $context);
         $val = $data->getUser();
         if (null !== $val) {
             $dataArray['user'] = $this->normalizer->normalize($val, 'json', $context);

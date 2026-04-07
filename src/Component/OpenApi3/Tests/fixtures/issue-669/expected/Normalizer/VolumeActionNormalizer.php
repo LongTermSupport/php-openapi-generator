@@ -78,16 +78,20 @@ class VolumeActionNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['resource_type']);
         }
         if (\array_key_exists('region', $data)) {
-            $object->setRegion($data['region']);
+            $value = $this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region, got ' . get_debug_type($value));
+            }
+            $object->setRegion($value);
             unset($data['region']);
         }
         if (\array_key_exists('region_slug', $data)) {
             $object->setRegionSlug(TypeValidator::assertNullableString($data['region_slug'], 'region_slug'));
             unset($data['region_slug']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -126,7 +130,7 @@ class VolumeActionNormalizer implements DenormalizerInterface, NormalizerInterfa
             $dataArray['resource_type'] = $data->getResourceType();
         }
         if ($data->isInitialized('region')) {
-            $dataArray['region'] = $data->getRegion();
+            $dataArray['region'] = $this->normalizer->normalize($data->getRegion(), 'json', $context);
         }
         $val_2 = $data->getRegionSlug();
         if ($data->isInitialized('regionSlug') && null !== $val_2) {

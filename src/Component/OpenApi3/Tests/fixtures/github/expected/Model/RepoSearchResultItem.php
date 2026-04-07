@@ -105,7 +105,7 @@ class RepoSearchResultItem extends \ArrayObject
     protected ?RepoSearchResultItemLicense $license = null;
     protected RepoSearchResultItemPermissions $permissions;
     /**
-     * @var list<mixed>
+     * @var list<SearchResultTextMatchesItem>
      */
     protected array $textMatches;
     protected string $tempCloneToken;
@@ -902,14 +902,14 @@ class RepoSearchResultItem extends \ArrayObject
         return $this;
     }
     /**
-     * @return list<mixed>
+     * @return list<SearchResultTextMatchesItem>
      */
     public function getTextMatches(): array
     {
         return $this->textMatches;
     }
     /**
-     * @param list<mixed> $textMatches
+     * @param list<SearchResultTextMatchesItem> $textMatches
      *
      * @return self
      */

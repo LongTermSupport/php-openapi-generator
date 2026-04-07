@@ -38,7 +38,7 @@ class ReviewReviewRead extends \ArrayObject
      *
      */
     protected ?string $letter = null;
-    protected mixed $book = null;
+    protected BookReviewRead $book;
     /**
      * The author of the review.
      *
@@ -123,11 +123,11 @@ class ReviewReviewRead extends \ArrayObject
         $this->letter = $letter;
         return $this;
     }
-    public function getBook(): mixed
+    public function getBook(): BookReviewRead
     {
         return $this->book;
     }
-    public function setBook(mixed $book): self
+    public function setBook(BookReviewRead $book): self
     {
         $this->initialized['book'] = true;
         $this->book = $book;

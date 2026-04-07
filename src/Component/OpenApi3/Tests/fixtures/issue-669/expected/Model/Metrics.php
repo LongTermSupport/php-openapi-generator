@@ -20,13 +20,13 @@ class Metrics extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $data = null;
+    protected MetricsData $data;
     protected string $status;
-    public function getData(): mixed
+    public function getData(): MetricsData
     {
         return $this->data;
     }
-    public function setData(mixed $data): self
+    public function setData(MetricsData $data): self
     {
         $this->initialized['data'] = true;
         $this->data = $data;

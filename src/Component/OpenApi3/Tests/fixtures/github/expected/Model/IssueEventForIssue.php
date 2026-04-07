@@ -27,7 +27,7 @@ class IssueEventForIssue extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $actor = null;
+    protected ?SimpleUser $actor = null;
     protected string $event;
     protected ?string $commitId = null;
     protected ?string $commitUrl = null;
@@ -79,7 +79,7 @@ class IssueEventForIssue extends \ArrayObject
      * Simple User
      *
      */
-    public function getActor(): mixed
+    public function getActor(): ?SimpleUser
     {
         return $this->actor;
     }
@@ -89,7 +89,7 @@ class IssueEventForIssue extends \ArrayObject
      *
      * @return self
      */
-    public function setActor(mixed $actor): self
+    public function setActor(?SimpleUser $actor): self
     {
         $this->initialized['actor'] = true;
         $this->actor = $actor;

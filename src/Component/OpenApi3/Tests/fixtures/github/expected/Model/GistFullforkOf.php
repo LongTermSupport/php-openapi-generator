@@ -43,7 +43,7 @@ class GistFullforkOf extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $owner = null;
+    protected ?SimpleUser $owner = null;
     protected bool $truncated;
     public function getUrl(): string
     {
@@ -217,7 +217,7 @@ class GistFullforkOf extends \ArrayObject
      * Simple User
      *
      */
-    public function getOwner(): mixed
+    public function getOwner(): ?SimpleUser
     {
         return $this->owner;
     }
@@ -227,7 +227,7 @@ class GistFullforkOf extends \ArrayObject
      *
      * @return self
      */
-    public function setOwner(mixed $owner): self
+    public function setOwner(?SimpleUser $owner): self
     {
         $this->initialized['owner'] = true;
         $this->owner = $owner;

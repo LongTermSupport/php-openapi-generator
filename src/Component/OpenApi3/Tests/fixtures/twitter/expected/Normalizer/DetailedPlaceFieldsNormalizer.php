@@ -47,12 +47,16 @@ class DetailedPlaceFieldsNormalizer implements DenormalizerInterface, Normalizer
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('geo', $data)) {
-            $object->setGeo($data['geo']);
+            $value = $this->denormalizer->denormalize($data['geo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Geo::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Geo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Geo, got ' . get_debug_type($value));
+            }
+            $object->setGeo($value);
             unset($data['geo']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class DetailedPlaceFieldsNormalizer implements DenormalizerInterface, Normalizer
         }
         $dataArray = [];
         if ($data->isInitialized('geo')) {
-            $dataArray['geo'] = $data->getGeo();
+            $dataArray['geo'] = $this->normalizer->normalize($data->getGeo(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

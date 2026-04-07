@@ -45,7 +45,7 @@ class CreateTrigger extends \ArrayObject
      * 
      *
      */
-    protected mixed $scheduledDetails = null;
+    protected ScheduledDetails $scheduledDetails;
     /**
      * The trigger's unique name within the namespace.
      *
@@ -131,7 +131,7 @@ class CreateTrigger extends \ArrayObject
      * 
      *
      */
-    public function getScheduledDetails(): mixed
+    public function getScheduledDetails(): ScheduledDetails
     {
         return $this->scheduledDetails;
     }
@@ -141,7 +141,7 @@ class CreateTrigger extends \ArrayObject
      *
      * @return self
      */
-    public function setScheduledDetails(mixed $scheduledDetails): self
+    public function setScheduledDetails(ScheduledDetails $scheduledDetails): self
     {
         $this->initialized['scheduledDetails'] = true;
         $this->scheduledDetails = $scheduledDetails;

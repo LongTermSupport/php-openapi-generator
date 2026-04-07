@@ -47,20 +47,24 @@ class ResponseReservedIpCreatedNormalizer implements DenormalizerInterface, Norm
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('reserved_ip', $data)) {
-            $object->setReservedIp($data['reserved_ip']);
+            $value = $this->denormalizer->denormalize($data['reserved_ip'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIp::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIp) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIp, got ' . get_debug_type($value));
+            }
+            $object->setReservedIp($value);
             unset($data['reserved_ip']);
         }
         if (\array_key_exists('links', $data)) {
-            $value = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpCreatedLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpCreatedLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpCreatedLinks, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpCreatedLinks::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpCreatedLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpCreatedLinks, got ' . get_debug_type($value_1));
             }
-            $object->setLinks($value);
+            $object->setLinks($value_1);
             unset($data['links']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -76,7 +80,7 @@ class ResponseReservedIpCreatedNormalizer implements DenormalizerInterface, Norm
         }
         $dataArray = [];
         if ($data->isInitialized('reservedIp')) {
-            $dataArray['reserved_ip'] = $data->getReservedIp();
+            $dataArray['reserved_ip'] = $this->normalizer->normalize($data->getReservedIp(), 'json', $context);
         }
         if ($data->isInitialized('links')) {
             $dataArray['links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);

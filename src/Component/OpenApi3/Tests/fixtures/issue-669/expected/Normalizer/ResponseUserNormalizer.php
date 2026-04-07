@@ -47,12 +47,16 @@ class ResponseUserNormalizer implements DenormalizerInterface, NormalizerInterfa
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('user', $data)) {
-            $object->setUser($data['user']);
+            $value = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser, got ' . get_debug_type($value));
+            }
+            $object->setUser($value);
             unset($data['user']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -67,7 +71,7 @@ class ResponseUserNormalizer implements DenormalizerInterface, NormalizerInterfa
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseUser, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['user'] = $data->getUser();
+        $dataArray['user'] = $this->normalizer->normalize($data->getUser(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

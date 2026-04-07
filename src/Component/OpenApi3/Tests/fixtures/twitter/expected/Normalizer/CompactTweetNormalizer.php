@@ -93,12 +93,16 @@ class CompactTweetNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['attachments']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $object->setWithheld($data['withheld']);
+            $value_3 = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld, got ' . get_debug_type($value_3));
+            }
+            $object->setWithheld($value_3);
             unset($data['withheld']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -134,7 +138,7 @@ class CompactTweetNormalizer implements DenormalizerInterface, NormalizerInterfa
             $dataArray['attachments'] = $this->normalizer->normalize($data->getAttachments(), 'json', $context);
         }
         if ($data->isInitialized('withheld')) {
-            $dataArray['withheld'] = $data->getWithheld();
+            $dataArray['withheld'] = $this->normalizer->normalize($data->getWithheld(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

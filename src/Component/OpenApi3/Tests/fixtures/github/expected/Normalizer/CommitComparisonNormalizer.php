@@ -70,11 +70,19 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['patch_url']);
         }
         if (\array_key_exists('base_commit', $data)) {
-            $object->setBaseCommit($data['base_commit']);
+            $value = $this->denormalizer->denormalize($data['base_commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit, got ' . get_debug_type($value));
+            }
+            $object->setBaseCommit($value);
             unset($data['base_commit']);
         }
         if (\array_key_exists('merge_base_commit', $data)) {
-            $object->setMergeBaseCommit($data['merge_base_commit']);
+            $value_1 = $this->denormalizer->denormalize($data['merge_base_commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit, got ' . get_debug_type($value_1));
+            }
+            $object->setMergeBaseCommit($value_1);
             unset($data['merge_base_commit']);
         }
         if (\array_key_exists('status', $data)) {
@@ -96,12 +104,12 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
         if (\array_key_exists('commits', $data)) {
             $values = [];
             if (\is_array($data['commits'])) {
-                foreach ($data['commits'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit, got ' . get_debug_type($value_1));
+                foreach ($data['commits'] as $value_2) {
+                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit::class, 'json', $context);
+                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Commit, got ' . get_debug_type($value_3));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_3;
                 }
             }
             $object->setCommits($values);
@@ -110,20 +118,20 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
         if (\array_key_exists('files', $data)) {
             $values_1 = [];
             if (\is_array($data['files'])) {
-                foreach ($data['files'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DiffEntry::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DiffEntry) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DiffEntry, got ' . get_debug_type($value_3));
+                foreach ($data['files'] as $value_4) {
+                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DiffEntry::class, 'json', $context);
+                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DiffEntry) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DiffEntry, got ' . get_debug_type($value_5));
                     }
-                    $values_1[] = $value_3;
+                    $values_1[] = $value_5;
                 }
             }
             $object->setFiles($values_1);
             unset($data['files']);
         }
-        foreach ($data as $key => $value_4) {
+        foreach ($data as $key => $value_6) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_4;
+                $object[$key] = $value_6;
             }
         }
         return $object;
@@ -143,8 +151,8 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
         $dataArray['permalink_url'] = $data->getPermalinkUrl();
         $dataArray['diff_url'] = $data->getDiffUrl();
         $dataArray['patch_url'] = $data->getPatchUrl();
-        $dataArray['base_commit'] = $data->getBaseCommit();
-        $dataArray['merge_base_commit'] = $data->getMergeBaseCommit();
+        $dataArray['base_commit'] = $this->normalizer->normalize($data->getBaseCommit(), 'json', $context);
+        $dataArray['merge_base_commit'] = $this->normalizer->normalize($data->getMergeBaseCommit(), 'json', $context);
         $dataArray['status'] = $data->getStatus();
         $dataArray['ahead_by'] = $data->getAheadBy();
         $dataArray['behind_by'] = $data->getBehindBy();

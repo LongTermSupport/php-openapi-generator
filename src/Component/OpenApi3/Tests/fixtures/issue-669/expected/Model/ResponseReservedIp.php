@@ -20,12 +20,12 @@ class ResponseReservedIp extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $reservedIp = null;
-    public function getReservedIp(): mixed
+    protected ReservedIp $reservedIp;
+    public function getReservedIp(): ReservedIp
     {
         return $this->reservedIp;
     }
-    public function setReservedIp(mixed $reservedIp): self
+    public function setReservedIp(ReservedIp $reservedIp): self
     {
         $this->initialized['reservedIp'] = true;
         $this->reservedIp = $reservedIp;

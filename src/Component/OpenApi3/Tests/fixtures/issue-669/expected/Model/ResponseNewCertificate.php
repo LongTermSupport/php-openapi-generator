@@ -20,12 +20,12 @@ class ResponseNewCertificate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $certificate = null;
-    public function getCertificate(): mixed
+    protected Certificate $certificate;
+    public function getCertificate(): Certificate
     {
         return $this->certificate;
     }
-    public function setCertificate(mixed $certificate): self
+    public function setCertificate(Certificate $certificate): self
     {
         $this->initialized['certificate'] = true;
         $this->certificate = $certificate;

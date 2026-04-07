@@ -47,16 +47,24 @@ class StateNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('regions', $data)) {
-            $object->setRegions($data['regions']);
+            $value = $this->denormalizer->denormalize($data['regions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionalState::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionalState) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionalState, got ' . get_debug_type($value));
+            }
+            $object->setRegions($value);
             unset($data['regions']);
         }
         if (\array_key_exists('previous_outage', $data)) {
-            $object->setPreviousOutage($data['previous_outage']);
+            $value_1 = $this->denormalizer->denormalize($data['previous_outage'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PreviousOutage::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PreviousOutage) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PreviousOutage, got ' . get_debug_type($value_1));
+            }
+            $object->setPreviousOutage($value_1);
             unset($data['previous_outage']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -72,10 +80,10 @@ class StateNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         }
         $dataArray = [];
         if ($data->isInitialized('regions')) {
-            $dataArray['regions'] = $data->getRegions();
+            $dataArray['regions'] = $this->normalizer->normalize($data->getRegions(), 'json', $context);
         }
         if ($data->isInitialized('previousOutage')) {
-            $dataArray['previous_outage'] = $data->getPreviousOutage();
+            $dataArray['previous_outage'] = $this->normalizer->normalize($data->getPreviousOutage(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

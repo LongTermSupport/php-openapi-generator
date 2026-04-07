@@ -55,7 +55,7 @@ class ResponseFloatingIpActionAction extends \ArrayObject
      *
      */
     protected string $resourceType;
-    protected mixed $region = null;
+    protected Region $region;
     /**
      * A human-readable string that is used as a unique identifier for each region.
      *
@@ -206,11 +206,11 @@ class ResponseFloatingIpActionAction extends \ArrayObject
         $this->resourceType = $resourceType;
         return $this;
     }
-    public function getRegion(): mixed
+    public function getRegion(): Region
     {
         return $this->region;
     }
-    public function setRegion(mixed $region): self
+    public function setRegion(Region $region): self
     {
         $this->initialized['region'] = true;
         $this->region = $region;

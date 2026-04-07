@@ -39,7 +39,7 @@ class KafkaTopicVerbose extends \ArrayObject
      * @var list<KafkaTopicPartition>
      */
     protected array $partitions;
-    protected mixed $config = null;
+    protected KafkaTopicConfig $config;
     /**
      * The name of the Kafka topic.
      *
@@ -118,11 +118,11 @@ class KafkaTopicVerbose extends \ArrayObject
         $this->partitions = $partitions;
         return $this;
     }
-    public function getConfig(): mixed
+    public function getConfig(): KafkaTopicConfig
     {
         return $this->config;
     }
-    public function setConfig(mixed $config): self
+    public function setConfig(KafkaTopicConfig $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

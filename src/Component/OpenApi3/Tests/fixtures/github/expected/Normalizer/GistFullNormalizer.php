@@ -124,7 +124,11 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['comments_url']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $object->setOwner($data['owner']);
+            $value_2 = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value_2));
+            }
+            $object->setOwner($value_2);
             unset($data['owner']);
         }
         elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
@@ -137,12 +141,12 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('forks', $data)) {
             $values_1 = [];
             if (\is_array($data['forks'])) {
-                foreach ($data['forks'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem, got ' . get_debug_type($value_3));
+                foreach ($data['forks'] as $value_3) {
+                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem::class, 'json', $context);
+                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem, got ' . get_debug_type($value_4));
                     }
-                    $values_1[] = $value_3;
+                    $values_1[] = $value_4;
                 }
             }
             $object->setForks($values_1);
@@ -151,31 +155,31 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('history', $data)) {
             $values_2 = [];
             if (\is_array($data['history'])) {
-                foreach ($data['history'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem, got ' . get_debug_type($value_5));
+                foreach ($data['history'] as $value_5) {
+                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem::class, 'json', $context);
+                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem, got ' . get_debug_type($value_6));
                     }
-                    $values_2[] = $value_5;
+                    $values_2[] = $value_6;
                 }
             }
             $object->setHistory($values_2);
             unset($data['history']);
         }
         if (\array_key_exists('fork_of', $data) && $data['fork_of'] !== null) {
-            $value_6 = $this->denormalizer->denormalize($data['fork_of'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf, got ' . get_debug_type($value_6));
+            $value_7 = $this->denormalizer->denormalize($data['fork_of'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf, got ' . get_debug_type($value_7));
             }
-            $object->setForkOf($value_6);
+            $object->setForkOf($value_7);
             unset($data['fork_of']);
         }
         elseif (\array_key_exists('fork_of', $data) && $data['fork_of'] === null) {
             $object->setForkOf(null);
         }
-        foreach ($data as $key_1 => $value_7) {
+        foreach ($data as $key_1 => $value_8) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_7;
+                $object[$key_1] = $value_8;
             }
         }
         return $object;
@@ -246,7 +250,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
         $val_2 = $data->getOwner();
         if ($data->isInitialized('owner') && null !== $val_2) {
-            $dataArray['owner'] = $val_2;
+            $dataArray['owner'] = $this->normalizer->normalize($val_2, 'json', $context);
         }
         if ($data->isInitialized('truncated')) {
             $dataArray['truncated'] = $data->getTruncated();

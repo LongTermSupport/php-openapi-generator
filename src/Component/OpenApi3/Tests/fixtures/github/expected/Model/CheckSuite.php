@@ -42,14 +42,14 @@ class CheckSuite extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository = null;
+    protected MinimalRepository $repository;
     protected ?\DateTime $createdAt = null;
     protected ?\DateTime $updatedAt = null;
     /**
      * Simple Commit
      *
      */
-    protected mixed $headCommit = null;
+    protected SimpleCommit $headCommit;
     protected int $latestCheckRunsCount;
     protected string $checkRunsUrl;
     public function getId(): int
@@ -184,7 +184,7 @@ class CheckSuite extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): MinimalRepository
     {
         return $this->repository;
     }
@@ -194,7 +194,7 @@ class CheckSuite extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(MinimalRepository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;
@@ -224,7 +224,7 @@ class CheckSuite extends \ArrayObject
      * Simple Commit
      *
      */
-    public function getHeadCommit(): mixed
+    public function getHeadCommit(): SimpleCommit
     {
         return $this->headCommit;
     }
@@ -234,7 +234,7 @@ class CheckSuite extends \ArrayObject
      *
      * @return self
      */
-    public function setHeadCommit(mixed $headCommit): self
+    public function setHeadCommit(SimpleCommit $headCommit): self
     {
         $this->initialized['headCommit'] = true;
         $this->headCommit = $headCommit;

@@ -31,7 +31,7 @@ class CombinedCommitStatus extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository = null;
+    protected MinimalRepository $repository;
     protected string $commitUrl;
     protected string $url;
     public function getState(): string
@@ -86,7 +86,7 @@ class CombinedCommitStatus extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): MinimalRepository
     {
         return $this->repository;
     }
@@ -96,7 +96,7 @@ class CombinedCommitStatus extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(MinimalRepository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;

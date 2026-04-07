@@ -24,7 +24,7 @@ class DefaultTweetFieldsGeo extends \ArrayObject
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
      *
      */
-    protected mixed $coordinates = null;
+    protected Point $coordinates;
     /**
      * The identifier for this place
      *
@@ -34,7 +34,7 @@ class DefaultTweetFieldsGeo extends \ArrayObject
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
      *
      */
-    public function getCoordinates(): mixed
+    public function getCoordinates(): Point
     {
         return $this->coordinates;
     }
@@ -44,7 +44,7 @@ class DefaultTweetFieldsGeo extends \ArrayObject
      *
      * @return self
      */
-    public function setCoordinates(mixed $coordinates): self
+    public function setCoordinates(Point $coordinates): self
     {
         $this->initialized['coordinates'] = true;
         $this->coordinates = $coordinates;

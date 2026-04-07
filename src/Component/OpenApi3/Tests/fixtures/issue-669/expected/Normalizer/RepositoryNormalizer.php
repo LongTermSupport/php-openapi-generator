@@ -55,16 +55,20 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             unset($data['name']);
         }
         if (\array_key_exists('latest_tag', $data)) {
-            $object->setLatestTag($data['latest_tag']);
+            $value = $this->denormalizer->denormalize($data['latest_tag'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag, got ' . get_debug_type($value));
+            }
+            $object->setLatestTag($value);
             unset($data['latest_tag']);
         }
         if (\array_key_exists('tag_count', $data)) {
             $object->setTagCount(TypeValidator::assertInt($data['tag_count'], 'tag_count'));
             unset($data['tag_count']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -86,7 +90,7 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             $dataArray['name'] = $data->getName();
         }
         if ($data->isInitialized('latestTag')) {
-            $dataArray['latest_tag'] = $data->getLatestTag();
+            $dataArray['latest_tag'] = $this->normalizer->normalize($data->getLatestTag(), 'json', $context);
         }
         if ($data->isInitialized('tagCount')) {
             $dataArray['tag_count'] = $data->getTagCount();

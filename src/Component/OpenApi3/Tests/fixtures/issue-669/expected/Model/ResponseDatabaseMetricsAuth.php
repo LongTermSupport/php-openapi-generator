@@ -20,12 +20,12 @@ class ResponseDatabaseMetricsAuth extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $credentials = null;
-    public function getCredentials(): mixed
+    protected DatabaseMetricsCredentials $credentials;
+    public function getCredentials(): DatabaseMetricsCredentials
     {
         return $this->credentials;
     }
-    public function setCredentials(mixed $credentials): self
+    public function setCredentials(DatabaseMetricsCredentials $credentials): self
     {
         $this->initialized['credentials'] = true;
         $this->credentials = $credentials;

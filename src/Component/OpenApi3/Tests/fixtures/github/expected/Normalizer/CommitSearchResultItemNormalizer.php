@@ -110,7 +110,11 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             unset($data['parents']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_5 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_5));
+            }
+            $object->setRepository($value_5);
             unset($data['repository']);
         }
         if (\array_key_exists('score', $data)) {
@@ -124,16 +128,20 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
         if (\array_key_exists('text_matches', $data)) {
             $values_1 = [];
             if (\is_array($data['text_matches'])) {
-                foreach ($data['text_matches'] as $value_5) {
-                    $values_1[] = $value_5;
+                foreach ($data['text_matches'] as $value_6) {
+                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
+                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_7));
+                    }
+                    $values_1[] = $value_7;
                 }
             }
             $object->setTextMatches($values_1);
             unset($data['text_matches']);
         }
-        foreach ($data as $key => $value_6) {
+        foreach ($data as $key => $value_8) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_6;
+                $object[$key] = $value_8;
             }
         }
         return $object;
@@ -170,13 +178,13 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $dataArray['parents'] = $values;
-        $dataArray['repository'] = $data->getRepository();
+        $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         $dataArray['score'] = $data->getScore();
         $dataArray['node_id'] = $data->getNodeId();
         if ($data->isInitialized('textMatches')) {
             $values_1 = [];
             foreach ($data->getTextMatches() as $value_1) {
-                $values_1[] = $value_1;
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
             $dataArray['text_matches'] = $values_1;
         }

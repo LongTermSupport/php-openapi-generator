@@ -20,7 +20,7 @@ class App extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $activeDeployment = null;
+    protected AppsDeployment $activeDeployment;
     protected \DateTime $createdAt;
     protected string $defaultIngress;
     /**
@@ -28,7 +28,7 @@ class App extends \ArrayObject
      */
     protected array $domains;
     protected string $id;
-    protected mixed $inProgressDeployment = null;
+    protected AppsDeployment $inProgressDeployment;
     protected \DateTime $lastDeploymentCreatedAt;
     protected string $liveDomain;
     protected string $liveUrl;
@@ -40,12 +40,12 @@ class App extends \ArrayObject
      *
      */
     protected string $projectId;
-    protected mixed $region = null;
+    protected AppsRegion $region;
     /**
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec = null;
+    protected AppSpec $spec;
     protected string $tierSlug;
     protected \DateTime $updatedAt;
     protected AppPinnedDeployment $pinnedDeployment;
@@ -53,12 +53,12 @@ class App extends \ArrayObject
      * @var list<AppsDedicatedEgressIp>
      */
     protected array $dedicatedIps;
-    protected mixed $vpc = null;
-    public function getActiveDeployment(): mixed
+    protected AppsVpc $vpc;
+    public function getActiveDeployment(): AppsDeployment
     {
         return $this->activeDeployment;
     }
-    public function setActiveDeployment(mixed $activeDeployment): self
+    public function setActiveDeployment(AppsDeployment $activeDeployment): self
     {
         $this->initialized['activeDeployment'] = true;
         $this->activeDeployment = $activeDeployment;
@@ -112,11 +112,11 @@ class App extends \ArrayObject
         $this->id = $id;
         return $this;
     }
-    public function getInProgressDeployment(): mixed
+    public function getInProgressDeployment(): AppsDeployment
     {
         return $this->inProgressDeployment;
     }
-    public function setInProgressDeployment(mixed $inProgressDeployment): self
+    public function setInProgressDeployment(AppsDeployment $inProgressDeployment): self
     {
         $this->initialized['inProgressDeployment'] = true;
         $this->inProgressDeployment = $inProgressDeployment;
@@ -202,11 +202,11 @@ class App extends \ArrayObject
         $this->projectId = $projectId;
         return $this;
     }
-    public function getRegion(): mixed
+    public function getRegion(): AppsRegion
     {
         return $this->region;
     }
-    public function setRegion(mixed $region): self
+    public function setRegion(AppsRegion $region): self
     {
         $this->initialized['region'] = true;
         $this->region = $region;
@@ -216,7 +216,7 @@ class App extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    public function getSpec(): mixed
+    public function getSpec(): AppSpec
     {
         return $this->spec;
     }
@@ -226,7 +226,7 @@ class App extends \ArrayObject
      *
      * @return self
      */
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -280,11 +280,11 @@ class App extends \ArrayObject
         $this->dedicatedIps = $dedicatedIps;
         return $this;
     }
-    public function getVpc(): mixed
+    public function getVpc(): AppsVpc
     {
         return $this->vpc;
     }
-    public function setVpc(mixed $vpc): self
+    public function setVpc(AppsVpc $vpc): self
     {
         $this->initialized['vpc'] = true;
         $this->vpc = $vpc;

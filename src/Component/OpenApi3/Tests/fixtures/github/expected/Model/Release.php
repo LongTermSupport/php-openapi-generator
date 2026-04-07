@@ -56,7 +56,7 @@ class Release extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $author = null;
+    protected ?SimpleUser $author = null;
     /**
      * @var list<ReleaseAsset>
      */
@@ -267,7 +267,7 @@ class Release extends \ArrayObject
      * Simple User
      *
      */
-    public function getAuthor(): mixed
+    public function getAuthor(): ?SimpleUser
     {
         return $this->author;
     }
@@ -277,7 +277,7 @@ class Release extends \ArrayObject
      *
      * @return self
      */
-    public function setAuthor(mixed $author): self
+    public function setAuthor(?SimpleUser $author): self
     {
         $this->initialized['author'] = true;
         $this->author = $author;

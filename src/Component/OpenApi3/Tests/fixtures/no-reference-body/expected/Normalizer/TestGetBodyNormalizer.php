@@ -51,20 +51,24 @@ class TestGetBodyNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['foo']);
         }
         if (\array_key_exists('Bar', $data)) {
-            $object->setBar($data['Bar']);
+            $value = $this->denormalizer->denormalize($data['Bar'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar, got ' . get_debug_type($value));
+            }
+            $object->setBar($value);
             unset($data['Bar']);
         }
         if (\array_key_exists('Baz', $data)) {
-            $value = $this->denormalizer->denormalize($data['Baz'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['Baz'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz, got ' . get_debug_type($value_1));
             }
-            $object->setBaz($value);
+            $object->setBaz($value_1);
             unset($data['Baz']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -83,7 +87,7 @@ class TestGetBodyNormalizer implements DenormalizerInterface, NormalizerInterfac
             $dataArray['foo'] = $data->getFoo();
         }
         if ($data->isInitialized('bar')) {
-            $dataArray['Bar'] = $data->getBar();
+            $dataArray['Bar'] = $this->normalizer->normalize($data->getBar(), 'json', $context);
         }
         if ($data->isInitialized('baz')) {
             $dataArray['Baz'] = $this->normalizer->normalize($data->getBaz(), 'json', $context);

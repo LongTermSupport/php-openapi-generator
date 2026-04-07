@@ -47,12 +47,16 @@ class ResponseExistingLoadBalancerNormalizer implements DenormalizerInterface, N
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('load_balancer', $data)) {
-            $object->setLoadBalancer($data['load_balancer']);
+            $value = $this->denormalizer->denormalize($data['load_balancer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LoadBalancer::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LoadBalancer) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LoadBalancer, got ' . get_debug_type($value));
+            }
+            $object->setLoadBalancer($value);
             unset($data['load_balancer']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseExistingLoadBalancerNormalizer implements DenormalizerInterface, N
         }
         $dataArray = [];
         if ($data->isInitialized('loadBalancer')) {
-            $dataArray['load_balancer'] = $data->getLoadBalancer();
+            $dataArray['load_balancer'] = $this->normalizer->normalize($data->getLoadBalancer(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -20,12 +20,12 @@ class ResponseSubscriptionResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $subscription = null;
-    public function getSubscription(): mixed
+    protected Subscription $subscription;
+    public function getSubscription(): Subscription
     {
         return $this->subscription;
     }
-    public function setSubscription(mixed $subscription): self
+    public function setSubscription(Subscription $subscription): self
     {
         $this->initialized['subscription'] = true;
         $this->subscription = $subscription;

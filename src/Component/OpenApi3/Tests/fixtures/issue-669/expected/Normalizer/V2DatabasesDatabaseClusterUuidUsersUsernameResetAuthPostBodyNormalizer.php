@@ -47,12 +47,16 @@ class V2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostBodyNormalizer imp
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('mysql_settings', $data)) {
-            $object->setMysqlSettings($data['mysql_settings']);
+            $value = $this->denormalizer->denormalize($data['mysql_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings, got ' . get_debug_type($value));
+            }
+            $object->setMysqlSettings($value);
             unset($data['mysql_settings']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class V2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostBodyNormalizer imp
         }
         $dataArray = [];
         if ($data->isInitialized('mysqlSettings')) {
-            $dataArray['mysql_settings'] = $data->getMysqlSettings();
+            $dataArray['mysql_settings'] = $this->normalizer->normalize($data->getMysqlSettings(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

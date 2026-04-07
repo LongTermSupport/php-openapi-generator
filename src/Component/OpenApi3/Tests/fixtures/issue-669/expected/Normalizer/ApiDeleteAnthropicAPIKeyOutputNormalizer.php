@@ -47,12 +47,16 @@ class ApiDeleteAnthropicAPIKeyOutputNormalizer implements DenormalizerInterface,
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('api_key_info', $data)) {
-            $object->setApiKeyInfo($data['api_key_info']);
+            $value = $this->denormalizer->denormalize($data['api_key_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo, got ' . get_debug_type($value));
+            }
+            $object->setApiKeyInfo($value);
             unset($data['api_key_info']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ApiDeleteAnthropicAPIKeyOutputNormalizer implements DenormalizerInterface,
         }
         $dataArray = [];
         if ($data->isInitialized('apiKeyInfo')) {
-            $dataArray['api_key_info'] = $data->getApiKeyInfo();
+            $dataArray['api_key_info'] = $this->normalizer->normalize($data->getApiKeyInfo(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

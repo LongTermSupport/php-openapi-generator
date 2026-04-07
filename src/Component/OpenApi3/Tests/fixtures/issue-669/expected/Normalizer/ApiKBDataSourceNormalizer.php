@@ -47,7 +47,11 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('aws_data_source', $data)) {
-            $object->setAwsDataSource($data['aws_data_source']);
+            $value = $this->denormalizer->denormalize($data['aws_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource, got ' . get_debug_type($value));
+            }
+            $object->setAwsDataSource($value);
             unset($data['aws_data_source']);
         }
         if (\array_key_exists('bucket_name', $data)) {
@@ -63,19 +67,35 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['chunking_algorithm']);
         }
         if (\array_key_exists('chunking_options', $data)) {
-            $object->setChunkingOptions($data['chunking_options']);
+            $value_1 = $this->denormalizer->denormalize($data['chunking_options'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions, got ' . get_debug_type($value_1));
+            }
+            $object->setChunkingOptions($value_1);
             unset($data['chunking_options']);
         }
         if (\array_key_exists('dropbox_data_source', $data)) {
-            $object->setDropboxDataSource($data['dropbox_data_source']);
+            $value_2 = $this->denormalizer->denormalize($data['dropbox_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource, got ' . get_debug_type($value_2));
+            }
+            $object->setDropboxDataSource($value_2);
             unset($data['dropbox_data_source']);
         }
         if (\array_key_exists('file_upload_data_source', $data)) {
-            $object->setFileUploadDataSource($data['file_upload_data_source']);
+            $value_3 = $this->denormalizer->denormalize($data['file_upload_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource, got ' . get_debug_type($value_3));
+            }
+            $object->setFileUploadDataSource($value_3);
             unset($data['file_upload_data_source']);
         }
         if (\array_key_exists('google_drive_data_source', $data)) {
-            $object->setGoogleDriveDataSource($data['google_drive_data_source']);
+            $value_4 = $this->denormalizer->denormalize($data['google_drive_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource, got ' . get_debug_type($value_4));
+            }
+            $object->setGoogleDriveDataSource($value_4);
             unset($data['google_drive_data_source']);
         }
         if (\array_key_exists('item_path', $data)) {
@@ -83,16 +103,24 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['item_path']);
         }
         if (\array_key_exists('spaces_data_source', $data)) {
-            $object->setSpacesDataSource($data['spaces_data_source']);
+            $value_5 = $this->denormalizer->denormalize($data['spaces_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource, got ' . get_debug_type($value_5));
+            }
+            $object->setSpacesDataSource($value_5);
             unset($data['spaces_data_source']);
         }
         if (\array_key_exists('web_crawler_data_source', $data)) {
-            $object->setWebCrawlerDataSource($data['web_crawler_data_source']);
+            $value_6 = $this->denormalizer->denormalize($data['web_crawler_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource, got ' . get_debug_type($value_6));
+            }
+            $object->setWebCrawlerDataSource($value_6);
             unset($data['web_crawler_data_source']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_7) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_7;
             }
         }
         return $object;
@@ -108,7 +136,7 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
         }
         $dataArray = [];
         if ($data->isInitialized('awsDataSource')) {
-            $dataArray['aws_data_source'] = $data->getAwsDataSource();
+            $dataArray['aws_data_source'] = $this->normalizer->normalize($data->getAwsDataSource(), 'json', $context);
         }
         if ($data->isInitialized('bucketName')) {
             $dataArray['bucket_name'] = $data->getBucketName();
@@ -120,25 +148,25 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             $dataArray['chunking_algorithm'] = $data->getChunkingAlgorithm();
         }
         if ($data->isInitialized('chunkingOptions')) {
-            $dataArray['chunking_options'] = $data->getChunkingOptions();
+            $dataArray['chunking_options'] = $this->normalizer->normalize($data->getChunkingOptions(), 'json', $context);
         }
         if ($data->isInitialized('dropboxDataSource')) {
-            $dataArray['dropbox_data_source'] = $data->getDropboxDataSource();
+            $dataArray['dropbox_data_source'] = $this->normalizer->normalize($data->getDropboxDataSource(), 'json', $context);
         }
         if ($data->isInitialized('fileUploadDataSource')) {
-            $dataArray['file_upload_data_source'] = $data->getFileUploadDataSource();
+            $dataArray['file_upload_data_source'] = $this->normalizer->normalize($data->getFileUploadDataSource(), 'json', $context);
         }
         if ($data->isInitialized('googleDriveDataSource')) {
-            $dataArray['google_drive_data_source'] = $data->getGoogleDriveDataSource();
+            $dataArray['google_drive_data_source'] = $this->normalizer->normalize($data->getGoogleDriveDataSource(), 'json', $context);
         }
         if ($data->isInitialized('itemPath')) {
             $dataArray['item_path'] = $data->getItemPath();
         }
         if ($data->isInitialized('spacesDataSource')) {
-            $dataArray['spaces_data_source'] = $data->getSpacesDataSource();
+            $dataArray['spaces_data_source'] = $this->normalizer->normalize($data->getSpacesDataSource(), 'json', $context);
         }
         if ($data->isInitialized('webCrawlerDataSource')) {
-            $dataArray['web_crawler_data_source'] = $data->getWebCrawlerDataSource();
+            $dataArray['web_crawler_data_source'] = $this->normalizer->normalize($data->getWebCrawlerDataSource(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

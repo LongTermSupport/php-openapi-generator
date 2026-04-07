@@ -47,26 +47,30 @@ class SinksResponseNormalizer implements DenormalizerInterface, NormalizerInterf
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('destination', $data)) {
-            $object->setDestination($data['destination']);
+            $value = $this->denormalizer->denormalize($data['destination'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination, got ' . get_debug_type($value));
+            }
+            $object->setDestination($value);
             unset($data['destination']);
         }
         if (\array_key_exists('resources', $data)) {
             $values = [];
             if (\is_array($data['resources'])) {
-                foreach ($data['resources'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource, got ' . get_debug_type($value_1));
+                foreach ($data['resources'] as $value_1) {
+                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource::class, 'json', $context);
+                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource, got ' . get_debug_type($value_2));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_2;
                 }
             }
             $object->setResources($values);
             unset($data['resources']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -82,7 +86,7 @@ class SinksResponseNormalizer implements DenormalizerInterface, NormalizerInterf
         }
         $dataArray = [];
         if ($data->isInitialized('destination')) {
-            $dataArray['destination'] = $data->getDestination();
+            $dataArray['destination'] = $this->normalizer->normalize($data->getDestination(), 'json', $context);
         }
         if ($data->isInitialized('resources')) {
             $values = [];

@@ -95,18 +95,18 @@ class AppSpec extends \ArrayObject
      * Specification for app ingress configurations.
      *
      */
-    protected mixed $ingress = null;
+    protected AppIngressSpec $ingress;
     /**
      * Specification for app egress configurations.
      *
      */
-    protected mixed $egress = null;
+    protected AppEgressSpec $egress;
     /**
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
      *
      */
-    protected mixed $maintenance = null;
-    protected mixed $vpc = null;
+    protected AppMaintenanceSpec $maintenance;
+    protected AppsVpc $vpc;
     /**
      * The name of the app. Must be unique across all apps in the same account.
      *
@@ -373,7 +373,7 @@ class AppSpec extends \ArrayObject
      * Specification for app ingress configurations.
      *
      */
-    public function getIngress(): mixed
+    public function getIngress(): AppIngressSpec
     {
         return $this->ingress;
     }
@@ -383,7 +383,7 @@ class AppSpec extends \ArrayObject
      *
      * @return self
      */
-    public function setIngress(mixed $ingress): self
+    public function setIngress(AppIngressSpec $ingress): self
     {
         $this->initialized['ingress'] = true;
         $this->ingress = $ingress;
@@ -393,7 +393,7 @@ class AppSpec extends \ArrayObject
      * Specification for app egress configurations.
      *
      */
-    public function getEgress(): mixed
+    public function getEgress(): AppEgressSpec
     {
         return $this->egress;
     }
@@ -403,7 +403,7 @@ class AppSpec extends \ArrayObject
      *
      * @return self
      */
-    public function setEgress(mixed $egress): self
+    public function setEgress(AppEgressSpec $egress): self
     {
         $this->initialized['egress'] = true;
         $this->egress = $egress;
@@ -413,7 +413,7 @@ class AppSpec extends \ArrayObject
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
      *
      */
-    public function getMaintenance(): mixed
+    public function getMaintenance(): AppMaintenanceSpec
     {
         return $this->maintenance;
     }
@@ -423,17 +423,17 @@ class AppSpec extends \ArrayObject
      *
      * @return self
      */
-    public function setMaintenance(mixed $maintenance): self
+    public function setMaintenance(AppMaintenanceSpec $maintenance): self
     {
         $this->initialized['maintenance'] = true;
         $this->maintenance = $maintenance;
         return $this;
     }
-    public function getVpc(): mixed
+    public function getVpc(): AppsVpc
     {
         return $this->vpc;
     }
-    public function setVpc(mixed $vpc): self
+    public function setVpc(AppsVpc $vpc): self
     {
         $this->initialized['vpc'] = true;
         $this->vpc = $vpc;

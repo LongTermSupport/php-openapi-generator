@@ -121,16 +121,20 @@ class TeamFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['updated_at']);
         }
         if (\array_key_exists('organization', $data)) {
-            $object->setOrganization($data['organization']);
+            $value_1 = $this->denormalizer->denormalize($data['organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Organization::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Organization) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Organization, got ' . get_debug_type($value_1));
+            }
+            $object->setOrganization($value_1);
             unset($data['organization']);
         }
         if (\array_key_exists('ldap_dn', $data)) {
             $object->setLdapDn(TypeValidator::assertString($data['ldap_dn'], 'ldap_dn'));
             unset($data['ldap_dn']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -171,7 +175,7 @@ class TeamFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
         $dataArray['repos_count'] = $data->getReposCount();
         $dataArray['created_at'] = $data->getCreatedAt()->format('Y-m-d\TH:i:sP');
         $dataArray['updated_at'] = $data->getUpdatedAt()->format('Y-m-d\TH:i:sP');
-        $dataArray['organization'] = $data->getOrganization();
+        $dataArray['organization'] = $this->normalizer->normalize($data->getOrganization(), 'json', $context);
         if ($data->isInitialized('ldapDn')) {
             $dataArray['ldap_dn'] = $data->getLdapDn();
         }

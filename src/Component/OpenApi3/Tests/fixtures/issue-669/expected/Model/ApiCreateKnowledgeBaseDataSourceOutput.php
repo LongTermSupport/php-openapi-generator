@@ -24,12 +24,12 @@ class ApiCreateKnowledgeBaseDataSourceOutput extends \ArrayObject
      * Data Source configuration for Knowledge Bases
      *
      */
-    protected mixed $knowledgeBaseDataSource = null;
+    protected ApiKnowledgeBaseDataSource $knowledgeBaseDataSource;
     /**
      * Data Source configuration for Knowledge Bases
      *
      */
-    public function getKnowledgeBaseDataSource(): mixed
+    public function getKnowledgeBaseDataSource(): ApiKnowledgeBaseDataSource
     {
         return $this->knowledgeBaseDataSource;
     }
@@ -39,7 +39,7 @@ class ApiCreateKnowledgeBaseDataSourceOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setKnowledgeBaseDataSource(mixed $knowledgeBaseDataSource): self
+    public function setKnowledgeBaseDataSource(ApiKnowledgeBaseDataSource $knowledgeBaseDataSource): self
     {
         $this->initialized['knowledgeBaseDataSource'] = true;
         $this->knowledgeBaseDataSource = $knowledgeBaseDataSource;

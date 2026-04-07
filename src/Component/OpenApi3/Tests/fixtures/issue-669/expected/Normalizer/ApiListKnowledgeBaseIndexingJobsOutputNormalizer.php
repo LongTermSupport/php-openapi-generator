@@ -61,16 +61,24 @@ class ApiListKnowledgeBaseIndexingJobsOutputNormalizer implements DenormalizerIn
             unset($data['jobs']);
         }
         if (\array_key_exists('links', $data)) {
-            $object->setLinks($data['links']);
+            $value_2 = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks, got ' . get_debug_type($value_2));
+            }
+            $object->setLinks($value_2);
             unset($data['links']);
         }
         if (\array_key_exists('meta', $data)) {
-            $object->setMeta($data['meta']);
+            $value_3 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta, got ' . get_debug_type($value_3));
+            }
+            $object->setMeta($value_3);
             unset($data['meta']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -93,10 +101,10 @@ class ApiListKnowledgeBaseIndexingJobsOutputNormalizer implements DenormalizerIn
             $dataArray['jobs'] = $values;
         }
         if ($data->isInitialized('links')) {
-            $dataArray['links'] = $data->getLinks();
+            $dataArray['links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);
         }
         if ($data->isInitialized('meta')) {
-            $dataArray['meta'] = $data->getMeta();
+            $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

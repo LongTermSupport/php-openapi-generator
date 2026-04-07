@@ -20,12 +20,12 @@ class AppsAlertResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $alert = null;
-    public function getAlert(): mixed
+    protected AppAlert $alert;
+    public function getAlert(): AppAlert
     {
         return $this->alert;
     }
-    public function setAlert(mixed $alert): self
+    public function setAlert(AppAlert $alert): self
     {
         $this->initialized['alert'] = true;
         $this->alert = $alert;

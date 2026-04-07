@@ -24,7 +24,7 @@ class AppJobInvocations extends \ArrayObject
      * @var list<AppJobInvocation>
      */
     protected array $jobInvocations;
-    protected mixed $links = null;
+    protected PageLinks $links;
     /**
      * @return list<AppJobInvocation>
      */
@@ -43,11 +43,11 @@ class AppJobInvocations extends \ArrayObject
         $this->jobInvocations = $jobInvocations;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

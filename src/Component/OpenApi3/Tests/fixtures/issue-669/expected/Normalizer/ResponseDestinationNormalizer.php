@@ -47,12 +47,16 @@ class ResponseDestinationNormalizer implements DenormalizerInterface, Normalizer
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('destination', $data)) {
-            $object->setDestination($data['destination']);
+            $value = $this->denormalizer->denormalize($data['destination'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials, got ' . get_debug_type($value));
+            }
+            $object->setDestination($value);
             unset($data['destination']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseDestinationNormalizer implements DenormalizerInterface, Normalizer
         }
         $dataArray = [];
         if ($data->isInitialized('destination')) {
-            $dataArray['destination'] = $data->getDestination();
+            $dataArray['destination'] = $this->normalizer->normalize($data->getDestination(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

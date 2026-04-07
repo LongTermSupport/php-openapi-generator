@@ -54,26 +54,30 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
             unset($data['id']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value));
+            }
+            $object->setRepository($value);
             unset($data['repository']);
         }
         if (\array_key_exists('invitee', $data) && $data['invitee'] !== null) {
-            $value = $this->denormalizer->denormalize($data['invitee'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['invitee'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee, got ' . get_debug_type($value_1));
             }
-            $object->setInvitee($value);
+            $object->setInvitee($value_1);
             unset($data['invitee']);
         }
         elseif (\array_key_exists('invitee', $data) && $data['invitee'] === null) {
             $object->setInvitee(null);
         }
         if (\array_key_exists('inviter', $data) && $data['inviter'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['inviter'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter, got ' . get_debug_type($value_1));
+            $value_2 = $this->denormalizer->denormalize($data['inviter'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter, got ' . get_debug_type($value_2));
             }
-            $object->setInviter($value_1);
+            $object->setInviter($value_2);
             unset($data['inviter']);
         }
         elseif (\array_key_exists('inviter', $data) && $data['inviter'] === null) {
@@ -99,9 +103,9 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
             $object->setNodeId(TypeValidator::assertString($data['node_id'], 'node_id'));
             unset($data['node_id']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -117,7 +121,7 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray = [];
         $dataArray['id'] = $data->getId();
-        $dataArray['repository'] = $data->getRepository();
+        $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         $val = $data->getInvitee();
         if (null !== $val) {
             $dataArray['invitee'] = $this->normalizer->normalize($val, 'json', $context);

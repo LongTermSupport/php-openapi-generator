@@ -28,7 +28,7 @@ class OrgMembership extends \ArrayObject
      * Organization Simple
      *
      */
-    protected mixed $organization = null;
+    protected OrganizationSimple $organization;
     protected ?OrgMembershipUser $user = null;
     protected OrgMembershipPermissions $permissions;
     public function getUrl(): string
@@ -75,7 +75,7 @@ class OrgMembership extends \ArrayObject
      * Organization Simple
      *
      */
-    public function getOrganization(): mixed
+    public function getOrganization(): OrganizationSimple
     {
         return $this->organization;
     }
@@ -85,7 +85,7 @@ class OrgMembership extends \ArrayObject
      *
      * @return self
      */
-    public function setOrganization(mixed $organization): self
+    public function setOrganization(OrganizationSimple $organization): self
     {
         $this->initialized['organization'] = true;
         $this->organization = $organization;

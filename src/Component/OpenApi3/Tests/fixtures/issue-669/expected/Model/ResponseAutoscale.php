@@ -24,12 +24,12 @@ class ResponseAutoscale extends \ArrayObject
      * Contains all autoscaling configuration for a database cluster
      *
      */
-    protected mixed $autoscale = null;
+    protected DatabaseAutoscaleParams $autoscale;
     /**
      * Contains all autoscaling configuration for a database cluster
      *
      */
-    public function getAutoscale(): mixed
+    public function getAutoscale(): DatabaseAutoscaleParams
     {
         return $this->autoscale;
     }
@@ -39,7 +39,7 @@ class ResponseAutoscale extends \ArrayObject
      *
      * @return self
      */
-    public function setAutoscale(mixed $autoscale): self
+    public function setAutoscale(DatabaseAutoscaleParams $autoscale): self
     {
         $this->initialized['autoscale'] = true;
         $this->autoscale = $autoscale;

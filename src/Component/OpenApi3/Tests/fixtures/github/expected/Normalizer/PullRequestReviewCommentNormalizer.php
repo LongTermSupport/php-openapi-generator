@@ -94,7 +94,11 @@ class PullRequestReviewCommentNormalizer implements DenormalizerInterface, Norma
             unset($data['in_reply_to_id']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $object->setUser($data['user']);
+            $value = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value));
+            }
+            $object->setUser($value);
             unset($data['user']);
         }
         elseif (\array_key_exists('user', $data) && $data['user'] === null) {
@@ -125,11 +129,11 @@ class PullRequestReviewCommentNormalizer implements DenormalizerInterface, Norma
             unset($data['author_association']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinks, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinks::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinks, got ' . get_debug_type($value_1));
             }
-            $object->setLinks($value);
+            $object->setLinks($value_1);
             unset($data['_links']);
         }
         if (\array_key_exists('start_line', $data)) {
@@ -157,7 +161,11 @@ class PullRequestReviewCommentNormalizer implements DenormalizerInterface, Norma
             unset($data['side']);
         }
         if (\array_key_exists('reactions', $data)) {
-            $object->setReactions($data['reactions']);
+            $value_2 = $this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup, got ' . get_debug_type($value_2));
+            }
+            $object->setReactions($value_2);
             unset($data['reactions']);
         }
         if (\array_key_exists('body_html', $data)) {
@@ -168,9 +176,9 @@ class PullRequestReviewCommentNormalizer implements DenormalizerInterface, Norma
             $object->setBodyText(TypeValidator::assertString($data['body_text'], 'body_text'));
             unset($data['body_text']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -205,7 +213,7 @@ class PullRequestReviewCommentNormalizer implements DenormalizerInterface, Norma
         }
         $val_1 = $data->getUser();
         if (null !== $val_1) {
-            $dataArray['user'] = $val_1;
+            $dataArray['user'] = $this->normalizer->normalize($val_1, 'json', $context);
         } else {
             $dataArray['user'] = null;
         }
@@ -238,7 +246,7 @@ class PullRequestReviewCommentNormalizer implements DenormalizerInterface, Norma
             $dataArray['side'] = $data->getSide();
         }
         if ($data->isInitialized('reactions')) {
-            $dataArray['reactions'] = $data->getReactions();
+            $dataArray['reactions'] = $this->normalizer->normalize($data->getReactions(), 'json', $context);
         }
         if ($data->isInitialized('bodyHtml')) {
             $dataArray['body_html'] = $data->getBodyHtml();

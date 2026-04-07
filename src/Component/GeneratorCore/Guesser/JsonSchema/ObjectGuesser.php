@@ -95,34 +95,47 @@ class ObjectGuesser implements GuesserInterface, PropertiesGuesserInterface, Typ
         $this->initChainValidator($registry);
 
         foreach ($object->getProperties() ?? [] as $key => $property) {
-            $propertyObj = $property;
+            $resolvedSchema = $property;
 
-            if ($propertyObj instanceof Reference) {
-                $propertyObj = $this->resolve($propertyObj, $this->getSchemaClass());
+            if ($resolvedSchema instanceof Reference) {
+                $resolvedSchema = $this->resolve($resolvedSchema, $this->getSchemaClass());
             }
 
-            if (!\is_object($propertyObj)) {
+            if (!\is_object($resolvedSchema)) {
                 continue;
             }
 
-            if (!$propertyObj instanceof SchemaInterface) {
-                throw new LogicException('Expected SchemaInterface after resolve, got ' . get_debug_type($propertyObj));
+            if (!$resolvedSchema instanceof SchemaInterface) {
+                throw new LogicException('Expected SchemaInterface after resolve, got ' . get_debug_type($resolvedSchema));
             }
 
-            $nullable = $this->isPropertyNullable($propertyObj);
+            $nullable = $this->isPropertyNullable($resolvedSchema);
 
             $required = false;
             if (\is_array($object->getRequired())) {
                 $required = \in_array($key, $object->getRequired(), true);
             }
 
-            $newProperty = new Property($propertyObj, (string)$key, $reference . '/properties/' . $key, $nullable, $required, null, $propertyObj->getDescription(), $propertyObj->getDefault(), $propertyObj->getReadOnly());
-            $newProperty->setDeprecated($propertyObj->getDeprecated() ?? false);
+            // Property::$object MUST keep the original property — when it's a Reference, the
+            // chain type guesser needs to dispatch to ReferenceGuesser so it can resolve the
+            // class via the merged URI. Passing the resolved schema here would route to
+            // ObjectGuesser::guessType with the property path as reference, where the class
+            // lookup fails (the class is registered at the merged URI, not the property path),
+            // causing the property type to silently degrade to `mixed`.
+            //
+            // If the property is not a Reference, $property and $resolvedSchema are identical
+            // and the original behaviour is preserved.
+            if (!\is_object($property)) {
+                throw new LogicException('Expected object property, got ' . get_debug_type($property));
+            }
+
+            $newProperty = new Property($property, (string)$key, $reference . '/properties/' . $key, $nullable, $required, null, $resolvedSchema->getDescription(), $resolvedSchema->getDefault(), $resolvedSchema->getReadOnly());
+            $newProperty->setDeprecated($resolvedSchema->getDeprecated() ?? false);
             if (!$this->chainValidator instanceof ValidatorInterface) {
                 throw new LogicException('Expected ValidatorInterface, got ' . get_debug_type($this->chainValidator));
             }
 
-            $this->chainValidator->guess($propertyObj, $name, $newProperty);
+            $this->chainValidator->guess($resolvedSchema, $name, $newProperty);
             $properties[$key] = $newProperty;
         }
 

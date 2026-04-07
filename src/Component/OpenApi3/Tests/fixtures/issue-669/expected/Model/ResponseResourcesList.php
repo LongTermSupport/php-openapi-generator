@@ -26,7 +26,7 @@ class ResponseResourcesList extends \ArrayObject
      * @var list<Resource>
      */
     protected array $resources;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * The resources that are assigned to this project. Only resources that you are authorized to see will be returned.
@@ -50,11 +50,11 @@ class ResponseResourcesList extends \ArrayObject
         $this->resources = $resources;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

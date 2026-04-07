@@ -76,7 +76,11 @@ class CombinedCommitStatusNormalizer implements DenormalizerInterface, Normalize
             unset($data['total_count']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_2 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_2));
+            }
+            $object->setRepository($value_2);
             unset($data['repository']);
         }
         if (\array_key_exists('commit_url', $data)) {
@@ -87,9 +91,9 @@ class CombinedCommitStatusNormalizer implements DenormalizerInterface, Normalize
             $object->setUrl(TypeValidator::assertString($data['url'], 'url'));
             unset($data['url']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -112,7 +116,7 @@ class CombinedCommitStatusNormalizer implements DenormalizerInterface, Normalize
         $dataArray['statuses'] = $values;
         $dataArray['sha'] = $data->getSha();
         $dataArray['total_count'] = $data->getTotalCount();
-        $dataArray['repository'] = $data->getRepository();
+        $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         $dataArray['commit_url'] = $data->getCommitUrl();
         $dataArray['url'] = $data->getUrl();
         foreach ($data as $key => $value_1) {

@@ -25,7 +25,7 @@ class ProtectedBranch extends \ArrayObject
      * Status Check Policy
      *
      */
-    protected mixed $requiredStatusChecks = null;
+    protected StatusCheckPolicy $requiredStatusChecks;
     protected ProtectedBranchRequiredPullRequestReviews $requiredPullRequestReviews;
     protected ProtectedBranchRequiredSignatures $requiredSignatures;
     protected ProtectedBranchEnforceAdmins $enforceAdmins;
@@ -36,7 +36,7 @@ class ProtectedBranch extends \ArrayObject
      * Branch Restriction Policy
      *
      */
-    protected mixed $restrictions = null;
+    protected BranchRestrictionPolicy $restrictions;
     public function getUrl(): string
     {
         return $this->url;
@@ -51,7 +51,7 @@ class ProtectedBranch extends \ArrayObject
      * Status Check Policy
      *
      */
-    public function getRequiredStatusChecks(): mixed
+    public function getRequiredStatusChecks(): StatusCheckPolicy
     {
         return $this->requiredStatusChecks;
     }
@@ -61,7 +61,7 @@ class ProtectedBranch extends \ArrayObject
      *
      * @return self
      */
-    public function setRequiredStatusChecks(mixed $requiredStatusChecks): self
+    public function setRequiredStatusChecks(StatusCheckPolicy $requiredStatusChecks): self
     {
         $this->initialized['requiredStatusChecks'] = true;
         $this->requiredStatusChecks = $requiredStatusChecks;
@@ -131,7 +131,7 @@ class ProtectedBranch extends \ArrayObject
      * Branch Restriction Policy
      *
      */
-    public function getRestrictions(): mixed
+    public function getRestrictions(): BranchRestrictionPolicy
     {
         return $this->restrictions;
     }
@@ -141,7 +141,7 @@ class ProtectedBranch extends \ArrayObject
      *
      * @return self
      */
-    public function setRestrictions(mixed $restrictions): self
+    public function setRestrictions(BranchRestrictionPolicy $restrictions): self
     {
         $this->initialized['restrictions'] = true;
         $this->restrictions = $restrictions;

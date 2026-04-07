@@ -24,7 +24,7 @@ class Account extends \ArrayObject
     protected string $firstname;
     protected string $lastname;
     protected ?Country $countryOfBirth = null;
-    protected mixed $country = null;
+    protected Country $country;
     /**
      * @var Country|list<Country>|null
      */
@@ -69,11 +69,11 @@ class Account extends \ArrayObject
         $this->countryOfBirth = $countryOfBirth;
         return $this;
     }
-    public function getCountry(): mixed
+    public function getCountry(): Country
     {
         return $this->country;
     }
-    public function setCountry(mixed $country): self
+    public function setCountry(Country $country): self
     {
         $this->initialized['country'] = true;
         $this->country = $country;

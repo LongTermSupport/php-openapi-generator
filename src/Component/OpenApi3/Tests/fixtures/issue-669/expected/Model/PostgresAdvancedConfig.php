@@ -264,7 +264,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      * PGBouncer connection pooling settings
      *
      */
-    protected mixed $pgbouncer = null;
+    protected PgbouncerAdvancedConfig $pgbouncer;
     /**
      * The maximum amount of memory, in MB, used by a query operation (such as a sort or hash table) before writing to temporary disk files. Default is 1MB + 0.075% of total RAM (up to 32MB).
      *
@@ -274,7 +274,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      * TimescaleDB extension configuration values
      *
      */
-    protected mixed $timescaledb = null;
+    protected TimescaledbAdvancedConfig $timescaledb;
     /**
      * Synchronous replication type. Note that the service plan also needs to support synchronous replication.
      *
@@ -1264,7 +1264,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      * PGBouncer connection pooling settings
      *
      */
-    public function getPgbouncer(): mixed
+    public function getPgbouncer(): PgbouncerAdvancedConfig
     {
         return $this->pgbouncer;
     }
@@ -1274,7 +1274,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      *
      * @return self
      */
-    public function setPgbouncer(mixed $pgbouncer): self
+    public function setPgbouncer(PgbouncerAdvancedConfig $pgbouncer): self
     {
         $this->initialized['pgbouncer'] = true;
         $this->pgbouncer = $pgbouncer;
@@ -1304,7 +1304,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      * TimescaleDB extension configuration values
      *
      */
-    public function getTimescaledb(): mixed
+    public function getTimescaledb(): TimescaledbAdvancedConfig
     {
         return $this->timescaledb;
     }
@@ -1314,7 +1314,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      *
      * @return self
      */
-    public function setTimescaledb(mixed $timescaledb): self
+    public function setTimescaledb(TimescaledbAdvancedConfig $timescaledb): self
     {
         $this->initialized['timescaledb'] = true;
         $this->timescaledb = $timescaledb;

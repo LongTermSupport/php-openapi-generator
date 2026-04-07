@@ -47,16 +47,24 @@ class ContextAnnotationNormalizer implements DenormalizerInterface, NormalizerIn
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('domain', $data)) {
-            $object->setDomain($data['domain']);
+            $value = $this->denormalizer->denormalize($data['domain'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields, got ' . get_debug_type($value));
+            }
+            $object->setDomain($value);
             unset($data['domain']);
         }
         if (\array_key_exists('entity', $data)) {
-            $object->setEntity($data['entity']);
+            $value_1 = $this->denormalizer->denormalize($data['entity'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields, got ' . get_debug_type($value_1));
+            }
+            $object->setEntity($value_1);
             unset($data['entity']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -71,8 +79,8 @@ class ContextAnnotationNormalizer implements DenormalizerInterface, NormalizerIn
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['domain'] = $data->getDomain();
-        $dataArray['entity'] = $data->getEntity();
+        $dataArray['domain'] = $this->normalizer->normalize($data->getDomain(), 'json', $context);
+        $dataArray['entity'] = $this->normalizer->normalize($data->getEntity(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

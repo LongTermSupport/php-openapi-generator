@@ -24,17 +24,17 @@ class AppIngressSpecRuleMatch extends \ArrayObject
      * The path to match on.
      *
      */
-    protected mixed $path = null;
+    protected AppIngressSpecRuleStringMatchPrefix $path;
     /**
      * The authority to match on.
      *
      */
-    protected mixed $authority = null;
+    protected AppIngressSpecRuleStringMatchExact $authority;
     /**
      * The path to match on.
      *
      */
-    public function getPath(): mixed
+    public function getPath(): AppIngressSpecRuleStringMatchPrefix
     {
         return $this->path;
     }
@@ -44,7 +44,7 @@ class AppIngressSpecRuleMatch extends \ArrayObject
      *
      * @return self
      */
-    public function setPath(mixed $path): self
+    public function setPath(AppIngressSpecRuleStringMatchPrefix $path): self
     {
         $this->initialized['path'] = true;
         $this->path = $path;
@@ -54,7 +54,7 @@ class AppIngressSpecRuleMatch extends \ArrayObject
      * The authority to match on.
      *
      */
-    public function getAuthority(): mixed
+    public function getAuthority(): AppIngressSpecRuleStringMatchExact
     {
         return $this->authority;
     }
@@ -64,7 +64,7 @@ class AppIngressSpecRuleMatch extends \ArrayObject
      *
      * @return self
      */
-    public function setAuthority(mixed $authority): self
+    public function setAuthority(AppIngressSpecRuleStringMatchExact $authority): self
     {
         $this->initialized['authority'] = true;
         $this->authority = $authority;

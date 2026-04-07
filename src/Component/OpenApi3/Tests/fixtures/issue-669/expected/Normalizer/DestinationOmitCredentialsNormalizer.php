@@ -59,12 +59,16 @@ class DestinationOmitCredentialsNormalizer implements DenormalizerInterface, Nor
             unset($data['type']);
         }
         if (\array_key_exists('config', $data)) {
-            $object->setConfig($data['config']);
+            $value = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigOmitCredentials::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigOmitCredentials) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigOmitCredentials, got ' . get_debug_type($value));
+            }
+            $object->setConfig($value);
             unset($data['config']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -89,7 +93,7 @@ class DestinationOmitCredentialsNormalizer implements DenormalizerInterface, Nor
             $dataArray['type'] = $data->getType();
         }
         if ($data->isInitialized('config')) {
-            $dataArray['config'] = $data->getConfig();
+            $dataArray['config'] = $this->normalizer->normalize($data->getConfig(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

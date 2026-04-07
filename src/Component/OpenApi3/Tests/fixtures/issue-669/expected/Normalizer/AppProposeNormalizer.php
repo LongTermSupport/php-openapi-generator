@@ -47,16 +47,20 @@ class AppProposeNormalizer implements DenormalizerInterface, NormalizerInterface
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('spec', $data)) {
-            $object->setSpec($data['spec']);
+            $value = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec, got ' . get_debug_type($value));
+            }
+            $object->setSpec($value);
             unset($data['spec']);
         }
         if (\array_key_exists('app_id', $data)) {
             $object->setAppId(TypeValidator::assertString($data['app_id'], 'app_id'));
             unset($data['app_id']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -71,7 +75,7 @@ class AppProposeNormalizer implements DenormalizerInterface, NormalizerInterface
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppPropose, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['spec'] = $data->getSpec();
+        $dataArray['spec'] = $this->normalizer->normalize($data->getSpec(), 'json', $context);
         if ($data->isInitialized('appId')) {
             $dataArray['app_id'] = $data->getAppId();
         }

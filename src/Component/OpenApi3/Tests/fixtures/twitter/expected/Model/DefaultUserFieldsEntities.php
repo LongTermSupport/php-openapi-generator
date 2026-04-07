@@ -25,7 +25,7 @@ class DefaultUserFieldsEntities extends \ArrayObject
      *
      */
     protected DefaultUserFieldsEntitiesUrl $url;
-    protected mixed $description = null;
+    protected FullTextEntities $description;
     /**
      * Expanded details for the URL specified in the user's profile, with start and end indices.
      *
@@ -46,11 +46,11 @@ class DefaultUserFieldsEntities extends \ArrayObject
         $this->url = $url;
         return $this;
     }
-    public function getDescription(): mixed
+    public function getDescription(): FullTextEntities
     {
         return $this->description;
     }
-    public function setDescription(mixed $description): self
+    public function setDescription(FullTextEntities $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;

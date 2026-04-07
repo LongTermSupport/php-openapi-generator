@@ -47,16 +47,24 @@ class ApiGetAgentUsageOutputNormalizer implements DenormalizerInterface, Normali
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('log_insights_usage', $data)) {
-            $object->setLogInsightsUsage($data['log_insights_usage']);
+            $value = $this->denormalizer->denormalize($data['log_insights_usage'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiResourceUsage::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiResourceUsage) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiResourceUsage, got ' . get_debug_type($value));
+            }
+            $object->setLogInsightsUsage($value);
             unset($data['log_insights_usage']);
         }
         if (\array_key_exists('usage', $data)) {
-            $object->setUsage($data['usage']);
+            $value_1 = $this->denormalizer->denormalize($data['usage'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiResourceUsage::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiResourceUsage) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiResourceUsage, got ' . get_debug_type($value_1));
+            }
+            $object->setUsage($value_1);
             unset($data['usage']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -72,10 +80,10 @@ class ApiGetAgentUsageOutputNormalizer implements DenormalizerInterface, Normali
         }
         $dataArray = [];
         if ($data->isInitialized('logInsightsUsage')) {
-            $dataArray['log_insights_usage'] = $data->getLogInsightsUsage();
+            $dataArray['log_insights_usage'] = $this->normalizer->normalize($data->getLogInsightsUsage(), 'json', $context);
         }
         if ($data->isInitialized('usage')) {
-            $dataArray['usage'] = $data->getUsage();
+            $dataArray['usage'] = $this->normalizer->normalize($data->getUsage(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

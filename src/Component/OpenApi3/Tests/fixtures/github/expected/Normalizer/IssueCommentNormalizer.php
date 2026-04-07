@@ -116,12 +116,16 @@ class IssueCommentNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setPerformedViaGithubApp(null);
         }
         if (\array_key_exists('reactions', $data)) {
-            $object->setReactions($data['reactions']);
+            $value_2 = $this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup, got ' . get_debug_type($value_2));
+            }
+            $object->setReactions($value_2);
             unset($data['reactions']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -164,7 +168,7 @@ class IssueCommentNormalizer implements DenormalizerInterface, NormalizerInterfa
             $dataArray['performed_via_github_app'] = $this->normalizer->normalize($val_1, 'json', $context);
         }
         if ($data->isInitialized('reactions')) {
-            $dataArray['reactions'] = $data->getReactions();
+            $dataArray['reactions'] = $this->normalizer->normalize($data->getReactions(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

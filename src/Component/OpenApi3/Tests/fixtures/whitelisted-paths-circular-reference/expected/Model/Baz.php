@@ -21,7 +21,7 @@ class Baz extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $label;
-    protected mixed $sub = null;
+    protected SubBaz $sub;
     public function getLabel(): string
     {
         return $this->label;
@@ -32,11 +32,11 @@ class Baz extends \ArrayObject
         $this->label = $label;
         return $this;
     }
-    public function getSub(): mixed
+    public function getSub(): SubBaz
     {
         return $this->sub;
     }
-    public function setSub(mixed $sub): self
+    public function setSub(SubBaz $sub): self
     {
         $this->initialized['sub'] = true;
         $this->sub = $sub;

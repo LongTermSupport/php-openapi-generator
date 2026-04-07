@@ -57,30 +57,34 @@ class TweetSearchResponseNormalizer implements DenormalizerInterface, Normalizer
             unset($data['data']);
         }
         if (\array_key_exists('includes', $data)) {
-            $object->setIncludes($data['includes']);
+            $value_1 = $this->denormalizer->denormalize($data['includes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions, got ' . get_debug_type($value_1));
+            }
+            $object->setIncludes($value_1);
             unset($data['includes']);
         }
         if (\array_key_exists('errors', $data)) {
             $values_1 = [];
             if (\is_array($data['errors'])) {
-                foreach ($data['errors'] as $value_1) {
-                    $values_1[] = $value_1;
+                foreach ($data['errors'] as $value_2) {
+                    $values_1[] = $value_2;
                 }
             }
             $object->setErrors($values_1);
             unset($data['errors']);
         }
         if (\array_key_exists('meta', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponseMeta::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponseMeta) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponseMeta, got ' . get_debug_type($value_2));
+            $value_3 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponseMeta::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponseMeta) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponseMeta, got ' . get_debug_type($value_3));
             }
-            $object->setMeta($value_2);
+            $object->setMeta($value_3);
             unset($data['meta']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -103,7 +107,7 @@ class TweetSearchResponseNormalizer implements DenormalizerInterface, Normalizer
             $dataArray['data'] = $values;
         }
         if ($data->isInitialized('includes')) {
-            $dataArray['includes'] = $data->getIncludes();
+            $dataArray['includes'] = $this->normalizer->normalize($data->getIncludes(), 'json', $context);
         }
         if ($data->isInitialized('errors')) {
             $values_1 = [];

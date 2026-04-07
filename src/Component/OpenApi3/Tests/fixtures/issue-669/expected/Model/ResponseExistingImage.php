@@ -20,12 +20,12 @@ class ResponseExistingImage extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $image = null;
-    public function getImage(): mixed
+    protected Image $image;
+    public function getImage(): Image
     {
         return $this->image;
     }
-    public function setImage(mixed $image): self
+    public function setImage(Image $image): self
     {
         $this->initialized['image'] = true;
         $this->image = $image;

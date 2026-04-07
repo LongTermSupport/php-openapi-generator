@@ -109,7 +109,11 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['node_pools']);
         }
         if (\array_key_exists('maintenance_policy', $data) && $data['maintenance_policy'] !== null) {
-            $object->setMaintenancePolicy($data['maintenance_policy']);
+            $value_3 = $this->denormalizer->denormalize($data['maintenance_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy, got ' . get_debug_type($value_3));
+            }
+            $object->setMaintenancePolicy($value_3);
             unset($data['maintenance_policy']);
         }
         elseif (\array_key_exists('maintenance_policy', $data) && $data['maintenance_policy'] === null) {
@@ -120,11 +124,11 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['auto_upgrade']);
         }
         if (\array_key_exists('status', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterReadStatus::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterReadStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterReadStatus, got ' . get_debug_type($value_3));
+            $value_4 = $this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterReadStatus::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterReadStatus) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterReadStatus, got ' . get_debug_type($value_4));
             }
-            $object->setStatus($value_3);
+            $object->setStatus($value_4);
             unset($data['status']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -150,8 +154,8 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('registries', $data) && $data['registries'] !== null) {
             $values_3 = [];
             if (\is_array($data['registries'])) {
-                foreach ($data['registries'] as $value_4) {
-                    $values_3[] = TypeValidator::assertString($value_4, 'value');
+                foreach ($data['registries'] as $value_5) {
+                    $values_3[] = TypeValidator::assertString($value_5, 'value');
                 }
             }
             $object->setRegistries($values_3);
@@ -161,57 +165,85 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setRegistries(null);
         }
         if (\array_key_exists('control_plane_firewall', $data) && $data['control_plane_firewall'] !== null) {
-            $object->setControlPlaneFirewall($data['control_plane_firewall']);
+            $value_6 = $this->denormalizer->denormalize($data['control_plane_firewall'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall, got ' . get_debug_type($value_6));
+            }
+            $object->setControlPlaneFirewall($value_6);
             unset($data['control_plane_firewall']);
         }
         elseif (\array_key_exists('control_plane_firewall', $data) && $data['control_plane_firewall'] === null) {
             $object->setControlPlaneFirewall(null);
         }
         if (\array_key_exists('cluster_autoscaler_configuration', $data) && $data['cluster_autoscaler_configuration'] !== null) {
-            $object->setClusterAutoscalerConfiguration($data['cluster_autoscaler_configuration']);
+            $value_7 = $this->denormalizer->denormalize($data['cluster_autoscaler_configuration'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration, got ' . get_debug_type($value_7));
+            }
+            $object->setClusterAutoscalerConfiguration($value_7);
             unset($data['cluster_autoscaler_configuration']);
         }
         elseif (\array_key_exists('cluster_autoscaler_configuration', $data) && $data['cluster_autoscaler_configuration'] === null) {
             $object->setClusterAutoscalerConfiguration(null);
         }
         if (\array_key_exists('routing_agent', $data) && $data['routing_agent'] !== null) {
-            $object->setRoutingAgent($data['routing_agent']);
+            $value_8 = $this->denormalizer->denormalize($data['routing_agent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent::class, 'json', $context);
+            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent, got ' . get_debug_type($value_8));
+            }
+            $object->setRoutingAgent($value_8);
             unset($data['routing_agent']);
         }
         elseif (\array_key_exists('routing_agent', $data) && $data['routing_agent'] === null) {
             $object->setRoutingAgent(null);
         }
         if (\array_key_exists('amd_gpu_device_plugin', $data) && $data['amd_gpu_device_plugin'] !== null) {
-            $object->setAmdGpuDevicePlugin($data['amd_gpu_device_plugin']);
+            $value_9 = $this->denormalizer->denormalize($data['amd_gpu_device_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin::class, 'json', $context);
+            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin, got ' . get_debug_type($value_9));
+            }
+            $object->setAmdGpuDevicePlugin($value_9);
             unset($data['amd_gpu_device_plugin']);
         }
         elseif (\array_key_exists('amd_gpu_device_plugin', $data) && $data['amd_gpu_device_plugin'] === null) {
             $object->setAmdGpuDevicePlugin(null);
         }
         if (\array_key_exists('amd_gpu_device_metrics_exporter_plugin', $data) && $data['amd_gpu_device_metrics_exporter_plugin'] !== null) {
-            $object->setAmdGpuDeviceMetricsExporterPlugin($data['amd_gpu_device_metrics_exporter_plugin']);
+            $value_10 = $this->denormalizer->denormalize($data['amd_gpu_device_metrics_exporter_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin::class, 'json', $context);
+            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin, got ' . get_debug_type($value_10));
+            }
+            $object->setAmdGpuDeviceMetricsExporterPlugin($value_10);
             unset($data['amd_gpu_device_metrics_exporter_plugin']);
         }
         elseif (\array_key_exists('amd_gpu_device_metrics_exporter_plugin', $data) && $data['amd_gpu_device_metrics_exporter_plugin'] === null) {
             $object->setAmdGpuDeviceMetricsExporterPlugin(null);
         }
         if (\array_key_exists('nvidia_gpu_device_plugin', $data) && $data['nvidia_gpu_device_plugin'] !== null) {
-            $object->setNvidiaGpuDevicePlugin($data['nvidia_gpu_device_plugin']);
+            $value_11 = $this->denormalizer->denormalize($data['nvidia_gpu_device_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin::class, 'json', $context);
+            if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin, got ' . get_debug_type($value_11));
+            }
+            $object->setNvidiaGpuDevicePlugin($value_11);
             unset($data['nvidia_gpu_device_plugin']);
         }
         elseif (\array_key_exists('nvidia_gpu_device_plugin', $data) && $data['nvidia_gpu_device_plugin'] === null) {
             $object->setNvidiaGpuDevicePlugin(null);
         }
         if (\array_key_exists('rdma_shared_dev_plugin', $data) && $data['rdma_shared_dev_plugin'] !== null) {
-            $object->setRdmaSharedDevPlugin($data['rdma_shared_dev_plugin']);
+            $value_12 = $this->denormalizer->denormalize($data['rdma_shared_dev_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin::class, 'json', $context);
+            if (!$value_12 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin, got ' . get_debug_type($value_12));
+            }
+            $object->setRdmaSharedDevPlugin($value_12);
             unset($data['rdma_shared_dev_plugin']);
         }
         elseif (\array_key_exists('rdma_shared_dev_plugin', $data) && $data['rdma_shared_dev_plugin'] === null) {
             $object->setRdmaSharedDevPlugin(null);
         }
-        foreach ($data as $key_1 => $value_5) {
+        foreach ($data as $key_1 => $value_13) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_5;
+                $object[$key_1] = $value_13;
             }
         }
         return $object;
@@ -256,7 +288,7 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
         $dataArray['node_pools'] = $values_1;
         $val = $data->getMaintenancePolicy();
         if ($data->isInitialized('maintenancePolicy') && null !== $val) {
-            $dataArray['maintenance_policy'] = $val;
+            $dataArray['maintenance_policy'] = $this->normalizer->normalize($val, 'json', $context);
         }
         if ($data->isInitialized('autoUpgrade')) {
             $dataArray['auto_upgrade'] = $data->getAutoUpgrade();
@@ -277,31 +309,31 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
         }
         $val_2 = $data->getControlPlaneFirewall();
         if ($data->isInitialized('controlPlaneFirewall') && null !== $val_2) {
-            $dataArray['control_plane_firewall'] = $val_2;
+            $dataArray['control_plane_firewall'] = $this->normalizer->normalize($val_2, 'json', $context);
         }
         $val_3 = $data->getClusterAutoscalerConfiguration();
         if ($data->isInitialized('clusterAutoscalerConfiguration') && null !== $val_3) {
-            $dataArray['cluster_autoscaler_configuration'] = $val_3;
+            $dataArray['cluster_autoscaler_configuration'] = $this->normalizer->normalize($val_3, 'json', $context);
         }
         $val_4 = $data->getRoutingAgent();
         if ($data->isInitialized('routingAgent') && null !== $val_4) {
-            $dataArray['routing_agent'] = $val_4;
+            $dataArray['routing_agent'] = $this->normalizer->normalize($val_4, 'json', $context);
         }
         $val_5 = $data->getAmdGpuDevicePlugin();
         if ($data->isInitialized('amdGpuDevicePlugin') && null !== $val_5) {
-            $dataArray['amd_gpu_device_plugin'] = $val_5;
+            $dataArray['amd_gpu_device_plugin'] = $this->normalizer->normalize($val_5, 'json', $context);
         }
         $val_6 = $data->getAmdGpuDeviceMetricsExporterPlugin();
         if ($data->isInitialized('amdGpuDeviceMetricsExporterPlugin') && null !== $val_6) {
-            $dataArray['amd_gpu_device_metrics_exporter_plugin'] = $val_6;
+            $dataArray['amd_gpu_device_metrics_exporter_plugin'] = $this->normalizer->normalize($val_6, 'json', $context);
         }
         $val_7 = $data->getNvidiaGpuDevicePlugin();
         if ($data->isInitialized('nvidiaGpuDevicePlugin') && null !== $val_7) {
-            $dataArray['nvidia_gpu_device_plugin'] = $val_7;
+            $dataArray['nvidia_gpu_device_plugin'] = $this->normalizer->normalize($val_7, 'json', $context);
         }
         $val_8 = $data->getRdmaSharedDevPlugin();
         if ($data->isInitialized('rdmaSharedDevPlugin') && null !== $val_8) {
-            $dataArray['rdma_shared_dev_plugin'] = $val_8;
+            $dataArray['rdma_shared_dev_plugin'] = $this->normalizer->normalize($val_8, 'json', $context);
         }
         foreach ($data as $key_1 => $value_4) {
             if (preg_match('/.*/', (string) $key_1) === 1) {

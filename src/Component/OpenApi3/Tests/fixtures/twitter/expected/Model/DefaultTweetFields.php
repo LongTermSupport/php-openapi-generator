@@ -25,7 +25,7 @@ class DefaultTweetFields extends \ArrayObject
      *
      */
     protected DefaultTweetFieldsGeo $geo;
-    protected mixed $entities = null;
+    protected FullTextEntities $entities;
     /**
      * The location tagged on the Tweet, if the user provided one.
      *
@@ -46,11 +46,11 @@ class DefaultTweetFields extends \ArrayObject
         $this->geo = $geo;
         return $this;
     }
-    public function getEntities(): mixed
+    public function getEntities(): FullTextEntities
     {
         return $this->entities;
     }
-    public function setEntities(mixed $entities): self
+    public function setEntities(FullTextEntities $entities): self
     {
         $this->initialized['entities'] = true;
         $this->entities = $entities;

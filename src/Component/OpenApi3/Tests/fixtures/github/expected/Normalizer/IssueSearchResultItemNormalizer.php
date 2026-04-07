@@ -188,18 +188,22 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $values_2 = [];
             if (\is_array($data['text_matches'])) {
                 foreach ($data['text_matches'] as $value_7) {
-                    $values_2[] = $value_7;
+                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
+                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_8));
+                    }
+                    $values_2[] = $value_8;
                 }
             }
             $object->setTextMatches($values_2);
             unset($data['text_matches']);
         }
         if (\array_key_exists('pull_request', $data)) {
-            $value_8 = $this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPullRequest::class, 'json', $context);
-            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPullRequest) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPullRequest, got ' . get_debug_type($value_8));
+            $value_9 = $this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPullRequest::class, 'json', $context);
+            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPullRequest) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPullRequest, got ' . get_debug_type($value_9));
             }
-            $object->setPullRequest($value_8);
+            $object->setPullRequest($value_9);
             unset($data['pull_request']);
         }
         if (\array_key_exists('body', $data)) {
@@ -219,7 +223,11 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             unset($data['draft']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_10 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_10));
+            }
+            $object->setRepository($value_10);
             unset($data['repository']);
         }
         if (\array_key_exists('body_html', $data)) {
@@ -235,19 +243,19 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             unset($data['timeline_url']);
         }
         if (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] !== null) {
-            $value_9 = $this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPerformedViaGithubApp::class, 'json', $context);
-            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPerformedViaGithubApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPerformedViaGithubApp, got ' . get_debug_type($value_9));
+            $value_11 = $this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPerformedViaGithubApp::class, 'json', $context);
+            if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPerformedViaGithubApp) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItemPerformedViaGithubApp, got ' . get_debug_type($value_11));
             }
-            $object->setPerformedViaGithubApp($value_9);
+            $object->setPerformedViaGithubApp($value_11);
             unset($data['performed_via_github_app']);
         }
         elseif (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] === null) {
             $object->setPerformedViaGithubApp(null);
         }
-        foreach ($data as $key => $value_10) {
+        foreach ($data as $key => $value_12) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_10;
+                $object[$key] = $value_12;
             }
         }
         return $object;
@@ -321,7 +329,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
         if ($data->isInitialized('textMatches')) {
             $values_2 = [];
             foreach ($data->getTextMatches() as $value_2) {
-                $values_2[] = $value_2;
+                $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
             }
             $dataArray['text_matches'] = $values_2;
         }
@@ -337,7 +345,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $dataArray['draft'] = $data->getDraft();
         }
         if ($data->isInitialized('repository')) {
-            $dataArray['repository'] = $data->getRepository();
+            $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         }
         if ($data->isInitialized('bodyHtml')) {
             $dataArray['body_html'] = $data->getBodyHtml();

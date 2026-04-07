@@ -47,12 +47,16 @@ class ResponseDropletActionNormalizer implements DenormalizerInterface, Normaliz
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('action', $data)) {
-            $object->setAction($data['action']);
+            $value = $this->denormalizer->denormalize($data['action'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Action::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Action) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Action, got ' . get_debug_type($value));
+            }
+            $object->setAction($value);
             unset($data['action']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseDropletActionNormalizer implements DenormalizerInterface, Normaliz
         }
         $dataArray = [];
         if ($data->isInitialized('action')) {
-            $dataArray['action'] = $data->getAction();
+            $dataArray['action'] = $this->normalizer->normalize($data->getAction(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

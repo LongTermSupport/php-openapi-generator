@@ -55,7 +55,7 @@ class ResponseReservedIpv6ActionAction extends \ArrayObject
      *
      */
     protected string $resourceType;
-    protected mixed $region = null;
+    protected Region $region;
     /**
      * The slug identifier for the region the resource is located in.
      *
@@ -201,11 +201,11 @@ class ResponseReservedIpv6ActionAction extends \ArrayObject
         $this->resourceType = $resourceType;
         return $this;
     }
-    public function getRegion(): mixed
+    public function getRegion(): Region
     {
         return $this->region;
     }
-    public function setRegion(mixed $region): self
+    public function setRegion(Region $region): self
     {
         $this->initialized['region'] = true;
         $this->region = $region;

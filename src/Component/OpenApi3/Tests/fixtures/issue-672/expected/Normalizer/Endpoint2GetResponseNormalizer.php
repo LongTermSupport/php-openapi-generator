@@ -47,16 +47,24 @@ class Endpoint2GetResponseNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('field-2', $data)) {
-            $object->setField2($data['field-2']);
+            $value = $this->denormalizer->denormalize($data['field-2'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1, got ' . get_debug_type($value));
+            }
+            $object->setField2($value);
             unset($data['field-2']);
         }
         if (\array_key_exists('field-2-bis', $data)) {
-            $object->setField2Bis($data['field-2-bis']);
+            $value_1 = $this->denormalizer->denormalize($data['field-2-bis'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2, got ' . get_debug_type($value_1));
+            }
+            $object->setField2Bis($value_1);
             unset($data['field-2-bis']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -72,10 +80,10 @@ class Endpoint2GetResponseNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray = [];
         if ($data->isInitialized('field2')) {
-            $dataArray['field-2'] = $data->getField2();
+            $dataArray['field-2'] = $this->normalizer->normalize($data->getField2(), 'json', $context);
         }
         if ($data->isInitialized('field2Bis')) {
-            $dataArray['field-2-bis'] = $data->getField2Bis();
+            $dataArray['field-2-bis'] = $this->normalizer->normalize($data->getField2Bis(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

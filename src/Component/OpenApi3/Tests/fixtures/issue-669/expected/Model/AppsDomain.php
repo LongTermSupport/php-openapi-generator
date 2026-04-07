@@ -22,8 +22,8 @@ class AppsDomain extends \ArrayObject
     }
     protected string $id;
     protected string $phase = 'UNKNOWN';
-    protected mixed $progress = null;
-    protected mixed $spec = null;
+    protected AppsDomainProgress $progress;
+    protected AppDomainSpec $spec;
     /**
      * @var list<AppDomainValidation>
      */
@@ -50,21 +50,21 @@ class AppsDomain extends \ArrayObject
         $this->phase = $phase;
         return $this;
     }
-    public function getProgress(): mixed
+    public function getProgress(): AppsDomainProgress
     {
         return $this->progress;
     }
-    public function setProgress(mixed $progress): self
+    public function setProgress(AppsDomainProgress $progress): self
     {
         $this->initialized['progress'] = true;
         $this->progress = $progress;
         return $this;
     }
-    public function getSpec(): mixed
+    public function getSpec(): AppDomainSpec
     {
         return $this->spec;
     }
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppDomainSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

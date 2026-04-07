@@ -20,12 +20,12 @@ class ResponseReservedIpv6 extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $reservedIpv6 = null;
-    public function getReservedIpv6(): mixed
+    protected ReservedIpv6 $reservedIpv6;
+    public function getReservedIpv6(): ReservedIpv6
     {
         return $this->reservedIpv6;
     }
-    public function setReservedIpv6(mixed $reservedIpv6): self
+    public function setReservedIpv6(ReservedIpv6 $reservedIpv6): self
     {
         $this->initialized['reservedIpv6'] = true;
         $this->reservedIpv6 = $reservedIpv6;

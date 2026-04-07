@@ -21,7 +21,7 @@ class Foo extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $label;
-    protected mixed $parent = null;
+    protected Foo $parent;
     public function getLabel(): string
     {
         return $this->label;
@@ -32,11 +32,11 @@ class Foo extends \ArrayObject
         $this->label = $label;
         return $this;
     }
-    public function getParent(): mixed
+    public function getParent(): Foo
     {
         return $this->parent;
     }
-    public function setParent(mixed $parent): self
+    public function setParent(Foo $parent): self
     {
         $this->initialized['parent'] = true;
         $this->parent = $parent;

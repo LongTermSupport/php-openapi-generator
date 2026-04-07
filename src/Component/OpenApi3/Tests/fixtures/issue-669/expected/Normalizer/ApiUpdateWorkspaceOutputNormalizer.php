@@ -47,12 +47,16 @@ class ApiUpdateWorkspaceOutputNormalizer implements DenormalizerInterface, Norma
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('workspace', $data)) {
-            $object->setWorkspace($data['workspace']);
+            $value = $this->denormalizer->denormalize($data['workspace'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWorkspace::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWorkspace) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWorkspace, got ' . get_debug_type($value));
+            }
+            $object->setWorkspace($value);
             unset($data['workspace']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ApiUpdateWorkspaceOutputNormalizer implements DenormalizerInterface, Norma
         }
         $dataArray = [];
         if ($data->isInitialized('workspace')) {
-            $dataArray['workspace'] = $data->getWorkspace();
+            $dataArray['workspace'] = $this->normalizer->normalize($data->getWorkspace(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

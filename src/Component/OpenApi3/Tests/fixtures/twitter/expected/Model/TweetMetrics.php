@@ -29,12 +29,12 @@ class TweetMetrics extends \ArrayObject
      * Interaction metrics for a Tweet.
      *
      */
-    protected mixed $tweet = null;
+    protected TweetInteractionMetrics $tweet;
     /**
      * Metrics corresponding to a Video.
      *
      */
-    protected mixed $video = null;
+    protected VideoMetrics $video;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
      *
@@ -59,7 +59,7 @@ class TweetMetrics extends \ArrayObject
      * Interaction metrics for a Tweet.
      *
      */
-    public function getTweet(): mixed
+    public function getTweet(): TweetInteractionMetrics
     {
         return $this->tweet;
     }
@@ -69,7 +69,7 @@ class TweetMetrics extends \ArrayObject
      *
      * @return self
      */
-    public function setTweet(mixed $tweet): self
+    public function setTweet(TweetInteractionMetrics $tweet): self
     {
         $this->initialized['tweet'] = true;
         $this->tweet = $tweet;
@@ -79,7 +79,7 @@ class TweetMetrics extends \ArrayObject
      * Metrics corresponding to a Video.
      *
      */
-    public function getVideo(): mixed
+    public function getVideo(): VideoMetrics
     {
         return $this->video;
     }
@@ -89,7 +89,7 @@ class TweetMetrics extends \ArrayObject
      *
      * @return self
      */
-    public function setVideo(mixed $video): self
+    public function setVideo(VideoMetrics $video): self
     {
         $this->initialized['video'] = true;
         $this->video = $video;

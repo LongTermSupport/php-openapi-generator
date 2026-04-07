@@ -24,13 +24,13 @@ class State extends \ArrayObject
      * A map of region to regional state
      *
      */
-    protected mixed $regions = null;
-    protected mixed $previousOutage = null;
+    protected RegionalState $regions;
+    protected PreviousOutage $previousOutage;
     /**
      * A map of region to regional state
      *
      */
-    public function getRegions(): mixed
+    public function getRegions(): RegionalState
     {
         return $this->regions;
     }
@@ -40,17 +40,17 @@ class State extends \ArrayObject
      *
      * @return self
      */
-    public function setRegions(mixed $regions): self
+    public function setRegions(RegionalState $regions): self
     {
         $this->initialized['regions'] = true;
         $this->regions = $regions;
         return $this;
     }
-    public function getPreviousOutage(): mixed
+    public function getPreviousOutage(): PreviousOutage
     {
         return $this->previousOutage;
     }
-    public function setPreviousOutage(mixed $previousOutage): self
+    public function setPreviousOutage(PreviousOutage $previousOutage): self
     {
         $this->initialized['previousOutage'] = true;
         $this->previousOutage = $previousOutage;

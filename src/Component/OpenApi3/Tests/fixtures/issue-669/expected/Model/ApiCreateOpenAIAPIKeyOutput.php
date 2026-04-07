@@ -24,12 +24,12 @@ class ApiCreateOpenAIAPIKeyOutput extends \ArrayObject
      * OpenAI API Key Info
      *
      */
-    protected mixed $apiKeyInfo = null;
+    protected ApiOpenAIAPIKeyInfo $apiKeyInfo;
     /**
      * OpenAI API Key Info
      *
      */
-    public function getApiKeyInfo(): mixed
+    public function getApiKeyInfo(): ApiOpenAIAPIKeyInfo
     {
         return $this->apiKeyInfo;
     }
@@ -39,7 +39,7 @@ class ApiCreateOpenAIAPIKeyOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setApiKeyInfo(mixed $apiKeyInfo): self
+    public function setApiKeyInfo(ApiOpenAIAPIKeyInfo $apiKeyInfo): self
     {
         $this->initialized['apiKeyInfo'] = true;
         $this->apiKeyInfo = $apiKeyInfo;

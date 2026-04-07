@@ -20,56 +20,56 @@ class RateLimitOverviewResources extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $core = null;
-    protected mixed $graphql = null;
-    protected mixed $search = null;
-    protected mixed $sourceImport = null;
-    protected mixed $integrationManifest = null;
-    public function getCore(): mixed
+    protected RateLimit $core;
+    protected RateLimit $graphql;
+    protected RateLimit $search;
+    protected RateLimit $sourceImport;
+    protected RateLimit $integrationManifest;
+    public function getCore(): RateLimit
     {
         return $this->core;
     }
-    public function setCore(mixed $core): self
+    public function setCore(RateLimit $core): self
     {
         $this->initialized['core'] = true;
         $this->core = $core;
         return $this;
     }
-    public function getGraphql(): mixed
+    public function getGraphql(): RateLimit
     {
         return $this->graphql;
     }
-    public function setGraphql(mixed $graphql): self
+    public function setGraphql(RateLimit $graphql): self
     {
         $this->initialized['graphql'] = true;
         $this->graphql = $graphql;
         return $this;
     }
-    public function getSearch(): mixed
+    public function getSearch(): RateLimit
     {
         return $this->search;
     }
-    public function setSearch(mixed $search): self
+    public function setSearch(RateLimit $search): self
     {
         $this->initialized['search'] = true;
         $this->search = $search;
         return $this;
     }
-    public function getSourceImport(): mixed
+    public function getSourceImport(): RateLimit
     {
         return $this->sourceImport;
     }
-    public function setSourceImport(mixed $sourceImport): self
+    public function setSourceImport(RateLimit $sourceImport): self
     {
         $this->initialized['sourceImport'] = true;
         $this->sourceImport = $sourceImport;
         return $this;
     }
-    public function getIntegrationManifest(): mixed
+    public function getIntegrationManifest(): RateLimit
     {
         return $this->integrationManifest;
     }
-    public function setIntegrationManifest(mixed $integrationManifest): self
+    public function setIntegrationManifest(RateLimit $integrationManifest): self
     {
         $this->initialized['integrationManifest'] = true;
         $this->integrationManifest = $integrationManifest;

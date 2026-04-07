@@ -55,7 +55,7 @@ class DefaultUser extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    protected mixed $withheld = null;
+    protected UserWithheld $withheld;
     /**
      * The URL to the profile image for this user.
      *
@@ -225,7 +225,7 @@ class DefaultUser extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    public function getWithheld(): mixed
+    public function getWithheld(): UserWithheld
     {
         return $this->withheld;
     }
@@ -235,7 +235,7 @@ class DefaultUser extends \ArrayObject
      *
      * @return self
      */
-    public function setWithheld(mixed $withheld): self
+    public function setWithheld(UserWithheld $withheld): self
     {
         $this->initialized['withheld'] = true;
         $this->withheld = $withheld;

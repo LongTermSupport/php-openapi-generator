@@ -24,7 +24,7 @@ class ApiAgent extends \ArrayObject
      * Anthropic API Key Info
      *
      */
-    protected mixed $anthropicApiKey = null;
+    protected ApiAnthropicAPIKeyInfo $anthropicApiKey;
     /**
      * Api key infos
      *
@@ -41,7 +41,7 @@ class ApiAgent extends \ArrayObject
      * A Chatbot
      *
      */
-    protected mixed $chatbot = null;
+    protected ApiChatbot $chatbot;
     /**
      * Chatbot identifiers
      *
@@ -68,7 +68,7 @@ class ApiAgent extends \ArrayObject
      * Description of deployment
      *
      */
-    protected mixed $deployment = null;
+    protected ApiDeployment $deployment;
     /**
      * Description of agent
      *
@@ -97,14 +97,14 @@ class ApiAgent extends \ArrayObject
      * @var list<ApiKnowledgeBase>
      */
     protected array $knowledgeBases;
-    protected mixed $loggingConfig = null;
+    protected ApiAgentLoggingConfig $loggingConfig;
     protected int $maxTokens;
     /**
      * Description of a Model
      *
      */
-    protected mixed $model = null;
-    protected mixed $modelProviderKey = null;
+    protected ApiModel $model;
+    protected ApiModelProviderKeyInfo $modelProviderKey;
     /**
      * Agent name
      *
@@ -114,7 +114,7 @@ class ApiAgent extends \ArrayObject
      * OpenAI API Key Info
      *
      */
-    protected mixed $openaiApiKey = null;
+    protected ApiOpenAIAPIKeyInfo $openaiApiKey;
     /**
      * Parent agents
      *
@@ -164,7 +164,7 @@ class ApiAgent extends \ArrayObject
      * Represents an AgentTemplate entity
      *
      */
-    protected mixed $template = null;
+    protected ApiAgentTemplate $template;
     protected float $topP;
     /**
      * Last modified
@@ -198,12 +198,12 @@ class ApiAgent extends \ArrayObject
      */
     protected array $vpcEgressIps;
     protected string $vpcUuid;
-    protected mixed $workspace = null;
+    protected ApiWorkspace $workspace;
     /**
      * Anthropic API Key Info
      *
      */
-    public function getAnthropicApiKey(): mixed
+    public function getAnthropicApiKey(): ApiAnthropicAPIKeyInfo
     {
         return $this->anthropicApiKey;
     }
@@ -213,7 +213,7 @@ class ApiAgent extends \ArrayObject
      *
      * @return self
      */
-    public function setAnthropicApiKey(mixed $anthropicApiKey): self
+    public function setAnthropicApiKey(ApiAnthropicAPIKeyInfo $anthropicApiKey): self
     {
         $this->initialized['anthropicApiKey'] = true;
         $this->anthropicApiKey = $anthropicApiKey;
@@ -267,7 +267,7 @@ class ApiAgent extends \ArrayObject
      * A Chatbot
      *
      */
-    public function getChatbot(): mixed
+    public function getChatbot(): ApiChatbot
     {
         return $this->chatbot;
     }
@@ -277,7 +277,7 @@ class ApiAgent extends \ArrayObject
      *
      * @return self
      */
-    public function setChatbot(mixed $chatbot): self
+    public function setChatbot(ApiChatbot $chatbot): self
     {
         $this->initialized['chatbot'] = true;
         $this->chatbot = $chatbot;
@@ -371,7 +371,7 @@ class ApiAgent extends \ArrayObject
      * Description of deployment
      *
      */
-    public function getDeployment(): mixed
+    public function getDeployment(): ApiDeployment
     {
         return $this->deployment;
     }
@@ -381,7 +381,7 @@ class ApiAgent extends \ArrayObject
      *
      * @return self
      */
-    public function setDeployment(mixed $deployment): self
+    public function setDeployment(ApiDeployment $deployment): self
     {
         $this->initialized['deployment'] = true;
         $this->deployment = $deployment;
@@ -509,11 +509,11 @@ class ApiAgent extends \ArrayObject
         $this->knowledgeBases = $knowledgeBases;
         return $this;
     }
-    public function getLoggingConfig(): mixed
+    public function getLoggingConfig(): ApiAgentLoggingConfig
     {
         return $this->loggingConfig;
     }
-    public function setLoggingConfig(mixed $loggingConfig): self
+    public function setLoggingConfig(ApiAgentLoggingConfig $loggingConfig): self
     {
         $this->initialized['loggingConfig'] = true;
         $this->loggingConfig = $loggingConfig;
@@ -533,7 +533,7 @@ class ApiAgent extends \ArrayObject
      * Description of a Model
      *
      */
-    public function getModel(): mixed
+    public function getModel(): ApiModel
     {
         return $this->model;
     }
@@ -543,17 +543,17 @@ class ApiAgent extends \ArrayObject
      *
      * @return self
      */
-    public function setModel(mixed $model): self
+    public function setModel(ApiModel $model): self
     {
         $this->initialized['model'] = true;
         $this->model = $model;
         return $this;
     }
-    public function getModelProviderKey(): mixed
+    public function getModelProviderKey(): ApiModelProviderKeyInfo
     {
         return $this->modelProviderKey;
     }
-    public function setModelProviderKey(mixed $modelProviderKey): self
+    public function setModelProviderKey(ApiModelProviderKeyInfo $modelProviderKey): self
     {
         $this->initialized['modelProviderKey'] = true;
         $this->modelProviderKey = $modelProviderKey;
@@ -583,7 +583,7 @@ class ApiAgent extends \ArrayObject
      * OpenAI API Key Info
      *
      */
-    public function getOpenaiApiKey(): mixed
+    public function getOpenaiApiKey(): ApiOpenAIAPIKeyInfo
     {
         return $this->openaiApiKey;
     }
@@ -593,7 +593,7 @@ class ApiAgent extends \ArrayObject
      *
      * @return self
      */
-    public function setOpenaiApiKey(mixed $openaiApiKey): self
+    public function setOpenaiApiKey(ApiOpenAIAPIKeyInfo $openaiApiKey): self
     {
         $this->initialized['openaiApiKey'] = true;
         $this->openaiApiKey = $openaiApiKey;
@@ -795,7 +795,7 @@ class ApiAgent extends \ArrayObject
      * Represents an AgentTemplate entity
      *
      */
-    public function getTemplate(): mixed
+    public function getTemplate(): ApiAgentTemplate
     {
         return $this->template;
     }
@@ -805,7 +805,7 @@ class ApiAgent extends \ArrayObject
      *
      * @return self
      */
-    public function setTemplate(mixed $template): self
+    public function setTemplate(ApiAgentTemplate $template): self
     {
         $this->initialized['template'] = true;
         $this->template = $template;
@@ -953,11 +953,11 @@ class ApiAgent extends \ArrayObject
         $this->vpcUuid = $vpcUuid;
         return $this;
     }
-    public function getWorkspace(): mixed
+    public function getWorkspace(): ApiWorkspace
     {
         return $this->workspace;
     }
-    public function setWorkspace(mixed $workspace): self
+    public function setWorkspace(ApiWorkspace $workspace): self
     {
         $this->initialized['workspace'] = true;
         $this->workspace = $workspace;

@@ -47,30 +47,38 @@ class ApiListModelsOutputPublicNormalizer implements DenormalizerInterface, Norm
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('links', $data)) {
-            $object->setLinks($data['links']);
+            $value = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks, got ' . get_debug_type($value));
+            }
+            $object->setLinks($value);
             unset($data['links']);
         }
         if (\array_key_exists('meta', $data)) {
-            $object->setMeta($data['meta']);
+            $value_1 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta, got ' . get_debug_type($value_1));
+            }
+            $object->setMeta($value_1);
             unset($data['meta']);
         }
         if (\array_key_exists('models', $data)) {
             $values = [];
             if (\is_array($data['models'])) {
-                foreach ($data['models'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelPublic::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelPublic) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelPublic, got ' . get_debug_type($value_1));
+                foreach ($data['models'] as $value_2) {
+                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelPublic::class, 'json', $context);
+                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelPublic) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelPublic, got ' . get_debug_type($value_3));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_3;
                 }
             }
             $object->setModels($values);
             unset($data['models']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -86,10 +94,10 @@ class ApiListModelsOutputPublicNormalizer implements DenormalizerInterface, Norm
         }
         $dataArray = [];
         if ($data->isInitialized('links')) {
-            $dataArray['links'] = $data->getLinks();
+            $dataArray['links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);
         }
         if ($data->isInitialized('meta')) {
-            $dataArray['meta'] = $data->getMeta();
+            $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         }
         if ($data->isInitialized('models')) {
             $values = [];

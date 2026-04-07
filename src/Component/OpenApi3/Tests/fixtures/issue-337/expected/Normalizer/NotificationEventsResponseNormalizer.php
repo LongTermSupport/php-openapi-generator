@@ -65,12 +65,16 @@ class NotificationEventsResponseNormalizer implements DenormalizerInterface, Nor
             unset($data['data']);
         }
         if (\array_key_exists('paging', $data)) {
-            $object->setPaging($data['paging']);
+            $value_2 = $this->denormalizer->denormalize($data['paging'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\Paging::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\Paging) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\Paging, got ' . get_debug_type($value_2));
+            }
+            $object->setPaging($value_2);
             unset($data['paging']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -96,7 +100,7 @@ class NotificationEventsResponseNormalizer implements DenormalizerInterface, Nor
             $dataArray['data'] = $values;
         }
         if ($data->isInitialized('paging')) {
-            $dataArray['paging'] = $data->getPaging();
+            $dataArray['paging'] = $this->normalizer->normalize($data->getPaging(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

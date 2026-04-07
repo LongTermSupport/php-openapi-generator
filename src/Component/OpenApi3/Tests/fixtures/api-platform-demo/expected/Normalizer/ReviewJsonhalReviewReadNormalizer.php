@@ -71,7 +71,11 @@ class ReviewJsonhalReviewReadNormalizer implements DenormalizerInterface, Normal
             unset($data['letter']);
         }
         if (\array_key_exists('book', $data)) {
-            $object->setBook($data['book']);
+            $value_1 = $this->denormalizer->denormalize($data['book'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalReviewRead::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalReviewRead) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalReviewRead, got ' . get_debug_type($value_1));
+            }
+            $object->setBook($value_1);
             unset($data['book']);
         }
         if (\array_key_exists('author', $data)) {
@@ -85,9 +89,9 @@ class ReviewJsonhalReviewReadNormalizer implements DenormalizerInterface, Normal
         elseif (\array_key_exists('publicationDate', $data) && $data['publicationDate'] === null) {
             $object->setPublicationDate(null);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -111,7 +115,7 @@ class ReviewJsonhalReviewReadNormalizer implements DenormalizerInterface, Normal
         if ($data->isInitialized('letter') && null !== $val) {
             $dataArray['letter'] = $val;
         }
-        $dataArray['book'] = $data->getBook();
+        $dataArray['book'] = $this->normalizer->normalize($data->getBook(), 'json', $context);
         $val_1 = $data->getAuthor();
         if ($data->isInitialized('author') && null !== $val_1) {
             $dataArray['author'] = $val_1;

@@ -25,7 +25,7 @@ class StarredRepository extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repo = null;
+    protected Repository $repo;
     public function getStarredAt(): \DateTime
     {
         return $this->starredAt;
@@ -40,7 +40,7 @@ class StarredRepository extends \ArrayObject
      * A git repository
      *
      */
-    public function getRepo(): mixed
+    public function getRepo(): Repository
     {
         return $this->repo;
     }
@@ -50,7 +50,7 @@ class StarredRepository extends \ArrayObject
      *
      * @return self
      */
-    public function setRepo(mixed $repo): self
+    public function setRepo(Repository $repo): self
     {
         $this->initialized['repo'] = true;
         $this->repo = $repo;

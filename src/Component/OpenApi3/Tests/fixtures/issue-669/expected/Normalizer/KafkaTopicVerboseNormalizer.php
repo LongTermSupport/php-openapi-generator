@@ -73,12 +73,16 @@ class KafkaTopicVerboseNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['partitions']);
         }
         if (\array_key_exists('config', $data)) {
-            $object->setConfig($data['config']);
+            $value_2 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig, got ' . get_debug_type($value_2));
+            }
+            $object->setConfig($value_2);
             unset($data['config']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -110,7 +114,7 @@ class KafkaTopicVerboseNormalizer implements DenormalizerInterface, NormalizerIn
             $dataArray['partitions'] = $values;
         }
         if ($data->isInitialized('config')) {
-            $dataArray['config'] = $data->getConfig();
+            $dataArray['config'] = $this->normalizer->normalize($data->getConfig(), 'json', $context);
         }
         foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {

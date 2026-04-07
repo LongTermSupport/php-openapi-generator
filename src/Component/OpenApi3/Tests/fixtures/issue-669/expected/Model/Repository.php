@@ -30,7 +30,7 @@ class Repository extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $latestTag = null;
+    protected RepositoryTag $latestTag;
     /**
      * The number of tags in the repository.
      *
@@ -76,11 +76,11 @@ class Repository extends \ArrayObject
         $this->name = $name;
         return $this;
     }
-    public function getLatestTag(): mixed
+    public function getLatestTag(): RepositoryTag
     {
         return $this->latestTag;
     }
-    public function setLatestTag(mixed $latestTag): self
+    public function setLatestTag(RepositoryTag $latestTag): self
     {
         $this->initialized['latestTag'] = true;
         $this->latestTag = $latestTag;

@@ -78,12 +78,16 @@ class MarketplacePurchaseMarketplacePurchaseNormalizer implements DenormalizerIn
             unset($data['updated_at']);
         }
         if (\array_key_exists('plan', $data)) {
-            $object->setPlan($data['plan']);
+            $value = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan, got ' . get_debug_type($value));
+            }
+            $object->setPlan($value);
             unset($data['plan']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -123,7 +127,7 @@ class MarketplacePurchaseMarketplacePurchaseNormalizer implements DenormalizerIn
             $dataArray['updated_at'] = $data->getUpdatedAt();
         }
         if ($data->isInitialized('plan')) {
-            $dataArray['plan'] = $data->getPlan();
+            $dataArray['plan'] = $this->normalizer->normalize($data->getPlan(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

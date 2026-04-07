@@ -20,12 +20,12 @@ class ResponseUser extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $user = null;
-    public function getUser(): mixed
+    protected DatabaseUser $user;
+    public function getUser(): DatabaseUser
     {
         return $this->user;
     }
-    public function setUser(mixed $user): self
+    public function setUser(DatabaseUser $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;

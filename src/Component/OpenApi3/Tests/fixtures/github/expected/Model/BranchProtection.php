@@ -26,17 +26,17 @@ class BranchProtection extends \ArrayObject
      * Protected Branch Admin Enforced
      *
      */
-    protected mixed $enforceAdmins = null;
+    protected ProtectedBranchAdminEnforced $enforceAdmins;
     /**
      * Protected Branch Pull Request Review
      *
      */
-    protected mixed $requiredPullRequestReviews = null;
+    protected ProtectedBranchPullRequestReview $requiredPullRequestReviews;
     /**
      * Branch Restriction Policy
      *
      */
-    protected mixed $restrictions = null;
+    protected BranchRestrictionPolicy $restrictions;
     protected BranchProtectionRequiredLinearHistory $requiredLinearHistory;
     protected BranchProtectionAllowForcePushes $allowForcePushes;
     protected BranchProtectionAllowDeletions $allowDeletions;
@@ -67,7 +67,7 @@ class BranchProtection extends \ArrayObject
      * Protected Branch Admin Enforced
      *
      */
-    public function getEnforceAdmins(): mixed
+    public function getEnforceAdmins(): ProtectedBranchAdminEnforced
     {
         return $this->enforceAdmins;
     }
@@ -77,7 +77,7 @@ class BranchProtection extends \ArrayObject
      *
      * @return self
      */
-    public function setEnforceAdmins(mixed $enforceAdmins): self
+    public function setEnforceAdmins(ProtectedBranchAdminEnforced $enforceAdmins): self
     {
         $this->initialized['enforceAdmins'] = true;
         $this->enforceAdmins = $enforceAdmins;
@@ -87,7 +87,7 @@ class BranchProtection extends \ArrayObject
      * Protected Branch Pull Request Review
      *
      */
-    public function getRequiredPullRequestReviews(): mixed
+    public function getRequiredPullRequestReviews(): ProtectedBranchPullRequestReview
     {
         return $this->requiredPullRequestReviews;
     }
@@ -97,7 +97,7 @@ class BranchProtection extends \ArrayObject
      *
      * @return self
      */
-    public function setRequiredPullRequestReviews(mixed $requiredPullRequestReviews): self
+    public function setRequiredPullRequestReviews(ProtectedBranchPullRequestReview $requiredPullRequestReviews): self
     {
         $this->initialized['requiredPullRequestReviews'] = true;
         $this->requiredPullRequestReviews = $requiredPullRequestReviews;
@@ -107,7 +107,7 @@ class BranchProtection extends \ArrayObject
      * Branch Restriction Policy
      *
      */
-    public function getRestrictions(): mixed
+    public function getRestrictions(): BranchRestrictionPolicy
     {
         return $this->restrictions;
     }
@@ -117,7 +117,7 @@ class BranchProtection extends \ArrayObject
      *
      * @return self
      */
-    public function setRestrictions(mixed $restrictions): self
+    public function setRestrictions(BranchRestrictionPolicy $restrictions): self
     {
         $this->initialized['restrictions'] = true;
         $this->restrictions = $restrictions;

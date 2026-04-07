@@ -24,7 +24,7 @@ class ResponseAllImages extends \ArrayObject
      * @var list<Image>
      */
     protected array $images;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<Image>
@@ -44,11 +44,11 @@ class ResponseAllImages extends \ArrayObject
         $this->images = $images;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

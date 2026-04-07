@@ -33,7 +33,7 @@ class NotificationEventsResponse extends \ArrayObject
      * Paging parameters.
      *
      */
-    protected mixed $paging = null;
+    protected Paging $paging;
     /**
      * The total number of events returned for the given company.
      *
@@ -76,7 +76,7 @@ class NotificationEventsResponse extends \ArrayObject
      * Paging parameters.
      *
      */
-    public function getPaging(): mixed
+    public function getPaging(): Paging
     {
         return $this->paging;
     }
@@ -86,7 +86,7 @@ class NotificationEventsResponse extends \ArrayObject
      *
      * @return self
      */
-    public function setPaging(mixed $paging): self
+    public function setPaging(Paging $paging): self
     {
         $this->initialized['paging'] = true;
         $this->paging = $paging;

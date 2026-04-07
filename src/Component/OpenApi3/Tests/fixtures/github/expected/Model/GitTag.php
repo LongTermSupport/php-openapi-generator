@@ -39,7 +39,7 @@ class GitTag extends \ArrayObject
     protected string $message;
     protected GitTagTagger $tagger;
     protected GitTagObject $object;
-    protected mixed $verification = null;
+    protected Verification $verification;
     public function getNodeId(): string
     {
         return $this->nodeId;
@@ -140,11 +140,11 @@ class GitTag extends \ArrayObject
         $this->object = $object;
         return $this;
     }
-    public function getVerification(): mixed
+    public function getVerification(): Verification
     {
         return $this->verification;
     }
-    public function setVerification(mixed $verification): self
+    public function setVerification(Verification $verification): self
     {
         $this->initialized['verification'] = true;
         $this->verification = $verification;

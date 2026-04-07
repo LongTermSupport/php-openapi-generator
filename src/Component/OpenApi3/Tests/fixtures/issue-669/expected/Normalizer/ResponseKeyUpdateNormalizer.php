@@ -47,12 +47,16 @@ class ResponseKeyUpdateNormalizer implements DenormalizerInterface, NormalizerIn
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('key', $data)) {
-            $object->setKey($data['key']);
+            $value = $this->denormalizer->denormalize($data['key'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Key::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Key) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Key, got ' . get_debug_type($value));
+            }
+            $object->setKey($value);
             unset($data['key']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseKeyUpdateNormalizer implements DenormalizerInterface, NormalizerIn
         }
         $dataArray = [];
         if ($data->isInitialized('key')) {
-            $dataArray['key'] = $data->getKey();
+            $dataArray['key'] = $this->normalizer->normalize($data->getKey(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

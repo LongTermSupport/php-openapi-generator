@@ -24,23 +24,23 @@ class AppIngressSpecRule extends \ArrayObject
      * The match configuration for the rule.
      *
      */
-    protected mixed $match = null;
-    protected mixed $cors = null;
+    protected AppIngressSpecRuleMatch $match;
+    protected AppsCorsPolicy $cors;
     /**
      * The component to route to. Only one of `component` or `redirect` may be set.
      *
      */
-    protected mixed $component = null;
+    protected AppIngressSpecRuleRoutingComponent $component;
     /**
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
      *
      */
-    protected mixed $redirect = null;
+    protected AppIngressSpecRuleRoutingRedirect $redirect;
     /**
      * The match configuration for the rule.
      *
      */
-    public function getMatch(): mixed
+    public function getMatch(): AppIngressSpecRuleMatch
     {
         return $this->match;
     }
@@ -50,17 +50,17 @@ class AppIngressSpecRule extends \ArrayObject
      *
      * @return self
      */
-    public function setMatch(mixed $match): self
+    public function setMatch(AppIngressSpecRuleMatch $match): self
     {
         $this->initialized['match'] = true;
         $this->match = $match;
         return $this;
     }
-    public function getCors(): mixed
+    public function getCors(): AppsCorsPolicy
     {
         return $this->cors;
     }
-    public function setCors(mixed $cors): self
+    public function setCors(AppsCorsPolicy $cors): self
     {
         $this->initialized['cors'] = true;
         $this->cors = $cors;
@@ -70,7 +70,7 @@ class AppIngressSpecRule extends \ArrayObject
      * The component to route to. Only one of `component` or `redirect` may be set.
      *
      */
-    public function getComponent(): mixed
+    public function getComponent(): AppIngressSpecRuleRoutingComponent
     {
         return $this->component;
     }
@@ -80,7 +80,7 @@ class AppIngressSpecRule extends \ArrayObject
      *
      * @return self
      */
-    public function setComponent(mixed $component): self
+    public function setComponent(AppIngressSpecRuleRoutingComponent $component): self
     {
         $this->initialized['component'] = true;
         $this->component = $component;
@@ -90,7 +90,7 @@ class AppIngressSpecRule extends \ArrayObject
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
      *
      */
-    public function getRedirect(): mixed
+    public function getRedirect(): AppIngressSpecRuleRoutingRedirect
     {
         return $this->redirect;
     }
@@ -100,7 +100,7 @@ class AppIngressSpecRule extends \ArrayObject
      *
      * @return self
      */
-    public function setRedirect(mixed $redirect): self
+    public function setRedirect(AppIngressSpecRuleRoutingRedirect $redirect): self
     {
         $this->initialized['redirect'] = true;
         $this->redirect = $redirect;

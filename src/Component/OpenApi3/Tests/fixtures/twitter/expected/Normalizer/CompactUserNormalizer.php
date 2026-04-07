@@ -75,16 +75,20 @@ class CompactUserNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['verified']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $object->setWithheld($data['withheld']);
+            $value = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld, got ' . get_debug_type($value));
+            }
+            $object->setWithheld($value);
             unset($data['withheld']);
         }
         if (\array_key_exists('profile_image_url', $data)) {
             $object->setProfileImageUrl(TypeValidator::assertString($data['profile_image_url'], 'profile_image_url'));
             unset($data['profile_image_url']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -109,7 +113,7 @@ class CompactUserNormalizer implements DenormalizerInterface, NormalizerInterfac
         $dataArray['protected'] = $data->getProtected();
         $dataArray['verified'] = $data->getVerified();
         if ($data->isInitialized('withheld')) {
-            $dataArray['withheld'] = $data->getWithheld();
+            $dataArray['withheld'] = $this->normalizer->normalize($data->getWithheld(), 'json', $context);
         }
         if ($data->isInitialized('profileImageUrl')) {
             $dataArray['profile_image_url'] = $data->getProfileImageUrl();

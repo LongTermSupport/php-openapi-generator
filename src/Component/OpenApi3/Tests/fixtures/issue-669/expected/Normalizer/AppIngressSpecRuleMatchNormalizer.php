@@ -47,16 +47,24 @@ class AppIngressSpecRuleMatchNormalizer implements DenormalizerInterface, Normal
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('path', $data)) {
-            $object->setPath($data['path']);
+            $value = $this->denormalizer->denormalize($data['path'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix, got ' . get_debug_type($value));
+            }
+            $object->setPath($value);
             unset($data['path']);
         }
         if (\array_key_exists('authority', $data)) {
-            $object->setAuthority($data['authority']);
+            $value_1 = $this->denormalizer->denormalize($data['authority'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact, got ' . get_debug_type($value_1));
+            }
+            $object->setAuthority($value_1);
             unset($data['authority']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -72,10 +80,10 @@ class AppIngressSpecRuleMatchNormalizer implements DenormalizerInterface, Normal
         }
         $dataArray = [];
         if ($data->isInitialized('path')) {
-            $dataArray['path'] = $data->getPath();
+            $dataArray['path'] = $this->normalizer->normalize($data->getPath(), 'json', $context);
         }
         if ($data->isInitialized('authority')) {
-            $dataArray['authority'] = $data->getAuthority();
+            $dataArray['authority'] = $this->normalizer->normalize($data->getAuthority(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

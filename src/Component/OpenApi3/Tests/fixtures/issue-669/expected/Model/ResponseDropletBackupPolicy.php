@@ -20,12 +20,12 @@ class ResponseDropletBackupPolicy extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $policy = null;
-    public function getPolicy(): mixed
+    protected DropletBackupPolicyRecord $policy;
+    public function getPolicy(): DropletBackupPolicyRecord
     {
         return $this->policy;
     }
-    public function setPolicy(mixed $policy): self
+    public function setPolicy(DropletBackupPolicyRecord $policy): self
     {
         $this->initialized['policy'] = true;
         $this->policy = $policy;

@@ -48,7 +48,7 @@ class Hook extends \ArrayObject
     protected string $url;
     protected string $testUrl;
     protected string $pingUrl;
-    protected mixed $lastResponse = null;
+    protected HookResponse $lastResponse;
     public function getType(): string
     {
         return $this->type;
@@ -201,11 +201,11 @@ class Hook extends \ArrayObject
         $this->pingUrl = $pingUrl;
         return $this;
     }
-    public function getLastResponse(): mixed
+    public function getLastResponse(): HookResponse
     {
         return $this->lastResponse;
     }
-    public function setLastResponse(mixed $lastResponse): self
+    public function setLastResponse(HookResponse $lastResponse): self
     {
         $this->initialized['lastResponse'] = true;
         $this->lastResponse = $lastResponse;

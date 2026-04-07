@@ -20,23 +20,12 @@ class ResponseLogsink extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    /**
-     * @var array<string, mixed>
-     */
-    protected array $sink;
-    /**
-     * @return array<string, mixed>
-     */
-    public function getSink(): array
+    protected LogsinkSchema $sink;
+    public function getSink(): LogsinkSchema
     {
         return $this->sink;
     }
-    /**
-     * @param array<string, mixed> $sink
-     *
-     * @return self
-     */
-    public function setSink(array $sink): self
+    public function setSink(LogsinkSchema $sink): self
     {
         $this->initialized['sink'] = true;
         $this->sink = $sink;

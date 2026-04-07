@@ -47,16 +47,24 @@ class RegionalStateNormalizer implements DenormalizerInterface, NormalizerInterf
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('us_east', $data)) {
-            $object->setUsEast($data['us_east']);
+            $value = $this->denormalizer->denormalize($data['us_east'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionState::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionState) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionState, got ' . get_debug_type($value));
+            }
+            $object->setUsEast($value);
             unset($data['us_east']);
         }
         if (\array_key_exists('eu_west', $data)) {
-            $object->setEuWest($data['eu_west']);
+            $value_1 = $this->denormalizer->denormalize($data['eu_west'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionState::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionState) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RegionState, got ' . get_debug_type($value_1));
+            }
+            $object->setEuWest($value_1);
             unset($data['eu_west']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -72,10 +80,10 @@ class RegionalStateNormalizer implements DenormalizerInterface, NormalizerInterf
         }
         $dataArray = [];
         if ($data->isInitialized('usEast')) {
-            $dataArray['us_east'] = $data->getUsEast();
+            $dataArray['us_east'] = $this->normalizer->normalize($data->getUsEast(), 'json', $context);
         }
         if ($data->isInitialized('euWest')) {
-            $dataArray['eu_west'] = $data->getEuWest();
+            $dataArray['eu_west'] = $this->normalizer->normalize($data->getEuWest(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

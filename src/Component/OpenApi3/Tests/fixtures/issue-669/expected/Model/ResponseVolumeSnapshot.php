@@ -20,12 +20,12 @@ class ResponseVolumeSnapshot extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $snapshot = null;
-    public function getSnapshot(): mixed
+    protected Snapshots $snapshot;
+    public function getSnapshot(): Snapshots
     {
         return $this->snapshot;
     }
-    public function setSnapshot(mixed $snapshot): self
+    public function setSnapshot(Snapshots $snapshot): self
     {
         $this->initialized['snapshot'] = true;
         $this->snapshot = $snapshot;

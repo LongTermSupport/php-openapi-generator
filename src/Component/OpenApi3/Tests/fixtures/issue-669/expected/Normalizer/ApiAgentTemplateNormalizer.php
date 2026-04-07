@@ -99,7 +99,11 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['max_tokens']);
         }
         if (\array_key_exists('model', $data)) {
-            $object->setModel($data['model']);
+            $value_4 = $this->denormalizer->denormalize($data['model'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel, got ' . get_debug_type($value_4));
+            }
+            $object->setModel($value_4);
             unset($data['model']);
         }
         if (\array_key_exists('name', $data)) {
@@ -117,8 +121,8 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
         if (\array_key_exists('tags', $data)) {
             $values_2 = [];
             if (\is_array($data['tags'])) {
-                foreach ($data['tags'] as $value_4) {
-                    $values_2[] = TypeValidator::assertString($value_4, 'value');
+                foreach ($data['tags'] as $value_5) {
+                    $values_2[] = TypeValidator::assertString($value_5, 'value');
                 }
             }
             $object->setTags($values_2);
@@ -144,9 +148,9 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setUuid(TypeValidator::assertString($data['uuid'], 'uuid'));
             unset($data['uuid']);
         }
-        foreach ($data as $key => $value_5) {
+        foreach ($data as $key => $value_6) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_5;
+                $object[$key] = $value_6;
             }
         }
         return $object;
@@ -194,7 +198,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['max_tokens'] = $data->getMaxTokens();
         }
         if ($data->isInitialized('model')) {
-            $dataArray['model'] = $data->getModel();
+            $dataArray['model'] = $this->normalizer->normalize($data->getModel(), 'json', $context);
         }
         if ($data->isInitialized('name')) {
             $dataArray['name'] = $data->getName();

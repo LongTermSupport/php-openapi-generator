@@ -63,7 +63,11 @@ class AppsDeploymentProgressStepNormalizer implements DenormalizerInterface, Nor
             unset($data['name']);
         }
         if (\array_key_exists('reason', $data)) {
-            $object->setReason($data['reason']);
+            $value = $this->denormalizer->denormalize($data['reason'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason, got ' . get_debug_type($value));
+            }
+            $object->setReason($value);
             unset($data['reason']);
         }
         if (\array_key_exists('started_at', $data)) {
@@ -77,11 +81,11 @@ class AppsDeploymentProgressStepNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('steps', $data)) {
             $values = [];
             if (\is_array($data['steps'])) {
-                foreach ($data['steps'] as $value) {
+                foreach ($data['steps'] as $value_1) {
                     $values_1 = [];
-                    if (\is_array($value)) {
-                        foreach ($value as $key => $value_1) {
-                            $values_1[(string) $key] = $value_1;
+                    if (\is_array($value_1)) {
+                        foreach ($value_1 as $key => $value_2) {
+                            $values_1[(string) $key] = $value_2;
                         }
                     }
                     $values[] = $values_1;
@@ -90,9 +94,9 @@ class AppsDeploymentProgressStepNormalizer implements DenormalizerInterface, Nor
             $object->setSteps($values);
             unset($data['steps']);
         }
-        foreach ($data as $key_1 => $value_2) {
+        foreach ($data as $key_1 => $value_3) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_2;
+                $object[$key_1] = $value_3;
             }
         }
         return $object;
@@ -120,7 +124,7 @@ class AppsDeploymentProgressStepNormalizer implements DenormalizerInterface, Nor
             $dataArray['name'] = $data->getName();
         }
         if ($data->isInitialized('reason')) {
-            $dataArray['reason'] = $data->getReason();
+            $dataArray['reason'] = $this->normalizer->normalize($data->getReason(), 'json', $context);
         }
         if ($data->isInitialized('startedAt')) {
             $dataArray['started_at'] = $data->getStartedAt()->format('Y-m-d\TH:i:sP');

@@ -26,12 +26,12 @@ class UserMarketplacePurchase extends \ArrayObject
     protected bool $onFreeTrial;
     protected ?\DateTime $freeTrialEndsOn = null;
     protected ?\DateTime $updatedAt = null;
-    protected mixed $account = null;
+    protected MarketplaceAccount $account;
     /**
      * Marketplace Listing Plan
      *
      */
-    protected mixed $plan = null;
+    protected MarketplaceListingPlan $plan;
     public function getBillingCycle(): string
     {
         return $this->billingCycle;
@@ -92,11 +92,11 @@ class UserMarketplacePurchase extends \ArrayObject
         $this->updatedAt = $updatedAt;
         return $this;
     }
-    public function getAccount(): mixed
+    public function getAccount(): MarketplaceAccount
     {
         return $this->account;
     }
-    public function setAccount(mixed $account): self
+    public function setAccount(MarketplaceAccount $account): self
     {
         $this->initialized['account'] = true;
         $this->account = $account;
@@ -106,7 +106,7 @@ class UserMarketplacePurchase extends \ArrayObject
      * Marketplace Listing Plan
      *
      */
-    public function getPlan(): mixed
+    public function getPlan(): MarketplaceListingPlan
     {
         return $this->plan;
     }
@@ -116,7 +116,7 @@ class UserMarketplacePurchase extends \ArrayObject
      *
      * @return self
      */
-    public function setPlan(mixed $plan): self
+    public function setPlan(MarketplaceListingPlan $plan): self
     {
         $this->initialized['plan'] = true;
         $this->plan = $plan;

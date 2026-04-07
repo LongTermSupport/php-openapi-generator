@@ -32,12 +32,12 @@ class IssueEvent extends \ArrayObject
      * Issue Simple
      *
      */
-    protected mixed $issue = null;
+    protected IssueSimple $issue;
     /**
      * Issue Event Label
      *
      */
-    protected mixed $label = null;
+    protected IssueEventLabel $label;
     protected ?IssueEventAssignee $assignee = null;
     protected ?IssueEventAssigner $assigner = null;
     protected ?IssueEventReviewRequester $reviewRequester = null;
@@ -46,23 +46,23 @@ class IssueEvent extends \ArrayObject
      * Groups of organization members that gives permissions on specified repositories.
      *
      */
-    protected mixed $requestedTeam = null;
-    protected mixed $dismissedReview = null;
+    protected Team $requestedTeam;
+    protected IssueEventDismissedReview $dismissedReview;
     /**
      * Issue Event Milestone
      *
      */
-    protected mixed $milestone = null;
+    protected IssueEventMilestone $milestone;
     /**
      * Issue Event Project Card
      *
      */
-    protected mixed $projectCard = null;
+    protected IssueEventProjectCard $projectCard;
     /**
      * Issue Event Rename
      *
      */
-    protected mixed $rename = null;
+    protected IssueEventRename $rename;
     protected string $authorAssociation;
     protected ?string $lockReason = null;
     public function getId(): int
@@ -149,7 +149,7 @@ class IssueEvent extends \ArrayObject
      * Issue Simple
      *
      */
-    public function getIssue(): mixed
+    public function getIssue(): IssueSimple
     {
         return $this->issue;
     }
@@ -159,7 +159,7 @@ class IssueEvent extends \ArrayObject
      *
      * @return self
      */
-    public function setIssue(mixed $issue): self
+    public function setIssue(IssueSimple $issue): self
     {
         $this->initialized['issue'] = true;
         $this->issue = $issue;
@@ -169,7 +169,7 @@ class IssueEvent extends \ArrayObject
      * Issue Event Label
      *
      */
-    public function getLabel(): mixed
+    public function getLabel(): IssueEventLabel
     {
         return $this->label;
     }
@@ -179,7 +179,7 @@ class IssueEvent extends \ArrayObject
      *
      * @return self
      */
-    public function setLabel(mixed $label): self
+    public function setLabel(IssueEventLabel $label): self
     {
         $this->initialized['label'] = true;
         $this->label = $label;
@@ -229,7 +229,7 @@ class IssueEvent extends \ArrayObject
      * Groups of organization members that gives permissions on specified repositories.
      *
      */
-    public function getRequestedTeam(): mixed
+    public function getRequestedTeam(): Team
     {
         return $this->requestedTeam;
     }
@@ -239,17 +239,17 @@ class IssueEvent extends \ArrayObject
      *
      * @return self
      */
-    public function setRequestedTeam(mixed $requestedTeam): self
+    public function setRequestedTeam(Team $requestedTeam): self
     {
         $this->initialized['requestedTeam'] = true;
         $this->requestedTeam = $requestedTeam;
         return $this;
     }
-    public function getDismissedReview(): mixed
+    public function getDismissedReview(): IssueEventDismissedReview
     {
         return $this->dismissedReview;
     }
-    public function setDismissedReview(mixed $dismissedReview): self
+    public function setDismissedReview(IssueEventDismissedReview $dismissedReview): self
     {
         $this->initialized['dismissedReview'] = true;
         $this->dismissedReview = $dismissedReview;
@@ -259,7 +259,7 @@ class IssueEvent extends \ArrayObject
      * Issue Event Milestone
      *
      */
-    public function getMilestone(): mixed
+    public function getMilestone(): IssueEventMilestone
     {
         return $this->milestone;
     }
@@ -269,7 +269,7 @@ class IssueEvent extends \ArrayObject
      *
      * @return self
      */
-    public function setMilestone(mixed $milestone): self
+    public function setMilestone(IssueEventMilestone $milestone): self
     {
         $this->initialized['milestone'] = true;
         $this->milestone = $milestone;
@@ -279,7 +279,7 @@ class IssueEvent extends \ArrayObject
      * Issue Event Project Card
      *
      */
-    public function getProjectCard(): mixed
+    public function getProjectCard(): IssueEventProjectCard
     {
         return $this->projectCard;
     }
@@ -289,7 +289,7 @@ class IssueEvent extends \ArrayObject
      *
      * @return self
      */
-    public function setProjectCard(mixed $projectCard): self
+    public function setProjectCard(IssueEventProjectCard $projectCard): self
     {
         $this->initialized['projectCard'] = true;
         $this->projectCard = $projectCard;
@@ -299,7 +299,7 @@ class IssueEvent extends \ArrayObject
      * Issue Event Rename
      *
      */
-    public function getRename(): mixed
+    public function getRename(): IssueEventRename
     {
         return $this->rename;
     }
@@ -309,7 +309,7 @@ class IssueEvent extends \ArrayObject
      *
      * @return self
      */
-    public function setRename(mixed $rename): self
+    public function setRename(IssueEventRename $rename): self
     {
         $this->initialized['rename'] = true;
         $this->rename = $rename;

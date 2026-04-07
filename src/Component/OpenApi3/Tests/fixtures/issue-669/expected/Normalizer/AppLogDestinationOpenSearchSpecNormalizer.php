@@ -51,7 +51,11 @@ class AppLogDestinationOpenSearchSpecNormalizer implements DenormalizerInterface
             unset($data['endpoint']);
         }
         if (\array_key_exists('basic_auth', $data)) {
-            $object->setBasicAuth($data['basic_auth']);
+            $value = $this->denormalizer->denormalize($data['basic_auth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth, got ' . get_debug_type($value));
+            }
+            $object->setBasicAuth($value);
             unset($data['basic_auth']);
         }
         if (\array_key_exists('index_name', $data)) {
@@ -62,9 +66,9 @@ class AppLogDestinationOpenSearchSpecNormalizer implements DenormalizerInterface
             $object->setClusterName(TypeValidator::assertString($data['cluster_name'], 'cluster_name'));
             unset($data['cluster_name']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -83,7 +87,7 @@ class AppLogDestinationOpenSearchSpecNormalizer implements DenormalizerInterface
             $dataArray['endpoint'] = $data->getEndpoint();
         }
         if ($data->isInitialized('basicAuth')) {
-            $dataArray['basic_auth'] = $data->getBasicAuth();
+            $dataArray['basic_auth'] = $this->normalizer->normalize($data->getBasicAuth(), 'json', $context);
         }
         if ($data->isInitialized('indexName')) {
             $dataArray['index_name'] = $data->getIndexName();

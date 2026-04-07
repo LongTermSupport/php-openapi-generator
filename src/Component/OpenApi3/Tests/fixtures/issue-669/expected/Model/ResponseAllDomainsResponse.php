@@ -26,7 +26,7 @@ class ResponseAllDomainsResponse extends \ArrayObject
      * @var list<Domain>
      */
     protected array $domains;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * Array of volumes.
@@ -50,11 +50,11 @@ class ResponseAllDomainsResponse extends \ArrayObject
         $this->domains = $domains;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

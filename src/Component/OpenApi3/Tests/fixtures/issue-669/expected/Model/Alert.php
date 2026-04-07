@@ -49,7 +49,7 @@ class Alert extends \ArrayObject
      * The notification settings for a trigger alert.
      *
      */
-    protected mixed $notifications = null;
+    protected Notification $notifications;
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
      *
@@ -159,7 +159,7 @@ class Alert extends \ArrayObject
      * The notification settings for a trigger alert.
      *
      */
-    public function getNotifications(): mixed
+    public function getNotifications(): Notification
     {
         return $this->notifications;
     }
@@ -169,7 +169,7 @@ class Alert extends \ArrayObject
      *
      * @return self
      */
-    public function setNotifications(mixed $notifications): self
+    public function setNotifications(Notification $notifications): self
     {
         $this->initialized['notifications'] = true;
         $this->notifications = $notifications;

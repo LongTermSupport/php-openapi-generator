@@ -58,27 +58,35 @@ class EventNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['type']);
         }
         if (\array_key_exists('actor', $data)) {
-            $object->setActor($data['actor']);
+            $value = $this->denormalizer->denormalize($data['actor'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Actor::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Actor) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Actor, got ' . get_debug_type($value));
+            }
+            $object->setActor($value);
             unset($data['actor']);
         }
         if (\array_key_exists('repo', $data)) {
-            $value = $this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventRepo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventRepo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventRepo, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventRepo::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventRepo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventRepo, got ' . get_debug_type($value_1));
             }
-            $object->setRepo($value);
+            $object->setRepo($value_1);
             unset($data['repo']);
         }
         if (\array_key_exists('org', $data)) {
-            $object->setOrg($data['org']);
+            $value_2 = $this->denormalizer->denormalize($data['org'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Actor::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Actor) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Actor, got ' . get_debug_type($value_2));
+            }
+            $object->setOrg($value_2);
             unset($data['org']);
         }
         if (\array_key_exists('payload', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['payload'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayload::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayload) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayload, got ' . get_debug_type($value_1));
+            $value_3 = $this->denormalizer->denormalize($data['payload'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayload::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayload) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\EventPayload, got ' . get_debug_type($value_3));
             }
-            $object->setPayload($value_1);
+            $object->setPayload($value_3);
             unset($data['payload']);
         }
         if (\array_key_exists('public', $data)) {
@@ -92,9 +100,9 @@ class EventNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
             $object->setCreatedAt(null);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -116,10 +124,10 @@ class EventNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         } else {
             $dataArray['type'] = null;
         }
-        $dataArray['actor'] = $data->getActor();
+        $dataArray['actor'] = $this->normalizer->normalize($data->getActor(), 'json', $context);
         $dataArray['repo'] = $this->normalizer->normalize($data->getRepo(), 'json', $context);
         if ($data->isInitialized('org')) {
-            $dataArray['org'] = $data->getOrg();
+            $dataArray['org'] = $this->normalizer->normalize($data->getOrg(), 'json', $context);
         }
         $dataArray['payload'] = $this->normalizer->normalize($data->getPayload(), 'json', $context);
         $dataArray['public'] = $data->getPublic();

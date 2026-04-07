@@ -47,18 +47,16 @@ class ResponseLogsinkNormalizer implements DenormalizerInterface, NormalizerInte
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('sink', $data)) {
-            $values = [];
-            if (\is_array($data['sink'])) {
-                foreach ($data['sink'] as $key => $value) {
-                    $values[(string) $key] = $value;
-                }
+            $value = $this->denormalizer->denormalize($data['sink'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema, got ' . get_debug_type($value));
             }
-            $object->setSink($values);
+            $object->setSink($value);
             unset($data['sink']);
         }
-        foreach ($data as $key_1 => $value_1) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_1;
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key) === 1) {
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -74,15 +72,11 @@ class ResponseLogsinkNormalizer implements DenormalizerInterface, NormalizerInte
         }
         $dataArray = [];
         if ($data->isInitialized('sink')) {
-            $values = [];
-            foreach ($data->getSink() as $key => $value) {
-                $values[(string) $key] = $value;
-            }
-            $dataArray['sink'] = $values;
+            $dataArray['sink'] = $this->normalizer->normalize($data->getSink(), 'json', $context);
         }
-        foreach ($data as $key_1 => $value_1) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $dataArray[(string) $key_1] = $value_1;
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key) === 1) {
+                $dataArray[(string) $key] = $value;
             }
         }
         return $dataArray;

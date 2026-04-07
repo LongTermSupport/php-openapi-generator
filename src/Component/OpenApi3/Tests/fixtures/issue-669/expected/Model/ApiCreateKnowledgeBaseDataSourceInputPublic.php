@@ -24,7 +24,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * AWS S3 Data Source
      *
      */
-    protected mixed $awsDataSource = null;
+    protected ApiAWSDataSource $awsDataSource;
     /**
      * The chunking algorithm to use for processing data sources.
      * 
@@ -38,7 +38,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    protected mixed $chunkingOptions = null;
+    protected ApiChunkingOptions $chunkingOptions;
     /**
      * Knowledge base id
      *
@@ -48,17 +48,17 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    protected mixed $spacesDataSource = null;
+    protected ApiSpacesDataSource $spacesDataSource;
     /**
      * WebCrawlerDataSource
      *
      */
-    protected mixed $webCrawlerDataSource = null;
+    protected ApiWebCrawlerDataSource $webCrawlerDataSource;
     /**
      * AWS S3 Data Source
      *
      */
-    public function getAwsDataSource(): mixed
+    public function getAwsDataSource(): ApiAWSDataSource
     {
         return $this->awsDataSource;
     }
@@ -68,7 +68,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setAwsDataSource(mixed $awsDataSource): self
+    public function setAwsDataSource(ApiAWSDataSource $awsDataSource): self
     {
         $this->initialized['awsDataSource'] = true;
         $this->awsDataSource = $awsDataSource;
@@ -103,7 +103,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    public function getChunkingOptions(): mixed
+    public function getChunkingOptions(): ApiChunkingOptions
     {
         return $this->chunkingOptions;
     }
@@ -114,7 +114,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setChunkingOptions(mixed $chunkingOptions): self
+    public function setChunkingOptions(ApiChunkingOptions $chunkingOptions): self
     {
         $this->initialized['chunkingOptions'] = true;
         $this->chunkingOptions = $chunkingOptions;
@@ -144,7 +144,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    public function getSpacesDataSource(): mixed
+    public function getSpacesDataSource(): ApiSpacesDataSource
     {
         return $this->spacesDataSource;
     }
@@ -154,7 +154,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setSpacesDataSource(mixed $spacesDataSource): self
+    public function setSpacesDataSource(ApiSpacesDataSource $spacesDataSource): self
     {
         $this->initialized['spacesDataSource'] = true;
         $this->spacesDataSource = $spacesDataSource;
@@ -164,7 +164,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * WebCrawlerDataSource
      *
      */
-    public function getWebCrawlerDataSource(): mixed
+    public function getWebCrawlerDataSource(): ApiWebCrawlerDataSource
     {
         return $this->webCrawlerDataSource;
     }
@@ -174,7 +174,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setWebCrawlerDataSource(mixed $webCrawlerDataSource): self
+    public function setWebCrawlerDataSource(ApiWebCrawlerDataSource $webCrawlerDataSource): self
     {
         $this->initialized['webCrawlerDataSource'] = true;
         $this->webCrawlerDataSource = $webCrawlerDataSource;

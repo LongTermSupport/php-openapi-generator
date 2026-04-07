@@ -24,12 +24,12 @@ class ApiDeleteAgentAPIKeyOutput extends \ArrayObject
      * Agent API Key Info
      *
      */
-    protected mixed $apiKeyInfo = null;
+    protected ApiAgentAPIKeyInfo $apiKeyInfo;
     /**
      * Agent API Key Info
      *
      */
-    public function getApiKeyInfo(): mixed
+    public function getApiKeyInfo(): ApiAgentAPIKeyInfo
     {
         return $this->apiKeyInfo;
     }
@@ -39,7 +39,7 @@ class ApiDeleteAgentAPIKeyOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setApiKeyInfo(mixed $apiKeyInfo): self
+    public function setApiKeyInfo(ApiAgentAPIKeyInfo $apiKeyInfo): self
     {
         $this->initialized['apiKeyInfo'] = true;
         $this->apiKeyInfo = $apiKeyInfo;

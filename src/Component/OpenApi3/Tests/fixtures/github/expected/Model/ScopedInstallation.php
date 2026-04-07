@@ -35,7 +35,7 @@ class ScopedInstallation extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $account = null;
+    protected ?SimpleUser $account = null;
     /**
      * @return array<string, mixed>
      */
@@ -98,7 +98,7 @@ class ScopedInstallation extends \ArrayObject
      * Simple User
      *
      */
-    public function getAccount(): mixed
+    public function getAccount(): ?SimpleUser
     {
         return $this->account;
     }
@@ -108,7 +108,7 @@ class ScopedInstallation extends \ArrayObject
      *
      * @return self
      */
-    public function setAccount(mixed $account): self
+    public function setAccount(?SimpleUser $account): self
     {
         $this->initialized['account'] = true;
         $this->account = $account;

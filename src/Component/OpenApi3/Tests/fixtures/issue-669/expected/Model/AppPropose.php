@@ -24,7 +24,7 @@ class AppPropose extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec = null;
+    protected AppSpec $spec;
     /**
      * An optional ID of an existing app. If set, the spec will be treated as a proposed update to the specified app. The existing app is not modified using this method.
      *
@@ -34,7 +34,7 @@ class AppPropose extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    public function getSpec(): mixed
+    public function getSpec(): AppSpec
     {
         return $this->spec;
     }
@@ -44,7 +44,7 @@ class AppPropose extends \ArrayObject
      *
      * @return self
      */
-    public function setSpec(mixed $spec): self
+    public function setSpec(AppSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

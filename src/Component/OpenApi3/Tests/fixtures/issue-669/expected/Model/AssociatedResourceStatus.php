@@ -24,7 +24,7 @@ class AssociatedResourceStatus extends \ArrayObject
      * An object containing information about a resource scheduled for deletion.
      *
      */
-    protected mixed $droplet = null;
+    protected DestroyedAssociatedResource $droplet;
     /**
      * An object containing additional information about resource related to a Droplet requested to be destroyed.
      *
@@ -44,7 +44,7 @@ class AssociatedResourceStatus extends \ArrayObject
      * An object containing information about a resource scheduled for deletion.
      *
      */
-    public function getDroplet(): mixed
+    public function getDroplet(): DestroyedAssociatedResource
     {
         return $this->droplet;
     }
@@ -54,7 +54,7 @@ class AssociatedResourceStatus extends \ArrayObject
      *
      * @return self
      */
-    public function setDroplet(mixed $droplet): self
+    public function setDroplet(DestroyedAssociatedResource $droplet): self
     {
         $this->initialized['droplet'] = true;
         $this->droplet = $droplet;

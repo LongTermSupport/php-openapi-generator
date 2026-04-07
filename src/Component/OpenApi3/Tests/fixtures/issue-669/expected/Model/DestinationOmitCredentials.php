@@ -41,7 +41,7 @@ class DestinationOmitCredentials extends \ArrayObject
      * OpenSearch destination configuration with `credentials` omitted.
      *
      */
-    protected mixed $config = null;
+    protected OpensearchConfigOmitCredentials $config;
     /**
      * A unique identifier for a destination.
      *
@@ -110,7 +110,7 @@ class DestinationOmitCredentials extends \ArrayObject
      * OpenSearch destination configuration with `credentials` omitted.
      *
      */
-    public function getConfig(): mixed
+    public function getConfig(): OpensearchConfigOmitCredentials
     {
         return $this->config;
     }
@@ -120,7 +120,7 @@ class DestinationOmitCredentials extends \ArrayObject
      *
      * @return self
      */
-    public function setConfig(mixed $config): self
+    public function setConfig(OpensearchConfigOmitCredentials $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

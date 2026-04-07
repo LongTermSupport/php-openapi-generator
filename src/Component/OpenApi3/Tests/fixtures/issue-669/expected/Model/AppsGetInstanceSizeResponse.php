@@ -20,12 +20,12 @@ class AppsGetInstanceSizeResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $instanceSize = null;
-    public function getInstanceSize(): mixed
+    protected AppsInstanceSize $instanceSize;
+    public function getInstanceSize(): AppsInstanceSize
     {
         return $this->instanceSize;
     }
-    public function setInstanceSize(mixed $instanceSize): self
+    public function setInstanceSize(AppsInstanceSize $instanceSize): self
     {
         $this->initialized['instanceSize'] = true;
         $this->instanceSize = $instanceSize;

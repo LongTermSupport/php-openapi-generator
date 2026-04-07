@@ -20,12 +20,12 @@ class ResponseTriggerResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $trigger = null;
-    public function getTrigger(): mixed
+    protected TriggerInfo $trigger;
+    public function getTrigger(): TriggerInfo
     {
         return $this->trigger;
     }
-    public function setTrigger(mixed $trigger): self
+    public function setTrigger(TriggerInfo $trigger): self
     {
         $this->initialized['trigger'] = true;
         $this->trigger = $trigger;

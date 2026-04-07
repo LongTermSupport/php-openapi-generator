@@ -38,7 +38,7 @@ class Schema extends \ArrayObject
      */
     protected array $mapProperty;
     protected SchemaObjectProperty $objectProperty;
-    protected mixed $objectRefProperty = null;
+    protected Schema $objectRefProperty;
     public function getAttribute1(): string
     {
         return $this->attribute1;
@@ -175,11 +175,11 @@ class Schema extends \ArrayObject
         $this->objectProperty = $objectProperty;
         return $this;
     }
-    public function getObjectRefProperty(): mixed
+    public function getObjectRefProperty(): Schema
     {
         return $this->objectRefProperty;
     }
-    public function setObjectRefProperty(mixed $objectRefProperty): self
+    public function setObjectRefProperty(Schema $objectRefProperty): self
     {
         $this->initialized['objectRefProperty'] = true;
         $this->objectRefProperty = $objectRefProperty;

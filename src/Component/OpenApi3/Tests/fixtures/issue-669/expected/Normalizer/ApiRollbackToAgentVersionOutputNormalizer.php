@@ -47,16 +47,20 @@ class ApiRollbackToAgentVersionOutputNormalizer implements DenormalizerInterface
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('audit_header', $data)) {
-            $object->setAuditHeader($data['audit_header']);
+            $value = $this->denormalizer->denormalize($data['audit_header'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAuditHeader::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAuditHeader) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAuditHeader, got ' . get_debug_type($value));
+            }
+            $object->setAuditHeader($value);
             unset($data['audit_header']);
         }
         if (\array_key_exists('version_hash', $data)) {
             $object->setVersionHash(TypeValidator::assertString($data['version_hash'], 'version_hash'));
             unset($data['version_hash']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -72,7 +76,7 @@ class ApiRollbackToAgentVersionOutputNormalizer implements DenormalizerInterface
         }
         $dataArray = [];
         if ($data->isInitialized('auditHeader')) {
-            $dataArray['audit_header'] = $data->getAuditHeader();
+            $dataArray['audit_header'] = $this->normalizer->normalize($data->getAuditHeader(), 'json', $context);
         }
         if ($data->isInitialized('versionHash')) {
             $dataArray['version_hash'] = $data->getVersionHash();

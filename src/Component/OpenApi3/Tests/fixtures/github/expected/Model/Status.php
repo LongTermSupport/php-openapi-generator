@@ -34,7 +34,7 @@ class Status extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $creator = null;
+    protected ?SimpleUser $creator = null;
     public function getUrl(): string
     {
         return $this->url;
@@ -139,7 +139,7 @@ class Status extends \ArrayObject
      * Simple User
      *
      */
-    public function getCreator(): mixed
+    public function getCreator(): ?SimpleUser
     {
         return $this->creator;
     }
@@ -149,7 +149,7 @@ class Status extends \ArrayObject
      *
      * @return self
      */
-    public function setCreator(mixed $creator): self
+    public function setCreator(?SimpleUser $creator): self
     {
         $this->initialized['creator'] = true;
         $this->creator = $creator;

@@ -24,12 +24,12 @@ class ApiCreateAnthropicAPIKeyOutput extends \ArrayObject
      * Anthropic API Key Info
      *
      */
-    protected mixed $apiKeyInfo = null;
+    protected ApiAnthropicAPIKeyInfo $apiKeyInfo;
     /**
      * Anthropic API Key Info
      *
      */
-    public function getApiKeyInfo(): mixed
+    public function getApiKeyInfo(): ApiAnthropicAPIKeyInfo
     {
         return $this->apiKeyInfo;
     }
@@ -39,7 +39,7 @@ class ApiCreateAnthropicAPIKeyOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setApiKeyInfo(mixed $apiKeyInfo): self
+    public function setApiKeyInfo(ApiAnthropicAPIKeyInfo $apiKeyInfo): self
     {
         $this->initialized['apiKeyInfo'] = true;
         $this->apiKeyInfo = $apiKeyInfo;

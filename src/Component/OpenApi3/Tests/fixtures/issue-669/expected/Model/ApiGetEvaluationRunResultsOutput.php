@@ -20,28 +20,28 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $evaluationRun = null;
+    protected ApiEvaluationRun $evaluationRun;
     /**
      * Links to other pages
      *
      */
-    protected mixed $links = null;
+    protected ApiLinks $links;
     /**
      * Meta information about the data set
      *
      */
-    protected mixed $meta = null;
+    protected ApiMeta $meta;
     /**
      * The prompt level results.
      *
      * @var list<ApiPrompt>
      */
     protected array $prompts;
-    public function getEvaluationRun(): mixed
+    public function getEvaluationRun(): ApiEvaluationRun
     {
         return $this->evaluationRun;
     }
-    public function setEvaluationRun(mixed $evaluationRun): self
+    public function setEvaluationRun(ApiEvaluationRun $evaluationRun): self
     {
         $this->initialized['evaluationRun'] = true;
         $this->evaluationRun = $evaluationRun;
@@ -51,7 +51,7 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
      * Links to other pages
      *
      */
-    public function getLinks(): mixed
+    public function getLinks(): ApiLinks
     {
         return $this->links;
     }
@@ -61,7 +61,7 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setLinks(mixed $links): self
+    public function setLinks(ApiLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;
@@ -71,7 +71,7 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
      * Meta information about the data set
      *
      */
-    public function getMeta(): mixed
+    public function getMeta(): ApiMeta
     {
         return $this->meta;
     }
@@ -81,7 +81,7 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setMeta(mixed $meta): self
+    public function setMeta(ApiMeta $meta): self
     {
         $this->initialized['meta'] = true;
         $this->meta = $meta;

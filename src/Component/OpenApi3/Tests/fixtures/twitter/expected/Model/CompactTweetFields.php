@@ -60,7 +60,7 @@ class CompactTweetFields extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    protected mixed $withheld = null;
+    protected TweetWithheld $withheld;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
      *
@@ -207,7 +207,7 @@ class CompactTweetFields extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    public function getWithheld(): mixed
+    public function getWithheld(): TweetWithheld
     {
         return $this->withheld;
     }
@@ -217,7 +217,7 @@ class CompactTweetFields extends \ArrayObject
      *
      * @return self
      */
-    public function setWithheld(mixed $withheld): self
+    public function setWithheld(TweetWithheld $withheld): self
     {
         $this->initialized['withheld'] = true;
         $this->withheld = $withheld;

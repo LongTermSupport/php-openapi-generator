@@ -55,12 +55,16 @@ class DefaultUserFieldsEntitiesNormalizer implements DenormalizerInterface, Norm
             unset($data['url']);
         }
         if (\array_key_exists('description', $data)) {
-            $object->setDescription($data['description']);
+            $value_1 = $this->denormalizer->denormalize($data['description'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities, got ' . get_debug_type($value_1));
+            }
+            $object->setDescription($value_1);
             unset($data['description']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -79,7 +83,7 @@ class DefaultUserFieldsEntitiesNormalizer implements DenormalizerInterface, Norm
             $dataArray['url'] = $this->normalizer->normalize($data->getUrl(), 'json', $context);
         }
         if ($data->isInitialized('description')) {
-            $dataArray['description'] = $data->getDescription();
+            $dataArray['description'] = $this->normalizer->normalize($data->getDescription(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

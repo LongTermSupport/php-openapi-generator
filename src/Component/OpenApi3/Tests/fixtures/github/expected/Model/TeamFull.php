@@ -60,7 +60,7 @@ class TeamFull extends \ArrayObject
      * GitHub account for managing multiple users, teams, and repositories
      *
      */
-    protected mixed $organization = null;
+    protected Organization $organization;
     /**
      * Distinguished Name (DN) that team maps to within LDAP environment
      *
@@ -280,7 +280,7 @@ class TeamFull extends \ArrayObject
      * GitHub account for managing multiple users, teams, and repositories
      *
      */
-    public function getOrganization(): mixed
+    public function getOrganization(): Organization
     {
         return $this->organization;
     }
@@ -290,7 +290,7 @@ class TeamFull extends \ArrayObject
      *
      * @return self
      */
-    public function setOrganization(mixed $organization): self
+    public function setOrganization(Organization $organization): self
     {
         $this->initialized['organization'] = true;
         $this->organization = $organization;

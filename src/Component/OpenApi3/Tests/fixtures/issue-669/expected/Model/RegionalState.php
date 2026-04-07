@@ -20,23 +20,23 @@ class RegionalState extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $usEast = null;
-    protected mixed $euWest = null;
-    public function getUsEast(): mixed
+    protected RegionState $usEast;
+    protected RegionState $euWest;
+    public function getUsEast(): RegionState
     {
         return $this->usEast;
     }
-    public function setUsEast(mixed $usEast): self
+    public function setUsEast(RegionState $usEast): self
     {
         $this->initialized['usEast'] = true;
         $this->usEast = $usEast;
         return $this;
     }
-    public function getEuWest(): mixed
+    public function getEuWest(): RegionState
     {
         return $this->euWest;
     }
-    public function setEuWest(mixed $euWest): self
+    public function setEuWest(RegionState $euWest): self
     {
         $this->initialized['euWest'] = true;
         $this->euWest = $euWest;

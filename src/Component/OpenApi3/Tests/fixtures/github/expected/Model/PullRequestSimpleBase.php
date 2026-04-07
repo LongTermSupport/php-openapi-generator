@@ -26,7 +26,7 @@ class PullRequestSimpleBase extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repo = null;
+    protected Repository $repo;
     protected string $sha;
     protected ?PullRequestSimpleBaseUser $user = null;
     public function getLabel(): string
@@ -53,7 +53,7 @@ class PullRequestSimpleBase extends \ArrayObject
      * A git repository
      *
      */
-    public function getRepo(): mixed
+    public function getRepo(): Repository
     {
         return $this->repo;
     }
@@ -63,7 +63,7 @@ class PullRequestSimpleBase extends \ArrayObject
      *
      * @return self
      */
-    public function setRepo(mixed $repo): self
+    public function setRepo(Repository $repo): self
     {
         $this->initialized['repo'] = true;
         $this->repo = $repo;

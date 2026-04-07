@@ -66,7 +66,7 @@ class ApiAgentTemplate extends \ArrayObject
      * Description of a Model
      *
      */
-    protected mixed $model = null;
+    protected ApiModel $model;
     /**
      * Name of the agent template
      *
@@ -282,7 +282,7 @@ class ApiAgentTemplate extends \ArrayObject
      * Description of a Model
      *
      */
-    public function getModel(): mixed
+    public function getModel(): ApiModel
     {
         return $this->model;
     }
@@ -292,7 +292,7 @@ class ApiAgentTemplate extends \ArrayObject
      *
      * @return self
      */
-    public function setModel(mixed $model): self
+    public function setModel(ApiModel $model): self
     {
         $this->initialized['model'] = true;
         $this->model = $model;

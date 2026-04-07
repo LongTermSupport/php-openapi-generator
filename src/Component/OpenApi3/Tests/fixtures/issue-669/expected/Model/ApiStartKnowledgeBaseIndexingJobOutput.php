@@ -24,12 +24,12 @@ class ApiStartKnowledgeBaseIndexingJobOutput extends \ArrayObject
      * IndexingJob description
      *
      */
-    protected mixed $job = null;
+    protected ApiIndexingJob $job;
     /**
      * IndexingJob description
      *
      */
-    public function getJob(): mixed
+    public function getJob(): ApiIndexingJob
     {
         return $this->job;
     }
@@ -39,7 +39,7 @@ class ApiStartKnowledgeBaseIndexingJobOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setJob(mixed $job): self
+    public function setJob(ApiIndexingJob $job): self
     {
         $this->initialized['job'] = true;
         $this->job = $job;

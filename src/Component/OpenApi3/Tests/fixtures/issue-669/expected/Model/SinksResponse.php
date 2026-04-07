@@ -20,18 +20,18 @@ class SinksResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $destination = null;
+    protected Destination $destination;
     /**
      * List of resources identified by their URNs.
      *
      * @var list<SinkResource>
      */
     protected array $resources;
-    public function getDestination(): mixed
+    public function getDestination(): Destination
     {
         return $this->destination;
     }
-    public function setDestination(mixed $destination): self
+    public function setDestination(Destination $destination): self
     {
         $this->initialized['destination'] = true;
         $this->destination = $destination;

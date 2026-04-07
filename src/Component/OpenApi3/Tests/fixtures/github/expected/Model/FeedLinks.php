@@ -24,37 +24,37 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    protected mixed $timeline = null;
+    protected LinkWithType $timeline;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $user = null;
+    protected LinkWithType $user;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $securityAdvisories = null;
+    protected LinkWithType $securityAdvisories;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUser = null;
+    protected LinkWithType $currentUser;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUserPublic = null;
+    protected LinkWithType $currentUserPublic;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUserActor = null;
+    protected LinkWithType $currentUserActor;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUserOrganization = null;
+    protected LinkWithType $currentUserOrganization;
     /**
      * @var list<LinkWithType>
      */
@@ -63,7 +63,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getTimeline(): mixed
+    public function getTimeline(): LinkWithType
     {
         return $this->timeline;
     }
@@ -73,7 +73,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setTimeline(mixed $timeline): self
+    public function setTimeline(LinkWithType $timeline): self
     {
         $this->initialized['timeline'] = true;
         $this->timeline = $timeline;
@@ -83,7 +83,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getUser(): mixed
+    public function getUser(): LinkWithType
     {
         return $this->user;
     }
@@ -93,7 +93,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setUser(mixed $user): self
+    public function setUser(LinkWithType $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;
@@ -103,7 +103,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getSecurityAdvisories(): mixed
+    public function getSecurityAdvisories(): LinkWithType
     {
         return $this->securityAdvisories;
     }
@@ -113,7 +113,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setSecurityAdvisories(mixed $securityAdvisories): self
+    public function setSecurityAdvisories(LinkWithType $securityAdvisories): self
     {
         $this->initialized['securityAdvisories'] = true;
         $this->securityAdvisories = $securityAdvisories;
@@ -123,7 +123,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getCurrentUser(): mixed
+    public function getCurrentUser(): LinkWithType
     {
         return $this->currentUser;
     }
@@ -133,7 +133,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setCurrentUser(mixed $currentUser): self
+    public function setCurrentUser(LinkWithType $currentUser): self
     {
         $this->initialized['currentUser'] = true;
         $this->currentUser = $currentUser;
@@ -143,7 +143,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getCurrentUserPublic(): mixed
+    public function getCurrentUserPublic(): LinkWithType
     {
         return $this->currentUserPublic;
     }
@@ -153,7 +153,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setCurrentUserPublic(mixed $currentUserPublic): self
+    public function setCurrentUserPublic(LinkWithType $currentUserPublic): self
     {
         $this->initialized['currentUserPublic'] = true;
         $this->currentUserPublic = $currentUserPublic;
@@ -163,7 +163,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getCurrentUserActor(): mixed
+    public function getCurrentUserActor(): LinkWithType
     {
         return $this->currentUserActor;
     }
@@ -173,7 +173,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setCurrentUserActor(mixed $currentUserActor): self
+    public function setCurrentUserActor(LinkWithType $currentUserActor): self
     {
         $this->initialized['currentUserActor'] = true;
         $this->currentUserActor = $currentUserActor;
@@ -183,7 +183,7 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    public function getCurrentUserOrganization(): mixed
+    public function getCurrentUserOrganization(): LinkWithType
     {
         return $this->currentUserOrganization;
     }
@@ -193,7 +193,7 @@ class FeedLinks extends \ArrayObject
      *
      * @return self
      */
-    public function setCurrentUserOrganization(mixed $currentUserOrganization): self
+    public function setCurrentUserOrganization(LinkWithType $currentUserOrganization): self
     {
         $this->initialized['currentUserOrganization'] = true;
         $this->currentUserOrganization = $currentUserOrganization;

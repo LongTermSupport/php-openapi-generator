@@ -47,12 +47,16 @@ class AppsDeploymentResponseNormalizer implements DenormalizerInterface, Normali
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('deployment', $data)) {
-            $object->setDeployment($data['deployment']);
+            $value = $this->denormalizer->denormalize($data['deployment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeployment::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeployment) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeployment, got ' . get_debug_type($value));
+            }
+            $object->setDeployment($value);
             unset($data['deployment']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class AppsDeploymentResponseNormalizer implements DenormalizerInterface, Normali
         }
         $dataArray = [];
         if ($data->isInitialized('deployment')) {
-            $dataArray['deployment'] = $data->getDeployment();
+            $dataArray['deployment'] = $this->normalizer->normalize($data->getDeployment(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

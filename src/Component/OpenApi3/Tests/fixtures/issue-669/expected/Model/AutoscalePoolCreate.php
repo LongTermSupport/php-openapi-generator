@@ -31,7 +31,7 @@ class AutoscalePoolCreate extends \ArrayObject
      * @var array<string, mixed>
      */
     protected array $config;
-    protected mixed $dropletTemplate = null;
+    protected AutoscalePoolDropletTemplate $dropletTemplate;
     /**
      * The human-readable name of the autoscale pool. This field cannot be updated
      *
@@ -74,11 +74,11 @@ class AutoscalePoolCreate extends \ArrayObject
         $this->config = $config;
         return $this;
     }
-    public function getDropletTemplate(): mixed
+    public function getDropletTemplate(): AutoscalePoolDropletTemplate
     {
         return $this->dropletTemplate;
     }
-    public function setDropletTemplate(mixed $dropletTemplate): self
+    public function setDropletTemplate(AutoscalePoolDropletTemplate $dropletTemplate): self
     {
         $this->initialized['dropletTemplate'] = true;
         $this->dropletTemplate = $dropletTemplate;

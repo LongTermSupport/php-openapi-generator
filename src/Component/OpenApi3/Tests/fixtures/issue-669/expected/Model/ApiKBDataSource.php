@@ -24,7 +24,7 @@ class ApiKBDataSource extends \ArrayObject
      * AWS S3 Data Source
      *
      */
-    protected mixed $awsDataSource = null;
+    protected ApiAWSDataSource $awsDataSource;
     /**
      * Deprecated, moved to data_source_details
      *
@@ -48,38 +48,38 @@ class ApiKBDataSource extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    protected mixed $chunkingOptions = null;
+    protected ApiChunkingOptions $chunkingOptions;
     /**
      * Dropbox Data Source
      *
      */
-    protected mixed $dropboxDataSource = null;
+    protected ApiDropboxDataSource $dropboxDataSource;
     /**
      * File to upload as data source for knowledge base.
      *
      */
-    protected mixed $fileUploadDataSource = null;
+    protected ApiFileUploadDataSource $fileUploadDataSource;
     /**
      * Google Drive Data Source
      *
      */
-    protected mixed $googleDriveDataSource = null;
+    protected ApiGoogleDriveDataSource $googleDriveDataSource;
     protected string $itemPath;
     /**
      * Spaces Bucket Data Source
      *
      */
-    protected mixed $spacesDataSource = null;
+    protected ApiSpacesDataSource $spacesDataSource;
     /**
      * WebCrawlerDataSource
      *
      */
-    protected mixed $webCrawlerDataSource = null;
+    protected ApiWebCrawlerDataSource $webCrawlerDataSource;
     /**
      * AWS S3 Data Source
      *
      */
-    public function getAwsDataSource(): mixed
+    public function getAwsDataSource(): ApiAWSDataSource
     {
         return $this->awsDataSource;
     }
@@ -89,7 +89,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setAwsDataSource(mixed $awsDataSource): self
+    public function setAwsDataSource(ApiAWSDataSource $awsDataSource): self
     {
         $this->initialized['awsDataSource'] = true;
         $this->awsDataSource = $awsDataSource;
@@ -164,7 +164,7 @@ class ApiKBDataSource extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    public function getChunkingOptions(): mixed
+    public function getChunkingOptions(): ApiChunkingOptions
     {
         return $this->chunkingOptions;
     }
@@ -175,7 +175,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setChunkingOptions(mixed $chunkingOptions): self
+    public function setChunkingOptions(ApiChunkingOptions $chunkingOptions): self
     {
         $this->initialized['chunkingOptions'] = true;
         $this->chunkingOptions = $chunkingOptions;
@@ -185,7 +185,7 @@ class ApiKBDataSource extends \ArrayObject
      * Dropbox Data Source
      *
      */
-    public function getDropboxDataSource(): mixed
+    public function getDropboxDataSource(): ApiDropboxDataSource
     {
         return $this->dropboxDataSource;
     }
@@ -195,7 +195,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setDropboxDataSource(mixed $dropboxDataSource): self
+    public function setDropboxDataSource(ApiDropboxDataSource $dropboxDataSource): self
     {
         $this->initialized['dropboxDataSource'] = true;
         $this->dropboxDataSource = $dropboxDataSource;
@@ -205,7 +205,7 @@ class ApiKBDataSource extends \ArrayObject
      * File to upload as data source for knowledge base.
      *
      */
-    public function getFileUploadDataSource(): mixed
+    public function getFileUploadDataSource(): ApiFileUploadDataSource
     {
         return $this->fileUploadDataSource;
     }
@@ -215,7 +215,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setFileUploadDataSource(mixed $fileUploadDataSource): self
+    public function setFileUploadDataSource(ApiFileUploadDataSource $fileUploadDataSource): self
     {
         $this->initialized['fileUploadDataSource'] = true;
         $this->fileUploadDataSource = $fileUploadDataSource;
@@ -225,7 +225,7 @@ class ApiKBDataSource extends \ArrayObject
      * Google Drive Data Source
      *
      */
-    public function getGoogleDriveDataSource(): mixed
+    public function getGoogleDriveDataSource(): ApiGoogleDriveDataSource
     {
         return $this->googleDriveDataSource;
     }
@@ -235,7 +235,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setGoogleDriveDataSource(mixed $googleDriveDataSource): self
+    public function setGoogleDriveDataSource(ApiGoogleDriveDataSource $googleDriveDataSource): self
     {
         $this->initialized['googleDriveDataSource'] = true;
         $this->googleDriveDataSource = $googleDriveDataSource;
@@ -255,7 +255,7 @@ class ApiKBDataSource extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    public function getSpacesDataSource(): mixed
+    public function getSpacesDataSource(): ApiSpacesDataSource
     {
         return $this->spacesDataSource;
     }
@@ -265,7 +265,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setSpacesDataSource(mixed $spacesDataSource): self
+    public function setSpacesDataSource(ApiSpacesDataSource $spacesDataSource): self
     {
         $this->initialized['spacesDataSource'] = true;
         $this->spacesDataSource = $spacesDataSource;
@@ -275,7 +275,7 @@ class ApiKBDataSource extends \ArrayObject
      * WebCrawlerDataSource
      *
      */
-    public function getWebCrawlerDataSource(): mixed
+    public function getWebCrawlerDataSource(): ApiWebCrawlerDataSource
     {
         return $this->webCrawlerDataSource;
     }
@@ -285,7 +285,7 @@ class ApiKBDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setWebCrawlerDataSource(mixed $webCrawlerDataSource): self
+    public function setWebCrawlerDataSource(ApiWebCrawlerDataSource $webCrawlerDataSource): self
     {
         $this->initialized['webCrawlerDataSource'] = true;
         $this->webCrawlerDataSource = $webCrawlerDataSource;

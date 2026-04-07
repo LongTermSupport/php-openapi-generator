@@ -105,38 +105,54 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['envs']);
         }
         if (\array_key_exists('git', $data)) {
-            $object->setGit($data['git']);
+            $value_7 = $this->denormalizer->denormalize($data['git'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec::class, 'json', $context);
+            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec, got ' . get_debug_type($value_7));
+            }
+            $object->setGit($value_7);
             unset($data['git']);
         }
         if (\array_key_exists('github', $data)) {
-            $object->setGithub($data['github']);
+            $value_8 = $this->denormalizer->denormalize($data['github'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec::class, 'json', $context);
+            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec, got ' . get_debug_type($value_8));
+            }
+            $object->setGithub($value_8);
             unset($data['github']);
         }
         if (\array_key_exists('gitlab', $data)) {
-            $object->setGitlab($data['gitlab']);
+            $value_9 = $this->denormalizer->denormalize($data['gitlab'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec::class, 'json', $context);
+            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec, got ' . get_debug_type($value_9));
+            }
+            $object->setGitlab($value_9);
             unset($data['gitlab']);
         }
         if (\array_key_exists('bitbucket', $data)) {
-            $object->setBitbucket($data['bitbucket']);
+            $value_10 = $this->denormalizer->denormalize($data['bitbucket'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec::class, 'json', $context);
+            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec, got ' . get_debug_type($value_10));
+            }
+            $object->setBitbucket($value_10);
             unset($data['bitbucket']);
         }
         if (\array_key_exists('log_destinations', $data)) {
             $values_3 = [];
             if (\is_array($data['log_destinations'])) {
-                foreach ($data['log_destinations'] as $value_7) {
-                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition::class, 'json', $context);
-                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition, got ' . get_debug_type($value_8));
+                foreach ($data['log_destinations'] as $value_11) {
+                    $value_12 = $this->denormalizer->denormalize($value_11, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition::class, 'json', $context);
+                    if (!$value_12 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition, got ' . get_debug_type($value_12));
                     }
-                    $values_3[] = $value_8;
+                    $values_3[] = $value_12;
                 }
             }
             $object->setLogDestinations($values_3);
             unset($data['log_destinations']);
         }
-        foreach ($data as $key => $value_9) {
+        foreach ($data as $key => $value_13) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_9;
+                $object[$key] = $value_13;
             }
         }
         return $object;
@@ -180,16 +196,16 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['envs'] = $values_2;
         }
         if ($data->isInitialized('git')) {
-            $dataArray['git'] = $data->getGit();
+            $dataArray['git'] = $this->normalizer->normalize($data->getGit(), 'json', $context);
         }
         if ($data->isInitialized('github')) {
-            $dataArray['github'] = $data->getGithub();
+            $dataArray['github'] = $this->normalizer->normalize($data->getGithub(), 'json', $context);
         }
         if ($data->isInitialized('gitlab')) {
-            $dataArray['gitlab'] = $data->getGitlab();
+            $dataArray['gitlab'] = $this->normalizer->normalize($data->getGitlab(), 'json', $context);
         }
         if ($data->isInitialized('bitbucket')) {
-            $dataArray['bitbucket'] = $data->getBitbucket();
+            $dataArray['bitbucket'] = $this->normalizer->normalize($data->getBitbucket(), 'json', $context);
         }
         if ($data->isInitialized('logDestinations')) {
             $values_3 = [];

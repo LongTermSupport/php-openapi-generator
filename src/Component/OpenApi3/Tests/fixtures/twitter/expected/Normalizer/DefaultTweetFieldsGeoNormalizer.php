@@ -47,16 +47,20 @@ class DefaultTweetFieldsGeoNormalizer implements DenormalizerInterface, Normaliz
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('coordinates', $data)) {
-            $object->setCoordinates($data['coordinates']);
+            $value = $this->denormalizer->denormalize($data['coordinates'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Point::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Point) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Point, got ' . get_debug_type($value));
+            }
+            $object->setCoordinates($value);
             unset($data['coordinates']);
         }
         if (\array_key_exists('place_id', $data)) {
             $object->setPlaceId(TypeValidator::assertString($data['place_id'], 'place_id'));
             unset($data['place_id']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -72,7 +76,7 @@ class DefaultTweetFieldsGeoNormalizer implements DenormalizerInterface, Normaliz
         }
         $dataArray = [];
         if ($data->isInitialized('coordinates')) {
-            $dataArray['coordinates'] = $data->getCoordinates();
+            $dataArray['coordinates'] = $this->normalizer->normalize($data->getCoordinates(), 'json', $context);
         }
         if ($data->isInitialized('placeId')) {
             $dataArray['place_id'] = $data->getPlaceId();

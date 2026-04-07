@@ -58,12 +58,16 @@ class CheckSuitePreferenceNormalizer implements DenormalizerInterface, Normalize
             unset($data['preferences']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value_1 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_1));
+            }
+            $object->setRepository($value_1);
             unset($data['repository']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -82,7 +86,7 @@ class CheckSuitePreferenceNormalizer implements DenormalizerInterface, Normalize
             $dataArray['preferences'] = $this->normalizer->normalize($data->getPreferences(), 'json', $context);
         }
         if ($data->isInitialized('repository')) {
-            $dataArray['repository'] = $data->getRepository();
+            $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -83,16 +83,24 @@ class UserMarketplacePurchaseNormalizer implements DenormalizerInterface, Normal
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('account', $data)) {
-            $object->setAccount($data['account']);
+            $value = $this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount, got ' . get_debug_type($value));
+            }
+            $object->setAccount($value);
             unset($data['account']);
         }
         if (\array_key_exists('plan', $data)) {
-            $object->setPlan($data['plan']);
+            $value_1 = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan, got ' . get_debug_type($value_1));
+            }
+            $object->setPlan($value_1);
             unset($data['plan']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -133,8 +141,8 @@ class UserMarketplacePurchaseNormalizer implements DenormalizerInterface, Normal
         } else {
             $dataArray['updated_at'] = null;
         }
-        $dataArray['account'] = $data->getAccount();
-        $dataArray['plan'] = $data->getPlan();
+        $dataArray['account'] = $this->normalizer->normalize($data->getAccount(), 'json', $context);
+        $dataArray['plan'] = $this->normalizer->normalize($data->getPlan(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

@@ -47,12 +47,16 @@ class ApiGetEvaluationRunOutputNormalizer implements DenormalizerInterface, Norm
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('evaluation_run', $data)) {
-            $object->setEvaluationRun($data['evaluation_run']);
+            $value = $this->denormalizer->denormalize($data['evaluation_run'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationRun::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationRun) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationRun, got ' . get_debug_type($value));
+            }
+            $object->setEvaluationRun($value);
             unset($data['evaluation_run']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ApiGetEvaluationRunOutputNormalizer implements DenormalizerInterface, Norm
         }
         $dataArray = [];
         if ($data->isInitialized('evaluationRun')) {
-            $dataArray['evaluation_run'] = $data->getEvaluationRun();
+            $dataArray['evaluation_run'] = $this->normalizer->normalize($data->getEvaluationRun(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

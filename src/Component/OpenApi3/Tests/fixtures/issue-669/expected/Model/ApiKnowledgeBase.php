@@ -41,7 +41,7 @@ class ApiKnowledgeBase extends \ArrayObject
      * IndexingJob description
      *
      */
-    protected mixed $lastIndexingJob = null;
+    protected ApiIndexingJob $lastIndexingJob;
     /**
      * Name of knowledge base
      *
@@ -158,7 +158,7 @@ class ApiKnowledgeBase extends \ArrayObject
      * IndexingJob description
      *
      */
-    public function getLastIndexingJob(): mixed
+    public function getLastIndexingJob(): ApiIndexingJob
     {
         return $this->lastIndexingJob;
     }
@@ -168,7 +168,7 @@ class ApiKnowledgeBase extends \ArrayObject
      *
      * @return self
      */
-    public function setLastIndexingJob(mixed $lastIndexingJob): self
+    public function setLastIndexingJob(ApiIndexingJob $lastIndexingJob): self
     {
         $this->initialized['lastIndexingJob'] = true;
         $this->lastIndexingJob = $lastIndexingJob;

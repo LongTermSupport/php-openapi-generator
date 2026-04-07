@@ -72,15 +72,19 @@ class ScopedInstallationNormalizer implements DenormalizerInterface, NormalizerI
             unset($data['repositories_url']);
         }
         if (\array_key_exists('account', $data) && $data['account'] !== null) {
-            $object->setAccount($data['account']);
+            $value_1 = $this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value_1));
+            }
+            $object->setAccount($value_1);
             unset($data['account']);
         }
         elseif (\array_key_exists('account', $data) && $data['account'] === null) {
             $object->setAccount(null);
         }
-        foreach ($data as $key_1 => $value_1) {
+        foreach ($data as $key_1 => $value_2) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_1;
+                $object[$key_1] = $value_2;
             }
         }
         return $object;
@@ -110,7 +114,7 @@ class ScopedInstallationNormalizer implements DenormalizerInterface, NormalizerI
         $dataArray['repositories_url'] = $data->getRepositoriesUrl();
         $val_1 = $data->getAccount();
         if (null !== $val_1) {
-            $dataArray['account'] = $val_1;
+            $dataArray['account'] = $this->normalizer->normalize($val_1, 'json', $context);
         } else {
             $dataArray['account'] = null;
         }

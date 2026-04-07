@@ -47,12 +47,16 @@ class ResponseCaNormalizer implements DenormalizerInterface, NormalizerInterface
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('ca', $data)) {
-            $object->setCa($data['ca']);
+            $value = $this->denormalizer->denormalize($data['ca'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Ca::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Ca) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Ca, got ' . get_debug_type($value));
+            }
+            $object->setCa($value);
             unset($data['ca']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -67,7 +71,7 @@ class ResponseCaNormalizer implements DenormalizerInterface, NormalizerInterface
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseCa, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['ca'] = $data->getCa();
+        $dataArray['ca'] = $this->normalizer->normalize($data->getCa(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

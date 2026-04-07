@@ -58,7 +58,11 @@ class PullRequestSimpleHeadNormalizer implements DenormalizerInterface, Normaliz
             unset($data['ref']);
         }
         if (\array_key_exists('repo', $data)) {
-            $object->setRepo($data['repo']);
+            $value = $this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value));
+            }
+            $object->setRepo($value);
             unset($data['repo']);
         }
         if (\array_key_exists('sha', $data)) {
@@ -66,19 +70,19 @@ class PullRequestSimpleHeadNormalizer implements DenormalizerInterface, Normaliz
             unset($data['sha']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestSimpleHeadUser::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestSimpleHeadUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestSimpleHeadUser, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestSimpleHeadUser::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestSimpleHeadUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestSimpleHeadUser, got ' . get_debug_type($value_1));
             }
-            $object->setUser($value);
+            $object->setUser($value_1);
             unset($data['user']);
         }
         elseif (\array_key_exists('user', $data) && $data['user'] === null) {
             $object->setUser(null);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -95,7 +99,7 @@ class PullRequestSimpleHeadNormalizer implements DenormalizerInterface, Normaliz
         $dataArray = [];
         $dataArray['label'] = $data->getLabel();
         $dataArray['ref'] = $data->getRef();
-        $dataArray['repo'] = $data->getRepo();
+        $dataArray['repo'] = $this->normalizer->normalize($data->getRepo(), 'json', $context);
         $dataArray['sha'] = $data->getSha();
         $val = $data->getUser();
         if (null !== $val) {

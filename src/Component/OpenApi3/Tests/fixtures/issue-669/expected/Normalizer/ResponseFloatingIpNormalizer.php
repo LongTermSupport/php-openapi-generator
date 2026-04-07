@@ -47,12 +47,16 @@ class ResponseFloatingIpNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('floating_ip', $data)) {
-            $object->setFloatingIp($data['floating_ip']);
+            $value = $this->denormalizer->denormalize($data['floating_ip'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp, got ' . get_debug_type($value));
+            }
+            $object->setFloatingIp($value);
             unset($data['floating_ip']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseFloatingIpNormalizer implements DenormalizerInterface, NormalizerI
         }
         $dataArray = [];
         if ($data->isInitialized('floatingIp')) {
-            $dataArray['floating_ip'] = $data->getFloatingIp();
+            $dataArray['floating_ip'] = $this->normalizer->normalize($data->getFloatingIp(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

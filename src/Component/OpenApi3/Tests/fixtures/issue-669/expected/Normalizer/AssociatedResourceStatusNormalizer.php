@@ -47,15 +47,19 @@ class AssociatedResourceStatusNormalizer implements DenormalizerInterface, Norma
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('droplet', $data)) {
-            $object->setDroplet($data['droplet']);
+            $value = $this->denormalizer->denormalize($data['droplet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value));
+            }
+            $object->setDroplet($value);
             unset($data['droplet']);
         }
         if (\array_key_exists('resources', $data)) {
-            $value = $this->denormalizer->denormalize($data['resources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['resources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources, got ' . get_debug_type($value_1));
             }
-            $object->setResources($value);
+            $object->setResources($value_1);
             unset($data['resources']);
         }
         if (\array_key_exists('completed_at', $data)) {
@@ -66,9 +70,9 @@ class AssociatedResourceStatusNormalizer implements DenormalizerInterface, Norma
             $object->setFailures(TypeValidator::assertInt($data['failures'], 'failures'));
             unset($data['failures']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -84,7 +88,7 @@ class AssociatedResourceStatusNormalizer implements DenormalizerInterface, Norma
         }
         $dataArray = [];
         if ($data->isInitialized('droplet')) {
-            $dataArray['droplet'] = $data->getDroplet();
+            $dataArray['droplet'] = $this->normalizer->normalize($data->getDroplet(), 'json', $context);
         }
         if ($data->isInitialized('resources')) {
             $dataArray['resources'] = $this->normalizer->normalize($data->getResources(), 'json', $context);

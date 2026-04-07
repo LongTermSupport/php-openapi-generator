@@ -25,7 +25,7 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
      * Knowledgebase Description
      *
      */
-    protected mixed $knowledgeBase = null;
+    protected ApiKnowledgeBase $knowledgeBase;
     public function getDatabaseStatus(): string
     {
         return $this->databaseStatus;
@@ -40,7 +40,7 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
      * Knowledgebase Description
      *
      */
-    public function getKnowledgeBase(): mixed
+    public function getKnowledgeBase(): ApiKnowledgeBase
     {
         return $this->knowledgeBase;
     }
@@ -50,7 +50,7 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
      *
      * @return self
      */
-    public function setKnowledgeBase(mixed $knowledgeBase): self
+    public function setKnowledgeBase(ApiKnowledgeBase $knowledgeBase): self
     {
         $this->initialized['knowledgeBase'] = true;
         $this->knowledgeBase = $knowledgeBase;

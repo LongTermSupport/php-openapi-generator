@@ -25,7 +25,7 @@ class Thread extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository = null;
+    protected MinimalRepository $repository;
     protected ThreadSubject $subject;
     protected string $reason;
     protected bool $unread;
@@ -47,7 +47,7 @@ class Thread extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): MinimalRepository
     {
         return $this->repository;
     }
@@ -57,7 +57,7 @@ class Thread extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(MinimalRepository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;

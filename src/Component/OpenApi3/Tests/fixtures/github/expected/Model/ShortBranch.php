@@ -27,7 +27,7 @@ class ShortBranch extends \ArrayObject
      * Branch Protection
      *
      */
-    protected mixed $protection = null;
+    protected BranchProtection $protection;
     protected string $protectionUrl;
     public function getName(): string
     {
@@ -63,7 +63,7 @@ class ShortBranch extends \ArrayObject
      * Branch Protection
      *
      */
-    public function getProtection(): mixed
+    public function getProtection(): BranchProtection
     {
         return $this->protection;
     }
@@ -73,7 +73,7 @@ class ShortBranch extends \ArrayObject
      *
      * @return self
      */
-    public function setProtection(mixed $protection): self
+    public function setProtection(BranchProtection $protection): self
     {
         $this->initialized['protection'] = true;
         $this->protection = $protection;

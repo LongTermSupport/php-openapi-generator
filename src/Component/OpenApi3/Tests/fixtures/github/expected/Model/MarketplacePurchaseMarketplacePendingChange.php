@@ -28,7 +28,7 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
      * Marketplace Listing Plan
      *
      */
-    protected mixed $plan = null;
+    protected MarketplaceListingPlan $plan;
     public function getIsInstalled(): bool
     {
         return $this->isInstalled;
@@ -73,7 +73,7 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
      * Marketplace Listing Plan
      *
      */
-    public function getPlan(): mixed
+    public function getPlan(): MarketplaceListingPlan
     {
         return $this->plan;
     }
@@ -83,7 +83,7 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
      *
      * @return self
      */
-    public function setPlan(mixed $plan): self
+    public function setPlan(MarketplaceListingPlan $plan): self
     {
         $this->initialized['plan'] = true;
         $this->plan = $plan;

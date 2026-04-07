@@ -26,7 +26,7 @@ class CommitCommit extends \ArrayObject
     protected string $message;
     protected int $commentCount;
     protected CommitCommitTree $tree;
-    protected mixed $verification = null;
+    protected Verification $verification;
     public function getUrl(): string
     {
         return $this->url;
@@ -87,11 +87,11 @@ class CommitCommit extends \ArrayObject
         $this->tree = $tree;
         return $this;
     }
-    public function getVerification(): mixed
+    public function getVerification(): Verification
     {
         return $this->verification;
     }
-    public function setVerification(mixed $verification): self
+    public function setVerification(Verification $verification): self
     {
         $this->initialized['verification'] = true;
         $this->verification = $verification;

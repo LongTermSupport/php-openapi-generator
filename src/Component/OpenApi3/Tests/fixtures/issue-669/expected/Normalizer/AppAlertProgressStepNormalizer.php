@@ -63,12 +63,16 @@ class AppAlertProgressStepNormalizer implements DenormalizerInterface, Normalize
             unset($data['ended_at']);
         }
         if (\array_key_exists('reason', $data)) {
-            $object->setReason($data['reason']);
+            $value = $this->denormalizer->denormalize($data['reason'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgressStepReason::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgressStepReason) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgressStepReason, got ' . get_debug_type($value));
+            }
+            $object->setReason($value);
             unset($data['reason']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -96,7 +100,7 @@ class AppAlertProgressStepNormalizer implements DenormalizerInterface, Normalize
             $dataArray['ended_at'] = $data->getEndedAt()->format('Y-m-d\TH:i:sP');
         }
         if ($data->isInitialized('reason')) {
-            $dataArray['reason'] = $data->getReason();
+            $dataArray['reason'] = $this->normalizer->normalize($data->getReason(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

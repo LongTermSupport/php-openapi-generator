@@ -89,12 +89,12 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying health check settings for the load balancer.
      *
      */
-    protected mixed $healthCheck = null;
+    protected HealthCheck $healthCheck;
     /**
      * An object specifying sticky sessions settings for the load balancer.
      *
      */
-    protected mixed $stickySessions = null;
+    protected StickySessions $stickySessions;
     /**
      * A boolean value indicating whether HTTP requests to the load balancer on port 80 will be redirected to HTTPS on port 443.
      *
@@ -129,7 +129,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying allow and deny rules to control traffic to the load balancer.
      *
      */
-    protected mixed $firewall = null;
+    protected LbFirewall $firewall;
     /**
      * A string indicating whether the load balancer should be external or internal. Internal load balancers have no public IPs and are only accessible to resources on the same VPC network. This property cannot be updated after creating the load balancer.
      *
@@ -155,7 +155,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying forwarding configurations for a Global load balancer.
      *
      */
-    protected mixed $glbSettings = null;
+    protected GlbSettings $glbSettings;
     /**
      * An array containing the UUIDs of the Regional load balancers to be used as target backends for a Global load balancer.
      *
@@ -411,7 +411,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying health check settings for the load balancer.
      *
      */
-    public function getHealthCheck(): mixed
+    public function getHealthCheck(): HealthCheck
     {
         return $this->healthCheck;
     }
@@ -421,7 +421,7 @@ class LoadBalancerBase extends \ArrayObject
      *
      * @return self
      */
-    public function setHealthCheck(mixed $healthCheck): self
+    public function setHealthCheck(HealthCheck $healthCheck): self
     {
         $this->initialized['healthCheck'] = true;
         $this->healthCheck = $healthCheck;
@@ -431,7 +431,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying sticky sessions settings for the load balancer.
      *
      */
-    public function getStickySessions(): mixed
+    public function getStickySessions(): StickySessions
     {
         return $this->stickySessions;
     }
@@ -441,7 +441,7 @@ class LoadBalancerBase extends \ArrayObject
      *
      * @return self
      */
-    public function setStickySessions(mixed $stickySessions): self
+    public function setStickySessions(StickySessions $stickySessions): self
     {
         $this->initialized['stickySessions'] = true;
         $this->stickySessions = $stickySessions;
@@ -571,7 +571,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying allow and deny rules to control traffic to the load balancer.
      *
      */
-    public function getFirewall(): mixed
+    public function getFirewall(): LbFirewall
     {
         return $this->firewall;
     }
@@ -581,7 +581,7 @@ class LoadBalancerBase extends \ArrayObject
      *
      * @return self
      */
-    public function setFirewall(mixed $firewall): self
+    public function setFirewall(LbFirewall $firewall): self
     {
         $this->initialized['firewall'] = true;
         $this->firewall = $firewall;
@@ -673,7 +673,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying forwarding configurations for a Global load balancer.
      *
      */
-    public function getGlbSettings(): mixed
+    public function getGlbSettings(): GlbSettings
     {
         return $this->glbSettings;
     }
@@ -683,7 +683,7 @@ class LoadBalancerBase extends \ArrayObject
      *
      * @return self
      */
-    public function setGlbSettings(mixed $glbSettings): self
+    public function setGlbSettings(GlbSettings $glbSettings): self
     {
         $this->initialized['glbSettings'] = true;
         $this->glbSettings = $glbSettings;

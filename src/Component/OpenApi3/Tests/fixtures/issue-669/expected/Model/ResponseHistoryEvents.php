@@ -24,7 +24,7 @@ class ResponseHistoryEvents extends \ArrayObject
      * @var list<History>
      */
     protected array $history;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<History>
@@ -44,11 +44,11 @@ class ResponseHistoryEvents extends \ArrayObject
         $this->history = $history;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

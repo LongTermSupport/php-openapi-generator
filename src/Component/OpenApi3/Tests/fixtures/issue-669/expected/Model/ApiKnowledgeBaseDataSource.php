@@ -24,7 +24,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * AWS S3 Data Source for Display
      *
      */
-    protected mixed $awsDataSource = null;
+    protected ApiAWSDataSourceDisplay $awsDataSource;
     /**
      * Name of storage bucket - Deprecated, moved to data_source_details
      *
@@ -43,7 +43,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    protected mixed $chunkingOptions = null;
+    protected ApiChunkingOptions $chunkingOptions;
     /**
      * Creation date / time
      *
@@ -53,23 +53,23 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Dropbox Data Source for Display
      *
      */
-    protected mixed $dropboxDataSource = null;
+    protected ApiDropboxDataSourceDisplay $dropboxDataSource;
     /**
      * File to upload as data source for knowledge base.
      *
      */
-    protected mixed $fileUploadDataSource = null;
+    protected ApiFileUploadDataSource $fileUploadDataSource;
     /**
      * Google Drive Data Source for Display
      *
      */
-    protected mixed $googleDriveDataSource = null;
+    protected ApiGoogleDriveDataSourceDisplay $googleDriveDataSource;
     /**
      * Path of folder or object in bucket - Deprecated, moved to data_source_details
      *
      */
     protected string $itemPath;
-    protected mixed $lastDatasourceIndexingJob = null;
+    protected ApiIndexedDataSource $lastDatasourceIndexingJob;
     /**
      * Region code - Deprecated, moved to data_source_details
      *
@@ -79,7 +79,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    protected mixed $spacesDataSource = null;
+    protected ApiSpacesDataSource $spacesDataSource;
     /**
      * Last modified
      *
@@ -94,12 +94,12 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * WebCrawlerDataSource
      *
      */
-    protected mixed $webCrawlerDataSource = null;
+    protected ApiWebCrawlerDataSource $webCrawlerDataSource;
     /**
      * AWS S3 Data Source for Display
      *
      */
-    public function getAwsDataSource(): mixed
+    public function getAwsDataSource(): ApiAWSDataSourceDisplay
     {
         return $this->awsDataSource;
     }
@@ -109,7 +109,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setAwsDataSource(mixed $awsDataSource): self
+    public function setAwsDataSource(ApiAWSDataSourceDisplay $awsDataSource): self
     {
         $this->initialized['awsDataSource'] = true;
         $this->awsDataSource = $awsDataSource;
@@ -164,7 +164,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    public function getChunkingOptions(): mixed
+    public function getChunkingOptions(): ApiChunkingOptions
     {
         return $this->chunkingOptions;
     }
@@ -175,7 +175,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setChunkingOptions(mixed $chunkingOptions): self
+    public function setChunkingOptions(ApiChunkingOptions $chunkingOptions): self
     {
         $this->initialized['chunkingOptions'] = true;
         $this->chunkingOptions = $chunkingOptions;
@@ -205,7 +205,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Dropbox Data Source for Display
      *
      */
-    public function getDropboxDataSource(): mixed
+    public function getDropboxDataSource(): ApiDropboxDataSourceDisplay
     {
         return $this->dropboxDataSource;
     }
@@ -215,7 +215,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setDropboxDataSource(mixed $dropboxDataSource): self
+    public function setDropboxDataSource(ApiDropboxDataSourceDisplay $dropboxDataSource): self
     {
         $this->initialized['dropboxDataSource'] = true;
         $this->dropboxDataSource = $dropboxDataSource;
@@ -225,7 +225,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * File to upload as data source for knowledge base.
      *
      */
-    public function getFileUploadDataSource(): mixed
+    public function getFileUploadDataSource(): ApiFileUploadDataSource
     {
         return $this->fileUploadDataSource;
     }
@@ -235,7 +235,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setFileUploadDataSource(mixed $fileUploadDataSource): self
+    public function setFileUploadDataSource(ApiFileUploadDataSource $fileUploadDataSource): self
     {
         $this->initialized['fileUploadDataSource'] = true;
         $this->fileUploadDataSource = $fileUploadDataSource;
@@ -245,7 +245,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Google Drive Data Source for Display
      *
      */
-    public function getGoogleDriveDataSource(): mixed
+    public function getGoogleDriveDataSource(): ApiGoogleDriveDataSourceDisplay
     {
         return $this->googleDriveDataSource;
     }
@@ -255,7 +255,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setGoogleDriveDataSource(mixed $googleDriveDataSource): self
+    public function setGoogleDriveDataSource(ApiGoogleDriveDataSourceDisplay $googleDriveDataSource): self
     {
         $this->initialized['googleDriveDataSource'] = true;
         $this->googleDriveDataSource = $googleDriveDataSource;
@@ -281,11 +281,11 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
         $this->itemPath = $itemPath;
         return $this;
     }
-    public function getLastDatasourceIndexingJob(): mixed
+    public function getLastDatasourceIndexingJob(): ApiIndexedDataSource
     {
         return $this->lastDatasourceIndexingJob;
     }
-    public function setLastDatasourceIndexingJob(mixed $lastDatasourceIndexingJob): self
+    public function setLastDatasourceIndexingJob(ApiIndexedDataSource $lastDatasourceIndexingJob): self
     {
         $this->initialized['lastDatasourceIndexingJob'] = true;
         $this->lastDatasourceIndexingJob = $lastDatasourceIndexingJob;
@@ -315,7 +315,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    public function getSpacesDataSource(): mixed
+    public function getSpacesDataSource(): ApiSpacesDataSource
     {
         return $this->spacesDataSource;
     }
@@ -325,7 +325,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setSpacesDataSource(mixed $spacesDataSource): self
+    public function setSpacesDataSource(ApiSpacesDataSource $spacesDataSource): self
     {
         $this->initialized['spacesDataSource'] = true;
         $this->spacesDataSource = $spacesDataSource;
@@ -375,7 +375,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * WebCrawlerDataSource
      *
      */
-    public function getWebCrawlerDataSource(): mixed
+    public function getWebCrawlerDataSource(): ApiWebCrawlerDataSource
     {
         return $this->webCrawlerDataSource;
     }
@@ -385,7 +385,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      *
      * @return self
      */
-    public function setWebCrawlerDataSource(mixed $webCrawlerDataSource): self
+    public function setWebCrawlerDataSource(ApiWebCrawlerDataSource $webCrawlerDataSource): self
     {
         $this->initialized['webCrawlerDataSource'] = true;
         $this->webCrawlerDataSource = $webCrawlerDataSource;

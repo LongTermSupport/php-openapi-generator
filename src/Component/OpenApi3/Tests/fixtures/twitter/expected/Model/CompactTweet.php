@@ -61,7 +61,7 @@ class CompactTweet extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    protected mixed $withheld = null;
+    protected TweetWithheld $withheld;
     public function getFormat(): string
     {
         return $this->format;
@@ -218,7 +218,7 @@ class CompactTweet extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    public function getWithheld(): mixed
+    public function getWithheld(): TweetWithheld
     {
         return $this->withheld;
     }
@@ -228,7 +228,7 @@ class CompactTweet extends \ArrayObject
      *
      * @return self
      */
-    public function setWithheld(mixed $withheld): self
+    public function setWithheld(TweetWithheld $withheld): self
     {
         $this->initialized['withheld'] = true;
         $this->withheld = $withheld;

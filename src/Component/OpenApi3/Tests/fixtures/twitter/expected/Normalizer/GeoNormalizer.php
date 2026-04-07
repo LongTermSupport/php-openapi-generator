@@ -61,22 +61,26 @@ class GeoNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             unset($data['bbox']);
         }
         if (\array_key_exists('geometry', $data)) {
-            $object->setGeometry($data['geometry']);
+            $value_1 = $this->denormalizer->denormalize($data['geometry'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Point::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Point) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Point, got ' . get_debug_type($value_1));
+            }
+            $object->setGeometry($value_1);
             unset($data['geometry']);
         }
         if (\array_key_exists('properties', $data)) {
             $values_1 = [];
             if (\is_array($data['properties'])) {
-                foreach ($data['properties'] as $key => $value_1) {
-                    $values_1[(string) $key] = $value_1;
+                foreach ($data['properties'] as $key => $value_2) {
+                    $values_1[(string) $key] = $value_2;
                 }
             }
             $object->setProperties($values_1);
             unset($data['properties']);
         }
-        foreach ($data as $key_1 => $value_2) {
+        foreach ($data as $key_1 => $value_3) {
             if (preg_match('/.*/', (string) $key_1) === 1) {
-                $object[$key_1] = $value_2;
+                $object[$key_1] = $value_3;
             }
         }
         return $object;
@@ -98,7 +102,7 @@ class GeoNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         }
         $dataArray['bbox'] = $values;
         if ($data->isInitialized('geometry')) {
-            $dataArray['geometry'] = $data->getGeometry();
+            $dataArray['geometry'] = $this->normalizer->normalize($data->getGeometry(), 'json', $context);
         }
         $values_1 = [];
         foreach ($data->getProperties() as $key => $value_1) {

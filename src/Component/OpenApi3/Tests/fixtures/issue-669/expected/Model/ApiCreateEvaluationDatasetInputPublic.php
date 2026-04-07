@@ -25,7 +25,7 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
      * File to upload as data source for knowledge base.
      *
      */
-    protected mixed $fileUploadDataset = null;
+    protected ApiFileUploadDataSource $fileUploadDataset;
     /**
      * The name of the agent evaluation dataset.
      *
@@ -45,7 +45,7 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
      * File to upload as data source for knowledge base.
      *
      */
-    public function getFileUploadDataset(): mixed
+    public function getFileUploadDataset(): ApiFileUploadDataSource
     {
         return $this->fileUploadDataset;
     }
@@ -55,7 +55,7 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setFileUploadDataset(mixed $fileUploadDataset): self
+    public function setFileUploadDataset(ApiFileUploadDataSource $fileUploadDataset): self
     {
         $this->initialized['fileUploadDataset'] = true;
         $this->fileUploadDataset = $fileUploadDataset;

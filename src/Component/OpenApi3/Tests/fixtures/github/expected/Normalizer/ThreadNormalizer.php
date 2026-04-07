@@ -54,15 +54,19 @@ class ThreadNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['id']);
         }
         if (\array_key_exists('repository', $data)) {
-            $object->setRepository($data['repository']);
+            $value = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value));
+            }
+            $object->setRepository($value);
             unset($data['repository']);
         }
         if (\array_key_exists('subject', $data)) {
-            $value = $this->denormalizer->denormalize($data['subject'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubject::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubject) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubject, got ' . get_debug_type($value));
+            $value_1 = $this->denormalizer->denormalize($data['subject'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubject::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubject) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubject, got ' . get_debug_type($value_1));
             }
-            $object->setSubject($value);
+            $object->setSubject($value_1);
             unset($data['subject']);
         }
         if (\array_key_exists('reason', $data)) {
@@ -89,9 +93,9 @@ class ThreadNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setSubscriptionUrl(TypeValidator::assertString($data['subscription_url'], 'subscription_url'));
             unset($data['subscription_url']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -110,7 +114,7 @@ class ThreadNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $dataArray['id'] = $data->getId();
         }
         if ($data->isInitialized('repository')) {
-            $dataArray['repository'] = $data->getRepository();
+            $dataArray['repository'] = $this->normalizer->normalize($data->getRepository(), 'json', $context);
         }
         if ($data->isInitialized('subject')) {
             $dataArray['subject'] = $this->normalizer->normalize($data->getSubject(), 'json', $context);

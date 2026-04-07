@@ -24,17 +24,17 @@ class ContextAnnotation extends \ArrayObject
      * Represents the data for the context annotation domain.
      *
      */
-    protected mixed $domain = null;
+    protected ContextAnnotationDomainFields $domain;
     /**
      * Represents the data for the context annotation entity.
      *
      */
-    protected mixed $entity = null;
+    protected ContextAnnotationEntityFields $entity;
     /**
      * Represents the data for the context annotation domain.
      *
      */
-    public function getDomain(): mixed
+    public function getDomain(): ContextAnnotationDomainFields
     {
         return $this->domain;
     }
@@ -44,7 +44,7 @@ class ContextAnnotation extends \ArrayObject
      *
      * @return self
      */
-    public function setDomain(mixed $domain): self
+    public function setDomain(ContextAnnotationDomainFields $domain): self
     {
         $this->initialized['domain'] = true;
         $this->domain = $domain;
@@ -54,7 +54,7 @@ class ContextAnnotation extends \ArrayObject
      * Represents the data for the context annotation entity.
      *
      */
-    public function getEntity(): mixed
+    public function getEntity(): ContextAnnotationEntityFields
     {
         return $this->entity;
     }
@@ -64,7 +64,7 @@ class ContextAnnotation extends \ArrayObject
      *
      * @return self
      */
-    public function setEntity(mixed $entity): self
+    public function setEntity(ContextAnnotationEntityFields $entity): self
     {
         $this->initialized['entity'] = true;
         $this->entity = $entity;

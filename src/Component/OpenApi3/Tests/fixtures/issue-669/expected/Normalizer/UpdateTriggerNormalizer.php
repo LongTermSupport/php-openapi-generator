@@ -51,12 +51,16 @@ class UpdateTriggerNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['is_enabled']);
         }
         if (\array_key_exists('scheduled_details', $data)) {
-            $object->setScheduledDetails($data['scheduled_details']);
+            $value = $this->denormalizer->denormalize($data['scheduled_details'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails, got ' . get_debug_type($value));
+            }
+            $object->setScheduledDetails($value);
             unset($data['scheduled_details']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -75,7 +79,7 @@ class UpdateTriggerNormalizer implements DenormalizerInterface, NormalizerInterf
             $dataArray['is_enabled'] = $data->getIsEnabled();
         }
         if ($data->isInitialized('scheduledDetails')) {
-            $dataArray['scheduled_details'] = $data->getScheduledDetails();
+            $dataArray['scheduled_details'] = $this->normalizer->normalize($data->getScheduledDetails(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

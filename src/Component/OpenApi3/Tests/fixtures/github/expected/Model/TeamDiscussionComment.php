@@ -44,7 +44,7 @@ class TeamDiscussionComment extends \ArrayObject
     protected int $number;
     protected \DateTime $updatedAt;
     protected string $url;
-    protected mixed $reactions = null;
+    protected ReactionRollup $reactions;
     public function getAuthor(): ?TeamDiscussionCommentAuthor
     {
         return $this->author;
@@ -195,11 +195,11 @@ class TeamDiscussionComment extends \ArrayObject
         $this->url = $url;
         return $this;
     }
-    public function getReactions(): mixed
+    public function getReactions(): ReactionRollup
     {
         return $this->reactions;
     }
-    public function setReactions(mixed $reactions): self
+    public function setReactions(ReactionRollup $reactions): self
     {
         $this->initialized['reactions'] = true;
         $this->reactions = $reactions;

@@ -57,22 +57,26 @@ class TweetLookupResponseNormalizer implements DenormalizerInterface, Normalizer
             unset($data['data']);
         }
         if (\array_key_exists('includes', $data)) {
-            $object->setIncludes($data['includes']);
+            $value_1 = $this->denormalizer->denormalize($data['includes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions, got ' . get_debug_type($value_1));
+            }
+            $object->setIncludes($value_1);
             unset($data['includes']);
         }
         if (\array_key_exists('errors', $data)) {
             $values_1 = [];
             if (\is_array($data['errors'])) {
-                foreach ($data['errors'] as $value_1) {
-                    $values_1[] = $value_1;
+                foreach ($data['errors'] as $value_2) {
+                    $values_1[] = $value_2;
                 }
             }
             $object->setErrors($values_1);
             unset($data['errors']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -95,7 +99,7 @@ class TweetLookupResponseNormalizer implements DenormalizerInterface, Normalizer
             $dataArray['data'] = $values;
         }
         if ($data->isInitialized('includes')) {
-            $dataArray['includes'] = $data->getIncludes();
+            $dataArray['includes'] = $this->normalizer->normalize($data->getIncludes(), 'json', $context);
         }
         if ($data->isInitialized('errors')) {
             $values_1 = [];

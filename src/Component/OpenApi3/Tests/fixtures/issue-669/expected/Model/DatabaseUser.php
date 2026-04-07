@@ -47,8 +47,8 @@ class DatabaseUser extends \ArrayObject
      *
      */
     protected string $accessKey;
-    protected mixed $mysqlSettings = null;
-    protected mixed $settings = null;
+    protected MysqlSettings $mysqlSettings;
+    protected UserSettings $settings;
     /**
      * The name of a database user.
      *
@@ -153,21 +153,21 @@ class DatabaseUser extends \ArrayObject
         $this->accessKey = $accessKey;
         return $this;
     }
-    public function getMysqlSettings(): mixed
+    public function getMysqlSettings(): MysqlSettings
     {
         return $this->mysqlSettings;
     }
-    public function setMysqlSettings(mixed $mysqlSettings): self
+    public function setMysqlSettings(MysqlSettings $mysqlSettings): self
     {
         $this->initialized['mysqlSettings'] = true;
         $this->mysqlSettings = $mysqlSettings;
         return $this;
     }
-    public function getSettings(): mixed
+    public function getSettings(): UserSettings
     {
         return $this->settings;
     }
-    public function setSettings(mixed $settings): self
+    public function setSettings(UserSettings $settings): self
     {
         $this->initialized['settings'] = true;
         $this->settings = $settings;

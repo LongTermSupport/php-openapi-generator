@@ -24,7 +24,7 @@ class ApiEvaluationTestCase extends \ArrayObject
     protected \DateTime $createdAt;
     protected string $createdByUserEmail;
     protected string $createdByUserId;
-    protected mixed $dataset = null;
+    protected ApiEvaluationDataset $dataset;
     protected string $datasetName;
     protected string $datasetUuid;
     protected string $description;
@@ -34,7 +34,7 @@ class ApiEvaluationTestCase extends \ArrayObject
      */
     protected array $metrics;
     protected string $name;
-    protected mixed $starMetric = null;
+    protected ApiStarMetric $starMetric;
     protected string $testCaseUuid;
     protected int $totalRuns;
     protected \DateTime $updatedAt;
@@ -81,11 +81,11 @@ class ApiEvaluationTestCase extends \ArrayObject
         $this->createdByUserId = $createdByUserId;
         return $this;
     }
-    public function getDataset(): mixed
+    public function getDataset(): ApiEvaluationDataset
     {
         return $this->dataset;
     }
-    public function setDataset(mixed $dataset): self
+    public function setDataset(ApiEvaluationDataset $dataset): self
     {
         $this->initialized['dataset'] = true;
         $this->dataset = $dataset;
@@ -159,11 +159,11 @@ class ApiEvaluationTestCase extends \ArrayObject
         $this->name = $name;
         return $this;
     }
-    public function getStarMetric(): mixed
+    public function getStarMetric(): ApiStarMetric
     {
         return $this->starMetric;
     }
-    public function setStarMetric(mixed $starMetric): self
+    public function setStarMetric(ApiStarMetric $starMetric): self
     {
         $this->initialized['starMetric'] = true;
         $this->starMetric = $starMetric;

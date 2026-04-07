@@ -47,12 +47,16 @@ class ResponseClusterCreateNormalizer implements DenormalizerInterface, Normaliz
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('kubernetes_cluster', $data)) {
-            $object->setKubernetesCluster($data['kubernetes_cluster']);
+            $value = $this->denormalizer->denormalize($data['kubernetes_cluster'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Cluster::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Cluster) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Cluster, got ' . get_debug_type($value));
+            }
+            $object->setKubernetesCluster($value);
             unset($data['kubernetes_cluster']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseClusterCreateNormalizer implements DenormalizerInterface, Normaliz
         }
         $dataArray = [];
         if ($data->isInitialized('kubernetesCluster')) {
-            $dataArray['kubernetes_cluster'] = $data->getKubernetesCluster();
+            $dataArray['kubernetes_cluster'] = $this->normalizer->normalize($data->getKubernetesCluster(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

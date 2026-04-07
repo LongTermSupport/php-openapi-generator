@@ -45,7 +45,7 @@ class IssueComment extends \ArrayObject
     protected string $issueUrl;
     protected string $authorAssociation;
     protected ?IssueCommentPerformedViaGithubApp $performedViaGithubApp = null;
-    protected mixed $reactions = null;
+    protected ReactionRollup $reactions;
     /**
      * Unique identifier of the issue comment
      *
@@ -206,11 +206,11 @@ class IssueComment extends \ArrayObject
         $this->performedViaGithubApp = $performedViaGithubApp;
         return $this;
     }
-    public function getReactions(): mixed
+    public function getReactions(): ReactionRollup
     {
         return $this->reactions;
     }
-    public function setReactions(mixed $reactions): self
+    public function setReactions(ReactionRollup $reactions): self
     {
         $this->initialized['reactions'] = true;
         $this->reactions = $reactions;

@@ -51,16 +51,20 @@ class ApiCreateEvaluationDatasetInputPublicNormalizer implements DenormalizerInt
             unset($data['dataset_type']);
         }
         if (\array_key_exists('file_upload_dataset', $data)) {
-            $object->setFileUploadDataset($data['file_upload_dataset']);
+            $value = $this->denormalizer->denormalize($data['file_upload_dataset'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource, got ' . get_debug_type($value));
+            }
+            $object->setFileUploadDataset($value);
             unset($data['file_upload_dataset']);
         }
         if (\array_key_exists('name', $data)) {
             $object->setName(TypeValidator::assertString($data['name'], 'name'));
             unset($data['name']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -79,7 +83,7 @@ class ApiCreateEvaluationDatasetInputPublicNormalizer implements DenormalizerInt
             $dataArray['dataset_type'] = $data->getDatasetType();
         }
         if ($data->isInitialized('fileUploadDataset')) {
-            $dataArray['file_upload_dataset'] = $data->getFileUploadDataset();
+            $dataArray['file_upload_dataset'] = $this->normalizer->normalize($data->getFileUploadDataset(), 'json', $context);
         }
         if ($data->isInitialized('name')) {
             $dataArray['name'] = $data->getName();

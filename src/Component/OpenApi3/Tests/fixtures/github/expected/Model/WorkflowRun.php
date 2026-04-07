@@ -96,17 +96,17 @@ class WorkflowRun extends \ArrayObject
      * Simple Commit
      *
      */
-    protected mixed $headCommit = null;
+    protected SimpleCommit $headCommit;
     /**
      * Minimal Repository
      *
      */
-    protected mixed $repository = null;
+    protected MinimalRepository $repository;
     /**
      * Minimal Repository
      *
      */
-    protected mixed $headRepository = null;
+    protected MinimalRepository $headRepository;
     protected int $headRepositoryId;
     /**
      * The ID of the workflow run.
@@ -450,7 +450,7 @@ class WorkflowRun extends \ArrayObject
      * Simple Commit
      *
      */
-    public function getHeadCommit(): mixed
+    public function getHeadCommit(): SimpleCommit
     {
         return $this->headCommit;
     }
@@ -460,7 +460,7 @@ class WorkflowRun extends \ArrayObject
      *
      * @return self
      */
-    public function setHeadCommit(mixed $headCommit): self
+    public function setHeadCommit(SimpleCommit $headCommit): self
     {
         $this->initialized['headCommit'] = true;
         $this->headCommit = $headCommit;
@@ -470,7 +470,7 @@ class WorkflowRun extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): MinimalRepository
     {
         return $this->repository;
     }
@@ -480,7 +480,7 @@ class WorkflowRun extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(MinimalRepository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;
@@ -490,7 +490,7 @@ class WorkflowRun extends \ArrayObject
      * Minimal Repository
      *
      */
-    public function getHeadRepository(): mixed
+    public function getHeadRepository(): MinimalRepository
     {
         return $this->headRepository;
     }
@@ -500,7 +500,7 @@ class WorkflowRun extends \ArrayObject
      *
      * @return self
      */
-    public function setHeadRepository(mixed $headRepository): self
+    public function setHeadRepository(MinimalRepository $headRepository): self
     {
         $this->initialized['headRepository'] = true;
         $this->headRepository = $headRepository;

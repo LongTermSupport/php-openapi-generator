@@ -80,10 +80,10 @@ class Issue extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository = null;
+    protected Repository $repository;
     protected ?IssuePerformedViaGithubApp $performedViaGithubApp = null;
     protected string $authorAssociation;
-    protected mixed $reactions = null;
+    protected ReactionRollup $reactions;
     public function getId(): int
     {
         return $this->id;
@@ -438,7 +438,7 @@ class Issue extends \ArrayObject
      * A git repository
      *
      */
-    public function getRepository(): mixed
+    public function getRepository(): Repository
     {
         return $this->repository;
     }
@@ -448,7 +448,7 @@ class Issue extends \ArrayObject
      *
      * @return self
      */
-    public function setRepository(mixed $repository): self
+    public function setRepository(Repository $repository): self
     {
         $this->initialized['repository'] = true;
         $this->repository = $repository;
@@ -474,11 +474,11 @@ class Issue extends \ArrayObject
         $this->authorAssociation = $authorAssociation;
         return $this;
     }
-    public function getReactions(): mixed
+    public function getReactions(): ReactionRollup
     {
         return $this->reactions;
     }
-    public function setReactions(mixed $reactions): self
+    public function setReactions(ReactionRollup $reactions): self
     {
         $this->initialized['reactions'] = true;
         $this->reactions = $reactions;

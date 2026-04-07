@@ -47,12 +47,16 @@ class ResponseConnectionPoolNormalizer implements DenormalizerInterface, Normali
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('pool', $data)) {
-            $object->setPool($data['pool']);
+            $value = $this->denormalizer->denormalize($data['pool'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPool::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPool) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPool, got ' . get_debug_type($value));
+            }
+            $object->setPool($value);
             unset($data['pool']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -67,7 +71,7 @@ class ResponseConnectionPoolNormalizer implements DenormalizerInterface, Normali
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseConnectionPool, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['pool'] = $data->getPool();
+        $dataArray['pool'] = $this->normalizer->normalize($data->getPool(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

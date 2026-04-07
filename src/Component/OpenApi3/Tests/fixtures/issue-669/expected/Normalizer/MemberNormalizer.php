@@ -67,12 +67,16 @@ class MemberNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['status']);
         }
         if (\array_key_exists('current_utilization', $data)) {
-            $object->setCurrentUtilization($data['current_utilization']);
+            $value = $this->denormalizer->denormalize($data['current_utilization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization, got ' . get_debug_type($value));
+            }
+            $object->setCurrentUtilization($value);
             unset($data['current_utilization']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -92,7 +96,7 @@ class MemberNormalizer implements DenormalizerInterface, NormalizerInterface, De
         $dataArray['updated_at'] = $data->getUpdatedAt()->format('Y-m-d\TH:i:sP');
         $dataArray['health_status'] = $data->getHealthStatus();
         $dataArray['status'] = $data->getStatus();
-        $dataArray['current_utilization'] = $data->getCurrentUtilization();
+        $dataArray['current_utilization'] = $this->normalizer->normalize($data->getCurrentUtilization(), 'json', $context);
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {
                 $dataArray[(string) $key] = $value;

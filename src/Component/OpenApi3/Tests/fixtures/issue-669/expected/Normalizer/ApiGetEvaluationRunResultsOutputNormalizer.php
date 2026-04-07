@@ -47,34 +47,46 @@ class ApiGetEvaluationRunResultsOutputNormalizer implements DenormalizerInterfac
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('evaluation_run', $data)) {
-            $object->setEvaluationRun($data['evaluation_run']);
+            $value = $this->denormalizer->denormalize($data['evaluation_run'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationRun::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationRun) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationRun, got ' . get_debug_type($value));
+            }
+            $object->setEvaluationRun($value);
             unset($data['evaluation_run']);
         }
         if (\array_key_exists('links', $data)) {
-            $object->setLinks($data['links']);
+            $value_1 = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks::class, 'json', $context);
+            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiLinks, got ' . get_debug_type($value_1));
+            }
+            $object->setLinks($value_1);
             unset($data['links']);
         }
         if (\array_key_exists('meta', $data)) {
-            $object->setMeta($data['meta']);
+            $value_2 = $this->denormalizer->denormalize($data['meta'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMeta, got ' . get_debug_type($value_2));
+            }
+            $object->setMeta($value_2);
             unset($data['meta']);
         }
         if (\array_key_exists('prompts', $data)) {
             $values = [];
             if (\is_array($data['prompts'])) {
-                foreach ($data['prompts'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPrompt::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPrompt) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPrompt, got ' . get_debug_type($value_1));
+                foreach ($data['prompts'] as $value_3) {
+                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPrompt::class, 'json', $context);
+                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPrompt) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPrompt, got ' . get_debug_type($value_4));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_4;
                 }
             }
             $object->setPrompts($values);
             unset($data['prompts']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_5) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_5;
             }
         }
         return $object;
@@ -90,13 +102,13 @@ class ApiGetEvaluationRunResultsOutputNormalizer implements DenormalizerInterfac
         }
         $dataArray = [];
         if ($data->isInitialized('evaluationRun')) {
-            $dataArray['evaluation_run'] = $data->getEvaluationRun();
+            $dataArray['evaluation_run'] = $this->normalizer->normalize($data->getEvaluationRun(), 'json', $context);
         }
         if ($data->isInitialized('links')) {
-            $dataArray['links'] = $data->getLinks();
+            $dataArray['links'] = $this->normalizer->normalize($data->getLinks(), 'json', $context);
         }
         if ($data->isInitialized('meta')) {
-            $dataArray['meta'] = $data->getMeta();
+            $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         }
         if ($data->isInitialized('prompts')) {
             $values = [];

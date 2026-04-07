@@ -28,8 +28,8 @@ class ResponseInvoices extends \ArrayObject
      * The invoice preview.
      *
      */
-    protected mixed $invoicePreview = null;
-    protected mixed $links = null;
+    protected InvoicePreview $invoicePreview;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * @return list<InvoicePreview>
@@ -53,7 +53,7 @@ class ResponseInvoices extends \ArrayObject
      * The invoice preview.
      *
      */
-    public function getInvoicePreview(): mixed
+    public function getInvoicePreview(): InvoicePreview
     {
         return $this->invoicePreview;
     }
@@ -63,17 +63,17 @@ class ResponseInvoices extends \ArrayObject
      *
      * @return self
      */
-    public function setInvoicePreview(mixed $invoicePreview): self
+    public function setInvoicePreview(InvoicePreview $invoicePreview): self
     {
         $this->initialized['invoicePreview'] = true;
         $this->invoicePreview = $invoicePreview;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

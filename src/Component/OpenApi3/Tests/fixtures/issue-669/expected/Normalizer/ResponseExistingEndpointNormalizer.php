@@ -47,12 +47,16 @@ class ResponseExistingEndpointNormalizer implements DenormalizerInterface, Norma
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('endpoint', $data)) {
-            $object->setEndpoint($data['endpoint']);
+            $value = $this->denormalizer->denormalize($data['endpoint'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\CdnEndpoint::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\CdnEndpoint) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\CdnEndpoint, got ' . get_debug_type($value));
+            }
+            $object->setEndpoint($value);
             unset($data['endpoint']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseExistingEndpointNormalizer implements DenormalizerInterface, Norma
         }
         $dataArray = [];
         if ($data->isInitialized('endpoint')) {
-            $dataArray['endpoint'] = $data->getEndpoint();
+            $dataArray['endpoint'] = $this->normalizer->normalize($data->getEndpoint(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

@@ -67,7 +67,11 @@ class ApiKnowledgeBaseNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['is_public']);
         }
         if (\array_key_exists('last_indexing_job', $data)) {
-            $object->setLastIndexingJob($data['last_indexing_job']);
+            $value = $this->denormalizer->denormalize($data['last_indexing_job'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob, got ' . get_debug_type($value));
+            }
+            $object->setLastIndexingJob($value);
             unset($data['last_indexing_job']);
         }
         if (\array_key_exists('name', $data)) {
@@ -85,8 +89,8 @@ class ApiKnowledgeBaseNormalizer implements DenormalizerInterface, NormalizerInt
         if (\array_key_exists('tags', $data)) {
             $values = [];
             if (\is_array($data['tags'])) {
-                foreach ($data['tags'] as $value) {
-                    $values[] = TypeValidator::assertString($value, 'value');
+                foreach ($data['tags'] as $value_1) {
+                    $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
             $object->setTags($values);
@@ -104,9 +108,9 @@ class ApiKnowledgeBaseNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setUuid(TypeValidator::assertString($data['uuid'], 'uuid'));
             unset($data['uuid']);
         }
-        foreach ($data as $key => $value_1) {
+        foreach ($data as $key => $value_2) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_1;
+                $object[$key] = $value_2;
             }
         }
         return $object;
@@ -137,7 +141,7 @@ class ApiKnowledgeBaseNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['is_public'] = $data->getIsPublic();
         }
         if ($data->isInitialized('lastIndexingJob')) {
-            $dataArray['last_indexing_job'] = $data->getLastIndexingJob();
+            $dataArray['last_indexing_job'] = $this->normalizer->normalize($data->getLastIndexingJob(), 'json', $context);
         }
         if ($data->isInitialized('name')) {
             $dataArray['name'] = $data->getName();

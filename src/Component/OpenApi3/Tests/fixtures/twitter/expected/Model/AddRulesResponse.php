@@ -24,7 +24,7 @@ class AddRulesResponse extends \ArrayObject
      * @var list<Rule>
      */
     protected array $data;
-    protected mixed $meta = null;
+    protected RulesResponseMetadata $meta;
     /**
      * @return list<Rule>
      */
@@ -43,11 +43,11 @@ class AddRulesResponse extends \ArrayObject
         $this->data = $data;
         return $this;
     }
-    public function getMeta(): mixed
+    public function getMeta(): RulesResponseMetadata
     {
         return $this->meta;
     }
-    public function setMeta(mixed $meta): self
+    public function setMeta(RulesResponseMetadata $meta): self
     {
         $this->initialized['meta'] = true;
         $this->meta = $meta;

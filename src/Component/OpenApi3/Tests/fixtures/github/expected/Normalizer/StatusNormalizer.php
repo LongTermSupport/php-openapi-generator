@@ -90,15 +90,19 @@ class StatusNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['updated_at']);
         }
         if (\array_key_exists('creator', $data) && $data['creator'] !== null) {
-            $object->setCreator($data['creator']);
+            $value = $this->denormalizer->denormalize($data['creator'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value));
+            }
+            $object->setCreator($value);
             unset($data['creator']);
         }
         elseif (\array_key_exists('creator', $data) && $data['creator'] === null) {
             $object->setCreator(null);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -146,7 +150,7 @@ class StatusNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
         $val_1 = $data->getCreator();
         if ($data->isInitialized('creator') && null !== $val_1) {
-            $dataArray['creator'] = $val_1;
+            $dataArray['creator'] = $this->normalizer->normalize($val_1, 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

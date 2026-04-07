@@ -28,7 +28,7 @@ class ResponseAllDropletBackupPolicies extends \ArrayObject
      * @var array<string, DropletBackupPolicyRecord>
      */
     protected array $policies;
-    protected mixed $links = null;
+    protected PageLinks $links;
     protected MetaMeta $meta;
     /**
      * A map where the keys are the Droplet IDs and the values are
@@ -56,11 +56,11 @@ class ResponseAllDropletBackupPolicies extends \ArrayObject
         $this->policies = $policies;
         return $this;
     }
-    public function getLinks(): mixed
+    public function getLinks(): PageLinks
     {
         return $this->links;
     }
-    public function setLinks(mixed $links): self
+    public function setLinks(PageLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

@@ -30,7 +30,7 @@ class RepositoryV2 extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $latestManifest = null;
+    protected RepositoryManifest $latestManifest;
     /**
      * The number of tags in the repository.
      *
@@ -81,11 +81,11 @@ class RepositoryV2 extends \ArrayObject
         $this->name = $name;
         return $this;
     }
-    public function getLatestManifest(): mixed
+    public function getLatestManifest(): RepositoryManifest
     {
         return $this->latestManifest;
     }
-    public function setLatestManifest(mixed $latestManifest): self
+    public function setLatestManifest(RepositoryManifest $latestManifest): self
     {
         $this->initialized['latestManifest'] = true;
         $this->latestManifest = $latestManifest;

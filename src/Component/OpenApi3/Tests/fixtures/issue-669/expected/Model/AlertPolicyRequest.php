@@ -20,7 +20,7 @@ class AlertPolicyRequest extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $alerts = null;
+    protected Alerts $alerts;
     protected string $compare;
     protected string $description;
     protected bool $enabled;
@@ -35,11 +35,11 @@ class AlertPolicyRequest extends \ArrayObject
     protected string $type;
     protected float $value;
     protected string $window;
-    public function getAlerts(): mixed
+    public function getAlerts(): Alerts
     {
         return $this->alerts;
     }
-    public function setAlerts(mixed $alerts): self
+    public function setAlerts(Alerts $alerts): self
     {
         $this->initialized['alerts'] = true;
         $this->alerts = $alerts;

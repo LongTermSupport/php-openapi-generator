@@ -47,12 +47,16 @@ class ResponseNewCertificateNormalizer implements DenormalizerInterface, Normali
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('certificate', $data)) {
-            $object->setCertificate($data['certificate']);
+            $value = $this->denormalizer->denormalize($data['certificate'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Certificate::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Certificate) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Certificate, got ' . get_debug_type($value));
+            }
+            $object->setCertificate($value);
             unset($data['certificate']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseNewCertificateNormalizer implements DenormalizerInterface, Normali
         }
         $dataArray = [];
         if ($data->isInitialized('certificate')) {
-            $dataArray['certificate'] = $data->getCertificate();
+            $dataArray['certificate'] = $this->normalizer->normalize($data->getCertificate(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

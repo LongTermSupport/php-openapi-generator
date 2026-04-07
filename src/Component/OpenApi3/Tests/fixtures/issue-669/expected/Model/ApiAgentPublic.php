@@ -24,7 +24,7 @@ class ApiAgentPublic extends \ArrayObject
      * A Chatbot
      *
      */
-    protected mixed $chatbot = null;
+    protected ApiChatbot $chatbot;
     /**
      * Chatbot identifiers
      *
@@ -40,7 +40,7 @@ class ApiAgentPublic extends \ArrayObject
      * Description of deployment
      *
      */
-    protected mixed $deployment = null;
+    protected ApiDeployment $deployment;
     /**
      * Description of agent
      *
@@ -70,7 +70,7 @@ class ApiAgentPublic extends \ArrayObject
      * Description of a Model
      *
      */
-    protected mixed $model = null;
+    protected ApiModel $model;
     /**
      * Agent name
      *
@@ -135,7 +135,7 @@ class ApiAgentPublic extends \ArrayObject
      * Represents an AgentTemplate entity
      *
      */
-    protected mixed $template = null;
+    protected ApiAgentTemplate $template;
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
      *
@@ -170,7 +170,7 @@ class ApiAgentPublic extends \ArrayObject
      * A Chatbot
      *
      */
-    public function getChatbot(): mixed
+    public function getChatbot(): ApiChatbot
     {
         return $this->chatbot;
     }
@@ -180,7 +180,7 @@ class ApiAgentPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setChatbot(mixed $chatbot): self
+    public function setChatbot(ApiChatbot $chatbot): self
     {
         $this->initialized['chatbot'] = true;
         $this->chatbot = $chatbot;
@@ -232,7 +232,7 @@ class ApiAgentPublic extends \ArrayObject
      * Description of deployment
      *
      */
-    public function getDeployment(): mixed
+    public function getDeployment(): ApiDeployment
     {
         return $this->deployment;
     }
@@ -242,7 +242,7 @@ class ApiAgentPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setDeployment(mixed $deployment): self
+    public function setDeployment(ApiDeployment $deployment): self
     {
         $this->initialized['deployment'] = true;
         $this->deployment = $deployment;
@@ -352,7 +352,7 @@ class ApiAgentPublic extends \ArrayObject
      * Description of a Model
      *
      */
-    public function getModel(): mixed
+    public function getModel(): ApiModel
     {
         return $this->model;
     }
@@ -362,7 +362,7 @@ class ApiAgentPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setModel(mixed $model): self
+    public function setModel(ApiModel $model): self
     {
         $this->initialized['model'] = true;
         $this->model = $model;
@@ -602,7 +602,7 @@ class ApiAgentPublic extends \ArrayObject
      * Represents an AgentTemplate entity
      *
      */
-    public function getTemplate(): mixed
+    public function getTemplate(): ApiAgentTemplate
     {
         return $this->template;
     }
@@ -612,7 +612,7 @@ class ApiAgentPublic extends \ArrayObject
      *
      * @return self
      */
-    public function setTemplate(mixed $template): self
+    public function setTemplate(ApiAgentTemplate $template): self
     {
         $this->initialized['template'] = true;
         $this->template = $template;

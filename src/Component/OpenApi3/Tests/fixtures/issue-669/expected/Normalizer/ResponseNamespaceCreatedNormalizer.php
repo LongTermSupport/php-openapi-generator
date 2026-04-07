@@ -47,12 +47,16 @@ class ResponseNamespaceCreatedNormalizer implements DenormalizerInterface, Norma
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('namespace', $data)) {
-            $object->setNamespace($data['namespace']);
+            $value = $this->denormalizer->denormalize($data['namespace'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo, got ' . get_debug_type($value));
+            }
+            $object->setNamespace($value);
             unset($data['namespace']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -68,7 +72,7 @@ class ResponseNamespaceCreatedNormalizer implements DenormalizerInterface, Norma
         }
         $dataArray = [];
         if ($data->isInitialized('namespace')) {
-            $dataArray['namespace'] = $data->getNamespace();
+            $dataArray['namespace'] = $this->normalizer->normalize($data->getNamespace(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

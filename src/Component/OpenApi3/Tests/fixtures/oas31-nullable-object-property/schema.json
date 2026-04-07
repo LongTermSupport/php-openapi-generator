@@ -1,0 +1,54 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "OAS 3.1 nullable object property",
+        "version": "1.0"
+    },
+    "paths": {
+        "/widget": {
+            "get": {
+                "operationId": "get_widget",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Parent"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Parent": {
+                "type": "object",
+                "properties": {
+                    "child": {
+                        "$ref": "#/components/schemas/Child"
+                    },
+                    "inlineNullableChild": {
+                        "type": ["null", "object"],
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "Child": {
+                "type": ["null", "object"],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

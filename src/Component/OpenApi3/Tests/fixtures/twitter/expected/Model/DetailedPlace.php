@@ -39,7 +39,7 @@ class DetailedPlace extends \ArrayObject
      * @var list<string>
      */
     protected array $containedWithin;
-    protected mixed $geo = null;
+    protected Geo $geo;
     public function getFormat(): string
     {
         return $this->format;
@@ -148,11 +148,11 @@ class DetailedPlace extends \ArrayObject
         $this->containedWithin = $containedWithin;
         return $this;
     }
-    public function getGeo(): mixed
+    public function getGeo(): Geo
     {
         return $this->geo;
     }
-    public function setGeo(mixed $geo): self
+    public function setGeo(Geo $geo): self
     {
         $this->initialized['geo'] = true;
         $this->geo = $geo;

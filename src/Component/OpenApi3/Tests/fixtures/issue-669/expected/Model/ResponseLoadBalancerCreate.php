@@ -20,12 +20,12 @@ class ResponseLoadBalancerCreate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $loadBalancer = null;
-    public function getLoadBalancer(): mixed
+    protected LoadBalancer $loadBalancer;
+    public function getLoadBalancer(): LoadBalancer
     {
         return $this->loadBalancer;
     }
-    public function setLoadBalancer(mixed $loadBalancer): self
+    public function setLoadBalancer(LoadBalancer $loadBalancer): self
     {
         $this->initialized['loadBalancer'] = true;
         $this->loadBalancer = $loadBalancer;

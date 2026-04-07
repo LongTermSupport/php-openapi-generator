@@ -20,7 +20,7 @@ class Subscription extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $tier = null;
+    protected SubscriptionTierBase $tier;
     /**
      * The time at which the subscription was created.
      *
@@ -31,11 +31,11 @@ class Subscription extends \ArrayObject
      *
      */
     protected \DateTime $updatedAt;
-    public function getTier(): mixed
+    public function getTier(): SubscriptionTierBase
     {
         return $this->tier;
     }
-    public function setTier(mixed $tier): self
+    public function setTier(SubscriptionTierBase $tier): self
     {
         $this->initialized['tier'] = true;
         $this->tier = $tier;

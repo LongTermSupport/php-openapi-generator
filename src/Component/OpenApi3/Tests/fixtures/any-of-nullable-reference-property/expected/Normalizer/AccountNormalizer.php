@@ -76,41 +76,45 @@ class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setCountryOfBirth(null);
         }
         if (\array_key_exists('country', $data)) {
-            $object->setCountry($data['country']);
+            $value_2 = $this->denormalizer->denormalize($data['country'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
+            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_2));
+            }
+            $object->setCountry($value_2);
             unset($data['country']);
         }
         if (\array_key_exists('nationality', $data) && $data['nationality'] !== null) {
-            $value_2 = $data['nationality'];
+            $value_3 = $data['nationality'];
             if (is_array($data['nationality'])) {
-                $value_3 = $this->denormalizer->denormalize($data['nationality'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
-                if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_3));
+                $value_4 = $this->denormalizer->denormalize($data['nationality'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
+                if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
+                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_4));
                 }
-                $value_2 = $value_3;
+                $value_3 = $value_4;
             } elseif (is_array($data['nationality']) && $this->isOnlyNumericKeys($data['nationality'])) {
                 $values = [];
                 if (\is_array($data['nationality'])) {
-                    foreach ($data['nationality'] as $value_4) {
-                        $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
-                        if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
-                            throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_5));
+                    foreach ($data['nationality'] as $value_5) {
+                        $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
+                        if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
+                            throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_6));
                         }
-                        $values[] = $value_5;
+                        $values[] = $value_6;
                     }
                 }
-                $value_2 = $values;
+                $value_3 = $values;
             } else {
-                throw new \LogicException('Unexpected type for Country|array: ' . get_debug_type($value_2));
+                throw new \LogicException('Unexpected type for Country|array: ' . get_debug_type($value_3));
             }
-            $object->setNationality($value_2);
+            $object->setNationality($value_3);
             unset($data['nationality']);
         }
         elseif (\array_key_exists('nationality', $data) && $data['nationality'] === null) {
             $object->setNationality(null);
         }
-        foreach ($data as $key => $value_6) {
+        foreach ($data as $key => $value_7) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_6;
+                $object[$key] = $value_7;
             }
         }
         return $object;
@@ -136,7 +140,7 @@ class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $dataArray['countryOfBirth'] = $this->normalizer->normalize($val, 'json', $context);
         }
         if ($data->isInitialized('country')) {
-            $dataArray['country'] = $data->getCountry();
+            $dataArray['country'] = $this->normalizer->normalize($data->getCountry(), 'json', $context);
         }
         $val_1 = $data->getNationality();
         if ($data->isInitialized('nationality') && null !== $val_1) {

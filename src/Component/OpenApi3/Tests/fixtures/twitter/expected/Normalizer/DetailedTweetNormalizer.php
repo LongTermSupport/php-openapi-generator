@@ -93,38 +93,46 @@ class DetailedTweetNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['attachments']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $object->setWithheld($data['withheld']);
+            $value_3 = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld, got ' . get_debug_type($value_3));
+            }
+            $object->setWithheld($value_3);
             unset($data['withheld']);
         }
         if (\array_key_exists('geo', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['geo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo, got ' . get_debug_type($value_3));
+            $value_4 = $this->denormalizer->denormalize($data['geo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo::class, 'json', $context);
+            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultTweetFieldsGeo, got ' . get_debug_type($value_4));
             }
-            $object->setGeo($value_3);
+            $object->setGeo($value_4);
             unset($data['geo']);
         }
         if (\array_key_exists('entities', $data)) {
-            $object->setEntities($data['entities']);
+            $value_5 = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'json', $context);
+            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities, got ' . get_debug_type($value_5));
+            }
+            $object->setEntities($value_5);
             unset($data['entities']);
         }
         if (\array_key_exists('stats', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['stats'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats, got ' . get_debug_type($value_4));
+            $value_6 = $this->denormalizer->denormalize($data['stats'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats::class, 'json', $context);
+            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats, got ' . get_debug_type($value_6));
             }
-            $object->setStats($value_4);
+            $object->setStats($value_6);
             unset($data['stats']);
         }
         if (\array_key_exists('context_annotation', $data)) {
             $values_1 = [];
             if (\is_array($data['context_annotation'])) {
-                foreach ($data['context_annotation'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation, got ' . get_debug_type($value_6));
+                foreach ($data['context_annotation'] as $value_7) {
+                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation::class, 'json', $context);
+                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation, got ' . get_debug_type($value_8));
                     }
-                    $values_1[] = $value_6;
+                    $values_1[] = $value_8;
                 }
             }
             $object->setContextAnnotation($values_1);
@@ -142,9 +150,9 @@ class DetailedTweetNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setSource(TypeValidator::assertString($data['source'], 'source'));
             unset($data['source']);
         }
-        foreach ($data as $key => $value_7) {
+        foreach ($data as $key => $value_9) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_7;
+                $object[$key] = $value_9;
             }
         }
         return $object;
@@ -180,13 +188,13 @@ class DetailedTweetNormalizer implements DenormalizerInterface, NormalizerInterf
             $dataArray['attachments'] = $this->normalizer->normalize($data->getAttachments(), 'json', $context);
         }
         if ($data->isInitialized('withheld')) {
-            $dataArray['withheld'] = $data->getWithheld();
+            $dataArray['withheld'] = $this->normalizer->normalize($data->getWithheld(), 'json', $context);
         }
         if ($data->isInitialized('geo')) {
             $dataArray['geo'] = $this->normalizer->normalize($data->getGeo(), 'json', $context);
         }
         if ($data->isInitialized('entities')) {
-            $dataArray['entities'] = $data->getEntities();
+            $dataArray['entities'] = $this->normalizer->normalize($data->getEntities(), 'json', $context);
         }
         $dataArray['stats'] = $this->normalizer->normalize($data->getStats(), 'json', $context);
         if ($data->isInitialized('contextAnnotation')) {

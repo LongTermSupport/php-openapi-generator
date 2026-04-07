@@ -89,12 +89,16 @@ class CommitSearchResultItemCommitNormalizer implements DenormalizerInterface, N
             unset($data['url']);
         }
         if (\array_key_exists('verification', $data)) {
-            $object->setVerification($data['verification']);
+            $value_3 = $this->denormalizer->denormalize($data['verification'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Verification::class, 'json', $context);
+            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Verification) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Verification, got ' . get_debug_type($value_3));
+            }
+            $object->setVerification($value_3);
             unset($data['verification']);
         }
-        foreach ($data as $key => $value_3) {
+        foreach ($data as $key => $value_4) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_3;
+                $object[$key] = $value_4;
             }
         }
         return $object;
@@ -121,7 +125,7 @@ class CommitSearchResultItemCommitNormalizer implements DenormalizerInterface, N
         $dataArray['tree'] = $this->normalizer->normalize($data->getTree(), 'json', $context);
         $dataArray['url'] = $data->getUrl();
         if ($data->isInitialized('verification')) {
-            $dataArray['verification'] = $data->getVerification();
+            $dataArray['verification'] = $this->normalizer->normalize($data->getVerification(), 'json', $context);
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', (string) $key) === 1) {

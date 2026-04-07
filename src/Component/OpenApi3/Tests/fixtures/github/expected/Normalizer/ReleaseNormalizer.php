@@ -117,7 +117,11 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setPublishedAt(null);
         }
         if (\array_key_exists('author', $data) && $data['author'] !== null) {
-            $object->setAuthor($data['author']);
+            $value = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value));
+            }
+            $object->setAuthor($value);
             unset($data['author']);
         }
         elseif (\array_key_exists('author', $data) && $data['author'] === null) {
@@ -126,12 +130,12 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('assets', $data)) {
             $values = [];
             if (\is_array($data['assets'])) {
-                foreach ($data['assets'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAsset::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAsset) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAsset, got ' . get_debug_type($value_1));
+                foreach ($data['assets'] as $value_1) {
+                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAsset::class, 'json', $context);
+                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAsset) {
+                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAsset, got ' . get_debug_type($value_2));
                     }
-                    $values[] = $value_1;
+                    $values[] = $value_2;
                 }
             }
             $object->setAssets($values);
@@ -145,9 +149,9 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setBodyText(TypeValidator::assertString($data['body_text'], 'body_text'));
             unset($data['body_text']);
         }
-        foreach ($data as $key => $value_2) {
+        foreach ($data as $key => $value_3) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value_2;
+                $object[$key] = $value_3;
             }
         }
         return $object;
@@ -203,7 +207,7 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
         }
         $val_5 = $data->getAuthor();
         if (null !== $val_5) {
-            $dataArray['author'] = $val_5;
+            $dataArray['author'] = $this->normalizer->normalize($val_5, 'json', $context);
         } else {
             $dataArray['author'] = null;
         }

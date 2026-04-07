@@ -29,12 +29,12 @@ class CommitComparison extends \ArrayObject
      * Commit
      *
      */
-    protected mixed $baseCommit = null;
+    protected Commit $baseCommit;
     /**
      * Commit
      *
      */
-    protected mixed $mergeBaseCommit = null;
+    protected Commit $mergeBaseCommit;
     protected string $status;
     protected int $aheadBy;
     protected int $behindBy;
@@ -101,7 +101,7 @@ class CommitComparison extends \ArrayObject
      * Commit
      *
      */
-    public function getBaseCommit(): mixed
+    public function getBaseCommit(): Commit
     {
         return $this->baseCommit;
     }
@@ -111,7 +111,7 @@ class CommitComparison extends \ArrayObject
      *
      * @return self
      */
-    public function setBaseCommit(mixed $baseCommit): self
+    public function setBaseCommit(Commit $baseCommit): self
     {
         $this->initialized['baseCommit'] = true;
         $this->baseCommit = $baseCommit;
@@ -121,7 +121,7 @@ class CommitComparison extends \ArrayObject
      * Commit
      *
      */
-    public function getMergeBaseCommit(): mixed
+    public function getMergeBaseCommit(): Commit
     {
         return $this->mergeBaseCommit;
     }
@@ -131,7 +131,7 @@ class CommitComparison extends \ArrayObject
      *
      * @return self
      */
-    public function setMergeBaseCommit(mixed $mergeBaseCommit): self
+    public function setMergeBaseCommit(Commit $mergeBaseCommit): self
     {
         $this->initialized['mergeBaseCommit'] = true;
         $this->mergeBaseCommit = $mergeBaseCommit;

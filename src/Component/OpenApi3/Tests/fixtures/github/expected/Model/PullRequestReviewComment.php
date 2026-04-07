@@ -79,7 +79,7 @@ class PullRequestReviewComment extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $user = null;
+    protected ?SimpleUser $user = null;
     /**
      * The text of the comment.
      *
@@ -133,7 +133,7 @@ class PullRequestReviewComment extends \ArrayObject
      *
      */
     protected string $side = 'RIGHT';
-    protected mixed $reactions = null;
+    protected ReactionRollup $reactions;
     protected string $bodyHtml;
     protected string $bodyText;
     /**
@@ -360,7 +360,7 @@ class PullRequestReviewComment extends \ArrayObject
      * Simple User
      *
      */
-    public function getUser(): mixed
+    public function getUser(): ?SimpleUser
     {
         return $this->user;
     }
@@ -370,7 +370,7 @@ class PullRequestReviewComment extends \ArrayObject
      *
      * @return self
      */
-    public function setUser(mixed $user): self
+    public function setUser(?SimpleUser $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;
@@ -606,11 +606,11 @@ class PullRequestReviewComment extends \ArrayObject
         $this->side = $side;
         return $this;
     }
-    public function getReactions(): mixed
+    public function getReactions(): ReactionRollup
     {
         return $this->reactions;
     }
-    public function setReactions(mixed $reactions): self
+    public function setReactions(ReactionRollup $reactions): self
     {
         $this->initialized['reactions'] = true;
         $this->reactions = $reactions;

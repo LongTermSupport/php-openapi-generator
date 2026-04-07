@@ -47,16 +47,20 @@ class AppsUpdateAppRequestNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('spec', $data)) {
-            $object->setSpec($data['spec']);
+            $value = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec::class, 'json', $context);
+            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec) {
+                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppSpec, got ' . get_debug_type($value));
+            }
+            $object->setSpec($value);
             unset($data['spec']);
         }
         if (\array_key_exists('update_all_source_versions', $data)) {
             $object->setUpdateAllSourceVersions(TypeValidator::assertBool($data['update_all_source_versions'], 'update_all_source_versions'));
             unset($data['update_all_source_versions']);
         }
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $value_1) {
             if (preg_match('/.*/', (string) $key) === 1) {
-                $object[$key] = $value;
+                $object[$key] = $value_1;
             }
         }
         return $object;
@@ -71,7 +75,7 @@ class AppsUpdateAppRequestNormalizer implements DenormalizerInterface, Normalize
             throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsUpdateAppRequest, got ' . get_debug_type($data));
         }
         $dataArray = [];
-        $dataArray['spec'] = $data->getSpec();
+        $dataArray['spec'] = $this->normalizer->normalize($data->getSpec(), 'json', $context);
         if ($data->isInitialized('updateAllSourceVersions')) {
             $dataArray['update_all_source_versions'] = $data->getUpdateAllSourceVersions();
         }

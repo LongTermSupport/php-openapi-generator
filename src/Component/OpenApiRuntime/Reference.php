@@ -49,7 +49,17 @@ class Reference
         $mergedParts = array_merge($originParts, $referenceParts);
 
         if (\array_key_exists('path', $referenceParts)) {
-            $mergedParts['path'] = $this->joinPath(\dirname((string)($originParts['path'] ?? '')), (string)$referenceParts['path']);
+            $originPath = $originParts['path'] ?? '';
+            if (!\is_string($originPath)) {
+                throw new LogicException('Origin URI path must be string, got ' . get_debug_type($originPath));
+            }
+
+            $referencePath = $referenceParts['path'];
+            if (!\is_string($referencePath)) {
+                throw new LogicException('Reference URI path must be string, got ' . get_debug_type($referencePath));
+            }
+
+            $mergedParts['path'] = $this->joinPath(\dirname($originPath), $referencePath);
         }
 
         $this->referenceUri = Http::new($reference);

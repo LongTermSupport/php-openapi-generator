@@ -8,11 +8,11 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Tests\CodeStyleFixe
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Authentication\ApiKeyAuthAuthentication;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Client;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Exception\GetEndpointUnauthorizedException;
+use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Runtime\Client\AuthenticationRegistry;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Command\GenerateCommand;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\ConfigLoader;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\OpenApiMatcher;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\SchemaLoader;
-use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Large;

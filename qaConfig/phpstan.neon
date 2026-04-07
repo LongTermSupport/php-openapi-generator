@@ -75,18 +75,3 @@ parameters:
         -
             identifier: catch.neverThrown
             path: ../src/Component/OpenApi3/Tests/OpenApiSpecValidationTest.php
-        # ServerPluginGenerator: parse_url() returns mixed values, casts are safe
-        -
-            identifier: cast.string
-            path: ../src/Component/OpenApi3/Generator/Client/ServerPluginGenerator.php
-        -
-            identifier: argument.type
-            path: ../src/Component/OpenApi3/Generator/Client/ServerPluginGenerator.php
-        # Reference::__construct — parse_url/UriString::parse values are mixed with treatPhpDocTypesAsCertain: false
-        -
-            identifier: cast.string
-            path: ../src/Component/OpenApiRuntime/Reference.php
-        # AuthenticationRegistry test — array<int, ConcreteAuth> vs array<AuthPlugin>
-        -
-            identifier: argument.type
-            path: ../src/Component/OpenApi3/Tests/JaneOpenApiResourceTest.php

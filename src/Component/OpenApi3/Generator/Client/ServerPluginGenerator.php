@@ -35,8 +35,17 @@ trait ServerPluginGenerator
             $plugins = [];
 
             if (\array_key_exists('host', $url)) {
-                $scheme    = (string)($url['scheme'] ?? 'https');
-                $baseUri   = $scheme . '://' . trim((string)$url['host'], '/');
+                $scheme = $url['scheme'] ?? 'https';
+                if (!\is_string($scheme)) {
+                    throw new LogicException('parse_url scheme must be string, got ' . get_debug_type($scheme));
+                }
+
+                $host = $url['host'];
+                if (!\is_string($host)) {
+                    throw new LogicException('parse_url host must be string, got ' . get_debug_type($host));
+                }
+
+                $baseUri   = $scheme . '://' . trim($host, '/');
                 $plugins[] = AddHostPlugin::class;
             }
 
@@ -50,7 +59,12 @@ trait ServerPluginGenerator
             }
 
             if (\array_key_exists('path', $url) && null !== $url['path']) {
-                $baseUri .= '/' . trim($url['path'], '/');
+                $path = $url['path'];
+                if (!\is_string($path)) {
+                    throw new LogicException('parse_url path must be string, got ' . get_debug_type($path));
+                }
+
+                $baseUri .= '/' . trim($path, '/');
                 $plugins[] = AddPathPlugin::class;
             }
 

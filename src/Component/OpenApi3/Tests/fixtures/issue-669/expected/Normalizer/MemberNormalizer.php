@@ -69,10 +69,7 @@ class MemberNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['status']);
         }
         if (\array_key_exists('current_utilization', $data)) {
-            $value = $this->denormalizer->denormalize($data['current_utilization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['current_utilization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MemberCurrentUtilization::class, 'MemberCurrentUtilization');
             $object->setCurrentUtilization($value);
             unset($data['current_utilization']);
         }

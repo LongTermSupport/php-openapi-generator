@@ -49,10 +49,7 @@ class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, De
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('child', $data) && $data['child'] !== null) {
-            $value = $this->denormalizer->denormalize($data['child'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\Child::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\Child) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\Child, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['child'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\Child::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\Child::class, 'Child');
             $object->setChild($value);
             unset($data['child']);
         }
@@ -60,10 +57,7 @@ class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setChild(null);
         }
         if (\array_key_exists('inlineNullableChild', $data) && $data['inlineNullableChild'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['inlineNullableChild'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\ParentInlineNullableChild::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\ParentInlineNullableChild) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\ParentInlineNullableChild, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['inlineNullableChild'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\ParentInlineNullableChild::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\ParentInlineNullableChild::class, 'ParentInlineNullableChild');
             $object->setInlineNullableChild($value_1);
             unset($data['inlineNullableChild']);
         }

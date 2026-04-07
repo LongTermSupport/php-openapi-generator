@@ -106,10 +106,7 @@ class JobNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             $values = [];
             if (\is_array($data['steps'])) {
                 foreach ($data['steps'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\JobStepsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\JobStepsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\JobStepsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\JobStepsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\JobStepsItem::class, 'JobStepsItem');
                     $values[] = $value_1;
                 }
             }

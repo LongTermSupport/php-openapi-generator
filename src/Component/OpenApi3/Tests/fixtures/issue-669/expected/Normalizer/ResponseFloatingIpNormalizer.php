@@ -49,10 +49,7 @@ class ResponseFloatingIpNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('floating_ip', $data)) {
-            $value = $this->denormalizer->denormalize($data['floating_ip'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['floating_ip'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIp::class, 'FloatingIp');
             $object->setFloatingIp($value);
             unset($data['floating_ip']);
         }

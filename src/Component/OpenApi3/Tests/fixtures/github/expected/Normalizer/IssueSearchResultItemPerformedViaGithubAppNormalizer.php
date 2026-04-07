@@ -64,10 +64,7 @@ class IssueSearchResultItemPerformedViaGithubAppNormalizer implements Denormaliz
             unset($data['node_id']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationOwner::class, 'IntegrationOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -99,10 +96,7 @@ class IssueSearchResultItemPerformedViaGithubAppNormalizer implements Denormaliz
             unset($data['updated_at']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationPermissions::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationPermissions, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IntegrationPermissions::class, 'IntegrationPermissions');
             $object->setPermissions($value_1);
             unset($data['permissions']);
         }

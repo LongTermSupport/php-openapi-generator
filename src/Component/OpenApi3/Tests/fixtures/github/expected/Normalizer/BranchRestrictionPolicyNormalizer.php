@@ -71,10 +71,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
             $values = [];
             if (\is_array($data['users'])) {
                 foreach ($data['users'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyUsersItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyUsersItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyUsersItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyUsersItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyUsersItem::class, 'BranchRestrictionPolicyUsersItem');
                     $values[] = $value_1;
                 }
             }
@@ -85,10 +82,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
             $values_1 = [];
             if (\is_array($data['teams'])) {
                 foreach ($data['teams'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyTeamsItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyTeamsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyTeamsItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyTeamsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyTeamsItem::class, 'BranchRestrictionPolicyTeamsItem');
                     $values_1[] = $value_3;
                 }
             }
@@ -99,10 +93,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
             $values_2 = [];
             if (\is_array($data['apps'])) {
                 foreach ($data['apps'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItem, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItem::class, 'BranchRestrictionPolicyAppsItem');
                     $values_2[] = $value_5;
                 }
             }

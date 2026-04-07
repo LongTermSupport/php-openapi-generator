@@ -52,10 +52,7 @@ class BlacklistNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values = [];
             if (\is_array($data['items'])) {
                 foreach ($data['items'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BlacklistItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BlacklistItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BlacklistItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BlacklistItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BlacklistItem::class, 'BlacklistItem');
                     $values[] = $value_1;
                 }
             }

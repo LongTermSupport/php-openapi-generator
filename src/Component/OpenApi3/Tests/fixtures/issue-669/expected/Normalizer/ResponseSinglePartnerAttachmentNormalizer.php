@@ -49,10 +49,7 @@ class ResponseSinglePartnerAttachmentNormalizer implements DenormalizerInterface
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('partner_attachment', $data)) {
-            $value = $this->denormalizer->denormalize($data['partner_attachment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['partner_attachment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachment::class, 'PartnerAttachment');
             $object->setPartnerAttachment($value);
             unset($data['partner_attachment']);
         }

@@ -69,34 +69,22 @@ class GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationN
             unset($data['companyRegistrationDate']);
         }
         if (\array_key_exists('legalForm', $data)) {
-            $value = $this->denormalizer->denormalize($data['legalForm'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationLegalForm::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationLegalForm) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationLegalForm, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['legalForm'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationLegalForm::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationLegalForm::class, 'GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationLegalForm');
             $object->setLegalForm($value);
             unset($data['legalForm']);
         }
         if (\array_key_exists('companyStatus', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['companyStatus'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationCompanyStatus::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationCompanyStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationCompanyStatus, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['companyStatus'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationCompanyStatus::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationCompanyStatus::class, 'GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationCompanyStatus');
             $object->setCompanyStatus($value_1);
             unset($data['companyStatus']);
         }
         if (\array_key_exists('principalActivity', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['principalActivity'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationPrincipalActivity::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationPrincipalActivity) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationPrincipalActivity, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['principalActivity'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationPrincipalActivity::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationPrincipalActivity::class, 'GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationPrincipalActivity');
             $object->setPrincipalActivity($value_2);
             unset($data['principalActivity']);
         }
         if (\array_key_exists('contactAddress', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['contactAddress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationContactAddress::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationContactAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationContactAddress, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['contactAddress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationContactAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationContactAddress::class, 'GbCompanyReportExampleResponseReportCompanyIdentificationBasicInformationContactAddress');
             $object->setContactAddress($value_3);
             unset($data['contactAddress']);
         }

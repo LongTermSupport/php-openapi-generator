@@ -69,10 +69,7 @@ class GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemNormalize
             unset($data['surname']);
         }
         if (\array_key_exists('address', $data)) {
-            $value = $this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemAddress::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemAddress, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemAddress::class, 'GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemAddress');
             $object->setAddress($value);
             unset($data['address']);
         }
@@ -92,10 +89,7 @@ class GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemNormalize
             $values = [];
             if (\is_array($data['positions'])) {
                 foreach ($data['positions'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem::class, 'GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem');
                     $values[] = $value_2;
                 }
             }

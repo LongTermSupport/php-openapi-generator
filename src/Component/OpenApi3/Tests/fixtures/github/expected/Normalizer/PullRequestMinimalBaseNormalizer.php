@@ -60,10 +60,7 @@ class PullRequestMinimalBaseNormalizer implements DenormalizerInterface, Normali
             unset($data['sha']);
         }
         if (\array_key_exists('repo', $data)) {
-            $value = $this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimalBaseRepo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimalBaseRepo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimalBaseRepo, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimalBaseRepo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimalBaseRepo::class, 'PullRequestMinimalBaseRepo');
             $object->setRepo($value);
             unset($data['repo']);
         }

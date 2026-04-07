@@ -49,10 +49,7 @@ class GbCompanyReportExampleResponseReportShareCapitalStructureNormalizer implem
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('issuedShareCapital', $data)) {
-            $value = $this->denormalizer->denormalize($data['issuedShareCapital'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureIssuedShareCapital::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureIssuedShareCapital) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureIssuedShareCapital, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['issuedShareCapital'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureIssuedShareCapital::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureIssuedShareCapital::class, 'GbCompanyReportExampleResponseReportShareCapitalStructureIssuedShareCapital');
             $object->setIssuedShareCapital($value);
             unset($data['issuedShareCapital']);
         }
@@ -64,10 +61,7 @@ class GbCompanyReportExampleResponseReportShareCapitalStructureNormalizer implem
             $values = [];
             if (\is_array($data['shareHolders'])) {
                 foreach ($data['shareHolders'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem::class, 'GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem');
                     $values[] = $value_2;
                 }
             }

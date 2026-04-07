@@ -56,10 +56,7 @@ class UserSettingsNormalizer implements DenormalizerInterface, NormalizerInterfa
             $values = [];
             if (\is_array($data['opensearch_acl'])) {
                 foreach ($data['opensearch_acl'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsOpensearchAclItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsOpensearchAclItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsOpensearchAclItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsOpensearchAclItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsOpensearchAclItem::class, 'UserSettingsOpensearchAclItem');
                     $values[] = $value_1;
                 }
             }
@@ -70,10 +67,7 @@ class UserSettingsNormalizer implements DenormalizerInterface, NormalizerInterfa
             $values_1 = [];
             if (\is_array($data['acl'])) {
                 foreach ($data['acl'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsAclItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsAclItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsAclItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsAclItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsAclItem::class, 'UserSettingsAclItem');
                     $values_1[] = $value_3;
                 }
             }
@@ -81,10 +75,7 @@ class UserSettingsNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['acl']);
         }
         if (\array_key_exists('mongo_user_settings', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['mongo_user_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsMongoUserSettings::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsMongoUserSettings) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsMongoUserSettings, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mongo_user_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsMongoUserSettings::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettingsMongoUserSettings::class, 'UserSettingsMongoUserSettings');
             $object->setMongoUserSettings($value_4);
             unset($data['mongo_user_settings']);
         }

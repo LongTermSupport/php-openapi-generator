@@ -52,42 +52,27 @@ class RateLimitOverviewResourcesNormalizer implements DenormalizerInterface, Nor
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\RateLimitOverviewResourcesConstraint());
         }
         if (\array_key_exists('core', $data)) {
-            $value = $this->denormalizer->denormalize($data['core'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['core'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'RateLimit');
             $object->setCore($value);
             unset($data['core']);
         }
         if (\array_key_exists('graphql', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['graphql'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['graphql'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'RateLimit');
             $object->setGraphql($value_1);
             unset($data['graphql']);
         }
         if (\array_key_exists('search', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'RateLimit');
             $object->setSearch($value_2);
             unset($data['search']);
         }
         if (\array_key_exists('source_import', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['source_import'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['source_import'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'RateLimit');
             $object->setSourceImport($value_3);
             unset($data['source_import']);
         }
         if (\array_key_exists('integration_manifest', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['integration_manifest'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['integration_manifest'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'RateLimit');
             $object->setIntegrationManifest($value_4);
             unset($data['integration_manifest']);
         }

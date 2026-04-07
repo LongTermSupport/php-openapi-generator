@@ -87,10 +87,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $values = [];
             if (\is_array($data['files'])) {
                 foreach ($data['files'] as $key => $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistSimpleFilesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistSimpleFilesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistSimpleFilesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistSimpleFilesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistSimpleFilesItem::class, 'GistSimpleFilesItem');
                     $values[(string) $key] = $value_1;
                 }
             }
@@ -126,10 +123,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['comments_url']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'SimpleUser');
             $object->setOwner($value_2);
             unset($data['owner']);
         }
@@ -144,10 +138,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $values_1 = [];
             if (\is_array($data['forks'])) {
                 foreach ($data['forks'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforksItem::class, 'GistFullforksItem');
                     $values_1[] = $value_4;
                 }
             }
@@ -158,10 +149,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $values_2 = [];
             if (\is_array($data['history'])) {
                 foreach ($data['history'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItem::class, 'GistFullhistoryItem');
                     $values_2[] = $value_6;
                 }
             }
@@ -169,10 +157,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['history']);
         }
         if (\array_key_exists('fork_of', $data) && $data['fork_of'] !== null) {
-            $value_7 = $this->denormalizer->denormalize($data['fork_of'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['fork_of'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullforkOf::class, 'GistFullforkOf');
             $object->setForkOf($value_7);
             unset($data['fork_of']);
         }

@@ -49,18 +49,12 @@ class DefaultUserFieldsEntitiesNormalizer implements DenormalizerInterface, Norm
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('url', $data)) {
-            $value = $this->denormalizer->denormalize($data['url'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntitiesUrl::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntitiesUrl) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntitiesUrl, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['url'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntitiesUrl::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntitiesUrl::class, 'DefaultUserFieldsEntitiesUrl');
             $object->setUrl($value);
             unset($data['url']);
         }
         if (\array_key_exists('description', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['description'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['description'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntities::class, 'FullTextEntities');
             $object->setDescription($value_1);
             unset($data['description']);
         }

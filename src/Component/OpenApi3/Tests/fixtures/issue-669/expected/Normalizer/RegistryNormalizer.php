@@ -69,10 +69,7 @@ class RegistryNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['storage_usage_bytes_updated_at']);
         }
         if (\array_key_exists('subscription', $data)) {
-            $value = $this->denormalizer->denormalize($data['subscription'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Registrysubscription::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Registrysubscription) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Registrysubscription, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['subscription'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Registrysubscription::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Registrysubscription::class, 'Registrysubscription');
             $object->setSubscription($value);
             unset($data['subscription']);
         }

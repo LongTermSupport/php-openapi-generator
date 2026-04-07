@@ -52,10 +52,7 @@ class ResponseKafkaSchemasNormalizer implements DenormalizerInterface, Normalize
             $values = [];
             if (\is_array($data['subjects'])) {
                 foreach ($data['subjects'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaSchemaVerbose::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaSchemaVerbose) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaSchemaVerbose, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaSchemaVerbose::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaSchemaVerbose::class, 'KafkaSchemaVerbose');
                     $values[] = $value_1;
                 }
             }

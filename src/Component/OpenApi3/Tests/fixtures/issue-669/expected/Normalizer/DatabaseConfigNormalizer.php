@@ -51,46 +51,25 @@ class DatabaseConfigNormalizer implements DenormalizerInterface, NormalizerInter
         if (\array_key_exists('config', $data)) {
             $value = $data['config'];
             if (is_array($data['config'])) {
-                $value_1 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlAdvancedConfig::class, 'json', $context);
-                if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlAdvancedConfig, got ' . get_debug_type($value_1));
-                }
+                $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlAdvancedConfig::class, 'MysqlAdvancedConfig');
                 $value = $value_1;
             } elseif (is_array($data['config'])) {
-                $value_2 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PostgresAdvancedConfig::class, 'json', $context);
-                if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PostgresAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PostgresAdvancedConfig, got ' . get_debug_type($value_2));
-                }
+                $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PostgresAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PostgresAdvancedConfig::class, 'PostgresAdvancedConfig');
                 $value = $value_2;
             } elseif (is_array($data['config'])) {
-                $value_3 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RedisAdvancedConfig::class, 'json', $context);
-                if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RedisAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RedisAdvancedConfig, got ' . get_debug_type($value_3));
-                }
+                $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RedisAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RedisAdvancedConfig::class, 'RedisAdvancedConfig');
                 $value = $value_3;
             } elseif (is_array($data['config'])) {
-                $value_4 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValkeyAdvancedConfig::class, 'json', $context);
-                if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValkeyAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValkeyAdvancedConfig, got ' . get_debug_type($value_4));
-                }
+                $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValkeyAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValkeyAdvancedConfig::class, 'ValkeyAdvancedConfig');
                 $value = $value_4;
             } elseif (is_array($data['config'])) {
-                $value_5 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MongoAdvancedConfig::class, 'json', $context);
-                if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MongoAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MongoAdvancedConfig, got ' . get_debug_type($value_5));
-                }
+                $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MongoAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MongoAdvancedConfig::class, 'MongoAdvancedConfig');
                 $value = $value_5;
             } elseif (is_array($data['config'])) {
-                $value_6 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaAdvancedConfig::class, 'json', $context);
-                if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaAdvancedConfig, got ' . get_debug_type($value_6));
-                }
+                $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaAdvancedConfig::class, 'KafkaAdvancedConfig');
                 $value = $value_6;
             } elseif (is_array($data['config'])) {
-                $value_7 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchAdvancedConfig::class, 'json', $context);
-                if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchAdvancedConfig) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchAdvancedConfig, got ' . get_debug_type($value_7));
-                }
+                $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchAdvancedConfig::class, 'OpensearchAdvancedConfig');
                 $value = $value_7;
             } else {
                 throw new \LogicException('Unexpected type for MysqlAdvancedConfig|PostgresAdvancedConfig|RedisAdvancedConfig|ValkeyAdvancedConfig|MongoAdvancedConfig|KafkaAdvancedConfig|OpensearchAdvancedConfig: ' . get_debug_type($value));

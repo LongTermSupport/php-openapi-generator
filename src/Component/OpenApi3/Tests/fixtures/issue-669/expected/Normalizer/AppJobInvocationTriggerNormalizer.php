@@ -53,18 +53,12 @@ class AppJobInvocationTriggerNormalizer implements DenormalizerInterface, Normal
             unset($data['type']);
         }
         if (\array_key_exists('scheduled', $data)) {
-            $value = $this->denormalizer->denormalize($data['scheduled'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduled::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduled) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduled, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['scheduled'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduled::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduled::class, 'AppJobInvocationTriggerScheduled');
             $object->setScheduled($value);
             unset($data['scheduled']);
         }
         if (\array_key_exists('manual', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['manual'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerManual::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerManual) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerManual, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['manual'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerManual::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerManual::class, 'AppJobInvocationTriggerManual');
             $object->setManual($value_1);
             unset($data['manual']);
         }

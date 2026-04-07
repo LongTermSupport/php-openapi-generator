@@ -53,10 +53,7 @@ class ApiCreateEvaluationDatasetInputPublicNormalizer implements DenormalizerInt
             unset($data['dataset_type']);
         }
         if (\array_key_exists('file_upload_dataset', $data)) {
-            $value = $this->denormalizer->denormalize($data['file_upload_dataset'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['file_upload_dataset'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'ApiFileUploadDataSource');
             $object->setFileUploadDataset($value);
             unset($data['file_upload_dataset']);
         }

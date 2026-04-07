@@ -52,10 +52,7 @@ class ReposOwnerRepoPagesPostBodyNormalizer implements DenormalizerInterface, No
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoPagesPostBodyConstraint());
         }
         if (\array_key_exists('source', $data)) {
-            $value = $this->denormalizer->denormalize($data['source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPagesPostBodySource::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPagesPostBodySource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPagesPostBodySource, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPagesPostBodySource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPagesPostBodySource::class, 'ReposOwnerRepoPagesPostBodySource');
             $object->setSource($value);
             unset($data['source']);
         }

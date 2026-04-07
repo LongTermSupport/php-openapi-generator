@@ -92,10 +92,7 @@ class ContentDirectoryItemNormalizer implements DenormalizerInterface, Normalize
             unset($data['download_url']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentDirectoryItemLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentDirectoryItemLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentDirectoryItemLinks, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentDirectoryItemLinks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentDirectoryItemLinks::class, 'ContentDirectoryItemLinks');
             $object->setLinks($value);
             unset($data['_links']);
         }

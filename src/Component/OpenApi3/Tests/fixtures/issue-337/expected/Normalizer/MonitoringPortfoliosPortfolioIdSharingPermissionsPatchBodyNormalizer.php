@@ -56,10 +56,7 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyNormalizer imple
             $values = [];
             if (\is_array($data['companies'])) {
                 foreach ($data['companies'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem::class, 'MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem');
                     $values[] = $value_1;
                 }
             }

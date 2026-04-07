@@ -92,10 +92,7 @@ class ContentSymlinkNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['download_url']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSymlinkLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSymlinkLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSymlinkLinks, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSymlinkLinks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSymlinkLinks::class, 'ContentSymlinkLinks');
             $object->setLinks($value);
             unset($data['_links']);
         }

@@ -49,18 +49,12 @@ class AppIngressSpecRuleMatchNormalizer implements DenormalizerInterface, Normal
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('path', $data)) {
-            $value = $this->denormalizer->denormalize($data['path'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['path'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchPrefix::class, 'AppIngressSpecRuleStringMatchPrefix');
             $object->setPath($value);
             unset($data['path']);
         }
         if (\array_key_exists('authority', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['authority'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['authority'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleStringMatchExact::class, 'AppIngressSpecRuleStringMatchExact');
             $object->setAuthority($value_1);
             unset($data['authority']);
         }

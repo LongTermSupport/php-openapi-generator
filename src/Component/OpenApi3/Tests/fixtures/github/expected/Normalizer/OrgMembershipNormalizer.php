@@ -68,18 +68,12 @@ class OrgMembershipNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['organization_url']);
         }
         if (\array_key_exists('organization', $data)) {
-            $value = $this->denormalizer->denormalize($data['organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimple::class, 'OrganizationSimple');
             $object->setOrganization($value);
             unset($data['organization']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipUser::class, 'OrgMembershipUser');
             $object->setUser($value_1);
             unset($data['user']);
         }
@@ -87,10 +81,7 @@ class OrgMembershipNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setUser(null);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgMembershipPermissions::class, 'OrgMembershipPermissions');
             $object->setPermissions($value_2);
             unset($data['permissions']);
         }

@@ -73,10 +73,7 @@ class GbPeopleReportReponseNormalizer implements DenormalizerInterface, Normaliz
             unset($data['userId']);
         }
         if (\array_key_exists('report', $data)) {
-            $value = $this->denormalizer->denormalize($data['report'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReport::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReport) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReport, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['report'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReport::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReport::class, 'GbPeopleReportReponseReport');
             $object->setReport($value);
             unset($data['report']);
         }

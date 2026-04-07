@@ -68,18 +68,12 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             unset($data['comments_url']);
         }
         if (\array_key_exists('commit', $data)) {
-            $value = $this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommit::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommit, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommit::class, 'CommitSearchResultItemCommit');
             $object->setCommit($value);
             unset($data['commit']);
         }
         if (\array_key_exists('author', $data) && $data['author'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemAuthor::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemAuthor) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemAuthor, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemAuthor::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemAuthor::class, 'CommitSearchResultItemAuthor');
             $object->setAuthor($value_1);
             unset($data['author']);
         }
@@ -87,10 +81,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             $object->setAuthor(null);
         }
         if (\array_key_exists('committer', $data) && $data['committer'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommitter::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommitter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommitter, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommitter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemCommitter::class, 'CommitSearchResultItemCommitter');
             $object->setCommitter($value_2);
             unset($data['committer']);
         }
@@ -101,10 +92,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             $values = [];
             if (\is_array($data['parents'])) {
                 foreach ($data['parents'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemParentsItem::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemParentsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemParentsItem, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemParentsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItemParentsItem::class, 'CommitSearchResultItemParentsItem');
                     $values[] = $value_4;
                 }
             }
@@ -112,10 +100,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             unset($data['parents']);
         }
         if (\array_key_exists('repository', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'MinimalRepository');
             $object->setRepository($value_5);
             unset($data['repository']);
         }
@@ -131,10 +116,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             $values_1 = [];
             if (\is_array($data['text_matches'])) {
                 foreach ($data['text_matches'] as $value_6) {
-                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
-                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_7));
-                    }
+                    $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'SearchResultTextMatchesItem');
                     $values_1[] = $value_7;
                 }
             }

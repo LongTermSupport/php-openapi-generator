@@ -68,10 +68,7 @@ class ProjectCardNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['note']);
         }
         if (\array_key_exists('creator', $data) && $data['creator'] !== null) {
-            $value = $this->denormalizer->denormalize($data['creator'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectCardCreator::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectCardCreator) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectCardCreator, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['creator'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectCardCreator::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectCardCreator::class, 'ProjectCardCreator');
             $object->setCreator($value);
             unset($data['creator']);
         }

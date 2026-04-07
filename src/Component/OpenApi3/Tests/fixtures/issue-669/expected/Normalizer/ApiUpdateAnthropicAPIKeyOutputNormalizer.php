@@ -49,10 +49,7 @@ class ApiUpdateAnthropicAPIKeyOutputNormalizer implements DenormalizerInterface,
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('api_key_info', $data)) {
-            $value = $this->denormalizer->denormalize($data['api_key_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['api_key_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAnthropicAPIKeyInfo::class, 'ApiAnthropicAPIKeyInfo');
             $object->setApiKeyInfo($value);
             unset($data['api_key_info']);
         }

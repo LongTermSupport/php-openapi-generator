@@ -92,10 +92,7 @@ class ContentLayerSameRootExceptionNormalizer implements DenormalizerInterface, 
             $values = [];
             if (\is_array($data['layerIdsByRootSchema'])) {
                 foreach ($data['layerIdsByRootSchema'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerIdsByRootSchema::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerIdsByRootSchema) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerIdsByRootSchema, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerIdsByRootSchema::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerIdsByRootSchema::class, 'LayerIdsByRootSchema');
                     $values[] = $value_1;
                 }
             }

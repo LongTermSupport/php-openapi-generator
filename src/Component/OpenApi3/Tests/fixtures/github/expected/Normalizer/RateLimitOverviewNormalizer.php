@@ -52,18 +52,12 @@ class RateLimitOverviewNormalizer implements DenormalizerInterface, NormalizerIn
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\RateLimitOverviewConstraint());
         }
         if (\array_key_exists('resources', $data)) {
-            $value = $this->denormalizer->denormalize($data['resources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimitOverviewResources::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimitOverviewResources) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimitOverviewResources, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['resources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimitOverviewResources::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimitOverviewResources::class, 'RateLimitOverviewResources');
             $object->setResources($value);
             unset($data['resources']);
         }
         if (\array_key_exists('rate', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['rate'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['rate'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RateLimit::class, 'RateLimit');
             $object->setRate($value_1);
             unset($data['rate']);
         }

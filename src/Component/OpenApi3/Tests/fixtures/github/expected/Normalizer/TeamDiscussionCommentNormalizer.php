@@ -52,10 +52,7 @@ class TeamDiscussionCommentNormalizer implements DenormalizerInterface, Normaliz
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TeamDiscussionCommentConstraint());
         }
         if (\array_key_exists('author', $data) && $data['author'] !== null) {
-            $value = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamDiscussionCommentAuthor::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamDiscussionCommentAuthor) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamDiscussionCommentAuthor, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamDiscussionCommentAuthor::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamDiscussionCommentAuthor::class, 'TeamDiscussionCommentAuthor');
             $object->setAuthor($value);
             unset($data['author']);
         }
@@ -110,10 +107,7 @@ class TeamDiscussionCommentNormalizer implements DenormalizerInterface, Normaliz
             unset($data['url']);
         }
         if (\array_key_exists('reactions', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'ReactionRollup');
             $object->setReactions($value_1);
             unset($data['reactions']);
         }

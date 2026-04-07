@@ -68,10 +68,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['full_name']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOwner::class, 'FullRepositoryOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -353,10 +350,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['updated_at']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryPermissions::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryPermissions, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryPermissions::class, 'FullRepositoryPermissions');
             $object->setPermissions($value_2);
             unset($data['permissions']);
         }
@@ -365,10 +359,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['allow_rebase_merge']);
         }
         if (\array_key_exists('template_repository', $data) && $data['template_repository'] !== null) {
-            $value_3 = $this->denormalizer->denormalize($data['template_repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryTemplateRepository::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryTemplateRepository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryTemplateRepository, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['template_repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryTemplateRepository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryTemplateRepository::class, 'FullRepositoryTemplateRepository');
             $object->setTemplateRepository($value_3);
             unset($data['template_repository']);
         }
@@ -400,10 +391,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['network_count']);
         }
         if (\array_key_exists('license', $data) && $data['license'] !== null) {
-            $value_4 = $this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryLicense::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryLicense) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryLicense, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryLicense::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryLicense::class, 'FullRepositoryLicense');
             $object->setLicense($value_4);
             unset($data['license']);
         }
@@ -411,10 +399,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setLicense(null);
         }
         if (\array_key_exists('organization', $data) && $data['organization'] !== null) {
-            $value_5 = $this->denormalizer->denormalize($data['organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOrganization::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOrganization) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOrganization, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOrganization::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FullRepositoryOrganization::class, 'FullRepositoryOrganization');
             $object->setOrganization($value_5);
             unset($data['organization']);
         }
@@ -422,18 +407,12 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setOrganization(null);
         }
         if (\array_key_exists('parent', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['parent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['parent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'Repository');
             $object->setParent($value_6);
             unset($data['parent']);
         }
         if (\array_key_exists('source', $data)) {
-            $value_7 = $this->denormalizer->denormalize($data['source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'Repository');
             $object->setSource($value_7);
             unset($data['source']);
         }

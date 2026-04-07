@@ -69,18 +69,12 @@ class DatabaseUserNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['access_key']);
         }
         if (\array_key_exists('mysql_settings', $data)) {
-            $value = $this->denormalizer->denormalize($data['mysql_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mysql_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlSettings::class, 'MysqlSettings');
             $object->setMysqlSettings($value);
             unset($data['mysql_settings']);
         }
         if (\array_key_exists('settings', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserSettings::class, 'UserSettings');
             $object->setSettings($value_1);
             unset($data['settings']);
         }

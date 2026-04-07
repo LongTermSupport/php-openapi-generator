@@ -49,26 +49,17 @@ class GbCompanyReportExampleResponseReportCreditScoreNormalizer implements Denor
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('currentCreditRating', $data)) {
-            $value = $this->denormalizer->denormalize($data['currentCreditRating'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRating::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRating) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRating, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['currentCreditRating'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRating::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRating::class, 'GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRating');
             $object->setCurrentCreditRating($value);
             unset($data['currentCreditRating']);
         }
         if (\array_key_exists('currentContractLimit', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['currentContractLimit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentContractLimit::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentContractLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentContractLimit, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['currentContractLimit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentContractLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentContractLimit::class, 'GbCompanyReportExampleResponseReportCreditScoreCurrentContractLimit');
             $object->setCurrentContractLimit($value_1);
             unset($data['currentContractLimit']);
         }
         if (\array_key_exists('previousCreditRating', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['previousCreditRating'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScorePreviousCreditRating::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScorePreviousCreditRating) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScorePreviousCreditRating, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['previousCreditRating'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScorePreviousCreditRating::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScorePreviousCreditRating::class, 'GbCompanyReportExampleResponseReportCreditScorePreviousCreditRating');
             $object->setPreviousCreditRating($value_2);
             unset($data['previousCreditRating']);
         }

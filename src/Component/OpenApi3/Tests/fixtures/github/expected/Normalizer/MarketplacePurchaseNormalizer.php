@@ -72,10 +72,7 @@ class MarketplacePurchaseNormalizer implements DenormalizerInterface, Normalizer
             unset($data['organization_billing_email']);
         }
         if (\array_key_exists('marketplace_pending_change', $data) && $data['marketplace_pending_change'] !== null) {
-            $value = $this->denormalizer->denormalize($data['marketplace_pending_change'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePendingChange::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePendingChange) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePendingChange, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['marketplace_pending_change'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePendingChange::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePendingChange::class, 'MarketplacePurchaseMarketplacePendingChange');
             $object->setMarketplacePendingChange($value);
             unset($data['marketplace_pending_change']);
         }
@@ -83,10 +80,7 @@ class MarketplacePurchaseNormalizer implements DenormalizerInterface, Normalizer
             $object->setMarketplacePendingChange(null);
         }
         if (\array_key_exists('marketplace_purchase', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['marketplace_purchase'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePurchase::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePurchase) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePurchase, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['marketplace_purchase'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePurchase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchaseMarketplacePurchase::class, 'MarketplacePurchaseMarketplacePurchase');
             $object->setMarketplacePurchase($value_1);
             unset($data['marketplace_purchase']);
         }

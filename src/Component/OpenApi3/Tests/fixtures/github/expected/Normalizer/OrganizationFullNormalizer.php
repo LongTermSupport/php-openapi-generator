@@ -188,10 +188,7 @@ class OrganizationFullNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['billing_email']);
         }
         if (\array_key_exists('plan', $data)) {
-            $value = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationFullPlan::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationFullPlan) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationFullPlan, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationFullPlan::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationFullPlan::class, 'OrganizationFullPlan');
             $object->setPlan($value);
             unset($data['plan']);
         }

@@ -63,10 +63,7 @@ class NumericRangeAggregatorNormalizer implements DenormalizerInterface, Normali
             $values = [];
             if (\is_array($data['aggregators'])) {
                 foreach ($data['aggregators'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'AggregatorBase');
                     $values[] = $value_1;
                 }
             }
@@ -95,10 +92,7 @@ class NumericRangeAggregatorNormalizer implements DenormalizerInterface, Normali
             $values_1 = [];
             if (\is_array($data['ranges'])) {
                 foreach ($data['ranges'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeForAggregator::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeForAggregator) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeForAggregator, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeForAggregator::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeForAggregator::class, 'NumericRangeForAggregator');
                     $values_1[] = $value_3;
                 }
             }

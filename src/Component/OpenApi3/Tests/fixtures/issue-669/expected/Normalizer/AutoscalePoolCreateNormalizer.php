@@ -63,10 +63,7 @@ class AutoscalePoolCreateNormalizer implements DenormalizerInterface, Normalizer
             unset($data['config']);
         }
         if (\array_key_exists('droplet_template', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['droplet_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['droplet_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AutoscalePoolDropletTemplate::class, 'AutoscalePoolDropletTemplate');
             $object->setDropletTemplate($value_1);
             unset($data['droplet_template']);
         }

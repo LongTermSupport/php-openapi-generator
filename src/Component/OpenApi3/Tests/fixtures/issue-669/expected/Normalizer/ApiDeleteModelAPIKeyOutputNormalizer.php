@@ -49,10 +49,7 @@ class ApiDeleteModelAPIKeyOutputNormalizer implements DenormalizerInterface, Nor
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('api_key_info', $data)) {
-            $value = $this->denormalizer->denormalize($data['api_key_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelAPIKeyInfo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelAPIKeyInfo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelAPIKeyInfo, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['api_key_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelAPIKeyInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModelAPIKeyInfo::class, 'ApiModelAPIKeyInfo');
             $object->setApiKeyInfo($value);
             unset($data['api_key_info']);
         }

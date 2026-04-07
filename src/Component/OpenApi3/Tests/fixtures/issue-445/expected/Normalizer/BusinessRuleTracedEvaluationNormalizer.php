@@ -55,10 +55,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             $values = [];
             if (\is_array($data['conditions'])) {
                 foreach ($data['conditions'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedEvaluationCondition::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedEvaluationCondition) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedEvaluationCondition, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedEvaluationCondition::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedEvaluationCondition::class, 'BusinessRuleTracedEvaluationCondition');
                     $values[] = $value_1;
                 }
             }
@@ -71,10 +68,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             $values_1 = [];
             if (\is_array($data['transformationGroups'])) {
                 foreach ($data['transformationGroups'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedTransformationGroup::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedTransformationGroup) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedTransformationGroup, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedTransformationGroup::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedTransformationGroup::class, 'BusinessRuleTracedTransformationGroup');
                     $values_1[] = $value_3;
                 }
             }
@@ -87,10 +81,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             $values_2 = [];
             if (\is_array($data['actions'])) {
                 foreach ($data['actions'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedAction::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedAction) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedAction, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedAction::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTracedAction::class, 'BusinessRuleTracedAction');
                     $values_2[] = $value_5;
                 }
             }

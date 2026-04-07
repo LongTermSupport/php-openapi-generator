@@ -57,10 +57,7 @@ class GpuInfoNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['model']);
         }
         if (\array_key_exists('vram', $data)) {
-            $value = $this->denormalizer->denormalize($data['vram'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfoVram::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfoVram) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfoVram, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['vram'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfoVram::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfoVram::class, 'GpuInfoVram');
             $object->setVram($value);
             unset($data['vram']);
         }

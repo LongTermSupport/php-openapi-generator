@@ -57,10 +57,7 @@ class ResourceNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['assigned_at']);
         }
         if (\array_key_exists('links', $data)) {
-            $value = $this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResourceLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResourceLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResourceLinks, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResourceLinks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResourceLinks::class, 'ResourceLinks');
             $object->setLinks($value);
             unset($data['links']);
         }

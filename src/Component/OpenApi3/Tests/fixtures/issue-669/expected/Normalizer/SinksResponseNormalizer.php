@@ -49,10 +49,7 @@ class SinksResponseNormalizer implements DenormalizerInterface, NormalizerInterf
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('destination', $data)) {
-            $value = $this->denormalizer->denormalize($data['destination'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['destination'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Destination::class, 'Destination');
             $object->setDestination($value);
             unset($data['destination']);
         }
@@ -60,10 +57,7 @@ class SinksResponseNormalizer implements DenormalizerInterface, NormalizerInterf
             $values = [];
             if (\is_array($data['resources'])) {
                 foreach ($data['resources'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\SinkResource::class, 'SinkResource');
                     $values[] = $value_2;
                 }
             }

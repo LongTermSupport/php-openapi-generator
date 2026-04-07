@@ -79,10 +79,7 @@ class DropletSingleCreateNormalizer implements DenormalizerInterface, Normalizer
             unset($data['backups']);
         }
         if (\array_key_exists('backup_policy', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['backup_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletCreateBackupPolicy::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletCreateBackupPolicy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletCreateBackupPolicy, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['backup_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletCreateBackupPolicy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletCreateBackupPolicy::class, 'DropletCreateBackupPolicy');
             $object->setBackupPolicy($value_1);
             unset($data['backup_policy']);
         }

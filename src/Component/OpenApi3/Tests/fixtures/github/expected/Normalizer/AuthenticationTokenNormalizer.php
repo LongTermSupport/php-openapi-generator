@@ -73,10 +73,7 @@ class AuthenticationTokenNormalizer implements DenormalizerInterface, Normalizer
             $values_1 = [];
             if (\is_array($data['repositories'])) {
                 foreach ($data['repositories'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'Repository');
                     $values_1[] = $value_2;
                 }
             }

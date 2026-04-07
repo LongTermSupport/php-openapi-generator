@@ -57,18 +57,12 @@ class DropletBackupPolicyRecordNormalizer implements DenormalizerInterface, Norm
             unset($data['backup_enabled']);
         }
         if (\array_key_exists('backup_policy', $data)) {
-            $value = $this->denormalizer->denormalize($data['backup_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordBackupPolicy::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordBackupPolicy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordBackupPolicy, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['backup_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordBackupPolicy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordBackupPolicy::class, 'DropletBackupPolicyRecordBackupPolicy');
             $object->setBackupPolicy($value);
             unset($data['backup_policy']);
         }
         if (\array_key_exists('next_backup_window', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['next_backup_window'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordNextBackupWindow::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordNextBackupWindow) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordNextBackupWindow, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['next_backup_window'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordNextBackupWindow::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletBackupPolicyRecordNextBackupWindow::class, 'DropletBackupPolicyRecordNextBackupWindow');
             $object->setNextBackupWindow($value_1);
             unset($data['next_backup_window']);
         }

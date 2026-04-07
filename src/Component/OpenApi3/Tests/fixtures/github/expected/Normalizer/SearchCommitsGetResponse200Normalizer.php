@@ -63,10 +63,7 @@ class SearchCommitsGetResponse200Normalizer implements DenormalizerInterface, No
             $values = [];
             if (\is_array($data['items'])) {
                 foreach ($data['items'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommitSearchResultItem::class, 'CommitSearchResultItem');
                     $values[] = $value_1;
                 }
             }

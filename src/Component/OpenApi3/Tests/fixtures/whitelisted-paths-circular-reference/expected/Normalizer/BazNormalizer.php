@@ -53,10 +53,7 @@ class BazNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             unset($data['label']);
         }
         if (\array_key_exists('sub', $data)) {
-            $value = $this->denormalizer->denormalize($data['sub'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['sub'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\SubBaz::class, 'SubBaz');
             $object->setSub($value);
             unset($data['sub']);
         }

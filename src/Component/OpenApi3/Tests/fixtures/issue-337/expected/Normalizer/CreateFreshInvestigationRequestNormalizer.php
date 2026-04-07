@@ -53,10 +53,7 @@ class CreateFreshInvestigationRequestNormalizer implements DenormalizerInterface
             unset($data['consent']);
         }
         if (\array_key_exists('contactInfo', $data)) {
-            $value = $this->denormalizer->denormalize($data['contactInfo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestContactInfo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestContactInfo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestContactInfo, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['contactInfo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestContactInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestContactInfo::class, 'CreateFreshInvestigationRequestContactInfo');
             $object->setContactInfo($value);
             unset($data['contactInfo']);
         }
@@ -65,10 +62,7 @@ class CreateFreshInvestigationRequestNormalizer implements DenormalizerInterface
             unset($data['chargeReference']);
         }
         if (\array_key_exists('searchCriteria', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['searchCriteria'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteria::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteria) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteria, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['searchCriteria'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteria::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteria::class, 'CreateFreshInvestigationRequestSearchCriteria');
             $object->setSearchCriteria($value_1);
             unset($data['searchCriteria']);
         }

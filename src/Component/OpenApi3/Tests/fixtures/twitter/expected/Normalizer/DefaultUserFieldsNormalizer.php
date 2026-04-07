@@ -61,10 +61,7 @@ class DefaultUserFieldsNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['description']);
         }
         if (\array_key_exists('entities', $data)) {
-            $value = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'DefaultUserFieldsEntities');
             $object->setEntities($value);
             unset($data['entities']);
         }

@@ -53,10 +53,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemNormalizer implements
             unset($data['record']);
         }
         if (\array_key_exists('recordDetails', $data)) {
-            $value = $this->denormalizer->denormalize($data['recordDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['recordDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails');
             $object->setRecordDetails($value);
             unset($data['recordDetails']);
         }
@@ -69,10 +66,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemNormalizer implements
             unset($data['runID']);
         }
         if (\array_key_exists('watchlist', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['watchlist'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['watchlist'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist');
             $object->setWatchlist($value_1);
             unset($data['watchlist']);
         }

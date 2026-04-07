@@ -80,10 +80,7 @@ class ApiEvaluationTraceSpanNormalizer implements DenormalizerInterface, Normali
             $values_2 = [];
             if (\is_array($data['retriever_chunks'])) {
                 foreach ($data['retriever_chunks'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk::class, 'ApiPromptChunk');
                     $values_2[] = $value_3;
                 }
             }
@@ -94,10 +91,7 @@ class ApiEvaluationTraceSpanNormalizer implements DenormalizerInterface, Normali
             $values_3 = [];
             if (\is_array($data['span_level_metric_results'])) {
                 foreach ($data['span_level_metric_results'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'ApiEvaluationMetricResult');
                     $values_3[] = $value_5;
                 }
             }

@@ -57,18 +57,12 @@ class GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingNormaliz
             unset($data['commonDescription']);
         }
         if (\array_key_exists('creditLimit', $data)) {
-            $value = $this->denormalizer->denormalize($data['creditLimit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingCreditLimit::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingCreditLimit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingCreditLimit, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['creditLimit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingCreditLimit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingCreditLimit::class, 'GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingCreditLimit');
             $object->setCreditLimit($value);
             unset($data['creditLimit']);
         }
         if (\array_key_exists('providerValue', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['providerValue'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingProviderValue::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingProviderValue) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingProviderValue, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['providerValue'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingProviderValue::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingProviderValue::class, 'GbCompanyReportExampleResponseReportCreditScoreCurrentCreditRatingProviderValue');
             $object->setProviderValue($value_1);
             unset($data['providerValue']);
         }

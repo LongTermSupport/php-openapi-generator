@@ -52,10 +52,7 @@ class ApiCreateDataSourceFileUploadPresignedUrlsInputPublicNormalizer implements
             $values = [];
             if (\is_array($data['files'])) {
                 foreach ($data['files'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPresignedUrlFile::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPresignedUrlFile) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPresignedUrlFile, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPresignedUrlFile::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPresignedUrlFile::class, 'ApiPresignedUrlFile');
                     $values[] = $value_1;
                 }
             }

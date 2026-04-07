@@ -49,34 +49,22 @@ class AppIngressSpecRuleNormalizer implements DenormalizerInterface, NormalizerI
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('match', $data)) {
-            $value = $this->denormalizer->denormalize($data['match'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['match'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleMatch::class, 'AppIngressSpecRuleMatch');
             $object->setMatch($value);
             unset($data['match']);
         }
         if (\array_key_exists('cors', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['cors'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['cors'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsCorsPolicy::class, 'AppsCorsPolicy');
             $object->setCors($value_1);
             unset($data['cors']);
         }
         if (\array_key_exists('component', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['component'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['component'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingComponent::class, 'AppIngressSpecRuleRoutingComponent');
             $object->setComponent($value_2);
             unset($data['component']);
         }
         if (\array_key_exists('redirect', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['redirect'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['redirect'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppIngressSpecRuleRoutingRedirect::class, 'AppIngressSpecRuleRoutingRedirect');
             $object->setRedirect($value_3);
             unset($data['redirect']);
         }

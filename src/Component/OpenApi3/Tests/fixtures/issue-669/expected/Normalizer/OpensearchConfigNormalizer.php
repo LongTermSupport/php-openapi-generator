@@ -53,10 +53,7 @@ class OpensearchConfigNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['id']);
         }
         if (\array_key_exists('credentials', $data)) {
-            $value = $this->denormalizer->denormalize($data['credentials'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigCredentials::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigCredentials) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigCredentials, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['credentials'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigCredentials::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfigCredentials::class, 'OpensearchConfigCredentials');
             $object->setCredentials($value);
             unset($data['credentials']);
         }

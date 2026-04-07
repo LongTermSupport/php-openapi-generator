@@ -56,18 +56,12 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
             unset($data['id']);
         }
         if (\array_key_exists('repository', $data)) {
-            $value = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'MinimalRepository');
             $object->setRepository($value);
             unset($data['repository']);
         }
         if (\array_key_exists('invitee', $data) && $data['invitee'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['invitee'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['invitee'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInvitee::class, 'RepositoryInvitationInvitee');
             $object->setInvitee($value_1);
             unset($data['invitee']);
         }
@@ -75,10 +69,7 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
             $object->setInvitee(null);
         }
         if (\array_key_exists('inviter', $data) && $data['inviter'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['inviter'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['inviter'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryInvitationInviter::class, 'RepositoryInvitationInviter');
             $object->setInviter($value_2);
             unset($data['inviter']);
         }

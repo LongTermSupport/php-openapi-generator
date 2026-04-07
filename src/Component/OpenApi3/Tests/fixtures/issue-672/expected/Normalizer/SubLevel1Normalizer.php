@@ -49,10 +49,7 @@ class SubLevel1Normalizer implements DenormalizerInterface, NormalizerInterface,
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('subLevel-2', $data)) {
-            $value = $this->denormalizer->denormalize($data['subLevel-2'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['subLevel-2'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'SubLevel2');
             $object->setSubLevel2($value);
             unset($data['subLevel-2']);
         }

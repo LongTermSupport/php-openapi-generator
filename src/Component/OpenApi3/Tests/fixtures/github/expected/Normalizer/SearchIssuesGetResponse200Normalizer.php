@@ -63,10 +63,7 @@ class SearchIssuesGetResponse200Normalizer implements DenormalizerInterface, Nor
             $values = [];
             if (\is_array($data['items'])) {
                 foreach ($data['items'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueSearchResultItem::class, 'IssueSearchResultItem');
                     $values[] = $value_1;
                 }
             }

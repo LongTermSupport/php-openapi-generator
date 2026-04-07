@@ -188,10 +188,7 @@ class PullRequestBaseRepoNormalizer implements DenormalizerInterface, Normalizer
             unset($data['notifications_url']);
         }
         if (\array_key_exists('owner', $data)) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoOwner::class, 'PullRequestBaseRepoOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -312,10 +309,7 @@ class PullRequestBaseRepoNormalizer implements DenormalizerInterface, Normalizer
             unset($data['open_issues_count']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoPermissions::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoPermissions, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoPermissions::class, 'PullRequestBaseRepoPermissions');
             $object->setPermissions($value_1);
             unset($data['permissions']);
         }
@@ -336,10 +330,7 @@ class PullRequestBaseRepoNormalizer implements DenormalizerInterface, Normalizer
             unset($data['allow_rebase_merge']);
         }
         if (\array_key_exists('license', $data) && $data['license'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoLicense::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoLicense) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoLicense, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoLicense::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestBaseRepoLicense::class, 'PullRequestBaseRepoLicense');
             $object->setLicense($value_2);
             unset($data['license']);
         }

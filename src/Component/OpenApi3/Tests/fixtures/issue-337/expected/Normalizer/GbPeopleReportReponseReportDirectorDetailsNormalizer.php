@@ -77,10 +77,7 @@ class GbPeopleReportReponseReportDirectorDetailsNormalizer implements Denormaliz
             unset($data['surname']);
         }
         if (\array_key_exists('address', $data)) {
-            $value = $this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAddress::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAddress, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAddress::class, 'GbPeopleReportReponseReportDirectorDetailsAddress');
             $object->setAddress($value);
             unset($data['address']);
         }
@@ -104,10 +101,7 @@ class GbPeopleReportReponseReportDirectorDetailsNormalizer implements Denormaliz
             $values = [];
             if (\is_array($data['positions'])) {
                 foreach ($data['positions'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsPositionsItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsPositionsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsPositionsItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsPositionsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsPositionsItem::class, 'GbPeopleReportReponseReportDirectorDetailsPositionsItem');
                     $values[] = $value_2;
                 }
             }
@@ -115,10 +109,7 @@ class GbPeopleReportReponseReportDirectorDetailsNormalizer implements Denormaliz
             unset($data['positions']);
         }
         if (\array_key_exists('additionalData', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['additionalData'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAdditionalData::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAdditionalData) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAdditionalData, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['additionalData'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAdditionalData::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetailsAdditionalData::class, 'GbPeopleReportReponseReportDirectorDetailsAdditionalData');
             $object->setAdditionalData($value_3);
             unset($data['additionalData']);
         }

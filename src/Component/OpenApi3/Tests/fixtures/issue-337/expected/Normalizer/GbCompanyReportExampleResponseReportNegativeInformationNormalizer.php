@@ -49,18 +49,12 @@ class GbCompanyReportExampleResponseReportNegativeInformationNormalizer implemen
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('ccjSummary', $data)) {
-            $value = $this->denormalizer->denormalize($data['ccjSummary'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCcjSummary::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCcjSummary) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCcjSummary, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['ccjSummary'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCcjSummary::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCcjSummary::class, 'GbCompanyReportExampleResponseReportNegativeInformationCcjSummary');
             $object->setCcjSummary($value);
             unset($data['ccjSummary']);
         }
         if (\array_key_exists('countyCourtJudgements', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['countyCourtJudgements'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgements::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgements) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgements, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['countyCourtJudgements'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgements::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgements::class, 'GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgements');
             $object->setCountyCourtJudgements($value_1);
             unset($data['countyCourtJudgements']);
         }

@@ -49,10 +49,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('chatbot', $data)) {
-            $value = $this->denormalizer->denormalize($data['chatbot'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['chatbot'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChatbot::class, 'ApiChatbot');
             $object->setChatbot($value);
             unset($data['chatbot']);
         }
@@ -60,10 +57,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             $values = [];
             if (\is_array($data['chatbot_identifiers'])) {
                 foreach ($data['chatbot_identifiers'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentChatbotIdentifier::class, 'ApiAgentChatbotIdentifier');
                     $values[] = $value_2;
                 }
             }
@@ -75,10 +69,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['created_at']);
         }
         if (\array_key_exists('deployment', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['deployment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['deployment'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDeployment::class, 'ApiDeployment');
             $object->setDeployment($value_3);
             unset($data['deployment']);
         }
@@ -103,10 +94,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['max_tokens']);
         }
         if (\array_key_exists('model', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['model'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['model'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'ApiModel');
             $object->setModel($value_4);
             unset($data['model']);
         }
@@ -161,10 +149,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['temperature']);
         }
         if (\array_key_exists('template', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplate::class, 'ApiAgentTemplate');
             $object->setTemplate($value_6);
             unset($data['template']);
         }

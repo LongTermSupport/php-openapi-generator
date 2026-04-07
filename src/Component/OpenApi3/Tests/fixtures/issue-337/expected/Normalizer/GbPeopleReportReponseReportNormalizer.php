@@ -53,18 +53,12 @@ class GbPeopleReportReponseReportNormalizer implements DenormalizerInterface, No
             unset($data['directorId']);
         }
         if (\array_key_exists('directorSummary', $data)) {
-            $value = $this->denormalizer->denormalize($data['directorSummary'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorSummary::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorSummary) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorSummary, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['directorSummary'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorSummary::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorSummary::class, 'GbPeopleReportReponseReportDirectorSummary');
             $object->setDirectorSummary($value);
             unset($data['directorSummary']);
         }
         if (\array_key_exists('directorDetails', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['directorDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetails::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetails, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['directorDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorDetails::class, 'GbPeopleReportReponseReportDirectorDetails');
             $object->setDirectorDetails($value_1);
             unset($data['directorDetails']);
         }
@@ -72,10 +66,7 @@ class GbPeopleReportReponseReportNormalizer implements DenormalizerInterface, No
             $values = [];
             if (\is_array($data['otherAddresses'])) {
                 foreach ($data['otherAddresses'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportOtherAddressesItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportOtherAddressesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportOtherAddressesItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportOtherAddressesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportOtherAddressesItem::class, 'GbPeopleReportReponseReportOtherAddressesItem');
                     $values[] = $value_3;
                 }
             }
@@ -83,10 +74,7 @@ class GbPeopleReportReponseReportNormalizer implements DenormalizerInterface, No
             unset($data['otherAddresses']);
         }
         if (\array_key_exists('directorships', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['directorships'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorships::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorships) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorships, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['directorships'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorships::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorships::class, 'GbPeopleReportReponseReportDirectorships');
             $object->setDirectorships($value_4);
             unset($data['directorships']);
         }

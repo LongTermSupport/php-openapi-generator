@@ -52,10 +52,7 @@ class ResponseListNamespacesNormalizer implements DenormalizerInterface, Normali
             $values = [];
             if (\is_array($data['namespaces'])) {
                 foreach ($data['namespaces'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NamespaceInfo::class, 'NamespaceInfo');
                     $values[] = $value_1;
                 }
             }

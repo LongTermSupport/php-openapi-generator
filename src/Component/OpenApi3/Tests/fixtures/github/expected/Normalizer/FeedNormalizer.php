@@ -90,10 +90,7 @@ class FeedNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['security_advisories_url']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FeedLinks::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FeedLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FeedLinks, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FeedLinks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FeedLinks::class, 'FeedLinks');
             $object->setLinks($value_1);
             unset($data['_links']);
         }

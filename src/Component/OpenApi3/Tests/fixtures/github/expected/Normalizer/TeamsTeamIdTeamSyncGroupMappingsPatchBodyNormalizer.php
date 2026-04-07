@@ -55,10 +55,7 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyNormalizer implements Denormalize
             $values = [];
             if (\is_array($data['groups'])) {
                 foreach ($data['groups'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem::class, 'TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem');
                     $values[] = $value_1;
                 }
             }

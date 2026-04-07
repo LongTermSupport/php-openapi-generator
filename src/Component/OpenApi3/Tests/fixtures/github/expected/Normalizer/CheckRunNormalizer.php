@@ -102,10 +102,7 @@ class CheckRunNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setCompletedAt(null);
         }
         if (\array_key_exists('output', $data)) {
-            $value = $this->denormalizer->denormalize($data['output'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunOutput::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunOutput) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunOutput, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['output'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunOutput::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunOutput::class, 'CheckRunOutput');
             $object->setOutput($value);
             unset($data['output']);
         }
@@ -114,10 +111,7 @@ class CheckRunNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['name']);
         }
         if (\array_key_exists('check_suite', $data) && $data['check_suite'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['check_suite'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunCheckSuite::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunCheckSuite) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunCheckSuite, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['check_suite'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunCheckSuite::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunCheckSuite::class, 'CheckRunCheckSuite');
             $object->setCheckSuite($value_1);
             unset($data['check_suite']);
         }
@@ -125,10 +119,7 @@ class CheckRunNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setCheckSuite(null);
         }
         if (\array_key_exists('app', $data) && $data['app'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunApp::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunApp, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunApp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckRunApp::class, 'CheckRunApp');
             $object->setApp($value_2);
             unset($data['app']);
         }

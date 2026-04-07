@@ -52,10 +52,7 @@ class KubernetesOptionsOptionsNormalizer implements DenormalizerInterface, Norma
             $values = [];
             if (\is_array($data['regions'])) {
                 foreach ($data['regions'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesRegion::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesRegion) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesRegion, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesRegion::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesRegion::class, 'KubernetesRegion');
                     $values[] = $value_1;
                 }
             }
@@ -66,10 +63,7 @@ class KubernetesOptionsOptionsNormalizer implements DenormalizerInterface, Norma
             $values_1 = [];
             if (\is_array($data['versions'])) {
                 foreach ($data['versions'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion::class, 'KubernetesVersion');
                     $values_1[] = $value_3;
                 }
             }
@@ -80,10 +74,7 @@ class KubernetesOptionsOptionsNormalizer implements DenormalizerInterface, Norma
             $values_2 = [];
             if (\is_array($data['sizes'])) {
                 foreach ($data['sizes'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesSize::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesSize) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesSize, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesSize::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesSize::class, 'KubernetesSize');
                     $values_2[] = $value_5;
                 }
             }

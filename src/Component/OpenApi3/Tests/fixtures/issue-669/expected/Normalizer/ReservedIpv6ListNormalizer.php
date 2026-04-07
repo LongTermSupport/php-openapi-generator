@@ -52,10 +52,7 @@ class ReservedIpv6ListNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['reserved_ipv6s'])) {
                 foreach ($data['reserved_ipv6s'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIpv6ListReservedIpv6sItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIpv6ListReservedIpv6sItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIpv6ListReservedIpv6sItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIpv6ListReservedIpv6sItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIpv6ListReservedIpv6sItem::class, 'ReservedIpv6ListReservedIpv6sItem');
                     $values[] = $value_1;
                 }
             }

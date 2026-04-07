@@ -73,10 +73,7 @@ class AppsImageSourceSpecNormalizer implements DenormalizerInterface, Normalizer
             unset($data['digest']);
         }
         if (\array_key_exists('deploy_on_push', $data)) {
-            $value = $this->denormalizer->denormalize($data['deploy_on_push'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpecDeployOnPush::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpecDeployOnPush) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpecDeployOnPush, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['deploy_on_push'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpecDeployOnPush::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpecDeployOnPush::class, 'AppsImageSourceSpecDeployOnPush');
             $object->setDeployOnPush($value);
             unset($data['deploy_on_push']);
         }

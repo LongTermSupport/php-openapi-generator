@@ -68,10 +68,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             unset($data['full_name']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemOwner::class, 'RepoSearchResultItemOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -365,10 +362,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             unset($data['disabled']);
         }
         if (\array_key_exists('license', $data) && $data['license'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemLicense::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemLicense) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemLicense, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemLicense::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemLicense::class, 'RepoSearchResultItemLicense');
             $object->setLicense($value_2);
             unset($data['license']);
         }
@@ -376,10 +370,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             $object->setLicense(null);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemPermissions::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemPermissions, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepoSearchResultItemPermissions::class, 'RepoSearchResultItemPermissions');
             $object->setPermissions($value_3);
             unset($data['permissions']);
         }
@@ -387,10 +378,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
             $values_1 = [];
             if (\is_array($data['text_matches'])) {
                 foreach ($data['text_matches'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'SearchResultTextMatchesItem');
                     $values_1[] = $value_5;
                 }
             }

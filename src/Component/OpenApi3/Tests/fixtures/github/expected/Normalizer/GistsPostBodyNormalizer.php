@@ -59,10 +59,7 @@ class GistsPostBodyNormalizer implements DenormalizerInterface, NormalizerInterf
             $values = [];
             if (\is_array($data['files'])) {
                 foreach ($data['files'] as $key => $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsPostBodyFilesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsPostBodyFilesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsPostBodyFilesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsPostBodyFilesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsPostBodyFilesItem::class, 'GistsPostBodyFilesItem');
                     $values[(string) $key] = $value_1;
                 }
             }

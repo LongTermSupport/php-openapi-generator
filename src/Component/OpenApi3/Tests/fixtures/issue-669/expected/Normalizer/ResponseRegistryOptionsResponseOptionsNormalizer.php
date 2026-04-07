@@ -62,10 +62,7 @@ class ResponseRegistryOptionsResponseOptionsNormalizer implements DenormalizerIn
             $values_1 = [];
             if (\is_array($data['subscription_tiers'])) {
                 foreach ($data['subscription_tiers'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem::class, 'ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem');
                     $values_1[] = $value_2;
                 }
             }

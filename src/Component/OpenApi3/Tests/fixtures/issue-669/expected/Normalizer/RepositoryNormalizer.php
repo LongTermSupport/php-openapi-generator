@@ -57,10 +57,7 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             unset($data['name']);
         }
         if (\array_key_exists('latest_tag', $data)) {
-            $value = $this->denormalizer->denormalize($data['latest_tag'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['latest_tag'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryTag::class, 'RepositoryTag');
             $object->setLatestTag($value);
             unset($data['latest_tag']);
         }

@@ -56,10 +56,7 @@ class ReposOwnerRepoHooksPostBodyNormalizer implements DenormalizerInterface, No
             unset($data['name']);
         }
         if (\array_key_exists('config', $data)) {
-            $value = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoHooksPostBodyConfig::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoHooksPostBodyConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoHooksPostBodyConfig, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoHooksPostBodyConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoHooksPostBodyConfig::class, 'ReposOwnerRepoHooksPostBodyConfig');
             $object->setConfig($value);
             unset($data['config']);
         }

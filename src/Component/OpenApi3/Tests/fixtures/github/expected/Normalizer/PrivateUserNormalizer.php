@@ -204,10 +204,7 @@ class PrivateUserNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['two_factor_authentication']);
         }
         if (\array_key_exists('plan', $data)) {
-            $value = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PrivateUserPlan::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PrivateUserPlan) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PrivateUserPlan, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PrivateUserPlan::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PrivateUserPlan::class, 'PrivateUserPlan');
             $object->setPlan($value);
             unset($data['plan']);
         }

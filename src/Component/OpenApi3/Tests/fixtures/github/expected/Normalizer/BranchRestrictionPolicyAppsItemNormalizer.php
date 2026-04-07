@@ -64,10 +64,7 @@ class BranchRestrictionPolicyAppsItemNormalizer implements DenormalizerInterface
             unset($data['node_id']);
         }
         if (\array_key_exists('owner', $data)) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemOwner::class, 'BranchRestrictionPolicyAppsItemOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -96,10 +93,7 @@ class BranchRestrictionPolicyAppsItemNormalizer implements DenormalizerInterface
             unset($data['updated_at']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemPermissions::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemPermissions, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchRestrictionPolicyAppsItemPermissions::class, 'BranchRestrictionPolicyAppsItemPermissions');
             $object->setPermissions($value_1);
             unset($data['permissions']);
         }

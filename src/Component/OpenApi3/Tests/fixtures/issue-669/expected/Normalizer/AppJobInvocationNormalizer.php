@@ -65,10 +65,7 @@ class AppJobInvocationNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['phase']);
         }
         if (\array_key_exists('trigger', $data)) {
-            $value = $this->denormalizer->denormalize($data['trigger'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTrigger::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTrigger) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTrigger, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['trigger'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTrigger::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTrigger::class, 'AppJobInvocationTrigger');
             $object->setTrigger($value);
             unset($data['trigger']);
         }

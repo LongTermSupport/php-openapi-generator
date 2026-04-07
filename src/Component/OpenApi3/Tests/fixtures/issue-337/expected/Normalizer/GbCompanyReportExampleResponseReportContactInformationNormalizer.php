@@ -49,10 +49,7 @@ class GbCompanyReportExampleResponseReportContactInformationNormalizer implement
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('mainAddress', $data)) {
-            $value = $this->denormalizer->denormalize($data['mainAddress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationMainAddress::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationMainAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationMainAddress, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mainAddress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationMainAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationMainAddress::class, 'GbCompanyReportExampleResponseReportContactInformationMainAddress');
             $object->setMainAddress($value);
             unset($data['mainAddress']);
         }
@@ -60,10 +57,7 @@ class GbCompanyReportExampleResponseReportContactInformationNormalizer implement
             $values = [];
             if (\is_array($data['otherAddresses'])) {
                 foreach ($data['otherAddresses'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem::class, 'GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem');
                     $values[] = $value_2;
                 }
             }

@@ -61,10 +61,7 @@ class CreateFreshInvestigationRequestSearchCriteriaNormalizer implements Denorma
             unset($data['telephoneNumber']);
         }
         if (\array_key_exists('address', $data)) {
-            $value = $this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteriaAddress::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteriaAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteriaAddress, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteriaAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CreateFreshInvestigationRequestSearchCriteriaAddress::class, 'CreateFreshInvestigationRequestSearchCriteriaAddress');
             $object->setAddress($value);
             unset($data['address']);
         }

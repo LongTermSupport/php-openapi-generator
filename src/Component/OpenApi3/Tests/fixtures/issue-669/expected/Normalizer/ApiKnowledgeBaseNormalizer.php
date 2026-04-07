@@ -69,10 +69,7 @@ class ApiKnowledgeBaseNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['is_public']);
         }
         if (\array_key_exists('last_indexing_job', $data)) {
-            $value = $this->denormalizer->denormalize($data['last_indexing_job'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['last_indexing_job'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiIndexingJob::class, 'ApiIndexingJob');
             $object->setLastIndexingJob($value);
             unset($data['last_indexing_job']);
         }

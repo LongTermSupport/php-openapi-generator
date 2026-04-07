@@ -52,10 +52,7 @@ class AddRulesRequestNormalizer implements DenormalizerInterface, NormalizerInte
             $values = [];
             if (\is_array($data['add'])) {
                 foreach ($data['add'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RuleNoId::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RuleNoId) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RuleNoId, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RuleNoId::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\RuleNoId::class, 'RuleNoId');
                     $values[] = $value_1;
                 }
             }

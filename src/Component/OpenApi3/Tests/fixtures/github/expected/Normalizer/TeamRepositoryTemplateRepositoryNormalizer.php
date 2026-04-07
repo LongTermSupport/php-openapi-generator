@@ -68,10 +68,7 @@ class TeamRepositoryTemplateRepositoryNormalizer implements DenormalizerInterfac
             unset($data['full_name']);
         }
         if (\array_key_exists('owner', $data)) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryOwner::class, 'TeamRepositoryTemplateRepositoryOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -350,10 +347,7 @@ class TeamRepositoryTemplateRepositoryNormalizer implements DenormalizerInterfac
             unset($data['updated_at']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryPermissions::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryPermissions, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepositoryTemplateRepositoryPermissions::class, 'TeamRepositoryTemplateRepositoryPermissions');
             $object->setPermissions($value_2);
             unset($data['permissions']);
         }

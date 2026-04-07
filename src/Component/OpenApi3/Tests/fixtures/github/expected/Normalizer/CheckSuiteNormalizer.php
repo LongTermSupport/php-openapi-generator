@@ -91,10 +91,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $values = [];
             if (\is_array($data['pull_requests'])) {
                 foreach ($data['pull_requests'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimal::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimal) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimal, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimal::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMinimal::class, 'PullRequestMinimal');
                     $values[] = $value_1;
                 }
             }
@@ -105,10 +102,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setPullRequests(null);
         }
         if (\array_key_exists('app', $data) && $data['app'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckSuiteApp::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckSuiteApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckSuiteApp, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckSuiteApp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CheckSuiteApp::class, 'CheckSuiteApp');
             $object->setApp($value_2);
             unset($data['app']);
         }
@@ -116,10 +110,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setApp(null);
         }
         if (\array_key_exists('repository', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'MinimalRepository');
             $object->setRepository($value_3);
             unset($data['repository']);
         }
@@ -138,10 +129,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('head_commit', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['head_commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['head_commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommit::class, 'SimpleCommit');
             $object->setHeadCommit($value_4);
             unset($data['head_commit']);
         }

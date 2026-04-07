@@ -55,10 +55,7 @@ class ReposOwnerRepoGitTreesPostBodyNormalizer implements DenormalizerInterface,
             $values = [];
             if (\is_array($data['tree'])) {
                 foreach ($data['tree'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTreesPostBodyTreeItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTreesPostBodyTreeItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTreesPostBodyTreeItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTreesPostBodyTreeItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTreesPostBodyTreeItem::class, 'ReposOwnerRepoGitTreesPostBodyTreeItem');
                     $values[] = $value_1;
                 }
             }

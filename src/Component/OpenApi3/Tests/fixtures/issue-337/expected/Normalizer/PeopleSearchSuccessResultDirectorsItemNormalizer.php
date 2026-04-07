@@ -65,18 +65,12 @@ class PeopleSearchSuccessResultDirectorsItemNormalizer implements DenormalizerIn
             unset($data['country']);
         }
         if (\array_key_exists('company', $data)) {
-            $value = $this->denormalizer->denormalize($data['company'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemCompany::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemCompany) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemCompany, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['company'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemCompany::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemCompany::class, 'PeopleSearchSuccessResultDirectorsItemCompany');
             $object->setCompany($value);
             unset($data['company']);
         }
         if (\array_key_exists('address', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemAddress::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemAddress, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\PeopleSearchSuccessResultDirectorsItemAddress::class, 'PeopleSearchSuccessResultDirectorsItemAddress');
             $object->setAddress($value_1);
             unset($data['address']);
         }

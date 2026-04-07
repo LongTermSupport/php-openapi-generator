@@ -87,18 +87,12 @@ class DatabaseReplicaReadNormalizer implements DenormalizerInterface, Normalizer
             unset($data['private_network_uuid']);
         }
         if (\array_key_exists('connection', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadConnection::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadConnection, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadConnection::class, 'DatabaseReplicaReadConnection');
             $object->setConnection($value_1);
             unset($data['connection']);
         }
         if (\array_key_exists('private_connection', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadPrivateConnection::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadPrivateConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadPrivateConnection, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadPrivateConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseReplicaReadPrivateConnection::class, 'DatabaseReplicaReadPrivateConnection');
             $object->setPrivateConnection($value_2);
             unset($data['private_connection']);
         }

@@ -53,10 +53,7 @@ class CompletedFreshInvestigationNormalizer implements DenormalizerInterface, No
             unset($data['chargeReference']);
         }
         if (\array_key_exists('contactDetails', $data)) {
-            $value = $this->denormalizer->denormalize($data['contactDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationContactDetails::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationContactDetails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationContactDetails, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['contactDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationContactDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationContactDetails::class, 'CompletedFreshInvestigationContactDetails');
             $object->setContactDetails($value);
             unset($data['contactDetails']);
         }
@@ -77,10 +74,7 @@ class CompletedFreshInvestigationNormalizer implements DenormalizerInterface, No
             unset($data['reportDate']);
         }
         if (\array_key_exists('searchCriteria', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['searchCriteria'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteria::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteria) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteria, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['searchCriteria'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteria::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteria::class, 'CompletedFreshInvestigationSearchCriteria');
             $object->setSearchCriteria($value_1);
             unset($data['searchCriteria']);
         }
@@ -95,10 +89,7 @@ class CompletedFreshInvestigationNormalizer implements DenormalizerInterface, No
             unset($data['sections']);
         }
         if (\array_key_exists('status', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationStatus::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationStatus, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationStatus::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationStatus::class, 'CompletedFreshInvestigationStatus');
             $object->setStatus($value_3);
             unset($data['status']);
         }

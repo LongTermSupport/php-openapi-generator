@@ -67,10 +67,7 @@ class ProjectsColumnsCardsCardIdMovesPostResponse503Normalizer implements Denorm
             $values = [];
             if (\is_array($data['errors'])) {
                 foreach ($data['errors'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem::class, 'ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem');
                     $values[] = $value_1;
                 }
             }

@@ -92,10 +92,7 @@ class ExpansionsNormalizer implements DenormalizerInterface, NormalizerInterface
             $values_4 = [];
             if (\is_array($data['polls'])) {
                 foreach ($data['polls'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Poll::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Poll) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Poll, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Poll::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Poll::class, 'Poll');
                     $values_4[] = $value_5;
                 }
             }

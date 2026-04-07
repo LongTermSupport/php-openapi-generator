@@ -115,10 +115,7 @@ class ImportNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $values = [];
             if (\is_array($data['project_choices'])) {
                 foreach ($data['project_choices'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ImportProjectChoicesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ImportProjectChoicesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ImportProjectChoicesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ImportProjectChoicesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ImportProjectChoicesItem::class, 'ImportProjectChoicesItem');
                     $values[] = $value_1;
                 }
             }

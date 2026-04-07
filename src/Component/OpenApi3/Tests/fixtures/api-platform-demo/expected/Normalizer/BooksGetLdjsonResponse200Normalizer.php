@@ -52,10 +52,7 @@ class BooksGetLdjsonResponse200Normalizer implements DenormalizerInterface, Norm
             $values = [];
             if (\is_array($data['hydra:member'])) {
                 foreach ($data['hydra:member'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead::class, 'BookJsonldBookRead');
                     $values[] = $value_1;
                 }
             }
@@ -67,18 +64,12 @@ class BooksGetLdjsonResponse200Normalizer implements DenormalizerInterface, Norm
             unset($data['hydra:totalItems']);
         }
         if (\array_key_exists('hydra:view', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['hydra:view'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraView::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraView) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraView, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['hydra:view'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraView::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraView::class, 'BooksGetLdjsonResponse200HydraView');
             $object->setHydraView($value_2);
             unset($data['hydra:view']);
         }
         if (\array_key_exists('hydra:search', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['hydra:search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraSearch::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraSearch) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraSearch, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['hydra:search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraSearch::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200HydraSearch::class, 'BooksGetLdjsonResponse200HydraSearch');
             $object->setHydraSearch($value_3);
             unset($data['hydra:search']);
         }

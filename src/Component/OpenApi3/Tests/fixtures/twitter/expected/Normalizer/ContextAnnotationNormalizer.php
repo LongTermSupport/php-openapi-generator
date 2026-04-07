@@ -49,18 +49,12 @@ class ContextAnnotationNormalizer implements DenormalizerInterface, NormalizerIn
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('domain', $data)) {
-            $value = $this->denormalizer->denormalize($data['domain'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['domain'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationDomainFields::class, 'ContextAnnotationDomainFields');
             $object->setDomain($value);
             unset($data['domain']);
         }
         if (\array_key_exists('entity', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['entity'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['entity'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotationEntityFields::class, 'ContextAnnotationEntityFields');
             $object->setEntity($value_1);
             unset($data['entity']);
         }

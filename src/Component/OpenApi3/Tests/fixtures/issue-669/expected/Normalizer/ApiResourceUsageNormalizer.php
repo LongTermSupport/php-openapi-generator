@@ -52,10 +52,7 @@ class ApiResourceUsageNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['measurements'])) {
                 foreach ($data['measurements'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiUsageMeasurement::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiUsageMeasurement) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiUsageMeasurement, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiUsageMeasurement::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiUsageMeasurement::class, 'ApiUsageMeasurement');
                     $values[] = $value_1;
                 }
             }

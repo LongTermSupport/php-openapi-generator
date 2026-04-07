@@ -64,10 +64,7 @@ class BooksBookIdReviewsGetLdjsonResponse200HydraSearchNormalizer implements Den
             $values = [];
             if (\is_array($data['hydra:mapping'])) {
                 foreach ($data['hydra:mapping'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem::class, 'BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem');
                     $values[] = $value_1;
                 }
             }

@@ -56,10 +56,7 @@ class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $values = [];
             if (\is_array($data['child'])) {
                 foreach ($data['child'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child::class, 'Child');
                     $values[] = $value_1;
                 }
             }

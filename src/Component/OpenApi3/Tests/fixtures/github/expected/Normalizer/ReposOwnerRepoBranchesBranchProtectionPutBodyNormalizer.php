@@ -52,10 +52,7 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements Denorma
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoBranchesBranchProtectionPutBodyConstraint());
         }
         if (\array_key_exists('required_status_checks', $data) && $data['required_status_checks'] !== null) {
-            $value = $this->denormalizer->denormalize($data['required_status_checks'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['required_status_checks'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks::class, 'ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks');
             $object->setRequiredStatusChecks($value);
             unset($data['required_status_checks']);
         }
@@ -67,10 +64,7 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements Denorma
             unset($data['enforce_admins']);
         }
         if (\array_key_exists('required_pull_request_reviews', $data) && $data['required_pull_request_reviews'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['required_pull_request_reviews'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['required_pull_request_reviews'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews::class, 'ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews');
             $object->setRequiredPullRequestReviews($value_1);
             unset($data['required_pull_request_reviews']);
         }
@@ -78,10 +72,7 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements Denorma
             $object->setRequiredPullRequestReviews(null);
         }
         if (\array_key_exists('restrictions', $data) && $data['restrictions'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['restrictions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['restrictions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions::class, 'ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions');
             $object->setRestrictions($value_2);
             unset($data['restrictions']);
         }

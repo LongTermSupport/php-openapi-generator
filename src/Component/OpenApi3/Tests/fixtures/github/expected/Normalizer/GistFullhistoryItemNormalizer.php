@@ -60,10 +60,7 @@ class GistFullhistoryItemNormalizer implements DenormalizerInterface, Normalizer
             unset($data['version']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemUser::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemUser, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemUser::class, 'GistFullhistoryItemUser');
             $object->setUser($value);
             unset($data['user']);
         }
@@ -71,10 +68,7 @@ class GistFullhistoryItemNormalizer implements DenormalizerInterface, Normalizer
             $object->setUser(null);
         }
         if (\array_key_exists('change_status', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['change_status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemChangeStatus::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemChangeStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemChangeStatus, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['change_status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemChangeStatus::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistFullhistoryItemChangeStatus::class, 'GistFullhistoryItemChangeStatus');
             $object->setChangeStatus($value_1);
             unset($data['change_status']);
         }

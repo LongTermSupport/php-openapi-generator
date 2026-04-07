@@ -52,10 +52,7 @@ class OrgsOrgHooksHookIdPatchBodyNormalizer implements DenormalizerInterface, No
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgHooksHookIdPatchBodyConstraint());
         }
         if (\array_key_exists('config', $data)) {
-            $value = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig::class, 'OrgsOrgHooksHookIdPatchBodyConfig');
             $object->setConfig($value);
             unset($data['config']);
         }

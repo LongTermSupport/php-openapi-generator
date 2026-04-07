@@ -85,18 +85,12 @@ class UserMarketplacePurchaseNormalizer implements DenormalizerInterface, Normal
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('account', $data)) {
-            $value = $this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceAccount::class, 'MarketplaceAccount');
             $object->setAccount($value);
             unset($data['account']);
         }
         if (\array_key_exists('plan', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'MarketplaceListingPlan');
             $object->setPlan($value_1);
             unset($data['plan']);
         }

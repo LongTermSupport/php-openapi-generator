@@ -82,10 +82,7 @@ class OrgHookNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['active']);
         }
         if (\array_key_exists('config', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgHookConfig::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgHookConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgHookConfig, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgHookConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgHookConfig::class, 'OrgHookConfig');
             $object->setConfig($value_1);
             unset($data['config']);
         }

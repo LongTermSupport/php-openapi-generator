@@ -56,10 +56,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['verifiable_password_authentication']);
         }
         if (\array_key_exists('ssh_key_fingerprints', $data)) {
-            $value = $this->denormalizer->denormalize($data['ssh_key_fingerprints'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApiOverviewSshKeyFingerprints::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApiOverviewSshKeyFingerprints) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApiOverviewSshKeyFingerprints, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['ssh_key_fingerprints'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApiOverviewSshKeyFingerprints::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApiOverviewSshKeyFingerprints::class, 'ApiOverviewSshKeyFingerprints');
             $object->setSshKeyFingerprints($value);
             unset($data['ssh_key_fingerprints']);
         }

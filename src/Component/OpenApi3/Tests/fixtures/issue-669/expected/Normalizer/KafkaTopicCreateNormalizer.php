@@ -61,10 +61,7 @@ class KafkaTopicCreateNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['partition_count']);
         }
         if (\array_key_exists('config', $data)) {
-            $value = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'KafkaTopicConfig');
             $object->setConfig($value);
             unset($data['config']);
         }

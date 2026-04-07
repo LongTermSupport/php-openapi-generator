@@ -142,10 +142,7 @@ class ContentDetailNormalizer implements DenormalizerInterface, NormalizerInterf
             $values_7 = [];
             if (\is_array($data['outputs'])) {
                 foreach ($data['outputs'] as $value_7) {
-                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Output::class, 'json', $context);
-                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Output) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Output, got ' . get_debug_type($value_8));
-                    }
+                    $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Output::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Output::class, 'Output');
                     $values_7[] = $value_8;
                 }
             }

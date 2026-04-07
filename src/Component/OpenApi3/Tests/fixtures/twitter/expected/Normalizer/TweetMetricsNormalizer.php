@@ -53,18 +53,12 @@ class TweetMetricsNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['tweet_id']);
         }
         if (\array_key_exists('tweet', $data)) {
-            $value = $this->denormalizer->denormalize($data['tweet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['tweet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetInteractionMetrics::class, 'TweetInteractionMetrics');
             $object->setTweet($value);
             unset($data['tweet']);
         }
         if (\array_key_exists('video', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['video'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['video'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\VideoMetrics::class, 'VideoMetrics');
             $object->setVideo($value_1);
             unset($data['video']);
         }

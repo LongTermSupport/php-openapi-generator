@@ -61,10 +61,7 @@ class ClusterlintResultsDiagnosticsItemNormalizer implements DenormalizerInterfa
             unset($data['message']);
         }
         if (\array_key_exists('object', $data)) {
-            $value = $this->denormalizer->denormalize($data['object'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItemObject::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItemObject) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItemObject, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['object'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItemObject::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItemObject::class, 'ClusterlintResultsDiagnosticsItemObject');
             $object->setObject($value);
             unset($data['object']);
         }

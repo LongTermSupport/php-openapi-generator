@@ -92,10 +92,7 @@ class LoadBalancerNormalizer implements DenormalizerInterface, NormalizerInterfa
             $values = [];
             if (\is_array($data['forwarding_rules'])) {
                 foreach ($data['forwarding_rules'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule::class, 'ForwardingRule');
                     $values[] = $value_1;
                 }
             }
@@ -103,18 +100,12 @@ class LoadBalancerNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['forwarding_rules']);
         }
         if (\array_key_exists('health_check', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\HealthCheck::class, 'HealthCheck');
             $object->setHealthCheck($value_2);
             unset($data['health_check']);
         }
         if (\array_key_exists('sticky_sessions', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['sticky_sessions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['sticky_sessions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\StickySessions::class, 'StickySessions');
             $object->setStickySessions($value_3);
             unset($data['sticky_sessions']);
         }
@@ -143,10 +134,7 @@ class LoadBalancerNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['disable_lets_encrypt_dns_records']);
         }
         if (\array_key_exists('firewall', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['firewall'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['firewall'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LbFirewall::class, 'LbFirewall');
             $object->setFirewall($value_4);
             unset($data['firewall']);
         }
@@ -166,10 +154,7 @@ class LoadBalancerNormalizer implements DenormalizerInterface, NormalizerInterfa
             $values_1 = [];
             if (\is_array($data['domains'])) {
                 foreach ($data['domains'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Domains::class, 'Domains');
                     $values_1[] = $value_6;
                 }
             }
@@ -177,10 +162,7 @@ class LoadBalancerNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['domains']);
         }
         if (\array_key_exists('glb_settings', $data)) {
-            $value_7 = $this->denormalizer->denormalize($data['glb_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['glb_settings'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GlbSettings::class, 'GlbSettings');
             $object->setGlbSettings($value_7);
             unset($data['glb_settings']);
         }

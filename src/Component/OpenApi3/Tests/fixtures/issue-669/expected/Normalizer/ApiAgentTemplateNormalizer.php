@@ -60,10 +60,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['guardrails'])) {
                 foreach ($data['guardrails'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplateGuardrail::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplateGuardrail) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplateGuardrail, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplateGuardrail::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAgentTemplateGuardrail::class, 'ApiAgentTemplateGuardrail');
                     $values[] = $value_1;
                 }
             }
@@ -82,10 +79,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
             $values_1 = [];
             if (\is_array($data['knowledge_bases'])) {
                 foreach ($data['knowledge_bases'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase::class, 'ApiKnowledgeBase');
                     $values_1[] = $value_3;
                 }
             }
@@ -101,10 +95,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['max_tokens']);
         }
         if (\array_key_exists('model', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['model'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['model'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiModel::class, 'ApiModel');
             $object->setModel($value_4);
             unset($data['model']);
         }

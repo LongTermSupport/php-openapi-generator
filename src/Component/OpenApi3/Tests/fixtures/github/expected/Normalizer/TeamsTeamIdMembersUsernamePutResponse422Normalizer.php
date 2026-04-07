@@ -59,10 +59,7 @@ class TeamsTeamIdMembersUsernamePutResponse422Normalizer implements Denormalizer
             $values = [];
             if (\is_array($data['errors'])) {
                 foreach ($data['errors'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembersUsernamePutResponse422ErrorsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembersUsernamePutResponse422ErrorsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembersUsernamePutResponse422ErrorsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembersUsernamePutResponse422ErrorsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembersUsernamePutResponse422ErrorsItem::class, 'TeamsTeamIdMembersUsernamePutResponse422ErrorsItem');
                     $values[] = $value_1;
                 }
             }

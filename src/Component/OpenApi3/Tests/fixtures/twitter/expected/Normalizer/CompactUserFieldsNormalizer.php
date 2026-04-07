@@ -73,10 +73,7 @@ class CompactUserFieldsNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['verified']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $value = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'UserWithheld');
             $object->setWithheld($value);
             unset($data['withheld']);
         }

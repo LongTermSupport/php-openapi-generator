@@ -56,10 +56,7 @@ class ProtectedBranchPullRequestReviewNormalizer implements DenormalizerInterfac
             unset($data['url']);
         }
         if (\array_key_exists('dismissal_restrictions', $data)) {
-            $value = $this->denormalizer->denormalize($data['dismissal_restrictions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReviewDismissalRestrictions::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReviewDismissalRestrictions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReviewDismissalRestrictions, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['dismissal_restrictions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReviewDismissalRestrictions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReviewDismissalRestrictions::class, 'ProtectedBranchPullRequestReviewDismissalRestrictions');
             $object->setDismissalRestrictions($value);
             unset($data['dismissal_restrictions']);
         }

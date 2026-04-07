@@ -56,10 +56,7 @@ class BranchShortNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['name']);
         }
         if (\array_key_exists('commit', $data)) {
-            $value = $this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchShortCommit::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchShortCommit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchShortCommit, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchShortCommit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchShortCommit::class, 'BranchShortCommit');
             $object->setCommit($value);
             unset($data['commit']);
         }

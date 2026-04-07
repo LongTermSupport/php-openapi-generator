@@ -60,10 +60,7 @@ class SchemaPermissionSetDetailNormalizer implements DenormalizerInterface, Norm
             $values = [];
             if (\is_array($data['userRolesRights'])) {
                 foreach ($data['userRolesRights'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfMetadataRight::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfMetadataRight) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfMetadataRight, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfMetadataRight::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfMetadataRight::class, 'PermissionUserRoleRightsOfMetadataRight');
                     $values[] = $value_1;
                 }
             }
@@ -77,10 +74,7 @@ class SchemaPermissionSetDetailNormalizer implements DenormalizerInterface, Norm
             $values_1 = [];
             if (\is_array($data['userRolesPermissionSetRights'])) {
                 foreach ($data['userRolesPermissionSetRights'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfPermissionSetRight::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfPermissionSetRight) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfPermissionSetRight, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfPermissionSetRight::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionUserRoleRightsOfPermissionSetRight::class, 'PermissionUserRoleRightsOfPermissionSetRight');
                     $values_1[] = $value_3;
                 }
             }

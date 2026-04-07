@@ -72,10 +72,7 @@ class AddonsDimensionWithPriceNormalizer implements DenormalizerInterface, Norma
             $values = [];
             if (\is_array($data['volumes'])) {
                 foreach ($data['volumes'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionVolumeWithPrice::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionVolumeWithPrice) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionVolumeWithPrice, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionVolumeWithPrice::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionVolumeWithPrice::class, 'AddonsDimensionVolumeWithPrice');
                     $values[] = $value_1;
                 }
             }

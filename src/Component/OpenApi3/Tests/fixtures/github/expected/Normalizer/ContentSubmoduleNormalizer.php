@@ -92,10 +92,7 @@ class ContentSubmoduleNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['download_url']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSubmoduleLinks::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSubmoduleLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSubmoduleLinks, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSubmoduleLinks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentSubmoduleLinks::class, 'ContentSubmoduleLinks');
             $object->setLinks($value);
             unset($data['_links']);
         }

@@ -52,10 +52,7 @@ class ResponseBillingInsightsNormalizer implements DenormalizerInterface, Normal
             $values = [];
             if (\is_array($data['data_points'])) {
                 foreach ($data['data_points'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\BillingDataPoint::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\BillingDataPoint) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\BillingDataPoint, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\BillingDataPoint::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\BillingDataPoint::class, 'BillingDataPoint');
                     $values[] = $value_1;
                 }
             }

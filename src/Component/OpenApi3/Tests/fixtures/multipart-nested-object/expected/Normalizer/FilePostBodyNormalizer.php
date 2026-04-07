@@ -56,10 +56,7 @@ class FilePostBodyNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['fichier']);
         }
         if (\array_key_exists('item', $data)) {
-            $value = $this->denormalizer->denormalize($data['item'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBodyItem::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBodyItem) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBodyItem, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['item'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBodyItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBodyItem::class, 'FilePostBodyItem');
             $object->setItem($value);
             unset($data['item']);
         }

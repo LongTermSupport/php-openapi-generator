@@ -91,10 +91,7 @@ class ContentTreeNormalizer implements DenormalizerInterface, NormalizerInterfac
             $values = [];
             if (\is_array($data['entries'])) {
                 foreach ($data['entries'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeEntriesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeEntriesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeEntriesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeEntriesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeEntriesItem::class, 'ContentTreeEntriesItem');
                     $values[] = $value_1;
                 }
             }
@@ -102,10 +99,7 @@ class ContentTreeNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['entries']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeLinks::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeLinks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeLinks, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeLinks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ContentTreeLinks::class, 'ContentTreeLinks');
             $object->setLinks($value_2);
             unset($data['_links']);
         }

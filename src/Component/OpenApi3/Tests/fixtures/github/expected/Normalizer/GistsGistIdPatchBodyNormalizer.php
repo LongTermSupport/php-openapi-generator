@@ -59,10 +59,7 @@ class GistsGistIdPatchBodyNormalizer implements DenormalizerInterface, Normalize
             $values = [];
             if (\is_array($data['files'])) {
                 foreach ($data['files'] as $key => $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdPatchBodyFilesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdPatchBodyFilesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdPatchBodyFilesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdPatchBodyFilesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GistsGistIdPatchBodyFilesItem::class, 'GistsGistIdPatchBodyFilesItem');
                     $values[(string) $key] = $value_1;
                 }
             }

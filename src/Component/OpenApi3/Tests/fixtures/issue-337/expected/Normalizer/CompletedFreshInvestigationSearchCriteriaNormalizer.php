@@ -53,10 +53,7 @@ class CompletedFreshInvestigationSearchCriteriaNormalizer implements Denormalize
             unset($data['additionalInfo']);
         }
         if (\array_key_exists('address', $data)) {
-            $value = $this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteriaAddress::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteriaAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteriaAddress, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteriaAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompletedFreshInvestigationSearchCriteriaAddress::class, 'CompletedFreshInvestigationSearchCriteriaAddress');
             $object->setAddress($value);
             unset($data['address']);
         }

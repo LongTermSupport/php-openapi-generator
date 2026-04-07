@@ -98,10 +98,7 @@ class SizeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             $values_1 = [];
             if (\is_array($data['disk_info'])) {
                 foreach ($data['disk_info'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo::class, 'DiskInfo');
                     $values_1[] = $value_2;
                 }
             }
@@ -109,10 +106,7 @@ class SizeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['disk_info']);
         }
         if (\array_key_exists('gpu_info', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['gpu_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['gpu_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'GpuInfo');
             $object->setGpuInfo($value_3);
             unset($data['gpu_info']);
         }

@@ -52,10 +52,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommunityProfileFilesConstraint());
         }
         if (\array_key_exists('code_of_conduct', $data) && $data['code_of_conduct'] !== null) {
-            $value = $this->denormalizer->denormalize($data['code_of_conduct'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesCodeOfConduct::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesCodeOfConduct) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesCodeOfConduct, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['code_of_conduct'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesCodeOfConduct::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesCodeOfConduct::class, 'CommunityProfileFilesCodeOfConduct');
             $object->setCodeOfConduct($value);
             unset($data['code_of_conduct']);
         }
@@ -63,10 +60,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setCodeOfConduct(null);
         }
         if (\array_key_exists('license', $data) && $data['license'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesLicense::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesLicense) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesLicense, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesLicense::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesLicense::class, 'CommunityProfileFilesLicense');
             $object->setLicense($value_1);
             unset($data['license']);
         }
@@ -74,10 +68,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setLicense(null);
         }
         if (\array_key_exists('contributing', $data) && $data['contributing'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['contributing'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesContributing::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesContributing) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesContributing, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['contributing'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesContributing::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesContributing::class, 'CommunityProfileFilesContributing');
             $object->setContributing($value_2);
             unset($data['contributing']);
         }
@@ -85,10 +76,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setContributing(null);
         }
         if (\array_key_exists('readme', $data) && $data['readme'] !== null) {
-            $value_3 = $this->denormalizer->denormalize($data['readme'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesReadme::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesReadme) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesReadme, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['readme'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesReadme::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesReadme::class, 'CommunityProfileFilesReadme');
             $object->setReadme($value_3);
             unset($data['readme']);
         }
@@ -96,10 +84,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setReadme(null);
         }
         if (\array_key_exists('issue_template', $data) && $data['issue_template'] !== null) {
-            $value_4 = $this->denormalizer->denormalize($data['issue_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesIssueTemplate::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesIssueTemplate) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesIssueTemplate, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['issue_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesIssueTemplate::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesIssueTemplate::class, 'CommunityProfileFilesIssueTemplate');
             $object->setIssueTemplate($value_4);
             unset($data['issue_template']);
         }
@@ -107,10 +92,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setIssueTemplate(null);
         }
         if (\array_key_exists('pull_request_template', $data) && $data['pull_request_template'] !== null) {
-            $value_5 = $this->denormalizer->denormalize($data['pull_request_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesPullRequestTemplate::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesPullRequestTemplate) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesPullRequestTemplate, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['pull_request_template'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesPullRequestTemplate::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFilesPullRequestTemplate::class, 'CommunityProfileFilesPullRequestTemplate');
             $object->setPullRequestTemplate($value_5);
             unset($data['pull_request_template']);
         }

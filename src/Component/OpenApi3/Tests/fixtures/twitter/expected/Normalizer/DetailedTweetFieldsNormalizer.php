@@ -49,10 +49,7 @@ class DetailedTweetFieldsNormalizer implements DenormalizerInterface, Normalizer
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('stats', $data)) {
-            $value = $this->denormalizer->denormalize($data['stats'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['stats'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedTweetFieldsStats::class, 'DetailedTweetFieldsStats');
             $object->setStats($value);
             unset($data['stats']);
         }
@@ -60,10 +57,7 @@ class DetailedTweetFieldsNormalizer implements DenormalizerInterface, Normalizer
             $values = [];
             if (\is_array($data['context_annotation'])) {
                 foreach ($data['context_annotation'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\ContextAnnotation::class, 'ContextAnnotation');
                     $values[] = $value_2;
                 }
             }

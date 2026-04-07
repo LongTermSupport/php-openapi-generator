@@ -60,10 +60,7 @@ class PullRequestHeadNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['ref']);
         }
         if (\array_key_exists('repo', $data)) {
-            $value = $this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadRepo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadRepo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadRepo, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['repo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadRepo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadRepo::class, 'PullRequestHeadRepo');
             $object->setRepo($value);
             unset($data['repo']);
         }
@@ -72,10 +69,7 @@ class PullRequestHeadNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['sha']);
         }
         if (\array_key_exists('user', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadUser::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadUser, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestHeadUser::class, 'PullRequestHeadUser');
             $object->setUser($value_1);
             unset($data['user']);
         }

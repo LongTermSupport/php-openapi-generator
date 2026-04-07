@@ -61,10 +61,7 @@ class CompanySearchSuccessResultCompaniesItemNormalizer implements DenormalizerI
             unset($data['regNo']);
         }
         if (\array_key_exists('vatNo', $data)) {
-            $value = $this->denormalizer->denormalize($data['vatNo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemVatNo::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemVatNo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemVatNo, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['vatNo'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemVatNo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemVatNo::class, 'CompanySearchSuccessResultCompaniesItemVatNo');
             $object->setVatNo($value);
             unset($data['vatNo']);
         }
@@ -97,34 +94,22 @@ class CompanySearchSuccessResultCompaniesItemNormalizer implements DenormalizerI
             unset($data['activityCode']);
         }
         if (\array_key_exists('tradingNames', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['tradingNames'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemTradingNames::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemTradingNames) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemTradingNames, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['tradingNames'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemTradingNames::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemTradingNames::class, 'CompanySearchSuccessResultCompaniesItemTradingNames');
             $object->setTradingNames($value_1);
             unset($data['tradingNames']);
         }
         if (\array_key_exists('address', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemAddress::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemAddress, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemAddress::class, 'CompanySearchSuccessResultCompaniesItemAddress');
             $object->setAddress($value_2);
             unset($data['address']);
         }
         if (\array_key_exists('dateOfLatestChange', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['dateOfLatestChange'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestChange::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestChange) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestChange, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['dateOfLatestChange'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestChange::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestChange::class, 'CompanySearchSuccessResultCompaniesItemDateOfLatestChange');
             $object->setDateOfLatestChange($value_3);
             unset($data['dateOfLatestChange']);
         }
         if (\array_key_exists('dateOfLatestCAccounts', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['dateOfLatestCAccounts'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestCAccounts::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestCAccounts) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestCAccounts, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['dateOfLatestCAccounts'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestCAccounts::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompanySearchSuccessResultCompaniesItemDateOfLatestCAccounts::class, 'CompanySearchSuccessResultCompaniesItemDateOfLatestCAccounts');
             $object->setDateOfLatestCAccounts($value_4);
             unset($data['dateOfLatestCAccounts']);
         }

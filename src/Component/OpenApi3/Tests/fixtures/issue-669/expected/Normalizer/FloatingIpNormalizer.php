@@ -53,10 +53,7 @@ class FloatingIpNormalizer implements DenormalizerInterface, NormalizerInterface
             unset($data['ip']);
         }
         if (\array_key_exists('region', $data)) {
-            $value = $this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpRegion::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpRegion) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpRegion, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpRegion::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpRegion::class, 'FloatingIpRegion');
             $object->setRegion($value);
             unset($data['region']);
         }

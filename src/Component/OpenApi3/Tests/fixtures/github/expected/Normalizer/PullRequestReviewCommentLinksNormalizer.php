@@ -52,26 +52,17 @@ class PullRequestReviewCommentLinksNormalizer implements DenormalizerInterface, 
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\PullRequestReviewCommentLinksConstraint());
         }
         if (\array_key_exists('self', $data)) {
-            $value = $this->denormalizer->denormalize($data['self'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksSelf::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksSelf) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksSelf, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['self'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksSelf::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksSelf::class, 'PullRequestReviewCommentLinksSelf');
             $object->setSelf($value);
             unset($data['self']);
         }
         if (\array_key_exists('html', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['html'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksHtml::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksHtml) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksHtml, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['html'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksHtml::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksHtml::class, 'PullRequestReviewCommentLinksHtml');
             $object->setHtml($value_1);
             unset($data['html']);
         }
         if (\array_key_exists('pull_request', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksPullRequest::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksPullRequest) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksPullRequest, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksPullRequest::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewCommentLinksPullRequest::class, 'PullRequestReviewCommentLinksPullRequest');
             $object->setPullRequest($value_2);
             unset($data['pull_request']);
         }

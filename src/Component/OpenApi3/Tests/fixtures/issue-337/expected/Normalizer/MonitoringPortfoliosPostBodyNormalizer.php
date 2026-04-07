@@ -57,10 +57,7 @@ class MonitoringPortfoliosPostBodyNormalizer implements DenormalizerInterface, N
             unset($data['isDefault']);
         }
         if (\array_key_exists('emails', $data)) {
-            $value = $this->denormalizer->denormalize($data['emails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPostBodyEmails::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPostBodyEmails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPostBodyEmails, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['emails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPostBodyEmails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPostBodyEmails::class, 'MonitoringPortfoliosPostBodyEmails');
             $object->setEmails($value);
             unset($data['emails']);
         }

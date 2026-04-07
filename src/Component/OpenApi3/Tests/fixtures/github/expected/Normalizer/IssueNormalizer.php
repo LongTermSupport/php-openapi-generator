@@ -100,10 +100,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['body']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueUser::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueUser, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueUser::class, 'IssueUser');
             $object->setUser($value);
             unset($data['user']);
         }
@@ -121,10 +118,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['labels']);
         }
         if (\array_key_exists('assignee', $data) && $data['assignee'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['assignee'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueAssignee::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueAssignee) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueAssignee, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['assignee'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueAssignee::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueAssignee::class, 'IssueAssignee');
             $object->setAssignee($value_2);
             unset($data['assignee']);
         }
@@ -135,10 +129,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             $values_1 = [];
             if (\is_array($data['assignees'])) {
                 foreach ($data['assignees'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'SimpleUser');
                     $values_1[] = $value_4;
                 }
             }
@@ -149,10 +140,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             $object->setAssignees(null);
         }
         if (\array_key_exists('milestone', $data) && $data['milestone'] !== null) {
-            $value_5 = $this->denormalizer->denormalize($data['milestone'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueMilestone::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueMilestone) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueMilestone, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['milestone'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueMilestone::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueMilestone::class, 'IssueMilestone');
             $object->setMilestone($value_5);
             unset($data['milestone']);
         }
@@ -172,10 +160,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['comments']);
         }
         if (\array_key_exists('pull_request', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePullRequest::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePullRequest) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePullRequest, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePullRequest::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePullRequest::class, 'IssuePullRequest');
             $object->setPullRequest($value_6);
             unset($data['pull_request']);
         }
@@ -195,10 +180,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['updated_at']);
         }
         if (\array_key_exists('closed_by', $data) && $data['closed_by'] !== null) {
-            $value_7 = $this->denormalizer->denormalize($data['closed_by'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueClosedBy::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueClosedBy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueClosedBy, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['closed_by'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueClosedBy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssueClosedBy::class, 'IssueClosedBy');
             $object->setClosedBy($value_7);
             unset($data['closed_by']);
         }
@@ -218,18 +200,12 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['timeline_url']);
         }
         if (\array_key_exists('repository', $data)) {
-            $value_8 = $this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context);
-            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository, got ' . get_debug_type($value_8));
-            }
+            $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['repository'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Repository::class, 'Repository');
             $object->setRepository($value_8);
             unset($data['repository']);
         }
         if (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] !== null) {
-            $value_9 = $this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePerformedViaGithubApp::class, 'json', $context);
-            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePerformedViaGithubApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePerformedViaGithubApp, got ' . get_debug_type($value_9));
-            }
+            $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePerformedViaGithubApp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\IssuePerformedViaGithubApp::class, 'IssuePerformedViaGithubApp');
             $object->setPerformedViaGithubApp($value_9);
             unset($data['performed_via_github_app']);
         }
@@ -241,10 +217,7 @@ class IssueNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             unset($data['author_association']);
         }
         if (\array_key_exists('reactions', $data)) {
-            $value_10 = $this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context);
-            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup, got ' . get_debug_type($value_10));
-            }
+            $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['reactions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReactionRollup::class, 'ReactionRollup');
             $object->setReactions($value_10);
             unset($data['reactions']);
         }

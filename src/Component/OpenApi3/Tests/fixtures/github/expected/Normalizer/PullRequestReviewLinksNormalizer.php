@@ -52,18 +52,12 @@ class PullRequestReviewLinksNormalizer implements DenormalizerInterface, Normali
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\PullRequestReviewLinksConstraint());
         }
         if (\array_key_exists('html', $data)) {
-            $value = $this->denormalizer->denormalize($data['html'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksHtml::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksHtml) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksHtml, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['html'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksHtml::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksHtml::class, 'PullRequestReviewLinksHtml');
             $object->setHtml($value);
             unset($data['html']);
         }
         if (\array_key_exists('pull_request', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksPullRequest::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksPullRequest) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksPullRequest, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['pull_request'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksPullRequest::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewLinksPullRequest::class, 'PullRequestReviewLinksPullRequest');
             $object->setPullRequest($value_1);
             unset($data['pull_request']);
         }

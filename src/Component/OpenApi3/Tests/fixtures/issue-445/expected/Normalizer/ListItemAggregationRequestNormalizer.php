@@ -76,10 +76,7 @@ class ListItemAggregationRequestNormalizer implements DenormalizerInterface, Nor
             $values_1 = [];
             if (\is_array($data['aggregationFilters'])) {
                 foreach ($data['aggregationFilters'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter::class, 'AggregationFilter');
                     $values_1[] = $value_2;
                 }
             }
@@ -131,10 +128,7 @@ class ListItemAggregationRequestNormalizer implements DenormalizerInterface, Nor
             $values_4 = [];
             if (\is_array($data['aggregators'])) {
                 foreach ($data['aggregators'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'AggregatorBase');
                     $values_4[] = $value_6;
                 }
             }

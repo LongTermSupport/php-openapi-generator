@@ -85,10 +85,7 @@ class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['hashed_token']);
         }
         if (\array_key_exists('app', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationApp::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationApp, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationApp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationApp::class, 'AuthorizationApp');
             $object->setApp($value_1);
             unset($data['app']);
         }
@@ -113,10 +110,7 @@ class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['fingerprint']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationUser::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationUser, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationUser::class, 'AuthorizationUser');
             $object->setUser($value_2);
             unset($data['user']);
         }
@@ -124,10 +118,7 @@ class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setUser(null);
         }
         if (\array_key_exists('installation', $data) && $data['installation'] !== null) {
-            $value_3 = $this->denormalizer->denormalize($data['installation'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationInstallation::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationInstallation) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationInstallation, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['installation'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationInstallation::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AuthorizationInstallation::class, 'AuthorizationInstallation');
             $object->setInstallation($value_3);
             unset($data['installation']);
         }

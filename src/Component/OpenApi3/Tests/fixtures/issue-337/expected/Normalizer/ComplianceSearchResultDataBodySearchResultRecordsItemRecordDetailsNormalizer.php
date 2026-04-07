@@ -84,10 +84,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsNormaliz
             $values = [];
             if (\is_array($data['iDs'])) {
                 foreach ($data['iDs'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem');
                     $values[] = $value_1;
                 }
             }
@@ -99,18 +96,12 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsNormaliz
             unset($data['lastUpdatedDate']);
         }
         if (\array_key_exists('name', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['name'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsName::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsName) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsName, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['name'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsName::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsName::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsName');
             $object->setName($value_2);
             unset($data['name']);
         }
         if (\array_key_exists('recordState', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['recordState'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordState::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordState) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordState, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['recordState'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordState::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordState::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordState');
             $object->setRecordState($value_3);
             unset($data['recordState']);
         }

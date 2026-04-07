@@ -63,10 +63,7 @@ class SearchNoResultsErrorNormalizer implements DenormalizerInterface, Normalize
             unset($data['companies']);
         }
         if (\array_key_exists('messages', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['messages'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\SearchNoResultsErrorMessages::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\SearchNoResultsErrorMessages) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\SearchNoResultsErrorMessages, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['messages'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\SearchNoResultsErrorMessages::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\SearchNoResultsErrorMessages::class, 'SearchNoResultsErrorMessages');
             $object->setMessages($value_1);
             unset($data['messages']);
         }

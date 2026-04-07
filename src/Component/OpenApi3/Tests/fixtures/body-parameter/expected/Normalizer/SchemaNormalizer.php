@@ -85,18 +85,12 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             unset($data['mapProperty']);
         }
         if (\array_key_exists('objectProperty', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['objectProperty'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\SchemaObjectProperty::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\SchemaObjectProperty) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\SchemaObjectProperty, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['objectProperty'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\SchemaObjectProperty::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\SchemaObjectProperty::class, 'SchemaObjectProperty');
             $object->setObjectProperty($value_2);
             unset($data['objectProperty']);
         }
         if (\array_key_exists('objectRefProperty', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['objectRefProperty'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['objectRefProperty'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema::class, 'Schema');
             $object->setObjectRefProperty($value_3);
             unset($data['objectRefProperty']);
         }

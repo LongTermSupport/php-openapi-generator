@@ -52,10 +52,7 @@ class ResponseLogsinksNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['sinks'])) {
                 foreach ($data['sinks'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\LogsinkSchema::class, 'LogsinkSchema');
                     $values[] = $value_1;
                 }
             }

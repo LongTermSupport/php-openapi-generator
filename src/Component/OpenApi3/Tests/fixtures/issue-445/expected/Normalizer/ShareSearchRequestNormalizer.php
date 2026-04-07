@@ -76,10 +76,7 @@ class ShareSearchRequestNormalizer implements DenormalizerInterface, NormalizerI
             $values_1 = [];
             if (\is_array($data['aggregationFilters'])) {
                 foreach ($data['aggregationFilters'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter::class, 'AggregationFilter');
                     $values_1[] = $value_2;
                 }
             }
@@ -97,10 +94,7 @@ class ShareSearchRequestNormalizer implements DenormalizerInterface, NormalizerI
             $values_2 = [];
             if (\is_array($data['sort'])) {
                 foreach ($data['sort'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo::class, 'SortInfo');
                     $values_2[] = $value_4;
                 }
             }
@@ -122,10 +116,7 @@ class ShareSearchRequestNormalizer implements DenormalizerInterface, NormalizerI
             $values_3 = [];
             if (\is_array($data['aggregators'])) {
                 foreach ($data['aggregators'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'AggregatorBase');
                     $values_3[] = $value_6;
                 }
             }

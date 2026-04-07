@@ -55,10 +55,7 @@ class PullRequestReviewRequestNormalizer implements DenormalizerInterface, Norma
             $values = [];
             if (\is_array($data['users'])) {
                 foreach ($data['users'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestUsersItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestUsersItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestUsersItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestUsersItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestUsersItem::class, 'PullRequestReviewRequestUsersItem');
                     $values[] = $value_1;
                 }
             }
@@ -69,10 +66,7 @@ class PullRequestReviewRequestNormalizer implements DenormalizerInterface, Norma
             $values_1 = [];
             if (\is_array($data['teams'])) {
                 foreach ($data['teams'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestTeamsItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestTeamsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestTeamsItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestTeamsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestReviewRequestTeamsItem::class, 'PullRequestReviewRequestTeamsItem');
                     $values_1[] = $value_3;
                 }
             }

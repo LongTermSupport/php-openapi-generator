@@ -49,10 +49,7 @@ class Endpoint3GetResponse200Normalizer implements DenormalizerInterface, Normal
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('field-3', $data)) {
-            $value = $this->denormalizer->denormalize($data['field-3'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200Field3::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200Field3) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200Field3, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['field-3'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200Field3::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200Field3::class, 'Endpoint3GetResponse200Field3');
             $object->setField3($value);
             unset($data['field-3']);
         }

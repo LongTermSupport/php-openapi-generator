@@ -69,10 +69,7 @@ class InvoiceSummaryNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['user_name']);
         }
         if (\array_key_exists('user_billing_address', $data)) {
-            $value = $this->denormalizer->denormalize($data['user_billing_address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryUserBillingAddress::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryUserBillingAddress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryUserBillingAddress, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user_billing_address'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryUserBillingAddress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryUserBillingAddress::class, 'InvoiceSummaryUserBillingAddress');
             $object->setUserBillingAddress($value);
             unset($data['user_billing_address']);
         }
@@ -85,34 +82,22 @@ class InvoiceSummaryNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['user_email']);
         }
         if (\array_key_exists('product_charges', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['product_charges'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryProductCharges::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryProductCharges) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryProductCharges, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['product_charges'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryProductCharges::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryProductCharges::class, 'InvoiceSummaryProductCharges');
             $object->setProductCharges($value_1);
             unset($data['product_charges']);
         }
         if (\array_key_exists('overages', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['overages'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryOverages::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryOverages) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryOverages, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['overages'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryOverages::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryOverages::class, 'InvoiceSummaryOverages');
             $object->setOverages($value_2);
             unset($data['overages']);
         }
         if (\array_key_exists('taxes', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['taxes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryTaxes::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryTaxes) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryTaxes, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['taxes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryTaxes::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryTaxes::class, 'InvoiceSummaryTaxes');
             $object->setTaxes($value_3);
             unset($data['taxes']);
         }
         if (\array_key_exists('credits_and_adjustments', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['credits_and_adjustments'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryCreditsAndAdjustments::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryCreditsAndAdjustments) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryCreditsAndAdjustments, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['credits_and_adjustments'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryCreditsAndAdjustments::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\InvoiceSummaryCreditsAndAdjustments::class, 'InvoiceSummaryCreditsAndAdjustments');
             $object->setCreditsAndAdjustments($value_4);
             unset($data['credits_and_adjustments']);
         }

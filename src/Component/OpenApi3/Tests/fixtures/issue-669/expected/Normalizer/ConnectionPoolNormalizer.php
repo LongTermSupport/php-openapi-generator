@@ -69,34 +69,22 @@ class ConnectionPoolNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['user']);
         }
         if (\array_key_exists('connection', $data)) {
-            $value = $this->denormalizer->denormalize($data['connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolConnection::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolConnection, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolConnection::class, 'ConnectionPoolConnection');
             $object->setConnection($value);
             unset($data['connection']);
         }
         if (\array_key_exists('private_connection', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolPrivateConnection::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolPrivateConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolPrivateConnection, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolPrivateConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolPrivateConnection::class, 'ConnectionPoolPrivateConnection');
             $object->setPrivateConnection($value_1);
             unset($data['private_connection']);
         }
         if (\array_key_exists('standby_connection', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['standby_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyConnection::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyConnection, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['standby_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyConnection::class, 'ConnectionPoolStandbyConnection');
             $object->setStandbyConnection($value_2);
             unset($data['standby_connection']);
         }
         if (\array_key_exists('standby_private_connection', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['standby_private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['standby_private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection::class, 'ConnectionPoolStandbyPrivateConnection');
             $object->setStandbyPrivateConnection($value_3);
             unset($data['standby_private_connection']);
         }

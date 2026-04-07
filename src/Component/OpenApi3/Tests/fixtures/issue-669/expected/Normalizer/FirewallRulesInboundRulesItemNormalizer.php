@@ -57,10 +57,7 @@ class FirewallRulesInboundRulesItemNormalizer implements DenormalizerInterface, 
             unset($data['ports']);
         }
         if (\array_key_exists('sources', $data)) {
-            $value = $this->denormalizer->denormalize($data['sources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItemsources::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItemsources) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItemsources, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['sources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItemsources::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItemsources::class, 'FirewallRulesInboundRulesItemsources');
             $object->setSources($value);
             unset($data['sources']);
         }

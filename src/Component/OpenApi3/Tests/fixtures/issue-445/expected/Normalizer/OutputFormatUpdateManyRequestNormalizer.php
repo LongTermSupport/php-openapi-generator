@@ -52,10 +52,7 @@ class OutputFormatUpdateManyRequestNormalizer implements DenormalizerInterface, 
             $values = [];
             if (\is_array($data['items'])) {
                 foreach ($data['items'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequestItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequestItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequestItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequestItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequestItem::class, 'OutputFormatUpdateManyRequestItem');
                     $values[] = $value_1;
                 }
             }

@@ -100,10 +100,7 @@ class ReleaseAssetNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['updated_at']);
         }
         if (\array_key_exists('uploader', $data) && $data['uploader'] !== null) {
-            $value = $this->denormalizer->denormalize($data['uploader'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAssetUploader::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAssetUploader) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAssetUploader, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['uploader'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAssetUploader::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReleaseAssetUploader::class, 'ReleaseAssetUploader');
             $object->setUploader($value);
             unset($data['uploader']);
         }

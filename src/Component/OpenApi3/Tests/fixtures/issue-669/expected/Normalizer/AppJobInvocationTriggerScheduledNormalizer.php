@@ -49,10 +49,7 @@ class AppJobInvocationTriggerScheduledNormalizer implements DenormalizerInterfac
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('schedule', $data)) {
-            $value = $this->denormalizer->denormalize($data['schedule'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduledSchedule::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduledSchedule) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduledSchedule, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['schedule'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduledSchedule::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppJobInvocationTriggerScheduledSchedule::class, 'AppJobInvocationTriggerScheduledSchedule');
             $object->setSchedule($value);
             unset($data['schedule']);
         }

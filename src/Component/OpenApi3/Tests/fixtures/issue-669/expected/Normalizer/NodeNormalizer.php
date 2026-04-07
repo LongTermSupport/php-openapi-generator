@@ -57,10 +57,7 @@ class NodeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['name']);
         }
         if (\array_key_exists('status', $data)) {
-            $value = $this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NodeStatus::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NodeStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NodeStatus, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NodeStatus::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NodeStatus::class, 'NodeStatus');
             $object->setStatus($value);
             unset($data['status']);
         }

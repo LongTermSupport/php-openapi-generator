@@ -53,10 +53,7 @@ class SingleTweetLookupResponseNormalizer implements DenormalizerInterface, Norm
             unset($data['data']);
         }
         if (\array_key_exists('includes', $data)) {
-            $value = $this->denormalizer->denormalize($data['includes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['includes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\Expansions::class, 'Expansions');
             $object->setIncludes($value);
             unset($data['includes']);
         }

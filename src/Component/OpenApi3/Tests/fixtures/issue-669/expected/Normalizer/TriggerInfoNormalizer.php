@@ -77,18 +77,12 @@ class TriggerInfoNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['updated_at']);
         }
         if (\array_key_exists('scheduled_details', $data)) {
-            $value = $this->denormalizer->denormalize($data['scheduled_details'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['scheduled_details'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ScheduledDetails::class, 'ScheduledDetails');
             $object->setScheduledDetails($value);
             unset($data['scheduled_details']);
         }
         if (\array_key_exists('scheduled_runs', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['scheduled_runs'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['scheduled_runs'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TriggerInfoScheduledRuns::class, 'TriggerInfoScheduledRuns');
             $object->setScheduledRuns($value_1);
             unset($data['scheduled_runs']);
         }

@@ -52,10 +52,7 @@ class WorkflowRunUsageNormalizer implements DenormalizerInterface, NormalizerInt
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\WorkflowRunUsageConstraint());
         }
         if (\array_key_exists('billable', $data)) {
-            $value = $this->denormalizer->denormalize($data['billable'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillable::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillable) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillable, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['billable'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillable::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillable::class, 'WorkflowRunUsageBillable');
             $object->setBillable($value);
             unset($data['billable']);
         }

@@ -52,10 +52,7 @@ class ResponseDatabaseBackupsNormalizer implements DenormalizerInterface, Normal
             $values = [];
             if (\is_array($data['backups'])) {
                 foreach ($data['backups'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Backup::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Backup) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Backup, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Backup::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Backup::class, 'Backup');
                     $values[] = $value_1;
                 }
             }
@@ -63,10 +60,7 @@ class ResponseDatabaseBackupsNormalizer implements DenormalizerInterface, Normal
             unset($data['backups']);
         }
         if (\array_key_exists('scheduled_backup_time', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['scheduled_backup_time'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDatabaseBackupsScheduledBackupTime::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDatabaseBackupsScheduledBackupTime) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDatabaseBackupsScheduledBackupTime, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['scheduled_backup_time'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDatabaseBackupsScheduledBackupTime::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDatabaseBackupsScheduledBackupTime::class, 'ResponseDatabaseBackupsScheduledBackupTime');
             $object->setScheduledBackupTime($value_2);
             unset($data['scheduled_backup_time']);
         }

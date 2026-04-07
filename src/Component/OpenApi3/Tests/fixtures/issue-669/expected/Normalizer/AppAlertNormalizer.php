@@ -57,10 +57,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['component_name']);
         }
         if (\array_key_exists('spec', $data)) {
-            $value = $this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['spec'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSpec::class, 'AppAlertSpec');
             $object->setSpec($value);
             unset($data['spec']);
         }
@@ -78,10 +75,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $values_1 = [];
             if (\is_array($data['slack_webhooks'])) {
                 foreach ($data['slack_webhooks'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertSlackWebhook::class, 'AppAlertSlackWebhook');
                     $values_1[] = $value_3;
                 }
             }
@@ -93,10 +87,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['phase']);
         }
         if (\array_key_exists('progress', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['progress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['progress'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppAlertProgress::class, 'AppAlertProgress');
             $object->setProgress($value_4);
             unset($data['progress']);
         }

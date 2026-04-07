@@ -68,10 +68,7 @@ class ReposOwnerRepoGitTagsPostBodyNormalizer implements DenormalizerInterface, 
             unset($data['type']);
         }
         if (\array_key_exists('tagger', $data)) {
-            $value = $this->denormalizer->denormalize($data['tagger'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTagsPostBodyTagger::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTagsPostBodyTagger) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTagsPostBodyTagger, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['tagger'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTagsPostBodyTagger::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitTagsPostBodyTagger::class, 'ReposOwnerRepoGitTagsPostBodyTagger');
             $object->setTagger($value);
             unset($data['tagger']);
         }

@@ -64,10 +64,7 @@ class CommunityProfileNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['documentation']);
         }
         if (\array_key_exists('files', $data)) {
-            $value = $this->denormalizer->denormalize($data['files'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFiles::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFiles) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFiles, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['files'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFiles::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CommunityProfileFiles::class, 'CommunityProfileFiles');
             $object->setFiles($value);
             unset($data['files']);
         }

@@ -77,10 +77,7 @@ class DetailedUserNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['verified']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $value = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UserWithheld::class, 'UserWithheld');
             $object->setWithheld($value);
             unset($data['withheld']);
         }
@@ -101,10 +98,7 @@ class DetailedUserNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['description']);
         }
         if (\array_key_exists('entities', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['entities'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DefaultUserFieldsEntities::class, 'DefaultUserFieldsEntities');
             $object->setEntities($value_1);
             unset($data['entities']);
         }
@@ -117,10 +111,7 @@ class DetailedUserNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['pinned_tweet_id']);
         }
         if (\array_key_exists('stats', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['stats'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedUserFieldsStats::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedUserFieldsStats) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedUserFieldsStats, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['stats'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedUserFieldsStats::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\DetailedUserFieldsStats::class, 'DetailedUserFieldsStats');
             $object->setStats($value_2);
             unset($data['stats']);
         }

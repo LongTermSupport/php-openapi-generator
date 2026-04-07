@@ -52,10 +52,7 @@ class V2LoadBalancersLbIdForwardingRulesPostBodyNormalizer implements Denormaliz
             $values = [];
             if (\is_array($data['forwarding_rules'])) {
                 foreach ($data['forwarding_rules'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ForwardingRule::class, 'ForwardingRule');
                     $values[] = $value_1;
                 }
             }

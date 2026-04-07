@@ -61,10 +61,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsIte
             unset($data['companyName']);
         }
         if (\array_key_exists('amount', $data)) {
-            $value = $this->denormalizer->denormalize($data['amount'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItemAmount::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItemAmount) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItemAmount, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['amount'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItemAmount::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItemAmount::class, 'GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItemAmount');
             $object->setAmount($value);
             unset($data['amount']);
         }

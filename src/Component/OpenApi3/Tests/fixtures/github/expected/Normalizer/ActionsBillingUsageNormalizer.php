@@ -64,10 +64,7 @@ class ActionsBillingUsageNormalizer implements DenormalizerInterface, Normalizer
             unset($data['included_minutes']);
         }
         if (\array_key_exists('minutes_used_breakdown', $data)) {
-            $value = $this->denormalizer->denormalize($data['minutes_used_breakdown'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['minutes_used_breakdown'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown::class, 'ActionsBillingUsageMinutesUsedBreakdown');
             $object->setMinutesUsedBreakdown($value);
             unset($data['minutes_used_breakdown']);
         }

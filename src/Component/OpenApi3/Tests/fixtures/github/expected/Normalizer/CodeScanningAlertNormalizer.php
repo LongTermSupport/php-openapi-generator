@@ -80,10 +80,7 @@ class CodeScanningAlertNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['open']);
         }
         if (\array_key_exists('closed_by', $data) && $data['closed_by'] !== null) {
-            $value = $this->denormalizer->denormalize($data['closed_by'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeScanningAlertClosedBy::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeScanningAlertClosedBy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeScanningAlertClosedBy, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['closed_by'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeScanningAlertClosedBy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeScanningAlertClosedBy::class, 'CodeScanningAlertClosedBy');
             $object->setClosedBy($value);
             unset($data['closed_by']);
         }

@@ -60,10 +60,7 @@ class ContentDownloadEventNormalizer implements DenormalizerInterface, Normalize
             $values = [];
             if (\is_array($data['downloadInfos'])) {
                 foreach ($data['downloadInfos'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadTrackingInfo::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadTrackingInfo) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadTrackingInfo, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadTrackingInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadTrackingInfo::class, 'DownloadTrackingInfo');
                     $values[] = $value_1;
                 }
             }

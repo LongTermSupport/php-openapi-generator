@@ -164,10 +164,7 @@ class OrganizationNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['updated_at']);
         }
         if (\array_key_exists('plan', $data)) {
-            $value = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationPlan::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationPlan) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationPlan, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationPlan::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationPlan::class, 'OrganizationPlan');
             $object->setPlan($value);
             unset($data['plan']);
         }

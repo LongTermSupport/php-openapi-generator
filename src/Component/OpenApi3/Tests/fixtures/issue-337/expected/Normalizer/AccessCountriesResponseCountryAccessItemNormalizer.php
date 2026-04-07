@@ -52,10 +52,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values = [];
             if (\is_array($data['creditsafeConnectOnlineReports'])) {
                 foreach ($data['creditsafeConnectOnlineReports'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem');
                     $values[] = $value_1;
                 }
             }
@@ -66,10 +63,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values_1 = [];
             if (\is_array($data['creditsafeConnectOfflineReports'])) {
                 foreach ($data['creditsafeConnectOfflineReports'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem');
                     $values_1[] = $value_3;
                 }
             }
@@ -80,10 +74,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values_2 = [];
             if (\is_array($data['creditsafeConnectMonitoring'])) {
                 foreach ($data['creditsafeConnectMonitoring'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem');
                     $values_2[] = $value_5;
                 }
             }
@@ -94,10 +85,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values_3 = [];
             if (\is_array($data['creditsafeConnectDirectorReports'])) {
                 foreach ($data['creditsafeConnectDirectorReports'] as $value_6) {
-                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem::class, 'json', $context);
-                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem, got ' . get_debug_type($value_7));
-                    }
+                    $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem');
                     $values_3[] = $value_7;
                 }
             }
@@ -108,10 +96,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values_4 = [];
             if (\is_array($data['creditsafeConnectImageDocuments'])) {
                 foreach ($data['creditsafeConnectImageDocuments'] as $value_8) {
-                    $value_9 = $this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem::class, 'json', $context);
-                    if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem, got ' . get_debug_type($value_9));
-                    }
+                    $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem');
                     $values_4[] = $value_9;
                 }
             }
@@ -122,10 +107,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values_5 = [];
             if (\is_array($data['creditsafeConnectBankValidation'])) {
                 foreach ($data['creditsafeConnectBankValidation'] as $value_10) {
-                    $value_11 = $this->denormalizer->denormalize($value_10, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem::class, 'json', $context);
-                    if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem, got ' . get_debug_type($value_11));
-                    }
+                    $value_11 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_10, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem');
                     $values_5[] = $value_11;
                 }
             }
@@ -136,10 +118,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
             $values_6 = [];
             if (\is_array($data['creditsafeConnectBankVerification'])) {
                 foreach ($data['creditsafeConnectBankVerification'] as $value_12) {
-                    $value_13 = $this->denormalizer->denormalize($value_12, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem::class, 'json', $context);
-                    if (!$value_13 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem, got ' . get_debug_type($value_13));
-                    }
+                    $value_13 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_12, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem::class, 'AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem');
                     $values_6[] = $value_13;
                 }
             }

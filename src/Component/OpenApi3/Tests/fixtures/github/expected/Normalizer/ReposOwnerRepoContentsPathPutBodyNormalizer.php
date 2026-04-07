@@ -68,18 +68,12 @@ class ReposOwnerRepoContentsPathPutBodyNormalizer implements DenormalizerInterfa
             unset($data['branch']);
         }
         if (\array_key_exists('committer', $data)) {
-            $value = $this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyCommitter::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyCommitter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyCommitter, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyCommitter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyCommitter::class, 'ReposOwnerRepoContentsPathPutBodyCommitter');
             $object->setCommitter($value);
             unset($data['committer']);
         }
         if (\array_key_exists('author', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyAuthor::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyAuthor) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyAuthor, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyAuthor::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoContentsPathPutBodyAuthor::class, 'ReposOwnerRepoContentsPathPutBodyAuthor');
             $object->setAuthor($value_1);
             unset($data['author']);
         }

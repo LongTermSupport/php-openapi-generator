@@ -52,10 +52,7 @@ class AppHealthNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values = [];
             if (\is_array($data['components'])) {
                 foreach ($data['components'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentHealth::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentHealth) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentHealth, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentHealth::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentHealth::class, 'AppComponentHealth');
                     $values[] = $value_1;
                 }
             }
@@ -66,10 +63,7 @@ class AppHealthNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values_1 = [];
             if (\is_array($data['functions_components'])) {
                 foreach ($data['functions_components'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealth::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealth) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealth, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealth::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealth::class, 'AppFunctionsComponentHealth');
                     $values_1[] = $value_3;
                 }
             }

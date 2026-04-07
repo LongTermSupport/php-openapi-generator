@@ -95,10 +95,7 @@ class VolumeFullNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setTags(null);
         }
         if (\array_key_exists('region', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VolumeFullregion::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VolumeFullregion) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VolumeFullregion, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VolumeFullregion::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VolumeFullregion::class, 'VolumeFullregion');
             $object->setRegion($value_2);
             unset($data['region']);
         }

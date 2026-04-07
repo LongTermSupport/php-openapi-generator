@@ -72,10 +72,7 @@ class CompactTweetFieldsNormalizer implements DenormalizerInterface, NormalizerI
             $values = [];
             if (\is_array($data['referenced_tweets'])) {
                 foreach ($data['referenced_tweets'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsReferencedTweetsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsReferencedTweetsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsReferencedTweetsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsReferencedTweetsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsReferencedTweetsItem::class, 'CompactTweetFieldsReferencedTweetsItem');
                     $values[] = $value_1;
                 }
             }
@@ -83,18 +80,12 @@ class CompactTweetFieldsNormalizer implements DenormalizerInterface, NormalizerI
             unset($data['referenced_tweets']);
         }
         if (\array_key_exists('attachments', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['attachments'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsAttachments::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsAttachments) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsAttachments, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['attachments'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsAttachments::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CompactTweetFieldsAttachments::class, 'CompactTweetFieldsAttachments');
             $object->setAttachments($value_2);
             unset($data['attachments']);
         }
         if (\array_key_exists('withheld', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['withheld'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetWithheld::class, 'TweetWithheld');
             $object->setWithheld($value_3);
             unset($data['withheld']);
         }

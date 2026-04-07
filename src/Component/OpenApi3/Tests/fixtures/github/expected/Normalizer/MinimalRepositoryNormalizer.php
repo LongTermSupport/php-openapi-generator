@@ -68,10 +68,7 @@ class MinimalRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['full_name']);
         }
         if (\array_key_exists('owner', $data) && $data['owner'] !== null) {
-            $value = $this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryOwner::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryOwner) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryOwner, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['owner'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryOwner::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryOwner::class, 'MinimalRepositoryOwner');
             $object->setOwner($value);
             unset($data['owner']);
         }
@@ -362,10 +359,7 @@ class MinimalRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryPermissions::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryPermissions, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryPermissions::class, 'MinimalRepositoryPermissions');
             $object->setPermissions($value_2);
             unset($data['permissions']);
         }
@@ -390,10 +384,7 @@ class MinimalRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['network_count']);
         }
         if (\array_key_exists('license', $data) && $data['license'] !== null) {
-            $value_3 = $this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryLicense::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryLicense) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryLicense, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['license'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryLicense::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryLicense::class, 'MinimalRepositoryLicense');
             $object->setLicense($value_3);
             unset($data['license']);
         }

@@ -52,10 +52,7 @@ class BooksBookIdReviewsGetHaljsonResponse200Normalizer implements DenormalizerI
             $values = [];
             if (\is_array($data['_embedded'])) {
                 foreach ($data['_embedded'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead::class, 'ReviewJsonhalReviewRead');
                     $values[] = $value_1;
                 }
             }
@@ -71,10 +68,7 @@ class BooksBookIdReviewsGetHaljsonResponse200Normalizer implements DenormalizerI
             unset($data['itemsPerPage']);
         }
         if (\array_key_exists('_links', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200Links::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200Links) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200Links, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['_links'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200Links::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200Links::class, 'BooksBookIdReviewsGetHaljsonResponse200Links');
             $object->setLinks($value_2);
             unset($data['_links']);
         }

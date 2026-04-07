@@ -57,10 +57,7 @@ class RepositoryV2Normalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['name']);
         }
         if (\array_key_exists('latest_manifest', $data)) {
-            $value = $this->denormalizer->denormalize($data['latest_manifest'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['latest_manifest'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryManifest::class, 'RepositoryManifest');
             $object->setLatestManifest($value);
             unset($data['latest_manifest']);
         }

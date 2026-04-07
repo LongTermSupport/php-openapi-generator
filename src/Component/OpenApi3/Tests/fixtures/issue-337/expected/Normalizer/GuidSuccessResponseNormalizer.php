@@ -52,10 +52,7 @@ class GuidSuccessResponseNormalizer implements DenormalizerInterface, Normalizer
             $values = [];
             if (\is_array($data['GUIDList'])) {
                 foreach ($data['GUIDList'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GuidSuccessResponseGUIDListItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GuidSuccessResponseGUIDListItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GuidSuccessResponseGUIDListItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GuidSuccessResponseGUIDListItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GuidSuccessResponseGUIDListItem::class, 'GuidSuccessResponseGUIDListItem');
                     $values[] = $value_1;
                 }
             }

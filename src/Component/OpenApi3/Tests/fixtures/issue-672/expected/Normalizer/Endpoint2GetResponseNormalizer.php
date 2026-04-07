@@ -49,18 +49,12 @@ class Endpoint2GetResponseNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('field-2', $data)) {
-            $value = $this->denormalizer->denormalize($data['field-2'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['field-2'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel1::class, 'SubLevel1');
             $object->setField2($value);
             unset($data['field-2']);
         }
         if (\array_key_exists('field-2-bis', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['field-2-bis'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['field-2-bis'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\SubLevel2::class, 'SubLevel2');
             $object->setField2Bis($value_1);
             unset($data['field-2-bis']);
         }

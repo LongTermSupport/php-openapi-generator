@@ -78,10 +78,7 @@ class HookNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['events']);
         }
         if (\array_key_exists('config', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookConfig::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookConfig, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookConfig::class, 'HookConfig');
             $object->setConfig($value_1);
             unset($data['config']);
         }
@@ -106,10 +103,7 @@ class HookNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['ping_url']);
         }
         if (\array_key_exists('last_response', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['last_response'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['last_response'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\HookResponse::class, 'HookResponse');
             $object->setLastResponse($value_2);
             unset($data['last_response']);
         }

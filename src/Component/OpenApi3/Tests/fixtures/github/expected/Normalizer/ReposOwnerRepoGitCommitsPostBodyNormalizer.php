@@ -70,18 +70,12 @@ class ReposOwnerRepoGitCommitsPostBodyNormalizer implements DenormalizerInterfac
             unset($data['parents']);
         }
         if (\array_key_exists('author', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyAuthor::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyAuthor) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyAuthor, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyAuthor::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyAuthor::class, 'ReposOwnerRepoGitCommitsPostBodyAuthor');
             $object->setAuthor($value_1);
             unset($data['author']);
         }
         if (\array_key_exists('committer', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyCommitter::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyCommitter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyCommitter, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyCommitter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoGitCommitsPostBodyCommitter::class, 'ReposOwnerRepoGitCommitsPostBodyCommitter');
             $object->setCommitter($value_2);
             unset($data['committer']);
         }

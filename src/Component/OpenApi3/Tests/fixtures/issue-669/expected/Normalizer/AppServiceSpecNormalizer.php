@@ -53,42 +53,27 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['name']);
         }
         if (\array_key_exists('git', $data)) {
-            $value = $this->denormalizer->denormalize($data['git'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['git'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitSourceSpec::class, 'AppsGitSourceSpec');
             $object->setGit($value);
             unset($data['git']);
         }
         if (\array_key_exists('github', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['github'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['github'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGithubSourceSpec::class, 'AppsGithubSourceSpec');
             $object->setGithub($value_1);
             unset($data['github']);
         }
         if (\array_key_exists('gitlab', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['gitlab'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['gitlab'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsGitlabSourceSpec::class, 'AppsGitlabSourceSpec');
             $object->setGitlab($value_2);
             unset($data['gitlab']);
         }
         if (\array_key_exists('bitbucket', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['bitbucket'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['bitbucket'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsBitbucketSourceSpec::class, 'AppsBitbucketSourceSpec');
             $object->setBitbucket($value_3);
             unset($data['bitbucket']);
         }
         if (\array_key_exists('image', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['image'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpec::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpec, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['image'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsImageSourceSpec::class, 'AppsImageSourceSpec');
             $object->setImage($value_4);
             unset($data['image']);
         }
@@ -112,10 +97,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
             $values = [];
             if (\is_array($data['envs'])) {
                 foreach ($data['envs'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppVariableDefinition::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppVariableDefinition) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppVariableDefinition, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppVariableDefinition::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppVariableDefinition::class, 'AppVariableDefinition');
                     $values[] = $value_6;
                 }
             }
@@ -130,10 +112,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
             $values_1 = [];
             if (\is_array($data['log_destinations'])) {
                 foreach ($data['log_destinations'] as $value_7) {
-                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition::class, 'json', $context);
-                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition, got ' . get_debug_type($value_8));
-                    }
+                    $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDefinition::class, 'AppLogDestinationDefinition');
                     $values_1[] = $value_8;
                 }
             }
@@ -149,34 +128,22 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['instance_size_slug']);
         }
         if (\array_key_exists('autoscaling', $data)) {
-            $value_9 = $this->denormalizer->denormalize($data['autoscaling'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentInstanceBaseAutoscaling::class, 'json', $context);
-            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentInstanceBaseAutoscaling) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentInstanceBaseAutoscaling, got ' . get_debug_type($value_9));
-            }
+            $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['autoscaling'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentInstanceBaseAutoscaling::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppComponentInstanceBaseAutoscaling::class, 'AppComponentInstanceBaseAutoscaling');
             $object->setAutoscaling($value_9);
             unset($data['autoscaling']);
         }
         if (\array_key_exists('cors', $data)) {
-            $value_10 = $this->denormalizer->denormalize($data['cors'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpeccors::class, 'json', $context);
-            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpeccors) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpeccors, got ' . get_debug_type($value_10));
-            }
+            $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['cors'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpeccors::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpeccors::class, 'AppServiceSpeccors');
             $object->setCors($value_10);
             unset($data['cors']);
         }
         if (\array_key_exists('health_check', $data)) {
-            $value_11 = $this->denormalizer->denormalize($data['health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecHealthCheck::class, 'json', $context);
-            if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecHealthCheck) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecHealthCheck, got ' . get_debug_type($value_11));
-            }
+            $value_11 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecHealthCheck::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecHealthCheck::class, 'AppServiceSpecHealthCheck');
             $object->setHealthCheck($value_11);
             unset($data['health_check']);
         }
         if (\array_key_exists('liveness_health_check', $data)) {
-            $value_12 = $this->denormalizer->denormalize($data['liveness_health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealthCheckSpec::class, 'json', $context);
-            if (!$value_12 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealthCheckSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealthCheckSpec, got ' . get_debug_type($value_12));
-            }
+            $value_12 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['liveness_health_check'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealthCheckSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppHealthCheckSpec::class, 'AppHealthCheckSpec');
             $object->setLivenessHealthCheck($value_12);
             unset($data['liveness_health_check']);
         }
@@ -202,10 +169,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
             $values_3 = [];
             if (\is_array($data['routes'])) {
                 foreach ($data['routes'] as $value_14) {
-                    $value_15 = $this->denormalizer->denormalize($value_14, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRouteSpec::class, 'json', $context);
-                    if (!$value_15 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRouteSpec) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRouteSpec, got ' . get_debug_type($value_15));
-                    }
+                    $value_15 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_14, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRouteSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRouteSpec::class, 'AppRouteSpec');
                     $values_3[] = $value_15;
                 }
             }
@@ -213,10 +177,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
             unset($data['routes']);
         }
         if (\array_key_exists('termination', $data)) {
-            $value_16 = $this->denormalizer->denormalize($data['termination'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecTermination::class, 'json', $context);
-            if (!$value_16 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecTermination) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecTermination, got ' . get_debug_type($value_16));
-            }
+            $value_16 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['termination'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecTermination::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppServiceSpecTermination::class, 'AppServiceSpecTermination');
             $object->setTermination($value_16);
             unset($data['termination']);
         }

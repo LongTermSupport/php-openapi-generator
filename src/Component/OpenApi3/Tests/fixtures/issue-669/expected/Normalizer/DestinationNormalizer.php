@@ -61,10 +61,7 @@ class DestinationNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['type']);
         }
         if (\array_key_exists('config', $data)) {
-            $value = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfig::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfig, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchConfig::class, 'OpensearchConfig');
             $object->setConfig($value);
             unset($data['config']);
         }

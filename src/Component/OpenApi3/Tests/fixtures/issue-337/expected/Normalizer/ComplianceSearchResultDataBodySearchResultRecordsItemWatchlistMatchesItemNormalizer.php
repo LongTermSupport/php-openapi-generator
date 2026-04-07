@@ -93,18 +93,12 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemN
             unset($data['checkSum']);
         }
         if (\array_key_exists('conflicts', $data)) {
-            $value = $this->denormalizer->denormalize($data['conflicts'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemConflicts::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemConflicts) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemConflicts, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['conflicts'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemConflicts::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemConflicts::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemConflicts');
             $object->setConflicts($value);
             unset($data['conflicts']);
         }
         if (\array_key_exists('entityDetails', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['entityDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetails::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetails, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['entityDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetails::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetails');
             $object->setEntityDetails($value_1);
             unset($data['entityDetails']);
         }
@@ -125,10 +119,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemN
             unset($data['falsePositive']);
         }
         if (\array_key_exists('file', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['file'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemFile::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemFile) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemFile, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['file'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemFile::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemFile::class, 'ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemFile');
             $object->setFile($value_2);
             unset($data['file']);
         }

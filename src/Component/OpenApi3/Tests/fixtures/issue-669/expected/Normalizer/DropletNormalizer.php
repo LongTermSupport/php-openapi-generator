@@ -72,10 +72,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $values = [];
             if (\is_array($data['disk_info'])) {
                 foreach ($data['disk_info'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfo::class, 'DiskInfo');
                     $values[] = $value_1;
                 }
             }
@@ -91,10 +88,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['status']);
         }
         if (\array_key_exists('kernel', $data) && $data['kernel'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['kernel'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Kernel::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Kernel) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Kernel, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['kernel'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Kernel::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Kernel::class, 'Kernel');
             $object->setKernel($value_2);
             unset($data['kernel']);
         }
@@ -126,10 +120,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['backup_ids']);
         }
         if (\array_key_exists('next_backup_window', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['next_backup_window'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNextBackupWindow::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNextBackupWindow) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNextBackupWindow, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['next_backup_window'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNextBackupWindow::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNextBackupWindow::class, 'DropletNextBackupWindow');
             $object->setNextBackupWindow($value_5);
             unset($data['next_backup_window']);
         }
@@ -144,10 +135,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['snapshot_ids']);
         }
         if (\array_key_exists('image', $data)) {
-            $value_7 = $this->denormalizer->denormalize($data['image'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletImage::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletImage) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletImage, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['image'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletImage::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletImage::class, 'DropletImage');
             $object->setImage($value_7);
             unset($data['image']);
         }
@@ -162,10 +150,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['volume_ids']);
         }
         if (\array_key_exists('size', $data)) {
-            $value_9 = $this->denormalizer->denormalize($data['size'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Size::class, 'json', $context);
-            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Size) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Size, got ' . get_debug_type($value_9));
-            }
+            $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['size'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Size::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Size::class, 'Size');
             $object->setSize($value_9);
             unset($data['size']);
         }
@@ -174,18 +159,12 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['size_slug']);
         }
         if (\array_key_exists('networks', $data)) {
-            $value_10 = $this->denormalizer->denormalize($data['networks'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNetworks::class, 'json', $context);
-            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNetworks) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNetworks, got ' . get_debug_type($value_10));
-            }
+            $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['networks'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNetworks::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletNetworks::class, 'DropletNetworks');
             $object->setNetworks($value_10);
             unset($data['networks']);
         }
         if (\array_key_exists('region', $data)) {
-            $value_11 = $this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'json', $context);
-            if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region, got ' . get_debug_type($value_11));
-            }
+            $value_11 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'Region');
             $object->setRegion($value_11);
             unset($data['region']);
         }
@@ -204,10 +183,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['vpc_uuid']);
         }
         if (\array_key_exists('gpu_info', $data)) {
-            $value_13 = $this->denormalizer->denormalize($data['gpu_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'json', $context);
-            if (!$value_13 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo, got ' . get_debug_type($value_13));
-            }
+            $value_13 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['gpu_info'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GpuInfo::class, 'GpuInfo');
             $object->setGpuInfo($value_13);
             unset($data['gpu_info']);
         }

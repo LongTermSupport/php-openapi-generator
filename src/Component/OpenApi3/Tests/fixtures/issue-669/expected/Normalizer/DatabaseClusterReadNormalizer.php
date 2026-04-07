@@ -119,50 +119,32 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $object->setDbNames(null);
         }
         if (\array_key_exists('ui_connection', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['ui_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadUiConnection::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadUiConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadUiConnection, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['ui_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadUiConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadUiConnection::class, 'DatabaseClusterReadUiConnection');
             $object->setUiConnection($value_2);
             unset($data['ui_connection']);
         }
         if (\array_key_exists('schema_registry_connection', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['schema_registry_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadSchemaRegistryConnection::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadSchemaRegistryConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadSchemaRegistryConnection, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['schema_registry_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadSchemaRegistryConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadSchemaRegistryConnection::class, 'DatabaseClusterReadSchemaRegistryConnection');
             $object->setSchemaRegistryConnection($value_3);
             unset($data['schema_registry_connection']);
         }
         if (\array_key_exists('connection', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadConnection::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadConnection, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadConnection::class, 'DatabaseClusterReadConnection');
             $object->setConnection($value_4);
             unset($data['connection']);
         }
         if (\array_key_exists('private_connection', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadPrivateConnection::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadPrivateConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadPrivateConnection, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadPrivateConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadPrivateConnection::class, 'DatabaseClusterReadPrivateConnection');
             $object->setPrivateConnection($value_5);
             unset($data['private_connection']);
         }
         if (\array_key_exists('standby_connection', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['standby_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyConnection::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyConnection, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['standby_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyConnection::class, 'DatabaseClusterReadStandbyConnection');
             $object->setStandbyConnection($value_6);
             unset($data['standby_connection']);
         }
         if (\array_key_exists('standby_private_connection', $data)) {
-            $value_7 = $this->denormalizer->denormalize($data['standby_private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyPrivateConnection::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyPrivateConnection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyPrivateConnection, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['standby_private_connection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyPrivateConnection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadStandbyPrivateConnection::class, 'DatabaseClusterReadStandbyPrivateConnection');
             $object->setStandbyPrivateConnection($value_7);
             unset($data['standby_private_connection']);
         }
@@ -170,10 +152,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $values_2 = [];
             if (\is_array($data['users'])) {
                 foreach ($data['users'] as $value_8) {
-                    $value_9 = $this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser::class, 'json', $context);
-                    if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser, got ' . get_debug_type($value_9));
-                    }
+                    $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseUser::class, 'DatabaseUser');
                     $values_2[] = $value_9;
                 }
             }
@@ -184,10 +163,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $object->setUsers(null);
         }
         if (\array_key_exists('maintenance_window', $data)) {
-            $value_10 = $this->denormalizer->denormalize($data['maintenance_window'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadMaintenanceWindow::class, 'json', $context);
-            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadMaintenanceWindow) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadMaintenanceWindow, got ' . get_debug_type($value_10));
-            }
+            $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['maintenance_window'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadMaintenanceWindow::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseClusterReadMaintenanceWindow::class, 'DatabaseClusterReadMaintenanceWindow');
             $object->setMaintenanceWindow($value_10);
             unset($data['maintenance_window']);
         }
@@ -199,10 +175,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $values_3 = [];
             if (\is_array($data['rules'])) {
                 foreach ($data['rules'] as $value_11) {
-                    $value_12 = $this->denormalizer->denormalize($value_11, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRule::class, 'json', $context);
-                    if (!$value_12 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRule) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRule, got ' . get_debug_type($value_12));
-                    }
+                    $value_12 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_11, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRule::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRule::class, 'FirewallRule');
                     $values_3[] = $value_12;
                 }
             }
@@ -225,10 +198,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $values_4 = [];
             if (\is_array($data['metrics_endpoints'])) {
                 foreach ($data['metrics_endpoints'] as $value_13) {
-                    $value_14 = $this->denormalizer->denormalize($value_13, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseServiceEndpoint::class, 'json', $context);
-                    if (!$value_14 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseServiceEndpoint) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseServiceEndpoint, got ' . get_debug_type($value_14));
-                    }
+                    $value_14 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_13, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseServiceEndpoint::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseServiceEndpoint::class, 'DatabaseServiceEndpoint');
                     $values_4[] = $value_14;
                 }
             }

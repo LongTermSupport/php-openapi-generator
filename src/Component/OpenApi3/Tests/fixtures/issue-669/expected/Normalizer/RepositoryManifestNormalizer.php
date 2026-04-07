@@ -86,10 +86,7 @@ class RepositoryManifestNormalizer implements DenormalizerInterface, NormalizerI
             $values_1 = [];
             if (\is_array($data['blobs'])) {
                 foreach ($data['blobs'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryBlob::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryBlob) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryBlob, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryBlob::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RepositoryBlob::class, 'RepositoryBlob');
                     $values_1[] = $value_2;
                 }
             }

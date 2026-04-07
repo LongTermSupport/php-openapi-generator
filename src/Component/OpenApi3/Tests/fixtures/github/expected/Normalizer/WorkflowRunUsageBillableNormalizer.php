@@ -52,26 +52,17 @@ class WorkflowRunUsageBillableNormalizer implements DenormalizerInterface, Norma
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\WorkflowRunUsageBillableConstraint());
         }
         if (\array_key_exists('UBUNTU', $data)) {
-            $value = $this->denormalizer->denormalize($data['UBUNTU'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableUBUNTU::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableUBUNTU) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableUBUNTU, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['UBUNTU'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableUBUNTU::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableUBUNTU::class, 'WorkflowRunUsageBillableUBUNTU');
             $object->setUBUNTU($value);
             unset($data['UBUNTU']);
         }
         if (\array_key_exists('MACOS', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['MACOS'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableMACOS::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableMACOS) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableMACOS, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['MACOS'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableMACOS::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableMACOS::class, 'WorkflowRunUsageBillableMACOS');
             $object->setMACOS($value_1);
             unset($data['MACOS']);
         }
         if (\array_key_exists('WINDOWS', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['WINDOWS'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableWINDOWS::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableWINDOWS) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableWINDOWS, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['WINDOWS'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableWINDOWS::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsageBillableWINDOWS::class, 'WorkflowRunUsageBillableWINDOWS');
             $object->setWINDOWS($value_2);
             unset($data['WINDOWS']);
         }

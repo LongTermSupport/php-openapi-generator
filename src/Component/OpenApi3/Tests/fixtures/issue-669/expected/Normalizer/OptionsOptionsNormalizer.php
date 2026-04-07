@@ -49,58 +49,37 @@ class OptionsOptionsNormalizer implements DenormalizerInterface, NormalizerInter
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('kafka', $data)) {
-            $value = $this->denormalizer->denormalize($data['kafka'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsKafka::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsKafka) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsKafka, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['kafka'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsKafka::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsKafka::class, 'OptionsOptionsKafka');
             $object->setKafka($value);
             unset($data['kafka']);
         }
         if (\array_key_exists('mongodb', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['mongodb'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMongodb::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMongodb) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMongodb, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mongodb'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMongodb::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMongodb::class, 'OptionsOptionsMongodb');
             $object->setMongodb($value_1);
             unset($data['mongodb']);
         }
         if (\array_key_exists('pg', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['pg'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsPg::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsPg) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsPg, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['pg'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsPg::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsPg::class, 'OptionsOptionsPg');
             $object->setPg($value_2);
             unset($data['pg']);
         }
         if (\array_key_exists('mysql', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['mysql'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMysql::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMysql) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMysql, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mysql'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMysql::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsMysql::class, 'OptionsOptionsMysql');
             $object->setMysql($value_3);
             unset($data['mysql']);
         }
         if (\array_key_exists('redis', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['redis'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsRedis::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsRedis) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsRedis, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['redis'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsRedis::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsRedis::class, 'OptionsOptionsRedis');
             $object->setRedis($value_4);
             unset($data['redis']);
         }
         if (\array_key_exists('valkey', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['valkey'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsValkey::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsValkey) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsValkey, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['valkey'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsValkey::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsValkey::class, 'OptionsOptionsValkey');
             $object->setValkey($value_5);
             unset($data['valkey']);
         }
         if (\array_key_exists('opensearch', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['opensearch'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsOpensearch::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsOpensearch) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsOpensearch, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['opensearch'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsOpensearch::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OptionsOptionsOpensearch::class, 'OptionsOptionsOpensearch');
             $object->setOpensearch($value_6);
             unset($data['opensearch']);
         }

@@ -52,10 +52,7 @@ class FileCommitNormalizer implements DenormalizerInterface, NormalizerInterface
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FileCommitConstraint());
         }
         if (\array_key_exists('content', $data) && $data['content'] !== null) {
-            $value = $this->denormalizer->denormalize($data['content'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitContent::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitContent) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitContent, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['content'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitContent::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitContent::class, 'FileCommitContent');
             $object->setContent($value);
             unset($data['content']);
         }
@@ -63,10 +60,7 @@ class FileCommitNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setContent(null);
         }
         if (\array_key_exists('commit', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommit::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommit, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommit::class, 'FileCommitCommit');
             $object->setCommit($value_1);
             unset($data['commit']);
         }

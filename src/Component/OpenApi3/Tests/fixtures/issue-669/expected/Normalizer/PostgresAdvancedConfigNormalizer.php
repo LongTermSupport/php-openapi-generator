@@ -241,10 +241,7 @@ class PostgresAdvancedConfigNormalizer implements DenormalizerInterface, Normali
             unset($data['shared_buffers_percentage']);
         }
         if (\array_key_exists('pgbouncer', $data)) {
-            $value = $this->denormalizer->denormalize($data['pgbouncer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['pgbouncer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PgbouncerAdvancedConfig::class, 'PgbouncerAdvancedConfig');
             $object->setPgbouncer($value);
             unset($data['pgbouncer']);
         }
@@ -253,10 +250,7 @@ class PostgresAdvancedConfigNormalizer implements DenormalizerInterface, Normali
             unset($data['work_mem']);
         }
         if (\array_key_exists('timescaledb', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['timescaledb'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['timescaledb'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TimescaledbAdvancedConfig::class, 'TimescaledbAdvancedConfig');
             $object->setTimescaledb($value_1);
             unset($data['timescaledb']);
         }

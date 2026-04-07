@@ -52,10 +52,7 @@ class ResponseAvailableUpgradesNormalizer implements DenormalizerInterface, Norm
             $values = [];
             if (\is_array($data['available_upgrade_versions'])) {
                 foreach ($data['available_upgrade_versions'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion::class, 'KubernetesVersion');
                     $values[] = $value_1;
                 }
             }

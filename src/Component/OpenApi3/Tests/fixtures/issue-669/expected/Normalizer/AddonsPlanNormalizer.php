@@ -84,10 +84,7 @@ class AddonsPlanNormalizer implements DenormalizerInterface, NormalizerInterface
             $values = [];
             if (\is_array($data['features'])) {
                 foreach ($data['features'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsFeature::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsFeature) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsFeature, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsFeature::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsFeature::class, 'AddonsFeature');
                     $values[] = $value_1;
                 }
             }
@@ -118,10 +115,7 @@ class AddonsPlanNormalizer implements DenormalizerInterface, NormalizerInterface
             $values_1 = [];
             if (\is_array($data['dimensions'])) {
                 foreach ($data['dimensions'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionWithPrice::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionWithPrice) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionWithPrice, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionWithPrice::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AddonsDimensionWithPrice::class, 'AddonsDimensionWithPrice');
                     $values_1[] = $value_3;
                 }
             }

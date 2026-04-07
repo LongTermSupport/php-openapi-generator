@@ -52,10 +52,7 @@ class GbPeopleReportReponseReportDirectorshipsNormalizer implements Denormalizer
             $values = [];
             if (\is_array($data['current'])) {
                 foreach ($data['current'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsCurrentItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsCurrentItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsCurrentItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsCurrentItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsCurrentItem::class, 'GbPeopleReportReponseReportDirectorshipsCurrentItem');
                     $values[] = $value_1;
                 }
             }
@@ -66,10 +63,7 @@ class GbPeopleReportReponseReportDirectorshipsNormalizer implements Denormalizer
             $values_1 = [];
             if (\is_array($data['inactive'])) {
                 foreach ($data['inactive'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsInactiveItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsInactiveItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsInactiveItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsInactiveItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsInactiveItem::class, 'GbPeopleReportReponseReportDirectorshipsInactiveItem');
                     $values_1[] = $value_3;
                 }
             }
@@ -80,10 +74,7 @@ class GbPeopleReportReponseReportDirectorshipsNormalizer implements Denormalizer
             $values_2 = [];
             if (\is_array($data['previous'])) {
                 foreach ($data['previous'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItem, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItem::class, 'GbPeopleReportReponseReportDirectorshipsPreviousItem');
                     $values_2[] = $value_5;
                 }
             }

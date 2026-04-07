@@ -49,18 +49,12 @@ class AssociatedResourceStatusNormalizer implements DenormalizerInterface, Norma
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('droplet', $data)) {
-            $value = $this->denormalizer->denormalize($data['droplet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['droplet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'DestroyedAssociatedResource');
             $object->setDroplet($value);
             unset($data['droplet']);
         }
         if (\array_key_exists('resources', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['resources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['resources'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatusResources::class, 'AssociatedResourceStatusResources');
             $object->setResources($value_1);
             unset($data['resources']);
         }

@@ -56,10 +56,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
             unset($data['userName']);
         }
         if (\array_key_exists('name', $data)) {
-            $value = $this->denormalizer->denormalize($data['name'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyName::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyName) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyName, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['name'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyName::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyName::class, 'ScimV2OrganizationsOrgUsersPostBodyName');
             $object->setName($value);
             unset($data['name']);
         }
@@ -67,10 +64,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
             $values = [];
             if (\is_array($data['emails'])) {
                 foreach ($data['emails'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyEmailsItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyEmailsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyEmailsItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyEmailsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersPostBodyEmailsItem::class, 'ScimV2OrganizationsOrgUsersPostBodyEmailsItem');
                     $values[] = $value_2;
                 }
             }

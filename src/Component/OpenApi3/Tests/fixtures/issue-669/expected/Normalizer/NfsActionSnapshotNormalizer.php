@@ -57,10 +57,7 @@ class NfsActionSnapshotNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['region']);
         }
         if (\array_key_exists('params', $data)) {
-            $value = $this->denormalizer->denormalize($data['params'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionSnapshotparams::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionSnapshotparams) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionSnapshotparams, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['params'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionSnapshotparams::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionSnapshotparams::class, 'NfsActionSnapshotparams');
             $object->setParams($value);
             unset($data['params']);
         }

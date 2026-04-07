@@ -111,10 +111,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['node_pools']);
         }
         if (\array_key_exists('maintenance_policy', $data) && $data['maintenance_policy'] !== null) {
-            $value_3 = $this->denormalizer->denormalize($data['maintenance_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['maintenance_policy'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MaintenancePolicy::class, 'MaintenancePolicy');
             $object->setMaintenancePolicy($value_3);
             unset($data['maintenance_policy']);
         }
@@ -126,10 +123,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['auto_upgrade']);
         }
         if (\array_key_exists('status', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterStatus::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterStatus, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterStatus::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterStatus::class, 'ClusterStatus');
             $object->setStatus($value_4);
             unset($data['status']);
         }
@@ -154,10 +148,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             unset($data['registry_enabled']);
         }
         if (\array_key_exists('control_plane_firewall', $data) && $data['control_plane_firewall'] !== null) {
-            $value_5 = $this->denormalizer->denormalize($data['control_plane_firewall'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['control_plane_firewall'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ControlPlaneFirewall::class, 'ControlPlaneFirewall');
             $object->setControlPlaneFirewall($value_5);
             unset($data['control_plane_firewall']);
         }
@@ -165,10 +156,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setControlPlaneFirewall(null);
         }
         if (\array_key_exists('cluster_autoscaler_configuration', $data) && $data['cluster_autoscaler_configuration'] !== null) {
-            $value_6 = $this->denormalizer->denormalize($data['cluster_autoscaler_configuration'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['cluster_autoscaler_configuration'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterAutoscalerConfiguration::class, 'ClusterAutoscalerConfiguration');
             $object->setClusterAutoscalerConfiguration($value_6);
             unset($data['cluster_autoscaler_configuration']);
         }
@@ -176,10 +164,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setClusterAutoscalerConfiguration(null);
         }
         if (\array_key_exists('routing_agent', $data) && $data['routing_agent'] !== null) {
-            $value_7 = $this->denormalizer->denormalize($data['routing_agent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent::class, 'json', $context);
-            if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent, got ' . get_debug_type($value_7));
-            }
+            $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['routing_agent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RoutingAgent::class, 'RoutingAgent');
             $object->setRoutingAgent($value_7);
             unset($data['routing_agent']);
         }
@@ -187,10 +172,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setRoutingAgent(null);
         }
         if (\array_key_exists('amd_gpu_device_plugin', $data) && $data['amd_gpu_device_plugin'] !== null) {
-            $value_8 = $this->denormalizer->denormalize($data['amd_gpu_device_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin::class, 'json', $context);
-            if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin, got ' . get_debug_type($value_8));
-            }
+            $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['amd_gpu_device_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDevicePlugin::class, 'AmdGpuDevicePlugin');
             $object->setAmdGpuDevicePlugin($value_8);
             unset($data['amd_gpu_device_plugin']);
         }
@@ -198,10 +180,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setAmdGpuDevicePlugin(null);
         }
         if (\array_key_exists('amd_gpu_device_metrics_exporter_plugin', $data) && $data['amd_gpu_device_metrics_exporter_plugin'] !== null) {
-            $value_9 = $this->denormalizer->denormalize($data['amd_gpu_device_metrics_exporter_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin::class, 'json', $context);
-            if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin, got ' . get_debug_type($value_9));
-            }
+            $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['amd_gpu_device_metrics_exporter_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AmdGpuDeviceMetricsExporterPlugin::class, 'AmdGpuDeviceMetricsExporterPlugin');
             $object->setAmdGpuDeviceMetricsExporterPlugin($value_9);
             unset($data['amd_gpu_device_metrics_exporter_plugin']);
         }
@@ -209,10 +188,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setAmdGpuDeviceMetricsExporterPlugin(null);
         }
         if (\array_key_exists('nvidia_gpu_device_plugin', $data) && $data['nvidia_gpu_device_plugin'] !== null) {
-            $value_10 = $this->denormalizer->denormalize($data['nvidia_gpu_device_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin::class, 'json', $context);
-            if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin, got ' . get_debug_type($value_10));
-            }
+            $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['nvidia_gpu_device_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NvidiaGpuDevicePlugin::class, 'NvidiaGpuDevicePlugin');
             $object->setNvidiaGpuDevicePlugin($value_10);
             unset($data['nvidia_gpu_device_plugin']);
         }
@@ -220,10 +196,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setNvidiaGpuDevicePlugin(null);
         }
         if (\array_key_exists('rdma_shared_dev_plugin', $data) && $data['rdma_shared_dev_plugin'] !== null) {
-            $value_11 = $this->denormalizer->denormalize($data['rdma_shared_dev_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin::class, 'json', $context);
-            if (!$value_11 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin, got ' . get_debug_type($value_11));
-            }
+            $value_11 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['rdma_shared_dev_plugin'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RdmaSharedDevPlugin::class, 'RdmaSharedDevPlugin');
             $object->setRdmaSharedDevPlugin($value_11);
             unset($data['rdma_shared_dev_plugin']);
         }

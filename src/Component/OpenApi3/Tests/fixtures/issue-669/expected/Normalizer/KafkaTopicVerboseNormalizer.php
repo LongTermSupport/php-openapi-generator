@@ -64,10 +64,7 @@ class KafkaTopicVerboseNormalizer implements DenormalizerInterface, NormalizerIn
             $values = [];
             if (\is_array($data['partitions'])) {
                 foreach ($data['partitions'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicPartition::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicPartition) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicPartition, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicPartition::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicPartition::class, 'KafkaTopicPartition');
                     $values[] = $value_1;
                 }
             }
@@ -75,10 +72,7 @@ class KafkaTopicVerboseNormalizer implements DenormalizerInterface, NormalizerIn
             unset($data['partitions']);
         }
         if (\array_key_exists('config', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KafkaTopicConfig::class, 'KafkaTopicConfig');
             $object->setConfig($value_2);
             unset($data['config']);
         }

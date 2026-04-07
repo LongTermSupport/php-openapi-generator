@@ -52,58 +52,37 @@ class FeedLinksNormalizer implements DenormalizerInterface, NormalizerInterface,
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FeedLinksConstraint());
         }
         if (\array_key_exists('timeline', $data)) {
-            $value = $this->denormalizer->denormalize($data['timeline'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['timeline'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setTimeline($value);
             unset($data['timeline']);
         }
         if (\array_key_exists('user', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setUser($value_1);
             unset($data['user']);
         }
         if (\array_key_exists('security_advisories', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['security_advisories'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['security_advisories'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setSecurityAdvisories($value_2);
             unset($data['security_advisories']);
         }
         if (\array_key_exists('current_user', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['current_user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['current_user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setCurrentUser($value_3);
             unset($data['current_user']);
         }
         if (\array_key_exists('current_user_public', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['current_user_public'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['current_user_public'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setCurrentUserPublic($value_4);
             unset($data['current_user_public']);
         }
         if (\array_key_exists('current_user_actor', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['current_user_actor'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['current_user_actor'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setCurrentUserActor($value_5);
             unset($data['current_user_actor']);
         }
         if (\array_key_exists('current_user_organization', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['current_user_organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['current_user_organization'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
             $object->setCurrentUserOrganization($value_6);
             unset($data['current_user_organization']);
         }
@@ -111,10 +90,7 @@ class FeedLinksNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values = [];
             if (\is_array($data['current_user_organizations'])) {
                 foreach ($data['current_user_organizations'] as $value_7) {
-                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context);
-                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType, got ' . get_debug_type($value_8));
-                    }
+                    $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\LinkWithType::class, 'LinkWithType');
                     $values[] = $value_8;
                 }
             }

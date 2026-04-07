@@ -60,10 +60,7 @@ class MetadataValuesChangeRequestBaseNormalizer implements DenormalizerInterface
             $values = [];
             if (\is_array($data['changeCommands'])) {
                 foreach ($data['changeCommands'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesChangeCommandBase::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesChangeCommandBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesChangeCommandBase, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesChangeCommandBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesChangeCommandBase::class, 'MetadataValuesChangeCommandBase');
                     $values[] = $value_1;
                 }
             }

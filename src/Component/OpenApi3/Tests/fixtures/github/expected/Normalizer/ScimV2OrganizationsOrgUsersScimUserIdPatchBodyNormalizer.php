@@ -65,10 +65,7 @@ class ScimV2OrganizationsOrgUsersScimUserIdPatchBodyNormalizer implements Denorm
             $values_1 = [];
             if (\is_array($data['Operations'])) {
                 foreach ($data['Operations'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem::class, 'ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem');
                     $values_1[] = $value_2;
                 }
             }

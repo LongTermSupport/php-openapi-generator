@@ -72,10 +72,7 @@ class AppInstallationsInstallationIdAccessTokensPostBodyNormalizer implements De
             unset($data['repository_ids']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AppInstallationsInstallationIdAccessTokensPostBodyPermissions::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AppInstallationsInstallationIdAccessTokensPostBodyPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AppInstallationsInstallationIdAccessTokensPostBodyPermissions, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AppInstallationsInstallationIdAccessTokensPostBodyPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\AppInstallationsInstallationIdAccessTokensPostBodyPermissions::class, 'AppInstallationsInstallationIdAccessTokensPostBodyPermissions');
             $object->setPermissions($value_2);
             unset($data['permissions']);
         }

@@ -58,16 +58,10 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (\array_key_exists('account', $data) && $data['account'] !== null) {
             $value = $data['account'];
             if (is_array($data['account']) and isset($data['account']['login']) and isset($data['account']['id']) and isset($data['account']['node_id']) and isset($data['account']['avatar_url']) and isset($data['account']['gravatar_id']) and isset($data['account']['url']) and isset($data['account']['html_url']) and isset($data['account']['followers_url']) and isset($data['account']['following_url']) and isset($data['account']['gists_url']) and isset($data['account']['starred_url']) and isset($data['account']['subscriptions_url']) and isset($data['account']['organizations_url']) and isset($data['account']['repos_url']) and isset($data['account']['events_url']) and isset($data['account']['received_events_url']) and isset($data['account']['type']) and isset($data['account']['site_admin'])) {
-                $value_1 = $this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context);
-                if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser, got ' . get_debug_type($value_1));
-                }
+                $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleUser::class, 'SimpleUser');
                 $value = $value_1;
             } elseif (is_array($data['account']) and isset($data['account']['html_url']) and isset($data['account']['id']) and isset($data['account']['node_id']) and isset($data['account']['name']) and isset($data['account']['slug']) and isset($data['account']['created_at']) and isset($data['account']['updated_at']) and isset($data['account']['avatar_url'])) {
-                $value_2 = $this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Enterprise::class, 'json', $context);
-                if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Enterprise) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Enterprise, got ' . get_debug_type($value_2));
-                }
+                $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['account'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Enterprise::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Enterprise::class, 'Enterprise');
                 $value = $value_2;
             } else {
                 throw new \LogicException('Unexpected type for SimpleUser|Enterprise: ' . get_debug_type($value));
@@ -107,10 +101,7 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['target_type']);
         }
         if (\array_key_exists('permissions', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationPermissions::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationPermissions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationPermissions, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['permissions'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationPermissions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationPermissions::class, 'InstallationPermissions');
             $object->setPermissions($value_3);
             unset($data['permissions']);
         }
@@ -141,10 +132,7 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['app_slug']);
         }
         if (\array_key_exists('suspended_by', $data) && $data['suspended_by'] !== null) {
-            $value_5 = $this->denormalizer->denormalize($data['suspended_by'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationSuspendedBy::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationSuspendedBy) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationSuspendedBy, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['suspended_by'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationSuspendedBy::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationSuspendedBy::class, 'InstallationSuspendedBy');
             $object->setSuspendedBy($value_5);
             unset($data['suspended_by']);
         }

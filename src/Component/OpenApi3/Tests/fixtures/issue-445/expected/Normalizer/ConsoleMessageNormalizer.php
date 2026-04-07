@@ -76,10 +76,7 @@ class ConsoleMessageNormalizer implements DenormalizerInterface, NormalizerInter
             $values = [];
             if (\is_array($data['arguments'])) {
                 foreach ($data['arguments'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TupleOfStringAndString::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TupleOfStringAndString) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TupleOfStringAndString, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TupleOfStringAndString::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TupleOfStringAndString::class, 'TupleOfStringAndString');
                     $values[] = $value_1;
                 }
             }

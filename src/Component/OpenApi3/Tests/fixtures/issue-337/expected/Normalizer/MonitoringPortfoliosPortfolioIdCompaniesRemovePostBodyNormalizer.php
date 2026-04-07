@@ -62,10 +62,7 @@ class MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyNormalizer implement
             $values_1 = [];
             if (\is_array($data['companies'])) {
                 foreach ($data['companies'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem::class, 'MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem');
                     $values_1[] = $value_2;
                 }
             }

@@ -107,10 +107,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $values = [];
             if (\is_array($data['text_matches'])) {
                 foreach ($data['text_matches'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SearchResultTextMatchesItem::class, 'SearchResultTextMatchesItem');
                     $values[] = $value_1;
                 }
             }
@@ -121,10 +118,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $values_1 = [];
             if (\is_array($data['related'])) {
                 foreach ($data['related'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemRelatedItem::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemRelatedItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemRelatedItem, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemRelatedItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemRelatedItem::class, 'TopicSearchResultItemRelatedItem');
                     $values_1[] = $value_3;
                 }
             }
@@ -138,10 +132,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $values_2 = [];
             if (\is_array($data['aliases'])) {
                 foreach ($data['aliases'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItem, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItem::class, 'TopicSearchResultItemAliasesItem');
                     $values_2[] = $value_5;
                 }
             }

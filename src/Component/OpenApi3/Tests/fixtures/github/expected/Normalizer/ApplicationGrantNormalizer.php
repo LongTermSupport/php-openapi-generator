@@ -60,10 +60,7 @@ class ApplicationGrantNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['url']);
         }
         if (\array_key_exists('app', $data)) {
-            $value = $this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantApp::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantApp, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantApp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantApp::class, 'ApplicationGrantApp');
             $object->setApp($value);
             unset($data['app']);
         }
@@ -86,10 +83,7 @@ class ApplicationGrantNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['scopes']);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
-            $value_2 = $this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantUser::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantUser, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ApplicationGrantUser::class, 'ApplicationGrantUser');
             $object->setUser($value_2);
             unset($data['user']);
         }

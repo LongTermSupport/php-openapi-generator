@@ -53,10 +53,7 @@ class DiskInfoNormalizer implements DenormalizerInterface, NormalizerInterface, 
             unset($data['type']);
         }
         if (\array_key_exists('size', $data)) {
-            $value = $this->denormalizer->denormalize($data['size'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfoSize::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfoSize) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfoSize, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['size'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfoSize::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DiskInfoSize::class, 'DiskInfoSize');
             $object->setSize($value);
             unset($data['size']);
         }

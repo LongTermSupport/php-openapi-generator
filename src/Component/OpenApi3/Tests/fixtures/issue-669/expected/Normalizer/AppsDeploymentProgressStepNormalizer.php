@@ -65,10 +65,7 @@ class AppsDeploymentProgressStepNormalizer implements DenormalizerInterface, Nor
             unset($data['name']);
         }
         if (\array_key_exists('reason', $data)) {
-            $value = $this->denormalizer->denormalize($data['reason'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['reason'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppsDeploymentProgressStepReason::class, 'AppsDeploymentProgressStepReason');
             $object->setReason($value);
             unset($data['reason']);
         }

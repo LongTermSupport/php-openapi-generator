@@ -56,10 +56,7 @@ class AppFunctionsComponentHealthNormalizer implements DenormalizerInterface, No
             $values = [];
             if (\is_array($data['functions_component_health_metrics'])) {
                 foreach ($data['functions_component_health_metrics'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem::class, 'AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem');
                     $values[] = $value_1;
                 }
             }

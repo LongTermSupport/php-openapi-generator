@@ -96,10 +96,7 @@ class TeamNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['repositories_url']);
         }
         if (\array_key_exists('parent', $data) && $data['parent'] !== null) {
-            $value = $this->denormalizer->denormalize($data['parent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamParent::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamParent) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamParent, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['parent'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamParent::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamParent::class, 'TeamParent');
             $object->setParent($value);
             unset($data['parent']);
         }

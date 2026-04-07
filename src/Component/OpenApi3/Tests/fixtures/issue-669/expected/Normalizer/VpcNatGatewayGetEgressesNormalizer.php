@@ -52,10 +52,7 @@ class VpcNatGatewayGetEgressesNormalizer implements DenormalizerInterface, Norma
             $values = [];
             if (\is_array($data['public_gateways'])) {
                 foreach ($data['public_gateways'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgressesPublicGatewaysItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgressesPublicGatewaysItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgressesPublicGatewaysItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgressesPublicGatewaysItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgressesPublicGatewaysItem::class, 'VpcNatGatewayGetEgressesPublicGatewaysItem');
                     $values[] = $value_1;
                 }
             }

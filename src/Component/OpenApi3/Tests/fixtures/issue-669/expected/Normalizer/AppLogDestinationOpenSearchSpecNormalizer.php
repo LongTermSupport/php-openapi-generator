@@ -53,10 +53,7 @@ class AppLogDestinationOpenSearchSpecNormalizer implements DenormalizerInterface
             unset($data['endpoint']);
         }
         if (\array_key_exists('basic_auth', $data)) {
-            $value = $this->denormalizer->denormalize($data['basic_auth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['basic_auth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpecBasicAuth::class, 'AppLogDestinationOpenSearchSpecBasicAuth');
             $object->setBasicAuth($value);
             unset($data['basic_auth']);
         }

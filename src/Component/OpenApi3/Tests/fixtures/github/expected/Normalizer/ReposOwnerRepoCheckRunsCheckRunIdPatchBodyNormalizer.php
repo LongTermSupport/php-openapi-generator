@@ -80,10 +80,7 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyNormalizer implements Denormaliz
             unset($data['completed_at']);
         }
         if (\array_key_exists('output', $data)) {
-            $value = $this->denormalizer->denormalize($data['output'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['output'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput::class, 'ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput');
             $object->setOutput($value);
             unset($data['output']);
         }
@@ -91,10 +88,7 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyNormalizer implements Denormaliz
             $values = [];
             if (\is_array($data['actions'])) {
                 foreach ($data['actions'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem::class, 'ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem');
                     $values[] = $value_2;
                 }
             }

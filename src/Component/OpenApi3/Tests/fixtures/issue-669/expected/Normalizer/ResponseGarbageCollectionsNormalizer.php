@@ -52,10 +52,7 @@ class ResponseGarbageCollectionsNormalizer implements DenormalizerInterface, Nor
             $values = [];
             if (\is_array($data['garbage_collections'])) {
                 foreach ($data['garbage_collections'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\GarbageCollection::class, 'GarbageCollection');
                     $values[] = $value_1;
                 }
             }

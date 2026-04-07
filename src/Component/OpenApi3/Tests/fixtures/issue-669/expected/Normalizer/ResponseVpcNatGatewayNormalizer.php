@@ -49,10 +49,7 @@ class ResponseVpcNatGatewayNormalizer implements DenormalizerInterface, Normaliz
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('vpc_nat_gateway', $data)) {
-            $value = $this->denormalizer->denormalize($data['vpc_nat_gateway'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGet::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGet) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGet, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['vpc_nat_gateway'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGet::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGet::class, 'VpcNatGatewayGet');
             $object->setVpcNatGateway($value);
             unset($data['vpc_nat_gateway']);
         }

@@ -52,10 +52,7 @@ class ApiPromptNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values = [];
             if (\is_array($data['evaluation_trace_spans'])) {
                 foreach ($data['evaluation_trace_spans'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationTraceSpan::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationTraceSpan) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationTraceSpan, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationTraceSpan::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationTraceSpan::class, 'ApiEvaluationTraceSpan');
                     $values[] = $value_1;
                 }
             }
@@ -86,10 +83,7 @@ class ApiPromptNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values_1 = [];
             if (\is_array($data['prompt_chunks'])) {
                 foreach ($data['prompt_chunks'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiPromptChunk::class, 'ApiPromptChunk');
                     $values_1[] = $value_3;
                 }
             }
@@ -104,10 +98,7 @@ class ApiPromptNormalizer implements DenormalizerInterface, NormalizerInterface,
             $values_2 = [];
             if (\is_array($data['prompt_level_metric_results'])) {
                 foreach ($data['prompt_level_metric_results'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiEvaluationMetricResult::class, 'ApiEvaluationMetricResult');
                     $values_2[] = $value_5;
                 }
             }

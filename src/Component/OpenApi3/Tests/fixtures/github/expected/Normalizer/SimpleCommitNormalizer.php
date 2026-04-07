@@ -68,10 +68,7 @@ class SimpleCommitNormalizer implements DenormalizerInterface, NormalizerInterfa
             unset($data['timestamp']);
         }
         if (\array_key_exists('author', $data) && $data['author'] !== null) {
-            $value = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitAuthor::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitAuthor) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitAuthor, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitAuthor::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitAuthor::class, 'SimpleCommitAuthor');
             $object->setAuthor($value);
             unset($data['author']);
         }
@@ -79,10 +76,7 @@ class SimpleCommitNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setAuthor(null);
         }
         if (\array_key_exists('committer', $data) && $data['committer'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitCommitter::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitCommitter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitCommitter, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitCommitter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\SimpleCommitCommitter::class, 'SimpleCommitCommitter');
             $object->setCommitter($value_1);
             unset($data['committer']);
         }

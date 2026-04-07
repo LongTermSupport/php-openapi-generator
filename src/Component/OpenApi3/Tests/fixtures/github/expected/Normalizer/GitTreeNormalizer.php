@@ -67,10 +67,7 @@ class GitTreeNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $values = [];
             if (\is_array($data['tree'])) {
                 foreach ($data['tree'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GitTreeTreeItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GitTreeTreeItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GitTreeTreeItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GitTreeTreeItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GitTreeTreeItem::class, 'GitTreeTreeItem');
                     $values[] = $value_1;
                 }
             }

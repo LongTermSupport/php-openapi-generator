@@ -52,10 +52,7 @@ class OutputFormatSetXmpWritebackStateManyRequestNormalizer implements Denormali
             $values = [];
             if (\is_array($data['items'])) {
                 foreach ($data['items'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequestItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequestItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequestItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequestItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequestItem::class, 'OutputFormatSetXmpWritebackStateRequestItem');
                     $values[] = $value_1;
                 }
             }

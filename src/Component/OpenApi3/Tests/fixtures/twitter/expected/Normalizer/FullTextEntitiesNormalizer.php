@@ -52,10 +52,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['urls'])) {
                 foreach ($data['urls'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UrlEntity::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UrlEntity) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UrlEntity, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UrlEntity::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UrlEntity::class, 'UrlEntity');
                     $values[] = $value_1;
                 }
             }
@@ -66,10 +63,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
             $values_1 = [];
             if (\is_array($data['hashtags'])) {
                 foreach ($data['hashtags'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HashtagEntity::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HashtagEntity) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HashtagEntity, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HashtagEntity::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HashtagEntity::class, 'HashtagEntity');
                     $values_1[] = $value_3;
                 }
             }
@@ -80,10 +74,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
             $values_2 = [];
             if (\is_array($data['mentions'])) {
                 foreach ($data['mentions'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\MentionEntity::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\MentionEntity) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\MentionEntity, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\MentionEntity::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\MentionEntity::class, 'MentionEntity');
                     $values_2[] = $value_5;
                 }
             }
@@ -94,10 +85,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
             $values_3 = [];
             if (\is_array($data['cashtags'])) {
                 foreach ($data['cashtags'] as $value_6) {
-                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CashtagEntity::class, 'json', $context);
-                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CashtagEntity) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CashtagEntity, got ' . get_debug_type($value_7));
-                    }
+                    $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CashtagEntity::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\CashtagEntity::class, 'CashtagEntity');
                     $values_3[] = $value_7;
                 }
             }
@@ -108,10 +96,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
             $values_4 = [];
             if (\is_array($data['annotations'])) {
                 foreach ($data['annotations'] as $value_8) {
-                    $value_9 = $this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntitiesAnnotationsItem::class, 'json', $context);
-                    if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntitiesAnnotationsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntitiesAnnotationsItem, got ' . get_debug_type($value_9));
-                    }
+                    $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntitiesAnnotationsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\FullTextEntitiesAnnotationsItem::class, 'FullTextEntitiesAnnotationsItem');
                     $values_4[] = $value_9;
                 }
             }

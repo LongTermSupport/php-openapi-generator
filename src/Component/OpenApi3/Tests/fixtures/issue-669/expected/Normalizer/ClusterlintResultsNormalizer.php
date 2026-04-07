@@ -64,10 +64,7 @@ class ClusterlintResultsNormalizer implements DenormalizerInterface, NormalizerI
             $values = [];
             if (\is_array($data['diagnostics'])) {
                 foreach ($data['diagnostics'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ClusterlintResultsDiagnosticsItem::class, 'ClusterlintResultsDiagnosticsItem');
                     $values[] = $value_1;
                 }
             }

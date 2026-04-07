@@ -82,10 +82,7 @@ class SchemaCreateRequestNormalizer implements DenormalizerInterface, Normalizer
             $values_1 = [];
             if (\is_array($data['displayPatterns'])) {
                 foreach ($data['displayPatterns'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayPattern::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayPattern) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayPattern, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayPattern::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayPattern::class, 'DisplayPattern');
                     $values_1[] = $value_2;
                 }
             }
@@ -95,10 +92,7 @@ class SchemaCreateRequestNormalizer implements DenormalizerInterface, Normalizer
             $values_2 = [];
             if (\is_array($data['fields'])) {
                 foreach ($data['fields'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldBase::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldBase, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldBase::class, 'FieldBase');
                     $values_2[] = $value_4;
                 }
             }
@@ -111,10 +105,7 @@ class SchemaCreateRequestNormalizer implements DenormalizerInterface, Normalizer
             $values_3 = [];
             if (\is_array($data['fieldsOverwrite'])) {
                 foreach ($data['fieldsOverwrite'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteBase::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteBase, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteBase::class, 'FieldOverwriteBase');
                     $values_3[] = $value_6;
                 }
             }
@@ -127,10 +118,7 @@ class SchemaCreateRequestNormalizer implements DenormalizerInterface, Normalizer
             $values_4 = [];
             if (\is_array($data['aggregations'])) {
                 foreach ($data['aggregations'] as $value_7) {
-                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context);
-                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase, got ' . get_debug_type($value_8));
-                    }
+                    $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregatorBase::class, 'AggregatorBase');
                     $values_4[] = $value_8;
                 }
             }
@@ -143,10 +131,7 @@ class SchemaCreateRequestNormalizer implements DenormalizerInterface, Normalizer
             $values_5 = [];
             if (\is_array($data['sort'])) {
                 foreach ($data['sort'] as $value_9) {
-                    $value_10 = $this->denormalizer->denormalize($value_9, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo::class, 'json', $context);
-                    if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo, got ' . get_debug_type($value_10));
-                    }
+                    $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_9, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SortInfo::class, 'SortInfo');
                     $values_5[] = $value_10;
                 }
             }

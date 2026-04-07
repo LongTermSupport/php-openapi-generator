@@ -49,10 +49,7 @@ class UserNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('kubernetes_cluster_user', $data)) {
-            $value = $this->denormalizer->denormalize($data['kubernetes_cluster_user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserKubernetesClusterUser::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserKubernetesClusterUser) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserKubernetesClusterUser, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['kubernetes_cluster_user'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserKubernetesClusterUser::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\UserKubernetesClusterUser::class, 'UserKubernetesClusterUser');
             $object->setKubernetesClusterUser($value);
             unset($data['kubernetes_cluster_user']);
         }

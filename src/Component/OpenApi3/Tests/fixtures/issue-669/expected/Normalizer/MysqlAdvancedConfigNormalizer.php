@@ -185,10 +185,7 @@ class MysqlAdvancedConfigNormalizer implements DenormalizerInterface, Normalizer
             unset($data['log_output']);
         }
         if (\array_key_exists('mysql_incremental_backup', $data)) {
-            $value = $this->denormalizer->denormalize($data['mysql_incremental_backup'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mysql_incremental_backup'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\MysqlIncrementalBackup::class, 'MysqlIncrementalBackup');
             $object->setMysqlIncrementalBackup($value);
             unset($data['mysql_incremental_backup']);
         }

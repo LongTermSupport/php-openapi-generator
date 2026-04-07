@@ -56,10 +56,7 @@ class ShortBranchNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['name']);
         }
         if (\array_key_exists('commit', $data)) {
-            $value = $this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ShortBranchCommit::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ShortBranchCommit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ShortBranchCommit, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ShortBranchCommit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ShortBranchCommit::class, 'ShortBranchCommit');
             $object->setCommit($value);
             unset($data['commit']);
         }
@@ -68,10 +65,7 @@ class ShortBranchNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['protected']);
         }
         if (\array_key_exists('protection', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['protection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['protection'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BranchProtection::class, 'BranchProtection');
             $object->setProtection($value_1);
             unset($data['protection']);
         }

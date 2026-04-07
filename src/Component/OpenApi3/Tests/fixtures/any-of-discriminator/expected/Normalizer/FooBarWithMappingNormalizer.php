@@ -51,16 +51,10 @@ class FooBarWithMappingNormalizer implements DenormalizerInterface, NormalizerIn
         if (\array_key_exists('what', $data)) {
             $value = $data['what'];
             if (is_array($data['what']) and (isset($data['what']['type']) and $data['what']['type'] === 'foo')) {
-                $value_1 = $this->denormalizer->denormalize($data['what'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo::class, 'json', $context);
-                if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo, got ' . get_debug_type($value_1));
-                }
+                $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['what'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo::class, 'Foo');
                 $value = $value_1;
             } elseif (is_array($data['what']) and (isset($data['what']['type']) and $data['what']['type'] === 'bar')) {
-                $value_2 = $this->denormalizer->denormalize($data['what'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar::class, 'json', $context);
-                if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar, got ' . get_debug_type($value_2));
-                }
+                $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['what'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar::class, 'Bar');
                 $value = $value_2;
             } else {
                 throw new \LogicException('Unexpected type for Foo|Bar: ' . get_debug_type($value));

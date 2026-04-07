@@ -49,42 +49,27 @@ class ParchmentsGetHaljsonResponse200LinksNormalizer implements DenormalizerInte
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('self', $data)) {
-            $value = $this->denormalizer->denormalize($data['self'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksSelf::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksSelf) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksSelf, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['self'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksSelf::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksSelf::class, 'ParchmentsGetHaljsonResponse200LinksSelf');
             $object->setSelf($value);
             unset($data['self']);
         }
         if (\array_key_exists('first', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['first'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksFirst::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksFirst) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksFirst, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['first'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksFirst::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksFirst::class, 'ParchmentsGetHaljsonResponse200LinksFirst');
             $object->setFirst($value_1);
             unset($data['first']);
         }
         if (\array_key_exists('last', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['last'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksLast::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksLast) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksLast, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['last'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksLast::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksLast::class, 'ParchmentsGetHaljsonResponse200LinksLast');
             $object->setLast($value_2);
             unset($data['last']);
         }
         if (\array_key_exists('next', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['next'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksNext::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksNext) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksNext, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['next'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksNext::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksNext::class, 'ParchmentsGetHaljsonResponse200LinksNext');
             $object->setNext($value_3);
             unset($data['next']);
         }
         if (\array_key_exists('previous', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['previous'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksPrevious::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksPrevious) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksPrevious, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['previous'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksPrevious::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200LinksPrevious::class, 'ParchmentsGetHaljsonResponse200LinksPrevious');
             $object->setPrevious($value_4);
             unset($data['previous']);
         }

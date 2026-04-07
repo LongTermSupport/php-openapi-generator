@@ -56,10 +56,7 @@ class TagNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             unset($data['name']);
         }
         if (\array_key_exists('commit', $data)) {
-            $value = $this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TagCommit::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TagCommit) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TagCommit, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['commit'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TagCommit::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TagCommit::class, 'TagCommit');
             $object->setCommit($value);
             unset($data['commit']);
         }

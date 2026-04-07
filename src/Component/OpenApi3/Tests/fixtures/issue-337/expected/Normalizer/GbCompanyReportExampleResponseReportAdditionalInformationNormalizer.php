@@ -52,10 +52,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $values = [];
             if (\is_array($data['companyHistory'])) {
                 foreach ($data['companyHistory'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem::class, 'GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem');
                     $values[] = $value_1;
                 }
             }
@@ -63,10 +60,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             unset($data['companyHistory']);
         }
         if (\array_key_exists('mortgageSummary', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['mortgageSummary'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['mortgageSummary'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary::class, 'GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary');
             $object->setMortgageSummary($value_2);
             unset($data['mortgageSummary']);
         }
@@ -74,10 +68,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $values_1 = [];
             if (\is_array($data['mortgageDetails'])) {
                 foreach ($data['mortgageDetails'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem::class, 'GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem');
                     $values_1[] = $value_4;
                 }
             }
@@ -88,10 +79,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $values_2 = [];
             if (\is_array($data['commentaries'])) {
                 foreach ($data['commentaries'] as $value_5) {
-                    $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem::class, 'json', $context);
-                    if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem, got ' . get_debug_type($value_6));
-                    }
+                    $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem::class, 'GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem');
                     $values_2[] = $value_6;
                 }
             }
@@ -102,10 +90,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $values_3 = [];
             if (\is_array($data['ratingHistory'])) {
                 foreach ($data['ratingHistory'] as $value_7) {
-                    $value_8 = $this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem::class, 'json', $context);
-                    if (!$value_8 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem, got ' . get_debug_type($value_8));
-                    }
+                    $value_8 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_7, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem::class, 'GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem');
                     $values_3[] = $value_8;
                 }
             }
@@ -116,10 +101,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $values_4 = [];
             if (\is_array($data['creditLimitHistory'])) {
                 foreach ($data['creditLimitHistory'] as $value_9) {
-                    $value_10 = $this->denormalizer->denormalize($value_9, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem::class, 'json', $context);
-                    if (!$value_10 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem, got ' . get_debug_type($value_10));
-                    }
+                    $value_10 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_9, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem::class, 'GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem');
                     $values_4[] = $value_10;
                 }
             }
@@ -130,10 +112,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $values_5 = [];
             if (\is_array($data['badDebtDetails'])) {
                 foreach ($data['badDebtDetails'] as $value_11) {
-                    $value_12 = $this->denormalizer->denormalize($value_11, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem::class, 'json', $context);
-                    if (!$value_12 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem, got ' . get_debug_type($value_12));
-                    }
+                    $value_12 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_11, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem::class, 'GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem');
                     $values_5[] = $value_12;
                 }
             }

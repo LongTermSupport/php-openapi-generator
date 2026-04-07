@@ -56,10 +56,7 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutputNormalizer implements Deno
             $values = [];
             if (\is_array($data['uploads'])) {
                 foreach ($data['uploads'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFilePresignedUrlResponse::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFilePresignedUrlResponse) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFilePresignedUrlResponse, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFilePresignedUrlResponse::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFilePresignedUrlResponse::class, 'ApiFilePresignedUrlResponse');
                     $values[] = $value_1;
                 }
             }

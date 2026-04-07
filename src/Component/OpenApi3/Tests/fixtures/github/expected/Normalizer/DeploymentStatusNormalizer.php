@@ -68,10 +68,7 @@ class DeploymentStatusNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['state']);
         }
         if (\array_key_exists('creator', $data) && $data['creator'] !== null) {
-            $value = $this->denormalizer->denormalize($data['creator'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusCreator::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusCreator) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusCreator, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['creator'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusCreator::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusCreator::class, 'DeploymentStatusCreator');
             $object->setCreator($value);
             unset($data['creator']);
         }
@@ -115,10 +112,7 @@ class DeploymentStatusNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['log_url']);
         }
         if (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] !== null) {
-            $value_1 = $this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusPerformedViaGithubApp::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusPerformedViaGithubApp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusPerformedViaGithubApp, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['performed_via_github_app'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusPerformedViaGithubApp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\DeploymentStatusPerformedViaGithubApp::class, 'DeploymentStatusPerformedViaGithubApp');
             $object->setPerformedViaGithubApp($value_1);
             unset($data['performed_via_github_app']);
         }

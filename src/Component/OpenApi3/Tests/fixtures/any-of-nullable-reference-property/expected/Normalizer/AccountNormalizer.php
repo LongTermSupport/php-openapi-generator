@@ -63,10 +63,7 @@ class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('countryOfBirth', $data) && $data['countryOfBirth'] !== null) {
             $value = $data['countryOfBirth'];
             if (is_array($data['countryOfBirth'])) {
-                $value_1 = $this->denormalizer->denormalize($data['countryOfBirth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
-                if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_1));
-                }
+                $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['countryOfBirth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'Country');
                 $value = $value_1;
             } else {
                 throw new \LogicException('Unexpected type for Country: ' . get_debug_type($value));
@@ -78,29 +75,20 @@ class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setCountryOfBirth(null);
         }
         if (\array_key_exists('country', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['country'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['country'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'Country');
             $object->setCountry($value_2);
             unset($data['country']);
         }
         if (\array_key_exists('nationality', $data) && $data['nationality'] !== null) {
             $value_3 = $data['nationality'];
             if (is_array($data['nationality'])) {
-                $value_4 = $this->denormalizer->denormalize($data['nationality'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
-                if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
-                    throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_4));
-                }
+                $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['nationality'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'Country');
                 $value_3 = $value_4;
             } elseif (is_array($data['nationality']) && $this->isOnlyNumericKeys($data['nationality'])) {
                 $values = [];
                 if (\is_array($data['nationality'])) {
                     foreach ($data['nationality'] as $value_5) {
-                        $value_6 = $this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context);
-                        if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country) {
-                            throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country, got ' . get_debug_type($value_6));
-                        }
+                        $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_5, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Country::class, 'Country');
                         $values[] = $value_6;
                     }
                 }

@@ -53,10 +53,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistor
             unset($data['date']);
         }
         if (\array_key_exists('companyValue', $data)) {
-            $value = $this->denormalizer->denormalize($data['companyValue'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItemCompanyValue::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItemCompanyValue) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItemCompanyValue, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['companyValue'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItemCompanyValue::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItemCompanyValue::class, 'GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItemCompanyValue');
             $object->setCompanyValue($value);
             unset($data['companyValue']);
         }

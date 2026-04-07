@@ -57,42 +57,27 @@ class TagsResourcesNormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['last_tagged_uri']);
         }
         if (\array_key_exists('droplets', $data)) {
-            $value = $this->denormalizer->denormalize($data['droplets'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdroplets::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdroplets) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdroplets, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['droplets'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdroplets::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdroplets::class, 'TagsResourcesdroplets');
             $object->setDroplets($value);
             unset($data['droplets']);
         }
         if (\array_key_exists('imgages', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['imgages'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesimgages::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesimgages) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesimgages, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['imgages'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesimgages::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesimgages::class, 'TagsResourcesimgages');
             $object->setImgages($value_1);
             unset($data['imgages']);
         }
         if (\array_key_exists('volumes', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['volumes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumes::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumes) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumes, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['volumes'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumes::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumes::class, 'TagsResourcesvolumes');
             $object->setVolumes($value_2);
             unset($data['volumes']);
         }
         if (\array_key_exists('volume_snapshots', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['volume_snapshots'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumeSnapshots::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumeSnapshots) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumeSnapshots, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['volume_snapshots'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumeSnapshots::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesvolumeSnapshots::class, 'TagsResourcesvolumeSnapshots');
             $object->setVolumeSnapshots($value_3);
             unset($data['volume_snapshots']);
         }
         if (\array_key_exists('databases', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['databases'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdatabases::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdatabases) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdatabases, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['databases'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdatabases::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\TagsResourcesdatabases::class, 'TagsResourcesdatabases');
             $object->setDatabases($value_4);
             unset($data['databases']);
         }

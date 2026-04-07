@@ -52,10 +52,7 @@ class AppMetricsBandwidthUsageNormalizer implements DenormalizerInterface, Norma
             $values = [];
             if (\is_array($data['app_bandwidth_usage'])) {
                 foreach ($data['app_bandwidth_usage'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMetricsBandwidthUsageDetails::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMetricsBandwidthUsageDetails) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMetricsBandwidthUsageDetails, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMetricsBandwidthUsageDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMetricsBandwidthUsageDetails::class, 'AppMetricsBandwidthUsageDetails');
                     $values[] = $value_1;
                 }
             }

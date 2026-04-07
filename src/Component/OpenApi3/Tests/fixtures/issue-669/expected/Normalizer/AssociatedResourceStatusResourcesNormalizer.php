@@ -52,10 +52,7 @@ class AssociatedResourceStatusResourcesNormalizer implements DenormalizerInterfa
             $values = [];
             if (\is_array($data['reserved_ips'])) {
                 foreach ($data['reserved_ips'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'DestroyedAssociatedResource');
                     $values[] = $value_1;
                 }
             }
@@ -66,10 +63,7 @@ class AssociatedResourceStatusResourcesNormalizer implements DenormalizerInterfa
             $values_1 = [];
             if (\is_array($data['floating_ips'])) {
                 foreach ($data['floating_ips'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'DestroyedAssociatedResource');
                     $values_1[] = $value_3;
                 }
             }
@@ -80,10 +74,7 @@ class AssociatedResourceStatusResourcesNormalizer implements DenormalizerInterfa
             $values_2 = [];
             if (\is_array($data['snapshots'])) {
                 foreach ($data['snapshots'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'DestroyedAssociatedResource');
                     $values_2[] = $value_5;
                 }
             }
@@ -94,10 +85,7 @@ class AssociatedResourceStatusResourcesNormalizer implements DenormalizerInterfa
             $values_3 = [];
             if (\is_array($data['volumes'])) {
                 foreach ($data['volumes'] as $value_6) {
-                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
-                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value_7));
-                    }
+                    $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'DestroyedAssociatedResource');
                     $values_3[] = $value_7;
                 }
             }
@@ -108,10 +96,7 @@ class AssociatedResourceStatusResourcesNormalizer implements DenormalizerInterfa
             $values_4 = [];
             if (\is_array($data['volume_snapshots'])) {
                 foreach ($data['volume_snapshots'] as $value_8) {
-                    $value_9 = $this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context);
-                    if (!$value_9 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource, got ' . get_debug_type($value_9));
-                    }
+                    $value_9 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_8, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestroyedAssociatedResource::class, 'DestroyedAssociatedResource');
                     $values_4[] = $value_9;
                 }
             }

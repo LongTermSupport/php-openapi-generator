@@ -61,10 +61,7 @@ class GbPeopleReportReponseReportDirectorshipsPreviousItemNormalizer implements 
             unset($data['status']);
         }
         if (\array_key_exists('position', $data)) {
-            $value = $this->denormalizer->denormalize($data['position'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemPosition::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemPosition) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemPosition, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['position'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemPosition::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemPosition::class, 'GbPeopleReportReponseReportDirectorshipsPreviousItemPosition');
             $object->setPosition($value);
             unset($data['position']);
         }
@@ -73,18 +70,12 @@ class GbPeopleReportReponseReportDirectorshipsPreviousItemNormalizer implements 
             unset($data['companyRegistrationDate']);
         }
         if (\array_key_exists('latestTurnoverFigure', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['latestTurnoverFigure'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemLatestTurnoverFigure::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemLatestTurnoverFigure) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemLatestTurnoverFigure, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['latestTurnoverFigure'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemLatestTurnoverFigure::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemLatestTurnoverFigure::class, 'GbPeopleReportReponseReportDirectorshipsPreviousItemLatestTurnoverFigure');
             $object->setLatestTurnoverFigure($value_1);
             unset($data['latestTurnoverFigure']);
         }
         if (\array_key_exists('netWorth', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['netWorth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemNetWorth::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemNetWorth) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemNetWorth, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['netWorth'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemNetWorth::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemNetWorth::class, 'GbPeopleReportReponseReportDirectorshipsPreviousItemNetWorth');
             $object->setNetWorth($value_2);
             unset($data['netWorth']);
         }
@@ -93,18 +84,12 @@ class GbPeopleReportReponseReportDirectorshipsPreviousItemNormalizer implements 
             unset($data['legalCount']);
         }
         if (\array_key_exists('creditScore', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['creditScore'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemCreditScore::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemCreditScore) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemCreditScore, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['creditScore'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemCreditScore::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemCreditScore::class, 'GbPeopleReportReponseReportDirectorshipsPreviousItemCreditScore');
             $object->setCreditScore($value_3);
             unset($data['creditScore']);
         }
         if (\array_key_exists('additionalData', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['additionalData'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemAdditionalData::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemAdditionalData) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemAdditionalData, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['additionalData'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemAdditionalData::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbPeopleReportReponseReportDirectorshipsPreviousItemAdditionalData::class, 'GbPeopleReportReponseReportDirectorshipsPreviousItemAdditionalData');
             $object->setAdditionalData($value_4);
             unset($data['additionalData']);
         }

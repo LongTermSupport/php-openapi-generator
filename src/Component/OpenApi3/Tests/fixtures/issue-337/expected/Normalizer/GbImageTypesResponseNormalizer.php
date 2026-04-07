@@ -56,10 +56,7 @@ class GbImageTypesResponseNormalizer implements DenormalizerInterface, Normalize
             $values = [];
             if (\is_array($data['availableTypes'])) {
                 foreach ($data['availableTypes'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbImageTypesResponseAvailableTypesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbImageTypesResponseAvailableTypesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbImageTypesResponseAvailableTypesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbImageTypesResponseAvailableTypesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbImageTypesResponseAvailableTypesItem::class, 'GbImageTypesResponseAvailableTypesItem');
                     $values[] = $value_1;
                 }
             }

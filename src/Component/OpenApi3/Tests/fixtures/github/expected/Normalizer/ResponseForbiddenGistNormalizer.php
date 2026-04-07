@@ -52,10 +52,7 @@ class ResponseForbiddenGistNormalizer implements DenormalizerInterface, Normaliz
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ResponseForbiddenGistConstraint());
         }
         if (\array_key_exists('block', $data)) {
-            $value = $this->denormalizer->denormalize($data['block'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponseForbiddenGistBlock::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponseForbiddenGistBlock) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponseForbiddenGistBlock, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['block'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponseForbiddenGistBlock::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponseForbiddenGistBlock::class, 'ResponseForbiddenGistBlock');
             $object->setBlock($value);
             unset($data['block']);
         }

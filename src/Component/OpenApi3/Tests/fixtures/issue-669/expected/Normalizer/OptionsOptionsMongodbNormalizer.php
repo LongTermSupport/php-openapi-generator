@@ -72,10 +72,7 @@ class OptionsOptionsMongodbNormalizer implements DenormalizerInterface, Normaliz
             $values_2 = [];
             if (\is_array($data['layouts'])) {
                 foreach ($data['layouts'] as $value_2) {
-                    $value_3 = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseLayoutOption::class, 'json', $context);
-                    if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseLayoutOption) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseLayoutOption, got ' . get_debug_type($value_3));
-                    }
+                    $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseLayoutOption::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatabaseLayoutOption::class, 'DatabaseLayoutOption');
                     $values_2[] = $value_3;
                 }
             }

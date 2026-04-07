@@ -68,18 +68,12 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['html_url']);
         }
         if (\array_key_exists('author', $data)) {
-            $value = $this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitAuthor::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitAuthor) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitAuthor, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['author'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitAuthor::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitAuthor::class, 'FileCommitCommitAuthor');
             $object->setAuthor($value);
             unset($data['author']);
         }
         if (\array_key_exists('committer', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitCommitter::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitCommitter) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitCommitter, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['committer'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitCommitter::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitCommitter::class, 'FileCommitCommitCommitter');
             $object->setCommitter($value_1);
             unset($data['committer']);
         }
@@ -88,10 +82,7 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['message']);
         }
         if (\array_key_exists('tree', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['tree'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitTree::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitTree) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitTree, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['tree'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitTree::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitTree::class, 'FileCommitCommitTree');
             $object->setTree($value_2);
             unset($data['tree']);
         }
@@ -99,10 +90,7 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['parents'])) {
                 foreach ($data['parents'] as $value_3) {
-                    $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitParentsItem::class, 'json', $context);
-                    if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitParentsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitParentsItem, got ' . get_debug_type($value_4));
-                    }
+                    $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitParentsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitParentsItem::class, 'FileCommitCommitParentsItem');
                     $values[] = $value_4;
                 }
             }
@@ -110,10 +98,7 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['parents']);
         }
         if (\array_key_exists('verification', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['verification'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitVerification::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitVerification) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitVerification, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['verification'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitVerification::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\FileCommitCommitVerification::class, 'FileCommitCommitVerification');
             $object->setVerification($value_5);
             unset($data['verification']);
         }

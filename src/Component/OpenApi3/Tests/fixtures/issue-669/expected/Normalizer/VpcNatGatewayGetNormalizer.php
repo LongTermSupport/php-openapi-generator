@@ -76,10 +76,7 @@ class VpcNatGatewayGetNormalizer implements DenormalizerInterface, NormalizerInt
             $values = [];
             if (\is_array($data['vpcs'])) {
                 foreach ($data['vpcs'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetVpcsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetVpcsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetVpcsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetVpcsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetVpcsItem::class, 'VpcNatGatewayGetVpcsItem');
                     $values[] = $value_1;
                 }
             }
@@ -87,10 +84,7 @@ class VpcNatGatewayGetNormalizer implements DenormalizerInterface, NormalizerInt
             unset($data['vpcs']);
         }
         if (\array_key_exists('egresses', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['egresses'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgresses::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgresses) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgresses, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['egresses'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgresses::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\VpcNatGatewayGetEgresses::class, 'VpcNatGatewayGetEgresses');
             $object->setEgresses($value_2);
             unset($data['egresses']);
         }

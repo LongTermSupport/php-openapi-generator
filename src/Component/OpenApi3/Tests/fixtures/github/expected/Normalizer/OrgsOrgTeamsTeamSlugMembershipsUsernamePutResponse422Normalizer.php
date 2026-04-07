@@ -59,10 +59,7 @@ class OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422Normalizer implements
             $values = [];
             if (\is_array($data['errors'])) {
                 foreach ($data['errors'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem::class, 'OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem');
                     $values[] = $value_1;
                 }
             }

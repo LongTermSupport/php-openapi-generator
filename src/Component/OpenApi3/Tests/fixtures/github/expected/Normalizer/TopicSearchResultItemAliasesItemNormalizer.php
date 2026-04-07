@@ -52,10 +52,7 @@ class TopicSearchResultItemAliasesItemNormalizer implements DenormalizerInterfac
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TopicSearchResultItemAliasesItemConstraint());
         }
         if (\array_key_exists('topic_relation', $data)) {
-            $value = $this->denormalizer->denormalize($data['topic_relation'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItemTopicRelation::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItemTopicRelation) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItemTopicRelation, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['topic_relation'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItemTopicRelation::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TopicSearchResultItemAliasesItemTopicRelation::class, 'TopicSearchResultItemAliasesItemTopicRelation');
             $object->setTopicRelation($value);
             unset($data['topic_relation']);
         }

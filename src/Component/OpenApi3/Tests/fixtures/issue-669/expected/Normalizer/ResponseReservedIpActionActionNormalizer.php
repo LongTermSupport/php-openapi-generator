@@ -80,10 +80,7 @@ class ResponseReservedIpActionActionNormalizer implements DenormalizerInterface,
             unset($data['resource_type']);
         }
         if (\array_key_exists('region', $data)) {
-            $value = $this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['region'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Region::class, 'Region');
             $object->setRegion($value);
             unset($data['region']);
         }

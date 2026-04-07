@@ -67,10 +67,7 @@ class ReposOwnerRepoPullsPullNumberReviewsPostBodyNormalizer implements Denormal
             $values = [];
             if (\is_array($data['comments'])) {
                 foreach ($data['comments'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem::class, 'ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem');
                     $values[] = $value_1;
                 }
             }

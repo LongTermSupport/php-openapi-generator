@@ -35,21 +35,42 @@ class ObjectType extends Type
         $tmpVar          = new Expr\Variable($context->getUniqueVariableName('value'));
         $denormalizeCall = $this->createDenormalizationValueStatement($context, $input, $normalizerFromObject);
 
+        // Wrap the denormalize call in TypeValidator::assertInstanceOf so the
+        // generated code:
+        //
+        //   1. Preserves runtime type validation (assertInstanceOf throws on
+        //      a mismatch, exactly as the previous explicit `if (!$x instanceof Y)`
+        //      guard did).
+        //
+        //   2. Avoids PHPStan `instanceof.alwaysTrue`. The Symfony parent
+        //      DenormalizerInterface::denormalize() has the conditional return
+        //      type `($type is class-string<TObject> ? TObject : mixed)`, so
+        //      PHPStan already narrows the call result to the requested class
+        //      when called with a class-string literal. An explicit `instanceof`
+        //      check on that narrowed value is reported as redundant under
+        //      `treatPhpDocTypesAsCertain: true` (the PHPStan default).
+        //      `TypeValidator::assertInstanceOf` accepts `mixed`, so no
+        //      `instanceof.alwaysTrue` is reported regardless of the consuming
+        //      project's `treatPhpDocTypesAsCertain` setting.
+        //
+        //   3. Reduces 5 lines of generated boilerplate (assign + if + throw)
+        //      to a single expression.
+        $assertCall = new Expr\StaticCall(
+            new Name('TypeValidator'),
+            'assertInstanceOf',
+            [
+                new Arg($denormalizeCall),
+                new Arg(new ClassConstFetch(
+                    new FullyQualified($this->getFqdn(false)),
+                    new Identifier('class')
+                )),
+                new Arg(new Scalar\String_($this->className)),
+            ]
+        );
+
         return [
             [
-                new Stmt\Expression(new Expr\Assign($tmpVar, $denormalizeCall)),
-                new Stmt\If_(
-                    new Expr\BooleanNot(new Expr\Instanceof_($tmpVar, new FullyQualified($this->getFqdn(false)))),
-                    ['stmts' => [
-                        new Stmt\Expression(new Expr\Throw_(new Expr\New_(
-                            new FullyQualified('LogicException'),
-                            [new Arg(new Expr\BinaryOp\Concat(
-                                new Scalar\String_('Expected ' . $this->getFqdn(false) . ', got '),
-                                new Expr\FuncCall(new Name('get_debug_type'), [new Arg($tmpVar)])
-                            ))]
-                        ))),
-                    ]]
-                ),
+                new Stmt\Expression(new Expr\Assign($tmpVar, $assertCall)),
             ],
             $tmpVar,
         ];

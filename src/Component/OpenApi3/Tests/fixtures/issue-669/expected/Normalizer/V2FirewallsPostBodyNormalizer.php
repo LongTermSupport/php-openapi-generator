@@ -64,10 +64,7 @@ class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $values = [];
             if (\is_array($data['pending_changes'])) {
                 foreach ($data['pending_changes'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallpendingChangesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallpendingChangesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallpendingChangesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallpendingChangesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallpendingChangesItem::class, 'FirewallpendingChangesItem');
                     $values[] = $value_1;
                 }
             }
@@ -105,10 +102,7 @@ class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $values_3 = [];
             if (\is_array($data['inbound_rules'])) {
                 foreach ($data['inbound_rules'] as $value_4) {
-                    $value_5 = $this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItem::class, 'json', $context);
-                    if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItem, got ' . get_debug_type($value_5));
-                    }
+                    $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_4, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesInboundRulesItem::class, 'FirewallRulesInboundRulesItem');
                     $values_3[] = $value_5;
                 }
             }
@@ -122,10 +116,7 @@ class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $values_4 = [];
             if (\is_array($data['outbound_rules'])) {
                 foreach ($data['outbound_rules'] as $value_6) {
-                    $value_7 = $this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesOutboundRulesItem::class, 'json', $context);
-                    if (!$value_7 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesOutboundRulesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesOutboundRulesItem, got ' . get_debug_type($value_7));
-                    }
+                    $value_7 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_6, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesOutboundRulesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FirewallRulesOutboundRulesItem::class, 'FirewallRulesOutboundRulesItem');
                     $values_4[] = $value_7;
                 }
             }

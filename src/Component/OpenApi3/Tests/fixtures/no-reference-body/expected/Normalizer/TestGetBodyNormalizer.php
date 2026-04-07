@@ -53,18 +53,12 @@ class TestGetBodyNormalizer implements DenormalizerInterface, NormalizerInterfac
             unset($data['foo']);
         }
         if (\array_key_exists('Bar', $data)) {
-            $value = $this->denormalizer->denormalize($data['Bar'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['Bar'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\Bar::class, 'Bar');
             $object->setBar($value);
             unset($data['Bar']);
         }
         if (\array_key_exists('Baz', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['Baz'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['Baz'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestGetBodyBaz::class, 'TestGetBodyBaz');
             $object->setBaz($value_1);
             unset($data['Baz']);
         }

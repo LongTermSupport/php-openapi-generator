@@ -73,18 +73,12 @@ class ListFreshInvestigationResponseOrdersItemNormalizer implements Denormalizer
             unset($data['chargeReference']);
         }
         if (\array_key_exists('contactDetails', $data)) {
-            $value = $this->denormalizer->denormalize($data['contactDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemContactDetails::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemContactDetails) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemContactDetails, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['contactDetails'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemContactDetails::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemContactDetails::class, 'ListFreshInvestigationResponseOrdersItemContactDetails');
             $object->setContactDetails($value);
             unset($data['contactDetails']);
         }
         if (\array_key_exists('status', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemStatus::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemStatus) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemStatus, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['status'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemStatus::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemStatus::class, 'ListFreshInvestigationResponseOrdersItemStatus');
             $object->setStatus($value_1);
             unset($data['status']);
         }
@@ -93,10 +87,7 @@ class ListFreshInvestigationResponseOrdersItemNormalizer implements Denormalizer
             unset($data['consent']);
         }
         if (\array_key_exists('searchCriteria', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['searchCriteria'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemSearchCriteria::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemSearchCriteria) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemSearchCriteria, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['searchCriteria'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemSearchCriteria::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListFreshInvestigationResponseOrdersItemSearchCriteria::class, 'ListFreshInvestigationResponseOrdersItemSearchCriteria');
             $object->setSearchCriteria($value_2);
             unset($data['searchCriteria']);
         }

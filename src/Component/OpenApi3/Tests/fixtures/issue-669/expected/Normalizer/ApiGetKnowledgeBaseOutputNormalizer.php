@@ -53,10 +53,7 @@ class ApiGetKnowledgeBaseOutputNormalizer implements DenormalizerInterface, Norm
             unset($data['database_status']);
         }
         if (\array_key_exists('knowledge_base', $data)) {
-            $value = $this->denormalizer->denormalize($data['knowledge_base'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['knowledge_base'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiKnowledgeBase::class, 'ApiKnowledgeBase');
             $object->setKnowledgeBase($value);
             unset($data['knowledge_base']);
         }

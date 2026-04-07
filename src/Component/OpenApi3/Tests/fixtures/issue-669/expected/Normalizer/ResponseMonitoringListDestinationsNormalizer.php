@@ -52,10 +52,7 @@ class ResponseMonitoringListDestinationsNormalizer implements DenormalizerInterf
             $values = [];
             if (\is_array($data['destinations'])) {
                 foreach ($data['destinations'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DestinationOmitCredentials::class, 'DestinationOmitCredentials');
                     $values[] = $value_1;
                 }
             }

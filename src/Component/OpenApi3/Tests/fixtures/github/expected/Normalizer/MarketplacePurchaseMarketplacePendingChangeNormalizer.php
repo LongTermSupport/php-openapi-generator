@@ -68,10 +68,7 @@ class MarketplacePurchaseMarketplacePendingChangeNormalizer implements Denormali
             unset($data['id']);
         }
         if (\array_key_exists('plan', $data)) {
-            $value = $this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['plan'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplaceListingPlan::class, 'MarketplaceListingPlan');
             $object->setPlan($value);
             unset($data['plan']);
         }

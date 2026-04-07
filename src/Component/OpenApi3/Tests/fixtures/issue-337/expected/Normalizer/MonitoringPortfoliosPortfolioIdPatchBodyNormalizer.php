@@ -56,10 +56,7 @@ class MonitoringPortfoliosPortfolioIdPatchBodyNormalizer implements Denormalizer
             $values = [];
             if (\is_array($data['emails'])) {
                 foreach ($data['emails'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem::class, 'MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem');
                     $values[] = $value_1;
                 }
             }

@@ -77,10 +77,7 @@ class ReviewJsonldReviewReadNormalizer implements DenormalizerInterface, Normali
             unset($data['letter']);
         }
         if (\array_key_exists('book', $data)) {
-            $value = $this->denormalizer->denormalize($data['book'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldReviewRead::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldReviewRead) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldReviewRead, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['book'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldReviewRead::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldReviewRead::class, 'BookJsonldReviewRead');
             $object->setBook($value);
             unset($data['book']);
         }

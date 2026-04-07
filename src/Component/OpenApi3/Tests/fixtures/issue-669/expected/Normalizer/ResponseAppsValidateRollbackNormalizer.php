@@ -53,10 +53,7 @@ class ResponseAppsValidateRollbackNormalizer implements DenormalizerInterface, N
             unset($data['valid']);
         }
         if (\array_key_exists('error', $data)) {
-            $value = $this->denormalizer->denormalize($data['error'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAppsValidateRollbackError::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAppsValidateRollbackError) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAppsValidateRollbackError, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['error'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAppsValidateRollbackError::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseAppsValidateRollbackError::class, 'ResponseAppsValidateRollbackError');
             $object->setError($value);
             unset($data['error']);
         }
@@ -64,10 +61,7 @@ class ResponseAppsValidateRollbackNormalizer implements DenormalizerInterface, N
             $values = [];
             if (\is_array($data['warnings'])) {
                 foreach ($data['warnings'] as $value_1) {
-                    $value_2 = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRollbackValidationCondition::class, 'json', $context);
-                    if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRollbackValidationCondition) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRollbackValidationCondition, got ' . get_debug_type($value_2));
-                    }
+                    $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRollbackValidationCondition::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppRollbackValidationCondition::class, 'AppRollbackValidationCondition');
                     $values[] = $value_2;
                 }
             }

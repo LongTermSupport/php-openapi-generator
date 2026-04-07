@@ -79,10 +79,7 @@ class PartnerAttachmentWritableNormalizer implements DenormalizerInterface, Norm
             unset($data['parent_uuid']);
         }
         if (\array_key_exists('bgp', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['bgp'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachmentWritableBgp::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachmentWritableBgp) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachmentWritableBgp, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['bgp'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachmentWritableBgp::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\PartnerAttachmentWritableBgp::class, 'PartnerAttachmentWritableBgp');
             $object->setBgp($value_1);
             unset($data['bgp']);
         }

@@ -69,10 +69,7 @@ class V2UptimeChecksCheckIdAlertsPostBodyNormalizer implements DenormalizerInter
             unset($data['comparison']);
         }
         if (\array_key_exists('notifications', $data)) {
-            $value = $this->denormalizer->denormalize($data['notifications'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Notification::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Notification) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Notification, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['notifications'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Notification::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Notification::class, 'Notification');
             $object->setNotifications($value);
             unset($data['notifications']);
         }

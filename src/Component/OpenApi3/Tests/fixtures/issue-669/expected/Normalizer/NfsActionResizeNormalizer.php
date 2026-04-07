@@ -57,10 +57,7 @@ class NfsActionResizeNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['region']);
         }
         if (\array_key_exists('params', $data)) {
-            $value = $this->denormalizer->denormalize($data['params'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionResizeparams::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionResizeparams) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionResizeparams, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['params'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionResizeparams::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionResizeparams::class, 'NfsActionResizeparams');
             $object->setParams($value);
             unset($data['params']);
         }

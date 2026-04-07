@@ -52,10 +52,7 @@ class GbCompanyReportExampleResponseReportGroupStructureNormalizer implements De
             $values = [];
             if (\is_array($data['subsidiaryCompanies'])) {
                 foreach ($data['subsidiaryCompanies'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem::class, 'GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem');
                     $values[] = $value_1;
                 }
             }

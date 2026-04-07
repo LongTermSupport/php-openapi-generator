@@ -56,10 +56,7 @@ class ListCompanyImagesNormalizer implements DenormalizerInterface, NormalizerIn
             $values = [];
             if (\is_array($data['data'])) {
                 foreach ($data['data'] as $value) {
-                    $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItem::class, 'json', $context);
-                    if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItem) {
-                        throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItem, got ' . get_debug_type($value_1));
-                    }
+                    $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItem::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItem::class, 'ListCompanyImagesDataItem');
                     $values[] = $value_1;
                 }
             }

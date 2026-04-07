@@ -53,34 +53,22 @@ class AppLogDestinationDefinitionNormalizer implements DenormalizerInterface, No
             unset($data['name']);
         }
         if (\array_key_exists('papertrail', $data)) {
-            $value = $this->denormalizer->denormalize($data['papertrail'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['papertrail'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationPapertrailSpec::class, 'AppLogDestinationPapertrailSpec');
             $object->setPapertrail($value);
             unset($data['papertrail']);
         }
         if (\array_key_exists('datadog', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['datadog'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['datadog'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationDatadogSpec::class, 'AppLogDestinationDatadogSpec');
             $object->setDatadog($value_1);
             unset($data['datadog']);
         }
         if (\array_key_exists('logtail', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['logtail'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['logtail'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationLogtailSpec::class, 'AppLogDestinationLogtailSpec');
             $object->setLogtail($value_2);
             unset($data['logtail']);
         }
         if (\array_key_exists('open_search', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['open_search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['open_search'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppLogDestinationOpenSearchSpec::class, 'AppLogDestinationOpenSearchSpec');
             $object->setOpenSearch($value_3);
             unset($data['open_search']);
         }

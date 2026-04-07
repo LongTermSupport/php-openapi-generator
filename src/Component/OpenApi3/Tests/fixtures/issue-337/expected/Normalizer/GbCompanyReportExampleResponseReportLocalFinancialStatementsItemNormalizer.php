@@ -73,42 +73,27 @@ class GbCompanyReportExampleResponseReportLocalFinancialStatementsItemNormalizer
             unset($data['auditQualification']);
         }
         if (\array_key_exists('profitAndLoss', $data)) {
-            $value = $this->denormalizer->denormalize($data['profitAndLoss'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemProfitAndLoss::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemProfitAndLoss) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemProfitAndLoss, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['profitAndLoss'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemProfitAndLoss::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemProfitAndLoss::class, 'GbCompanyReportExampleResponseReportLocalFinancialStatementsItemProfitAndLoss');
             $object->setProfitAndLoss($value);
             unset($data['profitAndLoss']);
         }
         if (\array_key_exists('balanceSheet', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['balanceSheet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemBalanceSheet::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemBalanceSheet) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemBalanceSheet, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['balanceSheet'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemBalanceSheet::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemBalanceSheet::class, 'GbCompanyReportExampleResponseReportLocalFinancialStatementsItemBalanceSheet');
             $object->setBalanceSheet($value_1);
             unset($data['balanceSheet']);
         }
         if (\array_key_exists('cashFlow', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['cashFlow'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemCashFlow::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemCashFlow) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemCashFlow, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['cashFlow'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemCashFlow::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemCashFlow::class, 'GbCompanyReportExampleResponseReportLocalFinancialStatementsItemCashFlow');
             $object->setCashFlow($value_2);
             unset($data['cashFlow']);
         }
         if (\array_key_exists('otherFinancials', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['otherFinancials'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemOtherFinancials::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemOtherFinancials) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemOtherFinancials, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['otherFinancials'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemOtherFinancials::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemOtherFinancials::class, 'GbCompanyReportExampleResponseReportLocalFinancialStatementsItemOtherFinancials');
             $object->setOtherFinancials($value_3);
             unset($data['otherFinancials']);
         }
         if (\array_key_exists('ratios', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['ratios'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemRatios::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemRatios) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemRatios, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['ratios'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemRatios::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\GbCompanyReportExampleResponseReportLocalFinancialStatementsItemRatios::class, 'GbCompanyReportExampleResponseReportLocalFinancialStatementsItemRatios');
             $object->setRatios($value_4);
             unset($data['ratios']);
         }

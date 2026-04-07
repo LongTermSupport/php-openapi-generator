@@ -49,10 +49,7 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('aws_data_source', $data)) {
-            $value = $this->denormalizer->denormalize($data['aws_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['aws_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiAWSDataSource::class, 'ApiAWSDataSource');
             $object->setAwsDataSource($value);
             unset($data['aws_data_source']);
         }
@@ -69,34 +66,22 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['chunking_algorithm']);
         }
         if (\array_key_exists('chunking_options', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['chunking_options'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['chunking_options'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiChunkingOptions::class, 'ApiChunkingOptions');
             $object->setChunkingOptions($value_1);
             unset($data['chunking_options']);
         }
         if (\array_key_exists('dropbox_data_source', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['dropbox_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['dropbox_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiDropboxDataSource::class, 'ApiDropboxDataSource');
             $object->setDropboxDataSource($value_2);
             unset($data['dropbox_data_source']);
         }
         if (\array_key_exists('file_upload_data_source', $data)) {
-            $value_3 = $this->denormalizer->denormalize($data['file_upload_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'json', $context);
-            if (!$value_3 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource, got ' . get_debug_type($value_3));
-            }
+            $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['file_upload_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiFileUploadDataSource::class, 'ApiFileUploadDataSource');
             $object->setFileUploadDataSource($value_3);
             unset($data['file_upload_data_source']);
         }
         if (\array_key_exists('google_drive_data_source', $data)) {
-            $value_4 = $this->denormalizer->denormalize($data['google_drive_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource::class, 'json', $context);
-            if (!$value_4 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource, got ' . get_debug_type($value_4));
-            }
+            $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['google_drive_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGoogleDriveDataSource::class, 'ApiGoogleDriveDataSource');
             $object->setGoogleDriveDataSource($value_4);
             unset($data['google_drive_data_source']);
         }
@@ -105,18 +90,12 @@ class ApiKBDataSourceNormalizer implements DenormalizerInterface, NormalizerInte
             unset($data['item_path']);
         }
         if (\array_key_exists('spaces_data_source', $data)) {
-            $value_5 = $this->denormalizer->denormalize($data['spaces_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource::class, 'json', $context);
-            if (!$value_5 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource, got ' . get_debug_type($value_5));
-            }
+            $value_5 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['spaces_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiSpacesDataSource::class, 'ApiSpacesDataSource');
             $object->setSpacesDataSource($value_5);
             unset($data['spaces_data_source']);
         }
         if (\array_key_exists('web_crawler_data_source', $data)) {
-            $value_6 = $this->denormalizer->denormalize($data['web_crawler_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource::class, 'json', $context);
-            if (!$value_6 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource, got ' . get_debug_type($value_6));
-            }
+            $value_6 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['web_crawler_data_source'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiWebCrawlerDataSource::class, 'ApiWebCrawlerDataSource');
             $object->setWebCrawlerDataSource($value_6);
             unset($data['web_crawler_data_source']);
         }

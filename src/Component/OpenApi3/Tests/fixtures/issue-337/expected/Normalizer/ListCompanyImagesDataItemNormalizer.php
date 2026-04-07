@@ -53,18 +53,12 @@ class ListCompanyImagesDataItemNormalizer implements DenormalizerInterface, Norm
             unset($data['imageId']);
         }
         if (\array_key_exists('company', $data)) {
-            $value = $this->denormalizer->denormalize($data['company'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemCompany::class, 'json', $context);
-            if (!$value instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemCompany) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemCompany, got ' . get_debug_type($value));
-            }
+            $value = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['company'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemCompany::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemCompany::class, 'ListCompanyImagesDataItemCompany');
             $object->setCompany($value);
             unset($data['company']);
         }
         if (\array_key_exists('document', $data)) {
-            $value_1 = $this->denormalizer->denormalize($data['document'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemDocument::class, 'json', $context);
-            if (!$value_1 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemDocument) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemDocument, got ' . get_debug_type($value_1));
-            }
+            $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['document'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemDocument::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemDocument::class, 'ListCompanyImagesDataItemDocument');
             $object->setDocument($value_1);
             unset($data['document']);
         }
@@ -101,10 +95,7 @@ class ListCompanyImagesDataItemNormalizer implements DenormalizerInterface, Norm
             unset($data['status']);
         }
         if (\array_key_exists('localProperties', $data)) {
-            $value_2 = $this->denormalizer->denormalize($data['localProperties'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemLocalProperties::class, 'json', $context);
-            if (!$value_2 instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemLocalProperties) {
-                throw new \LogicException('Expected LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemLocalProperties, got ' . get_debug_type($value_2));
-            }
+            $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['localProperties'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemLocalProperties::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ListCompanyImagesDataItemLocalProperties::class, 'ListCompanyImagesDataItemLocalProperties');
             $object->setLocalProperties($value_2);
             unset($data['localProperties']);
         }

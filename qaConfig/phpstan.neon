@@ -32,18 +32,18 @@ parameters:
         - ../qaConfig/PHPStan/Rules
     treatPhpDocTypesAsCertain: false
     ignoreErrors:
-        # Naming conventions: existing codebase uses unsuffixed traits/interfaces throughout.
-        # Renaming would break the entire public API surface. Suppress until a major version rename.
-        - identifier: phpqaci.traitSuffix
-        - identifier: phpqaci.interfaceSuffix
-        # PHPUnit assertion methods — static methods called as instance methods ($this->assertXxx)
+        # PHPUnit assertion methods — static methods called as instance methods ($this->assertXxx).
+        # Stylistic choice; rewriting every test to self::assertX would be churn for zero benefit.
         - identifier: staticMethod.dynamicCall
         # new static() in factory methods — intentional for inheritance support
         - identifier: new.static
         # Symfony DenormalizerInterface/NormalizerInterface conditional return types —
         # interface design limitation, not a code defect
         - identifier: method.childReturnType
-        # (string) cast on foreach key PHPStan already narrows to string
+        # (string) cast on foreach key over ArrayObject<string, mixed> — PHPStan thinks the cast
+        # is useless because the @template says string, but PHP COERCES numeric-string keys to int
+        # when stored in ArrayObject/array, so the cast is genuinely needed at runtime under
+        # strict_types. Removing it would TypeError on numeric-string keys.
         - identifier: cast.useless
         # Runtime template traits only used in generated code, not scanned source
         - identifier: trait.unused
@@ -51,34 +51,10 @@ parameters:
         -
             identifier: offsetAssign.dimType
             path: ../src/Component/OpenApiCommon/Console/Command/GenerateCommand.php
-        # assertInstanceOf valid even when PHPStan considers type already narrowed
-        -
-            identifier: method.alreadyNarrowedType
-            path: ../src/Component/OpenApi3/Tests/JaneOpenApiResourceTest.php
         # InvalidSpecVersionException can be thrown at runtime by strict-openapi-validator
         -
             identifier: catch.neverThrown
             path: ../src/Component/OpenApi3/Tests/OpenApiSpecValidationTest.php
-        # SubObjectValidator: getMergedUri().__toString() returns mixed due to PSR-7 v1 lacking native return types
-        -
-            identifier: method.nonObject
-            path: ../src/Component/GeneratorCore/Guesser/Validator/Object_/SubObjectValidator.php
-        -
-            identifier: argument.type
-            path: ../src/Component/GeneratorCore/Guesser/Validator/Object_/SubObjectValidator.php
-        # AnyOfReferencefGuesser: same PSR-7 v1 issue + resolve() returns object
-        -
-            identifier: instanceof.alwaysTrue
-            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
-        -
-            identifier: method.nonObject
-            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
-        -
-            identifier: assignOp.invalid
-            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
-        -
-            identifier: argument.type
-            path: ../src/Component/OpenApi3/Guesser/OpenApiSchema/AnyOfReferencefGuesser.php
         # OpenApi3 JsonSchema normalizers — auto-generated, ArrayObject→array mismatch
         -
             identifier: function.impossibleType

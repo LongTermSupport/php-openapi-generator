@@ -38,7 +38,7 @@ class JsonSchema implements SchemaInterface
     protected $unevaluatedProperties;
 
     /**
-     * @var array<string, JsonSchema|bool>|null
+     * @var array<string, JsonSchema|bool|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     protected $properties;
 
@@ -309,7 +309,7 @@ class JsonSchema implements SchemaInterface
     }
 
     /**
-     * @return array<string, JsonSchema|bool>|null
+     * @return array<string, JsonSchema|bool|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     public function getProperties(): ?array
     {
@@ -317,7 +317,7 @@ class JsonSchema implements SchemaInterface
     }
 
     /**
-     * @param array<string, JsonSchema|bool>|null $properties
+     * @param array<string, JsonSchema|bool|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null $properties
      */
     public function setProperties(?iterable $properties): self
     {

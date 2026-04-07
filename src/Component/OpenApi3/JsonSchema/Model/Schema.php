@@ -58,24 +58,24 @@ class Schema extends ArrayObject implements SchemaInterface
     protected Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference|null $not = null;
 
     /**
-     * @var array<Schema|Reference>|null
+     * @var array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     protected ?array $allOf = null;
 
     /**
-     * @var array<Schema|Reference>|null
+     * @var array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     protected ?array $oneOf = null;
 
     /**
-     * @var array<Schema|Reference>|null
+     * @var array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     protected ?array $anyOf = null;
 
     protected Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference|null $items = null;
 
     /**
-     * @var array<string, Schema|Reference>|null
+     * @var array<string, Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     protected $properties;
 
@@ -362,7 +362,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @return Schema[]|Reference[]|null
+     * @return array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     public function getAllOf(): ?array
     {
@@ -370,7 +370,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @param Schema[]|Reference[]|null $allOf
+     * @param array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null $allOf
      */
     public function setAllOf(?array $allOf): self
     {
@@ -381,7 +381,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @return Schema[]|Reference[]|null
+     * @return array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     public function getOneOf(): ?array
     {
@@ -389,7 +389,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @param Schema[]|Reference[]|null $oneOf
+     * @param array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null $oneOf
      */
     public function setOneOf(?array $oneOf): self
     {
@@ -400,7 +400,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @return Schema[]|Reference[]|null
+     * @return array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     public function getAnyOf(): ?array
     {
@@ -408,7 +408,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @param Schema[]|Reference[]|null $anyOf
+     * @param array<Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null $anyOf
      */
     public function setAnyOf(?array $anyOf): self
     {
@@ -438,7 +438,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @return array<string, Schema|Reference>|null
+     * @return array<string, Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null
      */
     public function getProperties(): ?array
     {
@@ -446,7 +446,7 @@ class Schema extends ArrayObject implements SchemaInterface
     }
 
     /**
-     * @param array<string, Schema|Reference>|null $properties
+     * @param array<string, Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference>|null $properties
      */
     public function setProperties(?iterable $properties): self
     {

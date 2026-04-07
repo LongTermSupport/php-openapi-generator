@@ -88,9 +88,6 @@ class AnyOfReferencefGuesser implements ChainGuesserAwareInterface, GuesserInter
                         $anyOfType = $this->chainGuesser->guessType($anyOfSchema, $name, $anyOfReference, $registry);
                         if ($supportsDiscriminator && $anyOf instanceof Reference) {
                             $anyOfMergedUri = $anyOf->getMergedUri();
-                            if (!$anyOfMergedUri instanceof \Psr\Http\Message\UriInterface) {
-                                throw new LogicException('Expected UriInterface, got ' . get_debug_type($anyOfMergedUri));
-                            }
 
                             $objectRef = '#' . $anyOfMergedUri->getFragment();
                             $type->addType($anyOfType, null !== $mapping ? ($mapping[$objectRef] ?? $objectRef) : $objectRef);

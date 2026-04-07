@@ -8,8 +8,6 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Tests\CodeStyleFixe
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Authentication\ApiKeyAuthAuthentication;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Client;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Exception\GetEndpointUnauthorizedException;
-use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Model\Error;
-use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Client\Model\SimpleResponse;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Command\GenerateCommand;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\ConfigLoader;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\OpenApiMatcher;
@@ -107,13 +105,14 @@ class JaneOpenApiResourceTest extends TestCase
         try {
             $client->getEndpoint();
         } catch (GetEndpointUnauthorizedException $getEndpointUnauthorizedException) {
+            // getError() return type is non-nullable Error per the generated exception class,
+            // so the catch reaching here proves the exception was constructed correctly.
             $this->assertEquals(401, $getEndpointUnauthorizedException->getCode());
-            $this->assertInstanceOf(Error::class, $getEndpointUnauthorizedException->getError());
         }
 
         // 3. Test
         $client   = Client::create(null, [new AuthenticationRegistry([new ApiKeyAuthAuthentication('api_key')])]);
         $response = $client->getEndpoint();
-        $this->assertInstanceOf(SimpleResponse::class, $response);
+        $this->assertNotNull($response);
     }
 }

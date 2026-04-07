@@ -7,7 +7,6 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime;
 use League\Uri\Http;
 use League\Uri\UriString;
 use LogicException;
-use Psr\Http\Message\UriInterface;
 use Rs\Json\Pointer;
 use RuntimeException;
 use Symfony\Component\Yaml\Yaml;
@@ -89,17 +88,17 @@ class Reference
             && $this->mergedUri->getQuery() === $this->originUri->getQuery();
     }
 
-    public function getMergedUri(): UriInterface
+    public function getMergedUri(): Http
     {
         return $this->mergedUri;
     }
 
-    public function getReferenceUri(): UriInterface
+    public function getReferenceUri(): Http
     {
         return $this->referenceUri;
     }
 
-    public function getOriginUri(): UriInterface
+    public function getOriginUri(): Http
     {
         return $this->originUri;
     }

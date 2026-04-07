@@ -63,19 +63,28 @@ abstract class GenerateCommand extends Command
                     throw new LogicException('Expected schema options to be an array');
                 }
 
-                $mappedSchema   = $this->schemaLoader->resolve((string)$schema, $schemaOptions);
-                $mappedRegistry = $this->newRegistry((string)$schema, $schemaOptions);
+                $stringKeyedSchemaOptions = [];
+                foreach ($schemaOptions as $optionKey => $optionValue) {
+                    if (!\is_string($optionKey)) {
+                        throw new LogicException('Expected schema option keys to be strings, got ' . get_debug_type($optionKey));
+                    }
+
+                    $stringKeyedSchemaOptions[$optionKey] = $optionValue;
+                }
+
+                $mappedSchema   = $this->schemaLoader->resolve((string)$schema, $stringKeyedSchemaOptions);
+                $mappedRegistry = $this->newRegistry((string)$schema, $stringKeyedSchemaOptions);
 
                 if (!\array_key_exists($hash = $mappedRegistry->getOptionsHash(), $registries)) {
                     $registries[$hash] = $mappedRegistry;
                 }
 
-                if (!\is_string($schemaOptions['directory'])) {
+                if (!\is_string($stringKeyedSchemaOptions['directory'] ?? null)) {
                     throw new LogicException('Schema directory must be a string');
                 }
 
                 $registries[$hash]->addSchema($mappedSchema);
-                $registries[$hash]->addOutputDirectory($schemaOptions['directory']);
+                $registries[$hash]->addOutputDirectory($stringKeyedSchemaOptions['directory']);
             }
         }
 

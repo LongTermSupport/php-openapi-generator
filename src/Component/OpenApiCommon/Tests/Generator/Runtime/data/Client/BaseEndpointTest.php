@@ -70,7 +70,7 @@ final class BaseEndpointTest extends TestCase
      * @param array<string, mixed> $queryParams
      * @param array<string>        $allowReserved
      */
-    private function getEndpoint(array $queryParams, array $allowReserved = []): object
+    private function getEndpoint(array $queryParams, array $allowReserved = []): BaseEndpoint
     {
         return new class($queryParams, $allowReserved) extends BaseEndpoint {
             /**

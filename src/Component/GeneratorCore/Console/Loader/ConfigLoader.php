@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader;
 
 use DateTime;
+use LogicException;
 use RuntimeException;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -52,7 +53,18 @@ class ConfigLoader implements ConfigLoaderInterface
             ]);
         }
 
-        return $optionsResolver->resolve($options);
+        $resolved = $optionsResolver->resolve($options);
+
+        $stringKeyed = [];
+        foreach ($resolved as $key => $value) {
+            if (!\is_string($key)) {
+                throw new LogicException('Expected resolved option keys to be strings, got ' . get_debug_type($key));
+            }
+
+            $stringKeyed[$key] = $value;
+        }
+
+        return $stringKeyed;
     }
 
     /** @return array<string> */

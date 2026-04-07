@@ -91,51 +91,60 @@ class GenerateCommand extends BaseGenerateCommand
         $throwUnexpected = $options['throw-unexpected-status-code'] ?? false;
         $registry->setThrowUnexpectedStatusCode(\is_bool($throwUnexpected) && $throwUnexpected);
 
-        /** @var array<string, array<string, array<string, string>|string>> $customQueryResolver */
-        $customQueryResolver    = [];
+        // Two distinct shapes merged into one output array to preserve the
+        // existing setCustomQueryResolver(array<string, mixed>) contract:
+        //  - $typeResolvers: map of parameter-type => class name (under '__type' key)
+        //  - $pathResolvers: map of path => method => param name => class name
+        /** @var array<string, string> $typeResolvers */
+        $typeResolvers          = [];
+        /** @var array<string, array<string, array<string, string>>> $pathResolvers */
+        $pathResolvers          = [];
         $customQueryResolverRaw = $options['custom-query-resolver'] ?? [];
         if (\is_array($customQueryResolverRaw)) {
-            foreach ($customQueryResolverRaw as $path => $methods) {
-                $path = (string)$path;
-                if (!\array_key_exists($path, $customQueryResolver)) {
-                    $customQueryResolver[$path] = [];
-                }
-
+            foreach ($customQueryResolverRaw as $rawPath => $methods) {
+                $path = (string)$rawPath;
                 if (!\is_array($methods)) {
                     continue;
                 }
 
-                foreach ($methods as $method => $parameters) {
-                    $method = mb_strtolower((string)$method);
-                    if (!\array_key_exists($method, $customQueryResolver[$path])) {
-                        $customQueryResolver[$path][$method] = [];
+                if ('__type' === $path) {
+                    // For '__type':
+                    // - method => parameter-type name
+                    // - parameters => class name string
+                    foreach ($methods as $rawType => $class) {
+                        $type                  = mb_strtolower((string)$rawType);
+                        $typeResolvers[$type]  = $this->formatClassName(\is_scalar($class) ? (string)$class : '');
                     }
+                    continue;
+                }
 
-                    if ('__type' === $path) {
-                        // here, variables has a different meaning:
-                        // - path => '__type', meta-key to handle all types of ...
-                        // - method => will contains the type of the query parameter where to apply this normalizer
-                        // - parameters => will contains the class to apply
-                        $customQueryResolver['__type'][$method] = $this->formatClassName(\is_scalar($parameters) ? (string)$parameters : '');
-                        continue;
-                    }
+                if (!\array_key_exists($path, $pathResolvers)) {
+                    $pathResolvers[$path] = [];
+                }
 
+                foreach ($methods as $rawMethod => $parameters) {
+                    $method = mb_strtolower((string)$rawMethod);
                     if (!\is_array($parameters)) {
                         continue;
                     }
 
-                    foreach ($parameters as $name => $class) {
-                        $name = (string)$name;
-                        /** @var array<string, array<string, string>|string> $pathEntry */
-                        $pathEntry = $customQueryResolver[$path];
-                        if (!\is_array($pathEntry[$method] ?? null)) {
-                            $customQueryResolver[$path][$method] = [];
-                        }
+                    if (!\array_key_exists($method, $pathResolvers[$path])) {
+                        $pathResolvers[$path][$method] = [];
+                    }
 
-                        $customQueryResolver[$path][$method][$name] = $this->formatClassName(\is_scalar($class) ? (string)$class : '');
+                    foreach ($parameters as $rawName => $class) {
+                        $name                                    = (string)$rawName;
+                        $pathResolvers[$path][$method][$name]    = $this->formatClassName(\is_scalar($class) ? (string)$class : '');
                     }
                 }
             }
+        }
+
+        // Merge the two distinct shapes into the loose array<string, mixed>
+        // contract expected by Registry::setCustomQueryResolver().
+        $customQueryResolver = [...$pathResolvers];
+        if ([] !== $typeResolvers) {
+            $customQueryResolver['__type'] = $typeResolvers;
         }
 
         $registry->setCustomQueryResolver($customQueryResolver);

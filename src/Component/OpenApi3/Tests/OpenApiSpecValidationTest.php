@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests;
 
-use LongTermSupport\StrictOpenApiValidator\Exception\InvalidSpecVersionException;
 use LongTermSupport\StrictOpenApiValidator\Spec;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
@@ -25,17 +24,22 @@ class OpenApiSpecValidationTest extends TestCase
     #[DataProvider('jsonSpecProvider')]
     public function testSpecIsValid(string $specPath): void
     {
-        try {
-            Spec::createFromFile($specPath);
-        } catch (InvalidSpecVersionException $invalidSpecVersionException) {
+        // Pre-check version to skip 3.0.x specs cleanly — the validator throws
+        // InvalidSpecVersionException on 3.0.x, but we don't want to rely on catching it:
+        // doing the version check up-front is clearer and more explicit.
+        $raw    = \Safe\file_get_contents($specPath);
+        $parsed = \Safe\json_decode($raw, true);
+        if (!\is_array($parsed)) {
+            $this->fail(\sprintf('Spec at %s did not decode to an array', $specPath));
+        }
+        $version = $parsed['openapi'] ?? null;
+        if (\is_string($version) && !\str_starts_with($version, '3.1.')) {
             $this->markTestIncomplete(
-                \sprintf(
-                    'Spec at %s is not OpenAPI 3.1.x (version error: %s). Needs upgrading.',
-                    $specPath,
-                    $invalidSpecVersionException->getMessage()
-                )
+                \sprintf('Spec at %s is OpenAPI %s, not 3.1.x. Needs upgrading.', $specPath, $version)
             );
         }
+
+        Spec::createFromFile($specPath);
 
         // If no exception thrown, spec is valid — assertion for PHPUnit
         $this->addToAssertionCount(1);

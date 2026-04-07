@@ -71,7 +71,3 @@ parameters:
         -
             identifier: assign.propertyType
             path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
-        # InvalidSpecVersionException can be thrown at runtime by strict-openapi-validator
-        -
-            identifier: catch.neverThrown
-            path: ../src/Component/OpenApi3/Tests/OpenApiSpecValidationTest.php

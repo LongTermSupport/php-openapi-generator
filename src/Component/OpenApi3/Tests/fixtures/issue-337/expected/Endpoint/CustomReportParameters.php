@@ -33,7 +33,7 @@ class CustomReportParameters extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{country}'], [(string) $this->country], '/reportcustomdata/{country}');
+        return str_replace(['{country}'], [$this->country], '/reportcustomdata/{country}');
     }
     /**
      * @return array<int, mixed>

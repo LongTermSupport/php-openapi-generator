@@ -27,7 +27,7 @@ class ReposGetAllTopics extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/topics');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/topics');
     }
     /**
      * @return array<int, mixed>

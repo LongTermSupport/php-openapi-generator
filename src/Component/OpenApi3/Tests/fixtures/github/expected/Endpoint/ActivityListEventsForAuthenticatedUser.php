@@ -30,7 +30,7 @@ class ActivityListEventsForAuthenticatedUser extends \LongTermSupport\OpenApiGen
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/events');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/events');
     }
     /**
      * @return array<int, mixed>

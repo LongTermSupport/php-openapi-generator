@@ -36,7 +36,7 @@ class ReposListPullRequestsAssociatedWithCommit extends \LongTermSupport\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->commit_sha], '/repos/{owner}/{repo}/commits/{commit_sha}/pulls');
+        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [$this->owner, $this->repo, $this->commit_sha], '/repos/{owner}/{repo}/commits/{commit_sha}/pulls');
     }
     /**
      * @return array<int, mixed>

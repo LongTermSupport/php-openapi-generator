@@ -170,8 +170,8 @@ class ApiAgentFunctionNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['uuid'] = $data->getUuid();
         }
         foreach ($data as $key_2 => $value_2) {
-            if (preg_match('/.*/', (string) $key_2) === 1) {
-                $dataArray[(string) $key_2] = $value_2;
+            if (preg_match('/.*/', strval($key_2)) === 1) {
+                $dataArray[$key_2] = $value_2;
             }
         }
         return $dataArray;

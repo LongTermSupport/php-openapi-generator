@@ -29,7 +29,7 @@ class IssuesCreateLabel extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/labels');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/labels');
     }
     /**
      * @return array<int, mixed>

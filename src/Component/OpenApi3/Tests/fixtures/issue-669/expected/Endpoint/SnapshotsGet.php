@@ -30,7 +30,7 @@ class SnapshotsGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{snapshot_id}'], [(string) $this->snapshot_id], '/v2/snapshots/{snapshot_id}');
+        return str_replace(['{snapshot_id}'], [$this->snapshot_id], '/v2/snapshots/{snapshot_id}');
     }
     /**
      * @return array<int, mixed>

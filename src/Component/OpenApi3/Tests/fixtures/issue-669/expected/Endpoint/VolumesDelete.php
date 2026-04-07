@@ -28,7 +28,7 @@ class VolumesDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{volume_id}'], [(string) $this->volume_id], '/v2/volumes/{volume_id}');
+        return str_replace(['{volume_id}'], [$this->volume_id], '/v2/volumes/{volume_id}');
     }
     /**
      * @return array<int, mixed>

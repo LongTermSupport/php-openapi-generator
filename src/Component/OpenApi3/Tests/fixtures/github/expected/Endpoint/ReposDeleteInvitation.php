@@ -30,7 +30,7 @@ class ReposDeleteInvitation extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{invitation_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->invitation_id], '/repos/{owner}/{repo}/invitations/{invitation_id}');
+        return str_replace(['{owner}', '{repo}', '{invitation_id}'], [$this->owner, $this->repo, (string) $this->invitation_id], '/repos/{owner}/{repo}/invitations/{invitation_id}');
     }
     /**
      * @return array<int, mixed>

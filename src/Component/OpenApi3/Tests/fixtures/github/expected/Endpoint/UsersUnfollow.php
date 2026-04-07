@@ -25,7 +25,7 @@ class UsersUnfollow extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/user/following/{username}');
+        return str_replace(['{username}'], [$this->username], '/user/following/{username}');
     }
     /**
      * @return array<int, mixed>

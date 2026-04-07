@@ -32,7 +32,7 @@ class DocumentHistoryCompareWithCurrent extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{documentType}', '{documentId}'], [(string) $this->documentType, (string) $this->documentId], '/v1/history/{documentType}/{documentId}/current/compare');
+        return str_replace(['{documentType}', '{documentId}'], [$this->documentType, $this->documentId], '/v1/history/{documentType}/{documentId}/current/compare');
     }
     /**
      * @return array<int, mixed>

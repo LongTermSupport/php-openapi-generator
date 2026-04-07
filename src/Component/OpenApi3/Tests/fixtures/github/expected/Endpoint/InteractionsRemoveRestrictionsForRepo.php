@@ -28,7 +28,7 @@ class InteractionsRemoveRestrictionsForRepo extends \LongTermSupport\OpenApiGene
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/interaction-limits');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/interaction-limits');
     }
     /**
      * @return array<int, mixed>

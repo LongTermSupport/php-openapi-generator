@@ -25,7 +25,7 @@ class GenaiListEvaluationTestCasesByWorkspace extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{workspace_uuid}'], [(string) $this->workspace_uuid], '/v2/gen-ai/workspaces/{workspace_uuid}/evaluation_test_cases');
+        return str_replace(['{workspace_uuid}'], [$this->workspace_uuid], '/v2/gen-ai/workspaces/{workspace_uuid}/evaluation_test_cases');
     }
     /**
      * @return array<int, mixed>

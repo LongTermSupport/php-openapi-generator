@@ -24,7 +24,7 @@ class ContentGetDownloadLink extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{token}'], [(string) $this->token], '/v1/Contents/downloadLink/{token}');
+        return str_replace(['{token}'], [$this->token], '/v1/Contents/downloadLink/{token}');
     }
     /**
      * @return array<int, mixed>

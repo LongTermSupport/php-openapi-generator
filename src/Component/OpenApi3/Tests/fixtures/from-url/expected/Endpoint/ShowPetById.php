@@ -24,7 +24,7 @@ class ShowPetById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{petId}'], [(string) $this->petId], '/pets/{petId}');
+        return str_replace(['{petId}'], [$this->petId], '/pets/{petId}');
     }
     /**
      * @return array<int, mixed>

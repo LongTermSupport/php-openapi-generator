@@ -27,7 +27,7 @@ class AddonsGetAppMetadata extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{app_slug}'], [(string) $this->app_slug], '/v2/add-ons/apps/{app_slug}/metadata');
+        return str_replace(['{app_slug}'], [$this->app_slug], '/v2/add-ons/apps/{app_slug}/metadata');
     }
     /**
      * @return array<int, mixed>

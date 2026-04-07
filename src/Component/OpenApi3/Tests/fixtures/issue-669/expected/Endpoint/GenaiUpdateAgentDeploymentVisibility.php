@@ -27,7 +27,7 @@ class GenaiUpdateAgentDeploymentVisibility extends \LongTermSupport\OpenApiGener
     }
     public function getUri(): string
     {
-        return str_replace(['{uuid}'], [(string) $this->uuid], '/v2/gen-ai/agents/{uuid}/deployment_visibility');
+        return str_replace(['{uuid}'], [$this->uuid], '/v2/gen-ai/agents/{uuid}/deployment_visibility');
     }
     /**
      * @return array<int, mixed>

@@ -33,7 +33,7 @@ class ChecksRerequestSuite extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{check_suite_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->check_suite_id], '/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest');
+        return str_replace(['{owner}', '{repo}', '{check_suite_id}'], [$this->owner, $this->repo, (string) $this->check_suite_id], '/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest');
     }
     /**
      * @return array<int, mixed>

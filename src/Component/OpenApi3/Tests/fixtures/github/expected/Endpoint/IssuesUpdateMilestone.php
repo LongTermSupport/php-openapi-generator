@@ -32,7 +32,7 @@ class IssuesUpdateMilestone extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{milestone_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->milestone_number], '/repos/{owner}/{repo}/milestones/{milestone_number}');
+        return str_replace(['{owner}', '{repo}', '{milestone_number}'], [$this->owner, $this->repo, (string) $this->milestone_number], '/repos/{owner}/{repo}/milestones/{milestone_number}');
     }
     /**
      * @return array<int, mixed>

@@ -37,7 +37,7 @@ class LoadBalancersAddDroplets extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{lb_id}'], [(string) $this->lb_id], '/v2/load_balancers/{lb_id}/droplets');
+        return str_replace(['{lb_id}'], [$this->lb_id], '/v2/load_balancers/{lb_id}/droplets');
     }
     /**
      * @return array<int, mixed>

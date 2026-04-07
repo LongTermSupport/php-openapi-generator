@@ -35,7 +35,7 @@ class FirewallsAddRules extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{firewall_id}'], [(string) $this->firewall_id], '/v2/firewalls/{firewall_id}/rules');
+        return str_replace(['{firewall_id}'], [$this->firewall_id], '/v2/firewalls/{firewall_id}/rules');
     }
     /**
      * @return array<int, mixed>

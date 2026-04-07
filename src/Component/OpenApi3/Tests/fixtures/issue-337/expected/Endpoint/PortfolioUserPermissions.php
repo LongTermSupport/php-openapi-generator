@@ -29,7 +29,7 @@ class PortfolioUserPermissions extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/sharingPermissions');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/sharingPermissions');
     }
     /**
      * @return array<int, mixed>

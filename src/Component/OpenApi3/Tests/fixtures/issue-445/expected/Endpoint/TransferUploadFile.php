@@ -42,7 +42,7 @@ class TransferUploadFile extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{transferId}', '{requestId}'], [(string) $this->transferId, (string) $this->requestId], '/v1/Transfers/{transferId}/files/{requestId}/upload');
+        return str_replace(['{transferId}', '{requestId}'], [$this->transferId, $this->requestId], '/v1/Transfers/{transferId}/files/{requestId}/upload');
     }
     /**
      * @return array<int, mixed>

@@ -43,7 +43,7 @@ class ReposAddCollaborator extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{username}'], [(string) $this->owner, (string) $this->repo, (string) $this->username], '/repos/{owner}/{repo}/collaborators/{username}');
+        return str_replace(['{owner}', '{repo}', '{username}'], [$this->owner, $this->repo, $this->username], '/repos/{owner}/{repo}/collaborators/{username}');
     }
     /**
      * @return array<int, mixed>

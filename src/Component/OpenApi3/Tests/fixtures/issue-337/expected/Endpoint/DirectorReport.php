@@ -33,7 +33,7 @@ class DirectorReport extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{personId}'], [(string) $this->personId], '/people/{personId}');
+        return str_replace(['{personId}'], [$this->personId], '/people/{personId}');
     }
     /**
      * @return array<int, mixed>

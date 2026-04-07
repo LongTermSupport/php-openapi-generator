@@ -31,7 +31,7 @@ class MigrationsUnlockRepoForOrg extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{migration_id}', '{repo_name}'], [(string) $this->org, (string) $this->migration_id, (string) $this->repo_name], '/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock');
+        return str_replace(['{org}', '{migration_id}', '{repo_name}'], [$this->org, (string) $this->migration_id, $this->repo_name], '/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock');
     }
     /**
      * @return array<int, mixed>

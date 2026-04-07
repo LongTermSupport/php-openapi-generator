@@ -26,7 +26,7 @@ class OrgsUpdateMembershipForAuthenticatedUser extends \LongTermSupport\OpenApiG
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/user/memberships/orgs/{org}');
+        return str_replace(['{org}'], [$this->org], '/user/memberships/orgs/{org}');
     }
     /**
      * @return array<int, mixed>

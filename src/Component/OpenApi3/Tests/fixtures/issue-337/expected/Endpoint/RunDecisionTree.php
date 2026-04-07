@@ -37,7 +37,7 @@ class RunDecisionTree extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{provenirId}'], [(string) $this->provenirId], '/decisionEngine/{provenirId}');
+        return str_replace(['{provenirId}'], [$this->provenirId], '/decisionEngine/{provenirId}');
     }
     /**
      * @return array<int, mixed>

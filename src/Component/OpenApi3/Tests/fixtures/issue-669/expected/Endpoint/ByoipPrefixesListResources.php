@@ -33,7 +33,7 @@ class ByoipPrefixesListResources extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{byoip_prefix_uuid}'], [(string) $this->byoip_prefix_uuid], '/v2/byoip_prefixes/{byoip_prefix_uuid}/ips');
+        return str_replace(['{byoip_prefix_uuid}'], [$this->byoip_prefix_uuid], '/v2/byoip_prefixes/{byoip_prefix_uuid}/ips');
     }
     /**
      * @return array<int, mixed>

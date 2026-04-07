@@ -33,7 +33,7 @@ class ReactionsCreateForIssueComment extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{comment_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->comment_id], '/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions');
+        return str_replace(['{owner}', '{repo}', '{comment_id}'], [$this->owner, $this->repo, (string) $this->comment_id], '/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions');
     }
     /**
      * @return array<int, mixed>

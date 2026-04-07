@@ -27,7 +27,7 @@ class AppsRevertRollback extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}'], [(string) $this->app_id], '/v2/apps/{app_id}/rollback/revert');
+        return str_replace(['{app_id}'], [$this->app_id], '/v2/apps/{app_id}/rollback/revert');
     }
     /**
      * @return array<int, mixed>

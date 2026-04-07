@@ -40,7 +40,7 @@ class ActivityListReposStarredByUser extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/starred');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/starred');
     }
     /**
      * @return array<int, mixed>

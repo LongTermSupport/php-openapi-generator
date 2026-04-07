@@ -33,7 +33,7 @@ class FreshInvestigationReport extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{orderId}'], [(string) $this->orderId], '/freshInvestigations/{orderId}');
+        return str_replace(['{orderId}'], [$this->orderId], '/freshInvestigations/{orderId}');
     }
     /**
      * @return array<int, mixed>

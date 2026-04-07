@@ -29,7 +29,7 @@ class OrgsUpdateWebhook extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{hook_id}'], [(string) $this->org, (string) $this->hook_id], '/orgs/{org}/hooks/{hook_id}');
+        return str_replace(['{org}', '{hook_id}'], [$this->org, (string) $this->hook_id], '/orgs/{org}/hooks/{hook_id}');
     }
     /**
      * @return array<int, mixed>

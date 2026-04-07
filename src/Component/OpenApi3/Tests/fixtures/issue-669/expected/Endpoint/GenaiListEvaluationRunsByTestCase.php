@@ -29,7 +29,7 @@ class GenaiListEvaluationRunsByTestCase extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{evaluation_test_case_uuid}'], [(string) $this->evaluation_test_case_uuid], '/v2/gen-ai/evaluation_test_cases/{evaluation_test_case_uuid}/evaluation_runs');
+        return str_replace(['{evaluation_test_case_uuid}'], [$this->evaluation_test_case_uuid], '/v2/gen-ai/evaluation_test_cases/{evaluation_test_case_uuid}/evaluation_runs');
     }
     /**
      * @return array<int, mixed>

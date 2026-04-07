@@ -43,7 +43,7 @@ class TeamsAddOrUpdateMembershipForUserInOrg extends \LongTermSupport\OpenApiGen
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}', '{username}'], [(string) $this->org, (string) $this->team_slug, (string) $this->username], '/orgs/{org}/teams/{team_slug}/memberships/{username}');
+        return str_replace(['{org}', '{team_slug}', '{username}'], [$this->org, $this->team_slug, $this->username], '/orgs/{org}/teams/{team_slug}/memberships/{username}');
     }
     /**
      * @return array<int, mixed>

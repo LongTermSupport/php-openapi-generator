@@ -31,7 +31,7 @@ class ActionsRemoveSelectedRepoFromOrgSecret extends \LongTermSupport\OpenApiGen
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{secret_name}', '{repository_id}'], [(string) $this->org, (string) $this->secret_name, (string) $this->repository_id], '/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}');
+        return str_replace(['{org}', '{secret_name}', '{repository_id}'], [$this->org, $this->secret_name, (string) $this->repository_id], '/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}');
     }
     /**
      * @return array<int, mixed>

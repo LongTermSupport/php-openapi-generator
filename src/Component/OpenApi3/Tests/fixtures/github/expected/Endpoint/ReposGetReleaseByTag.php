@@ -31,7 +31,7 @@ class ReposGetReleaseByTag extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{tag}'], [(string) $this->owner, (string) $this->repo, (string) $this->tag], '/repos/{owner}/{repo}/releases/tags/{tag}');
+        return str_replace(['{owner}', '{repo}', '{tag}'], [$this->owner, $this->repo, $this->tag], '/repos/{owner}/{repo}/releases/tags/{tag}');
     }
     /**
      * @return array<int, mixed>

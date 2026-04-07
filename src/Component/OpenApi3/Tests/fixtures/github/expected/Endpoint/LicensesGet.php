@@ -24,7 +24,7 @@ class LicensesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{license}'], [(string) $this->license], '/licenses/{license}');
+        return str_replace(['{license}'], [$this->license], '/licenses/{license}');
     }
     /**
      * @return array<int, mixed>

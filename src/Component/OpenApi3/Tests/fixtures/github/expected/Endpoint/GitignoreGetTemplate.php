@@ -26,7 +26,7 @@ class GitignoreGetTemplate extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{name}'], [(string) $this->name], '/gitignore/templates/{name}');
+        return str_replace(['{name}'], [$this->name], '/gitignore/templates/{name}');
     }
     /**
      * @return array<int, mixed>

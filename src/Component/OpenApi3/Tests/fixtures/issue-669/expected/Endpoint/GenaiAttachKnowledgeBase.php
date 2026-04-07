@@ -28,7 +28,7 @@ class GenaiAttachKnowledgeBase extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{agent_uuid}', '{knowledge_base_uuid}'], [(string) $this->agent_uuid, (string) $this->knowledge_base_uuid], '/v2/gen-ai/agents/{agent_uuid}/knowledge_bases/{knowledge_base_uuid}');
+        return str_replace(['{agent_uuid}', '{knowledge_base_uuid}'], [$this->agent_uuid, $this->knowledge_base_uuid], '/v2/gen-ai/agents/{agent_uuid}/knowledge_bases/{knowledge_base_uuid}');
     }
     /**
      * @return array<int, mixed>

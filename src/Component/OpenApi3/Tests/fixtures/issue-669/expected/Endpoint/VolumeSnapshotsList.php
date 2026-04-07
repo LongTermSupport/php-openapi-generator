@@ -32,7 +32,7 @@ class VolumeSnapshotsList extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{volume_id}'], [(string) $this->volume_id], '/v2/volumes/{volume_id}/snapshots');
+        return str_replace(['{volume_id}'], [$this->volume_id], '/v2/volumes/{volume_id}/snapshots');
     }
     /**
      * @return array<int, mixed>

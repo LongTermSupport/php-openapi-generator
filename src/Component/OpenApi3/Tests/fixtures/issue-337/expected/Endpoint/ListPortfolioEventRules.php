@@ -29,7 +29,7 @@ class ListPortfolioEventRules extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/eventRules');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/eventRules');
     }
     /**
      * @return array<int, mixed>

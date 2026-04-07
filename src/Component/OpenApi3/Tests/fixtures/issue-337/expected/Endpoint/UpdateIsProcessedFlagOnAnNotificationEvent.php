@@ -34,7 +34,7 @@ class UpdateIsProcessedFlagOnAnNotificationEvent extends \LongTermSupport\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}', '{notificationEventId}'], [(string) $this->portfolioId, (string) $this->notificationEventId], '/monitoring/portfolios/{portfolioId}/notificationEvents/{notificationEventId}');
+        return str_replace(['{portfolioId}', '{notificationEventId}'], [$this->portfolioId, $this->notificationEventId], '/monitoring/portfolios/{portfolioId}/notificationEvents/{notificationEventId}');
     }
     /**
      * @return array<int, mixed>

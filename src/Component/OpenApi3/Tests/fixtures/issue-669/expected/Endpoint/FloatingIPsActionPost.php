@@ -35,7 +35,7 @@ class FloatingIPsActionPost extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{floating_ip}'], [(string) $this->floating_ip], '/v2/floating_ips/{floating_ip}/actions');
+        return str_replace(['{floating_ip}'], [$this->floating_ip], '/v2/floating_ips/{floating_ip}/actions');
     }
     /**
      * @return array<int, mixed>

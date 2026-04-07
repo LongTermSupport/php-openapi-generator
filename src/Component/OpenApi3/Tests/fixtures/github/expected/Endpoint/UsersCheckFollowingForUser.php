@@ -27,7 +27,7 @@ class UsersCheckFollowingForUser extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{username}', '{target_user}'], [(string) $this->username, (string) $this->target_user], '/users/{username}/following/{target_user}');
+        return str_replace(['{username}', '{target_user}'], [$this->username, $this->target_user], '/users/{username}/following/{target_user}');
     }
     /**
      * @return array<int, mixed>

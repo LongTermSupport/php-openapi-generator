@@ -39,7 +39,7 @@ class ContentDownloadThumbnail extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{id}', '{size}'], [(string) $this->id, (string) $this->size], '/v1/Contents/thumbnails/{id}/{size}');
+        return str_replace(['{id}', '{size}'], [$this->id, $this->size], '/v1/Contents/thumbnails/{id}/{size}');
     }
     /**
      * @return array<int, mixed>

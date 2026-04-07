@@ -37,7 +37,7 @@ class ContentUpdateMetadata extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Contents/{id}/metadata');
+        return str_replace(['{id}'], [$this->id], '/v1/Contents/{id}/metadata');
     }
     /**
      * @return array<int, mixed>

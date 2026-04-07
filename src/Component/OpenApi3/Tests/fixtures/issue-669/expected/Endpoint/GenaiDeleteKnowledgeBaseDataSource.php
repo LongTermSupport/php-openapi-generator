@@ -28,7 +28,7 @@ class GenaiDeleteKnowledgeBaseDataSource extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{knowledge_base_uuid}', '{data_source_uuid}'], [(string) $this->knowledge_base_uuid, (string) $this->data_source_uuid], '/v2/gen-ai/knowledge_bases/{knowledge_base_uuid}/data_sources/{data_source_uuid}');
+        return str_replace(['{knowledge_base_uuid}', '{data_source_uuid}'], [$this->knowledge_base_uuid, $this->data_source_uuid], '/v2/gen-ai/knowledge_bases/{knowledge_base_uuid}/data_sources/{data_source_uuid}');
     }
     /**
      * @return array<int, mixed>

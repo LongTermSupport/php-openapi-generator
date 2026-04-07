@@ -37,7 +37,7 @@ class BillingInsightsList extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{account_urn}', '{start_date}', '{end_date}'], [(string) $this->account_urn, (string) $this->start_date, (string) $this->end_date], '/v2/billing/{account_urn}/insights/{start_date}/{end_date}');
+        return str_replace(['{account_urn}', '{start_date}', '{end_date}'], [$this->account_urn, $this->start_date, $this->end_date], '/v2/billing/{account_urn}/insights/{start_date}/{end_date}');
     }
     /**
      * @return array<int, mixed>

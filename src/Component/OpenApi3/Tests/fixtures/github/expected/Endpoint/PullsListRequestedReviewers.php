@@ -35,7 +35,7 @@ class PullsListRequestedReviewers extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{pull_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers');
+        return str_replace(['{owner}', '{repo}', '{pull_number}'], [$this->owner, $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers');
     }
     /**
      * @return array<int, mixed>

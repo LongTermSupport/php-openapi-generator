@@ -35,7 +35,7 @@ class IssuesListMilestones extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/milestones');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/milestones');
     }
     /**
      * @return array<int, mixed>

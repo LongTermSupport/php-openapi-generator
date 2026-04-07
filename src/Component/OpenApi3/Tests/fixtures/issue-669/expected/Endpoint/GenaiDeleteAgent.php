@@ -25,7 +25,7 @@ class GenaiDeleteAgent extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{uuid}'], [(string) $this->uuid], '/v2/gen-ai/agents/{uuid}');
+        return str_replace(['{uuid}'], [$this->uuid], '/v2/gen-ai/agents/{uuid}');
     }
     /**
      * @return array<int, mixed>

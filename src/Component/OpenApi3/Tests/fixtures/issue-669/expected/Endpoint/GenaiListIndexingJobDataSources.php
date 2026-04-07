@@ -25,7 +25,7 @@ class GenaiListIndexingJobDataSources extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{indexing_job_uuid}'], [(string) $this->indexing_job_uuid], '/v2/gen-ai/indexing_jobs/{indexing_job_uuid}/data_sources');
+        return str_replace(['{indexing_job_uuid}'], [$this->indexing_job_uuid], '/v2/gen-ai/indexing_jobs/{indexing_job_uuid}/data_sources');
     }
     /**
      * @return array<int, mixed>

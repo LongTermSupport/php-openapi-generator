@@ -30,7 +30,7 @@ class TeamsList extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/teams');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/teams');
     }
     /**
      * @return array<int, mixed>

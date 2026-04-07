@@ -33,7 +33,7 @@ class DatabasesDeleteOpensearchIndex extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{index_name}'], [(string) $this->database_cluster_uuid, (string) $this->index_name], '/v2/databases/{database_cluster_uuid}/indexes/{index_name}');
+        return str_replace(['{database_cluster_uuid}', '{index_name}'], [$this->database_cluster_uuid, $this->index_name], '/v2/databases/{database_cluster_uuid}/indexes/{index_name}');
     }
     /**
      * @return array<int, mixed>

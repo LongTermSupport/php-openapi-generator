@@ -29,7 +29,7 @@ class CompanyImage extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{imageId}'], [(string) $this->imageId], '/images/{imageId}');
+        return str_replace(['{imageId}'], [$this->imageId], '/images/{imageId}');
     }
     /**
      * @return array<int, mixed>

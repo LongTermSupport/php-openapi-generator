@@ -74,8 +74,8 @@ class ReviewJsonhalReviewReadLinksNormalizer implements DenormalizerInterface, N
             $dataArray['self'] = $this->normalizer->normalize($data->getSelf(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

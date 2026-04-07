@@ -36,7 +36,7 @@ class TeamsListMembersInOrg extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}'], [(string) $this->org, (string) $this->team_slug], '/orgs/{org}/teams/{team_slug}/members');
+        return str_replace(['{org}', '{team_slug}'], [$this->org, $this->team_slug], '/orgs/{org}/teams/{team_slug}/members');
     }
     /**
      * @return array<int, mixed>

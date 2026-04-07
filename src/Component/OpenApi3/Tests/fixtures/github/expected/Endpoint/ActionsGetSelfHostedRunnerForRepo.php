@@ -31,7 +31,7 @@ class ActionsGetSelfHostedRunnerForRepo extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{runner_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->runner_id], '/repos/{owner}/{repo}/actions/runners/{runner_id}');
+        return str_replace(['{owner}', '{repo}', '{runner_id}'], [$this->owner, $this->repo, (string) $this->runner_id], '/repos/{owner}/{repo}/actions/runners/{runner_id}');
     }
     /**
      * @return array<int, mixed>

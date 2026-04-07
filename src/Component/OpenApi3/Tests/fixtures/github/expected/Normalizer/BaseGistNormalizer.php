@@ -227,8 +227,8 @@ class BaseGistNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $dataArray['history'] = $values_2;
         }
         foreach ($data as $key_1 => $value_3) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $dataArray[(string) $key_1] = $value_3;
+            if (preg_match('/.*/', strval($key_1)) === 1) {
+                $dataArray[$key_1] = $value_3;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

@@ -26,7 +26,7 @@ class VpcPeeringsDelete extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{vpc_peering_id}'], [(string) $this->vpc_peering_id], '/v2/vpc_peerings/{vpc_peering_id}');
+        return str_replace(['{vpc_peering_id}'], [$this->vpc_peering_id], '/v2/vpc_peerings/{vpc_peering_id}');
     }
     /**
      * @return array<int, mixed>

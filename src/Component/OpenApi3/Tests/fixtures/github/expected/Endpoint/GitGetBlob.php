@@ -33,7 +33,7 @@ class GitGetBlob extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{file_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->file_sha], '/repos/{owner}/{repo}/git/blobs/{file_sha}');
+        return str_replace(['{owner}', '{repo}', '{file_sha}'], [$this->owner, $this->repo, $this->file_sha], '/repos/{owner}/{repo}/git/blobs/{file_sha}');
     }
     /**
      * @return array<int, mixed>

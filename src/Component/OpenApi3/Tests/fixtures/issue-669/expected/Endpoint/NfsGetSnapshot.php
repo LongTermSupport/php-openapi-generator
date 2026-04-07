@@ -32,7 +32,7 @@ class NfsGetSnapshot extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{nfs_snapshot_id}'], [(string) $this->nfs_snapshot_id], '/v2/nfs/snapshots/{nfs_snapshot_id}');
+        return str_replace(['{nfs_snapshot_id}'], [$this->nfs_snapshot_id], '/v2/nfs/snapshots/{nfs_snapshot_id}');
     }
     /**
      * @return array<int, mixed>

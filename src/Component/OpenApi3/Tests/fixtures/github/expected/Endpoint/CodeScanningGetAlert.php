@@ -33,7 +33,7 @@ class CodeScanningGetAlert extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{alert_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->alert_id], '/repos/{owner}/{repo}/code-scanning/alerts/{alert_id}');
+        return str_replace(['{owner}', '{repo}', '{alert_id}'], [$this->owner, $this->repo, (string) $this->alert_id], '/repos/{owner}/{repo}/code-scanning/alerts/{alert_id}');
     }
     /**
      * @return array<int, mixed>

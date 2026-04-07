@@ -27,7 +27,7 @@ class AppsGetOrgInstallation extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/installation');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/installation');
     }
     /**
      * @return array<int, mixed>

@@ -35,7 +35,7 @@ class ClearCompaniesFromAPortfolio extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/companies/clear');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/companies/clear');
     }
     /**
      * @return array<int, mixed>

@@ -25,7 +25,7 @@ class ContentGetOutputs extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Contents/{id}/outputs');
+        return str_replace(['{id}'], [$this->id], '/v1/Contents/{id}/outputs');
     }
     /**
      * @return array<int, mixed>

@@ -53,7 +53,7 @@ class GitGetCommit extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->commit_sha], '/repos/{owner}/{repo}/git/commits/{commit_sha}');
+        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [$this->owner, $this->repo, $this->commit_sha], '/repos/{owner}/{repo}/git/commits/{commit_sha}');
     }
     /**
      * @return array<int, mixed>

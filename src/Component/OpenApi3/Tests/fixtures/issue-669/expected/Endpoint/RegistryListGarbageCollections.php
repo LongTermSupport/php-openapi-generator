@@ -30,7 +30,7 @@ class RegistryListGarbageCollections extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}'], [(string) $this->registry_name], '/v2/registry/{registry_name}/garbage-collections');
+        return str_replace(['{registry_name}'], [$this->registry_name], '/v2/registry/{registry_name}/garbage-collections');
     }
     /**
      * @return array<int, mixed>

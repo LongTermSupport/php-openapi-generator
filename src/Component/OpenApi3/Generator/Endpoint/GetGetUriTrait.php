@@ -62,11 +62,30 @@ trait GetGetUriTrait
             'stmts'      => [
                 new Stmt\Return_(new Expr\FuncCall(new Name('str_replace'), [
                     new Arg(new Expr\Array_(array_map(static fn ($name): ArrayItem => new ArrayItem(new Scalar\String_('{' . $name . '}')), $names))),
-                    new Arg(new Expr\Array_(array_map(static fn ($type, int|string $name): ArrayItem => 'array' === $type
-                        // return str_replace(['{param}'], [implode(',', $this->param)], '/path/{param}')
-                        ? new ArrayItem(new Expr\FuncCall(new Name('implode'), [new Arg(new Scalar\String_(',')), new Arg(new Expr\PropertyFetch(new Expr\Variable('this'), $name))]))
-                        // return str_replace(['{param}'], [(string) $this->param], '/path/{param}')
-                        : new ArrayItem(new Expr\Cast\String_(new Expr\PropertyFetch(new Expr\Variable('this'), $name))), $types, $names))),
+                    new Arg(new Expr\Array_(array_map(static function ($type, int|string $name): ArrayItem {
+                        $propertyFetch = new Expr\PropertyFetch(new Expr\Variable('this'), $name);
+
+                        // 'array' → implode(',', $this->param) — array property joined with comma
+                        if ('array' === $type) {
+                            return new ArrayItem(new Expr\FuncCall(new Name('implode'), [
+                                new Arg(new Scalar\String_(',')),
+                                new Arg($propertyFetch),
+                            ]));
+                        }
+
+                        // 'string' (and null/default, which GetConstructorTrait also maps to a
+                        // `string` property) → no cast needed. Casting `string` to `string`
+                        // triggers PHPStan `cast.useless`. Property type matches schema type
+                        // because GetConstructorTrait emits `protected string $param` for
+                        // string-typed (or untyped) path parameters.
+                        if ('string' === $type || null === $type) {
+                            return new ArrayItem($propertyFetch);
+                        }
+
+                        // Other scalar types (integer → int, number → float, boolean → bool)
+                        // need an explicit cast to string for str_replace.
+                        return new ArrayItem(new Expr\Cast\String_($propertyFetch));
+                    }, $types, $names))),
                     new Arg(new Scalar\String_($operation->getPath())),
                 ])),
             ],

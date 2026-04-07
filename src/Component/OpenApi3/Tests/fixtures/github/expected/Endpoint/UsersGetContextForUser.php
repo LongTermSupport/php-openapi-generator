@@ -37,7 +37,7 @@ class UsersGetContextForUser extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/hovercard');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/hovercard');
     }
     /**
      * @return array<int, mixed>

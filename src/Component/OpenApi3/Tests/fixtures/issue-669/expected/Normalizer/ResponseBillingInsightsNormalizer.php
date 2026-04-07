@@ -97,8 +97,8 @@ class ResponseBillingInsightsNormalizer implements DenormalizerInterface, Normal
         $dataArray['total_pages'] = $data->getTotalPages();
         $dataArray['current_page'] = $data->getCurrentPage();
         foreach ($data as $key => $value_1) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_1;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_1;
             }
         }
         return $dataArray;

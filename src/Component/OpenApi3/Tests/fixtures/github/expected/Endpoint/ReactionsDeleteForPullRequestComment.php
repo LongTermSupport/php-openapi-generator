@@ -36,7 +36,7 @@ class ReactionsDeleteForPullRequestComment extends \LongTermSupport\OpenApiGener
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{comment_id}', '{reaction_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->comment_id, (string) $this->reaction_id], '/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}');
+        return str_replace(['{owner}', '{repo}', '{comment_id}', '{reaction_id}'], [$this->owner, $this->repo, (string) $this->comment_id, (string) $this->reaction_id], '/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}');
     }
     /**
      * @return array<int, mixed>

@@ -27,7 +27,7 @@ class OutputFormatSetDownloadFileNamePatterns extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/OutputFormats/{id}/downloadFileNamePatterns');
+        return str_replace(['{id}'], [$this->id], '/v1/OutputFormats/{id}/downloadFileNamePatterns');
     }
     /**
      * @return array<int, mixed>

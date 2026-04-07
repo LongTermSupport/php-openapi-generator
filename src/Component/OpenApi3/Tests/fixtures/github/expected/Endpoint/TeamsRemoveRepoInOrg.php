@@ -36,7 +36,7 @@ class TeamsRemoveRepoInOrg extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}', '{owner}', '{repo}'], [(string) $this->org, (string) $this->team_slug, (string) $this->owner, (string) $this->repo], '/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}');
+        return str_replace(['{org}', '{team_slug}', '{owner}', '{repo}'], [$this->org, $this->team_slug, $this->owner, $this->repo], '/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}');
     }
     /**
      * @return array<int, mixed>

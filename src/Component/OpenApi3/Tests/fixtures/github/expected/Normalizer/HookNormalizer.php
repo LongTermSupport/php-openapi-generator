@@ -141,8 +141,8 @@ class HookNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         $dataArray['ping_url'] = $data->getPingUrl();
         $dataArray['last_response'] = $this->normalizer->normalize($data->getLastResponse(), 'json', $context);
         foreach ($data as $key => $value_1) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_1;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_1;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

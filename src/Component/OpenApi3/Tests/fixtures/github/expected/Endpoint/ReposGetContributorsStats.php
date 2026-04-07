@@ -34,7 +34,7 @@ class ReposGetContributorsStats extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/stats/contributors');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/stats/contributors');
     }
     /**
      * @return array<int, mixed>

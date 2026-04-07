@@ -101,8 +101,8 @@ class SearchIssuesGetResponse200Normalizer implements DenormalizerInterface, Nor
             $dataArray['items'] = $values;
         }
         foreach ($data as $key => $value_1) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_1;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_1;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

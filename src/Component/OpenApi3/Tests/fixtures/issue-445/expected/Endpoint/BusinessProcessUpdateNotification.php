@@ -27,7 +27,7 @@ class BusinessProcessUpdateNotification extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/BusinessProcesses/{id}/notification');
+        return str_replace(['{id}'], [$this->id], '/v1/BusinessProcesses/{id}/notification');
     }
     /**
      * @return array<int, mixed>

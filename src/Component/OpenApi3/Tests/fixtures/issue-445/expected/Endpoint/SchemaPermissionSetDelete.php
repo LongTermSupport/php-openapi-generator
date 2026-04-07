@@ -25,7 +25,7 @@ class SchemaPermissionSetDelete extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/SchemaPermissionSets/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/SchemaPermissionSets/{id}');
     }
     /**
      * @return array<int, mixed>

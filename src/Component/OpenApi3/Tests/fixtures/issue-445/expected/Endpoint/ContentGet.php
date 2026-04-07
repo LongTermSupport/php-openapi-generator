@@ -29,7 +29,7 @@ class ContentGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Contents/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/Contents/{id}');
     }
     /**
      * @return array<int, mixed>

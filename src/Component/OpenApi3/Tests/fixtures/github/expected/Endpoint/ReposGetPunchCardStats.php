@@ -34,7 +34,7 @@ class ReposGetPunchCardStats extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/stats/punch_card');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/stats/punch_card');
     }
     /**
      * @return array<int, mixed>

@@ -24,7 +24,7 @@ class UsersUnblock extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/user/blocks/{username}');
+        return str_replace(['{username}'], [$this->username], '/user/blocks/{username}');
     }
     /**
      * @return array<int, mixed>

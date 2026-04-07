@@ -30,7 +30,7 @@ class ReservedIPv6Delete extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{reserved_ipv6}'], [(string) $this->reserved_ipv6], '/v2/reserved_ipv6/{reserved_ipv6}');
+        return str_replace(['{reserved_ipv6}'], [$this->reserved_ipv6], '/v2/reserved_ipv6/{reserved_ipv6}');
     }
     /**
      * @return array<int, mixed>

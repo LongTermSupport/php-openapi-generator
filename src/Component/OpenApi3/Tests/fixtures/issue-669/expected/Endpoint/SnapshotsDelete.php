@@ -31,7 +31,7 @@ class SnapshotsDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{snapshot_id}'], [(string) $this->snapshot_id], '/v2/snapshots/{snapshot_id}');
+        return str_replace(['{snapshot_id}'], [$this->snapshot_id], '/v2/snapshots/{snapshot_id}');
     }
     /**
      * @return array<int, mixed>

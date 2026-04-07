@@ -39,7 +39,7 @@ class ApiBooksBookIdreviewsGetCollection extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{bookId}'], [(string) $this->bookId], '/books/{bookId}/reviews');
+        return str_replace(['{bookId}'], [$this->bookId], '/books/{bookId}/reviews');
     }
     /**
      * @return array<int, mixed>

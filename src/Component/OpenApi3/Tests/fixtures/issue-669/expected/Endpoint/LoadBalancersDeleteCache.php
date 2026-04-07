@@ -30,7 +30,7 @@ class LoadBalancersDeleteCache extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{lb_id}'], [(string) $this->lb_id], '/v2/load_balancers/{lb_id}/cache');
+        return str_replace(['{lb_id}'], [$this->lb_id], '/v2/load_balancers/{lb_id}/cache');
     }
     /**
      * @return array<int, mixed>

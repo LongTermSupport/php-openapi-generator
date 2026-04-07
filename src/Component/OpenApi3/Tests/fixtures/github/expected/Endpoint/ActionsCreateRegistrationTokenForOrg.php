@@ -37,7 +37,7 @@ class ActionsCreateRegistrationTokenForOrg extends \LongTermSupport\OpenApiGener
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/actions/runners/registration-token');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/actions/runners/registration-token');
     }
     /**
      * @return array<int, mixed>

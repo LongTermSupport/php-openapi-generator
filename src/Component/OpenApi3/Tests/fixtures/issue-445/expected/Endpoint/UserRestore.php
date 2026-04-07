@@ -25,7 +25,7 @@ class UserRestore extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Users/{id}/restore');
+        return str_replace(['{id}'], [$this->id], '/v1/Users/{id}/restore');
     }
     /**
      * @return array<int, mixed>

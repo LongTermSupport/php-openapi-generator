@@ -25,7 +25,7 @@ class SchemaPermissionSetGetPermissions extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/SchemaPermissionSets/{id}/permissions');
+        return str_replace(['{id}'], [$this->id], '/v1/SchemaPermissionSets/{id}/permissions');
     }
     /**
      * @return array<int, mixed>

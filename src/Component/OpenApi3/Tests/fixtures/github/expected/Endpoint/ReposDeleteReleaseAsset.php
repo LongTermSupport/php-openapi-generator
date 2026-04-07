@@ -30,7 +30,7 @@ class ReposDeleteReleaseAsset extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{asset_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->asset_id], '/repos/{owner}/{repo}/releases/assets/{asset_id}');
+        return str_replace(['{owner}', '{repo}', '{asset_id}'], [$this->owner, $this->repo, (string) $this->asset_id], '/repos/{owner}/{repo}/releases/assets/{asset_id}');
     }
     /**
      * @return array<int, mixed>

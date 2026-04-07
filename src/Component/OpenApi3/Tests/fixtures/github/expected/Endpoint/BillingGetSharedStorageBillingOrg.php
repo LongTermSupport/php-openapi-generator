@@ -31,7 +31,7 @@ class BillingGetSharedStorageBillingOrg extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/settings/billing/shared-storage');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/settings/billing/shared-storage');
     }
     /**
      * @return array<int, mixed>

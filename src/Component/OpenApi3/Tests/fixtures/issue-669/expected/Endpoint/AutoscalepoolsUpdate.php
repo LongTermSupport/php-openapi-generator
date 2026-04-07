@@ -30,7 +30,7 @@ class AutoscalepoolsUpdate extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{autoscale_pool_id}'], [(string) $this->autoscale_pool_id], '/v2/droplets/autoscale/{autoscale_pool_id}');
+        return str_replace(['{autoscale_pool_id}'], [$this->autoscale_pool_id], '/v2/droplets/autoscale/{autoscale_pool_id}');
     }
     /**
      * @return array<int, mixed>

@@ -31,7 +31,7 @@ class ReposDeleteDeployKey extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{key_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->key_id], '/repos/{owner}/{repo}/keys/{key_id}');
+        return str_replace(['{owner}', '{repo}', '{key_id}'], [$this->owner, $this->repo, (string) $this->key_id], '/repos/{owner}/{repo}/keys/{key_id}');
     }
     /**
      * @return array<int, mixed>

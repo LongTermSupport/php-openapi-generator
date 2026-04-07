@@ -31,7 +31,7 @@ class InvoicesGetPdfByUUID extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{invoice_uuid}'], [(string) $this->invoice_uuid], '/v2/customers/my/invoices/{invoice_uuid}/pdf');
+        return str_replace(['{invoice_uuid}'], [$this->invoice_uuid], '/v2/customers/my/invoices/{invoice_uuid}/pdf');
     }
     /**
      * @return array<int, mixed>

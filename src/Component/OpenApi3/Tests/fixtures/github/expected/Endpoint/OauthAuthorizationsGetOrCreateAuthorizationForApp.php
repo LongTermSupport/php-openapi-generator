@@ -35,7 +35,7 @@ class OauthAuthorizationsGetOrCreateAuthorizationForApp extends \LongTermSupport
     }
     public function getUri(): string
     {
-        return str_replace(['{client_id}'], [(string) $this->client_id], '/authorizations/clients/{client_id}');
+        return str_replace(['{client_id}'], [$this->client_id], '/authorizations/clients/{client_id}');
     }
     /**
      * @return array<int, mixed>

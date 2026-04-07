@@ -27,7 +27,7 @@ class VolumeSnapshotsGetById extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{snapshot_id}'], [(string) $this->snapshot_id], '/v2/volumes/snapshots/{snapshot_id}');
+        return str_replace(['{snapshot_id}'], [$this->snapshot_id], '/v2/volumes/snapshots/{snapshot_id}');
     }
     /**
      * @return array<int, mixed>

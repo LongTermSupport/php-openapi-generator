@@ -182,8 +182,8 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
             $dataArray['badDebtDetails'] = $values_5;
         }
         foreach ($data as $key => $value_6) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_6;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_6;
             }
         }
         return $dataArray;

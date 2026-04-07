@@ -25,7 +25,7 @@ class KubernetesListAssociatedResources extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{cluster_id}'], [(string) $this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/destroy_with_associated_resources');
+        return str_replace(['{cluster_id}'], [$this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/destroy_with_associated_resources');
     }
     /**
      * @return array<int, mixed>

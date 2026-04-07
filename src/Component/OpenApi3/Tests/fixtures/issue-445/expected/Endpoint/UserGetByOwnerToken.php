@@ -24,7 +24,7 @@ class UserGetByOwnerToken extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{tokenId}'], [(string) $this->tokenId], '/v1/Users/owner/{tokenId}');
+        return str_replace(['{tokenId}'], [$this->tokenId], '/v1/Users/owner/{tokenId}');
     }
     /**
      * @return array<int, mixed>

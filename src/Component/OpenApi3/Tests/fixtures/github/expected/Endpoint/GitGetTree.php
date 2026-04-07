@@ -37,7 +37,7 @@ class GitGetTree extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{tree_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->tree_sha], '/repos/{owner}/{repo}/git/trees/{tree_sha}');
+        return str_replace(['{owner}', '{repo}', '{tree_sha}'], [$this->owner, $this->repo, $this->tree_sha], '/repos/{owner}/{repo}/git/trees/{tree_sha}');
     }
     /**
      * @return array<int, mixed>

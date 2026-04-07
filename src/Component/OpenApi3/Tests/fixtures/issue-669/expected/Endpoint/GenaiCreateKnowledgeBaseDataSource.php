@@ -27,7 +27,7 @@ class GenaiCreateKnowledgeBaseDataSource extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{knowledge_base_uuid}'], [(string) $this->knowledge_base_uuid], '/v2/gen-ai/knowledge_bases/{knowledge_base_uuid}/data_sources');
+        return str_replace(['{knowledge_base_uuid}'], [$this->knowledge_base_uuid], '/v2/gen-ai/knowledge_bases/{knowledge_base_uuid}/data_sources');
     }
     /**
      * @return array<int, mixed>

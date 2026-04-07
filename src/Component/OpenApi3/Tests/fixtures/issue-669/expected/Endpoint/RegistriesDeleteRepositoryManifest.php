@@ -43,7 +43,7 @@ class RegistriesDeleteRepositoryManifest extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}', '{repository_name}', '{manifest_digest}'], [(string) $this->registry_name, (string) $this->repository_name, (string) $this->manifest_digest], '/v2/registries/{registry_name}/repositories/{repository_name}/digests/{manifest_digest}');
+        return str_replace(['{registry_name}', '{repository_name}', '{manifest_digest}'], [$this->registry_name, $this->repository_name, $this->manifest_digest], '/v2/registries/{registry_name}/repositories/{repository_name}/digests/{manifest_digest}');
     }
     /**
      * @return array<int, mixed>

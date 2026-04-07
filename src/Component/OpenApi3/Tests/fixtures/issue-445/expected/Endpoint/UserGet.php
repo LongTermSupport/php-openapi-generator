@@ -24,7 +24,7 @@ class UserGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Users/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/Users/{id}');
     }
     /**
      * @return array<int, mixed>

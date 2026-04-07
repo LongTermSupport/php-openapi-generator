@@ -34,7 +34,7 @@ class ProjectsListForRepo extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/projects');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/projects');
     }
     /**
      * @return array<int, mixed>

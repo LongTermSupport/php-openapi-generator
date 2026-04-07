@@ -25,7 +25,7 @@ class AppsListAlerts extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}'], [(string) $this->app_id], '/v2/apps/{app_id}/alerts');
+        return str_replace(['{app_id}'], [$this->app_id], '/v2/apps/{app_id}/alerts');
     }
     /**
      * @return array<int, mixed>

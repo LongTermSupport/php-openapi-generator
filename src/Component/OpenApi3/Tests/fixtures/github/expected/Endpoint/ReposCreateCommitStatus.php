@@ -35,7 +35,7 @@ class ReposCreateCommitStatus extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->sha], '/repos/{owner}/{repo}/statuses/{sha}');
+        return str_replace(['{owner}', '{repo}', '{sha}'], [$this->owner, $this->repo, $this->sha], '/repos/{owner}/{repo}/statuses/{sha}');
     }
     /**
      * @return array<int, mixed>

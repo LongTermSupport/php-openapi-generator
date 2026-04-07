@@ -30,7 +30,7 @@ class UsersListPublicKeysForUser extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/keys');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/keys');
     }
     /**
      * @return array<int, mixed>

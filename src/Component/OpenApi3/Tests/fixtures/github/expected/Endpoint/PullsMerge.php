@@ -33,7 +33,7 @@ class PullsMerge extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{pull_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/merge');
+        return str_replace(['{owner}', '{repo}', '{pull_number}'], [$this->owner, $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/merge');
     }
     /**
      * @return array<int, mixed>

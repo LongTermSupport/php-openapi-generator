@@ -149,8 +149,8 @@ class ContentMetadataUpdateItemNormalizer implements DenormalizerInterface, Norm
         $dataArray['contentFieldsUpdateOptions'] = $data->getContentFieldsUpdateOptions();
         $dataArray['id'] = $data->getId();
         foreach ($data as $key_2 => $value_3) {
-            if (preg_match('/.*/', (string) $key_2) === 1) {
-                $dataArray[(string) $key_2] = $value_3;
+            if (preg_match('/.*/', strval($key_2)) === 1) {
+                $dataArray[$key_2] = $value_3;
             }
         }
         return $dataArray;

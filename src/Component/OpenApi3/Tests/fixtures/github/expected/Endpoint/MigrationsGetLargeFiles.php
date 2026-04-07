@@ -28,7 +28,7 @@ class MigrationsGetLargeFiles extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/import/large_files');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/import/large_files');
     }
     /**
      * @return array<int, mixed>

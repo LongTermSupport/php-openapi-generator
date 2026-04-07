@@ -27,7 +27,7 @@ class FunctionsDeleteNamespace extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{namespace_id}'], [(string) $this->namespace_id], '/v2/functions/namespaces/{namespace_id}');
+        return str_replace(['{namespace_id}'], [$this->namespace_id], '/v2/functions/namespaces/{namespace_id}');
     }
     /**
      * @return array<int, mixed>

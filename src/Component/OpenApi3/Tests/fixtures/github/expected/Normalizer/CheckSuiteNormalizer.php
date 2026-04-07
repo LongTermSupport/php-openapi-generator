@@ -225,8 +225,8 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
         $dataArray['latest_check_runs_count'] = $data->getLatestCheckRunsCount();
         $dataArray['check_runs_url'] = $data->getCheckRunsUrl();
         foreach ($data as $key => $value_1) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_1;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_1;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

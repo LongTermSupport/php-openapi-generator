@@ -29,7 +29,7 @@ class AppsGetMetricsBandwidthDaily extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}'], [(string) $this->app_id], '/v2/apps/{app_id}/metrics/bandwidth_daily');
+        return str_replace(['{app_id}'], [$this->app_id], '/v2/apps/{app_id}/metrics/bandwidth_daily');
     }
     /**
      * @return array<int, mixed>

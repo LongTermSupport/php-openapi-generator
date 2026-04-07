@@ -32,7 +32,7 @@ class ActivityListPublicEventsForRepoNetwork extends \LongTermSupport\OpenApiGen
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/networks/{owner}/{repo}/events');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/networks/{owner}/{repo}/events');
     }
     /**
      * @return array<int, mixed>

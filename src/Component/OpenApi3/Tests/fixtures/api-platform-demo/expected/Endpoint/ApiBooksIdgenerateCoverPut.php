@@ -33,7 +33,7 @@ class ApiBooksIdgenerateCoverPut extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/books/{id}/generate-cover');
+        return str_replace(['{id}'], [$this->id], '/books/{id}/generate-cover');
     }
     /**
      * @return array<int, mixed>

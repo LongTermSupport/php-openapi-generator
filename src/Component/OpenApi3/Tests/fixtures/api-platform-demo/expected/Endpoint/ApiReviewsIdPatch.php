@@ -33,7 +33,7 @@ class ApiReviewsIdPatch extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/reviews/{id}');
+        return str_replace(['{id}'], [$this->id], '/reviews/{id}');
     }
     /**
      * @return array<int, mixed>

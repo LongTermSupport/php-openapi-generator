@@ -36,7 +36,7 @@ class PullsListCommits extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{pull_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/commits');
+        return str_replace(['{owner}', '{repo}', '{pull_number}'], [$this->owner, $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/commits');
     }
     /**
      * @return array<int, mixed>

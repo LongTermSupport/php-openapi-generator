@@ -36,7 +36,7 @@ class KubernetesGetClusterLintResults extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{cluster_id}'], [(string) $this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/clusterlint');
+        return str_replace(['{cluster_id}'], [$this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/clusterlint');
     }
     /**
      * @return array<int, mixed>

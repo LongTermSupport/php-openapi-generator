@@ -30,7 +30,7 @@ class DatabasesGetKafkaSchema extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{subject_name}'], [(string) $this->database_cluster_uuid, (string) $this->subject_name], '/v2/databases/{database_cluster_uuid}/schema-registry/{subject_name}');
+        return str_replace(['{database_cluster_uuid}', '{subject_name}'], [$this->database_cluster_uuid, $this->subject_name], '/v2/databases/{database_cluster_uuid}/schema-registry/{subject_name}');
     }
     /**
      * @return array<int, mixed>

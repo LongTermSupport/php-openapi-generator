@@ -164,8 +164,8 @@ class ApiIndexedDataSourceNormalizer implements DenormalizerInterface, Normalize
             $dataArray['total_file_count'] = $data->getTotalFileCount();
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

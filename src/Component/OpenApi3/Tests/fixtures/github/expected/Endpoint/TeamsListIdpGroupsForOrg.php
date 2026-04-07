@@ -34,7 +34,7 @@ class TeamsListIdpGroupsForOrg extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/team-sync/groups');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/team-sync/groups');
     }
     /**
      * @return array<int, mixed>

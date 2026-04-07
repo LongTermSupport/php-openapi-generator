@@ -27,7 +27,7 @@ class ActionsListRunnerApplicationsForOrg extends \LongTermSupport\OpenApiGenera
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/actions/runners/downloads');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/actions/runners/downloads');
     }
     /**
      * @return array<int, mixed>

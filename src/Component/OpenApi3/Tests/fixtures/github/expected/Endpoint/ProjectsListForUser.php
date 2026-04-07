@@ -30,7 +30,7 @@ class ProjectsListForUser extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/projects');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/projects');
     }
     /**
      * @return array<int, mixed>

@@ -25,7 +25,7 @@ class TagsDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{tag_id}'], [(string) $this->tag_id], '/v2/tags/{tag_id}');
+        return str_replace(['{tag_id}'], [$this->tag_id], '/v2/tags/{tag_id}');
     }
     /**
      * @return array<int, mixed>

@@ -33,7 +33,7 @@ class ActivityListOrgEventsForAuthenticatedUser extends \LongTermSupport\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{username}', '{org}'], [(string) $this->username, (string) $this->org], '/users/{username}/events/orgs/{org}');
+        return str_replace(['{username}', '{org}'], [$this->username, $this->org], '/users/{username}/events/orgs/{org}');
     }
     /**
      * @return array<int, mixed>

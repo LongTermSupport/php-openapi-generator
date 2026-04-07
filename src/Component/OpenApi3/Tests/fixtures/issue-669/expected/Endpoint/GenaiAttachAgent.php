@@ -30,7 +30,7 @@ class GenaiAttachAgent extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{parent_agent_uuid}', '{child_agent_uuid}'], [(string) $this->parent_agent_uuid, (string) $this->child_agent_uuid], '/v2/gen-ai/agents/{parent_agent_uuid}/child_agents/{child_agent_uuid}');
+        return str_replace(['{parent_agent_uuid}', '{child_agent_uuid}'], [$this->parent_agent_uuid, $this->child_agent_uuid], '/v2/gen-ai/agents/{parent_agent_uuid}/child_agents/{child_agent_uuid}');
     }
     /**
      * @return array<int, mixed>

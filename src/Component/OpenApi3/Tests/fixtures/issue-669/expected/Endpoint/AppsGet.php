@@ -29,7 +29,7 @@ class AppsGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v2/apps/{id}');
+        return str_replace(['{id}'], [$this->id], '/v2/apps/{id}');
     }
     /**
      * @return array<int, mixed>

@@ -107,8 +107,8 @@ class ResponseAllFirewallsNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray['meta'] = $this->normalizer->normalize($data->getMeta(), 'json', $context);
         foreach ($data as $key_1 => $value_2) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $dataArray[(string) $key_1] = $value_2;
+            if (preg_match('/.*/', strval($key_1)) === 1) {
+                $dataArray[$key_1] = $value_2;
             }
         }
         return $dataArray;

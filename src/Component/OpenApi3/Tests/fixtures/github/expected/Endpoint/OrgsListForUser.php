@@ -32,7 +32,7 @@ class OrgsListForUser extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/orgs');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/orgs');
     }
     /**
      * @return array<int, mixed>

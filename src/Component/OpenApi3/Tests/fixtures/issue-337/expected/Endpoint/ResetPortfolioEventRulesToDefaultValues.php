@@ -29,7 +29,7 @@ class ResetPortfolioEventRulesToDefaultValues extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/eventRules/setDefault');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/eventRules/setDefault');
     }
     /**
      * @return array<int, mixed>

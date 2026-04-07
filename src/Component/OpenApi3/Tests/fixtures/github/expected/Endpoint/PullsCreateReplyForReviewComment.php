@@ -38,7 +38,7 @@ class PullsCreateReplyForReviewComment extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{pull_number}', '{comment_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->pull_number, (string) $this->comment_id], '/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies');
+        return str_replace(['{owner}', '{repo}', '{pull_number}', '{comment_id}'], [$this->owner, $this->repo, (string) $this->pull_number, (string) $this->comment_id], '/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies');
     }
     /**
      * @return array<int, mixed>

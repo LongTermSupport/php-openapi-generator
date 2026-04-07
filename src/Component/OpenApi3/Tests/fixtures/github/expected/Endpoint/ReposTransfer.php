@@ -30,7 +30,7 @@ class ReposTransfer extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/transfer');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/transfer');
     }
     /**
      * @return array<int, mixed>

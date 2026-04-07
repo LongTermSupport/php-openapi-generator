@@ -25,7 +25,7 @@ class UserReinvite extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Users/{id}/reinvite');
+        return str_replace(['{id}'], [$this->id], '/v1/Users/{id}/reinvite');
     }
     /**
      * @return array<int, mixed>

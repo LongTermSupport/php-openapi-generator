@@ -38,7 +38,7 @@ class TagsUnassignResources extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{tag_id}'], [(string) $this->tag_id], '/v2/tags/{tag_id}/resources');
+        return str_replace(['{tag_id}'], [$this->tag_id], '/v2/tags/{tag_id}/resources');
     }
     /**
      * @return array<int, mixed>

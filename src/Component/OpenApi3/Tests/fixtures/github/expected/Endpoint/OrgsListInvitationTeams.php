@@ -33,7 +33,7 @@ class OrgsListInvitationTeams extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{invitation_id}'], [(string) $this->org, (string) $this->invitation_id], '/orgs/{org}/invitations/{invitation_id}/teams');
+        return str_replace(['{org}', '{invitation_id}'], [$this->org, (string) $this->invitation_id], '/orgs/{org}/invitations/{invitation_id}/teams');
     }
     /**
      * @return array<int, mixed>

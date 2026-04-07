@@ -25,7 +25,7 @@ class MonitoringDeleteAlertPolicy extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{alert_uuid}'], [(string) $this->alert_uuid], '/v2/monitoring/alerts/{alert_uuid}');
+        return str_replace(['{alert_uuid}'], [$this->alert_uuid], '/v2/monitoring/alerts/{alert_uuid}');
     }
     /**
      * @return array<int, mixed>

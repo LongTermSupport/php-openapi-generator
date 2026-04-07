@@ -24,7 +24,7 @@ class TransferGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Transfers/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/Transfers/{id}');
     }
     /**
      * @return array<int, mixed>

@@ -78,8 +78,8 @@ class ContextAnnotationNormalizer implements DenormalizerInterface, NormalizerIn
         $dataArray['domain'] = $this->normalizer->normalize($data->getDomain(), 'json', $context);
         $dataArray['entity'] = $this->normalizer->normalize($data->getEntity(), 'json', $context);
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

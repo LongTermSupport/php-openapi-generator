@@ -35,7 +35,7 @@ class IssuesCheckUserCanBeAssigned extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{assignee}'], [(string) $this->owner, (string) $this->repo, (string) $this->assignee], '/repos/{owner}/{repo}/assignees/{assignee}');
+        return str_replace(['{owner}', '{repo}', '{assignee}'], [$this->owner, $this->repo, $this->assignee], '/repos/{owner}/{repo}/assignees/{assignee}');
     }
     /**
      * @return array<int, mixed>

@@ -35,7 +35,7 @@ class ReposListReleaseAssets extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{release_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->release_id], '/repos/{owner}/{repo}/releases/{release_id}/assets');
+        return str_replace(['{owner}', '{repo}', '{release_id}'], [$this->owner, $this->repo, (string) $this->release_id], '/repos/{owner}/{repo}/releases/{release_id}/assets');
     }
     /**
      * @return array<int, mixed>

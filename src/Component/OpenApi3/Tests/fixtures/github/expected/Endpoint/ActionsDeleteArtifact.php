@@ -31,7 +31,7 @@ class ActionsDeleteArtifact extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{artifact_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->artifact_id], '/repos/{owner}/{repo}/actions/artifacts/{artifact_id}');
+        return str_replace(['{owner}', '{repo}', '{artifact_id}'], [$this->owner, $this->repo, (string) $this->artifact_id], '/repos/{owner}/{repo}/actions/artifacts/{artifact_id}');
     }
     /**
      * @return array<int, mixed>

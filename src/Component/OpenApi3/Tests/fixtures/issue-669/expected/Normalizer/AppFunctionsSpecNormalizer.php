@@ -190,8 +190,8 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
             $dataArray['log_destinations'] = $values_3;
         }
         foreach ($data as $key => $value_4) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_4;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_4;
             }
         }
         return $dataArray;

@@ -31,7 +31,7 @@ class ReposPingWebhook extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{hook_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->hook_id], '/repos/{owner}/{repo}/hooks/{hook_id}/pings');
+        return str_replace(['{owner}', '{repo}', '{hook_id}'], [$this->owner, $this->repo, (string) $this->hook_id], '/repos/{owner}/{repo}/hooks/{hook_id}/pings');
     }
     /**
      * @return array<int, mixed>

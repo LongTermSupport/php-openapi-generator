@@ -36,7 +36,7 @@ class PullsDismissReview extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{pull_number}', '{review_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->pull_number, (string) $this->review_id], '/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals');
+        return str_replace(['{owner}', '{repo}', '{pull_number}', '{review_id}'], [$this->owner, $this->repo, (string) $this->pull_number, (string) $this->review_id], '/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals');
     }
     /**
      * @return array<int, mixed>

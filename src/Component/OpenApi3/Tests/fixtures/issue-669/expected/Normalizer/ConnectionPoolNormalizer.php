@@ -125,8 +125,8 @@ class ConnectionPoolNormalizer implements DenormalizerInterface, NormalizerInter
             $dataArray['standby_private_connection'] = $this->normalizer->normalize($data->getStandbyPrivateConnection(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

@@ -33,7 +33,7 @@ class ReposListForOrg extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/repos');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/repos');
     }
     /**
      * @return array<int, mixed>

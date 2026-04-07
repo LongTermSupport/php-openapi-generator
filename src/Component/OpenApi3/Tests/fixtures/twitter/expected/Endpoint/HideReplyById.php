@@ -33,7 +33,7 @@ class HideReplyById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/labs/1/tweets/{id}/hidden');
+        return str_replace(['{id}'], [$this->id], '/labs/1/tweets/{id}/hidden');
     }
     /**
      * @return array<int, mixed>

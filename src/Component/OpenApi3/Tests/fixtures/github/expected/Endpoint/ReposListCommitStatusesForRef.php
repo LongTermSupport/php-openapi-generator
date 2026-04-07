@@ -38,7 +38,7 @@ class ReposListCommitStatusesForRef extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{ref}'], [(string) $this->owner, (string) $this->repo, (string) $this->ref], '/repos/{owner}/{repo}/commits/{ref}/statuses');
+        return str_replace(['{owner}', '{repo}', '{ref}'], [$this->owner, $this->repo, $this->ref], '/repos/{owner}/{repo}/commits/{ref}/statuses');
     }
     /**
      * @return array<int, mixed>

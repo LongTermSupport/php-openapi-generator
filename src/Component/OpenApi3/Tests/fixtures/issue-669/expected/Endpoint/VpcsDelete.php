@@ -32,7 +32,7 @@ class VpcsDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{vpc_id}'], [(string) $this->vpc_id], '/v2/vpcs/{vpc_id}');
+        return str_replace(['{vpc_id}'], [$this->vpc_id], '/v2/vpcs/{vpc_id}');
     }
     /**
      * @return array<int, mixed>

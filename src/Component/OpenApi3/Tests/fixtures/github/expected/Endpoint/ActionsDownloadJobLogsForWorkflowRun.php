@@ -34,7 +34,7 @@ class ActionsDownloadJobLogsForWorkflowRun extends \LongTermSupport\OpenApiGener
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{job_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->job_id], '/repos/{owner}/{repo}/actions/jobs/{job_id}/logs');
+        return str_replace(['{owner}', '{repo}', '{job_id}'], [$this->owner, $this->repo, (string) $this->job_id], '/repos/{owner}/{repo}/actions/jobs/{job_id}/logs');
     }
     /**
      * @return array<int, mixed>

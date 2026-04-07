@@ -25,7 +25,7 @@ class MonitoringGetSink extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{sink_uuid}'], [(string) $this->sink_uuid], '/v2/monitoring/sinks/{sink_uuid}');
+        return str_replace(['{sink_uuid}'], [$this->sink_uuid], '/v2/monitoring/sinks/{sink_uuid}');
     }
     /**
      * @return array<int, mixed>

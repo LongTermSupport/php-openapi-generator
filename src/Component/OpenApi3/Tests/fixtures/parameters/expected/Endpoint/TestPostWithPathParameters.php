@@ -32,7 +32,7 @@ class TestPostWithPathParameters extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{testPath}'], [(string) $this->testPath], '/test-path-parameters/{testPath}');
+        return str_replace(['{testPath}'], [$this->testPath], '/test-path-parameters/{testPath}');
     }
     /**
      * @return array<int, mixed>

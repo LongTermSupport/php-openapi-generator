@@ -28,7 +28,7 @@ class MigrationsUnlockRepoForAuthenticatedUser extends \LongTermSupport\OpenApiG
     }
     public function getUri(): string
     {
-        return str_replace(['{migration_id}', '{repo_name}'], [(string) $this->migration_id, (string) $this->repo_name], '/user/migrations/{migration_id}/repos/{repo_name}/lock');
+        return str_replace(['{migration_id}', '{repo_name}'], [(string) $this->migration_id, $this->repo_name], '/user/migrations/{migration_id}/repos/{repo_name}/lock');
     }
     /**
      * @return array<int, mixed>

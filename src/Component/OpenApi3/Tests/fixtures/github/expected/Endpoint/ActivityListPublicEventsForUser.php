@@ -29,7 +29,7 @@ class ActivityListPublicEventsForUser extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/events/public');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/events/public');
     }
     /**
      * @return array<int, mixed>

@@ -28,7 +28,7 @@ class AppsDeleteAuthorization extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{client_id}'], [(string) $this->client_id], '/applications/{client_id}/grant');
+        return str_replace(['{client_id}'], [$this->client_id], '/applications/{client_id}/grant');
     }
     /**
      * @return array<int, mixed>

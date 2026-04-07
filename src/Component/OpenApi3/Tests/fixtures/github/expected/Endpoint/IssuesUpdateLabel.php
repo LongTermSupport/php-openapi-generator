@@ -32,7 +32,7 @@ class IssuesUpdateLabel extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{name}'], [(string) $this->owner, (string) $this->repo, (string) $this->name], '/repos/{owner}/{repo}/labels/{name}');
+        return str_replace(['{owner}', '{repo}', '{name}'], [$this->owner, $this->repo, $this->name], '/repos/{owner}/{repo}/labels/{name}');
     }
     /**
      * @return array<int, mixed>

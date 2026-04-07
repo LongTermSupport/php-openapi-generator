@@ -33,7 +33,7 @@ class VpcsPatchPeerings extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{vpc_id}', '{vpc_peering_id}'], [(string) $this->vpc_id, (string) $this->vpc_peering_id], '/v2/vpcs/{vpc_id}/peerings/{vpc_peering_id}');
+        return str_replace(['{vpc_id}', '{vpc_peering_id}'], [$this->vpc_id, $this->vpc_peering_id], '/v2/vpcs/{vpc_id}/peerings/{vpc_peering_id}');
     }
     /**
      * @return array<int, mixed>

@@ -35,7 +35,7 @@ class ReposCreateDeploymentStatus extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{deployment_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->deployment_id], '/repos/{owner}/{repo}/deployments/{deployment_id}/statuses');
+        return str_replace(['{owner}', '{repo}', '{deployment_id}'], [$this->owner, $this->repo, (string) $this->deployment_id], '/repos/{owner}/{repo}/deployments/{deployment_id}/statuses');
     }
     /**
      * @return array<int, mixed>

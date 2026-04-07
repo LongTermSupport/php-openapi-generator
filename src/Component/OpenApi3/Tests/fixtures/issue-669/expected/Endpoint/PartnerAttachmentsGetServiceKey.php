@@ -27,7 +27,7 @@ class PartnerAttachmentsGetServiceKey extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{pa_id}'], [(string) $this->pa_id], '/v2/partner_network_connect/attachments/{pa_id}/service_key');
+        return str_replace(['{pa_id}'], [$this->pa_id], '/v2/partner_network_connect/attachments/{pa_id}/service_key');
     }
     /**
      * @return array<int, mixed>

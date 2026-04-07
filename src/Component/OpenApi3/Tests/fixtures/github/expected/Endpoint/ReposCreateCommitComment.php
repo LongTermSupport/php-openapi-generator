@@ -35,7 +35,7 @@ class ReposCreateCommitComment extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->commit_sha], '/repos/{owner}/{repo}/commits/{commit_sha}/comments');
+        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [$this->owner, $this->repo, $this->commit_sha], '/repos/{owner}/{repo}/commits/{commit_sha}/comments');
     }
     /**
      * @return array<int, mixed>

@@ -27,7 +27,7 @@ class FunctionsCreateTrigger extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{namespace_id}'], [(string) $this->namespace_id], '/v2/functions/namespaces/{namespace_id}/triggers');
+        return str_replace(['{namespace_id}'], [$this->namespace_id], '/v2/functions/namespaces/{namespace_id}/triggers');
     }
     /**
      * @return array<int, mixed>

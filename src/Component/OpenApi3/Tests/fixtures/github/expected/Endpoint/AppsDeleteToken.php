@@ -27,7 +27,7 @@ class AppsDeleteToken extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{client_id}'], [(string) $this->client_id], '/applications/{client_id}/token');
+        return str_replace(['{client_id}'], [$this->client_id], '/applications/{client_id}/token');
     }
     /**
      * @return array<int, mixed>

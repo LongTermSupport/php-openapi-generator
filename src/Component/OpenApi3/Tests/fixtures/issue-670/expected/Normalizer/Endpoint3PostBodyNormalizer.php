@@ -74,8 +74,8 @@ class Endpoint3PostBodyNormalizer implements DenormalizerInterface, NormalizerIn
             $dataArray['post-field-3'] = $this->normalizer->normalize($data->getPostField3(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

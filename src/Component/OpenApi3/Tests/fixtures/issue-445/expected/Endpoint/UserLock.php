@@ -28,7 +28,7 @@ class UserLock extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Users/{id}/lock');
+        return str_replace(['{id}'], [$this->id], '/v1/Users/{id}/lock');
     }
     /**
      * @return array<int, mixed>

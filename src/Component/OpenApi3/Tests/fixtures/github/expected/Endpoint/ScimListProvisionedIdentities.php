@@ -52,7 +52,7 @@ class ScimListProvisionedIdentities extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/scim/v2/organizations/{org}/Users');
+        return str_replace(['{org}'], [$this->org], '/scim/v2/organizations/{org}/Users');
     }
     /**
      * @return array<int, mixed>

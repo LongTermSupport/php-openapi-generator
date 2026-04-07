@@ -33,7 +33,7 @@ class ApiBooksIdPatch extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/books/{id}');
+        return str_replace(['{id}'], [$this->id], '/books/{id}');
     }
     /**
      * @return array<int, mixed>

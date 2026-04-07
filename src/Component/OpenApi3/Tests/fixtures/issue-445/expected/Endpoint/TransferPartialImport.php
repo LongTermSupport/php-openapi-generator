@@ -32,7 +32,7 @@ class TransferPartialImport extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Transfers/{id}/partialImport');
+        return str_replace(['{id}'], [$this->id], '/v1/Transfers/{id}/partialImport');
     }
     /**
      * @return array<int, mixed>

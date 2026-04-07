@@ -31,7 +31,7 @@ class DocumentHistoryGetVersion extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{documentType}', '{documentId}', '{documentVersion}'], [(string) $this->documentType, (string) $this->documentId, (string) $this->documentVersion], '/v1/history/{documentType}/{documentId}/{documentVersion}');
+        return str_replace(['{documentType}', '{documentId}', '{documentVersion}'], [$this->documentType, $this->documentId, (string) $this->documentVersion], '/v1/history/{documentType}/{documentId}/{documentVersion}');
     }
     /**
      * @return array<int, mixed>

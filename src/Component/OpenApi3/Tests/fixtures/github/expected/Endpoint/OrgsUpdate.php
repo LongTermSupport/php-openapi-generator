@@ -29,7 +29,7 @@ class OrgsUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}');
     }
     /**
      * @return array<int, mixed>

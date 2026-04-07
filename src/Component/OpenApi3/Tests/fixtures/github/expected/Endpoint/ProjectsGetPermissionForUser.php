@@ -28,7 +28,7 @@ class ProjectsGetPermissionForUser extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{project_id}', '{username}'], [(string) $this->project_id, (string) $this->username], '/projects/{project_id}/collaborators/{username}/permission');
+        return str_replace(['{project_id}', '{username}'], [(string) $this->project_id, $this->username], '/projects/{project_id}/collaborators/{username}/permission');
     }
     /**
      * @return array<int, mixed>

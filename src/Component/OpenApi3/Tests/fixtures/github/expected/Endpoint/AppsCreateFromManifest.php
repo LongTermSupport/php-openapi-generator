@@ -25,7 +25,7 @@ class AppsCreateFromManifest extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{code}'], [(string) $this->code], '/app-manifests/{code}/conversions');
+        return str_replace(['{code}'], [$this->code], '/app-manifests/{code}/conversions');
     }
     /**
      * @return array<int, mixed>

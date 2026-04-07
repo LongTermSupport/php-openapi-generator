@@ -35,7 +35,7 @@ class AppsGetExec extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}', '{deployment_id}', '{component_name}'], [(string) $this->app_id, (string) $this->deployment_id, (string) $this->component_name], '/v2/apps/{app_id}/deployments/{deployment_id}/components/{component_name}/exec');
+        return str_replace(['{app_id}', '{deployment_id}', '{component_name}'], [$this->app_id, $this->deployment_id, $this->component_name], '/v2/apps/{app_id}/deployments/{deployment_id}/components/{component_name}/exec');
     }
     /**
      * @return array<int, mixed>

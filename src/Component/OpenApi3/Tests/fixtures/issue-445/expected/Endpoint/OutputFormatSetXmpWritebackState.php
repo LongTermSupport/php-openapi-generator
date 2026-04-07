@@ -28,7 +28,7 @@ class OutputFormatSetXmpWritebackState extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/OutputFormats/{id}/xmpWriteback');
+        return str_replace(['{id}'], [$this->id], '/v1/OutputFormats/{id}/xmpWriteback');
     }
     /**
      * @return array<int, mixed>

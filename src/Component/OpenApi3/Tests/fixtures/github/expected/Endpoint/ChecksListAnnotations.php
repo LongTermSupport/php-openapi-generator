@@ -36,7 +36,7 @@ class ChecksListAnnotations extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{check_run_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->check_run_id], '/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations');
+        return str_replace(['{owner}', '{repo}', '{check_run_id}'], [$this->owner, $this->repo, (string) $this->check_run_id], '/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations');
     }
     /**
      * @return array<int, mixed>

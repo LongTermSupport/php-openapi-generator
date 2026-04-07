@@ -41,7 +41,7 @@ class IssuesListForOrg extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/issues');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/issues');
     }
     /**
      * @return array<int, mixed>

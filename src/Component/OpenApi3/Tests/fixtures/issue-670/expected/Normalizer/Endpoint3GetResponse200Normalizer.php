@@ -74,8 +74,8 @@ class Endpoint3GetResponse200Normalizer implements DenormalizerInterface, Normal
             $dataArray['field-3'] = $this->normalizer->normalize($data->getField3(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

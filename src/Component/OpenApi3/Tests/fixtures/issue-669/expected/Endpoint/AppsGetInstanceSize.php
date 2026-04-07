@@ -25,7 +25,7 @@ class AppsGetInstanceSize extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{slug}'], [(string) $this->slug], '/v2/apps/tiers/instance_sizes/{slug}');
+        return str_replace(['{slug}'], [$this->slug], '/v2/apps/tiers/instance_sizes/{slug}');
     }
     /**
      * @return array<int, mixed>

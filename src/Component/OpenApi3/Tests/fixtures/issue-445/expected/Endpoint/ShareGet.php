@@ -29,7 +29,7 @@ class ShareGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Shares/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/Shares/{id}');
     }
     /**
      * @return array<int, mixed>

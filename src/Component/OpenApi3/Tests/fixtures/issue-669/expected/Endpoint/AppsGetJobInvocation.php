@@ -32,7 +32,7 @@ class AppsGetJobInvocation extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}', '{job_invocation_id}'], [(string) $this->app_id, (string) $this->job_invocation_id], '/v2/apps/{app_id}/job-invocations/{job_invocation_id}');
+        return str_replace(['{app_id}', '{job_invocation_id}'], [$this->app_id, $this->job_invocation_id], '/v2/apps/{app_id}/job-invocations/{job_invocation_id}');
     }
     /**
      * @return array<int, mixed>

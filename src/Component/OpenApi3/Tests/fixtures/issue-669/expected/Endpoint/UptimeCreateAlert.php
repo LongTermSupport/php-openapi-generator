@@ -29,7 +29,7 @@ class UptimeCreateAlert extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{check_id}'], [(string) $this->check_id], '/v2/uptime/checks/{check_id}/alerts');
+        return str_replace(['{check_id}'], [$this->check_id], '/v2/uptime/checks/{check_id}/alerts');
     }
     /**
      * @return array<int, mixed>

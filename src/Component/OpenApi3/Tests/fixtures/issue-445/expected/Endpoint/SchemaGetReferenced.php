@@ -25,7 +25,7 @@ class SchemaGetReferenced extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Schemas/{id}/referenced');
+        return str_replace(['{id}'], [$this->id], '/v1/Schemas/{id}/referenced');
     }
     /**
      * @return array<int, mixed>

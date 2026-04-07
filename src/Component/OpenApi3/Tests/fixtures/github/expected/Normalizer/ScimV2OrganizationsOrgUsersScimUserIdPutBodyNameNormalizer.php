@@ -79,8 +79,8 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBodyNameNormalizer implements Deno
         $dataArray['givenName'] = $data->getGivenName();
         $dataArray['familyName'] = $data->getFamilyName();
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

@@ -111,8 +111,8 @@ class ReservedIpRegionNormalizer implements DenormalizerInterface, NormalizerInt
         }
         $dataArray['sizes'] = $values_1;
         foreach ($data as $key => $value_2) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_2;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_2;
             }
         }
         return $dataArray;

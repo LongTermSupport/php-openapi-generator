@@ -36,7 +36,7 @@ class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint extends \L
     }
     public function getUri(): string
     {
-        return str_replace(['{client_id}', '{fingerprint}'], [(string) $this->client_id, (string) $this->fingerprint], '/authorizations/clients/{client_id}/{fingerprint}');
+        return str_replace(['{client_id}', '{fingerprint}'], [$this->client_id, $this->fingerprint], '/authorizations/clients/{client_id}/{fingerprint}');
     }
     /**
      * @return array<int, mixed>

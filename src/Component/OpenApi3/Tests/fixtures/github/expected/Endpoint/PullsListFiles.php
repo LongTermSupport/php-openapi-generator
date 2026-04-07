@@ -36,7 +36,7 @@ class PullsListFiles extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{pull_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/files');
+        return str_replace(['{owner}', '{repo}', '{pull_number}'], [$this->owner, $this->repo, (string) $this->pull_number], '/repos/{owner}/{repo}/pulls/{pull_number}/files');
     }
     /**
      * @return array<int, mixed>

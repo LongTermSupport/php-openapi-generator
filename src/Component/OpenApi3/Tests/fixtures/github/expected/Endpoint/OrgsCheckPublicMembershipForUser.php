@@ -27,7 +27,7 @@ class OrgsCheckPublicMembershipForUser extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{username}'], [(string) $this->org, (string) $this->username], '/orgs/{org}/public_members/{username}');
+        return str_replace(['{org}', '{username}'], [$this->org, $this->username], '/orgs/{org}/public_members/{username}');
     }
     /**
      * @return array<int, mixed>

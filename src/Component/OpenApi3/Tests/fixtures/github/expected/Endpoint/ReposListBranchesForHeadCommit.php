@@ -33,7 +33,7 @@ class ReposListBranchesForHeadCommit extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->commit_sha], '/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head');
+        return str_replace(['{owner}', '{repo}', '{commit_sha}'], [$this->owner, $this->repo, $this->commit_sha], '/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head');
     }
     /**
      * @return array<int, mixed>

@@ -27,7 +27,7 @@ class MonitoringUpdateDestination extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{destination_uuid}'], [(string) $this->destination_uuid], '/v2/monitoring/sinks/destinations/{destination_uuid}');
+        return str_replace(['{destination_uuid}'], [$this->destination_uuid], '/v2/monitoring/sinks/destinations/{destination_uuid}');
     }
     /**
      * @return array<int, mixed>

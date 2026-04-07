@@ -28,7 +28,7 @@ class ContentUpdateFile extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Contents/{id}/file');
+        return str_replace(['{id}'], [$this->id], '/v1/Contents/{id}/file');
     }
     /**
      * @return array<int, mixed>

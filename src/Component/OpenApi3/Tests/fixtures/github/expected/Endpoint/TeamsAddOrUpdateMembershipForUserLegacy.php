@@ -40,7 +40,7 @@ class TeamsAddOrUpdateMembershipForUserLegacy extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{team_id}', '{username}'], [(string) $this->team_id, (string) $this->username], '/teams/{team_id}/memberships/{username}');
+        return str_replace(['{team_id}', '{username}'], [(string) $this->team_id, $this->username], '/teams/{team_id}/memberships/{username}');
     }
     /**
      * @return array<int, mixed>

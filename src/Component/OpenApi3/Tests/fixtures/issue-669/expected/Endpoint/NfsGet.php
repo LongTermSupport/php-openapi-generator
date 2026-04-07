@@ -32,7 +32,7 @@ class NfsGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     }
     public function getUri(): string
     {
-        return str_replace(['{nfs_id}'], [(string) $this->nfs_id], '/v2/nfs/{nfs_id}');
+        return str_replace(['{nfs_id}'], [$this->nfs_id], '/v2/nfs/{nfs_id}');
     }
     /**
      * @return array<int, mixed>

@@ -34,7 +34,7 @@ class PutMonitoringPortfoliosPortfolioIdEventRulesCountryCode extends \LongTermS
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}', '{countryCode}'], [(string) $this->portfolioId, (string) $this->countryCode], '/monitoring/portfolios/{portfolioId}/eventRules/{countryCode}');
+        return str_replace(['{portfolioId}', '{countryCode}'], [$this->portfolioId, $this->countryCode], '/monitoring/portfolios/{portfolioId}/eventRules/{countryCode}');
     }
     /**
      * @return array<int, mixed>

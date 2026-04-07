@@ -29,7 +29,7 @@ class PatchParentsParentIdChildChildId extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{parent_id}', '{child_id}'], [(string) $this->parent_id, (string) $this->child_id], '/parents/{parent_id}/child/child_id/');
+        return str_replace(['{parent_id}', '{child_id}'], [$this->parent_id, $this->child_id], '/parents/{parent_id}/child/child_id/');
     }
     /**
      * @return array<int, mixed>

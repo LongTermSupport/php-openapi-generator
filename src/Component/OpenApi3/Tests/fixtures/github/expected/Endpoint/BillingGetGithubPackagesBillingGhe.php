@@ -31,7 +31,7 @@ class BillingGetGithubPackagesBillingGhe extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{enterprise_id}'], [(string) $this->enterprise_id], '/enterprises/{enterprise_id}/settings/billing/packages');
+        return str_replace(['{enterprise_id}'], [$this->enterprise_id], '/enterprises/{enterprise_id}/settings/billing/packages');
     }
     /**
      * @return array<int, mixed>

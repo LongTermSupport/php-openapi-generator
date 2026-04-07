@@ -25,7 +25,7 @@ class XmpMappingGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/XmpMappings/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/XmpMappings/{id}');
     }
     /**
      * @return array<int, mixed>

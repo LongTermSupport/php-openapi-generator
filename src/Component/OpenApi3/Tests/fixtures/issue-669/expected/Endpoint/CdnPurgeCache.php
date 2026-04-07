@@ -36,7 +36,7 @@ class CdnPurgeCache extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{cdn_id}'], [(string) $this->cdn_id], '/v2/cdn/endpoints/{cdn_id}/cache');
+        return str_replace(['{cdn_id}'], [$this->cdn_id], '/v2/cdn/endpoints/{cdn_id}/cache');
     }
     /**
      * @return array<int, mixed>

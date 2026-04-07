@@ -32,7 +32,7 @@ class SchemaUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Schemas/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/Schemas/{id}');
     }
     /**
      * @return array<int, mixed>

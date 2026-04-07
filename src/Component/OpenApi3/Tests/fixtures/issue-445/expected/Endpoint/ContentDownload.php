@@ -43,7 +43,7 @@ class ContentDownload extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{contentId}', '{outputFormatId}'], [(string) $this->contentId, (string) $this->outputFormatId], '/v1/Contents/downloads/{contentId}/{outputFormatId}');
+        return str_replace(['{contentId}', '{outputFormatId}'], [$this->contentId, $this->outputFormatId], '/v1/Contents/downloads/{contentId}/{outputFormatId}');
     }
     /**
      * @return array<int, mixed>

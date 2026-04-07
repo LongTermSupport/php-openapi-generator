@@ -28,7 +28,7 @@ class ByoipPrefixesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{byoip_prefix_uuid}'], [(string) $this->byoip_prefix_uuid], '/v2/byoip_prefixes/{byoip_prefix_uuid}');
+        return str_replace(['{byoip_prefix_uuid}'], [$this->byoip_prefix_uuid], '/v2/byoip_prefixes/{byoip_prefix_uuid}');
     }
     /**
      * @return array<int, mixed>

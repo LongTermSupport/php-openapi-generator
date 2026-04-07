@@ -31,7 +31,7 @@ class PostMonitoringPortfoliosPortfolioIdImport extends \LongTermSupport\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/import');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/import');
     }
     /**
      * @return array<int, mixed>

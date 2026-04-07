@@ -37,7 +37,7 @@ class ActionsListJobsForWorkflowRun extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{run_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->run_id], '/repos/{owner}/{repo}/actions/runs/{run_id}/jobs');
+        return str_replace(['{owner}', '{repo}', '{run_id}'], [$this->owner, $this->repo, (string) $this->run_id], '/repos/{owner}/{repo}/actions/runs/{run_id}/jobs');
     }
     /**
      * @return array<int, mixed>

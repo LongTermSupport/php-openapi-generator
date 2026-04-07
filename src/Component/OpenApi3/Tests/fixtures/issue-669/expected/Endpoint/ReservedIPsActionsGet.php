@@ -28,7 +28,7 @@ class ReservedIPsActionsGet extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{reserved_ip}', '{action_id}'], [(string) $this->reserved_ip, (string) $this->action_id], '/v2/reserved_ips/{reserved_ip}/actions/{action_id}');
+        return str_replace(['{reserved_ip}', '{action_id}'], [$this->reserved_ip, (string) $this->action_id], '/v2/reserved_ips/{reserved_ip}/actions/{action_id}');
     }
     /**
      * @return array<int, mixed>

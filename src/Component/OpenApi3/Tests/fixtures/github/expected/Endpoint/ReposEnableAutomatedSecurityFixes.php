@@ -28,7 +28,7 @@ class ReposEnableAutomatedSecurityFixes extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/automated-security-fixes');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/automated-security-fixes');
     }
     /**
      * @return array<int, mixed>

@@ -32,7 +32,7 @@ class ImagesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{image_id}'], [(string) $this->image_id], '/v2/images/{image_id}');
+        return str_replace(['{image_id}'], [$this->image_id], '/v2/images/{image_id}');
     }
     /**
      * @return array<int, mixed>

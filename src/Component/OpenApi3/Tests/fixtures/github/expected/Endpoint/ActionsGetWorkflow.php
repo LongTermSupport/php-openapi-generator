@@ -31,7 +31,7 @@ class ActionsGetWorkflow extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{workflow_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->workflow_id], '/repos/{owner}/{repo}/actions/workflows/{workflow_id}');
+        return str_replace(['{owner}', '{repo}', '{workflow_id}'], [$this->owner, $this->repo, (string) $this->workflow_id], '/repos/{owner}/{repo}/actions/workflows/{workflow_id}');
     }
     /**
      * @return array<int, mixed>

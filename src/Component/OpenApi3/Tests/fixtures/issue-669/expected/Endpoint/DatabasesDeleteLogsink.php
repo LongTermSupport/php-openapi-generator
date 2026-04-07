@@ -30,7 +30,7 @@ class DatabasesDeleteLogsink extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{logsink_id}'], [(string) $this->database_cluster_uuid, (string) $this->logsink_id], '/v2/databases/{database_cluster_uuid}/logsink/{logsink_id}');
+        return str_replace(['{database_cluster_uuid}', '{logsink_id}'], [$this->database_cluster_uuid, $this->logsink_id], '/v2/databases/{database_cluster_uuid}/logsink/{logsink_id}');
     }
     /**
      * @return array<int, mixed>

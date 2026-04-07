@@ -46,7 +46,7 @@ class KubernetesDeleteNode extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{cluster_id}', '{node_pool_id}', '{node_id}'], [(string) $this->cluster_id, (string) $this->node_pool_id, (string) $this->node_id], '/v2/kubernetes/clusters/{cluster_id}/node_pools/{node_pool_id}/nodes/{node_id}');
+        return str_replace(['{cluster_id}', '{node_pool_id}', '{node_id}'], [$this->cluster_id, $this->node_pool_id, $this->node_id], '/v2/kubernetes/clusters/{cluster_id}/node_pools/{node_pool_id}/nodes/{node_id}');
     }
     /**
      * @return array<int, mixed>

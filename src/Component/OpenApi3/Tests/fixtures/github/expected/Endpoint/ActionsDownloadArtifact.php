@@ -37,7 +37,7 @@ class ActionsDownloadArtifact extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{artifact_id}', '{archive_format}'], [(string) $this->owner, (string) $this->repo, (string) $this->artifact_id, (string) $this->archive_format], '/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}');
+        return str_replace(['{owner}', '{repo}', '{artifact_id}', '{archive_format}'], [$this->owner, $this->repo, (string) $this->artifact_id, $this->archive_format], '/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}');
     }
     /**
      * @return array<int, mixed>

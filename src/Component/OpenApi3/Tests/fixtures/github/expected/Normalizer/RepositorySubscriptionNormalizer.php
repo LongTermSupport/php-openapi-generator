@@ -104,8 +104,8 @@ class RepositorySubscriptionNormalizer implements DenormalizerInterface, Normali
         $dataArray['url'] = $data->getUrl();
         $dataArray['repository_url'] = $data->getRepositoryUrl();
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

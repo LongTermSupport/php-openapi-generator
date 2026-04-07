@@ -245,8 +245,8 @@ class ReviewCommentNormalizer implements DenormalizerInterface, NormalizerInterf
             $dataArray['original_start_line'] = $val_5;
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

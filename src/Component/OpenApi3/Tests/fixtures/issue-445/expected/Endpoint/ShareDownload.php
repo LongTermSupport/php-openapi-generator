@@ -39,7 +39,7 @@ class ShareDownload extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{token}'], [(string) $this->token], '/v1/Shares/d/{token}');
+        return str_replace(['{token}'], [$this->token], '/v1/Shares/d/{token}');
     }
     /**
      * @return array<int, mixed>

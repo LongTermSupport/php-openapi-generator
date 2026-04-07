@@ -40,7 +40,7 @@ class IndividualPersonComplianceSearch extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{predefinedSearch}'], [(string) $this->predefinedSearch], '/compliancetemp/people/{predefinedSearch}');
+        return str_replace(['{predefinedSearch}'], [$this->predefinedSearch], '/compliancetemp/people/{predefinedSearch}');
     }
     /**
      * @return array<int, mixed>

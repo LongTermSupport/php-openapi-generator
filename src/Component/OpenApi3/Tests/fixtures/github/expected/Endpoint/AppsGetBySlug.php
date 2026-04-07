@@ -27,7 +27,7 @@ class AppsGetBySlug extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{app_slug}'], [(string) $this->app_slug], '/apps/{app_slug}');
+        return str_replace(['{app_slug}'], [$this->app_slug], '/apps/{app_slug}');
     }
     /**
      * @return array<int, mixed>

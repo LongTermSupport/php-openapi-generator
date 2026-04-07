@@ -31,7 +31,7 @@ class ActionsDeleteRepoSecret extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{secret_name}'], [(string) $this->owner, (string) $this->repo, (string) $this->secret_name], '/repos/{owner}/{repo}/actions/secrets/{secret_name}');
+        return str_replace(['{owner}', '{repo}', '{secret_name}'], [$this->owner, $this->repo, $this->secret_name], '/repos/{owner}/{repo}/actions/secrets/{secret_name}');
     }
     /**
      * @return array<int, mixed>

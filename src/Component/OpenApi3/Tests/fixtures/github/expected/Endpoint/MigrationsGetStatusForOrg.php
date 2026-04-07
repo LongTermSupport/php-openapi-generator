@@ -35,7 +35,7 @@ class MigrationsGetStatusForOrg extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{migration_id}'], [(string) $this->org, (string) $this->migration_id], '/orgs/{org}/migrations/{migration_id}');
+        return str_replace(['{org}', '{migration_id}'], [$this->org, (string) $this->migration_id], '/orgs/{org}/migrations/{migration_id}');
     }
     /**
      * @return array<int, mixed>

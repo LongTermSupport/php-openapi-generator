@@ -81,8 +81,8 @@ class V2LoadBalancersLbIdDropletsDeleteBodyNormalizer implements DenormalizerInt
         }
         $dataArray['droplet_ids'] = $values;
         foreach ($data as $key => $value_1) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_1;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_1;
             }
         }
         return $dataArray;

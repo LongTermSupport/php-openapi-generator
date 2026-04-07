@@ -71,8 +71,8 @@ class ResponseEvictionPolicyResponseNormalizer implements DenormalizerInterface,
         $dataArray = [];
         $dataArray['eviction_policy'] = $data->getEvictionPolicy();
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

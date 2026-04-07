@@ -31,7 +31,7 @@ class SyncPortfolioCompaniesToCSVRecords extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/sync');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/sync');
     }
     /**
      * @return array<int, mixed>

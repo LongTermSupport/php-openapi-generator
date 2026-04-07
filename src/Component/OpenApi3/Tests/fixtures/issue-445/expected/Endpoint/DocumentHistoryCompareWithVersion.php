@@ -35,7 +35,7 @@ class DocumentHistoryCompareWithVersion extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{documentType}', '{documentId}', '{documentVersion}'], [(string) $this->documentType, (string) $this->documentId, (string) $this->documentVersion], '/v1/history/{documentType}/{documentId}/{documentVersion}/compare');
+        return str_replace(['{documentType}', '{documentId}', '{documentVersion}'], [$this->documentType, $this->documentId, (string) $this->documentVersion], '/v1/history/{documentType}/{documentId}/{documentVersion}/compare');
     }
     /**
      * @return array<int, mixed>

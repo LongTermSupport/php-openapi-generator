@@ -31,7 +31,7 @@ class BillingGetGithubActionsBillingUser extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/settings/billing/actions');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/settings/billing/actions');
     }
     /**
      * @return array<int, mixed>

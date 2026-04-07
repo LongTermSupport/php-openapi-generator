@@ -25,7 +25,7 @@ class InvoicesGetSummaryByUUID extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{invoice_uuid}'], [(string) $this->invoice_uuid], '/v2/customers/my/invoices/{invoice_uuid}/summary');
+        return str_replace(['{invoice_uuid}'], [$this->invoice_uuid], '/v2/customers/my/invoices/{invoice_uuid}/summary');
     }
     /**
      * @return array<int, mixed>

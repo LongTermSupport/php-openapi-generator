@@ -31,7 +31,7 @@ class RegistriesListRepositoriesV2 extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}'], [(string) $this->registry_name], '/v2/registries/{registry_name}/repositoriesV2');
+        return str_replace(['{registry_name}'], [$this->registry_name], '/v2/registries/{registry_name}/repositoriesV2');
     }
     /**
      * @return array<int, mixed>

@@ -290,8 +290,8 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $dataArray['rdma_shared_dev_plugin'] = $this->normalizer->normalize($val_7, 'json', $context);
         }
         foreach ($data as $key_1 => $value_3) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $dataArray[(string) $key_1] = $value_3;
+            if (preg_match('/.*/', strval($key_1)) === 1) {
+                $dataArray[$key_1] = $value_3;
             }
         }
         return $dataArray;

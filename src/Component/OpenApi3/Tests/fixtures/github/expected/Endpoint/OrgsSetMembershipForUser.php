@@ -38,7 +38,7 @@ class OrgsSetMembershipForUser extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{username}'], [(string) $this->org, (string) $this->username], '/orgs/{org}/memberships/{username}');
+        return str_replace(['{org}', '{username}'], [$this->org, $this->username], '/orgs/{org}/memberships/{username}');
     }
     /**
      * @return array<int, mixed>

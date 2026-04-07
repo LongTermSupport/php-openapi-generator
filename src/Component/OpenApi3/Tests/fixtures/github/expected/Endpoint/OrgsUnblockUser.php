@@ -27,7 +27,7 @@ class OrgsUnblockUser extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{username}'], [(string) $this->org, (string) $this->username], '/orgs/{org}/blocks/{username}');
+        return str_replace(['{org}', '{username}'], [$this->org, $this->username], '/orgs/{org}/blocks/{username}');
     }
     /**
      * @return array<int, mixed>

@@ -42,7 +42,7 @@ class ReactionsListForTeamDiscussionCommentInOrg extends \LongTermSupport\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}', '{discussion_number}', '{comment_number}'], [(string) $this->org, (string) $this->team_slug, (string) $this->discussion_number, (string) $this->comment_number], '/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions');
+        return str_replace(['{org}', '{team_slug}', '{discussion_number}', '{comment_number}'], [$this->org, $this->team_slug, (string) $this->discussion_number, (string) $this->comment_number], '/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions');
     }
     /**
      * @return array<int, mixed>

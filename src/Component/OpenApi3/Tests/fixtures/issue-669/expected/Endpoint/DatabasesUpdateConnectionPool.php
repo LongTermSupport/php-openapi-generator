@@ -30,7 +30,7 @@ class DatabasesUpdateConnectionPool extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{pool_name}'], [(string) $this->database_cluster_uuid, (string) $this->pool_name], '/v2/databases/{database_cluster_uuid}/pools/{pool_name}');
+        return str_replace(['{database_cluster_uuid}', '{pool_name}'], [$this->database_cluster_uuid, $this->pool_name], '/v2/databases/{database_cluster_uuid}/pools/{pool_name}');
     }
     /**
      * @return array<int, mixed>

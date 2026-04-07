@@ -484,8 +484,8 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $dataArray['workspace'] = $this->normalizer->normalize($data->getWorkspace(), 'json', $context);
         }
         foreach ($data as $key => $value_10) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_10;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_10;
             }
         }
         return $dataArray;

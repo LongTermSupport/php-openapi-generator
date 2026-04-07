@@ -39,7 +39,7 @@ class TeamsListDiscussionCommentsInOrg extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}', '{discussion_number}'], [(string) $this->org, (string) $this->team_slug, (string) $this->discussion_number], '/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments');
+        return str_replace(['{org}', '{team_slug}', '{discussion_number}'], [$this->org, $this->team_slug, (string) $this->discussion_number], '/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments');
     }
     /**
      * @return array<int, mixed>

@@ -27,7 +27,7 @@ class ListItemGetReferences extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/ListItems/{id}/references/search');
+        return str_replace(['{id}'], [$this->id], '/v1/ListItems/{id}/references/search');
     }
     /**
      * @return array<int, mixed>

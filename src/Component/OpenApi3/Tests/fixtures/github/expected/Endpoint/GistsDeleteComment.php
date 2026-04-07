@@ -27,7 +27,7 @@ class GistsDeleteComment extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{gist_id}', '{comment_id}'], [(string) $this->gist_id, (string) $this->comment_id], '/gists/{gist_id}/comments/{comment_id}');
+        return str_replace(['{gist_id}', '{comment_id}'], [$this->gist_id, (string) $this->comment_id], '/gists/{gist_id}/comments/{comment_id}');
     }
     /**
      * @return array<int, mixed>

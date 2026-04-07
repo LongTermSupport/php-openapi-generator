@@ -104,8 +104,8 @@ class PorterAuthorNormalizer implements DenormalizerInterface, NormalizerInterfa
         $dataArray['url'] = $data->getUrl();
         $dataArray['import_url'] = $data->getImportUrl();
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

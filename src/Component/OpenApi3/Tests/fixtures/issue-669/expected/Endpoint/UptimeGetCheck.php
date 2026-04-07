@@ -25,7 +25,7 @@ class UptimeGetCheck extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{check_id}'], [(string) $this->check_id], '/v2/uptime/checks/{check_id}');
+        return str_replace(['{check_id}'], [$this->check_id], '/v2/uptime/checks/{check_id}');
     }
     /**
      * @return array<int, mixed>

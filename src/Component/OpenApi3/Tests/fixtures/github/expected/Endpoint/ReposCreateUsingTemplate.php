@@ -37,7 +37,7 @@ class ReposCreateUsingTemplate extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{template_owner}', '{template_repo}'], [(string) $this->template_owner, (string) $this->template_repo], '/repos/{template_owner}/{template_repo}/generate');
+        return str_replace(['{template_owner}', '{template_repo}'], [$this->template_owner, $this->template_repo], '/repos/{template_owner}/{template_repo}/generate');
     }
     /**
      * @return array<int, mixed>

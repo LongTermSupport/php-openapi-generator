@@ -30,7 +30,7 @@ class ReposGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}');
     }
     /**
      * @return array<int, mixed>

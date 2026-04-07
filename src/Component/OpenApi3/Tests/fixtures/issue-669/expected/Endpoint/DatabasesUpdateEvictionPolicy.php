@@ -27,7 +27,7 @@ class DatabasesUpdateEvictionPolicy extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}'], [(string) $this->database_cluster_uuid], '/v2/databases/{database_cluster_uuid}/eviction_policy');
+        return str_replace(['{database_cluster_uuid}'], [$this->database_cluster_uuid], '/v2/databases/{database_cluster_uuid}/eviction_policy');
     }
     /**
      * @return array<int, mixed>

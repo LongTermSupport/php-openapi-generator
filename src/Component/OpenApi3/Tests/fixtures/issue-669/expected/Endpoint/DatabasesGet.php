@@ -35,7 +35,7 @@ class DatabasesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{database_name}'], [(string) $this->database_cluster_uuid, (string) $this->database_name], '/v2/databases/{database_cluster_uuid}/dbs/{database_name}');
+        return str_replace(['{database_cluster_uuid}', '{database_name}'], [$this->database_cluster_uuid, $this->database_name], '/v2/databases/{database_cluster_uuid}/dbs/{database_name}');
     }
     /**
      * @return array<int, mixed>

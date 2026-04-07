@@ -25,7 +25,7 @@ class DomainsGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{domain_name}'], [(string) $this->domain_name], '/v2/domains/{domain_name}');
+        return str_replace(['{domain_name}'], [$this->domain_name], '/v2/domains/{domain_name}');
     }
     /**
      * @return array<int, mixed>

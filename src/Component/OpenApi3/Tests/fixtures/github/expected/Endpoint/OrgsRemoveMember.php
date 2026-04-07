@@ -28,7 +28,7 @@ class OrgsRemoveMember extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{username}'], [(string) $this->org, (string) $this->username], '/orgs/{org}/members/{username}');
+        return str_replace(['{org}', '{username}'], [$this->org, $this->username], '/orgs/{org}/members/{username}');
     }
     /**
      * @return array<int, mixed>

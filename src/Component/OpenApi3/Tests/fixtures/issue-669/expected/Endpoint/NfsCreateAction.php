@@ -37,7 +37,7 @@ class NfsCreateAction extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{nfs_id}'], [(string) $this->nfs_id], '/v2/nfs/{nfs_id}/actions');
+        return str_replace(['{nfs_id}'], [$this->nfs_id], '/v2/nfs/{nfs_id}/actions');
     }
     /**
      * @return array<int, mixed>

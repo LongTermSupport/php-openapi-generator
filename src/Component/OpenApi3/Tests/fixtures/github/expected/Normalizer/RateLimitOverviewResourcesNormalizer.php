@@ -105,8 +105,8 @@ class RateLimitOverviewResourcesNormalizer implements DenormalizerInterface, Nor
             $dataArray['integration_manifest'] = $this->normalizer->normalize($data->getIntegrationManifest(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

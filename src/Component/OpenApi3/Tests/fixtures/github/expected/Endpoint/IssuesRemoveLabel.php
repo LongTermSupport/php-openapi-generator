@@ -34,7 +34,7 @@ class IssuesRemoveLabel extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{issue_number}', '{name}'], [(string) $this->owner, (string) $this->repo, (string) $this->issue_number, (string) $this->name], '/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}');
+        return str_replace(['{owner}', '{repo}', '{issue_number}', '{name}'], [$this->owner, $this->repo, (string) $this->issue_number, $this->name], '/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}');
     }
     /**
      * @return array<int, mixed>

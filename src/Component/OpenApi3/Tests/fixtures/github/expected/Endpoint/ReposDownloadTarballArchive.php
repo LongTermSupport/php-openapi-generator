@@ -34,7 +34,7 @@ class ReposDownloadTarballArchive extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{ref}'], [(string) $this->owner, (string) $this->repo, (string) $this->ref], '/repos/{owner}/{repo}/tarball/{ref}');
+        return str_replace(['{owner}', '{repo}', '{ref}'], [$this->owner, $this->repo, $this->ref], '/repos/{owner}/{repo}/tarball/{ref}');
     }
     /**
      * @return array<int, mixed>

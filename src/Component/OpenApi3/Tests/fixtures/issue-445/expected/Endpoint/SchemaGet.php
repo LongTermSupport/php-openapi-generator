@@ -25,7 +25,7 @@ class SchemaGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Schemas/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/Schemas/{id}');
     }
     /**
      * @return array<int, mixed>

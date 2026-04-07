@@ -39,7 +39,7 @@ class TestSimplePathArrayParameters extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{string}', '{array}', '{stringRef}', '{arrayRef}'], [(string) $this->string, implode(',', $this->array), (string) $this->stringRef, implode(',', $this->arrayRef)], '/test-simple-path-array-parameters/{string}/{array}/{stringRef}/{arrayRef}');
+        return str_replace(['{string}', '{array}', '{stringRef}', '{arrayRef}'], [$this->string, implode(',', $this->array), $this->stringRef, implode(',', $this->arrayRef)], '/test-simple-path-array-parameters/{string}/{array}/{stringRef}/{arrayRef}');
     }
     /**
      * @return array<int, mixed>

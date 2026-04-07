@@ -38,7 +38,7 @@ class TestGetWithDefaultValuesInPathParameters extends \LongTermSupport\OpenApiG
     }
     public function getUri(): string
     {
-        return str_replace(['{testPath}', '{foo}', '{bar}'], [(string) $this->testPath, (string) $this->foo, (string) $this->bar], '/test-path-parameters/{testPath}');
+        return str_replace(['{testPath}', '{foo}', '{bar}'], [$this->testPath, $this->foo, $this->bar], '/test-path-parameters/{testPath}');
     }
     /**
      * @return array<int, mixed>

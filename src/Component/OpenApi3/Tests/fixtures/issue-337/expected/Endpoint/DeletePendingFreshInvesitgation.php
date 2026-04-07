@@ -29,7 +29,7 @@ class DeletePendingFreshInvesitgation extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{orderId}'], [(string) $this->orderId], '/freshInvestigations/{orderId}');
+        return str_replace(['{orderId}'], [$this->orderId], '/freshInvestigations/{orderId}');
     }
     /**
      * @return array<int, mixed>

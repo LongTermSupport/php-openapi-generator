@@ -40,7 +40,7 @@ class RegistryListRepositoryManifests extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}', '{repository_name}'], [(string) $this->registry_name, (string) $this->repository_name], '/v2/registry/{registry_name}/repositories/{repository_name}/digests');
+        return str_replace(['{registry_name}', '{repository_name}'], [$this->registry_name, $this->repository_name], '/v2/registry/{registry_name}/repositories/{repository_name}/digests');
     }
     /**
      * @return array<int, mixed>

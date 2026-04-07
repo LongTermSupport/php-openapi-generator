@@ -32,7 +32,7 @@ class AppsRevokeGrantForApplication extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{client_id}', '{access_token}'], [(string) $this->client_id, (string) $this->access_token], '/applications/{client_id}/grants/{access_token}');
+        return str_replace(['{client_id}', '{access_token}'], [$this->client_id, $this->access_token], '/applications/{client_id}/grants/{access_token}');
     }
     /**
      * @return array<int, mixed>

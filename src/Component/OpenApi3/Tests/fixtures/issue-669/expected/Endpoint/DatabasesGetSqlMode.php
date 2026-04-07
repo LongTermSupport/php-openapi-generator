@@ -26,7 +26,7 @@ class DatabasesGetSqlMode extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}'], [(string) $this->database_cluster_uuid], '/v2/databases/{database_cluster_uuid}/sql_mode');
+        return str_replace(['{database_cluster_uuid}'], [$this->database_cluster_uuid], '/v2/databases/{database_cluster_uuid}/sql_mode');
     }
     /**
      * @return array<int, mixed>

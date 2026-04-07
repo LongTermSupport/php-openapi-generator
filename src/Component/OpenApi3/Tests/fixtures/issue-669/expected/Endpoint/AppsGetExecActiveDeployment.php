@@ -32,7 +32,7 @@ class AppsGetExecActiveDeployment extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}', '{component_name}'], [(string) $this->app_id, (string) $this->component_name], '/v2/apps/{app_id}/components/{component_name}/exec');
+        return str_replace(['{app_id}', '{component_name}'], [$this->app_id, $this->component_name], '/v2/apps/{app_id}/components/{component_name}/exec');
     }
     /**
      * @return array<int, mixed>

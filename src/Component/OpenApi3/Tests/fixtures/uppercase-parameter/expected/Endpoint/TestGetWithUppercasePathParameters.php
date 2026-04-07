@@ -24,7 +24,7 @@ class TestGetWithUppercasePathParameters extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{TestParameter}'], [(string) $this->TestParameter], '/test-uppercase-path-parameters/{TestParameter}');
+        return str_replace(['{TestParameter}'], [$this->TestParameter], '/test-uppercase-path-parameters/{TestParameter}');
     }
     /**
      * @return array<int, mixed>

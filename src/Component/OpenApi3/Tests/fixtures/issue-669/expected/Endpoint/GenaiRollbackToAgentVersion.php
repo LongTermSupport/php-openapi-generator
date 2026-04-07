@@ -27,7 +27,7 @@ class GenaiRollbackToAgentVersion extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{uuid}'], [(string) $this->uuid], '/v2/gen-ai/agents/{uuid}/versions');
+        return str_replace(['{uuid}'], [$this->uuid], '/v2/gen-ai/agents/{uuid}/versions');
     }
     /**
      * @return array<int, mixed>

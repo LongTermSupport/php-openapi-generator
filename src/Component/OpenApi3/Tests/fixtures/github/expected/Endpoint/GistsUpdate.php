@@ -27,7 +27,7 @@ class GistsUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{gist_id}'], [(string) $this->gist_id], '/gists/{gist_id}');
+        return str_replace(['{gist_id}'], [$this->gist_id], '/gists/{gist_id}');
     }
     /**
      * @return array<int, mixed>

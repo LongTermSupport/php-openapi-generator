@@ -27,7 +27,7 @@ class ContentPermissionSetTransferOwnership extends \LongTermSupport\OpenApiGene
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/ContentPermissionSets/{id}/ownership');
+        return str_replace(['{id}'], [$this->id], '/v1/ContentPermissionSets/{id}/ownership');
     }
     /**
      * @return array<int, mixed>

@@ -192,8 +192,8 @@ class ApplicationsClientIdTokensAccessTokenGetResponse200Normalizer implements D
             $dataArray['installation'] = $this->normalizer->normalize($val_6, 'json', $context);
         }
         foreach ($data as $key => $value_1) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_1;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_1;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

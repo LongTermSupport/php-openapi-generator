@@ -30,7 +30,7 @@ class OrgsListAppInstallations extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/installations');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/installations');
     }
     /**
      * @return array<int, mixed>

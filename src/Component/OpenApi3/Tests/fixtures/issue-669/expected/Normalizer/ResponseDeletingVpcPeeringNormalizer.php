@@ -83,8 +83,8 @@ class ResponseDeletingVpcPeeringNormalizer implements DenormalizerInterface, Nor
             $dataArray['vpc_peering'] = $values;
         }
         foreach ($data as $key_1 => $value_1) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $dataArray[(string) $key_1] = $value_1;
+            if (preg_match('/.*/', strval($key_1)) === 1) {
+                $dataArray[$key_1] = $value_1;
             }
         }
         return $dataArray;

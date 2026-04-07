@@ -30,7 +30,7 @@ class GenaiUpdateAgentFunction extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{agent_uuid}', '{function_uuid}'], [(string) $this->agent_uuid, (string) $this->function_uuid], '/v2/gen-ai/agents/{agent_uuid}/functions/{function_uuid}');
+        return str_replace(['{agent_uuid}', '{function_uuid}'], [$this->agent_uuid, $this->function_uuid], '/v2/gen-ai/agents/{agent_uuid}/functions/{function_uuid}');
     }
     /**
      * @return array<int, mixed>

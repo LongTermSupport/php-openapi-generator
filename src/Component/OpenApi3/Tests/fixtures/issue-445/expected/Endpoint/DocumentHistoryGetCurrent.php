@@ -28,7 +28,7 @@ class DocumentHistoryGetCurrent extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{documentType}', '{documentId}'], [(string) $this->documentType, (string) $this->documentId], '/v1/history/{documentType}/{documentId}/current');
+        return str_replace(['{documentType}', '{documentId}'], [$this->documentType, $this->documentId], '/v1/history/{documentType}/{documentId}/current');
     }
     /**
      * @return array<int, mixed>

@@ -27,7 +27,7 @@ class UserReview extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Users/{id}/review');
+        return str_replace(['{id}'], [$this->id], '/v1/Users/{id}/review');
     }
     /**
      * @return array<int, mixed>

@@ -29,7 +29,7 @@ class ActivityListReceivedPublicEventsForUser extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/received_events/public');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/received_events/public');
     }
     /**
      * @return array<int, mixed>

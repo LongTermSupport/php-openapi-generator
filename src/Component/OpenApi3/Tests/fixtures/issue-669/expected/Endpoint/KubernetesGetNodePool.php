@@ -30,7 +30,7 @@ class KubernetesGetNodePool extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{cluster_id}', '{node_pool_id}'], [(string) $this->cluster_id, (string) $this->node_pool_id], '/v2/kubernetes/clusters/{cluster_id}/node_pools/{node_pool_id}');
+        return str_replace(['{cluster_id}', '{node_pool_id}'], [$this->cluster_id, $this->node_pool_id], '/v2/kubernetes/clusters/{cluster_id}/node_pools/{node_pool_id}');
     }
     /**
      * @return array<int, mixed>

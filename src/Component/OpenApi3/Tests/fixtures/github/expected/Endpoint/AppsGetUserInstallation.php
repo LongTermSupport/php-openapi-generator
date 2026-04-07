@@ -27,7 +27,7 @@ class AppsGetUserInstallation extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/installation');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/installation');
     }
     /**
      * @return array<int, mixed>

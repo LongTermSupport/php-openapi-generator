@@ -35,7 +35,7 @@ class VolumeActionsGet extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{volume_id}', '{action_id}'], [(string) $this->volume_id, (string) $this->action_id], '/v2/volumes/{volume_id}/actions/{action_id}');
+        return str_replace(['{volume_id}', '{action_id}'], [$this->volume_id, (string) $this->action_id], '/v2/volumes/{volume_id}/actions/{action_id}');
     }
     /**
      * @return array<int, mixed>

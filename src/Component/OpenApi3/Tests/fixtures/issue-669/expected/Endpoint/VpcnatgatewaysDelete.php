@@ -28,7 +28,7 @@ class VpcnatgatewaysDelete extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v2/vpc_nat_gateways/{id}');
+        return str_replace(['{id}'], [$this->id], '/v2/vpc_nat_gateways/{id}');
     }
     /**
      * @return array<int, mixed>

@@ -31,7 +31,7 @@ class PullsDeleteReviewComment extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{comment_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->comment_id], '/repos/{owner}/{repo}/pulls/comments/{comment_id}');
+        return str_replace(['{owner}', '{repo}', '{comment_id}'], [$this->owner, $this->repo, (string) $this->comment_id], '/repos/{owner}/{repo}/pulls/comments/{comment_id}');
     }
     /**
      * @return array<int, mixed>

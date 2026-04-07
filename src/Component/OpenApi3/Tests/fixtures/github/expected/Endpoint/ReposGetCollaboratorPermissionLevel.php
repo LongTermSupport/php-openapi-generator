@@ -31,7 +31,7 @@ class ReposGetCollaboratorPermissionLevel extends \LongTermSupport\OpenApiGenera
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{username}'], [(string) $this->owner, (string) $this->repo, (string) $this->username], '/repos/{owner}/{repo}/collaborators/{username}/permission');
+        return str_replace(['{owner}', '{repo}', '{username}'], [$this->owner, $this->repo, $this->username], '/repos/{owner}/{repo}/collaborators/{username}/permission');
     }
     /**
      * @return array<int, mixed>

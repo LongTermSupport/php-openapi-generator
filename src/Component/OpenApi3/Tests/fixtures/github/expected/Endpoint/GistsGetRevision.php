@@ -27,7 +27,7 @@ class GistsGetRevision extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{gist_id}', '{sha}'], [(string) $this->gist_id, (string) $this->sha], '/gists/{gist_id}/{sha}');
+        return str_replace(['{gist_id}', '{sha}'], [$this->gist_id, $this->sha], '/gists/{gist_id}/{sha}');
     }
     /**
      * @return array<int, mixed>

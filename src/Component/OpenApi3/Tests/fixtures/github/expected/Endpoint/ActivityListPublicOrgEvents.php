@@ -29,7 +29,7 @@ class ActivityListPublicOrgEvents extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/events');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/events');
     }
     /**
      * @return array<int, mixed>

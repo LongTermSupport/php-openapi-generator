@@ -31,7 +31,7 @@ class OrgsListOutsideCollaborators extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/outside_collaborators');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/outside_collaborators');
     }
     /**
      * @return array<int, mixed>

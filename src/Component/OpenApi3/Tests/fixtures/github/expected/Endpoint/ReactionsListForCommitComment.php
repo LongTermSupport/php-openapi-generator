@@ -37,7 +37,7 @@ class ReactionsListForCommitComment extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{comment_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->comment_id], '/repos/{owner}/{repo}/comments/{comment_id}/reactions');
+        return str_replace(['{owner}', '{repo}', '{comment_id}'], [$this->owner, $this->repo, (string) $this->comment_id], '/repos/{owner}/{repo}/comments/{comment_id}/reactions');
     }
     /**
      * @return array<int, mixed>

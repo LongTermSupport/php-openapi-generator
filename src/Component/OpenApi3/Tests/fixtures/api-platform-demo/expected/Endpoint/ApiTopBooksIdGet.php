@@ -31,7 +31,7 @@ class ApiTopBooksIdGet extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/top_books/{id}');
+        return str_replace(['{id}'], [$this->id], '/top_books/{id}');
     }
     /**
      * @return array<int, mixed>

@@ -31,7 +31,7 @@ class BillingGetSharedStorageBillingUser extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/settings/billing/shared-storage');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/settings/billing/shared-storage');
     }
     /**
      * @return array<int, mixed>

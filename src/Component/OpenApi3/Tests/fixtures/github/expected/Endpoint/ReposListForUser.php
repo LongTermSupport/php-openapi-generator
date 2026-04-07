@@ -33,7 +33,7 @@ class ReposListForUser extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/repos');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/repos');
     }
     /**
      * @return array<int, mixed>

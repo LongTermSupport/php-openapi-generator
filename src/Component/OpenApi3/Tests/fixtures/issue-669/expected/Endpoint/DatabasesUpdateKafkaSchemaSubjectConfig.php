@@ -34,7 +34,7 @@ class DatabasesUpdateKafkaSchemaSubjectConfig extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{subject_name}'], [(string) $this->database_cluster_uuid, (string) $this->subject_name], '/v2/databases/{database_cluster_uuid}/schema-registry/config/{subject_name}');
+        return str_replace(['{database_cluster_uuid}', '{subject_name}'], [$this->database_cluster_uuid, $this->subject_name], '/v2/databases/{database_cluster_uuid}/schema-registry/config/{subject_name}');
     }
     /**
      * @return array<int, mixed>

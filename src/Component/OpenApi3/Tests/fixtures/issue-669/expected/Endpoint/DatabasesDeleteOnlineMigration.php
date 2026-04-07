@@ -31,7 +31,7 @@ class DatabasesDeleteOnlineMigration extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{migration_id}'], [(string) $this->database_cluster_uuid, (string) $this->migration_id], '/v2/databases/{database_cluster_uuid}/online-migration/{migration_id}');
+        return str_replace(['{database_cluster_uuid}', '{migration_id}'], [$this->database_cluster_uuid, $this->migration_id], '/v2/databases/{database_cluster_uuid}/online-migration/{migration_id}');
     }
     /**
      * @return array<int, mixed>

@@ -42,7 +42,7 @@ class GitListMatchingRefs extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{ref}'], [(string) $this->owner, (string) $this->repo, (string) $this->ref], '/repos/{owner}/{repo}/git/matching-refs/{ref}');
+        return str_replace(['{owner}', '{repo}', '{ref}'], [$this->owner, $this->repo, $this->ref], '/repos/{owner}/{repo}/git/matching-refs/{ref}');
     }
     /**
      * @return array<int, mixed>

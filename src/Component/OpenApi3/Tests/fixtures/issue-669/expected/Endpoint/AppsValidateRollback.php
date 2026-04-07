@@ -31,7 +31,7 @@ class AppsValidateRollback extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}'], [(string) $this->app_id], '/v2/apps/{app_id}/rollback/validate');
+        return str_replace(['{app_id}'], [$this->app_id], '/v2/apps/{app_id}/rollback/validate');
     }
     /**
      * @return array<int, mixed>

@@ -28,7 +28,7 @@ class ReposGetCommunityProfileMetrics extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/community/profile');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/community/profile');
     }
     /**
      * @return array<int, mixed>

@@ -39,7 +39,7 @@ class DatabasesResetAuth extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{username}'], [(string) $this->database_cluster_uuid, (string) $this->username], '/v2/databases/{database_cluster_uuid}/users/{username}/reset_auth');
+        return str_replace(['{database_cluster_uuid}', '{username}'], [$this->database_cluster_uuid, $this->username], '/v2/databases/{database_cluster_uuid}/users/{username}/reset_auth');
     }
     /**
      * @return array<int, mixed>

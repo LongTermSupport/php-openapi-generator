@@ -35,7 +35,7 @@ class CopyCompaniesFromOneToAnotherPortfolioS extends \LongTermSupport\OpenApiGe
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/companies/copy');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/companies/copy');
     }
     /**
      * @return array<int, mixed>

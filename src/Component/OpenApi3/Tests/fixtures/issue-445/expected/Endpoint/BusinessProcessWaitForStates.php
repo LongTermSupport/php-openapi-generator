@@ -30,7 +30,7 @@ class BusinessProcessWaitForStates extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/BusinessProcesses/{id}/waitStates');
+        return str_replace(['{id}'], [$this->id], '/v1/BusinessProcesses/{id}/waitStates');
     }
     /**
      * @return array<int, mixed>

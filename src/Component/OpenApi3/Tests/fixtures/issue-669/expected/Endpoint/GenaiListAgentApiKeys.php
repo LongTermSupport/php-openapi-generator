@@ -30,7 +30,7 @@ class GenaiListAgentApiKeys extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{agent_uuid}'], [(string) $this->agent_uuid], '/v2/gen-ai/agents/{agent_uuid}/api_keys');
+        return str_replace(['{agent_uuid}'], [$this->agent_uuid], '/v2/gen-ai/agents/{agent_uuid}/api_keys');
     }
     /**
      * @return array<int, mixed>

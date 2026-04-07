@@ -27,7 +27,7 @@ class GenaiUpdateAgentsWorkspace extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{workspace_uuid}'], [(string) $this->workspace_uuid], '/v2/gen-ai/workspaces/{workspace_uuid}/agents');
+        return str_replace(['{workspace_uuid}'], [$this->workspace_uuid], '/v2/gen-ai/workspaces/{workspace_uuid}/agents');
     }
     /**
      * @return array<int, mixed>

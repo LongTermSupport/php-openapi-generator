@@ -30,7 +30,7 @@ class UsersListFollowingForUser extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/following');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/following');
     }
     /**
      * @return array<int, mixed>

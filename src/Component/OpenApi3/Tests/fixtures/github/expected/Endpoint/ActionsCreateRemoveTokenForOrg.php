@@ -39,7 +39,7 @@ class ActionsCreateRemoveTokenForOrg extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/actions/runners/remove-token');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/actions/runners/remove-token');
     }
     /**
      * @return array<int, mixed>

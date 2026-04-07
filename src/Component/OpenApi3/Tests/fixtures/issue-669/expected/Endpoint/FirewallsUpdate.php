@@ -33,7 +33,7 @@ class FirewallsUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{firewall_id}'], [(string) $this->firewall_id], '/v2/firewalls/{firewall_id}');
+        return str_replace(['{firewall_id}'], [$this->firewall_id], '/v2/firewalls/{firewall_id}');
     }
     /**
      * @return array<int, mixed>

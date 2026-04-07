@@ -25,7 +25,7 @@ class GenaiGetAgentChildren extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{uuid}'], [(string) $this->uuid], '/v2/gen-ai/agents/{uuid}/child_agents');
+        return str_replace(['{uuid}'], [$this->uuid], '/v2/gen-ai/agents/{uuid}/child_agents');
     }
     /**
      * @return array<int, mixed>

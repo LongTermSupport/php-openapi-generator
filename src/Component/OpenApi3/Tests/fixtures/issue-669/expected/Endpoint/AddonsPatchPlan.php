@@ -29,7 +29,7 @@ class AddonsPatchPlan extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{resource_uuid}'], [(string) $this->resource_uuid], '/v2/add-ons/saas/{resource_uuid}/plan');
+        return str_replace(['{resource_uuid}'], [$this->resource_uuid], '/v2/add-ons/saas/{resource_uuid}/plan');
     }
     /**
      * @return array<int, mixed>

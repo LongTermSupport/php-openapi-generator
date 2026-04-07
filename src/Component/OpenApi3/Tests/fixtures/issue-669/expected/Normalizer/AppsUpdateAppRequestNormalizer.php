@@ -79,8 +79,8 @@ class AppsUpdateAppRequestNormalizer implements DenormalizerInterface, Normalize
             $dataArray['update_all_source_versions'] = $data->getUpdateAllSourceVersions();
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

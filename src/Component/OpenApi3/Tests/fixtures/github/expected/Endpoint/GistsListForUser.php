@@ -31,7 +31,7 @@ class GistsListForUser extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/gists');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/gists');
     }
     /**
      * @return array<int, mixed>

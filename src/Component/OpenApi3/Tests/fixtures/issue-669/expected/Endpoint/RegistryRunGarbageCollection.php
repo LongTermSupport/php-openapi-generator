@@ -48,7 +48,7 @@ class RegistryRunGarbageCollection extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}'], [(string) $this->registry_name], '/v2/registry/{registry_name}/garbage-collection');
+        return str_replace(['{registry_name}'], [$this->registry_name], '/v2/registry/{registry_name}/garbage-collection');
     }
     /**
      * @return array<int, mixed>

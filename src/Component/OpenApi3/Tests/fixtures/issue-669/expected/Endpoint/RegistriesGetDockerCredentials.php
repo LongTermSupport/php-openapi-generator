@@ -46,7 +46,7 @@ class RegistriesGetDockerCredentials extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}'], [(string) $this->registry_name], '/v2/registries/{registry_name}/docker-credentials');
+        return str_replace(['{registry_name}'], [$this->registry_name], '/v2/registries/{registry_name}/docker-credentials');
     }
     /**
      * @return array<int, mixed>

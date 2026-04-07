@@ -31,7 +31,7 @@ class ReposDeleteBranchProtection extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{branch}'], [(string) $this->owner, (string) $this->repo, (string) $this->branch], '/repos/{owner}/{repo}/branches/{branch}/protection');
+        return str_replace(['{owner}', '{repo}', '{branch}'], [$this->owner, $this->repo, $this->branch], '/repos/{owner}/{repo}/branches/{branch}/protection');
     }
     /**
      * @return array<int, mixed>

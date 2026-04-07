@@ -31,7 +31,7 @@ class LoadBalancersDelete extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{lb_id}'], [(string) $this->lb_id], '/v2/load_balancers/{lb_id}');
+        return str_replace(['{lb_id}'], [$this->lb_id], '/v2/load_balancers/{lb_id}');
     }
     /**
      * @return array<int, mixed>

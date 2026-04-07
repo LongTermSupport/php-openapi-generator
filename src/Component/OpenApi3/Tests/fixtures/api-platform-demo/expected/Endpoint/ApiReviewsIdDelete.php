@@ -25,7 +25,7 @@ class ApiReviewsIdDelete extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/reviews/{id}');
+        return str_replace(['{id}'], [$this->id], '/reviews/{id}');
     }
     /**
      * @return array<int, mixed>

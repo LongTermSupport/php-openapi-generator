@@ -31,7 +31,7 @@ class ProjectsListForOrg extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/projects');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/projects');
     }
     /**
      * @return array<int, mixed>

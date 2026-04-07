@@ -34,7 +34,7 @@ class CompanyReportJSONSchema extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{countryCode}'], [(string) $this->countryCode], '/companies/schema/{countryCode}');
+        return str_replace(['{countryCode}'], [$this->countryCode], '/companies/schema/{countryCode}');
     }
     /**
      * @return array<int, mixed>

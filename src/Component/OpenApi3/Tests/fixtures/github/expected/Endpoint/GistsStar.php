@@ -25,7 +25,7 @@ class GistsStar extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{gist_id}'], [(string) $this->gist_id], '/gists/{gist_id}/star');
+        return str_replace(['{gist_id}'], [$this->gist_id], '/gists/{gist_id}/star');
     }
     /**
      * @return array<int, mixed>

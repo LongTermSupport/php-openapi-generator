@@ -28,7 +28,7 @@ class OrgsConvertMemberToOutsideCollaborator extends \LongTermSupport\OpenApiGen
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{username}'], [(string) $this->org, (string) $this->username], '/orgs/{org}/outside_collaborators/{username}');
+        return str_replace(['{org}', '{username}'], [$this->org, $this->username], '/orgs/{org}/outside_collaborators/{username}');
     }
     /**
      * @return array<int, mixed>

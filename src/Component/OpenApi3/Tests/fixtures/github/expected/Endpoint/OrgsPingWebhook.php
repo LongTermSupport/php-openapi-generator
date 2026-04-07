@@ -28,7 +28,7 @@ class OrgsPingWebhook extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{hook_id}'], [(string) $this->org, (string) $this->hook_id], '/orgs/{org}/hooks/{hook_id}/pings');
+        return str_replace(['{org}', '{hook_id}'], [$this->org, (string) $this->hook_id], '/orgs/{org}/hooks/{hook_id}/pings');
     }
     /**
      * @return array<int, mixed>

@@ -34,7 +34,7 @@ class TeamsCreateOrUpdateIdpGroupConnectionsInOrg extends \LongTermSupport\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}'], [(string) $this->org, (string) $this->team_slug], '/orgs/{org}/teams/{team_slug}/team-sync/group-mappings');
+        return str_replace(['{org}', '{team_slug}'], [$this->org, $this->team_slug], '/orgs/{org}/teams/{team_slug}/team-sync/group-mappings');
     }
     /**
      * @return array<int, mixed>

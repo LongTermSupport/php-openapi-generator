@@ -30,7 +30,7 @@ class TestPathParameters extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{testString}', '{testInteger}', '{testFloat}'], [(string) $this->testString, (string) $this->testInteger, (string) $this->testFloat], '/test-path/{testString}/{testInteger}/{testFloat}');
+        return str_replace(['{testString}', '{testInteger}', '{testFloat}'], [$this->testString, (string) $this->testInteger, (string) $this->testFloat], '/test-path/{testString}/{testInteger}/{testFloat}');
     }
     /**
      * @return array<int, mixed>

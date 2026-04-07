@@ -156,8 +156,8 @@ class AssociatedResourceStatusResourcesNormalizer implements DenormalizerInterfa
             $dataArray['volume_snapshots'] = $values_4;
         }
         foreach ($data as $key => $value_5) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_5;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_5;
             }
         }
         return $dataArray;

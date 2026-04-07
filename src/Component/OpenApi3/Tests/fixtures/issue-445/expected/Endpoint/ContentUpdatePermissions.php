@@ -33,7 +33,7 @@ class ContentUpdatePermissions extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Contents/{id}/permissions');
+        return str_replace(['{id}'], [$this->id], '/v1/Contents/{id}/permissions');
     }
     /**
      * @return array<int, mixed>

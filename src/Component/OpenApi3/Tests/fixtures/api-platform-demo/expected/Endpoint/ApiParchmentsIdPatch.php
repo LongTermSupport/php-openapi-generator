@@ -33,7 +33,7 @@ class ApiParchmentsIdPatch extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/parchments/{id}');
+        return str_replace(['{id}'], [$this->id], '/parchments/{id}');
     }
     /**
      * @return array<int, mixed>

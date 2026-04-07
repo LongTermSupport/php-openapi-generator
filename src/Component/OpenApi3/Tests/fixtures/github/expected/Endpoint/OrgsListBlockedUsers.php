@@ -25,7 +25,7 @@ class OrgsListBlockedUsers extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/blocks');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/blocks');
     }
     /**
      * @return array<int, mixed>

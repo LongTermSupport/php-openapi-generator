@@ -24,7 +24,7 @@ class GetThingsId extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/things/{id}');
+        return str_replace(['{id}'], [$this->id], '/things/{id}');
     }
     /**
      * @return array<int, mixed>

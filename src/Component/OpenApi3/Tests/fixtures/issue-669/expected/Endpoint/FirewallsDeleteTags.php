@@ -34,7 +34,7 @@ class FirewallsDeleteTags extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{firewall_id}'], [(string) $this->firewall_id], '/v2/firewalls/{firewall_id}/tags');
+        return str_replace(['{firewall_id}'], [$this->firewall_id], '/v2/firewalls/{firewall_id}/tags');
     }
     /**
      * @return array<int, mixed>

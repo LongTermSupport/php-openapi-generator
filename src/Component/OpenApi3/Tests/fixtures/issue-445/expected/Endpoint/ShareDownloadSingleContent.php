@@ -46,7 +46,7 @@ class ShareDownloadSingleContent extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{token}', '{contentId}', '{outputFormatId}'], [(string) $this->token, (string) $this->contentId, (string) $this->outputFormatId], '/v1/Shares/d/{token}/{contentId}/{outputFormatId}');
+        return str_replace(['{token}', '{contentId}', '{outputFormatId}'], [$this->token, $this->contentId, $this->outputFormatId], '/v1/Shares/d/{token}/{contentId}/{outputFormatId}');
     }
     /**
      * @return array<int, mixed>

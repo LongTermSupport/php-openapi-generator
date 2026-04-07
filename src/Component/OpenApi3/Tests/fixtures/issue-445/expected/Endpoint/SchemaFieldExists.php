@@ -29,7 +29,7 @@ class SchemaFieldExists extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{schemaId}', '{fieldId}'], [(string) $this->schemaId, (string) $this->fieldId], '/v1/Schemas/{schemaId}/{fieldId}/exists');
+        return str_replace(['{schemaId}', '{fieldId}'], [$this->schemaId, $this->fieldId], '/v1/Schemas/{schemaId}/{fieldId}/exists');
     }
     /**
      * @return array<int, mixed>

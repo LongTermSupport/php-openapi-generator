@@ -27,7 +27,7 @@ class UsersCheckBlocked extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/user/blocks/{username}');
+        return str_replace(['{username}'], [$this->username], '/user/blocks/{username}');
     }
     /**
      * @return array<int, mixed>

@@ -25,7 +25,7 @@ class SchemaExists extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/Schemas/{id}/exists');
+        return str_replace(['{id}'], [$this->id], '/v1/Schemas/{id}/exists');
     }
     /**
      * @return array<int, mixed>

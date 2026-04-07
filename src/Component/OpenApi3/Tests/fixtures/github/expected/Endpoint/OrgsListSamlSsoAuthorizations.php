@@ -27,7 +27,7 @@ class OrgsListSamlSsoAuthorizations extends \LongTermSupport\OpenApiGenerator\Co
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/credential-authorizations');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/credential-authorizations');
     }
     /**
      * @return array<int, mixed>

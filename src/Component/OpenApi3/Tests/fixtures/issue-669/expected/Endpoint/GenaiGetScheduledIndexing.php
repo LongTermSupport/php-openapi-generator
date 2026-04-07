@@ -25,7 +25,7 @@ class GenaiGetScheduledIndexing extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{knowledge_base_uuid}'], [(string) $this->knowledge_base_uuid], '/v2/gen-ai/scheduled-indexing/knowledge-base/{knowledge_base_uuid}');
+        return str_replace(['{knowledge_base_uuid}'], [$this->knowledge_base_uuid], '/v2/gen-ai/scheduled-indexing/knowledge-base/{knowledge_base_uuid}');
     }
     /**
      * @return array<int, mixed>

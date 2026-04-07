@@ -29,7 +29,7 @@ class ListCountriesOfMonitoredCompanies extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/countries');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/countries');
     }
     /**
      * @return array<int, mixed>

@@ -66,7 +66,7 @@ class ReposCompareCommits extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{base}', '{head}'], [(string) $this->owner, (string) $this->repo, (string) $this->base, (string) $this->head], '/repos/{owner}/{repo}/compare/{base}...{head}');
+        return str_replace(['{owner}', '{repo}', '{base}', '{head}'], [$this->owner, $this->repo, $this->base, $this->head], '/repos/{owner}/{repo}/compare/{base}...{head}');
     }
     /**
      * @return array<int, mixed>

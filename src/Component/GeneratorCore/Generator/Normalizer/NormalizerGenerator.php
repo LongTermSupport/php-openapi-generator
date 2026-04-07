@@ -245,17 +245,36 @@ trait NormalizerGenerator
             $denormalizationStatements = $normResult[0];
             $outputVar                 = $normResult[1];
 
+            // This loop is over the typed model object, which extends
+            // `\ArrayObject<string, mixed>` (guarded by `willExtendArrayObject()`
+            // below). PHPStan narrows `$key` to `string` from the @template,
+            // but PHP coerces numeric-string keys to `int` when stored in
+            // ArrayObject — so at runtime `$key` may actually be `int`.
+            //
+            // For the `preg_match` argument we therefore emit `strval($key)`:
+            //
+            //   1. Runtime safe: converts `int` keys back to `string`, preventing
+            //      TypeError under strict_types where preg_match's `$subject`
+            //      parameter requires `string`.
+            //   2. PHPStan clean: `strval()` is a function call, not the
+            //      `(string)` cast operator, so it is NOT reported as
+            //      `cast.useless` even when the input is already `string`.
+            //
+            // For the array-key assignment we emit the bare `$key`. Even if it
+            // is `int` at runtime, PHP coerces it back to the appropriate key
+            // type when stored in `$dataArray`, so an explicit cast there is
+            // both useless (PHPStan) and unnecessary (runtime).
             $patternCondition[] = new Stmt\If_(
                 new Expr\BinaryOp\Identical(
                     new Expr\FuncCall(new Name('preg_match'), [
                         new Arg(new Expr\ConstFetch(new Name("'/" . str_replace('/', '\/', $pattern) . "/'"))),
-                        new Arg(new Expr\Cast\String_($loopKeyVar)),
+                        new Arg(new Expr\FuncCall(new Name('strval'), [new Arg($loopKeyVar)])),
                     ]),
                     new Scalar\Int_(1)
                 ),
                 [
                     'stmts' => array_merge($denormalizationStatements, [
-                        new Stmt\Expression(new Expr\Assign(new Expr\ArrayDimFetch($dataVariable, new Expr\Cast\String_($loopKeyVar)), $outputVar)),
+                        new Stmt\Expression(new Expr\Assign(new Expr\ArrayDimFetch($dataVariable, $loopKeyVar), $outputVar)),
                     ]),
                 ]
             );

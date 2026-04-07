@@ -155,8 +155,8 @@ class InvoiceSummaryNormalizer implements DenormalizerInterface, NormalizerInter
             $dataArray['credits_and_adjustments'] = $this->normalizer->normalize($data->getCreditsAndAdjustments(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

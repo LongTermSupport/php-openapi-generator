@@ -25,7 +25,7 @@ class GenaiDeleteOpenaiApiKey extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{api_key_uuid}'], [(string) $this->api_key_uuid], '/v2/gen-ai/openai/keys/{api_key_uuid}');
+        return str_replace(['{api_key_uuid}'], [$this->api_key_uuid], '/v2/gen-ai/openai/keys/{api_key_uuid}');
     }
     /**
      * @return array<int, mixed>

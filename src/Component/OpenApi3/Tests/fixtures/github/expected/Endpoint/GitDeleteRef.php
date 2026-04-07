@@ -30,7 +30,7 @@ class GitDeleteRef extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{ref}'], [(string) $this->owner, (string) $this->repo, (string) $this->ref], '/repos/{owner}/{repo}/git/refs/{ref}');
+        return str_replace(['{owner}', '{repo}', '{ref}'], [$this->owner, $this->repo, $this->ref], '/repos/{owner}/{repo}/git/refs/{ref}');
     }
     /**
      * @return array<int, mixed>

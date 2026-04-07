@@ -27,7 +27,7 @@ class GenaiCancelIndexingJob extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{uuid}'], [(string) $this->uuid], '/v2/gen-ai/indexing_jobs/{uuid}/cancel');
+        return str_replace(['{uuid}'], [$this->uuid], '/v2/gen-ai/indexing_jobs/{uuid}/cancel');
     }
     /**
      * @return array<int, mixed>

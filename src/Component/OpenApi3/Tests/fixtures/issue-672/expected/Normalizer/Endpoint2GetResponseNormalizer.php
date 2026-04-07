@@ -82,8 +82,8 @@ class Endpoint2GetResponseNormalizer implements DenormalizerInterface, Normalize
             $dataArray['field-2-bis'] = $this->normalizer->normalize($data->getField2Bis(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

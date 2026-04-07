@@ -39,7 +39,7 @@ class ReposGetCombinedStatusForRef extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{ref}'], [(string) $this->owner, (string) $this->repo, (string) $this->ref], '/repos/{owner}/{repo}/commits/{ref}/status');
+        return str_replace(['{owner}', '{repo}', '{ref}'], [$this->owner, $this->repo, $this->ref], '/repos/{owner}/{repo}/commits/{ref}/status');
     }
     /**
      * @return array<int, mixed>

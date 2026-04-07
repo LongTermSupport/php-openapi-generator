@@ -28,7 +28,7 @@ class ActionsListSelectedReposForOrgSecret extends \LongTermSupport\OpenApiGener
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{secret_name}'], [(string) $this->org, (string) $this->secret_name], '/orgs/{org}/actions/secrets/{secret_name}/repositories');
+        return str_replace(['{org}', '{secret_name}'], [$this->org, $this->secret_name], '/orgs/{org}/actions/secrets/{secret_name}/repositories');
     }
     /**
      * @return array<int, mixed>

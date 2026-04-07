@@ -30,7 +30,7 @@ class ReposGetPagesBuild extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{build_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->build_id], '/repos/{owner}/{repo}/pages/builds/{build_id}');
+        return str_replace(['{owner}', '{repo}', '{build_id}'], [$this->owner, $this->repo, (string) $this->build_id], '/repos/{owner}/{repo}/pages/builds/{build_id}');
     }
     /**
      * @return array<int, mixed>

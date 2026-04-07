@@ -32,7 +32,7 @@ class ActionsListSelfHostedRunnersForOrg extends \LongTermSupport\OpenApiGenerat
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/actions/runners');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/actions/runners');
     }
     /**
      * @return array<int, mixed>

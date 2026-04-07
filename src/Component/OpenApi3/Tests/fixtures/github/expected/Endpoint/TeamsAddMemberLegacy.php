@@ -38,7 +38,7 @@ class TeamsAddMemberLegacy extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{team_id}', '{username}'], [(string) $this->team_id, (string) $this->username], '/teams/{team_id}/members/{username}');
+        return str_replace(['{team_id}', '{username}'], [(string) $this->team_id, $this->username], '/teams/{team_id}/members/{username}');
     }
     /**
      * @return array<int, mixed>

@@ -102,8 +102,8 @@ class ReposOwnerRepoContentsPathDeleteBodyNormalizer implements DenormalizerInte
             $dataArray['author'] = $this->normalizer->normalize($data->getAuthor(), 'json', $context);
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

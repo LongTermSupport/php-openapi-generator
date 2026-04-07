@@ -25,7 +25,7 @@ class CertificatesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{certificate_id}'], [(string) $this->certificate_id], '/v2/certificates/{certificate_id}');
+        return str_replace(['{certificate_id}'], [$this->certificate_id], '/v2/certificates/{certificate_id}');
     }
     /**
      * @return array<int, mixed>

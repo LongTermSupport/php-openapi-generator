@@ -37,7 +37,7 @@ class ListNotificationEventsInAPortfolioFiltered extends \LongTermSupport\OpenAp
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/notificationEvents');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/notificationEvents');
     }
     /**
      * @return array<int, mixed>

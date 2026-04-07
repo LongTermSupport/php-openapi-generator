@@ -33,7 +33,7 @@ class KubernetesUpgradeCluster extends \LongTermSupport\OpenApiGenerator\Compone
     }
     public function getUri(): string
     {
-        return str_replace(['{cluster_id}'], [(string) $this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/upgrade');
+        return str_replace(['{cluster_id}'], [$this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/upgrade');
     }
     /**
      * @return array<int, mixed>

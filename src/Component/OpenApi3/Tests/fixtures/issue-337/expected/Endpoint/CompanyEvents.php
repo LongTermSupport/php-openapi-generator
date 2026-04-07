@@ -36,7 +36,7 @@ class CompanyEvents extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/monitoring/companies/{id}/events');
+        return str_replace(['{id}'], [$this->id], '/monitoring/companies/{id}/events');
     }
     /**
      * @return array<int, mixed>

@@ -51,7 +51,7 @@ class GitGetTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{tag_sha}'], [(string) $this->owner, (string) $this->repo, (string) $this->tag_sha], '/repos/{owner}/{repo}/git/tags/{tag_sha}');
+        return str_replace(['{owner}', '{repo}', '{tag_sha}'], [$this->owner, $this->repo, $this->tag_sha], '/repos/{owner}/{repo}/git/tags/{tag_sha}');
     }
     /**
      * @return array<int, mixed>

@@ -25,7 +25,7 @@ class RegistriesDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}'], [(string) $this->registry_name], '/v2/registries/{registry_name}');
+        return str_replace(['{registry_name}'], [$this->registry_name], '/v2/registries/{registry_name}');
     }
     /**
      * @return array<int, mixed>

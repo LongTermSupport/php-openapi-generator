@@ -31,7 +31,7 @@ class ListItemDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/ListItems/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/ListItems/{id}');
     }
     /**
      * @return array<int, mixed>

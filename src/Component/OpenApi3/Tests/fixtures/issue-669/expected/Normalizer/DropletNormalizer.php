@@ -261,8 +261,8 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $dataArray['gpu_info'] = $this->normalizer->normalize($data->getGpuInfo(), 'json', $context);
         }
         foreach ($data as $key => $value_6) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value_6;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value_6;
             }
         }
         return $dataArray;

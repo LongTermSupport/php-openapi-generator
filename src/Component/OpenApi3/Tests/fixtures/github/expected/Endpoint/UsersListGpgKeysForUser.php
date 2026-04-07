@@ -30,7 +30,7 @@ class UsersListGpgKeysForUser extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/gpg_keys');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/gpg_keys');
     }
     /**
      * @return array<int, mixed>

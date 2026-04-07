@@ -30,7 +30,7 @@ class ActivityListReceivedEventsForUser extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}/received_events');
+        return str_replace(['{username}'], [$this->username], '/users/{username}/received_events');
     }
     /**
      * @return array<int, mixed>

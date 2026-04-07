@@ -33,7 +33,7 @@ class MigrationsListReposForOrg extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{migration_id}'], [(string) $this->org, (string) $this->migration_id], '/orgs/{org}/migrations/{migration_id}/repositories');
+        return str_replace(['{org}', '{migration_id}'], [$this->org, (string) $this->migration_id], '/orgs/{org}/migrations/{migration_id}/repositories');
     }
     /**
      * @return array<int, mixed>

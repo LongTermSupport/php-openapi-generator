@@ -34,7 +34,7 @@ class AppsGetLogsAggregate extends \LongTermSupport\OpenApiGenerator\Component\O
     }
     public function getUri(): string
     {
-        return str_replace(['{app_id}', '{deployment_id}'], [(string) $this->app_id, (string) $this->deployment_id], '/v2/apps/{app_id}/deployments/{deployment_id}/logs');
+        return str_replace(['{app_id}', '{deployment_id}'], [$this->app_id, $this->deployment_id], '/v2/apps/{app_id}/deployments/{deployment_id}/logs');
     }
     /**
      * @return array<int, mixed>

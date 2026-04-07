@@ -24,7 +24,7 @@ class BusinessProcessGet extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{id}'], [(string) $this->id], '/v1/BusinessProcesses/{id}');
+        return str_replace(['{id}'], [$this->id], '/v1/BusinessProcesses/{id}');
     }
     /**
      * @return array<int, mixed>

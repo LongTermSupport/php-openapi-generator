@@ -41,7 +41,7 @@ class RegistryDeleteRepositoryTag extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{registry_name}', '{repository_name}', '{repository_tag}'], [(string) $this->registry_name, (string) $this->repository_name, (string) $this->repository_tag], '/v2/registry/{registry_name}/repositories/{repository_name}/tags/{repository_tag}');
+        return str_replace(['{registry_name}', '{repository_name}', '{repository_tag}'], [$this->registry_name, $this->repository_name, $this->repository_tag], '/v2/registry/{registry_name}/repositories/{repository_name}/tags/{repository_tag}');
     }
     /**
      * @return array<int, mixed>

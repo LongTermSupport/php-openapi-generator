@@ -30,7 +30,7 @@ class CdnUpdateEndpoints extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{cdn_id}'], [(string) $this->cdn_id], '/v2/cdn/endpoints/{cdn_id}');
+        return str_replace(['{cdn_id}'], [$this->cdn_id], '/v2/cdn/endpoints/{cdn_id}');
     }
     /**
      * @return array<int, mixed>

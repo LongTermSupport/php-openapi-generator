@@ -29,7 +29,7 @@ class GistsListForks extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     }
     public function getUri(): string
     {
-        return str_replace(['{gist_id}'], [(string) $this->gist_id], '/gists/{gist_id}/forks');
+        return str_replace(['{gist_id}'], [$this->gist_id], '/gists/{gist_id}/forks');
     }
     /**
      * @return array<int, mixed>

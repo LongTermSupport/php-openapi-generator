@@ -30,7 +30,7 @@ class ProjectsAssignResources extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{project_id}'], [(string) $this->project_id], '/v2/projects/{project_id}/resources');
+        return str_replace(['{project_id}'], [$this->project_id], '/v2/projects/{project_id}/resources');
     }
     /**
      * @return array<int, mixed>

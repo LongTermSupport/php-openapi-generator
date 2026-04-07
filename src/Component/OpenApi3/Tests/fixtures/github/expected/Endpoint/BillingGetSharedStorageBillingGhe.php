@@ -31,7 +31,7 @@ class BillingGetSharedStorageBillingGhe extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{enterprise_id}'], [(string) $this->enterprise_id], '/enterprises/{enterprise_id}/settings/billing/shared-storage');
+        return str_replace(['{enterprise_id}'], [$this->enterprise_id], '/enterprises/{enterprise_id}/settings/billing/shared-storage');
     }
     /**
      * @return array<int, mixed>

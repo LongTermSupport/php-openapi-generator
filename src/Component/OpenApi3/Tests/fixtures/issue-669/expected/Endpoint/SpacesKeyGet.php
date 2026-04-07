@@ -28,7 +28,7 @@ class SpacesKeyGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
     }
     public function getUri(): string
     {
-        return str_replace(['{access_key}'], [(string) $this->access_key], '/v2/spaces/keys/{access_key}');
+        return str_replace(['{access_key}'], [$this->access_key], '/v2/spaces/keys/{access_key}');
     }
     /**
      * @return array<int, mixed>

@@ -33,7 +33,7 @@ class ChecksGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{check_run_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->check_run_id], '/repos/{owner}/{repo}/check-runs/{check_run_id}');
+        return str_replace(['{owner}', '{repo}', '{check_run_id}'], [$this->owner, $this->repo, (string) $this->check_run_id], '/repos/{owner}/{repo}/check-runs/{check_run_id}');
     }
     /**
      * @return array<int, mixed>

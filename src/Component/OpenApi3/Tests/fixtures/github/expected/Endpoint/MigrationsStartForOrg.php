@@ -27,7 +27,7 @@ class MigrationsStartForOrg extends \LongTermSupport\OpenApiGenerator\Component\
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/migrations');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/migrations');
     }
     /**
      * @return array<int, mixed>

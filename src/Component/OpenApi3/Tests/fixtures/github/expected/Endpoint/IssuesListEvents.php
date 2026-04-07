@@ -35,7 +35,7 @@ class IssuesListEvents extends \LongTermSupport\OpenApiGenerator\Component\OpenA
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{issue_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->issue_number], '/repos/{owner}/{repo}/issues/{issue_number}/events');
+        return str_replace(['{owner}', '{repo}', '{issue_number}'], [$this->owner, $this->repo, (string) $this->issue_number], '/repos/{owner}/{repo}/issues/{issue_number}/events');
     }
     /**
      * @return array<int, mixed>

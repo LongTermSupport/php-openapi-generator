@@ -30,7 +30,7 @@ class OrgsRemoveSamlSsoAuthorization extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{credential_id}'], [(string) $this->org, (string) $this->credential_id], '/orgs/{org}/credential-authorizations/{credential_id}');
+        return str_replace(['{org}', '{credential_id}'], [$this->org, (string) $this->credential_id], '/orgs/{org}/credential-authorizations/{credential_id}');
     }
     /**
      * @return array<int, mixed>

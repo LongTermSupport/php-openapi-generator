@@ -27,7 +27,7 @@ class SshKeysUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{ssh_key_identifier}'], [(string) $this->ssh_key_identifier], '/v2/account/keys/{ssh_key_identifier}');
+        return str_replace(['{ssh_key_identifier}'], [$this->ssh_key_identifier], '/v2/account/keys/{ssh_key_identifier}');
     }
     /**
      * @return array<int, mixed>

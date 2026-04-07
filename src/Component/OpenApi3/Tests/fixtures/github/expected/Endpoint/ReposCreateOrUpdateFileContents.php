@@ -33,7 +33,7 @@ class ReposCreateOrUpdateFileContents extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{path}'], [(string) $this->owner, (string) $this->repo, (string) $this->path], '/repos/{owner}/{repo}/contents/{path}');
+        return str_replace(['{owner}', '{repo}', '{path}'], [$this->owner, $this->repo, $this->path], '/repos/{owner}/{repo}/contents/{path}');
     }
     /**
      * @return array<int, mixed>

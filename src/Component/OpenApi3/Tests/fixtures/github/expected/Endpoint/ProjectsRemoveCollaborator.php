@@ -28,7 +28,7 @@ class ProjectsRemoveCollaborator extends \LongTermSupport\OpenApiGenerator\Compo
     }
     public function getUri(): string
     {
-        return str_replace(['{project_id}', '{username}'], [(string) $this->project_id, (string) $this->username], '/projects/{project_id}/collaborators/{username}');
+        return str_replace(['{project_id}', '{username}'], [(string) $this->project_id, $this->username], '/projects/{project_id}/collaborators/{username}');
     }
     /**
      * @return array<int, mixed>

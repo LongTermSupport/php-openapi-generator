@@ -25,7 +25,7 @@ class GenaiGetWorkspace extends \LongTermSupport\OpenApiGenerator\Component\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{workspace_uuid}'], [(string) $this->workspace_uuid], '/v2/gen-ai/workspaces/{workspace_uuid}');
+        return str_replace(['{workspace_uuid}'], [$this->workspace_uuid], '/v2/gen-ai/workspaces/{workspace_uuid}');
     }
     /**
      * @return array<int, mixed>

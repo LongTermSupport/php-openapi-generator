@@ -31,7 +31,7 @@ class KubernetesGetStatusMessages extends \LongTermSupport\OpenApiGenerator\Comp
     }
     public function getUri(): string
     {
-        return str_replace(['{cluster_id}'], [(string) $this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/status_messages');
+        return str_replace(['{cluster_id}'], [$this->cluster_id], '/v2/kubernetes/clusters/{cluster_id}/status_messages');
     }
     /**
      * @return array<int, mixed>

@@ -35,7 +35,7 @@ class ReservedIPv6ActionsPost extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{reserved_ipv6}'], [(string) $this->reserved_ipv6], '/v2/reserved_ipv6/{reserved_ipv6}/actions');
+        return str_replace(['{reserved_ipv6}'], [$this->reserved_ipv6], '/v2/reserved_ipv6/{reserved_ipv6}/actions');
     }
     /**
      * @return array<int, mixed>

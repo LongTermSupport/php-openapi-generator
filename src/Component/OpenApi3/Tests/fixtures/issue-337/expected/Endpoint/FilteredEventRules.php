@@ -29,7 +29,7 @@ class FilteredEventRules extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{countryCode}'], [(string) $this->countryCode], '/monitoring/eventRules/{countryCode}');
+        return str_replace(['{countryCode}'], [$this->countryCode], '/monitoring/eventRules/{countryCode}');
     }
     /**
      * @return array<int, mixed>

@@ -31,7 +31,7 @@ class BillingGetGithubActionsBillingOrg extends \LongTermSupport\OpenApiGenerato
     }
     public function getUri(): string
     {
-        return str_replace(['{org}'], [(string) $this->org], '/orgs/{org}/settings/billing/actions');
+        return str_replace(['{org}'], [$this->org], '/orgs/{org}/settings/billing/actions');
     }
     /**
      * @return array<int, mixed>

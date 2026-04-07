@@ -24,7 +24,7 @@ class CodesOfConductGetConductCode extends \LongTermSupport\OpenApiGenerator\Com
     }
     public function getUri(): string
     {
-        return str_replace(['{key}'], [(string) $this->key], '/codes_of_conduct/{key}');
+        return str_replace(['{key}'], [$this->key], '/codes_of_conduct/{key}');
     }
     /**
      * @return array<int, mixed>

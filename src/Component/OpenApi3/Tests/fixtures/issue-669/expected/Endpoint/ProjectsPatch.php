@@ -27,7 +27,7 @@ class ProjectsPatch extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     }
     public function getUri(): string
     {
-        return str_replace(['{project_id}'], [(string) $this->project_id], '/v2/projects/{project_id}');
+        return str_replace(['{project_id}'], [$this->project_id], '/v2/projects/{project_id}');
     }
     /**
      * @return array<int, mixed>

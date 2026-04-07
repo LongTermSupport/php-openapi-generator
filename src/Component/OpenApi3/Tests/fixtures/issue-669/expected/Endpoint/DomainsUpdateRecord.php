@@ -36,7 +36,7 @@ class DomainsUpdateRecord extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{domain_name}', '{domain_record_id}'], [(string) $this->domain_name, (string) $this->domain_record_id], '/v2/domains/{domain_name}/records/{domain_record_id}');
+        return str_replace(['{domain_name}', '{domain_record_id}'], [$this->domain_name, (string) $this->domain_record_id], '/v2/domains/{domain_name}/records/{domain_record_id}');
     }
     /**
      * @return array<int, mixed>

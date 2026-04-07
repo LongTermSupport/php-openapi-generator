@@ -167,8 +167,8 @@ class ApiAgentGuardrailNormalizer implements DenormalizerInterface, NormalizerIn
             $dataArray['uuid'] = $data->getUuid();
         }
         foreach ($data as $key_1 => $value_1) {
-            if (preg_match('/.*/', (string) $key_1) === 1) {
-                $dataArray[(string) $key_1] = $value_1;
+            if (preg_match('/.*/', strval($key_1)) === 1) {
+                $dataArray[$key_1] = $value_1;
             }
         }
         return $dataArray;

@@ -37,7 +37,7 @@ class ActionsCreateRemoveTokenForRepo extends \LongTermSupport\OpenApiGenerator\
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}'], [(string) $this->owner, (string) $this->repo], '/repos/{owner}/{repo}/actions/runners/remove-token');
+        return str_replace(['{owner}', '{repo}'], [$this->owner, $this->repo], '/repos/{owner}/{repo}/actions/runners/remove-token');
     }
     /**
      * @return array<int, mixed>

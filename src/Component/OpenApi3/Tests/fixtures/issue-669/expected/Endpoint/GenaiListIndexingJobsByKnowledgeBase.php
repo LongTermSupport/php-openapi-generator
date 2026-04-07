@@ -25,7 +25,7 @@ class GenaiListIndexingJobsByKnowledgeBase extends \LongTermSupport\OpenApiGener
     }
     public function getUri(): string
     {
-        return str_replace(['{knowledge_base_uuid}'], [(string) $this->knowledge_base_uuid], '/v2/gen-ai/knowledge_bases/{knowledge_base_uuid}/indexing_jobs');
+        return str_replace(['{knowledge_base_uuid}'], [$this->knowledge_base_uuid], '/v2/gen-ai/knowledge_bases/{knowledge_base_uuid}/indexing_jobs');
     }
     /**
      * @return array<int, mixed>

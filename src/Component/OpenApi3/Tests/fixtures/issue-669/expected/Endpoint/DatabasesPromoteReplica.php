@@ -32,7 +32,7 @@ class DatabasesPromoteReplica extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{replica_name}'], [(string) $this->database_cluster_uuid, (string) $this->replica_name], '/v2/databases/{database_cluster_uuid}/replicas/{replica_name}/promote');
+        return str_replace(['{database_cluster_uuid}', '{replica_name}'], [$this->database_cluster_uuid, $this->replica_name], '/v2/databases/{database_cluster_uuid}/replicas/{replica_name}/promote');
     }
     /**
      * @return array<int, mixed>

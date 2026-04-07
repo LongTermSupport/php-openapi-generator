@@ -37,7 +37,7 @@ class TeamsAddOrUpdateRepoPermissionsLegacy extends \LongTermSupport\OpenApiGene
     }
     public function getUri(): string
     {
-        return str_replace(['{team_id}', '{owner}', '{repo}'], [(string) $this->team_id, (string) $this->owner, (string) $this->repo], '/teams/{team_id}/repos/{owner}/{repo}');
+        return str_replace(['{team_id}', '{owner}', '{repo}'], [(string) $this->team_id, $this->owner, $this->repo], '/teams/{team_id}/repos/{owner}/{repo}');
     }
     /**
      * @return array<int, mixed>

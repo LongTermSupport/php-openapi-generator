@@ -137,8 +137,8 @@ class SimpleCommitStatusNormalizer implements DenormalizerInterface, NormalizerI
         $dataArray['created_at'] = $data->getCreatedAt()->format('Y-m-d\TH:i:sP');
         $dataArray['updated_at'] = $data->getUpdatedAt()->format('Y-m-d\TH:i:sP');
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         if (!(bool) ($context['skip_validation'] ?? false)) {

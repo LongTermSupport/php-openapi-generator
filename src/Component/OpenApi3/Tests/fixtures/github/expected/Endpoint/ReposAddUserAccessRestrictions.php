@@ -39,7 +39,7 @@ class ReposAddUserAccessRestrictions extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{branch}'], [(string) $this->owner, (string) $this->repo, (string) $this->branch], '/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users');
+        return str_replace(['{owner}', '{repo}', '{branch}'], [$this->owner, $this->repo, $this->branch], '/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users');
     }
     /**
      * @return array<int, mixed>

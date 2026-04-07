@@ -33,7 +33,7 @@ class DatabasesGetKafkaSchemaVersion extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{subject_name}', '{version}'], [(string) $this->database_cluster_uuid, (string) $this->subject_name, (string) $this->version], '/v2/databases/{database_cluster_uuid}/schema-registry/{subject_name}/versions/{version}');
+        return str_replace(['{database_cluster_uuid}', '{subject_name}', '{version}'], [$this->database_cluster_uuid, $this->subject_name, $this->version], '/v2/databases/{database_cluster_uuid}/schema-registry/{subject_name}/versions/{version}');
     }
     /**
      * @return array<int, mixed>

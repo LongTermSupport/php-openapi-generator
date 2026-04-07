@@ -36,7 +36,7 @@ class ReactionsDeleteForTeamDiscussion extends \LongTermSupport\OpenApiGenerator
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}', '{discussion_number}', '{reaction_id}'], [(string) $this->org, (string) $this->team_slug, (string) $this->discussion_number, (string) $this->reaction_id], '/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}');
+        return str_replace(['{org}', '{team_slug}', '{discussion_number}', '{reaction_id}'], [$this->org, $this->team_slug, (string) $this->discussion_number, (string) $this->reaction_id], '/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}');
     }
     /**
      * @return array<int, mixed>

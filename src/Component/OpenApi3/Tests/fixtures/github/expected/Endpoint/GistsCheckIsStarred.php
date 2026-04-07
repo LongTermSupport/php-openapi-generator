@@ -24,7 +24,7 @@ class GistsCheckIsStarred extends \LongTermSupport\OpenApiGenerator\Component\Op
     }
     public function getUri(): string
     {
-        return str_replace(['{gist_id}'], [(string) $this->gist_id], '/gists/{gist_id}/star');
+        return str_replace(['{gist_id}'], [$this->gist_id], '/gists/{gist_id}/star');
     }
     /**
      * @return array<int, mixed>

@@ -104,7 +104,7 @@ class ActionsCreateOrUpdateOrgSecret extends \LongTermSupport\OpenApiGenerator\C
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{secret_name}'], [(string) $this->org, (string) $this->secret_name], '/orgs/{org}/actions/secrets/{secret_name}');
+        return str_replace(['{org}', '{secret_name}'], [$this->org, $this->secret_name], '/orgs/{org}/actions/secrets/{secret_name}');
     }
     /**
      * @return array<int, mixed>

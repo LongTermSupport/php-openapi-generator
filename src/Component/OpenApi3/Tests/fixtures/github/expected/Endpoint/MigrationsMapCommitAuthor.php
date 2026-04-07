@@ -33,7 +33,7 @@ class MigrationsMapCommitAuthor extends \LongTermSupport\OpenApiGenerator\Compon
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{author_id}'], [(string) $this->owner, (string) $this->repo, (string) $this->author_id], '/repos/{owner}/{repo}/import/authors/{author_id}');
+        return str_replace(['{owner}', '{repo}', '{author_id}'], [$this->owner, $this->repo, (string) $this->author_id], '/repos/{owner}/{repo}/import/authors/{author_id}');
     }
     /**
      * @return array<int, mixed>

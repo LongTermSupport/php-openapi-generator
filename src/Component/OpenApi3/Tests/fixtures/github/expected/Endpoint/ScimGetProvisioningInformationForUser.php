@@ -33,7 +33,7 @@ class ScimGetProvisioningInformationForUser extends \LongTermSupport\OpenApiGene
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{scim_user_id}'], [(string) $this->org, (string) $this->scim_user_id], '/scim/v2/organizations/{org}/Users/{scim_user_id}');
+        return str_replace(['{org}', '{scim_user_id}'], [$this->org, $this->scim_user_id], '/scim/v2/organizations/{org}/Users/{scim_user_id}');
     }
     /**
      * @return array<int, mixed>

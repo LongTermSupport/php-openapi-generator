@@ -31,7 +31,7 @@ class PostMonitoringPortfoliosPortfolioIdCompanies extends \LongTermSupport\Open
     }
     public function getUri(): string
     {
-        return str_replace(['{portfolioId}'], [(string) $this->portfolioId], '/monitoring/portfolios/{portfolioId}/companies');
+        return str_replace(['{portfolioId}'], [$this->portfolioId], '/monitoring/portfolios/{portfolioId}/companies');
     }
     /**
      * @return array<int, mixed>

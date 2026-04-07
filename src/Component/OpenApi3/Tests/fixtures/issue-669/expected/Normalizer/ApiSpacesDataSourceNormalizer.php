@@ -87,8 +87,8 @@ class ApiSpacesDataSourceNormalizer implements DenormalizerInterface, Normalizer
             $dataArray['region'] = $data->getRegion();
         }
         foreach ($data as $key => $value) {
-            if (preg_match('/.*/', (string) $key) === 1) {
-                $dataArray[(string) $key] = $value;
+            if (preg_match('/.*/', strval($key)) === 1) {
+                $dataArray[$key] = $value;
             }
         }
         return $dataArray;

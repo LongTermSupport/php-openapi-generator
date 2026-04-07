@@ -41,7 +41,7 @@ class IssuesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     }
     public function getUri(): string
     {
-        return str_replace(['{owner}', '{repo}', '{issue_number}'], [(string) $this->owner, (string) $this->repo, (string) $this->issue_number], '/repos/{owner}/{repo}/issues/{issue_number}');
+        return str_replace(['{owner}', '{repo}', '{issue_number}'], [$this->owner, $this->repo, (string) $this->issue_number], '/repos/{owner}/{repo}/issues/{issue_number}');
     }
     /**
      * @return array<int, mixed>

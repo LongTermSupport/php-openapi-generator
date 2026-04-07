@@ -32,7 +32,7 @@ class DatabasesGetKafkaTopic extends \LongTermSupport\OpenApiGenerator\Component
     }
     public function getUri(): string
     {
-        return str_replace(['{database_cluster_uuid}', '{topic_name}'], [(string) $this->database_cluster_uuid, (string) $this->topic_name], '/v2/databases/{database_cluster_uuid}/topics/{topic_name}');
+        return str_replace(['{database_cluster_uuid}', '{topic_name}'], [$this->database_cluster_uuid, $this->topic_name], '/v2/databases/{database_cluster_uuid}/topics/{topic_name}');
     }
     /**
      * @return array<int, mixed>

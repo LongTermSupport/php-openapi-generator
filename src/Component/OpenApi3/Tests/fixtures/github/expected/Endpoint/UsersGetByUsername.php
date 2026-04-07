@@ -31,7 +31,7 @@ class UsersGetByUsername extends \LongTermSupport\OpenApiGenerator\Component\Ope
     }
     public function getUri(): string
     {
-        return str_replace(['{username}'], [(string) $this->username], '/users/{username}');
+        return str_replace(['{username}'], [$this->username], '/users/{username}');
     }
     /**
      * @return array<int, mixed>

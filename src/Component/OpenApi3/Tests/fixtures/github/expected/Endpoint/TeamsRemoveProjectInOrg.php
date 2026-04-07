@@ -33,7 +33,7 @@ class TeamsRemoveProjectInOrg extends \LongTermSupport\OpenApiGenerator\Componen
     }
     public function getUri(): string
     {
-        return str_replace(['{org}', '{team_slug}', '{project_id}'], [(string) $this->org, (string) $this->team_slug, (string) $this->project_id], '/orgs/{org}/teams/{team_slug}/projects/{project_id}');
+        return str_replace(['{org}', '{team_slug}', '{project_id}'], [$this->org, $this->team_slug, (string) $this->project_id], '/orgs/{org}/teams/{team_slug}/projects/{project_id}');
     }
     /**
      * @return array<int, mixed>

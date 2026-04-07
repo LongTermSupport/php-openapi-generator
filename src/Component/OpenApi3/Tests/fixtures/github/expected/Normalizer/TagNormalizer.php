@@ -32,9 +32,9 @@ class TagNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Tag::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Tag|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Tag|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Tag();
         if (null === $data || false === \is_array($data)) {

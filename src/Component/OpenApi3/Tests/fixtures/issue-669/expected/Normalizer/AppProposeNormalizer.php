@@ -32,9 +32,9 @@ class AppProposeNormalizer implements DenormalizerInterface, NormalizerInterface
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppPropose::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppPropose|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppPropose|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppPropose();
         if (null === $data || false === \is_array($data)) {

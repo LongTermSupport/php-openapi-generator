@@ -32,9 +32,9 @@ class OutputDataVectorNormalizer implements DenormalizerInterface, NormalizerInt
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataVector::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataVector|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataVector|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataVector();
         if (null === $data || false === \is_array($data)) {

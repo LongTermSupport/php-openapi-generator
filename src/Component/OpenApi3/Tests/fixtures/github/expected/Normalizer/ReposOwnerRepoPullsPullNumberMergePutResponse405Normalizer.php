@@ -32,9 +32,9 @@ class ReposOwnerRepoPullsPullNumberMergePutResponse405Normalizer implements Deno
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberMergePutResponse405::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberMergePutResponse405|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberMergePutResponse405|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoPullsPullNumberMergePutResponse405();
         if (null === $data || false === \is_array($data)) {

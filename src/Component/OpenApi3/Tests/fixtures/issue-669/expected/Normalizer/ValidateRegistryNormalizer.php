@@ -32,9 +32,9 @@ class ValidateRegistryNormalizer implements DenormalizerInterface, NormalizerInt
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValidateRegistry::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValidateRegistry|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValidateRegistry|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ValidateRegistry();
         if (null === $data || false === \is_array($data)) {

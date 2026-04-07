@@ -32,9 +32,9 @@ class ReposOwnerRepoIssuesCommentsCommentIdPatchBodyNormalizer implements Denorm
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoIssuesCommentsCommentIdPatchBody::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoIssuesCommentsCommentIdPatchBody|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoIssuesCommentsCommentIdPatchBody|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoIssuesCommentsCommentIdPatchBody();
         if (null === $data || false === \is_array($data)) {

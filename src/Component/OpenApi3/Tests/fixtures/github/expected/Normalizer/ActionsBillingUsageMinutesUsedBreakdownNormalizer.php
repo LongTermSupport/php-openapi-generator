@@ -32,9 +32,9 @@ class ActionsBillingUsageMinutesUsedBreakdownNormalizer implements DenormalizerI
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ActionsBillingUsageMinutesUsedBreakdown();
         if (null === $data || false === \is_array($data)) {

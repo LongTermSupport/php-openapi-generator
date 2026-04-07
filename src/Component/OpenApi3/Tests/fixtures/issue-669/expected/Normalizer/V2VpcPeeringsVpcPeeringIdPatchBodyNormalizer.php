@@ -32,9 +32,9 @@ class V2VpcPeeringsVpcPeeringIdPatchBodyNormalizer implements DenormalizerInterf
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2VpcPeeringsVpcPeeringIdPatchBody::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2VpcPeeringsVpcPeeringIdPatchBody|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2VpcPeeringsVpcPeeringIdPatchBody|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\V2VpcPeeringsVpcPeeringIdPatchBody();
         if (null === $data || false === \is_array($data)) {

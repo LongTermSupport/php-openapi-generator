@@ -54,6 +54,7 @@ class IndividualsComplianceSearchCriteria extends \LongTermSupport\OpenApiGenera
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualsComplianceSearchCriteriaBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualsComplianceSearchCriteriaUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualsComplianceSearchCriteriaForbiddenException

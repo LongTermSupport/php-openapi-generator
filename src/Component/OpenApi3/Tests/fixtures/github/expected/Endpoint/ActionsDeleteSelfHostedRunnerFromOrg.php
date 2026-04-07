@@ -42,8 +42,9 @@ class ActionsDeleteSelfHostedRunnerFromOrg extends \LongTermSupport\OpenApiGener
     /**
      * {@inheritdoc}
      *
+     * @return null
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();

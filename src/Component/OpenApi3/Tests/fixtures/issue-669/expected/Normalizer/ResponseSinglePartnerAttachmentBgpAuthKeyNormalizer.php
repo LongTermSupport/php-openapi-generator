@@ -32,9 +32,9 @@ class ResponseSinglePartnerAttachmentBgpAuthKeyNormalizer implements Denormalize
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseSinglePartnerAttachmentBgpAuthKey::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseSinglePartnerAttachmentBgpAuthKey|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseSinglePartnerAttachmentBgpAuthKey|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseSinglePartnerAttachmentBgpAuthKey();
         if (null === $data || false === \is_array($data)) {

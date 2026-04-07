@@ -32,9 +32,9 @@ class OrgsOrgHooksHookIdPatchBodyConfigNormalizer implements DenormalizerInterfa
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgHooksHookIdPatchBodyConfig();
         if (null === $data || false === \is_array($data)) {

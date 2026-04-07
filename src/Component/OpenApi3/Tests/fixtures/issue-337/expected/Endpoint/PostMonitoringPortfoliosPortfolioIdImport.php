@@ -62,6 +62,7 @@ class PostMonitoringPortfoliosPortfolioIdImport extends \LongTermSupport\OpenApi
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PostMonitoringPortfoliosPortfolioIdImportBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PostMonitoringPortfoliosPortfolioIdImportUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PostMonitoringPortfoliosPortfolioIdImportForbiddenException

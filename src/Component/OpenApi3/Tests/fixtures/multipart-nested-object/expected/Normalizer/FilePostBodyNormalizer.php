@@ -32,9 +32,9 @@ class FilePostBodyNormalizer implements DenormalizerInterface, NormalizerInterfa
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBody::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBody|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBody|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBody();
         if (null === $data || false === \is_array($data)) {

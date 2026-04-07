@@ -32,9 +32,9 @@ class DropletActionEnableBackupsbackupPolicyNormalizer implements DenormalizerIn
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletActionEnableBackupsbackupPolicy::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletActionEnableBackupsbackupPolicy|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletActionEnableBackupsbackupPolicy|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DropletActionEnableBackupsbackupPolicy();
         if (null === $data || false === \is_array($data)) {

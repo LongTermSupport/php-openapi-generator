@@ -119,9 +119,18 @@ trait JaneObjectNormalizerGenerator
 
     protected function createBaseNormalizerDenormalizeMethod(): Stmt\ClassMethod
     {
+        // Generic dispatcher implementing Symfony's DenormalizerInterface. The
+        // signature is fixed by the interface: `(mixed, string, ?string, array): mixed`.
+        // Type safety lives in two places:
+        //   1. Per-class normalizers (e.g. AgentResponseNormalizer) — emit a
+        //      compound `\Foo|Reference` return type that callers can rely on.
+        //   2. Endpoint `transformResponseBody()` — wraps `serializer->deserialize()`
+        //      with type guards and exposes a precise union of response types.
+        // This method should never be called from user code directly; consumers
+        // see only the typed wrappers above.
         return new Stmt\ClassMethod('denormalize', [
             'flags'      => Modifiers::PUBLIC,
-            'returnType' => new Identifier('object'),
+            'returnType' => new Identifier('mixed'),
             'params'     => [
                 new Param(new Expr\Variable('data'), type: new Identifier('mixed')),
                 new Param(new Expr\Variable('type'), type: new Identifier('string')),
@@ -165,8 +174,6 @@ trait JaneObjectNormalizerGenerator
                 ),
                 new Stmt\Return_(new Expr\Variable('result')),
             ],
-        ], [
-            'comments' => [new Doc("/**\n * @return object\n */")],
         ]);
     }
 

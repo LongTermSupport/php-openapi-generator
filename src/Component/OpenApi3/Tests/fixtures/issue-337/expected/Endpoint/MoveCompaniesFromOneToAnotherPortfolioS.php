@@ -75,6 +75,7 @@ class MoveCompaniesFromOneToAnotherPortfolioS extends \LongTermSupport\OpenApiGe
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\MoveCompaniesFromOneToAnotherPortfolioSBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\MoveCompaniesFromOneToAnotherPortfolioSUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\MoveCompaniesFromOneToAnotherPortfolioSForbiddenException

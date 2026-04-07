@@ -60,6 +60,7 @@ class GetAMonitoredCompanyFromAPortfolio extends \LongTermSupport\OpenApiGenerat
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioForbiddenException

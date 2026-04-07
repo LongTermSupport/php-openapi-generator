@@ -87,4 +87,46 @@ final class TypeValidator
         }
         return self::assertDateTime($value, $format, $field);
     }
+    /**
+     * Type-guard a value against a class. Used by generated endpoint
+     * `transformResponseBody` to wrap `$serializer->deserialize()` calls
+     * (which return mixed) and project them down to a specific class.
+     *
+     * @template T of object
+     *
+     * @param class-string<T> $class
+     *
+     * @return T
+     */
+    public static function assertInstanceOf(mixed $value, string $class, string $field): object
+    {
+        if (!$value instanceof $class) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected %s, got %s', $field, $class, get_debug_type($value)));
+        }
+        return $value;
+    }
+    /**
+     * Type-guard a value as a list of instances of a class. Used by generated
+     * endpoint `transformResponseBody` for array-of-object response bodies.
+     *
+     * @template T of object
+     *
+     * @param class-string<T> $class
+     *
+     * @return list<T>
+     */
+    public static function assertListOf(mixed $value, string $class, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of %s, got %s', $field, $class, get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (!$item instanceof $class) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of %s, got element %s', $field, $class, get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
 }

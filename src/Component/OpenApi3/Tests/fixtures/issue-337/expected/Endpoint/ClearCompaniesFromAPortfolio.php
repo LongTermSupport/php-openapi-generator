@@ -75,6 +75,7 @@ class ClearCompaniesFromAPortfolio extends \LongTermSupport\OpenApiGenerator\Com
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ClearCompaniesFromAPortfolioBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ClearCompaniesFromAPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ClearCompaniesFromAPortfolioForbiddenException

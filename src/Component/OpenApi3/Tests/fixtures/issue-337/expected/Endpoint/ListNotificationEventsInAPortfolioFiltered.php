@@ -78,6 +78,7 @@ class ListNotificationEventsInAPortfolioFiltered extends \LongTermSupport\OpenAp
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListNotificationEventsInAPortfolioFilteredBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListNotificationEventsInAPortfolioFilteredUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListNotificationEventsInAPortfolioFilteredForbiddenException

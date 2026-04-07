@@ -78,6 +78,7 @@ class ListFilteredCompaniesInAPortfolio extends \LongTermSupport\OpenApiGenerato
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListFilteredCompaniesInAPortfolioBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListFilteredCompaniesInAPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListFilteredCompaniesInAPortfolioForbiddenException

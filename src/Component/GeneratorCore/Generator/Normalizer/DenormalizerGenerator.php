@@ -17,6 +17,7 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Param;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
+use PhpParser\Node\UnionType;
 
 trait DenormalizerGenerator
 {
@@ -272,9 +273,23 @@ trait DenormalizerGenerator
 
         $statements[] = new Stmt\Return_($objectVariable);
 
+        // Compound return type: the denormalize method always returns the specific
+        // model class. When $ref handling is enabled, it may also return a Reference
+        // sentinel that the caller resolves later. Both cases are explicit in the type.
+        $modelTypeNode = new Name\FullyQualified(ltrim($modelFqdn, '\\'));
+        $modelDocFqdn  = '\\' . ltrim($modelFqdn, '\\');
+
+        if ($this->useReference) {
+            $returnTypeNode = new UnionType([$modelTypeNode, new Name('Reference')]);
+            $returnDoc      = "/**\n * @return " . $modelDocFqdn . "|Reference\n */";
+        } else {
+            $returnTypeNode = $modelTypeNode;
+            $returnDoc      = "/**\n * @return " . $modelDocFqdn . "\n */";
+        }
+
         return new Stmt\ClassMethod('denormalize', [
             'flags'      => Modifiers::PUBLIC,
-            'returnType' => new Identifier('object'),
+            'returnType' => $returnTypeNode,
             'params'     => [
                 new Param($dataVariable, type: new Identifier('mixed')),
                 new Param(new Expr\Variable('type'), type: new Identifier('string')),
@@ -283,7 +298,7 @@ trait DenormalizerGenerator
             ],
             'stmts'      => $statements,
         ], [
-            'comments' => [new Doc("/**\n * @return object\n */")],
+            'comments' => [new Doc($returnDoc)],
         ]);
     }
 

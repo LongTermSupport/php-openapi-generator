@@ -32,9 +32,9 @@ class ConnectionPoolStandbyPrivateConnectionNormalizer implements DenormalizerIn
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ConnectionPoolStandbyPrivateConnection();
         if (null === $data || false === \is_array($data)) {

@@ -32,9 +32,9 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsNormalizer i
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions();
         if (null === $data || false === \is_array($data)) {

@@ -32,9 +32,9 @@ class TeamsTeamIdMembershipsUsernamePutResponse422ErrorsItemNormalizer implement
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembershipsUsernamePutResponse422ErrorsItem::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembershipsUsernamePutResponse422ErrorsItem|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembershipsUsernamePutResponse422ErrorsItem|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamsTeamIdMembershipsUsernamePutResponse422ErrorsItem();
         if (null === $data || false === \is_array($data)) {

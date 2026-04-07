@@ -59,6 +59,7 @@ class CreateMonitoringPortfolio extends \LongTermSupport\OpenApiGenerator\Compon
     /**
      * {@inheritdoc}
      *
+     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioForbiddenException

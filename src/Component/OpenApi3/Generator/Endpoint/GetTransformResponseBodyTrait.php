@@ -180,7 +180,16 @@ trait GetTransformResponseBodyTrait
             }
         }
 
-        $returnDoc = implode('', array_map(static fn (string $value): string => ' * @throws ' . $value . "\n", $throwTypes));
+        $throwsDoc = implode('', array_map(static fn (string $value): string => ' * @throws ' . $value . "\n", $throwTypes));
+
+        [$returnTypeNode, $returnDocType] = $this->buildReturnType($outputTypes);
+
+        $methodDoc = "/**\n"
+            . " * {@inheritdoc}\n"
+            . " *\n"
+            . ' * @return ' . $returnDocType . "\n"
+            . $throwsDoc
+            . ' */';
 
         return [new Stmt\ClassMethod('transformResponseBody', [
             'flags'      => Modifiers::PROTECTED,
@@ -189,20 +198,11 @@ trait GetTransformResponseBodyTrait
                 new Node\Param(new Expr\Variable('serializer'), null, new Name\FullyQualified(SerializerInterface::class)),
                 new Node\Param(new Expr\Variable('contentType'), new Expr\ConstFetch(new Name('null')), new Node\NullableType(new Name('string'))),
             ],
-            'returnType' => new Name('mixed'),
+            'returnType' => $returnTypeNode,
             'stmts'      => $outputStatements,
         ], [
-            'comments' => [new Doc(
-                <<<'EOD'
-                    /**
-                     * {@inheritdoc}
-                     *
-
-                    EOD
-                . $returnDoc . "\n"
-                . ' */'
-            ),
-            ], ]), $outputTypes, $throwTypes];
+            'comments' => [new Doc($methodDoc)],
+        ]), $outputTypes, $throwTypes];
     }
 
     /** @return array{0: array<string>, 1: array<string>, 2: array<Stmt>} */
@@ -380,14 +380,42 @@ trait GetTransformResponseBodyTrait
                 $class .= '[]';
             }
 
-            $returnType    = '\\' . $class;
-            $serializeStmt = new Expr\MethodCall(
+            $returnType = '\\' . $class;
+
+            // Symfony's serializer is type-unsafe (`deserialize()` returns `mixed`).
+            // We wrap the deserialize call in a runtime type guard so this method
+            // can advertise a precise union return type. The wrap costs almost
+            // nothing at runtime (one instanceof) but turns the entire endpoint
+            // surface from `mixed` into concrete model classes that PHPStan can
+            // prove. The element class (without `[]`) is used as the assertion
+            // class-string; the deserialize call still receives the full
+            // `\Foo\Bar[]` type so Symfony unwraps the array itself.
+            $elementClass = $isArray ? substr($class, 0, -2) : $class;
+
+            $deserializeCall = new Expr\MethodCall(
                 new Expr\Variable('serializer'),
                 'deserialize',
                 [
                     new Node\Arg(new Expr\Variable('body')),
                     new Node\Arg(new Scalar\String_($class)),
                     new Node\Arg(new Scalar\String_('json')),
+                ]
+            );
+
+            $typeValidatorClass = new Name\FullyQualified(
+                $context->getCurrentSchema()->getNamespace() . '\Runtime\Normalizer\TypeValidator'
+            );
+
+            $serializeStmt = new Expr\StaticCall(
+                $typeValidatorClass,
+                $isArray ? 'assertListOf' : 'assertInstanceOf',
+                [
+                    new Node\Arg($deserializeCall),
+                    new Node\Arg(new Expr\ClassConstFetch(
+                        new Name\FullyQualified(ltrim($elementClass, '\\')),
+                        'class'
+                    )),
+                    new Node\Arg(new Scalar\String_('response body')),
                 ]
             );
         } elseif ($schema instanceof Schema) {
@@ -419,5 +447,75 @@ trait GetTransformResponseBodyTrait
         }
 
         return [$returnType, $throwType, $contentStatement];
+    }
+
+    /**
+     * Build a PHP return type node and phpdoc `@return` string from the
+     * collected output type strings. Output types come in four shapes:
+     *
+     *   - 'null'        — endpoint may return null (default fallback)
+     *   - '\Foo\Bar'    — concrete model class
+     *   - '\Foo\Bar[]'  — list of model class
+     *   - 'mixed'       — untyped schema (json_decode escape hatch)
+     *
+     * The PHP-level type is a precise UnionType wherever possible. Arrays of
+     * objects degrade to PHP `array` (because PHP cannot express `list<T>` at
+     * the type level) but the phpdoc keeps the precise `list<\Foo\Bar>`
+     * projection so PHPStan still proves the element type. If `mixed` appears
+     * anywhere in the union we collapse the entire return to `mixed`, because
+     * PHP forbids `mixed` as a member of a union type.
+     *
+     * @param array<string> $outputTypes
+     *
+     * @return array{0: Node\Identifier|Name|Node\UnionType, 1: string} [phpReturnType, phpdocReturn]
+     */
+    private function buildReturnType(array $outputTypes): array
+    {
+        if (\in_array('mixed', $outputTypes, true)) {
+            return [new Node\Identifier('mixed'), 'mixed'];
+        }
+
+        /** @var list<Node\Identifier|Name\FullyQualified> $phpTypes */
+        $phpTypes = [];
+        /** @var list<string> $docTypes */
+        $docTypes = [];
+        $seenPhp  = [];
+
+        foreach (array_unique($outputTypes) as $type) {
+            if ('null' === $type) {
+                if (!isset($seenPhp['null'])) {
+                    $phpTypes[]      = new Node\Identifier('null');
+                    $seenPhp['null'] = true;
+                }
+                $docTypes[] = 'null';
+                continue;
+            }
+
+            if (str_ends_with($type, '[]')) {
+                if (!isset($seenPhp['array'])) {
+                    $phpTypes[]       = new Node\Identifier('array');
+                    $seenPhp['array'] = true;
+                }
+                $docTypes[] = 'list<' . substr($type, 0, -2) . '>';
+                continue;
+            }
+
+            $fqcn = ltrim($type, '\\');
+            if (!isset($seenPhp[$fqcn])) {
+                $phpTypes[]     = new Name\FullyQualified($fqcn);
+                $seenPhp[$fqcn] = true;
+            }
+            $docTypes[] = $type;
+        }
+
+        if (0 === \count($phpTypes)) {
+            return [new Node\Identifier('mixed'), 'mixed'];
+        }
+
+        if (1 === \count($phpTypes)) {
+            return [$phpTypes[0], implode('|', array_unique($docTypes))];
+        }
+
+        return [new Node\UnionType($phpTypes), implode('|', array_unique($docTypes))];
     }
 }

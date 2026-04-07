@@ -32,9 +32,9 @@ class BodyNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Model\Body::class;
     }
     /**
-     * @return object
+     * @return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Model\Body|Reference
      */
-    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): object
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Model\Body|Reference
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Model\Body();
         if (null === $data || false === \is_array($data)) {

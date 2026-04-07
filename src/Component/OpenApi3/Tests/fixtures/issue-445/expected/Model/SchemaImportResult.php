@@ -37,13 +37,13 @@ class SchemaImportResult
      *
      * @var list<string>|null
      */
-    protected ?array $skippedSchemaIds;
+    protected ?array $skippedSchemaIds = null;
     /**
      * Ids of the schemas that were successfully imported
      *
      * @var list<string>|null
      */
-    protected ?array $importedSchemaIds;
+    protected ?array $importedSchemaIds = null;
     /**
      * Number of schemas imported
      *

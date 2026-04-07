@@ -24,37 +24,37 @@ class FeedLinks extends \ArrayObject
      * Hypermedia Link with Type
      *
      */
-    protected mixed $timeline;
+    protected mixed $timeline = null;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $user;
+    protected mixed $user = null;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $securityAdvisories;
+    protected mixed $securityAdvisories = null;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUser;
+    protected mixed $currentUser = null;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUserPublic;
+    protected mixed $currentUserPublic = null;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUserActor;
+    protected mixed $currentUserActor = null;
     /**
      * Hypermedia Link with Type
      *
      */
-    protected mixed $currentUserOrganization;
+    protected mixed $currentUserOrganization = null;
     /**
      * @var list<LinkWithType>
      */

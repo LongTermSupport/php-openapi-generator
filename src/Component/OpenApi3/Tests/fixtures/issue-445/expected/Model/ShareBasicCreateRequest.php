@@ -22,7 +22,7 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
      *
      * @var list<UserEmail>|null
      */
-    protected ?array $recipientEmails;
+    protected ?array $recipientEmails = null;
     /**
      * System language used for share (mail and detail page). en or de.
      *

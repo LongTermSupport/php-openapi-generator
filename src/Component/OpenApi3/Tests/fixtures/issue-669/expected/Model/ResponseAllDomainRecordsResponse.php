@@ -24,7 +24,7 @@ class ResponseAllDomainRecordsResponse extends \ArrayObject
      * @var list<DomainRecord>
      */
     protected array $domainRecords;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<DomainRecord>

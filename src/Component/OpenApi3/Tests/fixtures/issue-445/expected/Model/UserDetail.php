@@ -24,17 +24,17 @@ class UserDetail extends \ArrayObject
      * User's Picturepark ID.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * User's first name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * User's last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
      *
@@ -50,38 +50,38 @@ class UserDetail extends \ArrayObject
      *
      * @var list<UserRoleAssignment>|null
      */
-    protected ?array $userRoles;
+    protected ?array $userRoles = null;
     /**
      * Comment saved for the user.
      *
      */
-    protected ?string $comment;
+    protected ?string $comment = null;
     /**
      * Preferred language, e.g. for correspondence.
      *
      */
-    protected ?string $languageCode;
+    protected ?string $languageCode = null;
     /**
      * User's address.
      *
      */
-    protected mixed $address;
+    protected mixed $address = null;
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
      *
      */
-    protected ?string $identityProviderId;
+    protected ?string $identityProviderId = null;
     /**
      * Owner tokens referencing the user.
      *
      * @var list<OwnerToken>|null
      */
-    protected ?array $ownerTokens;
+    protected ?array $ownerTokens = null;
     /**
      * Authorization state the user is currently in.
      *
      */
-    protected mixed $authorizationState;
+    protected mixed $authorizationState = null;
     /**
      * Locked users are unable to log in and use the system.
      *
@@ -91,7 +91,7 @@ class UserDetail extends \ArrayObject
      * Life cycle state the user is currently in.
      *
      */
-    protected mixed $lifeCycle;
+    protected mixed $lifeCycle = null;
     /**
      * The support user is a user created for Picturepark support personnel.
      *
@@ -111,7 +111,7 @@ class UserDetail extends \ArrayObject
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * User's Picturepark ID.
      *

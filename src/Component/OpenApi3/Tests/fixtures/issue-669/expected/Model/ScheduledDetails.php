@@ -29,7 +29,7 @@ class ScheduledDetails extends \ArrayObject
      * Optional data to be sent to function while triggering the function.
      *
      */
-    protected ?ScheduledDetailsBody $body;
+    protected ?ScheduledDetailsBody $body = null;
     /**
      * valid cron expression string which is required for SCHEDULED type triggers.
      *

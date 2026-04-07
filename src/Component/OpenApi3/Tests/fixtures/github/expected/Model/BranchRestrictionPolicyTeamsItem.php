@@ -26,12 +26,12 @@ class BranchRestrictionPolicyTeamsItem extends \ArrayObject
     protected string $htmlUrl;
     protected string $name;
     protected string $slug;
-    protected ?string $description;
+    protected ?string $description = null;
     protected string $privacy;
     protected string $permission;
     protected string $membersUrl;
     protected string $repositoriesUrl;
-    protected ?string $parent;
+    protected ?string $parent = null;
     public function getId(): int
     {
         return $this->id;

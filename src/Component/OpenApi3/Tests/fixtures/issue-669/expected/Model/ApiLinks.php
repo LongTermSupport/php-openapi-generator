@@ -24,7 +24,7 @@ class ApiLinks extends \ArrayObject
      * Information about how to reach other pages
      *
      */
-    protected mixed $pages;
+    protected mixed $pages = null;
     /**
      * Information about how to reach other pages
      *

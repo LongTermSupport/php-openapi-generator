@@ -20,15 +20,15 @@ class BookJsonldBookRead extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $context;
+    protected mixed $context = null;
     protected string $id;
     protected string $type;
-    protected ?string $id2;
+    protected ?string $id2 = null;
     /**
      * The ISBN of the book.
      *
      */
-    protected ?string $isbn;
+    protected ?string $isbn = null;
     /**
      * The title of the book.
      *

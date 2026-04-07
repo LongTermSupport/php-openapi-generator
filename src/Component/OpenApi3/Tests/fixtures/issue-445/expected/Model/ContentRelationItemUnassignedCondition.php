@@ -21,12 +21,12 @@ class ContentRelationItemUnassignedCondition extends BusinessRuleCondition
      * Content id that should be matched against.
      *
      */
-    protected ?string $contentId;
+    protected ?string $contentId = null;
     /**
      * JSON path to the field
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * Content id that should be matched against.
      *

@@ -24,7 +24,7 @@ class ApiEvaluationTestCase extends \ArrayObject
     protected \DateTime $createdAt;
     protected string $createdByUserEmail;
     protected string $createdByUserId;
-    protected mixed $dataset;
+    protected mixed $dataset = null;
     protected string $datasetName;
     protected string $datasetUuid;
     protected string $description;
@@ -34,7 +34,7 @@ class ApiEvaluationTestCase extends \ArrayObject
      */
     protected array $metrics;
     protected string $name;
-    protected mixed $starMetric;
+    protected mixed $starMetric = null;
     protected string $testCaseUuid;
     protected int $totalRuns;
     protected \DateTime $updatedAt;

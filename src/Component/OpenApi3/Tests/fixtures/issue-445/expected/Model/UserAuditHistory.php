@@ -18,7 +18,7 @@ class UserAuditHistory
         return array_key_exists($property, $this->initialized);
     }
     protected \DateTime $modificationDate;
-    protected ?string $modifiedByUser;
+    protected ?string $modifiedByUser = null;
     public function getModificationDate(): \DateTime
     {
         return $this->modificationDate;

@@ -22,7 +22,7 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
      * OverwriteFilter is set to true.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
      *
@@ -33,7 +33,7 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
      * OverwriteListItemCreateTemplate is set to true.
      *
      */
-    protected ?string $listItemCreateTemplate;
+    protected ?string $listItemCreateTemplate = null;
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
      *
@@ -44,7 +44,7 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
      * OverwriteMaximumItems is set to true.
      *
      */
-    protected ?int $maximumItems;
+    protected ?int $maximumItems = null;
     /**
      * Enable the overwriting of the MaximumItems property of the field specified by the Id property.
      *
@@ -55,7 +55,7 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
      * OverwriteMinimumItems is set to true.
      *
      */
-    protected ?int $minimumItems;
+    protected ?int $minimumItems = null;
     /**
      * Enable the overwriting of the MinimumItems property of the field specified by the Id property.
      *

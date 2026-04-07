@@ -22,7 +22,7 @@ class ChannelUpdateRequest
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Order in which the channels should be displayed.
      *
@@ -44,35 +44,35 @@ class ChannelUpdateRequest
      * Language specific names.
      *
      */
-    protected ?string $searchIndexId;
+    protected ?string $searchIndexId = null;
     /**
      * User roles granted access to the channel.
      *
      * @var list<string>|null
      */
-    protected ?array $grantedUserRoleIds;
+    protected ?array $grantedUserRoleIds = null;
     /**
      * An optional list of aggregators. These aggregations are added by default on each aggregation requests.
      *
      * @var list<AggregatorBase>|null
      */
-    protected ?array $aggregations;
+    protected ?array $aggregations = null;
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * An Optional list of fields. These fields extend the list of simple search fields outside the bounds of any schema field configuration.
      *
      * @var list<string>|null
      */
-    protected ?array $extendedSimpleSearchFields;
+    protected ?array $extendedSimpleSearchFields = null;
     /**
      * Display pattern to use for rendering details when 0 results are returned
      *
      */
-    protected mixed $missingResultsDisplayPatterns;
+    protected mixed $missingResultsDisplayPatterns = null;
     /**
      * Grants rights to all the users to view the channel.
      *

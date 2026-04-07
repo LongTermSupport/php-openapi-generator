@@ -21,7 +21,7 @@ class JoinByTransformation extends BusinessRuleTransformation
      * Separator to use.
      *
      */
-    protected ?string $separator;
+    protected ?string $separator = null;
     /**
      * Separator to use.
      *

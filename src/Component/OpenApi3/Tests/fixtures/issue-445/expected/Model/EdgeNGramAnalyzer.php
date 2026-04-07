@@ -21,12 +21,12 @@ class EdgeNGramAnalyzer extends AnalyzerBase
      * The analyzer type: EdgeNGram
      *
      */
-    protected mixed $type;
+    protected mixed $type = null;
     /**
      * The suffix for the analyzed field: edgengram.
      *
      */
-    protected ?string $fieldSuffix;
+    protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: EdgeNGram
      *

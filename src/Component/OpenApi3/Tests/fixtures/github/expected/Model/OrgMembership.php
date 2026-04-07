@@ -28,8 +28,8 @@ class OrgMembership extends \ArrayObject
      * Organization Simple
      *
      */
-    protected mixed $organization;
-    protected ?OrgMembershipUser $user;
+    protected mixed $organization = null;
+    protected ?OrgMembershipUser $user = null;
     protected OrgMembershipPermissions $permissions;
     public function getUrl(): string
     {

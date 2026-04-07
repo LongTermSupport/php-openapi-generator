@@ -31,7 +31,7 @@ class OrganizationSimple extends \ArrayObject
     protected string $membersUrl;
     protected string $publicMembersUrl;
     protected string $avatarUrl;
-    protected ?string $description;
+    protected ?string $description = null;
     public function getLogin(): string
     {
         return $this->login;

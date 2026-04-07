@@ -27,7 +27,7 @@ class ShortBranch extends \ArrayObject
      * Branch Protection
      *
      */
-    protected mixed $protection;
+    protected mixed $protection = null;
     protected string $protectionUrl;
     public function getName(): string
     {

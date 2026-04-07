@@ -24,7 +24,7 @@ class MetaOptionalTotal extends \ArrayObject
      * Information about the response itself.
      *
      */
-    protected mixed $meta;
+    protected mixed $meta = null;
     /**
      * Information about the response itself.
      *

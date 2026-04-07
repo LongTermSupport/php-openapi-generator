@@ -26,7 +26,7 @@ class PullRequestReview extends \ArrayObject
      */
     protected int $id;
     protected string $nodeId;
-    protected ?PullRequestReviewUser $user;
+    protected ?PullRequestReviewUser $user = null;
     /**
      * The text of the review.
      *

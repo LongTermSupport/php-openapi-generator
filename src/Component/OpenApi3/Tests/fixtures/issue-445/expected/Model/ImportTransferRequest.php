@@ -22,20 +22,20 @@ class ImportTransferRequest
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * The metadata to be assigned to the imported content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
      * by the LayerSchemaIds property.
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $metadata;
+    protected ?array $metadata = null;
     /**
      * An optional id list of content permission sets. Controls content accessibility outside of content ownership.
      *
      * @var list<string>|null
      */
-    protected ?array $contentPermissionSetIds;
+    protected ?array $contentPermissionSetIds = null;
     /**
      * An optional id list of schemas with type layer.
      *

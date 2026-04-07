@@ -29,7 +29,7 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
      * Body of the project
      *
      */
-    protected ?string $body;
+    protected ?string $body = null;
     /**
      * State of the project; either 'open' or 'closed'
      *

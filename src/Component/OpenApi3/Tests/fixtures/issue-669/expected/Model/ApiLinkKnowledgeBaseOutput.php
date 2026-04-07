@@ -24,7 +24,7 @@ class ApiLinkKnowledgeBaseOutput extends \ArrayObject
      * An Agent
      *
      */
-    protected mixed $agent;
+    protected mixed $agent = null;
     /**
      * An Agent
      *

@@ -22,7 +22,7 @@ class XmpMappingEntryDeleteManyRequest
      *
      * @var list<string>|null
      */
-    protected ?array $ids;
+    protected ?array $ids = null;
     /**
      * IDs to delete.
      *

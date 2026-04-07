@@ -21,7 +21,7 @@ class BusinessRuleScript extends BusinessRule
      * Script
      *
      */
-    protected ?string $script;
+    protected ?string $script = null;
     /**
      * Script
      *

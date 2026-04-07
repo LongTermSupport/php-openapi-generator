@@ -24,42 +24,42 @@ class PullRequestSimpleLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    protected mixed $comments;
+    protected mixed $comments = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $commits;
+    protected mixed $commits = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $statuses;
+    protected mixed $statuses = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $html;
+    protected mixed $html = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $issue;
+    protected mixed $issue = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $reviewComments;
+    protected mixed $reviewComments = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $reviewComment;
+    protected mixed $reviewComment = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $self;
+    protected mixed $self = null;
     /**
      * Hypermedia Link
      *

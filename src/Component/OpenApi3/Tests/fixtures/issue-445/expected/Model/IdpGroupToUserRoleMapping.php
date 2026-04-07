@@ -21,12 +21,12 @@ class IdpGroupToUserRoleMapping
      * Name of the group on external identity provider
      *
      */
-    protected ?string $group;
+    protected ?string $group = null;
     /**
      * User role ID as defined in CP
      *
      */
-    protected ?string $userRoleId;
+    protected ?string $userRoleId = null;
     /**
      * Name of the group on external identity provider
      *

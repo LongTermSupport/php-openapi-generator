@@ -35,15 +35,15 @@ class GistSimple extends \ArrayObject
     protected bool $public;
     protected string $createdAt;
     protected string $updatedAt;
-    protected ?string $description;
+    protected ?string $description = null;
     protected int $comments;
-    protected ?string $user;
+    protected ?string $user = null;
     protected string $commentsUrl;
     /**
      * Simple User
      *
      */
-    protected mixed $owner;
+    protected mixed $owner = null;
     protected bool $truncated;
     public function getUrl(): string
     {

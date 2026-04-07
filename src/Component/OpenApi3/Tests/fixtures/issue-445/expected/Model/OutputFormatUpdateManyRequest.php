@@ -22,7 +22,7 @@ class OutputFormatUpdateManyRequest
      *
      * @var list<OutputFormatUpdateManyRequestItem>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Output format items to be modified.
      *

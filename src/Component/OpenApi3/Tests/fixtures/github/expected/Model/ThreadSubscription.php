@@ -22,8 +22,8 @@ class ThreadSubscription extends \ArrayObject
     }
     protected bool $subscribed;
     protected bool $ignored;
-    protected ?string $reason;
-    protected ?\DateTime $createdAt;
+    protected ?string $reason = null;
+    protected ?\DateTime $createdAt = null;
     protected string $url;
     protected string $threadUrl;
     protected string $repositoryUrl;

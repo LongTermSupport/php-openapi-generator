@@ -21,12 +21,12 @@ class CommitSearchResultItemCommit extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected CommitSearchResultItemCommitAuthor $author;
-    protected ?CommitSearchResultItemCommitCommitter $committer;
+    protected ?CommitSearchResultItemCommitCommitter $committer = null;
     protected int $commentCount;
     protected string $message;
     protected CommitSearchResultItemCommitTree $tree;
     protected string $url;
-    protected mixed $verification;
+    protected mixed $verification = null;
     public function getAuthor(): CommitSearchResultItemCommitAuthor
     {
         return $this->author;

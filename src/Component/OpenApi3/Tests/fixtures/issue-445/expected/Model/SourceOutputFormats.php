@@ -21,27 +21,27 @@ class SourceOutputFormats
      * The source to be used for content of type Image
      *
      */
-    protected ?string $image;
+    protected ?string $image = null;
     /**
      * The source to be used for content of type Video
      *
      */
-    protected ?string $video;
+    protected ?string $video = null;
     /**
      * The source to be used for content of type Document
      *
      */
-    protected ?string $document;
+    protected ?string $document = null;
     /**
      * The source to be used for content of type Audio
      *
      */
-    protected ?string $audio;
+    protected ?string $audio = null;
     /**
      * The source to be used for content of type Vector
      *
      */
-    protected ?string $vector;
+    protected ?string $vector = null;
     /**
      * The source to be used for content of type Image
      *

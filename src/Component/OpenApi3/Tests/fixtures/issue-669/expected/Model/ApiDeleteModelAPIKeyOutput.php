@@ -24,7 +24,7 @@ class ApiDeleteModelAPIKeyOutput extends \ArrayObject
      * Model API Key Info
      *
      */
-    protected mixed $apiKeyInfo;
+    protected mixed $apiKeyInfo = null;
     /**
      * Model API Key Info
      *

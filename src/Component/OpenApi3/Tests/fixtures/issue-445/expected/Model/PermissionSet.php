@@ -32,7 +32,7 @@ class PermissionSet
      * Language specific permission set names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * The permission set ID.
      *

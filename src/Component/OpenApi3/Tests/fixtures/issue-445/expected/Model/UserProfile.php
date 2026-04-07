@@ -21,37 +21,37 @@ class UserProfile
      * ID of the user.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Email address.
      *
      */
-    protected ?string $emailAddress;
+    protected ?string $emailAddress = null;
     /**
      * First name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * Last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Language code.
      *
      */
-    protected ?string $languageCode;
+    protected ?string $languageCode = null;
     /**
      * Address.
      *
      */
-    protected mixed $address;
+    protected mixed $address = null;
     /**
      * Authorization state.
      *
      */
-    protected mixed $authorizationState;
+    protected mixed $authorizationState = null;
     /**
      * Indicates if the user is locked.
      *
@@ -62,13 +62,13 @@ class UserProfile
      *
      * @var list<string>|null
      */
-    protected ?array $userRights;
+    protected ?array $userRights = null;
     /**
      * A list of user role IDs assigned to the user.
      *
      * @var list<string>|null
      */
-    protected ?array $userRoleIds;
+    protected ?array $userRoleIds = null;
     /**
      * Indicates if the user has not accepted the latest terms of consent.
      *
@@ -79,7 +79,7 @@ class UserProfile
      *
      * @var list<string>|null
      */
-    protected ?array $systemUserRoles;
+    protected ?array $systemUserRoles = null;
     /**
      * Indicates if the user has the developer flag set.
      *

@@ -21,7 +21,7 @@ class BusinessRuleTracedAction
      * Trace reference ID of action
      *
      */
-    protected ?string $traceRefId;
+    protected ?string $traceRefId = null;
     /**
      * Indicates if the action modified the document
      *
@@ -31,7 +31,7 @@ class BusinessRuleTracedAction
      * Additional information provided by the trace
      *
      */
-    protected ?string $text;
+    protected ?string $text = null;
     /**
      * Trace reference ID of action
      *

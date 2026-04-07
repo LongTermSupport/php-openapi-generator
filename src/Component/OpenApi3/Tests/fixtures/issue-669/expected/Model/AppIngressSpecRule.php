@@ -24,18 +24,18 @@ class AppIngressSpecRule extends \ArrayObject
      * The match configuration for the rule.
      *
      */
-    protected mixed $match;
-    protected mixed $cors;
+    protected mixed $match = null;
+    protected mixed $cors = null;
     /**
      * The component to route to. Only one of `component` or `redirect` may be set.
      *
      */
-    protected mixed $component;
+    protected mixed $component = null;
     /**
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
      *
      */
-    protected mixed $redirect;
+    protected mixed $redirect = null;
     /**
      * The match configuration for the rule.
      *

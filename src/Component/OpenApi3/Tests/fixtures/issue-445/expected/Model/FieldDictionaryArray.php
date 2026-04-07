@@ -26,12 +26,12 @@ class FieldDictionaryArray extends FieldBase
      * The maximum number of items that can be stored.
      *
      */
-    protected ?int $maximumItems;
+    protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
      *
      */
-    protected ?int $minimumItems;
+    protected ?int $minimumItems = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
      *

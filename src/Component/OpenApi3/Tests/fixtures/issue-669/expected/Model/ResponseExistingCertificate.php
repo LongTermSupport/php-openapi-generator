@@ -20,7 +20,7 @@ class ResponseExistingCertificate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $certificate;
+    protected mixed $certificate = null;
     public function getCertificate(): mixed
     {
         return $this->certificate;

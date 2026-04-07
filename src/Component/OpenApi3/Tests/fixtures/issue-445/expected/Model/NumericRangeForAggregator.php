@@ -21,17 +21,17 @@ class NumericRangeForAggregator
      * Language specific range names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * The from value.
      *
      */
-    protected ?float $from;
+    protected ?float $from = null;
     /**
      * The to value.
      *
      */
-    protected ?float $to;
+    protected ?float $to = null;
     /**
      * Language specific range names.
      *

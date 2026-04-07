@@ -34,7 +34,7 @@ class AppPendingDeployment extends \ArrayObject
     protected array $functions;
     protected string $phase = 'UNKNOWN';
     protected \DateTime $phaseLastUpdatedAt;
-    protected mixed $progress;
+    protected mixed $progress = null;
     /**
      * @var list<AppsDeploymentService>
      */
@@ -43,7 +43,7 @@ class AppPendingDeployment extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec;
+    protected mixed $spec = null;
     /**
      * @var list<AppsDeploymentStaticSite>
      */

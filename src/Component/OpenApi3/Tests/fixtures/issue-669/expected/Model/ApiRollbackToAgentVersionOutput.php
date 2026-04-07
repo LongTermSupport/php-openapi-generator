@@ -24,7 +24,7 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
      * An alternative way to provide auth information. for internal use only.
      *
      */
-    protected mixed $auditHeader;
+    protected mixed $auditHeader = null;
     /**
      * Unique identifier
      *

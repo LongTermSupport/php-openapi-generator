@@ -34,12 +34,12 @@ class MetadataReference
      * ID of the source of the reference.
      *
      */
-    protected ?string $sourceMetadataItemId;
+    protected ?string $sourceMetadataItemId = null;
     /**
      * DocType of the source of the reference.
      *
      */
-    protected ?string $sourceDocType;
+    protected ?string $sourceDocType = null;
     /**
      * Target ID of reference.
      *

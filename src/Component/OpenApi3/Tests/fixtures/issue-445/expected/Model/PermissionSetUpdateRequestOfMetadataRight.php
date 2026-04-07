@@ -21,19 +21,19 @@ class PermissionSetUpdateRequestOfMetadataRight
      * Language specific permission set names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @var list<UserRoleRightsOfMetadataRight>|null
      */
-    protected ?array $userRolesRights;
+    protected ?array $userRolesRights = null;
     /**
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @var list<UserRoleRightsOfPermissionSetRight>|null
      */
-    protected ?array $userRolesPermissionSetRights;
+    protected ?array $userRolesPermissionSetRights = null;
     /**
      * Language specific permission set names.
      *

@@ -21,7 +21,7 @@ class XmpMappingEntryEditable
      * Direction of the mapping.
      *
      */
-    protected mixed $direction;
+    protected mixed $direction = null;
     /**
      * Priority of the mapping.
      *
@@ -46,7 +46,7 @@ class XmpMappingEntryEditable
      * Optional additional configuration for the mapping.
      *
      */
-    protected mixed $configuration;
+    protected mixed $configuration = null;
     /**
      * Direction of the mapping.
      *

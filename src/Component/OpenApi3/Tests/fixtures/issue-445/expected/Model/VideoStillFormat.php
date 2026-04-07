@@ -17,7 +17,7 @@ class VideoStillFormat extends FormatBase
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $extension;
+    protected ?string $extension = null;
     /**
      * Specifies the position from which to produce the image.
      *

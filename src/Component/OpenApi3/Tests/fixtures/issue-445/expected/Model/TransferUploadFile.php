@@ -26,12 +26,12 @@ class TransferUploadFile extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $identifier;
+    protected ?string $identifier = null;
     /**
      * Client generated identifier of the item.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * Target filename of file.
      *

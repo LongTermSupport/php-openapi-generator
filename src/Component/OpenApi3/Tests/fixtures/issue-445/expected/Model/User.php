@@ -21,17 +21,17 @@ class User
      * User's Picturepark ID.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * User's first name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * User's last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
      *

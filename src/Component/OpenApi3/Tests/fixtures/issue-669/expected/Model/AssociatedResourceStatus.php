@@ -24,7 +24,7 @@ class AssociatedResourceStatus extends \ArrayObject
      * An object containing information about a resource scheduled for deletion.
      *
      */
-    protected mixed $droplet;
+    protected mixed $droplet = null;
     /**
      * An object containing additional information about resource related to a Droplet requested to be destroyed.
      *

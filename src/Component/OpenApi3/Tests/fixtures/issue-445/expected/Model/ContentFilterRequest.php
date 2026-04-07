@@ -21,49 +21,49 @@ class ContentFilterRequest
      * Limits the simple search fields to the fields available in the specified channel.
      *
      */
-    protected ?string $channelId;
+    protected ?string $channelId = null;
     /**
      * Only searches the specified language values. Defaults to all metadata languages of the language configuration.
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * Type of search to be performed: against metadata, extracted fulltext from documents or both. Default to Metadata.
      *
      */
-    protected mixed $searchType;
+    protected mixed $searchType = null;
     /**
      * The collection id.
      *
      */
-    protected ?string $collectionId;
+    protected ?string $collectionId = null;
     /**
      * An optional search filter. Limits the content document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Limits the content document result set to that life cycle state. Defaults to ActiveOnly.
      *
      */
-    protected mixed $lifeCycleFilter;
+    protected mixed $lifeCycleFilter = null;
     /**
      * Filter the content document result set to those that have or not have broken references
      *
      */
-    protected mixed $brokenDependenciesFilter;
+    protected mixed $brokenDependenciesFilter = null;
     /**
      * Limits the content document result set to specific ContentRights the user has
      *
      * @var list<string>|null
      */
-    protected ?array $rightsFilter;
+    protected ?array $rightsFilter = null;
     /**
      * Limits the simple search fields to the fields available in the specified channel.
      *

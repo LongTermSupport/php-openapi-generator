@@ -24,7 +24,7 @@ class ResponseHistoryEvents extends \ArrayObject
      * @var list<History>
      */
     protected array $history;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<History>

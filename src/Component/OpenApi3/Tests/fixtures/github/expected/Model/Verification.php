@@ -22,8 +22,8 @@ class Verification extends \ArrayObject
     }
     protected bool $verified;
     protected string $reason;
-    protected ?string $payload;
-    protected ?string $signature;
+    protected ?string $payload = null;
+    protected ?string $signature = null;
     public function getVerified(): bool
     {
         return $this->verified;

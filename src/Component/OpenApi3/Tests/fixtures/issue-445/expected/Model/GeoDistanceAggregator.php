@@ -26,7 +26,7 @@ class GeoDistanceAggregator extends AggregatorBase
      * The point of origin to calculate the distance from (latitude/longitude).
      *
      */
-    protected mixed $location;
+    protected mixed $location = null;
     /**
      * A list of distance ranges.
      *

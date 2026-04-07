@@ -21,7 +21,7 @@ class EnqueueTaggingAction extends BusinessRuleAction
      * Options to use while tagging.
      *
      */
-    protected mixed $options;
+    protected mixed $options = null;
     /**
      * Options to use while tagging.
      *

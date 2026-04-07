@@ -21,7 +21,7 @@ class Content
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * The id of the schema with schema type content.
      *
@@ -31,13 +31,13 @@ class Content
      * The content type of this content. All except Virtual are binary files.
      *
      */
-    protected mixed $contentType;
+    protected mixed $contentType = null;
     /**
      * An optional id list of schemas with schema type layer.
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * Contains display values of the specified language, rendered according to the content schema's display pattern configuration.
      *
@@ -50,24 +50,24 @@ class Content
      *
      * @var list<string>|null
      */
-    protected ?array $brokenReferenceIds;
+    protected ?array $brokenReferenceIds = null;
     /**
      * All the ids of the broken indirect references (tagbox that has a property that reference a broken tagbox)
      *
      * @var list<string>|null
      */
-    protected ?array $brokenIndirectReferenceIds;
+    protected ?array $brokenIndirectReferenceIds = null;
     /**
      * All the target ids of the broken relations
      *
      * @var list<string>|null
      */
-    protected ?array $brokenRelationTargetIds;
+    protected ?array $brokenRelationTargetIds = null;
     /**
      * Life cycle of content
      *
      */
-    protected mixed $lifeCycle;
+    protected mixed $lifeCycle = null;
     /**
      * Audit information.
      *

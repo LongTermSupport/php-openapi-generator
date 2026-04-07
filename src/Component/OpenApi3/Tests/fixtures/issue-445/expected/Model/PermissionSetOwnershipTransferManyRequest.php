@@ -22,7 +22,7 @@ class PermissionSetOwnershipTransferManyRequest
      *
      * @var list<PermissionSetOwnershipTransferItem>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Permission set ownership transfer requests.
      *

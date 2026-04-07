@@ -20,7 +20,7 @@ class BookJsonldReviewRead extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $context;
+    protected mixed $context = null;
     protected string $id;
     protected string $type;
     /**

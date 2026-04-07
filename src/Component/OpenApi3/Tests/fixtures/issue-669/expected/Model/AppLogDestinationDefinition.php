@@ -25,22 +25,22 @@ class AppLogDestinationDefinition extends \ArrayObject
      * Papertrail configuration.
      *
      */
-    protected mixed $papertrail;
+    protected mixed $papertrail = null;
     /**
      * DataDog configuration.
      *
      */
-    protected mixed $datadog;
+    protected mixed $datadog = null;
     /**
      * Logtail configuration.
      *
      */
-    protected mixed $logtail;
+    protected mixed $logtail = null;
     /**
      * OpenSearch configuration.
      *
      */
-    protected mixed $openSearch;
+    protected mixed $openSearch = null;
     public function getName(): string
     {
         return $this->name;

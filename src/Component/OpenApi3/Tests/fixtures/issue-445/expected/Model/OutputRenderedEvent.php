@@ -17,9 +17,9 @@ class OutputRenderedEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $outputId;
-    protected ?string $contentId;
-    protected ?string $outputFormatId;
+    protected ?string $outputId = null;
+    protected ?string $contentId = null;
+    protected ?string $outputFormatId = null;
     protected string $renderingState;
     public function getOutputId(): ?string
     {

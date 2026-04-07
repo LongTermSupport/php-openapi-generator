@@ -20,23 +20,23 @@ class VectorMetadata extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $names;
-    protected mixed $descriptions;
-    protected ?string $fileExtension;
-    protected ?string $fileName;
-    protected ?string $filePath;
-    protected ?int $fileSizeInBytes;
-    protected ?string $sha1Hash;
-    protected mixed $xmpMetadata;
-    protected mixed $exifMetadata;
-    protected ?string $language;
-    protected ?string $author;
-    protected ?string $creator;
-    protected ?string $publisher;
-    protected ?string $company;
-    protected ?string $title;
+    protected mixed $names = null;
+    protected mixed $descriptions = null;
+    protected ?string $fileExtension = null;
+    protected ?string $fileName = null;
+    protected ?string $filePath = null;
+    protected ?int $fileSizeInBytes = null;
+    protected ?string $sha1Hash = null;
+    protected mixed $xmpMetadata = null;
+    protected mixed $exifMetadata = null;
+    protected ?string $language = null;
+    protected ?string $author = null;
+    protected ?string $creator = null;
+    protected ?string $publisher = null;
+    protected ?string $company = null;
+    protected ?string $title = null;
     protected int $pageCount;
-    protected mixed $epsInfo;
+    protected mixed $epsInfo = null;
     public function getNames(): mixed
     {
         return $this->names;

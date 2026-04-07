@@ -17,17 +17,17 @@ class AudioStream
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $bitRate;
-    protected ?string $bitRateMode;
-    protected ?string $channels;
-    protected ?string $channelPositions;
-    protected ?string $codec;
-    protected ?float $durationInSeconds;
-    protected ?string $format;
-    protected ?string $language;
-    protected ?int $resolution;
-    protected ?int $samplingRate;
-    protected ?int $streamSize;
+    protected ?string $bitRate = null;
+    protected ?string $bitRateMode = null;
+    protected ?string $channels = null;
+    protected ?string $channelPositions = null;
+    protected ?string $codec = null;
+    protected ?float $durationInSeconds = null;
+    protected ?string $format = null;
+    protected ?string $language = null;
+    protected ?int $resolution = null;
+    protected ?int $samplingRate = null;
+    protected ?int $streamSize = null;
     public function getBitRate(): ?string
     {
         return $this->bitRate;

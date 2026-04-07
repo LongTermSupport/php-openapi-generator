@@ -24,7 +24,7 @@ class ApiStartKnowledgeBaseIndexingJobOutput extends \ArrayObject
      * IndexingJob description
      *
      */
-    protected mixed $job;
+    protected mixed $job = null;
     /**
      * IndexingJob description
      *

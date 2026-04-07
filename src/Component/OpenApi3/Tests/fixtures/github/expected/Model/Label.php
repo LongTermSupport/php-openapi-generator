@@ -32,7 +32,7 @@ class Label extends \ArrayObject
      *
      */
     protected string $name;
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * 6-character hex code, without the leading #, identifying the color
      *

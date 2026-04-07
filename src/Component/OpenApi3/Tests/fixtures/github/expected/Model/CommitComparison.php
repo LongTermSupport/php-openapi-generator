@@ -29,12 +29,12 @@ class CommitComparison extends \ArrayObject
      * Commit
      *
      */
-    protected mixed $baseCommit;
+    protected mixed $baseCommit = null;
     /**
      * Commit
      *
      */
-    protected mixed $mergeBaseCommit;
+    protected mixed $mergeBaseCommit = null;
     protected string $status;
     protected int $aheadBy;
     protected int $behindBy;

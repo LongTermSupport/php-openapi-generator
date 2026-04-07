@@ -20,7 +20,7 @@ class ResponseSinks extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $sink;
+    protected mixed $sink = null;
     public function getSink(): mixed
     {
         return $this->sink;

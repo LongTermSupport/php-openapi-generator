@@ -24,14 +24,14 @@ class Team extends \ArrayObject
     protected string $nodeId;
     protected string $name;
     protected string $slug;
-    protected ?string $description;
+    protected ?string $description = null;
     protected string $privacy;
     protected string $permission;
     protected string $url;
     protected string $htmlUrl;
     protected string $membersUrl;
     protected string $repositoriesUrl;
-    protected ?TeamParent $parent;
+    protected ?TeamParent $parent = null;
     public function getId(): int
     {
         return $this->id;

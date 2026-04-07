@@ -24,7 +24,7 @@ class ResponseRepositoryManifests extends \ArrayObject
      * @var list<RepositoryManifest>
      */
     protected array $manifests;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<RepositoryManifest>

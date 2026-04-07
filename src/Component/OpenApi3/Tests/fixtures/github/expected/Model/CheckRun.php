@@ -31,27 +31,27 @@ class CheckRun extends \ArrayObject
      */
     protected string $headSha;
     protected string $nodeId;
-    protected ?string $externalId;
+    protected ?string $externalId = null;
     protected string $url;
-    protected ?string $htmlUrl;
-    protected ?string $detailsUrl;
+    protected ?string $htmlUrl = null;
+    protected ?string $detailsUrl = null;
     /**
      * The phase of the lifecycle that the check is currently in.
      *
      */
     protected string $status;
-    protected ?string $conclusion;
-    protected ?\DateTime $startedAt;
-    protected ?\DateTime $completedAt;
+    protected ?string $conclusion = null;
+    protected ?\DateTime $startedAt = null;
+    protected ?\DateTime $completedAt = null;
     protected CheckRunOutput $output;
     /**
      * The name of the check.
      *
      */
     protected string $name;
-    protected ?CheckRunCheckSuite $checkSuite;
-    protected ?CheckRunApp $app;
-    protected mixed $pullRequests;
+    protected ?CheckRunCheckSuite $checkSuite = null;
+    protected ?CheckRunApp $app = null;
+    protected mixed $pullRequests = null;
     /**
      * The id of the check.
      *

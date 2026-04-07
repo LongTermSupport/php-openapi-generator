@@ -22,7 +22,7 @@ class ContentPermissionSetCreateManyRequest
      *
      * @var list<ContentPermissionSetCreateRequest>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Content permission set update requests.
      *

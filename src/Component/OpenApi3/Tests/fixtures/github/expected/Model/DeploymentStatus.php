@@ -28,7 +28,7 @@ class DeploymentStatus extends \ArrayObject
      *
      */
     protected string $state;
-    protected ?DeploymentStatusCreator $creator;
+    protected ?DeploymentStatusCreator $creator = null;
     /**
      * A short description of the status.
      *
@@ -58,7 +58,7 @@ class DeploymentStatus extends \ArrayObject
      *
      */
     protected string $logUrl = '';
-    protected ?DeploymentStatusPerformedViaGithubApp $performedViaGithubApp;
+    protected ?DeploymentStatusPerformedViaGithubApp $performedViaGithubApp = null;
     public function getUrl(): string
     {
         return $this->url;

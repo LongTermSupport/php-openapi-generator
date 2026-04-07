@@ -24,7 +24,7 @@ class ResponseGetImageActionsResponse extends \ArrayObject
      * @var list<Action>
      */
     protected array $actions;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Action>

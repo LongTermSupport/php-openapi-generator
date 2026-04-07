@@ -39,9 +39,9 @@ class Artifact extends \ArrayObject
      *
      */
     protected bool $expired;
-    protected ?\DateTime $createdAt;
+    protected ?\DateTime $createdAt = null;
     protected string $expiresAt;
-    protected ?\DateTime $updatedAt;
+    protected ?\DateTime $updatedAt = null;
     public function getId(): int
     {
         return $this->id;

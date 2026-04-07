@@ -27,9 +27,9 @@ class ContentSubmodule extends \ArrayObject
     protected string $path;
     protected string $sha;
     protected string $url;
-    protected ?string $gitUrl;
-    protected ?string $htmlUrl;
-    protected ?string $downloadUrl;
+    protected ?string $gitUrl = null;
+    protected ?string $htmlUrl = null;
+    protected ?string $downloadUrl = null;
     protected ContentSubmoduleLinks $links;
     public function getType(): string
     {

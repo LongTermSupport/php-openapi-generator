@@ -26,7 +26,7 @@ class ResponseResourcesList extends \ArrayObject
      * @var list<Resource>
      */
     protected array $resources;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * The resources that are assigned to this project. Only resources that you are authorized to see will be returned.

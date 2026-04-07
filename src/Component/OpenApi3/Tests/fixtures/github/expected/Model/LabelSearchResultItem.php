@@ -26,7 +26,7 @@ class LabelSearchResultItem extends \ArrayObject
     protected string $name;
     protected string $color;
     protected bool $default;
-    protected ?string $description;
+    protected ?string $description = null;
     protected int $score;
     /**
      * @var list<mixed>

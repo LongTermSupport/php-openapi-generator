@@ -22,7 +22,7 @@ class PermissionSetDeleteManyRequest
      *
      * @var list<string>|null
      */
-    protected ?array $permissionSetIds;
+    protected ?array $permissionSetIds = null;
     /**
      * Permission set IDs.
      *

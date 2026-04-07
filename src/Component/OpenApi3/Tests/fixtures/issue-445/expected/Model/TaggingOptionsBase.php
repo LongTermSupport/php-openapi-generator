@@ -21,27 +21,27 @@ class TaggingOptionsBase
      * Override for the output format ID to tag.
      *
      */
-    protected ?string $tagOutputFormatId;
+    protected ?string $tagOutputFormatId = null;
     /**
      * Override for the cache to use.
      *
      */
-    protected ?string $keywordLookupCacheName;
+    protected ?string $keywordLookupCacheName = null;
     /**
      * Override for the layer to assign.
      *
      */
-    protected ?string $taggingLayerId;
+    protected ?string $taggingLayerId = null;
     /**
      * Override for the field id where found tags are stored.
      *
      */
-    protected ?string $foundTagsFieldId;
+    protected ?string $foundTagsFieldId = null;
     /**
      * Override for the field id where not found tags are stored.
      *
      */
-    protected ?string $missingKeywordsFieldId;
+    protected ?string $missingKeywordsFieldId = null;
     protected string $kind;
     /**
      * Override for the output format ID to tag.

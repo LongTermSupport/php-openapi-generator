@@ -17,7 +17,7 @@ class ReindexEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $indexId;
+    protected ?string $indexId = null;
     protected string $state;
     public function getIndexId(): ?string
     {

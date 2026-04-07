@@ -21,12 +21,12 @@ class UserEmail
      * First name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * Last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Email address
      *

@@ -25,7 +25,7 @@ class CheckSuitePreference extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     public function getPreferences(): CheckSuitePreferencePreferences
     {
         return $this->preferences;

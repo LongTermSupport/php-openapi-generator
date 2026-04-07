@@ -17,9 +17,9 @@ class BusinessProcessEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $businessProcessId;
-    protected mixed $lifeCycle;
-    protected ?string $state;
+    protected ?string $businessProcessId = null;
+    protected mixed $lifeCycle = null;
+    protected ?string $state = null;
     public function getBusinessProcessId(): ?string
     {
         return $this->businessProcessId;

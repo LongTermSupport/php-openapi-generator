@@ -22,23 +22,23 @@ class BusinessRuleTransformationGroup
      *
      * @var list<string>|null
      */
-    protected ?array $inputs;
+    protected ?array $inputs = null;
     /**
      * A list of transformations to apply.
      *
      * @var list<BusinessRuleTransformation>|null
      */
-    protected ?array $transformations;
+    protected ?array $transformations = null;
     /**
      * Variable name where the final result should be stored in.
      *
      */
-    protected ?string $storeIn;
+    protected ?string $storeIn = null;
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
      *
      */
-    protected ?string $traceRefId;
+    protected ?string $traceRefId = null;
     /**
      * The inputs of the transformation group.
      *

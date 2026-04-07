@@ -21,22 +21,22 @@ class VersionInfo
      * The manual file version of Picturepark.Contract.dll.
      *
      */
-    protected ?string $fileVersion;
+    protected ?string $fileVersion = null;
     /**
      * The GitVersionTask generated file product version of Picturepark.Configuration.dll.
      *
      */
-    protected ?string $fileProductVersion;
+    protected ?string $fileProductVersion = null;
     /**
      * The current contract version stored in CustomerDoc / EnvironmentDoc.
      *
      */
-    protected ?string $contractVersion;
+    protected ?string $contractVersion = null;
     /**
      * The bamboo release version. Only provided on bamboo deployments.
      *
      */
-    protected ?string $release;
+    protected ?string $release = null;
     /**
      * The manual file version of Picturepark.Contract.dll.
      *

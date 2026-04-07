@@ -24,7 +24,7 @@ class ResponseAllDropletBackups extends \ArrayObject
      * @var list<DropletSnapshot>
      */
     protected array $backups;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<DropletSnapshot>

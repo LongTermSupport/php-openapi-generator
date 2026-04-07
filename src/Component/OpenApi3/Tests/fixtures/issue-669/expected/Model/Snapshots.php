@@ -66,7 +66,7 @@ class Snapshots extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * The unique identifier for the snapshot.
      *

@@ -91,7 +91,7 @@ class ApiEvaluationRun extends \ArrayObject
      *
      */
     protected string $runName;
-    protected mixed $starMetricResult;
+    protected mixed $starMetricResult = null;
     /**
      * Run start time.
      *

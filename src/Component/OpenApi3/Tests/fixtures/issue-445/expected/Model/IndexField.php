@@ -17,30 +17,30 @@ class IndexField
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The field id.
      *
      */
-    protected ?string $fieldId;
+    protected ?string $fieldId = null;
     /**
      * The field's type name.
      *
      */
-    protected ?string $type;
+    protected ?string $type = null;
     /**
      * Contains all index field name variants of the field.
      *
      * @var array<string, string>|null
      */
-    protected ?array $indexFields;
+    protected ?array $indexFields = null;
     /**
      * Contains all simple search field name variants of the field.
      * The amount of simple search fields can be equal or less to the amount of IndexFields, but never more.
      *
      * @var array<string, string>|null
      */
-    protected ?array $simpleSearchFields;
+    protected ?array $simpleSearchFields = null;
     /**
      * Contains the fields boost value.
      *
@@ -55,12 +55,12 @@ class IndexField
      * The path of the Nested document this property belongs to. If set to null, it means that there is no Nested document
      *
      */
-    protected ?string $nestedPath;
+    protected ?string $nestedPath = null;
     /**
      * Path to the sorting information in the DataSortValuesField sort index.
      *
      */
-    protected ?string $sortField;
+    protected ?string $sortField = null;
     public function getId(): ?string
     {
         return $this->id;

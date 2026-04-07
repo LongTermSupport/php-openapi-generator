@@ -32,7 +32,7 @@ class ObjectAggregationResult
      * Search string used to query the data
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
      *
@@ -43,7 +43,7 @@ class ObjectAggregationResult
      *
      * @var list<QueryDebugInformation>|null
      */
-    protected ?array $queryDebugInformation;
+    protected ?array $queryDebugInformation = null;
     /**
      * How long did the search and aggregation took.
      *

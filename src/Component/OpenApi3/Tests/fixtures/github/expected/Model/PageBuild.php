@@ -23,7 +23,7 @@ class PageBuild extends \ArrayObject
     protected string $url;
     protected string $status;
     protected PageBuildError $error;
-    protected ?PageBuildPusher $pusher;
+    protected ?PageBuildPusher $pusher = null;
     protected string $commit;
     protected int $duration;
     protected \DateTime $createdAt;

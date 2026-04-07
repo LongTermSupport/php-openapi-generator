@@ -21,13 +21,13 @@ class BusinessRuleTracedRule
      * Configuration of the rule as it was running. Enriched with trace ref IDs.
      *
      */
-    protected mixed $configuration;
+    protected mixed $configuration = null;
     /**
      * Evaluations performed for this rule.
      *
      * @var list<BusinessRuleTracedEvaluation>|null
      */
-    protected ?array $evaluations;
+    protected ?array $evaluations = null;
     /**
      * Configuration of the rule as it was running. Enriched with trace ref IDs.
      *

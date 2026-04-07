@@ -20,14 +20,14 @@ class SimpleCommitStatus extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $description;
+    protected ?string $description = null;
     protected int $id;
     protected string $nodeId;
     protected string $state;
     protected string $context;
     protected string $targetUrl;
-    protected ?bool $required;
-    protected ?string $avatarUrl;
+    protected ?bool $required = null;
+    protected ?string $avatarUrl = null;
     protected string $url;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;

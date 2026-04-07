@@ -27,14 +27,14 @@ class TeamProject extends \ArrayObject
     protected int $id;
     protected string $nodeId;
     protected string $name;
-    protected ?string $body;
+    protected ?string $body = null;
     protected int $number;
     protected string $state;
     /**
      * Simple User
      *
      */
-    protected mixed $creator;
+    protected mixed $creator = null;
     protected string $createdAt;
     protected string $updatedAt;
     protected string $organizationPermission;

@@ -32,18 +32,18 @@ class XmpMappingEntrySearchRequest
      *
      * @var list<AggregationFilter>|null
      */
-    protected ?array $aggregationFilters;
+    protected ?array $aggregationFilters = null;
     /**
      * List of aggregators that defines how the items should be aggregated.
      *
      * @var list<AggregatorBase>|null
      */
-    protected ?array $aggregators;
+    protected ?array $aggregators = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Limits the document count of the result set.
      *
@@ -53,24 +53,24 @@ class XmpMappingEntrySearchRequest
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * Fields and respective directions requested to sort the search results. Sorting on a not indexed field will throw an exception.
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! Severely affects performance.
      *

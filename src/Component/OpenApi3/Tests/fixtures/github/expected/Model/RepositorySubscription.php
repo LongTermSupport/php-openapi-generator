@@ -30,7 +30,7 @@ class RepositorySubscription extends \ArrayObject
      *
      */
     protected bool $ignored;
-    protected ?string $reason;
+    protected ?string $reason = null;
     protected \DateTime $createdAt;
     protected string $url;
     protected string $repositoryUrl;

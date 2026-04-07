@@ -21,7 +21,7 @@ class TakeArrayValueTransformation extends BusinessRuleTransformation
      * Index of the item.
      *
      */
-    protected ?string $index;
+    protected ?string $index = null;
     /**
      * Index of the item.
      *

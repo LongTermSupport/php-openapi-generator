@@ -31,7 +31,7 @@ class ResizeAction
      * Specifies additional resize behaviour.
      *
      */
-    protected mixed $resizeMode;
+    protected mixed $resizeMode = null;
     /**
      * Target width for the output.
      *

@@ -21,19 +21,19 @@ class PermissionUserRoleRightsOfPermissionSetRight
      * The user role ID.
      *
      */
-    protected ?string $userRoleId;
+    protected ?string $userRoleId = null;
     /**
      * Language specific user role names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * List of rights: they can be content, metadata or permission set rights, depending on the type defined on the class
      * (ContentRight, MetadataRight, PermissionSetRight).
      *
      * @var list<string>|null
      */
-    protected ?array $rights;
+    protected ?array $rights = null;
     /**
      * The user role ID.
      *

@@ -264,7 +264,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      * PGBouncer connection pooling settings
      *
      */
-    protected mixed $pgbouncer;
+    protected mixed $pgbouncer = null;
     /**
      * The maximum amount of memory, in MB, used by a query operation (such as a sort or hash table) before writing to temporary disk files. Default is 1MB + 0.075% of total RAM (up to 32MB).
      *
@@ -274,7 +274,7 @@ class PostgresAdvancedConfig extends \ArrayObject
      * TimescaleDB extension configuration values
      *
      */
-    protected mixed $timescaledb;
+    protected mixed $timescaledb = null;
     /**
      * Synchronous replication type. Note that the service plan also needs to support synchronous replication.
      *

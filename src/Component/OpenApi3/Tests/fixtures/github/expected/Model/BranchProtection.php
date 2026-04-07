@@ -26,17 +26,17 @@ class BranchProtection extends \ArrayObject
      * Protected Branch Admin Enforced
      *
      */
-    protected mixed $enforceAdmins;
+    protected mixed $enforceAdmins = null;
     /**
      * Protected Branch Pull Request Review
      *
      */
-    protected mixed $requiredPullRequestReviews;
+    protected mixed $requiredPullRequestReviews = null;
     /**
      * Branch Restriction Policy
      *
      */
-    protected mixed $restrictions;
+    protected mixed $restrictions = null;
     protected BranchProtectionRequiredLinearHistory $requiredLinearHistory;
     protected BranchProtectionAllowForcePushes $allowForcePushes;
     protected BranchProtectionAllowDeletions $allowDeletions;

@@ -21,10 +21,10 @@ class CommunityProfile extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected int $healthPercentage;
-    protected ?string $description;
-    protected ?string $documentation;
+    protected ?string $description = null;
+    protected ?string $documentation = null;
     protected CommunityProfileFiles $files;
-    protected ?\DateTime $updatedAt;
+    protected ?\DateTime $updatedAt = null;
     public function getHealthPercentage(): int
     {
         return $this->healthPercentage;

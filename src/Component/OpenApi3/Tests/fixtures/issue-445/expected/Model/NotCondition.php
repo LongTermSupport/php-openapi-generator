@@ -21,7 +21,7 @@ class NotCondition extends BusinessRuleCondition
      * Inner condition.
      *
      */
-    protected mixed $condition;
+    protected mixed $condition = null;
     /**
      * Inner condition.
      *

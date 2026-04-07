@@ -22,7 +22,7 @@ class OutputFormatDeleteManyRequest
      *
      * @var list<string>|null
      */
-    protected ?array $ids;
+    protected ?array $ids = null;
     /**
      * List of IDs of output formats to remove.
      *

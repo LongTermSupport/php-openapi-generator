@@ -23,12 +23,12 @@ class TransferFile
      * @deprecated
      *
      */
-    protected ?string $identifier;
+    protected ?string $identifier = null;
     /**
      * Client generated identifier of the item.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *

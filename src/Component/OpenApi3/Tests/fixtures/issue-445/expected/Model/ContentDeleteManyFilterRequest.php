@@ -21,7 +21,7 @@ class ContentDeleteManyFilterRequest
      * Filters the contents that need to be deleted.
      *
      */
-    protected mixed $filterRequest;
+    protected mixed $filterRequest = null;
     /**
      * A value indicating whether references to the content items should be removed.
      *

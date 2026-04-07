@@ -21,19 +21,19 @@ class PermissionSetCreateRequestOfMetadataRight
      * Language specific permission set names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @var list<UserRoleRightsOfMetadataRight>|null
      */
-    protected ?array $userRolesRights;
+    protected ?array $userRolesRights = null;
     /**
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @var list<UserRoleRightsOfPermissionSetRight>|null
      */
-    protected ?array $userRolesPermissionSetRights;
+    protected ?array $userRolesPermissionSetRights = null;
     /**
      * When true this permission set will derogate all other configured permission sets on Content Items or List Items.
      *
@@ -45,7 +45,7 @@ class PermissionSetCreateRequestOfMetadataRight
      * It is not persisted anywhere and it is ignored in single operations.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * Language specific permission set names.
      *

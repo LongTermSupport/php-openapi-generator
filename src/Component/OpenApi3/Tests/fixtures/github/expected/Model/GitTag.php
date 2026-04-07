@@ -39,7 +39,7 @@ class GitTag extends \ArrayObject
     protected string $message;
     protected GitTagTagger $tagger;
     protected GitTagObject $object;
-    protected mixed $verification;
+    protected mixed $verification = null;
     public function getNodeId(): string
     {
         return $this->nodeId;

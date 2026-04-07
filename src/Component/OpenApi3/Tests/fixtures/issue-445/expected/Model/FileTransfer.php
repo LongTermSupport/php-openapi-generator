@@ -33,7 +33,7 @@ class FileTransfer
      * @deprecated
      *
      */
-    protected ?string $identifier;
+    protected ?string $identifier = null;
     /**
      * Client provided identifier.
      *
@@ -48,12 +48,12 @@ class FileTransfer
      * State of file transfer.
      *
      */
-    protected mixed $state;
+    protected mixed $state = null;
     /**
      * ID of Content created for file.
      *
      */
-    protected ?string $contentId;
+    protected ?string $contentId = null;
     /**
      * ID of file transfer.
      *

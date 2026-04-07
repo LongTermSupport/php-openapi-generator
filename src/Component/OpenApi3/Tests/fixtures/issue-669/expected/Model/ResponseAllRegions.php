@@ -24,7 +24,7 @@ class ResponseAllRegions extends \ArrayObject
      * @var list<Region>
      */
     protected array $regions;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Region>

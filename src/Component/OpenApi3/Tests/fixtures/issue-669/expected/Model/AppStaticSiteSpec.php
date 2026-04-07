@@ -25,11 +25,11 @@ class AppStaticSiteSpec extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $git;
-    protected mixed $github;
-    protected mixed $gitlab;
-    protected mixed $bitbucket;
-    protected mixed $image;
+    protected mixed $git = null;
+    protected mixed $github = null;
+    protected mixed $gitlab = null;
+    protected mixed $bitbucket = null;
+    protected mixed $image = null;
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
      *

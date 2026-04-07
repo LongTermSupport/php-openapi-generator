@@ -20,11 +20,11 @@ class ScimError extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $message;
-    protected ?string $documentationUrl;
-    protected ?string $detail;
+    protected ?string $message = null;
+    protected ?string $documentationUrl = null;
+    protected ?string $detail = null;
     protected int $status;
-    protected ?string $scimType;
+    protected ?string $scimType = null;
     /**
      * @var list<string>
      */

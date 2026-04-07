@@ -21,7 +21,7 @@ class FieldDate extends FieldBase
      * The date format structure.
      *
      */
-    protected ?string $format;
+    protected ?string $format = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
      *

@@ -25,7 +25,7 @@ class ProtectedBranch extends \ArrayObject
      * Status Check Policy
      *
      */
-    protected mixed $requiredStatusChecks;
+    protected mixed $requiredStatusChecks = null;
     protected ProtectedBranchRequiredPullRequestReviews $requiredPullRequestReviews;
     protected ProtectedBranchRequiredSignatures $requiredSignatures;
     protected ProtectedBranchEnforceAdmins $enforceAdmins;
@@ -36,7 +36,7 @@ class ProtectedBranch extends \ArrayObject
      * Branch Restriction Policy
      *
      */
-    protected mixed $restrictions;
+    protected mixed $restrictions = null;
     public function getUrl(): string
     {
         return $this->url;

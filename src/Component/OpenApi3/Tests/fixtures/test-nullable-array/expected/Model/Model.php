@@ -20,11 +20,11 @@ class Model extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $foo;
+    protected ?string $foo = null;
     /**
      * @var list<mixed>|null
      */
-    protected ?array $bar;
+    protected ?array $bar = null;
     public function getFoo(): ?string
     {
         return $this->foo;

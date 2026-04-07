@@ -17,20 +17,20 @@ class VideoStream
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $bitRate;
-    protected ?string $codec;
-    protected ?string $displayAspectRatio;
+    protected ?string $bitRate = null;
+    protected ?string $codec = null;
+    protected ?string $displayAspectRatio = null;
     protected float $durationInSeconds;
-    protected ?string $format;
-    protected ?int $frameCount;
-    protected ?float $frameRate;
-    protected ?int $height;
-    protected ?string $language;
-    protected ?float $pixelAspectRatio;
-    protected ?int $resolution;
-    protected ?int $streamSize;
-    protected ?int $width;
-    protected ?float $rotation;
+    protected ?string $format = null;
+    protected ?int $frameCount = null;
+    protected ?float $frameRate = null;
+    protected ?int $height = null;
+    protected ?string $language = null;
+    protected ?float $pixelAspectRatio = null;
+    protected ?int $resolution = null;
+    protected ?int $streamSize = null;
+    protected ?int $width = null;
+    protected ?float $rotation = null;
     public function getBitRate(): ?string
     {
         return $this->bitRate;

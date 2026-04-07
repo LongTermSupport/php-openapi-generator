@@ -35,14 +35,14 @@ class Project extends \ArrayObject
      * Body of the project
      *
      */
-    protected ?string $body;
+    protected ?string $body = null;
     protected int $number;
     /**
      * State of the project; either 'open' or 'closed'
      *
      */
     protected string $state;
-    protected ?ProjectCreator $creator;
+    protected ?ProjectCreator $creator = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     /**

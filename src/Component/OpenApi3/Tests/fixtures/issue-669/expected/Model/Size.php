@@ -81,7 +81,7 @@ class Size extends \ArrayObject
      * An object containing information about the GPU capabilities of Droplets created with this size.
      *
      */
-    protected mixed $gpuInfo;
+    protected mixed $gpuInfo = null;
     /**
      * A human-readable string that is used to uniquely identify each size.
      *

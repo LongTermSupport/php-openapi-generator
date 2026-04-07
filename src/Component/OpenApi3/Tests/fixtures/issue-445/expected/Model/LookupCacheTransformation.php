@@ -21,7 +21,7 @@ class LookupCacheTransformation extends BusinessRuleTransformation
      * Name of the cache to use.
      *
      */
-    protected ?string $namedCache;
+    protected ?string $namedCache = null;
     /**
      * Name of the cache to use.
      *

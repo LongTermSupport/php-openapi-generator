@@ -21,23 +21,23 @@ class BusinessRuleTracedTransformationGroup
      * Trace reference ID of transformation group.
      *
      */
-    protected ?string $traceRefId;
+    protected ?string $traceRefId = null;
     /**
      * Serialized JSON of input for group
      *
      */
-    protected ?string $input;
+    protected ?string $input = null;
     /**
      * Serialized JSON of output for group
      *
      */
-    protected ?string $output;
+    protected ?string $output = null;
     /**
      * Detailed traces for each step performed by transformations in group.
      *
      * @var list<BusinessRuleTracedTransformation>|null
      */
-    protected ?array $transformations;
+    protected ?array $transformations = null;
     /**
      * Trace reference ID of transformation group.
      *

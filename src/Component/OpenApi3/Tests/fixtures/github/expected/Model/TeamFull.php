@@ -38,7 +38,7 @@ class TeamFull extends \ArrayObject
      */
     protected string $name;
     protected string $slug;
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * The level of privacy this team should have
      *
@@ -51,7 +51,7 @@ class TeamFull extends \ArrayObject
     protected string $permission;
     protected string $membersUrl;
     protected string $repositoriesUrl;
-    protected ?TeamFullParent $parent;
+    protected ?TeamFullParent $parent = null;
     protected int $membersCount;
     protected int $reposCount;
     protected \DateTime $createdAt;
@@ -60,7 +60,7 @@ class TeamFull extends \ArrayObject
      * GitHub account for managing multiple users, teams, and repositories
      *
      */
-    protected mixed $organization;
+    protected mixed $organization = null;
     /**
      * Distinguished Name (DN) that team maps to within LDAP environment
      *

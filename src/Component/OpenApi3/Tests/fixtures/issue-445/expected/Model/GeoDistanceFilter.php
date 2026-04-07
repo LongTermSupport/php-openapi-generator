@@ -27,7 +27,7 @@ class GeoDistanceFilter extends FilterBase
      * The point of origin to calculate the distance from (latitude/longitude).
      *
      */
-    protected mixed $location;
+    protected mixed $location = null;
     /**
      * The distance in meters from the point of origin.
      *

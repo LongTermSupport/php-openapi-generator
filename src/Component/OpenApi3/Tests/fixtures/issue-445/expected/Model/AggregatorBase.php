@@ -26,18 +26,18 @@ class AggregatorBase
      * Language specific field names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * An optional aggregator list for nested aggregations.
      *
      * @var list<AggregatorBase>|null
      */
-    protected ?array $aggregators;
+    protected ?array $aggregators = null;
     /**
      * An optional filter to limit the data set the aggregation is operation on.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     protected string $kind;
     /**
      * The slug name of the aggregation. It must be unique per aggregation request.

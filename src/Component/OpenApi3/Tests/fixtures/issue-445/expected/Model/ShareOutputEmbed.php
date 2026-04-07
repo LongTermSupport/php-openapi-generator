@@ -21,7 +21,7 @@ class ShareOutputEmbed extends ShareOutputBase
      * Share token for the shared output.
      *
      */
-    protected ?string $token;
+    protected ?string $token = null;
     /**
      * Share token for the shared output.
      *

@@ -22,8 +22,8 @@ class LicenseContentLicense extends \ArrayObject
     }
     protected string $key;
     protected string $name;
-    protected ?string $url;
-    protected ?string $spdxId;
+    protected ?string $url = null;
+    protected ?string $spdxId = null;
     protected string $nodeId;
     protected string $htmlUrl;
     public function getKey(): string

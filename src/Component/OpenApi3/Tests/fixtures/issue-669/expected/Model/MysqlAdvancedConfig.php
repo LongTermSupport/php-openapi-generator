@@ -197,7 +197,7 @@ class MysqlAdvancedConfig extends \ArrayObject
      * MySQL Incremental Backup configuration settings
      *
      */
-    protected mixed $mysqlIncrementalBackup;
+    protected mixed $mysqlIncrementalBackup = null;
     /**
      * The hour of day (in UTC) when backup for the service starts. New backup only starts if previous backup has already completed.
      *

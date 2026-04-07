@@ -47,8 +47,8 @@ class DatabaseUser extends \ArrayObject
      *
      */
     protected string $accessKey;
-    protected mixed $mysqlSettings;
-    protected mixed $settings;
+    protected mixed $mysqlSettings = null;
+    protected mixed $settings = null;
     /**
      * The name of a database user.
      *

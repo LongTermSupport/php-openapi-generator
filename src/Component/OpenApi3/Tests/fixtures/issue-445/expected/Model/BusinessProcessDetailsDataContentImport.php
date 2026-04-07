@@ -22,7 +22,7 @@ class BusinessProcessDetailsDataContentImport extends BusinessProcessDetailsData
      *
      * @var list<ContentImportResult>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Items that were imported.
      *

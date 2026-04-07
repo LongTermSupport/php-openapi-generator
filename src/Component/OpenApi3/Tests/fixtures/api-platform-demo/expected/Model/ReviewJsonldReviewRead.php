@@ -22,8 +22,8 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     protected string $id;
     protected string $type;
-    protected mixed $context;
-    protected ?string $id2;
+    protected mixed $context = null;
+    protected ?string $id2 = null;
     /**
      * The actual body of the review.
      *
@@ -40,18 +40,18 @@ class ReviewJsonldReviewRead extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $letter;
-    protected mixed $book;
+    protected ?string $letter = null;
+    protected mixed $book = null;
     /**
      * The author of the review.
      *
      */
-    protected ?string $author;
+    protected ?string $author = null;
     /**
      * Publication date of the review.
      *
      */
-    protected ?\DateTime $publicationDate;
+    protected ?\DateTime $publicationDate = null;
     public function getId(): string
     {
         return $this->id;

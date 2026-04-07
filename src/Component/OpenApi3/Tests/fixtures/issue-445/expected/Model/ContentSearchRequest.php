@@ -24,18 +24,18 @@ class ContentSearchRequest extends \ArrayObject
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
      * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
@@ -46,25 +46,25 @@ class ContentSearchRequest extends \ArrayObject
      *
      * @var list<AggregationFilter>|null
      */
-    protected ?array $aggregationFilters;
+    protected ?array $aggregationFilters = null;
     /**
      * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
      * For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
      *
      */
-    protected ?string $channelId;
+    protected ?string $channelId = null;
     /**
      * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
      * If not specified, all metadata languages defined in the system are used.
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * Limit the search to the contents belonging to the specified collection.
      *
      */
-    protected ?string $collectionId;
+    protected ?string $collectionId = null;
     /**
      * Limits the aggregation to the contents that have the specified life cycle state. Defaults to ActiveOnly.
      *
@@ -85,13 +85,13 @@ class ContentSearchRequest extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $displayPatternIds;
+    protected ?array $displayPatternIds = null;
     /**
      * Sorts the search results. Sorting on a field not marked as Sortable in the Content schema will throw an exception.
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Limits the document count of the result set.
      *
@@ -101,20 +101,20 @@ class ContentSearchRequest extends \ArrayObject
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Limits the contents to the ones the user has the specified ContentRights.
      *
      * @var list<string>|null
      */
-    protected ?array $rightsFilter;
+    protected ?array $rightsFilter = null;
     /**
      * Returns the aggregated document counts to the ones the user has the specified ContentRights.
      * Produces the rightsAggregationCounts on the ContentSearchResult. View will be ignored as the totalResults already gives this information.
      *
      * @var list<string>|null
      */
-    protected ?array $rightsAggregations;
+    protected ?array $rightsAggregations = null;
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the ContentSearchResult.
      * Warning! It severely affects performance.
@@ -126,7 +126,7 @@ class ContentSearchRequest extends \ArrayObject
      *
      * @var list<AggregatorBase>|null
      */
-    protected ?array $aggregators;
+    protected ?array $aggregators = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *

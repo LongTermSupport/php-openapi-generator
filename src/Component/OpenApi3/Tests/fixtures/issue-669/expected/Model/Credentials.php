@@ -43,7 +43,7 @@ class Credentials extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $clientCertificateData;
+    protected ?string $clientCertificateData = null;
     /**
      * A base64 encoding of bytes representing the x509 client key
      * data for access the cluster. This is only returned for clusters without
@@ -57,7 +57,7 @@ class Credentials extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $clientKeyData;
+    protected ?string $clientKeyData = null;
     /**
      * An access token used to authenticate with the cluster. This is only returned for clusters with support for token-based authentication.
      *

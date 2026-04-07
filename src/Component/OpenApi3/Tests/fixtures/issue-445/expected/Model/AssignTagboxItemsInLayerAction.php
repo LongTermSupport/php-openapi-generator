@@ -21,12 +21,12 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
      * Named cache to use for lookup, should be of type SchemaTagboxFilterLookupNamedCacheConfiguration
      *
      */
-    protected ?string $namedCache;
+    protected ?string $namedCache = null;
     /**
      * List of refIds of the items that should be assigned.
      *
      */
-    protected mixed $refIds;
+    protected mixed $refIds = null;
     /**
      * Indicates where the assignment should be additive to the already assigned tags
      * or if existing tags should be replaced.

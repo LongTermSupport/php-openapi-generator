@@ -21,7 +21,7 @@ class SchemaUpdateResult
      * The details of the updated schema.
      *
      */
-    protected mixed $schema;
+    protected mixed $schema = null;
     /**
      * The details of the updated schema.
      *

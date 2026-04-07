@@ -17,7 +17,7 @@ class CdnPurgeJobByUri extends CdnPurgeJobBase
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $uri;
+    protected ?string $uri = null;
     public function getUri(): ?string
     {
         return $this->uri;

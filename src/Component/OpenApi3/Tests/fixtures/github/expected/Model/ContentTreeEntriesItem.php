@@ -27,9 +27,9 @@ class ContentTreeEntriesItem extends \ArrayObject
     protected string $content;
     protected string $sha;
     protected string $url;
-    protected ?string $gitUrl;
-    protected ?string $htmlUrl;
-    protected ?string $downloadUrl;
+    protected ?string $gitUrl = null;
+    protected ?string $htmlUrl = null;
+    protected ?string $downloadUrl = null;
     protected ContentTreeEntriesItemLinks $links;
     public function getType(): string
     {

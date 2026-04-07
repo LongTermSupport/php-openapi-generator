@@ -20,9 +20,9 @@ class CheckRunOutput extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $title;
-    protected ?string $summary;
-    protected ?string $text;
+    protected ?string $title = null;
+    protected ?string $summary = null;
+    protected ?string $text = null;
     protected int $annotationsCount;
     protected string $annotationsUrl;
     public function getTitle(): ?string

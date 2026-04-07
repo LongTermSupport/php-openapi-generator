@@ -24,7 +24,7 @@ class XmpMappingEntry extends \ArrayObject
      * Direction of the mapping.
      *
      */
-    protected mixed $direction;
+    protected mixed $direction = null;
     /**
      * Priority of the mapping.
      *
@@ -49,7 +49,7 @@ class XmpMappingEntry extends \ArrayObject
      * Optional additional configuration for the mapping.
      *
      */
-    protected mixed $configuration;
+    protected mixed $configuration = null;
     protected string $id;
     /**
      * Direction of the mapping.

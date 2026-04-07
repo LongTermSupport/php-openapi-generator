@@ -26,7 +26,7 @@ class Share
      * Name of share.
      *
      */
-    protected ?string $name;
+    protected ?string $name = null;
     /**
      * List of shared content IDs.
      *
@@ -37,17 +37,17 @@ class Share
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Date when share expires and cannot be accessed anymore.
      *
      */
-    protected ?\DateTime $expirationDate;
+    protected ?\DateTime $expirationDate = null;
     /**
      * Type of share.
      *
      */
-    protected mixed $shareType;
+    protected mixed $shareType = null;
     /**
      * Share is readonly if the current user is not the creator but only the recipient.
      *

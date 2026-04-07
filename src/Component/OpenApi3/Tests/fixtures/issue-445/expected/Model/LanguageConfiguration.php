@@ -22,18 +22,18 @@ class LanguageConfiguration
      *
      * @var list<string>|null
      */
-    protected ?array $systemLanguages;
+    protected ?array $systemLanguages = null;
     /**
      * A list of languages serving as metadata languages.
      *
      * @var list<string>|null
      */
-    protected ?array $metadataLanguages;
+    protected ?array $metadataLanguages = null;
     /**
      * The default language. Not the be confused with the metadata fallback language x-default.
      *
      */
-    protected ?string $defaultLanguage;
+    protected ?string $defaultLanguage = null;
     /**
      * A list of languages serving as system languages.
      *

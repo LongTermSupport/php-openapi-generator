@@ -37,7 +37,7 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $letter;
+    protected ?string $letter = null;
     /**
      * The item that is being reviewed/rated.
      *
@@ -47,12 +47,12 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
      * The author of the review.
      *
      */
-    protected ?string $author;
+    protected ?string $author = null;
     /**
      * Publication date of the review.
      *
      */
-    protected ?\DateTime $publicationDate;
+    protected ?\DateTime $publicationDate = null;
     public function getLinks(): ReviewJsonhalReviewWriteLinks
     {
         return $this->links;

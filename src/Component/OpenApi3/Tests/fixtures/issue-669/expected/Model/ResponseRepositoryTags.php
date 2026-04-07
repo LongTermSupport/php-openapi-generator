@@ -24,7 +24,7 @@ class ResponseRepositoryTags extends \ArrayObject
      * @var list<RepositoryTag>
      */
     protected array $tags;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<RepositoryTag>

@@ -18,11 +18,11 @@ class LiveStream
         return array_key_exists($property, $this->initialized);
     }
     protected string $id;
-    protected ?string $document;
-    protected ?string $scopeType;
+    protected ?string $document = null;
+    protected ?string $scopeType = null;
     protected \DateTime $timestamp;
-    protected mixed $traceJob;
-    protected mixed $audit;
+    protected mixed $traceJob = null;
+    protected mixed $audit = null;
     public function getId(): string
     {
         return $this->id;

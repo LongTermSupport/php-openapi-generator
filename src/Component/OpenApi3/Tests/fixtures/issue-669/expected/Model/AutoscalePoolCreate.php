@@ -31,7 +31,7 @@ class AutoscalePoolCreate extends \ArrayObject
      * @var array<string, mixed>
      */
     protected array $config;
-    protected mixed $dropletTemplate;
+    protected mixed $dropletTemplate = null;
     /**
      * The human-readable name of the autoscale pool. This field cannot be updated
      *

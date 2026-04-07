@@ -30,7 +30,7 @@ class ErrorWithRootCauses extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $messages;
+    protected ?array $messages = null;
     /**
      * A list of underlying causes for the error, including details to help  resolve it when possible.
      *

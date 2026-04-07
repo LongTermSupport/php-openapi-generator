@@ -20,7 +20,7 @@ class ContentDetailViewEvent extends ApplicationEvent
     /**
      * @var list<string>|null
      */
-    protected ?array $contentIds;
+    protected ?array $contentIds = null;
     /**
      * @return list<string>|null
      */

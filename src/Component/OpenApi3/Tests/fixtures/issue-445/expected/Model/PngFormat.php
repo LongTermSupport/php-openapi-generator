@@ -21,22 +21,22 @@ class PngFormat extends FormatBase
      * Color profile to use. Colorspace is derived from the chosen profile.
      *
      */
-    protected mixed $colorProfile;
+    protected mixed $colorProfile = null;
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
      *
      */
-    protected mixed $colorTransformationIntent;
+    protected mixed $colorTransformationIntent = null;
     /**
      * Horizontal resolution in dpi (dots per inch)
      *
      */
-    protected ?float $horizontalResolution;
+    protected ?float $horizontalResolution = null;
     /**
      * Vertical resolution in dpi (dots per inch)
      *
      */
-    protected ?float $verticalResolution;
+    protected ?float $verticalResolution = null;
     /**
      * Copy clipping paths from input.
      *
@@ -46,14 +46,14 @@ class PngFormat extends FormatBase
      * Allows resizing of the image.
      *
      */
-    protected mixed $resizeAction;
+    protected mixed $resizeAction = null;
     /**
      * A collection of actions to be applied during rendering.
      *
      * @var list<ImageActionBase>|null
      */
-    protected ?array $actions;
-    protected ?string $extension;
+    protected ?array $actions = null;
+    protected ?string $extension = null;
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
      *

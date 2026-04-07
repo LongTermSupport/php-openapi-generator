@@ -21,17 +21,17 @@ class MailRecipient
      * User information including email.
      *
      */
-    protected mixed $userEmail;
+    protected mixed $userEmail = null;
     /**
      * Recipient specific token.
      *
      */
-    protected ?string $token;
+    protected ?string $token = null;
     /**
      * URL to access the share for this recipient.
      *
      */
-    protected ?string $url;
+    protected ?string $url = null;
     /**
      * User information including email.
      *

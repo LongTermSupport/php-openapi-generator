@@ -22,7 +22,7 @@ class SchemaPermissionSetCreateManyRequest
      *
      * @var list<SchemaPermissionSetCreateRequest>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Schema permission sets create requests.
      *

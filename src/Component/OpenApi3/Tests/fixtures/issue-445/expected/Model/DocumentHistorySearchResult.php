@@ -40,7 +40,7 @@ class DocumentHistorySearchResult extends \ArrayObject
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * The total number of matching documents.
      *

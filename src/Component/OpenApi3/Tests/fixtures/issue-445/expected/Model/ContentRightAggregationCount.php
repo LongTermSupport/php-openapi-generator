@@ -21,7 +21,7 @@ class ContentRightAggregationCount
      * ContentRight.
      *
      */
-    protected mixed $contentRight;
+    protected mixed $contentRight = null;
     /**
      * Found document count.
      *

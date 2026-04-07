@@ -17,10 +17,10 @@ class DocumentChange
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $documentName;
-    protected ?string $documentId;
+    protected ?string $documentName = null;
+    protected ?string $documentId = null;
     protected int $version;
-    protected ?string $action;
+    protected ?string $action = null;
     protected \DateTime $timeStamp;
     public function getDocumentName(): ?string
     {

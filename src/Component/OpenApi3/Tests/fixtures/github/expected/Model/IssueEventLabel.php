@@ -20,8 +20,8 @@ class IssueEventLabel extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $name;
-    protected ?string $color;
+    protected ?string $name = null;
+    protected ?string $color = null;
     public function getName(): ?string
     {
         return $this->name;

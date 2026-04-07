@@ -21,13 +21,13 @@ class TransferSearchRequest
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * Limits the document count of the result set.
      *
@@ -37,12 +37,12 @@ class TransferSearchRequest
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the TransferSearchResult.
      * Warning! It severely affects performance.

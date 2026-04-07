@@ -24,7 +24,7 @@ class ResponseAllPartnerAttachments extends \ArrayObject
      * @var list<PartnerAttachment>
      */
     protected array $partnerAttachments;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<PartnerAttachment>

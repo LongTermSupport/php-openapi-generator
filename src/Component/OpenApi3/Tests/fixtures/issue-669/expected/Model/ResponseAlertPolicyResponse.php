@@ -20,7 +20,7 @@ class ResponseAlertPolicyResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $policy;
+    protected mixed $policy = null;
     public function getPolicy(): mixed
     {
         return $this->policy;

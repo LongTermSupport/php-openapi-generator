@@ -20,8 +20,8 @@ class ContentFileLinks extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $git;
-    protected ?string $html;
+    protected ?string $git = null;
+    protected ?string $html = null;
     protected string $self;
     public function getGit(): ?string
     {

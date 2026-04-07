@@ -21,17 +21,17 @@ class AssignValueAction extends BusinessRuleAction
      * Path to the object the value should be inserted in.
      *
      */
-    protected ?string $path;
+    protected ?string $path = null;
     /**
      * ID of the field, the value should be inserted in.
      *
      */
-    protected ?string $fieldId;
+    protected ?string $fieldId = null;
     /**
      * Value to assign.
      *
      */
-    protected mixed $value;
+    protected mixed $value = null;
     /**
      * Indicates whether existing values should be replaced.
      * Note: for multi fieldsets and relations, this setting controls, if the value is added

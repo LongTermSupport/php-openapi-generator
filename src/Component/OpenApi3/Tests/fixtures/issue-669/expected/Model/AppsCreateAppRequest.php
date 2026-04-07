@@ -24,7 +24,7 @@ class AppsCreateAppRequest extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec;
+    protected mixed $spec = null;
     /**
      * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
      * <br><br>Requires `project:update` scope.

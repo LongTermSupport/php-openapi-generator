@@ -21,7 +21,7 @@ class Parchment extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The title of the book.
      *

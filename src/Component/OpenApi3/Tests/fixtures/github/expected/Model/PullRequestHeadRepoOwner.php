@@ -25,7 +25,7 @@ class PullRequestHeadRepoOwner extends \ArrayObject
     protected string $followersUrl;
     protected string $followingUrl;
     protected string $gistsUrl;
-    protected ?string $gravatarId;
+    protected ?string $gravatarId = null;
     protected string $htmlUrl;
     protected int $id;
     protected string $nodeId;

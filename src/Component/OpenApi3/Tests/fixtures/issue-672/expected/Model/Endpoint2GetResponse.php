@@ -20,8 +20,8 @@ class Endpoint2GetResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $field2;
-    protected mixed $field2Bis;
+    protected mixed $field2 = null;
+    protected mixed $field2Bis = null;
     public function getField2(): mixed
     {
         return $this->field2;

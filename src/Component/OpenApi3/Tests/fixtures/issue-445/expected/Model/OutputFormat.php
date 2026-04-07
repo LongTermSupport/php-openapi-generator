@@ -24,17 +24,17 @@ class OutputFormat extends \ArrayObject
      * Which output format should be used as a source of data.
      *
      */
-    protected mixed $sourceOutputFormats;
+    protected mixed $sourceOutputFormats = null;
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
      *
      */
-    protected mixed $format;
+    protected mixed $format = null;
     /**
      * Language specific names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * How long should the dynamic outputs created from this format be kept.
      *
@@ -45,7 +45,7 @@ class OutputFormat extends \ArrayObject
      * If set, the customer's default language is required.
      *
      */
-    protected mixed $downloadFileNamePatterns;
+    protected mixed $downloadFileNamePatterns = null;
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
      *
@@ -60,7 +60,7 @@ class OutputFormat extends \ArrayObject
      * Output format ID.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Marks if this is a system output format.
      *

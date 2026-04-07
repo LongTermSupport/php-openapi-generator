@@ -20,7 +20,7 @@ class FileCommit extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?FileCommitContent $content;
+    protected ?FileCommitContent $content = null;
     protected FileCommitCommit $commit;
     public function getContent(): ?FileCommitContent
     {

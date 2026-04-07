@@ -31,13 +31,13 @@ class IssueSearchResultItemPerformedViaGithubApp extends \ArrayObject
      */
     protected string $slug;
     protected string $nodeId;
-    protected ?IntegrationOwner $owner;
+    protected ?IntegrationOwner $owner = null;
     /**
      * The name of the GitHub app
      *
      */
     protected string $name;
-    protected ?string $description;
+    protected ?string $description = null;
     protected string $externalUrl;
     protected string $htmlUrl;
     protected \DateTime $createdAt;

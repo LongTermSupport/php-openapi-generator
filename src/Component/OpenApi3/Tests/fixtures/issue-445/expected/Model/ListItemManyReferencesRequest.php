@@ -27,7 +27,7 @@ class ListItemManyReferencesRequest
      * Limits the number of the returned metadata references by setting paging information.
      *
      */
-    protected mixed $references;
+    protected mixed $references = null;
     /**
      * The IDs of the list items whose references need to be retrieved.
      *

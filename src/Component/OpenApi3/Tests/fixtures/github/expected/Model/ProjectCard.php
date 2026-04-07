@@ -27,8 +27,8 @@ class ProjectCard extends \ArrayObject
      */
     protected int $id;
     protected string $nodeId;
-    protected ?string $note;
-    protected ?ProjectCardCreator $creator;
+    protected ?string $note = null;
+    protected ?ProjectCardCreator $creator = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     /**

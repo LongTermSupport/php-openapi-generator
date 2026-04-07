@@ -31,17 +31,17 @@ class ShareDetail
      * Description of share entered by user.
      *
      */
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * Creator of share.
      *
      */
-    protected mixed $creator;
+    protected mixed $creator = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Detailed information about contents in the share.
      *
@@ -53,17 +53,17 @@ class ShareDetail
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * Detail of share.
      *
      */
-    protected mixed $data;
+    protected mixed $data = null;
     /**
      * Date when share expires and cannot be accessed anymore.
      *
      */
-    protected ?\DateTime $expirationDate;
+    protected ?\DateTime $expirationDate = null;
     /**
      * Info if share is already expired.
      *
@@ -73,18 +73,18 @@ class ShareDetail
      * Defined access for contents in share.
      *
      */
-    protected mixed $outputAccess;
+    protected mixed $outputAccess = null;
     /**
      * Type of share.
      *
      */
-    protected mixed $shareType;
+    protected mixed $shareType = null;
     /**
      * Schema detail of the content and the layers.
      *
      * @var list<SchemaDetail>|null
      */
-    protected ?array $schemas;
+    protected ?array $schemas = null;
     /**
      * Share ID.
      *

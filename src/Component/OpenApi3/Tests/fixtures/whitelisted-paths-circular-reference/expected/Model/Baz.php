@@ -21,7 +21,7 @@ class Baz extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $label;
-    protected mixed $sub;
+    protected mixed $sub = null;
     public function getLabel(): string
     {
         return $this->label;

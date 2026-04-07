@@ -22,7 +22,7 @@ class XmpMappingEntryCreateManyRequest
      *
      * @var list<XmpMappingEntryCreateRequest>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Mappings to create.
      *

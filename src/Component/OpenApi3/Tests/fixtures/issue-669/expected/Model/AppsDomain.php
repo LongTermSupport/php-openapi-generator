@@ -22,8 +22,8 @@ class AppsDomain extends \ArrayObject
     }
     protected string $id;
     protected string $phase = 'UNKNOWN';
-    protected mixed $progress;
-    protected mixed $spec;
+    protected mixed $progress = null;
+    protected mixed $spec = null;
     /**
      * @var list<AppDomainValidation>
      */

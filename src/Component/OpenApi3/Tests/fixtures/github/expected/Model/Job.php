@@ -38,7 +38,7 @@ class Job extends \ArrayObject
      */
     protected string $headSha;
     protected string $url;
-    protected ?string $htmlUrl;
+    protected ?string $htmlUrl = null;
     /**
      * The phase of the lifecycle that the job is currently in.
      *
@@ -48,7 +48,7 @@ class Job extends \ArrayObject
      * The outcome of the job.
      *
      */
-    protected ?string $conclusion;
+    protected ?string $conclusion = null;
     /**
      * The time that the job started, in ISO 8601 format.
      *
@@ -58,7 +58,7 @@ class Job extends \ArrayObject
      * The time that the job finished, in ISO 8601 format.
      *
      */
-    protected ?\DateTime $completedAt;
+    protected ?\DateTime $completedAt = null;
     /**
      * The name of the job.
      *

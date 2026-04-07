@@ -40,7 +40,7 @@ class AuthenticationToken extends \ArrayObject
      * @var list<Repository>
      */
     protected array $repositories;
-    protected ?string $singleFile;
+    protected ?string $singleFile = null;
     /**
      * Describe whether all repositories have been selected or there's a selection involved
      *

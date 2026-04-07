@@ -21,7 +21,7 @@ class NamedCacheConfigurationBase
      * Name of named cache.
      *
      */
-    protected ?string $name;
+    protected ?string $name = null;
     /**
      * Indicates if the lookup should be case sensitive.
      *

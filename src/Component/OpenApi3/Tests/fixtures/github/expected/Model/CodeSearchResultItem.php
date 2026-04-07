@@ -30,10 +30,10 @@ class CodeSearchResultItem extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     protected int $score;
     protected int $fileSize;
-    protected ?string $language;
+    protected ?string $language = null;
     protected \DateTime $lastModifiedAt;
     /**
      * @var list<string>

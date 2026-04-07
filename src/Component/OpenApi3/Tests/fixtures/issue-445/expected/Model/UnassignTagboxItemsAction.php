@@ -21,17 +21,17 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
      * Path to the object the tagbox is contained in.
      *
      */
-    protected ?string $path;
+    protected ?string $path = null;
     /**
      * ID of the tagbox field.
      *
      */
-    protected ?string $fieldId;
+    protected ?string $fieldId = null;
     /**
      * List of refIds of the items that should be removed.
      *
      */
-    protected mixed $refIds;
+    protected mixed $refIds = null;
     /**
      * Path to the object the tagbox is contained in.
      *

@@ -44,7 +44,7 @@ class ResponseReservedIpv6ActionAction extends \ArrayObject
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
      *
      */
-    protected ?\DateTime $completedAt;
+    protected ?\DateTime $completedAt = null;
     /**
      * The ID of the resource that the action is being taken on.
      *
@@ -55,7 +55,7 @@ class ResponseReservedIpv6ActionAction extends \ArrayObject
      *
      */
     protected string $resourceType;
-    protected mixed $region;
+    protected mixed $region = null;
     /**
      * The slug identifier for the region the resource is located in.
      *

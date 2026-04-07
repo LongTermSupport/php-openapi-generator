@@ -20,10 +20,10 @@ class ContentDownloadEvent extends ApplicationEvent
     /**
      * @var list<DownloadTrackingInfo>|null
      */
-    protected ?array $downloadInfos;
+    protected ?array $downloadInfos = null;
     protected int $fileSize;
-    protected ?string $shareToken;
-    protected ?string $range;
+    protected ?string $shareToken = null;
+    protected ?string $range = null;
     /**
      * @return list<DownloadTrackingInfo>|null
      */

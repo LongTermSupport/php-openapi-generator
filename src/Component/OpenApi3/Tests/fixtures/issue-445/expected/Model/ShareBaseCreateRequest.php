@@ -26,12 +26,12 @@ class ShareBaseCreateRequest
      * Optional description of share.
      *
      */
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * Optional date when share expires and cannot be accessed anymore.
      *
      */
-    protected ?\DateTime $expirationDate;
+    protected ?\DateTime $expirationDate = null;
     /**
      * List of contents including outputs to share.
      *
@@ -43,12 +43,12 @@ class ShareBaseCreateRequest
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * Access for content outputs in share.
      *
      */
-    protected mixed $outputAccess;
+    protected mixed $outputAccess = null;
     protected string $kind;
     /**
      * Name of share.

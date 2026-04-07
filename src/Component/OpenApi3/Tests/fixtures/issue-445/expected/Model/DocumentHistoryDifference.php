@@ -17,7 +17,7 @@ class DocumentHistoryDifference
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $documentId;
+    protected ?string $documentId = null;
     protected int $oldDocumentVersion;
     protected int $newDocumentVersion;
     /**
@@ -26,7 +26,7 @@ class DocumentHistoryDifference
      * or jsondiffpatch (https://github.com/benjamine/jsondiffpatch) to process this.
      *
      */
-    protected mixed $patch;
+    protected mixed $patch = null;
     public function getDocumentId(): ?string
     {
         return $this->documentId;

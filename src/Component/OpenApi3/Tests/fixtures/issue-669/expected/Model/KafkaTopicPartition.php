@@ -43,7 +43,7 @@ class KafkaTopicPartition extends \ArrayObject
     /**
      * @var list<KafkaTopicPartitionConsumerGroupsItem>|null
      */
-    protected ?array $consumerGroups;
+    protected ?array $consumerGroups = null;
     /**
      * Size of the topic partition in bytes.
      *

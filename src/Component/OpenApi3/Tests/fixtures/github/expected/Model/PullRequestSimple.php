@@ -36,32 +36,32 @@ class PullRequestSimple extends \ArrayObject
     protected string $state;
     protected bool $locked;
     protected string $title;
-    protected ?PullRequestSimpleUser $user;
-    protected ?string $body;
+    protected ?PullRequestSimpleUser $user = null;
+    protected ?string $body = null;
     /**
      * @var list<PullRequestSimpleLabelsItem>
      */
     protected array $labels;
-    protected ?PullRequestSimpleMilestone $milestone;
-    protected ?string $activeLockReason;
+    protected ?PullRequestSimpleMilestone $milestone = null;
+    protected ?string $activeLockReason = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?\DateTime $closedAt;
-    protected ?\DateTime $mergedAt;
-    protected ?string $mergeCommitSha;
-    protected ?PullRequestSimpleAssignee $assignee;
+    protected ?\DateTime $closedAt = null;
+    protected ?\DateTime $mergedAt = null;
+    protected ?string $mergeCommitSha = null;
+    protected ?PullRequestSimpleAssignee $assignee = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $assignees;
+    protected ?array $assignees = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $requestedReviewers;
+    protected ?array $requestedReviewers = null;
     /**
      * @var list<TeamSimple>|null
      */
-    protected ?array $requestedTeams;
+    protected ?array $requestedTeams = null;
     protected PullRequestSimpleHead $head;
     protected PullRequestSimpleBase $base;
     protected PullRequestSimpleLinks $links;

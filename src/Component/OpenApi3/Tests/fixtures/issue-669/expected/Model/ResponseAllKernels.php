@@ -24,7 +24,7 @@ class ResponseAllKernels extends \ArrayObject
      * @var list<Kernel>
      */
     protected array $kernels;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Kernel>

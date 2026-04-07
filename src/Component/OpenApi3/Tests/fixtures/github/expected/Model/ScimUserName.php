@@ -20,8 +20,8 @@ class ScimUserName extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $givenName;
-    protected ?string $familyName;
+    protected ?string $givenName = null;
+    protected ?string $familyName = null;
     public function getGivenName(): ?string
     {
         return $this->givenName;

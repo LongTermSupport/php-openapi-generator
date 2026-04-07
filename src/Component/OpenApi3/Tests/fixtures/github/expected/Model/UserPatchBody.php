@@ -39,7 +39,7 @@ class UserPatchBody extends \ArrayObject
      * The new Twitter username of the user.
      *
      */
-    protected ?string $twitterUsername;
+    protected ?string $twitterUsername = null;
     /**
      * The new company of the user.
      *

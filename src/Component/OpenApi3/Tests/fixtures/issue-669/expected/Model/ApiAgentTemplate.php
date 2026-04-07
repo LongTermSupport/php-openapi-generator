@@ -66,7 +66,7 @@ class ApiAgentTemplate extends \ArrayObject
      * Description of a Model
      *
      */
-    protected mixed $model;
+    protected mixed $model = null;
     /**
      * Name of the agent template
      *

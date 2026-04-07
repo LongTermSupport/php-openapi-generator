@@ -21,13 +21,13 @@ class UserRoleRightsOfPermissionSetRight
      * The user role id.
      *
      */
-    protected ?string $userRoleId;
+    protected ?string $userRoleId = null;
     /**
      * A permission container which can hold content, metadata or permission set rights.
      *
      * @var list<string>|null
      */
-    protected ?array $rights;
+    protected ?array $rights = null;
     /**
      * The user role id.
      *

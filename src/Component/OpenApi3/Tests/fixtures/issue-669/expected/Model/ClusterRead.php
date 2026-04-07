@@ -81,7 +81,7 @@ class ClusterRead extends \ArrayObject
      * An object specifying the maintenance window policy for the Kubernetes cluster.
      *
      */
-    protected mixed $maintenancePolicy;
+    protected mixed $maintenancePolicy = null;
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
      *
@@ -122,42 +122,42 @@ class ClusterRead extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $registries;
+    protected ?array $registries = null;
     /**
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
      *
      */
-    protected mixed $controlPlaneFirewall;
+    protected mixed $controlPlaneFirewall = null;
     /**
      * An object specifying custom cluster autoscaler configuration.
      *
      */
-    protected mixed $clusterAutoscalerConfiguration;
+    protected mixed $clusterAutoscalerConfiguration = null;
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
      *
      */
-    protected mixed $routingAgent;
+    protected mixed $routingAgent = null;
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
      *
      */
-    protected mixed $amdGpuDevicePlugin;
+    protected mixed $amdGpuDevicePlugin = null;
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
      *
      */
-    protected mixed $amdGpuDeviceMetricsExporterPlugin;
+    protected mixed $amdGpuDeviceMetricsExporterPlugin = null;
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
      *
      */
-    protected mixed $nvidiaGpuDevicePlugin;
+    protected mixed $nvidiaGpuDevicePlugin = null;
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
      *
      */
-    protected mixed $rdmaSharedDevPlugin;
+    protected mixed $rdmaSharedDevPlugin = null;
     /**
      * A unique ID that can be used to identify and reference a Kubernetes cluster.
      *

@@ -21,7 +21,7 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
      * IDs of the permission sets to assign.
      *
      */
-    protected mixed $permissionSetIds;
+    protected mixed $permissionSetIds = null;
     /**
      * Indicates whether the already assigned permissions should be replaced or merged.
      *

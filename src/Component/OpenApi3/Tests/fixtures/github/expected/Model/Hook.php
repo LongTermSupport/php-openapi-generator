@@ -48,7 +48,7 @@ class Hook extends \ArrayObject
     protected string $url;
     protected string $testUrl;
     protected string $pingUrl;
-    protected mixed $lastResponse;
+    protected mixed $lastResponse = null;
     public function getType(): string
     {
         return $this->type;

@@ -21,17 +21,17 @@ class ReviewComment extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $url;
-    protected ?int $pullRequestReviewId;
+    protected ?int $pullRequestReviewId = null;
     protected int $id;
     protected string $nodeId;
     protected string $diffHunk;
     protected string $path;
-    protected ?int $position;
+    protected ?int $position = null;
     protected int $originalPosition;
     protected string $commitId;
     protected string $originalCommitId;
     protected int $inReplyToId;
-    protected ?ReviewCommentUser $user;
+    protected ?ReviewCommentUser $user = null;
     protected string $body;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
@@ -65,12 +65,12 @@ class ReviewComment extends \ArrayObject
      * The first line of the range for a multi-line comment.
      *
      */
-    protected ?int $startLine;
+    protected ?int $startLine = null;
     /**
      * The original first line of the range for a multi-line comment.
      *
      */
-    protected ?int $originalStartLine;
+    protected ?int $originalStartLine = null;
     public function getUrl(): string
     {
         return $this->url;

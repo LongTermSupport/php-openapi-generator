@@ -22,7 +22,7 @@ class SchemaIndexingInfo
      *
      * @var list<FieldIndexingInfo>|null
      */
-    protected ?array $fields;
+    protected ?array $fields = null;
     /**
      * A collection of indexing information for the fields of a schema
      *

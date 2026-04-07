@@ -32,7 +32,7 @@ class PdfFormat extends FormatBase
      *
      */
     protected bool $reduceFileSize;
-    protected ?string $extension;
+    protected ?string $extension = null;
     /**
      * Whether to extract document full text from this output.
      *

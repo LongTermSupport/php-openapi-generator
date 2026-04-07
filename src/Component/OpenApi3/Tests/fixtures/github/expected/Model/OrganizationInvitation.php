@@ -21,15 +21,15 @@ class OrganizationInvitation extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected int $id;
-    protected ?string $login;
-    protected ?string $email;
+    protected ?string $login = null;
+    protected ?string $email = null;
     protected string $role;
     protected string $createdAt;
     /**
      * Simple User
      *
      */
-    protected mixed $inviter;
+    protected mixed $inviter = null;
     protected int $teamCount;
     protected string $invitationTeamUrl;
     protected string $nodeId;

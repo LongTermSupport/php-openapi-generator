@@ -22,7 +22,7 @@ class AndFilter extends FilterBase
      *
      * @var list<FilterBase>|null
      */
-    protected ?array $filters;
+    protected ?array $filters = null;
     /**
      * The filters to put in "and". All kinds of filters are accepted.
      *

@@ -22,7 +22,7 @@ class TopBooksGetLdjsonResponse200HydraSearchHydraMappingItem extends \ArrayObje
     }
     protected string $type;
     protected string $variable;
-    protected ?string $property;
+    protected ?string $property = null;
     protected bool $required;
     public function getType(): string
     {

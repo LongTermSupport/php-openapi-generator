@@ -45,7 +45,7 @@ class Member extends \ArrayObject
      *
      */
     protected string $status;
-    protected mixed $currentUtilization;
+    protected mixed $currentUtilization = null;
     /**
      * The unique identifier of the Droplet.
      *

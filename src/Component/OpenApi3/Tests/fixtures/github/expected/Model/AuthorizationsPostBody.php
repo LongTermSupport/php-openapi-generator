@@ -25,7 +25,7 @@ class AuthorizationsPostBody extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $scopes;
+    protected ?array $scopes = null;
     /**
      * A note to remind you what the OAuth token is for.
      *

@@ -20,11 +20,11 @@ class RateLimitOverviewResources extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $core;
-    protected mixed $graphql;
-    protected mixed $search;
-    protected mixed $sourceImport;
-    protected mixed $integrationManifest;
+    protected mixed $core = null;
+    protected mixed $graphql = null;
+    protected mixed $search = null;
+    protected mixed $sourceImport = null;
+    protected mixed $integrationManifest = null;
     public function getCore(): mixed
     {
         return $this->core;

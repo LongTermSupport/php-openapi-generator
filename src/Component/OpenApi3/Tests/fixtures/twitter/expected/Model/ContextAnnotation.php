@@ -24,12 +24,12 @@ class ContextAnnotation extends \ArrayObject
      * Represents the data for the context annotation domain.
      *
      */
-    protected mixed $domain;
+    protected mixed $domain = null;
     /**
      * Represents the data for the context annotation entity.
      *
      */
-    protected mixed $entity;
+    protected mixed $entity = null;
     /**
      * Represents the data for the context annotation domain.
      *

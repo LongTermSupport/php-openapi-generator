@@ -31,7 +31,7 @@ class GistsPostBody extends \ArrayObject
      * @var array<string, GistsPostBodyFilesItem>
      */
     protected array $files;
-    protected mixed $public;
+    protected mixed $public = null;
     /**
      * Description of the gist
      *

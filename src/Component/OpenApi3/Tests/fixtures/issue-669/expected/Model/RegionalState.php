@@ -20,8 +20,8 @@ class RegionalState extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $usEast;
-    protected mixed $euWest;
+    protected mixed $usEast = null;
+    protected mixed $euWest = null;
     public function getUsEast(): mixed
     {
         return $this->usEast;

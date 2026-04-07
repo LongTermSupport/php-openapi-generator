@@ -21,7 +21,7 @@ class TestGetBody extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $foo;
-    protected mixed $bar;
+    protected mixed $bar = null;
     protected TestGetBodyBaz $baz;
     public function getFoo(): string
     {

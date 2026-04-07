@@ -21,12 +21,12 @@ class NGramAnalyzer extends AnalyzerBase
      * The analyzer type: NGram
      *
      */
-    protected mixed $type;
+    protected mixed $type = null;
     /**
      * The suffix for the analyzed field: ngram.
      *
      */
-    protected ?string $fieldSuffix;
+    protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: NGram
      *

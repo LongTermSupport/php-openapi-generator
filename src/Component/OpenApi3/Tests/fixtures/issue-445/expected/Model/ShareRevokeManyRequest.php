@@ -20,7 +20,7 @@ class ShareRevokeManyRequest
     /**
      * @var list<string>|null
      */
-    protected ?array $ids;
+    protected ?array $ids = null;
     /**
      * @return list<string>|null
      */

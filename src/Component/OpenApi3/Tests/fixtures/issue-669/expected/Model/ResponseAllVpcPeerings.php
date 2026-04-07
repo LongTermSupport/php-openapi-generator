@@ -24,7 +24,7 @@ class ResponseAllVpcPeerings extends \ArrayObject
      * @var list<array<string, mixed>>
      */
     protected array $vpcPeerings;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<array<string, mixed>>

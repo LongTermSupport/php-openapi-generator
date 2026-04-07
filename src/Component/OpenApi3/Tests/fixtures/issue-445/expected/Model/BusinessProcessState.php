@@ -31,7 +31,7 @@ class BusinessProcessState
      * Eventual error associated to the state transition.
      *
      */
-    protected mixed $error;
+    protected mixed $error = null;
     /**
      * State of the business process
      *

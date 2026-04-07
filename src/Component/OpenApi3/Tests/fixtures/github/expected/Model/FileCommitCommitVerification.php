@@ -22,8 +22,8 @@ class FileCommitCommitVerification extends \ArrayObject
     }
     protected bool $verified;
     protected string $reason;
-    protected ?string $signature;
-    protected ?string $payload;
+    protected ?string $signature = null;
+    protected ?string $payload = null;
     public function getVerified(): bool
     {
         return $this->verified;

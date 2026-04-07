@@ -21,7 +21,7 @@ class LayerUnassignedCondition extends BusinessRuleCondition
      * Layer id to match on.
      *
      */
-    protected ?string $layerId;
+    protected ?string $layerId = null;
     /**
      * Layer id to match on.
      *

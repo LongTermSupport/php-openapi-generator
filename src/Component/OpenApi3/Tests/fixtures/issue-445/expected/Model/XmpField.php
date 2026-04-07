@@ -21,7 +21,7 @@ class XmpField
      * Path of the field in XMP.
      *
      */
-    protected ?string $path;
+    protected ?string $path = null;
     /**
      * Indicates if the field can be written to.
      *
@@ -31,7 +31,7 @@ class XmpField
      * Data type of the field.
      *
      */
-    protected mixed $dataType;
+    protected mixed $dataType = null;
     /**
      * Path of the field in XMP.
      *

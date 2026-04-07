@@ -26,7 +26,7 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
      * The response of the batch operation.
      *
      */
-    protected mixed $response;
+    protected mixed $response = null;
     /**
      * The DocType on which the operation was performed.
      *

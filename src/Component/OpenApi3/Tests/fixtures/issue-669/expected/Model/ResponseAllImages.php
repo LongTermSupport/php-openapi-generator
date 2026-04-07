@@ -24,7 +24,7 @@ class ResponseAllImages extends \ArrayObject
      * @var list<Image>
      */
     protected array $images;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Image>

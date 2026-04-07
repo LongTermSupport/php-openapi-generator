@@ -24,7 +24,7 @@ class ApiGetOpenAIAPIKeyOutput extends \ArrayObject
      * OpenAI API Key Info
      *
      */
-    protected mixed $apiKeyInfo;
+    protected mixed $apiKeyInfo = null;
     /**
      * OpenAI API Key Info
      *

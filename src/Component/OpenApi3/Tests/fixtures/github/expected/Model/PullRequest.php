@@ -48,32 +48,32 @@ class PullRequest extends \ArrayObject
      *
      */
     protected string $title;
-    protected ?PullRequestUser $user;
-    protected ?string $body;
+    protected ?PullRequestUser $user = null;
+    protected ?string $body = null;
     /**
      * @var list<PullRequestLabelsItem>
      */
     protected array $labels;
-    protected ?PullRequestMilestone $milestone;
-    protected ?string $activeLockReason;
+    protected ?PullRequestMilestone $milestone = null;
+    protected ?string $activeLockReason = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?\DateTime $closedAt;
-    protected ?\DateTime $mergedAt;
-    protected ?string $mergeCommitSha;
-    protected ?PullRequestAssignee $assignee;
+    protected ?\DateTime $closedAt = null;
+    protected ?\DateTime $mergedAt = null;
+    protected ?string $mergeCommitSha = null;
+    protected ?PullRequestAssignee $assignee = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $assignees;
+    protected ?array $assignees = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $requestedReviewers;
+    protected ?array $requestedReviewers = null;
     /**
      * @var list<TeamSimple>|null
      */
-    protected ?array $requestedTeams;
+    protected ?array $requestedTeams = null;
     protected PullRequestHead $head;
     protected PullRequestBase $base;
     protected PullRequestLinks $links;
@@ -84,10 +84,10 @@ class PullRequest extends \ArrayObject
      */
     protected bool $draft;
     protected bool $merged;
-    protected ?bool $mergeable;
-    protected ?bool $rebaseable;
+    protected ?bool $mergeable = null;
+    protected ?bool $rebaseable = null;
     protected string $mergeableState;
-    protected ?PullRequestMergedBy $mergedBy;
+    protected ?PullRequestMergedBy $mergedBy = null;
     protected int $comments;
     protected int $reviewComments;
     /**

@@ -21,18 +21,18 @@ class ArgumentRangeException extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $traceLevel;
-    protected ?string $traceId;
-    protected ?string $traceJobId;
+    protected ?string $traceId = null;
+    protected ?string $traceJobId = null;
     protected int $httpStatusCode;
-    protected ?string $exceptionMessage;
+    protected ?string $exceptionMessage = null;
     protected string $kind;
-    protected ?string $customerId;
-    protected ?string $customerAlias;
-    protected ?string $userId;
-    protected ?string $argumentName;
-    protected ?string $argumentValue;
-    protected ?string $minAcceptableValue;
-    protected ?string $maxAcceptableValue;
+    protected ?string $customerId = null;
+    protected ?string $customerAlias = null;
+    protected ?string $userId = null;
+    protected ?string $argumentName = null;
+    protected ?string $argumentValue = null;
+    protected ?string $minAcceptableValue = null;
+    protected ?string $maxAcceptableValue = null;
     public function getTraceLevel(): string
     {
         return $this->traceLevel;

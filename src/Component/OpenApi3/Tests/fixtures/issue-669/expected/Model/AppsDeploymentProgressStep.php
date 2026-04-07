@@ -31,7 +31,7 @@ class AppsDeploymentProgressStep extends \ArrayObject
      */
     protected string $messageBase;
     protected string $name;
-    protected mixed $reason;
+    protected mixed $reason = null;
     protected \DateTime $startedAt;
     protected string $status = 'UNKNOWN';
     /**

@@ -20,7 +20,7 @@ class ResponseGarbageCollection extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $garbageCollection;
+    protected mixed $garbageCollection = null;
     public function getGarbageCollection(): mixed
     {
         return $this->garbageCollection;

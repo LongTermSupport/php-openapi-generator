@@ -17,12 +17,12 @@ class MetadataError
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $errorType;
+    protected ?string $errorType = null;
     protected int $lineNumber;
     protected int $linePosition;
-    protected ?string $path;
-    protected ?string $message;
-    protected ?string $schemaId;
+    protected ?string $path = null;
+    protected ?string $message = null;
+    protected ?string $schemaId = null;
     public function getErrorType(): ?string
     {
         return $this->errorType;

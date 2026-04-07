@@ -20,7 +20,7 @@ class NotificationEvent extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $company;
+    protected mixed $company = null;
     /**
      * The unique identifier of the event that triggered the generation of the `notificationEvent`. This identifier is consistent across all portfolios in the Global Monitoring product.
      *

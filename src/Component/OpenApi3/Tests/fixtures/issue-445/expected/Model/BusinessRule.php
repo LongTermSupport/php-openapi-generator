@@ -21,12 +21,12 @@ class BusinessRule
      * User defined ID of the rule.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Trigger point.
      *
      */
-    protected mixed $triggerPoint;
+    protected mixed $triggerPoint = null;
     /**
      * Enable.
      *
@@ -36,12 +36,12 @@ class BusinessRule
      * Language specific rule names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * Language specific rule description.
      *
      */
-    protected mixed $description;
+    protected mixed $description = null;
     /**
      * Enable trace logs for this rule.
      *

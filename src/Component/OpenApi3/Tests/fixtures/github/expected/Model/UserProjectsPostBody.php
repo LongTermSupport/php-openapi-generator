@@ -29,7 +29,7 @@ class UserProjectsPostBody extends \ArrayObject
      * Body of the project
      *
      */
-    protected ?string $body;
+    protected ?string $body = null;
     /**
      * Name of the project
      *

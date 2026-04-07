@@ -24,7 +24,7 @@ class ResponseFloatingIpList extends \ArrayObject
      * @var list<FloatingIp>
      */
     protected array $floatingIps;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<FloatingIp>

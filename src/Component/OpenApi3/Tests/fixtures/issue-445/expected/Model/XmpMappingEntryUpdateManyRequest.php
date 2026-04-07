@@ -22,7 +22,7 @@ class XmpMappingEntryUpdateManyRequest
      *
      * @var list<XmpMappingEntry>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Items to update.
      *

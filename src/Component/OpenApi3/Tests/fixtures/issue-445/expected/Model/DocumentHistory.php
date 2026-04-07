@@ -17,13 +17,13 @@ class DocumentHistory
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $documentId;
+    protected ?string $documentId = null;
     protected int $documentVersion;
-    protected ?string $documentType;
+    protected ?string $documentType = null;
     protected \DateTime $documentDate;
-    protected ?string $document;
+    protected ?string $document = null;
     protected \DateTime $timestamp;
-    protected mixed $audit;
+    protected mixed $audit = null;
     protected bool $deleted;
     protected string $action;
     public function getDocumentId(): ?string

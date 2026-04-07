@@ -27,18 +27,18 @@ class Authorization extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $scopes;
+    protected ?array $scopes = null;
     protected string $token;
-    protected ?string $tokenLastEight;
-    protected ?string $hashedToken;
+    protected ?string $tokenLastEight = null;
+    protected ?string $hashedToken = null;
     protected AuthorizationApp $app;
-    protected ?string $note;
-    protected ?string $noteUrl;
+    protected ?string $note = null;
+    protected ?string $noteUrl = null;
     protected \DateTime $updatedAt;
     protected \DateTime $createdAt;
-    protected ?string $fingerprint;
-    protected ?AuthorizationUser $user;
-    protected ?AuthorizationInstallation $installation;
+    protected ?string $fingerprint = null;
+    protected ?AuthorizationUser $user = null;
+    protected ?AuthorizationInstallation $installation = null;
     public function getId(): int
     {
         return $this->id;

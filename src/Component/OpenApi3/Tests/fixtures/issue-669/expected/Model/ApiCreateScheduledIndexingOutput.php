@@ -24,7 +24,7 @@ class ApiCreateScheduledIndexingOutput extends \ArrayObject
      * Metadata for scheduled indexing entries
      *
      */
-    protected mixed $indexingInfo;
+    protected mixed $indexingInfo = null;
     /**
      * Metadata for scheduled indexing entries
      *

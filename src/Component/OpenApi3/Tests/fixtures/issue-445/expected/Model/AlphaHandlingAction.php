@@ -21,12 +21,12 @@ class AlphaHandlingAction extends ImageActionBase
      * Specifies the kind of alpha handling to be applied.
      *
      */
-    protected mixed $alphaHandling;
+    protected mixed $alphaHandling = null;
     /**
      * Specifies potentially needed color information for alpha handling. Must be given in RGB hex format (8 bit per channel).
      *
      */
-    protected ?string $replacementRgbColorHexCode;
+    protected ?string $replacementRgbColorHexCode = null;
     /**
      * Specifies the kind of alpha handling to be applied.
      *

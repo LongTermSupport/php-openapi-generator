@@ -22,7 +22,7 @@ class GistCommit extends \ArrayObject
     }
     protected string $url;
     protected string $version;
-    protected ?GistCommitUser $user;
+    protected ?GistCommitUser $user = null;
     protected GistCommitChangeStatus $changeStatus;
     protected \DateTime $committedAt;
     public function getUrl(): string

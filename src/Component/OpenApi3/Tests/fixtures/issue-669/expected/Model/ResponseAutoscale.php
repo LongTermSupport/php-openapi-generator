@@ -24,7 +24,7 @@ class ResponseAutoscale extends \ArrayObject
      * Contains all autoscaling configuration for a database cluster
      *
      */
-    protected mixed $autoscale;
+    protected mixed $autoscale = null;
     /**
      * Contains all autoscaling configuration for a database cluster
      *

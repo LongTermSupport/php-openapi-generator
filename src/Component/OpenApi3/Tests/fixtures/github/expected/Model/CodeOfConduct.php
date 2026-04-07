@@ -24,7 +24,7 @@ class CodeOfConduct extends \ArrayObject
     protected string $name;
     protected string $url;
     protected string $body;
-    protected ?string $htmlUrl;
+    protected ?string $htmlUrl = null;
     public function getKey(): string
     {
         return $this->key;

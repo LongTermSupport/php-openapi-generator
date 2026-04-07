@@ -21,7 +21,7 @@ class FieldOverwriteBase
      * The field's ID whose information need to be overwritten.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Defines if a field value is mandatory or not: this value will overwrite the existing Required value specified in the parent schema  if
      * OverwriteRequired is set to true.

@@ -20,7 +20,7 @@ class DetailedPlaceFields extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $geo;
+    protected mixed $geo = null;
     public function getGeo(): mixed
     {
         return $this->geo;

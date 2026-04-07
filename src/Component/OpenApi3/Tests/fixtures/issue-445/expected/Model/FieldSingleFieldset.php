@@ -26,7 +26,7 @@ class FieldSingleFieldset extends FieldBase
      * Indexing information of fields of the related schema identified by the SchemaId property
      *
      */
-    protected mixed $schemaIndexingInfo;
+    protected mixed $schemaIndexingInfo = null;
     /**
      * The ID of the schema to be used as fieldset (it must be of type Struct).
      *

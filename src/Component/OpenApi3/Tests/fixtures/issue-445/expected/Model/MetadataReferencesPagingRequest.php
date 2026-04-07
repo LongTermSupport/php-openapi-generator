@@ -29,7 +29,7 @@ class MetadataReferencesPagingRequest extends \ArrayObject
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Set to true to check if any incoming references are originating from an item the current user does not have full access to.
      *

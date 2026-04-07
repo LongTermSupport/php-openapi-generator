@@ -21,7 +21,7 @@ class ListItemDeleteManyFilterRequest
      * Filters the list items that need to be deleted.
      *
      */
-    protected mixed $filterRequest;
+    protected mixed $filterRequest = null;
     /**
      * A value indicating whether references to the list item should be removed.
      *

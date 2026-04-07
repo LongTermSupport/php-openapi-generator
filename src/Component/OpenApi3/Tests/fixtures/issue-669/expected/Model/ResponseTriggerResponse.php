@@ -20,7 +20,7 @@ class ResponseTriggerResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $trigger;
+    protected mixed $trigger = null;
     public function getTrigger(): mixed
     {
         return $this->trigger;

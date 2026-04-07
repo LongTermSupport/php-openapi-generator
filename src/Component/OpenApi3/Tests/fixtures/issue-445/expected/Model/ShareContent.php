@@ -27,7 +27,7 @@ class ShareContent
      *
      * @var list<string>|null
      */
-    protected ?array $outputFormatIds;
+    protected ?array $outputFormatIds = null;
     /**
      * Content ID to share.
      *

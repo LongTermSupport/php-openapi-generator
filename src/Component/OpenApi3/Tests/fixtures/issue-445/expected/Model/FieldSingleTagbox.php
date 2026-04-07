@@ -26,17 +26,17 @@ class FieldSingleTagbox extends FieldBase
      * Indexing information of fields of the related schema identified by the SchemaId property.
      *
      */
-    protected mixed $schemaIndexingInfo;
+    protected mixed $schemaIndexingInfo = null;
     /**
      * An optional filter to limit the list items.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Json serialized template used for creating new list item (no logic is implemented in backend).
      *
      */
-    protected ?string $listItemCreateTemplate;
+    protected ?string $listItemCreateTemplate = null;
     /**
      * Defines the display pattern type to be used (Name or List only) when showing a tagbox item in view mode. Defaults to "Name".
      * The information is only consumed by the client application. No actual logic is implemented in the backend.

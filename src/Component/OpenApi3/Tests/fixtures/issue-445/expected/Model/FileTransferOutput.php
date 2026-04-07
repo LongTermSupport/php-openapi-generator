@@ -17,8 +17,8 @@ class FileTransferOutput
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
-    protected ?string $filePath;
+    protected ?string $id = null;
+    protected ?string $filePath = null;
     protected string $outputSource;
     public function getId(): ?string
     {

@@ -20,9 +20,9 @@ class Model extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $foo;
+    protected ?string $foo = null;
     protected string $bar;
-    protected ?\DateTime $date;
+    protected ?\DateTime $date = null;
     public function getFoo(): ?string
     {
         return $this->foo;

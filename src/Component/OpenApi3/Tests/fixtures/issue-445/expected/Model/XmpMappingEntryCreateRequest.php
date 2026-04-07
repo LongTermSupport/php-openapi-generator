@@ -24,7 +24,7 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
      * Direction of the mapping.
      *
      */
-    protected mixed $direction;
+    protected mixed $direction = null;
     /**
      * Priority of the mapping.
      *
@@ -49,14 +49,14 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
      * Optional additional configuration for the mapping.
      *
      */
-    protected mixed $configuration;
+    protected mixed $configuration = null;
     /**
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * Direction of the mapping.
      *

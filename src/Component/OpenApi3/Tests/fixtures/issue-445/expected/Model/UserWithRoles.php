@@ -22,7 +22,7 @@ class UserWithRoles
      *
      * @var list<string>|null
      */
-    protected ?array $userRoleIds;
+    protected ?array $userRoleIds = null;
     /**
      * User's Picturepark ID.
      *
@@ -32,12 +32,12 @@ class UserWithRoles
      * User's first name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * User's last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
      *
@@ -47,12 +47,12 @@ class UserWithRoles
      * Authorization state the user is currently in.
      *
      */
-    protected mixed $authorizationState;
+    protected mixed $authorizationState = null;
     /**
      * Life cycle state the user is currently in.
      *
      */
-    protected mixed $lifeCycle;
+    protected mixed $lifeCycle = null;
     /**
      * A locked user is not allowed to log in.
      *

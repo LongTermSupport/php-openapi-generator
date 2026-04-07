@@ -21,17 +21,17 @@ class DateRange
      * Language specific range names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * The from value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
      *
      */
-    protected ?string $from;
+    protected ?string $from = null;
     /**
      * The to value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
      *
      */
-    protected ?string $to;
+    protected ?string $to = null;
     /**
      * Language specific range names.
      *

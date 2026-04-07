@@ -36,7 +36,7 @@ class ReviewReviewWrite extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $letter;
+    protected ?string $letter = null;
     /**
      * The item that is being reviewed/rated.
      *
@@ -46,12 +46,12 @@ class ReviewReviewWrite extends \ArrayObject
      * The author of the review.
      *
      */
-    protected ?string $author;
+    protected ?string $author = null;
     /**
      * Publication date of the review.
      *
      */
-    protected ?\DateTime $publicationDate;
+    protected ?\DateTime $publicationDate = null;
     /**
      * The actual body of the review.
      *

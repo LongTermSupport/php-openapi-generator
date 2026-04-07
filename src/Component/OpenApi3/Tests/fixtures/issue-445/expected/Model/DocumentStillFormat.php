@@ -17,12 +17,12 @@ class DocumentStillFormat extends FormatBase
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $extension;
+    protected ?string $extension = null;
     /**
      * Allows resizing of the image.
      *
      */
-    protected mixed $resizeAction;
+    protected mixed $resizeAction = null;
     public function getExtension(): ?string
     {
         return $this->extension;

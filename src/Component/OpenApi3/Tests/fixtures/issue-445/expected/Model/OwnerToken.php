@@ -21,12 +21,12 @@ class OwnerToken
      * The ownertoken id.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The id of the user to whom this ownertoken currently belongs to.
      *
      */
-    protected ?string $userId;
+    protected ?string $userId = null;
     /**
      * The ownertoken id.
      *

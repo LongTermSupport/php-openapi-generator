@@ -37,13 +37,13 @@ class ListItemImportResult
      *
      * @var list<string>|null
      */
-    protected ?array $skippedListItemIds;
+    protected ?array $skippedListItemIds = null;
     /**
      * Ids of the list items that were successfully imported
      *
      * @var list<string>|null
      */
-    protected ?array $importedListItemIds;
+    protected ?array $importedListItemIds = null;
     /**
      * Number of list items imported
      *

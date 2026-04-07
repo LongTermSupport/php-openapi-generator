@@ -17,14 +17,14 @@ class NodeInfoMessage extends Message
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $nodeId;
-    protected ?string $hostName;
+    protected ?string $nodeId = null;
+    protected ?string $hostName = null;
     protected \DateTime $lastResponseTime;
-    protected ?string $serviceName;
-    protected ?string $fileVersion;
-    protected ?string $productVersion;
-    protected ?string $release;
-    protected ?string $logLevel;
+    protected ?string $serviceName = null;
+    protected ?string $fileVersion = null;
+    protected ?string $productVersion = null;
+    protected ?string $release = null;
+    protected ?string $logLevel = null;
     public function getNodeId(): ?string
     {
         return $this->nodeId;

@@ -20,14 +20,14 @@ class Commit extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $url;
-    protected ?string $sha;
+    protected ?string $url = null;
+    protected ?string $sha = null;
     protected string $nodeId;
     protected string $htmlUrl;
     protected string $commentsUrl;
     protected CommitCommit $commit;
-    protected ?CommitAuthor $author;
-    protected ?CommitCommitter $committer;
+    protected ?CommitAuthor $author = null;
+    protected ?CommitCommitter $committer = null;
     /**
      * @var list<CommitParentsItem>
      */

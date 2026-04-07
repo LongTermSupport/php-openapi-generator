@@ -30,7 +30,7 @@ class V2DatabasesDatabaseClusterUuidTopicsTopicNamePutBody extends \ArrayObject
      *
      */
     protected int $partitionCount;
-    protected mixed $config;
+    protected mixed $config = null;
     /**
      * The number of nodes to replicate data across the cluster.
      *

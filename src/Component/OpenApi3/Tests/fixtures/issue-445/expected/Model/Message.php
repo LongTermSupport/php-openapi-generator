@@ -17,7 +17,7 @@ class Message
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
+    protected ?string $id = null;
     protected int $retries;
     protected int $priority;
     protected bool $deduplicate;

@@ -26,12 +26,12 @@ class ShareBaseUpdateRequest
      * Optional date when share expires and cannot be accessed anymore.
      *
      */
-    protected ?\DateTime $expirationDate;
+    protected ?\DateTime $expirationDate = null;
     /**
      * Optional description of share.
      *
      */
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * List of contents including outputs. Existing items needs to be sent again, otherwise they will be removed.
      *
@@ -43,12 +43,12 @@ class ShareBaseUpdateRequest
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * Access for content outputs in share.
      *
      */
-    protected mixed $outputAccess;
+    protected mixed $outputAccess = null;
     protected string $kind;
     /**
      * Name of share.

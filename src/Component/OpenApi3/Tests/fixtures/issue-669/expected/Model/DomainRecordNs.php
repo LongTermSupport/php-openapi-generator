@@ -44,12 +44,12 @@ class DomainRecordNs extends \ArrayObject
      * The priority for SRV and MX records.
      *
      */
-    protected ?int $priority;
+    protected ?int $priority = null;
     /**
      * The port for SRV records.
      *
      */
-    protected ?int $port;
+    protected ?int $port = null;
     /**
      * This value is the time to live for the record, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
      *
@@ -59,17 +59,17 @@ class DomainRecordNs extends \ArrayObject
      * The weight for SRV records.
      *
      */
-    protected ?int $weight;
+    protected ?int $weight = null;
     /**
      * An unsigned integer between 0-255 used for CAA records.
      *
      */
-    protected ?int $flags;
+    protected ?int $flags = null;
     /**
      * The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef"
      *
      */
-    protected ?string $tag;
+    protected ?string $tag = null;
     /**
      * A unique identifier for each domain record.
      *

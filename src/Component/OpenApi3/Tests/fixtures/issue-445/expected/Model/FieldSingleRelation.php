@@ -26,7 +26,7 @@ class FieldSingleRelation extends FieldBase
      * Indexing information of fields of the related schema identified by the SchemaId property.
      *
      */
-    protected mixed $schemaIndexingInfo;
+    protected mixed $schemaIndexingInfo = null;
     /**
      * Defines the allowed elation types.
      *

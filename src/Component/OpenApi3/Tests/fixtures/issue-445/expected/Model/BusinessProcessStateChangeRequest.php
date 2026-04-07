@@ -26,12 +26,12 @@ class BusinessProcessStateChangeRequest
      * The new life cycle of the business process.
      *
      */
-    protected mixed $lifeCycle;
+    protected mixed $lifeCycle = null;
     /**
      * An optional notification update to be posted together with the transition.
      *
      */
-    protected mixed $notification;
+    protected mixed $notification = null;
     /**
      * The new state of the business process.
      *

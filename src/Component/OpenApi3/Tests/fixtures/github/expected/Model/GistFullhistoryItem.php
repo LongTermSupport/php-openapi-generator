@@ -22,7 +22,7 @@ class GistFullhistoryItem extends \ArrayObject
     }
     protected string $url;
     protected string $version;
-    protected ?GistFullhistoryItemUser $user;
+    protected ?GistFullhistoryItemUser $user = null;
     protected GistFullhistoryItemChangeStatus $changeStatus;
     protected string $committedAt;
     public function getUrl(): string

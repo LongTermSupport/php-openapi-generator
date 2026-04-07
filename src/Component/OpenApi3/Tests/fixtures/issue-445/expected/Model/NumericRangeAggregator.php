@@ -21,7 +21,7 @@ class NumericRangeAggregator extends AggregatorBase
      * The field's ID to execute the aggregation on.
      *
      */
-    protected ?string $field;
+    protected ?string $field = null;
     /**
      * A list of numeric ranges on which aggregate.
      *

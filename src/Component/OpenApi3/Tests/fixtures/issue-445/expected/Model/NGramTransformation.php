@@ -32,7 +32,7 @@ class NGramTransformation extends BusinessRuleTransformation
      * Maximum length of a word to be considered.
      *
      */
-    protected ?int $maxWordLength;
+    protected ?int $maxWordLength = null;
     /**
      * Maximum size of n-grams to produce.
      * Settings this to 3 will produce unigrams, bigrams, trigrams.

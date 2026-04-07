@@ -30,7 +30,7 @@ class UpdateTrigger extends \ArrayObject
      * 
      *
      */
-    protected mixed $scheduledDetails;
+    protected mixed $scheduledDetails = null;
     /**
      * Indicates weather the trigger is paused or unpaused.
      *

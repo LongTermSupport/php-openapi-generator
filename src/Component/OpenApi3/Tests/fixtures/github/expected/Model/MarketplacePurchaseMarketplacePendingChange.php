@@ -22,13 +22,13 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
     }
     protected bool $isInstalled;
     protected string $effectiveDate;
-    protected ?int $unitCount;
+    protected ?int $unitCount = null;
     protected int $id;
     /**
      * Marketplace Listing Plan
      *
      */
-    protected mixed $plan;
+    protected mixed $plan = null;
     public function getIsInstalled(): bool
     {
         return $this->isInstalled;

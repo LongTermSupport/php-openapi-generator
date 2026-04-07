@@ -24,7 +24,7 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
      * The project card's note
      *
      */
-    protected ?string $note;
+    protected ?string $note = null;
     /**
      * Whether or not the card is archived
      *

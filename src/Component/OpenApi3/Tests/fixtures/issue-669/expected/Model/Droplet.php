@@ -73,7 +73,7 @@ class Droplet extends \ArrayObject
      * @deprecated
      *
      */
-    protected mixed $kernel;
+    protected mixed $kernel = null;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Droplet was created.
      *
@@ -105,7 +105,7 @@ class Droplet extends \ArrayObject
      * @var list<string>
      */
     protected array $volumeIds;
-    protected mixed $size;
+    protected mixed $size = null;
     /**
      * The unique slug identifier for the size of this Droplet.
      *
@@ -116,7 +116,7 @@ class Droplet extends \ArrayObject
      *
      */
     protected DropletNetworks $networks;
-    protected mixed $region;
+    protected mixed $region = null;
     /**
      * An array of Tags the Droplet has been tagged with.<br>Requires `tag:read` scope.
      *
@@ -132,7 +132,7 @@ class Droplet extends \ArrayObject
      * An object containing information about the GPU capabilities of Droplets created with this size.
      *
      */
-    protected mixed $gpuInfo;
+    protected mixed $gpuInfo = null;
     /**
      * A unique identifier for each Droplet instance. This is automatically generated upon Droplet creation.
      *

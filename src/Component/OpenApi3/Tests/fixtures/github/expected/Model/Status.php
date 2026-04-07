@@ -21,7 +21,7 @@ class Status extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $url;
-    protected ?string $avatarUrl;
+    protected ?string $avatarUrl = null;
     protected int $id;
     protected string $nodeId;
     protected string $state;
@@ -34,7 +34,7 @@ class Status extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $creator;
+    protected mixed $creator = null;
     public function getUrl(): string
     {
         return $this->url;

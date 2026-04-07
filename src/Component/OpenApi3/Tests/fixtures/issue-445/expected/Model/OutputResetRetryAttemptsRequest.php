@@ -22,25 +22,25 @@ class OutputResetRetryAttemptsRequest
      *
      * @var list<string>|null
      */
-    protected ?array $outputIds;
+    protected ?array $outputIds = null;
     /**
      * List of Content IDs you want to filter on.
      *
      * @var list<string>|null
      */
-    protected ?array $contentIds;
+    protected ?array $contentIds = null;
     /**
      * The file extension of the outputs you want to filter on.
      *
      * @var list<string>|null
      */
-    protected ?array $fileExtensions;
+    protected ?array $fileExtensions = null;
     /**
      * The IDs of the output formats you want to filter on.
      *
      * @var list<string>|null
      */
-    protected ?array $outputFormatIds;
+    protected ?array $outputFormatIds = null;
     /**
      * Should the successful filter results also be reset (and subsequently re-rendered)?
      *

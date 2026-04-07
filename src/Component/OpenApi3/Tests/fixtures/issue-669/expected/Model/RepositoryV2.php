@@ -30,7 +30,7 @@ class RepositoryV2 extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $latestManifest;
+    protected mixed $latestManifest = null;
     /**
      * The number of tags in the repository.
      *

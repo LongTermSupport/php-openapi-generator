@@ -24,7 +24,7 @@ class AppsResponse extends \ArrayObject
      * @var list<App>
      */
     protected array $apps;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<App>

@@ -29,7 +29,7 @@ class PullRequestReviewComment extends \ArrayObject
      * The ID of the pull request review to which the comment belongs.
      *
      */
-    protected ?int $pullRequestReviewId;
+    protected ?int $pullRequestReviewId = null;
     /**
      * The ID of the pull request review comment.
      *
@@ -79,7 +79,7 @@ class PullRequestReviewComment extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $user;
+    protected mixed $user = null;
     /**
      * The text of the comment.
      *
@@ -107,12 +107,12 @@ class PullRequestReviewComment extends \ArrayObject
      * The first line of the range for a multi-line comment.
      *
      */
-    protected ?int $startLine;
+    protected ?int $startLine = null;
     /**
      * The first line of the range for a multi-line comment.
      *
      */
-    protected ?int $originalStartLine;
+    protected ?int $originalStartLine = null;
     /**
      * The side of the first line of the range for a multi-line comment.
      *
@@ -133,7 +133,7 @@ class PullRequestReviewComment extends \ArrayObject
      *
      */
     protected string $side = 'RIGHT';
-    protected mixed $reactions;
+    protected mixed $reactions = null;
     protected string $bodyHtml;
     protected string $bodyText;
     /**

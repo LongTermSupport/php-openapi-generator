@@ -17,12 +17,12 @@ class BusinessRuleFiredEventDetail
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $documentId;
-    protected ?string $documentType;
+    protected ?string $documentId = null;
+    protected ?string $documentType = null;
     /**
      * @var list<string>|null
      */
-    protected ?array $ruleIds;
+    protected ?array $ruleIds = null;
     public function getDocumentId(): ?string
     {
         return $this->documentId;

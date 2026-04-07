@@ -30,7 +30,7 @@ class MarketplaceListingPlan extends \ArrayObject
     protected int $yearlyPriceInCents;
     protected string $priceModel;
     protected bool $hasFreeTrial;
-    protected ?string $unitName;
+    protected ?string $unitName = null;
     protected string $state;
     /**
      * @var list<string>

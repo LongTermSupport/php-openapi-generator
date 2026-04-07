@@ -21,42 +21,42 @@ class UserAddress
      * Company address line
      *
      */
-    protected ?string $company;
+    protected ?string $company = null;
     /**
      * Company department.
      *
      */
-    protected ?string $department;
+    protected ?string $department = null;
     /**
      * Street and house number.
      *
      */
-    protected ?string $address;
+    protected ?string $address = null;
     /**
      * Additional address line.
      *
      */
-    protected ?string $alternativeAddress;
+    protected ?string $alternativeAddress = null;
     /**
      * ZIP code.
      *
      */
-    protected ?string $zip;
+    protected ?string $zip = null;
     /**
      * City or town.
      *
      */
-    protected ?string $city;
+    protected ?string $city = null;
     /**
      * Phone number.
      *
      */
-    protected ?string $phone;
+    protected ?string $phone = null;
     /**
      * Country code.
      *
      */
-    protected ?string $countryCode;
+    protected ?string $countryCode = null;
     /**
      * Company address line
      *

@@ -21,12 +21,12 @@ class IdpClaimToUserAttributeMapping
      * Claim type name coming from external identity provider
      *
      */
-    protected ?string $claimType;
+    protected ?string $claimType = null;
     /**
      * Path to a user attribute to synchronize
      *
      */
-    protected ?string $userAttributePath;
+    protected ?string $userAttributePath = null;
     /**
      * Claim type name coming from external identity provider
      *

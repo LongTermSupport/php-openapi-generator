@@ -31,12 +31,12 @@ class UserAudit
      * ID of the user who created the document.
      *
      */
-    protected ?string $createdByUser;
+    protected ?string $createdByUser = null;
     /**
      * ID of the last user who modified the document.
      *
      */
-    protected ?string $modifiedByUser;
+    protected ?string $modifiedByUser = null;
     /**
      * The date on which the document was created.
      *

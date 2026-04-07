@@ -20,7 +20,7 @@ class ResponseExistingEndpoint extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $endpoint;
+    protected mixed $endpoint = null;
     public function getEndpoint(): mixed
     {
         return $this->endpoint;

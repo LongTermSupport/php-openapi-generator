@@ -20,7 +20,7 @@ class ResponseReservedIpv6 extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $reservedIpv6;
+    protected mixed $reservedIpv6 = null;
     public function getReservedIpv6(): mixed
     {
         return $this->reservedIpv6;

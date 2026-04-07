@@ -21,17 +21,17 @@ class ErrorResponse
      * Serialized PictureparkBusinessException.
      *
      */
-    protected ?string $exception;
+    protected ?string $exception = null;
     /**
      * Trace ID.
      *
      */
-    protected ?string $traceId;
+    protected ?string $traceId = null;
     /**
      * Trace job ID.
      *
      */
-    protected ?string $traceJobId;
+    protected ?string $traceJobId = null;
     /**
      * Serialized PictureparkBusinessException.
      *

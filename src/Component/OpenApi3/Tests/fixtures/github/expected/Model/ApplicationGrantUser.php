@@ -24,7 +24,7 @@ class ApplicationGrantUser extends \ArrayObject
     protected int $id;
     protected string $nodeId;
     protected string $avatarUrl;
-    protected ?string $gravatarId;
+    protected ?string $gravatarId = null;
     protected string $url;
     protected string $htmlUrl;
     protected string $followersUrl;

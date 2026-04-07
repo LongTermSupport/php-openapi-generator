@@ -20,7 +20,7 @@ class ResponseSubscriptionResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $subscription;
+    protected mixed $subscription = null;
     public function getSubscription(): mixed
     {
         return $this->subscription;

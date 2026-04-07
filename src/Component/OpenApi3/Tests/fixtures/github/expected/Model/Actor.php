@@ -23,7 +23,7 @@ class Actor extends \ArrayObject
     protected int $id;
     protected string $login;
     protected string $displayLogin;
-    protected ?string $gravatarId;
+    protected ?string $gravatarId = null;
     protected string $url;
     protected string $avatarUrl;
     public function getId(): int

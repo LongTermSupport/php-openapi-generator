@@ -44,7 +44,7 @@ class AddonsFeature extends \ArrayObject
      * Value of the feature, which can vary based on the type.
      *
      */
-    protected mixed $value;
+    protected mixed $value = null;
     /**
      * Timestamp when the feature was created.
      *

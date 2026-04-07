@@ -24,20 +24,20 @@ class RepoSearchResultItem extends \ArrayObject
     protected string $nodeId;
     protected string $name;
     protected string $fullName;
-    protected ?RepoSearchResultItemOwner $owner;
+    protected ?RepoSearchResultItemOwner $owner = null;
     protected bool $private;
     protected string $htmlUrl;
-    protected ?string $description;
+    protected ?string $description = null;
     protected bool $fork;
     protected string $url;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected \DateTime $pushedAt;
-    protected ?string $homepage;
+    protected ?string $homepage = null;
     protected int $size;
     protected int $stargazersCount;
     protected int $watchersCount;
-    protected ?string $language;
+    protected ?string $language = null;
     protected int $forksCount;
     protected int $openIssuesCount;
     protected string $masterBranch;
@@ -90,7 +90,7 @@ class RepoSearchResultItem extends \ArrayObject
      * @var list<string>
      */
     protected array $topics;
-    protected ?string $mirrorUrl;
+    protected ?string $mirrorUrl = null;
     protected bool $hasIssues;
     protected bool $hasProjects;
     protected bool $hasPages;
@@ -102,7 +102,7 @@ class RepoSearchResultItem extends \ArrayObject
      *
      */
     protected bool $disabled;
-    protected ?RepoSearchResultItemLicense $license;
+    protected ?RepoSearchResultItemLicense $license = null;
     protected RepoSearchResultItemPermissions $permissions;
     /**
      * @var list<mixed>

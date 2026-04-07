@@ -31,23 +31,23 @@ class IssueSearchResultItem extends \ArrayObject
     protected int $number;
     protected string $title;
     protected bool $locked;
-    protected ?string $activeLockReason;
+    protected ?string $activeLockReason = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $assignees;
-    protected ?IssueSearchResultItemUser $user;
+    protected ?array $assignees = null;
+    protected ?IssueSearchResultItemUser $user = null;
     /**
      * @var list<IssueSearchResultItemLabelsItem>
      */
     protected array $labels;
     protected string $state;
-    protected ?IssueSearchResultItemAssignee $assignee;
-    protected ?IssueSearchResultItemMilestone $milestone;
+    protected ?IssueSearchResultItemAssignee $assignee = null;
+    protected ?IssueSearchResultItemMilestone $milestone = null;
     protected int $comments;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?\DateTime $closedAt;
+    protected ?\DateTime $closedAt = null;
     /**
      * @var list<mixed>
      */
@@ -61,11 +61,11 @@ class IssueSearchResultItem extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     protected string $bodyHtml;
     protected string $bodyText;
     protected string $timelineUrl;
-    protected ?IssueSearchResultItemPerformedViaGithubApp $performedViaGithubApp;
+    protected ?IssueSearchResultItemPerformedViaGithubApp $performedViaGithubApp = null;
     public function getUrl(): string
     {
         return $this->url;

@@ -32,17 +32,17 @@ class TeamRepository extends \ArrayObject
      */
     protected string $name;
     protected string $fullName;
-    protected ?TeamRepositoryLicense $license;
+    protected ?TeamRepositoryLicense $license = null;
     protected int $forks;
     protected TeamRepositoryPermissions $permissions;
-    protected ?TeamRepositoryOwner $owner;
+    protected ?TeamRepositoryOwner $owner = null;
     /**
      * Whether the repository is private or public.
      *
      */
     protected bool $private = false;
     protected string $htmlUrl;
-    protected ?string $description;
+    protected ?string $description = null;
     protected bool $fork;
     protected string $url;
     protected string $archiveUrl;
@@ -83,11 +83,11 @@ class TeamRepository extends \ArrayObject
     protected string $teamsUrl;
     protected string $treesUrl;
     protected string $cloneUrl;
-    protected ?string $mirrorUrl;
+    protected ?string $mirrorUrl = null;
     protected string $hooksUrl;
     protected string $svnUrl;
-    protected ?string $homepage;
-    protected ?string $language;
+    protected ?string $homepage = null;
+    protected ?string $language = null;
     protected int $forksCount;
     protected int $stargazersCount;
     protected int $watchersCount;
@@ -143,15 +143,15 @@ class TeamRepository extends \ArrayObject
      *
      */
     protected string $visibility = 'public';
-    protected ?\DateTime $pushedAt;
-    protected ?\DateTime $createdAt;
-    protected ?\DateTime $updatedAt;
+    protected ?\DateTime $pushedAt = null;
+    protected ?\DateTime $createdAt = null;
+    protected ?\DateTime $updatedAt = null;
     /**
      * Whether to allow rebase merges for pull requests.
      *
      */
     protected bool $allowRebaseMerge = true;
-    protected ?TeamRepositoryTemplateRepository $templateRepository;
+    protected ?TeamRepositoryTemplateRepository $templateRepository = null;
     protected string $tempCloneToken;
     /**
      * Whether to allow squash merges for pull requests.

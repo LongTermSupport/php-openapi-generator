@@ -21,7 +21,7 @@ class UnassignContentPermissionSetsAction extends BusinessRuleAction
      * IDs of the permission sets to unassign.
      *
      */
-    protected mixed $permissionSetIds;
+    protected mixed $permissionSetIds = null;
     /**
      * IDs of the permission sets to unassign.
      *

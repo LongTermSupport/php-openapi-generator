@@ -24,7 +24,7 @@ class PrivateUser extends \ArrayObject
     protected int $id;
     protected string $nodeId;
     protected string $avatarUrl;
-    protected ?string $gravatarId;
+    protected ?string $gravatarId = null;
     protected string $url;
     protected string $htmlUrl;
     protected string $followersUrl;
@@ -38,14 +38,14 @@ class PrivateUser extends \ArrayObject
     protected string $receivedEventsUrl;
     protected string $type;
     protected bool $siteAdmin;
-    protected ?string $name;
-    protected ?string $company;
-    protected ?string $blog;
-    protected ?string $location;
-    protected ?string $email;
-    protected ?bool $hireable;
-    protected ?string $bio;
-    protected ?string $twitterUsername;
+    protected ?string $name = null;
+    protected ?string $company = null;
+    protected ?string $blog = null;
+    protected ?string $location = null;
+    protected ?string $email = null;
+    protected ?bool $hireable = null;
+    protected ?string $bio = null;
+    protected ?string $twitterUsername = null;
     protected int $publicRepos;
     protected int $publicGists;
     protected int $followers;
@@ -59,7 +59,7 @@ class PrivateUser extends \ArrayObject
     protected int $collaborators;
     protected bool $twoFactorAuthentication;
     protected PrivateUserPlan $plan;
-    protected ?\DateTime $suspendedAt;
+    protected ?\DateTime $suspendedAt = null;
     protected bool $businessPlus;
     protected string $ldapDn;
     public function getLogin(): string

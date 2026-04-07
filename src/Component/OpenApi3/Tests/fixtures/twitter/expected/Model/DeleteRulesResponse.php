@@ -20,7 +20,7 @@ class DeleteRulesResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $meta;
+    protected mixed $meta = null;
     public function getMeta(): mixed
     {
         return $this->meta;

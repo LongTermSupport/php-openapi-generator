@@ -21,17 +21,17 @@ class InternalRecipient
      * User information of recipient.
      *
      */
-    protected mixed $recipient;
+    protected mixed $recipient = null;
     /**
      * Recipient specific token.
      *
      */
-    protected ?string $token;
+    protected ?string $token = null;
     /**
      * URL to access the share for this recipient.
      *
      */
-    protected ?string $url;
+    protected ?string $url = null;
     /**
      * User information of recipient.
      *

@@ -20,12 +20,12 @@ class CommunityProfileFiles extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?CommunityProfileFilesCodeOfConduct $codeOfConduct;
-    protected ?CommunityProfileFilesLicense $license;
-    protected ?CommunityProfileFilesContributing $contributing;
-    protected ?CommunityProfileFilesReadme $readme;
-    protected ?CommunityProfileFilesIssueTemplate $issueTemplate;
-    protected ?CommunityProfileFilesPullRequestTemplate $pullRequestTemplate;
+    protected ?CommunityProfileFilesCodeOfConduct $codeOfConduct = null;
+    protected ?CommunityProfileFilesLicense $license = null;
+    protected ?CommunityProfileFilesContributing $contributing = null;
+    protected ?CommunityProfileFilesReadme $readme = null;
+    protected ?CommunityProfileFilesIssueTemplate $issueTemplate = null;
+    protected ?CommunityProfileFilesPullRequestTemplate $pullRequestTemplate = null;
     public function getCodeOfConduct(): ?CommunityProfileFilesCodeOfConduct
     {
         return $this->codeOfConduct;

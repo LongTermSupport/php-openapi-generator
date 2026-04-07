@@ -20,7 +20,7 @@ class ResponseSshKeysExisting extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $sshKey;
+    protected mixed $sshKey = null;
     public function getSshKey(): mixed
     {
         return $this->sshKey;

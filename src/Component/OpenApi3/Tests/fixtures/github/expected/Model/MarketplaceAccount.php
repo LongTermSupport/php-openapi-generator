@@ -25,8 +25,8 @@ class MarketplaceAccount extends \ArrayObject
     protected string $type;
     protected string $nodeId;
     protected string $login;
-    protected ?string $email;
-    protected ?string $organizationBillingEmail;
+    protected ?string $email = null;
+    protected ?string $organizationBillingEmail = null;
     public function getUrl(): string
     {
         return $this->url;

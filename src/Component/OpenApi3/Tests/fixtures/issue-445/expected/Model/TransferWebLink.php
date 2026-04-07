@@ -26,12 +26,12 @@ class TransferWebLink extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $identifier;
+    protected ?string $identifier = null;
     /**
      * Client generated identifier of the item.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * URL of the item.
      *
@@ -41,7 +41,7 @@ class TransferWebLink extends \ArrayObject
      * Optional target filename of the file.
      *
      */
-    protected ?string $fileName;
+    protected ?string $fileName = null;
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *

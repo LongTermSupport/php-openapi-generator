@@ -21,12 +21,12 @@ class LanguageAnalyzer extends AnalyzerBase
      * The analyzer type: Language
      *
      */
-    protected mixed $type;
+    protected mixed $type = null;
     /**
      * The suffix for the analyzed field: language.
      *
      */
-    protected ?string $fieldSuffix;
+    protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: Language
      *

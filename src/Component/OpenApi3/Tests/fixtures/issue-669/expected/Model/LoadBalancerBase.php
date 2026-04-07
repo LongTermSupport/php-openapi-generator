@@ -89,12 +89,12 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying health check settings for the load balancer.
      *
      */
-    protected mixed $healthCheck;
+    protected mixed $healthCheck = null;
     /**
      * An object specifying sticky sessions settings for the load balancer.
      *
      */
-    protected mixed $stickySessions;
+    protected mixed $stickySessions = null;
     /**
      * A boolean value indicating whether HTTP requests to the load balancer on port 80 will be redirected to HTTPS on port 443.
      *
@@ -129,7 +129,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying allow and deny rules to control traffic to the load balancer.
      *
      */
-    protected mixed $firewall;
+    protected mixed $firewall = null;
     /**
      * A string indicating whether the load balancer should be external or internal. Internal load balancers have no public IPs and are only accessible to resources on the same VPC network. This property cannot be updated after creating the load balancer.
      *
@@ -155,7 +155,7 @@ class LoadBalancerBase extends \ArrayObject
      * An object specifying forwarding configurations for a Global load balancer.
      *
      */
-    protected mixed $glbSettings;
+    protected mixed $glbSettings = null;
     /**
      * An array containing the UUIDs of the Regional load balancers to be used as target backends for a Global load balancer.
      *

@@ -22,8 +22,8 @@ class License extends \ArrayObject
     }
     protected string $key;
     protected string $name;
-    protected ?string $spdxId;
-    protected ?string $url;
+    protected ?string $spdxId = null;
+    protected ?string $url = null;
     protected string $nodeId;
     protected string $htmlUrl;
     protected string $description;

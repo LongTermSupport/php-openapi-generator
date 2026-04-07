@@ -20,7 +20,7 @@ class ResponseExistingCheckState extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $state;
+    protected mixed $state = null;
     public function getState(): mixed
     {
         return $this->state;

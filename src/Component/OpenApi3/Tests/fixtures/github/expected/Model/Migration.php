@@ -21,7 +21,7 @@ class Migration extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected int $id;
-    protected ?MigrationOwner $owner;
+    protected ?MigrationOwner $owner = null;
     protected string $guid;
     protected string $state;
     protected bool $lockRepositories;

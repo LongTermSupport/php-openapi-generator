@@ -21,12 +21,12 @@ class ContentReferencesResult
      * List of references. Only available when requested in the request.
      *
      */
-    protected mixed $metadataReferences;
+    protected mixed $metadataReferences = null;
     /**
      * List of share references
      *
      */
-    protected mixed $shareReferences;
+    protected mixed $shareReferences = null;
     /**
      * List of references. Only available when requested in the request.
      *

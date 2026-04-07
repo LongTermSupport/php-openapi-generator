@@ -20,11 +20,11 @@ class IssueSearchResultItemPullRequest extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?\DateTime $mergedAt;
-    protected ?string $diffUrl;
-    protected ?string $htmlUrl;
-    protected ?string $patchUrl;
-    protected ?string $url;
+    protected ?\DateTime $mergedAt = null;
+    protected ?string $diffUrl = null;
+    protected ?string $htmlUrl = null;
+    protected ?string $patchUrl = null;
+    protected ?string $url = null;
     public function getMergedAt(): ?\DateTime
     {
         return $this->mergedAt;

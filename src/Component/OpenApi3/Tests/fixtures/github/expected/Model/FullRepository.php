@@ -24,10 +24,10 @@ class FullRepository extends \ArrayObject
     protected string $nodeId;
     protected string $name;
     protected string $fullName;
-    protected ?FullRepositoryOwner $owner;
+    protected ?FullRepositoryOwner $owner = null;
     protected bool $private;
     protected string $htmlUrl;
-    protected ?string $description;
+    protected ?string $description = null;
     protected bool $fork;
     protected string $url;
     protected string $archiveUrl;
@@ -68,11 +68,11 @@ class FullRepository extends \ArrayObject
     protected string $teamsUrl;
     protected string $treesUrl;
     protected string $cloneUrl;
-    protected ?string $mirrorUrl;
+    protected ?string $mirrorUrl = null;
     protected string $hooksUrl;
     protected string $svnUrl;
-    protected ?string $homepage;
-    protected ?string $language;
+    protected ?string $homepage = null;
+    protected ?string $language = null;
     protected int $forksCount;
     protected int $stargazersCount;
     protected int $watchersCount;
@@ -105,25 +105,25 @@ class FullRepository extends \ArrayObject
     protected \DateTime $updatedAt;
     protected FullRepositoryPermissions $permissions;
     protected bool $allowRebaseMerge;
-    protected ?FullRepositoryTemplateRepository $templateRepository;
-    protected ?string $tempCloneToken;
+    protected ?FullRepositoryTemplateRepository $templateRepository = null;
+    protected ?string $tempCloneToken = null;
     protected bool $allowSquashMerge;
     protected bool $deleteBranchOnMerge;
     protected bool $allowMergeCommit;
     protected int $subscribersCount;
     protected int $networkCount;
-    protected ?FullRepositoryLicense $license;
-    protected ?FullRepositoryOrganization $organization;
+    protected ?FullRepositoryLicense $license = null;
+    protected ?FullRepositoryOrganization $organization = null;
     /**
      * A git repository
      *
      */
-    protected mixed $parent;
+    protected mixed $parent = null;
     /**
      * A git repository
      *
      */
-    protected mixed $source;
+    protected mixed $source = null;
     protected int $forks;
     protected string $masterBranch;
     protected int $openIssues;

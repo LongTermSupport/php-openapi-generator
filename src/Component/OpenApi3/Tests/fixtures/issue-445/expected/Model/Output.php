@@ -21,7 +21,7 @@ class Output
      * The ID of the output. Can be null for dynamic outputs which are not rendered yet.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The ID of the output format this output represents.
      *
@@ -36,17 +36,17 @@ class Output
      * The rendering state of the output file.
      *
      */
-    protected mixed $renderingState;
+    protected mixed $renderingState = null;
     /**
      * Detail of the output that are format dependent.
      *
      */
-    protected mixed $detail;
+    protected mixed $detail = null;
     /**
      * Date and time of the backup of the output file.
      *
      */
-    protected ?\DateTime $backupTimestamp;
+    protected ?\DateTime $backupTimestamp = null;
     /**
      * Number of rendering retry attempts left.
      *

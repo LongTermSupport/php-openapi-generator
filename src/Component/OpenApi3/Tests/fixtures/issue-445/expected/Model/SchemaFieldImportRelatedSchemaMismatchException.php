@@ -21,18 +21,18 @@ class SchemaFieldImportRelatedSchemaMismatchException extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $traceLevel;
-    protected ?string $traceId;
-    protected ?string $traceJobId;
+    protected ?string $traceId = null;
+    protected ?string $traceJobId = null;
     protected int $httpStatusCode;
-    protected ?string $exceptionMessage;
+    protected ?string $exceptionMessage = null;
     protected string $kind;
-    protected ?string $customerId;
-    protected ?string $customerAlias;
-    protected ?string $userId;
-    protected ?string $schemaId;
-    protected ?string $fieldId;
-    protected ?string $importingRelatedSchemaId;
-    protected ?string $existingRelatedSchemaId;
+    protected ?string $customerId = null;
+    protected ?string $customerAlias = null;
+    protected ?string $userId = null;
+    protected ?string $schemaId = null;
+    protected ?string $fieldId = null;
+    protected ?string $importingRelatedSchemaId = null;
+    protected ?string $existingRelatedSchemaId = null;
     public function getTraceLevel(): string
     {
         return $this->traceLevel;

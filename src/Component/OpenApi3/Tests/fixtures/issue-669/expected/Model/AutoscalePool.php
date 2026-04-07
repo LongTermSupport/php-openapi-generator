@@ -36,8 +36,8 @@ class AutoscalePool extends \ArrayObject
      * @var array<string, mixed>
      */
     protected array $config;
-    protected mixed $dropletTemplate;
-    protected mixed $currentUtilization;
+    protected mixed $dropletTemplate = null;
+    protected mixed $currentUtilization = null;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was created.
      *

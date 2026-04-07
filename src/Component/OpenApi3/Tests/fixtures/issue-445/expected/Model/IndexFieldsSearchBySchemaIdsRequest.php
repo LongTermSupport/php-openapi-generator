@@ -22,7 +22,7 @@ class IndexFieldsSearchBySchemaIdsRequest
      *
      * @var list<string>|null
      */
-    protected ?array $schemaIds;
+    protected ?array $schemaIds = null;
     /**
      * Controls how the search works which schemas should be considered in the search.
      * AllDescendantsFieldsOnRootSchema: All indexed fields from descendant schemas of root ones will be returned. Schemas that are not root schemas will be ignored.

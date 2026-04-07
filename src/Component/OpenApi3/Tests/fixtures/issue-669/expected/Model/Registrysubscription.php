@@ -20,7 +20,7 @@ class Registrysubscription extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $tier;
+    protected mixed $tier = null;
     /**
      * The time at which the subscription was created.
      *

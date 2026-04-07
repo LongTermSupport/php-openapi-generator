@@ -37,7 +37,7 @@ class Destination extends \ArrayObject
      *
      */
     protected string $type;
-    protected mixed $config;
+    protected mixed $config = null;
     /**
      * A unique identifier for a destination.
      *

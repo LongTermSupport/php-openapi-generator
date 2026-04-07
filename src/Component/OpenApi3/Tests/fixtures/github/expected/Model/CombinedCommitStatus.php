@@ -31,7 +31,7 @@ class CombinedCommitStatus extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     protected string $commitUrl;
     protected string $url;
     public function getState(): string

@@ -21,18 +21,18 @@ class ShareSearchAndAggregationBaseRequest
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
      * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
@@ -43,7 +43,7 @@ class ShareSearchAndAggregationBaseRequest
      *
      * @var list<AggregationFilter>|null
      */
-    protected ?array $aggregationFilters;
+    protected ?array $aggregationFilters = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *

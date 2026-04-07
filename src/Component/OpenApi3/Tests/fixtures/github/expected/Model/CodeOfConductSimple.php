@@ -23,7 +23,7 @@ class CodeOfConductSimple extends \ArrayObject
     protected string $url;
     protected string $key;
     protected string $name;
-    protected ?string $htmlUrl;
+    protected ?string $htmlUrl = null;
     public function getUrl(): string
     {
         return $this->url;

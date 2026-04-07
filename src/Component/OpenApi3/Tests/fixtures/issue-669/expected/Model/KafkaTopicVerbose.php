@@ -39,7 +39,7 @@ class KafkaTopicVerbose extends \ArrayObject
      * @var list<KafkaTopicPartition>
      */
     protected array $partitions;
-    protected mixed $config;
+    protected mixed $config = null;
     /**
      * The name of the Kafka topic.
      *

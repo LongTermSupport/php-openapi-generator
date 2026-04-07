@@ -17,10 +17,10 @@ class CustomerApp
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $appId;
-    protected mixed $name;
-    protected mixed $description;
-    protected ?string $icon;
+    protected ?string $appId = null;
+    protected mixed $name = null;
+    protected mixed $description = null;
+    protected ?string $icon = null;
     public function getAppId(): ?string
     {
         return $this->appId;

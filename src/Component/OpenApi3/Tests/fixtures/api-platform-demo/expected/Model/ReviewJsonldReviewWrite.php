@@ -20,7 +20,7 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $context;
+    protected mixed $context = null;
     protected string $id;
     protected string $type;
     /**
@@ -39,7 +39,7 @@ class ReviewJsonldReviewWrite extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $letter;
+    protected ?string $letter = null;
     /**
      * The item that is being reviewed/rated.
      *
@@ -49,12 +49,12 @@ class ReviewJsonldReviewWrite extends \ArrayObject
      * The author of the review.
      *
      */
-    protected ?string $author;
+    protected ?string $author = null;
     /**
      * Publication date of the review.
      *
      */
-    protected ?\DateTime $publicationDate;
+    protected ?\DateTime $publicationDate = null;
     public function getContext(): mixed
     {
         return $this->context;

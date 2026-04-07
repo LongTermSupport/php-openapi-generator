@@ -26,30 +26,30 @@ class TermsEnumAggregator extends AggregatorBase
      * It defines how many term buckets should be returned out of the overall terms list.
      *
      */
-    protected ?int $size;
+    protected ?int $size = null;
     /**
      * Includes values for which buckets will be created. Supports regular expression strings or arrays of exact values.
      *
      * @var list<string>|null
      */
-    protected ?array $includes;
+    protected ?array $includes = null;
     /**
      * Excludes values for which buckets will be created. Supports regular expression strings or arrays of exact values.
      *
      * @var list<string>|null
      */
-    protected ?array $excludes;
+    protected ?array $excludes = null;
     /**
      * Limits the possible returned aggregation values by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * Search fields to be used to search the SearchString value into. If no search field is specified, the Field value is used.
      *
      * @var list<string>|null
      */
-    protected ?array $searchFields;
+    protected ?array $searchFields = null;
     /**
      * Type of the enum target of the relation. It is used to resolve the enum translation.
      *

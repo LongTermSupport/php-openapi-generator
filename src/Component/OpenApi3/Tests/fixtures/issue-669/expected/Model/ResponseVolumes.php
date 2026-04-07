@@ -26,7 +26,7 @@ class ResponseVolumes extends \ArrayObject
      * @var list<array<string, mixed>>
      */
     protected array $volumes;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * Array of volumes.

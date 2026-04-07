@@ -30,7 +30,7 @@ class V2VolumesVolumeIdSnapshotsPostBody extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * A human-readable name for the volume snapshot.
      *

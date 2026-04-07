@@ -27,7 +27,7 @@ class BusinessProcessCreateRequest
      * Set to null to not create a notification.
      *
      */
-    protected mixed $notification;
+    protected mixed $notification = null;
     /**
      * Initial state of the business process.
      *

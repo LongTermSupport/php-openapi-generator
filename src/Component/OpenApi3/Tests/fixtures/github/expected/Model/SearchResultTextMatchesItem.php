@@ -21,7 +21,7 @@ class SearchResultTextMatchesItem extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $objectUrl;
-    protected ?string $objectType;
+    protected ?string $objectType = null;
     protected string $property;
     protected string $fragment;
     /**

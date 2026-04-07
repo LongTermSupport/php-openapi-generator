@@ -29,7 +29,7 @@ class ApplicationGrant extends \ArrayObject
      * @var list<string>
      */
     protected array $scopes;
-    protected ?ApplicationGrantUser $user;
+    protected ?ApplicationGrantUser $user = null;
     public function getId(): int
     {
         return $this->id;

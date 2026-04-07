@@ -44,7 +44,7 @@ class Image extends \ArrayObject
      * A uniquely identifying string that is associated with each of the DigitalOcean-provided public images. These can be used to reference a public image as an alternative to the numeric id.
      *
      */
-    protected ?string $slug;
+    protected ?string $slug = null;
     /**
      * This is a boolean value that indicates whether the image in question is public or not. An image that is public is available to all accounts. A non-public image is only accessible from your account.
      *
@@ -65,12 +65,12 @@ class Image extends \ArrayObject
      * The minimum disk size in GB required for a Droplet to use this image.
      *
      */
-    protected ?int $minDiskSize;
+    protected ?int $minDiskSize = null;
     /**
      * The size of the image in gigabytes.
      *
      */
-    protected ?float $sizeGigabytes;
+    protected ?float $sizeGigabytes = null;
     /**
      * An optional free-form text field to describe an image.
      *
@@ -81,7 +81,7 @@ class Image extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * A status string indicating the state of a custom image. This may be `NEW`,
      *  `available`, `pending`, `deleted`, or `retired`.

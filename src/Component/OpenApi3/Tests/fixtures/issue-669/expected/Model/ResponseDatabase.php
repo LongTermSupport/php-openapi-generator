@@ -20,7 +20,7 @@ class ResponseDatabase extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $db;
+    protected mixed $db = null;
     public function getDb(): mixed
     {
         return $this->db;

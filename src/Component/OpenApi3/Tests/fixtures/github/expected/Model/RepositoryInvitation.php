@@ -29,9 +29,9 @@ class RepositoryInvitation extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository;
-    protected ?RepositoryInvitationInvitee $invitee;
-    protected ?RepositoryInvitationInviter $inviter;
+    protected mixed $repository = null;
+    protected ?RepositoryInvitationInvitee $invitee = null;
+    protected ?RepositoryInvitationInviter $inviter = null;
     /**
      * The permission associated with the invitation.
      *

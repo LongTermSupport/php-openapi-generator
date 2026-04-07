@@ -80,13 +80,13 @@ class V2DatabasesPostBody extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * An array of strings containing the names of databases created in the database cluster.
      *
      * @var list<string>|null
      */
-    protected ?array $dbNames;
+    protected ?array $dbNames = null;
     /**
      * The connection details for OpenSearch dashboard.
      *
@@ -104,7 +104,7 @@ class V2DatabasesPostBody extends \ArrayObject
     /**
      * @var list<DatabaseUser>|null
      */
-    protected ?array $users;
+    protected ?array $users = null;
     protected DatabaseClusterMaintenanceWindow $maintenanceWindow;
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:update` scope.
@@ -141,7 +141,7 @@ class V2DatabasesPostBody extends \ArrayObject
      *
      */
     protected DatabaseClusterAutoscale $autoscale;
-    protected mixed $backupRestore;
+    protected mixed $backupRestore = null;
     /**
      * A unique ID that can be used to identify and reference a database cluster.
      *

@@ -26,7 +26,7 @@ class CreateTransferRequest
      * Type of transfer.
      *
      */
-    protected mixed $transferType;
+    protected mixed $transferType = null;
     /**
      * Files uploaded in transfer.
      * The client is responsible for uploading files to backend.
@@ -34,7 +34,7 @@ class CreateTransferRequest
      *
      * @var list<TransferUploadFile>|null
      */
-    protected ?array $files;
+    protected ?array $files = null;
     /**
      * Weblinks downloaded in transfer.
      * The backend will download files using HTTP, therefore public access to files is needed.
@@ -42,12 +42,12 @@ class CreateTransferRequest
      *
      * @var list<TransferWebLink>|null
      */
-    protected ?array $webLinks;
+    protected ?array $webLinks = null;
     /**
      * Name of collection created after transfer.
      *
      */
-    protected ?string $collectionName;
+    protected ?string $collectionName = null;
     /**
      * A value indicating whether to create a collection after importing the transfer.
      *

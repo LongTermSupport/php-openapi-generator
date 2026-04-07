@@ -21,13 +21,13 @@ class PermissionSetUserPermissionRights
      * Permission set ID.
      *
      */
-    protected ?string $permissionSetId;
+    protected ?string $permissionSetId = null;
     /**
      * List of rights on the permission set specified by PermissionSetId
      *
      * @var list<string>|null
      */
-    protected ?array $permissionSetRights;
+    protected ?array $permissionSetRights = null;
     /**
      * Permission set ID.
      *

@@ -17,7 +17,7 @@ class BusinessProcessCancellationRequestedEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $businessProcessId;
+    protected ?string $businessProcessId = null;
     public function getBusinessProcessId(): ?string
     {
         return $this->businessProcessId;

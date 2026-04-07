@@ -27,14 +27,14 @@ class ListItemCreateRequest
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $content;
+    protected ?array $content = null;
     /**
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
      *

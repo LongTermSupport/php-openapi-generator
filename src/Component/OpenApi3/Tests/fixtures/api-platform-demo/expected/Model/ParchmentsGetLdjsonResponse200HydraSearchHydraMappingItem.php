@@ -22,7 +22,7 @@ class ParchmentsGetLdjsonResponse200HydraSearchHydraMappingItem extends \ArrayOb
     }
     protected string $type;
     protected string $variable;
-    protected ?string $property;
+    protected ?string $property = null;
     protected bool $required;
     public function getType(): string
     {

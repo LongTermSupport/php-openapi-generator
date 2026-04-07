@@ -24,7 +24,7 @@ class ApiCreateKnowledgeBaseDataSourceOutput extends \ArrayObject
      * Data Source configuration for Knowledge Bases
      *
      */
-    protected mixed $knowledgeBaseDataSource;
+    protected mixed $knowledgeBaseDataSource = null;
     /**
      * Data Source configuration for Knowledge Bases
      *

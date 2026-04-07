@@ -34,17 +34,17 @@ class TransferDetail extends \ArrayObject
      * State of transfer.
      *
      */
-    protected mixed $state;
+    protected mixed $state = null;
     /**
      * Type of transfer.
      *
      */
-    protected mixed $transferType;
+    protected mixed $transferType = null;
     /**
      * Associated business process ID.
      *
      */
-    protected ?string $businessProcessId;
+    protected ?string $businessProcessId = null;
     /**
      * Number of files in transfer.
      *
@@ -54,12 +54,12 @@ class TransferDetail extends \ArrayObject
      * ID of collection created from transfer.
      *
      */
-    protected ?string $collectionId;
+    protected ?string $collectionId = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Number of items processed.
      *
@@ -94,12 +94,12 @@ class TransferDetail extends \ArrayObject
      * Time stamp of last progress update from data extraction.
      *
      */
-    protected ?\DateTime $lastDataExtractionProgressTimeStamp;
+    protected ?\DateTime $lastDataExtractionProgressTimeStamp = null;
     /**
      * Time stamp of last progress update from upload.
      *
      */
-    protected ?\DateTime $lastFileUploadProgressTimeStamp;
+    protected ?\DateTime $lastFileUploadProgressTimeStamp = null;
     /**
      * ID of transfer.
      *

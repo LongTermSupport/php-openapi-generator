@@ -39,13 +39,13 @@ class IssueComment extends \ArrayObject
     protected string $bodyText;
     protected string $bodyHtml;
     protected string $htmlUrl;
-    protected ?IssueCommentUser $user;
+    protected ?IssueCommentUser $user = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected string $issueUrl;
     protected string $authorAssociation;
-    protected ?IssueCommentPerformedViaGithubApp $performedViaGithubApp;
-    protected mixed $reactions;
+    protected ?IssueCommentPerformedViaGithubApp $performedViaGithubApp = null;
+    protected mixed $reactions = null;
     /**
      * Unique identifier of the issue comment
      *

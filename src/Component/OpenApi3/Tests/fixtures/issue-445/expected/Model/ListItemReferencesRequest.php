@@ -21,7 +21,7 @@ class ListItemReferencesRequest
      * Limits the number of the returned metadata references by setting paging information.
      *
      */
-    protected mixed $references;
+    protected mixed $references = null;
     /**
      * Limits the number of the returned metadata references by setting paging information.
      *

@@ -28,8 +28,8 @@ class ResponseInvoices extends \ArrayObject
      * The invoice preview.
      *
      */
-    protected mixed $invoicePreview;
-    protected mixed $links;
+    protected mixed $invoicePreview = null;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<InvoicePreview>

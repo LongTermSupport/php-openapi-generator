@@ -25,7 +25,7 @@ class Installation extends \ArrayObject
      *
      */
     protected int $id;
-    protected SimpleUser|Enterprise|null $account;
+    protected SimpleUser|Enterprise|null $account = null;
     /**
      * Describe whether all repositories have been selected or there's a selection involved
      *
@@ -48,11 +48,11 @@ class Installation extends \ArrayObject
     protected array $events;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?string $singleFileName;
+    protected ?string $singleFileName = null;
     protected string $appSlug;
-    protected ?InstallationSuspendedBy $suspendedBy;
-    protected ?\DateTime $suspendedAt;
-    protected ?string $contactEmail;
+    protected ?InstallationSuspendedBy $suspendedBy = null;
+    protected ?\DateTime $suspendedAt = null;
+    protected ?string $contactEmail = null;
     /**
      * The ID of the installation.
      *

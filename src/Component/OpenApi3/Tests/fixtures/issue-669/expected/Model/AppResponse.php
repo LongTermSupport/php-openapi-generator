@@ -24,7 +24,7 @@ class AppResponse extends \ArrayObject
      * An application's configuration and status.
      *
      */
-    protected mixed $app;
+    protected mixed $app = null;
     /**
      * An application's configuration and status.
      *

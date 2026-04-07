@@ -20,7 +20,7 @@ class ResponseFloatingIp extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $floatingIp;
+    protected mixed $floatingIp = null;
     public function getFloatingIp(): mixed
     {
         return $this->floatingIp;

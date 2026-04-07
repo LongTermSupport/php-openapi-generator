@@ -22,7 +22,7 @@ class EventPayloadPagesItem extends \ArrayObject
     }
     protected string $pageName;
     protected string $title;
-    protected ?string $summary;
+    protected ?string $summary = null;
     protected string $action;
     protected string $sha;
     protected string $htmlUrl;

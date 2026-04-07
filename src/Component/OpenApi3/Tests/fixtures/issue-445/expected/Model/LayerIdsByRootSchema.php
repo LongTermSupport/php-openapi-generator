@@ -17,11 +17,11 @@ class LayerIdsByRootSchema
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $rootSchemaId;
+    protected ?string $rootSchemaId = null;
     /**
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     public function getRootSchemaId(): ?string
     {
         return $this->rootSchemaId;

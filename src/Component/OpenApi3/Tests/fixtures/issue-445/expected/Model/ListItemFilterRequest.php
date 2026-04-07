@@ -21,12 +21,12 @@ class ListItemFilterRequest
      * The string used to query the data. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional filter to limit the list items.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Broadens the search to include all schema descendant list items.
      *
@@ -37,14 +37,14 @@ class ListItemFilterRequest
      *
      * @var list<string>|null
      */
-    protected ?array $schemaIds;
+    protected ?array $schemaIds = null;
     /**
      * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
      * If not specified, all metadata languages defined in the system are used.
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * Limits the search to the list items that have or not have broken references. By default it includes both.
      *

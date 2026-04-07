@@ -21,17 +21,17 @@ class MatchRegexCondition extends BusinessRuleCondition
      * JSON path to the field
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * Regular expression
      *
      */
-    protected ?string $regex;
+    protected ?string $regex = null;
     /**
      * Optional variable name to store the matched regex groups in
      *
      */
-    protected ?string $storeIn;
+    protected ?string $storeIn = null;
     /**
      * JSON path to the field
      *

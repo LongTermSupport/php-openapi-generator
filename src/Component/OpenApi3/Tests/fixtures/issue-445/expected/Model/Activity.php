@@ -17,8 +17,8 @@ class Activity
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?\DateTime $creationDate;
-    protected ?\DateTime $modificationDate;
+    protected ?\DateTime $creationDate = null;
+    protected ?\DateTime $modificationDate = null;
     public function getCreationDate(): ?\DateTime
     {
         return $this->creationDate;

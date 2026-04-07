@@ -33,7 +33,7 @@ class ShareDataBasic extends ShareDataBase
      * Language of share.
      *
      */
-    protected ?string $languageCode;
+    protected ?string $languageCode = null;
     /**
      * List of recipients added using email address
      *

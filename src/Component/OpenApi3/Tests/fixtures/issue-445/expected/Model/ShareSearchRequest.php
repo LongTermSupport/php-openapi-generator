@@ -24,18 +24,18 @@ class ShareSearchRequest extends \ArrayObject
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
      * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
@@ -46,7 +46,7 @@ class ShareSearchRequest extends \ArrayObject
      *
      * @var list<AggregationFilter>|null
      */
-    protected ?array $aggregationFilters;
+    protected ?array $aggregationFilters = null;
     /**
      * Limits the document count of the result set.
      *
@@ -57,12 +57,12 @@ class ShareSearchRequest extends \ArrayObject
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! It severely affects performance.
      *
@@ -73,7 +73,7 @@ class ShareSearchRequest extends \ArrayObject
      *
      * @var list<AggregatorBase>|null
      */
-    protected ?array $aggregators;
+    protected ?array $aggregators = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *

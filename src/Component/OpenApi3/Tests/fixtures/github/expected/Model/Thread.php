@@ -25,12 +25,12 @@ class Thread extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     protected ThreadSubject $subject;
     protected string $reason;
     protected bool $unread;
     protected string $updatedAt;
-    protected ?string $lastReadAt;
+    protected ?string $lastReadAt = null;
     protected string $url;
     protected string $subscriptionUrl;
     public function getId(): string

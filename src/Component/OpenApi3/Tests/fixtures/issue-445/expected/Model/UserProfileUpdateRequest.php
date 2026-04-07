@@ -21,32 +21,32 @@ class UserProfileUpdateRequest
      * ID of the user.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Email address.
      *
      */
-    protected ?string $emailAddress;
+    protected ?string $emailAddress = null;
     /**
      * First name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * Last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Language code.
      *
      */
-    protected ?string $languageCode;
+    protected ?string $languageCode = null;
     /**
      * Address.
      *
      */
-    protected mixed $address;
+    protected mixed $address = null;
     /**
      * ID of the user.
      *

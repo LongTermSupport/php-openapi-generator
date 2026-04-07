@@ -21,17 +21,17 @@ class DisplayPattern
      * The template engine used for parsing the display patterns.
      *
      */
-    protected mixed $templateEngine;
+    protected mixed $templateEngine = null;
     /**
      * The display pattern type.
      *
      */
-    protected mixed $displayPatternType;
+    protected mixed $displayPatternType = null;
     /**
      * Language specific pattern templates.
      *
      */
-    protected mixed $templates;
+    protected mixed $templates = null;
     /**
      * The template engine used for parsing the display patterns.
      *

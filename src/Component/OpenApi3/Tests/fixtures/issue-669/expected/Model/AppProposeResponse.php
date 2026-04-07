@@ -44,7 +44,7 @@ class AppProposeResponse extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec;
+    protected mixed $spec = null;
     /**
      * The monthly cost of the proposed app in USD.
      *

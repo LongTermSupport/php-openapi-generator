@@ -30,13 +30,13 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
      *
      */
     protected string $description;
-    protected mixed $metrics;
+    protected mixed $metrics = null;
     /**
      * Name of the test case.
      *
      */
     protected string $name;
-    protected mixed $starMetric;
+    protected mixed $starMetric = null;
     /**
      * Test-case UUID to update
      *

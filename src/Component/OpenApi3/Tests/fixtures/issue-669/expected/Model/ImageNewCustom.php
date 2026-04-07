@@ -50,7 +50,7 @@ class ImageNewCustom extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
      *

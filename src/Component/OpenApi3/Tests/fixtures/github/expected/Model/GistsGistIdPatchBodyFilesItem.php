@@ -29,7 +29,7 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
      * The new filename for the file
      *
      */
-    protected ?string $filename;
+    protected ?string $filename = null;
     /**
      * The new content of the file
      *

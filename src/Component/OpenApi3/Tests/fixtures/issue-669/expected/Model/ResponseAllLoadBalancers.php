@@ -24,7 +24,7 @@ class ResponseAllLoadBalancers extends \ArrayObject
      * @var list<LoadBalancer>
      */
     protected array $loadBalancers;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<LoadBalancer>

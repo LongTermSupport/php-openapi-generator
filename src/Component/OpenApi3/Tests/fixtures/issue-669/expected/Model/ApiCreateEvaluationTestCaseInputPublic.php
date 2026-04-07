@@ -42,7 +42,7 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $starMetric;
+    protected mixed $starMetric = null;
     /**
      * The workspace uuid.
      *

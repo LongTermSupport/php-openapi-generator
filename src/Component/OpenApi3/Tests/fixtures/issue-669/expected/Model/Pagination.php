@@ -20,7 +20,7 @@ class Pagination extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $links;
+    protected mixed $links = null;
     public function getLinks(): mixed
     {
         return $this->links;

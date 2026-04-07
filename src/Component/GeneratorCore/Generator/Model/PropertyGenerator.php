@@ -11,6 +11,8 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Type;
 use PhpParser\Comment\Doc;
 use PhpParser\Modifiers;
 use PhpParser\Node;
+use PhpParser\Node\Expr;
+use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 use PhpParser\Parser;
 
@@ -46,6 +48,24 @@ trait PropertyGenerator
             $nativeType = new Node\Identifier('mixed');
         } elseif (!$strict || $property->isNullable()) {
             $nativeType = Type::makeNullable($nativeType);
+        }
+
+        // Default nullable typed properties to null when no other default has been set.
+        // PHP requires typed properties to be explicitly initialized; reading an
+        // uninitialized typed property throws "Typed property must not be accessed
+        // before initialization". The generated normalizer reads properties via
+        // their getter before checking isInitialized(), so the property MUST have
+        // a safe default value to be readable on a freshly-constructed model.
+        //
+        // The isInitialized() tracking remains independent of the value: setters
+        // record explicit set/unset state in the $initialized array.
+        $isMixedNativeType = $nativeType instanceof Node\Identifier && 'mixed' === $nativeType->toString();
+        $alreadyHasDefault = $propertyStmt->default instanceof Expr;
+        $typeIsNullable    = $isMixedNativeType
+            || ($nativeType instanceof Node\NullableType)
+            || ($nativeType instanceof Node\UnionType && $this->unionTypeContainsNull($nativeType));
+        if (!$alreadyHasDefault && $typeIsNullable) {
+            $propertyStmt->default = new Expr\ConstFetch(new Name('null'));
         }
 
         $attributes = [];
@@ -140,5 +160,10 @@ trait PropertyGenerator
         }
 
         return $expression;
+    }
+
+    private function unionTypeContainsNull(Node\UnionType $unionType): bool
+    {
+        return array_any($unionType->types, static fn ($type): bool => $type instanceof Node\Identifier && 'null' === strtolower($type->toString()));
     }
 }

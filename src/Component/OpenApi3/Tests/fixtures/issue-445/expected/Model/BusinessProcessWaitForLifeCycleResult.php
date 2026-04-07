@@ -21,12 +21,12 @@ class BusinessProcessWaitForLifeCycleResult
      * The life cycle that was hit.
      *
      */
-    protected mixed $lifeCycleHit;
+    protected mixed $lifeCycleHit = null;
     /**
      * The business process.
      *
      */
-    protected mixed $businessProcess;
+    protected mixed $businessProcess = null;
     /**
      * The life cycle that was hit.
      *

@@ -32,22 +32,22 @@ class IssueSimple extends \ArrayObject
     protected string $state;
     protected string $title;
     protected string $body;
-    protected ?IssueSimpleUser $user;
+    protected ?IssueSimpleUser $user = null;
     /**
      * @var list<IssueSimpleLabelsItem>
      */
     protected array $labels;
-    protected ?IssueSimpleAssignee $assignee;
+    protected ?IssueSimpleAssignee $assignee = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $assignees;
-    protected ?IssueSimpleMilestone $milestone;
+    protected ?array $assignees = null;
+    protected ?IssueSimpleMilestone $milestone = null;
     protected bool $locked;
-    protected ?string $activeLockReason;
+    protected ?string $activeLockReason = null;
     protected int $comments;
     protected IssueSimplePullRequest $pullRequest;
-    protected ?\DateTime $closedAt;
+    protected ?\DateTime $closedAt = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected string $authorAssociation;
@@ -58,8 +58,8 @@ class IssueSimple extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository;
-    protected ?IssueSimplePerformedViaGithubApp $performedViaGithubApp;
+    protected mixed $repository = null;
+    protected ?IssueSimplePerformedViaGithubApp $performedViaGithubApp = null;
     public function getId(): int
     {
         return $this->id;

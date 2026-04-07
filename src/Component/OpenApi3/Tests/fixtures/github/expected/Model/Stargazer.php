@@ -21,7 +21,7 @@ class Stargazer extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected \DateTime $starredAt;
-    protected ?StargazerUser $user;
+    protected ?StargazerUser $user = null;
     public function getStarredAt(): \DateTime
     {
         return $this->starredAt;

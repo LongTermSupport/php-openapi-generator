@@ -20,7 +20,7 @@ class BusinessRuleFiredEvent extends ApplicationEvent
     /**
      * @var list<BusinessRuleFiredEventDetail>|null
      */
-    protected ?array $details;
+    protected ?array $details = null;
     /**
      * @return list<BusinessRuleFiredEventDetail>|null
      */

@@ -24,7 +24,7 @@ class ResponseAllCdnEndpoints extends \ArrayObject
      * @var list<CdnEndpoint>
      */
     protected array $endpoints;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<CdnEndpoint>

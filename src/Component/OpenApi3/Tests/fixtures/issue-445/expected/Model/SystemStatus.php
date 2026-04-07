@@ -22,19 +22,19 @@ class SystemStatus
      *
      * @var list<StatusOfSearchIndexState>|null
      */
-    protected ?array $searchIndicesStatus;
+    protected ?array $searchIndicesStatus = null;
     /**
      * The status of the display values.
      *
      * @var list<StatusOfDisplayValuesState>|null
      */
-    protected ?array $displayValuesStatus;
+    protected ?array $displayValuesStatus = null;
     /**
      * The status of the contents and list items.
      *
      * @var list<StatusOfMetadataState>|null
      */
-    protected ?array $metadataStatus;
+    protected ?array $metadataStatus = null;
     /**
      * The status of the search indices.
      *

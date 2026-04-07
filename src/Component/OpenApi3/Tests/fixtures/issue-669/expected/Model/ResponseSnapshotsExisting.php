@@ -20,7 +20,7 @@ class ResponseSnapshotsExisting extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $snapshot;
+    protected mixed $snapshot = null;
     public function getSnapshot(): mixed
     {
         return $this->snapshot;

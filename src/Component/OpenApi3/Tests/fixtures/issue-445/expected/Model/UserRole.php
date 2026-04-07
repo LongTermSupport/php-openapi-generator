@@ -24,7 +24,7 @@ class UserRole extends \ArrayObject
      * Language specific user role names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * All user rights for this user role.
      *

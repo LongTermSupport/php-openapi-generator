@@ -20,7 +20,7 @@ class ApiStatisticsEvent extends ApplicationEvent
     /**
      * @var array<string, int>|null
      */
-    protected ?array $requestsPerClient;
+    protected ?array $requestsPerClient = null;
     /**
      * @return array<string, int>|null
      */

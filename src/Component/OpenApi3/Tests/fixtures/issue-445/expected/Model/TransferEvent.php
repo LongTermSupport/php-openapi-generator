@@ -17,7 +17,7 @@ class TransferEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $transferId;
+    protected ?string $transferId = null;
     /**
      * Transfer states
      *

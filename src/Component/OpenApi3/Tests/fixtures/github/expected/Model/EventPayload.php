@@ -25,12 +25,12 @@ class EventPayload extends \ArrayObject
      * Issue Simple
      *
      */
-    protected mixed $issue;
+    protected mixed $issue = null;
     /**
      * Comments provide a way for people to collaborate on an issue.
      *
      */
-    protected mixed $comment;
+    protected mixed $comment = null;
     /**
      * @var list<EventPayloadPagesItem>
      */

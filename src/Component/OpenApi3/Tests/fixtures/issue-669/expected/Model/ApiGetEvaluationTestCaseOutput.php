@@ -20,7 +20,7 @@ class ApiGetEvaluationTestCaseOutput extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $evaluationTestCase;
+    protected mixed $evaluationTestCase = null;
     public function getEvaluationTestCase(): mixed
     {
         return $this->evaluationTestCase;

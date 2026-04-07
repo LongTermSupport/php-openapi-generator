@@ -51,7 +51,7 @@ class CustomerInfo
      * Configured languages of customer instance (system, metadata, default).
      *
      */
-    protected mixed $languageConfiguration;
+    protected mixed $languageConfiguration = null;
     /**
      * Languages including translations for the configured system and metadata languages.
      *
@@ -75,7 +75,7 @@ class CustomerInfo
      *
      * @var list<CustomerApp>|null
      */
-    protected ?array $apps;
+    protected ?array $apps = null;
     protected \DateTime $modificationDate;
     /**
      * Url to access Frontend service

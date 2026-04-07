@@ -21,7 +21,7 @@ class ListItem
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * The list item id.
      *
@@ -31,41 +31,41 @@ class ListItem
      * The id of the schema with schema type list.
      *
      */
-    protected ?string $contentSchemaId;
+    protected ?string $contentSchemaId = null;
     /**
      * Contains language specific display values, rendered according to the list schema's display pattern configuration.
      *
      */
-    protected mixed $displayValues;
+    protected mixed $displayValues = null;
     /**
      * The content data of the list item.
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $content;
+    protected ?array $content = null;
     /**
      * All the ids of the broken references (tagboxes)
      *
      * @var list<string>|null
      */
-    protected ?array $brokenReferenceIds;
+    protected ?array $brokenReferenceIds = null;
     /**
      * All the target ids of the broken relations
      *
      * @var list<string>|null
      */
-    protected ?array $brokenRelationTargetIds;
+    protected ?array $brokenRelationTargetIds = null;
     /**
      * All the ids of the broken indirect references (tagbox that has a property that reference a broken tagbox)
      *
      * @var list<string>|null
      */
-    protected ?array $brokenIndirectReferenceIds;
+    protected ?array $brokenIndirectReferenceIds = null;
     /**
      * LifeCycle of list item
      *
      */
-    protected mixed $lifeCycle;
+    protected mixed $lifeCycle = null;
     /**
      * Audit information.
      *

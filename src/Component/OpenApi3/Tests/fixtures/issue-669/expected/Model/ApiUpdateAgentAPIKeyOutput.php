@@ -24,7 +24,7 @@ class ApiUpdateAgentAPIKeyOutput extends \ArrayObject
      * Agent API Key Info
      *
      */
-    protected mixed $apiKeyInfo;
+    protected mixed $apiKeyInfo = null;
     /**
      * Agent API Key Info
      *

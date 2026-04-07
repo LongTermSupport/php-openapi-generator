@@ -20,7 +20,7 @@ class ContributorActivity extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?ContributorActivityAuthor $author;
+    protected ?ContributorActivityAuthor $author = null;
     protected int $total;
     /**
      * @var list<ContributorActivityWeeksItem>

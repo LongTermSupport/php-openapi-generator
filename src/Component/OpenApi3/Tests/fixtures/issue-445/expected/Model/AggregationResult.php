@@ -26,14 +26,14 @@ class AggregationResult
      * When there are lots of unique terms, Elastic Search only returns the top terms; this number is the sum of the document counts for all buckets that are not part of the response.
      *
      */
-    protected ?int $sumOtherDocCount;
+    protected ?int $sumOtherDocCount = null;
     /**
      * Items returned for the aggregation. Each item consists of a bucket with the matched value and the number of matches.
      * Optionally inner aggregations for further drill down can be available.
      *
      * @var list<AggregationResultItem>|null
      */
-    protected ?array $aggregationResultItems;
+    protected ?array $aggregationResultItems = null;
     /**
      * Name of the aggregation.
      *

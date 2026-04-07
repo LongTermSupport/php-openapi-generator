@@ -21,7 +21,7 @@ class ContentRelationItemsChangedCondition extends BusinessRuleCondition
      * JSON path to the field
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * JSON path to the field
      *

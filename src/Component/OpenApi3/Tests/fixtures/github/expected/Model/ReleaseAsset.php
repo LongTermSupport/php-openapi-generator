@@ -29,7 +29,7 @@ class ReleaseAsset extends \ArrayObject
      *
      */
     protected string $name;
-    protected ?string $label;
+    protected ?string $label = null;
     /**
      * State of the release asset.
      *
@@ -40,7 +40,7 @@ class ReleaseAsset extends \ArrayObject
     protected int $downloadCount;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?ReleaseAssetUploader $uploader;
+    protected ?ReleaseAssetUploader $uploader = null;
     public function getUrl(): string
     {
         return $this->url;

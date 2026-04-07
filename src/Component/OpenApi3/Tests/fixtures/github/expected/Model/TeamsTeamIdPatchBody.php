@@ -52,7 +52,7 @@ class TeamsTeamIdPatchBody extends \ArrayObject
      * The ID of a team to set as the parent team.
      *
      */
-    protected ?int $parentTeamId;
+    protected ?int $parentTeamId = null;
     /**
      * The name of the team.
      *

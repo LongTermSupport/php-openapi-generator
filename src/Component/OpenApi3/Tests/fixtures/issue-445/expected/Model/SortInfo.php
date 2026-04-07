@@ -21,12 +21,12 @@ class SortInfo
      * The field's ID to sort on.
      *
      */
-    protected ?string $field;
+    protected ?string $field = null;
     /**
      * The sort direction (ascending/descending).
      *
      */
-    protected mixed $direction;
+    protected mixed $direction = null;
     /**
      * The field's ID to sort on.
      *

@@ -24,7 +24,7 @@ class ResponseByoipPrefixList extends \ArrayObject
      * @var list<ByoipPrefix>
      */
     protected array $byoipPrefixes;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<ByoipPrefix>

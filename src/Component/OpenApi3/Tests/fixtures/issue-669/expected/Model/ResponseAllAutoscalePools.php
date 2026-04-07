@@ -24,7 +24,7 @@ class ResponseAllAutoscalePools extends \ArrayObject
      * @var list<AutoscalePool>
      */
     protected array $autoscalePools;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<AutoscalePool>

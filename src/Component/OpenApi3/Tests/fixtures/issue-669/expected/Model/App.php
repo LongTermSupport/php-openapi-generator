@@ -20,7 +20,7 @@ class App extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $activeDeployment;
+    protected mixed $activeDeployment = null;
     protected \DateTime $createdAt;
     protected string $defaultIngress;
     /**
@@ -28,7 +28,7 @@ class App extends \ArrayObject
      */
     protected array $domains;
     protected string $id;
-    protected mixed $inProgressDeployment;
+    protected mixed $inProgressDeployment = null;
     protected \DateTime $lastDeploymentCreatedAt;
     protected string $liveDomain;
     protected string $liveUrl;
@@ -40,12 +40,12 @@ class App extends \ArrayObject
      *
      */
     protected string $projectId;
-    protected mixed $region;
+    protected mixed $region = null;
     /**
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec;
+    protected mixed $spec = null;
     protected string $tierSlug;
     protected \DateTime $updatedAt;
     protected AppPinnedDeployment $pinnedDeployment;
@@ -53,7 +53,7 @@ class App extends \ArrayObject
      * @var list<AppsDedicatedEgressIp>
      */
     protected array $dedicatedIps;
-    protected mixed $vpc;
+    protected mixed $vpc = null;
     public function getActiveDeployment(): mixed
     {
         return $this->activeDeployment;

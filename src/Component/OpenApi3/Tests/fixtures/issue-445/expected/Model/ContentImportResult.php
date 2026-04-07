@@ -26,12 +26,12 @@ class ContentImportResult
      * ID of the resulting content.
      *
      */
-    protected ?string $contentId;
+    protected ?string $contentId = null;
     /**
      * State of the item.
      *
      */
-    protected ?string $state;
+    protected ?string $state = null;
     /**
      * Indicates if the operation succeeded.
      *
@@ -41,7 +41,7 @@ class ContentImportResult
      * If the operation did not succeeded, this contains error related information.
      *
      */
-    protected mixed $error;
+    protected mixed $error = null;
     /**
      * ID of the file transfer.
      *

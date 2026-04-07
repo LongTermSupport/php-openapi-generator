@@ -24,7 +24,7 @@ class IssueSimpleLabelsItem extends \ArrayObject
     protected string $nodeId;
     protected string $url;
     protected string $name;
-    protected ?string $description;
+    protected ?string $description = null;
     protected string $color;
     protected bool $default;
     public function getId(): int

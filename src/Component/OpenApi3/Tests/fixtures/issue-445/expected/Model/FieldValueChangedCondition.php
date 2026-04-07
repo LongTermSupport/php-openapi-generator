@@ -21,12 +21,12 @@ class FieldValueChangedCondition extends BusinessRuleCondition
      * JSON path to the field
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * Expected value for the field to have to satisfy the condition
      *
      */
-    protected mixed $expectedValue;
+    protected mixed $expectedValue = null;
     /**
      * JSON path to the field
      *

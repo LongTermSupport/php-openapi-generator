@@ -20,7 +20,7 @@ class PageLinks extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $pages;
+    protected mixed $pages = null;
     public function getPages(): mixed
     {
         return $this->pages;

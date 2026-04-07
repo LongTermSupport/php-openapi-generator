@@ -41,7 +41,7 @@ class ApiKnowledgeBase extends \ArrayObject
      * IndexingJob description
      *
      */
-    protected mixed $lastIndexingJob;
+    protected mixed $lastIndexingJob = null;
     /**
      * Name of knowledge base
      *

@@ -25,15 +25,15 @@ class CommitComment extends \ArrayObject
     protected int $id;
     protected string $nodeId;
     protected string $body;
-    protected ?string $path;
-    protected ?int $position;
-    protected ?int $line;
+    protected ?string $path = null;
+    protected ?int $position = null;
+    protected ?int $line = null;
     protected string $commitId;
-    protected ?CommitCommentUser $user;
+    protected ?CommitCommentUser $user = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected string $authorAssociation;
-    protected mixed $reactions;
+    protected mixed $reactions = null;
     public function getHtmlUrl(): string
     {
         return $this->htmlUrl;

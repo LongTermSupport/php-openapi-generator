@@ -41,7 +41,7 @@ class DestinationOmitCredentials extends \ArrayObject
      * OpenSearch destination configuration with `credentials` omitted.
      *
      */
-    protected mixed $config;
+    protected mixed $config = null;
     /**
      * A unique identifier for a destination.
      *

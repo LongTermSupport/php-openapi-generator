@@ -36,12 +36,12 @@ class Channel
      * An optional search filter. Limits the content document result set on each search and aggregation request.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Language specific names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * Default sort order specified for the channel to sort the results of a content search.
      *
@@ -76,12 +76,12 @@ class Channel
      * Display pattern to use for rendering details when 0 results are returned
      *
      */
-    protected mixed $missingResultsDisplayPatterns;
+    protected mixed $missingResultsDisplayPatterns = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Grants rights to all the users to view the channel.
      *

@@ -20,7 +20,7 @@ class Example extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $property1;
+    protected ?string $property1 = null;
     public function getProperty1(): ?string
     {
         return $this->property1;

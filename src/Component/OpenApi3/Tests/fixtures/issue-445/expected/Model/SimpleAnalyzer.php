@@ -21,12 +21,12 @@ class SimpleAnalyzer extends AnalyzerBase
      * The analyzer type: Simple
      *
      */
-    protected mixed $type;
+    protected mixed $type = null;
     /**
      * The suffix for the analyzed field: simple.
      *
      */
-    protected ?string $fieldSuffix;
+    protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: Simple
      *

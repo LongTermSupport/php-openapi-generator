@@ -24,8 +24,8 @@ class Release extends \ArrayObject
     protected string $htmlUrl;
     protected string $assetsUrl;
     protected string $uploadUrl;
-    protected ?string $tarballUrl;
-    protected ?string $zipballUrl;
+    protected ?string $tarballUrl = null;
+    protected ?string $zipballUrl = null;
     protected int $id;
     protected string $nodeId;
     /**
@@ -38,8 +38,8 @@ class Release extends \ArrayObject
      *
      */
     protected string $targetCommitish;
-    protected ?string $name;
-    protected ?string $body;
+    protected ?string $name = null;
+    protected ?string $body = null;
     /**
      * true to create a draft (unpublished) release, false to create a published one.
      *
@@ -51,12 +51,12 @@ class Release extends \ArrayObject
      */
     protected bool $prerelease;
     protected \DateTime $createdAt;
-    protected ?\DateTime $publishedAt;
+    protected ?\DateTime $publishedAt = null;
     /**
      * Simple User
      *
      */
-    protected mixed $author;
+    protected mixed $author = null;
     /**
      * @var list<ReleaseAsset>
      */

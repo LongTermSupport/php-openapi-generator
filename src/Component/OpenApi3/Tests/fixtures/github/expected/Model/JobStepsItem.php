@@ -29,7 +29,7 @@ class JobStepsItem extends \ArrayObject
      * The outcome of the job.
      *
      */
-    protected ?string $conclusion;
+    protected ?string $conclusion = null;
     /**
      * The name of the job.
      *
@@ -40,12 +40,12 @@ class JobStepsItem extends \ArrayObject
      * The time that the step started, in ISO 8601 format.
      *
      */
-    protected ?\DateTime $startedAt;
+    protected ?\DateTime $startedAt = null;
     /**
      * The time that the job finished, in ISO 8601 format.
      *
      */
-    protected ?\DateTime $completedAt;
+    protected ?\DateTime $completedAt = null;
     /**
      * The phase of the lifecycle that the job is currently in.
      *

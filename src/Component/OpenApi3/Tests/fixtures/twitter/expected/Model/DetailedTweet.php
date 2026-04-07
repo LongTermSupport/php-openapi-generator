@@ -61,13 +61,13 @@ class DetailedTweet extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    protected mixed $withheld;
+    protected mixed $withheld = null;
     /**
      * The location tagged on the Tweet, if the user provided one.
      *
      */
     protected DefaultTweetFieldsGeo $geo;
-    protected mixed $entities;
+    protected mixed $entities = null;
     /**
      * Engagement metrics for the Tweet at the time of the request.
      *

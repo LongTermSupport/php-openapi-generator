@@ -21,12 +21,12 @@ class CommitCommit extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $url;
-    protected ?CommitCommitAuthor $author;
-    protected ?CommitCommitCommitter $committer;
+    protected ?CommitCommitAuthor $author = null;
+    protected ?CommitCommitCommitter $committer = null;
     protected string $message;
     protected int $commentCount;
     protected CommitCommitTree $tree;
-    protected mixed $verification;
+    protected mixed $verification = null;
     public function getUrl(): string
     {
         return $this->url;

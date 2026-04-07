@@ -26,7 +26,7 @@ class ResponseAllDomainsResponse extends \ArrayObject
      * @var list<Domain>
      */
     protected array $domains;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * Array of volumes.

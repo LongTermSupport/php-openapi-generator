@@ -26,31 +26,31 @@ class OutputSearchRequest
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * List of Content ids you want to use to fetch the outputs.
      *
      * @var list<string>|null
      */
-    protected ?array $contentIds;
+    protected ?array $contentIds = null;
     /**
      * The allowed rendering states of the outputs you want to fetch.
      *
      * @var list<string>|null
      */
-    protected ?array $renderingStates;
+    protected ?array $renderingStates = null;
     /**
      * The file extension of the outputs you want to fetch.
      *
      * @var list<string>|null
      */
-    protected ?array $fileExtensions;
+    protected ?array $fileExtensions = null;
     /**
      * The output format id of the outputs you want to fetch.
      *
      * @var list<string>|null
      */
-    protected ?array $outputFormatIds;
+    protected ?array $outputFormatIds = null;
     /**
      * Limits the document count of the result set. Defaults to 30.
      *

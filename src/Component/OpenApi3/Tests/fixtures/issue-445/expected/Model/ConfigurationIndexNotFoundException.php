@@ -21,12 +21,12 @@ class ConfigurationIndexNotFoundException extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $traceLevel;
-    protected ?string $traceId;
-    protected ?string $traceJobId;
+    protected ?string $traceId = null;
+    protected ?string $traceJobId = null;
     protected int $httpStatusCode;
-    protected ?string $exceptionMessage;
+    protected ?string $exceptionMessage = null;
     protected string $kind;
-    protected ?string $configurationIndex;
+    protected ?string $configurationIndex = null;
     public function getTraceLevel(): string
     {
         return $this->traceLevel;

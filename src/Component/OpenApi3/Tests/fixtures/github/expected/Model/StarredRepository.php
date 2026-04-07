@@ -25,7 +25,7 @@ class StarredRepository extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repo;
+    protected mixed $repo = null;
     public function getStarredAt(): \DateTime
     {
         return $this->starredAt;

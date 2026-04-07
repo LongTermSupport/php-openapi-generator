@@ -21,12 +21,12 @@ class PathHierarchyAnalyzer extends AnalyzerBase
      * The analyzer type: PathHierarchy
      *
      */
-    protected mixed $type;
+    protected mixed $type = null;
     /**
      * The suffix for the analyzed field: pathhierarchy.
      *
      */
-    protected ?string $fieldSuffix;
+    protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: PathHierarchy
      *

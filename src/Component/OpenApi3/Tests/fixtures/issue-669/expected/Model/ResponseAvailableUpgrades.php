@@ -23,7 +23,7 @@ class ResponseAvailableUpgrades extends \ArrayObject
     /**
      * @var list<KubernetesVersion>|null
      */
-    protected ?array $availableUpgradeVersions;
+    protected ?array $availableUpgradeVersions = null;
     /**
      * @return list<KubernetesVersion>|null
      */

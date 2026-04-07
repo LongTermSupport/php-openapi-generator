@@ -27,25 +27,25 @@ class BusinessRuleTracedEvaluation
      *
      * @var list<BusinessRuleTracedEvaluationCondition>|null
      */
-    protected ?array $conditions;
+    protected ?array $conditions = null;
     /**
      * Detailed results for transformation groups.
      *
      * @var list<BusinessRuleTracedTransformationGroup>|null
      */
-    protected ?array $transformationGroups;
+    protected ?array $transformationGroups = null;
     /**
      * Detailed steps performed by actions.
      *
      * @var list<BusinessRuleTracedAction>|null
      */
-    protected ?array $actions;
+    protected ?array $actions = null;
     /**
      * State of variables after all transformation groups were ran.
      *
      * @var array<string, string>|null
      */
-    protected ?array $variables;
+    protected ?array $variables = null;
     /**
      * Indicates if the rule was found to be executable.
      *

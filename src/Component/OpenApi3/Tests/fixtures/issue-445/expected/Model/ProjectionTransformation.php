@@ -22,7 +22,7 @@ class ProjectionTransformation extends BusinessRuleTransformation
      *
      * @var list<BusinessRuleTransformation>|null
      */
-    protected ?array $transformations;
+    protected ?array $transformations = null;
     /**
      * Transformations to apply.
      *

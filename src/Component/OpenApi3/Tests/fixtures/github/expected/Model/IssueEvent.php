@@ -23,48 +23,48 @@ class IssueEvent extends \ArrayObject
     protected int $id;
     protected string $nodeId;
     protected string $url;
-    protected ?IssueEventActor $actor;
+    protected ?IssueEventActor $actor = null;
     protected string $event;
-    protected ?string $commitId;
-    protected ?string $commitUrl;
+    protected ?string $commitId = null;
+    protected ?string $commitUrl = null;
     protected \DateTime $createdAt;
     /**
      * Issue Simple
      *
      */
-    protected mixed $issue;
+    protected mixed $issue = null;
     /**
      * Issue Event Label
      *
      */
-    protected mixed $label;
-    protected ?IssueEventAssignee $assignee;
-    protected ?IssueEventAssigner $assigner;
-    protected ?IssueEventReviewRequester $reviewRequester;
-    protected ?IssueEventRequestedReviewer $requestedReviewer;
+    protected mixed $label = null;
+    protected ?IssueEventAssignee $assignee = null;
+    protected ?IssueEventAssigner $assigner = null;
+    protected ?IssueEventReviewRequester $reviewRequester = null;
+    protected ?IssueEventRequestedReviewer $requestedReviewer = null;
     /**
      * Groups of organization members that gives permissions on specified repositories.
      *
      */
-    protected mixed $requestedTeam;
-    protected mixed $dismissedReview;
+    protected mixed $requestedTeam = null;
+    protected mixed $dismissedReview = null;
     /**
      * Issue Event Milestone
      *
      */
-    protected mixed $milestone;
+    protected mixed $milestone = null;
     /**
      * Issue Event Project Card
      *
      */
-    protected mixed $projectCard;
+    protected mixed $projectCard = null;
     /**
      * Issue Event Rename
      *
      */
-    protected mixed $rename;
+    protected mixed $rename = null;
     protected string $authorAssociation;
-    protected ?string $lockReason;
+    protected ?string $lockReason = null;
     public function getId(): int
     {
         return $this->id;

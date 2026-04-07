@@ -26,7 +26,7 @@ class RelationType
      * Language specific relation names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * Defines the type of the document target of the relation. Currently supported: Content, ListItem.
      *
@@ -36,7 +36,7 @@ class RelationType
      * An optional filter to limit the documents of type TargetDocType.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * The ID of the relation type.
      *

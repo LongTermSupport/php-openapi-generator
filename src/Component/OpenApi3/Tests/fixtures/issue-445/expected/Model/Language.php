@@ -21,7 +21,7 @@ class Language
      * Language translations.
      *
      */
-    protected mixed $name;
+    protected mixed $name = null;
     /**
      * IETF language tag. E.g en, en-US, de.
      *
@@ -31,17 +31,17 @@ class Language
      * Two letter ISO language code. E.g. en, de.
      *
      */
-    protected ?string $twoLetterISOLanguageName;
+    protected ?string $twoLetterISOLanguageName = null;
     /**
      * Three letter ISO language code. E.g. eng, deu.
      *
      */
-    protected ?string $threeLetterISOLanguageName;
+    protected ?string $threeLetterISOLanguageName = null;
     /**
      * Region code of the language. E.g. US, DE, CH.
      *
      */
-    protected ?string $regionCode;
+    protected ?string $regionCode = null;
     /**
      * Language translations.
      *

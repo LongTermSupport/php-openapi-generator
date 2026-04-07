@@ -21,18 +21,18 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
      * ID of the schema to cache (should have SchemaType = List)
      *
      */
-    protected ?string $schemaId;
+    protected ?string $schemaId = null;
     /**
      * List of IDs of fields to use as a composite key
      *
      * @var list<string>|null
      */
-    protected ?array $keyFields;
+    protected ?array $keyFields = null;
     /**
      * An optional filter to narrow down the cached list items
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Include child schemas when caching list items
      *

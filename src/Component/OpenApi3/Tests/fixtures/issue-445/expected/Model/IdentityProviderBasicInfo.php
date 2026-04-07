@@ -21,17 +21,17 @@ class IdentityProviderBasicInfo
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Name of the identity provider as defined in IdentityServer
      *
      */
-    protected ?string $name;
+    protected ?string $name = null;
     /**
      * Display name of the identity provider as defined in IdentityServer
      *
      */
-    protected ?string $displayName;
+    protected ?string $displayName = null;
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
      *

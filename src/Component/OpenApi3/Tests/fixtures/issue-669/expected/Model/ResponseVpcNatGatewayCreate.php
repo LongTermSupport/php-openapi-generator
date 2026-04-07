@@ -20,7 +20,7 @@ class ResponseVpcNatGatewayCreate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $vpcNatGateway;
+    protected mixed $vpcNatGateway = null;
     public function getVpcNatGateway(): mixed
     {
         return $this->vpcNatGateway;

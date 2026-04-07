@@ -49,10 +49,10 @@ class AppFunctionsSpec extends \ArrayObject
      * @var list<AppVariableDefinition>
      */
     protected array $envs;
-    protected mixed $git;
-    protected mixed $github;
-    protected mixed $gitlab;
-    protected mixed $bitbucket;
+    protected mixed $git = null;
+    protected mixed $github = null;
+    protected mixed $gitlab = null;
+    protected mixed $bitbucket = null;
     /**
      * A list of configured log forwarding destinations.
      *

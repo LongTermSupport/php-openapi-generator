@@ -21,12 +21,12 @@ class Schema extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $attribute1;
-    protected ?string $attribute2;
+    protected ?string $attribute2 = null;
     protected string $attribute3;
-    protected ?string $attribute4;
+    protected ?string $attribute4 = null;
     protected string $stringProperty;
     protected \DateTime $dateProperty;
-    protected ?\DateTime $dateNullableProperty;
+    protected ?\DateTime $dateNullableProperty = null;
     protected int $integerProperty;
     protected float $floatProperty;
     /**
@@ -38,7 +38,7 @@ class Schema extends \ArrayObject
      */
     protected array $mapProperty;
     protected SchemaObjectProperty $objectProperty;
-    protected mixed $objectRefProperty;
+    protected mixed $objectRefProperty = null;
     public function getAttribute1(): string
     {
         return $this->attribute1;

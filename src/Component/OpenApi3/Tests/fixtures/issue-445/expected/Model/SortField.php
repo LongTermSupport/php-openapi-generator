@@ -26,7 +26,7 @@ class SortField
      * The translated name of the field to be shown in the UI.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * The path of the field ({schemaId}.{fieldId})
      *

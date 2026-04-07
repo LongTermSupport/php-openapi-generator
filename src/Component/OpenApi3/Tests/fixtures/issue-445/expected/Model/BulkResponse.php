@@ -22,7 +22,7 @@ class BulkResponse
      *
      * @var list<BulkResponseRow>|null
      */
-    protected ?array $rows;
+    protected ?array $rows = null;
     /**
      * Rows of the bulk response.
      *

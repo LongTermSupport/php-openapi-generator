@@ -20,7 +20,7 @@ class AppsDeploymentResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $deployment;
+    protected mixed $deployment = null;
     public function getDeployment(): mixed
     {
         return $this->deployment;

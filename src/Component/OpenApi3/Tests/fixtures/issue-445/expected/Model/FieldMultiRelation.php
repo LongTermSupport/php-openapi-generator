@@ -26,7 +26,7 @@ class FieldMultiRelation extends FieldBase
      * Indexing information of fields of the related schema identified by the SchemaId property.
      *
      */
-    protected mixed $schemaIndexingInfo;
+    protected mixed $schemaIndexingInfo = null;
     /**
      * The relation types supported by the field.
      *
@@ -37,12 +37,12 @@ class FieldMultiRelation extends FieldBase
      * The maximum number of items that can be stored.
      *
      */
-    protected ?int $maximumItems;
+    protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
      *
      */
-    protected ?int $minimumItems;
+    protected ?int $minimumItems = null;
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
      *

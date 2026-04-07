@@ -20,7 +20,7 @@ class SinksResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $destination;
+    protected mixed $destination = null;
     /**
      * List of resources identified by their URNs.
      *

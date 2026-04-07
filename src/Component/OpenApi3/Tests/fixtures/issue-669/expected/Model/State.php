@@ -24,8 +24,8 @@ class State extends \ArrayObject
      * A map of region to regional state
      *
      */
-    protected mixed $regions;
-    protected mixed $previousOutage;
+    protected mixed $regions = null;
+    protected mixed $previousOutage = null;
     /**
      * A map of region to regional state
      *

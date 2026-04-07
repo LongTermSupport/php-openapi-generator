@@ -21,17 +21,17 @@ class FieldDecimal extends FieldBase
      * The decimal pattern structure.
      *
      */
-    protected ?string $pattern;
+    protected ?string $pattern = null;
     /**
      * The minimum possible value.
      *
      */
-    protected ?float $minimum;
+    protected ?float $minimum = null;
     /**
      * The maximum possible value.
      *
      */
-    protected ?float $maximum;
+    protected ?float $maximum = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
      *

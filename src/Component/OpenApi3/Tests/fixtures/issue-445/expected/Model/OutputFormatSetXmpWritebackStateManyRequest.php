@@ -22,7 +22,7 @@ class OutputFormatSetXmpWritebackStateManyRequest
      *
      * @var list<OutputFormatSetXmpWritebackStateRequestItem>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * XMP writeback state changes to be processed.
      *

@@ -24,7 +24,7 @@ class UserRoleDetail extends \ArrayObject
      * Language specific user role names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * All user rights for this user role.
      *
@@ -40,7 +40,7 @@ class UserRoleDetail extends \ArrayObject
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Language specific user role names.
      *

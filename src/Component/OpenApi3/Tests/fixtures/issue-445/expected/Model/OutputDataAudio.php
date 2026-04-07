@@ -21,7 +21,7 @@ class OutputDataAudio extends OutputDataBase
      * Duration of the audio stream in seconds.
      *
      */
-    protected ?float $durationInSeconds;
+    protected ?float $durationInSeconds = null;
     /**
      * Duration of the audio stream in seconds.
      *

@@ -21,7 +21,7 @@ class UserDeleteRequest
      * User ID of user who will take over the ownership of the content currently owned by the deleted user.
      *
      */
-    protected ?string $ownerTokenTransferUserId;
+    protected ?string $ownerTokenTransferUserId = null;
     /**
      * User ID of user who will take over the ownership of the content currently owned by the deleted user.
      *

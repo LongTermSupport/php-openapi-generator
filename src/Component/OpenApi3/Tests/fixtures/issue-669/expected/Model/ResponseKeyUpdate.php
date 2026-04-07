@@ -20,7 +20,7 @@ class ResponseKeyUpdate extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $key;
+    protected mixed $key = null;
     public function getKey(): mixed
     {
         return $this->key;

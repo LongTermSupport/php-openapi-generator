@@ -21,19 +21,19 @@ class SchemaSearchRequest
      * The string used to query the data. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied in the specified order.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * Sorts the search results. Currently only sorting on the Names property is allowed.
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Limits the number of the returned schemas. Defaults to 30.
      *
@@ -43,12 +43,12 @@ class SchemaSearchRequest
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * An optional filter to limit the schemas.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the SchemaSearchResult.
      * Warning! It severely affects performance.
@@ -61,13 +61,13 @@ class SchemaSearchRequest
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * Limits the schemas to the ones the user has the specified MetadataRights.
      *
      * @var list<string>|null
      */
-    protected ?array $rightsFilter;
+    protected ?array $rightsFilter = null;
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
      *

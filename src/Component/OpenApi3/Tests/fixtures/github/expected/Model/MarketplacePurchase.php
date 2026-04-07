@@ -25,7 +25,7 @@ class MarketplacePurchase extends \ArrayObject
     protected int $id;
     protected string $login;
     protected string $organizationBillingEmail;
-    protected ?MarketplacePurchaseMarketplacePendingChange $marketplacePendingChange;
+    protected ?MarketplacePurchaseMarketplacePendingChange $marketplacePendingChange = null;
     protected MarketplacePurchaseMarketplacePurchase $marketplacePurchase;
     public function getUrl(): string
     {

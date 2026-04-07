@@ -21,7 +21,7 @@ class SimulatedTaggingOptions extends TaggingOptionsBase
      * Number of keywords to assign.
      *
      */
-    protected ?string $numberOfKeywords;
+    protected ?string $numberOfKeywords = null;
     /**
      * Number of keywords to assign.
      *

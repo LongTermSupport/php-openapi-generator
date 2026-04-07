@@ -21,7 +21,7 @@ class GpgKey extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected int $id;
-    protected ?int $primaryKeyId;
+    protected ?int $primaryKeyId = null;
     protected string $keyId;
     protected string $publicKey;
     /**
@@ -37,8 +37,8 @@ class GpgKey extends \ArrayObject
     protected bool $canEncryptStorage;
     protected bool $canCertify;
     protected \DateTime $createdAt;
-    protected ?\DateTime $expiresAt;
-    protected ?string $rawKey;
+    protected ?\DateTime $expiresAt = null;
+    protected ?string $rawKey = null;
     public function getId(): int
     {
         return $this->id;

@@ -30,7 +30,7 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
      * Configure Username and/or Password for Basic authentication.
      *
      */
-    protected mixed $basicAuth;
+    protected mixed $basicAuth = null;
     /**
      * The index name to use for the logs. If not set, the default index name is "logs".
      *

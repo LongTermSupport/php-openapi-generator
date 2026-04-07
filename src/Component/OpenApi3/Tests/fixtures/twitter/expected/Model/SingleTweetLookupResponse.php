@@ -20,8 +20,8 @@ class SingleTweetLookupResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $data;
-    protected mixed $includes;
+    protected mixed $data = null;
+    protected mixed $includes = null;
     /**
      * @var list<mixed>
      */

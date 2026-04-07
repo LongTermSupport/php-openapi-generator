@@ -31,12 +31,12 @@ class LiveStreamSearchRequest
      * Optionally limits the result to only the specified scope type.
      *
      */
-    protected ?string $scopeType;
+    protected ?string $scopeType = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Limits the document count of the result set. Defaults to 30.
      *
@@ -46,7 +46,7 @@ class LiveStreamSearchRequest
      * To get a large amount of data, page token returned from the response can be used to get all data.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Sets the start date and time for results based on Timestamp attribute.
      *

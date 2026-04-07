@@ -26,7 +26,7 @@ class WorkflowRun extends \ArrayObject
      */
     protected int $id;
     protected string $nodeId;
-    protected ?string $headBranch;
+    protected ?string $headBranch = null;
     /**
      * The SHA of the head commit that points to the version of the worflow being run.
      *
@@ -38,8 +38,8 @@ class WorkflowRun extends \ArrayObject
      */
     protected int $runNumber;
     protected string $event;
-    protected ?string $status;
-    protected ?string $conclusion;
+    protected ?string $status = null;
+    protected ?string $conclusion = null;
     /**
      * The ID of the parent workflow.
      *
@@ -54,9 +54,9 @@ class WorkflowRun extends \ArrayObject
     /**
      * @var list<PullRequestMinimal>|null
      */
-    protected ?array $pullRequests;
-    protected ?\DateTime $createdAt;
-    protected ?\DateTime $updatedAt;
+    protected ?array $pullRequests = null;
+    protected ?\DateTime $createdAt = null;
+    protected ?\DateTime $updatedAt = null;
     /**
      * The URL to the jobs for the workflow run.
      *
@@ -96,17 +96,17 @@ class WorkflowRun extends \ArrayObject
      * Simple Commit
      *
      */
-    protected mixed $headCommit;
+    protected mixed $headCommit = null;
     /**
      * Minimal Repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     /**
      * Minimal Repository
      *
      */
-    protected mixed $headRepository;
+    protected mixed $headRepository = null;
     protected int $headRepositoryId;
     /**
      * The ID of the workflow run.

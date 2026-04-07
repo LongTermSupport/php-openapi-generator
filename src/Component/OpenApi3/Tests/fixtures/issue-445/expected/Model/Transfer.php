@@ -31,17 +31,17 @@ class Transfer
      * State of transfer.
      *
      */
-    protected mixed $state;
+    protected mixed $state = null;
     /**
      * Type of transfer.
      *
      */
-    protected mixed $transferType;
+    protected mixed $transferType = null;
     /**
      * Associated business process ID.
      *
      */
-    protected ?string $businessProcessId;
+    protected ?string $businessProcessId = null;
     /**
      * Number of files in transfer.
      *
@@ -51,7 +51,7 @@ class Transfer
      * ID of collection created from transfer.
      *
      */
-    protected ?string $collectionId;
+    protected ?string $collectionId = null;
     /**
      * ID of transfer.
      *

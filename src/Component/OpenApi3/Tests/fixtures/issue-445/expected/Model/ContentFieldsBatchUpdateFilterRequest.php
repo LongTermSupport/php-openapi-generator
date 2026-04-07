@@ -21,7 +21,7 @@ class ContentFieldsBatchUpdateFilterRequest extends MetadataValuesChangeRequestB
      * Filters the contents on which the change commands must be applied.
      *
      */
-    protected mixed $filterRequest;
+    protected mixed $filterRequest = null;
     /**
      * Filters the contents on which the change commands must be applied.
      *

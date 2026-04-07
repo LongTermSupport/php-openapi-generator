@@ -54,7 +54,7 @@ class CompactUserFields extends \ArrayObject
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
      *
      */
-    protected mixed $withheld;
+    protected mixed $withheld = null;
     /**
      * The URL to the profile image for this user.
      *

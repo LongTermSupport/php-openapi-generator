@@ -24,7 +24,7 @@ class ResponseSnapshots extends \ArrayObject
      * @var list<Snapshots>
      */
     protected array $snapshots;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Snapshots>

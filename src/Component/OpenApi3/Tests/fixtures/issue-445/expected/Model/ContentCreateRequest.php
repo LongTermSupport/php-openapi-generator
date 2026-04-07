@@ -29,13 +29,13 @@ class ContentCreateRequest
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * The content data of the content. It's an object of dynamic metadata whose structure is defined in the Content schema identified by the ContentSchemaId property.
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $content;
+    protected ?array $content = null;
     /**
      * The dynamic data structure matching the field schematics of the schemas with type layer (LayerSchemaIds).
      * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
@@ -43,20 +43,20 @@ class ContentCreateRequest
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $metadata;
+    protected ?array $metadata = null;
     /**
      * An optional list of content permission set IDs which control content permissions. These permissions control content accessibility for the users that do not own the content.
      *
      * @var list<string>|null
      */
-    protected ?array $contentPermissionSetIds;
+    protected ?array $contentPermissionSetIds = null;
     /**
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.

@@ -24,18 +24,18 @@ class ListItemSearchRequest extends \ArrayObject
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
      * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
@@ -46,7 +46,7 @@ class ListItemSearchRequest extends \ArrayObject
      *
      * @var list<AggregationFilter>|null
      */
-    protected ?array $aggregationFilters;
+    protected ?array $aggregationFilters = null;
     /**
      * Broadens the search to include all schema descendant list items.
      *
@@ -62,14 +62,14 @@ class ListItemSearchRequest extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $schemaIds;
+    protected ?array $schemaIds = null;
     /**
      * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
      * If not specified, all metadata languages defined in the system are used.
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * Limits the aggregation to the list items that have the specified life cycle state. Defaults to ActiveOnly.
      *
@@ -80,7 +80,7 @@ class ListItemSearchRequest extends \ArrayObject
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Limits the document count of the result set.
      *
@@ -90,7 +90,7 @@ class ListItemSearchRequest extends \ArrayObject
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the ListItemSearchResult.
      * Warning! It severely affects performance.
@@ -102,13 +102,13 @@ class ListItemSearchRequest extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $resolveBehaviors;
+    protected ?array $resolveBehaviors = null;
     /**
      * List of aggregators that defines how the items should be aggregated.
      *
      * @var list<AggregatorBase>|null
      */
-    protected ?array $aggregators;
+    protected ?array $aggregators = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *

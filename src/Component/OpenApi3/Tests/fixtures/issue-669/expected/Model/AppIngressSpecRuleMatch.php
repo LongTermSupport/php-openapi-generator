@@ -24,12 +24,12 @@ class AppIngressSpecRuleMatch extends \ArrayObject
      * The path to match on.
      *
      */
-    protected mixed $path;
+    protected mixed $path = null;
     /**
      * The authority to match on.
      *
      */
-    protected mixed $authority;
+    protected mixed $authority = null;
     /**
      * The path to match on.
      *

@@ -45,7 +45,7 @@ class CreateTrigger extends \ArrayObject
      * 
      *
      */
-    protected mixed $scheduledDetails;
+    protected mixed $scheduledDetails = null;
     /**
      * The trigger's unique name within the namespace.
      *

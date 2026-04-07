@@ -28,12 +28,12 @@ class ApiListAgentsByOpenAIKeyOutput extends \ArrayObject
      * Links to other pages
      *
      */
-    protected mixed $links;
+    protected mixed $links = null;
     /**
      * Meta information about the data set
      *
      */
-    protected mixed $meta;
+    protected mixed $meta = null;
     /**
      * @return list<ApiAgent>
      */

@@ -24,7 +24,7 @@ class ResponseAllPartnerAttachmentRemoteRoutes extends \ArrayObject
      * @var list<PartnerAttachmentRemoteRoute>
      */
     protected array $remoteRoutes;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<PartnerAttachmentRemoteRoute>

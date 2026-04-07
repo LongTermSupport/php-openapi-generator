@@ -24,7 +24,7 @@ class ResponseAllCertificates extends \ArrayObject
      * @var list<Certificate>
      */
     protected array $certificates;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Certificate>

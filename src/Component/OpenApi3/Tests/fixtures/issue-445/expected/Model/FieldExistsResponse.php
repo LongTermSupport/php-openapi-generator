@@ -34,7 +34,7 @@ class FieldExistsResponse
      * has to be unique across the schema hierarchy.
      *
      */
-    protected ?string $schemaId;
+    protected ?string $schemaId = null;
     /**
      * Indicates if a field with the specified ID currently exists.
      *

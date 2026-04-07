@@ -33,41 +33,41 @@ class ListItemDetail
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $content;
+    protected ?array $content = null;
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
      *
      */
-    protected mixed $displayValues;
+    protected mixed $displayValues = null;
     /**
      * All the IDs of the referenced list items (tagboxes) that do not exist in the system.
      *
      * @var list<string>|null
      */
-    protected ?array $brokenReferenceIds;
+    protected ?array $brokenReferenceIds = null;
     /**
      * All the IDs of the contents or list items target of a relation that do not exist in the system.
      *
      * @var list<string>|null
      */
-    protected ?array $brokenRelationTargetIds;
+    protected ?array $brokenRelationTargetIds = null;
     /**
      * All the IDs of the indirectly referenced list items (tagboxes) that do not exist in the system.
      * They are referenced list items that reference at least a list item that do not exist in the system.
      *
      * @var list<string>|null
      */
-    protected ?array $brokenIndirectReferenceIds;
+    protected ?array $brokenIndirectReferenceIds = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
      *
      */
-    protected mixed $activity;
+    protected mixed $activity = null;
     /**
      * The list item ID.
      *

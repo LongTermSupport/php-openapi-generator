@@ -27,7 +27,7 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItem
      * The customer's default language is required.
      *
      */
-    protected mixed $patterns;
+    protected mixed $patterns = null;
     /**
      * ID of the output format to set pattern for.
      *

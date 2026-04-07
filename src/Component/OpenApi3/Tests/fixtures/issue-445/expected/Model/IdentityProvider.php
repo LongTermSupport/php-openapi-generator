@@ -25,38 +25,38 @@ class IdentityProvider extends \ArrayObject
      *
      * @var list<IdpClaimToUserAttributeMapping>|null
      */
-    protected ?array $claimMapping;
+    protected ?array $claimMapping = null;
     /**
      * Name of the identity provider claim that holds group membership information
      *
      */
-    protected ?string $groupClaimType;
+    protected ?string $groupClaimType = null;
     /**
      * IdP (AD) group to user role ID mapping
      *
      * @var list<IdpGroupToUserRoleMapping>|null
      */
-    protected ?array $groupMapping;
+    protected ?array $groupMapping = null;
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
      *
      */
-    protected ?string $fallbackUserRoleId;
+    protected ?string $fallbackUserRoleId = null;
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Name of the identity provider as defined in IdentityServer
      *
      */
-    protected ?string $name;
+    protected ?string $name = null;
     /**
      * Display name of the identity provider as defined in IdentityServer
      *
      */
-    protected ?string $displayName;
+    protected ?string $displayName = null;
     /**
      * Mapping of identity provider claims to user attributes
      *

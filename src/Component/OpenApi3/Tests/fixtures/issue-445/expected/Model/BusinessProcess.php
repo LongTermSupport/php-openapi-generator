@@ -31,12 +31,12 @@ class BusinessProcess
      * ID of the document that is modified by the running of the business process. Used during the cancellation of the business process.
      *
      */
-    protected ?string $referenceId;
+    protected ?string $referenceId = null;
     /**
      * Type of the document that is modified by the running of the business process. Used during the cancellation of the business process.
      *
      */
-    protected ?string $referenceDocType;
+    protected ?string $referenceDocType = null;
     /**
      * True if the business process execution can be cancelled. False otherwise.
      *
@@ -46,12 +46,12 @@ class BusinessProcess
      * Scope of the business process.
      *
      */
-    protected mixed $businessProcessScope;
+    protected mixed $businessProcessScope = null;
     /**
      * Current life cycle of the business process.
      *
      */
-    protected mixed $lifeCycle;
+    protected mixed $lifeCycle = null;
     /**
      * When the business process started.
      *
@@ -72,22 +72,22 @@ class BusinessProcess
      *
      * @var list<BusinessProcessState>|null
      */
-    protected ?array $stateHistory;
+    protected ?array $stateHistory = null;
     /**
      * Current state of the business process.
      *
      */
-    protected ?string $currentState;
+    protected ?string $currentState = null;
     /**
      * Timestamp when the business process last reported progress.
      *
      */
-    protected ?\DateTime $lastReportedProgress;
+    protected ?\DateTime $lastReportedProgress = null;
     /**
      * Id of the business process that will be automatically started after the completion of the current one, if any.
      *
      */
-    protected ?string $continuationBusinessProcessId;
+    protected ?string $continuationBusinessProcessId = null;
     protected string $kind;
     /**
      * ID of the business process.

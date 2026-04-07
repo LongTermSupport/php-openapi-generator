@@ -24,7 +24,7 @@ class AppJobInvocations extends \ArrayObject
      * @var list<AppJobInvocation>
      */
     protected array $jobInvocations;
-    protected mixed $links;
+    protected mixed $links = null;
     /**
      * @return list<AppJobInvocation>
      */

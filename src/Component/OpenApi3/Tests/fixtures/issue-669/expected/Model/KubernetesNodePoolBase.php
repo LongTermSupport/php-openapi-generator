@@ -46,7 +46,7 @@ class KubernetesNodePoolBase extends \ArrayObject
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $labels;
+    protected ?array $labels = null;
     /**
      * An array of taints to apply to all nodes in a pool. Taints will automatically be applied to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is deleted from all nodes in the pool.
      *

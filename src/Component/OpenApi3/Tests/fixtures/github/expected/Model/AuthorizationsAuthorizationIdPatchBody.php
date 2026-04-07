@@ -25,7 +25,7 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $scopes;
+    protected ?array $scopes = null;
     /**
      * A list of scopes to add to this authorization.
      *

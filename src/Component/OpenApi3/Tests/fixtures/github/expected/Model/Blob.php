@@ -24,7 +24,7 @@ class Blob extends \ArrayObject
     protected string $encoding;
     protected string $url;
     protected string $sha;
-    protected ?int $size;
+    protected ?int $size = null;
     protected string $nodeId;
     protected string $highlightedContent;
     public function getContent(): string

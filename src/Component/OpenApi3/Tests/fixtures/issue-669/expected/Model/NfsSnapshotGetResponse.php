@@ -24,7 +24,7 @@ class NfsSnapshotGetResponse extends \ArrayObject
      * Represents an NFS snapshot.
      *
      */
-    protected mixed $snapshot;
+    protected mixed $snapshot = null;
     /**
      * Represents an NFS snapshot.
      *

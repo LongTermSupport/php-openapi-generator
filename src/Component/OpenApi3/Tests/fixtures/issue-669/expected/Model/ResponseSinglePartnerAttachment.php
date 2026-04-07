@@ -20,7 +20,7 @@ class ResponseSinglePartnerAttachment extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $partnerAttachment;
+    protected mixed $partnerAttachment = null;
     public function getPartnerAttachment(): mixed
     {
         return $this->partnerAttachment;

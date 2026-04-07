@@ -17,7 +17,7 @@ class SharePageViewEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $shareToken;
+    protected ?string $shareToken = null;
     public function getShareToken(): ?string
     {
         return $this->shareToken;

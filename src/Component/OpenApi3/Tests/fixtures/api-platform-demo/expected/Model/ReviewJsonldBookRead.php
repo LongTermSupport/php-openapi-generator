@@ -20,10 +20,10 @@ class ReviewJsonldBookRead extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $context;
+    protected mixed $context = null;
     protected string $id;
     protected string $type;
-    protected ?string $id2;
+    protected ?string $id2 = null;
     /**
      * The actual body of the review.
      *

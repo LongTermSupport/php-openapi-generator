@@ -21,7 +21,7 @@ class ListItemFieldsBatchUpdateFilterRequest
      * Filters the list items on which the change commands must be applied.
      *
      */
-    protected mixed $filterRequest;
+    protected mixed $filterRequest = null;
     /**
      * Changes that need to be applied to the existing list items. The same set of changes is applied to all list items.
      *

@@ -31,7 +31,7 @@ class PullRequestBaseRepo extends \ArrayObject
     protected string $contentsUrl;
     protected string $contributorsUrl;
     protected string $deploymentsUrl;
-    protected ?string $description;
+    protected ?string $description = null;
     protected string $downloadsUrl;
     protected string $eventsUrl;
     protected bool $fork;
@@ -76,12 +76,12 @@ class PullRequestBaseRepo extends \ArrayObject
     protected bool $hasProjects;
     protected bool $hasWiki;
     protected bool $hasPages;
-    protected ?string $homepage;
-    protected ?string $language;
+    protected ?string $homepage = null;
+    protected ?string $language = null;
     protected string $masterBranch;
     protected bool $archived;
     protected bool $disabled;
-    protected ?string $mirrorUrl;
+    protected ?string $mirrorUrl = null;
     protected int $openIssues;
     protected int $openIssuesCount;
     protected PullRequestBaseRepoPermissions $permissions;
@@ -89,7 +89,7 @@ class PullRequestBaseRepo extends \ArrayObject
     protected bool $allowMergeCommit;
     protected bool $allowSquashMerge;
     protected bool $allowRebaseMerge;
-    protected ?PullRequestBaseRepoLicense $license;
+    protected ?PullRequestBaseRepoLicense $license = null;
     protected \DateTime $pushedAt;
     protected int $size;
     protected string $sshUrl;

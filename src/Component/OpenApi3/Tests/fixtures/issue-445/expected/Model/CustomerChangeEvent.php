@@ -17,7 +17,7 @@ class CustomerChangeEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $documentType;
+    protected ?string $documentType = null;
     /**
      * Lifecycle
      *

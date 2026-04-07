@@ -21,18 +21,18 @@ class Mp4VideoFormat extends FormatBase
      * Allows resizing of the video.
      *
      */
-    protected mixed $resizeAction;
+    protected mixed $resizeAction = null;
     /**
      * Gets or sets the encoding audio codec.
      *
      */
-    protected mixed $audioCodec;
+    protected mixed $audioCodec = null;
     /**
      * Gets or sets the encoding codec preset.
      *
      */
-    protected mixed $preset;
-    protected ?string $extension;
+    protected mixed $preset = null;
+    protected ?string $extension = null;
     /**
      * Allows resizing of the video.
      *

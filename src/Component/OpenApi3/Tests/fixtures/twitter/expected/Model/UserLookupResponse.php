@@ -24,7 +24,7 @@ class UserLookupResponse extends \ArrayObject
      * @var list<mixed>
      */
     protected array $data;
-    protected mixed $includes;
+    protected mixed $includes = null;
     /**
      * @var list<mixed>
      */

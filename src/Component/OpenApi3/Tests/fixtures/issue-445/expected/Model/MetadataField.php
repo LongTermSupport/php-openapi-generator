@@ -32,13 +32,13 @@ class MetadataField
      * Data type of the field.
      *
      */
-    protected mixed $dataType;
+    protected mixed $dataType = null;
     /**
      * A list of field IDs that can be used as a key field when a tagbox is mapped.
      *
      * @var list<string>|null
      */
-    protected ?array $availableKeyFields;
+    protected ?array $availableKeyFields = null;
     /**
      * Path to the field in metadata.
      *

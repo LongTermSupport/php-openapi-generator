@@ -24,7 +24,7 @@ class ApiModel extends \ArrayObject
      * Agreement Description
      *
      */
-    protected mixed $agreement;
+    protected mixed $agreement = null;
     /**
      * Creation date / time
      *
@@ -107,7 +107,7 @@ class ApiModel extends \ArrayObject
      * Version Information about a Model
      *
      */
-    protected mixed $version;
+    protected mixed $version = null;
     /**
      * Agreement Description
      *

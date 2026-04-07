@@ -37,7 +37,7 @@ class UserRoleAssignManyRequest extends \ArrayObject
      * If an operation results in no change for a user, that user will be returned as succeeded.
      *
      */
-    protected mixed $operation;
+    protected mixed $operation = null;
     /**
      * User IDs.
      *

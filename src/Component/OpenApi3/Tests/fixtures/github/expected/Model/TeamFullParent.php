@@ -41,7 +41,7 @@ class TeamFullParent extends \ArrayObject
      * Description of the team
      *
      */
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * Permission that the team will have for its repositories
      *

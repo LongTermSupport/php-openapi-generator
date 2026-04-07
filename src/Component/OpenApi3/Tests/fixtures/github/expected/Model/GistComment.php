@@ -28,7 +28,7 @@ class GistComment extends \ArrayObject
      *
      */
     protected string $body;
-    protected ?GistCommentUser $user;
+    protected ?GistCommentUser $user = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected string $authorAssociation;

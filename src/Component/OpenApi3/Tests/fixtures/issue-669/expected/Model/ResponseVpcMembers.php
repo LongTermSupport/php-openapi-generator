@@ -24,7 +24,7 @@ class ResponseVpcMembers extends \ArrayObject
      * @var list<VpcMember>
      */
     protected array $members;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<VpcMember>

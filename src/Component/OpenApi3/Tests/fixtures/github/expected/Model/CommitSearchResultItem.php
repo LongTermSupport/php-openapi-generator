@@ -25,8 +25,8 @@ class CommitSearchResultItem extends \ArrayObject
     protected string $htmlUrl;
     protected string $commentsUrl;
     protected CommitSearchResultItemCommit $commit;
-    protected ?CommitSearchResultItemAuthor $author;
-    protected ?CommitSearchResultItemCommitter $committer;
+    protected ?CommitSearchResultItemAuthor $author = null;
+    protected ?CommitSearchResultItemCommitter $committer = null;
     /**
      * @var list<CommitSearchResultItemParentsItem>
      */
@@ -35,7 +35,7 @@ class CommitSearchResultItem extends \ArrayObject
      * Minimal Repository
      *
      */
-    protected mixed $repository;
+    protected mixed $repository = null;
     protected int $score;
     protected string $nodeId;
     /**

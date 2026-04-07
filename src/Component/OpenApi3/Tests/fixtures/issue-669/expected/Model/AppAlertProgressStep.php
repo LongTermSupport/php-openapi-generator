@@ -24,7 +24,7 @@ class AppAlertProgressStep extends \ArrayObject
     protected string $status = 'UNKNOWN';
     protected \DateTime $startedAt;
     protected \DateTime $endedAt;
-    protected mixed $reason;
+    protected mixed $reason = null;
     public function getName(): string
     {
         return $this->name;

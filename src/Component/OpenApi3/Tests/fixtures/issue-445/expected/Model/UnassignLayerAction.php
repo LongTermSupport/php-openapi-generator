@@ -21,7 +21,7 @@ class UnassignLayerAction extends BusinessRuleAction
      * The ID of the layer.
      *
      */
-    protected ?string $layerId;
+    protected ?string $layerId = null;
     /**
      * The ID of the layer.
      *

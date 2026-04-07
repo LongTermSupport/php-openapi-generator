@@ -24,7 +24,7 @@ class ResponseKeyList extends \ArrayObject
      * @var list<Key>
      */
     protected array $keys;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Key>

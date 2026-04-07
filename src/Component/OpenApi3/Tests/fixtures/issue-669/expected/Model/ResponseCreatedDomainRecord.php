@@ -20,7 +20,7 @@ class ResponseCreatedDomainRecord extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $domainRecord;
+    protected mixed $domainRecord = null;
     public function getDomainRecord(): mixed
     {
         return $this->domainRecord;

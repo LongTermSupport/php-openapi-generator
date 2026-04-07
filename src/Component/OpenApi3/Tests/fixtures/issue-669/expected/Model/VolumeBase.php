@@ -30,7 +30,7 @@ class VolumeBase extends \ArrayObject
      *
      * @var list<int>|null
      */
-    protected ?array $dropletIds;
+    protected ?array $dropletIds = null;
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
      *
@@ -56,7 +56,7 @@ class VolumeBase extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * The unique identifier for the block storage volume.
      *

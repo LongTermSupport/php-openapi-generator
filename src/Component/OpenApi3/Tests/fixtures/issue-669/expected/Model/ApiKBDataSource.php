@@ -24,7 +24,7 @@ class ApiKBDataSource extends \ArrayObject
      * AWS S3 Data Source
      *
      */
-    protected mixed $awsDataSource;
+    protected mixed $awsDataSource = null;
     /**
      * Deprecated, moved to data_source_details
      *
@@ -48,33 +48,33 @@ class ApiKBDataSource extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    protected mixed $chunkingOptions;
+    protected mixed $chunkingOptions = null;
     /**
      * Dropbox Data Source
      *
      */
-    protected mixed $dropboxDataSource;
+    protected mixed $dropboxDataSource = null;
     /**
      * File to upload as data source for knowledge base.
      *
      */
-    protected mixed $fileUploadDataSource;
+    protected mixed $fileUploadDataSource = null;
     /**
      * Google Drive Data Source
      *
      */
-    protected mixed $googleDriveDataSource;
+    protected mixed $googleDriveDataSource = null;
     protected string $itemPath;
     /**
      * Spaces Bucket Data Source
      *
      */
-    protected mixed $spacesDataSource;
+    protected mixed $spacesDataSource = null;
     /**
      * WebCrawlerDataSource
      *
      */
-    protected mixed $webCrawlerDataSource;
+    protected mixed $webCrawlerDataSource = null;
     /**
      * AWS S3 Data Source
      *

@@ -21,7 +21,7 @@ class TakeDictionaryValueTransformation extends BusinessRuleTransformation
      * Key of the item.
      *
      */
-    protected ?string $key;
+    protected ?string $key = null;
     /**
      * Key of the item.
      *

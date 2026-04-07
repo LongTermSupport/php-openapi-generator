@@ -95,18 +95,18 @@ class AppSpec extends \ArrayObject
      * Specification for app ingress configurations.
      *
      */
-    protected mixed $ingress;
+    protected mixed $ingress = null;
     /**
      * Specification for app egress configurations.
      *
      */
-    protected mixed $egress;
+    protected mixed $egress = null;
     /**
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
      *
      */
-    protected mixed $maintenance;
-    protected mixed $vpc;
+    protected mixed $maintenance = null;
+    protected mixed $vpc = null;
     /**
      * The name of the app. Must be unique across all apps in the same account.
      *

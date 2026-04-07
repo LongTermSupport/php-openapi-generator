@@ -22,7 +22,7 @@ class SchemaPermissionSetUpdateManyRequest
      *
      * @var list<SchemaPermissionSetUpdateRequestItem>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Schema permission sets update requests.
      *

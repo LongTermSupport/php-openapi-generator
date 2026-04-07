@@ -21,7 +21,7 @@ class RepositoryCollaboratorPermission extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $permission;
-    protected ?RepositoryCollaboratorPermissionUser $user;
+    protected ?RepositoryCollaboratorPermissionUser $user = null;
     public function getPermission(): string
     {
         return $this->permission;

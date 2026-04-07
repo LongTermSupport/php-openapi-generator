@@ -24,7 +24,7 @@ class ResponseAllDroplets extends \ArrayObject
      * @var list<Droplet>
      */
     protected array $droplets;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Droplet>

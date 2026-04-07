@@ -22,8 +22,8 @@ class PullRequestHeadRepoLicense extends \ArrayObject
     }
     protected string $key;
     protected string $name;
-    protected ?string $url;
-    protected ?string $spdxId;
+    protected ?string $url = null;
+    protected ?string $spdxId = null;
     protected string $nodeId;
     public function getKey(): string
     {

@@ -22,7 +22,7 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
      * OverwriteFilter is set to true.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
      *
@@ -33,7 +33,7 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
      * OverwriteListItemCreateTemplate is set to true.
      *
      */
-    protected ?string $listItemCreateTemplate;
+    protected ?string $listItemCreateTemplate = null;
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
      *

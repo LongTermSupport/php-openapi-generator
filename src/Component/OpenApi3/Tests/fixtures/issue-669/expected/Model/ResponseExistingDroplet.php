@@ -20,7 +20,7 @@ class ResponseExistingDroplet extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $droplet;
+    protected mixed $droplet = null;
     public function getDroplet(): mixed
     {
         return $this->droplet;

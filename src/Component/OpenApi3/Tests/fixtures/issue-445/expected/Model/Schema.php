@@ -26,29 +26,29 @@ class Schema
      * The parent schema ID.
      *
      */
-    protected ?string $parentSchemaId;
+    protected ?string $parentSchemaId = null;
     /**
      * List of schema types. Currently only one schema type can be assigned to this list, and it cannot be modified once the schema is created.
      *
      * @var list<string>|null
      */
-    protected ?array $types;
+    protected ?array $types = null;
     /**
      * Language specific schema names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * Language specific schema descriptions.
      *
      */
-    protected mixed $descriptions;
+    protected mixed $descriptions = null;
     /**
      * An optional list of schemas' IDs with type layer. For a Content schema it stores the layers that can be assigned to a content.
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * The count of all fields.
      *

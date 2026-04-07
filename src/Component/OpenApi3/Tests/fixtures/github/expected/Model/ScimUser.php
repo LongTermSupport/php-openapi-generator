@@ -35,12 +35,12 @@ class ScimUser extends \ArrayObject
      * The ID of the User.
      *
      */
-    protected ?string $externalId;
+    protected ?string $externalId = null;
     /**
      * Configured by the admin. Could be an email, login, or username
      *
      */
-    protected ?string $userName;
+    protected ?string $userName = null;
     protected ScimUserName $name;
     /**
      * user emails

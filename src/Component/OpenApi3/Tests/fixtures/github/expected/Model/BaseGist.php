@@ -35,11 +35,11 @@ class BaseGist extends \ArrayObject
     protected bool $public;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?string $description;
+    protected ?string $description = null;
     protected int $comments;
-    protected ?BaseGistUser $user;
+    protected ?BaseGistUser $user = null;
     protected string $commentsUrl;
-    protected ?BaseGistOwner $owner;
+    protected ?BaseGistOwner $owner = null;
     protected bool $truncated;
     /**
      * @var list<mixed>

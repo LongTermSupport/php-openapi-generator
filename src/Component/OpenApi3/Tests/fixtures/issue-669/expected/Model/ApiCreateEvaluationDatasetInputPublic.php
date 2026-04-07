@@ -25,7 +25,7 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
      * File to upload as data source for knowledge base.
      *
      */
-    protected mixed $fileUploadDataset;
+    protected mixed $fileUploadDataset = null;
     /**
      * The name of the agent evaluation dataset.
      *

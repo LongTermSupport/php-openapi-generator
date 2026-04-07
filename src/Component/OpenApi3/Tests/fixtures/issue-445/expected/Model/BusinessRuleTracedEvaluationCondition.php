@@ -21,7 +21,7 @@ class BusinessRuleTracedEvaluationCondition
      * Trace reference ID of condition.
      *
      */
-    protected ?string $traceRefId;
+    protected ?string $traceRefId = null;
     /**
      * Indicates if this condition evaluated to true.
      *
@@ -31,7 +31,7 @@ class BusinessRuleTracedEvaluationCondition
      * Additional reason why condition evaluated to given result.
      *
      */
-    protected ?string $reason;
+    protected ?string $reason = null;
     /**
      * Trace reference ID of condition.
      *

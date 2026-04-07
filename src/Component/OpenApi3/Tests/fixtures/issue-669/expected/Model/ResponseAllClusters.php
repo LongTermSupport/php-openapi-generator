@@ -24,7 +24,7 @@ class ResponseAllClusters extends \ArrayObject
      * @var list<ClusterRead>
      */
     protected array $kubernetesClusters;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<ClusterRead>

@@ -49,7 +49,7 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
      * The notification settings for a trigger alert.
      *
      */
-    protected mixed $notifications;
+    protected mixed $notifications = null;
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
      *

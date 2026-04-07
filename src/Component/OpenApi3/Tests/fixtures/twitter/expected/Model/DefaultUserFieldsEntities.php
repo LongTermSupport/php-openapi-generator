@@ -25,7 +25,7 @@ class DefaultUserFieldsEntities extends \ArrayObject
      *
      */
     protected DefaultUserFieldsEntitiesUrl $url;
-    protected mixed $description;
+    protected mixed $description = null;
     /**
      * Expanded details for the URL specified in the user's profile, with start and end indices.
      *

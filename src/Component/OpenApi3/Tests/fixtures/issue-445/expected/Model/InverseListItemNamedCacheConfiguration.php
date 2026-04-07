@@ -21,17 +21,17 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
      * ID of the schema to cache (should have SchemaType = List)
      *
      */
-    protected ?string $schemaId;
+    protected ?string $schemaId = null;
     /**
      * ID of the field that yields the value
      *
      */
-    protected ?string $valueField;
+    protected ?string $valueField = null;
     /**
      * An optional filter to narrow down the cached list items
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Include child schemas when caching list items
      *

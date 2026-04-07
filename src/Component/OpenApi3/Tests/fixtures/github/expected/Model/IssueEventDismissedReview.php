@@ -22,8 +22,8 @@ class IssueEventDismissedReview extends \ArrayObject
     }
     protected string $state;
     protected int $reviewId;
-    protected ?string $dismissalMessage;
-    protected ?string $dismissalCommitId;
+    protected ?string $dismissalMessage = null;
+    protected ?string $dismissalCommitId = null;
     public function getState(): string
     {
         return $this->state;

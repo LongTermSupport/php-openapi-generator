@@ -60,7 +60,7 @@ class TriggerInfo extends \ArrayObject
      * 
      *
      */
-    protected mixed $scheduledDetails;
+    protected mixed $scheduledDetails = null;
     protected TriggerInfoScheduledRuns $scheduledRuns;
     /**
      * A unique string format of UUID with a prefix fn-.

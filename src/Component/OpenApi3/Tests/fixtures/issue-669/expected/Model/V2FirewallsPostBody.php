@@ -51,7 +51,7 @@ class V2FirewallsPostBody extends \ArrayObject
      *
      * @var list<int>|null
      */
-    protected ?array $dropletIds;
+    protected ?array $dropletIds = null;
     /**
      * @var list<string>
      */
@@ -59,11 +59,11 @@ class V2FirewallsPostBody extends \ArrayObject
     /**
      * @var list<FirewallRulesInboundRulesItem>|null
      */
-    protected ?array $inboundRules;
+    protected ?array $inboundRules = null;
     /**
      * @var list<FirewallRulesOutboundRulesItem>|null
      */
-    protected ?array $outboundRules;
+    protected ?array $outboundRules = null;
     /**
      * A unique ID that can be used to identify and reference a firewall.
      *

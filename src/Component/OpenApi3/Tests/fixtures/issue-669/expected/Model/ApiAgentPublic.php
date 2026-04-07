@@ -24,7 +24,7 @@ class ApiAgentPublic extends \ArrayObject
      * A Chatbot
      *
      */
-    protected mixed $chatbot;
+    protected mixed $chatbot = null;
     /**
      * Chatbot identifiers
      *
@@ -40,7 +40,7 @@ class ApiAgentPublic extends \ArrayObject
      * Description of deployment
      *
      */
-    protected mixed $deployment;
+    protected mixed $deployment = null;
     /**
      * Description of agent
      *
@@ -70,7 +70,7 @@ class ApiAgentPublic extends \ArrayObject
      * Description of a Model
      *
      */
-    protected mixed $model;
+    protected mixed $model = null;
     /**
      * Agent name
      *
@@ -135,7 +135,7 @@ class ApiAgentPublic extends \ArrayObject
      * Represents an AgentTemplate entity
      *
      */
-    protected mixed $template;
+    protected mixed $template = null;
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
      *

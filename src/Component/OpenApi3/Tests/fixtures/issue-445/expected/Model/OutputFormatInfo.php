@@ -26,7 +26,7 @@ class OutputFormatInfo
      * Output translations.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * Output ID.
      *

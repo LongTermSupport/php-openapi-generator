@@ -22,12 +22,12 @@ class SchemaOwnershipTransferManyRequest
      *
      * @var list<string>|null
      */
-    protected ?array $schemaIds;
+    protected ?array $schemaIds = null;
     /**
      * The id of user to whom the schemas have to be transferred to.
      *
      */
-    protected ?string $transferUserId;
+    protected ?string $transferUserId = null;
     /**
      * The schema ids.
      *

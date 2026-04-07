@@ -24,7 +24,7 @@ class ApiAgent extends \ArrayObject
      * Anthropic API Key Info
      *
      */
-    protected mixed $anthropicApiKey;
+    protected mixed $anthropicApiKey = null;
     /**
      * Api key infos
      *
@@ -41,7 +41,7 @@ class ApiAgent extends \ArrayObject
      * A Chatbot
      *
      */
-    protected mixed $chatbot;
+    protected mixed $chatbot = null;
     /**
      * Chatbot identifiers
      *
@@ -68,7 +68,7 @@ class ApiAgent extends \ArrayObject
      * Description of deployment
      *
      */
-    protected mixed $deployment;
+    protected mixed $deployment = null;
     /**
      * Description of agent
      *
@@ -97,14 +97,14 @@ class ApiAgent extends \ArrayObject
      * @var list<ApiKnowledgeBase>
      */
     protected array $knowledgeBases;
-    protected mixed $loggingConfig;
+    protected mixed $loggingConfig = null;
     protected int $maxTokens;
     /**
      * Description of a Model
      *
      */
-    protected mixed $model;
-    protected mixed $modelProviderKey;
+    protected mixed $model = null;
+    protected mixed $modelProviderKey = null;
     /**
      * Agent name
      *
@@ -114,7 +114,7 @@ class ApiAgent extends \ArrayObject
      * OpenAI API Key Info
      *
      */
-    protected mixed $openaiApiKey;
+    protected mixed $openaiApiKey = null;
     /**
      * Parent agents
      *
@@ -164,7 +164,7 @@ class ApiAgent extends \ArrayObject
      * Represents an AgentTemplate entity
      *
      */
-    protected mixed $template;
+    protected mixed $template = null;
     protected float $topP;
     /**
      * Last modified
@@ -198,7 +198,7 @@ class ApiAgent extends \ArrayObject
      */
     protected array $vpcEgressIps;
     protected string $vpcUuid;
-    protected mixed $workspace;
+    protected mixed $workspace = null;
     /**
      * Anthropic API Key Info
      *

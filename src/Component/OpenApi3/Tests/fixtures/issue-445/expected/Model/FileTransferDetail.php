@@ -36,7 +36,7 @@ class FileTransferDetail extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $identifier;
+    protected ?string $identifier = null;
     /**
      * Client provided identifier.
      *
@@ -51,28 +51,28 @@ class FileTransferDetail extends \ArrayObject
      * State of file transfer.
      *
      */
-    protected mixed $state;
+    protected mixed $state = null;
     /**
      * ID of Content created for file.
      *
      */
-    protected ?string $contentId;
+    protected ?string $contentId = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Metadata extracted for file.
      *
      */
-    protected mixed $fileMetadata;
+    protected mixed $fileMetadata = null;
     /**
      * Outputs rendered during data extraction phase.
      *
      * @var list<FileTransferOutput>|null
      */
-    protected ?array $outputItems;
+    protected ?array $outputItems = null;
     /**
      * ID of file transfer.
      *

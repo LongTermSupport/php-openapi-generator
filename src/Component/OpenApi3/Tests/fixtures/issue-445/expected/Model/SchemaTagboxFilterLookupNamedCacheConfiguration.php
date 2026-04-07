@@ -21,7 +21,7 @@ class SchemaTagboxFilterLookupNamedCacheConfiguration extends NamedCacheConfigur
      * The layer id.
      *
      */
-    protected ?string $schemaId;
+    protected ?string $schemaId = null;
     /**
      * The layer id.
      *

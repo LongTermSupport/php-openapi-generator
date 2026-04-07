@@ -21,12 +21,12 @@ class NumberCompareCondition extends BusinessRuleCondition
      * JSON path to the field.
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * Mode to use for comparison.
      *
      */
-    protected mixed $mode;
+    protected mixed $mode = null;
     /**
      * Value to compare to.
      *

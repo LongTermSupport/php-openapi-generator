@@ -25,14 +25,14 @@ class BranchWithProtection extends \ArrayObject
      * Commit
      *
      */
-    protected mixed $commit;
+    protected mixed $commit = null;
     protected BranchWithProtectionLinks $links;
     protected bool $protected;
     /**
      * Branch Protection
      *
      */
-    protected mixed $protection;
+    protected mixed $protection = null;
     protected string $protectionUrl;
     protected string $pattern;
     protected int $requiredApprovingReviewCount;

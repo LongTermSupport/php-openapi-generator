@@ -39,7 +39,7 @@ class DetailedPlace extends \ArrayObject
      * @var list<string>
      */
     protected array $containedWithin;
-    protected mixed $geo;
+    protected mixed $geo = null;
     public function getFormat(): string
     {
         return $this->format;

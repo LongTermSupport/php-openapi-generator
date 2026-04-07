@@ -24,7 +24,7 @@ class AddRulesResponse extends \ArrayObject
      * @var list<Rule>
      */
     protected array $data;
-    protected mixed $meta;
+    protected mixed $meta = null;
     /**
      * @return list<Rule>
      */

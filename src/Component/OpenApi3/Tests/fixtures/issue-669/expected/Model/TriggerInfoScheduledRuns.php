@@ -24,12 +24,12 @@ class TriggerInfoScheduledRuns extends \ArrayObject
      * Indicates last run time. null value indicates trigger not run yet.
      *
      */
-    protected ?string $lastRunAt;
+    protected ?string $lastRunAt = null;
     /**
      * Indicates next run time. null value indicates trigger will not run.
      *
      */
-    protected ?string $nextRunAt;
+    protected ?string $nextRunAt = null;
     /**
      * Indicates last run time. null value indicates trigger not run yet.
      *

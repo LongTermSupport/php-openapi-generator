@@ -46,7 +46,7 @@ class FieldIndexingInfo
      * Indexing information of schema's fields related to this field (if existing).
      *
      */
-    protected mixed $relatedSchemaIndexing;
+    protected mixed $relatedSchemaIndexing = null;
     /**
      * The field ID.
      *

@@ -21,12 +21,12 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
      * Result information of a schema import operation
      *
      */
-    protected mixed $schemaImportResult;
+    protected mixed $schemaImportResult = null;
     /**
      * Result information of a list item import operation
      *
      */
-    protected mixed $listItemImportResult;
+    protected mixed $listItemImportResult = null;
     /**
      * Result information of a schema import operation
      *

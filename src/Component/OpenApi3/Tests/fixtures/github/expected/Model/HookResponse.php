@@ -20,9 +20,9 @@ class HookResponse extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?int $code;
-    protected ?string $status;
-    protected ?string $message;
+    protected ?int $code = null;
+    protected ?string $status = null;
+    protected ?string $message = null;
     public function getCode(): ?int
     {
         return $this->code;

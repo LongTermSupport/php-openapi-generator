@@ -21,21 +21,21 @@ class Event extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $id;
-    protected ?string $type;
+    protected ?string $type = null;
     /**
      * Actor
      *
      */
-    protected mixed $actor;
+    protected mixed $actor = null;
     protected EventRepo $repo;
     /**
      * Actor
      *
      */
-    protected mixed $org;
+    protected mixed $org = null;
     protected EventPayload $payload;
     protected bool $public;
-    protected ?\DateTime $createdAt;
+    protected ?\DateTime $createdAt = null;
     public function getId(): string
     {
         return $this->id;

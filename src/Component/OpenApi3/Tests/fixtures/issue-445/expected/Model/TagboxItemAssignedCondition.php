@@ -21,12 +21,12 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
      * JSON path to the field
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * Ref Id of the list item that was assigned in the tagbox
      *
      */
-    protected ?string $refId;
+    protected ?string $refId = null;
     /**
      * JSON path to the field
      *

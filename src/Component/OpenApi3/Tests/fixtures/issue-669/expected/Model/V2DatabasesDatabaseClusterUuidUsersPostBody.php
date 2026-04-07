@@ -47,8 +47,8 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
      *
      */
     protected string $accessKey;
-    protected mixed $mysqlSettings;
-    protected mixed $settings;
+    protected mixed $mysqlSettings = null;
+    protected mixed $settings = null;
     /**
      * (To be deprecated: use settings.mongo_user_settings.role instead for access controls to MongoDB databases).
      * For MongoDB clusters, set to `true` to create a read-only user.

@@ -24,7 +24,7 @@ class UserRoleCreateRequest extends \ArrayObject
      * Language specific user role names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * All user rights for this user role.
      *
@@ -37,7 +37,7 @@ class UserRoleCreateRequest extends \ArrayObject
      * It is not persisted anywhere and it is ignored in single operations.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * Language specific user role names.
      *

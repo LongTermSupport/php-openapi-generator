@@ -80,13 +80,13 @@ class DatabaseClusterRead extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * An array of strings containing the names of databases created in the database cluster.
      *
      * @var list<string>|null
      */
-    protected ?array $dbNames;
+    protected ?array $dbNames = null;
     /**
      * The connection details for OpenSearch dashboard.
      *
@@ -104,7 +104,7 @@ class DatabaseClusterRead extends \ArrayObject
     /**
      * @var list<DatabaseUser>|null
      */
-    protected ?array $users;
+    protected ?array $users = null;
     protected DatabaseClusterReadMaintenanceWindow $maintenanceWindow;
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:read` scope.

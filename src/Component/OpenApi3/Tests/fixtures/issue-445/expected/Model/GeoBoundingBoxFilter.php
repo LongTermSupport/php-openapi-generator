@@ -27,12 +27,12 @@ class GeoBoundingBoxFilter extends FilterBase
      * The top left corner of the bounding box's geo location (latitude and longitude).
      *
      */
-    protected mixed $topLeft;
+    protected mixed $topLeft = null;
     /**
      * The bottom right corner of the bounding box's geo location (latitude and longitude).
      *
      */
-    protected mixed $bottomRight;
+    protected mixed $bottomRight = null;
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).

@@ -20,8 +20,8 @@ class PatchableEntity extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $nullableProperty;
-    protected ?string $nullableAndRequiredProperty;
+    protected ?string $nullableProperty = null;
+    protected ?string $nullableAndRequiredProperty = null;
     public function getNullableProperty(): ?string
     {
         return $this->nullableProperty;

@@ -37,8 +37,8 @@ class GpgKeySubkeysItem extends \ArrayObject
     protected bool $canEncryptStorage;
     protected bool $canCertify;
     protected string $createdAt;
-    protected ?string $expiresAt;
-    protected ?string $rawKey;
+    protected ?string $expiresAt = null;
+    protected ?string $rawKey = null;
     public function getId(): int
     {
         return $this->id;

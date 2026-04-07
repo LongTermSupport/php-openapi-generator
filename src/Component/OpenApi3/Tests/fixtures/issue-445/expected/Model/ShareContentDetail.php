@@ -27,7 +27,7 @@ class ShareContentDetail
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * The content data. It's an object of dynamic metadata whose structure is defined in the Content schema specified
      * by the ContentSchemaId property.
@@ -41,7 +41,7 @@ class ShareContentDetail
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $metadata;
+    protected ?array $metadata = null;
     /**
      * Content ID.
      *
@@ -57,17 +57,17 @@ class ShareContentDetail
      * The type of content
      *
      */
-    protected mixed $contentType;
+    protected mixed $contentType = null;
     /**
      * Contains language specific display values, rendered according to the content schema's display pattern configuration.
      *
      */
-    protected mixed $displayValues;
+    protected mixed $displayValues = null;
     /**
      * Contains an URL that can be used to retrieve the icon corresponding to the file type.
      *
      */
-    protected ?string $iconUrl;
+    protected ?string $iconUrl = null;
     /**
      * The id of the schema with schema type content.
      *

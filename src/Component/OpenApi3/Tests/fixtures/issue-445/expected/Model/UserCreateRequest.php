@@ -21,12 +21,12 @@ class UserCreateRequest
      * User's first name.
      *
      */
-    protected ?string $firstName;
+    protected ?string $firstName = null;
     /**
      * User's last name.
      *
      */
-    protected ?string $lastName;
+    protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
      *
@@ -36,18 +36,18 @@ class UserCreateRequest
      * Preferred language, e.g. for correspondence.
      *
      */
-    protected ?string $languageCode;
+    protected ?string $languageCode = null;
     /**
      * IDs of user roles the user is assigned to.
      *
      * @var list<string>|null
      */
-    protected ?array $userRoleIds;
+    protected ?array $userRoleIds = null;
     /**
      * User address.
      *
      */
-    protected mixed $address;
+    protected mixed $address = null;
     /**
      * User's first name.
      *

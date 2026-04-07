@@ -21,17 +21,17 @@ class BusinessRuleTracedTransformation
      * Trace reference ID of transformation.
      *
      */
-    protected ?string $traceRefId;
+    protected ?string $traceRefId = null;
     /**
      * Serialized JSON of input of transformation
      *
      */
-    protected ?string $input;
+    protected ?string $input = null;
     /**
      * Serialized JSON of output of transformation
      *
      */
-    protected ?string $output;
+    protected ?string $output = null;
     /**
      * Trace reference ID of transformation.
      *

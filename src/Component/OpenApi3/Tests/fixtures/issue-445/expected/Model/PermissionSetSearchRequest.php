@@ -21,17 +21,17 @@ class PermissionSetSearchRequest
      * The string used to query the data. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied in the specified order.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Limits the number of the returned schemas. Defaults to 30.
      *
@@ -41,13 +41,13 @@ class PermissionSetSearchRequest
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
-    protected mixed $filter;
+    protected ?string $pageToken = null;
+    protected mixed $filter = null;
     /**
      * Filters based on the PermissionSetRight of the user.
      *
      */
-    protected mixed $rightFilter;
+    protected mixed $rightFilter = null;
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the result.
      * Warning! It severely affects performance.
@@ -60,7 +60,7 @@ class PermissionSetSearchRequest
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
      *

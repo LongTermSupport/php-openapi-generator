@@ -24,7 +24,7 @@ class ResponseTagsAll extends \ArrayObject
      * @var list<Tags>
      */
     protected array $tags;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Tags>

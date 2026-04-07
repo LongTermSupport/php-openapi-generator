@@ -17,7 +17,7 @@ class XmpWritebackCompletedEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $outputDocId;
+    protected ?string $outputDocId = null;
     public function getOutputDocId(): ?string
     {
         return $this->outputDocId;

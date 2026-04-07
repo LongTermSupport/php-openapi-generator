@@ -20,7 +20,7 @@ class PageBuildError extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $message;
+    protected ?string $message = null;
     public function getMessage(): ?string
     {
         return $this->message;

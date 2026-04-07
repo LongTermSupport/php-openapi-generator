@@ -24,12 +24,12 @@ class ResponseBillingHistory extends \ArrayObject
      * @var list<BillingHistory>
      */
     protected array $billingHistory;
-    protected mixed $links;
+    protected mixed $links = null;
     /**
      * Information about the response itself.
      *
      */
-    protected mixed $meta;
+    protected mixed $meta = null;
     /**
      * @return list<BillingHistory>
      */

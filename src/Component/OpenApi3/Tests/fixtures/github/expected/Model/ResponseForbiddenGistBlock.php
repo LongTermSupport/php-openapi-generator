@@ -22,7 +22,7 @@ class ResponseForbiddenGistBlock extends \ArrayObject
     }
     protected string $reason;
     protected string $createdAt;
-    protected ?string $htmlUrl;
+    protected ?string $htmlUrl = null;
     public function getReason(): string
     {
         return $this->reason;

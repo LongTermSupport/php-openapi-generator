@@ -21,19 +21,19 @@ class PermissionSetNotFoundException extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $traceLevel;
-    protected ?string $traceId;
-    protected ?string $traceJobId;
+    protected ?string $traceId = null;
+    protected ?string $traceJobId = null;
     protected int $httpStatusCode;
-    protected ?string $exceptionMessage;
+    protected ?string $exceptionMessage = null;
     protected string $kind;
-    protected ?string $customerId;
-    protected ?string $customerAlias;
-    protected ?string $userId;
-    protected ?string $reference;
+    protected ?string $customerId = null;
+    protected ?string $customerAlias = null;
+    protected ?string $userId = null;
+    protected ?string $reference = null;
     /**
      * @var list<string>|null
      */
-    protected ?array $permissionSetIds;
+    protected ?array $permissionSetIds = null;
     public function getTraceLevel(): string
     {
         return $this->traceLevel;

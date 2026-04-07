@@ -29,13 +29,13 @@ class ScopedInstallation extends \ArrayObject
      *
      */
     protected string $repositorySelection;
-    protected ?string $singleFileName;
+    protected ?string $singleFileName = null;
     protected string $repositoriesUrl;
     /**
      * Simple User
      *
      */
-    protected mixed $account;
+    protected mixed $account = null;
     /**
      * @return array<string, mixed>
      */

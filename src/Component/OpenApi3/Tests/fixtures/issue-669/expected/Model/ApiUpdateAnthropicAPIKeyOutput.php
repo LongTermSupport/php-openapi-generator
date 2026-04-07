@@ -24,7 +24,7 @@ class ApiUpdateAnthropicAPIKeyOutput extends \ArrayObject
      * Anthropic API Key Info
      *
      */
-    protected mixed $apiKeyInfo;
+    protected mixed $apiKeyInfo = null;
     /**
      * Anthropic API Key Info
      *

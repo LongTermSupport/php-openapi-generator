@@ -22,7 +22,7 @@ class OutputFormatCreateManyRequest
      *
      * @var list<OutputFormat>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Output format items to be created.
      *

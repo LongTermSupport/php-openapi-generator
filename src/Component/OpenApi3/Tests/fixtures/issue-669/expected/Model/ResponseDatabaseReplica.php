@@ -20,7 +20,7 @@ class ResponseDatabaseReplica extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $replica;
+    protected mixed $replica = null;
     public function getReplica(): mixed
     {
         return $this->replica;

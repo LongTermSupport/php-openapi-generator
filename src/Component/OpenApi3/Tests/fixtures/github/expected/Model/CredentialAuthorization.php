@@ -60,7 +60,7 @@ class CredentialAuthorization extends \ArrayObject
      * Date when the credential was last accessed. May be null if it was never accessed
      *
      */
-    protected ?\DateTime $credentialAccessedAt;
+    protected ?\DateTime $credentialAccessedAt = null;
     /**
      * User login that owns the underlying credential.
      *

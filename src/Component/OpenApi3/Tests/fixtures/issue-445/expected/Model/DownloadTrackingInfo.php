@@ -17,10 +17,10 @@ class DownloadTrackingInfo
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $contentId;
-    protected ?string $outputFormatId;
-    protected ?int $width;
-    protected ?int $height;
+    protected ?string $contentId = null;
+    protected ?string $outputFormatId = null;
+    protected ?int $width = null;
+    protected ?int $height = null;
     protected string $contentDisposition;
     public function getContentId(): ?string
     {

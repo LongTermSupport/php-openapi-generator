@@ -21,17 +21,17 @@ class AssignTagboxItemsAction extends BusinessRuleAction
      * Path to the object the tagbox is contained in.
      *
      */
-    protected ?string $path;
+    protected ?string $path = null;
     /**
      * ID of the tagbox field.
      *
      */
-    protected ?string $fieldId;
+    protected ?string $fieldId = null;
     /**
      * List of refIds of the items that should be assigned.
      *
      */
-    protected mixed $refIds;
+    protected mixed $refIds = null;
     /**
      * Indicates whether all the already assigned tags get replaced by the set specified in the action.
      * If false, the not already assigned tags get added, the rest is left as is.

@@ -24,7 +24,7 @@ class ResponseAllMembers extends \ArrayObject
      * @var list<Member>
      */
     protected array $droplets;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Member>

@@ -29,7 +29,7 @@ class VolumeAction extends \ArrayObject
      * A unique identifier for the resource that the action is associated with.
      *
      */
-    protected ?int $resourceId;
+    protected ?int $resourceId = null;
     /**
      * A unique numeric ID that can be used to identify and reference an action.
      *
@@ -49,18 +49,18 @@ class VolumeAction extends \ArrayObject
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
      *
      */
-    protected ?\DateTime $completedAt;
+    protected ?\DateTime $completedAt = null;
     /**
      * The type of resource that the action is associated with.
      *
      */
     protected string $resourceType;
-    protected mixed $region;
+    protected mixed $region = null;
     /**
      * A human-readable string that is used as a unique identifier for each region.
      *
      */
-    protected ?string $regionSlug;
+    protected ?string $regionSlug = null;
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
      *

@@ -32,7 +32,7 @@ class DestinationRequest extends \ArrayObject
      *
      */
     protected string $type;
-    protected mixed $config;
+    protected mixed $config = null;
     /**
      * destination name
      *

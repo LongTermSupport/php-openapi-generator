@@ -21,12 +21,12 @@ class BusinessProcessWaitForStateResult
      * The state that was hit.
      *
      */
-    protected ?string $stateHit;
+    protected ?string $stateHit = null;
     /**
      * The business process.
      *
      */
-    protected mixed $businessProcess;
+    protected mixed $businessProcess = null;
     /**
      * The state that was hit.
      *

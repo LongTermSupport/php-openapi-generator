@@ -24,7 +24,7 @@ class ApiCreateKnowledgeBaseOutput extends \ArrayObject
      * Knowledgebase Description
      *
      */
-    protected mixed $knowledgeBase;
+    protected mixed $knowledgeBase = null;
     /**
      * Knowledgebase Description
      *

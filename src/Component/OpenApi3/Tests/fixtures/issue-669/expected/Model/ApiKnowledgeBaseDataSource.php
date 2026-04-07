@@ -24,7 +24,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * AWS S3 Data Source for Display
      *
      */
-    protected mixed $awsDataSource;
+    protected mixed $awsDataSource = null;
     /**
      * Name of storage bucket - Deprecated, moved to data_source_details
      *
@@ -43,7 +43,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    protected mixed $chunkingOptions;
+    protected mixed $chunkingOptions = null;
     /**
      * Creation date / time
      *
@@ -53,23 +53,23 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Dropbox Data Source for Display
      *
      */
-    protected mixed $dropboxDataSource;
+    protected mixed $dropboxDataSource = null;
     /**
      * File to upload as data source for knowledge base.
      *
      */
-    protected mixed $fileUploadDataSource;
+    protected mixed $fileUploadDataSource = null;
     /**
      * Google Drive Data Source for Display
      *
      */
-    protected mixed $googleDriveDataSource;
+    protected mixed $googleDriveDataSource = null;
     /**
      * Path of folder or object in bucket - Deprecated, moved to data_source_details
      *
      */
     protected string $itemPath;
-    protected mixed $lastDatasourceIndexingJob;
+    protected mixed $lastDatasourceIndexingJob = null;
     /**
      * Region code - Deprecated, moved to data_source_details
      *
@@ -79,7 +79,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    protected mixed $spacesDataSource;
+    protected mixed $spacesDataSource = null;
     /**
      * Last modified
      *
@@ -94,7 +94,7 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * WebCrawlerDataSource
      *
      */
-    protected mixed $webCrawlerDataSource;
+    protected mixed $webCrawlerDataSource = null;
     /**
      * AWS S3 Data Source for Display
      *

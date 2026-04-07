@@ -21,36 +21,36 @@ class FieldStringArray extends FieldBase
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
      *
      */
-    protected ?string $template;
+    protected ?string $template = null;
     /**
      * Contains a regex validation pattern.
      *
      */
-    protected ?string $pattern;
+    protected ?string $pattern = null;
     /**
      * The minimum string's lenght.
      *
      */
-    protected ?int $minimumLength;
+    protected ?int $minimumLength = null;
     /**
      * The maximum string's length.
      *
      */
-    protected ?int $maximumLength;
+    protected ?int $maximumLength = null;
     /**
      * Defines how the value must be analyzed for filtering by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
      * The analyzers are applied only if the Index property is set to true.
      *
      * @var list<AnalyzerBase>|null
      */
-    protected ?array $indexAnalyzers;
+    protected ?array $indexAnalyzers = null;
     /**
      * Defines how the value must be analyzed for searches by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
      * The analyzers are applied only if the SimpleSearch property is set to true.
      *
      * @var list<AnalyzerBase>|null
      */
-    protected ?array $simpleSearchAnalyzers;
+    protected ?array $simpleSearchAnalyzers = null;
     /**
      * Defines that the field value must be displayed in a multiline component.
      *
@@ -61,7 +61,7 @@ class FieldStringArray extends FieldBase
      *
      * @var list<string>|null
      */
-    protected ?array $grantedValues;
+    protected ?array $grantedValues = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
      *
@@ -71,12 +71,12 @@ class FieldStringArray extends FieldBase
      * The maximum number of items that can be stored.
      *
      */
-    protected ?int $maximumItems;
+    protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
      *
      */
-    protected ?int $minimumItems;
+    protected ?int $minimumItems = null;
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
      *

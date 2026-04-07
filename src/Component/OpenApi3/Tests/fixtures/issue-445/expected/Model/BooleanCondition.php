@@ -22,7 +22,7 @@ class BooleanCondition extends BusinessRuleCondition
      *
      * @var list<BusinessRuleCondition>|null
      */
-    protected ?array $conditions;
+    protected ?array $conditions = null;
     /**
      * The conditions.
      *

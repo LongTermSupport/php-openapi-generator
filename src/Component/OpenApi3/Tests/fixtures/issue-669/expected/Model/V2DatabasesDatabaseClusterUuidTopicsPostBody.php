@@ -35,7 +35,7 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
      *
      */
     protected int $partitionCount;
-    protected mixed $config;
+    protected mixed $config = null;
     /**
      * The name of the Kafka topic.
      *

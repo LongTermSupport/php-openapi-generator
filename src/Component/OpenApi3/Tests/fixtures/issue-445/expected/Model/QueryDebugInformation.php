@@ -17,10 +17,10 @@ class QueryDebugInformation
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $general;
-    protected ?string $auditTrail;
-    protected mixed $request;
-    protected mixed $response;
+    protected ?string $general = null;
+    protected ?string $auditTrail = null;
+    protected mixed $request = null;
+    protected mixed $response = null;
     public function getGeneral(): ?string
     {
         return $this->general;

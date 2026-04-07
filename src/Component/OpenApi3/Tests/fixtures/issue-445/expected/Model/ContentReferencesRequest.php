@@ -21,12 +21,12 @@ class ContentReferencesRequest
      * Limits the number of the returned metadata references by setting paging information.
      *
      */
-    protected mixed $references;
+    protected mixed $references = null;
     /**
      * Limits the number of the returned share references by setting paging information.
      *
      */
-    protected mixed $shares;
+    protected mixed $shares = null;
     /**
      * Limits the number of the returned metadata references by setting paging information.
      *

@@ -29,7 +29,7 @@ class AppComponentInstanceBase extends \ArrayObject
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
      *
      */
-    protected mixed $instanceSizeSlug;
+    protected mixed $instanceSizeSlug = null;
     /**
      * Configuration for automatically scaling this component based on metrics.
      *

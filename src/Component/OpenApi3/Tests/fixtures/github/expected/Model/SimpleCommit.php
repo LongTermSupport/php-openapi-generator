@@ -24,8 +24,8 @@ class SimpleCommit extends \ArrayObject
     protected string $treeId;
     protected string $message;
     protected \DateTime $timestamp;
-    protected ?SimpleCommitAuthor $author;
-    protected ?SimpleCommitCommitter $committer;
+    protected ?SimpleCommitAuthor $author = null;
+    protected ?SimpleCommitCommitter $committer = null;
     public function getId(): string
     {
         return $this->id;

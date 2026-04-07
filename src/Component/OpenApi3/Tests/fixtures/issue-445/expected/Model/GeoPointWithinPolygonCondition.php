@@ -21,14 +21,14 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
      * JSON path to the field
      *
      */
-    protected ?string $fieldPath;
+    protected ?string $fieldPath = null;
     /**
      * List of points that form the polygon for the geo fence.
      * Must include at least 3 points.
      *
      * @var list<LatLon>|null
      */
-    protected ?array $polygon;
+    protected ?array $polygon = null;
     /**
      * JSON path to the field
      *

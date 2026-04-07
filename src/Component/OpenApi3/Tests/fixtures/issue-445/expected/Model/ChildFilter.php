@@ -26,7 +26,7 @@ class ChildFilter extends FilterBase
      * The filter to be applied on the child document. All kinds of filters are accepted.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * The type of the child document.
      *

@@ -25,7 +25,7 @@ class DefaultTweetFields extends \ArrayObject
      *
      */
     protected DefaultTweetFieldsGeo $geo;
-    protected mixed $entities;
+    protected mixed $entities = null;
     /**
      * The location tagged on the Tweet, if the user provided one.
      *

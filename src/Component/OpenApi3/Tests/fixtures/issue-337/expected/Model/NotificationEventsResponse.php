@@ -33,7 +33,7 @@ class NotificationEventsResponse extends \ArrayObject
      * Paging parameters.
      *
      */
-    protected mixed $paging;
+    protected mixed $paging = null;
     /**
      * The total number of events returned for the given company.
      *

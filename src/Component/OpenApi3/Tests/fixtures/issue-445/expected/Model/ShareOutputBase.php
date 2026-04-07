@@ -31,17 +31,17 @@ class ShareOutputBase
      * Url to directly view output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
      *
      */
-    protected ?string $viewUrl;
+    protected ?string $viewUrl = null;
     /**
      * Url to directly download output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
      *
      */
-    protected ?string $downloadUrl;
+    protected ?string $downloadUrl = null;
     /**
      * Output details.
      *
      */
-    protected mixed $detail;
+    protected mixed $detail = null;
     /**
      * Whether this Output belongs to a dynamic OutputFormat
      *

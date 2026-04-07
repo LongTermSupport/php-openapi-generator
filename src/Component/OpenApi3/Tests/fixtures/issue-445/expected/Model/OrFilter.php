@@ -22,7 +22,7 @@ class OrFilter extends FilterBase
      *
      * @var list<FilterBase>|null
      */
-    protected ?array $filters;
+    protected ?array $filters = null;
     /**
      * The filters to put in "or". All kinds of filters are accepted.
      *

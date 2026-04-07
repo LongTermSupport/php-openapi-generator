@@ -40,12 +40,12 @@ class SchemaSearchResult extends \ArrayObject
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * The search string used to query the data.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
      *
@@ -56,7 +56,7 @@ class SchemaSearchResult extends \ArrayObject
      *
      * @var list<QueryDebugInformation>|null
      */
-    protected ?array $queryDebugInformation;
+    protected ?array $queryDebugInformation = null;
     /**
      * The total number of matching documents.
      *

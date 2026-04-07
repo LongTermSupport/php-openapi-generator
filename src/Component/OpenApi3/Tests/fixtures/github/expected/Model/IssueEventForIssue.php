@@ -27,10 +27,10 @@ class IssueEventForIssue extends \ArrayObject
      * Simple User
      *
      */
-    protected mixed $actor;
+    protected mixed $actor = null;
     protected string $event;
-    protected ?string $commitId;
-    protected ?string $commitUrl;
+    protected ?string $commitId = null;
+    protected ?string $commitUrl = null;
     protected string $createdAt;
     protected string $sha;
     protected string $htmlUrl;

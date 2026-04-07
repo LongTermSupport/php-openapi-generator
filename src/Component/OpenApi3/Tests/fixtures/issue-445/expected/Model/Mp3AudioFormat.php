@@ -17,18 +17,18 @@ class Mp3AudioFormat extends FormatBase
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $extension;
+    protected ?string $extension = null;
     /**
      * Gets or sets the encoding bitrate. This setting and Quality are mutually exclusive.
      *
      */
-    protected ?int $bitrate;
+    protected ?int $bitrate = null;
     /**
      * Gets or sets the encoding quality. This setting and Bitrate are mutually exclusive.
      * Values can be set it range of 0 to 9, where a lower value is a higher quality.
      *
      */
-    protected ?int $quality;
+    protected ?int $quality = null;
     public function getExtension(): ?string
     {
         return $this->extension;

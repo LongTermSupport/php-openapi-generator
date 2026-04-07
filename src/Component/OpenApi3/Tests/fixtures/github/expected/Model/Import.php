@@ -20,7 +20,7 @@ class Import extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $vcs;
+    protected ?string $vcs = null;
     protected string $useLfs;
     /**
      * The URL of the originating repository.
@@ -30,12 +30,12 @@ class Import extends \ArrayObject
     protected string $svcRoot;
     protected string $tfvcProject;
     protected string $status;
-    protected ?string $statusText;
-    protected ?string $failedStep;
-    protected ?string $errorMessage;
-    protected ?int $importPercent;
-    protected ?int $commitCount;
-    protected ?int $pushPercent;
+    protected ?string $statusText = null;
+    protected ?string $failedStep = null;
+    protected ?string $errorMessage = null;
+    protected ?int $importPercent = null;
+    protected ?int $commitCount = null;
+    protected ?int $pushPercent = null;
     protected bool $hasLargeFiles;
     protected int $largeFilesSize;
     protected int $largeFilesCount;
@@ -44,7 +44,7 @@ class Import extends \ArrayObject
      */
     protected array $projectChoices;
     protected string $message;
-    protected ?int $authorsCount;
+    protected ?int $authorsCount = null;
     protected string $url;
     protected string $htmlUrl;
     protected string $authorsUrl;

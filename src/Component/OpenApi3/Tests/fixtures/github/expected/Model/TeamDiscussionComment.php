@@ -20,7 +20,7 @@ class TeamDiscussionComment extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?TeamDiscussionCommentAuthor $author;
+    protected ?TeamDiscussionCommentAuthor $author = null;
     /**
      * The main text of the comment.
      *
@@ -33,7 +33,7 @@ class TeamDiscussionComment extends \ArrayObject
      */
     protected string $bodyVersion;
     protected \DateTime $createdAt;
-    protected ?\DateTime $lastEditedAt;
+    protected ?\DateTime $lastEditedAt = null;
     protected string $discussionUrl;
     protected string $htmlUrl;
     protected string $nodeId;
@@ -44,7 +44,7 @@ class TeamDiscussionComment extends \ArrayObject
     protected int $number;
     protected \DateTime $updatedAt;
     protected string $url;
-    protected mixed $reactions;
+    protected mixed $reactions = null;
     public function getAuthor(): ?TeamDiscussionCommentAuthor
     {
         return $this->author;

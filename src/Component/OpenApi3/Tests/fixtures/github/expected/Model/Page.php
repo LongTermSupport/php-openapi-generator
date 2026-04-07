@@ -29,12 +29,12 @@ class Page extends \ArrayObject
      * The status of the most recent build of the Page.
      *
      */
-    protected ?string $status;
+    protected ?string $status = null;
     /**
      * The Pages site's custom domain
      *
      */
-    protected ?string $cname;
+    protected ?string $cname = null;
     /**
      * Whether the Page has a custom 404 page.
      *
@@ -45,7 +45,7 @@ class Page extends \ArrayObject
      *
      */
     protected string $htmlUrl;
-    protected mixed $source;
+    protected mixed $source = null;
     /**
      * The API address for accessing this Page resource.
      *

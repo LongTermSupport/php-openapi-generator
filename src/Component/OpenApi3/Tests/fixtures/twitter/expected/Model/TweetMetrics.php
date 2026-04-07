@@ -29,12 +29,12 @@ class TweetMetrics extends \ArrayObject
      * Interaction metrics for a Tweet.
      *
      */
-    protected mixed $tweet;
+    protected mixed $tweet = null;
     /**
      * Metrics corresponding to a Video.
      *
      */
-    protected mixed $video;
+    protected mixed $video = null;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
      *

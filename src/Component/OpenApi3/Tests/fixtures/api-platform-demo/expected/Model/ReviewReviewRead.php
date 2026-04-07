@@ -20,7 +20,7 @@ class ReviewReviewRead extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The actual body of the review.
      *
@@ -37,18 +37,18 @@ class ReviewReviewRead extends \ArrayObject
      * @deprecated
      *
      */
-    protected ?string $letter;
-    protected mixed $book;
+    protected ?string $letter = null;
+    protected mixed $book = null;
     /**
      * The author of the review.
      *
      */
-    protected ?string $author;
+    protected ?string $author = null;
     /**
      * Publication date of the review.
      *
      */
-    protected ?\DateTime $publicationDate;
+    protected ?\DateTime $publicationDate = null;
     public function getId(): ?string
     {
         return $this->id;

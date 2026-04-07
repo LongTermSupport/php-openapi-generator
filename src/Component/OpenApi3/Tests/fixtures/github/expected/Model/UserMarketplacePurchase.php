@@ -21,17 +21,17 @@ class UserMarketplacePurchase extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $billingCycle;
-    protected ?\DateTime $nextBillingDate;
-    protected ?int $unitCount;
+    protected ?\DateTime $nextBillingDate = null;
+    protected ?int $unitCount = null;
     protected bool $onFreeTrial;
-    protected ?\DateTime $freeTrialEndsOn;
-    protected ?\DateTime $updatedAt;
-    protected mixed $account;
+    protected ?\DateTime $freeTrialEndsOn = null;
+    protected ?\DateTime $updatedAt = null;
+    protected mixed $account = null;
     /**
      * Marketplace Listing Plan
      *
      */
-    protected mixed $plan;
+    protected mixed $plan = null;
     public function getBillingCycle(): string
     {
         return $this->billingCycle;

@@ -40,12 +40,12 @@ class MetadataReferenceResult extends \ArrayObject
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Indicates if any reference is originating from an item that the current user does not have access to.
      *
      */
-    protected ?bool $isReferencedByRestrictedItem;
+    protected ?bool $isReferencedByRestrictedItem = null;
     /**
      * The total number of matching documents.
      *

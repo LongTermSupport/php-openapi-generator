@@ -21,17 +21,17 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
      * Override for the model to use
      *
      */
-    protected ?string $model;
+    protected ?string $model = null;
     /**
      * Override for the language to use
      *
      */
-    protected ?string $language;
+    protected ?string $language = null;
     /**
      * Minimum value a concept must have to be considered
      *
      */
-    protected ?string $minimumValue;
+    protected ?string $minimumValue = null;
     /**
      * Override for the model to use
      *

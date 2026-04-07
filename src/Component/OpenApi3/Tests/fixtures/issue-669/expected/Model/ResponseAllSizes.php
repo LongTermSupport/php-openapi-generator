@@ -24,7 +24,7 @@ class ResponseAllSizes extends \ArrayObject
      * @var list<Size>
      */
     protected array $sizes;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Size>

@@ -20,7 +20,7 @@ class ResponseAddonsGet extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $resource;
+    protected mixed $resource = null;
     public function getResource(): mixed
     {
         return $this->resource;

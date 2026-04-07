@@ -21,46 +21,46 @@ class BusinessRuleTraceLog
      * ID of the trace.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * ID of the document.
      *
      */
-    protected ?string $documentId;
+    protected ?string $documentId = null;
     /**
      * Type of the document.
      *
      */
-    protected mixed $documentType;
+    protected mixed $documentType = null;
     /**
      * IDs of rules that were traced for this document.
      *
      * @var list<string>|null
      */
-    protected ?array $ruleIds;
+    protected ?array $ruleIds = null;
     /**
      * Detailed information about rules traced.
      *
      * @var list<BusinessRuleTracedRule>|null
      */
-    protected ?array $rules;
+    protected ?array $rules = null;
     /**
      * Validation errors occuring after all rules have ran.
      *
      * @var list<ErrorResponse>|null
      */
-    protected ?array $validationErrors;
+    protected ?array $validationErrors = null;
     /**
      * General errors occuring when saving the document.
      *
      * @var list<ErrorResponse>|null
      */
-    protected ?array $generalErrors;
+    protected ?array $generalErrors = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * ID of the trace.
      *

@@ -20,7 +20,7 @@ class ImportTransferPartialRequest
     /**
      * @var list<FileTransferCreateItem>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * @return list<FileTransferCreateItem>|null
      */

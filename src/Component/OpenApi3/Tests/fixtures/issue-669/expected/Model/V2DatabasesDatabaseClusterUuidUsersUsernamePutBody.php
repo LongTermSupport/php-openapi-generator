@@ -20,7 +20,7 @@ class V2DatabasesDatabaseClusterUuidUsersUsernamePutBody extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $settings;
+    protected mixed $settings = null;
     public function getSettings(): mixed
     {
         return $this->settings;

@@ -39,7 +39,7 @@ class Organization extends \ArrayObject
     protected string $membersUrl;
     protected string $publicMembersUrl;
     protected string $avatarUrl;
-    protected ?string $description;
+    protected ?string $description = null;
     /**
      * Display blog url for the organization
      *

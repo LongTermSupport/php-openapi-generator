@@ -22,7 +22,7 @@ class ContentPermissionSetUpdateManyRequest
      *
      * @var list<ContentPermissionSetUpdateRequestItem>|null
      */
-    protected ?array $items;
+    protected ?array $items = null;
     /**
      * Content permission sets update requests.
      *

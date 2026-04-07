@@ -20,7 +20,7 @@ class AlertPolicyRequest extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $alerts;
+    protected mixed $alerts = null;
     protected string $compare;
     protected string $description;
     protected bool $enabled;

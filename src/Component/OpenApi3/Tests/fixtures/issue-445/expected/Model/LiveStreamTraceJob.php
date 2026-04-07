@@ -17,10 +17,10 @@ class LiveStreamTraceJob
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $traceJobId;
-    protected ?string $ipAddress;
-    protected ?string $userId;
-    protected ?string $apiClientId;
+    protected ?string $traceJobId = null;
+    protected ?string $ipAddress = null;
+    protected ?string $userId = null;
+    protected ?string $apiClientId = null;
     public function getTraceJobId(): ?string
     {
         return $this->traceJobId;

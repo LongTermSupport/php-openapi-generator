@@ -22,7 +22,7 @@ class ListItemUpdateRequest
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $content;
+    protected ?array $content = null;
     /**
      * Options to modify the behavior for updating the content.
      * Merge: the values specified in the Content object are merged to the existing content.

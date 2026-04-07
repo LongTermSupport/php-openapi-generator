@@ -23,12 +23,12 @@ class Account extends \ArrayObject
     protected int $id;
     protected string $firstname;
     protected string $lastname;
-    protected ?Country $countryOfBirth;
-    protected mixed $country;
+    protected ?Country $countryOfBirth = null;
+    protected mixed $country = null;
     /**
      * @var Country|list<Country>|null
      */
-    protected Country|array|null $nationality;
+    protected Country|array|null $nationality = null;
     public function getId(): int
     {
         return $this->id;

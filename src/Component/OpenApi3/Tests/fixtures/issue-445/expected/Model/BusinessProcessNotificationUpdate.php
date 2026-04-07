@@ -21,23 +21,23 @@ class BusinessProcessNotificationUpdate
      * The title the message that is shown to the user should have.
      *
      */
-    protected mixed $title;
+    protected mixed $title = null;
     /**
      * The message shown to the user.
      *
      */
-    protected mixed $message;
+    protected mixed $message = null;
     /**
      * An optional navigation link that allows the user to jump to a page giving more information
      * about the process.
      *
      */
-    protected ?string $navigationLink;
+    protected ?string $navigationLink = null;
     /**
      * The event type of the notification.
      *
      */
-    protected mixed $eventType;
+    protected mixed $eventType = null;
     /**
      * The title the message that is shown to the user should have.
      *

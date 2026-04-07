@@ -35,7 +35,7 @@ class ReservedIpv6 extends \ArrayObject
      *
      */
     protected string $regionSlug;
-    protected mixed $droplet;
+    protected mixed $droplet = null;
     /**
      * The public IP address of the reserved IPv6. It also serves as its identifier.
      *

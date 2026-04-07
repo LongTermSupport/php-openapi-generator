@@ -20,7 +20,7 @@ class Metrics extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $data;
+    protected mixed $data = null;
     protected string $status;
     public function getData(): mixed
     {

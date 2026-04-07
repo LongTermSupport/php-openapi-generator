@@ -22,7 +22,7 @@ class ParchmentJsonhal extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected ParchmentJsonhalLinks $links;
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The title of the book.
      *

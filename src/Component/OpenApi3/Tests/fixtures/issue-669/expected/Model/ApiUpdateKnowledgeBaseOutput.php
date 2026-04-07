@@ -24,7 +24,7 @@ class ApiUpdateKnowledgeBaseOutput extends \ArrayObject
      * Knowledgebase Description
      *
      */
-    protected mixed $knowledgeBase;
+    protected mixed $knowledgeBase = null;
     /**
      * Knowledgebase Description
      *

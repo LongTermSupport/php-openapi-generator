@@ -21,7 +21,7 @@ class SplitTransformation extends BusinessRuleTransformation
      * Separators to use, supports variables, an array of strings including escape sequences or null to split on any white space character.
      *
      */
-    protected mixed $separators;
+    protected mixed $separators = null;
     /**
      * Keeps empty items. Empty items will be returned as empty strings.
      *

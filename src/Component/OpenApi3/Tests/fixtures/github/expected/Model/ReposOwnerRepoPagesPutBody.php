@@ -24,8 +24,8 @@ class ReposOwnerRepoPagesPutBody extends \ArrayObject
      * Specify a custom domain for the repository. Sending a `null` value will remove the custom domain. For more about custom domains, see "[Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)."
      *
      */
-    protected ?string $cname;
-    protected mixed $source;
+    protected ?string $cname = null;
+    protected mixed $source = null;
     /**
      * Specify a custom domain for the repository. Sending a `null` value will remove the custom domain. For more about custom domains, see "[Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)."
      *

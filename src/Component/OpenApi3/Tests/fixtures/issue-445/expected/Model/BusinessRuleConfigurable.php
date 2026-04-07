@@ -21,19 +21,19 @@ class BusinessRuleConfigurable extends BusinessRule
      * The condition that makes this rule trigger.
      *
      */
-    protected mixed $condition;
+    protected mixed $condition = null;
     /**
      * Optional transformations to apply.
      *
      * @var list<BusinessRuleTransformationGroup>|null
      */
-    protected ?array $transformationGroups;
+    protected ?array $transformationGroups = null;
     /**
      * The actions that are performed when this rule triggers.
      *
      * @var list<BusinessRuleAction>|null
      */
-    protected ?array $actions;
+    protected ?array $actions = null;
     /**
      * The condition that makes this rule trigger.
      *

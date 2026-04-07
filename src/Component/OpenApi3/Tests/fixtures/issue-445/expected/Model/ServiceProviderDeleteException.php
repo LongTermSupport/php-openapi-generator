@@ -21,13 +21,13 @@ class ServiceProviderDeleteException extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $traceLevel;
-    protected ?string $traceId;
-    protected ?string $traceJobId;
+    protected ?string $traceId = null;
+    protected ?string $traceJobId = null;
     protected int $httpStatusCode;
-    protected ?string $exceptionMessage;
+    protected ?string $exceptionMessage = null;
     protected string $kind;
-    protected ?string $serviceProviderId;
-    protected ?string $detailedErrorMessage;
+    protected ?string $serviceProviderId = null;
+    protected ?string $detailedErrorMessage = null;
     public function getTraceLevel(): string
     {
         return $this->traceLevel;

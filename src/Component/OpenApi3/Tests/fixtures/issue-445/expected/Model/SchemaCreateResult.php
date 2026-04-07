@@ -21,7 +21,7 @@ class SchemaCreateResult
      * The details of the created schema.
      *
      */
-    protected mixed $schema;
+    protected mixed $schema = null;
     /**
      * The details of the created schema.
      *

@@ -23,12 +23,12 @@ class CheckAnnotation extends \ArrayObject
     protected string $path;
     protected int $startLine;
     protected int $endLine;
-    protected ?int $startColumn;
-    protected ?int $endColumn;
-    protected ?string $annotationLevel;
-    protected ?string $title;
-    protected ?string $message;
-    protected ?string $rawDetails;
+    protected ?int $startColumn = null;
+    protected ?int $endColumn = null;
+    protected ?string $annotationLevel = null;
+    protected ?string $title = null;
+    protected ?string $message = null;
+    protected ?string $rawDetails = null;
     protected string $blobHref;
     public function getPath(): string
     {

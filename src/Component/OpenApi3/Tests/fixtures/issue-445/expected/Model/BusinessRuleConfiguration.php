@@ -27,13 +27,13 @@ class BusinessRuleConfiguration
      *
      * @var list<BusinessRule>|null
      */
-    protected ?array $rules;
+    protected ?array $rules = null;
     /**
      * Named caches.
      *
      * @var list<NamedCacheConfigurationBase>|null
      */
-    protected ?array $caches;
+    protected ?array $caches = null;
     /**
      * Disables the rule completely.
      *

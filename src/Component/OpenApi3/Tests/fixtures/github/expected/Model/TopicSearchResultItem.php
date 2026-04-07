@@ -21,18 +21,18 @@ class TopicSearchResultItem extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected string $name;
-    protected ?string $displayName;
-    protected ?string $shortDescription;
-    protected ?string $description;
-    protected ?string $createdBy;
-    protected ?string $released;
+    protected ?string $displayName = null;
+    protected ?string $shortDescription = null;
+    protected ?string $description = null;
+    protected ?string $createdBy = null;
+    protected ?string $released = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected bool $featured;
     protected bool $curated;
     protected int $score;
-    protected ?int $repositoryCount;
-    protected ?string $logoUrl;
+    protected ?int $repositoryCount = null;
+    protected ?string $logoUrl = null;
     /**
      * @var list<mixed>
      */
@@ -40,11 +40,11 @@ class TopicSearchResultItem extends \ArrayObject
     /**
      * @var list<TopicSearchResultItemRelatedItem>|null
      */
-    protected ?array $related;
+    protected ?array $related = null;
     /**
      * @var list<TopicSearchResultItemAliasesItem>|null
      */
-    protected ?array $aliases;
+    protected ?array $aliases = null;
     public function getName(): string
     {
         return $this->name;

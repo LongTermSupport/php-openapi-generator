@@ -24,7 +24,7 @@ class ResponseListAlertPolicyResponse extends \ArrayObject
      * @var list<AlertPolicy>
      */
     protected array $policies;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<AlertPolicy>

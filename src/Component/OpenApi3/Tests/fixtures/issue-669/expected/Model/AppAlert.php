@@ -22,7 +22,7 @@ class AppAlert extends \ArrayObject
     }
     protected string $id;
     protected string $componentName;
-    protected mixed $spec;
+    protected mixed $spec = null;
     /**
      * @var list<string>
      */
@@ -32,7 +32,7 @@ class AppAlert extends \ArrayObject
      */
     protected array $slackWebhooks;
     protected string $phase = 'UNKNOWN';
-    protected mixed $progress;
+    protected mixed $progress = null;
     public function getId(): string
     {
         return $this->id;

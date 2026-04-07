@@ -21,27 +21,27 @@ class OutputDataBase
      * The extension of the file.
      *
      */
-    protected ?string $fileExtension;
+    protected ?string $fileExtension = null;
     /**
      * The path where the file is stored.
      *
      */
-    protected ?string $filePath;
+    protected ?string $filePath = null;
     /**
      * The size of the file in bytes.
      *
      */
-    protected ?int $fileSizeInBytes;
+    protected ?int $fileSizeInBytes = null;
     /**
      * The SHA-1 hash of the file.
      *
      */
-    protected ?string $sha1Hash;
+    protected ?string $sha1Hash = null;
     /**
      * The original filename of the file.
      *
      */
-    protected ?string $originalFileName;
+    protected ?string $originalFileName = null;
     protected string $kind;
     /**
      * The extension of the file.

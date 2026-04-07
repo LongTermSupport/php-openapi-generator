@@ -32,7 +32,7 @@ class AggregationResultItem
      * It can be passed as one of the aggregation filters of an aggregation query: it returns documents meeting the aggregation condition.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * True if the current result item matches on of the aggregation filters sent in the query.
      *
@@ -43,7 +43,7 @@ class AggregationResultItem
      *
      * @var list<AggregationResult>|null
      */
-    protected ?array $aggregationResults;
+    protected ?array $aggregationResults = null;
     /**
      * Value matched.
      *

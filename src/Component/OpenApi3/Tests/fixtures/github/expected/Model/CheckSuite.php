@@ -22,34 +22,34 @@ class CheckSuite extends \ArrayObject
     }
     protected int $id;
     protected string $nodeId;
-    protected ?string $headBranch;
+    protected ?string $headBranch = null;
     /**
      * The SHA of the head commit that is being checked.
      *
      */
     protected string $headSha;
-    protected ?string $status;
-    protected ?string $conclusion;
-    protected ?string $url;
-    protected ?string $before;
-    protected ?string $after;
+    protected ?string $status = null;
+    protected ?string $conclusion = null;
+    protected ?string $url = null;
+    protected ?string $before = null;
+    protected ?string $after = null;
     /**
      * @var list<PullRequestMinimal>|null
      */
-    protected ?array $pullRequests;
-    protected ?CheckSuiteApp $app;
+    protected ?array $pullRequests = null;
+    protected ?CheckSuiteApp $app = null;
     /**
      * Minimal Repository
      *
      */
-    protected mixed $repository;
-    protected ?\DateTime $createdAt;
-    protected ?\DateTime $updatedAt;
+    protected mixed $repository = null;
+    protected ?\DateTime $createdAt = null;
+    protected ?\DateTime $updatedAt = null;
     /**
      * Simple Commit
      *
      */
-    protected mixed $headCommit;
+    protected mixed $headCommit = null;
     protected int $latestCheckRunsCount;
     protected string $checkRunsUrl;
     public function getId(): int

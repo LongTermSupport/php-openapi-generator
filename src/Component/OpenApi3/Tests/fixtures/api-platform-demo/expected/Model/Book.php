@@ -20,12 +20,12 @@ class Book extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The ISBN of the book.
      *
      */
-    protected ?string $isbn;
+    protected ?string $isbn = null;
     /**
      * The title of the book.
      *
@@ -56,8 +56,8 @@ class Book extends \ArrayObject
      * The book's cover base64 encoded.
      *
      */
-    protected ?string $cover;
-    protected ?\DateTime $archivedAt;
+    protected ?string $cover = null;
+    protected ?\DateTime $archivedAt = null;
     public function getId(): ?string
     {
         return $this->id;

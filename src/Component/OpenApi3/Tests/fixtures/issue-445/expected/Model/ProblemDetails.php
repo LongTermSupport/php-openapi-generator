@@ -17,15 +17,15 @@ class ProblemDetails
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $type;
-    protected ?string $title;
-    protected ?int $status;
-    protected ?string $detail;
-    protected ?string $instance;
+    protected ?string $type = null;
+    protected ?string $title = null;
+    protected ?int $status = null;
+    protected ?string $detail = null;
+    protected ?string $instance = null;
     /**
      * @var array<string, mixed>|null
      */
-    protected ?array $extensions;
+    protected ?array $extensions = null;
     public function getType(): ?string
     {
         return $this->type;

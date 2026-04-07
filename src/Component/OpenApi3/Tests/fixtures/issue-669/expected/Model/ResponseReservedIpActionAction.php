@@ -44,23 +44,23 @@ class ResponseReservedIpActionAction extends \ArrayObject
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
      *
      */
-    protected ?\DateTime $completedAt;
+    protected ?\DateTime $completedAt = null;
     /**
      * A unique identifier for the resource that the action is associated with.
      *
      */
-    protected ?int $resourceId;
+    protected ?int $resourceId = null;
     /**
      * The type of resource that the action is associated with.
      *
      */
     protected string $resourceType;
-    protected mixed $region;
+    protected mixed $region = null;
     /**
      * A human-readable string that is used as a unique identifier for each region.
      *
      */
-    protected ?string $regionSlug;
+    protected ?string $regionSlug = null;
     /**
      * The UUID of the project to which the reserved IP currently belongs.
      *

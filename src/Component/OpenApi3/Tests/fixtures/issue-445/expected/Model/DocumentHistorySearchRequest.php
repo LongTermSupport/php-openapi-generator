@@ -36,12 +36,12 @@ class DocumentHistorySearchRequest
      * To get a large amount of data, page token returned from the response can be used to get all data.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Limits the search to a specific document ID. E.g. contentId
      *
      */
-    protected ?string $documentId;
+    protected ?string $documentId = null;
     /**
      * The document version to search. Default to -1 to not limit to a specific document version.
      *
@@ -51,13 +51,13 @@ class DocumentHistorySearchRequest
      * Limits the search to a specific document type.
      *
      */
-    protected ?string $documentType;
+    protected ?string $documentType = null;
     /**
      * Sorts the search results. Sorting on a not indexed field will throw an exception.
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Limits the start date of the search request. By default no limitation set.
      *

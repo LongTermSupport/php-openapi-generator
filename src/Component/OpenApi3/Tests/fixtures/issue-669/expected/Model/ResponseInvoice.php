@@ -24,7 +24,7 @@ class ResponseInvoice extends \ArrayObject
      * @var list<InvoiceItem>
      */
     protected array $invoiceItems;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<InvoiceItem>

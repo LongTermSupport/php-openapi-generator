@@ -21,7 +21,7 @@ class GeoDistance
      * Language specific geo distance names.
      *
      */
-    protected mixed $names;
+    protected mixed $names = null;
     /**
      * The distance in meters.
      *

@@ -45,8 +45,8 @@ class Deployment extends \ArrayObject
      *
      */
     protected string $environment;
-    protected ?string $description;
-    protected ?DeploymentCreator $creator;
+    protected ?string $description = null;
+    protected ?DeploymentCreator $creator = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     protected string $statusesUrl;
@@ -61,7 +61,7 @@ class Deployment extends \ArrayObject
      *
      */
     protected bool $productionEnvironment;
-    protected ?DeploymentPerformedViaGithubApp $performedViaGithubApp;
+    protected ?DeploymentPerformedViaGithubApp $performedViaGithubApp = null;
     public function getUrl(): string
     {
         return $this->url;

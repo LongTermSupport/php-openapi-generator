@@ -21,7 +21,7 @@ class UserRoleAssignment
      * User role assigned.
      *
      */
-    protected mixed $userRole;
+    protected mixed $userRole = null;
     /**
      * Marks user roles that were assigned automatically to a federated user based on group mapping of a federated identity provider.
      *

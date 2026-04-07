@@ -25,7 +25,7 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
      * Knowledgebase Description
      *
      */
-    protected mixed $knowledgeBase;
+    protected mixed $knowledgeBase = null;
     public function getDatabaseStatus(): string
     {
         return $this->databaseStatus;

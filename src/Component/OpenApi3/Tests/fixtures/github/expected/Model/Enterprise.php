@@ -24,13 +24,13 @@ class Enterprise extends \ArrayObject
      * A short description of the enterprise.
      *
      */
-    protected ?string $description;
+    protected ?string $description = null;
     protected string $htmlUrl;
     /**
      * The enterprise's website URL.
      *
      */
-    protected ?string $websiteUrl;
+    protected ?string $websiteUrl = null;
     /**
      * Unique identifier of the enterprise
      *
@@ -47,8 +47,8 @@ class Enterprise extends \ArrayObject
      *
      */
     protected string $slug;
-    protected ?\DateTime $createdAt;
-    protected ?\DateTime $updatedAt;
+    protected ?\DateTime $createdAt = null;
+    protected ?\DateTime $updatedAt = null;
     protected string $avatarUrl;
     /**
      * A short description of the enterprise.

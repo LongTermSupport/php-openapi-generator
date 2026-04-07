@@ -23,11 +23,11 @@ class FirewallRules extends \ArrayObject
     /**
      * @var list<FirewallRulesInboundRulesItem>|null
      */
-    protected ?array $inboundRules;
+    protected ?array $inboundRules = null;
     /**
      * @var list<FirewallRulesOutboundRulesItem>|null
      */
-    protected ?array $outboundRules;
+    protected ?array $outboundRules = null;
     /**
      * @return list<FirewallRulesInboundRulesItem>|null
      */

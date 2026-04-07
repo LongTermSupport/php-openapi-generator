@@ -37,7 +37,7 @@ class OutputDataVideo extends OutputDataBase
      *
      * @var list<Sprite>|null
      */
-    protected ?array $sprites;
+    protected ?array $sprites = null;
     /**
      * Duration of the video in seconds.
      *

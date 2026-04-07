@@ -26,9 +26,9 @@ class PullRequestSimpleHead extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repo;
+    protected mixed $repo = null;
     protected string $sha;
-    protected ?PullRequestSimpleHeadUser $user;
+    protected ?PullRequestSimpleHeadUser $user = null;
     public function getLabel(): string
     {
         return $this->label;

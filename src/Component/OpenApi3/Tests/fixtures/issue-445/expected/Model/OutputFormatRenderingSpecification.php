@@ -21,12 +21,12 @@ class OutputFormatRenderingSpecification
      * Which output format should be used as a source of data.
      *
      */
-    protected mixed $sourceOutputFormats;
+    protected mixed $sourceOutputFormats = null;
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
      *
      */
-    protected mixed $format;
+    protected mixed $format = null;
     /**
      * Which output format should be used as a source of data.
      *

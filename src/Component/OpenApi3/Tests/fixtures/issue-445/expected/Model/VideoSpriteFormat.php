@@ -21,7 +21,7 @@ class VideoSpriteFormat extends FormatBase
      * Specifies the dimensions of a single frame in the sprite.
      *
      */
-    protected mixed $spriteResizeAction;
+    protected mixed $spriteResizeAction = null;
     /**
      * Limit for the number of frames to generate.
      *
@@ -32,7 +32,7 @@ class VideoSpriteFormat extends FormatBase
      *
      */
     protected int $quality;
-    protected ?string $extension;
+    protected ?string $extension = null;
     /**
      * Specifies the dimensions of a single frame in the sprite.
      *

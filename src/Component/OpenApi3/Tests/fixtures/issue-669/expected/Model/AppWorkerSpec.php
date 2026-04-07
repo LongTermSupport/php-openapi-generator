@@ -25,11 +25,11 @@ class AppWorkerSpec extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $git;
-    protected mixed $github;
-    protected mixed $gitlab;
-    protected mixed $bitbucket;
-    protected mixed $image;
+    protected mixed $git = null;
+    protected mixed $github = null;
+    protected mixed $gitlab = null;
+    protected mixed $bitbucket = null;
+    protected mixed $image = null;
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
      *
@@ -76,14 +76,14 @@ class AppWorkerSpec extends \ArrayObject
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
      *
      */
-    protected mixed $instanceSizeSlug;
+    protected mixed $instanceSizeSlug = null;
     /**
      * Configuration for automatically scaling this component based on metrics.
      *
      */
     protected AppComponentInstanceBaseAutoscaling $autoscaling;
-    protected mixed $termination;
-    protected mixed $livenessHealthCheck;
+    protected mixed $termination = null;
+    protected mixed $livenessHealthCheck = null;
     /**
      * The name. Must be unique across all components within the same app.
      *

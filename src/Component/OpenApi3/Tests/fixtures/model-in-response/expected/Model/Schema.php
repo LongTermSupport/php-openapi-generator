@@ -32,7 +32,7 @@ class Schema extends \ArrayObject
      */
     protected array $mapProperty;
     protected SchemaObjectProperty $objectProperty;
-    protected mixed $objectRefProperty;
+    protected mixed $objectRefProperty = null;
     public function getStringProperty(): string
     {
         return $this->stringProperty;

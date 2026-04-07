@@ -40,7 +40,7 @@ class VolumeActionPostAttach extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $tags;
+    protected ?array $tags = null;
     /**
      * The volume action to initiate.
      *

@@ -25,14 +25,14 @@ class LicenseContent extends \ArrayObject
     protected string $sha;
     protected int $size;
     protected string $url;
-    protected ?string $htmlUrl;
-    protected ?string $gitUrl;
-    protected ?string $downloadUrl;
+    protected ?string $htmlUrl = null;
+    protected ?string $gitUrl = null;
+    protected ?string $downloadUrl = null;
     protected string $type;
     protected string $content;
     protected string $encoding;
     protected LicenseContentLinks $links;
-    protected ?LicenseContentLicense $license;
+    protected ?LicenseContentLicense $license = null;
     public function getName(): string
     {
         return $this->name;

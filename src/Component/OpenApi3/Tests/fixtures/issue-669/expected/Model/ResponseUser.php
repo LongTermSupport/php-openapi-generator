@@ -20,7 +20,7 @@ class ResponseUser extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $user;
+    protected mixed $user = null;
     public function getUser(): mixed
     {
         return $this->user;

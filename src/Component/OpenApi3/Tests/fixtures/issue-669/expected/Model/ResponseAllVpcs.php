@@ -24,7 +24,7 @@ class ResponseAllVpcs extends \ArrayObject
      * @var list<array<string, mixed>>
      */
     protected array $vpcs;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<array<string, mixed>>

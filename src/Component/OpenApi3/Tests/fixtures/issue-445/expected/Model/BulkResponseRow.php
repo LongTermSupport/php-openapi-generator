@@ -31,7 +31,7 @@ class BulkResponseRow
      * Eventual error.
      *
      */
-    protected ?string $error;
+    protected ?string $error = null;
     /**
      * True if item successfully saved. False otherwise.
      *
@@ -46,7 +46,7 @@ class BulkResponseRow
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * ID of the document.
      *

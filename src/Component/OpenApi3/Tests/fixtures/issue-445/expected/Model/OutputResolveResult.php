@@ -21,7 +21,7 @@ class OutputResolveResult
      * ID of output.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * ID of output format.
      *
@@ -36,7 +36,7 @@ class OutputResolveResult
      * Rendering state of output.
      *
      */
-    protected mixed $renderingState;
+    protected mixed $renderingState = null;
     /**
      * Whether this Output belongs to a dynamic OutputFormat
      *
@@ -46,7 +46,7 @@ class OutputResolveResult
      * Size of file, if already known
      *
      */
-    protected ?int $fileSize;
+    protected ?int $fileSize = null;
     /**
      * ID of output.
      *

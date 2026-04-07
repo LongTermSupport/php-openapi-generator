@@ -26,7 +26,7 @@ class ContentPermissionsUpdateItem extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $contentPermissionSetIds;
+    protected ?array $contentPermissionSetIds = null;
     /**
      * ID of the content.
      *

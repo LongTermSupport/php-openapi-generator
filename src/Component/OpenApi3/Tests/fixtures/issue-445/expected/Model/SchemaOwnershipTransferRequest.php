@@ -21,7 +21,7 @@ class SchemaOwnershipTransferRequest
      * The id of the user to whom the schema has to be transferred to.
      *
      */
-    protected ?string $transferUserId;
+    protected ?string $transferUserId = null;
     /**
      * The id of the user to whom the schema has to be transferred to.
      *

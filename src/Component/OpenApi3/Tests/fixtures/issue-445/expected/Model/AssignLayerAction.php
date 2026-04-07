@@ -21,13 +21,13 @@ class AssignLayerAction extends BusinessRuleAction
      * The ID of the layer.
      *
      */
-    protected ?string $layerId;
+    protected ?string $layerId = null;
     /**
      * An object containing default values (used for example to populate required fields).
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $defaultValues;
+    protected ?array $defaultValues = null;
     /**
      * The ID of the layer.
      *

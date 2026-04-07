@@ -20,7 +20,7 @@ class ResponseKafkaTopic extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $topic;
+    protected mixed $topic = null;
     public function getTopic(): mixed
     {
         return $this->topic;

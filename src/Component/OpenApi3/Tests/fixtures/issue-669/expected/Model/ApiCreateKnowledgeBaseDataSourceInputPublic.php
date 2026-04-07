@@ -24,7 +24,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * AWS S3 Data Source
      *
      */
-    protected mixed $awsDataSource;
+    protected mixed $awsDataSource = null;
     /**
      * The chunking algorithm to use for processing data sources.
      * 
@@ -38,7 +38,7 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      */
-    protected mixed $chunkingOptions;
+    protected mixed $chunkingOptions = null;
     /**
      * Knowledge base id
      *
@@ -48,12 +48,12 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * Spaces Bucket Data Source
      *
      */
-    protected mixed $spacesDataSource;
+    protected mixed $spacesDataSource = null;
     /**
      * WebCrawlerDataSource
      *
      */
-    protected mixed $webCrawlerDataSource;
+    protected mixed $webCrawlerDataSource = null;
     /**
      * AWS S3 Data Source
      *

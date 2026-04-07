@@ -17,7 +17,7 @@ class StatusOfSearchIndexState
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $id;
+    protected ?string $id = null;
     protected string $state;
     public function getId(): ?string
     {

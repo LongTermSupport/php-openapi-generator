@@ -17,27 +17,27 @@ class AacAudioFormat extends FormatBase
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $extension;
+    protected ?string $extension = null;
     /**
      * Gets or sets the encoding profile.
      *
      */
-    protected mixed $profile;
+    protected mixed $profile = null;
     /**
      * Gets or sets the encoding coder.
      *
      */
-    protected mixed $coder;
+    protected mixed $coder = null;
     /**
      * Gets or sets the bitrate of the encoding in kbps.
      *
      */
-    protected ?int $bitrate;
+    protected ?int $bitrate = null;
     /**
      * Gets or sets the encoding variable bit rate (VBR) - 1 is lowest quality and 5 is highest quality.
      *
      */
-    protected ?int $variableBitRate;
+    protected ?int $variableBitRate = null;
     public function getExtension(): ?string
     {
         return $this->extension;

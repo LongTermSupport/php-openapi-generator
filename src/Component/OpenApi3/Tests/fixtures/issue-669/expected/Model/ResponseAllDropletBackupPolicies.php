@@ -28,7 +28,7 @@ class ResponseAllDropletBackupPolicies extends \ArrayObject
      * @var array<string, DropletBackupPolicyRecord>
      */
     protected array $policies;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * A map where the keys are the Droplet IDs and the values are

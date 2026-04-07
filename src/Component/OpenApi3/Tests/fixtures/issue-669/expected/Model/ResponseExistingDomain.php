@@ -20,7 +20,7 @@ class ResponseExistingDomain extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $domain;
+    protected mixed $domain = null;
     public function getDomain(): mixed
     {
         return $this->domain;

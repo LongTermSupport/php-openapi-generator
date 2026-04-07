@@ -20,7 +20,7 @@ class ApiGetEvaluationRunOutput extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $evaluationRun;
+    protected mixed $evaluationRun = null;
     public function getEvaluationRun(): mixed
     {
         return $this->evaluationRun;

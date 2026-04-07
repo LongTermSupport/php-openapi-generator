@@ -40,14 +40,14 @@ class PullRequestSimpleMilestone extends \ArrayObject
      *
      */
     protected string $title;
-    protected ?string $description;
-    protected ?MilestoneCreator $creator;
+    protected ?string $description = null;
+    protected ?MilestoneCreator $creator = null;
     protected int $openIssues;
     protected int $closedIssues;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?\DateTime $closedAt;
-    protected ?\DateTime $dueOn;
+    protected ?\DateTime $closedAt = null;
+    protected ?\DateTime $dueOn = null;
     public function getUrl(): string
     {
         return $this->url;

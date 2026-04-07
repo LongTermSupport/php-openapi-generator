@@ -34,7 +34,7 @@ class DropletCreate extends \ArrayObject
      * The image ID of a public or private image or the slug identifier for a public image. This image will be the base image for your Droplet.<br>Requires `image:read` scope.
      *
      */
-    protected mixed $image;
+    protected mixed $image = null;
     /**
      * An array containing the IDs or fingerprints of the SSH keys that you wish to embed in the Droplet's root account upon creation. You must add the keys to your team before they can be embedded on a Droplet.<br>Requires `ssh_key:read` scope.
      *

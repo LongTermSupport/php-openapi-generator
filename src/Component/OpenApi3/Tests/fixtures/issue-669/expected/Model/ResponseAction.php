@@ -20,7 +20,7 @@ class ResponseAction extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $action;
+    protected mixed $action = null;
     public function getAction(): mixed
     {
         return $this->action;

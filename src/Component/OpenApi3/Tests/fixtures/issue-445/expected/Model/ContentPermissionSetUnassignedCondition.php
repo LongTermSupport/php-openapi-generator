@@ -21,7 +21,7 @@ class ContentPermissionSetUnassignedCondition extends BusinessRuleCondition
      * Permission set id to match on.
      *
      */
-    protected ?string $permissionSetId;
+    protected ?string $permissionSetId = null;
     /**
      * Permission set id to match on.
      *

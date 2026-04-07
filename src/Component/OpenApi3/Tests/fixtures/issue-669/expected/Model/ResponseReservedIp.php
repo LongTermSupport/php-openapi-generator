@@ -20,7 +20,7 @@ class ResponseReservedIp extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $reservedIp;
+    protected mixed $reservedIp = null;
     public function getReservedIp(): mixed
     {
         return $this->reservedIp;

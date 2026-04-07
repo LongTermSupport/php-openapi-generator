@@ -24,17 +24,17 @@ class ReviewCommentLinks extends \ArrayObject
      * Hypermedia Link
      *
      */
-    protected mixed $self;
+    protected mixed $self = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $html;
+    protected mixed $html = null;
     /**
      * Hypermedia Link
      *
      */
-    protected mixed $pullRequest;
+    protected mixed $pullRequest = null;
     /**
      * Hypermedia Link
      *

@@ -24,7 +24,7 @@ class ResponseReservedIpv6List extends \ArrayObject
      * @var list<ReservedIpv6ListReservedIpv6sItem>
      */
     protected array $reservedIpv6s;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<ReservedIpv6ListReservedIpv6sItem>

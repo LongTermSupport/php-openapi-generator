@@ -17,7 +17,7 @@ class AudioStillFormat extends FormatBase
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $extension;
+    protected ?string $extension = null;
     public function getExtension(): ?string
     {
         return $this->extension;

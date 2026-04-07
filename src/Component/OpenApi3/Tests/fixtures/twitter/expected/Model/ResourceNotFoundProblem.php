@@ -26,7 +26,7 @@ class ResourceNotFoundProblem extends \ArrayObject
      * Value will match the schema of the field.
      *
      */
-    protected mixed $value;
+    protected mixed $value = null;
     protected string $resourceType;
     protected string $title;
     protected string $detail;

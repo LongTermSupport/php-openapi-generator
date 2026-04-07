@@ -22,18 +22,18 @@ class DisplayValueStatus
      *
      * @var list<string>|null
      */
-    protected ?array $contentOrLayerSchemaIds;
+    protected ?array $contentOrLayerSchemaIds = null;
     /**
      * The schema ids (of type List) for which the re-rendering of the display values is needed.
      *
      * @var list<string>|null
      */
-    protected ?array $listSchemaIds;
+    protected ?array $listSchemaIds = null;
     /**
      * The state of the display values compared to the schema structure (UpToDate = ok, Outdated = re-rendering needed).
      *
      */
-    protected mixed $state;
+    protected mixed $state = null;
     /**
      * The schema ids (of type Content or Layer) for which the re-rendering of the display values is needed.
      *

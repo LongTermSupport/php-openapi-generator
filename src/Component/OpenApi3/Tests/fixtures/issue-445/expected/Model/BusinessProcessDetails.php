@@ -21,7 +21,7 @@ class BusinessProcessDetails extends BusinessProcess
      * Details for the business process.
      *
      */
-    protected mixed $details;
+    protected mixed $details = null;
     /**
      * Details for the business process.
      *

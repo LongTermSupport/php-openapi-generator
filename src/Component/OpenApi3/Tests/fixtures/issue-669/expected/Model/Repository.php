@@ -30,7 +30,7 @@ class Repository extends \ArrayObject
      *
      */
     protected string $name;
-    protected mixed $latestTag;
+    protected mixed $latestTag = null;
     /**
      * The number of tags in the repository.
      *

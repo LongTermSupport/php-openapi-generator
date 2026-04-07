@@ -21,12 +21,12 @@ class OutputFormatRenderPreviewRequest
      * The content for which the format should be rendered
      *
      */
-    protected ?string $contentId;
+    protected ?string $contentId = null;
     /**
      * The format which should be rendered.
      *
      */
-    protected mixed $outputFormat;
+    protected mixed $outputFormat = null;
     /**
      * The content for which the format should be rendered
      *

@@ -21,19 +21,19 @@ class UserRoleSearchRequest
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
      *
      */
-    protected ?string $searchString;
+    protected ?string $searchString = null;
     /**
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @var list<string>|null
      */
-    protected ?array $searchBehaviors;
+    protected ?array $searchBehaviors = null;
     /**
      * Fields and respective directions requested to sort the search results.
      *
      * @var list<SortInfo>|null
      */
-    protected ?array $sort;
+    protected ?array $sort = null;
     /**
      * Limits the document count of the result set. Defaults to 30.
      *
@@ -43,12 +43,12 @@ class UserRoleSearchRequest
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
      *
      */
-    protected ?string $pageToken;
+    protected ?string $pageToken = null;
     /**
      * Filter applied to user roles.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! It severely affects performance.
      *
@@ -59,7 +59,7 @@ class UserRoleSearchRequest
      *
      * @var list<string>|null
      */
-    protected ?array $searchLanguages;
+    protected ?array $searchLanguages = null;
     /**
      * Defines if the user roles with system user role Administrator is returned.
      *

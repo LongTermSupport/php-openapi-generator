@@ -41,12 +41,12 @@ class BatchResponseRow
      * If the operation did not succeed, this contains error information.
      *
      */
-    protected mixed $error;
+    protected mixed $error = null;
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
      *
      */
-    protected ?string $requestId;
+    protected ?string $requestId = null;
     /**
      * Id of the item.
      *

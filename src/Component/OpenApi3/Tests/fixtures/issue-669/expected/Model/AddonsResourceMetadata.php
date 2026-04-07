@@ -29,7 +29,7 @@ class AddonsResourceMetadata extends \ArrayObject
      * The value to be set for the metadata item, which can be a string or boolean.
      *
      */
-    protected mixed $value;
+    protected mixed $value = null;
     /**
      * The name of the metadata item to be set.
      *

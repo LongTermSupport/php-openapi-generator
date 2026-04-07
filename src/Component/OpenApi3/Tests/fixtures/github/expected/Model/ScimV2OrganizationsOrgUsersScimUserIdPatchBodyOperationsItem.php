@@ -22,7 +22,7 @@ class ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem extends \Arra
     }
     protected string $op;
     protected string $path;
-    protected mixed $value;
+    protected mixed $value = null;
     public function getOp(): string
     {
         return $this->op;

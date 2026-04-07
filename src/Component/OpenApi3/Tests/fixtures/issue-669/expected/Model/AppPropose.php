@@ -24,7 +24,7 @@ class AppPropose extends \ArrayObject
      * The desired configuration of an application.
      *
      */
-    protected mixed $spec;
+    protected mixed $spec = null;
     /**
      * An optional ID of an existing app. If set, the spec will be treated as a proposed update to the specified app. The existing app is not modified using this method.
      *

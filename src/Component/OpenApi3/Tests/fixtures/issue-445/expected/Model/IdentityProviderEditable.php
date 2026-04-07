@@ -22,23 +22,23 @@ class IdentityProviderEditable
      *
      * @var list<IdpClaimToUserAttributeMapping>|null
      */
-    protected ?array $claimMapping;
+    protected ?array $claimMapping = null;
     /**
      * Name of the identity provider claim that holds group membership information
      *
      */
-    protected ?string $groupClaimType;
+    protected ?string $groupClaimType = null;
     /**
      * IdP (AD) group to user role ID mapping
      *
      * @var list<IdpGroupToUserRoleMapping>|null
      */
-    protected ?array $groupMapping;
+    protected ?array $groupMapping = null;
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
      *
      */
-    protected ?string $fallbackUserRoleId;
+    protected ?string $fallbackUserRoleId = null;
     /**
      * Mapping of identity provider claims to user attributes
      *

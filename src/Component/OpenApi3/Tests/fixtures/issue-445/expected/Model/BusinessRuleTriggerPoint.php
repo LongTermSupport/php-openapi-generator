@@ -21,17 +21,17 @@ class BusinessRuleTriggerPoint
      * Execution scope.
      *
      */
-    protected mixed $executionScope;
+    protected mixed $executionScope = null;
     /**
      * Document type.
      *
      */
-    protected mixed $documentType;
+    protected mixed $documentType = null;
     /**
      * Action performed.
      *
      */
-    protected mixed $action;
+    protected mixed $action = null;
     /**
      * Execution scope.
      *

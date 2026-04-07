@@ -24,7 +24,7 @@ class ResponseProjectsList extends \ArrayObject
      * @var list<Project>
      */
     protected array $projects;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<Project>

@@ -27,7 +27,7 @@ class DateRangeFilter extends FilterBase
      * The date time range.
      *
      */
-    protected mixed $range;
+    protected mixed $range = null;
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).

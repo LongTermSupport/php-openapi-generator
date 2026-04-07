@@ -21,27 +21,27 @@ class WatermarkAction extends ImageActionBase
      * Identifies the image to be used as watermark
      *
      */
-    protected ?string $watermarkFilePath;
+    protected ?string $watermarkFilePath = null;
     /**
      * Margin to the left border of the image, in pixels
      *
      */
-    protected ?int $marginLeft;
+    protected ?int $marginLeft = null;
     /**
      * Margin to the top of the image, in pixels
      *
      */
-    protected ?int $marginTop;
+    protected ?int $marginTop = null;
     /**
      * Margin to the right border of the image, in pixels
      *
      */
-    protected ?int $marginRight;
+    protected ?int $marginRight = null;
     /**
      * Margin to the bottom of the image, in pixels
      *
      */
-    protected ?int $marginBottom;
+    protected ?int $marginBottom = null;
     /**
      * Scales the opacity of the watermark
      *

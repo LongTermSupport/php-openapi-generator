@@ -24,7 +24,7 @@ class UserSearchResultItem extends \ArrayObject
     protected int $id;
     protected string $nodeId;
     protected string $avatarUrl;
-    protected ?string $gravatarId;
+    protected ?string $gravatarId = null;
     protected string $url;
     protected string $htmlUrl;
     protected string $followersUrl;
@@ -44,19 +44,19 @@ class UserSearchResultItem extends \ArrayObject
     protected int $following;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?string $name;
-    protected ?string $bio;
-    protected ?string $email;
-    protected ?string $location;
+    protected ?string $name = null;
+    protected ?string $bio = null;
+    protected ?string $email = null;
+    protected ?string $location = null;
     protected bool $siteAdmin;
-    protected ?bool $hireable;
+    protected ?bool $hireable = null;
     /**
      * @var list<mixed>
      */
     protected array $textMatches;
-    protected ?string $blog;
-    protected ?string $company;
-    protected ?\DateTime $suspendedAt;
+    protected ?string $blog = null;
+    protected ?string $company = null;
+    protected ?\DateTime $suspendedAt = null;
     public function getLogin(): string
     {
         return $this->login;

@@ -21,7 +21,7 @@ class ContentSchemaCondition extends BusinessRuleCondition
      * Content schema id to match on.
      *
      */
-    protected ?string $schemaId;
+    protected ?string $schemaId = null;
     /**
      * Content schema id to match on.
      *

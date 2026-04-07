@@ -21,12 +21,12 @@ class BookJsonhalBookRead extends \ArrayObject
         return array_key_exists($property, $this->initialized);
     }
     protected BookJsonhalBookReadLinks $links;
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * The ISBN of the book.
      *
      */
-    protected ?string $isbn;
+    protected ?string $isbn = null;
     /**
      * The title of the book.
      *

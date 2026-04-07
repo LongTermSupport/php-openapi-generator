@@ -26,7 +26,7 @@ class NestedFilter extends FilterBase
      * The filter to be applied on the nested documents.
      *
      */
-    protected mixed $filter;
+    protected mixed $filter = null;
     /**
      * The path pointing to the nested document (i.e. personLayer.nestedAddress).
      *

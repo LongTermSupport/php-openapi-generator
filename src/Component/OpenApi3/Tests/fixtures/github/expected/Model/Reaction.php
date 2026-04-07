@@ -22,7 +22,7 @@ class Reaction extends \ArrayObject
     }
     protected int $id;
     protected string $nodeId;
-    protected ?ReactionUser $user;
+    protected ?ReactionUser $user = null;
     /**
      * The reaction to use
      *

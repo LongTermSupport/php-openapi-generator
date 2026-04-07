@@ -25,7 +25,7 @@ class ValidationErrorErrorsItem extends \ArrayObject
     protected string $message;
     protected string $code;
     protected int $index;
-    protected mixed $value;
+    protected mixed $value = null;
     public function getResource(): string
     {
         return $this->resource;

@@ -24,7 +24,7 @@ class ResponseVpcNatGateways extends \ArrayObject
      * @var list<VpcNatGatewayGet>
      */
     protected array $vpcNatGateways;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<VpcNatGatewayGet>

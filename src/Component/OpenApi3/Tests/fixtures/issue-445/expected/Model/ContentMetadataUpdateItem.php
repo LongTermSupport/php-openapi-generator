@@ -26,7 +26,7 @@ class ContentMetadataUpdateItem extends \ArrayObject
      *
      * @var list<string>|null
      */
-    protected ?array $layerSchemaIds;
+    protected ?array $layerSchemaIds = null;
     /**
      * The content data of the content. It's an object of dynamic metadata whose structure is defined in the Content schema identified by
      * the ContentSchemaId property. Updating the Content property is only possible for virtual items (contents
@@ -35,7 +35,7 @@ class ContentMetadataUpdateItem extends \ArrayObject
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $content;
+    protected ?array $content = null;
     /**
      * The dynamic data structure matching the field schematics of the schemas with type layer (LayerSchemaIds).
      * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
@@ -44,7 +44,7 @@ class ContentMetadataUpdateItem extends \ArrayObject
      *
      * @var array<string, mixed>|null
      */
-    protected ?array $metadata;
+    protected ?array $metadata = null;
     /**
      * Options to modify the behavior for updating the layers.
      * Merge: the content is updated so that the assigned layers to the content will be a merge of the ones specified in the LayerSchemaIds property

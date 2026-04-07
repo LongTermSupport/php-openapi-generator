@@ -20,7 +20,7 @@ class ResponseCa extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $ca;
+    protected mixed $ca = null;
     public function getCa(): mixed
     {
         return $this->ca;

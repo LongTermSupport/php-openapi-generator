@@ -40,18 +40,18 @@ class CodeScanningAlert extends \ArrayObject
      * The name of the tool used to detect the alert.
      *
      */
-    protected ?string $tool;
+    protected ?string $tool = null;
     protected \DateTime $createdAt;
     /**
      * Whether or not the alert is open.
      *
      */
     protected bool $open;
-    protected ?CodeScanningAlertClosedBy $closedBy;
-    protected ?\DateTime $closedAt;
+    protected ?CodeScanningAlertClosedBy $closedBy = null;
+    protected ?\DateTime $closedAt = null;
     protected string $url;
     protected string $htmlUrl;
-    protected ?string $closedReason;
+    protected ?string $closedReason = null;
     public function getNumber(): int
     {
         return $this->number;

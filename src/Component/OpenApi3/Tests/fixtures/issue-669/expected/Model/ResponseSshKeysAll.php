@@ -24,7 +24,7 @@ class ResponseSshKeysAll extends \ArrayObject
      * @var list<SshKeys>
      */
     protected array $sshKeys;
-    protected mixed $links;
+    protected mixed $links = null;
     protected MetaMeta $meta;
     /**
      * @return list<SshKeys>

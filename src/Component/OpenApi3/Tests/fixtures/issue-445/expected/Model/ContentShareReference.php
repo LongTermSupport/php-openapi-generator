@@ -21,27 +21,27 @@ class ContentShareReference
      * ID of the share.
      *
      */
-    protected ?string $id;
+    protected ?string $id = null;
     /**
      * Name of the share.
      *
      */
-    protected ?string $name;
+    protected ?string $name = null;
     /**
      * Audit information.
      *
      */
-    protected mixed $audit;
+    protected mixed $audit = null;
     /**
      * Type of the share.
      *
      */
-    protected mixed $shareType;
+    protected mixed $shareType = null;
     /**
      * The email address of the user who created the share.
      *
      */
-    protected ?string $emailAddress;
+    protected ?string $emailAddress = null;
     /**
      * ID of the share.
      *

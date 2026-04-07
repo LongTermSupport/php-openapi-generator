@@ -26,7 +26,7 @@ class IssueSearchResultItemLabelsItem extends \ArrayObject
     protected string $name;
     protected string $color;
     protected bool $default;
-    protected ?string $description;
+    protected ?string $description = null;
     public function getId(): int
     {
         return $this->id;

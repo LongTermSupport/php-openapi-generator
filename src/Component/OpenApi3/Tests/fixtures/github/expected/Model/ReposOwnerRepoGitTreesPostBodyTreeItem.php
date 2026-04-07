@@ -41,7 +41,7 @@ class ReposOwnerRepoGitTreesPostBodyTreeItem extends \ArrayObject
      * **Note:** Use either `tree.sha` or `content` to specify the contents of the entry. Using both `tree.sha` and `content` will return an error.
      *
      */
-    protected ?string $sha;
+    protected ?string $sha = null;
     /**
      * The content you want this file to have. GitHub will write this blob out and use that SHA for this entry. Use either this, or `tree.sha`.
      * 

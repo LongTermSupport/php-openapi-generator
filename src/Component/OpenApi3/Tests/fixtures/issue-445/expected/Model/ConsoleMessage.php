@@ -17,12 +17,12 @@ class ConsoleMessage extends Message
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $command;
+    protected ?string $command = null;
     /**
      * @var list<TupleOfStringAndString>|null
      */
-    protected ?array $arguments;
-    protected ?string $targetQueue;
+    protected ?array $arguments = null;
+    protected ?string $targetQueue = null;
     public function getCommand(): ?string
     {
         return $this->command;

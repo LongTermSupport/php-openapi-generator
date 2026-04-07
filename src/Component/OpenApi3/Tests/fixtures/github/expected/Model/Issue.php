@@ -52,27 +52,27 @@ class Issue extends \ArrayObject
      *
      */
     protected string $body;
-    protected ?IssueUser $user;
+    protected ?IssueUser $user = null;
     /**
      * Labels to associate with this issue; pass one or more label names to replace the set of labels on this issue; send an empty array to clear all labels from the issue; note that the labels are silently dropped for users without push access to the repository
      *
      * @var list<mixed>
      */
     protected array $labels;
-    protected ?IssueAssignee $assignee;
+    protected ?IssueAssignee $assignee = null;
     /**
      * @var list<SimpleUser>|null
      */
-    protected ?array $assignees;
-    protected ?IssueMilestone $milestone;
+    protected ?array $assignees = null;
+    protected ?IssueMilestone $milestone = null;
     protected bool $locked;
-    protected ?string $activeLockReason;
+    protected ?string $activeLockReason = null;
     protected int $comments;
     protected IssuePullRequest $pullRequest;
-    protected ?\DateTime $closedAt;
+    protected ?\DateTime $closedAt = null;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
-    protected ?IssueClosedBy $closedBy;
+    protected ?IssueClosedBy $closedBy = null;
     protected string $bodyHtml;
     protected string $bodyText;
     protected string $timelineUrl;
@@ -80,10 +80,10 @@ class Issue extends \ArrayObject
      * A git repository
      *
      */
-    protected mixed $repository;
-    protected ?IssuePerformedViaGithubApp $performedViaGithubApp;
+    protected mixed $repository = null;
+    protected ?IssuePerformedViaGithubApp $performedViaGithubApp = null;
     protected string $authorAssociation;
-    protected mixed $reactions;
+    protected mixed $reactions = null;
     public function getId(): int
     {
         return $this->id;

@@ -21,17 +21,17 @@ class FieldLongArray extends FieldBase
      * The long pattern structure.
      *
      */
-    protected ?string $pattern;
+    protected ?string $pattern = null;
     /**
      * The minimum possible value.
      *
      */
-    protected ?float $minimum;
+    protected ?float $minimum = null;
     /**
      * The maximum possible value.
      *
      */
-    protected ?float $maximum;
+    protected ?float $maximum = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
      *
@@ -41,12 +41,12 @@ class FieldLongArray extends FieldBase
      * The maximum number of items that can be stored.
      *
      */
-    protected ?int $maximumItems;
+    protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
      *
      */
-    protected ?int $minimumItems;
+    protected ?int $minimumItems = null;
     /**
      * The long pattern structure.
      *

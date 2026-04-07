@@ -17,7 +17,7 @@ class ConfigurationChangeEvent extends ApplicationEvent
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $documentType;
+    protected ?string $documentType = null;
     public function getDocumentType(): ?string
     {
         return $this->documentType;

@@ -17,12 +17,12 @@ class LiveStreamMessage extends Message
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected ?string $customerId;
-    protected ?string $customerAlias;
+    protected ?string $customerId = null;
+    protected ?string $customerAlias = null;
     protected \DateTime $timestamp;
-    protected ?string $scope;
-    protected mixed $documentChange;
-    protected mixed $applicationEvent;
+    protected ?string $scope = null;
+    protected mixed $documentChange = null;
+    protected mixed $applicationEvent = null;
     public function getCustomerId(): ?string
     {
         return $this->customerId;

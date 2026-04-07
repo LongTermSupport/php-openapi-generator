@@ -24,12 +24,12 @@ class ApiGetAgentUsageOutput extends \ArrayObject
      * Resource Usage Description
      *
      */
-    protected mixed $logInsightsUsage;
+    protected mixed $logInsightsUsage = null;
     /**
      * Resource Usage Description
      *
      */
-    protected mixed $usage;
+    protected mixed $usage = null;
     /**
      * Resource Usage Description
      *

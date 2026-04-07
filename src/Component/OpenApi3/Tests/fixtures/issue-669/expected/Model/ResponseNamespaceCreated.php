@@ -20,7 +20,7 @@ class ResponseNamespaceCreated extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $namespace;
+    protected mixed $namespace = null;
     public function getNamespace(): mixed
     {
         return $this->namespace;

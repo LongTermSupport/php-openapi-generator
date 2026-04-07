@@ -20,7 +20,7 @@ class ResponseConnectionPool extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $pool;
+    protected mixed $pool = null;
     public function getPool(): mixed
     {
         return $this->pool;

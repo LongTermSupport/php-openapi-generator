@@ -20,7 +20,7 @@ class ResponseExistingImage extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected mixed $image;
+    protected mixed $image = null;
     public function getImage(): mixed
     {
         return $this->image;

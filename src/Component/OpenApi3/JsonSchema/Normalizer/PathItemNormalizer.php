@@ -275,8 +275,6 @@ class PathItemNormalizer implements DenormalizerInterface, NormalizerInterface, 
                 $value_2 = $value_1;
                 if (\is_object($value_1)) {
                     $value_2 = $this->normalizer->normalize($value_1, 'json', $context);
-                } elseif (\is_object($value_1)) {
-                    $value_2 = $this->normalizer->normalize($value_1, 'json', $context);
                 }
 
                 $values_1[] = $value_2;

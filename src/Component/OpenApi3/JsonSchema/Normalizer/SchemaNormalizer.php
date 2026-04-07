@@ -572,8 +572,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $value_2 = $object->getNot();
             if (\is_object($object->getNot())) {
                 $value_2 = $this->normalizer->normalize($object->getNot(), 'json', $context);
-            } elseif (\is_object($object->getNot())) {
-                $value_2 = $this->normalizer->normalize($object->getNot(), 'json', $context);
             }
 
             $data['not'] = $value_2;
@@ -584,8 +582,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             foreach ($object->getAllOf() as $value_3) {
                 $value_4 = $value_3;
                 if (\is_object($value_3)) {
-                    $value_4 = $this->normalizer->normalize($value_3, 'json', $context);
-                } elseif (\is_object($value_3)) {
                     $value_4 = $this->normalizer->normalize($value_3, 'json', $context);
                 }
 
@@ -601,8 +597,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
                 $value_6 = $value_5;
                 if (\is_object($value_5)) {
                     $value_6 = $this->normalizer->normalize($value_5, 'json', $context);
-                } elseif (\is_object($value_5)) {
-                    $value_6 = $this->normalizer->normalize($value_5, 'json', $context);
                 }
 
                 $values_3[] = $value_6;
@@ -617,8 +611,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
                 $value_8 = $value_7;
                 if (\is_object($value_7)) {
                     $value_8 = $this->normalizer->normalize($value_7, 'json', $context);
-                } elseif (\is_object($value_7)) {
-                    $value_8 = $this->normalizer->normalize($value_7, 'json', $context);
                 }
 
                 $values_4[] = $value_8;
@@ -631,8 +623,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $value_9 = $object->getItems();
             if (\is_object($object->getItems())) {
                 $value_9 = $this->normalizer->normalize($object->getItems(), 'json', $context);
-            } elseif (\is_object($object->getItems())) {
-                $value_9 = $this->normalizer->normalize($object->getItems(), 'json', $context);
             }
 
             $data['items'] = $value_9;
@@ -643,8 +633,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             foreach ($object->getProperties() as $key => $value_10) {
                 $value_11 = $value_10;
                 if (\is_object($value_10)) {
-                    $value_11 = $this->normalizer->normalize($value_10, 'json', $context);
-                } elseif (\is_object($value_10)) {
                     $value_11 = $this->normalizer->normalize($value_10, 'json', $context);
                 }
 
@@ -657,8 +645,6 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if ($object->isInitialized('additionalProperties') && null !== $object->getAdditionalProperties()) {
             $value_12 = $object->getAdditionalProperties();
             if (\is_object($object->getAdditionalProperties())) {
-                $value_12 = $this->normalizer->normalize($object->getAdditionalProperties(), 'json', $context);
-            } elseif (\is_object($object->getAdditionalProperties())) {
                 $value_12 = $this->normalizer->normalize($object->getAdditionalProperties(), 'json', $context);
             } elseif (\is_bool($object->getAdditionalProperties())) {
                 $value_12 = $object->getAdditionalProperties();

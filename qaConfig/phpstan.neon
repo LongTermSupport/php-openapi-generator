@@ -82,9 +82,6 @@ parameters:
         # Until the above are fixed in the generator templates, these ignores must
         # remain in place. Do NOT suppress these in service code — fix the templates.
         -
-            identifier: function.impossibleType
-            path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
-        -
             identifier: argument.type
             path: ../src/Component/OpenApi3/JsonSchema/Normalizer/*
         -

@@ -101,8 +101,6 @@ class ResponsesNormalizer implements DenormalizerInterface, NormalizerInterface,
             $value = $object->getDefault();
             if (\is_object($object->getDefault())) {
                 $value = $this->normalizer->normalize($object->getDefault(), 'json', $context);
-            } elseif (\is_object($object->getDefault())) {
-                $value = $this->normalizer->normalize($object->getDefault(), 'json', $context);
             }
 
             $data['default'] = $value;
@@ -112,8 +110,6 @@ class ResponsesNormalizer implements DenormalizerInterface, NormalizerInterface,
             if (0 !== \Safe\preg_match('/^[1-5](?:\d{2}|XX)$/', $key)) {
                 $value_2 = $value_1;
                 if (\is_object($value_1)) {
-                    $value_2 = $this->normalizer->normalize($value_1, 'json', $context);
-                } elseif (\is_object($value_1)) {
                     $value_2 = $this->normalizer->normalize($value_1, 'json', $context);
                 }
 

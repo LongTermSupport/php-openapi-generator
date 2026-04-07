@@ -15,6 +15,7 @@ use PhpParser\Node\Identifier;
 use PhpParser\Node\Name;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
+use PhpParser\PrettyPrinter\Standard;
 
 class MultipleType extends Type
 {
@@ -227,6 +228,38 @@ class MultipleType extends Type
     public function createNormalizationStatement(Context $context, Expr $input, bool $normalizerFromObject = true): array
     {
         $sortedTypes = $this->getTypesSorted();
+
+        // Deduplicate types whose normalization condition is textually
+        // identical. The OpenAPI 3 meta-schema (and other recursive specs)
+        // can produce a `MultipleType` containing two or more bare
+        // `Type::object` instances — the fallback ObjectGuesser returns when
+        // a referenced class isn't yet in the registry. Each bare `object`
+        // emits the same `is_object($input)` condition, so without dedupe
+        // the generator produces:
+        //
+        //     if (is_object($x)) { ... }
+        //     elseif (is_object($x)) { ... }   // dead branch
+        //
+        // PHPStan reports the elseif as `function.impossibleType` because
+        // the false branch of the first `is_object` has already narrowed the
+        // value away from `object`. Deduping by the pretty-printed condition
+        // string handles every shape — bare `is_object`, repeated
+        // `instanceof X`, repeated scalar checks — without needing to teach
+        // each Type subclass about identity.
+        $printer        = new Standard();
+        $seenConditions = [];
+        $dedupedTypes   = [];
+        foreach ($sortedTypes as $key => $type) {
+            $conditionKey = $printer->prettyPrintExpr($type->createNormalizationConditionStatement($input));
+            if (isset($seenConditions[$conditionKey])) {
+                continue;
+            }
+
+            $seenConditions[$conditionKey] = true;
+            $dedupedTypes[$key]            = $type;
+        }
+
+        $sortedTypes = $dedupedTypes;
 
         // When there's only one type, skip the conditional — directly normalize
         // (avoids function.alreadyNarrowedType when PHPStan knows the type from PHPDoc)

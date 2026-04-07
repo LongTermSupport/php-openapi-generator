@@ -136,8 +136,6 @@ class MediaTypeNormalizer implements DenormalizerInterface, NormalizerInterface,
             $value = $object->getSchema();
             if (\is_object($object->getSchema())) {
                 $value = $this->normalizer->normalize($object->getSchema(), 'json', $context);
-            } elseif (\is_object($object->getSchema())) {
-                $value = $this->normalizer->normalize($object->getSchema(), 'json', $context);
             }
 
             $data['schema'] = $value;
@@ -152,8 +150,6 @@ class MediaTypeNormalizer implements DenormalizerInterface, NormalizerInterface,
             foreach ($object->getExamples() as $key => $value_1) {
                 $value_2 = $value_1;
                 if (\is_object($value_1)) {
-                    $value_2 = $this->normalizer->normalize($value_1, 'json', $context);
-                } elseif (\is_object($value_1)) {
                     $value_2 = $this->normalizer->normalize($value_1, 'json', $context);
                 }
 

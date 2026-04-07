@@ -146,8 +146,6 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
                 $value_1 = $value;
                 if (\is_object($value)) {
                     $value_1 = $this->normalizer->normalize($value, 'json', $context);
-                } elseif (\is_object($value)) {
-                    $value_1 = $this->normalizer->normalize($value, 'json', $context);
                 }
 
                 $values[$key] = $value_1;
@@ -170,8 +168,6 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
             foreach ($object->getLinks() as $key_2 => $value_3) {
                 $value_4 = $value_3;
                 if (\is_object($value_3)) {
-                    $value_4 = $this->normalizer->normalize($value_3, 'json', $context);
-                } elseif (\is_object($value_3)) {
                     $value_4 = $this->normalizer->normalize($value_3, 'json', $context);
                 }
 

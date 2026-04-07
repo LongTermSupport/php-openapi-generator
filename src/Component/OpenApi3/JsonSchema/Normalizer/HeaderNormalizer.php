@@ -242,8 +242,6 @@ class HeaderNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $value = $object->getSchema();
             if (\is_object($object->getSchema())) {
                 $value = $this->normalizer->normalize($object->getSchema(), 'json', $context);
-            } elseif (\is_object($object->getSchema())) {
-                $value = $this->normalizer->normalize($object->getSchema(), 'json', $context);
             }
 
             $data['schema'] = $value;
@@ -267,8 +265,6 @@ class HeaderNormalizer implements DenormalizerInterface, NormalizerInterface, De
             foreach ($object->getExamples() as $key_1 => $value_2) {
                 $value_3 = $value_2;
                 if (\is_object($value_2)) {
-                    $value_3 = $this->normalizer->normalize($value_2, 'json', $context);
-                } elseif (\is_object($value_2)) {
                     $value_3 = $this->normalizer->normalize($value_2, 'json', $context);
                 }
 

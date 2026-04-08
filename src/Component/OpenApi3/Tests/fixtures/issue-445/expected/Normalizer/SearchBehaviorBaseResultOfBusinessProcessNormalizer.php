@@ -39,7 +39,7 @@ class SearchBehaviorBaseResultOfBusinessProcessNormalizer implements Denormalize
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SearchBehaviorBaseResultOfBusinessProcess();
-        if (null === $data || false === \is_array($data)) {
+        if (!\is_array($data)) {
             return $object;
         }
         if (isset($data['$ref'])) {

@@ -39,7 +39,7 @@ class ResponseReservedIpv6ListNormalizer implements DenormalizerInterface, Norma
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseReservedIpv6List();
-        if (null === $data || false === \is_array($data)) {
+        if (!\is_array($data)) {
             return $object;
         }
         if (isset($data['$ref'])) {

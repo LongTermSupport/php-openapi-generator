@@ -39,7 +39,7 @@ class ReservedIpActionTypeNormalizer implements DenormalizerInterface, Normalize
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ReservedIpActionType();
-        if (null === $data || false === \is_array($data)) {
+        if (!\is_array($data)) {
             return $object;
         }
         if (array_key_exists('type', $data) and 'assign' === $data['type']) {

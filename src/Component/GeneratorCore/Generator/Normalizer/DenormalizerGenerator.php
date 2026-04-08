@@ -69,7 +69,8 @@ trait DenormalizerGenerator
         // 2. Guard: early return if $data is not an array.
         // After this guard, PHPStan knows $data is array — all subsequent
         // array access ($data['key']) is type-safe.
-        $statements[] = new Stmt\If_(new Expr\BinaryOp\BooleanOr(new Expr\BinaryOp\Identical(new Expr\ConstFetch(new Name('null')), $dataVariable), new Expr\BinaryOp\Identical(new Expr\ConstFetch(new Name('false')), new Expr\FuncCall(new Name('\is_array'), [new Arg($dataVariable)]))), [
+        // is_array(null) is false, so a separate null check is redundant.
+        $statements[] = new Stmt\If_(new Expr\BooleanNot(new Expr\FuncCall(new Name('\is_array'), [new Arg($dataVariable)])), [
             'stmts' => [new Stmt\Return_($objectVariable)],
         ]);
 

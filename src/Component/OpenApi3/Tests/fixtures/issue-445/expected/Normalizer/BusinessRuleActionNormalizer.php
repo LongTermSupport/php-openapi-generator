@@ -39,7 +39,7 @@ class BusinessRuleActionNormalizer implements DenormalizerInterface, NormalizerI
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleAction();
-        if (null === $data || false === \is_array($data)) {
+        if (!\is_array($data)) {
             return $object;
         }
         if (array_key_exists('kind', $data) and 'AssignLayerAction' === $data['kind']) {

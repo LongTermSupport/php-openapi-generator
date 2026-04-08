@@ -39,7 +39,7 @@ class KubernetesVersionNormalizer implements DenormalizerInterface, NormalizerIn
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
         $object = new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\KubernetesVersion();
-        if (null === $data || false === \is_array($data)) {
+        if (!\is_array($data)) {
             return $object;
         }
         if (isset($data['$ref'])) {

@@ -87,9 +87,9 @@ trait ClientGenerator
                         ])
                     )),
                     new Stmt\If_(
-                        new Expr\BinaryOp\Greater(
-                            new Expr\FuncCall(new Name('count'), [new Node\Arg(new Expr\Variable('additionalNormalizers'))]),
-                            new Expr\ConstFetch(new Name('0'))
+                        new Expr\BinaryOp\NotIdentical(
+                            new Expr\Variable('additionalNormalizers'),
+                            new Expr\Array_()
                         ),
                         [
                             'stmts' => [

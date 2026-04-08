@@ -26,7 +26,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\Psr18ClientDiscovery::find();
             $plugins = [];
-            if (count($additionalPlugins) > 0) {
+            if ($additionalPlugins !== []) {
                 $plugins = array_merge($plugins, $additionalPlugins);
             }
             $httpClient = new \Http\Client\Common\PluginClient($httpClient, $plugins);
@@ -34,7 +34,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
         $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
         $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfMixedRequestBodyParameterType\Normalizer\JaneObjectNormalizer()];
-        if (count($additionalNormalizers) > 0) {
+        if ($additionalNormalizers !== []) {
             $normalizers = array_merge($normalizers, $additionalNormalizers);
         }
         $serializer = new \Symfony\Component\Serializer\Serializer($normalizers, [new \Symfony\Component\Serializer\Encoder\JsonEncoder(new \Symfony\Component\Serializer\Encoder\JsonEncode(), new \Symfony\Component\Serializer\Encoder\JsonDecode(['json_decode_associative' => true]))]);

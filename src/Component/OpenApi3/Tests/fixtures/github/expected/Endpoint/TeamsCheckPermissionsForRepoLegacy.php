@@ -61,7 +61,7 @@ class TeamsCheckPermissionsForRepoLegacy extends \LongTermSupport\OpenApiGenerat
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && (200 === $status && mb_strpos(strtolower($contentType), 'application/vnd.github.v3.repository+json') !== false)) {
+        if ($contentType !== null && (200 === $status && mb_strpos(strtolower($contentType), 'application/vnd.github.v3.repository+json') !== false)) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepository', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepository::class, 'response body');
         }
         if (204 === $status) {

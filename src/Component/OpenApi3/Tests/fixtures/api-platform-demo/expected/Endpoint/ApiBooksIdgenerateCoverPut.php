@@ -73,7 +73,7 @@ class ApiBooksIdgenerateCoverPut extends \LongTermSupport\OpenApiGenerator\Compo
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && 204 === $status) {
+        if ($contentType !== null && 204 === $status) {
             if (mb_strpos(strtolower($contentType), 'application/ld+json') !== false) {
                 return json_decode($body);
             }

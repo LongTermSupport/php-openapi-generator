@@ -89,7 +89,7 @@ class ApiBooksGetCollection extends \LongTermSupport\OpenApiGenerator\Component\
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && 200 === $status) {
+        if ($contentType !== null && 200 === $status) {
             if (mb_strpos(strtolower($contentType), 'application/ld+json') !== false) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200::class, 'response body');
             }

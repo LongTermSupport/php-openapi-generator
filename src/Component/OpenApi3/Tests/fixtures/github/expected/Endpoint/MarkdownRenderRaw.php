@@ -52,7 +52,7 @@ class MarkdownRenderRaw extends \LongTermSupport\OpenApiGenerator\Component\Open
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && 200 === $status) {
+        if ($contentType !== null && 200 === $status) {
         }
         if (304 === $status) {
             return null;

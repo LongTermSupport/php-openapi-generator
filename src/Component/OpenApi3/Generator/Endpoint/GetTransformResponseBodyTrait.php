@@ -296,11 +296,9 @@ trait GetTransformResponseBodyTrait
         if ('default' === $status) {
             if (\count($statements) > 0) {
                 return [$returnTypes, $throwTypes, [new Stmt\If_(
-                    new Expr\BinaryOp\Identical(
-                        new Expr\FuncCall(new Name('is_null'), [
-                            new Node\Arg(new Expr\Variable('contentType')),
-                        ]),
-                        new Expr\ConstFetch(new Name('false'))
+                    new Expr\BinaryOp\NotIdentical(
+                        new Expr\Variable('contentType'),
+                        new Expr\ConstFetch(new Name('null'))
                     ),
                     [
                         'stmts' => $statements,
@@ -317,11 +315,9 @@ trait GetTransformResponseBodyTrait
 
             return [$returnTypes, $throwTypes, [new Stmt\If_(
                 new Expr\BinaryOp\BooleanAnd(
-                    new Expr\BinaryOp\Identical(
-                        new Expr\FuncCall(new Name('is_null'), [
-                            new Node\Arg(new Expr\Variable('contentType')),
-                        ]),
-                        new Expr\ConstFetch(new Name('false'))
+                    new Expr\BinaryOp\NotIdentical(
+                        new Expr\Variable('contentType'),
+                        new Expr\ConstFetch(new Name('null'))
                     ),
                     new Expr\BinaryOp\BooleanAnd(
                         new Expr\BinaryOp\Identical(
@@ -339,11 +335,9 @@ trait GetTransformResponseBodyTrait
 
         return [$returnTypes, $throwTypes, [new Stmt\If_(
             new Expr\BinaryOp\BooleanAnd(
-                new Expr\BinaryOp\Identical(
-                    new Expr\FuncCall(new Name('is_null'), [
-                        new Node\Arg(new Expr\Variable('contentType')),
-                    ]),
-                    new Expr\ConstFetch(new Name('false'))
+                new Expr\BinaryOp\NotIdentical(
+                    new Expr\Variable('contentType'),
+                    new Expr\ConstFetch(new Name('null'))
                 ),
                 new Expr\BinaryOp\Identical(
                     new Scalar\LNumber((int)$status),

@@ -57,10 +57,10 @@ class PostFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if (200 === $status) {
             return null;
         }
-        if (is_null($contentType) === false && (400 === $status && mb_strpos(strtolower($contentType), 'application/problem+json') !== false)) {
+        if ($contentType !== null && (400 === $status && mb_strpos(strtolower($contentType), 'application/problem+json') !== false)) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\PostFooBadRequestException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse400', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse400::class, 'response body'), $response);
         }
-        if (is_null($contentType) === false && (500 === $status && mb_strpos(strtolower($contentType), 'application/problem+json') !== false)) {
+        if ($contentType !== null && (500 === $status && mb_strpos(strtolower($contentType), 'application/problem+json') !== false)) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\PostFooInternalServerErrorException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse500', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse500::class, 'response body'), $response);
         }
         throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\UnexpectedStatusCodeException($status, $body);

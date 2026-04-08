@@ -44,7 +44,7 @@ class TestNoTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && (400 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (400 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagBadRequestException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Model\Message', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Model\Message::class, 'response body'), $response);
         }
         if (404 === $status) {

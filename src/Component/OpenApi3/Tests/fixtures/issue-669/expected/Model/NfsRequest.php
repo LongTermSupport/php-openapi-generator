@@ -47,8 +47,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The human-readable name of the share.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -65,8 +63,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
-     * @return self
      */
     public function setSizeGib(int $sizeGib): self
     {
@@ -83,8 +79,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -105,8 +99,6 @@ class NfsRequest extends \ArrayObject
      * List of VPC IDs that should be able to access the share.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {

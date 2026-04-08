@@ -37,8 +37,6 @@ class UserEmailVisibilityPatchBody extends \ArrayObject
     }
     /**
      * An email address associated with the GitHub user account to manage.
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -55,8 +53,6 @@ class UserEmailVisibilityPatchBody extends \ArrayObject
     }
     /**
      * Denotes whether an email is publically visible.
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {

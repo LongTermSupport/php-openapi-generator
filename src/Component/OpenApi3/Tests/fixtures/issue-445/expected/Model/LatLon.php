@@ -34,8 +34,6 @@ class LatLon
     }
     /**
      * Latitude
-     *
-     * @return self
      */
     public function setLat(float $lat): self
     {
@@ -52,8 +50,6 @@ class LatLon
     }
     /**
      * Longitude
-     *
-     * @return self
      */
     public function setLon(float $lon): self
     {

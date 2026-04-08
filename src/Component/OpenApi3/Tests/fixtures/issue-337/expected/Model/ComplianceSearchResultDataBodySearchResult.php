@@ -34,8 +34,6 @@ class ComplianceSearchResultDataBodySearchResult extends \ArrayObject
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItem> $records
-     *
-     * @return self
      */
     public function setRecords(array $records): self
     {

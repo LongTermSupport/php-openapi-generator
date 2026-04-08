@@ -37,8 +37,6 @@ class ReposOwnerRepoGitRefsRefPatchBody extends \ArrayObject
     }
     /**
      * The SHA1 value to set this reference to
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {
@@ -55,8 +53,6 @@ class ReposOwnerRepoGitRefsRefPatchBody extends \ArrayObject
     }
     /**
      * Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to `false` will make sure you're not overwriting work.
-     *
-     * @return self
      */
     public function setForce(bool $force): self
     {

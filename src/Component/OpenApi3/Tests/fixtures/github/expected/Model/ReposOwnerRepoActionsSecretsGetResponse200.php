@@ -44,8 +44,6 @@ class ReposOwnerRepoActionsSecretsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<ActionsSecret> $secrets
-     *
-     * @return self
      */
     public function setSecrets(array $secrets): self
     {

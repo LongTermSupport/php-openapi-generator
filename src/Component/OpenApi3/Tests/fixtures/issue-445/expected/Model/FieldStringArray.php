@@ -78,8 +78,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
-     *
-     * @return self
      */
     public function setTemplate(?string $template): self
     {
@@ -96,8 +94,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * Contains a regex validation pattern.
-     *
-     * @return self
      */
     public function setPattern(?string $pattern): self
     {
@@ -114,8 +110,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * The minimum string's lenght.
-     *
-     * @return self
      */
     public function setMinimumLength(?int $minimumLength): self
     {
@@ -132,8 +126,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * The maximum string's length.
-     *
-     * @return self
      */
     public function setMaximumLength(?int $maximumLength): self
     {
@@ -156,8 +148,6 @@ class FieldStringArray extends FieldBase
      * The analyzers are applied only if the Index property is set to true.
      *
      * @param list<AnalyzerBase>|null $indexAnalyzers
-     *
-     * @return self
      */
     public function setIndexAnalyzers(?array $indexAnalyzers): self
     {
@@ -180,8 +170,6 @@ class FieldStringArray extends FieldBase
      * The analyzers are applied only if the SimpleSearch property is set to true.
      *
      * @param list<AnalyzerBase>|null $simpleSearchAnalyzers
-     *
-     * @return self
      */
     public function setSimpleSearchAnalyzers(?array $simpleSearchAnalyzers): self
     {
@@ -198,8 +186,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
-     * @return self
      */
     public function setMultiLine(bool $multiLine): self
     {
@@ -220,8 +206,6 @@ class FieldStringArray extends FieldBase
      * If values are stored in this list, field values are limited to these ones.
      *
      * @param list<string>|null $grantedValues
-     *
-     * @return self
      */
     public function setGrantedValues(?array $grantedValues): self
     {
@@ -238,8 +222,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {
@@ -256,8 +238,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
-     * @return self
      */
     public function setMaximumItems(?int $maximumItems): self
     {
@@ -274,8 +254,6 @@ class FieldStringArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
-     * @return self
      */
     public function setMinimumItems(?int $minimumItems): self
     {

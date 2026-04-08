@@ -59,7 +59,6 @@ class NfsCreateAction extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\NfsActionsResponse|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\NfsCreateActionUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\NfsCreateActionNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\NfsCreateActionTooManyRequestsException

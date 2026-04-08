@@ -30,8 +30,6 @@ class EnqueueTaggingAction extends BusinessRuleAction
     }
     /**
      * Options to use while tagging.
-     *
-     * @return self
      */
     public function setOptions(mixed $options): self
     {

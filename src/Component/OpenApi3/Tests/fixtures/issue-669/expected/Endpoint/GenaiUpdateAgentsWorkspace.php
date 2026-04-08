@@ -49,7 +49,6 @@ class GenaiUpdateAgentsWorkspace extends \LongTermSupport\OpenApiGenerator\Compo
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiMoveAgentsToWorkspaceOutput|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiUpdateAgentsWorkspaceUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiUpdateAgentsWorkspaceNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiUpdateAgentsWorkspaceTooManyRequestsException

@@ -72,8 +72,6 @@ class AppsDeploymentProgressStep extends \ArrayObject
      * 
      * `message_base` = "Building service"
      * `component_name` = "api"
-     *
-     * @return self
      */
     public function setMessageBase(string $messageBase): self
     {
@@ -130,8 +128,6 @@ class AppsDeploymentProgressStep extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $steps
-     *
-     * @return self
      */
     public function setSteps(array $steps): self
     {

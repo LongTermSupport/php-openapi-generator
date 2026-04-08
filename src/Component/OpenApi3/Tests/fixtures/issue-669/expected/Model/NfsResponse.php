@@ -67,8 +67,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the NFS share.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -85,8 +83,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The human-readable name of the share.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -103,8 +99,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
-     * @return self
      */
     public function setSizeGib(int $sizeGib): self
     {
@@ -121,8 +115,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -139,8 +131,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The current status of the share.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -157,8 +147,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * Timestamp for when the NFS share was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -179,8 +167,6 @@ class NfsResponse extends \ArrayObject
      * List of VPC IDs that should be able to access the share.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {
@@ -197,8 +183,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * Path at which the share will be available, to be mounted at a target of the user's choice within the client
-     *
-     * @return self
      */
     public function setMountPath(string $mountPath): self
     {
@@ -215,8 +199,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The host IP of the NFS server that will be accessible from the associated VPC
-     *
-     * @return self
      */
     public function setHost(string $host): self
     {

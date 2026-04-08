@@ -41,8 +41,6 @@ class UserSettingsAclItem extends \ArrayObject
     }
     /**
      * An identifier for the ACL. Will be computed after the ACL is created/updated.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class UserSettingsAclItem extends \ArrayObject
     }
     /**
      * A regex for matching the topic(s) that this ACL should apply to.
-     *
-     * @return self
      */
     public function setTopic(string $topic): self
     {
@@ -77,8 +73,6 @@ class UserSettingsAclItem extends \ArrayObject
     }
     /**
      * Permission set applied to the ACL. 'consume' allows for messages to be consumed from the topic. 'produce' allows for messages to be published to the topic. 'produceconsume' allows for both 'consume' and 'produce' permission. 'admin' allows for 'produceconsume' as well as any operations to administer the topic (delete, update).
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

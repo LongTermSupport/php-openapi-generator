@@ -58,8 +58,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Identifies the image to be used as watermark
-     *
-     * @return self
      */
     public function setWatermarkFilePath(?string $watermarkFilePath): self
     {
@@ -76,8 +74,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the left border of the image, in pixels
-     *
-     * @return self
      */
     public function setMarginLeft(?int $marginLeft): self
     {
@@ -94,8 +90,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the top of the image, in pixels
-     *
-     * @return self
      */
     public function setMarginTop(?int $marginTop): self
     {
@@ -112,8 +106,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the right border of the image, in pixels
-     *
-     * @return self
      */
     public function setMarginRight(?int $marginRight): self
     {
@@ -130,8 +122,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the bottom of the image, in pixels
-     *
-     * @return self
      */
     public function setMarginBottom(?int $marginBottom): self
     {
@@ -148,8 +138,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the opacity of the watermark
-     *
-     * @return self
      */
     public function setOpacity(float $opacity): self
     {
@@ -166,8 +154,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the watermark width according to the size of the final image.
-     *
-     * @return self
      */
     public function setWidthRatio(float $widthRatio): self
     {
@@ -184,8 +170,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the watermark height according to the size of the final image.
-     *
-     * @return self
      */
     public function setHeightRatio(float $heightRatio): self
     {

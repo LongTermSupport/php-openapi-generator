@@ -60,8 +60,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the start date of the search request. By default no limitation set.
-     *
-     * @return self
      */
     public function setFrom(\DateTime $from): self
     {
@@ -78,8 +76,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the end date of the search request. By default no limitation set.
-     *
-     * @return self
      */
     public function setTo(\DateTime $to): self
     {
@@ -96,8 +92,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -114,8 +108,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -132,8 +124,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the search to a specific document ID. E.g. contentId
-     *
-     * @return self
      */
     public function setDocumentId(?string $documentId): self
     {
@@ -150,8 +140,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * The document version to search. Default to -1 to not limit to a specific document version.
-     *
-     * @return self
      */
     public function setDocumentVersion(int $documentVersion): self
     {
@@ -168,8 +156,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the search to a specific document type.
-     *
-     * @return self
      */
     public function setDocumentType(?string $documentType): self
     {
@@ -190,8 +176,6 @@ class DocumentHistorySearchRequest
      * Sorts the search results. Sorting on a not indexed field will throw an exception.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {

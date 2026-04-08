@@ -133,8 +133,6 @@ class ContentTree extends \ArrayObject
     }
     /**
      * @param list<ContentTreeEntriesItem> $entries
-     *
-     * @return self
      */
     public function setEntries(array $entries): self
     {

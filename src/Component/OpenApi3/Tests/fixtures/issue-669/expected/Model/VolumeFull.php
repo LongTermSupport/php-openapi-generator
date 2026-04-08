@@ -70,8 +70,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * The unique identifier for the block storage volume.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -92,8 +90,6 @@ class VolumeFull extends \ArrayObject
      * An array containing the IDs of the Droplets the volume is attached to. Note that at this time, a volume can only be attached to a single Droplet.
      *
      * @param list<int>|null $dropletIds
-     *
-     * @return self
      */
     public function setDropletIds(?array $dropletIds): self
     {
@@ -110,8 +106,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -128,8 +122,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -146,8 +138,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
-     * @return self
      */
     public function setSizeGigabytes(int $sizeGigabytes): self
     {
@@ -164,8 +154,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
-     * @return self
      */
     public function setCreatedAt(string $createdAt): self
     {
@@ -186,8 +174,6 @@ class VolumeFull extends \ArrayObject
      * A flat array of tag names as strings applied to the resource. <br><br>Requires `tag:read` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {
@@ -214,8 +200,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * The type of filesystem currently in-use on the volume.
-     *
-     * @return self
      */
     public function setFilesystemType(string $filesystemType): self
     {
@@ -232,8 +216,6 @@ class VolumeFull extends \ArrayObject
     }
     /**
      * The label currently applied to the filesystem.
-     *
-     * @return self
      */
     public function setFilesystemLabel(string $filesystemLabel): self
     {

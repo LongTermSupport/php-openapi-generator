@@ -62,8 +62,6 @@ class Action extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -80,8 +78,6 @@ class Action extends \ArrayObject
     }
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -98,8 +94,6 @@ class Action extends \ArrayObject
     }
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -116,8 +110,6 @@ class Action extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
-     * @return self
      */
     public function setStartedAt(\DateTime $startedAt): self
     {
@@ -134,8 +126,6 @@ class Action extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
-     * @return self
      */
     public function setCompletedAt(?\DateTime $completedAt): self
     {
@@ -152,8 +142,6 @@ class Action extends \ArrayObject
     }
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
-     * @return self
      */
     public function setResourceId(?int $resourceId): self
     {
@@ -170,8 +158,6 @@ class Action extends \ArrayObject
     }
     /**
      * The type of resource that the action is associated with.
-     *
-     * @return self
      */
     public function setResourceType(string $resourceType): self
     {
@@ -198,8 +184,6 @@ class Action extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
-     * @return self
      */
     public function setRegionSlug(?string $regionSlug): self
     {

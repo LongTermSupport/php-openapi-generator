@@ -50,8 +50,6 @@ class UserProfileUpdateRequest
     }
     /**
      * ID of the user.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -68,8 +66,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Email address.
-     *
-     * @return self
      */
     public function setEmailAddress(?string $emailAddress): self
     {
@@ -86,8 +82,6 @@ class UserProfileUpdateRequest
     }
     /**
      * First name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -104,8 +98,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -122,8 +114,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Language code.
-     *
-     * @return self
      */
     public function setLanguageCode(?string $languageCode): self
     {
@@ -140,8 +130,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Address.
-     *
-     * @return self
      */
     public function setAddress(mixed $address): self
     {

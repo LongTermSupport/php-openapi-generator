@@ -158,8 +158,6 @@ class SchemaFieldAnalyzerInvalidException extends \ArrayObject
     }
     /**
      * @param list<string>|null $analyzers
-     *
-     * @return self
      */
     public function setAnalyzers(?array $analyzers): self
     {
@@ -176,8 +174,6 @@ class SchemaFieldAnalyzerInvalidException extends \ArrayObject
     }
     /**
      * @param list<string>|null $allowedAnalyzers
-     *
-     * @return self
      */
     public function setAllowedAnalyzers(?array $allowedAnalyzers): self
     {

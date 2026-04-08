@@ -43,8 +43,6 @@ class UserWithheld extends \ArrayObject
      * Provides a list of countries where this content is not available.
      *
      * @param list<string> $countryCodes
-     *
-     * @return self
      */
     public function setCountryCodes(array $countryCodes): self
     {
@@ -61,8 +59,6 @@ class UserWithheld extends \ArrayObject
     }
     /**
      * Indicates that the content being withheld is a `user`.
-     *
-     * @return self
      */
     public function setScope(string $scope): self
     {

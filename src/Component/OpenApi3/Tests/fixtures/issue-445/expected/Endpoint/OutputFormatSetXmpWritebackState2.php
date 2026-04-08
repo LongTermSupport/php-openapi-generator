@@ -47,7 +47,6 @@ class OutputFormatSetXmpWritebackState2 extends \LongTermSupport\OpenApiGenerato
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackState2BadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackState2UnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackState2NotFoundException

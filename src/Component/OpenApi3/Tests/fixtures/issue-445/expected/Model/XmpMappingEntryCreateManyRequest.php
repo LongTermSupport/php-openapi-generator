@@ -36,8 +36,6 @@ class XmpMappingEntryCreateManyRequest
      * Mappings to create.
      *
      * @param list<XmpMappingEntryCreateRequest>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

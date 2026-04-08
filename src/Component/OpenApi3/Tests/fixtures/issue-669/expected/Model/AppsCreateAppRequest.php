@@ -39,8 +39,6 @@ class AppsCreateAppRequest extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
-     * @return self
      */
     public function setSpec(AppSpec $spec): self
     {
@@ -61,8 +59,6 @@ class AppsCreateAppRequest extends \ArrayObject
      * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
      * <br><br>Requires `project:update` scope.
      * 
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {

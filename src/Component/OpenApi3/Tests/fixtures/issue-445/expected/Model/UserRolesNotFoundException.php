@@ -143,8 +143,6 @@ class UserRolesNotFoundException extends \ArrayObject
     }
     /**
      * @param list<string>|null $userRoleIds
-     *
-     * @return self
      */
     public function setUserRoleIds(?array $userRoleIds): self
     {

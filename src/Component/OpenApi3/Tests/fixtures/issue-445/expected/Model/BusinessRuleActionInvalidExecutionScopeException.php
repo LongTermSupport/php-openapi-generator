@@ -132,8 +132,6 @@ class BusinessRuleActionInvalidExecutionScopeException extends \ArrayObject
     }
     /**
      * @param list<string>|null $allowedScopes
-     *
-     * @return self
      */
     public function setAllowedScopes(?array $allowedScopes): self
     {

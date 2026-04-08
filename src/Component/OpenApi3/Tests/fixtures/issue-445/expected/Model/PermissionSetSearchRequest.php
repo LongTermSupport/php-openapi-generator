@@ -65,8 +65,6 @@ class PermissionSetSearchRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -87,8 +85,6 @@ class PermissionSetSearchRequest
      * An optional list of search behaviors. All the passed behaviors will be applied in the specified order.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -105,8 +101,6 @@ class PermissionSetSearchRequest
     }
     /**
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -123,8 +117,6 @@ class PermissionSetSearchRequest
     }
     /**
      * Limits the number of the returned schemas. Defaults to 30.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -141,8 +133,6 @@ class PermissionSetSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -169,8 +159,6 @@ class PermissionSetSearchRequest
     }
     /**
      * Filters based on the PermissionSetRight of the user.
-     *
-     * @return self
      */
     public function setRightFilter(mixed $rightFilter): self
     {
@@ -189,8 +177,6 @@ class PermissionSetSearchRequest
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the result.
      * Warning! It severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -213,8 +199,6 @@ class PermissionSetSearchRequest
      * If not specified, all metadata languages defined in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {

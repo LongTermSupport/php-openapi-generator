@@ -41,8 +41,6 @@ class GeoBoundingBoxFilter extends FilterBase
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
-     * @return self
      */
     public function setField(string $field): self
     {
@@ -59,8 +57,6 @@ class GeoBoundingBoxFilter extends FilterBase
     }
     /**
      * The top left corner of the bounding box's geo location (latitude and longitude).
-     *
-     * @return self
      */
     public function setTopLeft(mixed $topLeft): self
     {
@@ -77,8 +73,6 @@ class GeoBoundingBoxFilter extends FilterBase
     }
     /**
      * The bottom right corner of the bounding box's geo location (latitude and longitude).
-     *
-     * @return self
      */
     public function setBottomRight(mixed $bottomRight): self
     {

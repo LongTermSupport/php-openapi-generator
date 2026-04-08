@@ -45,7 +45,6 @@ class BusinessRuleSearchTraces extends \LongTermSupport\OpenApiGenerator\Compone
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchResult
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleSearchTracesBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleSearchTracesUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleSearchTracesNotFoundException

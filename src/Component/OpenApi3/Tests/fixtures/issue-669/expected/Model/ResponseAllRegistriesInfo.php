@@ -33,8 +33,6 @@ class ResponseAllRegistriesInfo extends \ArrayObject
     }
     /**
      * @param list<mixed> $registries
-     *
-     * @return self
      */
     public function setRegistries(array $registries): self
     {

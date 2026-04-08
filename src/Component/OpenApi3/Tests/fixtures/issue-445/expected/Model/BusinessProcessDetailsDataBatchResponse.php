@@ -34,8 +34,6 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
     }
     /**
      * The DocType on which the operation was performed.
-     *
-     * @return self
      */
     public function setDocType(string $docType): self
     {
@@ -52,8 +50,6 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
     }
     /**
      * The response of the batch operation.
-     *
-     * @return self
      */
     public function setResponse(mixed $response): self
     {

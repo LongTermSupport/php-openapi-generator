@@ -52,8 +52,6 @@ class BusinessRuleFiredEventDetail
     }
     /**
      * @param list<string>|null $ruleIds
-     *
-     * @return self
      */
     public function setRuleIds(?array $ruleIds): self
     {

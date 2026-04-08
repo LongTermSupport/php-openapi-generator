@@ -33,8 +33,6 @@ class AppResponse extends \ArrayObject
     }
     /**
      * An application's configuration and status.
-     *
-     * @return self
      */
     public function setApp(App $app): self
     {

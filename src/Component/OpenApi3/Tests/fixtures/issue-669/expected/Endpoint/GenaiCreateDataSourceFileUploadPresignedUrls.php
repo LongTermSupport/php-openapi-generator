@@ -46,7 +46,6 @@ class GenaiCreateDataSourceFileUploadPresignedUrls extends \LongTermSupport\Open
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiCreateDataSourceFileUploadPresignedUrlsOutput|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiCreateDataSourceFileUploadPresignedUrlsUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiCreateDataSourceFileUploadPresignedUrlsNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiCreateDataSourceFileUploadPresignedUrlsTooManyRequestsException

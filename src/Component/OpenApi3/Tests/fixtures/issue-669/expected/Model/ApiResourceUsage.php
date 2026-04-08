@@ -36,8 +36,6 @@ class ApiResourceUsage extends \ArrayObject
     }
     /**
      * @param list<ApiUsageMeasurement> $measurements
-     *
-     * @return self
      */
     public function setMeasurements(array $measurements): self
     {

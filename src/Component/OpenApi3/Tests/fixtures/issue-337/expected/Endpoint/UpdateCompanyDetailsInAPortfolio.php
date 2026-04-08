@@ -65,7 +65,6 @@ class UpdateCompanyDetailsInAPortfolio extends \LongTermSupport\OpenApiGenerator
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioForbiddenException

@@ -60,8 +60,6 @@ class FileTransferCreateItem
      * An optional id list of schemas with type layer.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -84,8 +82,6 @@ class FileTransferCreateItem
      * by the LayerSchemaIds property.
      *
      * @param array<string, mixed>|null $metadata
-     *
-     * @return self
      */
     public function setMetadata(?array $metadata): self
     {
@@ -106,8 +102,6 @@ class FileTransferCreateItem
      * An optional id list of content permission sets. Controls content accessibility outside of content ownership.
      *
      * @param list<string>|null $contentPermissionSetIds
-     *
-     * @return self
      */
     public function setContentPermissionSetIds(?array $contentPermissionSetIds): self
     {

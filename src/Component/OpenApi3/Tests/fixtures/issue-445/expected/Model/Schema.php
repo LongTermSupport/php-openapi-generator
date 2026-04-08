@@ -70,8 +70,6 @@ class Schema
     }
     /**
      * The schema ID. It is unique throughout the whole customer setup.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -88,8 +86,6 @@ class Schema
     }
     /**
      * The parent schema ID.
-     *
-     * @return self
      */
     public function setParentSchemaId(?string $parentSchemaId): self
     {
@@ -110,8 +106,6 @@ class Schema
      * List of schema types. Currently only one schema type can be assigned to this list, and it cannot be modified once the schema is created.
      *
      * @param list<string>|null $types
-     *
-     * @return self
      */
     public function setTypes(?array $types): self
     {
@@ -128,8 +122,6 @@ class Schema
     }
     /**
      * Language specific schema names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -146,8 +138,6 @@ class Schema
     }
     /**
      * Language specific schema descriptions.
-     *
-     * @return self
      */
     public function setDescriptions(mixed $descriptions): self
     {
@@ -168,8 +158,6 @@ class Schema
      * An optional list of schemas' IDs with type layer. For a Content schema it stores the layers that can be assigned to a content.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -186,8 +174,6 @@ class Schema
     }
     /**
      * The count of all fields.
-     *
-     * @return self
      */
     public function setFieldCount(int $fieldCount): self
     {
@@ -204,8 +190,6 @@ class Schema
     }
     /**
      * The count of all schema descendants with an immediate inheritance.
-     *
-     * @return self
      */
     public function setChildCount(int $childCount): self
     {
@@ -222,8 +206,6 @@ class Schema
     }
     /**
      * The descendant depth of the schema.
-     *
-     * @return self
      */
     public function setLevel(int $level): self
     {
@@ -240,8 +222,6 @@ class Schema
     }
     /**
      * Identifies a system provided schema. A system schema cannot be created, updated or deleted.
-     *
-     * @return self
      */
     public function setSystem(bool $system): self
     {

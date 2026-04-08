@@ -45,7 +45,6 @@ class TransferCancel extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCancelBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCancelUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCancelNotFoundException

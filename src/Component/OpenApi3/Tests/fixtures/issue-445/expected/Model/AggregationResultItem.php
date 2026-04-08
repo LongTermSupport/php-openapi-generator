@@ -49,8 +49,6 @@ class AggregationResultItem
     }
     /**
      * Value matched.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -67,8 +65,6 @@ class AggregationResultItem
     }
     /**
      * Number of items matched.
-     *
-     * @return self
      */
     public function setCount(int $count): self
     {
@@ -87,8 +83,6 @@ class AggregationResultItem
     /**
      * Ready to use filter to filter the data based on the aggregation result values.
      * It can be passed as one of the aggregation filters of an aggregation query: it returns documents meeting the aggregation condition.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -105,8 +99,6 @@ class AggregationResultItem
     }
     /**
      * True if the current result item matches on of the aggregation filters sent in the query.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {
@@ -127,8 +119,6 @@ class AggregationResultItem
      * Inner aggregation results, if inner aggregations were provided in the query.
      *
      * @param list<AggregationResult>|null $aggregationResults
-     *
-     * @return self
      */
     public function setAggregationResults(?array $aggregationResults): self
     {

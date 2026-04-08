@@ -57,8 +57,6 @@ class Alert extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the alert.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -75,8 +73,6 @@ class Alert extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -93,8 +89,6 @@ class Alert extends \ArrayObject
     }
     /**
      * The type of alert.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -111,8 +105,6 @@ class Alert extends \ArrayObject
     }
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
-     * @return self
      */
     public function setThreshold(int $threshold): self
     {
@@ -129,8 +121,6 @@ class Alert extends \ArrayObject
     }
     /**
      * The comparison operator used against the alert's threshold.
-     *
-     * @return self
      */
     public function setComparison(string $comparison): self
     {
@@ -147,8 +137,6 @@ class Alert extends \ArrayObject
     }
     /**
      * The notification settings for a trigger alert.
-     *
-     * @return self
      */
     public function setNotifications(Notification $notifications): self
     {
@@ -165,8 +153,6 @@ class Alert extends \ArrayObject
     }
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
-     * @return self
      */
     public function setPeriod(string $period): self
     {

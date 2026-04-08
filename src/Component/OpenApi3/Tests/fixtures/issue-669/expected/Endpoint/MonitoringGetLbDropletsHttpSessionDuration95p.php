@@ -58,7 +58,6 @@ class MonitoringGetLbDropletsHttpSessionDuration95p extends \LongTermSupport\Ope
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Metrics|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\MonitoringGetLbDropletsHttpSessionDuration95pUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\MonitoringGetLbDropletsHttpSessionDuration95pTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\MonitoringGetLbDropletsHttpSessionDuration95pInternalServerErrorException

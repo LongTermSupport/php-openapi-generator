@@ -44,7 +44,6 @@ class UserRoleDelete extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteNotFoundException

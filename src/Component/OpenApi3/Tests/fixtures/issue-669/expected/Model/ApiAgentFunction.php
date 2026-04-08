@@ -71,8 +71,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Api key
-     *
-     * @return self
      */
     public function setApiKey(string $apiKey): self
     {
@@ -89,8 +87,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -107,8 +103,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
-     * @return self
      */
     public function setCreatedBy(string $createdBy): self
     {
@@ -125,8 +119,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Agent description
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -163,8 +155,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $inputSchema
-     *
-     * @return self
      */
     public function setInputSchema(array $inputSchema): self
     {
@@ -181,8 +171,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -199,8 +187,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $outputSchema
-     *
-     * @return self
      */
     public function setOutputSchema(array $outputSchema): self
     {
@@ -217,8 +203,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -235,8 +219,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Download your agent here
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -253,8 +235,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

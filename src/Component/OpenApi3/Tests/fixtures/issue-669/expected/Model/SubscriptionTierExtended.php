@@ -39,8 +39,6 @@ class SubscriptionTierExtended extends \ArrayObject
     }
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
-     * @return self
      */
     public function setEligible(bool $eligible): self
     {
@@ -61,8 +59,6 @@ class SubscriptionTierExtended extends \ArrayObject
      * If your account is not eligible to use a certain subscription tier, this will include a list of reasons that prevent you from using the tier.
      *
      * @param list<string> $eligibilityReasons
-     *
-     * @return self
      */
     public function setEligibilityReasons(array $eligibilityReasons): self
     {

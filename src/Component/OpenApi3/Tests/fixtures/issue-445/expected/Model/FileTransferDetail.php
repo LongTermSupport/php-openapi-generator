@@ -73,8 +73,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of file transfer.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -91,8 +89,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Name of file transfer.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -113,8 +109,6 @@ class FileTransferDetail extends \ArrayObject
      * Replaced in favor of RequestId. Client provided identifier.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setIdentifier(?string $identifier): self
     {
@@ -131,8 +125,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Client provided identifier.
-     *
-     * @return self
      */
     public function setRequestId(string $requestId): self
     {
@@ -149,8 +141,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of transfer.
-     *
-     * @return self
      */
     public function setTransferId(string $transferId): self
     {
@@ -167,8 +157,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * State of file transfer.
-     *
-     * @return self
      */
     public function setState(mixed $state): self
     {
@@ -185,8 +173,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of Content created for file.
-     *
-     * @return self
      */
     public function setContentId(?string $contentId): self
     {
@@ -203,8 +189,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -221,8 +205,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Metadata extracted for file.
-     *
-     * @return self
      */
     public function setFileMetadata(mixed $fileMetadata): self
     {
@@ -243,8 +225,6 @@ class FileTransferDetail extends \ArrayObject
      * Outputs rendered during data extraction phase.
      *
      * @param list<FileTransferOutput>|null $outputItems
-     *
-     * @return self
      */
     public function setOutputItems(?array $outputItems): self
     {

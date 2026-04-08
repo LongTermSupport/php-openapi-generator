@@ -70,7 +70,6 @@ class CustomReportParameters extends \LongTermSupport\OpenApiGenerator\Component
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CustomReportParametersBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CustomReportParametersUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CustomReportParametersForbiddenException

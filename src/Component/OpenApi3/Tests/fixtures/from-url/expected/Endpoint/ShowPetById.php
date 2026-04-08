@@ -40,11 +40,6 @@ class ShowPetById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
     {
         return ['Accept' => ['application/json']];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error
     {
         $status = $response->getStatusCode();

@@ -51,8 +51,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
      * A list of arrays indicating which repositories should be migrated.
      *
      * @param list<string> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {
@@ -69,8 +67,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
-     *
-     * @return self
      */
     public function setLockRepositories(bool $lockRepositories): self
     {
@@ -87,8 +83,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
-     *
-     * @return self
      */
     public function setExcludeAttachments(bool $excludeAttachments): self
     {
@@ -105,8 +99,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * @param list<string> $exclude
-     *
-     * @return self
      */
     public function setExclude(array $exclude): self
     {

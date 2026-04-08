@@ -48,7 +48,6 @@ class ProjectsUpdateColumn extends \LongTermSupport\OpenApiGenerator\Component\O
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectColumn
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ProjectsUpdateColumnForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ProjectsUpdateColumnUnauthorizedException
      */

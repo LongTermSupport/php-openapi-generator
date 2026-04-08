@@ -37,8 +37,6 @@ class CurrentUtilization extends \ArrayObject
     }
     /**
      * The average memory utilization of the autoscale pool.
-     *
-     * @return self
      */
     public function setMemory(float $memory): self
     {
@@ -55,8 +53,6 @@ class CurrentUtilization extends \ArrayObject
     }
     /**
      * The average CPU utilization of the autoscale pool.
-     *
-     * @return self
      */
     public function setCpu(float $cpu): self
     {

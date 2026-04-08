@@ -33,8 +33,6 @@ class V2KubernetesClustersClusterIdNodePoolsNodePoolIdRecyclePostBody extends \A
     }
     /**
      * @param list<string> $nodes
-     *
-     * @return self
      */
     public function setNodes(array $nodes): self
     {

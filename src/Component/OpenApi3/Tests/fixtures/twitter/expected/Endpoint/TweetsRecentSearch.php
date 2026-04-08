@@ -82,11 +82,6 @@ class TweetsRecentSearch extends \LongTermSupport\OpenApiGenerator\Component\Ope
         $optionsResolver->addAllowedTypes('expansions', ['array']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return mixed
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
         $status = $response->getStatusCode();

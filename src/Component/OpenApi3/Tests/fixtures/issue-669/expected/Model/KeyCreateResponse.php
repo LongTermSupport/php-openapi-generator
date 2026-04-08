@@ -51,8 +51,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The secret key used to access the bucket. We return secret keys only once upon creation. Make sure to copy the key and securely store it.
-     *
-     * @return self
      */
     public function setSecretKey(string $secretKey): self
     {
@@ -69,8 +67,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The access key's name.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -91,8 +87,6 @@ class KeyCreateResponse extends \ArrayObject
      * The list of permissions for the access key.
      *
      * @param list<Grant> $grants
-     *
-     * @return self
      */
     public function setGrants(array $grants): self
     {
@@ -109,8 +103,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The Access Key ID used to access a bucket.
-     *
-     * @return self
      */
     public function setAccessKey(string $accessKey): self
     {
@@ -127,8 +119,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The date and time the key was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {

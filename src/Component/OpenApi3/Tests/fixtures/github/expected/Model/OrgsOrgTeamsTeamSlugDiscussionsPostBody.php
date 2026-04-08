@@ -41,8 +41,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * The discussion post's title.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -59,8 +57,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * The discussion post's body text.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -77,8 +73,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * Private posts are only visible to team members, organization owners, and team maintainers. Public posts are visible to all members of the organization. Set to `true` to create a private post.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {

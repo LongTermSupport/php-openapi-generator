@@ -63,8 +63,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a certificate.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -81,8 +79,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -99,8 +95,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents the certificate's expiration date.
-     *
-     * @return self
      */
     public function setNotAfter(\DateTime $notAfter): self
     {
@@ -117,8 +111,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique identifier generated from the SHA-1 fingerprint of the certificate.
-     *
-     * @return self
      */
     public function setSha1Fingerprint(string $sha1Fingerprint): self
     {
@@ -135,8 +127,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the certificate was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -157,8 +147,6 @@ class Certificate extends \ArrayObject
      * An array of fully qualified domain names (FQDNs) for which the certificate was issued.
      *
      * @param list<string> $dnsNames
-     *
-     * @return self
      */
     public function setDnsNames(array $dnsNames): self
     {
@@ -175,8 +163,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A string representing the current state of the certificate. It may be `pending`, `verified`, or `error`.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -193,8 +179,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

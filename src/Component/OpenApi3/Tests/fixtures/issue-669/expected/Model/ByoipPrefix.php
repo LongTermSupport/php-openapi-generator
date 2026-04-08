@@ -71,8 +71,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Unique identifier for the BYOIP prefix
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -89,8 +87,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Name of the BYOIP prefix
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -107,8 +103,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * The IP prefix in CIDR notation
-     *
-     * @return self
      */
     public function setPrefix(string $prefix): self
     {
@@ -125,8 +119,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Status of the BYOIP prefix
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -143,8 +135,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Region where the BYOIP prefix is located
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -165,8 +155,6 @@ class ByoipPrefix extends \ArrayObject
      * List of validation statuses for the BYOIP prefix
      *
      * @param list<ByoipPrefixValidationsItem> $validations
-     *
-     * @return self
      */
     public function setValidations(array $validations): self
     {
@@ -183,8 +171,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Reason for failure, if applicable
-     *
-     * @return self
      */
     public function setFailureReason(string $failureReason): self
     {
@@ -201,8 +187,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix is locked
-     *
-     * @return self
      */
     public function setLocked(bool $locked): self
     {
@@ -219,8 +203,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix is being advertised
-     *
-     * @return self
      */
     public function setAdvertised(bool $advertised): self
     {
@@ -237,8 +219,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * The ID of the project associated with the BYOIP prefix
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {

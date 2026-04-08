@@ -39,8 +39,6 @@ class ProjectAssignment extends \ArrayObject
      * A list of uniform resource names (URNs) to be added to a project. Only resources that you are authorized to see will be returned.
      *
      * @param list<string> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

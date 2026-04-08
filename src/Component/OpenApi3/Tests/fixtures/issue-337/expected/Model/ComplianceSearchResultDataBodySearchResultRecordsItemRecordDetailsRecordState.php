@@ -65,8 +65,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
     }
     /**
      * @param list<string> $assignedTo
-     *
-     * @return self
      */
     public function setAssignedTo(array $assignedTo): self
     {
@@ -103,8 +101,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordStateHistoryItem> $history
-     *
-     * @return self
      */
     public function setHistory(array $history): self
     {
@@ -121,8 +117,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordStateMatchStatesItem> $matchStates
-     *
-     * @return self
      */
     public function setMatchStates(array $matchStates): self
     {

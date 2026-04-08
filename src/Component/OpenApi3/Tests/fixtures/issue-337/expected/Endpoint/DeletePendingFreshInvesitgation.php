@@ -57,7 +57,6 @@ class DeletePendingFreshInvesitgation extends \LongTermSupport\OpenApiGenerator\
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeletePendingFreshInvesitgationBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeletePendingFreshInvesitgationUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeletePendingFreshInvesitgationForbiddenException

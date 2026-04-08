@@ -45,8 +45,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Name of the component, from the app spec.
-     *
-     * @return self
      */
     public function setComponentName(string $componentName): self
     {
@@ -63,8 +61,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Supported compute component by DigitalOcean App Platform.
-     *
-     * @return self
      */
     public function setComponentType(string $componentType): self
     {
@@ -81,8 +77,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Name of the instance, which is a unique identifier for the instance.
-     *
-     * @return self
      */
     public function setInstanceName(string $instanceName): self
     {
@@ -99,8 +93,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Readable identifier, an alias of the instance name, reference for mapping insights to instance names.
-     *
-     * @return self
      */
     public function setInstanceAlias(string $instanceAlias): self
     {

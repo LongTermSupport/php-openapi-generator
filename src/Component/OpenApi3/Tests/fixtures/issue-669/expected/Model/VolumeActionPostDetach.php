@@ -41,8 +41,6 @@ class VolumeActionPostDetach extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -59,8 +57,6 @@ class VolumeActionPostDetach extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -77,8 +73,6 @@ class VolumeActionPostDetach extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet the volume will be attached or detached from.
-     *
-     * @return self
      */
     public function setDropletId(int $dropletId): self
     {

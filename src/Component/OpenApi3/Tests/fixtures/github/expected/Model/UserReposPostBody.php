@@ -97,8 +97,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -115,8 +113,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * A short description of the repository.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -133,8 +129,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * A URL with more information about the repository.
-     *
-     * @return self
      */
     public function setHomepage(string $homepage): self
     {
@@ -151,8 +145,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the repository is private or public.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {
@@ -169,8 +161,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether issues are enabled.
-     *
-     * @return self
      */
     public function setHasIssues(bool $hasIssues): self
     {
@@ -187,8 +177,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether projects are enabled.
-     *
-     * @return self
      */
     public function setHasProjects(bool $hasProjects): self
     {
@@ -205,8 +193,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the wiki is enabled.
-     *
-     * @return self
      */
     public function setHasWiki(bool $hasWiki): self
     {
@@ -223,8 +209,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
-     * @return self
      */
     public function setTeamId(int $teamId): self
     {
@@ -241,8 +225,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the repository is initialized with a minimal README.
-     *
-     * @return self
      */
     public function setAutoInit(bool $autoInit): self
     {
@@ -259,8 +241,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The desired language or platform to apply to the .gitignore.
-     *
-     * @return self
      */
     public function setGitignoreTemplate(string $gitignoreTemplate): self
     {
@@ -277,8 +257,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The license keyword of the open source license for this repository.
-     *
-     * @return self
      */
     public function setLicenseTemplate(string $licenseTemplate): self
     {
@@ -295,8 +273,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow squash merges for pull requests.
-     *
-     * @return self
      */
     public function setAllowSquashMerge(bool $allowSquashMerge): self
     {
@@ -313,8 +289,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow merge commits for pull requests.
-     *
-     * @return self
      */
     public function setAllowMergeCommit(bool $allowMergeCommit): self
     {
@@ -331,8 +305,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow rebase merges for pull requests.
-     *
-     * @return self
      */
     public function setAllowRebaseMerge(bool $allowRebaseMerge): self
     {
@@ -349,8 +321,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to delete head branches when pull requests are merged
-     *
-     * @return self
      */
     public function setDeleteBranchOnMerge(bool $deleteBranchOnMerge): self
     {
@@ -367,8 +337,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether downloads are enabled.
-     *
-     * @return self
      */
     public function setHasDownloads(bool $hasDownloads): self
     {
@@ -385,8 +353,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
-     * @return self
      */
     public function setIsTemplate(bool $isTemplate): self
     {

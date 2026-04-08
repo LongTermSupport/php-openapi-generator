@@ -59,7 +59,6 @@ class GenaiGetEvaluationRunResults extends \LongTermSupport\OpenApiGenerator\Com
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGetEvaluationRunResultsOutput|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiGetEvaluationRunResultsUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiGetEvaluationRunResultsNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiGetEvaluationRunResultsTooManyRequestsException

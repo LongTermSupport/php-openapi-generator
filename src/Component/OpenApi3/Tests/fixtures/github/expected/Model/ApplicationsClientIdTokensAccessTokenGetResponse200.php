@@ -72,8 +72,6 @@ class ApplicationsClientIdTokensAccessTokenGetResponse200 extends \ArrayObject
      * A list of scopes that this authorization is in.
      *
      * @param list<string>|null $scopes
-     *
-     * @return self
      */
     public function setScopes(?array $scopes): self
     {

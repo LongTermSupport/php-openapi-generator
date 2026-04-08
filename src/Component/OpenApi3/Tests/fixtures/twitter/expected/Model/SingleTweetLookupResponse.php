@@ -55,8 +55,6 @@ class SingleTweetLookupResponse extends \ArrayObject
     }
     /**
      * @param list<mixed> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

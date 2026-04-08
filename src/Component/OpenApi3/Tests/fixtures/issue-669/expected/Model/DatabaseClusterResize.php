@@ -41,8 +41,6 @@ class DatabaseClusterResize extends \ArrayObject
     }
     /**
      * A slug identifier representing desired the size of the nodes in the database cluster.
-     *
-     * @return self
      */
     public function setSize(string $size): self
     {
@@ -59,8 +57,6 @@ class DatabaseClusterResize extends \ArrayObject
     }
     /**
      * The number of nodes in the database cluster. Valid values are are 1-3. In addition to the primary node, up to two standby nodes may be added for highly available configurations.
-     *
-     * @return self
      */
     public function setNumNodes(int $numNodes): self
     {
@@ -77,8 +73,6 @@ class DatabaseClusterResize extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
-     * @return self
      */
     public function setStorageSizeMib(int $storageSizeMib): self
     {

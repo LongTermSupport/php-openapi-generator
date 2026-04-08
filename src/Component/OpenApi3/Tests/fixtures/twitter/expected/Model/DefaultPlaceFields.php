@@ -66,8 +66,6 @@ class DefaultPlaceFields extends \ArrayObject
     }
     /**
      * @param list<string> $containedWithin
-     *
-     * @return self
      */
     public function setContainedWithin(array $containedWithin): self
     {

@@ -44,8 +44,6 @@ class ReposOwnerRepoActionsWorkflowsWorkflowIdRunsGetResponse200 extends \ArrayO
     }
     /**
      * @param list<WorkflowRun> $workflowRuns
-     *
-     * @return self
      */
     public function setWorkflowRuns(array $workflowRuns): self
     {

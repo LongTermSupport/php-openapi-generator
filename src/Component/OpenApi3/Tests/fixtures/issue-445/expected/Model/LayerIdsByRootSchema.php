@@ -41,8 +41,6 @@ class LayerIdsByRootSchema
     }
     /**
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {

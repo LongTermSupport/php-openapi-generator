@@ -34,8 +34,6 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * IDs of the permission sets to assign.
-     *
-     * @return self
      */
     public function setPermissionSetIds(mixed $permissionSetIds): self
     {
@@ -52,8 +50,6 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * Indicates whether the already assigned permissions should be replaced or merged.
-     *
-     * @return self
      */
     public function setReplace(bool $replace): self
     {

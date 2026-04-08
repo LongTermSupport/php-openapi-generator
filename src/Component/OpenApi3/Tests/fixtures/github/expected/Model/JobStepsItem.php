@@ -50,8 +50,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -68,8 +66,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The outcome of the job.
-     *
-     * @return self
      */
     public function setConclusion(?string $conclusion): self
     {
@@ -86,8 +82,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The name of the job.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -114,8 +108,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The time that the step started, in ISO 8601 format.
-     *
-     * @return self
      */
     public function setStartedAt(?\DateTime $startedAt): self
     {
@@ -132,8 +124,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
-     * @return self
      */
     public function setCompletedAt(?\DateTime $completedAt): self
     {

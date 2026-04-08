@@ -30,8 +30,6 @@ class Failure
     }
     /**
      * @param list<Error> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

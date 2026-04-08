@@ -33,8 +33,6 @@ class ResponseOneClicksAll extends \ArrayObject
     }
     /**
      * @param list<OneClicks> $n1Clicks
-     *
-     * @return self
      */
     public function set1Clicks(array $n1Clicks): self
     {

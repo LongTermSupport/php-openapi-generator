@@ -30,8 +30,6 @@ class NotFilter extends FilterBase
     }
     /**
      * The filter to be negated.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {

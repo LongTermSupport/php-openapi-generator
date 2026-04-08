@@ -34,8 +34,6 @@ class SortInfo
     }
     /**
      * The field's ID to sort on.
-     *
-     * @return self
      */
     public function setField(?string $field): self
     {
@@ -52,8 +50,6 @@ class SortInfo
     }
     /**
      * The sort direction (ascending/descending).
-     *
-     * @return self
      */
     public function setDirection(mixed $direction): self
     {

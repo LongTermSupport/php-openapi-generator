@@ -259,8 +259,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * @param list<PullRequestSimpleLabelsItem> $labels
-     *
-     * @return self
      */
     public function setLabels(array $labels): self
     {
@@ -357,8 +355,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $assignees
-     *
-     * @return self
      */
     public function setAssignees(?array $assignees): self
     {
@@ -375,8 +371,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $requestedReviewers
-     *
-     * @return self
      */
     public function setRequestedReviewers(?array $requestedReviewers): self
     {
@@ -393,8 +387,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * @param list<TeamSimple>|null $requestedTeams
-     *
-     * @return self
      */
     public function setRequestedTeams(?array $requestedTeams): self
     {
@@ -451,8 +443,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * Indicates whether or not the pull request is a draft.
-     *
-     * @return self
      */
     public function setDraft(bool $draft): self
     {

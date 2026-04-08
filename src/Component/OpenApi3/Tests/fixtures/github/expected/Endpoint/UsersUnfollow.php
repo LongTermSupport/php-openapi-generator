@@ -44,7 +44,6 @@ class UsersUnfollow extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersUnfollowNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersUnfollowForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersUnfollowUnauthorizedException

@@ -37,8 +37,6 @@ class ApiCreateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Anthropic API key
-     *
-     * @return self
      */
     public function setApiKey(string $apiKey): self
     {
@@ -55,8 +53,6 @@ class ApiCreateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -46,7 +46,6 @@ class AppsListMetricsBandwidthDaily extends \LongTermSupport\OpenApiGenerator\Co
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AppMetricsBandwidthUsage|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\AppsListMetricsBandwidthDailyUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\AppsListMetricsBandwidthDailyNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\AppsListMetricsBandwidthDailyTooManyRequestsException

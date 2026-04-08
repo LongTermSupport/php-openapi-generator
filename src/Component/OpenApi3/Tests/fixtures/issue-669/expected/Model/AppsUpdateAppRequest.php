@@ -37,8 +37,6 @@ class AppsUpdateAppRequest extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
-     * @return self
      */
     public function setSpec(AppSpec $spec): self
     {
@@ -55,8 +53,6 @@ class AppsUpdateAppRequest extends \ArrayObject
     }
     /**
      * Whether or not to update the source versions (for example fetching a new commit or image digest) of all components. By default (when this is false) only newly added sources will be updated to avoid changes like updating the scale of a component from also updating the respective code.
-     *
-     * @return self
      */
     public function setUpdateAllSourceVersions(bool $updateAllSourceVersions): self
     {

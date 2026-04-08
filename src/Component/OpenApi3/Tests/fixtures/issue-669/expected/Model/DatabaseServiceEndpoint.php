@@ -37,8 +37,6 @@ class DatabaseServiceEndpoint extends \ArrayObject
     }
     /**
      * A FQDN pointing to the database cluster's node(s).
-     *
-     * @return self
      */
     public function setHost(string $host): self
     {
@@ -55,8 +53,6 @@ class DatabaseServiceEndpoint extends \ArrayObject
     }
     /**
      * The port on which a service is listening.
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {

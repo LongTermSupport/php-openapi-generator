@@ -39,8 +39,6 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     }
     /**
      * Named cache to use for lookup, should be of type SchemaTagboxFilterLookupNamedCacheConfiguration
-     *
-     * @return self
      */
     public function setNamedCache(?string $namedCache): self
     {
@@ -57,8 +55,6 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be assigned.
-     *
-     * @return self
      */
     public function setRefIds(mixed $refIds): self
     {
@@ -77,8 +73,6 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     /**
      * Indicates where the assignment should be additive to the already assigned tags
      * or if existing tags should be replaced.
-     *
-     * @return self
      */
     public function setReplace(bool $replace): self
     {

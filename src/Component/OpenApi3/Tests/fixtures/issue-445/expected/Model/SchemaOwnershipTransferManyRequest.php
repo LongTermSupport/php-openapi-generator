@@ -40,8 +40,6 @@ class SchemaOwnershipTransferManyRequest
      * The schema ids.
      *
      * @param list<string>|null $schemaIds
-     *
-     * @return self
      */
     public function setSchemaIds(?array $schemaIds): self
     {
@@ -58,8 +56,6 @@ class SchemaOwnershipTransferManyRequest
     }
     /**
      * The id of user to whom the schemas have to be transferred to.
-     *
-     * @return self
      */
     public function setTransferUserId(?string $transferUserId): self
     {

@@ -36,8 +36,6 @@ class ShareDeleteManyRequest
      * IDs of shares to delete.
      *
      * @param list<string> $ids
-     *
-     * @return self
      */
     public function setIds(array $ids): self
     {

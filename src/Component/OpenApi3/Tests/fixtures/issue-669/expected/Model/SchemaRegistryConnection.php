@@ -53,8 +53,6 @@ class SchemaRegistryConnection extends \ArrayObject
     }
     /**
      * This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
-     * @return self
      */
     public function setUri(string $uri): self
     {
@@ -71,8 +69,6 @@ class SchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The FQDN pointing to the schema registry connection uri.
-     *
-     * @return self
      */
     public function setHost(string $host): self
     {
@@ -89,8 +85,6 @@ class SchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The port on which the schema registry is listening.
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {
@@ -107,8 +101,6 @@ class SchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The default user for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
-     * @return self
      */
     public function setUser(string $user): self
     {
@@ -125,8 +117,6 @@ class SchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The randomly generated password for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
-     * @return self
      */
     public function setPassword(string $password): self
     {
@@ -143,8 +133,6 @@ class SchemaRegistryConnection extends \ArrayObject
     }
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
-     * @return self
      */
     public function setSsl(bool $ssl): self
     {

@@ -33,8 +33,6 @@ class ResponseExistingAlert extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $alert
-     *
-     * @return self
      */
     public function setAlert(array $alert): self
     {

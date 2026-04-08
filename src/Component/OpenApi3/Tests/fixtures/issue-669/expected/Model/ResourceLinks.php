@@ -33,8 +33,6 @@ class ResourceLinks extends \ArrayObject
     }
     /**
      * A URI that can be used to retrieve the resource.
-     *
-     * @return self
      */
     public function setSelf(string $self): self
     {

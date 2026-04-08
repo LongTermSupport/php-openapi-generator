@@ -37,8 +37,6 @@ class DefaultTweetFieldsGeo extends \ArrayObject
     }
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
-     * @return self
      */
     public function setCoordinates(Point $coordinates): self
     {
@@ -55,8 +53,6 @@ class DefaultTweetFieldsGeo extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
-     * @return self
      */
     public function setPlaceId(string $placeId): self
     {

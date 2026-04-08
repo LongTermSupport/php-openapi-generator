@@ -33,8 +33,6 @@ class NotificationsThreadsThreadIdSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Whether to block all notifications from a thread.
-     *
-     * @return self
      */
     public function setIgnored(bool $ignored): self
     {

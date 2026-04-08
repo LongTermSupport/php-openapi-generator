@@ -67,8 +67,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsIt
     }
     /**
      * Date of when the service was enabled
-     *
-     * @return self
      */
     public function setStartDate(string $startDate): self
     {
@@ -85,8 +83,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsIt
     }
     /**
      * Date of when the service will expire
-     *
-     * @return self
      */
     public function setExpireDate(string $expireDate): self
     {
@@ -103,8 +99,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsIt
     }
     /**
      * Measure of total usage available in the service
-     *
-     * @return self
      */
     public function setPaid(int $paid): self
     {
@@ -121,8 +115,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsIt
     }
     /**
      * Service usage
-     *
-     * @return self
      */
     public function setUsed(int $used): self
     {

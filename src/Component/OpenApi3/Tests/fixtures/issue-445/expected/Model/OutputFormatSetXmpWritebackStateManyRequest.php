@@ -36,8 +36,6 @@ class OutputFormatSetXmpWritebackStateManyRequest
      * XMP writeback state changes to be processed.
      *
      * @param list<OutputFormatSetXmpWritebackStateRequestItem>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

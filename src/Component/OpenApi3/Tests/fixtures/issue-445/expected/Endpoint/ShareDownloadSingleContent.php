@@ -87,7 +87,6 @@ class ShareDownloadSingleContent extends \LongTermSupport\OpenApiGenerator\Compo
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentNotFoundException

@@ -37,8 +37,6 @@ class DropletBackupPolicyRecordNextBackupWindow extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format specifying the start of the Droplet's backup window.
-     *
-     * @return self
      */
     public function setStart(\DateTime $start): self
     {
@@ -55,8 +53,6 @@ class DropletBackupPolicyRecordNextBackupWindow extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format specifying the end of the Droplet's backup window.
-     *
-     * @return self
      */
     public function setEnd(\DateTime $end): self
     {

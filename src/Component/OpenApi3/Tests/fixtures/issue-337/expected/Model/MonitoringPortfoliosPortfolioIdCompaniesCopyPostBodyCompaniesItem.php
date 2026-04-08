@@ -33,8 +33,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBodyCompaniesItem extends 
     }
     /**
      * Company Safe Number or Connect ID. Not required when copyAll query parameter is set to true.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

@@ -46,8 +46,6 @@ class Language
     }
     /**
      * Language translations.
-     *
-     * @return self
      */
     public function setName(mixed $name): self
     {
@@ -64,8 +62,6 @@ class Language
     }
     /**
      * IETF language tag. E.g en, en-US, de.
-     *
-     * @return self
      */
     public function setIetf(string $ietf): self
     {
@@ -82,8 +78,6 @@ class Language
     }
     /**
      * Two letter ISO language code. E.g. en, de.
-     *
-     * @return self
      */
     public function setTwoLetterISOLanguageName(?string $twoLetterISOLanguageName): self
     {
@@ -100,8 +94,6 @@ class Language
     }
     /**
      * Three letter ISO language code. E.g. eng, deu.
-     *
-     * @return self
      */
     public function setThreeLetterISOLanguageName(?string $threeLetterISOLanguageName): self
     {
@@ -118,8 +110,6 @@ class Language
     }
     /**
      * Region code of the language. E.g. US, DE, CH.
-     *
-     * @return self
      */
     public function setRegionCode(?string $regionCode): self
     {

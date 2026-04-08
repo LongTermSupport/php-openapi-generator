@@ -59,7 +59,6 @@ class KubernetesDestroyAssociatedResourcesSelective extends \LongTermSupport\Ope
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\KubernetesDestroyAssociatedResourcesSelectiveUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\KubernetesDestroyAssociatedResourcesSelectiveNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\KubernetesDestroyAssociatedResourcesSelectiveTooManyRequestsException

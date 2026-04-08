@@ -45,8 +45,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * The unique identifier for the resource scheduled for deletion.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -63,8 +61,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * The name of the resource scheduled for deletion.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -81,8 +77,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format indicating when the resource was destroyed if the request was successful.
-     *
-     * @return self
      */
     public function setDestroyedAt(\DateTime $destroyedAt): self
     {
@@ -99,8 +93,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * A string indicating that the resource was not successfully destroyed and providing additional information.
-     *
-     * @return self
      */
     public function setErrorMessage(string $errorMessage): self
     {

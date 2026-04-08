@@ -53,8 +53,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * Unique identifier for the addon metadata item.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -71,8 +69,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The name of the metadata item.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -89,8 +85,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The display name of the metadata item.
-     *
-     * @return self
      */
     public function setDisplayName(string $displayName): self
     {
@@ -107,8 +101,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * A brief description of the metadata item.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -125,8 +117,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The data type of the metadata value.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -143,8 +133,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * @param list<string> $options
-     *
-     * @return self
      */
     public function setOptions(array $options): self
     {

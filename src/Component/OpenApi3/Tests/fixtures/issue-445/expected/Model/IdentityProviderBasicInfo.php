@@ -38,8 +38,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -56,8 +54,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
-     * @return self
      */
     public function setName(?string $name): self
     {
@@ -74,8 +70,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
-     * @return self
      */
     public function setDisplayName(?string $displayName): self
     {

@@ -38,8 +38,6 @@ class SchemaImportRequest
     }
     /**
      * ID of the file transfer identifying the file previously uploaded.
-     *
-     * @return self
      */
     public function setFileTransferId(string $fileTransferId): self
     {
@@ -56,8 +54,6 @@ class SchemaImportRequest
     }
     /**
      * Allow creating list items that refer to list items or contents that don't exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {
@@ -74,8 +70,6 @@ class SchemaImportRequest
     }
     /**
      * Import the list items belonging to the schema.
-     *
-     * @return self
      */
     public function setImportListItems(bool $importListItems): self
     {

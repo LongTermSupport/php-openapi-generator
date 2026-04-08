@@ -41,8 +41,6 @@ class KubernetesOptionsOptions extends \ArrayObject
     }
     /**
      * @param list<KubernetesRegion> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -59,8 +57,6 @@ class KubernetesOptionsOptions extends \ArrayObject
     }
     /**
      * @param list<KubernetesVersion> $versions
-     *
-     * @return self
      */
     public function setVersions(array $versions): self
     {
@@ -77,8 +73,6 @@ class KubernetesOptionsOptions extends \ArrayObject
     }
     /**
      * @param list<KubernetesSize> $sizes
-     *
-     * @return self
      */
     public function setSizes(array $sizes): self
     {

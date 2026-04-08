@@ -49,7 +49,6 @@ class AppsAddRepoToInstallation extends \LongTermSupport\OpenApiGenerator\Compon
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsAddRepoToInstallationForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsAddRepoToInstallationNotFoundException
      */

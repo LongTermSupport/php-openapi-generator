@@ -41,8 +41,6 @@ class GbPeopleReportReponseReportDirectorships extends \ArrayObject
     }
     /**
      * @param list<GbPeopleReportReponseReportDirectorshipsCurrentItem> $current
-     *
-     * @return self
      */
     public function setCurrent(array $current): self
     {
@@ -59,8 +57,6 @@ class GbPeopleReportReponseReportDirectorships extends \ArrayObject
     }
     /**
      * @param list<GbPeopleReportReponseReportDirectorshipsInactiveItem> $inactive
-     *
-     * @return self
      */
     public function setInactive(array $inactive): self
     {
@@ -77,8 +73,6 @@ class GbPeopleReportReponseReportDirectorships extends \ArrayObject
     }
     /**
      * @param list<GbPeopleReportReponseReportDirectorshipsPreviousItem> $previous
-     *
-     * @return self
      */
     public function setPrevious(array $previous): self
     {

@@ -39,8 +39,6 @@ class VpcPeeringCreate extends \ArrayObject
      * An array of the two peered VPCs IDs.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {

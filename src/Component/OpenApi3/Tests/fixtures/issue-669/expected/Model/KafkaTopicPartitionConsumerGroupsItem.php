@@ -37,8 +37,6 @@ class KafkaTopicPartitionConsumerGroupsItem extends \ArrayObject
     }
     /**
      * Name of the consumer group.
-     *
-     * @return self
      */
     public function setGroupName(string $groupName): self
     {
@@ -55,8 +53,6 @@ class KafkaTopicPartitionConsumerGroupsItem extends \ArrayObject
     }
     /**
      * The current offset of the consumer group.
-     *
-     * @return self
      */
     public function setOffset(int $offset): self
     {

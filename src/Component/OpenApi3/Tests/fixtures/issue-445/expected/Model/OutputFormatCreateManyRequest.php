@@ -36,8 +36,6 @@ class OutputFormatCreateManyRequest
      * Output format items to be created.
      *
      * @param list<OutputFormat>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

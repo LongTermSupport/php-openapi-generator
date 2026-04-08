@@ -72,11 +72,6 @@ class FindUsersByIdOrUsername extends \LongTermSupport\OpenApiGenerator\Componen
         $optionsResolver->addAllowedTypes('expansions', ['array']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return mixed
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
         $status = $response->getStatusCode();

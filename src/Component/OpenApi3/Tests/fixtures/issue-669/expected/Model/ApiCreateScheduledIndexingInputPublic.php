@@ -47,8 +47,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
      * Days for execution (day is represented same as in a cron expression, e.g. Monday begins with 1 )
      *
      * @param list<int> $days
-     *
-     * @return self
      */
     public function setDays(array $days): self
     {
@@ -65,8 +63,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base uuid for which the schedule is created
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(string $knowledgeBaseUuid): self
     {
@@ -83,8 +79,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Time of execution (HH:MM) UTC
-     *
-     * @return self
      */
     public function setTime(string $time): self
     {

@@ -33,8 +33,6 @@ class ApiCreateEvaluationDatasetOutput extends \ArrayObject
     }
     /**
      * Evaluation dataset uuid.
-     *
-     * @return self
      */
     public function setEvaluationDatasetUuid(string $evaluationDatasetUuid): self
     {

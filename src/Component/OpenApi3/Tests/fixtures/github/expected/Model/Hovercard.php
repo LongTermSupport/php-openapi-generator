@@ -33,8 +33,6 @@ class Hovercard extends \ArrayObject
     }
     /**
      * @param list<HovercardContextsItem> $contexts
-     *
-     * @return self
      */
     public function setContexts(array $contexts): self
     {

@@ -38,8 +38,6 @@ class LogsinkBaseVerbose extends \ArrayObject
     }
     /**
      * A unique identifier for Logsink
-     *
-     * @return self
      */
     public function setSinkId(string $sinkId): self
     {
@@ -56,8 +54,6 @@ class LogsinkBaseVerbose extends \ArrayObject
     }
     /**
      * The name of the Logsink
-     *
-     * @return self
      */
     public function setSinkName(string $sinkName): self
     {

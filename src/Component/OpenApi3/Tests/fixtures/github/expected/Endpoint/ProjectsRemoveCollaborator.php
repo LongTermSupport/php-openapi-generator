@@ -47,7 +47,6 @@ class ProjectsRemoveCollaborator extends \LongTermSupport\OpenApiGenerator\Compo
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ProjectsRemoveCollaboratorNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ProjectsRemoveCollaboratorUnsupportedMediaTypeException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ProjectsRemoveCollaboratorForbiddenException

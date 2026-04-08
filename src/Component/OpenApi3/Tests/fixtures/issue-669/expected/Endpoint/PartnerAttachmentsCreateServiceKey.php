@@ -45,7 +45,6 @@ class PartnerAttachmentsCreateServiceKey extends \LongTermSupport\OpenApiGenerat
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseEmptyJsonObject|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\PartnerAttachmentsCreateServiceKeyUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\PartnerAttachmentsCreateServiceKeyNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\PartnerAttachmentsCreateServiceKeyTooManyRequestsException

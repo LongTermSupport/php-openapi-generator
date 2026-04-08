@@ -143,8 +143,6 @@ class SchemaValidationException extends \ArrayObject
     }
     /**
      * @param list<PictureparkBusinessException>|null $exceptions
-     *
-     * @return self
      */
     public function setExceptions(?array $exceptions): self
     {

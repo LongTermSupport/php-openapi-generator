@@ -52,7 +52,6 @@ class MigrationsStartImport extends \LongTermSupport\OpenApiGenerator\Component\
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Import
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsStartImportUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsStartImportNotFoundException
      */

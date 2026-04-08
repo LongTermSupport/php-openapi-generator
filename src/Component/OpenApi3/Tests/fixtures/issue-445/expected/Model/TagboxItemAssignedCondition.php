@@ -34,8 +34,6 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
-     * @return self
      */
     public function setFieldPath(?string $fieldPath): self
     {
@@ -52,8 +50,6 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Ref Id of the list item that was assigned in the tagbox
-     *
-     * @return self
      */
     public function setRefId(?string $refId): self
     {

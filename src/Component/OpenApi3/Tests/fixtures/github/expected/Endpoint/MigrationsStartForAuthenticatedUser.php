@@ -46,7 +46,6 @@ class MigrationsStartForAuthenticatedUser extends \LongTermSupport\OpenApiGenera
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Migration
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsStartForAuthenticatedUserUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsStartForAuthenticatedUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsStartForAuthenticatedUserUnauthorizedException

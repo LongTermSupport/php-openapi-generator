@@ -49,8 +49,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * Size of the topic partition in bytes.
-     *
-     * @return self
      */
     public function setSize(int $size): self
     {
@@ -67,8 +65,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * An identifier for the partition.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -85,8 +81,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * The number of nodes that are in-sync (have the latest data) for the given partition
-     *
-     * @return self
      */
     public function setInSyncReplicas(int $inSyncReplicas): self
     {
@@ -103,8 +97,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * The earliest consumer offset amongst consumer groups.
-     *
-     * @return self
      */
     public function setEarliestOffset(int $earliestOffset): self
     {
@@ -121,8 +113,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * @param list<KafkaTopicPartitionConsumerGroupsItem>|null $consumerGroups
-     *
-     * @return self
      */
     public function setConsumerGroups(?array $consumerGroups): self
     {

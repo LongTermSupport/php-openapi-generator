@@ -37,8 +37,6 @@ class GbCompanyReportExampleResponseReportOtherInformation extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportOtherInformationAdvisorsItem> $advisors
-     *
-     * @return self
      */
     public function setAdvisors(array $advisors): self
     {
@@ -55,8 +53,6 @@ class GbCompanyReportExampleResponseReportOtherInformation extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportOtherInformationEmployeesInformationItem> $employeesInformation
-     *
-     * @return self
      */
     public function setEmployeesInformation(array $employeesInformation): self
     {

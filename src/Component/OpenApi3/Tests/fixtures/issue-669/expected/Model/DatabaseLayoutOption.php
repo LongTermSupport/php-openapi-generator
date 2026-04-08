@@ -50,8 +50,6 @@ class DatabaseLayoutOption extends \ArrayObject
      * An array of objects containing the slugs available with various node counts
      *
      * @param list<string> $sizes
-     *
-     * @return self
      */
     public function setSizes(array $sizes): self
     {

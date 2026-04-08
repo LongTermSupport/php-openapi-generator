@@ -52,7 +52,6 @@ class DatabasesGetKafkaSchemaVersion extends \LongTermSupport\OpenApiGenerator\C
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseKafkaSchemaVersion
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DatabasesGetKafkaSchemaVersionUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DatabasesGetKafkaSchemaVersionNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DatabasesGetKafkaSchemaVersionTooManyRequestsException

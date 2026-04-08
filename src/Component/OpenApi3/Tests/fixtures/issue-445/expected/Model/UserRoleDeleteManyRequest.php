@@ -36,8 +36,6 @@ class UserRoleDeleteManyRequest
      * IDs of the user roles to delete.
      *
      * @param list<string> $ids
-     *
-     * @return self
      */
     public function setIds(array $ids): self
     {

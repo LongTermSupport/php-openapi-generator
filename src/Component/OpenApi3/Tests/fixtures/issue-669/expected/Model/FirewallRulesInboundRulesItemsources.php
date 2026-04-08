@@ -61,8 +61,6 @@ class FirewallRulesInboundRulesItemsources extends \ArrayObject
      * An array of strings containing the IPv4 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the firewall will allow traffic.
      *
      * @param list<string> $addresses
-     *
-     * @return self
      */
     public function setAddresses(array $addresses): self
     {
@@ -83,8 +81,6 @@ class FirewallRulesInboundRulesItemsources extends \ArrayObject
      * An array containing the IDs of the Droplets to which the firewall will allow traffic.
      *
      * @param list<int> $dropletIds
-     *
-     * @return self
      */
     public function setDropletIds(array $dropletIds): self
     {
@@ -105,8 +101,6 @@ class FirewallRulesInboundRulesItemsources extends \ArrayObject
      * An array containing the IDs of the load balancers to which the firewall will allow traffic.
      *
      * @param list<string> $loadBalancerUids
-     *
-     * @return self
      */
     public function setLoadBalancerUids(array $loadBalancerUids): self
     {
@@ -127,8 +121,6 @@ class FirewallRulesInboundRulesItemsources extends \ArrayObject
      * An array containing the IDs of the Kubernetes clusters to which the firewall will allow traffic.
      *
      * @param list<string> $kubernetesIds
-     *
-     * @return self
      */
     public function setKubernetesIds(array $kubernetesIds): self
     {
@@ -145,8 +137,6 @@ class FirewallRulesInboundRulesItemsources extends \ArrayObject
     }
     /**
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {

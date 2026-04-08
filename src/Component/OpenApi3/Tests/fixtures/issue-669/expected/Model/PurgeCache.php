@@ -39,8 +39,6 @@ class PurgeCache extends \ArrayObject
      * An array of strings containing the path to the content to be purged from the CDN cache.
      *
      * @param list<string> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {

@@ -60,7 +60,6 @@ class RegistriesDeleteRepositoryTag extends \LongTermSupport\OpenApiGenerator\Co
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\RegistriesDeleteRepositoryTagUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\RegistriesDeleteRepositoryTagNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\RegistriesDeleteRepositoryTagTooManyRequestsException

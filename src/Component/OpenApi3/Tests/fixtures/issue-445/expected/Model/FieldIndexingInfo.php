@@ -50,8 +50,6 @@ class FieldIndexingInfo
     }
     /**
      * The field ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -68,8 +66,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for filtering.
-     *
-     * @return self
      */
     public function setIndex(bool $index): self
     {
@@ -86,8 +82,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for simple search.
-     *
-     * @return self
      */
     public function setSimpleSearch(bool $simpleSearch): self
     {
@@ -104,8 +98,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for sorting.
-     *
-     * @return self
      */
     public function setSortable(bool $sortable): self
     {
@@ -122,8 +114,6 @@ class FieldIndexingInfo
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {
@@ -140,8 +130,6 @@ class FieldIndexingInfo
     }
     /**
      * Indexing information of schema's fields related to this field (if existing).
-     *
-     * @return self
      */
     public function setRelatedSchemaIndexing(mixed $relatedSchemaIndexing): self
     {

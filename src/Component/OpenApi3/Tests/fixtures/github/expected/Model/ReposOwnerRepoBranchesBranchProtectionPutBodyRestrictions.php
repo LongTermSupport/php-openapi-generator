@@ -51,8 +51,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions extends \ArrayOb
      * The list of user `login`s with push access
      *
      * @param list<string> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -73,8 +71,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions extends \ArrayOb
      * The list of team `slug`s with push access
      *
      * @param list<string> $teams
-     *
-     * @return self
      */
     public function setTeams(array $teams): self
     {
@@ -95,8 +91,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions extends \ArrayOb
      * The list of app `slug`s with push access
      *
      * @param list<string> $apps
-     *
-     * @return self
      */
     public function setApps(array $apps): self
     {

@@ -34,8 +34,6 @@ class ContentRelationItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Content id that should be matched against.
-     *
-     * @return self
      */
     public function setContentId(?string $contentId): self
     {
@@ -52,8 +50,6 @@ class ContentRelationItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
-     * @return self
      */
     public function setFieldPath(?string $fieldPath): self
     {

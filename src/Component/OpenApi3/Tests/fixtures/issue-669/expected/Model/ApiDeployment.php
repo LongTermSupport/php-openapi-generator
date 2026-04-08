@@ -58,8 +58,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -76,8 +74,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -104,8 +100,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -122,8 +116,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Access your deployed agent here
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -140,8 +132,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -166,8 +156,6 @@ class ApiDeployment extends \ArrayObject
      *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
      *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
      *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {

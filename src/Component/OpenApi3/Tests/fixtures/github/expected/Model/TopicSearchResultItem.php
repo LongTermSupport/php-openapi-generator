@@ -184,8 +184,6 @@ class TopicSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItem> $textMatches
-     *
-     * @return self
      */
     public function setTextMatches(array $textMatches): self
     {
@@ -202,8 +200,6 @@ class TopicSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<TopicSearchResultItemRelatedItem>|null $related
-     *
-     * @return self
      */
     public function setRelated(?array $related): self
     {
@@ -220,8 +216,6 @@ class TopicSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<TopicSearchResultItemAliasesItem>|null $aliases
-     *
-     * @return self
      */
     public function setAliases(?array $aliases): self
     {

@@ -37,8 +37,6 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
     }
     /**
      * The new content of the file
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {
@@ -55,8 +53,6 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
     }
     /**
      * The new filename for the file
-     *
-     * @return self
      */
     public function setFilename(?string $filename): self
     {

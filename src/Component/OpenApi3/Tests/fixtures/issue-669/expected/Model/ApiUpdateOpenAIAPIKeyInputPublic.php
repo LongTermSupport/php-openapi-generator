@@ -41,8 +41,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * OpenAI API key
-     *
-     * @return self
      */
     public function setApiKey(string $apiKey): self
     {
@@ -59,8 +57,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
-     * @return self
      */
     public function setApiKeyUuid(string $apiKeyUuid): self
     {
@@ -77,8 +73,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

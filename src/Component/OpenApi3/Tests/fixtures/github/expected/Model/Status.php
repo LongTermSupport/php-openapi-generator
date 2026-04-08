@@ -143,8 +143,6 @@ class Status extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setCreator(?SimpleUser $creator): self
     {

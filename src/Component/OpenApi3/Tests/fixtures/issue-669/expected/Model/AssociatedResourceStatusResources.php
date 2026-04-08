@@ -49,8 +49,6 @@ class AssociatedResourceStatusResources extends \ArrayObject
     }
     /**
      * @param list<DestroyedAssociatedResource> $reservedIps
-     *
-     * @return self
      */
     public function setReservedIps(array $reservedIps): self
     {
@@ -67,8 +65,6 @@ class AssociatedResourceStatusResources extends \ArrayObject
     }
     /**
      * @param list<DestroyedAssociatedResource> $floatingIps
-     *
-     * @return self
      */
     public function setFloatingIps(array $floatingIps): self
     {
@@ -85,8 +81,6 @@ class AssociatedResourceStatusResources extends \ArrayObject
     }
     /**
      * @param list<DestroyedAssociatedResource> $snapshots
-     *
-     * @return self
      */
     public function setSnapshots(array $snapshots): self
     {
@@ -103,8 +97,6 @@ class AssociatedResourceStatusResources extends \ArrayObject
     }
     /**
      * @param list<DestroyedAssociatedResource> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {
@@ -121,8 +113,6 @@ class AssociatedResourceStatusResources extends \ArrayObject
     }
     /**
      * @param list<DestroyedAssociatedResource> $volumeSnapshots
-     *
-     * @return self
      */
     public function setVolumeSnapshots(array $volumeSnapshots): self
     {

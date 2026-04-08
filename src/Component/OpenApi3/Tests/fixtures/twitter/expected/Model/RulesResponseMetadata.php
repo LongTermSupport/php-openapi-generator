@@ -44,8 +44,6 @@ class RulesResponseMetadata extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $summary
-     *
-     * @return self
      */
     public function setSummary(array $summary): self
     {

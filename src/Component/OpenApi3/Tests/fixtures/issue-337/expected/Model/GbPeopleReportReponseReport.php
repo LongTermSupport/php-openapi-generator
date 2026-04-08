@@ -67,8 +67,6 @@ class GbPeopleReportReponseReport extends \ArrayObject
     }
     /**
      * @param list<GbPeopleReportReponseReportOtherAddressesItem> $otherAddresses
-     *
-     * @return self
      */
     public function setOtherAddresses(array $otherAddresses): self
     {

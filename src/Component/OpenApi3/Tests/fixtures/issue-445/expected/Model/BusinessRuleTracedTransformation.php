@@ -38,8 +38,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Trace reference ID of transformation.
-     *
-     * @return self
      */
     public function setTraceRefId(?string $traceRefId): self
     {
@@ -56,8 +54,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Serialized JSON of input of transformation
-     *
-     * @return self
      */
     public function setInput(?string $input): self
     {
@@ -74,8 +70,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Serialized JSON of output of transformation
-     *
-     * @return self
      */
     public function setOutput(?string $output): self
     {

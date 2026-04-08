@@ -37,8 +37,6 @@ class OutputFormatSetXmpWritebackStateRequestItem extends \ArrayObject
     }
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {
@@ -55,8 +53,6 @@ class OutputFormatSetXmpWritebackStateRequestItem extends \ArrayObject
     }
     /**
      * ID of the output format to set XMP writeback state for.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

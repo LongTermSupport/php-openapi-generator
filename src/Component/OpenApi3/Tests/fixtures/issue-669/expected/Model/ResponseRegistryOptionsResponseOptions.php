@@ -37,8 +37,6 @@ class ResponseRegistryOptionsResponseOptions extends \ArrayObject
     }
     /**
      * @param list<string> $availableRegions
-     *
-     * @return self
      */
     public function setAvailableRegions(array $availableRegions): self
     {
@@ -55,8 +53,6 @@ class ResponseRegistryOptionsResponseOptions extends \ArrayObject
     }
     /**
      * @param list<ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem> $subscriptionTiers
-     *
-     * @return self
      */
     public function setSubscriptionTiers(array $subscriptionTiers): self
     {

@@ -65,8 +65,6 @@ class AppStaticSiteSpeccors extends \ArrayObject
      * The set of allowed CORS origins.
      *
      * @param list<AppsStringMatch> $allowOrigins
-     *
-     * @return self
      */
     public function setAllowOrigins(array $allowOrigins): self
     {
@@ -87,8 +85,6 @@ class AppStaticSiteSpeccors extends \ArrayObject
      * The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
      *
      * @param list<string> $allowMethods
-     *
-     * @return self
      */
     public function setAllowMethods(array $allowMethods): self
     {
@@ -109,8 +105,6 @@ class AppStaticSiteSpeccors extends \ArrayObject
      * The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
      *
      * @param list<string> $allowHeaders
-     *
-     * @return self
      */
     public function setAllowHeaders(array $allowHeaders): self
     {
@@ -131,8 +125,6 @@ class AppStaticSiteSpeccors extends \ArrayObject
      * The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
      *
      * @param list<string> $exposeHeaders
-     *
-     * @return self
      */
     public function setExposeHeaders(array $exposeHeaders): self
     {
@@ -149,8 +141,6 @@ class AppStaticSiteSpeccors extends \ArrayObject
     }
     /**
      * An optional duration specifying how long browsers can cache the results of a preflight request. This configures the `Access-Control-Max-Age` header.
-     *
-     * @return self
      */
     public function setMaxAge(string $maxAge): self
     {
@@ -167,8 +157,6 @@ class AppStaticSiteSpeccors extends \ArrayObject
     }
     /**
      * Whether browsers should expose the response to the client-side JavaScript code when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials` header.
-     *
-     * @return self
      */
     public function setAllowCredentials(bool $allowCredentials): self
     {

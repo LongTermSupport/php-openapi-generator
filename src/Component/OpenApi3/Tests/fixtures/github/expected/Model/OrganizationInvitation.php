@@ -92,8 +92,6 @@ class OrganizationInvitation extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setInviter(?SimpleUser $inviter): self
     {

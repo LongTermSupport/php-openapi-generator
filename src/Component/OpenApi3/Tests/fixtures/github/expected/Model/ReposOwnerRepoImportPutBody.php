@@ -49,8 +49,6 @@ class ReposOwnerRepoImportPutBody extends \ArrayObject
     }
     /**
      * The URL of the originating repository.
-     *
-     * @return self
      */
     public function setVcsUrl(string $vcsUrl): self
     {
@@ -67,8 +65,6 @@ class ReposOwnerRepoImportPutBody extends \ArrayObject
     }
     /**
      * The originating VCS type. Can be one of `subversion`, `git`, `mercurial`, or `tfvc`. Please be aware that without this parameter, the import job will take additional time to detect the VCS type before beginning the import. This detection step will be reflected in the response.
-     *
-     * @return self
      */
     public function setVcs(string $vcs): self
     {
@@ -85,8 +81,6 @@ class ReposOwnerRepoImportPutBody extends \ArrayObject
     }
     /**
      * If authentication is required, the username to provide to `vcs_url`.
-     *
-     * @return self
      */
     public function setVcsUsername(string $vcsUsername): self
     {
@@ -103,8 +97,6 @@ class ReposOwnerRepoImportPutBody extends \ArrayObject
     }
     /**
      * If authentication is required, the password to provide to `vcs_url`.
-     *
-     * @return self
      */
     public function setVcsPassword(string $vcsPassword): self
     {
@@ -121,8 +113,6 @@ class ReposOwnerRepoImportPutBody extends \ArrayObject
     }
     /**
      * For a tfvc import, the name of the project that is being imported.
-     *
-     * @return self
      */
     public function setTfvcProject(string $tfvcProject): self
     {

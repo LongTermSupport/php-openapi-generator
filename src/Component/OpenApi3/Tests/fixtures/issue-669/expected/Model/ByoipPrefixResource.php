@@ -49,8 +49,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Unique identifier for the allocation
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -67,8 +65,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * The BYOIP prefix UUID
-     *
-     * @return self
      */
     public function setByoip(string $byoip): self
     {
@@ -85,8 +81,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Region where the allocation is made
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -103,8 +97,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * The resource associated with the allocation
-     *
-     * @return self
      */
     public function setResource(string $resource): self
     {
@@ -121,8 +113,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Time when the allocation was assigned
-     *
-     * @return self
      */
     public function setAssignedAt(\DateTime $assignedAt): self
     {

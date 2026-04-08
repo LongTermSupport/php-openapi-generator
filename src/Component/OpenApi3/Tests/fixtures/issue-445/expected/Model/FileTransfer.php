@@ -56,8 +56,6 @@ class FileTransfer
     }
     /**
      * ID of file transfer.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -74,8 +72,6 @@ class FileTransfer
     }
     /**
      * Name of file transfer.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -96,8 +92,6 @@ class FileTransfer
      * Replaced in favor of RequestId. Client provided identifier.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setIdentifier(?string $identifier): self
     {
@@ -114,8 +108,6 @@ class FileTransfer
     }
     /**
      * Client provided identifier.
-     *
-     * @return self
      */
     public function setRequestId(string $requestId): self
     {
@@ -132,8 +124,6 @@ class FileTransfer
     }
     /**
      * ID of transfer.
-     *
-     * @return self
      */
     public function setTransferId(string $transferId): self
     {
@@ -150,8 +140,6 @@ class FileTransfer
     }
     /**
      * State of file transfer.
-     *
-     * @return self
      */
     public function setState(mixed $state): self
     {
@@ -168,8 +156,6 @@ class FileTransfer
     }
     /**
      * ID of Content created for file.
-     *
-     * @return self
      */
     public function setContentId(?string $contentId): self
     {

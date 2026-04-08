@@ -46,7 +46,6 @@ class ActivityCheckRepoIsStarredByAuthenticatedUser extends \LongTermSupport\Ope
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityCheckRepoIsStarredByAuthenticatedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityCheckRepoIsStarredByAuthenticatedUserUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityCheckRepoIsStarredByAuthenticatedUserForbiddenException

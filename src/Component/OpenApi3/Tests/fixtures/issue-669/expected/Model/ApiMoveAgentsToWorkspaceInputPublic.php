@@ -43,8 +43,6 @@ class ApiMoveAgentsToWorkspaceInputPublic extends \ArrayObject
      * Agent uuids
      *
      * @param list<string> $agentUuids
-     *
-     * @return self
      */
     public function setAgentUuids(array $agentUuids): self
     {
@@ -61,8 +59,6 @@ class ApiMoveAgentsToWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Workspace uuid to move agents to
-     *
-     * @return self
      */
     public function setWorkspaceUuid(string $workspaceUuid): self
     {

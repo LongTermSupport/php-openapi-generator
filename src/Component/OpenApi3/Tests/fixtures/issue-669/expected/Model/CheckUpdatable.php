@@ -51,8 +51,6 @@ class CheckUpdatable extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -69,8 +67,6 @@ class CheckUpdatable extends \ArrayObject
     }
     /**
      * The type of health check to perform.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -87,8 +83,6 @@ class CheckUpdatable extends \ArrayObject
     }
     /**
      * The endpoint to perform healthchecks on.
-     *
-     * @return self
      */
     public function setTarget(string $target): self
     {
@@ -109,8 +103,6 @@ class CheckUpdatable extends \ArrayObject
      * An array containing the selected regions to perform healthchecks from.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -127,8 +119,6 @@ class CheckUpdatable extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the check is enabled/disabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

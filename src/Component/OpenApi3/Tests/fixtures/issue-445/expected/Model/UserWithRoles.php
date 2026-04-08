@@ -76,8 +76,6 @@ class UserWithRoles
      * IDs of user roles user is assigned to
      *
      * @param list<string>|null $userRoleIds
-     *
-     * @return self
      */
     public function setUserRoleIds(?array $userRoleIds): self
     {
@@ -94,8 +92,6 @@ class UserWithRoles
     }
     /**
      * User's Picturepark ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -112,8 +108,6 @@ class UserWithRoles
     }
     /**
      * User's first name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -130,8 +124,6 @@ class UserWithRoles
     }
     /**
      * User's last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -148,8 +140,6 @@ class UserWithRoles
     }
     /**
      * Email address of the user (doubles as username).
-     *
-     * @return self
      */
     public function setEmailAddress(string $emailAddress): self
     {
@@ -166,8 +156,6 @@ class UserWithRoles
     }
     /**
      * Authorization state the user is currently in.
-     *
-     * @return self
      */
     public function setAuthorizationState(mixed $authorizationState): self
     {
@@ -184,8 +172,6 @@ class UserWithRoles
     }
     /**
      * Life cycle state the user is currently in.
-     *
-     * @return self
      */
     public function setLifeCycle(mixed $lifeCycle): self
     {
@@ -202,8 +188,6 @@ class UserWithRoles
     }
     /**
      * A locked user is not allowed to log in.
-     *
-     * @return self
      */
     public function setIsLocked(bool $isLocked): self
     {
@@ -220,8 +204,6 @@ class UserWithRoles
     }
     /**
      * A support user is a user created for Picturepark support personnel.
-     *
-     * @return self
      */
     public function setIsSupportUser(bool $isSupportUser): self
     {
@@ -238,8 +220,6 @@ class UserWithRoles
     }
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
-     * @return self
      */
     public function setIsReadOnly(bool $isReadOnly): self
     {
@@ -256,8 +236,6 @@ class UserWithRoles
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
-     * @return self
      */
     public function setIsFederated(bool $isFederated): self
     {

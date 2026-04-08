@@ -33,8 +33,6 @@ class ResponseAddonsGetAppMetadata extends \ArrayObject
     }
     /**
      * @param list<AddonsAppMetadata> $metadata
-     *
-     * @return self
      */
     public function setMetadata(array $metadata): self
     {

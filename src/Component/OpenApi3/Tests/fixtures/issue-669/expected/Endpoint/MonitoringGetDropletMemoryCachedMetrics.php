@@ -58,7 +58,6 @@ class MonitoringGetDropletMemoryCachedMetrics extends \LongTermSupport\OpenApiGe
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Metrics|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\MonitoringGetDropletMemoryCachedMetricsUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\MonitoringGetDropletMemoryCachedMetricsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\MonitoringGetDropletMemoryCachedMetricsInternalServerErrorException

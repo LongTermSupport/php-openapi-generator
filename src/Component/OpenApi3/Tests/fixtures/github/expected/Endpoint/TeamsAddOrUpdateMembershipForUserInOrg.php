@@ -65,7 +65,6 @@ class TeamsAddOrUpdateMembershipForUserInOrg extends \LongTermSupport\OpenApiGen
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamMembership
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsAddOrUpdateMembershipForUserInOrgForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsAddOrUpdateMembershipForUserInOrgUnprocessableEntityException
      */

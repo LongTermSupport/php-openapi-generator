@@ -33,8 +33,6 @@ class ResponseAddonsList extends \ArrayObject
     }
     /**
      * @param list<AddonsResource> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

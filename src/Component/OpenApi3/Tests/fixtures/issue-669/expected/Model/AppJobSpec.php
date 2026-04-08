@@ -90,8 +90,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -158,8 +156,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
-     * @return self
      */
     public function setDockerfilePath(string $dockerfilePath): self
     {
@@ -176,8 +172,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
-     * @return self
      */
     public function setBuildCommand(string $buildCommand): self
     {
@@ -194,8 +188,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
-     * @return self
      */
     public function setRunCommand(string $runCommand): self
     {
@@ -212,8 +204,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
-     * @return self
      */
     public function setSourceDir(string $sourceDir): self
     {
@@ -234,8 +224,6 @@ class AppJobSpec extends \ArrayObject
      * A list of environment variables made available to the component.
      *
      * @param list<AppVariableDefinition> $envs
-     *
-     * @return self
      */
     public function setEnvs(array $envs): self
     {
@@ -252,8 +240,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
-     * @return self
      */
     public function setEnvironmentSlug(string $environmentSlug): self
     {
@@ -274,8 +260,6 @@ class AppJobSpec extends \ArrayObject
      * A list of configured log forwarding destinations.
      *
      * @param list<AppLogDestinationDefinition> $logDestinations
-     *
-     * @return self
      */
     public function setLogDestinations(array $logDestinations): self
     {
@@ -292,8 +276,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
-     * @return self
      */
     public function setInstanceCount(int $instanceCount): self
     {
@@ -310,8 +292,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
-     * @return self
      */
     public function setInstanceSizeSlug(mixed $instanceSizeSlug): self
     {
@@ -328,8 +308,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
-     * @return self
      */
     public function setAutoscaling(AppComponentInstanceBaseAutoscaling $autoscaling): self
     {
@@ -352,8 +330,6 @@ class AppJobSpec extends \ArrayObject
      * - PRE_DEPLOY: Indicates a job that runs before an app deployment.
      * - POST_DEPLOY: Indicates a job that runs after an app deployment.
      * - FAILED_DEPLOY: Indicates a job that runs after a component fails to deploy.
-     *
-     * @return self
      */
     public function setKind(string $kind): self
     {

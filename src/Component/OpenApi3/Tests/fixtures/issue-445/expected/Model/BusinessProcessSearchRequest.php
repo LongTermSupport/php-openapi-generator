@@ -53,8 +53,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * Limits the document count of the result set.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -71,8 +69,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -89,8 +85,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -107,8 +101,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -129,8 +121,6 @@ class BusinessProcessSearchRequest
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -149,8 +139,6 @@ class BusinessProcessSearchRequest
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the BusinessProcessSearchResult.
      * Warning! It severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {

@@ -94,8 +94,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The human-readable string you wish to use when displaying the Droplet name. The name, if set to a domain name managed in the DigitalOcean DNS management system, will configure a PTR record for the Droplet. The name set during creation will also determine the hostname for the Droplet in its internal configuration.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -112,8 +110,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The slug identifier for the region that you wish to deploy the Droplet in. If the specific datacenter is not not important, a slug prefix (e.g. `nyc`) can be used to deploy the Droplet in any of the that region's locations (`nyc1`, `nyc2`, or `nyc3`). If the region is omitted from the create request completely, the Droplet may deploy in any region.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -130,8 +126,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The slug identifier for the size that you wish to select for this Droplet.
-     *
-     * @return self
      */
     public function setSize(string $size): self
     {
@@ -148,8 +142,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The image ID of a public or private image or the slug identifier for a public image. This image will be the base image for your Droplet.<br>Requires `image:read` scope.
-     *
-     * @return self
      */
     public function setImage(mixed $image): self
     {
@@ -170,8 +162,6 @@ class DropletSingleCreate extends \ArrayObject
      * An array containing the IDs or fingerprints of the SSH keys that you wish to embed in the Droplet's root account upon creation. You must add the keys to your team before they can be embedded on a Droplet.<br>Requires `ssh_key:read` scope.
      *
      * @param list<mixed> $sshKeys
-     *
-     * @return self
      */
     public function setSshKeys(array $sshKeys): self
     {
@@ -188,8 +178,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether automated backups should be enabled for the Droplet.
-     *
-     * @return self
      */
     public function setBackups(bool $backups): self
     {
@@ -216,8 +204,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to enable IPv6 on the Droplet.
-     *
-     * @return self
      */
     public function setIpv6(bool $ipv6): self
     {
@@ -234,8 +220,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to install the DigitalOcean agent for monitoring.
-     *
-     * @return self
      */
     public function setMonitoring(bool $monitoring): self
     {
@@ -256,8 +240,6 @@ class DropletSingleCreate extends \ArrayObject
      * A flat array of tag names as strings to apply to the Droplet after it is created. Tag names can either be existing or new tags.<br>Requires `tag:create` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {
@@ -274,8 +256,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A string containing 'user data' which may be used to configure the Droplet on first boot, often a 'cloud-config' file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
-     * @return self
      */
     public function setUserData(string $userData): self
     {
@@ -296,8 +276,6 @@ class DropletSingleCreate extends \ArrayObject
      * This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setPrivateNetworking(bool $privateNetworking): self
     {
@@ -318,8 +296,6 @@ class DropletSingleCreate extends \ArrayObject
      * An array of IDs for block storage volumes that will be attached to the Droplet once created. The volumes must not already be attached to an existing Droplet.<br>Requires `block_storage:read` scpoe.
      *
      * @param list<string> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {
@@ -336,8 +312,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Droplet will be assigned. If excluded, the Droplet will be assigned to your account's default VPC for the region.<br>Requires `vpc:read` scope.
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -354,8 +328,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to install the DigitalOcean agent used for providing access to the Droplet web console in the control panel. By default, the agent is installed on new Droplets but installation errors (i.e. OS not supported) are ignored. To prevent it from being installed, set to `false`. To make installation errors fatal, explicitly set it to `true`.
-     *
-     * @return self
      */
     public function setWithDropletAgent(bool $withDropletAgent): self
     {

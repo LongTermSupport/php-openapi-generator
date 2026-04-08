@@ -45,8 +45,6 @@ class ReposOwnerRepoMilestonesMilestoneNumberPatchBody extends \ArrayObject
     }
     /**
      * The title of the milestone.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -63,8 +61,6 @@ class ReposOwnerRepoMilestonesMilestoneNumberPatchBody extends \ArrayObject
     }
     /**
      * The state of the milestone. Either `open` or `closed`.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -81,8 +77,6 @@ class ReposOwnerRepoMilestonesMilestoneNumberPatchBody extends \ArrayObject
     }
     /**
      * A description of the milestone.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -99,8 +93,6 @@ class ReposOwnerRepoMilestonesMilestoneNumberPatchBody extends \ArrayObject
     }
     /**
      * The milestone due date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
-     * @return self
      */
     public function setDueOn(string $dueOn): self
     {

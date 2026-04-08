@@ -48,8 +48,6 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
-     * @return self
      */
     public function setFileUploadDataset(ApiFileUploadDataSource $fileUploadDataset): self
     {
@@ -66,8 +64,6 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     }
     /**
      * The name of the agent evaluation dataset.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

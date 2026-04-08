@@ -60,8 +60,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -78,8 +76,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Bandwidth (in Mbps) of the connection.
-     *
-     * @return self
      */
     public function setConnectionBandwidthInMbps(int $connectionBandwidthInMbps): self
     {
@@ -96,8 +92,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * The region to create the partner attachment.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -128,8 +122,6 @@ class PartnerAttachmentWritable extends \ArrayObject
      * An array of VPCs IDs.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {
@@ -146,8 +138,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional associated partner attachment UUID
-     *
-     * @return self
      */
     public function setParentUuid(string $parentUuid): self
     {
@@ -164,8 +154,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional BGP configurations
-     *
-     * @return self
      */
     public function setBgp(PartnerAttachmentWritableBgp $bgp): self
     {
@@ -182,8 +170,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional redundancy zone for the partner attachment.
-     *
-     * @return self
      */
     public function setRedundancyZone(string $redundancyZone): self
     {

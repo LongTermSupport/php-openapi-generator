@@ -44,8 +44,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
      * IDs of key fields.
      *
      * @param list<string> $keyFieldIds
-     *
-     * @return self
      */
     public function setKeyFieldIds(array $keyFieldIds): self
     {
@@ -62,8 +60,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * Indicates if lookup shall be performed case sensitive.
-     *
-     * @return self
      */
     public function setCaseSensitive(bool $caseSensitive): self
     {
@@ -80,8 +76,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * Indicates if child schemas should also be included.
-     *
-     * @return self
      */
     public function setIncludeAllSchemaChildren(bool $includeAllSchemaChildren): self
     {

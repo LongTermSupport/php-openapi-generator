@@ -35,8 +35,6 @@ class ResponseByoipPrefixList extends \ArrayObject
     }
     /**
      * @param list<ByoipPrefix> $byoipPrefixes
-     *
-     * @return self
      */
     public function setByoipPrefixes(array $byoipPrefixes): self
     {

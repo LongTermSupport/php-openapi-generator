@@ -70,8 +70,6 @@ class ListItem
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -88,8 +86,6 @@ class ListItem
     }
     /**
      * The list item id.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -106,8 +102,6 @@ class ListItem
     }
     /**
      * The id of the schema with schema type list.
-     *
-     * @return self
      */
     public function setContentSchemaId(?string $contentSchemaId): self
     {
@@ -124,8 +118,6 @@ class ListItem
     }
     /**
      * Contains language specific display values, rendered according to the list schema's display pattern configuration.
-     *
-     * @return self
      */
     public function setDisplayValues(mixed $displayValues): self
     {
@@ -146,8 +138,6 @@ class ListItem
      * The content data of the list item.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -168,8 +158,6 @@ class ListItem
      * All the ids of the broken references (tagboxes)
      *
      * @param list<string>|null $brokenReferenceIds
-     *
-     * @return self
      */
     public function setBrokenReferenceIds(?array $brokenReferenceIds): self
     {
@@ -190,8 +178,6 @@ class ListItem
      * All the target ids of the broken relations
      *
      * @param list<string>|null $brokenRelationTargetIds
-     *
-     * @return self
      */
     public function setBrokenRelationTargetIds(?array $brokenRelationTargetIds): self
     {
@@ -212,8 +198,6 @@ class ListItem
      * All the ids of the broken indirect references (tagbox that has a property that reference a broken tagbox)
      *
      * @param list<string>|null $brokenIndirectReferenceIds
-     *
-     * @return self
      */
     public function setBrokenIndirectReferenceIds(?array $brokenIndirectReferenceIds): self
     {
@@ -230,8 +214,6 @@ class ListItem
     }
     /**
      * LifeCycle of list item
-     *
-     * @return self
      */
     public function setLifeCycle(mixed $lifeCycle): self
     {

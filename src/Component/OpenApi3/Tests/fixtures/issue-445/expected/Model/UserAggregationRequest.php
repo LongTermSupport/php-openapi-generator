@@ -79,8 +79,6 @@ class UserAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -101,8 +99,6 @@ class UserAggregationRequest extends \ArrayObject
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -119,8 +115,6 @@ class UserAggregationRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -137,8 +131,6 @@ class UserAggregationRequest extends \ArrayObject
     }
     /**
      * Return only users in certain life cycle state(s).
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -159,8 +151,6 @@ class UserAggregationRequest extends \ArrayObject
      * Return only users with certain user rights.
      *
      * @param list<string>|null $userRightsFilter
-     *
-     * @return self
      */
     public function setUserRightsFilter(?array $userRightsFilter): self
     {
@@ -191,8 +181,6 @@ class UserAggregationRequest extends \ArrayObject
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -209,8 +197,6 @@ class UserAggregationRequest extends \ArrayObject
     }
     /**
      * Includes the service user in result.
-     *
-     * @return self
      */
     public function setIncludeServiceUser(bool $includeServiceUser): self
     {
@@ -229,8 +215,6 @@ class UserAggregationRequest extends \ArrayObject
     /**
      * Restricts the results to users that are editable for calling user.
      * If set to true, IncludeServiceUser is ignored.
-     *
-     * @return self
      */
     public function setEditableOnly(bool $editableOnly): self
     {
@@ -251,8 +235,6 @@ class UserAggregationRequest extends \ArrayObject
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase> $aggregators
-     *
-     * @return self
      */
     public function setAggregators(array $aggregators): self
     {

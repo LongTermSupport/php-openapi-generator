@@ -41,8 +41,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem extends \ArrayObject
     }
     /**
      * The text to be displayed on a button in the web UI. The maximum size is 20 characters.
-     *
-     * @return self
      */
     public function setLabel(string $label): self
     {
@@ -59,8 +57,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem extends \ArrayObject
     }
     /**
      * A short explanation of what this action would do. The maximum size is 40 characters.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -77,8 +73,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem extends \ArrayObject
     }
     /**
      * A reference for the action on the integrator's system. The maximum size is 20 characters.
-     *
-     * @return self
      */
     public function setIdentifier(string $identifier): self
     {

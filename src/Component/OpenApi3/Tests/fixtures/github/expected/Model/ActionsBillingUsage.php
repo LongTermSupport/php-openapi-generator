@@ -42,8 +42,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The sum of the free and paid GitHub Actions minutes used.
-     *
-     * @return self
      */
     public function setTotalMinutesUsed(int $totalMinutesUsed): self
     {
@@ -60,8 +58,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The total paid GitHub Actions minutes used.
-     *
-     * @return self
      */
     public function setTotalPaidMinutesUsed(int $totalPaidMinutesUsed): self
     {
@@ -78,8 +74,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The amount of free GitHub Actions minutes available.
-     *
-     * @return self
      */
     public function setIncludedMinutes(int $includedMinutes): self
     {

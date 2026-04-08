@@ -38,8 +38,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {
@@ -56,8 +54,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
-     * @return self
      */
     public function setMaximumItems(?int $maximumItems): self
     {
@@ -74,8 +70,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
-     * @return self
      */
     public function setMinimumItems(?int $minimumItems): self
     {

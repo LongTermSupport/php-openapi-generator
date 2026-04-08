@@ -33,8 +33,6 @@ class SqlMode extends \ArrayObject
     }
     /**
      * A string specifying the configured SQL modes for the MySQL cluster.
-     *
-     * @return self
      */
     public function setSqlMode(string $sqlMode): self
     {

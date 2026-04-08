@@ -33,8 +33,6 @@ class ApiRunEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * @param list<string> $evaluationRunUuids
-     *
-     * @return self
      */
     public function setEvaluationRunUuids(array $evaluationRunUuids): self
     {

@@ -143,8 +143,6 @@ class SchemaInUseFieldException extends \ArrayObject
     }
     /**
      * @param list<string>|null $fieldNamespaces
-     *
-     * @return self
      */
     public function setFieldNamespaces(?array $fieldNamespaces): self
     {

@@ -33,8 +33,6 @@ class AutoscalePoolStaticConfig extends \ArrayObject
     }
     /**
      * Fixed number of instances in an autoscale pool.
-     *
-     * @return self
      */
     public function setTargetNumberInstances(int $targetNumberInstances): self
     {

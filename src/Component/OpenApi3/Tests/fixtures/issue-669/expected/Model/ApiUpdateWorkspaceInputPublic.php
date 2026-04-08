@@ -41,8 +41,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * The new description of the workspace
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -59,8 +57,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * The new name of the workspace
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -77,8 +73,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Workspace UUID.
-     *
-     * @return self
      */
     public function setWorkspaceUuid(string $workspaceUuid): self
     {

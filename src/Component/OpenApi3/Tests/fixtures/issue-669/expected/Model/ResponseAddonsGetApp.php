@@ -33,8 +33,6 @@ class ResponseAddonsGetApp extends \ArrayObject
     }
     /**
      * @param list<AddonsAppInfo> $apps
-     *
-     * @return self
      */
     public function setApps(array $apps): self
     {

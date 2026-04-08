@@ -132,8 +132,6 @@ class BusinessRuleConditionInvalidTriggerPointActionException extends \ArrayObje
     }
     /**
      * @param list<string>|null $allowedActions
-     *
-     * @return self
      */
     public function setAllowedActions(?array $allowedActions): self
     {

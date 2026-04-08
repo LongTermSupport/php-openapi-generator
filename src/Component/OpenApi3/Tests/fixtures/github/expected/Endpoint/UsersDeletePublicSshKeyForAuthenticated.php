@@ -44,7 +44,6 @@ class UsersDeletePublicSshKeyForAuthenticated extends \LongTermSupport\OpenApiGe
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersDeletePublicSshKeyForAuthenticatedNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersDeletePublicSshKeyForAuthenticatedForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersDeletePublicSshKeyForAuthenticatedUnauthorizedException

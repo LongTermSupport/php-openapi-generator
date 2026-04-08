@@ -53,8 +53,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key creation date
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -71,8 +69,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
-     * @return self
      */
     public function setCreatedBy(string $createdBy): self
     {
@@ -89,8 +85,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key deleted date
-     *
-     * @return self
      */
     public function setDeletedAt(\DateTime $deletedAt): self
     {
@@ -107,8 +101,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -125,8 +117,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key last updated date
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -143,8 +133,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Uuid
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

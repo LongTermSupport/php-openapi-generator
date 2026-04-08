@@ -61,8 +61,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A unique identifier for each autoscale pool instance. This is automatically generated upon autoscale pool creation.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -79,8 +77,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The human-readable name set for the autoscale pool.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -101,8 +97,6 @@ class AutoscalePool extends \ArrayObject
      * The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration).
      *
      * @param array<string, mixed> $config
-     *
-     * @return self
      */
     public function setConfig(array $config): self
     {
@@ -139,8 +133,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -157,8 +149,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -175,8 +165,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The current status of the autoscale pool.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -193,8 +181,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The number of active Droplets in the autoscale pool.
-     *
-     * @return self
      */
     public function setActiveResourcesCount(int $activeResourcesCount): self
     {

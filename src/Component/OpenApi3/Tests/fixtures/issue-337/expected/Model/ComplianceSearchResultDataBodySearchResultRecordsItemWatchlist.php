@@ -34,8 +34,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist extends \Ar
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItem> $matches
-     *
-     * @return self
      */
     public function setMatches(array $matches): self
     {

@@ -46,7 +46,6 @@ class UsersSetPrimaryEmailVisibilityForAuthenticated extends \LongTermSupport\Op
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersSetPrimaryEmailVisibilityForAuthenticatedNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersSetPrimaryEmailVisibilityForAuthenticatedForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersSetPrimaryEmailVisibilityForAuthenticatedUnauthorizedException

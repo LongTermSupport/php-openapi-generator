@@ -37,8 +37,6 @@ class EntityIndices extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
-     * @return self
      */
     public function setStart(int $start): self
     {
@@ -55,8 +53,6 @@ class EntityIndices extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
-     * @return self
      */
     public function setEnd(int $end): self
     {

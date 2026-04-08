@@ -43,8 +43,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $permissions
-     *
-     * @return self
      */
     public function setPermissions(array $permissions): self
     {
@@ -61,8 +59,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
-     * @return self
      */
     public function setRepositorySelection(string $repositorySelection): self
     {
@@ -99,8 +95,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setAccount(?SimpleUser $account): self
     {

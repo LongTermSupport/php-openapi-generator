@@ -33,8 +33,6 @@ class ApiRegenerateModelAPIKeyOutput extends \ArrayObject
     }
     /**
      * Model API Key Info
-     *
-     * @return self
      */
     public function setApiKeyInfo(ApiModelAPIKeyInfo $apiKeyInfo): self
     {

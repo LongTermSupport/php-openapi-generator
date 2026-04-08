@@ -33,8 +33,6 @@ class ApiEvaluationTestCaseMetricList extends \ArrayObject
     }
     /**
      * @param list<string> $metricUuids
-     *
-     * @return self
      */
     public function setMetricUuids(array $metricUuids): self
     {

@@ -55,8 +55,6 @@ class UserInstallationsInstallationIdRepositoriesGetResponse200 extends \ArrayOb
     }
     /**
      * @param list<Repository> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {

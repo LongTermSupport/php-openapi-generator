@@ -43,8 +43,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -61,8 +59,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {
@@ -83,8 +79,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
      * The models
      *
      * @param list<ApiModelPublic> $models
-     *
-     * @return self
      */
     public function setModels(array $models): self
     {

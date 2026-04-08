@@ -73,8 +73,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Name of the product being billed in the invoice item.
-     *
-     * @return self
      */
     public function setProduct(string $product): self
     {
@@ -91,8 +89,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * UUID of the resource billing in the invoice item if available.
-     *
-     * @return self
      */
     public function setResourceUuid(string $resourceUuid): self
     {
@@ -109,8 +105,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * ID of the resource billing in the invoice item if available.
-     *
-     * @return self
      */
     public function setResourceId(string $resourceId): self
     {
@@ -127,8 +121,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Description of the invoice item when it is a grouped set of usage, such  as DOKS or databases.
-     *
-     * @return self
      */
     public function setGroupDescription(string $groupDescription): self
     {
@@ -145,8 +137,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Description of the invoice item.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -163,8 +153,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Billed amount of this invoice item. Billed in USD.
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {
@@ -181,8 +169,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Duration of time this invoice item was used and subsequently billed.
-     *
-     * @return self
      */
     public function setDuration(string $duration): self
     {
@@ -199,8 +185,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Unit of time for duration.
-     *
-     * @return self
      */
     public function setDurationUnit(string $durationUnit): self
     {
@@ -217,8 +201,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Time the invoice item began to be billed for usage.
-     *
-     * @return self
      */
     public function setStartTime(string $startTime): self
     {
@@ -235,8 +217,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Time the invoice item stopped being billed for usage.
-     *
-     * @return self
      */
     public function setEndTime(string $endTime): self
     {
@@ -253,8 +233,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Name of the DigitalOcean Project this resource belongs to.
-     *
-     * @return self
      */
     public function setProjectName(string $projectName): self
     {

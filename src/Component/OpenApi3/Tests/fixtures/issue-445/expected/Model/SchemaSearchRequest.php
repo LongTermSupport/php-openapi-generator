@@ -72,8 +72,6 @@ class SchemaSearchRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -94,8 +92,6 @@ class SchemaSearchRequest
      * An optional list of search behaviors. All the passed behaviors will be applied in the specified order.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -116,8 +112,6 @@ class SchemaSearchRequest
      * Sorts the search results. Currently only sorting on the Names property is allowed.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -134,8 +128,6 @@ class SchemaSearchRequest
     }
     /**
      * Limits the number of the returned schemas. Defaults to 30.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -152,8 +144,6 @@ class SchemaSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -170,8 +160,6 @@ class SchemaSearchRequest
     }
     /**
      * An optional filter to limit the schemas.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -190,8 +178,6 @@ class SchemaSearchRequest
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the SchemaSearchResult.
      * Warning! It severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -214,8 +200,6 @@ class SchemaSearchRequest
      * If not specified, all metadata languages in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -236,8 +220,6 @@ class SchemaSearchRequest
      * Limits the schemas to the ones the user has the specified MetadataRights.
      *
      * @param list<string>|null $rightsFilter
-     *
-     * @return self
      */
     public function setRightsFilter(?array $rightsFilter): self
     {

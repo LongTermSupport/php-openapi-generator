@@ -67,8 +67,6 @@ class Reaction extends \ArrayObject
     }
     /**
      * The reaction to use
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {

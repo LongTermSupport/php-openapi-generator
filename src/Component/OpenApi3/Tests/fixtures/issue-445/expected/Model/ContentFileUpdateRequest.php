@@ -30,8 +30,6 @@ class ContentFileUpdateRequest
     }
     /**
      * ID of the file transfer to use to replace the content file.
-     *
-     * @return self
      */
     public function setFileTransferId(string $fileTransferId): self
     {

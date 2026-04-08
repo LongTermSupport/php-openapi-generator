@@ -30,8 +30,6 @@ class CdnPurgeJobByTag extends CdnPurgeJobBase
     }
     /**
      * The tag that should be purged.
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {

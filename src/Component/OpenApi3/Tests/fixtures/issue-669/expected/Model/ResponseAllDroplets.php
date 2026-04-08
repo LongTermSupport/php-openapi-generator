@@ -35,8 +35,6 @@ class ResponseAllDroplets extends \ArrayObject
     }
     /**
      * @param list<Droplet> $droplets
-     *
-     * @return self
      */
     public function setDroplets(array $droplets): self
     {

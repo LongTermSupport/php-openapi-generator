@@ -49,8 +49,6 @@ class Multiregistry extends \ArrayObject
     }
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -67,8 +65,6 @@ class Multiregistry extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the registry was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -85,8 +81,6 @@ class Multiregistry extends \ArrayObject
     }
     /**
      * Slug of the region where registry data is stored
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -103,8 +97,6 @@ class Multiregistry extends \ArrayObject
     }
     /**
      * The amount of storage used in the registry in bytes.
-     *
-     * @return self
      */
     public function setStorageUsageBytes(int $storageUsageBytes): self
     {
@@ -121,8 +113,6 @@ class Multiregistry extends \ArrayObject
     }
     /**
      * The time at which the storage usage was updated. Storage usage is calculated asynchronously, and may not immediately reflect pushes to the registry.
-     *
-     * @return self
      */
     public function setStorageUsageBytesUpdatedAt(\DateTime $storageUsageBytesUpdatedAt): self
     {

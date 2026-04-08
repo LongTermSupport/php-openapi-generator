@@ -38,8 +38,6 @@ class ResponseDatabaseBackups extends \ArrayObject
     }
     /**
      * @param list<Backup> $backups
-     *
-     * @return self
      */
     public function setBackups(array $backups): self
     {
@@ -66,8 +64,6 @@ class ResponseDatabaseBackups extends \ArrayObject
     }
     /**
      * If a backup is currently in progress, this attribute shows the percentage of completion. If no backup is in progress, this attribute will be hidden.
-     *
-     * @return self
      */
     public function setBackupProgress(string $backupProgress): self
     {

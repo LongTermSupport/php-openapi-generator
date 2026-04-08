@@ -35,8 +35,6 @@ class ResponseAllPartnerAttachmentRemoteRoutes extends \ArrayObject
     }
     /**
      * @param list<PartnerAttachmentRemoteRoute> $remoteRoutes
-     *
-     * @return self
      */
     public function setRemoteRoutes(array $remoteRoutes): self
     {

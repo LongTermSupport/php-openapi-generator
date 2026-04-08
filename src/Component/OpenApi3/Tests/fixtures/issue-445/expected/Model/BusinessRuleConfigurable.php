@@ -42,8 +42,6 @@ class BusinessRuleConfigurable extends BusinessRule
     }
     /**
      * The condition that makes this rule trigger.
-     *
-     * @return self
      */
     public function setCondition(mixed $condition): self
     {
@@ -64,8 +62,6 @@ class BusinessRuleConfigurable extends BusinessRule
      * Optional transformations to apply.
      *
      * @param list<BusinessRuleTransformationGroup>|null $transformationGroups
-     *
-     * @return self
      */
     public function setTransformationGroups(?array $transformationGroups): self
     {
@@ -86,8 +82,6 @@ class BusinessRuleConfigurable extends BusinessRule
      * The actions that are performed when this rule triggers.
      *
      * @param list<BusinessRuleAction>|null $actions
-     *
-     * @return self
      */
     public function setActions(?array $actions): self
     {

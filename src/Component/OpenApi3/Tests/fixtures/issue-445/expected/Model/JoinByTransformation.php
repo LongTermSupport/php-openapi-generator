@@ -30,8 +30,6 @@ class JoinByTransformation extends BusinessRuleTransformation
     }
     /**
      * Separator to use.
-     *
-     * @return self
      */
     public function setSeparator(?string $separator): self
     {

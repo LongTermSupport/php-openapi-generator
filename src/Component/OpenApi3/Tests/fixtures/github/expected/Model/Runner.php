@@ -45,8 +45,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The id of the runner.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -63,8 +61,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The name of the runner.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -81,8 +77,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The Operating System of the runner.
-     *
-     * @return self
      */
     public function setOs(string $os): self
     {
@@ -99,8 +93,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The status of the runner.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {

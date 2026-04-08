@@ -55,8 +55,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -73,8 +71,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
-     * @return self
      */
     public function setDistribution(string $distribution): self
     {
@@ -91,8 +87,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -109,8 +103,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * A URL from which the custom Linux virtual machine image may be retrieved.  The image it points to must be in the raw, qcow2, vhdx, vdi, or vmdk format.  It may be compressed using gzip or bzip2 and must be smaller than 100 GB after being decompressed.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -127,8 +119,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -149,8 +139,6 @@ class ImageNewCustom extends \ArrayObject
      * A flat array of tag names as strings to be applied to the resource. Tag names may be for either existing or new tags. <br><br>Requires `tag:create` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {

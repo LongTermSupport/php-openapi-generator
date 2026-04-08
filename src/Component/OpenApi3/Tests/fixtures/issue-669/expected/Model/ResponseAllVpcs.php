@@ -35,8 +35,6 @@ class ResponseAllVpcs extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $vpcs
-     *
-     * @return self
      */
     public function setVpcs(array $vpcs): self
     {

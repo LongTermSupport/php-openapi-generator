@@ -33,8 +33,6 @@ class ApiDeleteAgentAPIKeyOutput extends \ArrayObject
     }
     /**
      * Agent API Key Info
-     *
-     * @return self
      */
     public function setApiKeyInfo(ApiAgentAPIKeyInfo $apiKeyInfo): self
     {

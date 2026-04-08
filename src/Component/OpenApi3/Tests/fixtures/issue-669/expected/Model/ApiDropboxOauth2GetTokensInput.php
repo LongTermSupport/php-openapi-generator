@@ -37,8 +37,6 @@ class ApiDropboxOauth2GetTokensInput extends \ArrayObject
     }
     /**
      * The oauth2 code from google
-     *
-     * @return self
      */
     public function setCode(string $code): self
     {
@@ -55,8 +53,6 @@ class ApiDropboxOauth2GetTokensInput extends \ArrayObject
     }
     /**
      * Redirect url
-     *
-     * @return self
      */
     public function setRedirectUrl(string $redirectUrl): self
     {

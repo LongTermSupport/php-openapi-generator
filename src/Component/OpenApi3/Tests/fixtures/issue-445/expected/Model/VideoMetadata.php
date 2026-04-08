@@ -213,8 +213,6 @@ class VideoMetadata extends \ArrayObject
     }
     /**
      * @param list<VideoStream>|null $videoStreams
-     *
-     * @return self
      */
     public function setVideoStreams(?array $videoStreams): self
     {
@@ -231,8 +229,6 @@ class VideoMetadata extends \ArrayObject
     }
     /**
      * @param list<AudioStream>|null $audioStreams
-     *
-     * @return self
      */
     public function setAudioStreams(?array $audioStreams): self
     {

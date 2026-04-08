@@ -58,8 +58,6 @@ class AppsImageSourceSpec extends \ArrayObject
     }
     /**
      * The registry name. Must be left empty for the `DOCR` registry type.
-     *
-     * @return self
      */
     public function setRegistry(string $registry): self
     {
@@ -80,8 +78,6 @@ class AppsImageSourceSpec extends \ArrayObject
      * - DOCKER_HUB: The DockerHub container registry type.
      * - DOCR: The DigitalOcean container registry type.
      * - GHCR: The Github container registry type.
-     *
-     * @return self
      */
     public function setRegistryType(string $registryType): self
     {
@@ -102,8 +98,6 @@ class AppsImageSourceSpec extends \ArrayObject
      * The credentials to be able to pull the image. The value will be encrypted on first submission. On following submissions, the encrypted value should be used.
      * - "$username:$access_token" for registries of type `DOCKER_HUB`.
      * - "$username:$access_token" for registries of type `GHCR`.
-     *
-     * @return self
      */
     public function setRegistryCredentials(string $registryCredentials): self
     {
@@ -120,8 +114,6 @@ class AppsImageSourceSpec extends \ArrayObject
     }
     /**
      * The repository name.
-     *
-     * @return self
      */
     public function setRepository(string $repository): self
     {
@@ -138,8 +130,6 @@ class AppsImageSourceSpec extends \ArrayObject
     }
     /**
      * The repository tag. Defaults to `latest` if not provided and no digest is provided. Cannot be specified if digest is provided.
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {
@@ -156,8 +146,6 @@ class AppsImageSourceSpec extends \ArrayObject
     }
     /**
      * The image digest. Cannot be specified if tag is provided.
-     *
-     * @return self
      */
     public function setDigest(string $digest): self
     {

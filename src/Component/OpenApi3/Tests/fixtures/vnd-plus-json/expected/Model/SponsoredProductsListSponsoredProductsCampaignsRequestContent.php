@@ -41,8 +41,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * Number of records to include in the paginated response. Defaults to max page size for given API
-     *
-     * @return self
      */
     public function setMaxResults(int $maxResults): self
     {
@@ -59,8 +57,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * token value allowing to navigate to the next response page
-     *
-     * @return self
      */
     public function setNextToken(string $nextToken): self
     {
@@ -77,8 +73,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * Whether to get entity with extended data fields such as creationDate, lastUpdateDate, servingStatus
-     *
-     * @return self
      */
     public function setIncludeExtendedDataFields(bool $includeExtendedDataFields): self
     {

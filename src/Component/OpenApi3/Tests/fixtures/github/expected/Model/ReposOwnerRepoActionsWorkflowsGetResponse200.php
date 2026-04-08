@@ -44,8 +44,6 @@ class ReposOwnerRepoActionsWorkflowsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<Workflow> $workflows
-     *
-     * @return self
      */
     public function setWorkflows(array $workflows): self
     {

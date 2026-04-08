@@ -33,8 +33,6 @@ class ApiListIndexingJobDataSourcesOutput extends \ArrayObject
     }
     /**
      * @param list<ApiIndexedDataSource> $indexedDataSources
-     *
-     * @return self
      */
     public function setIndexedDataSources(array $indexedDataSources): self
     {

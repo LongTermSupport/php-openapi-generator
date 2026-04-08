@@ -130,8 +130,6 @@ class SchemaDetail
     }
     /**
      * The schema ID. It is unique throughout the whole customer setup.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -148,8 +146,6 @@ class SchemaDetail
     }
     /**
      * System generated schema namespace. It contains the full schema hierarchy up to the root schema (i.e. [RootSchemaId].[ParentSchemaId].[SchemaId]).
-     *
-     * @return self
      */
     public function setSchemaNamespace(string $schemaNamespace): self
     {
@@ -166,8 +162,6 @@ class SchemaDetail
     }
     /**
      * The parent schema ID.
-     *
-     * @return self
      */
     public function setParentSchemaId(?string $parentSchemaId): self
     {
@@ -188,8 +182,6 @@ class SchemaDetail
      * List of schema types. Currently only one schema type can be assigned to this list, and it cannot be modified once the schema is created.
      *
      * @param list<string> $types
-     *
-     * @return self
      */
     public function setTypes(array $types): self
     {
@@ -206,8 +198,6 @@ class SchemaDetail
     }
     /**
      * Language specific schema names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -224,8 +214,6 @@ class SchemaDetail
     }
     /**
      * Language specific schema descriptions.
-     *
-     * @return self
      */
     public function setDescriptions(mixed $descriptions): self
     {
@@ -246,8 +234,6 @@ class SchemaDetail
      * An optional list of schemas' IDs with type layer. For a Content schema it stores the layers that can be assigned to a content.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -268,8 +254,6 @@ class SchemaDetail
      * Language specific DotLiquid templates. These templates will be resolved into display values in content documents and/or list items.
      *
      * @param list<DisplayPattern> $displayPatterns
-     *
-     * @return self
      */
     public function setDisplayPatterns(array $displayPatterns): self
     {
@@ -290,8 +274,6 @@ class SchemaDetail
      * The schema fields.
      *
      * @param list<FieldBase>|null $fields
-     *
-     * @return self
      */
     public function setFields(?array $fields): self
     {
@@ -314,8 +296,6 @@ class SchemaDetail
      * Only a subset of properties of a FieldSingleTagbox and FieldMultiTagbox can be be overwritten. All other properties and fields cannot.
      *
      * @param list<FieldOverwriteBase>|null $fieldsOverwrite
-     *
-     * @return self
      */
     public function setFieldsOverwrite(?array $fieldsOverwrite): self
     {
@@ -338,8 +318,6 @@ class SchemaDetail
      * must be set to true. Multiple sorting is supported: they are applied in the specified order.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -362,8 +340,6 @@ class SchemaDetail
      * the UI uses such information to show the available filters and grouped results.
      *
      * @param list<AggregatorBase>|null $aggregations
-     *
-     * @return self
      */
     public function setAggregations(?array $aggregations): self
     {
@@ -380,8 +356,6 @@ class SchemaDetail
     }
     /**
      * Identifies a system provided schema. A system schema cannot be created, updated or deleted.
-     *
-     * @return self
      */
     public function setSystem(bool $system): self
     {
@@ -398,8 +372,6 @@ class SchemaDetail
     }
     /**
      * The owner token ID. Defines the schema owner.
-     *
-     * @return self
      */
     public function setOwnerTokenId(string $ownerTokenId): self
     {
@@ -416,8 +388,6 @@ class SchemaDetail
     }
     /**
      * Defines a schema as viewable by everyone. Everyone with ManageSchema user permission is able to see the schema.
-     *
-     * @return self
      */
     public function setViewForAll(bool $viewForAll): self
     {
@@ -438,8 +408,6 @@ class SchemaDetail
      * An optional list of schema permission set IDs which control schema permissions.
      *
      * @param list<string>|null $schemaPermissionSetIds
-     *
-     * @return self
      */
     public function setSchemaPermissionSetIds(?array $schemaPermissionSetIds): self
     {
@@ -462,8 +430,6 @@ class SchemaDetail
      * that reference the layer.
      *
      * @param list<string>|null $referencedInContentSchemaIds
-     *
-     * @return self
      */
     public function setReferencedInContentSchemaIds(?array $referencedInContentSchemaIds): self
     {
@@ -484,8 +450,6 @@ class SchemaDetail
      * The complete list of all descendant schema IDs.
      *
      * @param list<string>|null $descendantSchemaIds
-     *
-     * @return self
      */
     public function setDescendantSchemaIds(?array $descendantSchemaIds): self
     {
@@ -502,8 +466,6 @@ class SchemaDetail
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -520,8 +482,6 @@ class SchemaDetail
     }
     /**
      * The number of fields generated by the schema in the search index for filtering, searching and sorting.
-     *
-     * @return self
      */
     public function setSearchFieldCount(mixed $searchFieldCount): self
     {

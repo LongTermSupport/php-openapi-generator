@@ -57,8 +57,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * URN of the team that incurred the usage
-     *
-     * @return self
      */
     public function setUsageTeamUrn(string $usageTeamUrn): self
     {
@@ -75,8 +73,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * Start date of the billing data point in YYYY-MM-DD format
-     *
-     * @return self
      */
     public function setStartDate(\DateTime $startDate): self
     {
@@ -93,8 +89,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * Total amount for this data point in USD
-     *
-     * @return self
      */
     public function setTotalAmount(string $totalAmount): self
     {
@@ -111,8 +105,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * Region where the usage occurred
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -129,8 +121,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * Unique SKU identifier for the billed resource
-     *
-     * @return self
      */
     public function setSku(string $sku): self
     {
@@ -147,8 +137,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * Description of the billed resource or service as shown on an invoice item
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -165,8 +153,6 @@ class BillingDataPoint extends \ArrayObject
     }
     /**
      * Optional invoice item group name of the billed resource or service, blank when not part an invoice item group
-     *
-     * @return self
      */
     public function setGroupDescription(string $groupDescription): self
     {

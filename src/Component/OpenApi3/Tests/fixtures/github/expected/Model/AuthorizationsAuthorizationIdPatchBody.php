@@ -63,8 +63,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
      * A list of scopes that this authorization is in.
      *
      * @param list<string>|null $scopes
-     *
-     * @return self
      */
     public function setScopes(?array $scopes): self
     {
@@ -85,8 +83,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
      * A list of scopes to add to this authorization.
      *
      * @param list<string> $addScopes
-     *
-     * @return self
      */
     public function setAddScopes(array $addScopes): self
     {
@@ -107,8 +103,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
      * A list of scopes to remove from this authorization.
      *
      * @param list<string> $removeScopes
-     *
-     * @return self
      */
     public function setRemoveScopes(array $removeScopes): self
     {
@@ -125,8 +119,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
-     * @return self
      */
     public function setNote(string $note): self
     {
@@ -143,8 +135,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
-     * @return self
      */
     public function setNoteUrl(string $noteUrl): self
     {
@@ -161,8 +151,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
-     * @return self
      */
     public function setFingerprint(string $fingerprint): self
     {

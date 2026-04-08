@@ -68,8 +68,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the check. For example, "code-coverage".
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -86,8 +84,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The URL of the integrator's site that has the full details of the check.
-     *
-     * @return self
      */
     public function setDetailsUrl(string $detailsUrl): self
     {
@@ -104,8 +100,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * A reference for the run on the integrator's system.
-     *
-     * @return self
      */
     public function setExternalId(string $externalId): self
     {
@@ -122,8 +116,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
-     * @return self
      */
     public function setStartedAt(string $startedAt): self
     {
@@ -140,8 +132,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -160,8 +150,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     /**
      * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`.
      * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-     *
-     * @return self
      */
     public function setConclusion(string $conclusion): self
     {
@@ -178,8 +166,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
-     * @return self
      */
     public function setCompletedAt(string $completedAt): self
     {
@@ -196,8 +182,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object-1) description.
-     *
-     * @return self
      */
     public function setOutput(ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput $output): self
     {
@@ -218,8 +202,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
      * Possible further actions the integrator can perform, which a user may trigger. Each action includes a `label`, `identifier` and `description`. A maximum of three actions are accepted. See the [`actions` object](https://developer.github.com/v3/checks/runs/#actions-object) description. To learn more about check runs and requested actions, see "[Check runs and requested actions](https://developer.github.com/v3/checks/runs/#check-runs-and-requested-actions)."
      *
      * @param list<ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem> $actions
-     *
-     * @return self
      */
     public function setActions(array $actions): self
     {

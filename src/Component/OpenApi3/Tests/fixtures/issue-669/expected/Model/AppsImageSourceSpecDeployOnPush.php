@@ -33,8 +33,6 @@ class AppsImageSourceSpecDeployOnPush extends \ArrayObject
     }
     /**
      * Whether to automatically deploy new images. Can only be used for images hosted in DOCR and can only be used with an image tag, not a specific digest.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

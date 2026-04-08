@@ -44,7 +44,6 @@ class ActivityDeleteThreadSubscription extends \LongTermSupport\OpenApiGenerator
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityDeleteThreadSubscriptionForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityDeleteThreadSubscriptionUnauthorizedException
      */

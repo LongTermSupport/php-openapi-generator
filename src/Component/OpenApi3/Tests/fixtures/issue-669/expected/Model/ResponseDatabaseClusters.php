@@ -33,8 +33,6 @@ class ResponseDatabaseClusters extends \ArrayObject
     }
     /**
      * @param list<DatabaseClusterRead> $databases
-     *
-     * @return self
      */
     public function setDatabases(array $databases): self
     {

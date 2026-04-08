@@ -37,8 +37,6 @@ class VpcNatGatewayUpdateVpcsItem extends \ArrayObject
     }
     /**
      * The unique identifier of the VPC to which the NAT gateway is attached.
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -55,8 +53,6 @@ class VpcNatGatewayUpdateVpcsItem extends \ArrayObject
     }
     /**
      * The classification of the NAT gateway as the default egress route for the VPC traffic.
-     *
-     * @return self
      */
     public function setDefaultGateway(bool $defaultGateway): self
     {

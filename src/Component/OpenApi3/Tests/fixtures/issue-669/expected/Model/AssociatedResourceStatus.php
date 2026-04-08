@@ -45,8 +45,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * An object containing information about a resource scheduled for deletion.
-     *
-     * @return self
      */
     public function setDroplet(DestroyedAssociatedResource $droplet): self
     {
@@ -63,8 +61,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * An object containing additional information about resource related to a Droplet requested to be destroyed.
-     *
-     * @return self
      */
     public function setResources(AssociatedResourceStatusResources $resources): self
     {
@@ -81,8 +77,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format indicating when the requested action was completed.
-     *
-     * @return self
      */
     public function setCompletedAt(\DateTime $completedAt): self
     {
@@ -99,8 +93,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * A count of the associated resources that failed to be destroyed, if any.
-     *
-     * @return self
      */
     public function setFailures(int $failures): self
     {

@@ -47,8 +47,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Must be passed as "web".
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -65,8 +63,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#create-hook-config-params).
-     *
-     * @return self
      */
     public function setConfig(OrgsOrgHooksPostBodyConfig $config): self
     {
@@ -87,8 +83,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
      * Determines what [events](https://developer.github.com/webhooks/event-payloads) the hook is triggered for.
      *
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {
@@ -105,8 +99,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {

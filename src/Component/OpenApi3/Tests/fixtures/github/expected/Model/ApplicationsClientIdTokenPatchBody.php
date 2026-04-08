@@ -33,8 +33,6 @@ class ApplicationsClientIdTokenPatchBody extends \ArrayObject
     }
     /**
      * The access_token of the OAuth application.
-     *
-     * @return self
      */
     public function setAccessToken(string $accessToken): self
     {

@@ -34,8 +34,6 @@ class ContentReferencesRequest
     }
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
-     * @return self
      */
     public function setReferences(mixed $references): self
     {
@@ -52,8 +50,6 @@ class ContentReferencesRequest
     }
     /**
      * Limits the number of the returned share references by setting paging information.
-     *
-     * @return self
      */
     public function setShares(mixed $shares): self
     {

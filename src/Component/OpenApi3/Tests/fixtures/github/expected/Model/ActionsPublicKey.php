@@ -41,8 +41,6 @@ class ActionsPublicKey extends \ArrayObject
     }
     /**
      * The identifier for the key.
-     *
-     * @return self
      */
     public function setKeyId(string $keyId): self
     {
@@ -59,8 +57,6 @@ class ActionsPublicKey extends \ArrayObject
     }
     /**
      * The Base64 encoded public key.
-     *
-     * @return self
      */
     public function setKey(string $key): self
     {

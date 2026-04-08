@@ -37,8 +37,6 @@ class AppsGitSourceSpec extends \ArrayObject
     }
     /**
      * The name of the branch to use
-     *
-     * @return self
      */
     public function setBranch(string $branch): self
     {
@@ -55,8 +53,6 @@ class AppsGitSourceSpec extends \ArrayObject
     }
     /**
      * The clone URL of the repo. Example: `https://github.com/digitalocean/sample-golang.git`
-     *
-     * @return self
      */
     public function setRepoCloneUrl(string $repoCloneUrl): self
     {

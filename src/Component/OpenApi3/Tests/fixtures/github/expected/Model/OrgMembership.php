@@ -79,8 +79,6 @@ class OrgMembership extends \ArrayObject
     }
     /**
      * Organization Simple
-     *
-     * @return self
      */
     public function setOrganization(OrganizationSimple $organization): self
     {

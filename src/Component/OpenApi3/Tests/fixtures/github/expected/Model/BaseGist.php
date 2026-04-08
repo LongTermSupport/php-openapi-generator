@@ -138,8 +138,6 @@ class BaseGist extends \ArrayObject
     }
     /**
      * @param array<string, BaseGistFilesItem> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {
@@ -246,8 +244,6 @@ class BaseGist extends \ArrayObject
     }
     /**
      * @param list<mixed> $forks
-     *
-     * @return self
      */
     public function setForks(array $forks): self
     {
@@ -264,8 +260,6 @@ class BaseGist extends \ArrayObject
     }
     /**
      * @param list<mixed> $history
-     *
-     * @return self
      */
     public function setHistory(array $history): self
     {

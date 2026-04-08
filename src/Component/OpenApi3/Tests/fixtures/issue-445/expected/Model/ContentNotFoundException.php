@@ -143,8 +143,6 @@ class ContentNotFoundException extends \ArrayObject
     }
     /**
      * @param list<string>|null $contentIds
-     *
-     * @return self
      */
     public function setContentIds(?array $contentIds): self
     {

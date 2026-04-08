@@ -46,8 +46,6 @@ class LanguageConfiguration
      * A list of languages serving as system languages.
      *
      * @param list<string>|null $systemLanguages
-     *
-     * @return self
      */
     public function setSystemLanguages(?array $systemLanguages): self
     {
@@ -68,8 +66,6 @@ class LanguageConfiguration
      * A list of languages serving as metadata languages.
      *
      * @param list<string>|null $metadataLanguages
-     *
-     * @return self
      */
     public function setMetadataLanguages(?array $metadataLanguages): self
     {
@@ -86,8 +82,6 @@ class LanguageConfiguration
     }
     /**
      * The default language. Not the be confused with the metadata fallback language x-default.
-     *
-     * @return self
      */
     public function setDefaultLanguage(?string $defaultLanguage): self
     {

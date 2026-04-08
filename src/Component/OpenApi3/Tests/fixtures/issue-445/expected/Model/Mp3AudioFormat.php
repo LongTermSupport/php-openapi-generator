@@ -46,8 +46,6 @@ class Mp3AudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding bitrate. This setting and Quality are mutually exclusive.
-     *
-     * @return self
      */
     public function setBitrate(?int $bitrate): self
     {
@@ -66,8 +64,6 @@ class Mp3AudioFormat extends FormatBase
     /**
      * Gets or sets the encoding quality. This setting and Bitrate are mutually exclusive.
      * Values can be set it range of 0 to 9, where a lower value is a higher quality.
-     *
-     * @return self
      */
     public function setQuality(?int $quality): self
     {

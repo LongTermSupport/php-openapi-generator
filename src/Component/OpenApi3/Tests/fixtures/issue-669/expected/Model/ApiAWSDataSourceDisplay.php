@@ -38,8 +38,6 @@ class ApiAWSDataSourceDisplay extends \ArrayObject
     }
     /**
      * Spaces bucket name
-     *
-     * @return self
      */
     public function setBucketName(string $bucketName): self
     {
@@ -66,8 +64,6 @@ class ApiAWSDataSourceDisplay extends \ArrayObject
     }
     /**
      * Region of bucket
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {

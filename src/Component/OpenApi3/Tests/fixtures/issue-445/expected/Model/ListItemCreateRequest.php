@@ -42,8 +42,6 @@ class ListItemCreateRequest
     }
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
-     * @return self
      */
     public function setContentSchemaId(string $contentSchemaId): self
     {
@@ -64,8 +62,6 @@ class ListItemCreateRequest
      * The content data of the list item. It's an object of dynamic metadata whose structure is defined in the Content schema.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -86,8 +82,6 @@ class ListItemCreateRequest
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

@@ -41,8 +41,6 @@ class RepositorySubscription extends \ArrayObject
     }
     /**
      * Determines if notifications should be received from this repository.
-     *
-     * @return self
      */
     public function setSubscribed(bool $subscribed): self
     {
@@ -59,8 +57,6 @@ class RepositorySubscription extends \ArrayObject
     }
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
-     * @return self
      */
     public function setIgnored(bool $ignored): self
     {

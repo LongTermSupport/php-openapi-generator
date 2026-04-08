@@ -43,7 +43,6 @@ class UsersCheckPersonIsFollowedByAuthenticated extends \LongTermSupport\OpenApi
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckPersonIsFollowedByAuthenticatedNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckPersonIsFollowedByAuthenticatedForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckPersonIsFollowedByAuthenticatedUnauthorizedException

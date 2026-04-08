@@ -37,8 +37,6 @@ class GbCompanyReportExampleResponseReportDirectors extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItem> $currentDirectors
-     *
-     * @return self
      */
     public function setCurrentDirectors(array $currentDirectors): self
     {
@@ -55,8 +53,6 @@ class GbCompanyReportExampleResponseReportDirectors extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportDirectorsPreviousDirectorsItem> $previousDirectors
-     *
-     * @return self
      */
     public function setPreviousDirectors(array $previousDirectors): self
     {

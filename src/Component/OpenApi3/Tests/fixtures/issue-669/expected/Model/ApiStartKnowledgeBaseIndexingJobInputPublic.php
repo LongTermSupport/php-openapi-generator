@@ -43,8 +43,6 @@ class ApiStartKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
      * List of data source ids to index, if none are provided, all data sources will be indexed
      *
      * @param list<string> $dataSourceUuids
-     *
-     * @return self
      */
     public function setDataSourceUuids(array $dataSourceUuids): self
     {
@@ -61,8 +59,6 @@ class ApiStartKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(string $knowledgeBaseUuid): self
     {

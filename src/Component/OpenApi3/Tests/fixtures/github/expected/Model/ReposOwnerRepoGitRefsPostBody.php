@@ -38,8 +38,6 @@ class ReposOwnerRepoGitRefsPostBody extends \ArrayObject
     }
     /**
      * The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
-     *
-     * @return self
      */
     public function setRef(string $ref): self
     {
@@ -56,8 +54,6 @@ class ReposOwnerRepoGitRefsPostBody extends \ArrayObject
     }
     /**
      * The SHA1 value for this reference.
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {

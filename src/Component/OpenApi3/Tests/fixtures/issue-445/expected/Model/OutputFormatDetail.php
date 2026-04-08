@@ -82,8 +82,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Which output format should be used as a source of data.
-     *
-     * @return self
      */
     public function setSourceOutputFormats(mixed $sourceOutputFormats): self
     {
@@ -100,8 +98,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
-     * @return self
      */
     public function setFormat(mixed $format): self
     {
@@ -118,8 +114,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Language specific names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -136,8 +130,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
-     * @return self
      */
     public function setRetentionTime(string $retentionTime): self
     {
@@ -156,8 +148,6 @@ class OutputFormatDetail extends \ArrayObject
     /**
      * Optional patterns (liquid syntax) that produce the filename for item of this output format.
      * If set, the customer's default language is required.
-     *
-     * @return self
      */
     public function setDownloadFileNamePatterns(mixed $downloadFileNamePatterns): self
     {
@@ -174,8 +164,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
-     * @return self
      */
     public function setViewForAll(bool $viewForAll): self
     {
@@ -192,8 +180,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
-     * @return self
      */
     public function setEnableXmpWriteback(bool $enableXmpWriteback): self
     {
@@ -210,8 +196,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Output format ID.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -228,8 +212,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Marks if this is a system output format.
-     *
-     * @return self
      */
     public function setSystem(bool $system): self
     {
@@ -246,8 +228,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * A dynamic output format is not rendered automatically, but only on demand.
-     *
-     * @return self
      */
     public function setDynamic(bool $dynamic): self
     {
@@ -264,8 +244,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Specifies if output format should be taken into account during data extraction.
-     *
-     * @return self
      */
     public function setDataExtraction(bool $dataExtraction): self
     {
@@ -282,8 +260,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Temporary outputs will not be backed up.
-     *
-     * @return self
      */
     public function setTemporary(bool $temporary): self
     {
@@ -300,8 +276,6 @@ class OutputFormatDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {

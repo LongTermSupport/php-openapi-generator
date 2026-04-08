@@ -72,8 +72,6 @@ class ShareContentDetail
     }
     /**
      * The id of the schema with schema type content.
-     *
-     * @return self
      */
     public function setContentSchemaId(string $contentSchemaId): self
     {
@@ -94,8 +92,6 @@ class ShareContentDetail
      * An optional id list of schemas with type layer.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -118,8 +114,6 @@ class ShareContentDetail
      * by the ContentSchemaId property.
      *
      * @param array<string, mixed> $content
-     *
-     * @return self
      */
     public function setContent(array $content): self
     {
@@ -142,8 +136,6 @@ class ShareContentDetail
      * by the LayerSchemaIds property.
      *
      * @param array<string, mixed>|null $metadata
-     *
-     * @return self
      */
     public function setMetadata(?array $metadata): self
     {
@@ -160,8 +152,6 @@ class ShareContentDetail
     }
     /**
      * Content ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -182,8 +172,6 @@ class ShareContentDetail
      * List of shared outputs for this content.
      *
      * @param list<ShareOutputBase> $outputs
-     *
-     * @return self
      */
     public function setOutputs(array $outputs): self
     {
@@ -200,8 +188,6 @@ class ShareContentDetail
     }
     /**
      * The type of content
-     *
-     * @return self
      */
     public function setContentType(mixed $contentType): self
     {
@@ -218,8 +204,6 @@ class ShareContentDetail
     }
     /**
      * Contains language specific display values, rendered according to the content schema's display pattern configuration.
-     *
-     * @return self
      */
     public function setDisplayValues(mixed $displayValues): self
     {
@@ -236,8 +220,6 @@ class ShareContentDetail
     }
     /**
      * Contains an URL that can be used to retrieve the icon corresponding to the file type.
-     *
-     * @return self
      */
     public function setIconUrl(?string $iconUrl): self
     {

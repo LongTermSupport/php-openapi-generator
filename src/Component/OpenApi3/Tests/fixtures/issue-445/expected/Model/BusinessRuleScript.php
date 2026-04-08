@@ -30,8 +30,6 @@ class BusinessRuleScript extends BusinessRule
     }
     /**
      * Script
-     *
-     * @return self
      */
     public function setScript(?string $script): self
     {

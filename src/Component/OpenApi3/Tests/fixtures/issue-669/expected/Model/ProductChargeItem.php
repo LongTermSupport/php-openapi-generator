@@ -41,8 +41,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Amount of the charge
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {
@@ -59,8 +57,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Description of the charge
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -77,8 +73,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Number of times the charge was applied
-     *
-     * @return self
      */
     public function setCount(string $count): self
     {

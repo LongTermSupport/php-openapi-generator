@@ -50,8 +50,6 @@ class BulkResponseRow
     }
     /**
      * ID of the document.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -68,8 +66,6 @@ class BulkResponseRow
     }
     /**
      * Version of the document.
-     *
-     * @return self
      */
     public function setVersion(int $version): self
     {
@@ -86,8 +82,6 @@ class BulkResponseRow
     }
     /**
      * Eventual error.
-     *
-     * @return self
      */
     public function setError(?string $error): self
     {
@@ -104,8 +98,6 @@ class BulkResponseRow
     }
     /**
      * True if item successfully saved. False otherwise.
-     *
-     * @return self
      */
     public function setSucceeded(bool $succeeded): self
     {
@@ -122,8 +114,6 @@ class BulkResponseRow
     }
     /**
      * Returned status code.
-     *
-     * @return self
      */
     public function setStatus(int $status): self
     {
@@ -140,8 +130,6 @@ class BulkResponseRow
     }
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

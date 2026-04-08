@@ -63,8 +63,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
      * Country usage for Company Reports service
      *
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem> $creditsafeConnectOnlineReports
-     *
-     * @return self
      */
     public function setCreditsafeConnectOnlineReports(array $creditsafeConnectOnlineReports): self
     {
@@ -81,8 +79,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem> $creditsafeConnectOfflineReports
-     *
-     * @return self
      */
     public function setCreditsafeConnectOfflineReports(array $creditsafeConnectOfflineReports): self
     {
@@ -99,8 +95,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem> $creditsafeConnectMonitoring
-     *
-     * @return self
      */
     public function setCreditsafeConnectMonitoring(array $creditsafeConnectMonitoring): self
     {
@@ -117,8 +111,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem> $creditsafeConnectDirectorReports
-     *
-     * @return self
      */
     public function setCreditsafeConnectDirectorReports(array $creditsafeConnectDirectorReports): self
     {
@@ -135,8 +127,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem> $creditsafeConnectImageDocuments
-     *
-     * @return self
      */
     public function setCreditsafeConnectImageDocuments(array $creditsafeConnectImageDocuments): self
     {
@@ -153,8 +143,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem> $creditsafeConnectBankValidation
-     *
-     * @return self
      */
     public function setCreditsafeConnectBankValidation(array $creditsafeConnectBankValidation): self
     {
@@ -171,8 +159,6 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem> $creditsafeConnectBankVerification
-     *
-     * @return self
      */
     public function setCreditsafeConnectBankVerification(array $creditsafeConnectBankVerification): self
     {

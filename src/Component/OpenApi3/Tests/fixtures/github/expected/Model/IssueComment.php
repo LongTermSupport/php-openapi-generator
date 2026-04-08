@@ -52,8 +52,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * Unique identifier of the issue comment
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -80,8 +78,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * URL for the issue comment
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -98,8 +94,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * Contents of the issue comment
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

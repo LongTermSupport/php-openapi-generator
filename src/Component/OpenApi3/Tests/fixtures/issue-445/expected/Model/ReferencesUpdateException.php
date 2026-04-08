@@ -132,8 +132,6 @@ class ReferencesUpdateException extends \ArrayObject
     }
     /**
      * @param list<ReferenceUpdateException>|null $exceptions
-     *
-     * @return self
      */
     public function setExceptions(?array $exceptions): self
     {

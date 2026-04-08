@@ -37,8 +37,6 @@ class ScheduledDetails extends \ArrayObject
     }
     /**
      * valid cron expression string which is required for SCHEDULED type triggers.
-     *
-     * @return self
      */
     public function setCron(string $cron): self
     {
@@ -55,8 +53,6 @@ class ScheduledDetails extends \ArrayObject
     }
     /**
      * Optional data to be sent to function while triggering the function.
-     *
-     * @return self
      */
     public function setBody(?ScheduledDetailsBody $body): self
     {

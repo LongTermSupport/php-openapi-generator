@@ -33,8 +33,6 @@ class ResponseKafkaTopics extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $topics
-     *
-     * @return self
      */
     public function setTopics(array $topics): self
     {

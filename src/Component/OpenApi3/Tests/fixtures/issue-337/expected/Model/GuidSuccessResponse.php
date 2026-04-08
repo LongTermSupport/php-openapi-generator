@@ -33,8 +33,6 @@ class GuidSuccessResponse extends \ArrayObject
     }
     /**
      * @param list<GuidSuccessResponseGUIDListItem> $gUIDList
-     *
-     * @return self
      */
     public function setGUIDList(array $gUIDList): self
     {

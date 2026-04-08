@@ -37,8 +37,6 @@ class DatadogLogsink extends \ArrayObject
     }
     /**
      * Datadog connection URL
-     *
-     * @return self
      */
     public function setSite(string $site): self
     {
@@ -55,8 +53,6 @@ class DatadogLogsink extends \ArrayObject
     }
     /**
      * Datadog API key
-     *
-     * @return self
      */
     public function setDatadogApiKey(string $datadogApiKey): self
     {

@@ -166,8 +166,6 @@ class GbPeopleReportReponseReportDirectorDetails extends \ArrayObject
     }
     /**
      * @param list<GbPeopleReportReponseReportDirectorDetailsPositionsItem> $positions
-     *
-     * @return self
      */
     public function setPositions(array $positions): self
     {

@@ -65,8 +65,6 @@ class IdentityProvider extends \ArrayObject
      * Mapping of identity provider claims to user attributes
      *
      * @param list<IdpClaimToUserAttributeMapping>|null $claimMapping
-     *
-     * @return self
      */
     public function setClaimMapping(?array $claimMapping): self
     {
@@ -83,8 +81,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Name of the identity provider claim that holds group membership information
-     *
-     * @return self
      */
     public function setGroupClaimType(?string $groupClaimType): self
     {
@@ -105,8 +101,6 @@ class IdentityProvider extends \ArrayObject
      * IdP (AD) group to user role ID mapping
      *
      * @param list<IdpGroupToUserRoleMapping>|null $groupMapping
-     *
-     * @return self
      */
     public function setGroupMapping(?array $groupMapping): self
     {
@@ -123,8 +117,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
-     * @return self
      */
     public function setFallbackUserRoleId(?string $fallbackUserRoleId): self
     {
@@ -141,8 +133,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -159,8 +149,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
-     * @return self
      */
     public function setName(?string $name): self
     {
@@ -177,8 +165,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
-     * @return self
      */
     public function setDisplayName(?string $displayName): self
     {

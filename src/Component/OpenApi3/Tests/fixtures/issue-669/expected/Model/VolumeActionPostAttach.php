@@ -47,8 +47,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -65,8 +63,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -83,8 +79,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet the volume will be attached or detached from.
-     *
-     * @return self
      */
     public function setDropletId(int $dropletId): self
     {
@@ -105,8 +99,6 @@ class VolumeActionPostAttach extends \ArrayObject
      * A flat array of tag names as strings to be applied to the resource. Tag names may be for either existing or new tags. <br><br>Requires `tag:create` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {

@@ -33,8 +33,6 @@ class AppJobInvocationTriggerManual extends \ArrayObject
     }
     /**
      * The user who triggered the job
-     *
-     * @return self
      */
     public function setUser(AppJobInvocationTriggerManualUser $user): self
     {

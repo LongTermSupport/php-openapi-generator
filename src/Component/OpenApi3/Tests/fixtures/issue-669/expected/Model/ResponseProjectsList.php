@@ -35,8 +35,6 @@ class ResponseProjectsList extends \ArrayObject
     }
     /**
      * @param list<Project> $projects
-     *
-     * @return self
      */
     public function setProjects(array $projects): self
     {

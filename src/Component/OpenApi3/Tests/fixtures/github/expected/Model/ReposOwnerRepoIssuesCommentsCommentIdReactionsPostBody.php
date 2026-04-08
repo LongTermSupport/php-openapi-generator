@@ -33,8 +33,6 @@ class ReposOwnerRepoIssuesCommentsCommentIdReactionsPostBody extends \ArrayObjec
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue comment.
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {

@@ -68,8 +68,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier of the event that triggered the generation of the `notificationEvent`. This identifier is consistent across all portfolios in the Global Monitoring product.
-     *
-     * @return self
      */
     public function setEventId(float $eventId): self
     {
@@ -86,8 +84,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The date that the event occured.
-     *
-     * @return self
      */
     public function setEventDate(\DateTime $eventDate): self
     {
@@ -104,8 +100,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
-     * @return self
      */
     public function setNewValue(string $newValue): self
     {
@@ -122,8 +116,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
-     * @return self
      */
     public function setOldValue(string $oldValue): self
     {
@@ -140,8 +132,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier for the `notificationEvent`. This identifier is tied to a specific `eventId` and `portfolioId`.
-     *
-     * @return self
      */
     public function setNotificationEventId(float $notificationEventId): self
     {
@@ -158,8 +148,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier for the `ruleCode` that triggered the generation of the `notificationEvent`.
-     *
-     * @return self
      */
     public function setRuleCode(float $ruleCode): self
     {
@@ -176,8 +164,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The name of the notification event rule that triggered the generation of the `notificationEvent`.
-     *
-     * @return self
      */
     public function setRuleName(string $ruleName): self
     {

@@ -34,8 +34,6 @@ class UserRoleAssignment
     }
     /**
      * User role assigned.
-     *
-     * @return self
      */
     public function setUserRole(mixed $userRole): self
     {
@@ -52,8 +50,6 @@ class UserRoleAssignment
     }
     /**
      * Marks user roles that were assigned automatically to a federated user based on group mapping of a federated identity provider.
-     *
-     * @return self
      */
     public function setIsFederated(bool $isFederated): self
     {

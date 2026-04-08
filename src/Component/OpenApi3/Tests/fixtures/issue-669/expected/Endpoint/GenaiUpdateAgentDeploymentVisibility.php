@@ -49,7 +49,6 @@ class GenaiUpdateAgentDeploymentVisibility extends \LongTermSupport\OpenApiGener
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiUpdateAgentDeploymentVisbilityOutput|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiUpdateAgentDeploymentVisibilityUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiUpdateAgentDeploymentVisibilityNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiUpdateAgentDeploymentVisibilityTooManyRequestsException

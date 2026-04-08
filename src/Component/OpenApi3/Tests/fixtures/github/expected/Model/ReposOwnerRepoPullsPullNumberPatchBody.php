@@ -49,8 +49,6 @@ class ReposOwnerRepoPullsPullNumberPatchBody extends \ArrayObject
     }
     /**
      * The title of the pull request.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -67,8 +65,6 @@ class ReposOwnerRepoPullsPullNumberPatchBody extends \ArrayObject
     }
     /**
      * The contents of the pull request.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -85,8 +81,6 @@ class ReposOwnerRepoPullsPullNumberPatchBody extends \ArrayObject
     }
     /**
      * State of this Pull Request. Either `open` or `closed`.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -103,8 +97,6 @@ class ReposOwnerRepoPullsPullNumberPatchBody extends \ArrayObject
     }
     /**
      * The name of the branch you want your changes pulled into. This should be an existing branch on the current repository. You cannot update the base branch on a pull request to point to another repository.
-     *
-     * @return self
      */
     public function setBase(string $base): self
     {
@@ -121,8 +113,6 @@ class ReposOwnerRepoPullsPullNumberPatchBody extends \ArrayObject
     }
     /**
      * Indicates whether [maintainers can modify](https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
-     *
-     * @return self
      */
     public function setMaintainerCanModify(bool $maintainerCanModify): self
     {

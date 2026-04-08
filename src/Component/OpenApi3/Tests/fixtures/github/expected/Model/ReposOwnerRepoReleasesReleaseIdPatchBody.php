@@ -53,8 +53,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
-     * @return self
      */
     public function setTagName(string $tagName): self
     {
@@ -71,8 +69,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
-     * @return self
      */
     public function setTargetCommitish(string $targetCommitish): self
     {
@@ -89,8 +85,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the release.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -107,8 +101,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * Text describing the contents of the tag.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -125,8 +117,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * `true` makes the release a draft, and `false` publishes the release.
-     *
-     * @return self
      */
     public function setDraft(bool $draft): self
     {
@@ -143,8 +133,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * `true` to identify the release as a prerelease, `false` to identify the release as a full release.
-     *
-     * @return self
      */
     public function setPrerelease(bool $prerelease): self
     {

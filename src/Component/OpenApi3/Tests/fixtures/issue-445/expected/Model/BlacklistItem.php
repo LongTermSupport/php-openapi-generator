@@ -34,8 +34,6 @@ class BlacklistItem
     }
     /**
      * Friendly name of item.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -52,8 +50,6 @@ class BlacklistItem
     }
     /**
      * Pattern a file name must match to be excluded from the transfer.
-     *
-     * @return self
      */
     public function setMatch(string $match): self
     {

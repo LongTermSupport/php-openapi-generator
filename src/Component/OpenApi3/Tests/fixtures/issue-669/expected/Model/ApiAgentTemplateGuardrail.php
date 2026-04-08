@@ -37,8 +37,6 @@ class ApiAgentTemplateGuardrail extends \ArrayObject
     }
     /**
      * Priority of the guardrail
-     *
-     * @return self
      */
     public function setPriority(int $priority): self
     {
@@ -55,8 +53,6 @@ class ApiAgentTemplateGuardrail extends \ArrayObject
     }
     /**
      * Uuid of the guardrail
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

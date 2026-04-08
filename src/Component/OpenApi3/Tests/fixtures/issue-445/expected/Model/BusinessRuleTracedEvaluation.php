@@ -54,8 +54,6 @@ class BusinessRuleTracedEvaluation
     }
     /**
      * Indicates if the rule was found to be executable.
-     *
-     * @return self
      */
     public function setConditionSatisfied(bool $conditionSatisfied): self
     {
@@ -76,8 +74,6 @@ class BusinessRuleTracedEvaluation
      * Detailed evaluation results for each condition.
      *
      * @param list<BusinessRuleTracedEvaluationCondition>|null $conditions
-     *
-     * @return self
      */
     public function setConditions(?array $conditions): self
     {
@@ -98,8 +94,6 @@ class BusinessRuleTracedEvaluation
      * Detailed results for transformation groups.
      *
      * @param list<BusinessRuleTracedTransformationGroup>|null $transformationGroups
-     *
-     * @return self
      */
     public function setTransformationGroups(?array $transformationGroups): self
     {
@@ -120,8 +114,6 @@ class BusinessRuleTracedEvaluation
      * Detailed steps performed by actions.
      *
      * @param list<BusinessRuleTracedAction>|null $actions
-     *
-     * @return self
      */
     public function setActions(?array $actions): self
     {
@@ -142,8 +134,6 @@ class BusinessRuleTracedEvaluation
      * State of variables after all transformation groups were ran.
      *
      * @param array<string, string>|null $variables
-     *
-     * @return self
      */
     public function setVariables(?array $variables): self
     {

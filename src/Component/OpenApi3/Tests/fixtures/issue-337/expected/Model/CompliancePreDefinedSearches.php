@@ -44,8 +44,6 @@ class CompliancePreDefinedSearches extends \ArrayObject
     }
     /**
      * @param list<CompliancePreDefinedSearchesPredefinedSearchesItem> $predefinedSearches
-     *
-     * @return self
      */
     public function setPredefinedSearches(array $predefinedSearches): self
     {

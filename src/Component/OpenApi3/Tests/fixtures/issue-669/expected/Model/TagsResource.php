@@ -54,8 +54,6 @@ class TagsResource extends \ArrayObject
      * 
      *
      * @param list<TagsResourceResourcesItem> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

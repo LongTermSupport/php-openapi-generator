@@ -57,8 +57,6 @@ class History extends \ArrayObject
     }
     /**
      * The unique identifier of the history event.
-     *
-     * @return self
      */
     public function setHistoryEventId(string $historyEventId): self
     {
@@ -75,8 +73,6 @@ class History extends \ArrayObject
     }
     /**
      * The current number of Droplets in the autoscale pool.
-     *
-     * @return self
      */
     public function setCurrentInstanceCount(int $currentInstanceCount): self
     {
@@ -93,8 +89,6 @@ class History extends \ArrayObject
     }
     /**
      * The target number of Droplets for the autoscale pool after the scaling event.
-     *
-     * @return self
      */
     public function setDesiredInstanceCount(int $desiredInstanceCount): self
     {
@@ -111,8 +105,6 @@ class History extends \ArrayObject
     }
     /**
      * The reason for the scaling event.
-     *
-     * @return self
      */
     public function setReason(string $reason): self
     {
@@ -129,8 +121,6 @@ class History extends \ArrayObject
     }
     /**
      * The status of the scaling event.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -147,8 +137,6 @@ class History extends \ArrayObject
     }
     /**
      * The creation time of the history event in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -165,8 +153,6 @@ class History extends \ArrayObject
     }
     /**
      * The last updated time of the history event in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

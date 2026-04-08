@@ -41,8 +41,6 @@ class NGramTransformation extends BusinessRuleTransformation
     /**
      * Maximum size of n-grams to produce.
      * Settings this to 3 will produce unigrams, bigrams, trigrams.
-     *
-     * @return self
      */
     public function setSize(int $size): self
     {
@@ -59,8 +57,6 @@ class NGramTransformation extends BusinessRuleTransformation
     }
     /**
      * Minimum length of a word to be considered.
-     *
-     * @return self
      */
     public function setMinWordLength(int $minWordLength): self
     {
@@ -77,8 +73,6 @@ class NGramTransformation extends BusinessRuleTransformation
     }
     /**
      * Maximum length of a word to be considered.
-     *
-     * @return self
      */
     public function setMaxWordLength(?int $maxWordLength): self
     {

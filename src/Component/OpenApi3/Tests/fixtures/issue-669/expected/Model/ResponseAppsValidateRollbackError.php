@@ -80,8 +80,6 @@ class ResponseAppsValidateRollbackError extends \ArrayObject
      *   - `static_site_requires_rebuild` - indicates that the deployment contains at least one static site that will require a rebuild.
      *   - `image_source_missing_digest` - indicates that the deployment contains at least one component with an image source that is missing a digest.
      * 
-     *
-     * @return self
      */
     public function setCode(string $code): self
     {
@@ -98,8 +96,6 @@ class ResponseAppsValidateRollbackError extends \ArrayObject
     }
     /**
      * A human-readable message describing the failing condition.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -116,8 +112,6 @@ class ResponseAppsValidateRollbackError extends \ArrayObject
     }
     /**
      * @param list<string> $components
-     *
-     * @return self
      */
     public function setComponents(array $components): self
     {

@@ -37,8 +37,6 @@ class UserProjectsPostBody extends \ArrayObject
     }
     /**
      * Name of the project
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class UserProjectsPostBody extends \ArrayObject
     }
     /**
      * Body of the project
-     *
-     * @return self
      */
     public function setBody(?string $body): self
     {

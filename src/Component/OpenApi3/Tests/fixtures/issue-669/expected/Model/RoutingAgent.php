@@ -33,8 +33,6 @@ class RoutingAgent extends \ArrayObject
     }
     /**
      * Indicates whether the routing-agent component is enabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

@@ -53,8 +53,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Description of the billing history entry.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -71,8 +69,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Amount of the billing history entry.
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {
@@ -89,8 +85,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * ID of the invoice associated with the billing history entry, if applicable.
-     *
-     * @return self
      */
     public function setInvoiceId(string $invoiceId): self
     {
@@ -107,8 +101,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * UUID of the invoice associated with the billing history entry, if applicable.
-     *
-     * @return self
      */
     public function setInvoiceUuid(string $invoiceUuid): self
     {
@@ -125,8 +117,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Time the billing history entry occurred.
-     *
-     * @return self
      */
     public function setDate(\DateTime $date): self
     {
@@ -143,8 +133,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Type of billing history entry.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

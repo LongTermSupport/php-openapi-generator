@@ -139,8 +139,6 @@ class AppsInstanceSize extends \ArrayObject
     }
     /**
      * @deprecated
-     *
-     * @return self
      */
     public function setTierDowngradeTo(string $tierDowngradeTo): self
     {
@@ -167,8 +165,6 @@ class AppsInstanceSize extends \ArrayObject
     }
     /**
      * @deprecated
-     *
-     * @return self
      */
     public function setTierUpgradeTo(string $tierUpgradeTo): self
     {

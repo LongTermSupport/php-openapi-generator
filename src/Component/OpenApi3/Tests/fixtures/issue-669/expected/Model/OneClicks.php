@@ -37,8 +37,6 @@ class OneClicks extends \ArrayObject
     }
     /**
      * The slug identifier for the 1-Click application.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -55,8 +53,6 @@ class OneClicks extends \ArrayObject
     }
     /**
      * The type of the 1-Click application.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

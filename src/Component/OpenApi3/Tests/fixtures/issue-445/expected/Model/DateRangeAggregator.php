@@ -36,8 +36,6 @@ class DateRangeAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
-     * @return self
      */
     public function setField(string $field): self
     {
@@ -58,8 +56,6 @@ class DateRangeAggregator extends AggregatorBase
      * A list of date time ranges.
      *
      * @param list<DateRangeForAggregator> $ranges
-     *
-     * @return self
      */
     public function setRanges(array $ranges): self
     {

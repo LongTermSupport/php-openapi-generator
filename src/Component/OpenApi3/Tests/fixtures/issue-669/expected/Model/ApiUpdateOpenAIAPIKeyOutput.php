@@ -33,8 +33,6 @@ class ApiUpdateOpenAIAPIKeyOutput extends \ArrayObject
     }
     /**
      * OpenAI API Key Info
-     *
-     * @return self
      */
     public function setApiKeyInfo(ApiOpenAIAPIKeyInfo $apiKeyInfo): self
     {

@@ -33,8 +33,6 @@ class ApiCreateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * A human friendly name to identify the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

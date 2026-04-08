@@ -42,8 +42,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * X-Coordinate of top left point of the cropping rectangle.
-     *
-     * @return self
      */
     public function setX(int $x): self
     {
@@ -60,8 +58,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Y-Coordinate of top left point of the cropping rectangle.
-     *
-     * @return self
      */
     public function setY(int $y): self
     {
@@ -78,8 +74,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Width of the cropping rectangle.
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {
@@ -96,8 +90,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Height of the cropping rectangle.
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {

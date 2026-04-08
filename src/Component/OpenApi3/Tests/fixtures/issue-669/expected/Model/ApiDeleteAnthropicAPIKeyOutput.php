@@ -33,8 +33,6 @@ class ApiDeleteAnthropicAPIKeyOutput extends \ArrayObject
     }
     /**
      * Anthropic API Key Info
-     *
-     * @return self
      */
     public function setApiKeyInfo(ApiAnthropicAPIKeyInfo $apiKeyInfo): self
     {

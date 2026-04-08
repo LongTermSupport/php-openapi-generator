@@ -55,8 +55,6 @@ class ContributorActivity extends \ArrayObject
     }
     /**
      * @param list<ContributorActivityWeeksItem> $weeks
-     *
-     * @return self
      */
     public function setWeeks(array $weeks): self
     {

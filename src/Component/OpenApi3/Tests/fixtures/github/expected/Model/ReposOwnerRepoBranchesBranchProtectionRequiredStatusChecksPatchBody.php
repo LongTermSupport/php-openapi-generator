@@ -39,8 +39,6 @@ class ReposOwnerRepoBranchesBranchProtectionRequiredStatusChecksPatchBody extend
     }
     /**
      * Require branches to be up to date before merging.
-     *
-     * @return self
      */
     public function setStrict(bool $strict): self
     {
@@ -61,8 +59,6 @@ class ReposOwnerRepoBranchesBranchProtectionRequiredStatusChecksPatchBody extend
      * The list of status checks to require in order to merge into this branch
      *
      * @param list<string> $contexts
-     *
-     * @return self
      */
     public function setContexts(array $contexts): self
     {

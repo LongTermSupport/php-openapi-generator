@@ -51,8 +51,6 @@ class ResponseBillingInsights extends \ArrayObject
      * Array of billing data points, which are day-over-day changes in billing resource usage based on nightly invoice item estimates, for the requested period
      *
      * @param list<BillingDataPoint> $dataPoints
-     *
-     * @return self
      */
     public function setDataPoints(array $dataPoints): self
     {
@@ -69,8 +67,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Total number of items available across all pages
-     *
-     * @return self
      */
     public function setTotalItems(int $totalItems): self
     {
@@ -87,8 +83,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Total number of pages available
-     *
-     * @return self
      */
     public function setTotalPages(int $totalPages): self
     {
@@ -105,8 +99,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Current page number
-     *
-     * @return self
      */
     public function setCurrentPage(int $currentPage): self
     {

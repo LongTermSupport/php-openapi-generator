@@ -69,8 +69,6 @@ class DocumentHistoryDifference
      * Contains an RFC 6902 compatible patch that can be applied on the old document to get the new document.
      * Use a library like jsondiffpatch.net (https://github.com/wbish/jsondiffpatch.net)
      * or jsondiffpatch (https://github.com/benjamine/jsondiffpatch) to process this.
-     *
-     * @return self
      */
     public function setPatch(mixed $patch): self
     {

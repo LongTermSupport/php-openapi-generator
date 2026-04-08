@@ -33,8 +33,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesClearPatchBody extends \ArrayObjec
     }
     /**
      * @param list<MonitoringPortfoliosPortfolioIdCompaniesClearPatchBodyCompaniesItem> $companies
-     *
-     * @return self
      */
     public function setCompanies(array $companies): self
     {

@@ -47,7 +47,6 @@ class DropletsGetDestroyAssociatedResourcesStatus extends \LongTermSupport\OpenA
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\AssociatedResourceStatus|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsGetDestroyAssociatedResourcesStatusUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsGetDestroyAssociatedResourcesStatusNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsGetDestroyAssociatedResourcesStatusTooManyRequestsException

@@ -34,8 +34,6 @@ class EdgeNGramAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: EdgeNGram
-     *
-     * @return self
      */
     public function setType(mixed $type): self
     {
@@ -52,8 +50,6 @@ class EdgeNGramAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: edgengram.
-     *
-     * @return self
      */
     public function setFieldSuffix(?string $fieldSuffix): self
     {

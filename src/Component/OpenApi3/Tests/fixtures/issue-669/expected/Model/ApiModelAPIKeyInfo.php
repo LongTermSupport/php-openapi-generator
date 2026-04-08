@@ -50,8 +50,6 @@ class ApiModelAPIKeyInfo extends \ArrayObject
     }
     /**
      * Creation date
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -68,8 +66,6 @@ class ApiModelAPIKeyInfo extends \ArrayObject
     }
     /**
      * Created by
-     *
-     * @return self
      */
     public function setCreatedBy(string $createdBy): self
     {
@@ -86,8 +82,6 @@ class ApiModelAPIKeyInfo extends \ArrayObject
     }
     /**
      * Deleted date
-     *
-     * @return self
      */
     public function setDeletedAt(\DateTime $deletedAt): self
     {
@@ -104,8 +98,6 @@ class ApiModelAPIKeyInfo extends \ArrayObject
     }
     /**
      * Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -132,8 +124,6 @@ class ApiModelAPIKeyInfo extends \ArrayObject
     }
     /**
      * Uuid
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

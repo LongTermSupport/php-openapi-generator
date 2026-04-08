@@ -41,8 +41,6 @@ class AggregationResult
     }
     /**
      * Name of the aggregation.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class AggregationResult
     }
     /**
      * When there are lots of unique terms, Elastic Search only returns the top terms; this number is the sum of the document counts for all buckets that are not part of the response.
-     *
-     * @return self
      */
     public function setSumOtherDocCount(?int $sumOtherDocCount): self
     {
@@ -83,8 +79,6 @@ class AggregationResult
      * Optionally inner aggregations for further drill down can be available.
      *
      * @param list<AggregationResultItem>|null $aggregationResultItems
-     *
-     * @return self
      */
     public function setAggregationResultItems(?array $aggregationResultItems): self
     {

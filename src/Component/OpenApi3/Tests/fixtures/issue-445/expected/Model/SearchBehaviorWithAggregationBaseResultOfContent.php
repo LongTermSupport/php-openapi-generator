@@ -67,8 +67,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
-     * @return self
      */
     public function setTotalResults(int $totalResults): self
     {
@@ -89,8 +87,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
      * The matched documents.
      *
      * @param list<Content> $results
-     *
-     * @return self
      */
     public function setResults(array $results): self
     {
@@ -107,8 +103,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
-     * @return self
      */
     public function setElapsedMilliseconds(int $elapsedMilliseconds): self
     {
@@ -125,8 +119,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -143,8 +135,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
     }
     /**
      * The search string used to query the data.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -161,8 +151,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
     }
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
-     * @return self
      */
     public function setIsSearchStringRewritten(bool $isSearchStringRewritten): self
     {
@@ -183,8 +171,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
      * Additional information regarding the query execution and reason of the matched documents. Multiple items are returned if multiple queries were performed.
      *
      * @param list<QueryDebugInformation>|null $queryDebugInformation
-     *
-     * @return self
      */
     public function setQueryDebugInformation(?array $queryDebugInformation): self
     {
@@ -205,8 +191,6 @@ class SearchBehaviorWithAggregationBaseResultOfContent extends \ArrayObject
      * Results of the aggregation, if any aggregators was passed in the request.
      *
      * @param list<AggregationResult>|null $aggregationResults
-     *
-     * @return self
      */
     public function setAggregationResults(?array $aggregationResults): self
     {

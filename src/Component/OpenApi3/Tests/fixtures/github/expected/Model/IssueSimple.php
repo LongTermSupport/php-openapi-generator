@@ -198,8 +198,6 @@ class IssueSimple extends \ArrayObject
     }
     /**
      * @param list<IssueSimpleLabelsItem> $labels
-     *
-     * @return self
      */
     public function setLabels(array $labels): self
     {
@@ -226,8 +224,6 @@ class IssueSimple extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $assignees
-     *
-     * @return self
      */
     public function setAssignees(?array $assignees): self
     {
@@ -364,8 +360,6 @@ class IssueSimple extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setRepository(Repository $repository): self
     {

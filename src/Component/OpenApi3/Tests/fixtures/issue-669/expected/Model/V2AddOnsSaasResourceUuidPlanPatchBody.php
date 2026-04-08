@@ -33,8 +33,6 @@ class V2AddOnsSaasResourceUuidPlanPatchBody extends \ArrayObject
     }
     /**
      * The slug identifier for the new plan to apply to the add-on resource.
-     *
-     * @return self
      */
     public function setPlanSlug(string $planSlug): self
     {

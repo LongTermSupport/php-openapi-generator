@@ -39,8 +39,6 @@ class ControlPlaneFirewall extends \ArrayObject
     }
     /**
      * Indicates whether the control plane firewall is enabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {
@@ -61,8 +59,6 @@ class ControlPlaneFirewall extends \ArrayObject
      * An array of public addresses (IPv4 or CIDR) allowed to access the control plane.
      *
      * @param list<string> $allowedAddresses
-     *
-     * @return self
      */
     public function setAllowedAddresses(array $allowedAddresses): self
     {

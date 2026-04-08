@@ -41,8 +41,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
-     * @return self
      */
     public function setColor(string $color): self
     {
@@ -77,8 +73,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * A short description of the label.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {

@@ -30,8 +30,6 @@ class ListItemReferencesRequest
     }
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
-     * @return self
      */
     public function setReferences(mixed $references): self
     {

@@ -42,8 +42,6 @@ class FieldMultiFieldset extends FieldBase
     }
     /**
      * The ID of the schema to be used as fieldset (it must be of type Struct, and it cannot be a system schema).
-     *
-     * @return self
      */
     public function setSchemaId(string $schemaId): self
     {
@@ -60,8 +58,6 @@ class FieldMultiFieldset extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
-     * @return self
      */
     public function setSchemaIndexingInfo(mixed $schemaIndexingInfo): self
     {
@@ -78,8 +74,6 @@ class FieldMultiFieldset extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
-     * @return self
      */
     public function setMaximumItems(?int $maximumItems): self
     {
@@ -96,8 +90,6 @@ class FieldMultiFieldset extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
-     * @return self
      */
     public function setMinimumItems(?int $minimumItems): self
     {

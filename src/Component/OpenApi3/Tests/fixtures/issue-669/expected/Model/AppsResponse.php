@@ -35,8 +35,6 @@ class AppsResponse extends \ArrayObject
     }
     /**
      * @param list<App> $apps
-     *
-     * @return self
      */
     public function setApps(array $apps): self
     {

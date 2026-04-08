@@ -45,8 +45,6 @@ class UserLockManyRequest extends \ArrayObject
      * User IDs.
      *
      * @param list<string> $userIds
-     *
-     * @return self
      */
     public function setUserIds(array $userIds): self
     {
@@ -67,8 +65,6 @@ class UserLockManyRequest extends \ArrayObject
      * Indicates the requested lock state of the users.
      * If _true_ was specified, the users will be _locked_. _False_ will unlock the previously _locked_ users.
      * Users which are already in desired state will be returned as errors.
-     *
-     * @return self
      */
     public function setLock(bool $lock): self
     {

@@ -68,8 +68,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * The name of the artifact.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -86,8 +84,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * The size in bytes of the artifact.
-     *
-     * @return self
      */
     public function setSizeInBytes(int $sizeInBytes): self
     {
@@ -124,8 +120,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * Whether or not the artifact has expired.
-     *
-     * @return self
      */
     public function setExpired(bool $expired): self
     {

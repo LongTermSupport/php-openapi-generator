@@ -41,8 +41,6 @@ class Backup extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format at which the backup was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -59,8 +57,6 @@ class Backup extends \ArrayObject
     }
     /**
      * The size of the database backup in GBs.
-     *
-     * @return self
      */
     public function setSizeGigabytes(float $sizeGigabytes): self
     {
@@ -77,8 +73,6 @@ class Backup extends \ArrayObject
     }
     /**
      * Indicates if this backup is a full or an incremental one (available only for MySQL).
-     *
-     * @return self
      */
     public function setIncremental(bool $incremental): self
     {

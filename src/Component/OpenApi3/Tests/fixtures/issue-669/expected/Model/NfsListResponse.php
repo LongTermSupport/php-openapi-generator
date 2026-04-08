@@ -33,8 +33,6 @@ class NfsListResponse extends \ArrayObject
     }
     /**
      * @param list<NfsResponse> $shares
-     *
-     * @return self
      */
     public function setShares(array $shares): self
     {

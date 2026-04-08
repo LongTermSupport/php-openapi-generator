@@ -37,8 +37,6 @@ class AccountTeam extends \ArrayObject
     }
     /**
      * The unique universal identifier for the current team.
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -55,8 +53,6 @@ class AccountTeam extends \ArrayObject
     }
     /**
      * The name for the current team.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -45,8 +45,6 @@ class LogsinkCreate extends \ArrayObject
     }
     /**
      * The name of the Logsink
-     *
-     * @return self
      */
     public function setSinkName(string $sinkName): self
     {
@@ -77,8 +75,6 @@ class LogsinkCreate extends \ArrayObject
      * 
      * More details about the configuration can be found in the `config` property.
      * 
-     *
-     * @return self
      */
     public function setSinkType(string $sinkType): self
     {

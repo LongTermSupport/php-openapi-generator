@@ -37,8 +37,6 @@ class ApiCreateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
-     * @return self
      */
     public function setAgentUuid(string $agentUuid): self
     {
@@ -55,8 +53,6 @@ class ApiCreateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * A human friendly name to identify the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

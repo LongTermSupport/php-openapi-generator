@@ -39,8 +39,6 @@ class BusinessProcessCreateRequest
     }
     /**
      * Indicates if the system starting the business process supports cancellation.
-     *
-     * @return self
      */
     public function setSupportsCancellation(bool $supportsCancellation): self
     {
@@ -59,8 +57,6 @@ class BusinessProcessCreateRequest
     /**
      * Notification data to send to the user when creating the business process.
      * Set to null to not create a notification.
-     *
-     * @return self
      */
     public function setNotification(mixed $notification): self
     {
@@ -77,8 +73,6 @@ class BusinessProcessCreateRequest
     }
     /**
      * Initial state of the business process.
-     *
-     * @return self
      */
     public function setInitialState(string $initialState): self
     {

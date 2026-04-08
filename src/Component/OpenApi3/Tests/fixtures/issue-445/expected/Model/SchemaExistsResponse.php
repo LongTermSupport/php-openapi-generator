@@ -30,8 +30,6 @@ class SchemaExistsResponse
     }
     /**
      * It indicates if it exists.
-     *
-     * @return self
      */
     public function setExists(bool $exists): self
     {

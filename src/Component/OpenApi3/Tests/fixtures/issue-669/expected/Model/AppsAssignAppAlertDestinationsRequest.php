@@ -37,8 +37,6 @@ class AppsAssignAppAlertDestinationsRequest extends \ArrayObject
     }
     /**
      * @param list<string> $emails
-     *
-     * @return self
      */
     public function setEmails(array $emails): self
     {
@@ -55,8 +53,6 @@ class AppsAssignAppAlertDestinationsRequest extends \ArrayObject
     }
     /**
      * @param list<AppAlertSlackWebhook> $slackWebhooks
-     *
-     * @return self
      */
     public function setSlackWebhooks(array $slackWebhooks): self
     {

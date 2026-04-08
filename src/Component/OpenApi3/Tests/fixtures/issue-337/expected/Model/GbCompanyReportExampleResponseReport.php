@@ -154,8 +154,6 @@ class GbCompanyReportExampleResponseReport extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportExtendedGroupStructureItem> $extendedGroupStructure
-     *
-     * @return self
      */
     public function setExtendedGroupStructure(array $extendedGroupStructure): self
     {
@@ -172,8 +170,6 @@ class GbCompanyReportExampleResponseReport extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportFinancialStatementsItem> $financialStatements
-     *
-     * @return self
      */
     public function setFinancialStatements(array $financialStatements): self
     {
@@ -190,8 +186,6 @@ class GbCompanyReportExampleResponseReport extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportLocalFinancialStatementsItem> $localFinancialStatements
-     *
-     * @return self
      */
     public function setLocalFinancialStatements(array $localFinancialStatements): self
     {

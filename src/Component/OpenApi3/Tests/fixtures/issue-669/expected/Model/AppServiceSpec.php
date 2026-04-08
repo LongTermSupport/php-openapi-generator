@@ -113,8 +113,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -181,8 +179,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
-     * @return self
      */
     public function setDockerfilePath(string $dockerfilePath): self
     {
@@ -199,8 +195,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
-     * @return self
      */
     public function setBuildCommand(string $buildCommand): self
     {
@@ -217,8 +211,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
-     * @return self
      */
     public function setRunCommand(string $runCommand): self
     {
@@ -235,8 +227,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
-     * @return self
      */
     public function setSourceDir(string $sourceDir): self
     {
@@ -257,8 +247,6 @@ class AppServiceSpec extends \ArrayObject
      * A list of environment variables made available to the component.
      *
      * @param list<AppVariableDefinition> $envs
-     *
-     * @return self
      */
     public function setEnvs(array $envs): self
     {
@@ -275,8 +263,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
-     * @return self
      */
     public function setEnvironmentSlug(string $environmentSlug): self
     {
@@ -297,8 +283,6 @@ class AppServiceSpec extends \ArrayObject
      * A list of configured log forwarding destinations.
      *
      * @param list<AppLogDestinationDefinition> $logDestinations
-     *
-     * @return self
      */
     public function setLogDestinations(array $logDestinations): self
     {
@@ -315,8 +299,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
-     * @return self
      */
     public function setInstanceCount(int $instanceCount): self
     {
@@ -333,8 +315,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
-     * @return self
      */
     public function setInstanceSizeSlug(mixed $instanceSizeSlug): self
     {
@@ -351,8 +331,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
-     * @return self
      */
     public function setAutoscaling(AppComponentInstanceBaseAutoscaling $autoscaling): self
     {
@@ -407,8 +385,6 @@ class AppServiceSpec extends \ArrayObject
      * - `HTTP`: The app is serving the HTTP protocol. Default.
      * - `HTTP2`: The app is serving the HTTP/2 protocol. Currently, this needs to be implemented in the service by serving HTTP/2 cleartext (h2c).
      * 
-     *
-     * @return self
      */
     public function setProtocol(string $protocol): self
     {
@@ -427,8 +403,6 @@ class AppServiceSpec extends \ArrayObject
     /**
      * The internal port on which this service's run command will listen. Default: 8080
      * If there is not an environment variable with the name `PORT`, one will be automatically added with its value set to the value of this field.
-     *
-     * @return self
      */
     public function setHttpPort(int $httpPort): self
     {
@@ -449,8 +423,6 @@ class AppServiceSpec extends \ArrayObject
      * The ports on which this service will listen for internal traffic.
      *
      * @param list<int> $internalPorts
-     *
-     * @return self
      */
     public function setInternalPorts(array $internalPorts): self
     {
@@ -475,8 +447,6 @@ class AppServiceSpec extends \ArrayObject
      * @param list<AppRouteSpec> $routes
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setRoutes(array $routes): self
     {

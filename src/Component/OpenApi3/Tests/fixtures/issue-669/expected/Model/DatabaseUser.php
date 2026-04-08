@@ -53,8 +53,6 @@ class DatabaseUser extends \ArrayObject
     }
     /**
      * The name of a database user.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -75,8 +73,6 @@ class DatabaseUser extends \ArrayObject
      * A string representing the database user's role. The value will be either
      * "primary" or "normal".
      * 
-     *
-     * @return self
      */
     public function setRole(string $role): self
     {
@@ -93,8 +89,6 @@ class DatabaseUser extends \ArrayObject
     }
     /**
      * A randomly generated password for the database user.<br>Requires `database:view_credentials` scope.
-     *
-     * @return self
      */
     public function setPassword(string $password): self
     {
@@ -111,8 +105,6 @@ class DatabaseUser extends \ArrayObject
     }
     /**
      * Access certificate for TLS client authentication. (Kafka only)
-     *
-     * @return self
      */
     public function setAccessCert(string $accessCert): self
     {
@@ -129,8 +121,6 @@ class DatabaseUser extends \ArrayObject
     }
     /**
      * Access key for TLS client authentication. (Kafka only)
-     *
-     * @return self
      */
     public function setAccessKey(string $accessKey): self
     {

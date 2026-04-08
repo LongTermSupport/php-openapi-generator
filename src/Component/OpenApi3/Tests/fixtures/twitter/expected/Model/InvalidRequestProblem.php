@@ -46,8 +46,6 @@ class InvalidRequestProblem extends \ArrayObject
     }
     /**
      * @param list<InvalidRequestProblemErrorsItem> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

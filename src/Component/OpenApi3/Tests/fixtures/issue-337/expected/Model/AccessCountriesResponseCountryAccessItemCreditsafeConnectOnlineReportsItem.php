@@ -61,8 +61,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Company Report template. Full reports are default
-     *
-     * @return self
      */
     public function setTemplateName(string $templateName): self
     {
@@ -89,8 +87,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Date of when the service was enabled
-     *
-     * @return self
      */
     public function setStartDate(string $startDate): self
     {
@@ -107,8 +103,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Date of when the service will expire
-     *
-     * @return self
      */
     public function setExpireDate(string $expireDate): self
     {
@@ -125,8 +119,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Measure of total usage available in the service
-     *
-     * @return self
      */
     public function setPaid(int $paid): self
     {
@@ -143,8 +135,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Service usage
-     *
-     * @return self
      */
     public function setUsed(int $used): self
     {

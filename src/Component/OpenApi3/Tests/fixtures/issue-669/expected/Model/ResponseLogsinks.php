@@ -33,8 +33,6 @@ class ResponseLogsinks extends \ArrayObject
     }
     /**
      * @param list<LogsinkSchema> $sinks
-     *
-     * @return self
      */
     public function setSinks(array $sinks): self
     {

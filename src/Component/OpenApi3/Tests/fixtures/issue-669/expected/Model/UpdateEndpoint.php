@@ -41,8 +41,6 @@ class UpdateEndpoint extends \ArrayObject
     }
     /**
      * The amount of time the content is cached by the CDN's edge servers in seconds. TTL must be one of 60, 600, 3600, 86400, or 604800. Defaults to 3600 (one hour) when excluded.
-     *
-     * @return self
      */
     public function setTtl(int $ttl): self
     {
@@ -59,8 +57,6 @@ class UpdateEndpoint extends \ArrayObject
     }
     /**
      * The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-     *
-     * @return self
      */
     public function setCertificateId(string $certificateId): self
     {
@@ -77,8 +73,6 @@ class UpdateEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) of the custom subdomain used with the CDN endpoint.
-     *
-     * @return self
      */
     public function setCustomDomain(string $customDomain): self
     {

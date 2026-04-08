@@ -42,8 +42,6 @@ class UserAuditDetail
     }
     /**
      * The date on which the document was created.
-     *
-     * @return self
      */
     public function setCreationDate(\DateTime $creationDate): self
     {
@@ -60,8 +58,6 @@ class UserAuditDetail
     }
     /**
      * The last date on which the document was modified.
-     *
-     * @return self
      */
     public function setModificationDate(\DateTime $modificationDate): self
     {
@@ -78,8 +74,6 @@ class UserAuditDetail
     }
     /**
      * ID of the user who created the document.
-     *
-     * @return self
      */
     public function setCreatedByUser(mixed $createdByUser): self
     {
@@ -96,8 +90,6 @@ class UserAuditDetail
     }
     /**
      * ID of the last user who modified the document.
-     *
-     * @return self
      */
     public function setModifiedByUser(mixed $modifiedByUser): self
     {

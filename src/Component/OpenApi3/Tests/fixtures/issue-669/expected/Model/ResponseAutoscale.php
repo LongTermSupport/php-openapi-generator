@@ -33,8 +33,6 @@ class ResponseAutoscale extends \ArrayObject
     }
     /**
      * Contains all autoscaling configuration for a database cluster
-     *
-     * @return self
      */
     public function setAutoscale(DatabaseAutoscaleParams $autoscale): self
     {

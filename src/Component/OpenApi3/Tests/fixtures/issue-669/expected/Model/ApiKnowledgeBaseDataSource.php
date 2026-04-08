@@ -90,8 +90,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * AWS S3 Data Source for Display
-     *
-     * @return self
      */
     public function setAwsDataSource(ApiAWSDataSourceDisplay $awsDataSource): self
     {
@@ -108,8 +106,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Name of storage bucket - Deprecated, moved to data_source_details
-     *
-     * @return self
      */
     public function setBucketName(string $bucketName): self
     {
@@ -130,8 +126,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
-     * @return self
      */
     public function setChunkingAlgorithm(string $chunkingAlgorithm): self
     {
@@ -152,8 +146,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
-     * @return self
      */
     public function setChunkingOptions(ApiChunkingOptions $chunkingOptions): self
     {
@@ -170,8 +162,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -188,8 +178,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Dropbox Data Source for Display
-     *
-     * @return self
      */
     public function setDropboxDataSource(ApiDropboxDataSourceDisplay $dropboxDataSource): self
     {
@@ -206,8 +194,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
-     * @return self
      */
     public function setFileUploadDataSource(ApiFileUploadDataSource $fileUploadDataSource): self
     {
@@ -224,8 +210,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Google Drive Data Source for Display
-     *
-     * @return self
      */
     public function setGoogleDriveDataSource(ApiGoogleDriveDataSourceDisplay $googleDriveDataSource): self
     {
@@ -242,8 +226,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Path of folder or object in bucket - Deprecated, moved to data_source_details
-     *
-     * @return self
      */
     public function setItemPath(string $itemPath): self
     {
@@ -270,8 +252,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Region code - Deprecated, moved to data_source_details
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -288,8 +268,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
-     * @return self
      */
     public function setSpacesDataSource(ApiSpacesDataSource $spacesDataSource): self
     {
@@ -306,8 +284,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -324,8 +300,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Unique id of knowledge base
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -342,8 +316,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
-     * @return self
      */
     public function setWebCrawlerDataSource(ApiWebCrawlerDataSource $webCrawlerDataSource): self
     {

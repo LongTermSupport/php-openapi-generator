@@ -30,8 +30,6 @@ class TakeArrayValueTransformation extends BusinessRuleTransformation
     }
     /**
      * Index of the item.
-     *
-     * @return self
      */
     public function setIndex(?string $index): self
     {

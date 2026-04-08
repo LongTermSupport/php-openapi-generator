@@ -63,8 +63,6 @@ class Event extends \ArrayObject
     }
     /**
      * Actor
-     *
-     * @return self
      */
     public function setActor(Actor $actor): self
     {
@@ -91,8 +89,6 @@ class Event extends \ArrayObject
     }
     /**
      * Actor
-     *
-     * @return self
      */
     public function setOrg(Actor $org): self
     {

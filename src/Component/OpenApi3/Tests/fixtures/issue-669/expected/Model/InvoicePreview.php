@@ -49,8 +49,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * The UUID of the invoice. The canonical reference for the invoice.
-     *
-     * @return self
      */
     public function setInvoiceUuid(string $invoiceUuid): self
     {
@@ -67,8 +65,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * ID of the invoice. Listed on the face of the invoice PDF as the "Invoice number".
-     *
-     * @return self
      */
     public function setInvoiceId(string $invoiceId): self
     {
@@ -85,8 +81,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {
@@ -103,8 +97,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
-     * @return self
      */
     public function setInvoicePeriod(string $invoicePeriod): self
     {
@@ -121,8 +113,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Time the invoice was last updated.  This is only included with the invoice preview.
-     *
-     * @return self
      */
     public function setUpdatedAt(string $updatedAt): self
     {

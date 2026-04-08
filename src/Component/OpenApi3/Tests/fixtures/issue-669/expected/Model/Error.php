@@ -41,8 +41,6 @@ class Error extends \ArrayObject
     }
     /**
      * A short identifier corresponding to the HTTP status code returned. For  example, the ID for a response returning a 404 status code would be "not_found."
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class Error extends \ArrayObject
     }
     /**
      * A message providing additional information about the error, including  details to help resolve it when possible.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -77,8 +73,6 @@ class Error extends \ArrayObject
     }
     /**
      * Optionally, some endpoints may include a request ID that should be provided when reporting bugs or opening support tickets to help identify the issue.
-     *
-     * @return self
      */
     public function setRequestId(string $requestId): self
     {

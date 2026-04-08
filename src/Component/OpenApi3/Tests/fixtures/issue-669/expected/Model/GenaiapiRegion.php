@@ -49,8 +49,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * Url for inference server
-     *
-     * @return self
      */
     public function setInferenceUrl(string $inferenceUrl): self
     {
@@ -67,8 +65,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * Region code
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -85,8 +81,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * This datacenter is capable of running batch jobs
-     *
-     * @return self
      */
     public function setServesBatch(bool $servesBatch): self
     {
@@ -103,8 +97,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * This datacenter is capable of serving inference
-     *
-     * @return self
      */
     public function setServesInference(bool $servesInference): self
     {
@@ -121,8 +113,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * The url for the inference streaming server
-     *
-     * @return self
      */
     public function setStreamInferenceUrl(string $streamInferenceUrl): self
     {

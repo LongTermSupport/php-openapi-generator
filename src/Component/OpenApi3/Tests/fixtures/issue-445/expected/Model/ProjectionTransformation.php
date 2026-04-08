@@ -36,8 +36,6 @@ class ProjectionTransformation extends BusinessRuleTransformation
      * Transformations to apply.
      *
      * @param list<BusinessRuleTransformation>|null $transformations
-     *
-     * @return self
      */
     public function setTransformations(?array $transformations): self
     {

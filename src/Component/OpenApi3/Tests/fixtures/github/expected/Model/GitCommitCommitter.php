@@ -41,8 +41,6 @@ class GitCommitCommitter extends \ArrayObject
     }
     /**
      * Timestamp of the commit
-     *
-     * @return self
      */
     public function setDate(\DateTime $date): self
     {
@@ -59,8 +57,6 @@ class GitCommitCommitter extends \ArrayObject
     }
     /**
      * Git email address of the user
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -77,8 +73,6 @@ class GitCommitCommitter extends \ArrayObject
     }
     /**
      * Name of the git user
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -57,8 +57,6 @@ class ClusterlintRequest extends \ArrayObject
      * An array of check groups that will be run when clusterlint executes checks.
      *
      * @param list<string> $includeGroups
-     *
-     * @return self
      */
     public function setIncludeGroups(array $includeGroups): self
     {
@@ -79,8 +77,6 @@ class ClusterlintRequest extends \ArrayObject
      * An array of checks that will be run when clusterlint executes checks.
      *
      * @param list<string> $includeChecks
-     *
-     * @return self
      */
     public function setIncludeChecks(array $includeChecks): self
     {
@@ -101,8 +97,6 @@ class ClusterlintRequest extends \ArrayObject
      * An array of check groups that will be omitted when clusterlint executes checks.
      *
      * @param list<string> $excludeGroups
-     *
-     * @return self
      */
     public function setExcludeGroups(array $excludeGroups): self
     {
@@ -123,8 +117,6 @@ class ClusterlintRequest extends \ArrayObject
      * An array of checks that will be run when clusterlint executes checks.
      *
      * @param list<string> $excludeChecks
-     *
-     * @return self
      */
     public function setExcludeChecks(array $excludeChecks): self
     {

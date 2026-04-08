@@ -38,8 +38,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store filter information for a schema.
-     *
-     * @return self
      */
     public function setIndexedField(int $indexedField): self
     {
@@ -56,8 +54,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store search information for a schema.
-     *
-     * @return self
      */
     public function setSimpleSearchField(int $simpleSearchField): self
     {
@@ -74,8 +70,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store sorting information for a schema.
-     *
-     * @return self
      */
     public function setSortableField(int $sortableField): self
     {

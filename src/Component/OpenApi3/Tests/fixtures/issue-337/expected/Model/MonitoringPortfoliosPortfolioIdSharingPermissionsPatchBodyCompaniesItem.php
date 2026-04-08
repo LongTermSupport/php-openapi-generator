@@ -37,8 +37,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ex
     }
     /**
      * A creditsafe user id.
-     *
-     * @return self
      */
     public function setCsUserId(string $csUserId): self
     {
@@ -55,8 +53,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ex
     }
     /**
      * Comma separated permissions. "View" permission gets automatically added to the user if "Add", "Edit", "Remove" permissions are set.
-     *
-     * @return self
      */
     public function setPermissions(string $permissions): self
     {

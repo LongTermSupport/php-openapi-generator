@@ -45,8 +45,6 @@ class ClusterRegistries extends \ArrayObject
      * An array containing the UUIDs of Kubernetes clusters.
      *
      * @param list<string> $clusterUuids
-     *
-     * @return self
      */
     public function setClusterUuids(array $clusterUuids): self
     {
@@ -67,8 +65,6 @@ class ClusterRegistries extends \ArrayObject
      * An array containing the registry names.
      *
      * @param list<string> $registries
-     *
-     * @return self
      */
     public function setRegistries(array $registries): self
     {

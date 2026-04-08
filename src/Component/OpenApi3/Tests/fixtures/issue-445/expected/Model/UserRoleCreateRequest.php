@@ -45,8 +45,6 @@ class UserRoleCreateRequest extends \ArrayObject
     }
     /**
      * Language specific user role names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -67,8 +65,6 @@ class UserRoleCreateRequest extends \ArrayObject
      * All user rights for this user role.
      *
      * @param list<string> $userRights
-     *
-     * @return self
      */
     public function setUserRights(array $userRights): self
     {
@@ -89,8 +85,6 @@ class UserRoleCreateRequest extends \ArrayObject
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

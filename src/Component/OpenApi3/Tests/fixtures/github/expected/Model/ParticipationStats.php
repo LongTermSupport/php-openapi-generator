@@ -37,8 +37,6 @@ class ParticipationStats extends \ArrayObject
     }
     /**
      * @param list<int> $all
-     *
-     * @return self
      */
     public function setAll(array $all): self
     {
@@ -55,8 +53,6 @@ class ParticipationStats extends \ArrayObject
     }
     /**
      * @param list<int> $owner
-     *
-     * @return self
      */
     public function setOwner(array $owner): self
     {

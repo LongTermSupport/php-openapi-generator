@@ -36,8 +36,6 @@ class ParchmentsGetLdjsonResponse200 extends \ArrayObject
     }
     /**
      * @param list<ParchmentJsonld> $hydraMember
-     *
-     * @return self
      */
     public function setHydraMember(array $hydraMember): self
     {

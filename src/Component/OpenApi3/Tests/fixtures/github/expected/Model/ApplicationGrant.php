@@ -89,8 +89,6 @@ class ApplicationGrant extends \ArrayObject
     }
     /**
      * @param list<string> $scopes
-     *
-     * @return self
      */
     public function setScopes(array $scopes): self
     {

@@ -33,8 +33,6 @@ class ApiLinks extends \ArrayObject
     }
     /**
      * Information about how to reach other pages
-     *
-     * @return self
      */
     public function setPages(ApiPages $pages): self
     {

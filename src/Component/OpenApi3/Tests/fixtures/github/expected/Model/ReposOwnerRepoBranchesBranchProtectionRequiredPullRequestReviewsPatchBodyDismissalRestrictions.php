@@ -45,8 +45,6 @@ class ReposOwnerRepoBranchesBranchProtectionRequiredPullRequestReviewsPatchBodyD
      * The list of user `login`s with dismissal access
      *
      * @param list<string> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -67,8 +65,6 @@ class ReposOwnerRepoBranchesBranchProtectionRequiredPullRequestReviewsPatchBodyD
      * The list of team `slug`s with dismissal access
      *
      * @param list<string> $teams
-     *
-     * @return self
      */
     public function setTeams(array $teams): self
     {

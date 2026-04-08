@@ -113,8 +113,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The cleanup_policy sets the retention policy to use on log segments. 'delete' will discard old segments when retention time/size limits are reached. 'compact' will enable log compaction, resulting in retention of the latest value for each key.
-     *
-     * @return self
      */
     public function setCleanupPolicy(string $cleanupPolicy): self
     {
@@ -131,8 +129,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The compression_type specifies the compression type of the topic.
-     *
-     * @return self
      */
     public function setCompressionType(string $compressionType): self
     {
@@ -149,8 +145,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The delete_retention_ms specifies how long (in ms) to retain delete tombstone markers for topics.
-     *
-     * @return self
      */
     public function setDeleteRetentionMs(int $deleteRetentionMs): self
     {
@@ -167,8 +161,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The file_delete_delay_ms specifies the time (in ms) to wait before deleting a file from the filesystem.
-     *
-     * @return self
      */
     public function setFileDeleteDelayMs(int $fileDeleteDelayMs): self
     {
@@ -185,8 +177,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The flush_messages specifies the number of messages to accumulate on a log partition before messages are flushed to disk.
-     *
-     * @return self
      */
     public function setFlushMessages(int $flushMessages): self
     {
@@ -203,8 +193,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The flush_ms specifies the maximum time (in ms) that a message is kept in memory before being flushed to disk.
-     *
-     * @return self
      */
     public function setFlushMs(int $flushMs): self
     {
@@ -221,8 +209,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The index_interval_bytes specifies the number of bytes between entries being added into te offset index.
-     *
-     * @return self
      */
     public function setIndexIntervalBytes(int $indexIntervalBytes): self
     {
@@ -239,8 +225,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The max_compaction_lag_ms specifies the maximum amount of time (in ms) that a message will remain uncompacted. This is only applicable if the logs are have compaction enabled.
-     *
-     * @return self
      */
     public function setMaxCompactionLagMs(int $maxCompactionLagMs): self
     {
@@ -257,8 +241,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The max_messages_bytes specifies the largest record batch size (in bytes) that can be sent to the server.  This is calculated after compression if compression is enabled.
-     *
-     * @return self
      */
     public function setMaxMessageBytes(int $maxMessageBytes): self
     {
@@ -275,8 +257,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The message_down_conversion_enable specifies whether down-conversion of message formats is enabled to satisfy consumer requests. When 'false', the broker will not perform conversion for consumers expecting older message formats. The broker will respond with an `UNSUPPORTED_VERSION` error for consume requests from these older clients.
-     *
-     * @return self
      */
     public function setMessageDownConversionEnable(bool $messageDownConversionEnable): self
     {
@@ -293,8 +273,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The message_format_version specifies the message format version used by the broker to append messages to the logs. The value of this setting is assumed to be 3.0-IV1 if the broker protocol version is 3.0 or higher. By setting a  particular message format version, all existing messages on disk must be smaller or equal to the specified version.
-     *
-     * @return self
      */
     public function setMessageFormatVersion(string $messageFormatVersion): self
     {
@@ -311,8 +289,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The message_timestamp_type specifies whether to use the message create time or log append time as the timestamp on a message.
-     *
-     * @return self
      */
     public function setMessageTimestampType(string $messageTimestampType): self
     {
@@ -329,8 +305,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The min_cleanable_dirty_ratio specifies the frequency of log compaction (if enabled) in relation to duplicates present in the logs. For example, at 0.5, at most 50% of the log could be duplicates before compaction would begin.
-     *
-     * @return self
      */
     public function setMinCleanableDirtyRatio(float $minCleanableDirtyRatio): self
     {
@@ -347,8 +321,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The min_compaction_lag_ms specifies the minimum time (in ms) that a message will remain uncompacted in the log. Only relevant if log compaction is enabled.
-     *
-     * @return self
      */
     public function setMinCompactionLagMs(int $minCompactionLagMs): self
     {
@@ -365,8 +337,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The min_insync_replicas specifies the number of replicas that must ACK a write for the write to be considered successful.
-     *
-     * @return self
      */
     public function setMinInsyncReplicas(int $minInsyncReplicas): self
     {
@@ -383,8 +353,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The preallocate specifies whether a file should be preallocated on disk when creating a new log segment.
-     *
-     * @return self
      */
     public function setPreallocate(bool $preallocate): self
     {
@@ -401,8 +369,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The retention_bytes specifies the maximum size of the log (in bytes) before deleting messages. -1 indicates that there is no limit.
-     *
-     * @return self
      */
     public function setRetentionBytes(int $retentionBytes): self
     {
@@ -419,8 +385,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The retention_ms specifies the maximum amount of time (in ms) to keep a message before deleting it.
-     *
-     * @return self
      */
     public function setRetentionMs(int $retentionMs): self
     {
@@ -437,8 +401,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The segment_bytes specifies the maximum size of a single log file (in bytes).
-     *
-     * @return self
      */
     public function setSegmentBytes(int $segmentBytes): self
     {
@@ -455,8 +417,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The segment_jitter_ms specifies the maximum random jitter subtracted from the scheduled segment roll time to avoid thundering herds of segment rolling.
-     *
-     * @return self
      */
     public function setSegmentJitterMs(int $segmentJitterMs): self
     {
@@ -473,8 +433,6 @@ class KafkaTopicConfig extends \ArrayObject
     }
     /**
      * The segment_ms specifies the period of time after which the log will be forced to roll if the segment file isn't full. This ensures that retention can delete or compact old data.
-     *
-     * @return self
      */
     public function setSegmentMs(int $segmentMs): self
     {

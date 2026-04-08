@@ -49,8 +49,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Name of the child agent
-     *
-     * @return self
      */
     public function setAgentName(string $agentName): self
     {
@@ -67,8 +65,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Child agent unique identifier
-     *
-     * @return self
      */
     public function setChildAgentUuid(string $childAgentUuid): self
     {
@@ -85,8 +81,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * If case
-     *
-     * @return self
      */
     public function setIfCase(string $ifCase): self
     {
@@ -103,8 +97,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Child agent is deleted
-     *
-     * @return self
      */
     public function setIsDeleted(bool $isDeleted): self
     {
@@ -121,8 +113,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Route name
-     *
-     * @return self
      */
     public function setRouteName(string $routeName): self
     {

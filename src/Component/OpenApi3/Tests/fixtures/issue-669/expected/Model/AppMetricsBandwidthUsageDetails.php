@@ -37,8 +37,6 @@ class AppMetricsBandwidthUsageDetails extends \ArrayObject
     }
     /**
      * The ID of the app.
-     *
-     * @return self
      */
     public function setAppId(string $appId): self
     {
@@ -55,8 +53,6 @@ class AppMetricsBandwidthUsageDetails extends \ArrayObject
     }
     /**
      * The used bandwidth amount in bytes.
-     *
-     * @return self
      */
     public function setBandwidthBytes(string $bandwidthBytes): self
     {

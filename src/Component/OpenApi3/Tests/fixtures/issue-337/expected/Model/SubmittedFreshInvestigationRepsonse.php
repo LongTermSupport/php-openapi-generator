@@ -59,8 +59,6 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     }
     /**
      * Fresh Investigation Unique Identifier
-     *
-     * @return self
      */
     public function setOrderID(string $orderID): self
     {
@@ -77,8 +75,6 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     }
     /**
      * Fresh Investigation Internal Identifier
-     *
-     * @return self
      */
     public function setTransactionID(string $transactionID): self
     {

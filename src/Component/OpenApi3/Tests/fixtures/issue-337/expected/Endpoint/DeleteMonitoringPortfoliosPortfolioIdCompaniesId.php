@@ -60,7 +60,6 @@ class DeleteMonitoringPortfoliosPortfolioIdCompaniesId extends \LongTermSupport\
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeleteMonitoringPortfoliosPortfolioIdCompaniesIdBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeleteMonitoringPortfoliosPortfolioIdCompaniesIdUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeleteMonitoringPortfoliosPortfolioIdCompaniesIdForbiddenException

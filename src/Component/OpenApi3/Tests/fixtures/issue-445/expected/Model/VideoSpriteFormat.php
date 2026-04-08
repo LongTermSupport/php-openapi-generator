@@ -39,8 +39,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * Specifies the dimensions of a single frame in the sprite.
-     *
-     * @return self
      */
     public function setSpriteResizeAction(mixed $spriteResizeAction): self
     {
@@ -57,8 +55,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * Limit for the number of frames to generate.
-     *
-     * @return self
      */
     public function setMaxNumberOfSprites(int $maxNumberOfSprites): self
     {
@@ -75,8 +71,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * JPEG-quality to use for the sprite.
-     *
-     * @return self
      */
     public function setQuality(int $quality): self
     {

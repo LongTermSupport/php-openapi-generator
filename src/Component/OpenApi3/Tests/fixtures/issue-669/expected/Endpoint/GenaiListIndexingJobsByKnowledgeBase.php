@@ -44,7 +44,6 @@ class GenaiListIndexingJobsByKnowledgeBase extends \LongTermSupport\OpenApiGener
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiListKnowledgeBaseIndexingJobsOutput|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiListIndexingJobsByKnowledgeBaseUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiListIndexingJobsByKnowledgeBaseNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\GenaiListIndexingJobsByKnowledgeBaseTooManyRequestsException

@@ -33,8 +33,6 @@ class ResponseSinglePartnerAttachmentServiceKey extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $serviceKey
-     *
-     * @return self
      */
     public function setServiceKey(array $serviceKey): self
     {

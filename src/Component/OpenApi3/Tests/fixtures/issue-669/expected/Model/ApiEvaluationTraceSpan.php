@@ -65,8 +65,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * When the span was created
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -87,8 +85,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
      * Input data for the span (flexible structure - can be messages array, string, etc.)
      *
      * @param array<string, mixed> $input
-     *
-     * @return self
      */
     public function setInput(array $input): self
     {
@@ -105,8 +101,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Name/identifier for the span
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -127,8 +121,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
      * Output data from the span (flexible structure - can be message, string, etc.)
      *
      * @param array<string, mixed> $output
-     *
-     * @return self
      */
     public function setOutput(array $output): self
     {
@@ -149,8 +141,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
      * Any retriever span chunks that were included as part of the span.
      *
      * @param list<ApiPromptChunk> $retrieverChunks
-     *
-     * @return self
      */
     public function setRetrieverChunks(array $retrieverChunks): self
     {
@@ -171,8 +161,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
      * The span-level metric results.
      *
      * @param list<ApiEvaluationMetricResult> $spanLevelMetricResults
-     *
-     * @return self
      */
     public function setSpanLevelMetricResults(array $spanLevelMetricResults): self
     {
@@ -189,8 +177,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Types of spans in a trace
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

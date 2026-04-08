@@ -37,8 +37,6 @@ class StatusMessages extends \ArrayObject
     }
     /**
      * Status information about the cluster which impacts it's lifecycle.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -55,8 +53,6 @@ class StatusMessages extends \ArrayObject
     }
     /**
      * A timestamp in ISO8601 format that represents when the status message was emitted.
-     *
-     * @return self
      */
     public function setTimestamp(\DateTime $timestamp): self
     {

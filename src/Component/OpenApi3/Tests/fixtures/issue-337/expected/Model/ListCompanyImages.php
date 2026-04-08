@@ -44,8 +44,6 @@ class ListCompanyImages extends \ArrayObject
     }
     /**
      * @param list<ListCompanyImagesDataItem> $data
-     *
-     * @return self
      */
     public function setData(array $data): self
     {

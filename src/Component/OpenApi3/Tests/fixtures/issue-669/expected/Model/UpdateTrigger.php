@@ -38,8 +38,6 @@ class UpdateTrigger extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
-     * @return self
      */
     public function setIsEnabled(bool $isEnabled): self
     {
@@ -58,8 +56,6 @@ class UpdateTrigger extends \ArrayObject
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
-     * @return self
      */
     public function setScheduledDetails(ScheduledDetails $scheduledDetails): self
     {

@@ -75,8 +75,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The main text of the discussion.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -103,8 +101,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
-     * @return self
      */
     public function setBodyVersion(string $bodyVersion): self
     {
@@ -181,8 +177,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The unique sequence number of a team discussion.
-     *
-     * @return self
      */
     public function setNumber(int $number): self
     {
@@ -199,8 +193,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * Whether or not this discussion should be pinned for easy retrieval.
-     *
-     * @return self
      */
     public function setPinned(bool $pinned): self
     {
@@ -217,8 +209,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * Whether or not this discussion should be restricted to team members and organization administrators.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {
@@ -245,8 +235,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The title of the discussion.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {

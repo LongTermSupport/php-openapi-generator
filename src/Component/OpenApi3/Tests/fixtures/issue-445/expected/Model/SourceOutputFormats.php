@@ -46,8 +46,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Image
-     *
-     * @return self
      */
     public function setImage(?string $image): self
     {
@@ -64,8 +62,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Video
-     *
-     * @return self
      */
     public function setVideo(?string $video): self
     {
@@ -82,8 +78,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Document
-     *
-     * @return self
      */
     public function setDocument(?string $document): self
     {
@@ -100,8 +94,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Audio
-     *
-     * @return self
      */
     public function setAudio(?string $audio): self
     {
@@ -118,8 +110,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Vector
-     *
-     * @return self
      */
     public function setVector(?string $vector): self
     {

@@ -37,8 +37,6 @@ class AppJobInvocationTriggerScheduledSchedule extends \ArrayObject
     }
     /**
      * The cron expression defining the schedule
-     *
-     * @return self
      */
     public function setCron(string $cron): self
     {
@@ -55,8 +53,6 @@ class AppJobInvocationTriggerScheduledSchedule extends \ArrayObject
     }
     /**
      * The time zone for the schedule
-     *
-     * @return self
      */
     public function setTimeZone(string $timeZone): self
     {

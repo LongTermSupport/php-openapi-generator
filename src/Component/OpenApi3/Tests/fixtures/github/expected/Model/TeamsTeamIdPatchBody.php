@@ -57,8 +57,6 @@ class TeamsTeamIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the team.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -75,8 +73,6 @@ class TeamsTeamIdPatchBody extends \ArrayObject
     }
     /**
      * The description of the team.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -103,8 +99,6 @@ class TeamsTeamIdPatchBody extends \ArrayObject
      * \* `closed` - visible to all members of this organization.
      * **For a parent or child team:**
      * \* `closed` - visible to all members of this organization.
-     *
-     * @return self
      */
     public function setPrivacy(string $privacy): self
     {
@@ -127,8 +121,6 @@ class TeamsTeamIdPatchBody extends \ArrayObject
      * \* `pull` - team members can pull, but not push to or administer newly-added repositories.
      * \* `push` - team members can pull and push, but not administer newly-added repositories.
      * \* `admin` - team members can pull, push and administer newly-added repositories.
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {
@@ -145,8 +137,6 @@ class TeamsTeamIdPatchBody extends \ArrayObject
     }
     /**
      * The ID of a team to set as the parent team.
-     *
-     * @return self
      */
     public function setParentTeamId(?int $parentTeamId): self
     {

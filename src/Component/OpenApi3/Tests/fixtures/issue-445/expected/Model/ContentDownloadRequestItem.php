@@ -34,8 +34,6 @@ class ContentDownloadRequestItem
     }
     /**
      * ID of the content that is going to be downloaded.
-     *
-     * @return self
      */
     public function setContentId(string $contentId): self
     {
@@ -52,8 +50,6 @@ class ContentDownloadRequestItem
     }
     /**
      * ID of the output format that is going to be downloaded.
-     *
-     * @return self
      */
     public function setOutputFormatId(string $outputFormatId): self
     {

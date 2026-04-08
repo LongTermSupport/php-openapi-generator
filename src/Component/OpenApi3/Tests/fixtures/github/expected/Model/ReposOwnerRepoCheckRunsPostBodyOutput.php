@@ -53,8 +53,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The title of the check run.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -71,8 +69,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The summary of the check run. This parameter supports Markdown.
-     *
-     * @return self
      */
     public function setSummary(string $summary): self
     {
@@ -89,8 +85,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The details of the check run. This parameter supports Markdown.
-     *
-     * @return self
      */
     public function setText(string $text): self
     {
@@ -111,8 +105,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
      * Adds information from your analysis to specific lines of code. Annotations are visible on GitHub in the **Checks** and **Files changed** tab of the pull request. The Checks API limits the number of annotations to a maximum of 50 per API request. To create more than 50 annotations, you have to make multiple requests to the [Update a check run](https://developer.github.com/v3/checks/runs/#update-a-check-run) endpoint. Each time you update the check run, annotations are appended to the list of annotations that already exist for the check run. For details about how you can view annotations on GitHub, see "[About status checks](https://help.github.com/articles/about-status-checks#checks)". See the [`annotations` object](https://developer.github.com/v3/checks/runs/#annotations-object) description for details about how to use this parameter.
      *
      * @param list<ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem> $annotations
-     *
-     * @return self
      */
     public function setAnnotations(array $annotations): self
     {
@@ -133,8 +125,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
      * Adds images to the output displayed in the GitHub pull request UI. See the [`images` object](https://developer.github.com/v3/checks/runs/#images-object) description for details.
      *
      * @param list<ReposOwnerRepoCheckRunsPostBodyOutputImagesItem> $images
-     *
-     * @return self
      */
     public function setImages(array $images): self
     {

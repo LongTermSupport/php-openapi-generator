@@ -37,8 +37,6 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
     }
     /**
      * An alternative way to provide auth information. for internal use only.
-     *
-     * @return self
      */
     public function setAuditHeader(ApiAuditHeader $auditHeader): self
     {
@@ -55,8 +53,6 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
-     * @return self
      */
     public function setVersionHash(string $versionHash): self
     {

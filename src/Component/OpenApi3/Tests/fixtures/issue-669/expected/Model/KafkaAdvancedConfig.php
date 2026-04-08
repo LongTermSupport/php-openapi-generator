@@ -189,8 +189,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Specify the final compression type for a given topic. This configuration accepts the standard compression codecs ('gzip', 'snappy', 'lz4', 'zstd'). It additionally accepts 'uncompressed' which is equivalent to no compression; and 'producer' which means retain the original compression codec set by the producer.
-     *
-     * @return self
      */
     public function setCompressionType(string $compressionType): self
     {
@@ -207,8 +205,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The amount of time, in milliseconds, the group coordinator will wait for more consumers to join a new group before performing the first rebalance. A longer delay means potentially fewer rebalances, but increases the time until processing begins. The default value for this is 3 seconds. During development and testing it might be desirable to set this to 0 in order to not delay test execution time.
-     *
-     * @return self
      */
     public function setGroupInitialRebalanceDelayMs(int $groupInitialRebalanceDelayMs): self
     {
@@ -225,8 +221,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The minimum allowed session timeout for registered consumers. Longer timeouts give consumers more time to process messages in between heartbeats at the cost of a longer time to detect failures.
-     *
-     * @return self
      */
     public function setGroupMinSessionTimeoutMs(int $groupMinSessionTimeoutMs): self
     {
@@ -243,8 +237,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum allowed session timeout for registered consumers. Longer timeouts give consumers more time to process messages in between heartbeats at the cost of a longer time to detect failures.
-     *
-     * @return self
      */
     public function setGroupMaxSessionTimeoutMs(int $groupMaxSessionTimeoutMs): self
     {
@@ -261,8 +253,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Idle connections timeout: the server socket processor threads close the connections that idle for longer than this.
-     *
-     * @return self
      */
     public function setConnectionsMaxIdleMs(int $connectionsMaxIdleMs): self
     {
@@ -279,8 +269,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum number of incremental fetch sessions that the broker will maintain.
-     *
-     * @return self
      */
     public function setMaxIncrementalFetchSessionCacheSlots(int $maxIncrementalFetchSessionCacheSlots): self
     {
@@ -297,8 +285,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum size of message that the server can receive.
-     *
-     * @return self
      */
     public function setMessageMaxBytes(int $messageMaxBytes): self
     {
@@ -315,8 +301,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Log retention window in minutes for offsets topic
-     *
-     * @return self
      */
     public function setOffsetsRetentionMinutes(int $offsetsRetentionMinutes): self
     {
@@ -333,8 +317,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * How long are delete records retained?
-     *
-     * @return self
      */
     public function setLogCleanerDeleteRetentionMs(int $logCleanerDeleteRetentionMs): self
     {
@@ -351,8 +333,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Controls log compactor frequency. Larger value means more frequent compactions but also more space wasted for logs. Consider setting log_cleaner_max_compaction_lag_ms to enforce compactions sooner, instead of setting a very high value for this option.
-     *
-     * @return self
      */
     public function setLogCleanerMinCleanableRatio(float $logCleanerMinCleanableRatio): self
     {
@@ -369,8 +349,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum amount of time message will remain uncompacted. Only applicable for logs that are being compacted
-     *
-     * @return self
      */
     public function setLogCleanerMaxCompactionLagMs(int $logCleanerMaxCompactionLagMs): self
     {
@@ -387,8 +365,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The minimum time a message will remain uncompacted in the log. Only applicable for logs that are being compacted.
-     *
-     * @return self
      */
     public function setLogCleanerMinCompactionLagMs(int $logCleanerMinCompactionLagMs): self
     {
@@ -405,8 +381,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The default cleanup policy for segments beyond the retention window
-     *
-     * @return self
      */
     public function setLogCleanupPolicy(string $logCleanupPolicy): self
     {
@@ -423,8 +397,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of messages accumulated on a log partition before messages are flushed to disk
-     *
-     * @return self
      */
     public function setLogFlushIntervalMessages(int $logFlushIntervalMessages): self
     {
@@ -441,8 +413,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum time in ms that a message in any topic is kept in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used
-     *
-     * @return self
      */
     public function setLogFlushIntervalMs(int $logFlushIntervalMs): self
     {
@@ -459,8 +429,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The interval with which Kafka adds an entry to the offset index
-     *
-     * @return self
      */
     public function setLogIndexIntervalBytes(int $logIndexIntervalBytes): self
     {
@@ -477,8 +445,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum size in bytes of the offset index
-     *
-     * @return self
      */
     public function setLogIndexSizeMaxBytes(int $logIndexSizeMaxBytes): self
     {
@@ -495,8 +461,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * This configuration controls whether down-conversion of message formats is enabled to satisfy consume requests.
-     *
-     * @return self
      */
     public function setLogMessageDownconversionEnable(bool $logMessageDownconversionEnable): self
     {
@@ -513,8 +477,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Define whether the timestamp in the message is message create time or log append time.
-     *
-     * @return self
      */
     public function setLogMessageTimestampType(string $logMessageTimestampType): self
     {
@@ -531,8 +493,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum difference allowed between the timestamp when a broker receives a message and the timestamp specified in the message
-     *
-     * @return self
      */
     public function setLogMessageTimestampDifferenceMaxMs(int $logMessageTimestampDifferenceMaxMs): self
     {
@@ -549,8 +509,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Controls whether to preallocate a file when creating a new segment
-     *
-     * @return self
      */
     public function setLogPreallocate(bool $logPreallocate): self
     {
@@ -567,8 +525,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum size of the log before deleting messages
-     *
-     * @return self
      */
     public function setLogRetentionBytes(int $logRetentionBytes): self
     {
@@ -585,8 +541,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of hours to keep a log file before deleting it
-     *
-     * @return self
      */
     public function setLogRetentionHours(int $logRetentionHours): self
     {
@@ -603,8 +557,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of milliseconds to keep a log file before deleting it (in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no time limit is applied.
-     *
-     * @return self
      */
     public function setLogRetentionMs(int $logRetentionMs): self
     {
@@ -621,8 +573,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum jitter to subtract from logRollTimeMillis (in milliseconds). If not set, the value in log.roll.jitter.hours is used
-     *
-     * @return self
      */
     public function setLogRollJitterMs(int $logRollJitterMs): self
     {
@@ -639,8 +589,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum time before a new log segment is rolled out (in milliseconds).
-     *
-     * @return self
      */
     public function setLogRollMs(int $logRollMs): self
     {
@@ -657,8 +605,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum size of a single log file
-     *
-     * @return self
      */
     public function setLogSegmentBytes(int $logSegmentBytes): self
     {
@@ -675,8 +621,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The amount of time to wait before deleting a file from the filesystem
-     *
-     * @return self
      */
     public function setLogSegmentDeleteDelayMs(int $logSegmentDeleteDelayMs): self
     {
@@ -693,8 +637,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Enable auto creation of topics
-     *
-     * @return self
      */
     public function setAutoCreateTopicsEnable(bool $autoCreateTopicsEnable): self
     {
@@ -711,8 +653,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * When a producer sets acks to 'all' (or '-1'), min_insync_replicas specifies the minimum number of replicas that must acknowledge a write for the write to be considered successful.
-     *
-     * @return self
      */
     public function setMinInsyncReplicas(int $minInsyncReplicas): self
     {
@@ -729,8 +669,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of partitions for autocreated topics
-     *
-     * @return self
      */
     public function setNumPartitions(int $numPartitions): self
     {
@@ -747,8 +685,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Replication factor for autocreated topics
-     *
-     * @return self
      */
     public function setDefaultReplicationFactor(int $defaultReplicationFactor): self
     {
@@ -765,8 +701,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of bytes of messages to attempt to fetch for each partition (defaults to 1048576). This is not an absolute maximum, if the first record batch in the first non-empty partition of the fetch is larger than this value, the record batch will still be returned to ensure that progress can be made.
-     *
-     * @return self
      */
     public function setReplicaFetchMaxBytes(int $replicaFetchMaxBytes): self
     {
@@ -783,8 +717,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum bytes expected for the entire fetch response (defaults to 10485760). Records are fetched in batches, and if the first record batch in the first non-empty partition of the fetch is larger than this value, the record batch will still be returned to ensure that progress can be made. As such, this is not an absolute maximum.
-     *
-     * @return self
      */
     public function setReplicaFetchResponseMaxBytes(int $replicaFetchResponseMaxBytes): self
     {
@@ -801,8 +733,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum number of connections allowed from each ip address (defaults to 2147483647).
-     *
-     * @return self
      */
     public function setMaxConnectionsPerIp(int $maxConnectionsPerIp): self
     {
@@ -819,8 +749,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The purge interval (in number of requests) of the producer request purgatory (defaults to 1000).
-     *
-     * @return self
      */
     public function setProducerPurgatoryPurgeIntervalRequests(int $producerPurgatoryPurgeIntervalRequests): self
     {
@@ -837,8 +765,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum number of bytes in a socket request (defaults to 104857600).
-     *
-     * @return self
      */
     public function setSocketRequestMaxBytes(int $socketRequestMaxBytes): self
     {
@@ -855,8 +781,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The transaction topic segment bytes should be kept relatively small in order to facilitate faster log compaction and cache loads (defaults to 104857600 (100 mebibytes)).
-     *
-     * @return self
      */
     public function setTransactionStateLogSegmentBytes(int $transactionStateLogSegmentBytes): self
     {
@@ -873,8 +797,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * The interval at which to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults to 3600000 (1 hour)).
-     *
-     * @return self
      */
     public function setTransactionRemoveExpiredTransactionCleanupIntervalMs(int $transactionRemoveExpiredTransactionCleanupIntervalMs): self
     {
@@ -891,8 +813,6 @@ class KafkaAdvancedConfig extends \ArrayObject
     }
     /**
      * Enable creation of schema registry for the Kafka cluster. Schema_registry only works with General Purpose - Dedicated CPU plans.
-     *
-     * @return self
      */
     public function setSchemaRegistry(bool $schemaRegistry): self
     {

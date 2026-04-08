@@ -36,8 +36,6 @@ class UserRoleEditable
     }
     /**
      * Language specific user role names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -58,8 +56,6 @@ class UserRoleEditable
      * All user rights for this user role.
      *
      * @param list<string> $userRights
-     *
-     * @return self
      */
     public function setUserRights(array $userRights): self
     {

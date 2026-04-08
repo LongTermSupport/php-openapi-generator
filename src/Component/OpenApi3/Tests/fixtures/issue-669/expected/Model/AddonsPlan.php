@@ -93,8 +93,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * ID of a given plan.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -111,8 +109,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * ID of the app associated with this plan.
-     *
-     * @return self
      */
     public function setAppId(int $appId): self
     {
@@ -129,8 +125,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Display name for a given plan.
-     *
-     * @return self
      */
     public function setDisplayName(string $displayName): self
     {
@@ -147,8 +141,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Description of an app plan.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -165,8 +157,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Slug identifier for the plan.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -183,8 +173,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Price of a month's usage of the plan in US dollars.
-     *
-     * @return self
      */
     public function setPricePerMonth(int $pricePerMonth): self
     {
@@ -201,8 +189,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if the plan is currently active.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {
@@ -219,8 +205,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Current state of the plan.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -241,8 +225,6 @@ class AddonsPlan extends \ArrayObject
      * List of features included in the plan.
      *
      * @param list<AddonsFeature> $features
-     *
-     * @return self
      */
     public function setFeatures(array $features): self
     {
@@ -259,8 +241,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Timestamp when the plan was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -277,8 +257,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Timestamp when the plan was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -295,8 +273,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if the plan is available for selection.
-     *
-     * @return self
      */
     public function setAvailable(bool $available): self
     {
@@ -313,8 +289,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Unique identifier for the plan.
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -331,8 +305,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if this plan is the default option for the app.
-     *
-     * @return self
      */
     public function setByDefault(bool $byDefault): self
     {
@@ -353,8 +325,6 @@ class AddonsPlan extends \ArrayObject
      * List of dimensions associated with the plan, each with its own pricing.
      *
      * @param list<AddonsDimensionWithPrice> $dimensions
-     *
-     * @return self
      */
     public function setDimensions(array $dimensions): self
     {

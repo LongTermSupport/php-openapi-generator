@@ -41,8 +41,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
-     * @return self
      */
     public function setDistribution(string $distribution): self
     {
@@ -77,8 +73,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {

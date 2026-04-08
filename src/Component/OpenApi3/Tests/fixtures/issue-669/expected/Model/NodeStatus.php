@@ -33,8 +33,6 @@ class NodeStatus extends \ArrayObject
     }
     /**
      * A string indicating the current status of the node.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {

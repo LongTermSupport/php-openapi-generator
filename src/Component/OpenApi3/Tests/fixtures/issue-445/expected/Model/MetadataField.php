@@ -45,8 +45,6 @@ class MetadataField
     }
     /**
      * Path to the field in metadata.
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -65,8 +63,6 @@ class MetadataField
     /**
      * Indicates if the field can act as target for a mapping.
      * If field is read-only, it can only act as source of a mapping.
-     *
-     * @return self
      */
     public function setIsWritable(bool $isWritable): self
     {
@@ -83,8 +79,6 @@ class MetadataField
     }
     /**
      * Data type of the field.
-     *
-     * @return self
      */
     public function setDataType(mixed $dataType): self
     {
@@ -105,8 +99,6 @@ class MetadataField
      * A list of field IDs that can be used as a key field when a tagbox is mapped.
      *
      * @param list<string>|null $availableKeyFields
-     *
-     * @return self
      */
     public function setAvailableKeyFields(?array $availableKeyFields): self
     {

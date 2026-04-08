@@ -84,8 +84,6 @@ class AppFunctionsSpec extends \ArrayObject
      * @param list<AppRouteSpec> $routes
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setRoutes(array $routes): self
     {
@@ -102,8 +100,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -120,8 +116,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
-     * @return self
      */
     public function setSourceDir(string $sourceDir): self
     {
@@ -138,8 +132,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * @param list<AppAlertSpec> $alerts
-     *
-     * @return self
      */
     public function setAlerts(array $alerts): self
     {
@@ -160,8 +152,6 @@ class AppFunctionsSpec extends \ArrayObject
      * A list of environment variables made available to the component.
      *
      * @param list<AppVariableDefinition> $envs
-     *
-     * @return self
      */
     public function setEnvs(array $envs): self
     {
@@ -222,8 +212,6 @@ class AppFunctionsSpec extends \ArrayObject
      * A list of configured log forwarding destinations.
      *
      * @param list<AppLogDestinationDefinition> $logDestinations
-     *
-     * @return self
      */
     public function setLogDestinations(array $logDestinations): self
     {

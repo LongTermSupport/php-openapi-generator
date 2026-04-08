@@ -55,8 +55,6 @@ class SearchTopicsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<TopicSearchResultItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

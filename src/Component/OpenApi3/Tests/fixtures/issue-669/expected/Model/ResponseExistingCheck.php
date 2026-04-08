@@ -33,8 +33,6 @@ class ResponseExistingCheck extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $check
-     *
-     * @return self
      */
     public function setCheck(array $check): self
     {

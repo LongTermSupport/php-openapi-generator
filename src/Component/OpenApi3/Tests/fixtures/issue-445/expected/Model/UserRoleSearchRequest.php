@@ -68,8 +68,6 @@ class UserRoleSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -90,8 +88,6 @@ class UserRoleSearchRequest
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -112,8 +108,6 @@ class UserRoleSearchRequest
      * Fields and respective directions requested to sort the search results.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -130,8 +124,6 @@ class UserRoleSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -148,8 +140,6 @@ class UserRoleSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -166,8 +156,6 @@ class UserRoleSearchRequest
     }
     /**
      * Filter applied to user roles.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -184,8 +172,6 @@ class UserRoleSearchRequest
     }
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! It severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -206,8 +192,6 @@ class UserRoleSearchRequest
      * Which languages to search against when using the search string.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -224,8 +208,6 @@ class UserRoleSearchRequest
     }
     /**
      * Defines if the user roles with system user role Administrator is returned.
-     *
-     * @return self
      */
     public function setIncludeAdministratorSystemUserRole(bool $includeAdministratorSystemUserRole): self
     {

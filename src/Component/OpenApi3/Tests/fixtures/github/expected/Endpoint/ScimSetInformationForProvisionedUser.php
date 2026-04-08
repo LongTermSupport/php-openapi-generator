@@ -65,7 +65,6 @@ class ScimSetInformationForProvisionedUser extends \LongTermSupport\OpenApiGener
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimUser
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimSetInformationForProvisionedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimSetInformationForProvisionedUserForbiddenException
      */

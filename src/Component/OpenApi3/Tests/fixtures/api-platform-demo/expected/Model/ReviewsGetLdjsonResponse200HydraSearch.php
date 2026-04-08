@@ -66,8 +66,6 @@ class ReviewsGetLdjsonResponse200HydraSearch extends \ArrayObject
     }
     /**
      * @param list<ReviewsGetLdjsonResponse200HydraSearchHydraMappingItem> $hydraMapping
-     *
-     * @return self
      */
     public function setHydraMapping(array $hydraMapping): self
     {

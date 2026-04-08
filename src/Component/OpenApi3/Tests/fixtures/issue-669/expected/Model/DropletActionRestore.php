@@ -37,8 +37,6 @@ class DropletActionRestore extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -55,8 +53,6 @@ class DropletActionRestore extends \ArrayObject
     }
     /**
      * The ID of a backup of the current Droplet instance to restore from.
-     *
-     * @return self
      */
     public function setImage(int $image): self
     {

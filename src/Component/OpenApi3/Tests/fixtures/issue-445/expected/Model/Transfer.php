@@ -54,8 +54,6 @@ class Transfer
     }
     /**
      * ID of transfer.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -72,8 +70,6 @@ class Transfer
     }
     /**
      * Name of transfer.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -90,8 +86,6 @@ class Transfer
     }
     /**
      * State of transfer.
-     *
-     * @return self
      */
     public function setState(mixed $state): self
     {
@@ -108,8 +102,6 @@ class Transfer
     }
     /**
      * Type of transfer.
-     *
-     * @return self
      */
     public function setTransferType(mixed $transferType): self
     {
@@ -126,8 +118,6 @@ class Transfer
     }
     /**
      * Associated business process ID.
-     *
-     * @return self
      */
     public function setBusinessProcessId(?string $businessProcessId): self
     {
@@ -144,8 +134,6 @@ class Transfer
     }
     /**
      * Number of files in transfer.
-     *
-     * @return self
      */
     public function setFileTransferCount(int $fileTransferCount): self
     {
@@ -162,8 +150,6 @@ class Transfer
     }
     /**
      * ID of collection created from transfer.
-     *
-     * @return self
      */
     public function setCollectionId(?string $collectionId): self
     {

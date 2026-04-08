@@ -36,8 +36,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesPostBody extends \ArrayObject
     }
     /**
      * The company Safe Number or Connect ID
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

@@ -85,8 +85,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Unique login name of the organization
-     *
-     * @return self
      */
     public function setLogin(string $login): self
     {
@@ -103,8 +101,6 @@ class Organization extends \ArrayObject
     }
     /**
      * URL for the organization
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -221,8 +217,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display blog url for the organization
-     *
-     * @return self
      */
     public function setBlog(string $blog): self
     {
@@ -249,8 +243,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display name for the organization
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -267,8 +259,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display company name for the organization
-     *
-     * @return self
      */
     public function setCompany(string $company): self
     {
@@ -285,8 +275,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display location for the organization
-     *
-     * @return self
      */
     public function setLocation(string $location): self
     {
@@ -303,8 +291,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display email for the organization
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -321,8 +307,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Specifies if organization projects are enabled for this org
-     *
-     * @return self
      */
     public function setHasOrganizationProjects(bool $hasOrganizationProjects): self
     {
@@ -339,8 +323,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Specifies if repository projects are enabled for repositories that belong to this org
-     *
-     * @return self
      */
     public function setHasRepositoryProjects(bool $hasRepositoryProjects): self
     {

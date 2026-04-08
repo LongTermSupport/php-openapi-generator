@@ -73,8 +73,6 @@ class ApiPrompt extends \ArrayObject
      * The evaluated trace spans.
      *
      * @param list<ApiEvaluationTraceSpan> $evaluationTraceSpans
-     *
-     * @return self
      */
     public function setEvaluationTraceSpans(array $evaluationTraceSpans): self
     {
@@ -91,8 +89,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The ground truth for the prompt.
-     *
-     * @return self
      */
     public function setGroundTruth(string $groundTruth): self
     {
@@ -119,8 +115,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The number of input tokens used in the prompt.
-     *
-     * @return self
      */
     public function setInputTokens(string $inputTokens): self
     {
@@ -147,8 +141,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The number of output tokens used in the prompt.
-     *
-     * @return self
      */
     public function setOutputTokens(string $outputTokens): self
     {
@@ -169,8 +161,6 @@ class ApiPrompt extends \ArrayObject
      * The list of prompt chunks.
      *
      * @param list<ApiPromptChunk> $promptChunks
-     *
-     * @return self
      */
     public function setPromptChunks(array $promptChunks): self
     {
@@ -187,8 +177,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * Prompt ID
-     *
-     * @return self
      */
     public function setPromptId(int $promptId): self
     {
@@ -209,8 +197,6 @@ class ApiPrompt extends \ArrayObject
      * The metric results for the prompt.
      *
      * @param list<ApiEvaluationMetricResult> $promptLevelMetricResults
-     *
-     * @return self
      */
     public function setPromptLevelMetricResults(array $promptLevelMetricResults): self
     {
@@ -227,8 +213,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The trace id for the prompt.
-     *
-     * @return self
      */
     public function setTraceId(string $traceId): self
     {

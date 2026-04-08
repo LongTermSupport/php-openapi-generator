@@ -38,8 +38,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * The new state of the business process.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -56,8 +54,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * The new life cycle of the business process.
-     *
-     * @return self
      */
     public function setLifeCycle(mixed $lifeCycle): self
     {
@@ -74,8 +70,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * An optional notification update to be posted together with the transition.
-     *
-     * @return self
      */
     public function setNotification(mixed $notification): self
     {

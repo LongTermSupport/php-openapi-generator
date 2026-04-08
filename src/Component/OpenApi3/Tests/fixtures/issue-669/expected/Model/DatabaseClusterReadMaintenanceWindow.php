@@ -47,8 +47,6 @@ class DatabaseClusterReadMaintenanceWindow extends \ArrayObject
     }
     /**
      * The day of the week on which to apply maintenance updates.
-     *
-     * @return self
      */
     public function setDay(string $day): self
     {
@@ -65,8 +63,6 @@ class DatabaseClusterReadMaintenanceWindow extends \ArrayObject
     }
     /**
      * The hour in UTC at which maintenance updates will be applied in 24 hour format.
-     *
-     * @return self
      */
     public function setHour(string $hour): self
     {
@@ -83,8 +79,6 @@ class DatabaseClusterReadMaintenanceWindow extends \ArrayObject
     }
     /**
      * A boolean value indicating whether any maintenance is scheduled to be performed in the next window.
-     *
-     * @return self
      */
     public function setPending(bool $pending): self
     {
@@ -105,8 +99,6 @@ class DatabaseClusterReadMaintenanceWindow extends \ArrayObject
      * A list of strings, each containing information about a pending maintenance update.
      *
      * @param list<string> $description
-     *
-     * @return self
      */
     public function setDescription(array $description): self
     {

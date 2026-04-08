@@ -33,8 +33,6 @@ class MetaMeta extends \ArrayObject
     }
     /**
      * Number of objects returned by the request.
-     *
-     * @return self
      */
     public function setTotal(int $total): self
     {

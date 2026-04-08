@@ -41,8 +41,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on Ubuntu runner machines.
-     *
-     * @return self
      */
     public function setUBUNTU(int $uBUNTU): self
     {
@@ -59,8 +57,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on macOS runner machines.
-     *
-     * @return self
      */
     public function setMACOS(int $mACOS): self
     {
@@ -77,8 +73,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on Windows runner machines.
-     *
-     * @return self
      */
     public function setWINDOWS(int $wINDOWS): self
     {

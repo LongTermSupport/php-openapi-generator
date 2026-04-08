@@ -32,11 +32,6 @@ class GetBaz extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     {
         return ['Accept' => ['application/json']];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Baz
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Baz
     {
         $status = $response->getStatusCode();

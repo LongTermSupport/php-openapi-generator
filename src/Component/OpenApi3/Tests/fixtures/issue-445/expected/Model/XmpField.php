@@ -38,8 +38,6 @@ class XmpField
     }
     /**
      * Path of the field in XMP.
-     *
-     * @return self
      */
     public function setPath(?string $path): self
     {
@@ -56,8 +54,6 @@ class XmpField
     }
     /**
      * Indicates if the field can be written to.
-     *
-     * @return self
      */
     public function setIsWritable(bool $isWritable): self
     {
@@ -74,8 +70,6 @@ class XmpField
     }
     /**
      * Data type of the field.
-     *
-     * @return self
      */
     public function setDataType(mixed $dataType): self
     {

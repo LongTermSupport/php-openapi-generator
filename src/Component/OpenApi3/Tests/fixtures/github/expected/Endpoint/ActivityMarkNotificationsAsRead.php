@@ -46,7 +46,6 @@ class ActivityMarkNotificationsAsRead extends \LongTermSupport\OpenApiGenerator\
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\NotificationsPutResponse202
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityMarkNotificationsAsReadForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityMarkNotificationsAsReadUnauthorizedException
      */

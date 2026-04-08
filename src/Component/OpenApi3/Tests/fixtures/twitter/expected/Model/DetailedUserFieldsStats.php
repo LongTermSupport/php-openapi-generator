@@ -45,8 +45,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * Number of users who are following this user.
-     *
-     * @return self
      */
     public function setFollowersCount(int $followersCount): self
     {
@@ -63,8 +61,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * Number of users this user is following.
-     *
-     * @return self
      */
     public function setFollowingCount(int $followingCount): self
     {
@@ -81,8 +77,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * The number of Tweets (including Retweets) posted by this user.
-     *
-     * @return self
      */
     public function setTweetCount(int $tweetCount): self
     {
@@ -99,8 +93,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * The number of lists that include this user.
-     *
-     * @return self
      */
     public function setListedCount(int $listedCount): self
     {

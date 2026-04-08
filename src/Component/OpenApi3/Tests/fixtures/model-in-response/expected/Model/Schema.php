@@ -72,8 +72,6 @@ class Schema extends \ArrayObject
     }
     /**
      * @param list<mixed> $arrayProperty
-     *
-     * @return self
      */
     public function setArrayProperty(array $arrayProperty): self
     {
@@ -90,8 +88,6 @@ class Schema extends \ArrayObject
     }
     /**
      * @param array<string, string> $mapProperty
-     *
-     * @return self
      */
     public function setMapProperty(array $mapProperty): self
     {

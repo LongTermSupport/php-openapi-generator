@@ -65,7 +65,6 @@ class UpdateIsProcessedFlagOnAnNotificationEvent extends \LongTermSupport\OpenAp
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventForbiddenException

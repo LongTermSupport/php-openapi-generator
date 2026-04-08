@@ -37,8 +37,6 @@ class ReposOwnerRepoContentsPathDeleteBodyAuthor extends \ArrayObject
     }
     /**
      * The name of the author (or committer) of the commit
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class ReposOwnerRepoContentsPathDeleteBodyAuthor extends \ArrayObject
     }
     /**
      * The email of the author (or committer) of the commit
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {

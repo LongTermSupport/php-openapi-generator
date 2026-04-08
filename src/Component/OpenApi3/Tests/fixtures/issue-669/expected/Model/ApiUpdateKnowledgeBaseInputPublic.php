@@ -55,8 +55,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean database this knowledge base will use, optiona.
-     *
-     * @return self
      */
     public function setDatabaseId(string $databaseId): self
     {
@@ -73,8 +71,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
-     * @return self
      */
     public function setEmbeddingModelUuid(string $embeddingModelUuid): self
     {
@@ -91,8 +87,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -109,8 +103,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this knowledge base will belong to
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -131,8 +123,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
      * Tags to organize your knowledge base.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -149,8 +139,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

@@ -140,8 +140,6 @@ class ApiEvaluationTestCase extends \ArrayObject
     }
     /**
      * @param list<ApiEvaluationMetric> $metrics
-     *
-     * @return self
      */
     public function setMetrics(array $metrics): self
     {

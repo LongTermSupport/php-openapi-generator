@@ -37,8 +37,6 @@ class ProjectsColumnsCardsCardIdMovesPostBody extends \ArrayObject
     }
     /**
      * The position of the card in a column
-     *
-     * @return self
      */
     public function setPosition(string $position): self
     {
@@ -55,8 +53,6 @@ class ProjectsColumnsCardsCardIdMovesPostBody extends \ArrayObject
     }
     /**
      * The unique identifier of the column the card should be moved to
-     *
-     * @return self
      */
     public function setColumnId(int $columnId): self
     {

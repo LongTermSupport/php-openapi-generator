@@ -34,8 +34,6 @@ class OwnerToken
     }
     /**
      * The ownertoken id.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -52,8 +50,6 @@ class OwnerToken
     }
     /**
      * The id of the user to whom this ownertoken currently belongs to.
-     *
-     * @return self
      */
     public function setUserId(?string $userId): self
     {

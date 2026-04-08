@@ -35,8 +35,6 @@ class ResponseAllCertificates extends \ArrayObject
     }
     /**
      * @param list<Certificate> $certificates
-     *
-     * @return self
      */
     public function setCertificates(array $certificates): self
     {

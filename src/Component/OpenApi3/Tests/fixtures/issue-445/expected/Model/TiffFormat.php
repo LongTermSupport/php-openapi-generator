@@ -69,8 +69,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
-     * @return self
      */
     public function setColorProfile(mixed $colorProfile): self
     {
@@ -87,8 +85,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
-     * @return self
      */
     public function setColorTransformationIntent(mixed $colorTransformationIntent): self
     {
@@ -105,8 +101,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
-     * @return self
      */
     public function setHorizontalResolution(?float $horizontalResolution): self
     {
@@ -123,8 +117,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
-     * @return self
      */
     public function setVerticalResolution(?float $verticalResolution): self
     {
@@ -141,8 +133,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Copy clipping paths from input.
-     *
-     * @return self
      */
     public function setKeepClippingPath(bool $keepClippingPath): self
     {
@@ -159,8 +149,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
-     * @return self
      */
     public function setResizeAction(mixed $resizeAction): self
     {
@@ -181,8 +169,6 @@ class TiffFormat extends FormatBase
      * A collection of actions to be applied during rendering.
      *
      * @param list<ImageActionBase>|null $actions
-     *
-     * @return self
      */
     public function setActions(?array $actions): self
     {
@@ -199,8 +185,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Specifies whether color channels should be premultiplied with alpha (associated alpha) or not (unassociated alpha).
-     *
-     * @return self
      */
     public function setAlphaPremultiplied(bool $alphaPremultiplied): self
     {
@@ -217,8 +201,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Specifies the compression type to use.
-     *
-     * @return self
      */
     public function setCompressionType(mixed $compressionType): self
     {
@@ -235,8 +217,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Preserve (including size affecting changes) unspecified extraChannels.
-     *
-     * @return self
      */
     public function setIncludeUnspecifiedTiffExtraChannels(bool $includeUnspecifiedTiffExtraChannels): self
     {

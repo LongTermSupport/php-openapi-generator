@@ -44,8 +44,6 @@ class AppsVpc extends \ArrayObject
     }
     /**
      * @param list<AppsVpcEgressIp> $egressIps
-     *
-     * @return self
      */
     public function setEgressIps(array $egressIps): self
     {

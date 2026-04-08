@@ -38,8 +38,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field.
-     *
-     * @return self
      */
     public function setFieldPath(?string $fieldPath): self
     {
@@ -56,8 +54,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * Mode to use for comparison.
-     *
-     * @return self
      */
     public function setMode(mixed $mode): self
     {
@@ -74,8 +70,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * Value to compare to.
-     *
-     * @return self
      */
     public function setValue(float $value): self
     {

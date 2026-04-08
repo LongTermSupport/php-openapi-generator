@@ -91,7 +91,7 @@ trait GetterSetterGenerator
         $methodName = $this->getNaming()->getReservedSafeMethodName($methodName, $extendsArrayObject);
 
         $attributes = [];
-        $doc        = $this->createSetterDoc($property, $namespace, $strict, $fluent);
+        $doc        = $this->createSetterDoc($property, $namespace, $strict);
         if (null !== $doc) {
             $attributes['comments'] = [$doc];
         }
@@ -147,7 +147,7 @@ trait GetterSetterGenerator
         return new Doc($this->formatDocBlock($sections));
     }
 
-    protected function createSetterDoc(Property $property, string $namespace, bool $strict, bool $fluent): ?Doc
+    protected function createSetterDoc(Property $property, string $namespace, bool $strict): ?Doc
     {
         $hasDescription  = (bool)$property->getDescription();
         $isDeprecated    = $property->isDeprecated();
@@ -174,9 +174,8 @@ trait GetterSetterGenerator
             $sections[] = [' * @deprecated'];
         }
 
-        if ($fluent) {
-            $sections[] = [' * @return self'];
-        }
+        // NOTE: no `@return self` — the native `: self` return type expresses this already.
+        // PHPDoc `@return` should only appear when it adds type info beyond the native hint.
 
         return new Doc($this->formatDocBlock($sections));
     }

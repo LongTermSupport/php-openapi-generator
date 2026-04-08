@@ -143,8 +143,6 @@ class ContentLayerSameRootException extends \ArrayObject
     }
     /**
      * @param list<LayerIdsByRootSchema>|null $layerIdsByRootSchema
-     *
-     * @return self
      */
     public function setLayerIdsByRootSchema(?array $layerIdsByRootSchema): self
     {

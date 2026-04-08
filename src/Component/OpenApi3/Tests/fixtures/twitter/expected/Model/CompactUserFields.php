@@ -61,8 +61,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -79,8 +77,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Creation time of this user.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -97,8 +93,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The friendly name of this user, as shown on their profile.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -115,8 +109,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
-     * @return self
      */
     public function setUsername(string $username): self
     {
@@ -133,8 +125,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
-     * @return self
      */
     public function setProtected(bool $protected): self
     {
@@ -151,8 +141,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicate if this user is a verified Twitter User.
-     *
-     * @return self
      */
     public function setVerified(bool $verified): self
     {
@@ -169,8 +157,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
-     * @return self
      */
     public function setWithheld(UserWithheld $withheld): self
     {
@@ -187,8 +173,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The URL to the profile image for this user.
-     *
-     * @return self
      */
     public function setProfileImageUrl(string $profileImageUrl): self
     {

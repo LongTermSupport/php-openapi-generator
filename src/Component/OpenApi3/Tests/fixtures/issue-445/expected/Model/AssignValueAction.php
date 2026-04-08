@@ -44,8 +44,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * Path to the object the value should be inserted in.
-     *
-     * @return self
      */
     public function setPath(?string $path): self
     {
@@ -62,8 +60,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * ID of the field, the value should be inserted in.
-     *
-     * @return self
      */
     public function setFieldId(?string $fieldId): self
     {
@@ -80,8 +76,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * Value to assign.
-     *
-     * @return self
      */
     public function setValue(mixed $value): self
     {
@@ -102,8 +96,6 @@ class AssignValueAction extends BusinessRuleAction
      * Indicates whether existing values should be replaced.
      * Note: for multi fieldsets and relations, this setting controls, if the value is added
      * to the already existing values or if the existing values shall be overwritten.
-     *
-     * @return self
      */
     public function setReplace(bool $replace): self
     {

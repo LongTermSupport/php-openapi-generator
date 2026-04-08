@@ -34,8 +34,6 @@ class NGramAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: NGram
-     *
-     * @return self
      */
     public function setType(mixed $type): self
     {
@@ -52,8 +50,6 @@ class NGramAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: ngram.
-     *
-     * @return self
      */
     public function setFieldSuffix(?string $fieldSuffix): self
     {

@@ -102,8 +102,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The ID of the workflow run.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -140,8 +138,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The SHA of the head commit that points to the version of the worflow being run.
-     *
-     * @return self
      */
     public function setHeadSha(string $headSha): self
     {
@@ -158,8 +154,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The auto incrementing run number for the workflow run.
-     *
-     * @return self
      */
     public function setRunNumber(int $runNumber): self
     {
@@ -206,8 +200,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The ID of the parent workflow.
-     *
-     * @return self
      */
     public function setWorkflowId(int $workflowId): self
     {
@@ -224,8 +216,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to the workflow run.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -252,8 +242,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * @param list<PullRequestMinimal>|null $pullRequests
-     *
-     * @return self
      */
     public function setPullRequests(?array $pullRequests): self
     {
@@ -290,8 +278,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to the jobs for the workflow run.
-     *
-     * @return self
      */
     public function setJobsUrl(string $jobsUrl): self
     {
@@ -308,8 +294,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to download the logs for the workflow run.
-     *
-     * @return self
      */
     public function setLogsUrl(string $logsUrl): self
     {
@@ -326,8 +310,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to the associated check suite.
-     *
-     * @return self
      */
     public function setCheckSuiteUrl(string $checkSuiteUrl): self
     {
@@ -344,8 +326,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to the artifacts for the workflow run.
-     *
-     * @return self
      */
     public function setArtifactsUrl(string $artifactsUrl): self
     {
@@ -362,8 +342,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to cancel the workflow run.
-     *
-     * @return self
      */
     public function setCancelUrl(string $cancelUrl): self
     {
@@ -380,8 +358,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to rerun the workflow run.
-     *
-     * @return self
      */
     public function setRerunUrl(string $rerunUrl): self
     {
@@ -398,8 +374,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * The URL to the workflow.
-     *
-     * @return self
      */
     public function setWorkflowUrl(string $workflowUrl): self
     {
@@ -416,8 +390,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * Simple Commit
-     *
-     * @return self
      */
     public function setHeadCommit(SimpleCommit $headCommit): self
     {
@@ -434,8 +406,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {
@@ -452,8 +422,6 @@ class WorkflowRun extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setHeadRepository(MinimalRepository $headRepository): self
     {

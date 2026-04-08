@@ -38,8 +38,6 @@ class ResizeAction
     }
     /**
      * Target width for the output.
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {
@@ -56,8 +54,6 @@ class ResizeAction
     }
     /**
      * Target height for the output.
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {
@@ -74,8 +70,6 @@ class ResizeAction
     }
     /**
      * Specifies additional resize behaviour.
-     *
-     * @return self
      */
     public function setResizeMode(mixed $resizeMode): self
     {

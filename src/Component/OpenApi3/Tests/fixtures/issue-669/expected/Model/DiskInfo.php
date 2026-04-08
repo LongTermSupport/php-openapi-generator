@@ -34,8 +34,6 @@ class DiskInfo extends \ArrayObject
     }
     /**
      * The type of disk. All Droplets contain a `local` disk. Additionally, GPU Droplets can also have a `scratch` disk for non-persistent data.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

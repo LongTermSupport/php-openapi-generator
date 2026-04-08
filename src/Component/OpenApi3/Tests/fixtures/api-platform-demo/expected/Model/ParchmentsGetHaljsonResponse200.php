@@ -36,8 +36,6 @@ class ParchmentsGetHaljsonResponse200 extends \ArrayObject
     }
     /**
      * @param list<ParchmentJsonhal> $embedded
-     *
-     * @return self
      */
     public function setEmbedded(array $embedded): self
     {

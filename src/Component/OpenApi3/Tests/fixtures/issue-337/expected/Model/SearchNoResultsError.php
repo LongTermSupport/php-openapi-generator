@@ -45,8 +45,6 @@ class SearchNoResultsError extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $companies
-     *
-     * @return self
      */
     public function setCompanies(array $companies): self
     {

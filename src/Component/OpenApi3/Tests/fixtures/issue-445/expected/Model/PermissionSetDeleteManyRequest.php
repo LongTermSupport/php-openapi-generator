@@ -36,8 +36,6 @@ class PermissionSetDeleteManyRequest
      * Permission set IDs.
      *
      * @param list<string>|null $permissionSetIds
-     *
-     * @return self
      */
     public function setPermissionSetIds(?array $permissionSetIds): self
     {

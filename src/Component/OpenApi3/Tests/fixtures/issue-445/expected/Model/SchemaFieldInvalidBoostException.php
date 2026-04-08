@@ -165,8 +165,6 @@ class SchemaFieldInvalidBoostException extends \ArrayObject
     }
     /**
      * @param list<float>|null $allowedBoostValues
-     *
-     * @return self
      */
     public function setAllowedBoostValues(?array $allowedBoostValues): self
     {

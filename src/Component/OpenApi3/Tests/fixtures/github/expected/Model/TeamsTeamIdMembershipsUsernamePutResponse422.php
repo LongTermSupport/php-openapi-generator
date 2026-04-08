@@ -45,8 +45,6 @@ class TeamsTeamIdMembershipsUsernamePutResponse422 extends \ArrayObject
     }
     /**
      * @param list<TeamsTeamIdMembershipsUsernamePutResponse422ErrorsItem> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

@@ -52,8 +52,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * The token used for authentication
-     *
-     * @return self
      */
     public function setToken(string $token): self
     {
@@ -70,8 +68,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * The time this token expires
-     *
-     * @return self
      */
     public function setExpiresAt(\DateTime $expiresAt): self
     {
@@ -88,8 +84,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $permissions
-     *
-     * @return self
      */
     public function setPermissions(array $permissions): self
     {
@@ -110,8 +104,6 @@ class AuthenticationToken extends \ArrayObject
      * The repositories this token has access to
      *
      * @param list<Repository> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {
@@ -138,8 +130,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
-     * @return self
      */
     public function setRepositorySelection(string $repositorySelection): self
     {

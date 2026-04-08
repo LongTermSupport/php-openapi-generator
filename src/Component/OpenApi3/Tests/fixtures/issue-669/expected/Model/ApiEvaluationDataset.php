@@ -53,8 +53,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Time created at.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -71,8 +69,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Name of the dataset.
-     *
-     * @return self
      */
     public function setDatasetName(string $datasetName): self
     {
@@ -89,8 +85,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * UUID of the dataset.
-     *
-     * @return self
      */
     public function setDatasetUuid(string $datasetUuid): self
     {
@@ -107,8 +101,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * The size of the dataset uploaded file in bytes.
-     *
-     * @return self
      */
     public function setFileSize(string $fileSize): self
     {
@@ -125,8 +117,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Does the dataset have a ground truth column?
-     *
-     * @return self
      */
     public function setHasGroundTruth(bool $hasGroundTruth): self
     {
@@ -143,8 +133,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Number of rows in the dataset.
-     *
-     * @return self
      */
     public function setRowCount(int $rowCount): self
     {

@@ -46,8 +46,6 @@ class BusinessProcessNotificationUpdateRequest extends \ArrayObject
     }
     /**
      * The title the message that is shown to the user should have.
-     *
-     * @return self
      */
     public function setTitle(mixed $title): self
     {
@@ -64,8 +62,6 @@ class BusinessProcessNotificationUpdateRequest extends \ArrayObject
     }
     /**
      * The message shown to the user.
-     *
-     * @return self
      */
     public function setMessage(mixed $message): self
     {
@@ -84,8 +80,6 @@ class BusinessProcessNotificationUpdateRequest extends \ArrayObject
     /**
      * An optional navigation link that allows the user to jump to a page giving more information
      * about the process.
-     *
-     * @return self
      */
     public function setNavigationLink(?string $navigationLink): self
     {
@@ -102,8 +96,6 @@ class BusinessProcessNotificationUpdateRequest extends \ArrayObject
     }
     /**
      * The event type of the notification.
-     *
-     * @return self
      */
     public function setEventType(mixed $eventType): self
     {

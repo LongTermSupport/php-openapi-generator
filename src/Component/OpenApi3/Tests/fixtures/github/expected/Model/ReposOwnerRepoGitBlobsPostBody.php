@@ -37,8 +37,6 @@ class ReposOwnerRepoGitBlobsPostBody extends \ArrayObject
     }
     /**
      * The new blob's content.
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {
@@ -55,8 +53,6 @@ class ReposOwnerRepoGitBlobsPostBody extends \ArrayObject
     }
     /**
      * The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
-     *
-     * @return self
      */
     public function setEncoding(string $encoding): self
     {

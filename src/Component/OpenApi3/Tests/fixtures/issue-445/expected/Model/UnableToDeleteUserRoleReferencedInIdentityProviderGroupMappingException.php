@@ -143,8 +143,6 @@ class UnableToDeleteUserRoleReferencedInIdentityProviderGroupMappingException ex
     }
     /**
      * @param list<string>|null $identityProviderIds
-     *
-     * @return self
      */
     public function setIdentityProviderIds(?array $identityProviderIds): self
     {

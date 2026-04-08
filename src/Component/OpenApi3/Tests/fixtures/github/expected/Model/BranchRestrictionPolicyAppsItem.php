@@ -154,8 +154,6 @@ class BranchRestrictionPolicyAppsItem extends \ArrayObject
     }
     /**
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {

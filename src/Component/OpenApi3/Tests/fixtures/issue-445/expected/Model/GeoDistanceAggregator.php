@@ -40,8 +40,6 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
-     * @return self
      */
     public function setField(string $field): self
     {
@@ -58,8 +56,6 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
-     * @return self
      */
     public function setLocation(mixed $location): self
     {
@@ -80,8 +76,6 @@ class GeoDistanceAggregator extends AggregatorBase
      * A list of distance ranges.
      *
      * @param list<GeoDistance> $ranges
-     *
-     * @return self
      */
     public function setRanges(array $ranges): self
     {

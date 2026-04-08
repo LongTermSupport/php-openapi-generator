@@ -39,8 +39,6 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutput extends \ArrayObject
     }
     /**
      * The ID generated for the request for Presigned URLs.
-     *
-     * @return self
      */
     public function setRequestId(string $requestId): self
     {
@@ -61,8 +59,6 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutput extends \ArrayObject
      * A list of generated presigned URLs and object keys, one per file.
      *
      * @param list<ApiFilePresignedUrlResponse> $uploads
-     *
-     * @return self
      */
     public function setUploads(array $uploads): self
     {

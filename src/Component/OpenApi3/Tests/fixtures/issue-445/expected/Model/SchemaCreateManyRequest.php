@@ -39,8 +39,6 @@ class SchemaCreateManyRequest
      * are all in the same request.
      *
      * @param list<SchemaCreateRequest> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {

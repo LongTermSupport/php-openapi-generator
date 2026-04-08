@@ -33,8 +33,6 @@ class ReposOwnerRepoInteractionLimitsPutBody extends \ArrayObject
     }
     /**
      * Specifies the group of GitHub users who can comment, open issues, or create pull requests for the given repository. Must be one of: `existing_users`, `contributors_only`, or `collaborators_only`.
-     *
-     * @return self
      */
     public function setLimit(string $limit): self
     {

@@ -59,8 +59,6 @@ class GroupMapping extends \ArrayObject
      * Array of groups to be mapped to this team
      *
      * @param list<GroupMappingGroupsItem> $groups
-     *
-     * @return self
      */
     public function setGroups(array $groups): self
     {
@@ -77,8 +75,6 @@ class GroupMapping extends \ArrayObject
     }
     /**
      * The ID of the group
-     *
-     * @return self
      */
     public function setGroupId(string $groupId): self
     {
@@ -95,8 +91,6 @@ class GroupMapping extends \ArrayObject
     }
     /**
      * The name of the group
-     *
-     * @return self
      */
     public function setGroupName(string $groupName): self
     {
@@ -113,8 +107,6 @@ class GroupMapping extends \ArrayObject
     }
     /**
      * a description of the group
-     *
-     * @return self
      */
     public function setGroupDescription(string $groupDescription): self
     {
@@ -131,8 +123,6 @@ class GroupMapping extends \ArrayObject
     }
     /**
      * synchronization status for this group mapping
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -149,8 +139,6 @@ class GroupMapping extends \ArrayObject
     }
     /**
      * the time of the last sync for this group-mapping
-     *
-     * @return self
      */
     public function setSyncedAt(string $syncedAt): self
     {

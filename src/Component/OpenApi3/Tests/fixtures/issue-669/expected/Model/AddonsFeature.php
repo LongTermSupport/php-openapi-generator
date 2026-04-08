@@ -57,8 +57,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Unique identifier for the app feature.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -75,8 +73,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Name of the feature.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -93,8 +89,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Feature type, indicating the kind of data it holds.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -111,8 +105,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Unit of measurement for the feature, if applicable. Units apply to allowance features.
-     *
-     * @return self
      */
     public function setUnit(string $unit): self
     {
@@ -129,8 +121,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Value of the feature, which can vary based on the type.
-     *
-     * @return self
      */
     public function setValue(mixed $value): self
     {
@@ -147,8 +137,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Timestamp when the feature was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -165,8 +153,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Timestamp when the feature was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

@@ -46,8 +46,6 @@ class ContentImportResult
     }
     /**
      * ID of the file transfer.
-     *
-     * @return self
      */
     public function setFileTransferId(string $fileTransferId): self
     {
@@ -64,8 +62,6 @@ class ContentImportResult
     }
     /**
      * ID of the resulting content.
-     *
-     * @return self
      */
     public function setContentId(?string $contentId): self
     {
@@ -82,8 +78,6 @@ class ContentImportResult
     }
     /**
      * State of the item.
-     *
-     * @return self
      */
     public function setState(?string $state): self
     {
@@ -100,8 +94,6 @@ class ContentImportResult
     }
     /**
      * Indicates if the operation succeeded.
-     *
-     * @return self
      */
     public function setSucceeded(bool $succeeded): self
     {
@@ -118,8 +110,6 @@ class ContentImportResult
     }
     /**
      * If the operation did not succeeded, this contains error related information.
-     *
-     * @return self
      */
     public function setError(mixed $error): self
     {

@@ -44,11 +44,6 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         $optionsResolver->setNormalizer('testBoolean', \Closure::fromCallable([new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AllBooleanQueryResolver\BooleanCustomQueryResolver(), '__invoke']));
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();

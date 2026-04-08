@@ -88,8 +88,6 @@ class UserProfile
     }
     /**
      * ID of the user.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -106,8 +104,6 @@ class UserProfile
     }
     /**
      * Email address.
-     *
-     * @return self
      */
     public function setEmailAddress(?string $emailAddress): self
     {
@@ -124,8 +120,6 @@ class UserProfile
     }
     /**
      * First name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -142,8 +136,6 @@ class UserProfile
     }
     /**
      * Last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -160,8 +152,6 @@ class UserProfile
     }
     /**
      * Language code.
-     *
-     * @return self
      */
     public function setLanguageCode(?string $languageCode): self
     {
@@ -178,8 +168,6 @@ class UserProfile
     }
     /**
      * Address.
-     *
-     * @return self
      */
     public function setAddress(mixed $address): self
     {
@@ -196,8 +184,6 @@ class UserProfile
     }
     /**
      * Authorization state.
-     *
-     * @return self
      */
     public function setAuthorizationState(mixed $authorizationState): self
     {
@@ -214,8 +200,6 @@ class UserProfile
     }
     /**
      * Indicates if the user is locked.
-     *
-     * @return self
      */
     public function setIsLocked(bool $isLocked): self
     {
@@ -236,8 +220,6 @@ class UserProfile
      * A list of user rights assigned to the user.
      *
      * @param list<string>|null $userRights
-     *
-     * @return self
      */
     public function setUserRights(?array $userRights): self
     {
@@ -258,8 +240,6 @@ class UserProfile
      * A list of user role IDs assigned to the user.
      *
      * @param list<string>|null $userRoleIds
-     *
-     * @return self
      */
     public function setUserRoleIds(?array $userRoleIds): self
     {
@@ -276,8 +256,6 @@ class UserProfile
     }
     /**
      * Indicates if the user has not accepted the latest terms of consent.
-     *
-     * @return self
      */
     public function setTermsConsentExpired(bool $termsConsentExpired): self
     {
@@ -298,8 +276,6 @@ class UserProfile
      * A list of system user roles assigned to the user.
      *
      * @param list<string>|null $systemUserRoles
-     *
-     * @return self
      */
     public function setSystemUserRoles(?array $systemUserRoles): self
     {
@@ -316,8 +292,6 @@ class UserProfile
     }
     /**
      * Indicates if the user has the developer flag set.
-     *
-     * @return self
      */
     public function setIsDeveloper(bool $isDeveloper): self
     {
@@ -334,8 +308,6 @@ class UserProfile
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
-     * @return self
      */
     public function setIsFederated(bool $isFederated): self
     {

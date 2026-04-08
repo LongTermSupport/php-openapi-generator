@@ -73,8 +73,6 @@ class ProjectColumn extends \ArrayObject
     }
     /**
      * The unique identifier of the project column
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -101,8 +99,6 @@ class ProjectColumn extends \ArrayObject
     }
     /**
      * Name of the project column
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

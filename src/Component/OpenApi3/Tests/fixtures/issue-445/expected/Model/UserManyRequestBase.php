@@ -36,8 +36,6 @@ class UserManyRequestBase
      * User IDs.
      *
      * @param list<string> $userIds
-     *
-     * @return self
      */
     public function setUserIds(array $userIds): self
     {

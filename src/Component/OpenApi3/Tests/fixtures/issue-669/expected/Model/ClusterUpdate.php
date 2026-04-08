@@ -83,8 +83,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A human-readable name for a Kubernetes cluster.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -105,8 +103,6 @@ class ClusterUpdate extends \ArrayObject
      * An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged `k8s` and `k8s:$K8S_CLUSTER_ID`.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -123,8 +119,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying the maintenance window policy for the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setMaintenancePolicy(?MaintenancePolicy $maintenancePolicy): self
     {
@@ -141,8 +135,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
-     *
-     * @return self
      */
     public function setAutoUpgrade(bool $autoUpgrade): self
     {
@@ -159,8 +151,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether surge upgrade is enabled/disabled for the cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the outdated nodes.
-     *
-     * @return self
      */
     public function setSurgeUpgrade(bool $surgeUpgrade): self
     {
@@ -177,8 +167,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the control plane is run in a highly available configuration in the cluster. Highly available control planes incur less downtime. The property cannot be disabled.
-     *
-     * @return self
      */
     public function setHa(bool $ha): self
     {
@@ -195,8 +183,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
-     *
-     * @return self
      */
     public function setControlPlaneFirewall(?ControlPlaneFirewall $controlPlaneFirewall): self
     {
@@ -213,8 +199,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying custom cluster autoscaler configuration.
-     *
-     * @return self
      */
     public function setClusterAutoscalerConfiguration(?ClusterAutoscalerConfiguration $clusterAutoscalerConfiguration): self
     {
@@ -231,8 +215,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setRoutingAgent(?RoutingAgent $routingAgent): self
     {
@@ -249,8 +231,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
-     *
-     * @return self
      */
     public function setAmdGpuDevicePlugin(?AmdGpuDevicePlugin $amdGpuDevicePlugin): self
     {
@@ -267,8 +247,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setAmdGpuDeviceMetricsExporterPlugin(?AmdGpuDeviceMetricsExporterPlugin $amdGpuDeviceMetricsExporterPlugin): self
     {
@@ -285,8 +263,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
-     *
-     * @return self
      */
     public function setNvidiaGpuDevicePlugin(?NvidiaGpuDevicePlugin $nvidiaGpuDevicePlugin): self
     {
@@ -303,8 +279,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setRdmaSharedDevPlugin(?RdmaSharedDevPlugin $rdmaSharedDevPlugin): self
     {

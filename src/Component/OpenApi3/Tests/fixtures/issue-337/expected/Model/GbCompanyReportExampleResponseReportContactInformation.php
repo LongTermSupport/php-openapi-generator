@@ -48,8 +48,6 @@ class GbCompanyReportExampleResponseReportContactInformation extends \ArrayObjec
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem> $otherAddresses
-     *
-     * @return self
      */
     public function setOtherAddresses(array $otherAddresses): self
     {
@@ -66,8 +64,6 @@ class GbCompanyReportExampleResponseReportContactInformation extends \ArrayObjec
     }
     /**
      * @param list<string> $websites
-     *
-     * @return self
      */
     public function setWebsites(array $websites): self
     {

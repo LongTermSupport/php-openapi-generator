@@ -57,8 +57,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a CDN endpoint.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -75,8 +73,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) for the origin server which provides the content for the CDN. This is currently restricted to a Space.
-     *
-     * @return self
      */
     public function setOrigin(string $origin): self
     {
@@ -93,8 +89,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-     *
-     * @return self
      */
     public function setEndpoint(string $endpoint): self
     {
@@ -111,8 +105,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The amount of time the content is cached by the CDN's edge servers in seconds. TTL must be one of 60, 600, 3600, 86400, or 604800. Defaults to 3600 (one hour) when excluded.
-     *
-     * @return self
      */
     public function setTtl(int $ttl): self
     {
@@ -129,8 +121,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-     *
-     * @return self
      */
     public function setCertificateId(string $certificateId): self
     {
@@ -147,8 +137,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) of the custom subdomain used with the CDN endpoint.
-     *
-     * @return self
      */
     public function setCustomDomain(string $customDomain): self
     {
@@ -165,8 +153,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the CDN endpoint was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {

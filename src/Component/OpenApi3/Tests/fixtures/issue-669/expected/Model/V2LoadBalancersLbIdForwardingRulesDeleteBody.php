@@ -33,8 +33,6 @@ class V2LoadBalancersLbIdForwardingRulesDeleteBody extends \ArrayObject
     }
     /**
      * @param list<ForwardingRule> $forwardingRules
-     *
-     * @return self
      */
     public function setForwardingRules(array $forwardingRules): self
     {

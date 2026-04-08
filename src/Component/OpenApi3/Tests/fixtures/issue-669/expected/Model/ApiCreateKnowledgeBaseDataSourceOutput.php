@@ -33,8 +33,6 @@ class ApiCreateKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Data Source configuration for Knowledge Bases
-     *
-     * @return self
      */
     public function setKnowledgeBaseDataSource(ApiKnowledgeBaseDataSource $knowledgeBaseDataSource): self
     {

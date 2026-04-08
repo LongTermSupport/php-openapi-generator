@@ -37,8 +37,6 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem extends
     }
     /**
      * The `id` of the GitHub App.
-     *
-     * @return self
      */
     public function setAppId(int $appId): self
     {
@@ -55,8 +53,6 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem extends
     }
     /**
      * Set to `true` to enable automatic creation of CheckSuite events upon pushes to the repository, or `false` to disable them.
-     *
-     * @return self
      */
     public function setSetting(bool $setting): self
     {

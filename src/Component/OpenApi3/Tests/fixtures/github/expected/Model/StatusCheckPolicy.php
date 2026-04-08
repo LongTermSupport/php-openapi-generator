@@ -56,8 +56,6 @@ class StatusCheckPolicy extends \ArrayObject
     }
     /**
      * @param list<string> $contexts
-     *
-     * @return self
      */
     public function setContexts(array $contexts): self
     {

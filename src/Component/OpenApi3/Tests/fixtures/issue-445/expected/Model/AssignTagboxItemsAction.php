@@ -43,8 +43,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * Path to the object the tagbox is contained in.
-     *
-     * @return self
      */
     public function setPath(?string $path): self
     {
@@ -61,8 +59,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * ID of the tagbox field.
-     *
-     * @return self
      */
     public function setFieldId(?string $fieldId): self
     {
@@ -79,8 +75,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be assigned.
-     *
-     * @return self
      */
     public function setRefIds(mixed $refIds): self
     {
@@ -99,8 +93,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     /**
      * Indicates whether all the already assigned tags get replaced by the set specified in the action.
      * If false, the not already assigned tags get added, the rest is left as is.
-     *
-     * @return self
      */
     public function setReplace(bool $replace): self
     {

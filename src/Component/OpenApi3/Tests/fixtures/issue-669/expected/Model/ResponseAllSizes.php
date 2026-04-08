@@ -35,8 +35,6 @@ class ResponseAllSizes extends \ArrayObject
     }
     /**
      * @param list<Size> $sizes
-     *
-     * @return self
      */
     public function setSizes(array $sizes): self
     {

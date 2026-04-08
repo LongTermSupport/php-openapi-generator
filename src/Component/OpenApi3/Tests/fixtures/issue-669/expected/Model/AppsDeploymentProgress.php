@@ -72,8 +72,6 @@ class AppsDeploymentProgress extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentProgressStep> $steps
-     *
-     * @return self
      */
     public function setSteps(array $steps): self
     {
@@ -100,8 +98,6 @@ class AppsDeploymentProgress extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentProgressStep> $summarySteps
-     *
-     * @return self
      */
     public function setSummarySteps(array $summarySteps): self
     {

@@ -129,8 +129,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A unique identifier for each Droplet instance. This is automatically generated upon Droplet creation.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -147,8 +145,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The human-readable name set for the Droplet instance.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -165,8 +161,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * Memory of the Droplet in megabytes.
-     *
-     * @return self
      */
     public function setMemory(int $memory): self
     {
@@ -183,8 +177,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The number of virtual CPUs.
-     *
-     * @return self
      */
     public function setVcpus(int $vcpus): self
     {
@@ -201,8 +193,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The size of the Droplet's disk in gigabytes.
-     *
-     * @return self
      */
     public function setDisk(int $disk): self
     {
@@ -223,8 +213,6 @@ class Droplet extends \ArrayObject
      * An array of objects containing information about the disks available to the Droplet.
      *
      * @param list<DiskInfo> $diskInfo
-     *
-     * @return self
      */
     public function setDiskInfo(array $diskInfo): self
     {
@@ -241,8 +229,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the Droplet has been locked, preventing actions by users.
-     *
-     * @return self
      */
     public function setLocked(bool $locked): self
     {
@@ -259,8 +245,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A status string indicating the state of the Droplet instance. This may be "new", "active", "off", or "archive".
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -293,8 +277,6 @@ class Droplet extends \ArrayObject
      * 
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setKernel(?Kernel $kernel): self
     {
@@ -311,8 +293,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Droplet was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -333,8 +313,6 @@ class Droplet extends \ArrayObject
      * An array of features enabled on this Droplet.
      *
      * @param list<string> $features
-     *
-     * @return self
      */
     public function setFeatures(array $features): self
     {
@@ -355,8 +333,6 @@ class Droplet extends \ArrayObject
      * An array of backup IDs of any backups that have been taken of the Droplet instance.  Droplet backups are enabled at the time of the instance creation.<br>Requires `image:read` scope.
      *
      * @param list<int> $backupIds
-     *
-     * @return self
      */
     public function setBackupIds(array $backupIds): self
     {
@@ -387,8 +363,6 @@ class Droplet extends \ArrayObject
      * An array of snapshot IDs of any snapshots created from the Droplet instance.<br>Requires `image:read` scope.
      *
      * @param list<int> $snapshotIds
-     *
-     * @return self
      */
     public function setSnapshotIds(array $snapshotIds): self
     {
@@ -419,8 +393,6 @@ class Droplet extends \ArrayObject
      * A flat array including the unique identifier for each Block Storage volume attached to the Droplet.<br>Requires `block_storage:read` scope.
      *
      * @param list<string> $volumeIds
-     *
-     * @return self
      */
     public function setVolumeIds(array $volumeIds): self
     {
@@ -447,8 +419,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The unique slug identifier for the size of this Droplet.
-     *
-     * @return self
      */
     public function setSizeSlug(string $sizeSlug): self
     {
@@ -465,8 +435,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The details of the network that are configured for the Droplet instance.  This is an object that contains keys for IPv4 and IPv6. The value of each of these is an array that contains objects describing an individual IP resource allocated to the Droplet. These will define attributes like the IP address, netmask, and gateway of the specific network depending on the type of network it is.
-     *
-     * @return self
      */
     public function setNetworks(DropletNetworks $networks): self
     {
@@ -497,8 +465,6 @@ class Droplet extends \ArrayObject
      * An array of Tags the Droplet has been tagged with.<br>Requires `tag:read` scope.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -515,8 +481,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Droplet is assigned.<br>Requires `vpc:read` scope.
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -533,8 +497,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
-     * @return self
      */
     public function setGpuInfo(GpuInfo $gpuInfo): self
     {

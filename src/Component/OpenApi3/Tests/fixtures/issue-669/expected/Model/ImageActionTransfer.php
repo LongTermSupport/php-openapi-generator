@@ -37,8 +37,6 @@ class ImageActionTransfer extends \ArrayObject
     }
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -55,8 +53,6 @@ class ImageActionTransfer extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {

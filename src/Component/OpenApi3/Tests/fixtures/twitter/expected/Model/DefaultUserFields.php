@@ -53,8 +53,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
-     * @return self
      */
     public function setLocation(string $location): self
     {
@@ -71,8 +69,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The URL specified in the user's profile.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -89,8 +85,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -107,8 +101,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * A list of metadata found in the user's profile description.
-     *
-     * @return self
      */
     public function setEntities(DefaultUserFieldsEntities $entities): self
     {
@@ -125,8 +117,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setMostRecentTweetId(string $mostRecentTweetId): self
     {
@@ -143,8 +133,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setPinnedTweetId(string $pinnedTweetId): self
     {

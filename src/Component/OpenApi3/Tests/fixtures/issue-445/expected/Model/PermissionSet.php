@@ -39,8 +39,6 @@ class PermissionSet
     }
     /**
      * The permission set ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class PermissionSet
     /**
      * When true this permission set will derogate all other configured permission sets.
      * Cannot be changed after creation.
-     *
-     * @return self
      */
     public function setExclusive(bool $exclusive): self
     {
@@ -77,8 +73,6 @@ class PermissionSet
     }
     /**
      * Language specific permission set names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {

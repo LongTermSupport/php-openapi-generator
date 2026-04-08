@@ -52,8 +52,6 @@ class CombinedCommitStatus extends \ArrayObject
     }
     /**
      * @param list<SimpleCommitStatus> $statuses
-     *
-     * @return self
      */
     public function setStatuses(array $statuses): self
     {
@@ -90,8 +88,6 @@ class CombinedCommitStatus extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {

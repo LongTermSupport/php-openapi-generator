@@ -75,7 +75,6 @@ class CopyCompaniesFromOneToAnotherPortfolioS extends \LongTermSupport\OpenApiGe
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CopyCompaniesFromOneToAnotherPortfolioSBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CopyCompaniesFromOneToAnotherPortfolioSUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CopyCompaniesFromOneToAnotherPortfolioSForbiddenException

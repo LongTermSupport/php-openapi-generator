@@ -39,8 +39,6 @@ class DatabaseVersionOptions extends \ArrayObject
      * An array of strings containing the names of available regions
      *
      * @param list<string> $versions
-     *
-     * @return self
      */
     public function setVersions(array $versions): self
     {

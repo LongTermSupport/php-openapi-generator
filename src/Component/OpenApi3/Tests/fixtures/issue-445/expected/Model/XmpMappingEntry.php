@@ -54,8 +54,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Direction of the mapping.
-     *
-     * @return self
      */
     public function setDirection(mixed $direction): self
     {
@@ -72,8 +70,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Priority of the mapping.
-     *
-     * @return self
      */
     public function setPriority(int $priority): self
     {
@@ -90,8 +86,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
-     * @return self
      */
     public function setStopProcessing(bool $stopProcessing): self
     {
@@ -108,8 +102,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Path to source property in XMP.
-     *
-     * @return self
      */
     public function setXmpPath(string $xmpPath): self
     {
@@ -126,8 +118,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Path to target property in metadata.
-     *
-     * @return self
      */
     public function setMetadataPath(string $metadataPath): self
     {
@@ -144,8 +134,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Optional additional configuration for the mapping.
-     *
-     * @return self
      */
     public function setConfiguration(mixed $configuration): self
     {

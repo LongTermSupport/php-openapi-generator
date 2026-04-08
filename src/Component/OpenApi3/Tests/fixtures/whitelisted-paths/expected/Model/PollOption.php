@@ -41,8 +41,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * Position of this choice in the poll.
-     *
-     * @return self
      */
     public function setPosition(int $position): self
     {
@@ -59,8 +57,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * The text of a poll choice.
-     *
-     * @return self
      */
     public function setLabel(string $label): self
     {
@@ -77,8 +73,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * Number of users who voted for this choice.
-     *
-     * @return self
      */
     public function setVotes(int $votes): self
     {

@@ -72,11 +72,6 @@ class ActionsListWorkflowRuns extends \LongTermSupport\OpenApiGenerator\Componen
         $optionsResolver->addAllowedTypes('page', ['int']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoActionsWorkflowsWorkflowIdRunsGetResponse200
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoActionsWorkflowsWorkflowIdRunsGetResponse200
     {
         $status = $response->getStatusCode();

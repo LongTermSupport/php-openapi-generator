@@ -33,8 +33,6 @@ class GbCompanyReportExampleResponseReportGroupStructure extends \ArrayObject
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem> $subsidiaryCompanies
-     *
-     * @return self
      */
     public function setSubsidiaryCompanies(array $subsidiaryCompanies): self
     {

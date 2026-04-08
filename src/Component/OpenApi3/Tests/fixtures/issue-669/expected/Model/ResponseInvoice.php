@@ -35,8 +35,6 @@ class ResponseInvoice extends \ArrayObject
     }
     /**
      * @param list<InvoiceItem> $invoiceItems
-     *
-     * @return self
      */
     public function setInvoiceItems(array $invoiceItems): self
     {

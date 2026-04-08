@@ -63,8 +63,6 @@ class ResponseAssociatedResourcesList extends \ArrayObject
      * Reserved IPs that are associated with this Droplet.<br>Requires `reserved_ip:read` scope.
      *
      * @param list<AssociatedResource> $reservedIps
-     *
-     * @return self
      */
     public function setReservedIps(array $reservedIps): self
     {
@@ -85,8 +83,6 @@ class ResponseAssociatedResourcesList extends \ArrayObject
      * Floating IPs that are associated with this Droplet.<br>Requires `reserved_ip:read` scope.
      *
      * @param list<AssociatedResource> $floatingIps
-     *
-     * @return self
      */
     public function setFloatingIps(array $floatingIps): self
     {
@@ -107,8 +103,6 @@ class ResponseAssociatedResourcesList extends \ArrayObject
      * Snapshots that are associated with this Droplet.<br>Requires `image:read` scope.
      *
      * @param list<AssociatedResource> $snapshots
-     *
-     * @return self
      */
     public function setSnapshots(array $snapshots): self
     {
@@ -129,8 +123,6 @@ class ResponseAssociatedResourcesList extends \ArrayObject
      * Volumes that are associated with this Droplet.<br>Requires `block_storage:read` scope.
      *
      * @param list<AssociatedResource> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {
@@ -151,8 +143,6 @@ class ResponseAssociatedResourcesList extends \ArrayObject
      * Volume Snapshots that are associated with this Droplet.<br>Requires `block_storage_snapshot:read` scope.
      *
      * @param list<AssociatedResource> $volumeSnapshots
-     *
-     * @return self
      */
     public function setVolumeSnapshots(array $volumeSnapshots): self
     {

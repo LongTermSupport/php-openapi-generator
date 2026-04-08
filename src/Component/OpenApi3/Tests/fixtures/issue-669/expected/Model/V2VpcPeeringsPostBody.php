@@ -39,8 +39,6 @@ class V2VpcPeeringsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -61,8 +59,6 @@ class V2VpcPeeringsPostBody extends \ArrayObject
      * An array of the two peered VPCs IDs.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {

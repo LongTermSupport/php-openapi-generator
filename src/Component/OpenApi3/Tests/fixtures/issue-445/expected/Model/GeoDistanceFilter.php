@@ -41,8 +41,6 @@ class GeoDistanceFilter extends FilterBase
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
-     * @return self
      */
     public function setField(string $field): self
     {
@@ -59,8 +57,6 @@ class GeoDistanceFilter extends FilterBase
     }
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
-     * @return self
      */
     public function setLocation(mixed $location): self
     {
@@ -77,8 +73,6 @@ class GeoDistanceFilter extends FilterBase
     }
     /**
      * The distance in meters from the point of origin.
-     *
-     * @return self
      */
     public function setDistance(float $distance): self
     {

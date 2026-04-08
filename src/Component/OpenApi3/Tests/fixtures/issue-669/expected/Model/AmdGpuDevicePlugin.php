@@ -33,8 +33,6 @@ class AmdGpuDevicePlugin extends \ArrayObject
     }
     /**
      * Indicates whether the AMD GPU Device Plugin is enabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

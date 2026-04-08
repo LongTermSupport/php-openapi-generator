@@ -33,8 +33,6 @@ class Database extends \ArrayObject
     }
     /**
      * The name of the database.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

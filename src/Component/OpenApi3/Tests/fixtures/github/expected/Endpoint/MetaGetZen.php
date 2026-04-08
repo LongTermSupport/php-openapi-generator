@@ -32,11 +32,6 @@ class MetaGetZen extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
     {
         return ['Accept' => ['text/plain']];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();

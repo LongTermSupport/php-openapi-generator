@@ -33,8 +33,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdPutBody extends \ArrayObject
     }
     /**
      * The body text of the pull request review.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

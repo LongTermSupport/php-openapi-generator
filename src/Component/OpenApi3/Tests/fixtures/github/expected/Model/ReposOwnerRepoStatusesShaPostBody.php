@@ -47,8 +47,6 @@ class ReposOwnerRepoStatusesShaPostBody extends \ArrayObject
     }
     /**
      * The state of the status. Can be one of `error`, `failure`, `pending`, or `success`.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -69,8 +67,6 @@ class ReposOwnerRepoStatusesShaPostBody extends \ArrayObject
      * The target URL to associate with this status. This URL will be linked from the GitHub UI to allow users to easily see the source of the status.
      * For example, if your continuous integration system is posting build status, you would want to provide the deep link for the build output for this specific SHA:
      * `http://ci.example.com/user/repo/build/sha`
-     *
-     * @return self
      */
     public function setTargetUrl(string $targetUrl): self
     {
@@ -87,8 +83,6 @@ class ReposOwnerRepoStatusesShaPostBody extends \ArrayObject
     }
     /**
      * A short description of the status.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -105,8 +99,6 @@ class ReposOwnerRepoStatusesShaPostBody extends \ArrayObject
     }
     /**
      * A string label to differentiate this status from the status of other systems.
-     *
-     * @return self
      */
     public function setContext(string $context): self
     {

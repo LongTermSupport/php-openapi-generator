@@ -47,8 +47,6 @@ class FieldSingleTagbox extends FieldBase
     }
     /**
      * The ID of the schema to be used as tagbox (it must be of type List).
-     *
-     * @return self
      */
     public function setSchemaId(string $schemaId): self
     {
@@ -65,8 +63,6 @@ class FieldSingleTagbox extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
-     * @return self
      */
     public function setSchemaIndexingInfo(mixed $schemaIndexingInfo): self
     {
@@ -83,8 +79,6 @@ class FieldSingleTagbox extends FieldBase
     }
     /**
      * An optional filter to limit the list items.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -101,8 +95,6 @@ class FieldSingleTagbox extends FieldBase
     }
     /**
      * Json serialized template used for creating new list item (no logic is implemented in backend).
-     *
-     * @return self
      */
     public function setListItemCreateTemplate(?string $listItemCreateTemplate): self
     {
@@ -121,8 +113,6 @@ class FieldSingleTagbox extends FieldBase
     /**
      * Defines the display pattern type to be used (Name or List only) when showing a tagbox item in view mode. Defaults to "Name".
      * The information is only consumed by the client application. No actual logic is implemented in the backend.
-     *
-     * @return self
      */
     public function setViewModeDisplayPatternType(mixed $viewModeDisplayPatternType): self
     {

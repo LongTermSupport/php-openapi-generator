@@ -37,8 +37,6 @@ class FirewallRuleBase extends \ArrayObject
     }
     /**
      * The type of traffic to be allowed. This may be one of `tcp`, `udp`, or `icmp`.
-     *
-     * @return self
      */
     public function setProtocol(string $protocol): self
     {
@@ -55,8 +53,6 @@ class FirewallRuleBase extends \ArrayObject
     }
     /**
      * The ports on which traffic will be allowed specified as a string containing a single port, a range (e.g. "8000-9000"), or "0" when all ports are open for a protocol. For ICMP rules this parameter will always return "0".
-     *
-     * @return self
      */
     public function setPorts(string $ports): self
     {

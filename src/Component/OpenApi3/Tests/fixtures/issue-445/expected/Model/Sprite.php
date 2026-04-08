@@ -50,8 +50,6 @@ class Sprite
     }
     /**
      * The width of the sprite.
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {
@@ -68,8 +66,6 @@ class Sprite
     }
     /**
      * The height of the sprite.
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {
@@ -86,8 +82,6 @@ class Sprite
     }
     /**
      * Y coordinate of the sprite in the saved file.
-     *
-     * @return self
      */
     public function setY(int $y): self
     {
@@ -104,8 +98,6 @@ class Sprite
     }
     /**
      * X coordinate of the sprite in the saved file.
-     *
-     * @return self
      */
     public function setX(int $x): self
     {
@@ -122,8 +114,6 @@ class Sprite
     }
     /**
      * The starting point in time of the sprite in the video.
-     *
-     * @return self
      */
     public function setStart(string $start): self
     {
@@ -140,8 +130,6 @@ class Sprite
     }
     /**
      * The ending point in time of the sprite in the video.
-     *
-     * @return self
      */
     public function setEnd(string $end): self
     {

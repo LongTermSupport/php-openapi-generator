@@ -37,8 +37,6 @@ class ApiCreateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * OpenAI API key
-     *
-     * @return self
      */
     public function setApiKey(string $apiKey): self
     {
@@ -55,8 +53,6 @@ class ApiCreateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

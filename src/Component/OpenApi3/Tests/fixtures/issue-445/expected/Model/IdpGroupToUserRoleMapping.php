@@ -34,8 +34,6 @@ class IdpGroupToUserRoleMapping
     }
     /**
      * Name of the group on external identity provider
-     *
-     * @return self
      */
     public function setGroup(?string $group): self
     {
@@ -52,8 +50,6 @@ class IdpGroupToUserRoleMapping
     }
     /**
      * User role ID as defined in CP
-     *
-     * @return self
      */
     public function setUserRoleId(?string $userRoleId): self
     {

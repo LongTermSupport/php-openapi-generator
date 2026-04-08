@@ -147,8 +147,6 @@ class SchemaFieldDisplayPatternTypeNotSupportedException extends \ArrayObject
     }
     /**
      * The display pattern type
-     *
-     * @return self
      */
     public function setDisplayPatternType(string $displayPatternType): self
     {
@@ -165,8 +163,6 @@ class SchemaFieldDisplayPatternTypeNotSupportedException extends \ArrayObject
     }
     /**
      * @param list<string>|null $supportedDisplayPatternTypes
-     *
-     * @return self
      */
     public function setSupportedDisplayPatternTypes(?array $supportedDisplayPatternTypes): self
     {

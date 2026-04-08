@@ -43,8 +43,6 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Indicates if the content is being withheld for on the basis of copyright infringement.
-     *
-     * @return self
      */
     public function setCopyright(bool $copyright): self
     {
@@ -65,8 +63,6 @@ class TweetWithheld extends \ArrayObject
      * Provides a list of countries where this content is not available.
      *
      * @param list<string> $countryCodes
-     *
-     * @return self
      */
     public function setCountryCodes(array $countryCodes): self
     {
@@ -83,8 +79,6 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Indicates whether the content being withheld is the `tweet` or a `user`.
-     *
-     * @return self
      */
     public function setScope(string $scope): self
     {

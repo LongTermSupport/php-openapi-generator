@@ -37,8 +37,6 @@ class PermissionSetOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
-     * @return self
      */
     public function setTransferUserId(string $transferUserId): self
     {
@@ -55,8 +53,6 @@ class PermissionSetOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
-     * @return self
      */
     public function setPermissionSetId(?string $permissionSetId): self
     {

@@ -37,8 +37,6 @@ class GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgemen
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgementsRegisteredExactItem> $exact
-     *
-     * @return self
      */
     public function setExact(array $exact): self
     {
@@ -55,8 +53,6 @@ class GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgemen
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgementsRegisteredPossibleItem> $possible
-     *
-     * @return self
      */
     public function setPossible(array $possible): self
     {

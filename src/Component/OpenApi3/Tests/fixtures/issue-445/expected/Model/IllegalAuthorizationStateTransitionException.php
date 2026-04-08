@@ -144,8 +144,6 @@ class IllegalAuthorizationStateTransitionException extends \ArrayObject
     }
     /**
      * User authorization state
-     *
-     * @return self
      */
     public function setAuthorizationState(string $authorizationState): self
     {

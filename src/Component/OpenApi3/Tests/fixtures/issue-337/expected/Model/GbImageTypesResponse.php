@@ -44,8 +44,6 @@ class GbImageTypesResponse extends \ArrayObject
     }
     /**
      * @param list<GbImageTypesResponseAvailableTypesItem> $availableTypes
-     *
-     * @return self
      */
     public function setAvailableTypes(array $availableTypes): self
     {

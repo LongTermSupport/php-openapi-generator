@@ -41,8 +41,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -59,8 +57,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {
@@ -77,8 +73,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {

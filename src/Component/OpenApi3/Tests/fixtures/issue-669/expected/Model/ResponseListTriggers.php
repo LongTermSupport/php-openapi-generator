@@ -33,8 +33,6 @@ class ResponseListTriggers extends \ArrayObject
     }
     /**
      * @param list<TriggerInfo> $triggers
-     *
-     * @return self
      */
     public function setTriggers(array $triggers): self
     {

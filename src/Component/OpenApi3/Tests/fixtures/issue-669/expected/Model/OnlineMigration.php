@@ -41,8 +41,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The ID of the most recent migration.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The current status of the migration.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -77,8 +73,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The time the migration was initiated, in ISO 8601 format.
-     *
-     * @return self
      */
     public function setCreatedAt(string $createdAt): self
     {

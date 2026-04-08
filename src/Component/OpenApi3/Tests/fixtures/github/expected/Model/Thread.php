@@ -51,8 +51,6 @@ class Thread extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {

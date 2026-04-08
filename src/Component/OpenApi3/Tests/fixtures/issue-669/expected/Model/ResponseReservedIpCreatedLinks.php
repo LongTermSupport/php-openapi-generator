@@ -37,8 +37,6 @@ class ResponseReservedIpCreatedLinks extends \ArrayObject
     }
     /**
      * @param list<ActionLink> $droplets
-     *
-     * @return self
      */
     public function setDroplets(array $droplets): self
     {
@@ -55,8 +53,6 @@ class ResponseReservedIpCreatedLinks extends \ArrayObject
     }
     /**
      * @param list<ActionLink> $actions
-     *
-     * @return self
      */
     public function setActions(array $actions): self
     {

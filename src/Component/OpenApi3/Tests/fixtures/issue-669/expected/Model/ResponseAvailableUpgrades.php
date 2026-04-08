@@ -33,8 +33,6 @@ class ResponseAvailableUpgrades extends \ArrayObject
     }
     /**
      * @param list<KubernetesVersion>|null $availableUpgradeVersions
-     *
-     * @return self
      */
     public function setAvailableUpgradeVersions(?array $availableUpgradeVersions): self
     {

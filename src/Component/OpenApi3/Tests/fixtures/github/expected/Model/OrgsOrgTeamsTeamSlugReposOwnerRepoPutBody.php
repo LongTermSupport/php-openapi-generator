@@ -54,8 +54,6 @@ class OrgsOrgTeamsTeamSlugReposOwnerRepoPutBody extends \ArrayObject
      * \* `triage` - team members can proactively manage issues and pull requests without write access. Recommended for contributors who triage a repository. Only applies to repositories owned by organizations.
      * 
      * If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

@@ -41,8 +41,6 @@ class MetadataReferencesPagingRequest extends \ArrayObject
     }
     /**
      * Limits the number of the returned schemas. Defaults to 0.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -59,8 +57,6 @@ class MetadataReferencesPagingRequest extends \ArrayObject
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -77,8 +73,6 @@ class MetadataReferencesPagingRequest extends \ArrayObject
     }
     /**
      * Set to true to check if any incoming references are originating from an item the current user does not have full access to.
-     *
-     * @return self
      */
     public function setFetchReferencedByRestrictedItem(bool $fetchReferencedByRestrictedItem): self
     {

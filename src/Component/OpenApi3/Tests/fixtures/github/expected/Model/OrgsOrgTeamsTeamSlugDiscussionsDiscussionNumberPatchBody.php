@@ -37,8 +37,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberPatchBody extends \ArrayObj
     }
     /**
      * The discussion post's title.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -55,8 +53,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberPatchBody extends \ArrayObj
     }
     /**
      * The discussion post's body text.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

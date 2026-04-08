@@ -34,8 +34,6 @@ class FieldSingleFieldset extends FieldBase
     }
     /**
      * The ID of the schema to be used as fieldset (it must be of type Struct).
-     *
-     * @return self
      */
     public function setSchemaId(string $schemaId): self
     {
@@ -52,8 +50,6 @@ class FieldSingleFieldset extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
-     * @return self
      */
     public function setSchemaIndexingInfo(mixed $schemaIndexingInfo): self
     {

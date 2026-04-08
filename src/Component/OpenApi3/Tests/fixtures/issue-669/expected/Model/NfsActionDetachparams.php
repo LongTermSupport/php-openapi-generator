@@ -33,8 +33,6 @@ class NfsActionDetachparams extends \ArrayObject
     }
     /**
      * The ID of the VPC from which the NFS share will be detached
-     *
-     * @return self
      */
     public function setVpcId(string $vpcId): self
     {

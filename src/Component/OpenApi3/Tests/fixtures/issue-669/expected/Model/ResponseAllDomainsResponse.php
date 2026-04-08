@@ -41,8 +41,6 @@ class ResponseAllDomainsResponse extends \ArrayObject
      * Array of volumes.
      *
      * @param list<Domain> $domains
-     *
-     * @return self
      */
     public function setDomains(array $domains): self
     {

@@ -97,8 +97,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -119,8 +117,6 @@ class UserSearchRequest extends \ArrayObject
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -137,8 +133,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -155,8 +149,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * Return only users in certain life cycle state(s).
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -177,8 +169,6 @@ class UserSearchRequest extends \ArrayObject
      * Return only users with certain user rights.
      *
      * @param list<string>|null $userRightsFilter
-     *
-     * @return self
      */
     public function setUserRightsFilter(?array $userRightsFilter): self
     {
@@ -209,8 +199,6 @@ class UserSearchRequest extends \ArrayObject
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -227,8 +215,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * Includes the service user in result.
-     *
-     * @return self
      */
     public function setIncludeServiceUser(bool $includeServiceUser): self
     {
@@ -247,8 +233,6 @@ class UserSearchRequest extends \ArrayObject
     /**
      * Restricts the results to users that are editable for calling user.
      * If set to true, IncludeServiceUser is ignored.
-     *
-     * @return self
      */
     public function setEditableOnly(bool $editableOnly): self
     {
@@ -269,8 +253,6 @@ class UserSearchRequest extends \ArrayObject
      * Fields and respective directions requested to sort the search results. Sorting on a not indexed field will throw an exception.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -287,8 +269,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * Limits the document count of the result set.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -305,8 +285,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -323,8 +301,6 @@ class UserSearchRequest extends \ArrayObject
     }
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! Severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -345,8 +321,6 @@ class UserSearchRequest extends \ArrayObject
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase>|null $aggregators
-     *
-     * @return self
      */
     public function setAggregators(?array $aggregators): self
     {

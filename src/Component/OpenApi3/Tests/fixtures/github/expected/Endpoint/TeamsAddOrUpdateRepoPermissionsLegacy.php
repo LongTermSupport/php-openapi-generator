@@ -59,7 +59,6 @@ class TeamsAddOrUpdateRepoPermissionsLegacy extends \LongTermSupport\OpenApiGene
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsAddOrUpdateRepoPermissionsLegacyForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsAddOrUpdateRepoPermissionsLegacyUnprocessableEntityException
      */

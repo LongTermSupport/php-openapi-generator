@@ -85,8 +85,6 @@ class ProblemDetails
     }
     /**
      * @param array<string, mixed>|null $extensions
-     *
-     * @return self
      */
     public function setExtensions(?array $extensions): self
     {

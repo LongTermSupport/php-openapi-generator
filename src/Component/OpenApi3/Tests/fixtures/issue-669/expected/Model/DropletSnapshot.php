@@ -59,8 +59,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The unique identifier for the snapshot or backup.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -77,8 +75,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -95,8 +91,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -117,8 +111,6 @@ class DropletSnapshot extends \ArrayObject
      * An array of the regions that the snapshot is available in. The regions are represented by their identifying slug values.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -135,8 +127,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
-     * @return self
      */
     public function setMinDiskSize(int $minDiskSize): self
     {
@@ -153,8 +143,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
-     * @return self
      */
     public function setSizeGigabytes(float $sizeGigabytes): self
     {
@@ -171,8 +159,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * Describes the kind of image. It may be one of `snapshot` or `backup`. This specifies whether an image is a user-generated Droplet snapshot or automatically created Droplet backup.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

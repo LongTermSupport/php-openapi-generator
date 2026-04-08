@@ -30,8 +30,6 @@ class OutputFormatSetXmpWritebackStateRequest
     }
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

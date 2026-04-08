@@ -44,8 +44,6 @@ class ListFreshInvestigationResponse extends \ArrayObject
     }
     /**
      * @param list<ListFreshInvestigationResponseOrdersItem> $orders
-     *
-     * @return self
      */
     public function setOrders(array $orders): self
     {

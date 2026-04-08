@@ -47,8 +47,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Dataset against which the test‑case is executed.
-     *
-     * @return self
      */
     public function setDatasetUuid(string $datasetUuid): self
     {
@@ -65,8 +63,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Description of the test case.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -93,8 +89,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the test case.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -121,8 +115,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Test-case UUID to update
-     *
-     * @return self
      */
     public function setTestCaseUuid(string $testCaseUuid): self
     {

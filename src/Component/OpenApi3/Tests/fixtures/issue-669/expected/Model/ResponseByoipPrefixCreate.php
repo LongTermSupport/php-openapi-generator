@@ -41,8 +41,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The unique identifier for the BYOIP prefix
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -59,8 +57,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The region where the prefix is created
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -77,8 +73,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The status of the BYOIP prefix
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {

@@ -33,8 +33,6 @@ class Topic extends \ArrayObject
     }
     /**
      * @param list<string> $names
-     *
-     * @return self
      */
     public function setNames(array $names): self
     {

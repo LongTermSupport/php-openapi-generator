@@ -72,8 +72,6 @@ class Job extends \ArrayObject
     }
     /**
      * The id of the job.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -90,8 +88,6 @@ class Job extends \ArrayObject
     }
     /**
      * The id of the associated workflow run.
-     *
-     * @return self
      */
     public function setRunId(int $runId): self
     {
@@ -128,8 +124,6 @@ class Job extends \ArrayObject
     }
     /**
      * The SHA of the commit that is being run.
-     *
-     * @return self
      */
     public function setHeadSha(string $headSha): self
     {
@@ -166,8 +160,6 @@ class Job extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -184,8 +176,6 @@ class Job extends \ArrayObject
     }
     /**
      * The outcome of the job.
-     *
-     * @return self
      */
     public function setConclusion(?string $conclusion): self
     {
@@ -202,8 +192,6 @@ class Job extends \ArrayObject
     }
     /**
      * The time that the job started, in ISO 8601 format.
-     *
-     * @return self
      */
     public function setStartedAt(\DateTime $startedAt): self
     {
@@ -220,8 +208,6 @@ class Job extends \ArrayObject
     }
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
-     * @return self
      */
     public function setCompletedAt(?\DateTime $completedAt): self
     {
@@ -238,8 +224,6 @@ class Job extends \ArrayObject
     }
     /**
      * The name of the job.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -260,8 +244,6 @@ class Job extends \ArrayObject
      * Steps in this job.
      *
      * @param list<JobStepsItem> $steps
-     *
-     * @return self
      */
     public function setSteps(array $steps): self
     {

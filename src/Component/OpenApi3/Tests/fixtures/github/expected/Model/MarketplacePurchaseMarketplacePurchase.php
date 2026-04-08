@@ -110,8 +110,6 @@ class MarketplacePurchaseMarketplacePurchase extends \ArrayObject
     }
     /**
      * Marketplace Listing Plan
-     *
-     * @return self
      */
     public function setPlan(MarketplaceListingPlan $plan): self
     {

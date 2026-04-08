@@ -38,8 +38,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * Path to the object the tagbox is contained in.
-     *
-     * @return self
      */
     public function setPath(?string $path): self
     {
@@ -56,8 +54,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * ID of the tagbox field.
-     *
-     * @return self
      */
     public function setFieldId(?string $fieldId): self
     {
@@ -74,8 +70,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be removed.
-     *
-     * @return self
      */
     public function setRefIds(mixed $refIds): self
     {

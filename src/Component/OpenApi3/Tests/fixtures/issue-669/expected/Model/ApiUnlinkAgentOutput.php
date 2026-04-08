@@ -37,8 +37,6 @@ class ApiUnlinkAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
-     * @return self
      */
     public function setChildAgentUuid(string $childAgentUuid): self
     {
@@ -55,8 +53,6 @@ class ApiUnlinkAgentOutput extends \ArrayObject
     }
     /**
      * Pagent agent id
-     *
-     * @return self
      */
     public function setParentAgentUuid(string $parentAgentUuid): self
     {

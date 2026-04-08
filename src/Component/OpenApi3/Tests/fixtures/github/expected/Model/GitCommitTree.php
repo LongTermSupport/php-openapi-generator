@@ -34,8 +34,6 @@ class GitCommitTree extends \ArrayObject
     }
     /**
      * SHA for the commit
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {

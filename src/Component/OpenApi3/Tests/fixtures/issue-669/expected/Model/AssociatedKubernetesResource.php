@@ -37,8 +37,6 @@ class AssociatedKubernetesResource extends \ArrayObject
     }
     /**
      * The ID of a resource associated with a Kubernetes cluster.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -55,8 +53,6 @@ class AssociatedKubernetesResource extends \ArrayObject
     }
     /**
      * The name of a resource associated with a Kubernetes cluster.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

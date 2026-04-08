@@ -48,8 +48,6 @@ class ProtectedBranchPullRequestReviewDismissalRestrictions extends \ArrayObject
      * The list of users with review dismissal access.
      *
      * @param list<SimpleUser> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -70,8 +68,6 @@ class ProtectedBranchPullRequestReviewDismissalRestrictions extends \ArrayObject
      * The list of teams with review dismissal access.
      *
      * @param list<Team> $teams
-     *
-     * @return self
      */
     public function setTeams(array $teams): self
     {

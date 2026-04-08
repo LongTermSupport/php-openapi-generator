@@ -85,8 +85,6 @@ class AlertPolicy extends \ArrayObject
     }
     /**
      * @param list<string> $entities
-     *
-     * @return self
      */
     public function setEntities(array $entities): self
     {
@@ -103,8 +101,6 @@ class AlertPolicy extends \ArrayObject
     }
     /**
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {

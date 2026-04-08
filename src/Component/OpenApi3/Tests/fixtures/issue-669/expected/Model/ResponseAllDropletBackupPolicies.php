@@ -47,8 +47,6 @@ class ResponseAllDropletBackupPolicies extends \ArrayObject
      * 
      *
      * @param array<string, DropletBackupPolicyRecord> $policies
-     *
-     * @return self
      */
     public function setPolicies(array $policies): self
     {

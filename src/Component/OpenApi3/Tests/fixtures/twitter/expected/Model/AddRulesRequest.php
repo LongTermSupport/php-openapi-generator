@@ -33,8 +33,6 @@ class AddRulesRequest extends \ArrayObject
     }
     /**
      * @param list<RuleNoId> $add
-     *
-     * @return self
      */
     public function setAdd(array $add): self
     {

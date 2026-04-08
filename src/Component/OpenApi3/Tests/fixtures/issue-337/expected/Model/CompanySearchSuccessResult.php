@@ -44,8 +44,6 @@ class CompanySearchSuccessResult extends \ArrayObject
     }
     /**
      * @param list<CompanySearchSuccessResultCompaniesItem> $companies
-     *
-     * @return self
      */
     public function setCompanies(array $companies): self
     {

@@ -35,8 +35,6 @@ class ResponseAllVpcPeerings extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $vpcPeerings
-     *
-     * @return self
      */
     public function setVpcPeerings(array $vpcPeerings): self
     {

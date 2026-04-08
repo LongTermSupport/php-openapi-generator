@@ -66,8 +66,6 @@ class GbImageTypesResponseAvailableTypesItem extends \ArrayObject
     }
     /**
      * @param list<string> $availableFormats
-     *
-     * @return self
      */
     public function setAvailableFormats(array $availableFormats): self
     {

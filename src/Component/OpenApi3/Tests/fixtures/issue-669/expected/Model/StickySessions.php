@@ -41,8 +41,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -59,8 +57,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * The name of the cookie sent to the client. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
-     * @return self
      */
     public function setCookieName(string $cookieName): self
     {
@@ -77,8 +73,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * The number of seconds until the cookie set by the load balancer expires. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
-     * @return self
      */
     public function setCookieTtlSeconds(int $cookieTtlSeconds): self
     {

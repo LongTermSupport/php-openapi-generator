@@ -49,8 +49,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The name of the opensearch index.
-     *
-     * @return self
      */
     public function setIndexName(string $indexName): self
     {
@@ -67,8 +65,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The number of shards for the index.
-     *
-     * @return self
      */
     public function setNumberOfShards(int $numberOfShards): self
     {
@@ -85,8 +81,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The number of replicas for the index.
-     *
-     * @return self
      */
     public function setNumberOfReplicas(int $numberOfReplicas): self
     {
@@ -103,8 +97,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The size of the index.
-     *
-     * @return self
      */
     public function setSize(int $size): self
     {
@@ -121,8 +113,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The date and time the index was created.
-     *
-     * @return self
      */
     public function setCreatedTime(\DateTime $createdTime): self
     {

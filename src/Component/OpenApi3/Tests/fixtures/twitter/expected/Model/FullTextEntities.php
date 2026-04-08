@@ -49,8 +49,6 @@ class FullTextEntities extends \ArrayObject
     }
     /**
      * @param list<UrlEntity> $urls
-     *
-     * @return self
      */
     public function setUrls(array $urls): self
     {
@@ -67,8 +65,6 @@ class FullTextEntities extends \ArrayObject
     }
     /**
      * @param list<HashtagEntity> $hashtags
-     *
-     * @return self
      */
     public function setHashtags(array $hashtags): self
     {
@@ -85,8 +81,6 @@ class FullTextEntities extends \ArrayObject
     }
     /**
      * @param list<MentionEntity> $mentions
-     *
-     * @return self
      */
     public function setMentions(array $mentions): self
     {
@@ -103,8 +97,6 @@ class FullTextEntities extends \ArrayObject
     }
     /**
      * @param list<CashtagEntity> $cashtags
-     *
-     * @return self
      */
     public function setCashtags(array $cashtags): self
     {
@@ -121,8 +113,6 @@ class FullTextEntities extends \ArrayObject
     }
     /**
      * @param list<FullTextEntitiesAnnotationsItem> $annotations
-     *
-     * @return self
      */
     public function setAnnotations(array $annotations): self
     {

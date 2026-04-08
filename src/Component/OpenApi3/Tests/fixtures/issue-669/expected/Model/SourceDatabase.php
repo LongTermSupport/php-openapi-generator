@@ -50,8 +50,6 @@ class SourceDatabase extends \ArrayObject
     }
     /**
      * Enables SSL encryption when connecting to the source database.
-     *
-     * @return self
      */
     public function setDisableSsl(bool $disableSsl): self
     {
@@ -72,8 +70,6 @@ class SourceDatabase extends \ArrayObject
      * List of databases that should be ignored during migration.
      *
      * @param list<string> $ignoreDbs
-     *
-     * @return self
      */
     public function setIgnoreDbs(array $ignoreDbs): self
     {

@@ -33,8 +33,6 @@ class ResponseEventsLogs extends \ArrayObject
     }
     /**
      * @param list<EventsLogs> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {

@@ -57,8 +57,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * AWS S3 Data Source
-     *
-     * @return self
      */
     public function setAwsDataSource(ApiAWSDataSource $awsDataSource): self
     {
@@ -79,8 +77,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
-     * @return self
      */
     public function setChunkingAlgorithm(string $chunkingAlgorithm): self
     {
@@ -101,8 +97,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
-     * @return self
      */
     public function setChunkingOptions(ApiChunkingOptions $chunkingOptions): self
     {
@@ -119,8 +113,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(string $knowledgeBaseUuid): self
     {
@@ -137,8 +129,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
-     * @return self
      */
     public function setSpacesDataSource(ApiSpacesDataSource $spacesDataSource): self
     {
@@ -155,8 +145,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
-     * @return self
      */
     public function setWebCrawlerDataSource(ApiWebCrawlerDataSource $webCrawlerDataSource): self
     {

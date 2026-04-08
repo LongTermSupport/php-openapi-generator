@@ -50,8 +50,6 @@ class ObjectAggregationResult
     }
     /**
      * How long did the search and aggregation took.
-     *
-     * @return self
      */
     public function setElapsedMilliseconds(int $elapsedMilliseconds): self
     {
@@ -72,8 +70,6 @@ class ObjectAggregationResult
      * Results of the aggregation.
      *
      * @param list<AggregationResult> $aggregationResults
-     *
-     * @return self
      */
     public function setAggregationResults(array $aggregationResults): self
     {
@@ -90,8 +86,6 @@ class ObjectAggregationResult
     }
     /**
      * Search string used to query the data
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -108,8 +102,6 @@ class ObjectAggregationResult
     }
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
-     * @return self
      */
     public function setIsSearchStringRewritten(bool $isSearchStringRewritten): self
     {
@@ -130,8 +122,6 @@ class ObjectAggregationResult
      * Additional information regarding the query execution and reason of the matched documents. Multiple items are returned if multiple queries were performed.
      *
      * @param list<QueryDebugInformation>|null $queryDebugInformation
-     *
-     * @return self
      */
     public function setQueryDebugInformation(?array $queryDebugInformation): self
     {

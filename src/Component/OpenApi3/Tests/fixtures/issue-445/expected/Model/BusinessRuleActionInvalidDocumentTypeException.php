@@ -132,8 +132,6 @@ class BusinessRuleActionInvalidDocumentTypeException extends \ArrayObject
     }
     /**
      * @param list<string>|null $allowedDocumentTypes
-     *
-     * @return self
      */
     public function setAllowedDocumentTypes(?array $allowedDocumentTypes): self
     {

@@ -42,8 +42,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
-     * @return self
      */
     public function setSchemaId(?string $schemaId): self
     {
@@ -60,8 +58,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the field that yields the value
-     *
-     * @return self
      */
     public function setValueField(?string $valueField): self
     {
@@ -78,8 +74,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * An optional filter to narrow down the cached list items
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -96,8 +90,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * Include child schemas when caching list items
-     *
-     * @return self
      */
     public function setIncludeAllSchemaChildren(bool $includeAllSchemaChildren): self
     {

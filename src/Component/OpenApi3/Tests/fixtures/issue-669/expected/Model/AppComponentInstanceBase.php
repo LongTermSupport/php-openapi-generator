@@ -41,8 +41,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
-     * @return self
      */
     public function setInstanceCount(int $instanceCount): self
     {
@@ -59,8 +57,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
-     * @return self
      */
     public function setInstanceSizeSlug(mixed $instanceSizeSlug): self
     {
@@ -77,8 +73,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
-     * @return self
      */
     public function setAutoscaling(AppComponentInstanceBaseAutoscaling $autoscaling): self
     {

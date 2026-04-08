@@ -45,8 +45,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * The contents of the comment.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -63,8 +61,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * Relative path of the file to comment on.
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -81,8 +77,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * Line index in the diff to comment on.
-     *
-     * @return self
      */
     public function setPosition(int $position): self
     {
@@ -99,8 +93,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
-     *
-     * @return self
      */
     public function setLine(int $line): self
     {

@@ -39,8 +39,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPatchBody extends \ArrayObject
     }
     /**
      * @param list<string> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {
@@ -61,8 +59,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPatchBody extends \ArrayObject
      * Set of operations to be performed
      *
      * @param list<ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem> $operations
-     *
-     * @return self
      */
     public function setOperations(array $operations): self
     {

@@ -50,8 +50,6 @@ class AppAlertSpec extends \ArrayObject
     }
     /**
      * Is the alert disabled?
-     *
-     * @return self
      */
     public function setDisabled(bool $disabled): self
     {
@@ -78,8 +76,6 @@ class AppAlertSpec extends \ArrayObject
     }
     /**
      * Threshold value for alert
-     *
-     * @return self
      */
     public function setValue(float $value): self
     {

@@ -36,8 +36,6 @@ class NumericRangeAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
-     * @return self
      */
     public function setField(?string $field): self
     {
@@ -58,8 +56,6 @@ class NumericRangeAggregator extends AggregatorBase
      * A list of numeric ranges on which aggregate.
      *
      * @param list<NumericRangeForAggregator> $ranges
-     *
-     * @return self
      */
     public function setRanges(array $ranges): self
     {

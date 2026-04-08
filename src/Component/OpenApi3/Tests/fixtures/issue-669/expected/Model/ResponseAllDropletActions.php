@@ -35,8 +35,6 @@ class ResponseAllDropletActions extends \ArrayObject
     }
     /**
      * @param list<Action> $actions
-     *
-     * @return self
      */
     public function setActions(array $actions): self
     {

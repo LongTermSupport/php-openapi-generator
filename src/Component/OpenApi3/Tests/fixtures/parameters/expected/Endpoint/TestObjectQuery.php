@@ -43,11 +43,6 @@ class TestObjectQuery extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
         $optionsResolver->addAllowedTypes('filter', ['array']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();

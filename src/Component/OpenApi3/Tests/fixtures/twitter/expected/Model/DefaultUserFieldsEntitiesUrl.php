@@ -33,8 +33,6 @@ class DefaultUserFieldsEntitiesUrl extends \ArrayObject
     }
     /**
      * @param list<UrlEntity> $urls
-     *
-     * @return self
      */
     public function setUrls(array $urls): self
     {

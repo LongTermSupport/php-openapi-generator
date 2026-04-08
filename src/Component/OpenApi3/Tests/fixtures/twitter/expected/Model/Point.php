@@ -50,8 +50,6 @@ class Point extends \ArrayObject
      * A [GeoJson Position](https://tools.ietf.org/html/rfc7946#section-3.1.1) in the format `[longitude,latitude]`.
      *
      * @param list<float> $coordinates
-     *
-     * @return self
      */
     public function setCoordinates(array $coordinates): self
     {

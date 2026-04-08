@@ -55,8 +55,6 @@ class SearchRepositoriesGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<RepoSearchResultItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

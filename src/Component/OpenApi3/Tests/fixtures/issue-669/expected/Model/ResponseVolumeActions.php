@@ -35,8 +35,6 @@ class ResponseVolumeActions extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $actions
-     *
-     * @return self
      */
     public function setActions(array $actions): self
     {

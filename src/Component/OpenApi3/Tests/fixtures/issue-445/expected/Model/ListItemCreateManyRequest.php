@@ -36,8 +36,6 @@ class ListItemCreateManyRequest
     }
     /**
      * Allows creating list items that refer to list items or contents that don't exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {
@@ -58,8 +56,6 @@ class ListItemCreateManyRequest
      * Items to be created.
      *
      * @param list<ListItemCreateRequest> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

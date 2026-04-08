@@ -737,8 +737,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * @param list<string> $topics
-     *
-     * @return self
      */
     public function setTopics(array $topics): self
     {
@@ -815,8 +813,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
-     * @return self
      */
     public function setDisabled(bool $disabled): self
     {
@@ -833,8 +829,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * The repository visibility: public, private, or internal.
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {
@@ -991,8 +985,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setParent(Repository $parent): self
     {
@@ -1009,8 +1001,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setSource(Repository $source): self
     {
@@ -1067,8 +1057,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * Whether anonymous git access is allowed.
-     *
-     * @return self
      */
     public function setAnonymousAccessEnabled(bool $anonymousAccessEnabled): self
     {

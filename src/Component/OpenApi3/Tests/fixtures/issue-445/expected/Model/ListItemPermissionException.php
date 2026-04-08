@@ -143,8 +143,6 @@ class ListItemPermissionException extends \ArrayObject
     }
     /**
      * Metadata rights
-     *
-     * @return self
      */
     public function setMetadataRight(string $metadataRight): self
     {

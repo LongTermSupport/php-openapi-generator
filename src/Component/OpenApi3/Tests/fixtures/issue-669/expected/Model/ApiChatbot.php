@@ -42,8 +42,6 @@ class ApiChatbot extends \ArrayObject
     }
     /**
      * @param list<string> $allowedDomains
-     *
-     * @return self
      */
     public function setAllowedDomains(array $allowedDomains): self
     {
@@ -80,8 +78,6 @@ class ApiChatbot extends \ArrayObject
     }
     /**
      * Name of chatbot
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

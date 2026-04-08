@@ -33,8 +33,6 @@ class ListAlertPolicy extends \ArrayObject
     }
     /**
      * @param list<AlertPolicy> $policies
-     *
-     * @return self
      */
     public function setPolicies(array $policies): self
     {

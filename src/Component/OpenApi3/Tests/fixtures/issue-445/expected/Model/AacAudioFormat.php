@@ -53,8 +53,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding profile.
-     *
-     * @return self
      */
     public function setProfile(mixed $profile): self
     {
@@ -71,8 +69,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding coder.
-     *
-     * @return self
      */
     public function setCoder(mixed $coder): self
     {
@@ -89,8 +85,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the bitrate of the encoding in kbps.
-     *
-     * @return self
      */
     public function setBitrate(?int $bitrate): self
     {
@@ -107,8 +101,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding variable bit rate (VBR) - 1 is lowest quality and 5 is highest quality.
-     *
-     * @return self
      */
     public function setVariableBitRate(?int $variableBitRate): self
     {

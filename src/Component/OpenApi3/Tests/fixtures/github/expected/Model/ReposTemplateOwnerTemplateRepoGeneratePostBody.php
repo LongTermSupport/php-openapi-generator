@@ -45,8 +45,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * The organization or person who will own the new repository. To create a new repository in an organization, the authenticated user must be a member of the specified organization.
-     *
-     * @return self
      */
     public function setOwner(string $owner): self
     {
@@ -63,8 +61,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * The name of the new repository.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -81,8 +77,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * A short description of the new repository.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -99,8 +93,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * Either `true` to create a new private repository or `false` to create a new public one.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {

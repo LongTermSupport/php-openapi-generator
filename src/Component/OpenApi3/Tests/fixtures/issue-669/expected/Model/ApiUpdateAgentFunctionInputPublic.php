@@ -65,8 +65,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
-     * @return self
      */
     public function setAgentUuid(string $agentUuid): self
     {
@@ -83,8 +81,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Funciton description
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -101,8 +97,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
-     * @return self
      */
     public function setFaasName(string $faasName): self
     {
@@ -119,8 +113,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
-     * @return self
      */
     public function setFaasNamespace(string $faasNamespace): self
     {
@@ -137,8 +129,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function name
-     *
-     * @return self
      */
     public function setFunctionName(string $functionName): self
     {
@@ -155,8 +145,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function id
-     *
-     * @return self
      */
     public function setFunctionUuid(string $functionUuid): self
     {
@@ -177,8 +165,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
      * Describe the input schema for the function so the agent may call it
      *
      * @param array<string, mixed> $inputSchema
-     *
-     * @return self
      */
     public function setInputSchema(array $inputSchema): self
     {
@@ -199,8 +185,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
      * Describe the output schema for the function so the agent handle its response
      *
      * @param array<string, mixed> $outputSchema
-     *
-     * @return self
      */
     public function setOutputSchema(array $outputSchema): self
     {

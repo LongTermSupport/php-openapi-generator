@@ -57,8 +57,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https`, or `tcp`.
-     *
-     * @return self
      */
     public function setProtocol(string $protocol): self
     {
@@ -75,8 +73,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {
@@ -93,8 +89,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The path on the backend Droplets to which the load balancer instance will send a request.
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -111,8 +105,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of seconds between between two consecutive health checks.
-     *
-     * @return self
      */
     public function setCheckIntervalSeconds(int $checkIntervalSeconds): self
     {
@@ -129,8 +121,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of seconds the load balancer instance will wait for a response until marking a health check as failed.
-     *
-     * @return self
      */
     public function setResponseTimeoutSeconds(int $responseTimeoutSeconds): self
     {
@@ -147,8 +137,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool.
-     *
-     * @return self
      */
     public function setUnhealthyThreshold(int $unhealthyThreshold): self
     {
@@ -165,8 +153,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool.
-     *
-     * @return self
      */
     public function setHealthyThreshold(int $healthyThreshold): self
     {

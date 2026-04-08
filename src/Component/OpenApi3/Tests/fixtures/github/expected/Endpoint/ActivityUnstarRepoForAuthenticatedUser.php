@@ -46,7 +46,6 @@ class ActivityUnstarRepoForAuthenticatedUser extends \LongTermSupport\OpenApiGen
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityUnstarRepoForAuthenticatedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityUnstarRepoForAuthenticatedUserUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityUnstarRepoForAuthenticatedUserForbiddenException

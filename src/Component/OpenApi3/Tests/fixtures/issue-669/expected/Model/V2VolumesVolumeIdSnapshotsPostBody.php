@@ -39,8 +39,6 @@ class V2VolumesVolumeIdSnapshotsPostBody extends \ArrayObject
     }
     /**
      * A human-readable name for the volume snapshot.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -61,8 +59,6 @@ class V2VolumesVolumeIdSnapshotsPostBody extends \ArrayObject
      * A flat array of tag names as strings to be applied to the resource. Tag names may be for either existing or new tags. <br><br>Requires `tag:create` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {

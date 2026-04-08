@@ -40,8 +40,6 @@ class TransferFile
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setIdentifier(?string $identifier): self
     {
@@ -58,8 +56,6 @@ class TransferFile
     }
     /**
      * Client generated identifier of the item.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

@@ -43,8 +43,6 @@ class AppMetricsBandwidthUsage extends \ArrayObject
      * A list of bandwidth usage details by app.
      *
      * @param list<AppMetricsBandwidthUsageDetails> $appBandwidthUsage
-     *
-     * @return self
      */
     public function setAppBandwidthUsage(array $appBandwidthUsage): self
     {
@@ -61,8 +59,6 @@ class AppMetricsBandwidthUsage extends \ArrayObject
     }
     /**
      * The date for the metrics data.
-     *
-     * @return self
      */
     public function setDate(\DateTime $date): self
     {

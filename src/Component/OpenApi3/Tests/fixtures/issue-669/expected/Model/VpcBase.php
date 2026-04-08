@@ -41,8 +41,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
-     * @return self
      */
     public function setUrn(string $urn): self
     {
@@ -77,8 +73,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {

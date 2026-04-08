@@ -102,8 +102,6 @@ class AppsDeployment extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentJob> $jobs
-     *
-     * @return self
      */
     public function setJobs(array $jobs): self
     {
@@ -120,8 +118,6 @@ class AppsDeployment extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentFunctions> $functions
-     *
-     * @return self
      */
     public function setFunctions(array $functions): self
     {
@@ -168,8 +164,6 @@ class AppsDeployment extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentService> $services
-     *
-     * @return self
      */
     public function setServices(array $services): self
     {
@@ -186,8 +180,6 @@ class AppsDeployment extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
-     * @return self
      */
     public function setSpec(AppSpec $spec): self
     {
@@ -204,8 +196,6 @@ class AppsDeployment extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentStaticSite> $staticSites
-     *
-     * @return self
      */
     public function setStaticSites(array $staticSites): self
     {
@@ -242,8 +232,6 @@ class AppsDeployment extends \ArrayObject
     }
     /**
      * @param list<AppsDeploymentWorker> $workers
-     *
-     * @return self
      */
     public function setWorkers(array $workers): self
     {

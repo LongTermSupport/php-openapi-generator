@@ -47,7 +47,6 @@ class OrgsConvertMemberToOutsideCollaborator extends \LongTermSupport\OpenApiGen
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OrgsConvertMemberToOutsideCollaboratorForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OrgsConvertMemberToOutsideCollaboratorNotFoundException
      */

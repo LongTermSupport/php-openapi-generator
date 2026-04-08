@@ -70,8 +70,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * The ref to deploy. This can be a branch, tag, or SHA.
-     *
-     * @return self
      */
     public function setRef(string $ref): self
     {
@@ -88,8 +86,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
-     *
-     * @return self
      */
     public function setTask(string $task): self
     {
@@ -106,8 +102,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.
-     *
-     * @return self
      */
     public function setAutoMerge(bool $autoMerge): self
     {
@@ -128,8 +122,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
      * The [status](https://developer.github.com/v3/repos/statuses/) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
      *
      * @param list<string> $requiredContexts
-     *
-     * @return self
      */
     public function setRequiredContexts(array $requiredContexts): self
     {
@@ -146,8 +138,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * JSON payload with extra information about the deployment.
-     *
-     * @return self
      */
     public function setPayload(string $payload): self
     {
@@ -164,8 +154,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Name for the target deployment environment (e.g., `production`, `staging`, `qa`).
-     *
-     * @return self
      */
     public function setEnvironment(string $environment): self
     {
@@ -182,8 +170,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Short description of the deployment.
-     *
-     * @return self
      */
     public function setDescription(?string $description): self
     {
@@ -202,8 +188,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     /**
      * Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: `false`
      * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type. **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-     *
-     * @return self
      */
     public function setTransientEnvironment(bool $transientEnvironment): self
     {
@@ -222,8 +206,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.
      * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-     *
-     * @return self
      */
     public function setProductionEnvironment(bool $productionEnvironment): self
     {

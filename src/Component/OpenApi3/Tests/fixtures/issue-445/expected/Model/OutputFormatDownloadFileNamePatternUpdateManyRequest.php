@@ -36,8 +36,6 @@ class OutputFormatDownloadFileNamePatternUpdateManyRequest
      * Download file name update requests to be processed.
      *
      * @param list<OutputFormatDownloadFileNamePatternUpdateRequestItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

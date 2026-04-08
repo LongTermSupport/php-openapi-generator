@@ -41,8 +41,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * The ID of the group
-     *
-     * @return self
      */
     public function setGroupId(string $groupId): self
     {
@@ -59,8 +57,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * The name of the group
-     *
-     * @return self
      */
     public function setGroupName(string $groupName): self
     {
@@ -77,8 +73,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * a description of the group
-     *
-     * @return self
      */
     public function setGroupDescription(string $groupDescription): self
     {

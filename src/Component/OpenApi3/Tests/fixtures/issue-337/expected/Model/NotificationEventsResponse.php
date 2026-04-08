@@ -41,8 +41,6 @@ class NotificationEventsResponse extends \ArrayObject
     }
     /**
      * The total number of events returned for the given company.
-     *
-     * @return self
      */
     public function setTotalCount(float $totalCount): self
     {
@@ -59,8 +57,6 @@ class NotificationEventsResponse extends \ArrayObject
     }
     /**
      * @param list<NotificationEvent> $data
-     *
-     * @return self
      */
     public function setData(array $data): self
     {
@@ -77,8 +73,6 @@ class NotificationEventsResponse extends \ArrayObject
     }
     /**
      * Paging parameters.
-     *
-     * @return self
      */
     public function setPaging(Paging $paging): self
     {

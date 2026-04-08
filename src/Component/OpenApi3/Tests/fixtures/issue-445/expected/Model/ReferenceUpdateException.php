@@ -142,8 +142,6 @@ class ReferenceUpdateException extends \ArrayObject
     }
     /**
      * This is the source of the reference.
-     *
-     * @return self
      */
     public function setReferenceItemId(?string $referenceItemId): self
     {
@@ -160,8 +158,6 @@ class ReferenceUpdateException extends \ArrayObject
     }
     /**
      * This is the DocType of the source of the reference.
-     *
-     * @return self
      */
     public function setReferenceType(?string $referenceType): self
     {
@@ -182,8 +178,6 @@ class ReferenceUpdateException extends \ArrayObject
      * These exceptions describe why the source metadata item could not be updated.
      *
      * @param list<PictureparkException>|null $exceptions
-     *
-     * @return self
      */
     public function setExceptions(?array $exceptions): self
     {

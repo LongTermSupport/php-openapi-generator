@@ -43,8 +43,6 @@ class OneClicksCreate extends \ArrayObject
      * An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
      *
      * @param list<string> $addonSlugs
-     *
-     * @return self
      */
     public function setAddonSlugs(array $addonSlugs): self
     {
@@ -61,8 +59,6 @@ class OneClicksCreate extends \ArrayObject
     }
     /**
      * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
-     *
-     * @return self
      */
     public function setClusterUuid(string $clusterUuid): self
     {

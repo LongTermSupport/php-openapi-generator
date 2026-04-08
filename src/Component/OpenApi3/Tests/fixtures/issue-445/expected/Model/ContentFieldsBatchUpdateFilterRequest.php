@@ -30,8 +30,6 @@ class ContentFieldsBatchUpdateFilterRequest extends MetadataValuesChangeRequestB
     }
     /**
      * Filters the contents on which the change commands must be applied.
-     *
-     * @return self
      */
     public function setFilterRequest(mixed $filterRequest): self
     {

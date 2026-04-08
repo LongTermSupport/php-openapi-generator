@@ -35,8 +35,6 @@ class ResponseAllRepositoriesV2 extends \ArrayObject
     }
     /**
      * @param list<RepositoryV2> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {

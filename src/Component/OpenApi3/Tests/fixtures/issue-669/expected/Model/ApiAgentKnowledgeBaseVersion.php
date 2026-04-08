@@ -41,8 +41,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Deletet at date / time
-     *
-     * @return self
      */
     public function setIsDeleted(bool $isDeleted): self
     {
@@ -59,8 +57,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Name of the knowledge base
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -77,8 +73,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Unique id of the knowledge base
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

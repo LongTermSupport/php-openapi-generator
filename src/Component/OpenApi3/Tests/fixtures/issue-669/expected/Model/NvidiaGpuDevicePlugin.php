@@ -33,8 +33,6 @@ class NvidiaGpuDevicePlugin extends \ArrayObject
     }
     /**
      * Indicates whether the Nvidia GPU Device Plugin is enabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

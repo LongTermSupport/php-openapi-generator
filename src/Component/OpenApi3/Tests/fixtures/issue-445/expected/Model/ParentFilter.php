@@ -34,8 +34,6 @@ class ParentFilter extends FilterBase
     }
     /**
      * The type of the parent document.
-     *
-     * @return self
      */
     public function setParentType(string $parentType): self
     {
@@ -52,8 +50,6 @@ class ParentFilter extends FilterBase
     }
     /**
      * The filter to be applied on the child document. All kinds of filters are accepted.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {

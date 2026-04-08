@@ -37,8 +37,6 @@ class ApiPresignedUrlFile extends \ArrayObject
     }
     /**
      * Local filename
-     *
-     * @return self
      */
     public function setFileName(string $fileName): self
     {
@@ -55,8 +53,6 @@ class ApiPresignedUrlFile extends \ArrayObject
     }
     /**
      * The size of the file in bytes.
-     *
-     * @return self
      */
     public function setFileSize(string $fileSize): self
     {

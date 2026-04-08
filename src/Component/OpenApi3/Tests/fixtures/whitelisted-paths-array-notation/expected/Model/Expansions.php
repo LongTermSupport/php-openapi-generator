@@ -49,8 +49,6 @@ class Expansions extends \ArrayObject
     }
     /**
      * @param list<mixed> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -67,8 +65,6 @@ class Expansions extends \ArrayObject
     }
     /**
      * @param list<mixed> $tweets
-     *
-     * @return self
      */
     public function setTweets(array $tweets): self
     {
@@ -85,8 +81,6 @@ class Expansions extends \ArrayObject
     }
     /**
      * @param list<mixed> $places
-     *
-     * @return self
      */
     public function setPlaces(array $places): self
     {
@@ -103,8 +97,6 @@ class Expansions extends \ArrayObject
     }
     /**
      * @param list<mixed> $media
-     *
-     * @return self
      */
     public function setMedia(array $media): self
     {
@@ -121,8 +113,6 @@ class Expansions extends \ArrayObject
     }
     /**
      * @param list<Poll> $polls
-     *
-     * @return self
      */
     public function setPolls(array $polls): self
     {

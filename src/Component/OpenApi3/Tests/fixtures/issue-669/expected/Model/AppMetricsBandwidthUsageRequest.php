@@ -43,8 +43,6 @@ class AppMetricsBandwidthUsageRequest extends \ArrayObject
      * A list of app IDs to query bandwidth metrics for.
      *
      * @param list<string> $appIds
-     *
-     * @return self
      */
     public function setAppIds(array $appIds): self
     {
@@ -61,8 +59,6 @@ class AppMetricsBandwidthUsageRequest extends \ArrayObject
     }
     /**
      * Optional day to query. Only the date component of the timestamp will be considered. Default: yesterday.
-     *
-     * @return self
      */
     public function setDate(\DateTime $date): self
     {

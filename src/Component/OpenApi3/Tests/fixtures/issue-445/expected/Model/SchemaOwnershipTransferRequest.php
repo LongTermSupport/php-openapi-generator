@@ -30,8 +30,6 @@ class SchemaOwnershipTransferRequest
     }
     /**
      * The id of the user to whom the schema has to be transferred to.
-     *
-     * @return self
      */
     public function setTransferUserId(?string $transferUserId): self
     {

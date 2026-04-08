@@ -38,8 +38,6 @@ class ResponseBillingHistory extends \ArrayObject
     }
     /**
      * @param list<BillingHistory> $billingHistory
-     *
-     * @return self
      */
     public function setBillingHistory(array $billingHistory): self
     {
@@ -66,8 +64,6 @@ class ResponseBillingHistory extends \ArrayObject
     }
     /**
      * Information about the response itself.
-     *
-     * @return self
      */
     public function setMeta(MetaProperties $meta): self
     {

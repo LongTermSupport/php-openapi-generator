@@ -85,8 +85,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Agreement Description
-     *
-     * @return self
      */
     public function setAgreement(ApiAgreement $agreement): self
     {
@@ -103,8 +101,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -121,8 +117,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Human-readable model identifier
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -139,8 +133,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * True if it is a foundational model provided by do
-     *
-     * @return self
      */
     public function setIsFoundational(bool $isFoundational): self
     {
@@ -157,8 +149,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Default chunking size limit to show in UI
-     *
-     * @return self
      */
     public function setKbDefaultChunkSize(int $kbDefaultChunkSize): self
     {
@@ -175,8 +165,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Maximum chunk size limit of model
-     *
-     * @return self
      */
     public function setKbMaxChunkSize(int $kbMaxChunkSize): self
     {
@@ -193,8 +181,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Minimum chunking size token limits if model supports KNOWLEDGEBASE usecase
-     *
-     * @return self
      */
     public function setKbMinChunkSize(int $kbMinChunkSize): self
     {
@@ -211,8 +197,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Display name of the model
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -229,8 +213,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Unique id of the model, this model is based on
-     *
-     * @return self
      */
     public function setParentUuid(string $parentUuid): self
     {
@@ -247,8 +229,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -265,8 +245,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Model has been fully uploaded
-     *
-     * @return self
      */
     public function setUploadComplete(bool $uploadComplete): self
     {
@@ -283,8 +261,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Download url
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -301,8 +277,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -319,8 +293,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Version Information about a Model
-     *
-     * @return self
      */
     public function setVersion(ApiModelVersion $version): self
     {

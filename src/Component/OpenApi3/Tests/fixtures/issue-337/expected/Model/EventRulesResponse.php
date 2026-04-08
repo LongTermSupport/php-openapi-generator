@@ -61,8 +61,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Shows whether the notification event rule has been enabled for the given portfolio.
-     *
-     * @return self
      */
     public function setIsActive(bool $isActive): self
     {
@@ -79,8 +77,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The unique identifier for the notification event rule.
-     *
-     * @return self
      */
     public function setRuleCode(float $ruleCode): self
     {
@@ -97,8 +93,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The ISO/Alpha 2 format country code for the notification event rule. "XX" is used for global rules that apply to companies from all countries.
-     *
-     * @return self
      */
     public function setRuleCountryCode(string $ruleCountryCode): self
     {
@@ -115,8 +109,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the `ruleType` for the notification event rule.
-     *
-     * @return self
      */
     public function setRuleType(float $ruleType): self
     {
@@ -133,8 +125,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * A short description of the `ruleType` for the notification event rule.
-     *
-     * @return self
      */
     public function setRuleTypeName(string $ruleTypeName): self
     {
@@ -151,8 +141,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The name for the notification event rule.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -169,8 +157,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
-     * @return self
      */
     public function setParam0(string $param0): self
     {
@@ -187,8 +173,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
-     * @return self
      */
     public function setParam1(string $param1): self
     {

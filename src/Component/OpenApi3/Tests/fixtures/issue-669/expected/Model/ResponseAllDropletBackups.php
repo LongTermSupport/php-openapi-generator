@@ -35,8 +35,6 @@ class ResponseAllDropletBackups extends \ArrayObject
     }
     /**
      * @param list<DropletSnapshot> $backups
-     *
-     * @return self
      */
     public function setBackups(array $backups): self
     {

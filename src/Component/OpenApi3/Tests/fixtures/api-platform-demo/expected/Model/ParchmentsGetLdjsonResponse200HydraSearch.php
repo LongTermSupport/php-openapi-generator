@@ -66,8 +66,6 @@ class ParchmentsGetLdjsonResponse200HydraSearch extends \ArrayObject
     }
     /**
      * @param list<ParchmentsGetLdjsonResponse200HydraSearchHydraMappingItem> $hydraMapping
-     *
-     * @return self
      */
     public function setHydraMapping(array $hydraMapping): self
     {

@@ -102,8 +102,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Agreement Description
-     *
-     * @return self
      */
     public function setAgreement(ApiAgreement $agreement): self
     {
@@ -120,8 +118,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -138,8 +134,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Internally used name
-     *
-     * @return self
      */
     public function setInferenceName(string $inferenceName): self
     {
@@ -156,8 +150,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Internally used version
-     *
-     * @return self
      */
     public function setInferenceVersion(string $inferenceVersion): self
     {
@@ -174,8 +166,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * True if it is a foundational model provided by do
-     *
-     * @return self
      */
     public function setIsFoundational(bool $isFoundational): self
     {
@@ -192,8 +182,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Default chunking size limit to show in UI
-     *
-     * @return self
      */
     public function setKbDefaultChunkSize(int $kbDefaultChunkSize): self
     {
@@ -210,8 +198,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Maximum chunk size limit of model
-     *
-     * @return self
      */
     public function setKbMaxChunkSize(int $kbMaxChunkSize): self
     {
@@ -228,8 +214,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Minimum chunking size token limits if model supports KNOWLEDGEBASE usecase
-     *
-     * @return self
      */
     public function setKbMinChunkSize(int $kbMinChunkSize): self
     {
@@ -250,8 +234,6 @@ class ApiModel extends \ArrayObject
      * Additional meta data
      *
      * @param array<string, mixed> $metadata
-     *
-     * @return self
      */
     public function setMetadata(array $metadata): self
     {
@@ -268,8 +250,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Name of the model
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -286,8 +266,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Unique id of the model, this model is based on
-     *
-     * @return self
      */
     public function setParentUuid(string $parentUuid): self
     {
@@ -314,8 +292,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -332,8 +308,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Model has been fully uploaded
-     *
-     * @return self
      */
     public function setUploadComplete(bool $uploadComplete): self
     {
@@ -350,8 +324,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Download url
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -372,8 +344,6 @@ class ApiModel extends \ArrayObject
      * Usecases of the model
      *
      * @param list<string> $usecases
-     *
-     * @return self
      */
     public function setUsecases(array $usecases): self
     {
@@ -390,8 +360,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -408,8 +376,6 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Version Information about a Model
-     *
-     * @return self
      */
     public function setVersion(ApiModelVersion $version): self
     {

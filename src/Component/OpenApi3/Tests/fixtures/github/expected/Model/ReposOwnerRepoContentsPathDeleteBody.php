@@ -49,8 +49,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The commit message.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -67,8 +65,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The blob SHA of the file being replaced.
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {
@@ -85,8 +81,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
-     * @return self
      */
     public function setBranch(string $branch): self
     {
@@ -103,8 +97,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * object containing information about the committer.
-     *
-     * @return self
      */
     public function setCommitter(ReposOwnerRepoContentsPathDeleteBodyCommitter $committer): self
     {
@@ -121,8 +113,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * object containing information about the author.
-     *
-     * @return self
      */
     public function setAuthor(ReposOwnerRepoContentsPathDeleteBodyAuthor $author): self
     {

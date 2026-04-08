@@ -132,8 +132,6 @@ class BusinessRuleConfigurationValidationException extends \ArrayObject
     }
     /**
      * @param list<PictureparkValidationException>|null $innerExceptions
-     *
-     * @return self
      */
     public function setInnerExceptions(?array $innerExceptions): self
     {

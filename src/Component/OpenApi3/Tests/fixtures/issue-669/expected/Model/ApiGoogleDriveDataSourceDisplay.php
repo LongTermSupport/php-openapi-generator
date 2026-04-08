@@ -44,8 +44,6 @@ class ApiGoogleDriveDataSourceDisplay extends \ArrayObject
     }
     /**
      * Name of the selected folder if available
-     *
-     * @return self
      */
     public function setFolderName(string $folderName): self
     {

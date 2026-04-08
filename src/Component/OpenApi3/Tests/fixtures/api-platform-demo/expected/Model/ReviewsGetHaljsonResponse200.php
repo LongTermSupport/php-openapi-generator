@@ -36,8 +36,6 @@ class ReviewsGetHaljsonResponse200 extends \ArrayObject
     }
     /**
      * @param list<ReviewJsonhalReviewRead> $embedded
-     *
-     * @return self
      */
     public function setEmbedded(array $embedded): self
     {

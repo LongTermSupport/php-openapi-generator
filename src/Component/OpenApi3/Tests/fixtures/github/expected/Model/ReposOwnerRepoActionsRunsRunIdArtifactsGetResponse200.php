@@ -44,8 +44,6 @@ class ReposOwnerRepoActionsRunsRunIdArtifactsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<Artifact> $artifacts
-     *
-     * @return self
      */
     public function setArtifacts(array $artifacts): self
     {

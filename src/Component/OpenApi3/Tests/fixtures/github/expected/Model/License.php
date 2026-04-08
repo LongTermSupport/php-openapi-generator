@@ -131,8 +131,6 @@ class License extends \ArrayObject
     }
     /**
      * @param list<string> $permissions
-     *
-     * @return self
      */
     public function setPermissions(array $permissions): self
     {
@@ -149,8 +147,6 @@ class License extends \ArrayObject
     }
     /**
      * @param list<string> $conditions
-     *
-     * @return self
      */
     public function setConditions(array $conditions): self
     {
@@ -167,8 +163,6 @@ class License extends \ArrayObject
     }
     /**
      * @param list<string> $limitations
-     *
-     * @return self
      */
     public function setLimitations(array $limitations): self
     {

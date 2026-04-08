@@ -69,8 +69,6 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
      * @param list<string> $floatingIps
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setFloatingIps(array $floatingIps): self
     {
@@ -91,8 +89,6 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
      * An array of unique identifiers for the reserved IPs to be scheduled for deletion.
      *
      * @param list<string> $reservedIps
-     *
-     * @return self
      */
     public function setReservedIps(array $reservedIps): self
     {
@@ -113,8 +109,6 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
      * An array of unique identifiers for the snapshots to be scheduled for deletion.
      *
      * @param list<string> $snapshots
-     *
-     * @return self
      */
     public function setSnapshots(array $snapshots): self
     {
@@ -135,8 +129,6 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
      * An array of unique identifiers for the volumes to be scheduled for deletion.
      *
      * @param list<string> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {
@@ -157,8 +149,6 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
      * An array of unique identifiers for the volume snapshots to be scheduled for deletion.
      *
      * @param list<string> $volumeSnapshots
-     *
-     * @return self
      */
     public function setVolumeSnapshots(array $volumeSnapshots): self
     {

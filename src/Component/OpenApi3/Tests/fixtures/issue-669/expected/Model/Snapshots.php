@@ -69,8 +69,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The unique identifier for the snapshot.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -87,8 +85,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -105,8 +101,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -127,8 +121,6 @@ class Snapshots extends \ArrayObject
      * An array of the regions that the snapshot is available in. The regions are represented by their identifying slug values.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -145,8 +137,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
-     * @return self
      */
     public function setMinDiskSize(int $minDiskSize): self
     {
@@ -163,8 +153,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
-     * @return self
      */
     public function setSizeGigabytes(float $sizeGigabytes): self
     {
@@ -181,8 +169,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The unique identifier for the resource that the snapshot originated from.
-     *
-     * @return self
      */
     public function setResourceId(string $resourceId): self
     {
@@ -199,8 +185,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The type of resource that the snapshot originated from.
-     *
-     * @return self
      */
     public function setResourceType(string $resourceType): self
     {
@@ -221,8 +205,6 @@ class Snapshots extends \ArrayObject
      * An array of Tags the snapshot has been tagged with.<br><br>Requires `tag:read` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {

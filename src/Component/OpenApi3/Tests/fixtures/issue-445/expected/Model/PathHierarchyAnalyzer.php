@@ -34,8 +34,6 @@ class PathHierarchyAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: PathHierarchy
-     *
-     * @return self
      */
     public function setType(mixed $type): self
     {
@@ -52,8 +50,6 @@ class PathHierarchyAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: pathhierarchy.
-     *
-     * @return self
      */
     public function setFieldSuffix(?string $fieldSuffix): self
     {

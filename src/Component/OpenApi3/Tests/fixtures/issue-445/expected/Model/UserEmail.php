@@ -38,8 +38,6 @@ class UserEmail
     }
     /**
      * First name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -56,8 +54,6 @@ class UserEmail
     }
     /**
      * Last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -74,8 +70,6 @@ class UserEmail
     }
     /**
      * Email address
-     *
-     * @return self
      */
     public function setEmailAddress(string $emailAddress): self
     {

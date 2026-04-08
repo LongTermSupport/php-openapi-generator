@@ -42,8 +42,6 @@ class TagsResources extends \ArrayObject
     }
     /**
      * The number of tagged objects for this type of resource.
-     *
-     * @return self
      */
     public function setCount(int $count): self
     {
@@ -60,8 +58,6 @@ class TagsResources extends \ArrayObject
     }
     /**
      * The URI for the last tagged object for this type of resource.
-     *
-     * @return self
      */
     public function setLastTaggedUri(string $lastTaggedUri): self
     {

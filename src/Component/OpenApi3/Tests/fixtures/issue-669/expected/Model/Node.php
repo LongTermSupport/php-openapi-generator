@@ -53,8 +53,6 @@ class Node extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the node.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -71,8 +69,6 @@ class Node extends \ArrayObject
     }
     /**
      * An automatically generated, human-readable name for the node.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -89,8 +85,6 @@ class Node extends \ArrayObject
     }
     /**
      * An object containing a `state` attribute whose value is set to a string indicating the current status of the node.
-     *
-     * @return self
      */
     public function setStatus(NodeStatus $status): self
     {
@@ -107,8 +101,6 @@ class Node extends \ArrayObject
     }
     /**
      * The ID of the Droplet used for the worker node.
-     *
-     * @return self
      */
     public function setDropletId(string $dropletId): self
     {
@@ -125,8 +117,6 @@ class Node extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the node was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -143,8 +133,6 @@ class Node extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the node was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

@@ -55,8 +55,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/repos/hooks/#create-hook-config-params).
-     *
-     * @return self
      */
     public function setConfig(ReposOwnerRepoHooksHookIdPatchBodyConfig $config): self
     {
@@ -77,8 +75,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
      * Determines what [events](https://developer.github.com/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
      *
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {
@@ -99,8 +95,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
      * Determines a list of events to be added to the list of events that the Hook triggers for.
      *
      * @param list<string> $addEvents
-     *
-     * @return self
      */
     public function setAddEvents(array $addEvents): self
     {
@@ -121,8 +115,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
      * Determines a list of events to be removed from the list of events that the Hook triggers for.
      *
      * @param list<string> $removeEvents
-     *
-     * @return self
      */
     public function setRemoveEvents(array $removeEvents): self
     {
@@ -139,8 +131,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {

@@ -51,8 +51,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -69,8 +67,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -87,8 +83,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * The current status of the VPC peering.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -109,8 +103,6 @@ class VpcPeering extends \ArrayObject
      * An array of the two peered VPCs IDs.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {
@@ -127,8 +119,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -55,8 +55,6 @@ class SchemaPermissionSetCreateRequest extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -77,8 +75,6 @@ class SchemaPermissionSetCreateRequest extends \ArrayObject
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @param list<UserRoleRightsOfMetadataRight>|null $userRolesRights
-     *
-     * @return self
      */
     public function setUserRolesRights(?array $userRolesRights): self
     {
@@ -99,8 +95,6 @@ class SchemaPermissionSetCreateRequest extends \ArrayObject
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @param list<UserRoleRightsOfPermissionSetRight>|null $userRolesPermissionSetRights
-     *
-     * @return self
      */
     public function setUserRolesPermissionSetRights(?array $userRolesPermissionSetRights): self
     {
@@ -117,8 +111,6 @@ class SchemaPermissionSetCreateRequest extends \ArrayObject
     }
     /**
      * When true this permission set will derogate all other configured permission sets on Content Items or List Items.
-     *
-     * @return self
      */
     public function setExclusive(bool $exclusive): self
     {
@@ -139,8 +131,6 @@ class SchemaPermissionSetCreateRequest extends \ArrayObject
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

@@ -38,8 +38,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Separators to use, supports variables, an array of strings including escape sequences or null to split on any white space character.
-     *
-     * @return self
      */
     public function setSeparators(mixed $separators): self
     {
@@ -56,8 +54,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Keeps empty items. Empty items will be returned as empty strings.
-     *
-     * @return self
      */
     public function setKeepEmpty(bool $keepEmpty): self
     {
@@ -74,8 +70,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Trims each entry for punctuation and white space.
-     *
-     * @return self
      */
     public function setTrim(bool $trim): self
     {

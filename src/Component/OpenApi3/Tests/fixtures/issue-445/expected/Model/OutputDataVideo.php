@@ -44,8 +44,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * Duration of the video in seconds.
-     *
-     * @return self
      */
     public function setDurationInSeconds(float $durationInSeconds): self
     {
@@ -62,8 +60,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * With of the video.
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {
@@ -80,8 +76,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * Height of the video.
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {
@@ -102,8 +96,6 @@ class OutputDataVideo extends OutputDataBase
      * The sprites making up the key frames of the video.
      *
      * @param list<Sprite>|null $sprites
-     *
-     * @return self
      */
     public function setSprites(?array $sprites): self
     {

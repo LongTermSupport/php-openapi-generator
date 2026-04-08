@@ -33,8 +33,6 @@ class BookReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {

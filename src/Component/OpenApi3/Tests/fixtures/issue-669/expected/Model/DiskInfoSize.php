@@ -37,8 +37,6 @@ class DiskInfoSize extends \ArrayObject
     }
     /**
      * The amount of space allocated to the disk.
-     *
-     * @return self
      */
     public function setAmount(int $amount): self
     {
@@ -55,8 +53,6 @@ class DiskInfoSize extends \ArrayObject
     }
     /**
      * The unit of measure for the disk size.
-     *
-     * @return self
      */
     public function setUnit(string $unit): self
     {

@@ -38,8 +38,6 @@ class MailRecipient
     }
     /**
      * User information including email.
-     *
-     * @return self
      */
     public function setUserEmail(mixed $userEmail): self
     {
@@ -56,8 +54,6 @@ class MailRecipient
     }
     /**
      * Recipient specific token.
-     *
-     * @return self
      */
     public function setToken(?string $token): self
     {
@@ -74,8 +70,6 @@ class MailRecipient
     }
     /**
      * URL to access the share for this recipient.
-     *
-     * @return self
      */
     public function setUrl(?string $url): self
     {

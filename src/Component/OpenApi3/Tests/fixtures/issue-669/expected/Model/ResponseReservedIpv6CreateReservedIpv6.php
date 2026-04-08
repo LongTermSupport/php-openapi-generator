@@ -38,8 +38,6 @@ class ResponseReservedIpv6CreateReservedIpv6 extends \ArrayObject
     }
     /**
      * The public IP address of the reserved IPv6. It also serves as its identifier.
-     *
-     * @return self
      */
     public function setIp(string $ip): self
     {
@@ -56,8 +54,6 @@ class ResponseReservedIpv6CreateReservedIpv6 extends \ArrayObject
     }
     /**
      * The region that the reserved IPv6 is reserved to. When you query a reserved IPv6,the region_slug will be returned.
-     *
-     * @return self
      */
     public function setRegionSlug(string $regionSlug): self
     {

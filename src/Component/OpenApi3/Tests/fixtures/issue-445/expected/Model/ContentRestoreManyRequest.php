@@ -40,8 +40,6 @@ class ContentRestoreManyRequest
      * IDs of the contents to restore.
      *
      * @param list<string> $contentIds
-     *
-     * @return self
      */
     public function setContentIds(array $contentIds): self
     {
@@ -58,8 +56,6 @@ class ContentRestoreManyRequest
     }
     /**
      * Allows creating contents that refer to list items or contents that don't exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {

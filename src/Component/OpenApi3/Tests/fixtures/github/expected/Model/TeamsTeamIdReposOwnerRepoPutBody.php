@@ -48,8 +48,6 @@ class TeamsTeamIdReposOwnerRepoPutBody extends \ArrayObject
      * \* `admin` - team members can pull, push and administer this repository.
      * 
      * If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

@@ -35,8 +35,6 @@ class ResponseListAlertPolicyResponse extends \ArrayObject
     }
     /**
      * @param list<AlertPolicy> $policies
-     *
-     * @return self
      */
     public function setPolicies(array $policies): self
     {

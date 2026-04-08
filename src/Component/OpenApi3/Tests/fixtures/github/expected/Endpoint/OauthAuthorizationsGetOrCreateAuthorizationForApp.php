@@ -57,7 +57,6 @@ class OauthAuthorizationsGetOrCreateAuthorizationForApp extends \LongTermSupport
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Authorization
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsGetOrCreateAuthorizationForAppUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsGetOrCreateAuthorizationForAppForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsGetOrCreateAuthorizationForAppUnauthorizedException

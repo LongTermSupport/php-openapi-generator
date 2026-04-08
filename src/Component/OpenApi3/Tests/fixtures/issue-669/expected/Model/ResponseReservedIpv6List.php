@@ -35,8 +35,6 @@ class ResponseReservedIpv6List extends \ArrayObject
     }
     /**
      * @param list<ReservedIpv6ListReservedIpv6sItem> $reservedIpv6s
-     *
-     * @return self
      */
     public function setReservedIpv6s(array $reservedIpv6s): self
     {

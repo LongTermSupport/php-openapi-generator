@@ -45,8 +45,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Title for the automatic commit message.
-     *
-     * @return self
      */
     public function setCommitTitle(string $commitTitle): self
     {
@@ -63,8 +61,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Extra detail to append to automatic commit message.
-     *
-     * @return self
      */
     public function setCommitMessage(string $commitMessage): self
     {
@@ -81,8 +77,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * SHA that pull request head must match to allow merge.
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {
@@ -99,8 +93,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Merge method to use. Possible values are `merge`, `squash` or `rebase`. Default is `merge`.
-     *
-     * @return self
      */
     public function setMergeMethod(string $mergeMethod): self
     {

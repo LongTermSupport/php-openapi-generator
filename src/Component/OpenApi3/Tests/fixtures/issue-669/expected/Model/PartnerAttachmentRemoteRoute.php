@@ -33,8 +33,6 @@ class PartnerAttachmentRemoteRoute extends \ArrayObject
     }
     /**
      * A CIDR block representing a remote route.
-     *
-     * @return self
      */
     public function setCidr(string $cidr): self
     {

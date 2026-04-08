@@ -37,8 +37,6 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContent extends \Ar
     }
     /**
      * The total number of entities
-     *
-     * @return self
      */
     public function setTotalResults(int $totalResults): self
     {
@@ -55,8 +53,6 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContent extends \Ar
     }
     /**
      * @param list<string> $campaigns
-     *
-     * @return self
      */
     public function setCampaigns(array $campaigns): self
     {

@@ -34,8 +34,6 @@ class DefaultTweetFields extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
-     * @return self
      */
     public function setGeo(DefaultTweetFieldsGeo $geo): self
     {

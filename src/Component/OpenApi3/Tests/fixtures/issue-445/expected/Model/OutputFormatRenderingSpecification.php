@@ -34,8 +34,6 @@ class OutputFormatRenderingSpecification
     }
     /**
      * Which output format should be used as a source of data.
-     *
-     * @return self
      */
     public function setSourceOutputFormats(mixed $sourceOutputFormats): self
     {
@@ -52,8 +50,6 @@ class OutputFormatRenderingSpecification
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
-     * @return self
      */
     public function setFormat(mixed $format): self
     {

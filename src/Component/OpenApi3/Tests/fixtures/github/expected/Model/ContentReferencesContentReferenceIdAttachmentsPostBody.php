@@ -37,8 +37,6 @@ class ContentReferencesContentReferenceIdAttachmentsPostBody extends \ArrayObjec
     }
     /**
      * The title of the attachment
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -55,8 +53,6 @@ class ContentReferencesContentReferenceIdAttachmentsPostBody extends \ArrayObjec
     }
     /**
      * The body of the attachment
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

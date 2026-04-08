@@ -41,8 +41,6 @@ class StatusOfMetadataState
     }
     /**
      * The state of the contents and list items
-     *
-     * @return self
      */
     public function setState(string $state): self
     {

@@ -82,8 +82,6 @@ class ParchmentJsonld extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -100,8 +98,6 @@ class ParchmentJsonld extends \ArrayObject
     }
     /**
      * A description of the item.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {

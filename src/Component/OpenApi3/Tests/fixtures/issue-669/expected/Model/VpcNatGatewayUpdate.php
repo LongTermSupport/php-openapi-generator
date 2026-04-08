@@ -55,8 +55,6 @@ class VpcNatGatewayUpdate extends \ArrayObject
     }
     /**
      * The human-readable name of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -73,8 +71,6 @@ class VpcNatGatewayUpdate extends \ArrayObject
     }
     /**
      * The size of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setSize(int $size): self
     {
@@ -95,8 +91,6 @@ class VpcNatGatewayUpdate extends \ArrayObject
      * An array of VPCs associated with the VPC NAT gateway.
      *
      * @param list<VpcNatGatewayUpdateVpcsItem> $vpcs
-     *
-     * @return self
      */
     public function setVpcs(array $vpcs): self
     {
@@ -113,8 +107,6 @@ class VpcNatGatewayUpdate extends \ArrayObject
     }
     /**
      * The UDP timeout in seconds for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setUdpTimeoutSeconds(int $udpTimeoutSeconds): self
     {
@@ -131,8 +123,6 @@ class VpcNatGatewayUpdate extends \ArrayObject
     }
     /**
      * The ICMP timeout in seconds for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setIcmpTimeoutSeconds(int $icmpTimeoutSeconds): self
     {
@@ -149,8 +139,6 @@ class VpcNatGatewayUpdate extends \ArrayObject
     }
     /**
      * The TCP timeout in seconds for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setTcpTimeoutSeconds(int $tcpTimeoutSeconds): self
     {

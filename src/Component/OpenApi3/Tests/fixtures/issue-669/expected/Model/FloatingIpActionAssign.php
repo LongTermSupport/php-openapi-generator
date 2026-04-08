@@ -30,8 +30,6 @@ class FloatingIpActionAssign extends FloatingIPsAction
     }
     /**
      * The ID of the Droplet that the floating IP will be assigned to.
-     *
-     * @return self
      */
     public function setDropletId(int $dropletId): self
     {

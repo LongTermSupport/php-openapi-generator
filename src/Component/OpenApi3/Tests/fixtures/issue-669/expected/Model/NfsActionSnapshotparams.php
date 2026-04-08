@@ -33,8 +33,6 @@ class NfsActionSnapshotparams extends \ArrayObject
     }
     /**
      * Snapshot name of the NFS share
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

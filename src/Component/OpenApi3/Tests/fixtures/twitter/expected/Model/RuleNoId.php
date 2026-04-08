@@ -37,8 +37,6 @@ class RuleNoId extends \ArrayObject
     }
     /**
      * The filterlang value of the rule.
-     *
-     * @return self
      */
     public function setValue(string $value): self
     {
@@ -55,8 +53,6 @@ class RuleNoId extends \ArrayObject
     }
     /**
      * A tag meant for the labeling of user provided rules.
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {

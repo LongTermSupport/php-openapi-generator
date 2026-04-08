@@ -37,8 +37,6 @@ class AppHealth extends \ArrayObject
     }
     /**
      * @param list<AppComponentHealth> $components
-     *
-     * @return self
      */
     public function setComponents(array $components): self
     {
@@ -55,8 +53,6 @@ class AppHealth extends \ArrayObject
     }
     /**
      * @param list<AppFunctionsComponentHealth> $functionsComponents
-     *
-     * @return self
      */
     public function setFunctionsComponents(array $functionsComponents): self
     {

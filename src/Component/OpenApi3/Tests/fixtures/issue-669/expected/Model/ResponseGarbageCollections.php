@@ -33,8 +33,6 @@ class ResponseGarbageCollections extends \ArrayObject
     }
     /**
      * @param list<GarbageCollection> $garbageCollections
-     *
-     * @return self
      */
     public function setGarbageCollections(array $garbageCollections): self
     {

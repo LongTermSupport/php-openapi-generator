@@ -37,8 +37,6 @@ class Grant extends \ArrayObject
     }
     /**
      * The name of the bucket.
-     *
-     * @return self
      */
     public function setBucket(string $bucket): self
     {
@@ -55,8 +53,6 @@ class Grant extends \ArrayObject
     }
     /**
      * The permission to grant to the user. Possible values are `read`, `readwrite`, `fullaccess`, or an empty string.
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

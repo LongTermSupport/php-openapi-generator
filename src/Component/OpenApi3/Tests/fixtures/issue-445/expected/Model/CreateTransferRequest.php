@@ -58,8 +58,6 @@ class CreateTransferRequest
     }
     /**
      * Name of transfer.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -76,8 +74,6 @@ class CreateTransferRequest
     }
     /**
      * Type of transfer.
-     *
-     * @return self
      */
     public function setTransferType(mixed $transferType): self
     {
@@ -102,8 +98,6 @@ class CreateTransferRequest
      * Required when TransferType is FileUpload or FileUploadAutoImport.
      *
      * @param list<TransferUploadFile>|null $files
-     *
-     * @return self
      */
     public function setFiles(?array $files): self
     {
@@ -128,8 +122,6 @@ class CreateTransferRequest
      * Required when TransferType is WebDownload.
      *
      * @param list<TransferWebLink>|null $webLinks
-     *
-     * @return self
      */
     public function setWebLinks(?array $webLinks): self
     {
@@ -146,8 +138,6 @@ class CreateTransferRequest
     }
     /**
      * Name of collection created after transfer.
-     *
-     * @return self
      */
     public function setCollectionName(?string $collectionName): self
     {
@@ -164,8 +154,6 @@ class CreateTransferRequest
     }
     /**
      * A value indicating whether to create a collection after importing the transfer.
-     *
-     * @return self
      */
     public function setCreateCollection(bool $createCollection): self
     {

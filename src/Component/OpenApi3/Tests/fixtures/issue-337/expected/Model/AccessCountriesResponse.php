@@ -44,8 +44,6 @@ class AccessCountriesResponse extends \ArrayObject
     }
     /**
      * @param list<AccessCountriesResponseCountryAccessItem> $countryAccess
-     *
-     * @return self
      */
     public function setCountryAccess(array $countryAccess): self
     {

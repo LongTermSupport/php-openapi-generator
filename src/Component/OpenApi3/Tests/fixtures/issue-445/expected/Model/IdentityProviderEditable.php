@@ -50,8 +50,6 @@ class IdentityProviderEditable
      * Mapping of identity provider claims to user attributes
      *
      * @param list<IdpClaimToUserAttributeMapping>|null $claimMapping
-     *
-     * @return self
      */
     public function setClaimMapping(?array $claimMapping): self
     {
@@ -68,8 +66,6 @@ class IdentityProviderEditable
     }
     /**
      * Name of the identity provider claim that holds group membership information
-     *
-     * @return self
      */
     public function setGroupClaimType(?string $groupClaimType): self
     {
@@ -90,8 +86,6 @@ class IdentityProviderEditable
      * IdP (AD) group to user role ID mapping
      *
      * @param list<IdpGroupToUserRoleMapping>|null $groupMapping
-     *
-     * @return self
      */
     public function setGroupMapping(?array $groupMapping): self
     {
@@ -108,8 +102,6 @@ class IdentityProviderEditable
     }
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
-     * @return self
      */
     public function setFallbackUserRoleId(?string $fallbackUserRoleId): self
     {

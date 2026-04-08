@@ -30,8 +30,6 @@ class UserDeleteRequest
     }
     /**
      * User ID of user who will take over the ownership of the content currently owned by the deleted user.
-     *
-     * @return self
      */
     public function setOwnerTokenTransferUserId(?string $ownerTokenTransferUserId): self
     {

@@ -39,8 +39,6 @@ class ReposOwnerRepoDispatchesPostBody extends \ArrayObject
     }
     /**
      * **Required:** A custom webhook event name.
-     *
-     * @return self
      */
     public function setEventType(string $eventType): self
     {
@@ -61,8 +59,6 @@ class ReposOwnerRepoDispatchesPostBody extends \ArrayObject
      * JSON payload with extra information about the webhook event that your action or worklow may use.
      *
      * @param array<string, mixed> $clientPayload
-     *
-     * @return self
      */
     public function setClientPayload(array $clientPayload): self
     {

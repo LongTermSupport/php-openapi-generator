@@ -70,11 +70,6 @@ class ChecksListForRef extends \LongTermSupport\OpenApiGenerator\Component\OpenA
         $optionsResolver->addAllowedTypes('page', ['int']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCommitsRefCheckRunsGetResponse200
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCommitsRefCheckRunsGetResponse200
     {
         $status = $response->getStatusCode();

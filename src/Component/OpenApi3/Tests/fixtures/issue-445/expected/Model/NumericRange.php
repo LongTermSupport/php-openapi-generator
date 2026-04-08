@@ -38,8 +38,6 @@ class NumericRange
     }
     /**
      * Language specific range names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -56,8 +54,6 @@ class NumericRange
     }
     /**
      * The from value.
-     *
-     * @return self
      */
     public function setFrom(?float $from): self
     {
@@ -74,8 +70,6 @@ class NumericRange
     }
     /**
      * The to value.
-     *
-     * @return self
      */
     public function setTo(?float $to): self
     {

@@ -33,8 +33,6 @@ class NfsActionResizeparams extends \ArrayObject
     }
     /**
      * The new size for the NFS share.
-     *
-     * @return self
      */
     public function setSizeGib(int $sizeGib): self
     {

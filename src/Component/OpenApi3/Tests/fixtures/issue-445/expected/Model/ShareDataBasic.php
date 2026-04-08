@@ -46,8 +46,6 @@ class ShareDataBasic extends ShareDataBase
      * List of recipients added using email address
      *
      * @param list<MailRecipient> $mailRecipients
-     *
-     * @return self
      */
     public function setMailRecipients(array $mailRecipients): self
     {
@@ -68,8 +66,6 @@ class ShareDataBasic extends ShareDataBase
      * List of recipients that exist in Picturepark.
      *
      * @param list<InternalRecipient> $internalRecipients
-     *
-     * @return self
      */
     public function setInternalRecipients(array $internalRecipients): self
     {
@@ -86,8 +82,6 @@ class ShareDataBasic extends ShareDataBase
     }
     /**
      * Language of share.
-     *
-     * @return self
      */
     public function setLanguageCode(?string $languageCode): self
     {

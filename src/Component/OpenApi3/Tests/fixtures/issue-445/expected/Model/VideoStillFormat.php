@@ -41,8 +41,6 @@ class VideoStillFormat extends FormatBase
     }
     /**
      * Specifies the position from which to produce the image.
-     *
-     * @return self
      */
     public function setPositionInSeconds(int $positionInSeconds): self
     {

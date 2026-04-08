@@ -41,8 +41,6 @@ class PackagesBillingUsage extends \ArrayObject
     }
     /**
      * Sum of the free and paid storage space (GB) for GitHuub Packages.
-     *
-     * @return self
      */
     public function setTotalGigabytesBandwidthUsed(int $totalGigabytesBandwidthUsed): self
     {
@@ -59,8 +57,6 @@ class PackagesBillingUsage extends \ArrayObject
     }
     /**
      * Total paid storage space (GB) for GitHuub Packages.
-     *
-     * @return self
      */
     public function setTotalPaidGigabytesBandwidthUsed(int $totalPaidGigabytesBandwidthUsed): self
     {
@@ -77,8 +73,6 @@ class PackagesBillingUsage extends \ArrayObject
     }
     /**
      * Free storage space (GB) for GitHub Packages.
-     *
-     * @return self
      */
     public function setIncludedGigabytesBandwidth(int $includedGigabytesBandwidth): self
     {

@@ -33,8 +33,6 @@ class ApiUnlinkAgentFunctionOutput extends \ArrayObject
     }
     /**
      * An Agent
-     *
-     * @return self
      */
     public function setAgent(ApiAgent $agent): self
     {

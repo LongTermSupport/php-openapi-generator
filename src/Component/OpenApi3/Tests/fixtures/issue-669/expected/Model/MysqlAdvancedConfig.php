@@ -172,8 +172,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The hour of day (in UTC) when backup for the service starts. New backup only starts if previous backup has already completed.
-     *
-     * @return self
      */
     public function setBackupHour(int $backupHour): self
     {
@@ -190,8 +188,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The minute of the backup hour when backup for the service starts. New backup  only starts if previous backup has already completed.
-     *
-     * @return self
      */
     public function setBackupMinute(int $backupMinute): self
     {
@@ -208,8 +204,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Global SQL mode. If empty, uses MySQL server defaults. Must only include uppercase alphabetic characters, underscores, and commas.
-     *
-     * @return self
      */
     public function setSqlMode(string $sqlMode): self
     {
@@ -226,8 +220,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of seconds that the mysqld server waits for a connect packet before responding with bad handshake.
-     *
-     * @return self
      */
     public function setConnectTimeout(int $connectTimeout): self
     {
@@ -244,8 +236,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Default server time zone, in the form of an offset from UTC (from -12:00 to +12:00), a time zone name (EST), or 'SYSTEM' to use the MySQL server default.
-     *
-     * @return self
      */
     public function setDefaultTimeZone(string $defaultTimeZone): self
     {
@@ -262,8 +252,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum permitted result length, in bytes, for the GROUP_CONCAT() function.
-     *
-     * @return self
      */
     public function setGroupConcatMaxLen(int $groupConcatMaxLen): self
     {
@@ -280,8 +268,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The time, in seconds, before cached statistics expire.
-     *
-     * @return self
      */
     public function setInformationSchemaStatsExpiry(int $informationSchemaStatsExpiry): self
     {
@@ -298,8 +284,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The minimum length of words that an InnoDB FULLTEXT index stores.
-     *
-     * @return self
      */
     public function setInnodbFtMinTokenSize(int $innodbFtMinTokenSize): self
     {
@@ -316,8 +300,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The InnoDB FULLTEXT index stopword list for all InnoDB tables.
-     *
-     * @return self
      */
     public function setInnodbFtServerStopwordTable(string $innodbFtServerStopwordTable): self
     {
@@ -334,8 +316,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The time, in seconds, that an InnoDB transaction waits for a row lock. before giving up.
-     *
-     * @return self
      */
     public function setInnodbLockWaitTimeout(int $innodbLockWaitTimeout): self
     {
@@ -352,8 +332,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The size of the buffer, in bytes, that InnoDB uses to write to the log files. on disk.
-     *
-     * @return self
      */
     public function setInnodbLogBufferSize(int $innodbLogBufferSize): self
     {
@@ -370,8 +348,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The upper limit, in bytes, of the size of the temporary log files used during online DDL operations for InnoDB tables.
-     *
-     * @return self
      */
     public function setInnodbOnlineAlterLogMaxSize(int $innodbOnlineAlterLogMaxSize): self
     {
@@ -388,8 +364,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * When enabled, records information about all deadlocks in InnoDB user transactions  in the error log. Disabled by default.
-     *
-     * @return self
      */
     public function setInnodbPrintAllDeadlocks(bool $innodbPrintAllDeadlocks): self
     {
@@ -406,8 +380,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * When enabled, transaction timeouts cause InnoDB to abort and roll back the entire transaction.
-     *
-     * @return self
      */
     public function setInnodbRollbackOnTimeout(bool $innodbRollbackOnTimeout): self
     {
@@ -424,8 +396,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The time, in seconds, the server waits for activity on an interactive. connection before closing it.
-     *
-     * @return self
      */
     public function setInteractiveTimeout(int $interactiveTimeout): self
     {
@@ -442,8 +412,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The storage engine for in-memory internal temporary tables.
-     *
-     * @return self
      */
     public function setInternalTmpMemStorageEngine(string $internalTmpMemStorageEngine): self
     {
@@ -460,8 +428,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The time, in seconds, to wait for more data from an existing connection. aborting the read.
-     *
-     * @return self
      */
     public function setNetReadTimeout(int $netReadTimeout): self
     {
@@ -478,8 +444,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     *
-     * @return self
      */
     public function setNetWriteTimeout(int $netWriteTimeout): self
     {
@@ -496,8 +460,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Require primary key to be defined for new tables or old tables modified with ALTER TABLE and fail if missing. It is recommended to always have primary keys because various functionality may break if any large table is missing them.
-     *
-     * @return self
      */
     public function setSqlRequirePrimaryKey(bool $sqlRequirePrimaryKey): self
     {
@@ -514,8 +476,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of seconds the server waits for activity on a noninteractive connection before closing it.
-     *
-     * @return self
      */
     public function setWaitTimeout(int $waitTimeout): self
     {
@@ -532,8 +492,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The size of the largest message, in bytes, that can be received by the server. Default is 67108864 (64M).
-     *
-     * @return self
      */
     public function setMaxAllowedPacket(int $maxAllowedPacket): self
     {
@@ -550,8 +508,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum size, in bytes, of internal in-memory tables. Also set tmp_table_size. Default is 16777216 (16M)
-     *
-     * @return self
      */
     public function setMaxHeapTableSize(int $maxHeapTableSize): self
     {
@@ -568,8 +524,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The sort buffer size, in bytes, for ORDER BY optimization. Default is 262144. (256K).
-     *
-     * @return self
      */
     public function setSortBufferSize(int $sortBufferSize): self
     {
@@ -586,8 +540,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum size, in bytes, of internal in-memory tables. Also set max_heap_table_size. Default is 16777216 (16M).
-     *
-     * @return self
      */
     public function setTmpTableSize(int $tmpTableSize): self
     {
@@ -604,8 +556,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * When enabled, captures slow queries. When disabled, also truncates the mysql.slow_log table. Default is false.
-     *
-     * @return self
      */
     public function setSlowQueryLog(bool $slowQueryLog): self
     {
@@ -622,8 +572,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The time, in seconds, for a query to take to execute before  being captured by slow_query_logs. Default is 10 seconds.
-     *
-     * @return self
      */
     public function setLongQueryTime(float $longQueryTime): self
     {
@@ -640,8 +588,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The minimum amount of time, in seconds, to keep binlog entries before deletion.  This may be extended for services that require binlog entries for longer than the default, for example if using the MySQL Debezium Kafka connector.
-     *
-     * @return self
      */
     public function setBinlogRetentionPeriod(float $binlogRetentionPeriod): self
     {
@@ -658,8 +604,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the maximum size of the InnoDB change buffer as a percentage of the buffer pool.
-     *
-     * @return self
      */
     public function setInnodbChangeBufferMaxSize(int $innodbChangeBufferMaxSize): self
     {
@@ -682,8 +626,6 @@ class MysqlAdvancedConfig extends \ArrayObject
      *   - 0 &mdash; disables this functionality, dirty pages in the same extent are not flushed.
      *   - 1 &mdash; flushes contiguous dirty pages in the same extent.
      *   - 2 &mdash; flushes dirty pages in the same extent.
-     *
-     * @return self
      */
     public function setInnodbFlushNeighbors(int $innodbFlushNeighbors): self
     {
@@ -700,8 +642,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of I/O threads for read operations in InnoDB. Changing this parameter will lead to a restart of the MySQL service.
-     *
-     * @return self
      */
     public function setInnodbReadIoThreads(int $innodbReadIoThreads): self
     {
@@ -718,8 +658,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * The number of I/O threads for write operations in InnoDB. Changing this parameter will lead to a restart of the MySQL service.
-     *
-     * @return self
      */
     public function setInnodbWriteIoThreads(int $innodbWriteIoThreads): self
     {
@@ -736,8 +674,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Defines the maximum number of threads permitted inside of InnoDB. A value of 0 (the default) is interpreted as infinite concurrency (no limit). This variable is intended for performance  tuning on high concurrency systems.
-     *
-     * @return self
      */
     public function setInnodbThreadConcurrency(int $innodbThreadConcurrency): self
     {
@@ -754,8 +690,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Start sizes of connection buffer and result buffer, must be multiple of 1024. Changing this parameter will lead to a restart of the MySQL service.
-     *
-     * @return self
      */
     public function setNetBufferLength(int $netBufferLength): self
     {
@@ -772,8 +706,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * Defines the destination for logs. Can be `INSIGHTS`, `TABLE`, or both (`INSIGHTS,TABLE`), or `NONE` to disable logs. To specify both destinations, use `INSIGHTS,TABLE` (order matters). Default is NONE.
-     *
-     * @return self
      */
     public function setLogOutput(string $logOutput): self
     {
@@ -790,8 +722,6 @@ class MysqlAdvancedConfig extends \ArrayObject
     }
     /**
      * MySQL Incremental Backup configuration settings
-     *
-     * @return self
      */
     public function setMysqlIncrementalBackup(MysqlIncrementalBackup $mysqlIncrementalBackup): self
     {

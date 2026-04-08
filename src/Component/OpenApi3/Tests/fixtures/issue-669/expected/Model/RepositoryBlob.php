@@ -37,8 +37,6 @@ class RepositoryBlob extends \ArrayObject
     }
     /**
      * The digest of the blob
-     *
-     * @return self
      */
     public function setDigest(string $digest): self
     {
@@ -55,8 +53,6 @@ class RepositoryBlob extends \ArrayObject
     }
     /**
      * The compressed size of the blob in bytes.
-     *
-     * @return self
      */
     public function setCompressedSizeBytes(int $compressedSizeBytes): self
     {

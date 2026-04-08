@@ -62,7 +62,6 @@ class SyncPortfolioCompaniesToCSVRecords extends \LongTermSupport\OpenApiGenerat
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsForbiddenException

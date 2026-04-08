@@ -33,8 +33,6 @@ class ApiGenerateOauth2URLOutput extends \ArrayObject
     }
     /**
      * The oauth2 url
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {

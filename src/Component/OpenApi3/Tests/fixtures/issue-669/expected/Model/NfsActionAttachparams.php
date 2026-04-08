@@ -33,8 +33,6 @@ class NfsActionAttachparams extends \ArrayObject
     }
     /**
      * The ID of the VPC to which the NFS share will be attached
-     *
-     * @return self
      */
     public function setVpcId(string $vpcId): self
     {

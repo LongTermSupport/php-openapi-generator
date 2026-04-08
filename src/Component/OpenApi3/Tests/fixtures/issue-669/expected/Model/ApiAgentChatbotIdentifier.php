@@ -33,8 +33,6 @@ class ApiAgentChatbotIdentifier extends \ArrayObject
     }
     /**
      * Agent chatbot identifier
-     *
-     * @return self
      */
     public function setAgentChatbotIdentifier(string $agentChatbotIdentifier): self
     {

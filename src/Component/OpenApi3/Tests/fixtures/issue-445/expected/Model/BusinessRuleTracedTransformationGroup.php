@@ -44,8 +44,6 @@ class BusinessRuleTracedTransformationGroup
     }
     /**
      * Trace reference ID of transformation group.
-     *
-     * @return self
      */
     public function setTraceRefId(?string $traceRefId): self
     {
@@ -62,8 +60,6 @@ class BusinessRuleTracedTransformationGroup
     }
     /**
      * Serialized JSON of input for group
-     *
-     * @return self
      */
     public function setInput(?string $input): self
     {
@@ -80,8 +76,6 @@ class BusinessRuleTracedTransformationGroup
     }
     /**
      * Serialized JSON of output for group
-     *
-     * @return self
      */
     public function setOutput(?string $output): self
     {
@@ -102,8 +96,6 @@ class BusinessRuleTracedTransformationGroup
      * Detailed traces for each step performed by transformations in group.
      *
      * @param list<BusinessRuleTracedTransformation>|null $transformations
-     *
-     * @return self
      */
     public function setTransformations(?array $transformations): self
     {

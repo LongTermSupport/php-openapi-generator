@@ -154,8 +154,6 @@ class AggregationFilterNotSupportedException extends \ArrayObject
     }
     /**
      * @param list<string>|null $supportedFilterTypes
-     *
-     * @return self
      */
     public function setSupportedFilterTypes(?array $supportedFilterTypes): self
     {

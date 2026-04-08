@@ -112,8 +112,6 @@ class CompletedFreshInvestigation extends \ArrayObject
     }
     /**
      * @param list<mixed> $sections
-     *
-     * @return self
      */
     public function setSections(array $sections): self
     {

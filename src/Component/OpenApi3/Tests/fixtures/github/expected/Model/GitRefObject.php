@@ -45,8 +45,6 @@ class GitRefObject extends \ArrayObject
     }
     /**
      * SHA for the reference
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {

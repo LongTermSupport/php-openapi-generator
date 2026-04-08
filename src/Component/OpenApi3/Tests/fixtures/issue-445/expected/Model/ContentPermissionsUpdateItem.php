@@ -46,8 +46,6 @@ class ContentPermissionsUpdateItem extends \ArrayObject
      * These permissions control content accessibility for the users that do not own the content.
      *
      * @param list<string>|null $contentPermissionSetIds
-     *
-     * @return self
      */
     public function setContentPermissionSetIds(?array $contentPermissionSetIds): self
     {
@@ -64,8 +62,6 @@ class ContentPermissionsUpdateItem extends \ArrayObject
     }
     /**
      * ID of the content.
-     *
-     * @return self
      */
     public function setContentId(string $contentId): self
     {

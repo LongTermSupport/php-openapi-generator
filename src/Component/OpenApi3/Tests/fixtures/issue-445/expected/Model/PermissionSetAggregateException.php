@@ -132,8 +132,6 @@ class PermissionSetAggregateException extends \ArrayObject
     }
     /**
      * @param list<PictureparkException>|null $exceptions
-     *
-     * @return self
      */
     public function setExceptions(?array $exceptions): self
     {

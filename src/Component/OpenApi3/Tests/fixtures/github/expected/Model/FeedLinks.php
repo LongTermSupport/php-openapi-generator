@@ -61,8 +61,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setTimeline(LinkWithType $timeline): self
     {
@@ -79,8 +77,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setUser(LinkWithType $user): self
     {
@@ -97,8 +93,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setSecurityAdvisories(LinkWithType $securityAdvisories): self
     {
@@ -115,8 +109,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setCurrentUser(LinkWithType $currentUser): self
     {
@@ -133,8 +125,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setCurrentUserPublic(LinkWithType $currentUserPublic): self
     {
@@ -151,8 +141,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setCurrentUserActor(LinkWithType $currentUserActor): self
     {
@@ -169,8 +157,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
-     * @return self
      */
     public function setCurrentUserOrganization(LinkWithType $currentUserOrganization): self
     {
@@ -187,8 +173,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * @param list<LinkWithType> $currentUserOrganizations
-     *
-     * @return self
      */
     public function setCurrentUserOrganizations(array $currentUserOrganizations): self
     {

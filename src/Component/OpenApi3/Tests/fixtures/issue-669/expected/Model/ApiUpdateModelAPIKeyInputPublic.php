@@ -37,8 +37,6 @@ class ApiUpdateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
-     * @return self
      */
     public function setApiKeyUuid(string $apiKeyUuid): self
     {
@@ -55,8 +53,6 @@ class ApiUpdateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

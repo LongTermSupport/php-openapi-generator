@@ -46,8 +46,6 @@ class ScimUserList extends \ArrayObject
      * SCIM schema used.
      *
      * @param list<string> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {
@@ -94,8 +92,6 @@ class ScimUserList extends \ArrayObject
     }
     /**
      * @param list<ScimUser> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

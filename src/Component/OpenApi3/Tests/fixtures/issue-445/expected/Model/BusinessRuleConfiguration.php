@@ -42,8 +42,6 @@ class BusinessRuleConfiguration
     }
     /**
      * Disables the rule completely.
-     *
-     * @return self
      */
     public function setDisableRuleEngine(bool $disableRuleEngine): self
     {
@@ -64,8 +62,6 @@ class BusinessRuleConfiguration
      * Rules
      *
      * @param list<BusinessRule>|null $rules
-     *
-     * @return self
      */
     public function setRules(?array $rules): self
     {
@@ -86,8 +82,6 @@ class BusinessRuleConfiguration
      * Named caches.
      *
      * @param list<NamedCacheConfigurationBase>|null $caches
-     *
-     * @return self
      */
     public function setCaches(?array $caches): self
     {

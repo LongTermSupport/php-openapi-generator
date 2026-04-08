@@ -33,8 +33,6 @@ class AuthenticationSuccessResponse extends \ArrayObject
     }
     /**
      * Authentication Token
-     *
-     * @return self
      */
     public function setToken(string $token): self
     {

@@ -33,8 +33,6 @@ class TeamsTeamIdDiscussionsDiscussionNumberCommentsPostBody extends \ArrayObjec
     }
     /**
      * The discussion comment's body text.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

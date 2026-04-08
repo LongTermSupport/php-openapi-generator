@@ -46,8 +46,6 @@ class DisplayValueStatus
      * The schema ids (of type Content or Layer) for which the re-rendering of the display values is needed.
      *
      * @param list<string>|null $contentOrLayerSchemaIds
-     *
-     * @return self
      */
     public function setContentOrLayerSchemaIds(?array $contentOrLayerSchemaIds): self
     {
@@ -68,8 +66,6 @@ class DisplayValueStatus
      * The schema ids (of type List) for which the re-rendering of the display values is needed.
      *
      * @param list<string>|null $listSchemaIds
-     *
-     * @return self
      */
     public function setListSchemaIds(?array $listSchemaIds): self
     {
@@ -86,8 +82,6 @@ class DisplayValueStatus
     }
     /**
      * The state of the display values compared to the schema structure (UpToDate = ok, Outdated = re-rendering needed).
-     *
-     * @return self
      */
     public function setState(mixed $state): self
     {

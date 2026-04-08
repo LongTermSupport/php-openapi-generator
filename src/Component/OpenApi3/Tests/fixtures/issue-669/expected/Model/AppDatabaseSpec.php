@@ -63,8 +63,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if cluster_name is not set, a new cluster will be provisioned.
-     *
-     * @return self
      */
     public function setClusterName(string $clusterName): self
     {
@@ -81,8 +79,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the MySQL or PostgreSQL database to configure.
-     *
-     * @return self
      */
     public function setDbName(string $dbName): self
     {
@@ -99,8 +95,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the MySQL or PostgreSQL user to configure.
-     *
-     * @return self
      */
     public function setDbUser(string $dbUser): self
     {
@@ -129,8 +123,6 @@ class AppDatabaseSpec extends \ArrayObject
      * - KAFKA: Kafka
      * - OPENSEARCH: OpenSearch
      * - VALKEY: ValKey
-     *
-     * @return self
      */
     public function setEngine(string $engine): self
     {
@@ -147,8 +139,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The database's name. The name must be unique across all components within the same app and cannot use capital letters.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -165,8 +155,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * Whether this is a production or dev database.
-     *
-     * @return self
      */
     public function setProduction(bool $production): self
     {
@@ -183,8 +171,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The version of the database engine
-     *
-     * @return self
      */
     public function setVersion(string $version): self
     {

@@ -187,8 +187,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Anthropic API Key Info
-     *
-     * @return self
      */
     public function setAnthropicApiKey(ApiAnthropicAPIKeyInfo $anthropicApiKey): self
     {
@@ -209,8 +207,6 @@ class ApiAgent extends \ArrayObject
      * Api key infos
      *
      * @param list<ApiAgentAPIKeyInfo> $apiKeyInfos
-     *
-     * @return self
      */
     public function setApiKeyInfos(array $apiKeyInfos): self
     {
@@ -231,8 +227,6 @@ class ApiAgent extends \ArrayObject
      * Api keys
      *
      * @param list<ApiAgentAPIKey> $apiKeys
-     *
-     * @return self
      */
     public function setApiKeys(array $apiKeys): self
     {
@@ -249,8 +243,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * A Chatbot
-     *
-     * @return self
      */
     public function setChatbot(ApiChatbot $chatbot): self
     {
@@ -271,8 +263,6 @@ class ApiAgent extends \ArrayObject
      * Chatbot identifiers
      *
      * @param list<ApiAgentChatbotIdentifier> $chatbotIdentifiers
-     *
-     * @return self
      */
     public function setChatbotIdentifiers(array $chatbotIdentifiers): self
     {
@@ -293,8 +283,6 @@ class ApiAgent extends \ArrayObject
      * Child agents
      *
      * @param list<ApiAgent> $childAgents
-     *
-     * @return self
      */
     public function setChildAgents(array $childAgents): self
     {
@@ -311,8 +299,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Whether conversation logs are enabled for the agent
-     *
-     * @return self
      */
     public function setConversationLogsEnabled(bool $conversationLogsEnabled): self
     {
@@ -329,8 +315,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -347,8 +331,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of deployment
-     *
-     * @return self
      */
     public function setDeployment(ApiDeployment $deployment): self
     {
@@ -365,8 +347,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of agent
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -383,8 +363,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * @param list<ApiAgentFunction> $functions
-     *
-     * @return self
      */
     public function setFunctions(array $functions): self
     {
@@ -405,8 +383,6 @@ class ApiAgent extends \ArrayObject
      * The guardrails the agent is attached to
      *
      * @param list<ApiAgentGuardrail> $guardrails
-     *
-     * @return self
      */
     public function setGuardrails(array $guardrails): self
     {
@@ -433,8 +409,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
-     * @return self
      */
     public function setInstruction(string $instruction): self
     {
@@ -465,8 +439,6 @@ class ApiAgent extends \ArrayObject
      * Knowledge bases
      *
      * @param list<ApiKnowledgeBase> $knowledgeBases
-     *
-     * @return self
      */
     public function setKnowledgeBases(array $knowledgeBases): self
     {
@@ -503,8 +475,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
-     * @return self
      */
     public function setModel(ApiModel $model): self
     {
@@ -531,8 +501,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -549,8 +517,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * OpenAI API Key Info
-     *
-     * @return self
      */
     public function setOpenaiApiKey(ApiOpenAIAPIKeyInfo $openaiApiKey): self
     {
@@ -571,8 +537,6 @@ class ApiAgent extends \ArrayObject
      * Parent agents
      *
      * @param list<ApiAgent> $parentAgents
-     *
-     * @return self
      */
     public function setParentAgents(array $parentAgents): self
     {
@@ -599,8 +563,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
-     * @return self
      */
     public function setProvideCitations(bool $provideCitations): self
     {
@@ -617,8 +579,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Region code
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -643,8 +603,6 @@ class ApiAgent extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
-     * @return self
      */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
@@ -661,8 +619,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Creation of route date / time
-     *
-     * @return self
      */
     public function setRouteCreatedAt(\DateTime $routeCreatedAt): self
     {
@@ -689,8 +645,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Route name
-     *
-     * @return self
      */
     public function setRouteName(string $routeName): self
     {
@@ -721,8 +675,6 @@ class ApiAgent extends \ArrayObject
      * Agent tag to organize related resources
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -749,8 +701,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Represents an AgentTemplate entity
-     *
-     * @return self
      */
     public function setTemplate(ApiAgentTemplate $template): self
     {
@@ -777,8 +727,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -795,8 +743,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Access your agent under this url
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -813,8 +759,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Id of user that created the agent
-     *
-     * @return self
      */
     public function setUserId(string $userId): self
     {
@@ -831,8 +775,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -849,8 +791,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * The latest version of the agent
-     *
-     * @return self
      */
     public function setVersionHash(string $versionHash): self
     {
@@ -871,8 +811,6 @@ class ApiAgent extends \ArrayObject
      * VPC Egress IPs
      *
      * @param list<string> $vpcEgressIps
-     *
-     * @return self
      */
     public function setVpcEgressIps(array $vpcEgressIps): self
     {

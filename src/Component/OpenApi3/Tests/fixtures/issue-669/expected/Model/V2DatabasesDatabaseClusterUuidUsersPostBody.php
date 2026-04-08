@@ -60,8 +60,6 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
     }
     /**
      * The name of a database user.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -82,8 +80,6 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
      * A string representing the database user's role. The value will be either
      * "primary" or "normal".
      * 
-     *
-     * @return self
      */
     public function setRole(string $role): self
     {
@@ -100,8 +96,6 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
     }
     /**
      * A randomly generated password for the database user.<br>Requires `database:view_credentials` scope.
-     *
-     * @return self
      */
     public function setPassword(string $password): self
     {
@@ -118,8 +112,6 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
     }
     /**
      * Access certificate for TLS client authentication. (Kafka only)
-     *
-     * @return self
      */
     public function setAccessCert(string $accessCert): self
     {
@@ -136,8 +128,6 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
     }
     /**
      * Access key for TLS client authentication. (Kafka only)
-     *
-     * @return self
      */
     public function setAccessKey(string $accessKey): self
     {
@@ -180,8 +170,6 @@ class V2DatabasesDatabaseClusterUuidUsersPostBody extends \ArrayObject
      * For MongoDB clusters, set to `true` to create a read-only user.
      * This option is not currently supported for other database engines.
      * 
-     *
-     * @return self
      */
     public function setReadonly(bool $readonly): self
     {

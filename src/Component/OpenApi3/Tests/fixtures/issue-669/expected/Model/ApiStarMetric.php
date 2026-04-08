@@ -63,8 +63,6 @@ class ApiStarMetric extends \ArrayObject
     /**
      * The success threshold for the star metric.
      * This is a value that the metric must reach to be considered successful.
-     *
-     * @return self
      */
     public function setSuccessThreshold(float $successThreshold): self
     {
@@ -83,8 +81,6 @@ class ApiStarMetric extends \ArrayObject
     /**
      * The success threshold for the star metric.
      * This is a percentage value between 0 and 100.
-     *
-     * @return self
      */
     public function setSuccessThresholdPct(int $successThresholdPct): self
     {

@@ -166,8 +166,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a load balancer.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -184,8 +182,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A human-readable name for a load balancer instance.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -202,8 +198,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * The ID of the project that the load balancer is associated with. If no ID is provided at creation, the load balancer associates with the user's default project. If an invalid project ID is provided, the load balancer will not be created.
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -220,8 +214,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An attribute containing the public-facing IP address of the load balancer.
-     *
-     * @return self
      */
     public function setIp(string $ip): self
     {
@@ -238,8 +230,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An attribute containing the public-facing IPv6 address of the load balancer.
-     *
-     * @return self
      */
     public function setIpv6(string $ipv6): self
     {
@@ -256,8 +246,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * How many nodes the load balancer contains. Each additional node increases the load balancer's ability to manage more connections. Load balancers can be scaled up or down, and you can change the number of nodes after creation up to once per hour. This field is currently not available in the AMS2, NYC2, or SFO1 regions. Use the `size` field to scale load balancers that reside in these regions.
-     *
-     * @return self
      */
     public function setSizeUnit(int $sizeUnit): self
     {
@@ -288,8 +276,6 @@ class LoadBalancer extends \ArrayObject
      * You can resize load balancers after creation up to once per hour. You cannot resize a load balancer within the first hour of its creation.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setSize(string $size): self
     {
@@ -310,8 +296,6 @@ class LoadBalancer extends \ArrayObject
      * This field has been deprecated. You can no longer specify an algorithm for load balancers.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setAlgorithm(string $algorithm): self
     {
@@ -328,8 +312,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A status string indicating the current state of the load balancer. This can be `new`, `active`, or `errored`.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -346,8 +328,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the load balancer was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -368,8 +348,6 @@ class LoadBalancer extends \ArrayObject
      * An array of objects specifying the forwarding rules for a load balancer.
      *
      * @param list<ForwardingRule> $forwardingRules
-     *
-     * @return self
      */
     public function setForwardingRules(array $forwardingRules): self
     {
@@ -386,8 +364,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An object specifying health check settings for the load balancer.
-     *
-     * @return self
      */
     public function setHealthCheck(HealthCheck $healthCheck): self
     {
@@ -404,8 +380,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An object specifying sticky sessions settings for the load balancer.
-     *
-     * @return self
      */
     public function setStickySessions(StickySessions $stickySessions): self
     {
@@ -422,8 +396,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A boolean value indicating whether HTTP requests to the load balancer on port 80 will be redirected to HTTPS on port 443.
-     *
-     * @return self
      */
     public function setRedirectHttpToHttps(bool $redirectHttpToHttps): self
     {
@@ -440,8 +412,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A boolean value indicating whether PROXY Protocol is in use.
-     *
-     * @return self
      */
     public function setEnableProxyProtocol(bool $enableProxyProtocol): self
     {
@@ -458,8 +428,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets.
-     *
-     * @return self
      */
     public function setEnableBackendKeepalive(bool $enableBackendKeepalive): self
     {
@@ -476,8 +444,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An integer value which configures the idle timeout for HTTP requests to the target droplets.
-     *
-     * @return self
      */
     public function setHttpIdleTimeoutSeconds(int $httpIdleTimeoutSeconds): self
     {
@@ -494,8 +460,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the load balancer is assigned.
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -512,8 +476,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A boolean value indicating whether to disable automatic DNS record creation for Let's Encrypt certificates that are added to the load balancer.
-     *
-     * @return self
      */
     public function setDisableLetsEncryptDnsRecords(bool $disableLetsEncryptDnsRecords): self
     {
@@ -530,8 +492,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An object specifying allow and deny rules to control traffic to the load balancer.
-     *
-     * @return self
      */
     public function setFirewall(LbFirewall $firewall): self
     {
@@ -548,8 +508,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A string indicating whether the load balancer should be external or internal. Internal load balancers have no public IPs and are only accessible to resources on the same VPC network. This property cannot be updated after creating the load balancer.
-     *
-     * @return self
      */
     public function setNetwork(string $network): self
     {
@@ -566,8 +524,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A string indicating whether the load balancer will support IPv4 or both IPv4 and IPv6 networking. This property cannot be updated after creating the load balancer.
-     *
-     * @return self
      */
     public function setNetworkStack(string $networkStack): self
     {
@@ -584,8 +540,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A string indicating whether the load balancer should be a standard regional HTTP load balancer, a regional network load balancer that routes traffic at the TCP/UDP transport layer, or a global load balancer.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -606,8 +560,6 @@ class LoadBalancer extends \ArrayObject
      * An array of objects specifying the domain configurations for a Global load balancer.
      *
      * @param list<Domains> $domains
-     *
-     * @return self
      */
     public function setDomains(array $domains): self
     {
@@ -624,8 +576,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An object specifying forwarding configurations for a Global load balancer.
-     *
-     * @return self
      */
     public function setGlbSettings(GlbSettings $glbSettings): self
     {
@@ -646,8 +596,6 @@ class LoadBalancer extends \ArrayObject
      * An array containing the UUIDs of the Regional load balancers to be used as target backends for a Global load balancer.
      *
      * @param list<string> $targetLoadBalancerIds
-     *
-     * @return self
      */
     public function setTargetLoadBalancerIds(array $targetLoadBalancerIds): self
     {
@@ -664,8 +612,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * A string indicating the policy for the TLS cipher suites used by the load balancer. The possible values are `DEFAULT` or `STRONG`. The default value is `DEFAULT`.
-     *
-     * @return self
      */
     public function setTlsCipherPolicy(string $tlsCipherPolicy): self
     {
@@ -682,8 +628,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $region
-     *
-     * @return self
      */
     public function setRegion(array $region): self
     {
@@ -704,8 +648,6 @@ class LoadBalancer extends \ArrayObject
      * An array containing the IDs of the Droplets assigned to the load balancer.
      *
      * @param list<int> $dropletIds
-     *
-     * @return self
      */
     public function setDropletIds(array $dropletIds): self
     {
@@ -722,8 +664,6 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * The name of a Droplet tag corresponding to Droplets assigned to the load balancer.
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {

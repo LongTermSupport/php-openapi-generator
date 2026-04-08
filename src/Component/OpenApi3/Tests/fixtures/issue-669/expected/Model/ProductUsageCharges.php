@@ -43,8 +43,6 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * Description of usage charges
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -61,8 +59,6 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * Total amount charged
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {
@@ -83,8 +79,6 @@ class ProductUsageCharges extends \ArrayObject
      * List of amount, and grouped aggregates by resource type.
      *
      * @param list<ProductChargeItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

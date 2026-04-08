@@ -44,7 +44,6 @@ class OauthAuthorizationsGetAuthorization extends \LongTermSupport\OpenApiGenera
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Authorization
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsGetAuthorizationForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsGetAuthorizationUnauthorizedException
      */

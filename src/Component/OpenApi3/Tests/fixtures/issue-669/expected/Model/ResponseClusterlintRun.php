@@ -33,8 +33,6 @@ class ResponseClusterlintRun extends \ArrayObject
     }
     /**
      * ID of the clusterlint run that can be used later to fetch the diagnostics.
-     *
-     * @return self
      */
     public function setRunId(string $runId): self
     {

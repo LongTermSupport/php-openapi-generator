@@ -45,8 +45,6 @@ class OrgsOrgHooksHookIdPatchBodyConfig extends \ArrayObject
     }
     /**
      * The URL to which the payloads will be delivered.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -63,8 +61,6 @@ class OrgsOrgHooksHookIdPatchBodyConfig extends \ArrayObject
     }
     /**
      * The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
-     *
-     * @return self
      */
     public function setContentType(string $contentType): self
     {
@@ -81,8 +77,6 @@ class OrgsOrgHooksHookIdPatchBodyConfig extends \ArrayObject
     }
     /**
      * If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value in the [`X-Hub-Signature`](https://developer.github.com/webhooks/event-payloads/#delivery-headers) header.
-     *
-     * @return self
      */
     public function setSecret(string $secret): self
     {
@@ -99,8 +93,6 @@ class OrgsOrgHooksHookIdPatchBodyConfig extends \ArrayObject
     }
     /**
      * Determines whether the SSL certificate of the host for `url` will be verified when delivering payloads. Supported values include `0` (verification is performed) and `1` (verification is not performed). The default is `0`. **We strongly recommend not setting this to `1` as you are subject to man-in-the-middle and other attacks.**
-     *
-     * @return self
      */
     public function setInsecureSsl(string $insecureSsl): self
     {

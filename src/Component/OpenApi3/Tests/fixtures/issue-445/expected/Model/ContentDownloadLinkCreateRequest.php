@@ -40,8 +40,6 @@ class ContentDownloadLinkCreateRequest
      * List of content information to generate the download link
      *
      * @param list<ContentDownloadRequestItem> $contents
-     *
-     * @return self
      */
     public function setContents(array $contents): self
     {
@@ -58,8 +56,6 @@ class ContentDownloadLinkCreateRequest
     }
     /**
      * Indicates if a progress message shall be shown to the user, notifying once the download is completed.
-     *
-     * @return self
      */
     public function setNotifyProgress(bool $notifyProgress): self
     {

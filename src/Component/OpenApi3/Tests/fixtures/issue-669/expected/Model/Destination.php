@@ -44,8 +44,6 @@ class Destination extends \ArrayObject
     }
     /**
      * A unique identifier for a destination.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -62,8 +60,6 @@ class Destination extends \ArrayObject
     }
     /**
      * destination name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -84,8 +80,6 @@ class Destination extends \ArrayObject
      * The destination type. `opensearch_dbaas` for a DigitalOcean managed OpenSearch
      * cluster or `opensearch_ext` for an externally managed one.
      * 
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

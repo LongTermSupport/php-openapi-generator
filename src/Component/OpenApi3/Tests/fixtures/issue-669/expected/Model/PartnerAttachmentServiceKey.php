@@ -45,8 +45,6 @@ class PartnerAttachmentServiceKey extends \ArrayObject
     }
     /**
      * A time value given in the ISO 8601 combined date and time format.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {

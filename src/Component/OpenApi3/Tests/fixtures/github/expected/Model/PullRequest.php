@@ -223,8 +223,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Number uniquely identifying the pull request within its repository.
-     *
-     * @return self
      */
     public function setNumber(int $number): self
     {
@@ -241,8 +239,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * State of this Pull Request. Either `open` or `closed`.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -269,8 +265,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * The title of the pull request.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -307,8 +301,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * @param list<PullRequestLabelsItem> $labels
-     *
-     * @return self
      */
     public function setLabels(array $labels): self
     {
@@ -405,8 +397,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $assignees
-     *
-     * @return self
      */
     public function setAssignees(?array $assignees): self
     {
@@ -423,8 +413,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $requestedReviewers
-     *
-     * @return self
      */
     public function setRequestedReviewers(?array $requestedReviewers): self
     {
@@ -441,8 +429,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * @param list<TeamSimple>|null $requestedTeams
-     *
-     * @return self
      */
     public function setRequestedTeams(?array $requestedTeams): self
     {
@@ -499,8 +485,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Indicates whether or not the pull request is a draft.
-     *
-     * @return self
      */
     public function setDraft(bool $draft): self
     {
@@ -587,8 +571,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Indicates whether maintainers can modify the pull request.
-     *
-     * @return self
      */
     public function setMaintainerCanModify(bool $maintainerCanModify): self
     {

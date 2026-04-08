@@ -33,8 +33,6 @@ class ProjectsColumnsColumnIdMovesPostBody extends \ArrayObject
     }
     /**
      * The position of the column in a project
-     *
-     * @return self
      */
     public function setPosition(string $position): self
     {

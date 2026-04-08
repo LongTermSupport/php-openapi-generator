@@ -67,8 +67,6 @@ class Tags extends \ArrayObject
      * 
      * Tagged resources in the control panel will always display the canonical capitalization. For example, if you create a tag named "PROD", you can tag resources in the control panel by entering "prod". The tag will still display with its canonical capitalization, "PROD".
      * 
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -97,8 +95,6 @@ class Tags extends \ArrayObject
      * 
      *
      * @param array<string, mixed> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

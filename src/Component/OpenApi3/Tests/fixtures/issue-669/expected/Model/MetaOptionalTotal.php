@@ -33,8 +33,6 @@ class MetaOptionalTotal extends \ArrayObject
     }
     /**
      * Information about the response itself.
-     *
-     * @return self
      */
     public function setMeta(MetaProperties $meta): self
     {

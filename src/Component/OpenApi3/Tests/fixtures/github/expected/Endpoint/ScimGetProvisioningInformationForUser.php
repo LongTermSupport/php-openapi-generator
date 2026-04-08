@@ -55,7 +55,6 @@ class ScimGetProvisioningInformationForUser extends \LongTermSupport\OpenApiGene
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimUser
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimGetProvisioningInformationForUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimGetProvisioningInformationForUserForbiddenException
      */

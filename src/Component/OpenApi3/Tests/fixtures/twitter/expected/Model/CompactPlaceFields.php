@@ -38,8 +38,6 @@ class CompactPlaceFields extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -56,8 +54,6 @@ class CompactPlaceFields extends \ArrayObject
     }
     /**
      * The human readable name of this place.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

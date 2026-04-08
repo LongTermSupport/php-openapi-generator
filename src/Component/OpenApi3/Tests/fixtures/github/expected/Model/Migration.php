@@ -108,8 +108,6 @@ class Migration extends \ArrayObject
     }
     /**
      * @param list<Repository> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {
@@ -176,8 +174,6 @@ class Migration extends \ArrayObject
     }
     /**
      * @param list<mixed> $exclude
-     *
-     * @return self
      */
     public function setExclude(array $exclude): self
     {

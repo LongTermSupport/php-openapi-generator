@@ -62,8 +62,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * Unique identifier of the team
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -90,8 +88,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * URL for the team
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -118,8 +114,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * Name of the team
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -136,8 +130,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * Description of the team
-     *
-     * @return self
      */
     public function setDescription(?string $description): self
     {
@@ -154,8 +146,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * Permission that the team will have for its repositories
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {
@@ -172,8 +162,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * The level of privacy this team should have
-     *
-     * @return self
      */
     public function setPrivacy(string $privacy): self
     {
@@ -220,8 +208,6 @@ class TeamSimple extends \ArrayObject
     }
     /**
      * Distinguished Name (DN) that team maps to within LDAP environment
-     *
-     * @return self
      */
     public function setLdapDn(string $ldapDn): self
     {

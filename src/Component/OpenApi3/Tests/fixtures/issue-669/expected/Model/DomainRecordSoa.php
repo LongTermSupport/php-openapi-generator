@@ -69,8 +69,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * A unique identifier for each domain record.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -87,8 +85,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * The type of the DNS record. For example: A, CNAME, TXT, ...
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -105,8 +101,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * The host name, alias, or service being defined by the record.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -123,8 +117,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * Variable data depending on record type. For example, the "data" value for an A record would be the IPv4 address to which the domain will be mapped. For a CAA record, it would contain the domain name of the CA being granted permission to issue certificates.
-     *
-     * @return self
      */
     public function setData(string $data): self
     {
@@ -141,8 +133,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * The priority for SRV and MX records.
-     *
-     * @return self
      */
     public function setPriority(?int $priority): self
     {
@@ -159,8 +149,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * The port for SRV records.
-     *
-     * @return self
      */
     public function setPort(?int $port): self
     {
@@ -177,8 +165,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * This value is the time to live for the record, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
-     * @return self
      */
     public function setTtl(int $ttl): self
     {
@@ -195,8 +181,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * The weight for SRV records.
-     *
-     * @return self
      */
     public function setWeight(?int $weight): self
     {
@@ -213,8 +197,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * An unsigned integer between 0-255 used for CAA records.
-     *
-     * @return self
      */
     public function setFlagsField(?int $flags): self
     {
@@ -231,8 +213,6 @@ class DomainRecordSoa extends \ArrayObject
     }
     /**
      * The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef"
-     *
-     * @return self
      */
     public function setTag(?string $tag): self
     {

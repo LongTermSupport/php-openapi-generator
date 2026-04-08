@@ -55,8 +55,6 @@ class UserSettings extends \ArrayObject
      * For Postgres clusters, set to `true` for a user with replication rights.
      * This option is not currently supported for other database engines.
      * 
-     *
-     * @return self
      */
     public function setPgAllowReplication(bool $pgAllowReplication): self
     {
@@ -77,8 +75,6 @@ class UserSettings extends \ArrayObject
      * ACLs (Access Control Lists) specifying permissions on index within a OpenSearch cluster.
      *
      * @param list<UserSettingsOpensearchAclItem> $opensearchAcl
-     *
-     * @return self
      */
     public function setOpensearchAcl(array $opensearchAcl): self
     {
@@ -99,8 +95,6 @@ class UserSettings extends \ArrayObject
      * ACLs (Access Control Lists) specifying permissions on topics within a Kafka cluster.
      *
      * @param list<UserSettingsAclItem> $acl
-     *
-     * @return self
      */
     public function setAcl(array $acl): self
     {
@@ -117,8 +111,6 @@ class UserSettings extends \ArrayObject
     }
     /**
      * MongoDB-specific settings for the user. This option is not currently supported for other database engines.
-     *
-     * @return self
      */
     public function setMongoUserSettings(UserSettingsMongoUserSettings $mongoUserSettings): self
     {

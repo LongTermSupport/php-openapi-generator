@@ -33,8 +33,6 @@ class ResponseOpensearchIndexes extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $indexes
-     *
-     * @return self
      */
     public function setIndexes(array $indexes): self
     {

@@ -33,8 +33,6 @@ class ApiDeleteWorkspaceOutput extends \ArrayObject
     }
     /**
      * Workspace
-     *
-     * @return self
      */
     public function setWorkspaceUuid(string $workspaceUuid): self
     {

@@ -39,8 +39,6 @@ class ApiListEvaluationTestCasesOutput extends \ArrayObject
      * Alternative way of authentication for internal usage only - should not be exposed to public api
      *
      * @param list<ApiEvaluationTestCase> $evaluationTestCases
-     *
-     * @return self
      */
     public function setEvaluationTestCases(array $evaluationTestCases): self
     {

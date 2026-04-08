@@ -44,8 +44,6 @@ class _Parent extends \ArrayObject
     }
     /**
      * @param list<Child> $child
-     *
-     * @return self
      */
     public function setChild(array $child): self
     {

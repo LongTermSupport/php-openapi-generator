@@ -104,8 +104,6 @@ class IssueSimpleMilestone extends \ArrayObject
     }
     /**
      * The number of the milestone.
-     *
-     * @return self
      */
     public function setNumber(int $number): self
     {
@@ -122,8 +120,6 @@ class IssueSimpleMilestone extends \ArrayObject
     }
     /**
      * The state of the milestone.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -140,8 +136,6 @@ class IssueSimpleMilestone extends \ArrayObject
     }
     /**
      * The title of the milestone.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {

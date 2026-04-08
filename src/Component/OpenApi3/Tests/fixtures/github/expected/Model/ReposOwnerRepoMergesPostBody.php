@@ -41,8 +41,6 @@ class ReposOwnerRepoMergesPostBody extends \ArrayObject
     }
     /**
      * The name of the base branch that the head will be merged into.
-     *
-     * @return self
      */
     public function setBase(string $base): self
     {
@@ -59,8 +57,6 @@ class ReposOwnerRepoMergesPostBody extends \ArrayObject
     }
     /**
      * The head to merge. This can be a branch name or a commit SHA1.
-     *
-     * @return self
      */
     public function setHead(string $head): self
     {
@@ -77,8 +73,6 @@ class ReposOwnerRepoMergesPostBody extends \ArrayObject
     }
     /**
      * Commit message to use for the merge commit. If omitted, a default message will be used.
-     *
-     * @return self
      */
     public function setCommitMessage(string $commitMessage): self
     {

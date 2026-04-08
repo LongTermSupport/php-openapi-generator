@@ -66,8 +66,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the simple search fields to the fields available in the specified channel.
-     *
-     * @return self
      */
     public function setChannelId(?string $channelId): self
     {
@@ -88,8 +86,6 @@ class ContentFilterRequest
      * Only searches the specified language values. Defaults to all metadata languages of the language configuration.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -106,8 +102,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -124,8 +118,6 @@ class ContentFilterRequest
     }
     /**
      * Type of search to be performed: against metadata, extracted fulltext from documents or both. Default to Metadata.
-     *
-     * @return self
      */
     public function setSearchType(mixed $searchType): self
     {
@@ -142,8 +134,6 @@ class ContentFilterRequest
     }
     /**
      * The collection id.
-     *
-     * @return self
      */
     public function setCollectionId(?string $collectionId): self
     {
@@ -160,8 +150,6 @@ class ContentFilterRequest
     }
     /**
      * An optional search filter. Limits the content document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -178,8 +166,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the content document result set to that life cycle state. Defaults to ActiveOnly.
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -196,8 +182,6 @@ class ContentFilterRequest
     }
     /**
      * Filter the content document result set to those that have or not have broken references
-     *
-     * @return self
      */
     public function setBrokenDependenciesFilter(mixed $brokenDependenciesFilter): self
     {
@@ -218,8 +202,6 @@ class ContentFilterRequest
      * Limits the content document result set to specific ContentRights the user has
      *
      * @param list<string>|null $rightsFilter
-     *
-     * @return self
      */
     public function setRightsFilter(?array $rightsFilter): self
     {

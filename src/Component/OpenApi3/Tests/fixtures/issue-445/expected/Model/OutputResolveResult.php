@@ -50,8 +50,6 @@ class OutputResolveResult
     }
     /**
      * ID of output.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -68,8 +66,6 @@ class OutputResolveResult
     }
     /**
      * ID of output format.
-     *
-     * @return self
      */
     public function setOutputFormatId(string $outputFormatId): self
     {
@@ -86,8 +82,6 @@ class OutputResolveResult
     }
     /**
      * ID of content.
-     *
-     * @return self
      */
     public function setContentId(string $contentId): self
     {
@@ -104,8 +98,6 @@ class OutputResolveResult
     }
     /**
      * Rendering state of output.
-     *
-     * @return self
      */
     public function setRenderingState(mixed $renderingState): self
     {
@@ -122,8 +114,6 @@ class OutputResolveResult
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
-     * @return self
      */
     public function setDynamicRendering(bool $dynamicRendering): self
     {
@@ -140,8 +130,6 @@ class OutputResolveResult
     }
     /**
      * Size of file, if already known
-     *
-     * @return self
      */
     public function setFileSize(?int $fileSize): self
     {

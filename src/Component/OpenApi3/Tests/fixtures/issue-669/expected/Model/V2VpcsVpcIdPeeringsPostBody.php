@@ -37,8 +37,6 @@ class V2VpcsVpcIdPeeringsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class V2VpcsVpcIdPeeringsPostBody extends \ArrayObject
     }
     /**
      * The ID of the VPC to peer with.
-     *
-     * @return self
      */
     public function setVpcId(string $vpcId): self
     {

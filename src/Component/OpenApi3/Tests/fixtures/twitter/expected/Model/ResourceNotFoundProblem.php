@@ -58,8 +58,6 @@ class ResourceNotFoundProblem extends \ArrayObject
     }
     /**
      * Value will match the schema of the field.
-     *
-     * @return self
      */
     public function setValue(mixed $value): self
     {

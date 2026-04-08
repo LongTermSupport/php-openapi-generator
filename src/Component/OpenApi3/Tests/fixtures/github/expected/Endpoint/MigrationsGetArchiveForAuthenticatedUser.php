@@ -64,7 +64,6 @@ class MigrationsGetArchiveForAuthenticatedUser extends \LongTermSupport\OpenApiG
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsGetArchiveForAuthenticatedUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsGetArchiveForAuthenticatedUserUnauthorizedException
      */

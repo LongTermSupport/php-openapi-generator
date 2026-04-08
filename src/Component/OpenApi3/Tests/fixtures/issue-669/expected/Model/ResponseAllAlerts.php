@@ -35,8 +35,6 @@ class ResponseAllAlerts extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $alerts
-     *
-     * @return self
      */
     public function setAlerts(array $alerts): self
     {

@@ -36,8 +36,6 @@ class ShareContent
     }
     /**
      * Content ID to share.
-     *
-     * @return self
      */
     public function setContentId(string $contentId): self
     {
@@ -58,8 +56,6 @@ class ShareContent
      * List of output formats for this content to share. If not specified outer OutputAccess is used.
      *
      * @param list<string>|null $outputFormatIds
-     *
-     * @return self
      */
     public function setOutputFormatIds(?array $outputFormatIds): self
     {

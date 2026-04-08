@@ -45,8 +45,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The maximum number of results returned per page.
-     *
-     * @return self
      */
     public function setSize(float $size): self
     {
@@ -63,8 +61,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the previous page, null if there is no previous page available.
-     *
-     * @return self
      */
     public function setPrev(float $prev): self
     {
@@ -81,8 +77,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the next page, null if there is no next page available.
-     *
-     * @return self
      */
     public function setNext(float $next): self
     {
@@ -99,8 +93,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the last page.
-     *
-     * @return self
      */
     public function setLast(float $last): self
     {

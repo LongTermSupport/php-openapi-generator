@@ -56,8 +56,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
-     * @return self
      */
     public function setColorProfile(mixed $colorProfile): self
     {
@@ -74,8 +72,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
-     * @return self
      */
     public function setColorTransformationIntent(mixed $colorTransformationIntent): self
     {
@@ -92,8 +88,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
-     * @return self
      */
     public function setHorizontalResolution(?float $horizontalResolution): self
     {
@@ -110,8 +104,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
-     * @return self
      */
     public function setVerticalResolution(?float $verticalResolution): self
     {
@@ -128,8 +120,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Copy clipping paths from input.
-     *
-     * @return self
      */
     public function setKeepClippingPath(bool $keepClippingPath): self
     {
@@ -146,8 +136,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
-     * @return self
      */
     public function setResizeAction(mixed $resizeAction): self
     {
@@ -168,8 +156,6 @@ class ImageFormatBase extends FormatBase
      * A collection of actions to be applied during rendering.
      *
      * @param list<ImageActionBase>|null $actions
-     *
-     * @return self
      */
     public function setActions(?array $actions): self
     {

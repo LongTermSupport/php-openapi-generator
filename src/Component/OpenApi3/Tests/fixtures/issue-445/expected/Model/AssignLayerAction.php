@@ -36,8 +36,6 @@ class AssignLayerAction extends BusinessRuleAction
     }
     /**
      * The ID of the layer.
-     *
-     * @return self
      */
     public function setLayerId(?string $layerId): self
     {
@@ -58,8 +56,6 @@ class AssignLayerAction extends BusinessRuleAction
      * An object containing default values (used for example to populate required fields).
      *
      * @param array<string, mixed>|null $defaultValues
-     *
-     * @return self
      */
     public function setDefaultValues(?array $defaultValues): self
     {

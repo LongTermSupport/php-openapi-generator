@@ -30,8 +30,6 @@ class OutputDataAudio extends OutputDataBase
     }
     /**
      * Duration of the audio stream in seconds.
-     *
-     * @return self
      */
     public function setDurationInSeconds(?float $durationInSeconds): self
     {

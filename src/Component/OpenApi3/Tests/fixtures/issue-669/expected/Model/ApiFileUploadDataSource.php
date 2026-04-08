@@ -41,8 +41,6 @@ class ApiFileUploadDataSource extends \ArrayObject
     }
     /**
      * The original file name
-     *
-     * @return self
      */
     public function setOriginalFileName(string $originalFileName): self
     {
@@ -59,8 +57,6 @@ class ApiFileUploadDataSource extends \ArrayObject
     }
     /**
      * The size of the file in bytes
-     *
-     * @return self
      */
     public function setSizeInBytes(string $sizeInBytes): self
     {
@@ -77,8 +73,6 @@ class ApiFileUploadDataSource extends \ArrayObject
     }
     /**
      * The object key the file was stored as
-     *
-     * @return self
      */
     public function setStoredObjectKey(string $storedObjectKey): self
     {

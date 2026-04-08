@@ -87,8 +87,6 @@ class CustomerInfo
     }
     /**
      * The customer ID.
-     *
-     * @return self
      */
     public function setCustomerId(string $customerId): self
     {
@@ -105,8 +103,6 @@ class CustomerInfo
     }
     /**
      * The name of the customer instance.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -123,8 +119,6 @@ class CustomerInfo
     }
     /**
      * Alias of the customer instance.
-     *
-     * @return self
      */
     public function setCustomerAlias(string $customerAlias): self
     {
@@ -141,8 +135,6 @@ class CustomerInfo
     }
     /**
      * The base URL of identity server to authenticate the user using OpenID Connect.
-     *
-     * @return self
      */
     public function setIdentityServerUrl(string $identityServerUrl): self
     {
@@ -159,8 +151,6 @@ class CustomerInfo
     }
     /**
      * The base API URL.
-     *
-     * @return self
      */
     public function setApiUrl(string $apiUrl): self
     {
@@ -177,8 +167,6 @@ class CustomerInfo
     }
     /**
      * Information if the query details can be enabled when searching. For debug purposes only.
-     *
-     * @return self
      */
     public function setEnableQueryDetails(bool $enableQueryDetails): self
     {
@@ -195,8 +183,6 @@ class CustomerInfo
     }
     /**
      * Configured languages of customer instance (system, metadata, default).
-     *
-     * @return self
      */
     public function setLanguageConfiguration(mixed $languageConfiguration): self
     {
@@ -217,8 +203,6 @@ class CustomerInfo
      * Languages including translations for the configured system and metadata languages.
      *
      * @param list<Language> $languages
-     *
-     * @return self
      */
     public function setLanguages(array $languages): self
     {
@@ -239,8 +223,6 @@ class CustomerInfo
      * Configured rendering outputs including translations for the customer instance.
      *
      * @param list<OutputFormatInfo> $outputFormats
-     *
-     * @return self
      */
     public function setOutputFormats(array $outputFormats): self
     {
@@ -261,8 +243,6 @@ class CustomerInfo
      * Boost levels that can be applied to a metadata field to boost the the significance of the field in a search operation.
      *
      * @param list<float> $boostValues
-     *
-     * @return self
      */
     public function setBoostValues(array $boostValues): self
     {
@@ -283,8 +263,6 @@ class CustomerInfo
      * Apps registered for this customer
      *
      * @param list<CustomerApp>|null $apps
-     *
-     * @return self
      */
     public function setApps(?array $apps): self
     {
@@ -311,8 +289,6 @@ class CustomerInfo
     }
     /**
      * Url to access Frontend service
-     *
-     * @return self
      */
     public function setBaseUrl(string $baseUrl): self
     {
@@ -329,8 +305,6 @@ class CustomerInfo
     }
     /**
      * Base bath to access logos of customer (including trailing slash), available images: name, full, small, background
-     *
-     * @return self
      */
     public function setLogosUrl(string $logosUrl): self
     {

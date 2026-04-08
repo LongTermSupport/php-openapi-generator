@@ -43,8 +43,6 @@ class ReposOwnerRepoGitTreesPostBody extends \ArrayObject
      * Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure.
      *
      * @param list<ReposOwnerRepoGitTreesPostBodyTreeItem> $tree
-     *
-     * @return self
      */
     public function setTree(array $tree): self
     {
@@ -61,8 +59,6 @@ class ReposOwnerRepoGitTreesPostBody extends \ArrayObject
     }
     /**
      * The SHA1 of the tree you want to update with new data. If you don't set this, the commit will be created on top of everything; however, it will only contain your change, the rest of your files will show up as deleted.
-     *
-     * @return self
      */
     public function setBaseTree(string $baseTree): self
     {

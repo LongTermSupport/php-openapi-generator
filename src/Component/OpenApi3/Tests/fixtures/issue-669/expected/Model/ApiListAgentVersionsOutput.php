@@ -47,8 +47,6 @@ class ApiListAgentVersionsOutput extends \ArrayObject
      * Agents
      *
      * @param list<ApiAgentVersion> $agentVersions
-     *
-     * @return self
      */
     public function setAgentVersions(array $agentVersions): self
     {
@@ -65,8 +63,6 @@ class ApiListAgentVersionsOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -83,8 +79,6 @@ class ApiListAgentVersionsOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {

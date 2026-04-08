@@ -33,8 +33,6 @@ class LinkToNextPage extends \ArrayObject
     }
     /**
      * URI of the next page of the results.
-     *
-     * @return self
      */
     public function setNext(string $next): self
     {

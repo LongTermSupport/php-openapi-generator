@@ -46,8 +46,6 @@ class FloatingIp extends \ArrayObject
     }
     /**
      * The public IP address of the floating IP. It also serves as its identifier.
-     *
-     * @return self
      */
     public function setIp(string $ip): self
     {
@@ -74,8 +72,6 @@ class FloatingIp extends \ArrayObject
     }
     /**
      * The Droplet that the floating IP has been assigned to. When you query a floating IP, if it is assigned to a Droplet, the entire Droplet object will be returned. If it is not assigned, the value will be null. <br><br>Requires `droplet:read` scope.
-     *
-     * @return self
      */
     public function setDroplet(mixed $droplet): self
     {
@@ -92,8 +88,6 @@ class FloatingIp extends \ArrayObject
     }
     /**
      * A boolean value indicating whether or not the floating IP has pending actions preventing new ones from being submitted.
-     *
-     * @return self
      */
     public function setLocked(bool $locked): self
     {
@@ -110,8 +104,6 @@ class FloatingIp extends \ArrayObject
     }
     /**
      * The UUID of the project to which the reserved IP currently belongs.<br><br>Requires `project:read` scope.
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {

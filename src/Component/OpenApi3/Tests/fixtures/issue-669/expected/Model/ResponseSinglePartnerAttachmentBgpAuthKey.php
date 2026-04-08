@@ -33,8 +33,6 @@ class ResponseSinglePartnerAttachmentBgpAuthKey extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $bgpAuthKey
-     *
-     * @return self
      */
     public function setBgpAuthKey(array $bgpAuthKey): self
     {

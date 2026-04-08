@@ -88,8 +88,6 @@ class Account extends \ArrayObject
     }
     /**
      * @param Country|list<Country>|null $nationality
-     *
-     * @return self
      */
     public function setNationality(Country|array|null $nationality): self
     {

@@ -33,8 +33,6 @@ class HashtagFields extends \ArrayObject
     }
     /**
      * The text of the Hashtag
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {

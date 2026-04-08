@@ -30,8 +30,6 @@ class SchemaUpdateResult
     }
     /**
      * The details of the updated schema.
-     *
-     * @return self
      */
     public function setSchema(mixed $schema): self
     {

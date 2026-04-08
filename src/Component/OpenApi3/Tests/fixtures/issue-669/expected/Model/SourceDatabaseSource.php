@@ -49,8 +49,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
-     * @return self
      */
     public function setHost(string $host): self
     {
@@ -67,8 +65,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The port on which the database cluster is listening.
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {
@@ -85,8 +81,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The name of the default database.
-     *
-     * @return self
      */
     public function setDbname(string $dbname): self
     {
@@ -103,8 +97,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The default user for the database.
-     *
-     * @return self
      */
     public function setUsername(string $username): self
     {
@@ -121,8 +113,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The randomly generated password for the default user.
-     *
-     * @return self
      */
     public function setPassword(string $password): self
     {

@@ -57,8 +57,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the snapshot.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -75,8 +73,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The human-readable name of the snapshot.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -93,8 +89,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The size of the snapshot in GiB.
-     *
-     * @return self
      */
     public function setSizeGib(int $sizeGib): self
     {
@@ -111,8 +105,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug where the snapshot is located.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -129,8 +121,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The current status of the snapshot.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -147,8 +137,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The timestamp when the snapshot was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -165,8 +153,6 @@ class NfsSnapshotResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the share from which this snapshot was created.
-     *
-     * @return self
      */
     public function setShareId(string $shareId): self
     {

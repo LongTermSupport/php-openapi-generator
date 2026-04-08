@@ -33,8 +33,6 @@ class RdmaSharedDevPlugin extends \ArrayObject
     }
     /**
      * Indicates whether the RDMA shared device plugin is enabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

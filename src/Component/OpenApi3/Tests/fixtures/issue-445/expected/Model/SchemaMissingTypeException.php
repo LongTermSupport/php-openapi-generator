@@ -143,8 +143,6 @@ class SchemaMissingTypeException extends \ArrayObject
     }
     /**
      * @param list<string>|null $expectedSchemaTypes
-     *
-     * @return self
      */
     public function setExpectedSchemaTypes(?array $expectedSchemaTypes): self
     {

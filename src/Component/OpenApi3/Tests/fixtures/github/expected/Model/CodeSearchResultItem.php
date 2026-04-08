@@ -111,8 +111,6 @@ class CodeSearchResultItem extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {
@@ -169,8 +167,6 @@ class CodeSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<string> $lineNumbers
-     *
-     * @return self
      */
     public function setLineNumbers(array $lineNumbers): self
     {
@@ -187,8 +183,6 @@ class CodeSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItem> $textMatches
-     *
-     * @return self
      */
     public function setTextMatches(array $textMatches): self
     {

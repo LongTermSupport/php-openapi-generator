@@ -44,8 +44,6 @@ class Model extends \ArrayObject
     }
     /**
      * @param list<mixed>|null $bar
-     *
-     * @return self
      */
     public function setBar(?array $bar): self
     {

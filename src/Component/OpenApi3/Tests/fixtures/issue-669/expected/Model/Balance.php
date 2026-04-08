@@ -45,8 +45,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Balance as of the `generated_at` time.  This value includes the `account_balance` and `month_to_date_usage`.
-     *
-     * @return self
      */
     public function setMonthToDateBalance(string $monthToDateBalance): self
     {
@@ -63,8 +61,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Current balance of the customer's most recent billing activity. Does not reflect `month_to_date_usage`.
-     *
-     * @return self
      */
     public function setAccountBalance(string $accountBalance): self
     {
@@ -81,8 +77,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Amount used in the current billing period as of the `generated_at` time.
-     *
-     * @return self
      */
     public function setMonthToDateUsage(string $monthToDateUsage): self
     {
@@ -99,8 +93,6 @@ class Balance extends \ArrayObject
     }
     /**
      * The time at which balances were most recently generated.
-     *
-     * @return self
      */
     public function setGeneratedAt(\DateTime $generatedAt): self
     {

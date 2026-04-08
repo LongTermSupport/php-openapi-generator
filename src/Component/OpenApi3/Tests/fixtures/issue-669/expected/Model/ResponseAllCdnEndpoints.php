@@ -35,8 +35,6 @@ class ResponseAllCdnEndpoints extends \ArrayObject
     }
     /**
      * @param list<CdnEndpoint> $endpoints
-     *
-     * @return self
      */
     public function setEndpoints(array $endpoints): self
     {

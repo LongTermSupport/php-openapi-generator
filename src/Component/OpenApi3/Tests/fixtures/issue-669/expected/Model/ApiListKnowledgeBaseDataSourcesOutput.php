@@ -47,8 +47,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
      * The data sources
      *
      * @param list<ApiKnowledgeBaseDataSource> $knowledgeBaseDataSources
-     *
-     * @return self
      */
     public function setKnowledgeBaseDataSources(array $knowledgeBaseDataSources): self
     {
@@ -65,8 +63,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -83,8 +79,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {

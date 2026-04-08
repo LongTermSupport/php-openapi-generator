@@ -37,8 +37,6 @@ class AppServiceSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between selecting a container instance for termination and issuing the TERM signal. Selecting a container instance for termination begins an asynchronous drain of new requests on upstream load-balancers. (Default 15)
-     *
-     * @return self
      */
     public function setDrainSeconds(int $drainSeconds): self
     {
@@ -55,8 +53,6 @@ class AppServiceSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between sending a TERM signal to a container and issuing a KILL which causes immediate shutdown. (Default 120)
-     *
-     * @return self
      */
     public function setGracePeriodSeconds(int $gracePeriodSeconds): self
     {

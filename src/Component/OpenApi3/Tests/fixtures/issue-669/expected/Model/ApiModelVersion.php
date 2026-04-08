@@ -41,8 +41,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Major version number
-     *
-     * @return self
      */
     public function setMajor(int $major): self
     {
@@ -59,8 +57,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Minor version number
-     *
-     * @return self
      */
     public function setMinor(int $minor): self
     {
@@ -77,8 +73,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Patch version number
-     *
-     * @return self
      */
     public function setPatch(int $patch): self
     {

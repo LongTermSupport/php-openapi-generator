@@ -78,8 +78,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional Anthropic API key ID to use with Anthropic models
-     *
-     * @return self
      */
     public function setAnthropicKeyUuid(string $anthropicKeyUuid): self
     {
@@ -96,8 +94,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * A text description of the agent, not used in inference
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -114,8 +110,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
-     * @return self
      */
     public function setInstruction(string $instruction): self
     {
@@ -136,8 +130,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
      * Ids of the knowledge base(s) to attach to the agent
      *
      * @param list<string> $knowledgeBaseUuid
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(array $knowledgeBaseUuid): self
     {
@@ -164,8 +156,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
-     * @return self
      */
     public function setModelUuid(string $modelUuid): self
     {
@@ -182,8 +172,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -200,8 +188,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional OpenAI API key ID to use with OpenAI models
-     *
-     * @return self
      */
     public function setOpenAiKeyUuid(string $openAiKeyUuid): self
     {
@@ -218,8 +204,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -236,8 +220,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * The DigitalOcean region to deploy your agent in
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -258,8 +240,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
      * Agent tag to organize related resources
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -276,8 +256,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the workspace
-     *
-     * @return self
      */
     public function setWorkspaceUuid(string $workspaceUuid): self
     {

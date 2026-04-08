@@ -30,8 +30,6 @@ class FieldDictionary extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {

@@ -35,8 +35,6 @@ class ResponseRepositoryTags extends \ArrayObject
     }
     /**
      * @param list<RepositoryTag> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {

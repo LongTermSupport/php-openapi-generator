@@ -34,8 +34,6 @@ class AlphaHandlingAction extends ImageActionBase
     }
     /**
      * Specifies the kind of alpha handling to be applied.
-     *
-     * @return self
      */
     public function setAlphaHandling(mixed $alphaHandling): self
     {
@@ -52,8 +50,6 @@ class AlphaHandlingAction extends ImageActionBase
     }
     /**
      * Specifies potentially needed color information for alpha handling. Must be given in RGB hex format (8 bit per channel).
-     *
-     * @return self
      */
     public function setReplacementRgbColorHexCode(?string $replacementRgbColorHexCode): self
     {

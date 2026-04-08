@@ -84,8 +84,6 @@ class ChannelCreateRequest
     }
     /**
      * ID of the channel.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -106,8 +104,6 @@ class ChannelCreateRequest
      * Default sort order specified for the channel to sort the results of a content search.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -124,8 +120,6 @@ class ChannelCreateRequest
     }
     /**
      * Order in which the channels should be displayed.
-     *
-     * @return self
      */
     public function setSortOrder(int $sortOrder): self
     {
@@ -146,8 +140,6 @@ class ChannelCreateRequest
      * Fields to be used for sorting in content browser when displaying the channel. The information is only set and consumed by the client, not by the server.
      *
      * @param list<SortField> $sortFields
-     *
-     * @return self
      */
     public function setSortFields(array $sortFields): self
     {
@@ -164,8 +156,6 @@ class ChannelCreateRequest
     }
     /**
      * Language specific channel names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -182,8 +172,6 @@ class ChannelCreateRequest
     }
     /**
      * Language specific names.
-     *
-     * @return self
      */
     public function setSearchIndexId(?string $searchIndexId): self
     {
@@ -204,8 +192,6 @@ class ChannelCreateRequest
      * User roles granted access to the channel.
      *
      * @param list<string>|null $grantedUserRoleIds
-     *
-     * @return self
      */
     public function setGrantedUserRoleIds(?array $grantedUserRoleIds): self
     {
@@ -226,8 +212,6 @@ class ChannelCreateRequest
      * An optional list of aggregators. These aggregations are added by default on each aggregation requests.
      *
      * @param list<AggregatorBase>|null $aggregations
-     *
-     * @return self
      */
     public function setAggregations(?array $aggregations): self
     {
@@ -244,8 +228,6 @@ class ChannelCreateRequest
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -266,8 +248,6 @@ class ChannelCreateRequest
      * An Optional list of fields. These fields extend the list of simple search fields outside the bounds of any schema field configuration.
      *
      * @param list<string>|null $extendedSimpleSearchFields
-     *
-     * @return self
      */
     public function setExtendedSimpleSearchFields(?array $extendedSimpleSearchFields): self
     {
@@ -284,8 +264,6 @@ class ChannelCreateRequest
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
-     * @return self
      */
     public function setMissingResultsDisplayPatterns(mixed $missingResultsDisplayPatterns): self
     {
@@ -302,8 +280,6 @@ class ChannelCreateRequest
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
-     * @return self
      */
     public function setViewForAll(bool $viewForAll): self
     {

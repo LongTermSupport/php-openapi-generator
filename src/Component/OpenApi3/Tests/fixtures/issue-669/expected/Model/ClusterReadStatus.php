@@ -37,8 +37,6 @@ class ClusterReadStatus extends \ArrayObject
     }
     /**
      * A string indicating the current status of the cluster.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -55,8 +53,6 @@ class ClusterReadStatus extends \ArrayObject
     }
     /**
      * An optional message providing additional information about the current cluster state.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {

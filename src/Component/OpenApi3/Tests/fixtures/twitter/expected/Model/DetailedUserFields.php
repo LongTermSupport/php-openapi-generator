@@ -33,8 +33,6 @@ class DetailedUserFields extends \ArrayObject
     }
     /**
      * A list of metrics for this user
-     *
-     * @return self
      */
     public function setStats(DetailedUserFieldsStats $stats): self
     {

@@ -38,8 +38,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
-     * @return self
      */
     public function setFieldPath(?string $fieldPath): self
     {
@@ -56,8 +54,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * Regular expression
-     *
-     * @return self
      */
     public function setRegex(?string $regex): self
     {
@@ -74,8 +70,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * Optional variable name to store the matched regex groups in
-     *
-     * @return self
      */
     public function setStoreIn(?string $storeIn): self
     {

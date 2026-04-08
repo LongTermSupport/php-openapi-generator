@@ -34,8 +34,6 @@ class NestedFilter extends FilterBase
     }
     /**
      * The path pointing to the nested document (i.e. personLayer.nestedAddress).
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -52,8 +50,6 @@ class NestedFilter extends FilterBase
     }
     /**
      * The filter to be applied on the nested documents.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {

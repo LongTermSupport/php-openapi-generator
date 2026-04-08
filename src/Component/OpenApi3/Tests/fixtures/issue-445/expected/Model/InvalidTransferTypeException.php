@@ -132,8 +132,6 @@ class InvalidTransferTypeException extends \ArrayObject
     }
     /**
      * Type of the transfer
-     *
-     * @return self
      */
     public function setTransferType(string $transferType): self
     {

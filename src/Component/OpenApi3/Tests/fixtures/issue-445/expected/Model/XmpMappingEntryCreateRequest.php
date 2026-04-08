@@ -59,8 +59,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Direction of the mapping.
-     *
-     * @return self
      */
     public function setDirection(mixed $direction): self
     {
@@ -77,8 +75,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Priority of the mapping.
-     *
-     * @return self
      */
     public function setPriority(int $priority): self
     {
@@ -95,8 +91,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
-     * @return self
      */
     public function setStopProcessing(bool $stopProcessing): self
     {
@@ -113,8 +107,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Path to source property in XMP.
-     *
-     * @return self
      */
     public function setXmpPath(string $xmpPath): self
     {
@@ -131,8 +123,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Path to target property in metadata.
-     *
-     * @return self
      */
     public function setMetadataPath(string $metadataPath): self
     {
@@ -149,8 +139,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Optional additional configuration for the mapping.
-     *
-     * @return self
      */
     public function setConfiguration(mixed $configuration): self
     {
@@ -171,8 +159,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

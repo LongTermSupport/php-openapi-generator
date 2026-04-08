@@ -33,8 +33,6 @@ class ApiListEvaluationTestCasesByWorkspaceOutput extends \ArrayObject
     }
     /**
      * @param list<ApiEvaluationTestCase> $evaluationTestCases
-     *
-     * @return self
      */
     public function setEvaluationTestCases(array $evaluationTestCases): self
     {

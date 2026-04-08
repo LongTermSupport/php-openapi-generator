@@ -41,8 +41,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * The current page
-     *
-     * @return self
      */
     public function setPage(int $page): self
     {
@@ -59,8 +57,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * Total number of pages
-     *
-     * @return self
      */
     public function setPages(int $pages): self
     {
@@ -77,8 +73,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * Total amount of items over all pages
-     *
-     * @return self
      */
     public function setTotal(int $total): self
     {

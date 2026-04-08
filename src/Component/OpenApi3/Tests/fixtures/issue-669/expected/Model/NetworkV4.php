@@ -49,8 +49,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The IP address of the IPv4 network interface.
-     *
-     * @return self
      */
     public function setIpAddress(string $ipAddress): self
     {
@@ -67,8 +65,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The netmask of the IPv4 network interface.
-     *
-     * @return self
      */
     public function setNetmask(string $netmask): self
     {
@@ -93,8 +89,6 @@ class NetworkV4 extends \ArrayObject
      * For private interfaces, a gateway is not provided. This is denoted by
      * returning `nil` as its value.
      * 
-     *
-     * @return self
      */
     public function setGateway(string $gateway): self
     {
@@ -111,8 +105,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The type of the IPv4 network interface.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

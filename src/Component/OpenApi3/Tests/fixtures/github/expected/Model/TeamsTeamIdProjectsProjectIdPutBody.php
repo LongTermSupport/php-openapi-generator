@@ -45,8 +45,6 @@ class TeamsTeamIdProjectsProjectIdPutBody extends \ArrayObject
      * \* `write` - team members can read and write, but not administer this project.
      * \* `admin` - team members can read, write and administer this project.
      * Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

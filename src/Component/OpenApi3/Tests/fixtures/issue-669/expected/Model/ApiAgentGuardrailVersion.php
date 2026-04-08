@@ -45,8 +45,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Whether the guardrail is deleted
-     *
-     * @return self
      */
     public function setIsDeleted(bool $isDeleted): self
     {
@@ -63,8 +61,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -81,8 +77,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail Priority
-     *
-     * @return self
      */
     public function setPriority(int $priority): self
     {
@@ -99,8 +93,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail UUID
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

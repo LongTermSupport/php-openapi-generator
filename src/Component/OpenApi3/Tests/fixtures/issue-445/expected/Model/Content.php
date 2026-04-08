@@ -73,8 +73,6 @@ class Content
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -91,8 +89,6 @@ class Content
     }
     /**
      * The id of the schema with schema type content.
-     *
-     * @return self
      */
     public function setContentSchemaId(string $contentSchemaId): self
     {
@@ -109,8 +105,6 @@ class Content
     }
     /**
      * The content type of this content. All except Virtual are binary files.
-     *
-     * @return self
      */
     public function setContentType(mixed $contentType): self
     {
@@ -131,8 +125,6 @@ class Content
      * An optional id list of schemas with schema type layer.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -153,8 +145,6 @@ class Content
      * Contains display values of the specified language, rendered according to the content schema's display pattern configuration.
      *
      * @param array<string, string> $displayValues
-     *
-     * @return self
      */
     public function setDisplayValues(array $displayValues): self
     {
@@ -185,8 +175,6 @@ class Content
      * All the ids of the broken references (tagboxes)
      *
      * @param list<string>|null $brokenReferenceIds
-     *
-     * @return self
      */
     public function setBrokenReferenceIds(?array $brokenReferenceIds): self
     {
@@ -207,8 +195,6 @@ class Content
      * All the ids of the broken indirect references (tagbox that has a property that reference a broken tagbox)
      *
      * @param list<string>|null $brokenIndirectReferenceIds
-     *
-     * @return self
      */
     public function setBrokenIndirectReferenceIds(?array $brokenIndirectReferenceIds): self
     {
@@ -229,8 +215,6 @@ class Content
      * All the target ids of the broken relations
      *
      * @param list<string>|null $brokenRelationTargetIds
-     *
-     * @return self
      */
     public function setBrokenRelationTargetIds(?array $brokenRelationTargetIds): self
     {
@@ -247,8 +231,6 @@ class Content
     }
     /**
      * Life cycle of content
-     *
-     * @return self
      */
     public function setLifeCycle(mixed $lifeCycle): self
     {

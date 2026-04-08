@@ -110,8 +110,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -132,8 +130,6 @@ class ListItemSearchRequest extends \ArrayObject
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -150,8 +146,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -182,8 +176,6 @@ class ListItemSearchRequest extends \ArrayObject
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -200,8 +192,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
-     * @return self
      */
     public function setIncludeAllSchemaChildren(bool $includeAllSchemaChildren): self
     {
@@ -218,8 +208,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have or not have broken references. By default it includes both.
-     *
-     * @return self
      */
     public function setBrokenDependenciesFilter(mixed $brokenDependenciesFilter): self
     {
@@ -240,8 +228,6 @@ class ListItemSearchRequest extends \ArrayObject
      * Limits the search among the list items of the provided schemas.
      *
      * @param list<string>|null $schemaIds
-     *
-     * @return self
      */
     public function setSchemaIds(?array $schemaIds): self
     {
@@ -264,8 +250,6 @@ class ListItemSearchRequest extends \ArrayObject
      * If not specified, all metadata languages defined in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -282,8 +266,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have the specified life cycle state. Defaults to ActiveOnly.
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -304,8 +286,6 @@ class ListItemSearchRequest extends \ArrayObject
      * Fields and respective directions requested to sort the search results. Sorting on a not indexed field will throw an exception.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -322,8 +302,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * Limits the document count of the result set.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -340,8 +318,6 @@ class ListItemSearchRequest extends \ArrayObject
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -360,8 +336,6 @@ class ListItemSearchRequest extends \ArrayObject
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the ListItemSearchResult.
      * Warning! It severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -382,8 +356,6 @@ class ListItemSearchRequest extends \ArrayObject
      * List of enums that control which parts of the list item are resolved and returned.
      *
      * @param list<string>|null $resolveBehaviors
-     *
-     * @return self
      */
     public function setResolveBehaviors(?array $resolveBehaviors): self
     {
@@ -404,8 +376,6 @@ class ListItemSearchRequest extends \ArrayObject
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase>|null $aggregators
-     *
-     * @return self
      */
     public function setAggregators(?array $aggregators): self
     {

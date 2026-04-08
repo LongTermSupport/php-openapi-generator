@@ -36,8 +36,6 @@ class BulkResponse
      * Rows of the bulk response.
      *
      * @param list<BulkResponseRow>|null $rows
-     *
-     * @return self
      */
     public function setRows(?array $rows): self
     {

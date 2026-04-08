@@ -33,8 +33,6 @@ class AppsRestartRequest extends \ArrayObject
     }
     /**
      * @param list<string> $components
-     *
-     * @return self
      */
     public function setComponents(array $components): self
     {

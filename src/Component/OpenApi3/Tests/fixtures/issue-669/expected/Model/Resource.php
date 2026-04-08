@@ -45,8 +45,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
-     * @return self
      */
     public function setUrn(string $urn): self
     {
@@ -63,8 +61,6 @@ class Resource extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
-     * @return self
      */
     public function setAssignedAt(\DateTime $assignedAt): self
     {
@@ -81,8 +77,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The links object contains the `self` object, which contains the resource relationship.
-     *
-     * @return self
      */
     public function setLinks(ResourceLinks $links): self
     {
@@ -99,8 +93,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The status of assigning and fetching the resources.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {

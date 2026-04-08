@@ -41,8 +41,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint.
-     *
-     * @return self
      */
     public function setSubscriptionTierSlug(string $subscriptionTierSlug): self
     {
@@ -77,8 +73,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * Slug of the region where registry data is stored. When not provided, a region will be selected.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {

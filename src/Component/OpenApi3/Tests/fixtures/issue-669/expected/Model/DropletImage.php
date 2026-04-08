@@ -91,8 +91,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A unique number that can be used to identify and reference a specific image.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -109,8 +107,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -127,8 +123,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * Describes the kind of image. It may be one of `base`, `snapshot`, `backup`, `custom`, or `admin`. Respectively, this specifies whether an image is a DigitalOcean base OS image, user-generated Droplet snapshot, automatically created Droplet backup, user-provided virtual machine image, or an image used for DigitalOcean managed resources (e.g. DOKS worker nodes).
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -145,8 +139,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
-     * @return self
      */
     public function setDistribution(string $distribution): self
     {
@@ -163,8 +155,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A uniquely identifying string that is associated with each of the DigitalOcean-provided public images. These can be used to reference a public image as an alternative to the numeric id.
-     *
-     * @return self
      */
     public function setSlug(?string $slug): self
     {
@@ -181,8 +171,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * This is a boolean value that indicates whether the image in question is public or not. An image that is public is available to all accounts. A non-public image is only accessible from your account.
-     *
-     * @return self
      */
     public function setPublic(bool $public): self
     {
@@ -203,8 +191,6 @@ class DropletImage extends \ArrayObject
      * This attribute is an array of the regions that the image is available in. The regions are represented by their identifying slug values.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -221,8 +207,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the image was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -239,8 +223,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The minimum disk size in GB required for a Droplet to use this image.
-     *
-     * @return self
      */
     public function setMinDiskSize(?int $minDiskSize): self
     {
@@ -257,8 +239,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The size of the image in gigabytes.
-     *
-     * @return self
      */
     public function setSizeGigabytes(?float $sizeGigabytes): self
     {
@@ -275,8 +255,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -297,8 +275,6 @@ class DropletImage extends \ArrayObject
      * A flat array of tag names as strings to be applied to the resource. Tag names may be for either existing or new tags. <br><br>Requires `tag:create` scope.
      *
      * @param list<string>|null $tags
-     *
-     * @return self
      */
     public function setTags(?array $tags): self
     {
@@ -317,8 +293,6 @@ class DropletImage extends \ArrayObject
     /**
      * A status string indicating the state of a custom image. This may be `NEW`,
      *  `available`, `pending`, `deleted`, or `retired`.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -337,8 +311,6 @@ class DropletImage extends \ArrayObject
     /**
      * A string containing information about errors that may occur when importing
      *  a custom image.
-     *
-     * @return self
      */
     public function setErrorMessage(string $errorMessage): self
     {

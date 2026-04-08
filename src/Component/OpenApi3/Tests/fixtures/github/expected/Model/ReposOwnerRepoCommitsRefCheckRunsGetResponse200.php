@@ -44,8 +44,6 @@ class ReposOwnerRepoCommitsRefCheckRunsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<CheckRun> $checkRuns
-     *
-     * @return self
      */
     public function setCheckRuns(array $checkRuns): self
     {

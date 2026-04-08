@@ -38,8 +38,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Execution scope.
-     *
-     * @return self
      */
     public function setExecutionScope(mixed $executionScope): self
     {
@@ -56,8 +54,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Document type.
-     *
-     * @return self
      */
     public function setDocumentType(mixed $documentType): self
     {
@@ -74,8 +70,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Action performed.
-     *
-     * @return self
      */
     public function setAction(mixed $action): self
     {

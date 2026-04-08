@@ -62,8 +62,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's API hostname. Each function in a namespace is provided an endpoint at the namespace's hostname.
-     *
-     * @return self
      */
     public function setApiHost(string $apiHost): self
     {
@@ -80,8 +78,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
-     * @return self
      */
     public function setNamespace(string $namespace): self
     {
@@ -98,8 +94,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
-     * @return self
      */
     public function setCreatedAt(string $createdAt): self
     {
@@ -116,8 +110,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
-     * @return self
      */
     public function setUpdatedAt(string $updatedAt): self
     {
@@ -134,8 +126,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's unique name.
-     *
-     * @return self
      */
     public function setLabel(string $label): self
     {
@@ -152,8 +142,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's datacenter region.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -170,8 +158,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's Universally Unique Identifier.
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -190,8 +176,6 @@ class NamespaceInfo extends \ArrayObject
     /**
      * A random alpha numeric string. This key is used in conjunction with the namespace's UUID to authenticate
      * a user to use the namespace via `doctl`, DigitalOcean's official CLI.
-     *
-     * @return self
      */
     public function setKey(string $key): self
     {

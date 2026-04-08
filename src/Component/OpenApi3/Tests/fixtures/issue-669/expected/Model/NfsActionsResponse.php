@@ -33,8 +33,6 @@ class NfsActionsResponse extends \ArrayObject
     }
     /**
      * The action that was submitted.
-     *
-     * @return self
      */
     public function setAction(NfsActionsResponseAction $action): self
     {

@@ -69,8 +69,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The ISO/Alpha 2 format country code for the user's country.
-     *
-     * @return self
      */
     public function setCountryCode(string $countryCode): self
     {
@@ -87,8 +85,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the Global Monitoring user account was created.
-     *
-     * @return self
      */
     public function setCreatedDate(\DateTime $createdDate): self
     {
@@ -105,8 +101,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The unique identifier for the user's customer account, used across the Creditsafe product suite.
-     *
-     * @return self
      */
     public function setCsCustomerId(float $csCustomerId): self
     {
@@ -123,8 +117,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The unique identifier for the user's account, used across the Creditsafe product suite.
-     *
-     * @return self
      */
     public function setCsUserId(float $csUserId): self
     {
@@ -141,8 +133,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * If auto-tracker is enabled, any companies that you pull a credit report for are automatically added to the portfolio that you have selected as default.
-     *
-     * @return self
      */
     public function setIsAutoTracker(bool $isAutoTracker): self
     {
@@ -159,8 +149,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The language code for the user's preferred language.
-     *
-     * @return self
      */
     public function setLanguageCode(string $languageCode): self
     {
@@ -177,8 +165,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date the the user last accessed the Global Monitoring product.
-     *
-     * @return self
      */
     public function setLastAccessDate(\DateTime $lastAccessDate): self
     {
@@ -195,8 +181,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the user's details were last modified.
-     *
-     * @return self
      */
     public function setModifiedDate(\DateTime $modifiedDate): self
     {
@@ -213,8 +197,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the user's contract is currently set to expire. From this date onward, the user will be unable to access to Global Monitoring product.
-     *
-     * @return self
      */
     public function setContractEndDate(\DateTime $contractEndDate): self
     {
@@ -231,8 +213,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The internal identifier used to reference the user's account through the Global Monitoring product.
-     *
-     * @return self
      */
     public function setUserId(float $userId): self
     {

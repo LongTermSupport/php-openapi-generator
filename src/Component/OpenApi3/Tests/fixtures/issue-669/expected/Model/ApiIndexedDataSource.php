@@ -82,8 +82,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Timestamp when data source completed indexing
-     *
-     * @return self
      */
     public function setCompletedAt(\DateTime $completedAt): self
     {
@@ -100,8 +98,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Uuid of the indexed data source
-     *
-     * @return self
      */
     public function setDataSourceUuid(string $dataSourceUuid): self
     {
@@ -118,8 +114,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * A detailed error description
-     *
-     * @return self
      */
     public function setErrorDetails(string $errorDetails): self
     {
@@ -136,8 +130,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * A string code provinding a hint which part of the system experienced an error
-     *
-     * @return self
      */
     public function setErrorMsg(string $errorMsg): self
     {
@@ -154,8 +146,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total count of files that have failed
-     *
-     * @return self
      */
     public function setFailedItemCount(string $failedItemCount): self
     {
@@ -172,8 +162,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total count of files that have been indexed
-     *
-     * @return self
      */
     public function setIndexedFileCount(string $indexedFileCount): self
     {
@@ -190,8 +178,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total count of files that have been indexed
-     *
-     * @return self
      */
     public function setIndexedItemCount(string $indexedItemCount): self
     {
@@ -208,8 +194,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total count of files that have been removed
-     *
-     * @return self
      */
     public function setRemovedItemCount(string $removedItemCount): self
     {
@@ -226,8 +210,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total count of files that have been skipped
-     *
-     * @return self
      */
     public function setSkippedItemCount(string $skippedItemCount): self
     {
@@ -244,8 +226,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Timestamp when data source started indexing
-     *
-     * @return self
      */
     public function setStartedAt(\DateTime $startedAt): self
     {
@@ -272,8 +252,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total size of files in data source in bytes
-     *
-     * @return self
      */
     public function setTotalBytes(string $totalBytes): self
     {
@@ -290,8 +268,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total size of files in data source in bytes that have been indexed
-     *
-     * @return self
      */
     public function setTotalBytesIndexed(string $totalBytesIndexed): self
     {
@@ -308,8 +284,6 @@ class ApiIndexedDataSource extends \ArrayObject
     }
     /**
      * Total file count in the data source
-     *
-     * @return self
      */
     public function setTotalFileCount(string $totalFileCount): self
     {

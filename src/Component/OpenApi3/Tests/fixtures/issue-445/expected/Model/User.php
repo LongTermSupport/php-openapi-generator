@@ -46,8 +46,6 @@ class User
     }
     /**
      * User's Picturepark ID.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -64,8 +62,6 @@ class User
     }
     /**
      * User's first name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -82,8 +78,6 @@ class User
     }
     /**
      * User's last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -100,8 +94,6 @@ class User
     }
     /**
      * Email address of the user (doubles as username).
-     *
-     * @return self
      */
     public function setEmailAddress(string $emailAddress): self
     {
@@ -118,8 +110,6 @@ class User
     }
     /**
      * Marks a user that was deleted from the system.
-     *
-     * @return self
      */
     public function setIsDeleted(bool $isDeleted): self
     {

@@ -41,8 +41,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
-     * @return self
      */
     public function setEndOfLife(?string $endOfLife): self
     {
@@ -59,8 +57,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
-     * @return self
      */
     public function setEndOfAvailability(?string $endOfAvailability): self
     {
@@ -77,8 +73,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * The engine version.
-     *
-     * @return self
      */
     public function setVersion(string $version): self
     {

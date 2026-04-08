@@ -33,8 +33,6 @@ class V2DatabasesDatabaseClusterUuidMigratePutBody extends \ArrayObject
     }
     /**
      * A slug identifier for the region to which the database cluster will be migrated.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {

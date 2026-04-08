@@ -36,8 +36,6 @@ class MetadataValuesSchemaReplaceCommand extends MetadataValuesChangeCommandBase
      * An object containing the metadata values for the schema. The existing dictionary will be entirely overwritten.
      *
      * @param array<string, mixed> $value
-     *
-     * @return self
      */
     public function setValue(array $value): self
     {

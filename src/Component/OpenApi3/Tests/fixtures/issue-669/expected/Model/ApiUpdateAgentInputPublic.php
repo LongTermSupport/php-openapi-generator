@@ -121,8 +121,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
      * Optional list of allowed domains for the chatbot - Must use fully qualified domain name (FQDN) such as https://example.com
      *
      * @param list<string> $allowedDomains
-     *
-     * @return self
      */
     public function setAllowedDomains(array $allowedDomains): self
     {
@@ -139,8 +137,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional anthropic key uuid for use with anthropic models
-     *
-     * @return self
      */
     public function setAnthropicKeyUuid(string $anthropicKeyUuid): self
     {
@@ -157,8 +153,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional update of conversation logs enabled
-     *
-     * @return self
      */
     public function setConversationLogsEnabled(bool $conversationLogsEnabled): self
     {
@@ -175,8 +169,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent description
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -193,8 +185,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
-     * @return self
      */
     public function setInstruction(string $instruction): self
     {
@@ -211,8 +201,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * How many results should be considered from an attached knowledge base
-     *
-     * @return self
      */
     public function setK(int $k): self
     {
@@ -229,8 +217,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
-     * @return self
      */
     public function setMaxTokens(int $maxTokens): self
     {
@@ -247,8 +233,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional Model Provider uuid for use with provider models
-     *
-     * @return self
      */
     public function setModelProviderKeyUuid(string $modelProviderKeyUuid): self
     {
@@ -265,8 +249,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
-     * @return self
      */
     public function setModelUuid(string $modelUuid): self
     {
@@ -283,8 +265,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -301,8 +281,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional OpenAI key uuid for use with OpenAI models
-     *
-     * @return self
      */
     public function setOpenAiKeyUuid(string $openAiKeyUuid): self
     {
@@ -319,8 +297,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -355,8 +331,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
-     * @return self
      */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
@@ -377,8 +351,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
      * A set of abitrary tags to organize your agent
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -395,8 +367,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
-     * @return self
      */
     public function setTemperature(float $temperature): self
     {
@@ -413,8 +383,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
-     * @return self
      */
     public function setTopP(float $topP): self
     {
@@ -431,8 +399,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

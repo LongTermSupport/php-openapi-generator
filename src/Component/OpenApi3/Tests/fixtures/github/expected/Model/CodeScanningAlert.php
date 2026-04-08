@@ -66,8 +66,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * A unique identifier for the rule used to detect the alert.
-     *
-     * @return self
      */
     public function setRuleId(string $ruleId): self
     {
@@ -84,8 +82,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * The severity of the alert.
-     *
-     * @return self
      */
     public function setRuleSeverity(string $ruleSeverity): self
     {
@@ -102,8 +98,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * A short description of the rule used to detect the alert.
-     *
-     * @return self
      */
     public function setRuleDescription(string $ruleDescription): self
     {
@@ -120,8 +114,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * The name of the tool used to detect the alert.
-     *
-     * @return self
      */
     public function setTool(?string $tool): self
     {
@@ -148,8 +140,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * Whether or not the alert is open.
-     *
-     * @return self
      */
     public function setOpen(bool $open): self
     {

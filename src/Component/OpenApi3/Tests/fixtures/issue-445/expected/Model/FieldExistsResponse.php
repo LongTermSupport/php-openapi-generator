@@ -41,8 +41,6 @@ class FieldExistsResponse
     }
     /**
      * Indicates if a field with the specified ID currently exists.
-     *
-     * @return self
      */
     public function setExists(bool $exists): self
     {
@@ -61,8 +59,6 @@ class FieldExistsResponse
     /**
      * Indicates if a field with the specified ID was previously used.
      * A field ID that was previously in use cannot be used again.
-     *
-     * @return self
      */
     public function setPreviouslyUsed(bool $previouslyUsed): self
     {
@@ -83,8 +79,6 @@ class FieldExistsResponse
      * If the field does already exist or has already existed, this will contain the ID
      * of the schema containing it. It case of parent-child schemas, a field ID
      * has to be unique across the schema hierarchy.
-     *
-     * @return self
      */
     public function setSchemaId(?string $schemaId): self
     {

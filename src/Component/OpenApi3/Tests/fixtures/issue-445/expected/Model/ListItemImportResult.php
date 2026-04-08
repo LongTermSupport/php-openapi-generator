@@ -50,8 +50,6 @@ class ListItemImportResult
     }
     /**
      * Number of list items imported
-     *
-     * @return self
      */
     public function setImportedListItemCount(int $importedListItemCount): self
     {
@@ -68,8 +66,6 @@ class ListItemImportResult
     }
     /**
      * Number of list items skipped during import phase because they were already found in the system
-     *
-     * @return self
      */
     public function setSkippedListItemCount(int $skippedListItemCount): self
     {
@@ -86,8 +82,6 @@ class ListItemImportResult
     }
     /**
      * Total number of list items requested to be imported
-     *
-     * @return self
      */
     public function setTotalListItemCount(int $totalListItemCount): self
     {
@@ -108,8 +102,6 @@ class ListItemImportResult
      * Ids of the list items that were not imported because already found in the system
      *
      * @param list<string>|null $skippedListItemIds
-     *
-     * @return self
      */
     public function setSkippedListItemIds(?array $skippedListItemIds): self
     {
@@ -130,8 +122,6 @@ class ListItemImportResult
      * Ids of the list items that were successfully imported
      *
      * @param list<string>|null $importedListItemIds
-     *
-     * @return self
      */
     public function setImportedListItemIds(?array $importedListItemIds): self
     {

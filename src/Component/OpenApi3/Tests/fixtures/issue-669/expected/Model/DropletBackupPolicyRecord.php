@@ -39,8 +39,6 @@ class DropletBackupPolicyRecord extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet.
-     *
-     * @return self
      */
     public function setDropletId(int $dropletId): self
     {
@@ -57,8 +55,6 @@ class DropletBackupPolicyRecord extends \ArrayObject
     }
     /**
      * A boolean value indicating whether backups are enabled for the Droplet.
-     *
-     * @return self
      */
     public function setBackupEnabled(bool $backupEnabled): self
     {

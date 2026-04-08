@@ -41,8 +41,6 @@ class TweetMetrics extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setTweetId(string $tweetId): self
     {
@@ -59,8 +57,6 @@ class TweetMetrics extends \ArrayObject
     }
     /**
      * Interaction metrics for a Tweet.
-     *
-     * @return self
      */
     public function setTweet(TweetInteractionMetrics $tweet): self
     {
@@ -77,8 +73,6 @@ class TweetMetrics extends \ArrayObject
     }
     /**
      * Metrics corresponding to a Video.
-     *
-     * @return self
      */
     public function setVideo(VideoMetrics $video): self
     {

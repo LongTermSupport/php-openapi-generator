@@ -41,8 +41,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
-     * @return self
      */
     public function setAgentUuid(string $agentUuid): self
     {
@@ -59,8 +57,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
-     * @return self
      */
     public function setApiKeyUuid(string $apiKeyUuid): self
     {
@@ -77,8 +73,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -49,8 +49,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
-     * @return self
      */
     public function setChildAgentUuid(string $childAgentUuid): self
     {
@@ -67,8 +65,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Describes the case in which the child agent should be used
-     *
-     * @return self
      */
     public function setIfCase(string $ifCase): self
     {
@@ -85,8 +81,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
-     * @return self
      */
     public function setParentAgentUuid(string $parentAgentUuid): self
     {
@@ -103,8 +97,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Route name
-     *
-     * @return self
      */
     public function setRouteName(string $routeName): self
     {
@@ -121,8 +113,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Unique id of linkage
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

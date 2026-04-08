@@ -33,8 +33,6 @@ class AppsDomainProgress extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $steps
-     *
-     * @return self
      */
     public function setSteps(array $steps): self
     {

@@ -88,8 +88,6 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -110,8 +108,6 @@ class ContentAggregationRequest extends \ArrayObject
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -128,8 +124,6 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -160,8 +154,6 @@ class ContentAggregationRequest extends \ArrayObject
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -180,8 +172,6 @@ class ContentAggregationRequest extends \ArrayObject
     /**
      * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
      * For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
-     *
-     * @return self
      */
     public function setChannelId(?string $channelId): self
     {
@@ -204,8 +194,6 @@ class ContentAggregationRequest extends \ArrayObject
      * If not specified, all metadata languages defined in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -222,8 +210,6 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * Limit the search to the contents belonging to the specified collection.
-     *
-     * @return self
      */
     public function setCollectionId(?string $collectionId): self
     {
@@ -240,8 +226,6 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the contents that have the specified life cycle state. Defaults to ActiveOnly.
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -258,8 +242,6 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the contents that have or not have broken references. By default it includes both.
-     *
-     * @return self
      */
     public function setBrokenDependenciesFilter(mixed $brokenDependenciesFilter): self
     {
@@ -276,8 +258,6 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * Type of search to be performed: search only in metadata, only in the extracted fulltext from the file or both. Default to Metadata.
-     *
-     * @return self
      */
     public function setSearchType(mixed $searchType): self
     {
@@ -298,8 +278,6 @@ class ContentAggregationRequest extends \ArrayObject
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase> $aggregators
-     *
-     * @return self
      */
     public function setAggregators(array $aggregators): self
     {

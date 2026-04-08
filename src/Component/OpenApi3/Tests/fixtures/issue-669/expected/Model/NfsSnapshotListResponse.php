@@ -33,8 +33,6 @@ class NfsSnapshotListResponse extends \ArrayObject
     }
     /**
      * @param list<NfsSnapshotResponse> $snapshots
-     *
-     * @return self
      */
     public function setSnapshots(array $snapshots): self
     {

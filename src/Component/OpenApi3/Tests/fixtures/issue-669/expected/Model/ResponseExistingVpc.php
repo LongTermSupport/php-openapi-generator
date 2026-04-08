@@ -33,8 +33,6 @@ class ResponseExistingVpc extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $vpc
-     *
-     * @return self
      */
     public function setVpc(array $vpc): self
     {

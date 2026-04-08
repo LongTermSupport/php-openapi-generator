@@ -71,8 +71,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The name of the subscription tier.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -89,8 +87,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The slug identifier of the subscription tier.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -107,8 +103,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The number of repositories included in the subscription tier. `0` indicates that the subscription tier includes unlimited repositories.
-     *
-     * @return self
      */
     public function setIncludedRepositories(int $includedRepositories): self
     {
@@ -125,8 +119,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The amount of storage included in the subscription tier in bytes.
-     *
-     * @return self
      */
     public function setIncludedStorageBytes(int $includedStorageBytes): self
     {
@@ -143,8 +135,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * A boolean indicating whether the subscription tier supports additional storage above what is included in the base plan at an additional cost per GiB used.
-     *
-     * @return self
      */
     public function setAllowStorageOverage(bool $allowStorageOverage): self
     {
@@ -161,8 +151,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The amount of outbound data transfer included in the subscription tier in bytes.
-     *
-     * @return self
      */
     public function setIncludedBandwidthBytes(int $includedBandwidthBytes): self
     {
@@ -179,8 +167,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The monthly cost of the subscription tier in cents.
-     *
-     * @return self
      */
     public function setMonthlyPriceInCents(int $monthlyPriceInCents): self
     {
@@ -197,8 +183,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The price paid in cents per GiB for additional storage beyond what is included in the subscription plan.
-     *
-     * @return self
      */
     public function setStorageOveragePriceInCents(int $storageOveragePriceInCents): self
     {
@@ -215,8 +199,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
-     * @return self
      */
     public function setEligible(bool $eligible): self
     {
@@ -237,8 +219,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
      * If your account is not eligible to use a certain subscription tier, this will include a list of reasons that prevent you from using the tier.
      *
      * @param list<string> $eligibilityReasons
-     *
-     * @return self
      */
     public function setEligibilityReasons(array $eligibilityReasons): self
     {

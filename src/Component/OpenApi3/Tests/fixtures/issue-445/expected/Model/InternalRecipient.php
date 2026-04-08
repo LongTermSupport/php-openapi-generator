@@ -38,8 +38,6 @@ class InternalRecipient
     }
     /**
      * User information of recipient.
-     *
-     * @return self
      */
     public function setRecipient(mixed $recipient): self
     {
@@ -56,8 +54,6 @@ class InternalRecipient
     }
     /**
      * Recipient specific token.
-     *
-     * @return self
      */
     public function setToken(?string $token): self
     {
@@ -74,8 +70,6 @@ class InternalRecipient
     }
     /**
      * URL to access the share for this recipient.
-     *
-     * @return self
      */
     public function setUrl(?string $url): self
     {

@@ -36,8 +36,6 @@ class UserRoleUpdateManyRequest
      * New value for user roles with specified IDs.
      *
      * @param list<UserRole> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

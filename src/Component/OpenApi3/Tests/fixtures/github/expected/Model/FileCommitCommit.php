@@ -122,8 +122,6 @@ class FileCommitCommit extends \ArrayObject
     }
     /**
      * @param list<FileCommitCommitParentsItem> $parents
-     *
-     * @return self
      */
     public function setParents(array $parents): self
     {

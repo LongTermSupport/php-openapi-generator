@@ -30,8 +30,6 @@ class ContentDetailViewEvent extends ApplicationEvent
     }
     /**
      * @param list<string>|null $contentIds
-     *
-     * @return self
      */
     public function setContentIds(?array $contentIds): self
     {

@@ -37,8 +37,6 @@ class SinkResource extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
-     * @return self
      */
     public function setUrn(string $urn): self
     {
@@ -55,8 +53,6 @@ class SinkResource extends \ArrayObject
     }
     /**
      * resource name
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

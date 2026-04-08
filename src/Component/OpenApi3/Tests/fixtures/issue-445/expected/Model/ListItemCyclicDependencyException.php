@@ -132,8 +132,6 @@ class ListItemCyclicDependencyException extends \ArrayObject
     }
     /**
      * @param list<string>|null $listItemIds
-     *
-     * @return self
      */
     public function setListItemIds(?array $listItemIds): self
     {

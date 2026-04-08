@@ -39,8 +39,6 @@ class ReposOwnerRepoActionsWorkflowsWorkflowIdDispatchesPostBody extends \ArrayO
     }
     /**
      * The reference of the workflow run. The reference can be a branch, tag, or a commit SHA.
-     *
-     * @return self
      */
     public function setRef(string $ref): self
     {
@@ -61,8 +59,6 @@ class ReposOwnerRepoActionsWorkflowsWorkflowIdDispatchesPostBody extends \ArrayO
      * Input keys and values configured in the workflow file. The maximum number of properties is 10. Any default properties configured in the workflow file will be used when `inputs` are omitted.
      *
      * @param array<string, string> $inputs
-     *
-     * @return self
      */
     public function setInputs(array $inputs): self
     {

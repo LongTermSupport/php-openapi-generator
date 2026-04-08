@@ -38,8 +38,6 @@ class ReposOwnerRepoImportAuthorsAuthorIdPatchBody extends \ArrayObject
     }
     /**
      * The new Git author email.
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -56,8 +54,6 @@ class ReposOwnerRepoImportAuthorsAuthorIdPatchBody extends \ArrayObject
     }
     /**
      * The new Git author name.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

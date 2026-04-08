@@ -38,8 +38,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Trace reference ID of condition.
-     *
-     * @return self
      */
     public function setTraceRefId(?string $traceRefId): self
     {
@@ -56,8 +54,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Indicates if this condition evaluated to true.
-     *
-     * @return self
      */
     public function setSatisfied(bool $satisfied): self
     {
@@ -74,8 +70,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Additional reason why condition evaluated to given result.
-     *
-     * @return self
      */
     public function setReason(?string $reason): self
     {

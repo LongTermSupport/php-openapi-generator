@@ -33,8 +33,6 @@ class AppLogDestinationPapertrailSpec extends \ArrayObject
     }
     /**
      * Papertrail syslog endpoint.
-     *
-     * @return self
      */
     public function setEndpoint(string $endpoint): self
     {

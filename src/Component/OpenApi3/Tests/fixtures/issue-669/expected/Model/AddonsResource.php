@@ -79,8 +79,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The unique identifier for the addon resource.
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -97,8 +95,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the addon resource.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -115,8 +111,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The state the resource is currently in.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -133,8 +127,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the application associated with the resource.
-     *
-     * @return self
      */
     public function setAppName(string $appName): self
     {
@@ -151,8 +143,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
-     * @return self
      */
     public function setAppSlug(string $appSlug): self
     {
@@ -169,8 +159,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the plan associated with the resource.
-     *
-     * @return self
      */
     public function setPlanName(string $planName): self
     {
@@ -187,8 +175,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The slug identifier for the plan associated with the resource.
-     *
-     * @return self
      */
     public function setPlanSlug(string $planSlug): self
     {
@@ -205,8 +191,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The price of the plan per month in US dollars.
-     *
-     * @return self
      */
     public function setPlanPricePerMonth(int $planPricePerMonth): self
     {
@@ -223,8 +207,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * Indicates if the resource has configuration values set by the vendor.
-     *
-     * @return self
      */
     public function setHasConfig(bool $hasConfig): self
     {
@@ -245,8 +227,6 @@ class AddonsResource extends \ArrayObject
      * Metadata associated with the resource, set by the user.
      *
      * @param list<AddonsResourceMetadata> $metadata
-     *
-     * @return self
      */
     public function setMetadata(array $metadata): self
     {
@@ -263,8 +243,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The Single Sign-On URL for the resource, if applicable.
-     *
-     * @return self
      */
     public function setSsoUrl(string $ssoUrl): self
     {
@@ -281,8 +259,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * A message related to the resource, if applicable.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {

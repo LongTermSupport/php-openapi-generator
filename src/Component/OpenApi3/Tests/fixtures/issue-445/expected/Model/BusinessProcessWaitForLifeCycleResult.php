@@ -34,8 +34,6 @@ class BusinessProcessWaitForLifeCycleResult
     }
     /**
      * The life cycle that was hit.
-     *
-     * @return self
      */
     public function setLifeCycleHit(mixed $lifeCycleHit): self
     {
@@ -52,8 +50,6 @@ class BusinessProcessWaitForLifeCycleResult
     }
     /**
      * The business process.
-     *
-     * @return self
      */
     public function setBusinessProcess(mixed $businessProcess): self
     {

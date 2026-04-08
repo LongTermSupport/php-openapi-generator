@@ -28,7 +28,6 @@ class TestTwo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\Two\Exception\TestTwoNotFoundException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null

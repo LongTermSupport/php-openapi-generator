@@ -45,8 +45,6 @@ class KafkaSchemaVerbose extends \ArrayObject
     }
     /**
      * The id for schema.
-     *
-     * @return self
      */
     public function setSchemaId(int $schemaId): self
     {
@@ -63,8 +61,6 @@ class KafkaSchemaVerbose extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
-     * @return self
      */
     public function setSubjectName(string $subjectName): self
     {
@@ -81,8 +77,6 @@ class KafkaSchemaVerbose extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
-     * @return self
      */
     public function setSchemaType(string $schemaType): self
     {
@@ -99,8 +93,6 @@ class KafkaSchemaVerbose extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
-     * @return self
      */
     public function setSchema(string $schema): self
     {

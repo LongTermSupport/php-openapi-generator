@@ -37,8 +37,6 @@ class ForwardLinks extends \ArrayObject
     }
     /**
      * URI of the last page of the results.
-     *
-     * @return self
      */
     public function setLast(string $last): self
     {
@@ -55,8 +53,6 @@ class ForwardLinks extends \ArrayObject
     }
     /**
      * URI of the next page of the results.
-     *
-     * @return self
      */
     public function setNext(string $next): self
     {

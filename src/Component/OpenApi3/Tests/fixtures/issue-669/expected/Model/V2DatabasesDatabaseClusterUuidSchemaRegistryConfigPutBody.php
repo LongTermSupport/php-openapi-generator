@@ -33,8 +33,6 @@ class V2DatabasesDatabaseClusterUuidSchemaRegistryConfigPutBody extends \ArrayOb
     }
     /**
      * The compatibility level of the schema registry.
-     *
-     * @return self
      */
     public function setCompatibilityLevel(string $compatibilityLevel): self
     {

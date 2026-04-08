@@ -143,8 +143,6 @@ class MissingDisplayPatternForCustomerDefaultLanguageException extends \ArrayObj
     }
     /**
      * @param list<string>|null $missingTypes
-     *
-     * @return self
      */
     public function setMissingTypes(?array $missingTypes): self
     {

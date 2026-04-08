@@ -44,8 +44,6 @@ class UserInstallationsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<Installation> $installations
-     *
-     * @return self
      */
     public function setInstallations(array $installations): self
     {

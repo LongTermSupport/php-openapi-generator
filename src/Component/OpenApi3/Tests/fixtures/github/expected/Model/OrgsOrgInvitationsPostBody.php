@@ -50,8 +50,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * **Required unless you provide `email`**. GitHub user ID for the person you are inviting.
-     *
-     * @return self
      */
     public function setInviteeId(int $inviteeId): self
     {
@@ -68,8 +66,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * **Required unless you provide `invitee_id`**. Email address of the person you are inviting, which can be an existing GitHub user.
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -92,8 +88,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
      * \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
      * \* `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.
      * \* `billing_manager` - Non-owner organization members with ability to manage the billing settings of your organization.
-     *
-     * @return self
      */
     public function setRole(string $role): self
     {
@@ -114,8 +108,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
      * Specify IDs for the teams you want to invite new members to.
      *
      * @param list<int> $teamIds
-     *
-     * @return self
      */
     public function setTeamIds(array $teamIds): self
     {

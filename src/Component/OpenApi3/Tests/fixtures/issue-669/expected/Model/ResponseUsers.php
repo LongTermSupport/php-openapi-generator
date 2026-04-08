@@ -33,8 +33,6 @@ class ResponseUsers extends \ArrayObject
     }
     /**
      * @param list<DatabaseUser> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {

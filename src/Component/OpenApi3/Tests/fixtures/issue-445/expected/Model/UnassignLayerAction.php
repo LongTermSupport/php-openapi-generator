@@ -30,8 +30,6 @@ class UnassignLayerAction extends BusinessRuleAction
     }
     /**
      * The ID of the layer.
-     *
-     * @return self
      */
     public function setLayerId(?string $layerId): self
     {

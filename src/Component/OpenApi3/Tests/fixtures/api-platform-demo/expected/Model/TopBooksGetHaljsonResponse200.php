@@ -36,8 +36,6 @@ class TopBooksGetHaljsonResponse200 extends \ArrayObject
     }
     /**
      * @param list<TopBookJsonhal> $embedded
-     *
-     * @return self
      */
     public function setEmbedded(array $embedded): self
     {

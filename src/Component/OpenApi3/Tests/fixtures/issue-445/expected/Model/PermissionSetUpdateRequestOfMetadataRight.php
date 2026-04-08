@@ -42,8 +42,6 @@ class PermissionSetUpdateRequestOfMetadataRight
     }
     /**
      * Language specific permission set names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -64,8 +62,6 @@ class PermissionSetUpdateRequestOfMetadataRight
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @param list<UserRoleRightsOfMetadataRight>|null $userRolesRights
-     *
-     * @return self
      */
     public function setUserRolesRights(?array $userRolesRights): self
     {
@@ -86,8 +82,6 @@ class PermissionSetUpdateRequestOfMetadataRight
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @param list<UserRoleRightsOfPermissionSetRight>|null $userRolesPermissionSetRights
-     *
-     * @return self
      */
     public function setUserRolesPermissionSetRights(?array $userRolesPermissionSetRights): self
     {

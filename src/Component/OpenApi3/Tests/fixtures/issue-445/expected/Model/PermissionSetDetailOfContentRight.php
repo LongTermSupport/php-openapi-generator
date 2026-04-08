@@ -58,8 +58,6 @@ class PermissionSetDetailOfContentRight
     }
     /**
      * The permission set ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -76,8 +74,6 @@ class PermissionSetDetailOfContentRight
     }
     /**
      * Language specific permission set names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -98,8 +94,6 @@ class PermissionSetDetailOfContentRight
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @param list<PermissionUserRoleRightsOfContentRight>|null $userRolesRights
-     *
-     * @return self
      */
     public function setUserRolesRights(?array $userRolesRights): self
     {
@@ -120,8 +114,6 @@ class PermissionSetDetailOfContentRight
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @param list<PermissionUserRoleRightsOfPermissionSetRight>|null $userRolesPermissionSetRights
-     *
-     * @return self
      */
     public function setUserRolesPermissionSetRights(?array $userRolesPermissionSetRights): self
     {
@@ -138,8 +130,6 @@ class PermissionSetDetailOfContentRight
     }
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
-     * @return self
      */
     public function setExclusive(bool $exclusive): self
     {
@@ -156,8 +146,6 @@ class PermissionSetDetailOfContentRight
     }
     /**
      * The owner token ID. Defines the permission set owner.
-     *
-     * @return self
      */
     public function setOwnerTokenId(string $ownerTokenId): self
     {
@@ -174,8 +162,6 @@ class PermissionSetDetailOfContentRight
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {

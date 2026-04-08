@@ -45,8 +45,6 @@ class CompactTweetFieldsAttachments extends \ArrayObject
      * A list of Media Keys for each one of the media attachments (if media are attached).
      *
      * @param list<string> $mediaKeys
-     *
-     * @return self
      */
     public function setMediaKeys(array $mediaKeys): self
     {
@@ -67,8 +65,6 @@ class CompactTweetFieldsAttachments extends \ArrayObject
      * A list of poll IDs (if polls are attached).
      *
      * @param list<string> $pollIds
-     *
-     * @return self
      */
     public function setPollIds(array $pollIds): self
     {

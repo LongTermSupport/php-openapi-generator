@@ -55,8 +55,6 @@ class CloneTraffic extends \ArrayObject
     }
     /**
      * @param list<Traffic> $clones
-     *
-     * @return self
      */
     public function setClones(array $clones): self
     {

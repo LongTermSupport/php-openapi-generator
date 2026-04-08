@@ -57,8 +57,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The title of the issue.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -75,8 +73,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The contents of the issue.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -93,8 +89,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
-     *
-     * @return self
      */
     public function setAssignee(?string $assignee): self
     {
@@ -111,8 +105,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The `number` of the milestone to associate this issue with. _NOTE: Only users with push access can set the milestone for new issues. The milestone is silently dropped otherwise._
-     *
-     * @return self
      */
     public function setMilestone(?int $milestone): self
     {
@@ -133,8 +125,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
      * Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
      *
      * @param list<mixed> $labels
-     *
-     * @return self
      */
     public function setLabels(array $labels): self
     {
@@ -155,8 +145,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
      * Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
      *
      * @param list<string> $assignees
-     *
-     * @return self
      */
     public function setAssignees(array $assignees): self
     {

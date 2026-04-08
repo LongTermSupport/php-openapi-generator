@@ -37,8 +37,6 @@ class DropletActionRebuild extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -55,8 +53,6 @@ class DropletActionRebuild extends \ArrayObject
     }
     /**
      * The image ID of a public or private image or the slug identifier for a public image. The Droplet will be rebuilt using this image as its base.
-     *
-     * @return self
      */
     public function setImage(mixed $image): self
     {

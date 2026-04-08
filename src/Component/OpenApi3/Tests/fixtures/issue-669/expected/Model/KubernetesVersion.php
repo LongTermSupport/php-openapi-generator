@@ -43,8 +43,6 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The slug identifier for an available version of Kubernetes for use when creating or updating a cluster. The string contains both the upstream version of Kubernetes as well as the DigitalOcean revision.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -61,8 +59,6 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The upstream version string for the version of Kubernetes provided by a given slug.
-     *
-     * @return self
      */
     public function setKubernetesVersion(string $kubernetesVersion): self
     {
@@ -83,8 +79,6 @@ class KubernetesVersion extends \ArrayObject
      * The features available with the version of Kubernetes provided by a given slug.
      *
      * @param list<string> $supportedFeatures
-     *
-     * @return self
      */
     public function setSupportedFeatures(array $supportedFeatures): self
     {

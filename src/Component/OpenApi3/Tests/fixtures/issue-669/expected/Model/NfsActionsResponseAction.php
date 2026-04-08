@@ -53,8 +53,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug where the resource is located.
-     *
-     * @return self
      */
     public function setRegionSlug(string $regionSlug): self
     {
@@ -71,8 +69,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The unique identifier of the resource on which the action is being performed.
-     *
-     * @return self
      */
     public function setResourceId(string $resourceId): self
     {
@@ -89,8 +85,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The type of resource on which the action is being performed.
-     *
-     * @return self
      */
     public function setResourceType(string $resourceType): self
     {
@@ -107,8 +101,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The timestamp when the action was started.
-     *
-     * @return self
      */
     public function setStartedAt(\DateTime $startedAt): self
     {
@@ -125,8 +117,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The current status of the action.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -143,8 +133,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The type of action being performed.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

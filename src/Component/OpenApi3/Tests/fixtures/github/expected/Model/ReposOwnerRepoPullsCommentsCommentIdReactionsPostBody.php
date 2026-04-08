@@ -33,8 +33,6 @@ class ReposOwnerRepoPullsCommentsCommentIdReactionsPostBody extends \ArrayObject
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the pull request review comment.
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {

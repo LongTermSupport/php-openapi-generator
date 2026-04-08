@@ -33,8 +33,6 @@ class ResponseOneClicksCreate extends \ArrayObject
     }
     /**
      * A message about the result of the request.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {

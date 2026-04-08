@@ -30,8 +30,6 @@ class SimulatedTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Number of keywords to assign.
-     *
-     * @return self
      */
     public function setNumberOfKeywords(?string $numberOfKeywords): self
     {

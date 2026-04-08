@@ -42,8 +42,6 @@ class FieldLong extends FieldBase
     }
     /**
      * The long pattern structure.
-     *
-     * @return self
      */
     public function setPattern(?string $pattern): self
     {
@@ -60,8 +58,6 @@ class FieldLong extends FieldBase
     }
     /**
      * The minimum possible value.
-     *
-     * @return self
      */
     public function setMinimum(?float $minimum): self
     {
@@ -78,8 +74,6 @@ class FieldLong extends FieldBase
     }
     /**
      * The maximum possible value.
-     *
-     * @return self
      */
     public function setMaximum(?float $maximum): self
     {
@@ -96,8 +90,6 @@ class FieldLong extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {

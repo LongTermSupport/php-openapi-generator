@@ -33,8 +33,6 @@ class ProjectsProjectIdCollaboratorsUsernamePutBody extends \ArrayObject
     }
     /**
      * The permission to grant the collaborator.
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

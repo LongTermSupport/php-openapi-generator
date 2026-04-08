@@ -33,8 +33,6 @@ class V2FirewallsFirewallIdTagsDeleteBody extends \ArrayObject
     }
     /**
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {

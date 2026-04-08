@@ -57,8 +57,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * A connection string in the format accepted by the `psql` command. This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
-     * @return self
      */
     public function setUri(string $uri): self
     {
@@ -75,8 +73,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * The name of the default database.
-     *
-     * @return self
      */
     public function setDatabase(string $database): self
     {
@@ -93,8 +89,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
-     * @return self
      */
     public function setHost(string $host): self
     {
@@ -111,8 +105,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * The port on which the database cluster is listening.
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {
@@ -129,8 +121,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * The default user for the database.<br><br>Requires `database:view_credentials` scope.
-     *
-     * @return self
      */
     public function setUser(string $user): self
     {
@@ -147,8 +137,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * The randomly generated password for the default user.<br><br>Requires `database:view_credentials` scope.
-     *
-     * @return self
      */
     public function setPassword(string $password): self
     {
@@ -165,8 +153,6 @@ class DatabaseClusterReadStandbyConnection extends \ArrayObject
     }
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
-     * @return self
      */
     public function setSsl(bool $ssl): self
     {

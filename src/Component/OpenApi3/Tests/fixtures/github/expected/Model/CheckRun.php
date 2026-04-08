@@ -57,8 +57,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The id of the check.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -75,8 +73,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The SHA of the commit that is being checked.
-     *
-     * @return self
      */
     public function setHeadSha(string $headSha): self
     {
@@ -143,8 +139,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the check is currently in.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -201,8 +195,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The name of the check.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -36,8 +36,6 @@ class SchemaIndexingInfo
      * A collection of indexing information for the fields of a schema
      *
      * @param list<FieldIndexingInfo>|null $fields
-     *
-     * @return self
      */
     public function setFields(?array $fields): self
     {

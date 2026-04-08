@@ -56,8 +56,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -74,8 +72,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * The human readable name of this place.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -132,8 +128,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * @param list<string> $containedWithin
-     *
-     * @return self
      */
     public function setContainedWithin(array $containedWithin): self
     {

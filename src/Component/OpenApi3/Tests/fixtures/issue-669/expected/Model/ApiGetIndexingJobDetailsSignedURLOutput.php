@@ -33,8 +33,6 @@ class ApiGetIndexingJobDetailsSignedURLOutput extends \ArrayObject
     }
     /**
      * The signed url for downloading the indexing job details
-     *
-     * @return self
      */
     public function setSignedUrl(string $signedUrl): self
     {

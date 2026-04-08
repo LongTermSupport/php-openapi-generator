@@ -41,8 +41,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
-     * @return self
      */
     public function setStart(int $start): self
     {
@@ -59,8 +57,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
-     * @return self
      */
     public function setEnd(int $end): self
     {
@@ -77,8 +73,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
-     * @return self
      */
     public function setUsername(string $username): self
     {

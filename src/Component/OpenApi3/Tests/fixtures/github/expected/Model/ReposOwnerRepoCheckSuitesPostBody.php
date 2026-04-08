@@ -33,8 +33,6 @@ class ReposOwnerRepoCheckSuitesPostBody extends \ArrayObject
     }
     /**
      * The sha of the head commit.
-     *
-     * @return self
      */
     public function setHeadSha(string $headSha): self
     {

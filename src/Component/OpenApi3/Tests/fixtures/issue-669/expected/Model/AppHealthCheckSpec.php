@@ -57,8 +57,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of failed health checks before considered unhealthy.
-     *
-     * @return self
      */
     public function setFailureThreshold(int $failureThreshold): self
     {
@@ -75,8 +73,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The port on which the health check will be performed.
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {
@@ -93,8 +89,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The route path used for the HTTP health check ping. If not set, the HTTP health check will be disabled and a TCP health check used instead.
-     *
-     * @return self
      */
     public function setHttpPath(string $httpPath): self
     {
@@ -111,8 +105,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds to wait before beginning health checks.
-     *
-     * @return self
      */
     public function setInitialDelaySeconds(int $initialDelaySeconds): self
     {
@@ -129,8 +121,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds to wait between health checks.
-     *
-     * @return self
      */
     public function setPeriodSeconds(int $periodSeconds): self
     {
@@ -147,8 +137,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of successful health checks before considered healthy.
-     *
-     * @return self
      */
     public function setSuccessThreshold(int $successThreshold): self
     {
@@ -165,8 +153,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds after which the check times out.
-     *
-     * @return self
      */
     public function setTimeoutSeconds(int $timeoutSeconds): self
     {

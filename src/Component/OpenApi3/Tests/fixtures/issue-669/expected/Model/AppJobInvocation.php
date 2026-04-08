@@ -70,8 +70,6 @@ class AppJobInvocation extends \ArrayObject
     }
     /**
      * The phase of the job invocation
-     *
-     * @return self
      */
     public function setPhase(string $phase): self
     {

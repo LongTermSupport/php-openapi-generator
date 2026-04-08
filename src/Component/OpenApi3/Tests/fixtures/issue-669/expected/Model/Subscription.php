@@ -48,8 +48,6 @@ class Subscription extends \ArrayObject
     }
     /**
      * The time at which the subscription was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -66,8 +64,6 @@ class Subscription extends \ArrayObject
     }
     /**
      * The time at which the subscription was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

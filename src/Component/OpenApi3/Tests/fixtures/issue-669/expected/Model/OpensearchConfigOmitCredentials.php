@@ -53,8 +53,6 @@ class OpensearchConfigOmitCredentials extends \ArrayObject
     }
     /**
      * A unique identifier for a configuration.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -71,8 +69,6 @@ class OpensearchConfigOmitCredentials extends \ArrayObject
     }
     /**
      * host of the OpenSearch cluster
-     *
-     * @return self
      */
     public function setEndpoint(string $endpoint): self
     {
@@ -89,8 +85,6 @@ class OpensearchConfigOmitCredentials extends \ArrayObject
     }
     /**
      * A unique identifier for a managed OpenSearch cluster.
-     *
-     * @return self
      */
     public function setClusterUuid(string $clusterUuid): self
     {
@@ -107,8 +101,6 @@ class OpensearchConfigOmitCredentials extends \ArrayObject
     }
     /**
      * Name of a managed OpenSearch cluster.
-     *
-     * @return self
      */
     public function setClusterName(string $clusterName): self
     {
@@ -125,8 +117,6 @@ class OpensearchConfigOmitCredentials extends \ArrayObject
     }
     /**
      * OpenSearch index to send logs to.
-     *
-     * @return self
      */
     public function setIndexName(string $indexName): self
     {
@@ -143,8 +133,6 @@ class OpensearchConfigOmitCredentials extends \ArrayObject
     }
     /**
      * Number of days to retain logs in OpenSearch.
-     *
-     * @return self
      */
     public function setRetentionDays(int $retentionDays): self
     {

@@ -36,8 +36,6 @@ class ReviewsGetLdjsonResponse200 extends \ArrayObject
     }
     /**
      * @param list<ReviewJsonldReviewRead> $hydraMember
-     *
-     * @return self
      */
     public function setHydraMember(array $hydraMember): self
     {

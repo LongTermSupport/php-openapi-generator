@@ -33,8 +33,6 @@ class NfsSnapshotGetResponse extends \ArrayObject
     }
     /**
      * Represents an NFS snapshot.
-     *
-     * @return self
      */
     public function setSnapshot(NfsSnapshotResponse $snapshot): self
     {

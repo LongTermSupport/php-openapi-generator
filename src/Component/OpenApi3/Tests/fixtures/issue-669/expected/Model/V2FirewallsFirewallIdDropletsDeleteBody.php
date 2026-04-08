@@ -39,8 +39,6 @@ class V2FirewallsFirewallIdDropletsDeleteBody extends \ArrayObject
      * An array containing the IDs of the Droplets to be removed from the firewall.
      *
      * @param list<int> $dropletIds
-     *
-     * @return self
      */
     public function setDropletIds(array $dropletIds): self
     {

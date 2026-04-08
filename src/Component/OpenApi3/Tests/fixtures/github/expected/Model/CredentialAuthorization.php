@@ -63,8 +63,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * User login that owns the underlying credential.
-     *
-     * @return self
      */
     public function setLogin(string $login): self
     {
@@ -81,8 +79,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Unique identifier for the credential.
-     *
-     * @return self
      */
     public function setCredentialId(int $credentialId): self
     {
@@ -99,8 +95,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Human-readable description of the credential type.
-     *
-     * @return self
      */
     public function setCredentialType(string $credentialType): self
     {
@@ -117,8 +111,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Last eight characters of the credential. Only included in responses with credential_type of personal access token.
-     *
-     * @return self
      */
     public function setTokenLastEight(string $tokenLastEight): self
     {
@@ -135,8 +127,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Date when the credential was authorized for use.
-     *
-     * @return self
      */
     public function setCredentialAuthorizedAt(\DateTime $credentialAuthorizedAt): self
     {
@@ -157,8 +147,6 @@ class CredentialAuthorization extends \ArrayObject
      * List of oauth scopes the token has been granted.
      *
      * @param list<string> $scopes
-     *
-     * @return self
      */
     public function setScopes(array $scopes): self
     {
@@ -175,8 +163,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Unique string to distinguish the credential. Only included in responses with credential_type of SSH Key.
-     *
-     * @return self
      */
     public function setFingerprint(string $fingerprint): self
     {
@@ -193,8 +179,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Date when the credential was last accessed. May be null if it was never accessed
-     *
-     * @return self
      */
     public function setCredentialAccessedAt(?\DateTime $credentialAccessedAt): self
     {

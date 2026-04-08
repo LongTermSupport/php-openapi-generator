@@ -88,8 +88,6 @@ class ScimError extends \ArrayObject
     }
     /**
      * @param list<string> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {

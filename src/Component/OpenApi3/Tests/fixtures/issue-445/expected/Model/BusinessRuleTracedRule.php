@@ -36,8 +36,6 @@ class BusinessRuleTracedRule
     }
     /**
      * Configuration of the rule as it was running. Enriched with trace ref IDs.
-     *
-     * @return self
      */
     public function setConfiguration(mixed $configuration): self
     {
@@ -58,8 +56,6 @@ class BusinessRuleTracedRule
      * Evaluations performed for this rule.
      *
      * @param list<BusinessRuleTracedEvaluation>|null $evaluations
-     *
-     * @return self
      */
     public function setEvaluations(?array $evaluations): self
     {

@@ -35,8 +35,6 @@ class ResponseHistoryEvents extends \ArrayObject
     }
     /**
      * @param list<History> $history
-     *
-     * @return self
      */
     public function setHistory(array $history): self
     {

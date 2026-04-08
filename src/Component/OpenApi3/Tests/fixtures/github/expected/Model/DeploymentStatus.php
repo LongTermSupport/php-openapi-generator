@@ -92,8 +92,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The state of the status.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -120,8 +118,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * A short description of the status.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -138,8 +134,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The environment of the deployment that the status is for.
-     *
-     * @return self
      */
     public function setEnvironment(string $environment): self
     {
@@ -156,8 +150,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * Deprecated: the URL to associate with this status.
-     *
-     * @return self
      */
     public function setTargetUrl(string $targetUrl): self
     {
@@ -214,8 +206,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The URL for accessing your environment.
-     *
-     * @return self
      */
     public function setEnvironmentUrl(string $environmentUrl): self
     {
@@ -232,8 +222,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The URL to associate with this status.
-     *
-     * @return self
      */
     public function setLogUrl(string $logUrl): self
     {

@@ -61,8 +61,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
-     * @return self
      */
     public function setAgentUuid(string $agentUuid): self
     {
@@ -79,8 +77,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function description
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -97,8 +93,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
-     * @return self
      */
     public function setFaasName(string $faasName): self
     {
@@ -115,8 +109,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
-     * @return self
      */
     public function setFaasNamespace(string $faasNamespace): self
     {
@@ -133,8 +125,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function name
-     *
-     * @return self
      */
     public function setFunctionName(string $functionName): self
     {
@@ -155,8 +145,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
      * Describe the input schema for the function so the agent may call it
      *
      * @param array<string, mixed> $inputSchema
-     *
-     * @return self
      */
     public function setInputSchema(array $inputSchema): self
     {
@@ -177,8 +165,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
      * Describe the output schema for the function so the agent handle its response
      *
      * @param array<string, mixed> $outputSchema
-     *
-     * @return self
      */
     public function setOutputSchema(array $outputSchema): self
     {

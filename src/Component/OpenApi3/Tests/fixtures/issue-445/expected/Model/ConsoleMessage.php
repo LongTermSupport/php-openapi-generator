@@ -42,8 +42,6 @@ class ConsoleMessage extends Message
     }
     /**
      * @param list<TupleOfStringAndString>|null $arguments
-     *
-     * @return self
      */
     public function setArguments(?array $arguments): self
     {

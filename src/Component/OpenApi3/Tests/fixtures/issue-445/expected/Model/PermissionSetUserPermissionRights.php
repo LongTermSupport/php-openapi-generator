@@ -36,8 +36,6 @@ class PermissionSetUserPermissionRights
     }
     /**
      * Permission set ID.
-     *
-     * @return self
      */
     public function setPermissionSetId(?string $permissionSetId): self
     {
@@ -58,8 +56,6 @@ class PermissionSetUserPermissionRights
      * List of rights on the permission set specified by PermissionSetId
      *
      * @param list<string>|null $permissionSetRights
-     *
-     * @return self
      */
     public function setPermissionSetRights(?array $permissionSetRights): self
     {

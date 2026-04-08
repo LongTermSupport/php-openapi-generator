@@ -34,8 +34,6 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
     }
     /**
      * Result information of a schema import operation
-     *
-     * @return self
      */
     public function setSchemaImportResult(mixed $schemaImportResult): self
     {
@@ -52,8 +50,6 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
     }
     /**
      * Result information of a list item import operation
-     *
-     * @return self
      */
     public function setListItemImportResult(mixed $listItemImportResult): self
     {

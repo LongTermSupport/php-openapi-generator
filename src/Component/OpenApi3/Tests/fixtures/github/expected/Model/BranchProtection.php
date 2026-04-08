@@ -69,8 +69,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Protected Branch Admin Enforced
-     *
-     * @return self
      */
     public function setEnforceAdmins(ProtectedBranchAdminEnforced $enforceAdmins): self
     {
@@ -87,8 +85,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Protected Branch Pull Request Review
-     *
-     * @return self
      */
     public function setRequiredPullRequestReviews(ProtectedBranchPullRequestReview $requiredPullRequestReviews): self
     {
@@ -105,8 +101,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Branch Restriction Policy
-     *
-     * @return self
      */
     public function setRestrictions(BranchRestrictionPolicy $restrictions): self
     {

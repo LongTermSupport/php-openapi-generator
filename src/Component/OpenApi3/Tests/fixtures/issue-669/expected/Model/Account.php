@@ -73,8 +73,6 @@ class Account extends \ArrayObject
      * The total number of Droplets current user or team may have active at one time.
      * <br><br>Requires `droplet:read` scope.
      * 
-     *
-     * @return self
      */
     public function setDropletLimit(int $dropletLimit): self
     {
@@ -95,8 +93,6 @@ class Account extends \ArrayObject
      * The total number of Floating IPs the current user or team may have.
      * <br><br>Requires `reserved_ip:read` scope.
      * 
-     *
-     * @return self
      */
     public function setFloatingIpLimit(int $floatingIpLimit): self
     {
@@ -113,8 +109,6 @@ class Account extends \ArrayObject
     }
     /**
      * The email address used by the current user to register for DigitalOcean.
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -131,8 +125,6 @@ class Account extends \ArrayObject
     }
     /**
      * The display name for the current user.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -149,8 +141,6 @@ class Account extends \ArrayObject
     }
     /**
      * The unique universal identifier for the current user.
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -167,8 +157,6 @@ class Account extends \ArrayObject
     }
     /**
      * If true, the user has verified their account via email. False otherwise.
-     *
-     * @return self
      */
     public function setEmailVerified(bool $emailVerified): self
     {
@@ -185,8 +173,6 @@ class Account extends \ArrayObject
     }
     /**
      * This value is one of "active", "warning" or "locked".
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -203,8 +189,6 @@ class Account extends \ArrayObject
     }
     /**
      * A human-readable message giving more details about the status of the account.
-     *
-     * @return self
      */
     public function setStatusMessage(string $statusMessage): self
     {
@@ -221,8 +205,6 @@ class Account extends \ArrayObject
     }
     /**
      * When authorized in a team context, includes information about the current team.
-     *
-     * @return self
      */
     public function setTeam(AccountTeam $team): self
     {

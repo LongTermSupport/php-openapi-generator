@@ -57,8 +57,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -75,8 +73,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
-     * @return self
      */
     public function setExpandedUrl(string $expandedUrl): self
     {
@@ -93,8 +89,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * The URL as displayed in the Twitter client.
-     *
-     * @return self
      */
     public function setDisplayUrl(string $displayUrl): self
     {
@@ -111,8 +105,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * HTTP Status Code.
-     *
-     * @return self
      */
     public function setStatus(int $status): self
     {
@@ -129,8 +121,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * Title of the page the URL points to.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -147,8 +137,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * Description of the URL landing page.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -165,8 +153,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * @param list<URLImage> $images
-     *
-     * @return self
      */
     public function setImages(array $images): self
     {

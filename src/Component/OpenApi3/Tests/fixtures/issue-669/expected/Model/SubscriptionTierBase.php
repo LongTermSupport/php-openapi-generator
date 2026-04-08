@@ -61,8 +61,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The name of the subscription tier.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -79,8 +77,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The slug identifier of the subscription tier.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -97,8 +93,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The number of repositories included in the subscription tier. `0` indicates that the subscription tier includes unlimited repositories.
-     *
-     * @return self
      */
     public function setIncludedRepositories(int $includedRepositories): self
     {
@@ -115,8 +109,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The amount of storage included in the subscription tier in bytes.
-     *
-     * @return self
      */
     public function setIncludedStorageBytes(int $includedStorageBytes): self
     {
@@ -133,8 +125,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * A boolean indicating whether the subscription tier supports additional storage above what is included in the base plan at an additional cost per GiB used.
-     *
-     * @return self
      */
     public function setAllowStorageOverage(bool $allowStorageOverage): self
     {
@@ -151,8 +141,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The amount of outbound data transfer included in the subscription tier in bytes.
-     *
-     * @return self
      */
     public function setIncludedBandwidthBytes(int $includedBandwidthBytes): self
     {
@@ -169,8 +157,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The monthly cost of the subscription tier in cents.
-     *
-     * @return self
      */
     public function setMonthlyPriceInCents(int $monthlyPriceInCents): self
     {
@@ -187,8 +173,6 @@ class SubscriptionTierBase extends \ArrayObject
     }
     /**
      * The price paid in cents per GiB for additional storage beyond what is included in the subscription plan.
-     *
-     * @return self
      */
     public function setStorageOveragePriceInCents(int $storageOveragePriceInCents): self
     {

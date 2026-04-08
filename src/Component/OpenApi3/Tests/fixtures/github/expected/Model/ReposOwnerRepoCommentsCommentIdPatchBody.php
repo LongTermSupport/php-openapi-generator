@@ -33,8 +33,6 @@ class ReposOwnerRepoCommentsCommentIdPatchBody extends \ArrayObject
     }
     /**
      * The contents of the comment
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

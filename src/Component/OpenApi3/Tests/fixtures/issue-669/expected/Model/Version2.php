@@ -33,8 +33,6 @@ class Version2 extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
-     * @return self
      */
     public function setVersion(string $version): self
     {

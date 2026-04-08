@@ -33,8 +33,6 @@ class ResponseNodePoolUpdate extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $nodePool
-     *
-     * @return self
      */
     public function setNodePool(array $nodePool): self
     {

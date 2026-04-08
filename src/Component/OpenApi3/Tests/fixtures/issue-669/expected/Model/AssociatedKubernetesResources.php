@@ -51,8 +51,6 @@ class AssociatedKubernetesResources extends \ArrayObject
      * A list of names and IDs for associated load balancers that can be destroyed along with the cluster.
      *
      * @param list<AssociatedKubernetesResource> $loadBalancers
-     *
-     * @return self
      */
     public function setLoadBalancers(array $loadBalancers): self
     {
@@ -73,8 +71,6 @@ class AssociatedKubernetesResources extends \ArrayObject
      * A list of names and IDs for associated volumes that can be destroyed along with the cluster.
      *
      * @param list<AssociatedKubernetesResource> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {
@@ -95,8 +91,6 @@ class AssociatedKubernetesResources extends \ArrayObject
      * A list of names and IDs for associated volume snapshots that can be destroyed along with the cluster.
      *
      * @param list<AssociatedKubernetesResource> $volumeSnapshots
-     *
-     * @return self
      */
     public function setVolumeSnapshots(array $volumeSnapshots): self
     {

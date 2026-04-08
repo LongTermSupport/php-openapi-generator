@@ -34,8 +34,6 @@ class DownloadLink
     }
     /**
      * Token of the download, used to generate the url.
-     *
-     * @return self
      */
     public function setDownloadToken(string $downloadToken): self
     {
@@ -52,8 +50,6 @@ class DownloadLink
     }
     /**
      * Url of the download link.
-     *
-     * @return self
      */
     public function setDownloadUrl(string $downloadUrl): self
     {

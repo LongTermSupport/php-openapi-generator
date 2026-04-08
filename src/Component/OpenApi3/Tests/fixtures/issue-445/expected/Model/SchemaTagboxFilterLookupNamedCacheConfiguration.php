@@ -30,8 +30,6 @@ class SchemaTagboxFilterLookupNamedCacheConfiguration extends NamedCacheConfigur
     }
     /**
      * The layer id.
-     *
-     * @return self
      */
     public function setSchemaId(?string $schemaId): self
     {

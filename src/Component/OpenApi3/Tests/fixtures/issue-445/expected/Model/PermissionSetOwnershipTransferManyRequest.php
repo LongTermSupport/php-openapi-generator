@@ -36,8 +36,6 @@ class PermissionSetOwnershipTransferManyRequest
      * Permission set ownership transfer requests.
      *
      * @param list<PermissionSetOwnershipTransferItem>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

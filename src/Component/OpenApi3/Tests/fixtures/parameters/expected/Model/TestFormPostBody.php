@@ -68,8 +68,6 @@ class TestFormPostBody extends \ArrayObject
     }
     /**
      * @param list<mixed> $testArray
-     *
-     * @return self
      */
     public function setTestArray(array $testArray): self
     {

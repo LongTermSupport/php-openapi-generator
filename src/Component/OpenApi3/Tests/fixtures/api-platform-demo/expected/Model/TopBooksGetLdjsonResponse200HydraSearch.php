@@ -66,8 +66,6 @@ class TopBooksGetLdjsonResponse200HydraSearch extends \ArrayObject
     }
     /**
      * @param list<TopBooksGetLdjsonResponse200HydraSearchHydraMappingItem> $hydraMapping
-     *
-     * @return self
      */
     public function setHydraMapping(array $hydraMapping): self
     {

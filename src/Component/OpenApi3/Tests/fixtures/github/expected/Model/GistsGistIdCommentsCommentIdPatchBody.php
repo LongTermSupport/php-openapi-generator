@@ -33,8 +33,6 @@ class GistsGistIdCommentsCommentIdPatchBody extends \ArrayObject
     }
     /**
      * The comment text.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

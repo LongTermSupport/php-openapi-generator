@@ -34,8 +34,6 @@ class FieldValueChangedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
-     * @return self
      */
     public function setFieldPath(?string $fieldPath): self
     {
@@ -52,8 +50,6 @@ class FieldValueChangedCondition extends BusinessRuleCondition
     }
     /**
      * Expected value for the field to have to satisfy the condition
-     *
-     * @return self
      */
     public function setExpectedValue(mixed $expectedValue): self
     {

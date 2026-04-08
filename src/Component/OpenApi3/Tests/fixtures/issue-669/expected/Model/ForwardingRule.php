@@ -57,8 +57,6 @@ class ForwardingRule extends \ArrayObject
     /**
      * The protocol used for traffic to the load balancer. The possible values are: `http`, `https`, `http2`, `http3`, `tcp`, or `udp`. If you set the  `entry_protocol` to `udp`, the `target_protocol` must be set to `udp`.  When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
      * 
-     *
-     * @return self
      */
     public function setEntryProtocol(string $entryProtocol): self
     {
@@ -75,8 +73,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * An integer representing the port on which the load balancer instance will listen.
-     *
-     * @return self
      */
     public function setEntryPort(int $entryPort): self
     {
@@ -95,8 +91,6 @@ class ForwardingRule extends \ArrayObject
     /**
      * The protocol used for traffic from the load balancer to the backend Droplets. The possible values are: `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `udp`, the `entry_protocol` must be set to  `udp`. When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
      * 
-     *
-     * @return self
      */
     public function setTargetProtocol(string $targetProtocol): self
     {
@@ -113,8 +107,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * An integer representing the port on the backend Droplets to which the load balancer will send traffic.
-     *
-     * @return self
      */
     public function setTargetPort(int $targetPort): self
     {
@@ -131,8 +123,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * The ID of the TLS certificate used for SSL termination if enabled.
-     *
-     * @return self
      */
     public function setCertificateId(string $certificateId): self
     {
@@ -149,8 +139,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets.
-     *
-     * @return self
      */
     public function setTlsPassthrough(bool $tlsPassthrough): self
     {

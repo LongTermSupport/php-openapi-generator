@@ -50,8 +50,6 @@ class BatchResponseRow
     }
     /**
      * Id of the item.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -68,8 +66,6 @@ class BatchResponseRow
     }
     /**
      * Indicates if the operation succeeded.
-     *
-     * @return self
      */
     public function setSucceeded(bool $succeeded): self
     {
@@ -86,8 +82,6 @@ class BatchResponseRow
     }
     /**
      * Status code of the operation.
-     *
-     * @return self
      */
     public function setStatus(int $status): self
     {
@@ -104,8 +98,6 @@ class BatchResponseRow
     }
     /**
      * New version of the item.
-     *
-     * @return self
      */
     public function setVersion(int $version): self
     {
@@ -122,8 +114,6 @@ class BatchResponseRow
     }
     /**
      * If the operation did not succeed, this contains error information.
-     *
-     * @return self
      */
     public function setError(mixed $error): self
     {
@@ -140,8 +130,6 @@ class BatchResponseRow
     }
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

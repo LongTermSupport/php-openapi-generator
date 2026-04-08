@@ -50,8 +50,6 @@ class UserRoleAssignManyRequest extends \ArrayObject
      * User IDs.
      *
      * @param list<string> $userIds
-     *
-     * @return self
      */
     public function setUserIds(array $userIds): self
     {
@@ -72,8 +70,6 @@ class UserRoleAssignManyRequest extends \ArrayObject
      * Users roles to modify.
      *
      * @param list<string> $userRoleIds
-     *
-     * @return self
      */
     public function setUserRoleIds(array $userRoleIds): self
     {
@@ -92,8 +88,6 @@ class UserRoleAssignManyRequest extends \ArrayObject
     /**
      * Defines how to apply specified UserRoleIds to UserIds
      * If an operation results in no change for a user, that user will be returned as succeeded.
-     *
-     * @return self
      */
     public function setOperation(mixed $operation): self
     {

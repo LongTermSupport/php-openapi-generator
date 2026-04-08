@@ -34,8 +34,6 @@ class ContentReferencesResult
     }
     /**
      * List of references. Only available when requested in the request.
-     *
-     * @return self
      */
     public function setMetadataReferences(mixed $metadataReferences): self
     {
@@ -52,8 +50,6 @@ class ContentReferencesResult
     }
     /**
      * List of share references
-     *
-     * @return self
      */
     public function setShareReferences(mixed $shareReferences): self
     {

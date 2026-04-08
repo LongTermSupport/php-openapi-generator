@@ -38,8 +38,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * The date time format structure.
-     *
-     * @return self
      */
     public function setFormat(?string $format): self
     {
@@ -56,8 +54,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {
@@ -74,8 +70,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
-     * @return self
      */
     public function setInitializeOnItemCreation(bool $initializeOnItemCreation): self
     {

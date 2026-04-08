@@ -43,8 +43,6 @@ class UserUpdateIdentityProviderManyRequest extends \ArrayObject
      * User IDs.
      *
      * @param list<string> $userIds
-     *
-     * @return self
      */
     public function setUserIds(array $userIds): self
     {
@@ -61,8 +59,6 @@ class UserUpdateIdentityProviderManyRequest extends \ArrayObject
     }
     /**
      * Identity provider to assign to users.
-     *
-     * @return self
      */
     public function setIdentityProviderId(string $identityProviderId): self
     {

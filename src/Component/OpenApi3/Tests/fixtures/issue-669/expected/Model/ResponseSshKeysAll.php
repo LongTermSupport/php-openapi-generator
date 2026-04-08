@@ -35,8 +35,6 @@ class ResponseSshKeysAll extends \ArrayObject
     }
     /**
      * @param list<SshKeys> $sshKeys
-     *
-     * @return self
      */
     public function setSshKeys(array $sshKeys): self
     {

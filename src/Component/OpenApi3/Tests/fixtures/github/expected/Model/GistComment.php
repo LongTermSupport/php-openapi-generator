@@ -70,8 +70,6 @@ class GistComment extends \ArrayObject
     }
     /**
      * The comment text.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

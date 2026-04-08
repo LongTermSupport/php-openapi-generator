@@ -37,8 +37,6 @@ class TriggerInfoScheduledRuns extends \ArrayObject
     }
     /**
      * Indicates last run time. null value indicates trigger not run yet.
-     *
-     * @return self
      */
     public function setLastRunAt(?string $lastRunAt): self
     {
@@ -55,8 +53,6 @@ class TriggerInfoScheduledRuns extends \ArrayObject
     }
     /**
      * Indicates next run time. null value indicates trigger will not run.
-     *
-     * @return self
      */
     public function setNextRunAt(?string $nextRunAt): self
     {

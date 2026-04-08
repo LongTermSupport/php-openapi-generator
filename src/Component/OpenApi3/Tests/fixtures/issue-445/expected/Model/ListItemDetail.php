@@ -72,8 +72,6 @@ class ListItemDetail
     }
     /**
      * The list item ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -90,8 +88,6 @@ class ListItemDetail
     }
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
-     * @return self
      */
     public function setContentSchemaId(string $contentSchemaId): self
     {
@@ -114,8 +110,6 @@ class ListItemDetail
      * by the ContentSchemaId property.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -132,8 +126,6 @@ class ListItemDetail
     }
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
-     * @return self
      */
     public function setDisplayValues(mixed $displayValues): self
     {
@@ -154,8 +146,6 @@ class ListItemDetail
      * All the IDs of the referenced list items (tagboxes) that do not exist in the system.
      *
      * @param list<string>|null $brokenReferenceIds
-     *
-     * @return self
      */
     public function setBrokenReferenceIds(?array $brokenReferenceIds): self
     {
@@ -176,8 +166,6 @@ class ListItemDetail
      * All the IDs of the contents or list items target of a relation that do not exist in the system.
      *
      * @param list<string>|null $brokenRelationTargetIds
-     *
-     * @return self
      */
     public function setBrokenRelationTargetIds(?array $brokenRelationTargetIds): self
     {
@@ -200,8 +188,6 @@ class ListItemDetail
      * They are referenced list items that reference at least a list item that do not exist in the system.
      *
      * @param list<string>|null $brokenIndirectReferenceIds
-     *
-     * @return self
      */
     public function setBrokenIndirectReferenceIds(?array $brokenIndirectReferenceIds): self
     {
@@ -218,8 +204,6 @@ class ListItemDetail
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -236,8 +220,6 @@ class ListItemDetail
     }
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
-     * @return self
      */
     public function setActivity(mixed $activity): self
     {

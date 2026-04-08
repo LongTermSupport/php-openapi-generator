@@ -51,8 +51,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -69,8 +67,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -91,8 +87,6 @@ class SnapshotsBase extends \ArrayObject
      * An array of the regions that the snapshot is available in. The regions are represented by their identifying slug values.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -109,8 +103,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
-     * @return self
      */
     public function setMinDiskSize(int $minDiskSize): self
     {
@@ -127,8 +119,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
-     * @return self
      */
     public function setSizeGigabytes(float $sizeGigabytes): self
     {

@@ -91,8 +91,6 @@ class App extends \ArrayObject
     }
     /**
      * @param list<AppsDomain> $domains
-     *
-     * @return self
      */
     public function setDomains(array $domains): self
     {
@@ -189,8 +187,6 @@ class App extends \ArrayObject
     }
     /**
      * Requires `project:read` scope.
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -217,8 +213,6 @@ class App extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
-     * @return self
      */
     public function setSpec(AppSpec $spec): self
     {
@@ -265,8 +259,6 @@ class App extends \ArrayObject
     }
     /**
      * @param list<AppsDedicatedEgressIp> $dedicatedIps
-     *
-     * @return self
      */
     public function setDedicatedIps(array $dedicatedIps): self
     {

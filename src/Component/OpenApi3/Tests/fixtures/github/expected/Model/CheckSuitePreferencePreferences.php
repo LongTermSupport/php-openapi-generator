@@ -33,8 +33,6 @@ class CheckSuitePreferencePreferences extends \ArrayObject
     }
     /**
      * @param list<CheckSuitePreferencePreferencesAutoTriggerChecksItem> $autoTriggerChecks
-     *
-     * @return self
      */
     public function setAutoTriggerChecks(array $autoTriggerChecks): self
     {

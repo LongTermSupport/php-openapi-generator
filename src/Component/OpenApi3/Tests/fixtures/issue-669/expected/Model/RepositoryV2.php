@@ -46,8 +46,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
-     * @return self
      */
     public function setRegistryName(string $registryName): self
     {
@@ -64,8 +62,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -92,8 +88,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The number of tags in the repository.
-     *
-     * @return self
      */
     public function setTagCount(int $tagCount): self
     {
@@ -110,8 +104,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The number of manifests in the repository.
-     *
-     * @return self
      */
     public function setManifestCount(int $manifestCount): self
     {

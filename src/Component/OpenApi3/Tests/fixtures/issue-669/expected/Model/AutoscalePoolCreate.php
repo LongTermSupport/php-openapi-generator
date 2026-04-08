@@ -40,8 +40,6 @@ class AutoscalePoolCreate extends \ArrayObject
     }
     /**
      * The human-readable name of the autoscale pool. This field cannot be updated
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -62,8 +60,6 @@ class AutoscalePoolCreate extends \ArrayObject
      * The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration).
      *
      * @param array<string, mixed> $config
-     *
-     * @return self
      */
     public function setConfig(array $config): self
     {

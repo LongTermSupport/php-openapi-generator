@@ -39,8 +39,6 @@ class DatabaseLayoutOptions extends \ArrayObject
      * An array of objects, each indicating the node sizes (otherwise referred to as slugs) that are available with various numbers of nodes in the database cluster. Each slugs denotes the node's identifier, CPU, and RAM (in that order).
      *
      * @param list<DatabaseLayoutOption> $layouts
-     *
-     * @return self
      */
     public function setLayouts(array $layouts): self
     {

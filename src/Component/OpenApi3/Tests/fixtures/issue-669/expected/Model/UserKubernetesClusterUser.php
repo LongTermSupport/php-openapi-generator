@@ -39,8 +39,6 @@ class UserKubernetesClusterUser extends \ArrayObject
     }
     /**
      * The username for the cluster admin user.
-     *
-     * @return self
      */
     public function setUsername(string $username): self
     {
@@ -61,8 +59,6 @@ class UserKubernetesClusterUser extends \ArrayObject
      * A list of in-cluster groups that the user belongs to.
      *
      * @param list<string> $groups
-     *
-     * @return self
      */
     public function setGroups(array $groups): self
     {

@@ -46,8 +46,6 @@ class ContentShareReference
     }
     /**
      * ID of the share.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -64,8 +62,6 @@ class ContentShareReference
     }
     /**
      * Name of the share.
-     *
-     * @return self
      */
     public function setName(?string $name): self
     {
@@ -82,8 +78,6 @@ class ContentShareReference
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -100,8 +94,6 @@ class ContentShareReference
     }
     /**
      * Type of the share.
-     *
-     * @return self
      */
     public function setShareType(mixed $shareType): self
     {
@@ -118,8 +110,6 @@ class ContentShareReference
     }
     /**
      * The email address of the user who created the share.
-     *
-     * @return self
      */
     public function setEmailAddress(?string $emailAddress): self
     {

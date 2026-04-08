@@ -33,8 +33,6 @@ class AppJobSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between sending a TERM signal to a container and issuing a KILL which causes immediate shutdown. (Default 120)
-     *
-     * @return self
      */
     public function setGracePeriodSeconds(int $gracePeriodSeconds): self
     {

@@ -51,8 +51,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAdditionalInfoItem> $additionalInfo
-     *
-     * @return self
      */
     public function setAdditionalInfo(array $additionalInfo): self
     {
@@ -69,8 +67,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAddressesItem> $addresses
-     *
-     * @return self
      */
     public function setAddresses(array $addresses): self
     {
@@ -87,8 +83,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAkAsItem> $akAs
-     *
-     * @return self
      */
     public function setAkAs(array $akAs): self
     {
@@ -135,8 +129,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsIDsItem> $iDs
-     *
-     * @return self
      */
     public function setIDs(array $iDs): self
     {

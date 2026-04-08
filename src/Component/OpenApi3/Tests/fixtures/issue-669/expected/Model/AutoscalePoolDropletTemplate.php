@@ -85,8 +85,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The name(s) to be applied to all Droplets in the autoscale pool.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -103,8 +101,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The datacenter in which all of the Droplets will be created.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -121,8 +117,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The Droplet size to be used for all Droplets in the autoscale pool.
-     *
-     * @return self
      */
     public function setSize(string $size): self
     {
@@ -139,8 +133,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The Droplet image to be used for all Droplets in the autoscale pool. You may specify the slug or the image ID.
-     *
-     * @return self
      */
     public function setImage(string $image): self
     {
@@ -165,8 +157,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * 
      *
      * @param list<string> $sshKeys
-     *
-     * @return self
      */
     public function setSshKeys(array $sshKeys): self
     {
@@ -191,8 +181,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * 
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -213,8 +201,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The VPC where the Droplets in the autoscale pool will be created. The VPC must be in the region where you want to create the Droplets.
      * Requires `vpc:read` scope.
      * 
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -231,8 +217,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * Installs the Droplet agent. This must be set to true to monitor Droplets for resource utilization scaling.
-     *
-     * @return self
      */
     public function setWithDropletAgent(bool $withDropletAgent): self
     {
@@ -253,8 +237,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The project that the Droplets in the autoscale pool will belong to.
      * Requires `project:read` scope.
      * 
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -271,8 +253,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * Assigns a unique IPv6 address to each of the Droplets in the autoscale pool.
-     *
-     * @return self
      */
     public function setIpv6(bool $ipv6): self
     {
@@ -289,8 +269,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * A string containing user data that cloud-init consumes to configure a Droplet on first boot. User data is often a cloud-config file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
-     * @return self
      */
     public function setUserData(string $userData): self
     {

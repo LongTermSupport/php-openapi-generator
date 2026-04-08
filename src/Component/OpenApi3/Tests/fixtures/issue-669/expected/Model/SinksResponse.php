@@ -50,8 +50,6 @@ class SinksResponse extends \ArrayObject
      * List of resources identified by their URNs.
      *
      * @param list<SinkResource> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

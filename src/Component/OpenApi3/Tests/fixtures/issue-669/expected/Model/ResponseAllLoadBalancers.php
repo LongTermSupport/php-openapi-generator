@@ -35,8 +35,6 @@ class ResponseAllLoadBalancers extends \ArrayObject
     }
     /**
      * @param list<LoadBalancer> $loadBalancers
-     *
-     * @return self
      */
     public function setLoadBalancers(array $loadBalancers): self
     {

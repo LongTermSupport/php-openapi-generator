@@ -30,8 +30,6 @@ class ContentPermissionSetUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * Permission set id to match on.
-     *
-     * @return self
      */
     public function setPermissionSetId(?string $permissionSetId): self
     {

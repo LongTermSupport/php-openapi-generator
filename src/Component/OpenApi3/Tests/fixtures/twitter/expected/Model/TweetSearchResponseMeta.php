@@ -45,8 +45,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Most recent Tweet Id returned by search query
-     *
-     * @return self
      */
     public function setNewestId(string $newestId): self
     {
@@ -63,8 +61,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Oldest Tweet Id returned by search query
-     *
-     * @return self
      */
     public function setOldestId(string $oldestId): self
     {
@@ -81,8 +77,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * This value is used to get the next 'page' of results by providing it to the next_token parameter.
-     *
-     * @return self
      */
     public function setNextToken(string $nextToken): self
     {
@@ -99,8 +93,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Number of search query results
-     *
-     * @return self
      */
     public function setResultCount(int $resultCount): self
     {

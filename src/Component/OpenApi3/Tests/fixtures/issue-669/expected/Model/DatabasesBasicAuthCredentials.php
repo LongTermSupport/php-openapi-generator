@@ -37,8 +37,6 @@ class DatabasesBasicAuthCredentials extends \ArrayObject
     }
     /**
      * basic authentication username for metrics HTTP endpoint
-     *
-     * @return self
      */
     public function setBasicAuthUsername(string $basicAuthUsername): self
     {
@@ -55,8 +53,6 @@ class DatabasesBasicAuthCredentials extends \ArrayObject
     }
     /**
      * basic authentication password for metrics HTTP endpoint
-     *
-     * @return self
      */
     public function setBasicAuthPassword(string $basicAuthPassword): self
     {

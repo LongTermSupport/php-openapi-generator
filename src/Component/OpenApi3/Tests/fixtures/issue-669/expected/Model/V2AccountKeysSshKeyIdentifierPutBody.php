@@ -33,8 +33,6 @@ class V2AccountKeysSshKeyIdentifierPutBody extends \ArrayObject
     }
     /**
      * A human-readable display name for this key, used to easily identify the SSH keys when they are displayed.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

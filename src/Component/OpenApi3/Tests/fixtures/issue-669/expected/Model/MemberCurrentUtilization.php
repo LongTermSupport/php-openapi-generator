@@ -37,8 +37,6 @@ class MemberCurrentUtilization extends \ArrayObject
     }
     /**
      * The memory utilization average of the individual Droplet.
-     *
-     * @return self
      */
     public function setMemory(float $memory): self
     {
@@ -55,8 +53,6 @@ class MemberCurrentUtilization extends \ArrayObject
     }
     /**
      * The CPU utilization average of the individual Droplet.
-     *
-     * @return self
      */
     public function setCpu(float $cpu): self
     {

@@ -41,8 +41,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * The name of the resource.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
-     * @return self
      */
     public function setUrn(string $urn): self
     {
@@ -77,8 +73,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the resource was created.
-     *
-     * @return self
      */
     public function setCreatedAt(string $createdAt): self
     {

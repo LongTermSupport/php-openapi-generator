@@ -45,8 +45,6 @@ class ErrorWithRootCauses extends \ArrayObject
     }
     /**
      * A message providing information about the error.
-     *
-     * @return self
      */
     public function setError(string $error): self
     {
@@ -67,8 +65,6 @@ class ErrorWithRootCauses extends \ArrayObject
      * A list of error messages.
      *
      * @param list<string>|null $messages
-     *
-     * @return self
      */
     public function setMessages(?array $messages): self
     {
@@ -89,8 +85,6 @@ class ErrorWithRootCauses extends \ArrayObject
      * A list of underlying causes for the error, including details to help  resolve it when possible.
      *
      * @param list<string> $rootCauses
-     *
-     * @return self
      */
     public function setRootCauses(array $rootCauses): self
     {

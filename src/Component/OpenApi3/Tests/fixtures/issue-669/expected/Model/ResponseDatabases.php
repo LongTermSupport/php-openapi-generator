@@ -33,8 +33,6 @@ class ResponseDatabases extends \ArrayObject
     }
     /**
      * @param list<Database> $dbs
-     *
-     * @return self
      */
     public function setDbs(array $dbs): self
     {

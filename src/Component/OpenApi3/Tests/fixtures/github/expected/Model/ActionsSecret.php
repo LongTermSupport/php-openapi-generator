@@ -35,8 +35,6 @@ class ActionsSecret extends \ArrayObject
     }
     /**
      * The name of the secret.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

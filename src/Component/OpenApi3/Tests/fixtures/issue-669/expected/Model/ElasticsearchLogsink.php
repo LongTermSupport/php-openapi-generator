@@ -49,8 +49,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch connection URL
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -67,8 +65,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch index prefix
-     *
-     * @return self
      */
     public function setIndexPrefix(string $indexPrefix): self
     {
@@ -85,8 +81,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Maximum number of days of logs to keep
-     *
-     * @return self
      */
     public function setIndexDaysMax(int $indexDaysMax): self
     {
@@ -103,8 +97,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch request timeout limit
-     *
-     * @return self
      */
     public function setTimeout(float $timeout): self
     {
@@ -121,8 +113,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * PEM encoded CA certificate
-     *
-     * @return self
      */
     public function setCa(string $ca): self
     {

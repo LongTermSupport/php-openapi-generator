@@ -53,8 +53,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * The display name of the region.  This will be a full name that is used in the control panel and other interfaces.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -71,8 +69,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -93,8 +89,6 @@ class FloatingIpRegion extends \ArrayObject
      * This attribute is set to an array which contains features available in this region
      *
      * @param list<string> $features
-     *
-     * @return self
      */
     public function setFeatures(array $features): self
     {
@@ -111,8 +105,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * This is a boolean value that represents whether new Droplets can be created in this region.
-     *
-     * @return self
      */
     public function setAvailable(bool $available): self
     {
@@ -133,8 +125,6 @@ class FloatingIpRegion extends \ArrayObject
      * This attribute is set to an array which contains the identifying slugs for the sizes available in this region. sizes:read is required to view.
      *
      * @param list<string> $sizes
-     *
-     * @return self
      */
     public function setSizes(array $sizes): self
     {

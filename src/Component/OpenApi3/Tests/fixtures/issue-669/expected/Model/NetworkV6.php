@@ -48,8 +48,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The IP address of the IPv6 network interface.
-     *
-     * @return self
      */
     public function setIpAddress(string $ipAddress): self
     {
@@ -66,8 +64,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The netmask of the IPv6 network interface.
-     *
-     * @return self
      */
     public function setNetmask(int $netmask): self
     {
@@ -84,8 +80,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The gateway of the specified IPv6 network interface.
-     *
-     * @return self
      */
     public function setGateway(string $gateway): self
     {
@@ -108,8 +102,6 @@ class NetworkV6 extends \ArrayObject
      * 
      * **Note**: IPv6 private  networking is not currently supported.
      * 
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

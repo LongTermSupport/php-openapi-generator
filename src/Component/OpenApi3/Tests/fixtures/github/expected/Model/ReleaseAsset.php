@@ -88,8 +88,6 @@ class ReleaseAsset extends \ArrayObject
     }
     /**
      * The file name of the asset.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -116,8 +114,6 @@ class ReleaseAsset extends \ArrayObject
     }
     /**
      * State of the release asset.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {

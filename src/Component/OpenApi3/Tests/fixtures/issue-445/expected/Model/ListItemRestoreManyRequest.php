@@ -40,8 +40,6 @@ class ListItemRestoreManyRequest
      * The IDs of the list items to restore.
      *
      * @param list<string> $listItemIds
-     *
-     * @return self
      */
     public function setListItemIds(array $listItemIds): self
     {
@@ -58,8 +56,6 @@ class ListItemRestoreManyRequest
     }
     /**
      * Allows restoring list items that refer to list items or contents that don't exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {

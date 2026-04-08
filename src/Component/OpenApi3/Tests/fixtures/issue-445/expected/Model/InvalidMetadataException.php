@@ -136,8 +136,6 @@ class InvalidMetadataException extends \ArrayObject
     }
     /**
      * @param list<MetadataError>|null $metadataErrors
-     *
-     * @return self
      */
     public function setMetadataErrors(?array $metadataErrors): self
     {
@@ -154,8 +152,6 @@ class InvalidMetadataException extends \ArrayObject
     }
     /**
      * @param list<PictureparkBusinessException>|null $validationErrors
-     *
-     * @return self
      */
     public function setValidationErrors(?array $validationErrors): self
     {

@@ -49,8 +49,6 @@ class PermissionSetUpdateRequestItemOfContentRight extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -71,8 +69,6 @@ class PermissionSetUpdateRequestItemOfContentRight extends \ArrayObject
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @param list<UserRoleRightsOfContentRight>|null $userRolesRights
-     *
-     * @return self
      */
     public function setUserRolesRights(?array $userRolesRights): self
     {
@@ -93,8 +89,6 @@ class PermissionSetUpdateRequestItemOfContentRight extends \ArrayObject
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @param list<UserRoleRightsOfPermissionSetRight>|null $userRolesPermissionSetRights
-     *
-     * @return self
      */
     public function setUserRolesPermissionSetRights(?array $userRolesPermissionSetRights): self
     {
@@ -111,8 +105,6 @@ class PermissionSetUpdateRequestItemOfContentRight extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

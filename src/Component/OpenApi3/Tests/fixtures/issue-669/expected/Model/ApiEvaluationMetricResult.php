@@ -50,8 +50,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Error description if the metric could not be calculated.
-     *
-     * @return self
      */
     public function setErrorDescription(string $errorDescription): self
     {
@@ -68,8 +66,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Metric name
-     *
-     * @return self
      */
     public function setMetricName(string $metricName): self
     {
@@ -96,8 +92,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * The value of the metric as a number.
-     *
-     * @return self
      */
     public function setNumberValue(float $numberValue): self
     {
@@ -114,8 +108,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Reasoning of the metric result.
-     *
-     * @return self
      */
     public function setReasoning(string $reasoning): self
     {
@@ -132,8 +124,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * The value of the metric as a string.
-     *
-     * @return self
      */
     public function setStringValue(string $stringValue): self
     {

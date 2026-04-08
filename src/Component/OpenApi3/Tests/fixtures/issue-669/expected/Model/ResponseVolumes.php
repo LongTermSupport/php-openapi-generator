@@ -41,8 +41,6 @@ class ResponseVolumes extends \ArrayObject
      * Array of volumes.
      *
      * @param list<array<string, mixed>> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {

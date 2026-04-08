@@ -46,7 +46,6 @@ class ActivityGetThreadSubscriptionForAuthenticatedUser extends \LongTermSupport
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ThreadSubscription
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityGetThreadSubscriptionForAuthenticatedUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityGetThreadSubscriptionForAuthenticatedUserUnauthorizedException
      */

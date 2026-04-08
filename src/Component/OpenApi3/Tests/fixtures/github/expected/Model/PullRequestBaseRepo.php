@@ -862,8 +862,6 @@ class PullRequestBaseRepo extends \ArrayObject
     }
     /**
      * @param list<string> $topics
-     *
-     * @return self
      */
     public function setTopics(array $topics): self
     {

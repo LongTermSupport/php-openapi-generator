@@ -34,8 +34,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdDismissalsPutBody extends \Arr
     }
     /**
      * The message for the pull request review dismissal
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {

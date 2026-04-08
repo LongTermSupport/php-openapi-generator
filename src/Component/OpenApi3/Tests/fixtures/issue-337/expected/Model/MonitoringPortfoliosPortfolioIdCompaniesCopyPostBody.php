@@ -37,8 +37,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBody extends \ArrayObject
     }
     /**
      * @param list<string> $portfolios
-     *
-     * @return self
      */
     public function setPortfolios(array $portfolios): self
     {
@@ -55,8 +53,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBody extends \ArrayObject
     }
     /**
      * @param list<MonitoringPortfoliosPortfolioIdCompaniesCopyPostBodyCompaniesItem> $companies
-     *
-     * @return self
      */
     public function setCompanies(array $companies): self
     {

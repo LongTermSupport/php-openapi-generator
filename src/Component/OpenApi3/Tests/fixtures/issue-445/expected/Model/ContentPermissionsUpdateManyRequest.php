@@ -36,8 +36,6 @@ class ContentPermissionsUpdateManyRequest
      * Content permissions update items
      *
      * @param list<ContentPermissionsUpdateItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

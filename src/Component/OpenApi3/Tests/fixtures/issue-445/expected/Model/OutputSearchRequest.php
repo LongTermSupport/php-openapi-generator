@@ -58,8 +58,6 @@ class OutputSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -76,8 +74,6 @@ class OutputSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -98,8 +94,6 @@ class OutputSearchRequest
      * List of Content ids you want to use to fetch the outputs.
      *
      * @param list<string>|null $contentIds
-     *
-     * @return self
      */
     public function setContentIds(?array $contentIds): self
     {
@@ -120,8 +114,6 @@ class OutputSearchRequest
      * The allowed rendering states of the outputs you want to fetch.
      *
      * @param list<string>|null $renderingStates
-     *
-     * @return self
      */
     public function setRenderingStates(?array $renderingStates): self
     {
@@ -142,8 +134,6 @@ class OutputSearchRequest
      * The file extension of the outputs you want to fetch.
      *
      * @param list<string>|null $fileExtensions
-     *
-     * @return self
      */
     public function setFileExtensions(?array $fileExtensions): self
     {
@@ -164,8 +154,6 @@ class OutputSearchRequest
      * The output format id of the outputs you want to fetch.
      *
      * @param list<string>|null $outputFormatIds
-     *
-     * @return self
      */
     public function setOutputFormatIds(?array $outputFormatIds): self
     {

@@ -69,8 +69,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * If true, the metric is inverted, meaning that a lower value is better.
-     *
-     * @return self
      */
     public function setInverted(bool $inverted): self
     {
@@ -147,8 +145,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * The maximum value for the metric.
-     *
-     * @return self
      */
     public function setRangeMax(float $rangeMax): self
     {
@@ -165,8 +161,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * The minimum value for the metric.
-     *
-     * @return self
      */
     public function setRangeMin(float $rangeMin): self
     {

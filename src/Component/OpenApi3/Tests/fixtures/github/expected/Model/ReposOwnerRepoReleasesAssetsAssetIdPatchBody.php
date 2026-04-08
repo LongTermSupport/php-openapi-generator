@@ -38,8 +38,6 @@ class ReposOwnerRepoReleasesAssetsAssetIdPatchBody extends \ArrayObject
     }
     /**
      * The file name of the asset.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -56,8 +54,6 @@ class ReposOwnerRepoReleasesAssetsAssetIdPatchBody extends \ArrayObject
     }
     /**
      * An alternate short description of the asset. Used in place of the filename.
-     *
-     * @return self
      */
     public function setLabel(string $label): self
     {

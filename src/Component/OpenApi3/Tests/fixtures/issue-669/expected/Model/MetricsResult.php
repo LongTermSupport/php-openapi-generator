@@ -45,8 +45,6 @@ class MetricsResult extends \ArrayObject
      * An object containing the metric's labels. These labels are key/value pairs that vary depending on the metric being queried. For example, load balancer metrics contain a `lb_id` label, while Droplet metrics contain a `host_id` label, and App Platform metrics contain a `app_component` label.
      *
      * @param array<string, string> $metric
-     *
-     * @return self
      */
     public function setMetric(array $metric): self
     {
@@ -67,8 +65,6 @@ class MetricsResult extends \ArrayObject
      * An array of values for the metric.
      *
      * @param list<list<mixed>> $values
-     *
-     * @return self
      */
     public function setValues(array $values): self
     {

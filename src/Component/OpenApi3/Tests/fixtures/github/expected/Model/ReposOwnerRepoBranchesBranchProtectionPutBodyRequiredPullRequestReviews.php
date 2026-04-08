@@ -45,8 +45,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews ex
     }
     /**
      * Specify which users and teams can dismiss pull request reviews. Pass an empty `dismissal_restrictions` object to disable. User and team `dismissal_restrictions` are only available for organization-owned repositories. Omit this parameter for personal repositories.
-     *
-     * @return self
      */
     public function setDismissalRestrictions(ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviewsDismissalRestrictions $dismissalRestrictions): self
     {
@@ -63,8 +61,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews ex
     }
     /**
      * Set to `true` if you want to automatically dismiss approving reviews when someone pushes a new commit.
-     *
-     * @return self
      */
     public function setDismissStaleReviews(bool $dismissStaleReviews): self
     {
@@ -81,8 +77,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews ex
     }
     /**
      * Blocks merging pull requests until [code owners](https://help.github.com/articles/about-code-owners/) review them.
-     *
-     * @return self
      */
     public function setRequireCodeOwnerReviews(bool $requireCodeOwnerReviews): self
     {
@@ -99,8 +93,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredPullRequestReviews ex
     }
     /**
      * Specify the number of reviewers required to approve pull requests. Use a number between 1 and 6.
-     *
-     * @return self
      */
     public function setRequiredApprovingReviewCount(int $requiredApprovingReviewCount): self
     {

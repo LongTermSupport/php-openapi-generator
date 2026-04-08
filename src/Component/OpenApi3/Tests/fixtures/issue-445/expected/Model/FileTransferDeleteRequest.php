@@ -36,8 +36,6 @@ class FileTransferDeleteRequest
     }
     /**
      * ID of transfer.
-     *
-     * @return self
      */
     public function setTransferId(string $transferId): self
     {
@@ -58,8 +56,6 @@ class FileTransferDeleteRequest
      * List of IDs of file transfers to delete.
      *
      * @param list<string> $fileTransferIds
-     *
-     * @return self
      */
     public function setFileTransferIds(array $fileTransferIds): self
     {

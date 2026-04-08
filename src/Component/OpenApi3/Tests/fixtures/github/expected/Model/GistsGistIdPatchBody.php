@@ -39,8 +39,6 @@ class GistsGistIdPatchBody extends \ArrayObject
     }
     /**
      * Description of the gist
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -61,8 +59,6 @@ class GistsGistIdPatchBody extends \ArrayObject
      * Names of files to be updated
      *
      * @param array<string, GistsGistIdPatchBodyFilesItem> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {

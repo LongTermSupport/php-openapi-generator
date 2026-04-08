@@ -58,7 +58,6 @@ class AppsListReposAccessibleToInstallation extends \LongTermSupport\OpenApiGene
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\InstallationRepositoriesGetResponse200
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsListReposAccessibleToInstallationForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsListReposAccessibleToInstallationUnauthorizedException
      */

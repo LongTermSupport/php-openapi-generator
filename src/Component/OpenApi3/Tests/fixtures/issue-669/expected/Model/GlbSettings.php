@@ -51,8 +51,6 @@ class GlbSettings extends \ArrayObject
     }
     /**
      * The protocol used for forwarding traffic from the load balancer to the target backends. The possible values are `http`, `https` and `http2`.
-     *
-     * @return self
      */
     public function setTargetProtocol(string $targetProtocol): self
     {
@@ -69,8 +67,6 @@ class GlbSettings extends \ArrayObject
     }
     /**
      * An integer representing the port on the target backends which the load balancer will forward traffic to.
-     *
-     * @return self
      */
     public function setTargetPort(int $targetPort): self
     {
@@ -87,8 +83,6 @@ class GlbSettings extends \ArrayObject
     }
     /**
      * An object specifying CDN configurations for a Global load balancer.
-     *
-     * @return self
      */
     public function setCdn(GlbSettingsCdn $cdn): self
     {
@@ -109,8 +103,6 @@ class GlbSettings extends \ArrayObject
      * A map of region string to an integer priority value indicating preference for which regional target a Global load balancer will forward traffic to. A lower value indicates a higher priority.
      *
      * @param array<string, int> $regionPriorities
-     *
-     * @return self
      */
     public function setRegionPriorities(array $regionPriorities): self
     {
@@ -127,8 +119,6 @@ class GlbSettings extends \ArrayObject
     }
     /**
      * An integer value as a percentage to indicate failure threshold to decide how the regional priorities will take effect. A value of `50` would indicate that the Global load balancer will choose a lower priority region to forward traffic to once this failure threshold has been reached for the higher priority region.
-     *
-     * @return self
      */
     public function setFailoverThreshold(int $failoverThreshold): self
     {

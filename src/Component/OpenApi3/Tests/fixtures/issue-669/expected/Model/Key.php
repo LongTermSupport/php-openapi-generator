@@ -47,8 +47,6 @@ class Key extends \ArrayObject
     }
     /**
      * The access key's name.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -69,8 +67,6 @@ class Key extends \ArrayObject
      * The list of permissions for the access key.
      *
      * @param list<Grant> $grants
-     *
-     * @return self
      */
     public function setGrants(array $grants): self
     {
@@ -87,8 +83,6 @@ class Key extends \ArrayObject
     }
     /**
      * The Access Key ID used to access a bucket.
-     *
-     * @return self
      */
     public function setAccessKey(string $accessKey): self
     {
@@ -105,8 +99,6 @@ class Key extends \ArrayObject
     }
     /**
      * The date and time the key was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {

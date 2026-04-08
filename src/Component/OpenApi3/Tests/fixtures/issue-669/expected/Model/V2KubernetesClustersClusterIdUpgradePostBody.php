@@ -33,8 +33,6 @@ class V2KubernetesClustersClusterIdUpgradePostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the version of Kubernetes that the cluster will be upgraded to.
-     *
-     * @return self
      */
     public function setVersion(string $version): self
     {

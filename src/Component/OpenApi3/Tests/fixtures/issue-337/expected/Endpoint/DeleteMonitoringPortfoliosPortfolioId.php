@@ -57,7 +57,6 @@ class DeleteMonitoringPortfoliosPortfolioId extends \LongTermSupport\OpenApiGene
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeleteMonitoringPortfoliosPortfolioIdBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeleteMonitoringPortfoliosPortfolioIdUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeleteMonitoringPortfoliosPortfolioIdForbiddenException

@@ -54,8 +54,6 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem> $companyHistory
-     *
-     * @return self
      */
     public function setCompanyHistory(array $companyHistory): self
     {
@@ -82,8 +80,6 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem> $mortgageDetails
-     *
-     * @return self
      */
     public function setMortgageDetails(array $mortgageDetails): self
     {
@@ -100,8 +96,6 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem> $commentaries
-     *
-     * @return self
      */
     public function setCommentaries(array $commentaries): self
     {
@@ -118,8 +112,6 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem> $ratingHistory
-     *
-     * @return self
      */
     public function setRatingHistory(array $ratingHistory): self
     {
@@ -136,8 +128,6 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem> $creditLimitHistory
-     *
-     * @return self
      */
     public function setCreditLimitHistory(array $creditLimitHistory): self
     {
@@ -154,8 +144,6 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem> $badDebtDetails
-     *
-     * @return self
      */
     public function setBadDebtDetails(array $badDebtDetails): self
     {

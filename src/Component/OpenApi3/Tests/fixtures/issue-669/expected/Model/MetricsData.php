@@ -40,8 +40,6 @@ class MetricsData extends \ArrayObject
      * Result of query.
      *
      * @param list<MetricsResult> $result
-     *
-     * @return self
      */
     public function setResult(array $result): self
     {

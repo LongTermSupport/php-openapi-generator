@@ -36,8 +36,6 @@ class SchemaPermissionSetUpdateManyRequest
      * Schema permission sets update requests.
      *
      * @param list<SchemaPermissionSetUpdateRequestItem>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

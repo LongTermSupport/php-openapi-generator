@@ -72,8 +72,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The name of the check. For example, "code-coverage".
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -90,8 +88,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the commit.
-     *
-     * @return self
      */
     public function setHeadSha(string $headSha): self
     {
@@ -108,8 +104,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The URL of the integrator's site that has the full details of the check. If the integrator does not provide this, then the homepage of the GitHub app is used.
-     *
-     * @return self
      */
     public function setDetailsUrl(string $detailsUrl): self
     {
@@ -126,8 +120,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * A reference for the run on the integrator's system.
-     *
-     * @return self
      */
     public function setExternalId(string $externalId): self
     {
@@ -144,8 +136,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -162,8 +152,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The time that the check run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
-     * @return self
      */
     public function setStartedAt(string $startedAt): self
     {
@@ -182,8 +170,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     /**
      * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`. When the conclusion is `action_required`, additional details should be provided on the site specified by `details_url`.
      * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-     *
-     * @return self
      */
     public function setConclusion(string $conclusion): self
     {
@@ -200,8 +186,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
-     * @return self
      */
     public function setCompletedAt(string $completedAt): self
     {
@@ -218,8 +202,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object) description.
-     *
-     * @return self
      */
     public function setOutput(ReposOwnerRepoCheckRunsPostBodyOutput $output): self
     {
@@ -240,8 +222,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
      * Displays a button on GitHub that can be clicked to alert your app to do additional tasks. For example, a code linting app can display a button that automatically fixes detected errors. The button created in this object is displayed after the check run completes. When a user clicks the button, GitHub sends the [`check_run.requested_action` webhook](https://developer.github.com/webhooks/event-payloads/#check_run) to your app. Each action includes a `label`, `identifier` and `description`. A maximum of three actions are accepted. See the [`actions` object](https://developer.github.com/v3/checks/runs/#actions-object) description. To learn more about check runs and requested actions, see "[Check runs and requested actions](https://developer.github.com/v3/checks/runs/#check-runs-and-requested-actions)." To learn more about check runs and requested actions, see "[Check runs and requested actions](https://developer.github.com/v3/checks/runs/#check-runs-and-requested-actions)."
      *
      * @param list<ReposOwnerRepoCheckRunsPostBodyActionsItem> $actions
-     *
-     * @return self
      */
     public function setActions(array $actions): self
     {

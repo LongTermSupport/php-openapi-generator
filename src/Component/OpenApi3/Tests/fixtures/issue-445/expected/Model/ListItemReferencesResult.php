@@ -30,8 +30,6 @@ class ListItemReferencesResult
     }
     /**
      * List of references. Only available when requested in the request.
-     *
-     * @return self
      */
     public function setMetadataReferences(mixed $metadataReferences): self
     {

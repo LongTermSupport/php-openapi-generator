@@ -30,8 +30,6 @@ class NestedAggregator extends AggregatorBase
     }
     /**
      * The path pointing to the nested object.
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {

@@ -35,8 +35,6 @@ class ResponseAllRegions extends \ArrayObject
     }
     /**
      * @param list<Region> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {

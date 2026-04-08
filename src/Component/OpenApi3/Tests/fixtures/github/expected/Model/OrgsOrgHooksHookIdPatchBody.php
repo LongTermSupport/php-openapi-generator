@@ -44,8 +44,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#update-hook-config-params).
-     *
-     * @return self
      */
     public function setConfig(OrgsOrgHooksHookIdPatchBodyConfig $config): self
     {
@@ -66,8 +64,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
      * Determines what [events](https://developer.github.com/webhooks/event-payloads) the hook is triggered for.
      *
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {
@@ -84,8 +80,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {

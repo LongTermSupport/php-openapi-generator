@@ -65,11 +65,6 @@ class AddOrDeleteRules extends \LongTermSupport\OpenApiGenerator\Component\OpenA
         $optionsResolver->addAllowedTypes('dry_run', ['bool']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return mixed
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
         $status = $response->getStatusCode();

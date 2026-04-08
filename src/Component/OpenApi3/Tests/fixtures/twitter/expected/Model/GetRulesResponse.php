@@ -34,8 +34,6 @@ class GetRulesResponse extends \ArrayObject
     }
     /**
      * @param list<Rule> $data
-     *
-     * @return self
      */
     public function setData(array $data): self
     {

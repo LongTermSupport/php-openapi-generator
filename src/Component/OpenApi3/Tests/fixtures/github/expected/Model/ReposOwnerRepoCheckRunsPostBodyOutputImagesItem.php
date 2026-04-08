@@ -41,8 +41,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputImagesItem extends \ArrayObject
     }
     /**
      * The alternative text for the image.
-     *
-     * @return self
      */
     public function setAlt(string $alt): self
     {
@@ -59,8 +57,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputImagesItem extends \ArrayObject
     }
     /**
      * The full URL of the image.
-     *
-     * @return self
      */
     public function setImageUrl(string $imageUrl): self
     {
@@ -77,8 +73,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputImagesItem extends \ArrayObject
     }
     /**
      * A short image description.
-     *
-     * @return self
      */
     public function setCaption(string $caption): self
     {

@@ -40,8 +40,6 @@ class ListItemManyReferencesRequest
      * The IDs of the list items whose references need to be retrieved.
      *
      * @param list<string> $listItemIds
-     *
-     * @return self
      */
     public function setListItemIds(array $listItemIds): self
     {
@@ -58,8 +56,6 @@ class ListItemManyReferencesRequest
     }
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
-     * @return self
      */
     public function setReferences(mixed $references): self
     {

@@ -30,8 +30,6 @@ class BusinessRuleFiredEvent extends ApplicationEvent
     }
     /**
      * @param list<BusinessRuleFiredEventDetail>|null $details
-     *
-     * @return self
      */
     public function setDetails(?array $details): self
     {

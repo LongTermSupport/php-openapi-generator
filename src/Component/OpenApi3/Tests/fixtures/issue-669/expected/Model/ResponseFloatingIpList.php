@@ -35,8 +35,6 @@ class ResponseFloatingIpList extends \ArrayObject
     }
     /**
      * @param list<FloatingIp> $floatingIps
-     *
-     * @return self
      */
     public function setFloatingIps(array $floatingIps): self
     {

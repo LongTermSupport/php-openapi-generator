@@ -49,8 +49,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The minimum number of Droplets in an autoscale pool.
-     *
-     * @return self
      */
     public function setMinInstances(int $minInstances): self
     {
@@ -67,8 +65,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The maximum number of Droplets in an autoscale pool.
-     *
-     * @return self
      */
     public function setMaxInstances(int $maxInstances): self
     {
@@ -85,8 +81,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * Target CPU utilization as a decimal.
-     *
-     * @return self
      */
     public function setTargetCpuUtilization(float $targetCpuUtilization): self
     {
@@ -103,8 +97,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * Target memory utilization as a decimal.
-     *
-     * @return self
      */
     public function setTargetMemoryUtilization(float $targetMemoryUtilization): self
     {
@@ -121,8 +113,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The number of minutes to wait between scaling events in an autoscale pool. Defaults to 10 minutes.
-     *
-     * @return self
      */
     public function setCooldownMinutes(int $cooldownMinutes): self
     {

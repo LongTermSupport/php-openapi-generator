@@ -36,8 +36,6 @@ class OrFilter extends FilterBase
      * The filters to put in "or". All kinds of filters are accepted.
      *
      * @param list<FilterBase>|null $filters
-     *
-     * @return self
      */
     public function setFilters(?array $filters): self
     {

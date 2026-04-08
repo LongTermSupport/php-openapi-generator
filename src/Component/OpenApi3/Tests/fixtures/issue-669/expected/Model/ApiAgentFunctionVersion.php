@@ -49,8 +49,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Description of the function
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -67,8 +65,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * FaaS name of the function
-     *
-     * @return self
      */
     public function setFaasName(string $faasName): self
     {
@@ -85,8 +81,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * FaaS namespace of the function
-     *
-     * @return self
      */
     public function setFaasNamespace(string $faasNamespace): self
     {
@@ -103,8 +97,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Whether the function is deleted
-     *
-     * @return self
      */
     public function setIsDeleted(bool $isDeleted): self
     {
@@ -121,8 +113,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Name of the function
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

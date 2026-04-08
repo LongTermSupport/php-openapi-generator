@@ -126,8 +126,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -148,8 +146,6 @@ class ContentSearchRequest extends \ArrayObject
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -166,8 +162,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -198,8 +192,6 @@ class ContentSearchRequest extends \ArrayObject
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -218,8 +210,6 @@ class ContentSearchRequest extends \ArrayObject
     /**
      * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
      * For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
-     *
-     * @return self
      */
     public function setChannelId(?string $channelId): self
     {
@@ -242,8 +232,6 @@ class ContentSearchRequest extends \ArrayObject
      * If not specified, all metadata languages defined in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -260,8 +248,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * Limit the search to the contents belonging to the specified collection.
-     *
-     * @return self
      */
     public function setCollectionId(?string $collectionId): self
     {
@@ -278,8 +264,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the contents that have the specified life cycle state. Defaults to ActiveOnly.
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -296,8 +280,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the contents that have or not have broken references. By default it includes both.
-     *
-     * @return self
      */
     public function setBrokenDependenciesFilter(mixed $brokenDependenciesFilter): self
     {
@@ -314,8 +296,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * Type of search to be performed: search only in metadata, only in the extracted fulltext from the file or both. Default to Metadata.
-     *
-     * @return self
      */
     public function setSearchType(mixed $searchType): self
     {
@@ -336,8 +316,6 @@ class ContentSearchRequest extends \ArrayObject
      * Limits the display values included in the search response. Defaults to all display values.
      *
      * @param list<string>|null $displayPatternIds
-     *
-     * @return self
      */
     public function setDisplayPatternIds(?array $displayPatternIds): self
     {
@@ -358,8 +336,6 @@ class ContentSearchRequest extends \ArrayObject
      * Sorts the search results. Sorting on a field not marked as Sortable in the Content schema will throw an exception.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -376,8 +352,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * Limits the document count of the result set.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -394,8 +368,6 @@ class ContentSearchRequest extends \ArrayObject
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -416,8 +388,6 @@ class ContentSearchRequest extends \ArrayObject
      * Limits the contents to the ones the user has the specified ContentRights.
      *
      * @param list<string>|null $rightsFilter
-     *
-     * @return self
      */
     public function setRightsFilter(?array $rightsFilter): self
     {
@@ -440,8 +410,6 @@ class ContentSearchRequest extends \ArrayObject
      * Produces the rightsAggregationCounts on the ContentSearchResult. View will be ignored as the totalResults already gives this information.
      *
      * @param list<string>|null $rightsAggregations
-     *
-     * @return self
      */
     public function setRightsAggregations(?array $rightsAggregations): self
     {
@@ -460,8 +428,6 @@ class ContentSearchRequest extends \ArrayObject
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the ContentSearchResult.
      * Warning! It severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -482,8 +448,6 @@ class ContentSearchRequest extends \ArrayObject
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase>|null $aggregators
-     *
-     * @return self
      */
     public function setAggregators(?array $aggregators): self
     {

@@ -45,8 +45,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * Unique identifier for the addon.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -63,8 +61,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The minimum volume for the volume pricing tier.
-     *
-     * @return self
      */
     public function setLowVolume(int $lowVolume): self
     {
@@ -81,8 +77,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The maximum volume for the volume pricing tier.
-     *
-     * @return self
      */
     public function setMaxVolume(int $maxVolume): self
     {
@@ -99,8 +93,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The price per unit for the volume tier in US dollars.
-     *
-     * @return self
      */
     public function setPricePerUnit(string $pricePerUnit): self
     {

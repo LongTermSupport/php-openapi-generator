@@ -47,8 +47,6 @@ class ApiListModelAPIKeysOutput extends \ArrayObject
      * Api key infos
      *
      * @param list<ApiModelAPIKeyInfo> $apiKeyInfos
-     *
-     * @return self
      */
     public function setApiKeyInfos(array $apiKeyInfos): self
     {
@@ -65,8 +63,6 @@ class ApiListModelAPIKeysOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -83,8 +79,6 @@ class ApiListModelAPIKeysOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {

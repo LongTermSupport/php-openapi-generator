@@ -37,8 +37,6 @@ class AppPropose extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
-     * @return self
      */
     public function setSpec(AppSpec $spec): self
     {
@@ -55,8 +53,6 @@ class AppPropose extends \ArrayObject
     }
     /**
      * An optional ID of an existing app. If set, the spec will be treated as a proposed update to the specified app. The existing app is not modified using this method.
-     *
-     * @return self
      */
     public function setAppId(string $appId): self
     {

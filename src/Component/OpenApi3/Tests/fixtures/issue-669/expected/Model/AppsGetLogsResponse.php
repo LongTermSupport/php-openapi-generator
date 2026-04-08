@@ -37,8 +37,6 @@ class AppsGetLogsResponse extends \ArrayObject
     }
     /**
      * @param list<string> $historicUrls
-     *
-     * @return self
      */
     public function setHistoricUrls(array $historicUrls): self
     {
@@ -55,8 +53,6 @@ class AppsGetLogsResponse extends \ArrayObject
     }
     /**
      * A URL of the real-time live logs. This URL may use either the `https://` or `wss://` protocols and will keep pushing live logs as they become available.
-     *
-     * @return self
      */
     public function setLiveUrl(string $liveUrl): self
     {

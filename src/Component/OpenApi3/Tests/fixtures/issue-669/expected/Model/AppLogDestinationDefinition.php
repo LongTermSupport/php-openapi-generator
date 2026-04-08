@@ -56,8 +56,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * Papertrail configuration.
-     *
-     * @return self
      */
     public function setPapertrail(AppLogDestinationPapertrailSpec $papertrail): self
     {
@@ -74,8 +72,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * DataDog configuration.
-     *
-     * @return self
      */
     public function setDatadog(AppLogDestinationDatadogSpec $datadog): self
     {
@@ -92,8 +88,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * Logtail configuration.
-     *
-     * @return self
      */
     public function setLogtail(AppLogDestinationLogtailSpec $logtail): self
     {
@@ -110,8 +104,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * OpenSearch configuration.
-     *
-     * @return self
      */
     public function setOpenSearch(AppLogDestinationOpenSearchSpec $openSearch): self
     {

@@ -42,8 +42,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
-     * @return self
      */
     public function setChildAgentUuid(string $childAgentUuid): self
     {
@@ -60,8 +58,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
-     * @return self
      */
     public function setParentAgentUuid(string $parentAgentUuid): self
     {
@@ -88,8 +84,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * Unique id of linkage
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

@@ -36,8 +36,6 @@ class BooleanCondition extends BusinessRuleCondition
      * The conditions.
      *
      * @param list<BusinessRuleCondition>|null $conditions
-     *
-     * @return self
      */
     public function setConditions(?array $conditions): self
     {

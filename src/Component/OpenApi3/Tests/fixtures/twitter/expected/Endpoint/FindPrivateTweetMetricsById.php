@@ -60,11 +60,6 @@ class FindPrivateTweetMetricsById extends \LongTermSupport\OpenApiGenerator\Comp
         $optionsResolver->addAllowedTypes('ids', ['array']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return mixed
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
         $status = $response->getStatusCode();

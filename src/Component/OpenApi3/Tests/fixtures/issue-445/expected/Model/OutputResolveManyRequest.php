@@ -36,8 +36,6 @@ class OutputResolveManyRequest
      * The IDs of the contents whose outputs should to be retrieved.
      *
      * @param list<string> $contentIds
-     *
-     * @return self
      */
     public function setContentIds(array $contentIds): self
     {

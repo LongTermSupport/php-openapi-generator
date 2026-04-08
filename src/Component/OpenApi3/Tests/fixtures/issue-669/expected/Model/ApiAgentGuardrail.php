@@ -115,8 +115,6 @@ class ApiAgentGuardrail extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $metadata
-     *
-     * @return self
      */
     public function setMetadata(array $metadata): self
     {

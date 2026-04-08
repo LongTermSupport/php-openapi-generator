@@ -37,8 +37,6 @@ class TweetMetricsResponse extends \ArrayObject
     }
     /**
      * @param list<TweetMetrics> $data
-     *
-     * @return self
      */
     public function setData(array $data): self
     {
@@ -55,8 +53,6 @@ class TweetMetricsResponse extends \ArrayObject
     }
     /**
      * @param list<mixed> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

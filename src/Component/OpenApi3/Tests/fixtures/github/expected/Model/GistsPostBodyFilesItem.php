@@ -33,8 +33,6 @@ class GistsPostBodyFilesItem extends \ArrayObject
     }
     /**
      * Content of the file
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {

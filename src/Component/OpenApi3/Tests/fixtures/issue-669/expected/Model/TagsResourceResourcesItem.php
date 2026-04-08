@@ -37,8 +37,6 @@ class TagsResourceResourcesItem extends \ArrayObject
     }
     /**
      * The identifier of a resource.
-     *
-     * @return self
      */
     public function setResourceId(string $resourceId): self
     {
@@ -55,8 +53,6 @@ class TagsResourceResourcesItem extends \ArrayObject
     }
     /**
      * The type of the resource.
-     *
-     * @return self
      */
     public function setResourceType(string $resourceType): self
     {

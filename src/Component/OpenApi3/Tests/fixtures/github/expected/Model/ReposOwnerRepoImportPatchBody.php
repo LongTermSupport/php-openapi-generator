@@ -39,8 +39,6 @@ class ReposOwnerRepoImportPatchBody extends \ArrayObject
     }
     /**
      * The username to provide to the originating repository.
-     *
-     * @return self
      */
     public function setVcsUsername(string $vcsUsername): self
     {
@@ -57,8 +55,6 @@ class ReposOwnerRepoImportPatchBody extends \ArrayObject
     }
     /**
      * The password to provide to the originating repository.
-     *
-     * @return self
      */
     public function setVcsPassword(string $vcsPassword): self
     {

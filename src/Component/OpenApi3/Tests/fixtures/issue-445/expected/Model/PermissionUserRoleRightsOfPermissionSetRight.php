@@ -41,8 +41,6 @@ class PermissionUserRoleRightsOfPermissionSetRight
     }
     /**
      * The user role ID.
-     *
-     * @return self
      */
     public function setUserRoleId(?string $userRoleId): self
     {
@@ -59,8 +57,6 @@ class PermissionUserRoleRightsOfPermissionSetRight
     }
     /**
      * Language specific user role names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -83,8 +79,6 @@ class PermissionUserRoleRightsOfPermissionSetRight
      * (ContentRight, MetadataRight, PermissionSetRight).
      *
      * @param list<string>|null $rights
-     *
-     * @return self
      */
     public function setRights(?array $rights): self
     {

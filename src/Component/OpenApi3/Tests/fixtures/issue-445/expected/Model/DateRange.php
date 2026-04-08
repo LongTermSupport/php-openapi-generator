@@ -38,8 +38,6 @@ class DateRange
     }
     /**
      * Language specific range names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -56,8 +54,6 @@ class DateRange
     }
     /**
      * The from value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
-     * @return self
      */
     public function setFrom(?string $from): self
     {
@@ -74,8 +70,6 @@ class DateRange
     }
     /**
      * The to value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
-     * @return self
      */
     public function setTo(?string $to): self
     {

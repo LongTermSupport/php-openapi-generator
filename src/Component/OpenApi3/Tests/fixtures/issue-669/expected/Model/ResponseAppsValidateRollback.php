@@ -40,8 +40,6 @@ class ResponseAppsValidateRollback extends \ArrayObject
     }
     /**
      * Indicates whether the app can be rolled back to the specified deployment.
-     *
-     * @return self
      */
     public function setValid(bool $valid): self
     {
@@ -72,8 +70,6 @@ class ResponseAppsValidateRollback extends \ArrayObject
      * Contains a list of warnings that may cause the rollback to run under unideal circumstances.
      *
      * @param list<AppRollbackValidationCondition> $warnings
-     *
-     * @return self
      */
     public function setWarnings(array $warnings): self
     {

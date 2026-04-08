@@ -51,8 +51,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * Unique identifier of the review
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -89,8 +87,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * The text of the review.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -157,8 +153,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * A commit SHA for the review.
-     *
-     * @return self
      */
     public function setCommitId(string $commitId): self
     {

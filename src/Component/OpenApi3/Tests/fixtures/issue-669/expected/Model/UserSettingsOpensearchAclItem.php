@@ -37,8 +37,6 @@ class UserSettingsOpensearchAclItem extends \ArrayObject
     }
     /**
      * A regex for matching the indexes that this ACL should apply to.
-     *
-     * @return self
      */
     public function setIndex(string $index): self
     {
@@ -55,8 +53,6 @@ class UserSettingsOpensearchAclItem extends \ArrayObject
     }
     /**
      * Permission set applied to the ACL. 'read' allows user to read from the index. 'write' allows for user to write to the index. 'readwrite' allows for both 'read' and 'write' permission. 'deny'(default) restricts user from performing any operation over an index. 'admin' allows for 'readwrite' as well as any operations to administer the index.
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {

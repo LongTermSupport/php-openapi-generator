@@ -45,8 +45,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * ID of the particular event.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -63,8 +61,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * The name of cluster.
-     *
-     * @return self
      */
     public function setClusterName(string $clusterName): self
     {
@@ -81,8 +77,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * Type of the event.
-     *
-     * @return self
      */
     public function setEventType(string $eventType): self
     {
@@ -99,8 +93,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * The time of the generation of a event.
-     *
-     * @return self
      */
     public function setCreateTime(string $createTime): self
     {

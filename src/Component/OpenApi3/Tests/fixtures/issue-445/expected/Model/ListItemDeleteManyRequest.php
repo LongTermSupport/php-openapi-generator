@@ -44,8 +44,6 @@ class ListItemDeleteManyRequest
      * IDs of the list items to delete.
      *
      * @param list<string> $listItemIds
-     *
-     * @return self
      */
     public function setListItemIds(array $listItemIds): self
     {
@@ -62,8 +60,6 @@ class ListItemDeleteManyRequest
     }
     /**
      * A value indicating whether references to the list item should be removed.
-     *
-     * @return self
      */
     public function setForceReferenceRemoval(bool $forceReferenceRemoval): self
     {
@@ -80,8 +76,6 @@ class ListItemDeleteManyRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
-     * @return self
      */
     public function setNotifyProgress(bool $notifyProgress): self
     {

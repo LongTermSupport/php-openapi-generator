@@ -30,8 +30,6 @@ class UnassignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * IDs of the permission sets to unassign.
-     *
-     * @return self
      */
     public function setPermissionSetIds(mixed $permissionSetIds): self
     {

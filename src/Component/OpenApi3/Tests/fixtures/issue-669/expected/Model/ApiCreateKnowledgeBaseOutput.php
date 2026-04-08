@@ -33,8 +33,6 @@ class ApiCreateKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * Knowledgebase Description
-     *
-     * @return self
      */
     public function setKnowledgeBase(ApiKnowledgeBase $knowledgeBase): self
     {

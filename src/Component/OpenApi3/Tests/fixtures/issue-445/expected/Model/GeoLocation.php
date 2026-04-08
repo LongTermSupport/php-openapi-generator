@@ -34,8 +34,6 @@ class GeoLocation
     }
     /**
      * The latitude
-     *
-     * @return self
      */
     public function setLat(float $lat): self
     {
@@ -52,8 +50,6 @@ class GeoLocation
     }
     /**
      * The longitude
-     *
-     * @return self
      */
     public function setLon(float $lon): self
     {

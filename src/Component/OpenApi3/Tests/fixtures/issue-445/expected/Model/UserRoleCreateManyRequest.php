@@ -36,8 +36,6 @@ class UserRoleCreateManyRequest
      * Multiple user creation requests.
      *
      * @param list<UserRoleCreateRequest> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

@@ -33,8 +33,6 @@ class UserGpgKeysPostBody extends \ArrayObject
     }
     /**
      * A GPG key in ASCII-armored format.
-     *
-     * @return self
      */
     public function setArmoredPublicKey(string $armoredPublicKey): self
     {

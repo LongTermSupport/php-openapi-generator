@@ -55,8 +55,6 @@ class SearchCodeGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<CodeSearchResultItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

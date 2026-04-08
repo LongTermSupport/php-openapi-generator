@@ -38,8 +38,6 @@ class ErrorResponse
     }
     /**
      * Serialized PictureparkBusinessException.
-     *
-     * @return self
      */
     public function setException(?string $exception): self
     {
@@ -56,8 +54,6 @@ class ErrorResponse
     }
     /**
      * Trace ID.
-     *
-     * @return self
      */
     public function setTraceId(?string $traceId): self
     {
@@ -74,8 +70,6 @@ class ErrorResponse
     }
     /**
      * Trace job ID.
-     *
-     * @return self
      */
     public function setTraceJobId(?string $traceJobId): self
     {

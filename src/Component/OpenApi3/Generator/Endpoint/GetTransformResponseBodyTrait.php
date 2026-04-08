@@ -180,16 +180,40 @@ trait GetTransformResponseBodyTrait
             }
         }
 
-        $throwsDoc = implode('', array_map(static fn (string $value): string => ' * @throws ' . $value . "\n", $throwTypes));
-
         [$returnTypeNode, $returnDocType] = $this->buildReturnType($outputTypes);
 
-        $methodDoc = "/**\n"
-            . " * {@inheritdoc}\n"
-            . " *\n"
-            . ' * @return ' . $returnDocType . "\n"
-            . $throwsDoc
-            . ' */';
+        // `@return` only adds info when the phpdoc type is narrower than the
+        // native PHP return type. The only shape that narrows is a generic
+        // projection like `list<\Foo\Bar>` (PHP degrades these to plain
+        // `array`). Everything else — `null`, `\Foo\Bar`, `\Foo\Bar|null`,
+        // `mixed` — is expressed perfectly by the native return type and the
+        // phpdoc restates nothing but noise.
+        $docAddsReturnInfo = str_contains($returnDocType, '<');
+
+        $hasThrows  = [] !== $throwTypes;
+        $throwsDoc  = implode('', array_map(static fn (string $value): string => ' * @throws ' . $value . "\n", $throwTypes));
+
+        $classMethodAttributes = [];
+        if ($docAddsReturnInfo || $hasThrows) {
+            $docLines   = [];
+            $docLines[] = '/**';
+            $docLines[] = ' * {@inheritdoc}';
+            $docLines[] = ' *';
+            if ($docAddsReturnInfo) {
+                $docLines[] = ' * @return ' . $returnDocType;
+            }
+            if ($hasThrows) {
+                // Trim trailing newline from $throwsDoc so we can re-join cleanly.
+                foreach (explode("\n", rtrim($throwsDoc, "\n")) as $throwLine) {
+                    $docLines[] = $throwLine;
+                }
+            }
+            $docLines[] = ' */';
+
+            $classMethodAttributes = [
+                'comments' => [new Doc(implode("\n", $docLines))],
+            ];
+        }
 
         return [new Stmt\ClassMethod('transformResponseBody', [
             'flags'      => Modifiers::PROTECTED,
@@ -200,9 +224,7 @@ trait GetTransformResponseBodyTrait
             ],
             'returnType' => $returnTypeNode,
             'stmts'      => $outputStatements,
-        ], [
-            'comments' => [new Doc($methodDoc)],
-        ]), $outputTypes, $throwTypes];
+        ], $classMethodAttributes), $outputTypes, $throwTypes];
     }
 
     /** @return array{0: array<string>, 1: array<string>, 2: array<Stmt>} */

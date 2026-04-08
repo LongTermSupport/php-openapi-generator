@@ -80,8 +80,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * The unique universal identifier of this project.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -98,8 +96,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * The unique universal identifier of the project owner.
-     *
-     * @return self
      */
     public function setOwnerUuid(string $ownerUuid): self
     {
@@ -116,8 +112,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * The integer id of the project owner.
-     *
-     * @return self
      */
     public function setOwnerId(int $ownerId): self
     {
@@ -134,8 +128,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * The human-readable name for the project. The maximum length is 175 characters and the name must be unique.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -152,8 +144,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * The description of the project. The maximum length is 255 characters.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -200,8 +190,6 @@ class ProjectBase extends \ArrayObject
      * If another value for purpose is specified, for example, "your custom purpose",
      * your purpose will be stored as `Other: your custom purpose`.
      * 
-     *
-     * @return self
      */
     public function setPurpose(string $purpose): self
     {
@@ -218,8 +206,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * The environment of the project's resources.
-     *
-     * @return self
      */
     public function setEnvironment(string $environment): self
     {
@@ -236,8 +222,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -254,8 +238,6 @@ class ProjectBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

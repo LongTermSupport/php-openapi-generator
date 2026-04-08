@@ -57,8 +57,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
-     * @return self
      */
     public function setRegistryName(string $registryName): self
     {
@@ -75,8 +73,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
-     * @return self
      */
     public function setRepository(string $repository): self
     {
@@ -93,8 +89,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {
@@ -111,8 +105,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The digest of the manifest associated with the tag.
-     *
-     * @return self
      */
     public function setManifestDigest(string $manifestDigest): self
     {
@@ -129,8 +121,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The compressed size of the tag in bytes.
-     *
-     * @return self
      */
     public function setCompressedSizeBytes(int $compressedSizeBytes): self
     {
@@ -147,8 +137,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The uncompressed size of the tag in bytes (this size is calculated asynchronously so it may not be immediately available).
-     *
-     * @return self
      */
     public function setSizeBytes(int $sizeBytes): self
     {
@@ -165,8 +153,6 @@ class RepositoryTag extends \ArrayObject
     }
     /**
      * The time the tag was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

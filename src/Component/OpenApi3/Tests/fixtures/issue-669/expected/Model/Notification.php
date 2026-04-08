@@ -45,8 +45,6 @@ class Notification extends \ArrayObject
      * An email to notify on an alert trigger. The Email has to be one that is verified on that DigitalOcean account.
      *
      * @param list<string> $email
-     *
-     * @return self
      */
     public function setEmail(array $email): self
     {
@@ -67,8 +65,6 @@ class Notification extends \ArrayObject
      * Slack integration details.
      *
      * @param list<NotificationSlackItem> $slack
-     *
-     * @return self
      */
     public function setSlack(array $slack): self
     {

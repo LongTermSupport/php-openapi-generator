@@ -33,8 +33,6 @@ class Ca extends \ArrayObject
     }
     /**
      * base64 encoding of the certificate used to secure database connections
-     *
-     * @return self
      */
     public function setCertificate(string $certificate): self
     {

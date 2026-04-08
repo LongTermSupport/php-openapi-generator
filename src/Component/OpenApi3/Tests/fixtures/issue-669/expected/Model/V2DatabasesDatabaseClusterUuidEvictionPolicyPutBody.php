@@ -54,8 +54,6 @@ class V2DatabasesDatabaseClusterUuidEvictionPolicyPutBody extends \ArrayObject
      * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile_random`: Evict keys with expiration only in a random order.
      * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
-     * @return self
      */
     public function setEvictionPolicy(string $evictionPolicy): self
     {

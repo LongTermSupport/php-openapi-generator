@@ -44,8 +44,6 @@ class GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassific
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassificationsItemActivitiesItem> $activities
-     *
-     * @return self
      */
     public function setActivities(array $activities): self
     {

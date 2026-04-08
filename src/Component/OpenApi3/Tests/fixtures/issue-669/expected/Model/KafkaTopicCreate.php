@@ -42,8 +42,6 @@ class KafkaTopicCreate extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -60,8 +58,6 @@ class KafkaTopicCreate extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
-     * @return self
      */
     public function setReplicationFactor(int $replicationFactor): self
     {
@@ -78,8 +74,6 @@ class KafkaTopicCreate extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
-     * @return self
      */
     public function setPartitionCount(int $partitionCount): self
     {

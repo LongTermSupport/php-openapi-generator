@@ -136,8 +136,6 @@ class AggregationSizeInvalidException extends \ArrayObject
     }
     /**
      * The name identifying the aggregation.
-     *
-     * @return self
      */
     public function setAggregationName(?string $aggregationName): self
     {
@@ -154,8 +152,6 @@ class AggregationSizeInvalidException extends \ArrayObject
     }
     /**
      * The invalid size of the aggregation: size must be equal or greater than 1.
-     *
-     * @return self
      */
     public function setAggregationSize(int $aggregationSize): self
     {

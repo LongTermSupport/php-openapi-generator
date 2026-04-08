@@ -53,8 +53,6 @@ class BranchWithProtection extends \ArrayObject
     }
     /**
      * Commit
-     *
-     * @return self
      */
     public function setCommit(Commit $commit): self
     {
@@ -91,8 +89,6 @@ class BranchWithProtection extends \ArrayObject
     }
     /**
      * Branch Protection
-     *
-     * @return self
      */
     public function setProtection(BranchProtection $protection): self
     {

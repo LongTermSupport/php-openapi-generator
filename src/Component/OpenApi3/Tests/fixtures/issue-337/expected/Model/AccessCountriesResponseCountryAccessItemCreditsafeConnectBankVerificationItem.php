@@ -56,8 +56,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationI
     }
     /**
      * Date of when the service was enabled
-     *
-     * @return self
      */
     public function setStartDate(string $startDate): self
     {
@@ -74,8 +72,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationI
     }
     /**
      * Date of when the service will expire
-     *
-     * @return self
      */
     public function setExpireDate(string $expireDate): self
     {
@@ -92,8 +88,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationI
     }
     /**
      * Measure of total usage available in the service
-     *
-     * @return self
      */
     public function setPaid(int $paid): self
     {
@@ -110,8 +104,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationI
     }
     /**
      * Service usage
-     *
-     * @return self
      */
     public function setUsed(int $used): self
     {

@@ -70,8 +70,6 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -138,8 +136,6 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
-     * @return self
      */
     public function setDockerfilePath(string $dockerfilePath): self
     {
@@ -156,8 +152,6 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
-     * @return self
      */
     public function setBuildCommand(string $buildCommand): self
     {
@@ -174,8 +168,6 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
-     * @return self
      */
     public function setRunCommand(string $runCommand): self
     {
@@ -192,8 +184,6 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
-     * @return self
      */
     public function setSourceDir(string $sourceDir): self
     {
@@ -214,8 +204,6 @@ class AppComponentBase extends \ArrayObject
      * A list of environment variables made available to the component.
      *
      * @param list<AppVariableDefinition> $envs
-     *
-     * @return self
      */
     public function setEnvs(array $envs): self
     {
@@ -232,8 +220,6 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
-     * @return self
      */
     public function setEnvironmentSlug(string $environmentSlug): self
     {
@@ -254,8 +240,6 @@ class AppComponentBase extends \ArrayObject
      * A list of configured log forwarding destinations.
      *
      * @param list<AppLogDestinationDefinition> $logDestinations
-     *
-     * @return self
      */
     public function setLogDestinations(array $logDestinations): self
     {

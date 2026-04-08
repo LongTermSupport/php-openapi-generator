@@ -38,8 +38,6 @@ class BusinessProcessState
     }
     /**
      * State of the business process
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -56,8 +54,6 @@ class BusinessProcessState
     }
     /**
      * Date and time of when the state transition was performed.
-     *
-     * @return self
      */
     public function setTimestamp(\DateTime $timestamp): self
     {
@@ -74,8 +70,6 @@ class BusinessProcessState
     }
     /**
      * Eventual error associated to the state transition.
-     *
-     * @return self
      */
     public function setError(mixed $error): self
     {

@@ -39,8 +39,6 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBody extends \ArrayObject
      * Enables or disables automatic creation of CheckSuite events upon pushes to the repository. Enabled by default. See the [`auto_trigger_checks` object](https://developer.github.com/v3/checks/suites/#auto_trigger_checks-object) description for details.
      *
      * @param list<ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem> $autoTriggerChecks
-     *
-     * @return self
      */
     public function setAutoTriggerChecks(array $autoTriggerChecks): self
     {

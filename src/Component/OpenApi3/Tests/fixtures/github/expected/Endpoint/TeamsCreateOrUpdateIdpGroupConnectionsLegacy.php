@@ -53,7 +53,6 @@ class TeamsCreateOrUpdateIdpGroupConnectionsLegacy extends \LongTermSupport\Open
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\GroupMapping
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsCreateOrUpdateIdpGroupConnectionsLegacyUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsCreateOrUpdateIdpGroupConnectionsLegacyForbiddenException
      */

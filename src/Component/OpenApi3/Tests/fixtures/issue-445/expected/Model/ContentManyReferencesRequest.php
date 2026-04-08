@@ -44,8 +44,6 @@ class ContentManyReferencesRequest
      * The IDs of the contents whose references need to be retrieved.
      *
      * @param list<string> $contentIds
-     *
-     * @return self
      */
     public function setContentIds(array $contentIds): self
     {
@@ -62,8 +60,6 @@ class ContentManyReferencesRequest
     }
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
-     * @return self
      */
     public function setReferences(mixed $references): self
     {
@@ -80,8 +76,6 @@ class ContentManyReferencesRequest
     }
     /**
      * Limits the number of the returned share references by setting paging information.
-     *
-     * @return self
      */
     public function setShares(mixed $shares): self
     {

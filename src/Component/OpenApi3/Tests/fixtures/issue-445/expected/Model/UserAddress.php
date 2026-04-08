@@ -58,8 +58,6 @@ class UserAddress
     }
     /**
      * Company address line
-     *
-     * @return self
      */
     public function setCompany(?string $company): self
     {
@@ -76,8 +74,6 @@ class UserAddress
     }
     /**
      * Company department.
-     *
-     * @return self
      */
     public function setDepartment(?string $department): self
     {
@@ -94,8 +90,6 @@ class UserAddress
     }
     /**
      * Street and house number.
-     *
-     * @return self
      */
     public function setAddress(?string $address): self
     {
@@ -112,8 +106,6 @@ class UserAddress
     }
     /**
      * Additional address line.
-     *
-     * @return self
      */
     public function setAlternativeAddress(?string $alternativeAddress): self
     {
@@ -130,8 +122,6 @@ class UserAddress
     }
     /**
      * ZIP code.
-     *
-     * @return self
      */
     public function setZip(?string $zip): self
     {
@@ -148,8 +138,6 @@ class UserAddress
     }
     /**
      * City or town.
-     *
-     * @return self
      */
     public function setCity(?string $city): self
     {
@@ -166,8 +154,6 @@ class UserAddress
     }
     /**
      * Phone number.
-     *
-     * @return self
      */
     public function setPhone(?string $phone): self
     {
@@ -184,8 +170,6 @@ class UserAddress
     }
     /**
      * Country code.
-     *
-     * @return self
      */
     public function setCountryCode(?string $countryCode): self
     {

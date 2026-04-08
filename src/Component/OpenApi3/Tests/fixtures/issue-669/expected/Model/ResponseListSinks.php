@@ -39,8 +39,6 @@ class ResponseListSinks extends \ArrayObject
      * List of sinks identified by their URNs.
      *
      * @param list<SinksResponse> $sinks
-     *
-     * @return self
      */
     public function setSinks(array $sinks): self
     {

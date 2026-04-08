@@ -194,8 +194,6 @@ class IssueSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $assignees
-     *
-     * @return self
      */
     public function setAssignees(?array $assignees): self
     {
@@ -222,8 +220,6 @@ class IssueSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<IssueSearchResultItemLabelsItem> $labels
-     *
-     * @return self
      */
     public function setLabels(array $labels): self
     {
@@ -310,8 +306,6 @@ class IssueSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItem> $textMatches
-     *
-     * @return self
      */
     public function setTextMatches(array $textMatches): self
     {
@@ -378,8 +372,6 @@ class IssueSearchResultItem extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setRepository(Repository $repository): self
     {

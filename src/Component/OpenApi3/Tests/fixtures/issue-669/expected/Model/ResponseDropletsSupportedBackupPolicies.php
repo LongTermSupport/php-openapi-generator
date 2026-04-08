@@ -33,8 +33,6 @@ class ResponseDropletsSupportedBackupPolicies extends \ArrayObject
     }
     /**
      * @param list<SupportedDropletBackupPolicy> $supportedPolicies
-     *
-     * @return self
      */
     public function setSupportedPolicies(array $supportedPolicies): self
     {

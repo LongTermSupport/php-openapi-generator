@@ -50,8 +50,6 @@ class SchemaImportResult
     }
     /**
      * Number of schemas imported
-     *
-     * @return self
      */
     public function setImportedSchemaCount(int $importedSchemaCount): self
     {
@@ -68,8 +66,6 @@ class SchemaImportResult
     }
     /**
      * Number of schema skipped during import phase because they were already found in the system
-     *
-     * @return self
      */
     public function setSkippedSchemaCount(int $skippedSchemaCount): self
     {
@@ -86,8 +82,6 @@ class SchemaImportResult
     }
     /**
      * Total number of schemas requested to be imported
-     *
-     * @return self
      */
     public function setTotalSchemaCount(int $totalSchemaCount): self
     {
@@ -108,8 +102,6 @@ class SchemaImportResult
      * Ids of the schemas that were not imported because already found in the system
      *
      * @param list<string>|null $skippedSchemaIds
-     *
-     * @return self
      */
     public function setSkippedSchemaIds(?array $skippedSchemaIds): self
     {
@@ -130,8 +122,6 @@ class SchemaImportResult
      * Ids of the schemas that were successfully imported
      *
      * @param list<string>|null $importedSchemaIds
-     *
-     * @return self
      */
     public function setImportedSchemaIds(?array $importedSchemaIds): self
     {

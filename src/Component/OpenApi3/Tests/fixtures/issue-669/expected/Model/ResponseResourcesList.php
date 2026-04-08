@@ -41,8 +41,6 @@ class ResponseResourcesList extends \ArrayObject
      * The resources that are assigned to this project. Only resources that you are authorized to see will be returned.
      *
      * @param list<Resource> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

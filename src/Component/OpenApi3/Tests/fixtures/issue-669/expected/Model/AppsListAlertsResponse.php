@@ -33,8 +33,6 @@ class AppsListAlertsResponse extends \ArrayObject
     }
     /**
      * @param list<AppAlert> $alerts
-     *
-     * @return self
      */
     public function setAlerts(array $alerts): self
     {

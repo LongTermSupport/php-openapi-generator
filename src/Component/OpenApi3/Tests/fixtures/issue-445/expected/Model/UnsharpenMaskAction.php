@@ -38,8 +38,6 @@ class UnsharpenMaskAction extends ImageActionBase
     }
     /**
      * Unsharp mask amount (the difference between blurred and original image).
-     *
-     * @return self
      */
     public function setAmount(float $amount): self
     {
@@ -56,8 +54,6 @@ class UnsharpenMaskAction extends ImageActionBase
     }
     /**
      * Blur radius used to produce unfocused version of the image.
-     *
-     * @return self
      */
     public function setRadius(float $radius): self
     {
@@ -74,8 +70,6 @@ class UnsharpenMaskAction extends ImageActionBase
     }
     /**
      * The threshold value for the unsharp mask in range [0, 1]
-     *
-     * @return self
      */
     public function setThreshold(float $threshold): self
     {

@@ -49,8 +49,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The usage percentage of the chunk.
-     *
-     * @return self
      */
     public function setChunkUsagePct(float $chunkUsagePct): self
     {
@@ -67,8 +65,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * Indicates if the chunk was used in the prompt.
-     *
-     * @return self
      */
     public function setChunkUsed(bool $chunkUsed): self
     {
@@ -85,8 +81,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The index uuid (Knowledge Base) of the chunk.
-     *
-     * @return self
      */
     public function setIndexUuid(string $indexUuid): self
     {
@@ -103,8 +97,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The source name for the chunk, e.g., the file name or document title.
-     *
-     * @return self
      */
     public function setSourceName(string $sourceName): self
     {
@@ -121,8 +113,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * Text content of the chunk.
-     *
-     * @return self
      */
     public function setText(string $text): self
     {

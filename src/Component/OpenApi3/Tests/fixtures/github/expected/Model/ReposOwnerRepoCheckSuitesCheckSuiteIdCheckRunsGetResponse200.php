@@ -44,8 +44,6 @@ class ReposOwnerRepoCheckSuitesCheckSuiteIdCheckRunsGetResponse200 extends \Arra
     }
     /**
      * @param list<CheckRun> $checkRuns
-     *
-     * @return self
      */
     public function setCheckRuns(array $checkRuns): self
     {

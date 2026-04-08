@@ -34,8 +34,6 @@ class OutputDataImage extends OutputDataBase
     }
     /**
      * The width of the image.
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {
@@ -52,8 +50,6 @@ class OutputDataImage extends OutputDataBase
     }
     /**
      * The height of the image.
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {

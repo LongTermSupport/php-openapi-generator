@@ -61,8 +61,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new name of the user.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -79,8 +77,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The publicly visible email address of the user.
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {
@@ -97,8 +93,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new blog URL of the user.
-     *
-     * @return self
      */
     public function setBlog(string $blog): self
     {
@@ -115,8 +109,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new Twitter username of the user.
-     *
-     * @return self
      */
     public function setTwitterUsername(?string $twitterUsername): self
     {
@@ -133,8 +125,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new company of the user.
-     *
-     * @return self
      */
     public function setCompany(string $company): self
     {
@@ -151,8 +141,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new location of the user.
-     *
-     * @return self
      */
     public function setLocation(string $location): self
     {
@@ -169,8 +157,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new hiring availability of the user.
-     *
-     * @return self
      */
     public function setHireable(bool $hireable): self
     {
@@ -187,8 +173,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new short biography of the user.
-     *
-     * @return self
      */
     public function setBio(string $bio): self
     {

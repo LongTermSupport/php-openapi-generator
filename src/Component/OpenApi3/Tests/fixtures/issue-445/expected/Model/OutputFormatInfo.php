@@ -34,8 +34,6 @@ class OutputFormatInfo
     }
     /**
      * Output ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -52,8 +50,6 @@ class OutputFormatInfo
     }
     /**
      * Output translations.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {

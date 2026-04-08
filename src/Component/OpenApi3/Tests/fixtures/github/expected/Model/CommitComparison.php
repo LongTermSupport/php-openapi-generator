@@ -104,8 +104,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * Commit
-     *
-     * @return self
      */
     public function setBaseCommit(Commit $baseCommit): self
     {
@@ -122,8 +120,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * Commit
-     *
-     * @return self
      */
     public function setMergeBaseCommit(Commit $mergeBaseCommit): self
     {
@@ -180,8 +176,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * @param list<Commit> $commits
-     *
-     * @return self
      */
     public function setCommits(array $commits): self
     {
@@ -198,8 +192,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * @param list<DiffEntry> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {

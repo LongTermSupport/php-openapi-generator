@@ -30,8 +30,6 @@ class ImportTransferPartialRequest
     }
     /**
      * @param list<FileTransferCreateItem>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

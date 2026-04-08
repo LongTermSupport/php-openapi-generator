@@ -75,8 +75,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $kafka
-     *
-     * @return self
      */
     public function setKafka(array $kafka): self
     {
@@ -97,8 +95,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $pg
-     *
-     * @return self
      */
     public function setPg(array $pg): self
     {
@@ -119,8 +115,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $mysql
-     *
-     * @return self
      */
     public function setMysql(array $mysql): self
     {
@@ -141,8 +135,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $redis
-     *
-     * @return self
      */
     public function setRedis(array $redis): self
     {
@@ -163,8 +155,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $valkey
-     *
-     * @return self
      */
     public function setValkey(array $valkey): self
     {
@@ -185,8 +175,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $mongodb
-     *
-     * @return self
      */
     public function setMongodb(array $mongodb): self
     {
@@ -207,8 +195,6 @@ class OptionsVersionAvailability extends \ArrayObject
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
      *
      * @param list<DatabaseVersionAvailability> $opensearch
-     *
-     * @return self
      */
     public function setOpensearch(array $opensearch): self
     {

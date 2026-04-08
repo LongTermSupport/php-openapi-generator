@@ -132,8 +132,6 @@ class BusinessProcessDefinitionCreateException extends \ArrayObject
     }
     /**
      * @param list<string>|null $processDefinitionIds
-     *
-     * @return self
      */
     public function setProcessDefinitionIds(?array $processDefinitionIds): self
     {

@@ -143,8 +143,6 @@ class LayerAssignmentInUseWithContentsException extends \ArrayObject
     }
     /**
      * @param list<string>|null $usedAssignmentSchemaIds
-     *
-     * @return self
      */
     public function setUsedAssignmentSchemaIds(?array $usedAssignmentSchemaIds): self
     {

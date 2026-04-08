@@ -45,8 +45,6 @@ class TeamMembership extends \ArrayObject
     }
     /**
      * The role of the user in the team.
-     *
-     * @return self
      */
     public function setRole(string $role): self
     {

@@ -55,8 +55,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The name of the Droplet backup plan.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -81,8 +79,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
      * 
      *
      * @param list<int> $possibleWindowStarts
-     *
-     * @return self
      */
     public function setPossibleWindowStarts(array $possibleWindowStarts): self
     {
@@ -99,8 +95,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The number of hours that a backup window is open.
-     *
-     * @return self
      */
     public function setWindowLengthHours(int $windowLengthHours): self
     {
@@ -117,8 +111,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The number of days that a backup will be kept.
-     *
-     * @return self
      */
     public function setRetentionPeriodDays(int $retentionPeriodDays): self
     {
@@ -139,8 +131,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
      * The day of the week the backup will occur.
      *
      * @param list<string> $possibleDays
-     *
-     * @return self
      */
     public function setPossibleDays(array $possibleDays): self
     {

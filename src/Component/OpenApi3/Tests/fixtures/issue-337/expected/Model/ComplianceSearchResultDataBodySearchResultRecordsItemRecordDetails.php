@@ -125,8 +125,6 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails extends
     }
     /**
      * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem> $iDs
-     *
-     * @return self
      */
     public function setIDs(array $iDs): self
     {

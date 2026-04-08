@@ -34,8 +34,6 @@ class Error
     }
     /**
      * An application-specific error code, expressed as a string value.
-     *
-     * @return self
      */
     public function setCode(string $code): self
     {
@@ -52,8 +50,6 @@ class Error
     }
     /**
      * A short, human-readable summary of the problem.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {

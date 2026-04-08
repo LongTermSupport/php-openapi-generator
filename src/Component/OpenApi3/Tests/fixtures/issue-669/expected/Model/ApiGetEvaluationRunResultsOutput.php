@@ -54,8 +54,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -72,8 +70,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {
@@ -94,8 +90,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
      * The prompt level results.
      *
      * @param list<ApiPrompt> $prompts
-     *
-     * @return self
      */
     public function setPrompts(array $prompts): self
     {

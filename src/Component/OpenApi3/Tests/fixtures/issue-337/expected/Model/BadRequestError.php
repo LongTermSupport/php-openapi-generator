@@ -55,8 +55,6 @@ class BadRequestError extends \ArrayObject
     }
     /**
      * Provides further information on why the request was rejected
-     *
-     * @return self
      */
     public function setDetails(string $details): self
     {

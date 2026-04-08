@@ -41,8 +41,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * @param list<ApiAgent> $agents
-     *
-     * @return self
      */
     public function setAgents(array $agents): self
     {
@@ -59,8 +57,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -77,8 +73,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {

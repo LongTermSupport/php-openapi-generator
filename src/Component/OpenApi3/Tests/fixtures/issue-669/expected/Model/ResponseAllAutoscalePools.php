@@ -35,8 +35,6 @@ class ResponseAllAutoscalePools extends \ArrayObject
     }
     /**
      * @param list<AutoscalePool> $autoscalePools
-     *
-     * @return self
      */
     public function setAutoscalePools(array $autoscalePools): self
     {

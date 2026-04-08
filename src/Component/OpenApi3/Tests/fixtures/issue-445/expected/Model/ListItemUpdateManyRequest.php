@@ -36,8 +36,6 @@ class ListItemUpdateManyRequest
     }
     /**
      * Allows updating list items with references to list items or contents that don't exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {
@@ -58,8 +56,6 @@ class ListItemUpdateManyRequest
      * Items to be updated.
      *
      * @param list<ListItemUpdateItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

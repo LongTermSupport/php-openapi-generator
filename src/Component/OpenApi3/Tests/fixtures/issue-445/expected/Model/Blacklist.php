@@ -36,8 +36,6 @@ class Blacklist
      * Blacklist entries.
      *
      * @param list<BlacklistItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

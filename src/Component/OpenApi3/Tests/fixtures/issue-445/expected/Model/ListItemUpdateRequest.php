@@ -43,8 +43,6 @@ class ListItemUpdateRequest
      * The content data of the list item. It's an object of dynamic metadata whose structure is defined in the Content schema of the list item.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -67,8 +65,6 @@ class ListItemUpdateRequest
      * Merge: the values specified in the Content object are merged to the existing content.
      * Replace: the values specified in the Content object entirely replace any existing content.
      * Defaults to Merge.
-     *
-     * @return self
      */
     public function setContentFieldsUpdateOptions(mixed $contentFieldsUpdateOptions): self
     {

@@ -30,8 +30,6 @@ class ContentSchemaCondition extends BusinessRuleCondition
     }
     /**
      * Content schema id to match on.
-     *
-     * @return self
      */
     public function setSchemaId(?string $schemaId): self
     {

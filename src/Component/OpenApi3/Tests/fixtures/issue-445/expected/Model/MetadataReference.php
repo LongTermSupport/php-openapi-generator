@@ -45,8 +45,6 @@ class MetadataReference
     }
     /**
      * Target ID of reference.
-     *
-     * @return self
      */
     public function setTargetMetadataItemId(string $targetMetadataItemId): self
     {
@@ -69,8 +67,6 @@ class MetadataReference
      * If this is true and the SourceMetadataItemId property is filled, the user does not have the
      * edit permission on the source metadata item. If the SourceMetadataItemId is null, the user also
      * does not have the view permission on that item.
-     *
-     * @return self
      */
     public function setIsRestricted(bool $isRestricted): self
     {
@@ -87,8 +83,6 @@ class MetadataReference
     }
     /**
      * ID of the source of the reference.
-     *
-     * @return self
      */
     public function setSourceMetadataItemId(?string $sourceMetadataItemId): self
     {
@@ -105,8 +99,6 @@ class MetadataReference
     }
     /**
      * DocType of the source of the reference.
-     *
-     * @return self
      */
     public function setSourceDocType(?string $sourceDocType): self
     {

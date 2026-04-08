@@ -35,8 +35,6 @@ class InteractionLimit extends \ArrayObject
     }
     /**
      * The interaction limit to enable.
-     *
-     * @return self
      */
     public function setLimit(string $limit): self
     {

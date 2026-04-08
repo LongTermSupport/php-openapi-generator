@@ -50,8 +50,6 @@ class ListItemFieldsBatchUpdateRequest
      * The ids of the list items whose fields need to be updated.
      *
      * @param list<string> $listItemIds
-     *
-     * @return self
      */
     public function setListItemIds(array $listItemIds): self
     {
@@ -72,8 +70,6 @@ class ListItemFieldsBatchUpdateRequest
      * Changes that need to be applied to the existing list items. The same set of changes is applied to all list items.
      *
      * @param list<MetadataValuesChangeCommandBase> $changeCommands
-     *
-     * @return self
      */
     public function setChangeCommands(array $changeCommands): self
     {
@@ -90,8 +86,6 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Allows updating list items with references to list items or contents that do not exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {
@@ -108,8 +102,6 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
-     * @return self
      */
     public function setNotifyProgress(bool $notifyProgress): self
     {

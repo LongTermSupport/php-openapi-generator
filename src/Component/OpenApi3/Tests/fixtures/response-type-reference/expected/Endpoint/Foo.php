@@ -32,11 +32,6 @@ class Foo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Exp
     {
         return ['Accept' => ['application/json']];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseTypeReference\Model\FooGetResponse200
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseTypeReference\Model\FooGetResponse200
     {
         $status = $response->getStatusCode();

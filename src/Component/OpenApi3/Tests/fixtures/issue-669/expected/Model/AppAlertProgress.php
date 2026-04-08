@@ -33,8 +33,6 @@ class AppAlertProgress extends \ArrayObject
     }
     /**
      * @param list<AppAlertProgressStep> $steps
-     *
-     * @return self
      */
     public function setSteps(array $steps): self
     {

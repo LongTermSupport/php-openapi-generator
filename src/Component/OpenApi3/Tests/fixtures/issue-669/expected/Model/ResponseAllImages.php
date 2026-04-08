@@ -35,8 +35,6 @@ class ResponseAllImages extends \ArrayObject
     }
     /**
      * @param list<Image> $images
-     *
-     * @return self
      */
     public function setImages(array $images): self
     {

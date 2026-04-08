@@ -49,8 +49,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
-     * @return self
      */
     public function setStats(DetailedTweetFieldsStats $stats): self
     {
@@ -67,8 +65,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * @param list<ContextAnnotation> $contextAnnotation
-     *
-     * @return self
      */
     public function setContextAnnotation(array $contextAnnotation): self
     {
@@ -85,8 +81,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
-     * @return self
      */
     public function setPossiblySensitive(bool $possiblySensitive): self
     {
@@ -103,8 +97,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
-     * @return self
      */
     public function setLang(string $lang): self
     {
@@ -121,8 +113,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * The name of the app the user Tweeted from.
-     *
-     * @return self
      */
     public function setSource(string $source): self
     {

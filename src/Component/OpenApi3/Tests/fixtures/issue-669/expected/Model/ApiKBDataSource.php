@@ -74,8 +74,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * AWS S3 Data Source
-     *
-     * @return self
      */
     public function setAwsDataSource(ApiAWSDataSource $awsDataSource): self
     {
@@ -92,8 +90,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Deprecated, moved to data_source_details
-     *
-     * @return self
      */
     public function setBucketName(string $bucketName): self
     {
@@ -110,8 +106,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Deprecated, moved to data_source_details
-     *
-     * @return self
      */
     public function setBucketRegion(string $bucketRegion): self
     {
@@ -132,8 +126,6 @@ class ApiKBDataSource extends \ArrayObject
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
-     * @return self
      */
     public function setChunkingAlgorithm(string $chunkingAlgorithm): self
     {
@@ -154,8 +146,6 @@ class ApiKBDataSource extends \ArrayObject
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
-     * @return self
      */
     public function setChunkingOptions(ApiChunkingOptions $chunkingOptions): self
     {
@@ -172,8 +162,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Dropbox Data Source
-     *
-     * @return self
      */
     public function setDropboxDataSource(ApiDropboxDataSource $dropboxDataSource): self
     {
@@ -190,8 +178,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
-     * @return self
      */
     public function setFileUploadDataSource(ApiFileUploadDataSource $fileUploadDataSource): self
     {
@@ -208,8 +194,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Google Drive Data Source
-     *
-     * @return self
      */
     public function setGoogleDriveDataSource(ApiGoogleDriveDataSource $googleDriveDataSource): self
     {
@@ -236,8 +220,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
-     * @return self
      */
     public function setSpacesDataSource(ApiSpacesDataSource $spacesDataSource): self
     {
@@ -254,8 +236,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
-     * @return self
      */
     public function setWebCrawlerDataSource(ApiWebCrawlerDataSource $webCrawlerDataSource): self
     {

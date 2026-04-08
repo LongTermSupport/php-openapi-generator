@@ -37,8 +37,6 @@ class NotificationSlackItem extends \ArrayObject
     }
     /**
      * Slack channel to notify of an alert trigger.
-     *
-     * @return self
      */
     public function setChannel(string $channel): self
     {
@@ -55,8 +53,6 @@ class NotificationSlackItem extends \ArrayObject
     }
     /**
      * Slack Webhook URL.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {

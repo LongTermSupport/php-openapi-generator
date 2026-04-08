@@ -112,8 +112,6 @@ class RedisAdvancedConfig extends \ArrayObject
      * - `volatile-lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile-random`: Evict keys with expiration only in a random order.
      * - `volatile-ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
-     * @return self
      */
     public function setRedisMaxmemoryPolicy(string $redisMaxmemoryPolicy): self
     {
@@ -130,8 +128,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
-     * @return self
      */
     public function setRedisPubsubClientOutputBufferLimit(int $redisPubsubClientOutputBufferLimit): self
     {
@@ -148,8 +144,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Set number of redis databases. Changing this will cause a restart of redis service.
-     *
-     * @return self
      */
     public function setRedisNumberOfDatabases(int $redisNumberOfDatabases): self
     {
@@ -166,8 +160,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Caching IO thread count
-     *
-     * @return self
      */
     public function setRedisIoThreads(int $redisIoThreads): self
     {
@@ -184,8 +176,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
-     * @return self
      */
     public function setRedisLfuLogFactor(int $redisLfuLogFactor): self
     {
@@ -202,8 +192,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
-     * @return self
      */
     public function setRedisLfuDecayTime(int $redisLfuDecayTime): self
     {
@@ -226,8 +214,6 @@ class RedisAdvancedConfig extends \ArrayObject
      * - When enabled, Caching accepts only SSL connections on port `25061`.
      * - When disabled, port `25060` is opened for non-SSL connections, while port `25061` remains available for SSL connections.
      * 
-     *
-     * @return self
      */
     public function setRedisSsl(bool $redisSsl): self
     {
@@ -244,8 +230,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Caching idle connection timeout in seconds
-     *
-     * @return self
      */
     public function setRedisTimeout(int $redisTimeout): self
     {
@@ -292,8 +276,6 @@ class RedisAdvancedConfig extends \ArrayObject
      * - `m` &mdash; Key miss events
      * - `n` &mdash; New key events
      * - `A` &mdash; Alias for `"g$lshztxed"`
-     *
-     * @return self
      */
     public function setRedisNotifyKeyspaceEvents(string $redisNotifyKeyspaceEvents): self
     {
@@ -310,8 +292,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Creates an RDB dump of the database every 10 minutes that can be used  to recover data after a node crash. The database does not create the  dump if no keys have changed since the last dump. When set to `off`,  the database cannot fork services, and data can be lost if a service  is restarted or powered off. DigitalOcean Managed Caching databases  do not support the Append Only File (AOF) persistence method.
-     *
-     * @return self
      */
     public function setRedisPersistence(string $redisPersistence): self
     {
@@ -328,8 +308,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Caching configuration acl-pubsub-default.
-     *
-     * @return self
      */
     public function setRedisAclChannelsDefault(string $redisAclChannelsDefault): self
     {

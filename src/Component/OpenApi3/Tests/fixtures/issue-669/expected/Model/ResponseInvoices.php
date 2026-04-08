@@ -39,8 +39,6 @@ class ResponseInvoices extends \ArrayObject
     }
     /**
      * @param list<InvoicePreview> $invoices
-     *
-     * @return self
      */
     public function setInvoices(array $invoices): self
     {
@@ -57,8 +55,6 @@ class ResponseInvoices extends \ArrayObject
     }
     /**
      * The invoice preview.
-     *
-     * @return self
      */
     public function setInvoicePreview(InvoicePreview $invoicePreview): self
     {

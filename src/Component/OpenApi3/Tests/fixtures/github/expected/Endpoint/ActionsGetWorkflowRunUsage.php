@@ -51,11 +51,6 @@ class ActionsGetWorkflowRunUsage extends \LongTermSupport\OpenApiGenerator\Compo
     {
         return ['Accept' => ['application/json']];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsage
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\WorkflowRunUsage
     {
         $status = $response->getStatusCode();

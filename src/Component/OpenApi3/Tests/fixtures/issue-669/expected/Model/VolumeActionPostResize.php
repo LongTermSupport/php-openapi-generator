@@ -41,8 +41,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -59,8 +57,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -77,8 +73,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The new size of the block storage volume in GiB (1024^3).
-     *
-     * @return self
      */
     public function setSizeGigabytes(int $sizeGigabytes): self
     {

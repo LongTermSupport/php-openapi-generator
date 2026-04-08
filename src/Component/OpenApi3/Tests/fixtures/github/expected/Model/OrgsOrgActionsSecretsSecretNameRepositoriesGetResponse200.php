@@ -44,8 +44,6 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200 extends \ArrayOb
     }
     /**
      * @param list<MinimalRepository> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {

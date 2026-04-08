@@ -33,8 +33,6 @@ class ApiUpdateAgentOutput extends \ArrayObject
     }
     /**
      * An Agent
-     *
-     * @return self
      */
     public function setAgent(ApiAgent $agent): self
     {

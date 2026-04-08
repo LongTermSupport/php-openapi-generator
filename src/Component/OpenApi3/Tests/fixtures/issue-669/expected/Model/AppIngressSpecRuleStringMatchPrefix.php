@@ -33,8 +33,6 @@ class AppIngressSpecRuleStringMatchPrefix extends \ArrayObject
     }
     /**
      * Prefix-based match. For example, `/api` will match `/api`, `/api/`, and any nested paths such as `/api/v1/endpoint`.
-     *
-     * @return self
      */
     public function setPrefix(string $prefix): self
     {

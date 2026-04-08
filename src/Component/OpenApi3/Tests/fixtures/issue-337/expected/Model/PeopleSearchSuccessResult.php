@@ -44,8 +44,6 @@ class PeopleSearchSuccessResult extends \ArrayObject
     }
     /**
      * @param list<PeopleSearchSuccessResultDirectorsItem> $directors
-     *
-     * @return self
      */
     public function setDirectors(array $directors): self
     {

@@ -35,8 +35,6 @@ class ResponseAllChecks extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $checks
-     *
-     * @return self
      */
     public function setChecks(array $checks): self
     {

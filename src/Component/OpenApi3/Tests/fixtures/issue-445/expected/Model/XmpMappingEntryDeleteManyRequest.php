@@ -36,8 +36,6 @@ class XmpMappingEntryDeleteManyRequest
      * IDs to delete.
      *
      * @param list<string>|null $ids
-     *
-     * @return self
      */
     public function setIds(?array $ids): self
     {

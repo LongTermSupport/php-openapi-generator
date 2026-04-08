@@ -77,8 +77,6 @@ class SearchResultTextMatchesItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItemMatchesItem> $matches
-     *
-     * @return self
      */
     public function setMatches(array $matches): self
     {

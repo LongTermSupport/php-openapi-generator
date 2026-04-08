@@ -107,8 +107,6 @@ class Issue extends \ArrayObject
     }
     /**
      * URL for the issue
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -175,8 +173,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Number uniquely identifying the issue within its repository
-     *
-     * @return self
      */
     public function setNumber(int $number): self
     {
@@ -193,8 +189,6 @@ class Issue extends \ArrayObject
     }
     /**
      * State of the issue; either 'open' or 'closed'
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -211,8 +205,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Title of the issue
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -229,8 +221,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Contents of the issue
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -261,8 +251,6 @@ class Issue extends \ArrayObject
      * Labels to associate with this issue; pass one or more label names to replace the set of labels on this issue; send an empty array to clear all labels from the issue; note that the labels are silently dropped for users without push access to the repository
      *
      * @param list<mixed> $labels
-     *
-     * @return self
      */
     public function setLabels(array $labels): self
     {
@@ -289,8 +277,6 @@ class Issue extends \ArrayObject
     }
     /**
      * @param list<SimpleUser>|null $assignees
-     *
-     * @return self
      */
     public function setAssignees(?array $assignees): self
     {
@@ -427,8 +413,6 @@ class Issue extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setRepository(Repository $repository): self
     {

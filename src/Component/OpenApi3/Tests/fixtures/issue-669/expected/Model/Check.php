@@ -55,8 +55,6 @@ class Check extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -73,8 +71,6 @@ class Check extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -91,8 +87,6 @@ class Check extends \ArrayObject
     }
     /**
      * The type of health check to perform.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -109,8 +103,6 @@ class Check extends \ArrayObject
     }
     /**
      * The endpoint to perform healthchecks on.
-     *
-     * @return self
      */
     public function setTarget(string $target): self
     {
@@ -131,8 +123,6 @@ class Check extends \ArrayObject
      * An array containing the selected regions to perform healthchecks from.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -149,8 +139,6 @@ class Check extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the check is enabled/disabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

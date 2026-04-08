@@ -54,8 +54,6 @@ class ProtectedBranch extends \ArrayObject
     }
     /**
      * Status Check Policy
-     *
-     * @return self
      */
     public function setRequiredStatusChecks(StatusCheckPolicy $requiredStatusChecks): self
     {
@@ -132,8 +130,6 @@ class ProtectedBranch extends \ArrayObject
     }
     /**
      * Branch Restriction Policy
-     *
-     * @return self
      */
     public function setRestrictions(BranchRestrictionPolicy $restrictions): self
     {

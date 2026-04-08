@@ -54,8 +54,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * The base url to crawl.
-     *
-     * @return self
      */
     public function setBaseUrl(string $baseUrl): self
     {
@@ -86,8 +84,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
      *  - DOMAIN: Crawl the base URL and linked pages within the same domain.
      *  - SUBDOMAINS: Crawl the base URL and linked pages for any subdomain.
      *  - SITEMAP: Crawl URLs discovered in the sitemap.
-     *
-     * @return self
      */
     public function setCrawlingOption(string $crawlingOption): self
     {
@@ -104,8 +100,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * Whether to ingest and index media (images, etc.) on web pages.
-     *
-     * @return self
      */
     public function setEmbedMedia(bool $embedMedia): self
     {
@@ -126,8 +120,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
      * Declaring which tags to exclude in web pages while webcrawling
      *
      * @param list<string> $excludeTags
-     *
-     * @return self
      */
     public function setExcludeTags(array $excludeTags): self
     {

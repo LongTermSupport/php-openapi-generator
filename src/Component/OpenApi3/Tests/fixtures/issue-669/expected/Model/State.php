@@ -34,8 +34,6 @@ class State extends \ArrayObject
     }
     /**
      * A map of region to regional state
-     *
-     * @return self
      */
     public function setRegions(RegionalState $regions): self
     {

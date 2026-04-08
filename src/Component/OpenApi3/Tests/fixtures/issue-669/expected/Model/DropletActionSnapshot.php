@@ -37,8 +37,6 @@ class DropletActionSnapshot extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -55,8 +53,6 @@ class DropletActionSnapshot extends \ArrayObject
     }
     /**
      * The name to give the new snapshot of the Droplet.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

@@ -33,8 +33,6 @@ class V2DatabasesDatabaseClusterUuidFirewallPutBody extends \ArrayObject
     }
     /**
      * @param list<FirewallRule> $rules
-     *
-     * @return self
      */
     public function setRules(array $rules): self
     {

@@ -52,8 +52,6 @@ class UserCreateRequest
     }
     /**
      * User's first name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -70,8 +68,6 @@ class UserCreateRequest
     }
     /**
      * User's last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -88,8 +84,6 @@ class UserCreateRequest
     }
     /**
      * Email address of the user (doubles as username).
-     *
-     * @return self
      */
     public function setEmailAddress(string $emailAddress): self
     {
@@ -106,8 +100,6 @@ class UserCreateRequest
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
-     * @return self
      */
     public function setLanguageCode(?string $languageCode): self
     {
@@ -128,8 +120,6 @@ class UserCreateRequest
      * IDs of user roles the user is assigned to.
      *
      * @param list<string>|null $userRoleIds
-     *
-     * @return self
      */
     public function setUserRoleIds(?array $userRoleIds): self
     {
@@ -146,8 +136,6 @@ class UserCreateRequest
     }
     /**
      * User address.
-     *
-     * @return self
      */
     public function setAddress(mixed $address): self
     {

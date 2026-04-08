@@ -50,8 +50,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Sets the start date and time for results based on Timestamp attribute.
-     *
-     * @return self
      */
     public function setFrom(\DateTime $from): self
     {
@@ -68,8 +66,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Sets the end date and time for results based on Timestamp attribute.
-     *
-     * @return self
      */
     public function setTo(\DateTime $to): self
     {
@@ -86,8 +82,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Optionally limits the result to only the specified scope type.
-     *
-     * @return self
      */
     public function setScopeType(?string $scopeType): self
     {
@@ -104,8 +98,6 @@ class LiveStreamSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -122,8 +114,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -140,8 +130,6 @@ class LiveStreamSearchRequest
     }
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {

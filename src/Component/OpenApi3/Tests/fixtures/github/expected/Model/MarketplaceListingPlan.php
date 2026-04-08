@@ -165,8 +165,6 @@ class MarketplaceListingPlan extends \ArrayObject
     }
     /**
      * @param list<string> $bullets
-     *
-     * @return self
      */
     public function setBullets(array $bullets): self
     {

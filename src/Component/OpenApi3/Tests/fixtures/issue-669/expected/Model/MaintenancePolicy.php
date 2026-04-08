@@ -41,8 +41,6 @@ class MaintenancePolicy extends \ArrayObject
     }
     /**
      * The start time in UTC of the maintenance window policy in 24-hour clock format / HH:MM notation (e.g., `15:00`).
-     *
-     * @return self
      */
     public function setStartTime(string $startTime): self
     {
@@ -59,8 +57,6 @@ class MaintenancePolicy extends \ArrayObject
     }
     /**
      * The duration of the maintenance window policy in human-readable format.
-     *
-     * @return self
      */
     public function setDuration(string $duration): self
     {
@@ -77,8 +73,6 @@ class MaintenancePolicy extends \ArrayObject
     }
     /**
      * The day of the maintenance window policy. May be one of `monday` through `sunday`, or `any` to indicate an arbitrary week day.
-     *
-     * @return self
      */
     public function setDay(string $day): self
     {

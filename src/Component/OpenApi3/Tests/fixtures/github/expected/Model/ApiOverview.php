@@ -77,8 +77,6 @@ class ApiOverview extends \ArrayObject
     }
     /**
      * @param list<string> $hooks
-     *
-     * @return self
      */
     public function setHooks(array $hooks): self
     {
@@ -95,8 +93,6 @@ class ApiOverview extends \ArrayObject
     }
     /**
      * @param list<string> $web
-     *
-     * @return self
      */
     public function setWeb(array $web): self
     {
@@ -113,8 +109,6 @@ class ApiOverview extends \ArrayObject
     }
     /**
      * @param list<string> $api
-     *
-     * @return self
      */
     public function setApi(array $api): self
     {
@@ -131,8 +125,6 @@ class ApiOverview extends \ArrayObject
     }
     /**
      * @param list<string> $git
-     *
-     * @return self
      */
     public function setGit(array $git): self
     {
@@ -149,8 +141,6 @@ class ApiOverview extends \ArrayObject
     }
     /**
      * @param list<string> $pages
-     *
-     * @return self
      */
     public function setPages(array $pages): self
     {
@@ -167,8 +157,6 @@ class ApiOverview extends \ArrayObject
     }
     /**
      * @param list<string> $importer
-     *
-     * @return self
      */
     public function setImporter(array $importer): self
     {

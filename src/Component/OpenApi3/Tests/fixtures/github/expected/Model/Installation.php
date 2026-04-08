@@ -59,8 +59,6 @@ class Installation extends \ArrayObject
     }
     /**
      * The ID of the installation.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -87,8 +85,6 @@ class Installation extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
-     * @return self
      */
     public function setRepositorySelection(string $repositorySelection): self
     {
@@ -145,8 +141,6 @@ class Installation extends \ArrayObject
     }
     /**
      * The ID of the user or organization this token is being scoped to.
-     *
-     * @return self
      */
     public function setTargetId(int $targetId): self
     {
@@ -183,8 +177,6 @@ class Installation extends \ArrayObject
     }
     /**
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {

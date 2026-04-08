@@ -45,8 +45,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The ID of the attachment
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -63,8 +61,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The title of the attachment
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -81,8 +77,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The body of the attachment
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -99,8 +93,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The node_id of the content attachment
-     *
-     * @return self
      */
     public function setNodeId(string $nodeId): self
     {

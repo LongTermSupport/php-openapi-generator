@@ -35,8 +35,6 @@ class ResponseAllKernels extends \ArrayObject
     }
     /**
      * @param list<Kernel> $kernels
-     *
-     * @return self
      */
     public function setKernels(array $kernels): self
     {

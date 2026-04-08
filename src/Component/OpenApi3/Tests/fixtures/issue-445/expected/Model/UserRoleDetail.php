@@ -47,8 +47,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * Language specific user role names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -69,8 +67,6 @@ class UserRoleDetail extends \ArrayObject
      * All user rights for this user role.
      *
      * @param list<string> $userRights
-     *
-     * @return self
      */
     public function setUserRights(array $userRights): self
     {
@@ -87,8 +83,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * User role ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -105,8 +99,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {

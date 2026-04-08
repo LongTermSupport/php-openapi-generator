@@ -55,8 +55,6 @@ class GbCompanyReportExampleResponseReportShareCapitalStructure extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem> $shareHolders
-     *
-     * @return self
      */
     public function setShareHolders(array $shareHolders): self
     {

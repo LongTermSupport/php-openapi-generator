@@ -59,8 +59,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * Indicates whether the app is a static app.
-     *
-     * @return self
      */
     public function setAppIsStatic(bool $appIsStatic): self
     {
@@ -77,8 +75,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * Indicates whether the app name is available.
-     *
-     * @return self
      */
     public function setAppNameAvailable(bool $appNameAvailable): self
     {
@@ -95,8 +91,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The suggested name if the proposed app name is unavailable.
-     *
-     * @return self
      */
     public function setAppNameSuggestion(string $appNameSuggestion): self
     {
@@ -113,8 +107,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The maximum number of free static apps the account can have. We will charge you for any additional static apps.
-     *
-     * @return self
      */
     public function setExistingStaticApps(string $existingStaticApps): self
     {
@@ -131,8 +123,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
-     * @return self
      */
     public function setSpec(AppSpec $spec): self
     {
@@ -149,8 +139,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The monthly cost of the proposed app in USD.
-     *
-     * @return self
      */
     public function setAppCost(int $appCost): self
     {
@@ -171,8 +159,6 @@ class AppProposeResponse extends \ArrayObject
      * The monthly cost of the proposed app in USD using the previous pricing plan tier. For example, if you propose an app that uses the Professional tier, the `app_tier_downgrade_cost` field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses the lest expensive tier, the field is empty.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setAppTierDowngradeCost(int $appTierDowngradeCost): self
     {

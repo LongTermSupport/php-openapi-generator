@@ -67,8 +67,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Run server_reset_query (DISCARD ALL) in all pooling modes.
-     *
-     * @return self
      */
     public function setServerResetQueryAlways(bool $serverResetQueryAlways): self
     {
@@ -89,8 +87,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
      * List of parameters to ignore when given in startup packet.
      *
      * @param list<string> $ignoreStartupParameters
-     *
-     * @return self
      */
     public function setIgnoreStartupParameters(array $ignoreStartupParameters): self
     {
@@ -107,8 +103,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If current server connections are below this number, adds more. Improves behavior when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the pool size.
-     *
-     * @return self
      */
     public function setMinPoolSize(int $minPoolSize): self
     {
@@ -125,8 +119,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * The pooler closes any unused server connection that has been connected longer than this amount of seconds.
-     *
-     * @return self
      */
     public function setServerLifetime(int $serverLifetime): self
     {
@@ -143,8 +135,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Drops server connections if they have been idle more than this many seconds.  If 0, timeout is disabled.
-     *
-     * @return self
      */
     public function setServerIdleTimeout(int $serverIdleTimeout): self
     {
@@ -161,8 +151,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If non-zero, automatically creates a pool of that size per user when a pool doesn't exist.
-     *
-     * @return self
      */
     public function setAutodbPoolSize(int $autodbPoolSize): self
     {
@@ -179,8 +167,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * PGBouncer pool mode
-     *
-     * @return self
      */
     public function setAutodbPoolMode(string $autodbPoolMode): self
     {
@@ -197,8 +183,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Only allows a maximum this many server connections per database (regardless of user). If 0, allows unlimited connections.
-     *
-     * @return self
      */
     public function setAutodbMaxDbConnections(int $autodbMaxDbConnections): self
     {
@@ -215,8 +199,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If the automatically-created database pools have been unused this many seconds, they are freed. If 0, timeout is disabled.
-     *
-     * @return self
      */
     public function setAutodbIdleTimeout(int $autodbIdleTimeout): self
     {

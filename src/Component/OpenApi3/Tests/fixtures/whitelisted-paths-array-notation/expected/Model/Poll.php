@@ -40,8 +40,6 @@ class Poll extends \ArrayObject
     }
     /**
      * Unique identifier of this poll.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -58,8 +56,6 @@ class Poll extends \ArrayObject
     }
     /**
      * @param list<PollOption> $options
-     *
-     * @return self
      */
     public function setOptions(array $options): self
     {

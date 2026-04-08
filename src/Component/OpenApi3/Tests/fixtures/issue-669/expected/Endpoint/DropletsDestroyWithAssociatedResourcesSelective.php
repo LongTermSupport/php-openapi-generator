@@ -60,7 +60,6 @@ class DropletsDestroyWithAssociatedResourcesSelective extends \LongTermSupport\O
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyWithAssociatedResourcesSelectiveUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyWithAssociatedResourcesSelectiveNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyWithAssociatedResourcesSelectiveTooManyRequestsException

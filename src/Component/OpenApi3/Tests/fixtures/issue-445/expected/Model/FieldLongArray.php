@@ -50,8 +50,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The long pattern structure.
-     *
-     * @return self
      */
     public function setPattern(?string $pattern): self
     {
@@ -68,8 +66,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The minimum possible value.
-     *
-     * @return self
      */
     public function setMinimum(?float $minimum): self
     {
@@ -86,8 +82,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The maximum possible value.
-     *
-     * @return self
      */
     public function setMaximum(?float $maximum): self
     {
@@ -104,8 +98,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {
@@ -122,8 +114,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
-     * @return self
      */
     public function setMaximumItems(?int $maximumItems): self
     {
@@ -140,8 +130,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
-     * @return self
      */
     public function setMinimumItems(?int $minimumItems): self
     {

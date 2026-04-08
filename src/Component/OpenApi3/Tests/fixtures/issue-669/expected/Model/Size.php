@@ -81,8 +81,6 @@ class Size extends \ArrayObject
     }
     /**
      * A human-readable string that is used to uniquely identify each size.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -99,8 +97,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of RAM allocated to Droplets created of this size. The value is represented in megabytes.
-     *
-     * @return self
      */
     public function setMemory(int $memory): self
     {
@@ -117,8 +113,6 @@ class Size extends \ArrayObject
     }
     /**
      * The number of CPUs allocated to Droplets of this size.
-     *
-     * @return self
      */
     public function setVcpus(int $vcpus): self
     {
@@ -135,8 +129,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of disk space set aside for Droplets of this size. The value is represented in gigabytes.
-     *
-     * @return self
      */
     public function setDisk(int $disk): self
     {
@@ -153,8 +145,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
-     *
-     * @return self
      */
     public function setTransfer(float $transfer): self
     {
@@ -171,8 +161,6 @@ class Size extends \ArrayObject
     }
     /**
      * This attribute describes the monthly cost of this Droplet size if the Droplet is kept for an entire month. The value is measured in US dollars.
-     *
-     * @return self
      */
     public function setPriceMonthly(float $priceMonthly): self
     {
@@ -189,8 +177,6 @@ class Size extends \ArrayObject
     }
     /**
      * This describes the price of the Droplet size as measured hourly. The value is measured in US dollars.
-     *
-     * @return self
      */
     public function setPriceHourly(float $priceHourly): self
     {
@@ -211,8 +197,6 @@ class Size extends \ArrayObject
      * An array containing the region slugs where this size is available for Droplet creates.
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {
@@ -229,8 +213,6 @@ class Size extends \ArrayObject
     }
     /**
      * This is a boolean value that represents whether new Droplets can be created with this size.
-     *
-     * @return self
      */
     public function setAvailable(bool $available): self
     {
@@ -247,8 +229,6 @@ class Size extends \ArrayObject
     }
     /**
      * A string describing the class of Droplets created from this size. For example: Basic, General Purpose, CPU-Optimized, Memory-Optimized, or Storage-Optimized.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -269,8 +249,6 @@ class Size extends \ArrayObject
      * An array of objects containing information about the disks available to Droplets created with this size.
      *
      * @param list<DiskInfo> $diskInfo
-     *
-     * @return self
      */
     public function setDiskInfo(array $diskInfo): self
     {
@@ -287,8 +265,6 @@ class Size extends \ArrayObject
     }
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
-     * @return self
      */
     public function setGpuInfo(GpuInfo $gpuInfo): self
     {

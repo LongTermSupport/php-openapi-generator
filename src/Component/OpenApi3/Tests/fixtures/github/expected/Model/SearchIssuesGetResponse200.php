@@ -55,8 +55,6 @@ class SearchIssuesGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<IssueSearchResultItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

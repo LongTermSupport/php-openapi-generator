@@ -53,8 +53,6 @@ class AppsRegion extends \ArrayObject
     }
     /**
      * @param list<string> $dataCenters
-     *
-     * @return self
      */
     public function setDataCenters(array $dataCenters): self
     {
@@ -71,8 +69,6 @@ class AppsRegion extends \ArrayObject
     }
     /**
      * Whether or not the region is presented as the default.
-     *
-     * @return self
      */
     public function setDefault(bool $default): self
     {

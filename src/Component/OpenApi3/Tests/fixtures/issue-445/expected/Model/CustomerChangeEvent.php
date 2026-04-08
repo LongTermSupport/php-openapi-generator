@@ -41,8 +41,6 @@ class CustomerChangeEvent extends ApplicationEvent
     }
     /**
      * Lifecycle
-     *
-     * @return self
      */
     public function setLifeCycle(string $lifeCycle): self
     {

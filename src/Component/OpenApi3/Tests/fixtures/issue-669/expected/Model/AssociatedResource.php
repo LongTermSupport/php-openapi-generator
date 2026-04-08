@@ -41,8 +41,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The unique identifier for the resource associated with the Droplet.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The name of the resource associated with the Droplet.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -77,8 +73,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The cost of the resource in USD per month if the resource is retained after the Droplet is destroyed.
-     *
-     * @return self
      */
     public function setCost(string $cost): self
     {

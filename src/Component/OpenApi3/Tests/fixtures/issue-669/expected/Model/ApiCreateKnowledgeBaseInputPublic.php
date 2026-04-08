@@ -71,8 +71,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
      * Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional.
      * If not provided, we create a new database for the knowledge base in
      * the same region as the knowledge base.
-     *
-     * @return self
      */
     public function setDatabaseId(string $databaseId): self
     {
@@ -93,8 +91,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
      * The data sources to use for this knowledge base. See [Organize Data Sources](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#spaces-buckets) for more information on data sources best practices.
      *
      * @param list<ApiKBDataSource> $datasources
-     *
-     * @return self
      */
     public function setDatasources(array $datasources): self
     {
@@ -111,8 +107,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the [embedding model](https://docs.digitalocean.com/products/genai-platform/details/models/#embedding-models).
-     *
-     * @return self
      */
     public function setEmbeddingModelUuid(string $embeddingModelUuid): self
     {
@@ -129,8 +123,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the knowledge base.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -147,8 +139,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier of the DigitalOcean project this knowledge base will belong to.
-     *
-     * @return self
      */
     public function setProjectId(string $projectId): self
     {
@@ -165,8 +155,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The datacenter region to deploy the knowledge base in.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -187,8 +175,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
      * Tags to organize your knowledge base.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -205,8 +191,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The VPC to deploy the knowledge base database in
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {

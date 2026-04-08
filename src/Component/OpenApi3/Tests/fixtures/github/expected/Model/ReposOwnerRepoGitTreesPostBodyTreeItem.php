@@ -53,8 +53,6 @@ class ReposOwnerRepoGitTreesPostBodyTreeItem extends \ArrayObject
     }
     /**
      * The file referenced in the tree.
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -71,8 +69,6 @@ class ReposOwnerRepoGitTreesPostBodyTreeItem extends \ArrayObject
     }
     /**
      * The file mode; one of `100644` for file (blob), `100755` for executable (blob), `040000` for subdirectory (tree), `160000` for submodule (commit), or `120000` for a blob that specifies the path of a symlink.
-     *
-     * @return self
      */
     public function setMode(string $mode): self
     {
@@ -89,8 +85,6 @@ class ReposOwnerRepoGitTreesPostBodyTreeItem extends \ArrayObject
     }
     /**
      * Either `blob`, `tree`, or `commit`.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -111,8 +105,6 @@ class ReposOwnerRepoGitTreesPostBodyTreeItem extends \ArrayObject
      * The SHA1 checksum ID of the object in the tree. Also called `tree.sha`. If the value is `null` then the file will be deleted.
      * 
      * **Note:** Use either `tree.sha` or `content` to specify the contents of the entry. Using both `tree.sha` and `content` will return an error.
-     *
-     * @return self
      */
     public function setSha(?string $sha): self
     {
@@ -133,8 +125,6 @@ class ReposOwnerRepoGitTreesPostBodyTreeItem extends \ArrayObject
      * The content you want this file to have. GitHub will write this blob out and use that SHA for this entry. Use either this, or `tree.sha`.
      * 
      * **Note:** Use either `tree.sha` or `content` to specify the contents of the entry. Using both `tree.sha` and `content` will return an error.
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {

@@ -44,8 +44,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
      * List of external mail recipients which are no Picturepark users.
      *
      * @param list<UserEmail>|null $recipientEmails
-     *
-     * @return self
      */
     public function setRecipientEmails(?array $recipientEmails): self
     {
@@ -62,8 +60,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     }
     /**
      * System language used for share (mail and detail page). en or de.
-     *
-     * @return self
      */
     public function setLanguageCode(string $languageCode): self
     {
@@ -80,8 +76,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     }
     /**
      * Set to true to disable the creation of notifications and emails to recipients.
-     *
-     * @return self
      */
     public function setSuppressNotifications(bool $suppressNotifications): self
     {

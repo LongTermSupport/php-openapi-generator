@@ -69,8 +69,6 @@ class Event extends \ArrayObject
     }
     /**
      * The unique identifier for the event.
-     *
-     * @return self
      */
     public function setEventId(float $eventId): self
     {
@@ -87,8 +85,6 @@ class Event extends \ArrayObject
     }
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the event.
-     *
-     * @return self
      */
     public function setCompanyId(float $companyId): self
     {
@@ -105,8 +101,6 @@ class Event extends \ArrayObject
     }
     /**
      * The portfolio Id of the portfolio that contains the company that you requested event information for.
-     *
-     * @return self
      */
     public function setPortfolioId(float $portfolioId): self
     {
@@ -123,8 +117,6 @@ class Event extends \ArrayObject
     }
     /**
      * A short description of the company event.
-     *
-     * @return self
      */
     public function setRuleName(string $ruleName): self
     {
@@ -141,8 +133,6 @@ class Event extends \ArrayObject
     }
     /**
      * The local event code for the event.
-     *
-     * @return self
      */
     public function setLocalEventCode(string $localEventCode): self
     {
@@ -159,8 +149,6 @@ class Event extends \ArrayObject
     }
     /**
      * The global event code that has been mapped to the local event.
-     *
-     * @return self
      */
     public function setGlobalEventCode(string $globalEventCode): self
     {
@@ -177,8 +165,6 @@ class Event extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
-     * @return self
      */
     public function setNewValue(string $newValue): self
     {
@@ -195,8 +181,6 @@ class Event extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
-     * @return self
      */
     public function setOldValue(string $oldValue): self
     {
@@ -213,8 +197,6 @@ class Event extends \ArrayObject
     }
     /**
      * The date that the event occured.
-     *
-     * @return self
      */
     public function setEventDate(\DateTime $eventDate): self
     {
@@ -231,8 +213,6 @@ class Event extends \ArrayObject
     }
     /**
      * The date that the event was created in the Creditsafe database.
-     *
-     * @return self
      */
     public function setCreatedDate(\DateTime $createdDate): self
     {

@@ -37,8 +37,6 @@ class UserKeysPostBody extends \ArrayObject
     }
     /**
      * A descriptive name for the new key.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -55,8 +53,6 @@ class UserKeysPostBody extends \ArrayObject
     }
     /**
      * The public SSH key to add to your GitHub account.
-     *
-     * @return self
      */
     public function setKey(string $key): self
     {

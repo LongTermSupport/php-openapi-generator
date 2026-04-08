@@ -44,8 +44,6 @@ class Foo extends \ArrayObject
     }
     /**
      * A description
-     *
-     * @return self
      */
     public function setFoo(string $foo): self
     {

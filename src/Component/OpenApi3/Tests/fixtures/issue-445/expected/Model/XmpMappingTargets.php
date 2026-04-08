@@ -42,8 +42,6 @@ class XmpMappingTargets
      * Fields in XMP/Exif.
      *
      * @param list<XmpField> $xmpFields
-     *
-     * @return self
      */
     public function setXmpFields(array $xmpFields): self
     {
@@ -64,8 +62,6 @@ class XmpMappingTargets
      * Fields in metadata.
      *
      * @param list<MetadataField> $metadataFields
-     *
-     * @return self
      */
     public function setMetadataFields(array $metadataFields): self
     {

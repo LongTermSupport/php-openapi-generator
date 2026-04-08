@@ -57,8 +57,6 @@ class PullRequestSimpleBase extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setRepo(Repository $repo): self
     {

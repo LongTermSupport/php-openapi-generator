@@ -36,8 +36,6 @@ class SchemaPermissionSetCreateManyRequest
      * Schema permission sets create requests.
      *
      * @param list<SchemaPermissionSetCreateRequest>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

@@ -41,8 +41,6 @@ class ApiUpdateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Anthropic API key
-     *
-     * @return self
      */
     public function setApiKey(string $apiKey): self
     {
@@ -59,8 +57,6 @@ class ApiUpdateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
-     * @return self
      */
     public function setApiKeyUuid(string $apiKeyUuid): self
     {
@@ -77,8 +73,6 @@ class ApiUpdateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

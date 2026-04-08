@@ -35,8 +35,6 @@ class ResponseTagsAll extends \ArrayObject
     }
     /**
      * @param list<Tags> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {

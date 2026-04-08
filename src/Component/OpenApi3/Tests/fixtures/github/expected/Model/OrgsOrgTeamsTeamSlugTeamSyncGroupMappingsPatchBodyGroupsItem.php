@@ -41,8 +41,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * ID of the IdP group.
-     *
-     * @return self
      */
     public function setGroupId(string $groupId): self
     {
@@ -59,8 +57,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * Name of the IdP group.
-     *
-     * @return self
      */
     public function setGroupName(string $groupName): self
     {
@@ -77,8 +73,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * Description of the IdP group.
-     *
-     * @return self
      */
     public function setGroupDescription(string $groupDescription): self
     {

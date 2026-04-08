@@ -56,8 +56,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * The hostname for the domain
-     *
-     * @return self
      */
     public function setDomain(string $domain): self
     {
@@ -78,8 +76,6 @@ class AppDomainSpec extends \ArrayObject
      * - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
      * - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in bindable environment variables, and any other places that reference an app's live URL. Only one domain may be set as primary.
      * - ALIAS: A non-primary domain
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -96,8 +92,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * Indicates whether the domain includes all sub-domains, in addition to the given domain
-     *
-     * @return self
      */
     public function setWildcard(bool $wildcard): self
     {
@@ -124,8 +118,6 @@ class AppDomainSpec extends \ArrayObject
      * 
      * For example, If the domain you are adding is `app.domain.com`, the zone
      * could be `domain.com`.
-     *
-     * @return self
      */
     public function setZone(string $zone): self
     {
@@ -142,8 +134,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * The minimum version of TLS a client application can use to access resources for the domain.  Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
-     *
-     * @return self
      */
     public function setMinimumTlsVersion(string $minimumTlsVersion): self
     {

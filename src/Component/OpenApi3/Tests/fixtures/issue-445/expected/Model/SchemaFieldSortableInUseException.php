@@ -154,8 +154,6 @@ class SchemaFieldSortableInUseException extends \ArrayObject
     }
     /**
      * @param list<string>|null $channelIds
-     *
-     * @return self
      */
     public function setChannelIds(?array $channelIds): self
     {

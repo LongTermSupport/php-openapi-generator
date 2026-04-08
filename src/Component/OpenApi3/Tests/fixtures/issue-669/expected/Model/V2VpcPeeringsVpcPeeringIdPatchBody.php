@@ -33,8 +33,6 @@ class V2VpcPeeringsVpcPeeringIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

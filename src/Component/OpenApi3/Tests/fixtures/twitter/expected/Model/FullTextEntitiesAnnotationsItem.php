@@ -49,8 +49,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
-     * @return self
      */
     public function setStart(int $start): self
     {
@@ -67,8 +65,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
-     * @return self
      */
     public function setEnd(int $end): self
     {
@@ -85,8 +81,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Confidence factor for annotation type.
-     *
-     * @return self
      */
     public function setProbability(float $probability): self
     {
@@ -103,8 +97,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Annotation type.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -121,8 +113,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Text used to determine annotation.
-     *
-     * @return self
      */
     public function setNormalizedText(string $normalizedText): self
     {

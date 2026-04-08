@@ -366,8 +366,6 @@ class UserSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItem> $textMatches
-     *
-     * @return self
      */
     public function setTextMatches(array $textMatches): self
     {

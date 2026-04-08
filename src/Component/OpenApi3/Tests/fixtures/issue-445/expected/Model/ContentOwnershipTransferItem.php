@@ -37,8 +37,6 @@ class ContentOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
-     * @return self
      */
     public function setTransferUserId(string $transferUserId): self
     {
@@ -55,8 +53,6 @@ class ContentOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The content ID.
-     *
-     * @return self
      */
     public function setContentId(string $contentId): self
     {

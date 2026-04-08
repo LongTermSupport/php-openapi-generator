@@ -46,8 +46,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * Spaces bucket name
-     *
-     * @return self
      */
     public function setBucketName(string $bucketName): self
     {
@@ -74,8 +72,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * The AWS Key ID
-     *
-     * @return self
      */
     public function setKeyId(string $keyId): self
     {
@@ -92,8 +88,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * Region of bucket
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -110,8 +104,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * The AWS Secret Key
-     *
-     * @return self
      */
     public function setSecretKey(string $secretKey): self
     {

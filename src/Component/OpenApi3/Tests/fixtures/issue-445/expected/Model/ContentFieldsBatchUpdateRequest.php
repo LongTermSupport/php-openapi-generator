@@ -36,8 +36,6 @@ class ContentFieldsBatchUpdateRequest extends MetadataValuesChangeRequestBase
      * The IDs of the contents whose fields need to be updated.
      *
      * @param list<string> $contentIds
-     *
-     * @return self
      */
     public function setContentIds(array $contentIds): self
     {

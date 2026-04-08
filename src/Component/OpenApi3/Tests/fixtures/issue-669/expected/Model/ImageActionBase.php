@@ -33,8 +33,6 @@ class ImageActionBase extends \ArrayObject
     }
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

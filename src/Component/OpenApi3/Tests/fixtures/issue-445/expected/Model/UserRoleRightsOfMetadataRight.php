@@ -36,8 +36,6 @@ class UserRoleRightsOfMetadataRight
     }
     /**
      * The user role id.
-     *
-     * @return self
      */
     public function setUserRoleId(?string $userRoleId): self
     {
@@ -58,8 +56,6 @@ class UserRoleRightsOfMetadataRight
      * A permission container which can hold content, metadata or permission set rights.
      *
      * @param list<string>|null $rights
-     *
-     * @return self
      */
     public function setRights(?array $rights): self
     {

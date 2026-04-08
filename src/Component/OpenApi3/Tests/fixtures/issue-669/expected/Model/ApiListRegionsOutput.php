@@ -39,8 +39,6 @@ class ApiListRegionsOutput extends \ArrayObject
      * Region code
      *
      * @param list<GenaiapiRegion> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {

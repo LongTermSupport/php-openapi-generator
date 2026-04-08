@@ -34,8 +34,6 @@ class IdpClaimToUserAttributeMapping
     }
     /**
      * Claim type name coming from external identity provider
-     *
-     * @return self
      */
     public function setClaimType(?string $claimType): self
     {
@@ -52,8 +50,6 @@ class IdpClaimToUserAttributeMapping
     }
     /**
      * Path to a user attribute to synchronize
-     *
-     * @return self
      */
     public function setUserAttributePath(?string $userAttributePath): self
     {

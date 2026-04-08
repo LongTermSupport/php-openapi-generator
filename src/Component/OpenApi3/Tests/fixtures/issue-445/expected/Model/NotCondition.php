@@ -30,8 +30,6 @@ class NotCondition extends BusinessRuleCondition
     }
     /**
      * Inner condition.
-     *
-     * @return self
      */
     public function setCondition(mixed $condition): self
     {

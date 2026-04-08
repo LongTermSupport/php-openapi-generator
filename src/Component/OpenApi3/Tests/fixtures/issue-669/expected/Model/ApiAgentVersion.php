@@ -135,8 +135,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Uuid of the agent this version belongs to
-     *
-     * @return self
      */
     public function setAgentUuid(string $agentUuid): self
     {
@@ -157,8 +155,6 @@ class ApiAgentVersion extends \ArrayObject
      * List of child agent relationships
      *
      * @param list<ApiAgentChildRelationshipVerion> $attachedChildAgents
-     *
-     * @return self
      */
     public function setAttachedChildAgents(array $attachedChildAgents): self
     {
@@ -179,8 +175,6 @@ class ApiAgentVersion extends \ArrayObject
      * List of function versions
      *
      * @param list<ApiAgentFunctionVersion> $attachedFunctions
-     *
-     * @return self
      */
     public function setAttachedFunctions(array $attachedFunctions): self
     {
@@ -201,8 +195,6 @@ class ApiAgentVersion extends \ArrayObject
      * List of guardrail version
      *
      * @param list<ApiAgentGuardrailVersion> $attachedGuardrails
-     *
-     * @return self
      */
     public function setAttachedGuardrails(array $attachedGuardrails): self
     {
@@ -223,8 +215,6 @@ class ApiAgentVersion extends \ArrayObject
      * List of knowledge base agent versions
      *
      * @param list<ApiAgentKnowledgeBaseVersion> $attachedKnowledgebases
-     *
-     * @return self
      */
     public function setAttachedKnowledgebases(array $attachedKnowledgebases): self
     {
@@ -241,8 +231,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether the version is able to be rolled back to
-     *
-     * @return self
      */
     public function setCanRollback(bool $canRollback): self
     {
@@ -259,8 +247,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Creation date
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -277,8 +263,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * User who created this version
-     *
-     * @return self
      */
     public function setCreatedByEmail(string $createdByEmail): self
     {
@@ -295,8 +279,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether this is the currently applied configuration
-     *
-     * @return self
      */
     public function setCurrentlyApplied(bool $currentlyApplied): self
     {
@@ -313,8 +295,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Description of the agent
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -331,8 +311,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -349,8 +327,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Instruction for the agent
-     *
-     * @return self
      */
     public function setInstruction(string $instruction): self
     {
@@ -367,8 +343,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * K value for the agent's configuration
-     *
-     * @return self
      */
     public function setK(int $k): self
     {
@@ -385,8 +359,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Max tokens setting for the agent
-     *
-     * @return self
      */
     public function setMaxTokens(int $maxTokens): self
     {
@@ -403,8 +375,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Name of model associated to the agent version
-     *
-     * @return self
      */
     public function setModelName(string $modelName): self
     {
@@ -421,8 +391,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Name of the agent
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -439,8 +407,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
-     * @return self
      */
     public function setProvideCitations(bool $provideCitations): self
     {
@@ -465,8 +431,6 @@ class ApiAgentVersion extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
-     * @return self
      */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
@@ -487,8 +451,6 @@ class ApiAgentVersion extends \ArrayObject
      * Tags associated with the agent
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -505,8 +467,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Temperature setting for the agent
-     *
-     * @return self
      */
     public function setTemperature(float $temperature): self
     {
@@ -523,8 +483,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Top_p setting for the agent
-     *
-     * @return self
      */
     public function setTopP(float $topP): self
     {
@@ -541,8 +499,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Action triggering the configuration update
-     *
-     * @return self
      */
     public function setTriggerAction(string $triggerAction): self
     {
@@ -559,8 +515,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Version hash
-     *
-     * @return self
      */
     public function setVersionHash(string $versionHash): self
     {

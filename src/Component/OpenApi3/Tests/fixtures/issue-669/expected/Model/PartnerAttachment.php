@@ -77,8 +77,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the partner attachment.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -95,8 +93,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -113,8 +109,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The current operational state of the attachment.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -131,8 +125,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The bandwidth (in Mbps) of the connection.
-     *
-     * @return self
      */
     public function setConnectionBandwidthInMbps(int $connectionBandwidthInMbps): self
     {
@@ -149,8 +141,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The region where the partner attachment is located.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -167,8 +157,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The Network as a Service (NaaS) provider for the partner attachment.
-     *
-     * @return self
      */
     public function setNaasProvider(string $naasProvider): self
     {
@@ -189,8 +177,6 @@ class PartnerAttachment extends \ArrayObject
      * An array of VPC network IDs.
      *
      * @param list<string> $vpcIds
-     *
-     * @return self
      */
     public function setVpcIds(array $vpcIds): self
     {
@@ -207,8 +193,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The BGP configuration for the partner attachment.
-     *
-     * @return self
      */
     public function setBgp(PartnerAttachmentBgp $bgp): self
     {
@@ -225,8 +209,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -243,8 +225,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * Associated partner attachment UUID
-     *
-     * @return self
      */
     public function setParentUuid(string $parentUuid): self
     {
@@ -265,8 +245,6 @@ class PartnerAttachment extends \ArrayObject
      * An array of associated partner attachment UUIDs.
      *
      * @param list<string> $children
-     *
-     * @return self
      */
     public function setChildren(array $children): self
     {

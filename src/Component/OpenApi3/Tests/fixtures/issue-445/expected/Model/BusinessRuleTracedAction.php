@@ -38,8 +38,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Trace reference ID of action
-     *
-     * @return self
      */
     public function setTraceRefId(?string $traceRefId): self
     {
@@ -56,8 +54,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Indicates if the action modified the document
-     *
-     * @return self
      */
     public function setDocumentModified(bool $documentModified): self
     {
@@ -74,8 +70,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Additional information provided by the trace
-     *
-     * @return self
      */
     public function setText(?string $text): self
     {

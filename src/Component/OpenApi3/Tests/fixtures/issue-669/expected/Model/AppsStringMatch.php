@@ -43,8 +43,6 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * Exact string match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
-     * @return self
      */
     public function setExact(string $exact): self
     {
@@ -65,8 +63,6 @@ class AppsStringMatch extends \ArrayObject
      * Prefix-based match. Only 1 of `exact`, `prefix`, or `regex` must be set.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setPrefix(string $prefix): self
     {
@@ -83,8 +79,6 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * RE2 style regex-based match. Only 1 of `exact`, `prefix`, or `regex` must be set. For more information about RE2 syntax, see: https://github.com/google/re2/wiki/Syntax
-     *
-     * @return self
      */
     public function setRegex(string $regex): self
     {

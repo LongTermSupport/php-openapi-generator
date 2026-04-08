@@ -40,8 +40,6 @@ class GistsPostBody extends \ArrayObject
     }
     /**
      * Description of the gist
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -62,8 +60,6 @@ class GistsPostBody extends \ArrayObject
      * Names and content for the files that make up the gist
      *
      * @param array<string, GistsPostBodyFilesItem> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {

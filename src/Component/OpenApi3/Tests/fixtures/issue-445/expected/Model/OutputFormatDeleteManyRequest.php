@@ -36,8 +36,6 @@ class OutputFormatDeleteManyRequest
      * List of IDs of output formats to remove.
      *
      * @param list<string>|null $ids
-     *
-     * @return self
      */
     public function setIds(?array $ids): self
     {

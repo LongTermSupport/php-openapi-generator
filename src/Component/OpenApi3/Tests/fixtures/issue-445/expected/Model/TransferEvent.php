@@ -41,8 +41,6 @@ class TransferEvent extends ApplicationEvent
     }
     /**
      * Transfer states
-     *
-     * @return self
      */
     public function setState(string $state): self
     {

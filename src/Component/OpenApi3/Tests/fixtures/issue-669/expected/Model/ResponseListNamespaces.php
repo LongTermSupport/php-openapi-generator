@@ -33,8 +33,6 @@ class ResponseListNamespaces extends \ArrayObject
     }
     /**
      * @param list<NamespaceInfo> $namespaces
-     *
-     * @return self
      */
     public function setNamespaces(array $namespaces): self
     {

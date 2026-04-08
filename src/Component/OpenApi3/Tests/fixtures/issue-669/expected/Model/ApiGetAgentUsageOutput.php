@@ -37,8 +37,6 @@ class ApiGetAgentUsageOutput extends \ArrayObject
     }
     /**
      * Resource Usage Description
-     *
-     * @return self
      */
     public function setLogInsightsUsage(ApiResourceUsage $logInsightsUsage): self
     {
@@ -55,8 +53,6 @@ class ApiGetAgentUsageOutput extends \ArrayObject
     }
     /**
      * Resource Usage Description
-     *
-     * @return self
      */
     public function setUsage(ApiResourceUsage $usage): self
     {

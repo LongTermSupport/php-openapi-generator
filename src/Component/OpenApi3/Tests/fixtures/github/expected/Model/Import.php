@@ -78,8 +78,6 @@ class Import extends \ArrayObject
     }
     /**
      * The URL of the originating repository.
-     *
-     * @return self
      */
     public function setVcsUrl(string $vcsUrl): self
     {
@@ -216,8 +214,6 @@ class Import extends \ArrayObject
     }
     /**
      * @param list<ImportProjectChoicesItem> $projectChoices
-     *
-     * @return self
      */
     public function setProjectChoices(array $projectChoices): self
     {

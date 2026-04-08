@@ -37,8 +37,6 @@ class CreateNamespace extends \ArrayObject
     }
     /**
      * The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -55,8 +53,6 @@ class CreateNamespace extends \ArrayObject
     }
     /**
      * The namespace's unique name.
-     *
-     * @return self
      */
     public function setLabel(string $label): self
     {

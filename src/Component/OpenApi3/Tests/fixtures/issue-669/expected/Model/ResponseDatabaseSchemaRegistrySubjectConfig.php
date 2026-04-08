@@ -37,8 +37,6 @@ class ResponseDatabaseSchemaRegistrySubjectConfig extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
-     * @return self
      */
     public function setSubjectName(string $subjectName): self
     {
@@ -55,8 +53,6 @@ class ResponseDatabaseSchemaRegistrySubjectConfig extends \ArrayObject
     }
     /**
      * The compatibility level of the schema registry.
-     *
-     * @return self
      */
     public function setCompatibilityLevel(string $compatibilityLevel): self
     {

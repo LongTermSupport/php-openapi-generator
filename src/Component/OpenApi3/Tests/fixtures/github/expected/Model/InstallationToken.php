@@ -78,8 +78,6 @@ class InstallationToken extends \ArrayObject
     }
     /**
      * @param list<Repository> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {

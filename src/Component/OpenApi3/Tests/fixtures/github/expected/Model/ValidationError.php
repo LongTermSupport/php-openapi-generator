@@ -55,8 +55,6 @@ class ValidationError extends \ArrayObject
     }
     /**
      * @param list<ValidationErrorErrorsItem> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

@@ -75,8 +75,6 @@ class XmpMappingEntrySearchRequest
     }
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! Severely affects performance.
-     *
-     * @return self
      */
     public function setDebugMode(bool $debugMode): self
     {
@@ -107,8 +105,6 @@ class XmpMappingEntrySearchRequest
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -129,8 +125,6 @@ class XmpMappingEntrySearchRequest
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase>|null $aggregators
-     *
-     * @return self
      */
     public function setAggregators(?array $aggregators): self
     {
@@ -147,8 +141,6 @@ class XmpMappingEntrySearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -165,8 +157,6 @@ class XmpMappingEntrySearchRequest
     }
     /**
      * Limits the document count of the result set.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -183,8 +173,6 @@ class XmpMappingEntrySearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -201,8 +189,6 @@ class XmpMappingEntrySearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -223,8 +209,6 @@ class XmpMappingEntrySearchRequest
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -245,8 +229,6 @@ class XmpMappingEntrySearchRequest
      * Fields and respective directions requested to sort the search results. Sorting on a not indexed field will throw an exception.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {

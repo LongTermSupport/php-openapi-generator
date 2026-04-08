@@ -37,8 +37,6 @@ class OrgsOrgProjectsPostBody extends \ArrayObject
     }
     /**
      * The name of the project.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class OrgsOrgProjectsPostBody extends \ArrayObject
     }
     /**
      * The description of the project.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

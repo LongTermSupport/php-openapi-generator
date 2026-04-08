@@ -30,8 +30,6 @@ class LookupCacheTransformation extends BusinessRuleTransformation
     }
     /**
      * Name of the cache to use.
-     *
-     * @return self
      */
     public function setNamedCache(?string $namedCache): self
     {

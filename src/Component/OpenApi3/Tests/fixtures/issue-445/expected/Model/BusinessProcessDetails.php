@@ -30,8 +30,6 @@ class BusinessProcessDetails extends BusinessProcess
     }
     /**
      * Details for the business process.
-     *
-     * @return self
      */
     public function setDetails(mixed $details): self
     {

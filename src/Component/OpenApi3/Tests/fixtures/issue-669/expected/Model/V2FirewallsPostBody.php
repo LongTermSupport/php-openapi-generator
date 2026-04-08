@@ -69,8 +69,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a firewall.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -87,8 +85,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * A status string indicating the current state of the firewall. This can be "waiting", "succeeded", or "failed".
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -105,8 +101,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -127,8 +121,6 @@ class V2FirewallsPostBody extends \ArrayObject
      * An array of objects each containing the fields "droplet_id", "removing", and "status". It is provided to detail exactly which Droplets are having their security policies updated. When empty, all changes have been successfully applied.
      *
      * @param list<FirewallpendingChangesItem> $pendingChanges
-     *
-     * @return self
      */
     public function setPendingChanges(array $pendingChanges): self
     {
@@ -145,8 +137,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * A human-readable name for a firewall. The name must begin with an alphanumeric character. Subsequent characters must either be alphanumeric characters, a period (.), or a dash (-).
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -167,8 +157,6 @@ class V2FirewallsPostBody extends \ArrayObject
      * An array containing the IDs of the Droplets assigned to the firewall. <br><br>Requires `droplet:read` scope.
      *
      * @param list<int>|null $dropletIds
-     *
-     * @return self
      */
     public function setDropletIds(?array $dropletIds): self
     {
@@ -185,8 +173,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -203,8 +189,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * @param list<FirewallRulesInboundRulesItem>|null $inboundRules
-     *
-     * @return self
      */
     public function setInboundRules(?array $inboundRules): self
     {
@@ -221,8 +205,6 @@ class V2FirewallsPostBody extends \ArrayObject
     }
     /**
      * @param list<FirewallRulesOutboundRulesItem>|null $outboundRules
-     *
-     * @return self
      */
     public function setOutboundRules(?array $outboundRules): self
     {

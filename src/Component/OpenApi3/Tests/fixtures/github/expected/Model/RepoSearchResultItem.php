@@ -781,8 +781,6 @@ class RepoSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<string> $topics
-     *
-     * @return self
      */
     public function setTopics(array $topics): self
     {
@@ -869,8 +867,6 @@ class RepoSearchResultItem extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
-     * @return self
      */
     public function setDisabled(bool $disabled): self
     {
@@ -907,8 +903,6 @@ class RepoSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItem> $textMatches
-     *
-     * @return self
      */
     public function setTextMatches(array $textMatches): self
     {

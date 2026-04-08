@@ -42,8 +42,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -60,8 +58,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * The display name of the kernel. This is shown in the web UI and is generally a descriptive title for the kernel in question.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -78,8 +74,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * A standard kernel version string representing the version, patch, and release information.
-     *
-     * @return self
      */
     public function setVersion(string $version): self
     {

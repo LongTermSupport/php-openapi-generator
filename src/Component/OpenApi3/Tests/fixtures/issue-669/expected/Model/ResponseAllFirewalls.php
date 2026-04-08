@@ -35,8 +35,6 @@ class ResponseAllFirewalls extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $firewalls
-     *
-     * @return self
      */
     public function setFirewalls(array $firewalls): self
     {

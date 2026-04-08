@@ -143,8 +143,6 @@ class PermissionSetNotFoundException extends \ArrayObject
     }
     /**
      * @param list<string>|null $permissionSetIds
-     *
-     * @return self
      */
     public function setPermissionSetIds(?array $permissionSetIds): self
     {

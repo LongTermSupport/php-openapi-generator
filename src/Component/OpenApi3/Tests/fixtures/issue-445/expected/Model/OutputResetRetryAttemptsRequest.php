@@ -58,8 +58,6 @@ class OutputResetRetryAttemptsRequest
      * List of output IDs you want to filter on. If this field is not empty, the other will be ignored.
      *
      * @param list<string>|null $outputIds
-     *
-     * @return self
      */
     public function setOutputIds(?array $outputIds): self
     {
@@ -80,8 +78,6 @@ class OutputResetRetryAttemptsRequest
      * List of Content IDs you want to filter on.
      *
      * @param list<string>|null $contentIds
-     *
-     * @return self
      */
     public function setContentIds(?array $contentIds): self
     {
@@ -102,8 +98,6 @@ class OutputResetRetryAttemptsRequest
      * The file extension of the outputs you want to filter on.
      *
      * @param list<string>|null $fileExtensions
-     *
-     * @return self
      */
     public function setFileExtensions(?array $fileExtensions): self
     {
@@ -124,8 +118,6 @@ class OutputResetRetryAttemptsRequest
      * The IDs of the output formats you want to filter on.
      *
      * @param list<string>|null $outputFormatIds
-     *
-     * @return self
      */
     public function setOutputFormatIds(?array $outputFormatIds): self
     {
@@ -142,8 +134,6 @@ class OutputResetRetryAttemptsRequest
     }
     /**
      * Should the successful filter results also be reset (and subsequently re-rendered)?
-     *
-     * @return self
      */
     public function setIncludeCompleted(bool $includeCompleted): self
     {

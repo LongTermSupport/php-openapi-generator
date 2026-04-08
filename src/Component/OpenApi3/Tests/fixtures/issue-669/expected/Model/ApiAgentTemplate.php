@@ -108,8 +108,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The agent template's creation date
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -126,8 +124,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Deprecated - Use summary instead
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -148,8 +144,6 @@ class ApiAgentTemplate extends \ArrayObject
      * List of guardrails associated with the agent template
      *
      * @param list<ApiAgentTemplateGuardrail> $guardrails
-     *
-     * @return self
      */
     public function setGuardrails(array $guardrails): self
     {
@@ -166,8 +160,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Instructions for the agent template
-     *
-     * @return self
      */
     public function setInstruction(string $instruction): self
     {
@@ -184,8 +176,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The 'k' value for the agent template
-     *
-     * @return self
      */
     public function setK(int $k): self
     {
@@ -206,8 +196,6 @@ class ApiAgentTemplate extends \ArrayObject
      * List of knowledge bases associated with the agent template
      *
      * @param list<ApiKnowledgeBase> $knowledgeBases
-     *
-     * @return self
      */
     public function setKnowledgeBases(array $knowledgeBases): self
     {
@@ -224,8 +212,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The long description of the agent template
-     *
-     * @return self
      */
     public function setLongDescription(string $longDescription): self
     {
@@ -242,8 +228,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The max_tokens setting for the agent template
-     *
-     * @return self
      */
     public function setMaxTokens(int $maxTokens): self
     {
@@ -260,8 +244,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
-     * @return self
      */
     public function setModel(ApiModel $model): self
     {
@@ -278,8 +260,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Name of the agent template
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -296,8 +276,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The short description of the agent template
-     *
-     * @return self
      */
     public function setShortDescription(string $shortDescription): self
     {
@@ -314,8 +292,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The summary of the agent template
-     *
-     * @return self
      */
     public function setSummary(string $summary): self
     {
@@ -336,8 +312,6 @@ class ApiAgentTemplate extends \ArrayObject
      * List of tags associated with the agent template
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -354,8 +328,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The temperature setting for the agent template
-     *
-     * @return self
      */
     public function setTemperature(float $temperature): self
     {
@@ -374,8 +346,6 @@ class ApiAgentTemplate extends \ArrayObject
     /**
      * - AGENT_TEMPLATE_TYPE_STANDARD: The standard agent template
      *  - AGENT_TEMPLATE_TYPE_ONE_CLICK: The one click agent template
-     *
-     * @return self
      */
     public function setTemplateType(string $templateType): self
     {
@@ -392,8 +362,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The top_p setting for the agent template
-     *
-     * @return self
      */
     public function setTopP(float $topP): self
     {
@@ -410,8 +378,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The agent template's last updated date
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -428,8 +394,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

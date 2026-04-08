@@ -65,8 +65,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The path of the file to add an annotation to. For example, `assets/css/main.css`.
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -83,8 +81,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The start line of the annotation.
-     *
-     * @return self
      */
     public function setStartLine(int $startLine): self
     {
@@ -101,8 +97,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The end line of the annotation.
-     *
-     * @return self
      */
     public function setEndLine(int $endLine): self
     {
@@ -119,8 +113,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The start column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
-     * @return self
      */
     public function setStartColumn(int $startColumn): self
     {
@@ -137,8 +129,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The end column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
-     * @return self
      */
     public function setEndColumn(int $endColumn): self
     {
@@ -155,8 +145,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The level of the annotation. Can be one of `notice`, `warning`, or `failure`.
-     *
-     * @return self
      */
     public function setAnnotationLevel(string $annotationLevel): self
     {
@@ -173,8 +161,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * A short description of the feedback for these lines of code. The maximum size is 64 KB.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -191,8 +177,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * The title that represents the annotation. The maximum size is 255 characters.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -209,8 +193,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutputAnnotationsItem extends \ArrayObject
     }
     /**
      * Details about this annotation. The maximum size is 64 KB.
-     *
-     * @return self
      */
     public function setRawDetails(string $rawDetails): self
     {

@@ -33,8 +33,6 @@ class ByoipPrefixUpdate extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix should be advertised
-     *
-     * @return self
      */
     public function setAdvertise(bool $advertise): self
     {

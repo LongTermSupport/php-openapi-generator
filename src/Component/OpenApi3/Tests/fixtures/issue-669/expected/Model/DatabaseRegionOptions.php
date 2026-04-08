@@ -39,8 +39,6 @@ class DatabaseRegionOptions extends \ArrayObject
      * An array of strings containing the names of available regions
      *
      * @param list<string> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {

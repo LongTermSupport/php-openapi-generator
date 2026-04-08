@@ -33,8 +33,6 @@ class ApiCancelKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for an indexing job.
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

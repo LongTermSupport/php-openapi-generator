@@ -83,8 +83,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The unique identifier for the VPC NAT gateway. This is automatically generated upon creation.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -101,8 +99,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The human-readable name of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -119,8 +115,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The type of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -137,8 +131,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The current state of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -155,8 +147,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The region in which the VPC NAT gateway is created.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -173,8 +163,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The size of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setSize(int $size): self
     {
@@ -195,8 +183,6 @@ class VpcNatGatewayGet extends \ArrayObject
      * An array of VPCs associated with the VPC NAT gateway.
      *
      * @param list<VpcNatGatewayGetVpcsItem> $vpcs
-     *
-     * @return self
      */
     public function setVpcs(array $vpcs): self
     {
@@ -213,8 +199,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * An object containing egress information for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setEgresses(VpcNatGatewayGetEgresses $egresses): self
     {
@@ -231,8 +215,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The UDP timeout in seconds for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setUdpTimeoutSeconds(int $udpTimeoutSeconds): self
     {
@@ -249,8 +231,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The ICMP timeout in seconds for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setIcmpTimeoutSeconds(int $icmpTimeoutSeconds): self
     {
@@ -267,8 +247,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * The TCP timeout in seconds for the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setTcpTimeoutSeconds(int $tcpTimeoutSeconds): self
     {
@@ -285,8 +263,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the VPC NAT gateway was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -303,8 +279,6 @@ class VpcNatGatewayGet extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the VPC NAT gateway was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

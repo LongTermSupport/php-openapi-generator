@@ -33,8 +33,6 @@ class Fuz extends \ArrayObject
     }
     /**
      * A description
-     *
-     * @return self
      */
     public function setBar(string $bar): self
     {

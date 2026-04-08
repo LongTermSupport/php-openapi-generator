@@ -30,8 +30,6 @@ class OutputDataDocument extends OutputDataBase
     }
     /**
      * Number of document's pages.
-     *
-     * @return self
      */
     public function setPageCount(int $pageCount): self
     {

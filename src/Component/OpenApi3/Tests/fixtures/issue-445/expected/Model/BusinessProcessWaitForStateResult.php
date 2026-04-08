@@ -34,8 +34,6 @@ class BusinessProcessWaitForStateResult
     }
     /**
      * The state that was hit.
-     *
-     * @return self
      */
     public function setStateHit(?string $stateHit): self
     {
@@ -52,8 +50,6 @@ class BusinessProcessWaitForStateResult
     }
     /**
      * The business process.
-     *
-     * @return self
      */
     public function setBusinessProcess(mixed $businessProcess): self
     {

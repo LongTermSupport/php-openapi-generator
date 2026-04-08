@@ -33,8 +33,6 @@ class V2RegistrySubscriptionPostBody extends \ArrayObject
     }
     /**
      * The slug of the subscription tier to sign up for.
-     *
-     * @return self
      */
     public function setTierSlug(string $tierSlug): self
     {

@@ -34,8 +34,6 @@ class SimpleAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: Simple
-     *
-     * @return self
      */
     public function setType(mixed $type): self
     {
@@ -52,8 +50,6 @@ class SimpleAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: simple.
-     *
-     * @return self
      */
     public function setFieldSuffix(?string $fieldSuffix): self
     {

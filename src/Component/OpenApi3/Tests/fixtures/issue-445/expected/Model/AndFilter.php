@@ -36,8 +36,6 @@ class AndFilter extends FilterBase
      * The filters to put in "and". All kinds of filters are accepted.
      *
      * @param list<FilterBase>|null $filters
-     *
-     * @return self
      */
     public function setFilters(?array $filters): self
     {

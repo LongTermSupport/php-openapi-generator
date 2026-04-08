@@ -35,8 +35,6 @@ class ResponseAllClusters extends \ArrayObject
     }
     /**
      * @param list<ClusterRead> $kubernetesClusters
-     *
-     * @return self
      */
     public function setKubernetesClusters(array $kubernetesClusters): self
     {

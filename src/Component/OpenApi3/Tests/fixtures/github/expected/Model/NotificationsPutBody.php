@@ -37,8 +37,6 @@ class NotificationsPutBody extends \ArrayObject
     }
     /**
      * Describes the last point that notifications were checked.
-     *
-     * @return self
      */
     public function setLastReadAt(\DateTime $lastReadAt): self
     {
@@ -55,8 +53,6 @@ class NotificationsPutBody extends \ArrayObject
     }
     /**
      * Whether the notification has been read.
-     *
-     * @return self
      */
     public function setRead(bool $read): self
     {

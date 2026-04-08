@@ -61,8 +61,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -79,8 +77,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -101,8 +97,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
      * A list of content or metadata rights authorizing operations on Content Items or List Items.
      *
      * @param list<PermissionUserRoleRightsOfMetadataRight>|null $userRolesRights
-     *
-     * @return self
      */
     public function setUserRolesRights(?array $userRolesRights): self
     {
@@ -123,8 +117,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
      * A list of permission set rights authorizing operations on this permission set.
      *
      * @param list<PermissionUserRoleRightsOfPermissionSetRight>|null $userRolesPermissionSetRights
-     *
-     * @return self
      */
     public function setUserRolesPermissionSetRights(?array $userRolesPermissionSetRights): self
     {
@@ -141,8 +133,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
     }
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
-     * @return self
      */
     public function setExclusive(bool $exclusive): self
     {
@@ -159,8 +149,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
     }
     /**
      * The owner token ID. Defines the permission set owner.
-     *
-     * @return self
      */
     public function setOwnerTokenId(string $ownerTokenId): self
     {
@@ -177,8 +165,6 @@ class SchemaPermissionSetDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {

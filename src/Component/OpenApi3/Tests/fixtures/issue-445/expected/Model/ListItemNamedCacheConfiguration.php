@@ -44,8 +44,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
-     * @return self
      */
     public function setSchemaId(?string $schemaId): self
     {
@@ -66,8 +64,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
      * List of IDs of fields to use as a composite key
      *
      * @param list<string>|null $keyFields
-     *
-     * @return self
      */
     public function setKeyFields(?array $keyFields): self
     {
@@ -84,8 +80,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * An optional filter to narrow down the cached list items
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -102,8 +96,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * Include child schemas when caching list items
-     *
-     * @return self
      */
     public function setIncludeAllSchemaChildren(bool $includeAllSchemaChildren): self
     {

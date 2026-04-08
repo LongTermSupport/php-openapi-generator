@@ -37,8 +37,6 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
-     * @return self
      */
     public function setFieldPath(?string $fieldPath): self
     {
@@ -61,8 +59,6 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
      * Must include at least 3 points.
      *
      * @param list<LatLon>|null $polygon
-     *
-     * @return self
      */
     public function setPolygon(?array $polygon): self
     {

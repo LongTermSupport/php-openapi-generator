@@ -47,8 +47,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * Id of the clusterlint run that can be used later to fetch the diagnostics.
-     *
-     * @return self
      */
     public function setRunId(string $runId): self
     {
@@ -65,8 +63,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was made.
-     *
-     * @return self
      */
     public function setRequestedAt(\DateTime $requestedAt): self
     {
@@ -83,8 +79,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was completed.
-     *
-     * @return self
      */
     public function setCompletedAt(\DateTime $completedAt): self
     {
@@ -105,8 +99,6 @@ class ClusterlintResults extends \ArrayObject
      * An array of diagnostics reporting potential problems for the given cluster.
      *
      * @param list<ClusterlintResultsDiagnosticsItem> $diagnostics
-     *
-     * @return self
      */
     public function setDiagnostics(array $diagnostics): self
     {

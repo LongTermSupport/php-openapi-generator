@@ -33,8 +33,6 @@ class AppsGetExecResponse extends \ArrayObject
     }
     /**
      * A websocket URL that allows sending/receiving console input and receiving console output.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {

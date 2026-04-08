@@ -33,8 +33,6 @@ class AppLogDestinationLogtailSpec extends \ArrayObject
     }
     /**
      * Logtail token.
-     *
-     * @return self
      */
     public function setToken(string $token): self
     {

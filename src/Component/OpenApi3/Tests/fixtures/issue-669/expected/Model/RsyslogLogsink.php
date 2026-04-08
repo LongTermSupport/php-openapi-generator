@@ -85,8 +85,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * DNS name or IPv4 address of the rsyslog server
-     *
-     * @return self
      */
     public function setServer(string $server): self
     {
@@ -103,8 +101,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * The internal port on which the rsyslog server is listening
-     *
-     * @return self
      */
     public function setPort(int $port): self
     {
@@ -121,8 +117,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * Use TLS (as the messages are not filtered and may contain sensitive information, it is highly recommended to set this to true if the remote server supports it)
-     *
-     * @return self
      */
     public function setTls(bool $tls): self
     {
@@ -139,8 +133,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * Message format used by the server, this can be either rfc3164 (the old BSD style message format), `rfc5424` (current syslog message format) or custom
-     *
-     * @return self
      */
     public function setFormat(string $format): self
     {
@@ -197,8 +189,6 @@ class RsyslogLogsink extends \ArrayObject
      *   - Ensure the TLS checkbox is enabled.
      * - Note: This configuration applies to **non-Mongo clusters only**. For **Mongo clusters**, use the `datadog_logsink` integration instead.
      * 
-     *
-     * @return self
      */
     public function setLogline(string $logline): self
     {
@@ -215,8 +205,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * content of the structured data block of rfc5424 message
-     *
-     * @return self
      */
     public function setSd(string $sd): self
     {
@@ -233,8 +221,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * PEM encoded CA certificate
-     *
-     * @return self
      */
     public function setCa(string $ca): self
     {
@@ -251,8 +237,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * (PEM format) client key if the server requires client authentication
-     *
-     * @return self
      */
     public function setKey(string $key): self
     {
@@ -269,8 +253,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * (PEM format) client cert to use
-     *
-     * @return self
      */
     public function setCert(string $cert): self
     {

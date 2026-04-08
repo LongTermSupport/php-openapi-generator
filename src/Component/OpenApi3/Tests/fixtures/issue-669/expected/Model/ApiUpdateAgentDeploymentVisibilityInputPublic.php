@@ -41,8 +41,6 @@ class ApiUpdateAgentDeploymentVisibilityInputPublic extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -67,8 +65,6 @@ class ApiUpdateAgentDeploymentVisibilityInputPublic extends \ArrayObject
      *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
      *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
      *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {

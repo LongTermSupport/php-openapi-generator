@@ -39,8 +39,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Allows resizing of the video.
-     *
-     * @return self
      */
     public function setResizeAction(mixed $resizeAction): self
     {
@@ -57,8 +55,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding audio codec.
-     *
-     * @return self
      */
     public function setAudioCodec(mixed $audioCodec): self
     {
@@ -75,8 +71,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding codec preset.
-     *
-     * @return self
      */
     public function setPreset(mixed $preset): self
     {

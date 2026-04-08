@@ -134,8 +134,6 @@ class SortableFieldThresholdExceededException extends \ArrayObject
     }
     /**
      * @param list<string>|null $schemaIds
-     *
-     * @return self
      */
     public function setSchemaIds(?array $schemaIds): self
     {

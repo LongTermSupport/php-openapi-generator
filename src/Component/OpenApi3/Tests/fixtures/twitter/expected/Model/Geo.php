@@ -52,8 +52,6 @@ class Geo extends \ArrayObject
     }
     /**
      * @param list<float> $bbox
-     *
-     * @return self
      */
     public function setBbox(array $bbox): self
     {
@@ -70,8 +68,6 @@ class Geo extends \ArrayObject
     }
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
-     * @return self
      */
     public function setGeometry(Point $geometry): self
     {
@@ -88,8 +84,6 @@ class Geo extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $properties
-     *
-     * @return self
      */
     public function setProperties(array $properties): self
     {

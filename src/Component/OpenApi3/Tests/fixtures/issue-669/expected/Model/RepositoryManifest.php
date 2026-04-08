@@ -65,8 +65,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
-     * @return self
      */
     public function setRegistryName(string $registryName): self
     {
@@ -83,8 +81,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
-     * @return self
      */
     public function setRepository(string $repository): self
     {
@@ -101,8 +97,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The manifest digest
-     *
-     * @return self
      */
     public function setDigest(string $digest): self
     {
@@ -119,8 +113,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The compressed size of the manifest in bytes.
-     *
-     * @return self
      */
     public function setCompressedSizeBytes(int $compressedSizeBytes): self
     {
@@ -137,8 +129,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The uncompressed size of the manifest in bytes (this size is calculated asynchronously so it may not be immediately available).
-     *
-     * @return self
      */
     public function setSizeBytes(int $sizeBytes): self
     {
@@ -155,8 +145,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The time the manifest was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -177,8 +165,6 @@ class RepositoryManifest extends \ArrayObject
      * All tags associated with this manifest
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -199,8 +185,6 @@ class RepositoryManifest extends \ArrayObject
      * All blobs associated with this manifest
      *
      * @param list<RepositoryBlob> $blobs
-     *
-     * @return self
      */
     public function setBlobs(array $blobs): self
     {

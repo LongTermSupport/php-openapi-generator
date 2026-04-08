@@ -53,8 +53,6 @@ class Company extends \ArrayObject
     }
     /**
      * The connectId of the company that triggered the `notificationEvent`. A connectId is the primary Company identifier that is used to uniquely identify all companies across Creditsafe's Universe and Partner Network.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -71,8 +69,6 @@ class Company extends \ArrayObject
     }
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the `notificationEvent`.
-     *
-     * @return self
      */
     public function setSafeNumber(string $safeNumber): self
     {
@@ -89,8 +85,6 @@ class Company extends \ArrayObject
     }
     /**
      * The name of the company that triggered the `notificationEvent`.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -107,8 +101,6 @@ class Company extends \ArrayObject
     }
     /**
      * ISO/Alpha 2 format country code of the company that triggered the `notificationEvent`.
-     *
-     * @return self
      */
     public function setCountryCode(string $countryCode): self
     {
@@ -125,8 +117,6 @@ class Company extends \ArrayObject
     }
     /**
      * The portfolio Id of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
-     * @return self
      */
     public function setPortfolioId(float $portfolioId): self
     {
@@ -143,8 +133,6 @@ class Company extends \ArrayObject
     }
     /**
      * The name of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
-     * @return self
      */
     public function setPortfolioName(string $portfolioName): self
     {

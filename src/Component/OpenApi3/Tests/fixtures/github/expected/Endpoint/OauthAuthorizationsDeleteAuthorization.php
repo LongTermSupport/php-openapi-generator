@@ -44,7 +44,6 @@ class OauthAuthorizationsDeleteAuthorization extends \LongTermSupport\OpenApiGen
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsDeleteAuthorizationForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OauthAuthorizationsDeleteAuthorizationUnauthorizedException
      */

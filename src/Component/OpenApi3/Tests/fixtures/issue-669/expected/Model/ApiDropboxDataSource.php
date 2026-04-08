@@ -44,8 +44,6 @@ class ApiDropboxDataSource extends \ArrayObject
     }
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/dropbox/tokens for reference.
-     *
-     * @return self
      */
     public function setRefreshToken(string $refreshToken): self
     {

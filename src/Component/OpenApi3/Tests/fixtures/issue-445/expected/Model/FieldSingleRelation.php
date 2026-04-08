@@ -40,8 +40,6 @@ class FieldSingleRelation extends FieldBase
     }
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
-     * @return self
      */
     public function setSchemaId(string $schemaId): self
     {
@@ -58,8 +56,6 @@ class FieldSingleRelation extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
-     * @return self
      */
     public function setSchemaIndexingInfo(mixed $schemaIndexingInfo): self
     {
@@ -80,8 +76,6 @@ class FieldSingleRelation extends FieldBase
      * Defines the allowed elation types.
      *
      * @param list<RelationType> $relationTypes
-     *
-     * @return self
      */
     public function setRelationTypes(array $relationTypes): self
     {

@@ -71,8 +71,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Created at timestamp
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -93,8 +91,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
      * Days for execution (day is represented same as in a cron expression, e.g. Monday begins with 1 )
      *
      * @param list<int> $days
-     *
-     * @return self
      */
     public function setDays(array $days): self
     {
@@ -111,8 +107,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Deleted at timestamp (if soft deleted)
-     *
-     * @return self
      */
     public function setDeletedAt(\DateTime $deletedAt): self
     {
@@ -129,8 +123,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Whether the schedule is currently active
-     *
-     * @return self
      */
     public function setIsActive(bool $isActive): self
     {
@@ -147,8 +139,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Knowledge base uuid associated with this schedule
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(string $knowledgeBaseUuid): self
     {
@@ -165,8 +155,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Last time the schedule was executed
-     *
-     * @return self
      */
     public function setLastRanAt(\DateTime $lastRanAt): self
     {
@@ -183,8 +171,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Next scheduled run
-     *
-     * @return self
      */
     public function setNextRunAt(\DateTime $nextRunAt): self
     {
@@ -201,8 +187,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Scheduled time of execution (HH:MM:SS format)
-     *
-     * @return self
      */
     public function setTime(string $time): self
     {
@@ -219,8 +203,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Updated at timestamp
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -237,8 +219,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Unique identifier for the scheduled indexing entry
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

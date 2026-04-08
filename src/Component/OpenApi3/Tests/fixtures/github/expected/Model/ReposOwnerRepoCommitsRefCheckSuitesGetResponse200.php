@@ -44,8 +44,6 @@ class ReposOwnerRepoCommitsRefCheckSuitesGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<CheckSuite> $checkSuites
-     *
-     * @return self
      */
     public function setCheckSuites(array $checkSuites): self
     {

@@ -35,8 +35,6 @@ class ResponseVpcMembers extends \ArrayObject
     }
     /**
      * @param list<VpcMember> $members
-     *
-     * @return self
      */
     public function setMembers(array $members): self
     {

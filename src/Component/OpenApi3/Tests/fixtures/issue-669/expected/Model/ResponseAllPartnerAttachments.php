@@ -35,8 +35,6 @@ class ResponseAllPartnerAttachments extends \ArrayObject
     }
     /**
      * @param list<PartnerAttachment> $partnerAttachments
-     *
-     * @return self
      */
     public function setPartnerAttachments(array $partnerAttachments): self
     {

@@ -88,8 +88,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * The SHA of the head commit that is being checked.
-     *
-     * @return self
      */
     public function setHeadSha(string $headSha): self
     {
@@ -156,8 +154,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * @param list<PullRequestMinimal>|null $pullRequests
-     *
-     * @return self
      */
     public function setPullRequests(?array $pullRequests): self
     {
@@ -184,8 +180,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {
@@ -222,8 +216,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * Simple Commit
-     *
-     * @return self
      */
     public function setHeadCommit(SimpleCommit $headCommit): self
     {

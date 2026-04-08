@@ -53,8 +53,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
      * Agent deployment names to run the test case against (ADK agent workspaces).
      *
      * @param list<string> $agentDeploymentNames
-     *
-     * @return self
      */
     public function setAgentDeploymentNames(array $agentDeploymentNames): self
     {
@@ -75,8 +73,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
      * Agent UUIDs to run the test case against (legacy agents).
      *
      * @param list<string> $agentUuids
-     *
-     * @return self
      */
     public function setAgentUuids(array $agentUuids): self
     {
@@ -93,8 +89,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * The name of the run.
-     *
-     * @return self
      */
     public function setRunName(string $runName): self
     {
@@ -111,8 +105,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Test-case UUID to run
-     *
-     * @return self
      */
     public function setTestCaseUuid(string $testCaseUuid): self
     {

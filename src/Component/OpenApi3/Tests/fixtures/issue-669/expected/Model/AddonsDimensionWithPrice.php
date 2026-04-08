@@ -55,8 +55,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Unique identifier for the dimension.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -73,8 +71,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Unique string identifier for the dimension, tied to a price.
-     *
-     * @return self
      */
     public function setSku(string $sku): self
     {
@@ -91,8 +87,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Slug identifier for the dimension.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -109,8 +103,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Display name for the dimension.
-     *
-     * @return self
      */
     public function setDisplayName(string $displayName): self
     {
@@ -127,8 +119,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Name of the feature associated with the dimension.
-     *
-     * @return self
      */
     public function setFeatureName(string $featureName): self
     {
@@ -149,8 +139,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
      * A list of volumes associated with the dimension, each with its own price.
      *
      * @param list<AddonsDimensionVolumeWithPrice> $volumes
-     *
-     * @return self
      */
     public function setVolumes(array $volumes): self
     {

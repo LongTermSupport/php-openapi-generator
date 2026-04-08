@@ -49,8 +49,6 @@ class DropletActionEnableBackupsbackupPolicy extends \ArrayObject
     }
     /**
      * The backup plan used for the Droplet. The plan can be either `daily` or `weekly`.
-     *
-     * @return self
      */
     public function setPlan(string $plan): self
     {
@@ -67,8 +65,6 @@ class DropletActionEnableBackupsbackupPolicy extends \ArrayObject
     }
     /**
      * The day of the week on which the backup will occur.
-     *
-     * @return self
      */
     public function setWeekday(string $weekday): self
     {
@@ -85,8 +81,6 @@ class DropletActionEnableBackupsbackupPolicy extends \ArrayObject
     }
     /**
      * The hour of the day that the backup window will start.
-     *
-     * @return self
      */
     public function setHour(int $hour): self
     {
@@ -103,8 +97,6 @@ class DropletActionEnableBackupsbackupPolicy extends \ArrayObject
     }
     /**
      * The length of the backup window starting from `hour`.
-     *
-     * @return self
      */
     public function setWindowLengthHours(int $windowLengthHours): self
     {
@@ -121,8 +113,6 @@ class DropletActionEnableBackupsbackupPolicy extends \ArrayObject
     }
     /**
      * The number of days the backup will be retained.
-     *
-     * @return self
      */
     public function setRetentionPeriodDays(int $retentionPeriodDays): self
     {

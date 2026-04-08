@@ -33,8 +33,6 @@ class MentionFields extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
-     * @return self
      */
     public function setUsername(string $username): self
     {

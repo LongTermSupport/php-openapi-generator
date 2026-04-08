@@ -38,8 +38,6 @@ class ContentDeleteManyFilterRequest
     }
     /**
      * Filters the contents that need to be deleted.
-     *
-     * @return self
      */
     public function setFilterRequest(mixed $filterRequest): self
     {
@@ -56,8 +54,6 @@ class ContentDeleteManyFilterRequest
     }
     /**
      * A value indicating whether references to the content items should be removed.
-     *
-     * @return self
      */
     public function setForceReferenceRemoval(bool $forceReferenceRemoval): self
     {
@@ -74,8 +70,6 @@ class ContentDeleteManyFilterRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
-     * @return self
      */
     public function setNotifyProgress(bool $notifyProgress): self
     {

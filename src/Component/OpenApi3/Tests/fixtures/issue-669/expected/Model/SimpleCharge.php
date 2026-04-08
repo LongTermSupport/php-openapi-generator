@@ -37,8 +37,6 @@ class SimpleCharge extends \ArrayObject
     }
     /**
      * Name of the charge
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class SimpleCharge extends \ArrayObject
     }
     /**
      * Total amount charged in USD
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {

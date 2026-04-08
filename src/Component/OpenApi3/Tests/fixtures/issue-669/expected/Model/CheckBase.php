@@ -33,8 +33,6 @@ class CheckBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

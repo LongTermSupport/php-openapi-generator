@@ -44,8 +44,6 @@ class ApiUpdateEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * The new verson of the test case.
-     *
-     * @return self
      */
     public function setVersion(int $version): self
     {

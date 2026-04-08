@@ -46,8 +46,6 @@ class AppInstallationsInstallationIdAccessTokensPostBody extends \ArrayObject
      * List of repository names that the token should have access to
      *
      * @param list<string> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {
@@ -68,8 +66,6 @@ class AppInstallationsInstallationIdAccessTokensPostBody extends \ArrayObject
      * List of repository IDs that the token should have access to
      *
      * @param list<int> $repositoryIds
-     *
-     * @return self
      */
     public function setRepositoryIds(array $repositoryIds): self
     {

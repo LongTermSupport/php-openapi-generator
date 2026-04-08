@@ -74,8 +74,6 @@ class IndexField
     }
     /**
      * The field id.
-     *
-     * @return self
      */
     public function setFieldId(?string $fieldId): self
     {
@@ -92,8 +90,6 @@ class IndexField
     }
     /**
      * The field's type name.
-     *
-     * @return self
      */
     public function setType(?string $type): self
     {
@@ -114,8 +110,6 @@ class IndexField
      * Contains all index field name variants of the field.
      *
      * @param array<string, string>|null $indexFields
-     *
-     * @return self
      */
     public function setIndexFields(?array $indexFields): self
     {
@@ -138,8 +132,6 @@ class IndexField
      * The amount of simple search fields can be equal or less to the amount of IndexFields, but never more.
      *
      * @param array<string, string>|null $simpleSearchFields
-     *
-     * @return self
      */
     public function setSimpleSearchFields(?array $simpleSearchFields): self
     {
@@ -156,8 +148,6 @@ class IndexField
     }
     /**
      * Contains the fields boost value.
-     *
-     * @return self
      */
     public function setBoost(float $boost): self
     {
@@ -174,8 +164,6 @@ class IndexField
     }
     /**
      * Not to be returned for search query, but only used for mapping purposes
-     *
-     * @return self
      */
     public function setIgnoreForSearch(bool $ignoreForSearch): self
     {
@@ -192,8 +180,6 @@ class IndexField
     }
     /**
      * The path of the Nested document this property belongs to. If set to null, it means that there is no Nested document
-     *
-     * @return self
      */
     public function setNestedPath(?string $nestedPath): self
     {
@@ -210,8 +196,6 @@ class IndexField
     }
     /**
      * Path to the sorting information in the DataSortValuesField sort index.
-     *
-     * @return self
      */
     public function setSortField(?string $sortField): self
     {

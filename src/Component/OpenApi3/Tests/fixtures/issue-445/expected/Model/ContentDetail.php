@@ -124,8 +124,6 @@ class ContentDetail
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.
-     *
-     * @return self
      */
     public function setContentSchemaId(string $contentSchemaId): self
     {
@@ -148,8 +146,6 @@ class ContentDetail
      * The SchemaType of the specified schemas must be Layer.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -170,8 +166,6 @@ class ContentDetail
      * All the IDs of the referenced list items (tagboxes) that do not exist in the system.
      *
      * @param list<string>|null $brokenReferenceIds
-     *
-     * @return self
      */
     public function setBrokenReferenceIds(?array $brokenReferenceIds): self
     {
@@ -194,8 +188,6 @@ class ContentDetail
      * They are referenced list items that reference at least a list item that do not exist in the system.
      *
      * @param list<string>|null $brokenIndirectReferenceIds
-     *
-     * @return self
      */
     public function setBrokenIndirectReferenceIds(?array $brokenIndirectReferenceIds): self
     {
@@ -216,8 +208,6 @@ class ContentDetail
      * All the IDs of the contents or list items target of a relation that do not exist in the system.
      *
      * @param list<string>|null $brokenRelationTargetIds
-     *
-     * @return self
      */
     public function setBrokenRelationTargetIds(?array $brokenRelationTargetIds): self
     {
@@ -240,8 +230,6 @@ class ContentDetail
      * by the ContentSchemaId property.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -264,8 +252,6 @@ class ContentDetail
      * by the LayerSchemaIds property.
      *
      * @param array<string, mixed>|null $metadata
-     *
-     * @return self
      */
     public function setMetadata(?array $metadata): self
     {
@@ -282,8 +268,6 @@ class ContentDetail
     }
     /**
      * The content ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -304,8 +288,6 @@ class ContentDetail
      * An optional list of content permission set IDs which control content permissions. These permissions control content accessibility for the users that do not own the content.
      *
      * @param list<string>|null $contentPermissionSetIds
-     *
-     * @return self
      */
     public function setContentPermissionSetIds(?array $contentPermissionSetIds): self
     {
@@ -328,8 +310,6 @@ class ContentDetail
      * They are available only for file base contents, and they depends on the output formats configured in the system.
      *
      * @param list<Output>|null $outputs
-     *
-     * @return self
      */
     public function setOutputs(?array $outputs): self
     {
@@ -346,8 +326,6 @@ class ContentDetail
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -364,8 +342,6 @@ class ContentDetail
     }
     /**
      * The owner token ID. Defines the content owner.
-     *
-     * @return self
      */
     public function setOwnerTokenId(string $ownerTokenId): self
     {
@@ -382,8 +358,6 @@ class ContentDetail
     }
     /**
      * The resolved owner.
-     *
-     * @return self
      */
     public function setOwner(mixed $owner): self
     {
@@ -400,8 +374,6 @@ class ContentDetail
     }
     /**
      * Content type.
-     *
-     * @return self
      */
     public function setContentType(mixed $contentType): self
     {
@@ -418,8 +390,6 @@ class ContentDetail
     }
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
-     * @return self
      */
     public function setDisplayValues(mixed $displayValues): self
     {
@@ -436,8 +406,6 @@ class ContentDetail
     }
     /**
      * The actual lifecycle value of the content. Becomes Inactive when the content is deleted.
-     *
-     * @return self
      */
     public function setLifeCycle(mixed $lifeCycle): self
     {
@@ -458,8 +426,6 @@ class ContentDetail
      * List of content rights the user has on this content
      *
      * @param list<string>|null $contentRights
-     *
-     * @return self
      */
     public function setContentRights(?array $contentRights): self
     {
@@ -476,8 +442,6 @@ class ContentDetail
     }
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
-     * @return self
      */
     public function setActivity(mixed $activity): self
     {

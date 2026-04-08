@@ -70,8 +70,6 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions extends \Ar
     }
     /**
      * @param list<SimpleUser> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -88,8 +86,6 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions extends \Ar
     }
     /**
      * @param list<Team> $teams
-     *
-     * @return self
      */
     public function setTeams(array $teams): self
     {

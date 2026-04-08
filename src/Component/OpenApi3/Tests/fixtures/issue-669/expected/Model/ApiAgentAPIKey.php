@@ -33,8 +33,6 @@ class ApiAgentAPIKey extends \ArrayObject
     }
     /**
      * Api key
-     *
-     * @return self
      */
     public function setApiKey(string $apiKey): self
     {

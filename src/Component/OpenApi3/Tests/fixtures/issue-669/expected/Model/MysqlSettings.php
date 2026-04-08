@@ -48,8 +48,6 @@ class MysqlSettings extends \ArrayObject
      * default for the version of MySQL in use will be used. As of MySQL 8.0, the
      * default is `caching_sha2_password`.
      * 
-     *
-     * @return self
      */
     public function setAuthPlugin(string $authPlugin): self
     {

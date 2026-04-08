@@ -34,8 +34,6 @@ class ContentRightAggregationCount
     }
     /**
      * ContentRight.
-     *
-     * @return self
      */
     public function setContentRight(mixed $contentRight): self
     {
@@ -52,8 +50,6 @@ class ContentRightAggregationCount
     }
     /**
      * Found document count.
-     *
-     * @return self
      */
     public function setCount(int $count): self
     {

@@ -74,8 +74,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Time when the knowledge base was added to the agent
-     *
-     * @return self
      */
     public function setAddedToAgentAt(\DateTime $addedToAgentAt): self
     {
@@ -92,8 +90,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -130,8 +126,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Whether the knowledge base is public or not
-     *
-     * @return self
      */
     public function setIsPublic(bool $isPublic): self
     {
@@ -148,8 +142,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * IndexingJob description
-     *
-     * @return self
      */
     public function setLastIndexingJob(ApiIndexingJob $lastIndexingJob): self
     {
@@ -166,8 +158,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Name of knowledge base
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -194,8 +184,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Region code
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -216,8 +204,6 @@ class ApiKnowledgeBase extends \ArrayObject
      * Tags to organize related resources
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -234,8 +220,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -252,8 +236,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Id of user that created the knowledge base
-     *
-     * @return self
      */
     public function setUserId(string $userId): self
     {
@@ -270,8 +252,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Unique id for knowledge base
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

@@ -36,8 +36,6 @@ class TopBooksGetLdjsonResponse200 extends \ArrayObject
     }
     /**
      * @param list<TopBookJsonld> $hydraMember
-     *
-     * @return self
      */
     public function setHydraMember(array $hydraMember): self
     {

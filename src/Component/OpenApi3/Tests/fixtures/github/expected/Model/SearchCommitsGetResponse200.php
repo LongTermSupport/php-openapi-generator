@@ -55,8 +55,6 @@ class SearchCommitsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<CommitSearchResultItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

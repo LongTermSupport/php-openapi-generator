@@ -41,8 +41,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * Indicates whether maintenance mode should be enabled for the app.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {
@@ -59,8 +57,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * Indicates whether the app should be archived. Setting this to true implies that enabled is set to true.
-     *
-     * @return self
      */
     public function setArchive(bool $archive): self
     {
@@ -77,8 +73,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * A custom offline page to display when maintenance mode is enabled or the app is archived.
-     *
-     * @return self
      */
     public function setOfflinePageUrl(string $offlinePageUrl): self
     {

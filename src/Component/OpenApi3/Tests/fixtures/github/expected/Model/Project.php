@@ -121,8 +121,6 @@ class Project extends \ArrayObject
     }
     /**
      * Name of the project
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -139,8 +137,6 @@ class Project extends \ArrayObject
     }
     /**
      * Body of the project
-     *
-     * @return self
      */
     public function setBody(?string $body): self
     {
@@ -167,8 +163,6 @@ class Project extends \ArrayObject
     }
     /**
      * State of the project; either 'open' or 'closed'
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -215,8 +209,6 @@ class Project extends \ArrayObject
     }
     /**
      * The baseline permission that all organization members have on this project
-     *
-     * @return self
      */
     public function setOrganizationPermission(string $organizationPermission): self
     {
@@ -233,8 +225,6 @@ class Project extends \ArrayObject
     }
     /**
      * Whether or not this project can be seen by everyone.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {

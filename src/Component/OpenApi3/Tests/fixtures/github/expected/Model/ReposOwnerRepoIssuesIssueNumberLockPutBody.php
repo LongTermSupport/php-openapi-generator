@@ -45,8 +45,6 @@ class ReposOwnerRepoIssuesIssueNumberLockPutBody extends \ArrayObject
      * \* `too heated`
      * \* `resolved`
      * \* `spam`
-     *
-     * @return self
      */
     public function setLockReason(string $lockReason): self
     {

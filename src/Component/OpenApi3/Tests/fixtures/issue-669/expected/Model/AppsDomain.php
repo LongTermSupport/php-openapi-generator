@@ -79,8 +79,6 @@ class AppsDomain extends \ArrayObject
     }
     /**
      * @param list<AppDomainValidation> $validations
-     *
-     * @return self
      */
     public function setValidations(array $validations): self
     {

@@ -79,8 +79,6 @@ class ScimUser extends \ArrayObject
      * SCIM schema used.
      *
      * @param list<string> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {
@@ -97,8 +95,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Unique identifier of an external identity
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -115,8 +111,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The ID of the User.
-     *
-     * @return self
      */
     public function setExternalId(?string $externalId): self
     {
@@ -133,8 +127,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
-     * @return self
      */
     public function setUserName(?string $userName): self
     {
@@ -165,8 +157,6 @@ class ScimUser extends \ArrayObject
      * user emails
      *
      * @param list<ScimUserEmailsItem> $emails
-     *
-     * @return self
      */
     public function setEmails(array $emails): self
     {
@@ -183,8 +173,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The active status of the User.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {
@@ -211,8 +199,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The ID of the organization.
-     *
-     * @return self
      */
     public function setOrganizationId(int $organizationId): self
     {
@@ -233,8 +219,6 @@ class ScimUser extends \ArrayObject
      * Set of operations to be performed
      *
      * @param list<ScimUserOperationsItem> $operations
-     *
-     * @return self
      */
     public function setOperations(array $operations): self
     {
@@ -255,8 +239,6 @@ class ScimUser extends \ArrayObject
      * associated groups
      *
      * @param list<ScimUserGroupsItem> $groups
-     *
-     * @return self
      */
     public function setGroups(array $groups): self
     {

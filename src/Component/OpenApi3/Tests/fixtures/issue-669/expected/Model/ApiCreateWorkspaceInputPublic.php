@@ -47,8 +47,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
      * Ids of the agents(s) to attach to the workspace
      *
      * @param list<string> $agentUuids
-     *
-     * @return self
      */
     public function setAgentUuids(array $agentUuids): self
     {
@@ -65,8 +63,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Description of the workspace
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -83,8 +79,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Name of the workspace
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

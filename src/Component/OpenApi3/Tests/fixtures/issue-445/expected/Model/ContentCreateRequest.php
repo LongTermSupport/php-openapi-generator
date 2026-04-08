@@ -66,8 +66,6 @@ class ContentCreateRequest
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.
-     *
-     * @return self
      */
     public function setContentSchemaId(string $contentSchemaId): self
     {
@@ -90,8 +88,6 @@ class ContentCreateRequest
      * The SchemaType of the specified schemas must be Layer.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -112,8 +108,6 @@ class ContentCreateRequest
      * The content data of the content. It's an object of dynamic metadata whose structure is defined in the Content schema identified by the ContentSchemaId property.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -138,8 +132,6 @@ class ContentCreateRequest
      * by the LayerSchemaIds property.
      *
      * @param array<string, mixed>|null $metadata
-     *
-     * @return self
      */
     public function setMetadata(?array $metadata): self
     {
@@ -160,8 +152,6 @@ class ContentCreateRequest
      * An optional list of content permission set IDs which control content permissions. These permissions control content accessibility for the users that do not own the content.
      *
      * @param list<string>|null $contentPermissionSetIds
-     *
-     * @return self
      */
     public function setContentPermissionSetIds(?array $contentPermissionSetIds): self
     {
@@ -182,8 +172,6 @@ class ContentCreateRequest
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {

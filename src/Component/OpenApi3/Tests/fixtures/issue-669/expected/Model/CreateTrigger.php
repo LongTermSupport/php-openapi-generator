@@ -50,8 +50,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * The trigger's unique name within the namespace.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -68,8 +66,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Name of function(action) that exists in the given namespace.
-     *
-     * @return self
      */
     public function setFunction(string $function): self
     {
@@ -86,8 +82,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * One of different type of triggers. Currently only SCHEDULED is supported.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -104,8 +98,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
-     * @return self
      */
     public function setIsEnabled(bool $isEnabled): self
     {
@@ -124,8 +116,6 @@ class CreateTrigger extends \ArrayObject
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
-     * @return self
      */
     public function setScheduledDetails(ScheduledDetails $scheduledDetails): self
     {

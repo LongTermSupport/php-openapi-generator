@@ -74,8 +74,6 @@ class Video extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
-     * @return self
      */
     public function setMediaKey(string $mediaKey): self
     {
@@ -92,8 +90,6 @@ class Video extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
-     * @return self
      */
     public function setHeight(int $height): self
     {
@@ -110,8 +106,6 @@ class Video extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
-     * @return self
      */
     public function setWidth(int $width): self
     {

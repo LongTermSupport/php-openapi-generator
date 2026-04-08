@@ -66,8 +66,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -84,8 +82,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
-     * @return self
      */
     public function setRating(int $rating): self
     {
@@ -106,8 +102,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setLetter(?string $letter): self
     {
@@ -124,8 +118,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
-     * @return self
      */
     public function setBook(string $book): self
     {
@@ -142,8 +134,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
-     * @return self
      */
     public function setAuthor(?string $author): self
     {
@@ -160,8 +150,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
-     * @return self
      */
     public function setPublicationDate(?\DateTime $publicationDate): self
     {

@@ -37,8 +37,6 @@ class PullRequestReviewRequest extends \ArrayObject
     }
     /**
      * @param list<PullRequestReviewRequestUsersItem> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -55,8 +53,6 @@ class PullRequestReviewRequest extends \ArrayObject
     }
     /**
      * @param list<PullRequestReviewRequestTeamsItem> $teams
-     *
-     * @return self
      */
     public function setTeams(array $teams): self
     {

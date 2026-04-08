@@ -80,8 +80,6 @@ class ContentMetadataUpdateRequest
      * The SchemaType of the specified schemas must be Layer.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -108,8 +106,6 @@ class ContentMetadataUpdateRequest
      * Update of content data will be done only if this attribute has any data, i.e. if it's not null or empty.
      *
      * @param array<string, mixed>|null $content
-     *
-     * @return self
      */
     public function setContent(?array $content): self
     {
@@ -136,8 +132,6 @@ class ContentMetadataUpdateRequest
      * If there are no data for a specified LayerSchemaId, it is treated as empty.
      *
      * @param array<string, mixed>|null $metadata
-     *
-     * @return self
      */
     public function setMetadata(?array $metadata): self
     {
@@ -164,8 +158,6 @@ class ContentMetadataUpdateRequest
      * Replace: the content is updated so that only the layers specified in the LayerSchemaIds property are assigned to the content;
      * existing assigned layers not specified in the property are removed and missing layers are assigned.
      * Defaults to Merge.
-     *
-     * @return self
      */
     public function setLayerSchemasUpdateOptions(mixed $layerSchemasUpdateOptions): self
     {
@@ -188,8 +180,6 @@ class ContentMetadataUpdateRequest
      * Merge: the values specified in the Metadata dictionary are merged to the existing values of the corresponding schema on the content.
      * Replace: the values specified in the Metadata dictionary entirely replace any existing value of the corresponding schema on the content.
      * Defaults to Merge.
-     *
-     * @return self
      */
     public function setLayerFieldsUpdateOptions(mixed $layerFieldsUpdateOptions): self
     {
@@ -212,8 +202,6 @@ class ContentMetadataUpdateRequest
      * Merge: the values specified in the Content object are merged to the existing content.
      * Replace: the values specified in the Content object entirely replace the content.
      * Defaults to Merge.
-     *
-     * @return self
      */
     public function setContentFieldsUpdateOptions(mixed $contentFieldsUpdateOptions): self
     {

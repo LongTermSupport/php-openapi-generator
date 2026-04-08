@@ -147,8 +147,6 @@ class Release extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
-     * @return self
      */
     public function setTagName(string $tagName): self
     {
@@ -165,8 +163,6 @@ class Release extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from.
-     *
-     * @return self
      */
     public function setTargetCommitish(string $targetCommitish): self
     {
@@ -203,8 +199,6 @@ class Release extends \ArrayObject
     }
     /**
      * true to create a draft (unpublished) release, false to create a published one.
-     *
-     * @return self
      */
     public function setDraft(bool $draft): self
     {
@@ -221,8 +215,6 @@ class Release extends \ArrayObject
     }
     /**
      * Whether to identify the release as a prerelease or a full release.
-     *
-     * @return self
      */
     public function setPrerelease(bool $prerelease): self
     {
@@ -259,8 +251,6 @@ class Release extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setAuthor(?SimpleUser $author): self
     {
@@ -277,8 +267,6 @@ class Release extends \ArrayObject
     }
     /**
      * @param list<ReleaseAsset> $assets
-     *
-     * @return self
      */
     public function setAssets(array $assets): self
     {

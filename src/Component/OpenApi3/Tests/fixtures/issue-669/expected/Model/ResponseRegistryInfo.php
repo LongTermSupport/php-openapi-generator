@@ -33,8 +33,6 @@ class ResponseRegistryInfo extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $registry
-     *
-     * @return self
      */
     public function setRegistry(array $registry): self
     {

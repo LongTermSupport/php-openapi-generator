@@ -55,8 +55,6 @@ class ViewTraffic extends \ArrayObject
     }
     /**
      * @param list<Traffic> $views
-     *
-     * @return self
      */
     public function setViews(array $views): self
     {

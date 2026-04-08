@@ -37,8 +37,6 @@ class AppIngressSpecRuleMatch extends \ArrayObject
     }
     /**
      * The path to match on.
-     *
-     * @return self
      */
     public function setPath(AppIngressSpecRuleStringMatchPrefix $path): self
     {
@@ -55,8 +53,6 @@ class AppIngressSpecRuleMatch extends \ArrayObject
     }
     /**
      * The authority to match on.
-     *
-     * @return self
      */
     public function setAuthority(AppIngressSpecRuleStringMatchExact $authority): self
     {

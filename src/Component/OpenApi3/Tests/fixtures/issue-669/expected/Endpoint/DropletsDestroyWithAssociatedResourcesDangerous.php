@@ -67,7 +67,6 @@ class DropletsDestroyWithAssociatedResourcesDangerous extends \LongTermSupport\O
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyWithAssociatedResourcesDangerousUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyWithAssociatedResourcesDangerousNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyWithAssociatedResourcesDangerousTooManyRequestsException

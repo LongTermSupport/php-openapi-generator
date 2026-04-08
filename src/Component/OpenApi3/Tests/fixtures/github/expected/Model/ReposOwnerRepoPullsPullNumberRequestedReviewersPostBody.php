@@ -45,8 +45,6 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersPostBody extends \ArrayObje
      * An array of user `login`s that will be requested.
      *
      * @param list<string> $reviewers
-     *
-     * @return self
      */
     public function setReviewers(array $reviewers): self
     {
@@ -67,8 +65,6 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersPostBody extends \ArrayObje
      * An array of team `slug`s that will be requested.
      *
      * @param list<string> $teamReviewers
-     *
-     * @return self
      */
     public function setTeamReviewers(array $teamReviewers): self
     {

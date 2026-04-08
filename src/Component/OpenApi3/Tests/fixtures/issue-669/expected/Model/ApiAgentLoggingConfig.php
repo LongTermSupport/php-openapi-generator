@@ -53,8 +53,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Galileo project identifier
-     *
-     * @return self
      */
     public function setGalileoProjectId(string $galileoProjectId): self
     {
@@ -71,8 +69,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Name of the Galileo project
-     *
-     * @return self
      */
     public function setGalileoProjectName(string $galileoProjectName): self
     {
@@ -89,8 +85,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Whether insights are enabled
-     *
-     * @return self
      */
     public function setInsightsEnabled(bool $insightsEnabled): self
     {
@@ -107,8 +101,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Timestamp when insights were enabled
-     *
-     * @return self
      */
     public function setInsightsEnabledAt(\DateTime $insightsEnabledAt): self
     {
@@ -125,8 +117,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Identifier for the log stream
-     *
-     * @return self
      */
     public function setLogStreamId(string $logStreamId): self
     {
@@ -143,8 +133,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Name of the log stream
-     *
-     * @return self
      */
     public function setLogStreamName(string $logStreamName): self
     {

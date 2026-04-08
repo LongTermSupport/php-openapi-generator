@@ -45,8 +45,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * http or custom status code corresponding to this operation
-     *
-     * @return self
      */
     public function setStatus(int $status): self
     {
@@ -63,8 +61,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * http or custom status message corresponding to this operation
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -81,8 +77,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * Explanation for the status.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -99,8 +93,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * More details about the error.
-     *
-     * @return self
      */
     public function setDetail(string $detail): self
     {

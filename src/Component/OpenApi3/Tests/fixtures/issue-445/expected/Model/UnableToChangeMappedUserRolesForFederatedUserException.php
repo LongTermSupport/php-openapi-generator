@@ -143,8 +143,6 @@ class UnableToChangeMappedUserRolesForFederatedUserException extends \ArrayObjec
     }
     /**
      * @param list<string>|null $userRoleIds
-     *
-     * @return self
      */
     public function setUserRoleIds(?array $userRoleIds): self
     {

@@ -34,8 +34,6 @@ class SortField
     }
     /**
      * The path of the field ({schemaId}.{fieldId})
-     *
-     * @return self
      */
     public function setPath(string $path): self
     {
@@ -52,8 +50,6 @@ class SortField
     }
     /**
      * The translated name of the field to be shown in the UI.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {

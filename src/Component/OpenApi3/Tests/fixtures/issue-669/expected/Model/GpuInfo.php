@@ -38,8 +38,6 @@ class GpuInfo extends \ArrayObject
     }
     /**
      * The number of GPUs allocated to the Droplet.
-     *
-     * @return self
      */
     public function setCount(int $count): self
     {
@@ -56,8 +54,6 @@ class GpuInfo extends \ArrayObject
     }
     /**
      * The model of the GPU.
-     *
-     * @return self
      */
     public function setModel(string $model): self
     {

@@ -66,8 +66,6 @@ class BusinessRuleTraceLog
     }
     /**
      * ID of the trace.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -84,8 +82,6 @@ class BusinessRuleTraceLog
     }
     /**
      * ID of the document.
-     *
-     * @return self
      */
     public function setDocumentId(?string $documentId): self
     {
@@ -102,8 +98,6 @@ class BusinessRuleTraceLog
     }
     /**
      * Type of the document.
-     *
-     * @return self
      */
     public function setDocumentType(mixed $documentType): self
     {
@@ -124,8 +118,6 @@ class BusinessRuleTraceLog
      * IDs of rules that were traced for this document.
      *
      * @param list<string>|null $ruleIds
-     *
-     * @return self
      */
     public function setRuleIds(?array $ruleIds): self
     {
@@ -146,8 +138,6 @@ class BusinessRuleTraceLog
      * Detailed information about rules traced.
      *
      * @param list<BusinessRuleTracedRule>|null $rules
-     *
-     * @return self
      */
     public function setRules(?array $rules): self
     {
@@ -168,8 +158,6 @@ class BusinessRuleTraceLog
      * Validation errors occuring after all rules have ran.
      *
      * @param list<ErrorResponse>|null $validationErrors
-     *
-     * @return self
      */
     public function setValidationErrors(?array $validationErrors): self
     {
@@ -190,8 +178,6 @@ class BusinessRuleTraceLog
      * General errors occuring when saving the document.
      *
      * @param list<ErrorResponse>|null $generalErrors
-     *
-     * @return self
      */
     public function setGeneralErrors(?array $generalErrors): self
     {
@@ -208,8 +194,6 @@ class BusinessRuleTraceLog
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {

@@ -44,7 +44,6 @@ class MigrationsDeleteArchiveForAuthenticatedUser extends \LongTermSupport\OpenA
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsDeleteArchiveForAuthenticatedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsDeleteArchiveForAuthenticatedUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsDeleteArchiveForAuthenticatedUserUnauthorizedException

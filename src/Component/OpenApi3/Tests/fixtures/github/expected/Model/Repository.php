@@ -167,8 +167,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Unique identifier of the repository
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -195,8 +193,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -263,8 +259,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether the repository is private or public.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {
@@ -791,8 +785,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The default branch of the repository.
-     *
-     * @return self
      */
     public function setDefaultBranch(string $defaultBranch): self
     {
@@ -819,8 +811,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
-     * @return self
      */
     public function setIsTemplate(bool $isTemplate): self
     {
@@ -837,8 +827,6 @@ class Repository extends \ArrayObject
     }
     /**
      * @param list<string> $topics
-     *
-     * @return self
      */
     public function setTopics(array $topics): self
     {
@@ -855,8 +843,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether issues are enabled.
-     *
-     * @return self
      */
     public function setHasIssues(bool $hasIssues): self
     {
@@ -873,8 +859,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether projects are enabled.
-     *
-     * @return self
      */
     public function setHasProjects(bool $hasProjects): self
     {
@@ -891,8 +875,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether the wiki is enabled.
-     *
-     * @return self
      */
     public function setHasWiki(bool $hasWiki): self
     {
@@ -919,8 +901,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether downloads are enabled.
-     *
-     * @return self
      */
     public function setHasDownloads(bool $hasDownloads): self
     {
@@ -937,8 +917,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether the repository is archived.
-     *
-     * @return self
      */
     public function setArchived(bool $archived): self
     {
@@ -955,8 +933,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
-     * @return self
      */
     public function setDisabled(bool $disabled): self
     {
@@ -973,8 +949,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The repository visibility: public, private, or internal.
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {
@@ -1021,8 +995,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether to allow rebase merges for pull requests.
-     *
-     * @return self
      */
     public function setAllowRebaseMerge(bool $allowRebaseMerge): self
     {
@@ -1059,8 +1031,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether to allow squash merges for pull requests.
-     *
-     * @return self
      */
     public function setAllowSquashMerge(bool $allowSquashMerge): self
     {
@@ -1077,8 +1047,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether to delete head branches when pull requests are merged
-     *
-     * @return self
      */
     public function setDeleteBranchOnMerge(bool $deleteBranchOnMerge): self
     {
@@ -1095,8 +1063,6 @@ class Repository extends \ArrayObject
     }
     /**
      * Whether to allow merge commits for pull requests.
-     *
-     * @return self
      */
     public function setAllowMergeCommit(bool $allowMergeCommit): self
     {

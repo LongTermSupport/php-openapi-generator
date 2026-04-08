@@ -46,8 +46,6 @@ class MonitoringPortfoliosPortfolioIdPatchBody extends \ArrayObject
     }
     /**
      * @param list<MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem> $emails
-     *
-     * @return self
      */
     public function setEmails(array $emails): self
     {

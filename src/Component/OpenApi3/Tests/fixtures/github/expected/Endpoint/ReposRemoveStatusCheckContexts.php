@@ -55,7 +55,6 @@ class ReposRemoveStatusCheckContexts extends \LongTermSupport\OpenApiGenerator\C
     /**
      * {@inheritdoc}
      *
-     * @return mixed
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ReposRemoveStatusCheckContextsNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ReposRemoveStatusCheckContextsUnprocessableEntityException
      */

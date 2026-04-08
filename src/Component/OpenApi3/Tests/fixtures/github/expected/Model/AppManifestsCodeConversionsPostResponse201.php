@@ -66,8 +66,6 @@ class AppManifestsCodeConversionsPostResponse201 extends \ArrayObject
     }
     /**
      * Unique identifier of the GitHub app
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -84,8 +82,6 @@ class AppManifestsCodeConversionsPostResponse201 extends \ArrayObject
     }
     /**
      * The slug name of the GitHub app
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {
@@ -122,8 +118,6 @@ class AppManifestsCodeConversionsPostResponse201 extends \ArrayObject
     }
     /**
      * The name of the GitHub app
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -190,8 +184,6 @@ class AppManifestsCodeConversionsPostResponse201 extends \ArrayObject
     }
     /**
      * The set of permissions for the GitHub app
-     *
-     * @return self
      */
     public function setPermissions(IntegrationPermissions $permissions): self
     {
@@ -212,8 +204,6 @@ class AppManifestsCodeConversionsPostResponse201 extends \ArrayObject
      * The list of events for the GitHub app
      *
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {
@@ -230,8 +220,6 @@ class AppManifestsCodeConversionsPostResponse201 extends \ArrayObject
     }
     /**
      * The number of installations associated with the GitHub app
-     *
-     * @return self
      */
     public function setInstallationsCount(int $installationsCount): self
     {

@@ -58,8 +58,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Which output format should be used as a source of data.
-     *
-     * @return self
      */
     public function setSourceOutputFormats(mixed $sourceOutputFormats): self
     {
@@ -76,8 +74,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
-     * @return self
      */
     public function setFormat(mixed $format): self
     {
@@ -94,8 +90,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Language specific names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -112,8 +106,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
-     * @return self
      */
     public function setRetentionTime(string $retentionTime): self
     {
@@ -132,8 +124,6 @@ class OutputFormatEditable extends \ArrayObject
     /**
      * Optional patterns (liquid syntax) that produce the filename for item of this output format.
      * If set, the customer's default language is required.
-     *
-     * @return self
      */
     public function setDownloadFileNamePatterns(mixed $downloadFileNamePatterns): self
     {
@@ -150,8 +140,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
-     * @return self
      */
     public function setViewForAll(bool $viewForAll): self
     {
@@ -168,8 +156,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
-     * @return self
      */
     public function setEnableXmpWriteback(bool $enableXmpWriteback): self
     {

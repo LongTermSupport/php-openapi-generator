@@ -147,8 +147,6 @@ class BusinessProcessLifeCycleNotHitException extends \ArrayObject
     }
     /**
      * @param list<string>|null $expected
-     *
-     * @return self
      */
     public function setExpected(?array $expected): self
     {
@@ -165,8 +163,6 @@ class BusinessProcessLifeCycleNotHitException extends \ArrayObject
     }
     /**
      * Life cycle of the business process
-     *
-     * @return self
      */
     public function setActual(string $actual): self
     {

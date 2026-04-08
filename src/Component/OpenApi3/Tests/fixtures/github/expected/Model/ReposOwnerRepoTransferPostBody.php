@@ -39,8 +39,6 @@ class ReposOwnerRepoTransferPostBody extends \ArrayObject
     }
     /**
      * **Required:** The username or organization name the repository will be transferred to.
-     *
-     * @return self
      */
     public function setNewOwner(string $newOwner): self
     {
@@ -61,8 +59,6 @@ class ReposOwnerRepoTransferPostBody extends \ArrayObject
      * ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.
      *
      * @param list<int> $teamIds
-     *
-     * @return self
      */
     public function setTeamIds(array $teamIds): self
     {

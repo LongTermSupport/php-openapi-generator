@@ -57,8 +57,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
-     * @return self
      */
     public function setMediaKey(string $mediaKey): self
     {
@@ -75,8 +73,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of times this video has been viewed.
-     *
-     * @return self
      */
     public function setViewCount(int $viewCount): self
     {
@@ -93,8 +89,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 0% of the video.
-     *
-     * @return self
      */
     public function setPlayback0Count(int $playback0Count): self
     {
@@ -111,8 +105,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 25% of the video.
-     *
-     * @return self
      */
     public function setPlayback25Count(int $playback25Count): self
     {
@@ -129,8 +121,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 50% of the video.
-     *
-     * @return self
      */
     public function setPlayback50Count(int $playback50Count): self
     {
@@ -147,8 +137,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 75% of the video.
-     *
-     * @return self
      */
     public function setPlayback75Count(int $playback75Count): self
     {
@@ -165,8 +153,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 100% of the video.
-     *
-     * @return self
      */
     public function setPlayback100Count(int $playback100Count): self
     {

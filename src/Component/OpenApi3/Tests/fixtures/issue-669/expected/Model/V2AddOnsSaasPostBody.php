@@ -55,8 +55,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
-     * @return self
      */
     public function setAppSlug(string $appSlug): self
     {
@@ -73,8 +71,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the plan associated with the resource.
-     *
-     * @return self
      */
     public function setPlanSlug(string $planSlug): self
     {
@@ -91,8 +87,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The name of the addon resource.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -113,8 +107,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
      * Metadata associated with the resource, set by the user. Metadata expected varies per app, and can be verified with a GET request to "/v2/add-ons/apps/{app_slug}/metadata"
      *
      * @param list<AddonsResourceMetadata> $metadata
-     *
-     * @return self
      */
     public function setMetadata(array $metadata): self
     {
@@ -131,8 +123,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * ID of the droplet to be linked to this resource, if applicable.
-     *
-     * @return self
      */
     public function setLinkedDropletId(int $linkedDropletId): self
     {
@@ -149,8 +139,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * UUID of the fleet/project to which this resource will belong.
-     *
-     * @return self
      */
     public function setFleetUuid(string $fleetUuid): self
     {

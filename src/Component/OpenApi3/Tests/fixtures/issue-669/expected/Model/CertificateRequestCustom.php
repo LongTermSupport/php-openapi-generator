@@ -49,8 +49,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -67,8 +65,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -85,8 +81,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The contents of a PEM-formatted private-key corresponding to the SSL certificate.
-     *
-     * @return self
      */
     public function setPrivateKey(string $privateKey): self
     {
@@ -103,8 +97,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The contents of a PEM-formatted public SSL certificate.
-     *
-     * @return self
      */
     public function setLeafCertificate(string $leafCertificate): self
     {
@@ -121,8 +113,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate.
-     *
-     * @return self
      */
     public function setCertificateChain(string $certificateChain): self
     {

@@ -35,8 +35,6 @@ class ResponseReservedIpList extends \ArrayObject
     }
     /**
      * @param list<ReservedIp> $reservedIps
-     *
-     * @return self
      */
     public function setReservedIps(array $reservedIps): self
     {

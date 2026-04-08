@@ -45,8 +45,6 @@ class Alerts extends \ArrayObject
      * An email to notify on an alert trigger.
      *
      * @param list<string> $email
-     *
-     * @return self
      */
     public function setEmail(array $email): self
     {
@@ -67,8 +65,6 @@ class Alerts extends \ArrayObject
      * Slack integration details.
      *
      * @param list<SlackDetails> $slack
-     *
-     * @return self
      */
     public function setSlack(array $slack): self
     {

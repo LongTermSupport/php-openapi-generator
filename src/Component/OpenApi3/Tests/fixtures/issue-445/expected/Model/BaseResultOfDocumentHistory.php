@@ -44,8 +44,6 @@ class BaseResultOfDocumentHistory
     }
     /**
      * The total number of matching documents.
-     *
-     * @return self
      */
     public function setTotalResults(int $totalResults): self
     {
@@ -66,8 +64,6 @@ class BaseResultOfDocumentHistory
      * The matched documents.
      *
      * @param list<DocumentHistory> $results
-     *
-     * @return self
      */
     public function setResults(array $results): self
     {
@@ -84,8 +80,6 @@ class BaseResultOfDocumentHistory
     }
     /**
      * The search execution time in milliseconds.
-     *
-     * @return self
      */
     public function setElapsedMilliseconds(int $elapsedMilliseconds): self
     {
@@ -102,8 +96,6 @@ class BaseResultOfDocumentHistory
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {

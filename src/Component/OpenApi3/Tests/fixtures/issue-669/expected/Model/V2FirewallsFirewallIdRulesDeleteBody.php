@@ -37,8 +37,6 @@ class V2FirewallsFirewallIdRulesDeleteBody extends \ArrayObject
     }
     /**
      * @param list<FirewallRulesInboundRulesItem>|null $inboundRules
-     *
-     * @return self
      */
     public function setInboundRules(?array $inboundRules): self
     {
@@ -55,8 +53,6 @@ class V2FirewallsFirewallIdRulesDeleteBody extends \ArrayObject
     }
     /**
      * @param list<FirewallRulesOutboundRulesItem>|null $outboundRules
-     *
-     * @return self
      */
     public function setOutboundRules(?array $outboundRules): self
     {

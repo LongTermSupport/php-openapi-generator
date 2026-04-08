@@ -39,8 +39,6 @@ class OrgsOrgTeamsTeamSlugMembershipsUsernamePutBody extends \ArrayObject
      * The role that this user should have in the team. Can be one of:
      * \* `member` - a normal member of the team.
      * \* `maintainer` - a team maintainer. Able to add/remove other team members, promote other team members to team maintainer, and edit the team's name and description.
-     *
-     * @return self
      */
     public function setRole(string $role): self
     {

@@ -44,8 +44,6 @@ class BaseResultOfTransfer
     }
     /**
      * The total number of matching documents.
-     *
-     * @return self
      */
     public function setTotalResults(int $totalResults): self
     {
@@ -66,8 +64,6 @@ class BaseResultOfTransfer
      * The matched documents.
      *
      * @param list<Transfer> $results
-     *
-     * @return self
      */
     public function setResults(array $results): self
     {
@@ -84,8 +80,6 @@ class BaseResultOfTransfer
     }
     /**
      * The search execution time in milliseconds.
-     *
-     * @return self
      */
     public function setElapsedMilliseconds(int $elapsedMilliseconds): self
     {
@@ -102,8 +96,6 @@ class BaseResultOfTransfer
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {

@@ -33,8 +33,6 @@ class V2AddOnsSaasResourceUuidPatchBody extends \ArrayObject
     }
     /**
      * The new name for the add-on resource.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

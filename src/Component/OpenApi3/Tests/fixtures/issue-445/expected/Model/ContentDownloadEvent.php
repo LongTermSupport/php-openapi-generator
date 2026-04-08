@@ -33,8 +33,6 @@ class ContentDownloadEvent extends ApplicationEvent
     }
     /**
      * @param list<DownloadTrackingInfo>|null $downloadInfos
-     *
-     * @return self
      */
     public function setDownloadInfos(?array $downloadInfos): self
     {

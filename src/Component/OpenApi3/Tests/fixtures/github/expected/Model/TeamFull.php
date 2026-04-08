@@ -68,8 +68,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * Unique identifier of the team
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -96,8 +94,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * URL for the team
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -124,8 +120,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * Name of the team
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -162,8 +156,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * The level of privacy this team should have
-     *
-     * @return self
      */
     public function setPrivacy(string $privacy): self
     {
@@ -180,8 +172,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * Permission that the team will have for its repositories
-     *
-     * @return self
      */
     public function setPermission(string $permission): self
     {
@@ -268,8 +258,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * GitHub account for managing multiple users, teams, and repositories
-     *
-     * @return self
      */
     public function setOrganization(Organization $organization): self
     {
@@ -286,8 +274,6 @@ class TeamFull extends \ArrayObject
     }
     /**
      * Distinguished Name (DN) that team maps to within LDAP environment
-     *
-     * @return self
      */
     public function setLdapDn(string $ldapDn): self
     {

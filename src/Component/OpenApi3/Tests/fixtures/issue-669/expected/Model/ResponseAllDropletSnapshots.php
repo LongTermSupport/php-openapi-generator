@@ -35,8 +35,6 @@ class ResponseAllDropletSnapshots extends \ArrayObject
     }
     /**
      * @param list<DropletSnapshot> $snapshots
-     *
-     * @return self
      */
     public function setSnapshots(array $snapshots): self
     {

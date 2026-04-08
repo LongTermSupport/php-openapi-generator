@@ -99,8 +99,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -117,8 +115,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -135,8 +131,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
-     * @return self
      */
     public function setText(string $text): self
     {
@@ -153,8 +147,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setAuthorId(string $authorId): self
     {
@@ -171,8 +163,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setInReplyToUserId(string $inReplyToUserId): self
     {
@@ -193,8 +183,6 @@ class DetailedTweet extends \ArrayObject
      * A list of Tweets this Tweet refers to. For example, if the parent Tweet is a Retweet, a Quoted Tweet or a Reply, it will include the related Tweet referenced to by its parent.
      *
      * @param list<CompactTweetFieldsReferencedTweetsItem> $referencedTweets
-     *
-     * @return self
      */
     public function setReferencedTweets(array $referencedTweets): self
     {
@@ -211,8 +199,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
-     * @return self
      */
     public function setAttachments(CompactTweetFieldsAttachments $attachments): self
     {
@@ -229,8 +215,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
-     * @return self
      */
     public function setWithheld(TweetWithheld $withheld): self
     {
@@ -247,8 +231,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
-     * @return self
      */
     public function setGeo(DefaultTweetFieldsGeo $geo): self
     {
@@ -275,8 +257,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
-     * @return self
      */
     public function setStats(DetailedTweetFieldsStats $stats): self
     {
@@ -293,8 +273,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * @param list<ContextAnnotation> $contextAnnotation
-     *
-     * @return self
      */
     public function setContextAnnotation(array $contextAnnotation): self
     {
@@ -311,8 +289,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
-     * @return self
      */
     public function setPossiblySensitive(bool $possiblySensitive): self
     {
@@ -329,8 +305,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
-     * @return self
      */
     public function setLang(string $lang): self
     {
@@ -347,8 +321,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The name of the app the user Tweeted from.
-     *
-     * @return self
      */
     public function setSource(string $source): self
     {

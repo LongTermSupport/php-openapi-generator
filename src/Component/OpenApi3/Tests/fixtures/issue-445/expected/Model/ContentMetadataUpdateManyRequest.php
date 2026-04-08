@@ -36,8 +36,6 @@ class ContentMetadataUpdateManyRequest
     }
     /**
      * Allows storing references to list items or contents that don't exist in the system.
-     *
-     * @return self
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): self
     {
@@ -58,8 +56,6 @@ class ContentMetadataUpdateManyRequest
      * Update items
      *
      * @param list<ContentMetadataUpdateItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

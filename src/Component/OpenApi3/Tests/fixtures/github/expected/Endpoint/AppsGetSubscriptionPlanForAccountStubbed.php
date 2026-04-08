@@ -46,7 +46,6 @@ class AppsGetSubscriptionPlanForAccountStubbed extends \LongTermSupport\OpenApiG
     /**
      * {@inheritdoc}
      *
-     * @return null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MarketplacePurchase
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsGetSubscriptionPlanForAccountStubbedNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsGetSubscriptionPlanForAccountStubbedUnauthorizedException
      */

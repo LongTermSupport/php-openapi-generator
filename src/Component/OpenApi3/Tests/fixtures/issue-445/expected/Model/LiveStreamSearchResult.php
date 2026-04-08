@@ -47,8 +47,6 @@ class LiveStreamSearchResult extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
-     * @return self
      */
     public function setTotalResults(int $totalResults): self
     {
@@ -69,8 +67,6 @@ class LiveStreamSearchResult extends \ArrayObject
      * The matched documents.
      *
      * @param list<LiveStream> $results
-     *
-     * @return self
      */
     public function setResults(array $results): self
     {
@@ -87,8 +83,6 @@ class LiveStreamSearchResult extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
-     * @return self
      */
     public function setElapsedMilliseconds(int $elapsedMilliseconds): self
     {
@@ -105,8 +99,6 @@ class LiveStreamSearchResult extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {

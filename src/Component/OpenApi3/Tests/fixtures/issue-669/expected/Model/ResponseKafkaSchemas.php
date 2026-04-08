@@ -33,8 +33,6 @@ class ResponseKafkaSchemas extends \ArrayObject
     }
     /**
      * @param list<KafkaSchemaVerbose> $subjects
-     *
-     * @return self
      */
     public function setSubjects(array $subjects): self
     {

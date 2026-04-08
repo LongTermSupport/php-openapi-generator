@@ -36,8 +36,6 @@ class XmpMappingEntryUpdateManyRequest
      * Items to update.
      *
      * @param list<XmpMappingEntry>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

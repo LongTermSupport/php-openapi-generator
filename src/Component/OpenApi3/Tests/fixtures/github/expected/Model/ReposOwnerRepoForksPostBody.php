@@ -33,8 +33,6 @@ class ReposOwnerRepoForksPostBody extends \ArrayObject
     }
     /**
      * Optional parameter to specify the organization name if forking into an organization.
-     *
-     * @return self
      */
     public function setOrganization(string $organization): self
     {

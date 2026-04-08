@@ -41,8 +41,6 @@ class MetadataValuesSchemaItemRemoveCommand extends MetadataValuesChangeCommandB
     /**
      * The path of the field relative to the Content or Layer schema values defined by the schemaId property.
      * (i.e. add a team (existing list item) to the work information of a person: fieldPath = "workInfo.teams", schemaId = "PersonLayer").
-     *
-     * @return self
      */
     public function setFieldPath(string $fieldPath): self
     {
@@ -59,8 +57,6 @@ class MetadataValuesSchemaItemRemoveCommand extends MetadataValuesChangeCommandB
     }
     /**
      * The field namespace.
-     *
-     * @return self
      */
     public function setFieldNamespace(string $fieldNamespace): self
     {
@@ -77,8 +73,6 @@ class MetadataValuesSchemaItemRemoveCommand extends MetadataValuesChangeCommandB
     }
     /**
      * The ID of the list item to be removed.
-     *
-     * @return self
      */
     public function setReferenceId(string $referenceId): self
     {

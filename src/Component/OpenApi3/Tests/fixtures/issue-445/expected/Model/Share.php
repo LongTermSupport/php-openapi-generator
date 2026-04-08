@@ -56,8 +56,6 @@ class Share
     }
     /**
      * Share ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -74,8 +72,6 @@ class Share
     }
     /**
      * Name of share.
-     *
-     * @return self
      */
     public function setName(?string $name): self
     {
@@ -96,8 +92,6 @@ class Share
      * List of shared content IDs.
      *
      * @param list<string> $contentIds
-     *
-     * @return self
      */
     public function setContentIds(array $contentIds): self
     {
@@ -114,8 +108,6 @@ class Share
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -132,8 +124,6 @@ class Share
     }
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
-     * @return self
      */
     public function setExpirationDate(?\DateTime $expirationDate): self
     {
@@ -150,8 +140,6 @@ class Share
     }
     /**
      * Type of share.
-     *
-     * @return self
      */
     public function setShareType(mixed $shareType): self
     {
@@ -168,8 +156,6 @@ class Share
     }
     /**
      * Share is readonly if the current user is not the creator but only the recipient.
-     *
-     * @return self
      */
     public function setIsReadOnly(bool $isReadOnly): self
     {

@@ -35,8 +35,6 @@ class ResponseAllDomainRecordsResponse extends \ArrayObject
     }
     /**
      * @param list<DomainRecord> $domainRecords
-     *
-     * @return self
      */
     public function setDomainRecords(array $domainRecords): self
     {

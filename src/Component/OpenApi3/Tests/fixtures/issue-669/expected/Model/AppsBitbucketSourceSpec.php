@@ -41,8 +41,6 @@ class AppsBitbucketSourceSpec extends \ArrayObject
     }
     /**
      * The name of the branch to use
-     *
-     * @return self
      */
     public function setBranch(string $branch): self
     {
@@ -59,8 +57,6 @@ class AppsBitbucketSourceSpec extends \ArrayObject
     }
     /**
      * Whether to automatically deploy new commits made to the repo
-     *
-     * @return self
      */
     public function setDeployOnPush(bool $deployOnPush): self
     {
@@ -77,8 +73,6 @@ class AppsBitbucketSourceSpec extends \ArrayObject
     }
     /**
      * The name of the repo in the format owner/repo. Example: `digitalocean/sample-golang`
-     *
-     * @return self
      */
     public function setRepo(string $repo): self
     {

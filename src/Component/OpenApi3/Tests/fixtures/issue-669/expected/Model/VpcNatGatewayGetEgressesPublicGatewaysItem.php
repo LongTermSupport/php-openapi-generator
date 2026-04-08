@@ -33,8 +33,6 @@ class VpcNatGatewayGetEgressesPublicGatewaysItem extends \ArrayObject
     }
     /**
      * IPv4 address of the public gateway.
-     *
-     * @return self
      */
     public function setIpv4(string $ipv4): self
     {

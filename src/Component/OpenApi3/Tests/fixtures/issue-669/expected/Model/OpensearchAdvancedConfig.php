@@ -195,8 +195,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum content length for HTTP requests to the OpenSearch HTTP API, in bytes.
-     *
-     * @return self
      */
     public function setHttpMaxContentLengthBytes(int $httpMaxContentLengthBytes): self
     {
@@ -213,8 +211,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum size of allowed headers, in bytes.
-     *
-     * @return self
      */
     public function setHttpMaxHeaderSizeBytes(int $httpMaxHeaderSizeBytes): self
     {
@@ -231,8 +227,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum length of an HTTP URL, in bytes.
-     *
-     * @return self
      */
     public function setHttpMaxInitialLineLengthBytes(int $httpMaxInitialLineLengthBytes): self
     {
@@ -249,8 +243,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum number of clauses Lucene BooleanQuery can have.  Only increase it if necessary, as it may cause performance issues.
-     *
-     * @return self
      */
     public function setIndicesQueryBoolMaxClauseCount(int $indicesQueryBoolMaxClauseCount): self
     {
@@ -267,8 +259,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum amount of heap memory used for field data cache, expressed as a percentage. Decreasing the value too much will increase overhead of loading field data. Increasing the value too much will decrease amount of heap available for other operations.
-     *
-     * @return self
      */
     public function setIndicesFielddataCacheSizePercentage(int $indicesFielddataCacheSizePercentage): self
     {
@@ -285,8 +275,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Total amount of heap used for indexing buffer before writing segments to disk, expressed as a percentage. Too low value will slow down indexing; too high value will increase indexing performance but causes performance issues for query performance.
-     *
-     * @return self
      */
     public function setIndicesMemoryIndexBufferSizePercentage(int $indicesMemoryIndexBufferSizePercentage): self
     {
@@ -303,8 +291,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Minimum amount of heap used for indexing buffer before writing segments to disk, in mb. Works in conjunction with indices_memory_index_buffer_size_percentage, each being enforced.
-     *
-     * @return self
      */
     public function setIndicesMemoryMinIndexBufferSizeMb(int $indicesMemoryMinIndexBufferSizeMb): self
     {
@@ -321,8 +307,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum amount of heap used for indexing buffer before writing segments to disk, in mb. Works in conjunction with indices_memory_index_buffer_size_percentage, each being enforced. The default is unbounded.
-     *
-     * @return self
      */
     public function setIndicesMemoryMaxIndexBufferSizeMb(int $indicesMemoryMaxIndexBufferSizeMb): self
     {
@@ -339,8 +323,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum amount of heap used for query cache.  Too low value will decrease query performance and increase performance for other operations; too high value will cause issues with other functionality.
-     *
-     * @return self
      */
     public function setIndicesQueriesCacheSizePercentage(int $indicesQueriesCacheSizePercentage): self
     {
@@ -357,8 +339,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Limits total inbound and outbound recovery traffic for each node, expressed in mb per second. Applies to both peer recoveries as well as snapshot recoveries (i.e., restores from a snapshot).
-     *
-     * @return self
      */
     public function setIndicesRecoveryMaxMbPerSec(int $indicesRecoveryMaxMbPerSec): self
     {
@@ -375,8 +355,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum number of file chunks sent in parallel for each recovery.
-     *
-     * @return self
      */
     public function setIndicesRecoveryMaxConcurrentFileChunks(int $indicesRecoveryMaxConcurrentFileChunks): self
     {
@@ -393,8 +371,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of workers in the search operation thread pool.  Do note this may have maximum value depending on CPU count - value is automatically lowered if set to higher than maximum value.
-     *
-     * @return self
      */
     public function setThreadPoolSearchSize(int $threadPoolSearchSize): self
     {
@@ -411,8 +387,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of workers in the search throttled operation thread pool. This pool is used for searching frozen indices. Do note this may have maximum value depending on CPU count - value is automatically lowered if set to higher than maximum value.
-     *
-     * @return self
      */
     public function setThreadPoolSearchThrottledSize(int $threadPoolSearchThrottledSize): self
     {
@@ -429,8 +403,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of workers in the get operation thread pool.  Do note this may have maximum value depending on CPU count - value is automatically lowered if set to higher than maximum value.
-     *
-     * @return self
      */
     public function setThreadPoolGetSize(int $threadPoolGetSize): self
     {
@@ -447,8 +419,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of workers in the analyze operation thread pool.  Do note this may have maximum value depending on CPU count - value is automatically lowered if set to higher than maximum value.
-     *
-     * @return self
      */
     public function setThreadPoolAnalyzeSize(int $threadPoolAnalyzeSize): self
     {
@@ -465,8 +435,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of workers in the write operation thread pool.  Do note this may have maximum value depending on CPU count - value is automatically lowered if set to higher than maximum value.
-     *
-     * @return self
      */
     public function setThreadPoolWriteSize(int $threadPoolWriteSize): self
     {
@@ -483,8 +451,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of workers in the force merge operation thread pool. This pool is used for forcing a merge between shards of one or more indices. Do note this may have maximum value depending on CPU count - value is automatically lowered if set to higher than maximum value.
-     *
-     * @return self
      */
     public function setThreadPoolForceMergeSize(int $threadPoolForceMergeSize): self
     {
@@ -501,8 +467,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Size of queue for operations in the search thread pool.
-     *
-     * @return self
      */
     public function setThreadPoolSearchQueueSize(int $threadPoolSearchQueueSize): self
     {
@@ -519,8 +483,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Size of queue for operations in the search throttled thread pool.
-     *
-     * @return self
      */
     public function setThreadPoolSearchThrottledQueueSize(int $threadPoolSearchThrottledQueueSize): self
     {
@@ -537,8 +499,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Size of queue for operations in the get thread pool.
-     *
-     * @return self
      */
     public function setThreadPoolGetQueueSize(int $threadPoolGetQueueSize): self
     {
@@ -555,8 +515,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Size of queue for operations in the analyze thread pool.
-     *
-     * @return self
      */
     public function setThreadPoolAnalyzeQueueSize(int $threadPoolAnalyzeQueueSize): self
     {
@@ -573,8 +531,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Size of queue for operations in the write thread pool.
-     *
-     * @return self
      */
     public function setThreadPoolWriteQueueSize(int $threadPoolWriteQueueSize): self
     {
@@ -591,8 +547,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies whether ISM is enabled or not.
-     *
-     * @return self
      */
     public function setIsmEnabled(bool $ismEnabled): self
     {
@@ -609,8 +563,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies whether audit history is enabled or not. The logs from ISM are automatically indexed to a logs document.
-     *
-     * @return self
      */
     public function setIsmHistoryEnabled(bool $ismHistoryEnabled): self
     {
@@ -627,8 +579,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum age before rolling over the audit history index, in hours.
-     *
-     * @return self
      */
     public function setIsmHistoryMaxAgeHours(int $ismHistoryMaxAgeHours): self
     {
@@ -645,8 +595,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum number of documents before rolling over the audit history index.
-     *
-     * @return self
      */
     public function setIsmHistoryMaxDocs(int $ismHistoryMaxDocs): self
     {
@@ -663,8 +611,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * The time between rollover checks for the audit history index, in hours.
-     *
-     * @return self
      */
     public function setIsmHistoryRolloverCheckPeriodHours(int $ismHistoryRolloverCheckPeriodHours): self
     {
@@ -681,8 +627,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Length of time long audit history indices are kept, in days.
-     *
-     * @return self
      */
     public function setIsmHistoryRolloverRetentionPeriodDays(int $ismHistoryRolloverRetentionPeriodDays): self
     {
@@ -699,8 +643,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum number of aggregation buckets allowed in a single response.
-     *
-     * @return self
      */
     public function setSearchMaxBuckets(int $searchMaxBuckets): self
     {
@@ -717,8 +659,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifices whether to allow automatic creation of indices.
-     *
-     * @return self
      */
     public function setActionAutoCreateIndexEnabled(bool $actionAutoCreateIndexEnabled): self
     {
@@ -735,8 +675,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies whether to allow security audit logging.
-     *
-     * @return self
      */
     public function setEnableSecurityAudit(bool $enableSecurityAudit): self
     {
@@ -753,8 +691,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies whether to require explicit index names when deleting indices.
-     *
-     * @return self
      */
     public function setActionDestructiveRequiresName(bool $actionDestructiveRequiresName): self
     {
@@ -771,8 +707,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum number of shards allowed per data node.
-     *
-     * @return self
      */
     public function setClusterMaxShardsPerNode(int $clusterMaxShardsPerNode): self
     {
@@ -789,8 +723,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Compatibility mode sets OpenSearch to report its version as 7.10 so clients continue to work.
-     *
-     * @return self
      */
     public function setOverrideMainResponseVersion(bool $overrideMainResponseVersion): self
     {
@@ -807,8 +739,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Limits the number of inline script compilations within a period of time. Default is use-context
-     *
-     * @return self
      */
     public function setScriptMaxCompilationsRate(string $scriptMaxCompilationsRate): self
     {
@@ -825,8 +755,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum concurrent incoming/outgoing shard recoveries (normally replicas) are allowed to happen per node .
-     *
-     * @return self
      */
     public function setClusterRoutingAllocationNodeConcurrentRecoveries(int $clusterRoutingAllocationNodeConcurrentRecoveries): self
     {
@@ -847,8 +775,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
      * Allowlist of remote IP addresses for reindexing. Changing this value will cause all OpenSearch instances to restart.
      *
      * @param list<string> $reindexRemoteWhitelist
-     *
-     * @return self
      */
     public function setReindexRemoteWhitelist(array $reindexRemoteWhitelist): self
     {
@@ -865,8 +791,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Enable or disable filtering of alerting by backend roles.
-     *
-     * @return self
      */
     public function setPluginsAlertingFilterByBackendRolesEnabled(bool $pluginsAlertingFilterByBackendRolesEnabled): self
     {
@@ -883,8 +807,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Enable or disable KNN memory circuit breaker.
-     *
-     * @return self
      */
     public function setKnnMemoryCircuitBreakerEnabled(bool $knnMemoryCircuitBreakerEnabled): self
     {
@@ -901,8 +823,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum amount of memory in percentage that can be used for the KNN index. Defaults to 50% of the JVM heap size.  0 is used to set it to null which can be used to invalidate caches.
-     *
-     * @return self
      */
     public function setKnnMemoryCircuitBreakerLimit(int $knnMemoryCircuitBreakerLimit): self
     {
@@ -919,8 +839,6 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * DigitalOcean automatically resets the `index.refresh_interval` to the default value (once per second) to  ensure that new documents are quickly available for search queries. If you are setting your own refresh intervals,  you can disable this by setting this field to true.
-     *
-     * @return self
      */
     public function setKeepIndexRefreshInterval(bool $keepIndexRefreshInterval): self
     {

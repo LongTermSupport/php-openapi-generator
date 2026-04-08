@@ -61,8 +61,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setComments(Link $comments): self
     {
@@ -79,8 +77,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setCommits(Link $commits): self
     {
@@ -97,8 +93,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setStatuses(Link $statuses): self
     {
@@ -115,8 +109,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setHtml(Link $html): self
     {
@@ -133,8 +125,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setIssue(Link $issue): self
     {
@@ -151,8 +141,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setReviewComments(Link $reviewComments): self
     {
@@ -169,8 +157,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setReviewComment(Link $reviewComment): self
     {
@@ -187,8 +173,6 @@ class PullRequestLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setSelf(Link $self): self
     {

@@ -284,8 +284,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
-     * @return self
      */
     public function setSide(string $side): self
     {
@@ -302,8 +300,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
-     * @return self
      */
     public function setStartSide(?string $startSide): self
     {
@@ -320,8 +316,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
-     * @return self
      */
     public function setLine(int $line): self
     {
@@ -338,8 +332,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
-     * @return self
      */
     public function setOriginalLine(int $originalLine): self
     {
@@ -356,8 +348,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
-     * @return self
      */
     public function setStartLine(?int $startLine): self
     {
@@ -374,8 +364,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The original first line of the range for a multi-line comment.
-     *
-     * @return self
      */
     public function setOriginalStartLine(?int $originalStartLine): self
     {

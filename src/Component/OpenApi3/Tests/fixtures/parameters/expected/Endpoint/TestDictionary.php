@@ -43,11 +43,6 @@ class TestDictionary extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
         $optionsResolver->addAllowedTypes('input', ['string']);
         return $optionsResolver;
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();

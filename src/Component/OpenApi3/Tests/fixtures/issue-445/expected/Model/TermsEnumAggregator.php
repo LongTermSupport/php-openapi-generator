@@ -60,8 +60,6 @@ class TermsEnumAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on. Only not analyzed fields are supported.
-     *
-     * @return self
      */
     public function setField(string $field): self
     {
@@ -78,8 +76,6 @@ class TermsEnumAggregator extends AggregatorBase
     }
     /**
      * It defines how many term buckets should be returned out of the overall terms list.
-     *
-     * @return self
      */
     public function setSize(?int $size): self
     {
@@ -100,8 +96,6 @@ class TermsEnumAggregator extends AggregatorBase
      * Includes values for which buckets will be created. Supports regular expression strings or arrays of exact values.
      *
      * @param list<string>|null $includes
-     *
-     * @return self
      */
     public function setIncludes(?array $includes): self
     {
@@ -122,8 +116,6 @@ class TermsEnumAggregator extends AggregatorBase
      * Excludes values for which buckets will be created. Supports regular expression strings or arrays of exact values.
      *
      * @param list<string>|null $excludes
-     *
-     * @return self
      */
     public function setExcludes(?array $excludes): self
     {
@@ -140,8 +132,6 @@ class TermsEnumAggregator extends AggregatorBase
     }
     /**
      * Limits the possible returned aggregation values by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -162,8 +152,6 @@ class TermsEnumAggregator extends AggregatorBase
      * Search fields to be used to search the SearchString value into. If no search field is specified, the Field value is used.
      *
      * @param list<string>|null $searchFields
-     *
-     * @return self
      */
     public function setSearchFields(?array $searchFields): self
     {
@@ -180,8 +168,6 @@ class TermsEnumAggregator extends AggregatorBase
     }
     /**
      * Type of the enum target of the relation. It is used to resolve the enum translation.
-     *
-     * @return self
      */
     public function setEnumType(string $enumType): self
     {

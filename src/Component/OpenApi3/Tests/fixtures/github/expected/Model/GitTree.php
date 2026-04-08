@@ -72,8 +72,6 @@ class GitTree extends \ArrayObject
      * Objects specifying a tree structure
      *
      * @param list<GitTreeTreeItem> $tree
-     *
-     * @return self
      */
     public function setTree(array $tree): self
     {

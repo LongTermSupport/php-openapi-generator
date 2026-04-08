@@ -44,8 +44,6 @@ class AppsListInstanceSizesResponse extends \ArrayObject
     }
     /**
      * @param list<AppsInstanceSize> $instanceSizes
-     *
-     * @return self
      */
     public function setInstanceSizes(array $instanceSizes): self
     {

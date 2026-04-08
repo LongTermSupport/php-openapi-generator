@@ -104,8 +104,6 @@ class SchemaCreateRequest
     }
     /**
      * The schema ID. It can be a slug, but must be unique throughout the whole customer setup.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -122,8 +120,6 @@ class SchemaCreateRequest
     }
     /**
      * The parent schema ID.
-     *
-     * @return self
      */
     public function setParentSchemaId(?string $parentSchemaId): self
     {
@@ -144,8 +140,6 @@ class SchemaCreateRequest
      * List of schema types. Currently only one schema type can be assigned to this list, and it cannot be modified once the schema is created.
      *
      * @param list<string>|null $types
-     *
-     * @return self
      */
     public function setTypes(?array $types): self
     {
@@ -162,8 +156,6 @@ class SchemaCreateRequest
     }
     /**
      * Language specific schema names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -180,8 +172,6 @@ class SchemaCreateRequest
     }
     /**
      * Language specific schema descriptions.
-     *
-     * @return self
      */
     public function setDescriptions(mixed $descriptions): self
     {
@@ -202,8 +192,6 @@ class SchemaCreateRequest
      * Language specific DotLiquid templates. These templates will be resolved into display values in content documents and/or list items.
      *
      * @param list<DisplayPattern> $displayPatterns
-     *
-     * @return self
      */
     public function setDisplayPatterns(array $displayPatterns): self
     {
@@ -224,8 +212,6 @@ class SchemaCreateRequest
      * The schema fields.
      *
      * @param list<FieldBase>|null $fields
-     *
-     * @return self
      */
     public function setFields(?array $fields): self
     {
@@ -248,8 +234,6 @@ class SchemaCreateRequest
      * Only a subset of properties of a FieldSingleTagbox and FieldMultiTagbox can be be overwritten. All other properties and fields cannot.
      *
      * @param list<FieldOverwriteBase>|null $fieldsOverwrite
-     *
-     * @return self
      */
     public function setFieldsOverwrite(?array $fieldsOverwrite): self
     {
@@ -272,8 +256,6 @@ class SchemaCreateRequest
      * the UI uses such information to show the available filters and grouped results.
      *
      * @param list<AggregatorBase>|null $aggregations
-     *
-     * @return self
      */
     public function setAggregations(?array $aggregations): self
     {
@@ -296,8 +278,6 @@ class SchemaCreateRequest
      * must be set to true. Multiple sorting is supported: they are applied in the specified order.
      *
      * @param list<SortInfo>|null $sort
-     *
-     * @return self
      */
     public function setSort(?array $sort): self
     {
@@ -314,8 +294,6 @@ class SchemaCreateRequest
     }
     /**
      * Defines a schema as viewable by everyone. Everyone with ManageSchema user permission is able to see the schema.
-     *
-     * @return self
      */
     public function setViewForAll(bool $viewForAll): self
     {
@@ -336,8 +314,6 @@ class SchemaCreateRequest
      * An optional list of schema permission set IDs which control schema permissions.
      *
      * @param list<string>|null $schemaPermissionSetIds
-     *
-     * @return self
      */
     public function setSchemaPermissionSetIds(?array $schemaPermissionSetIds): self
     {
@@ -358,8 +334,6 @@ class SchemaCreateRequest
      * An optional list of schemas' IDs with type layer. For a Content schema it stores the layers that can be assigned to a content.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -382,8 +356,6 @@ class SchemaCreateRequest
      * that reference the layer.
      *
      * @param list<string>|null $referencedInContentSchemaIds
-     *
-     * @return self
      */
     public function setReferencedInContentSchemaIds(?array $referencedInContentSchemaIds): self
     {

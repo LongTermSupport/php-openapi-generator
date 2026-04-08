@@ -35,8 +35,6 @@ class AppsDeploymentsResponse extends \ArrayObject
     }
     /**
      * @param list<AppsDeployment> $deployments
-     *
-     * @return self
      */
     public function setDeployments(array $deployments): self
     {

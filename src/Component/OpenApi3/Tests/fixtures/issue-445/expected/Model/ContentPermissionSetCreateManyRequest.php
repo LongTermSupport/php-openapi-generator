@@ -36,8 +36,6 @@ class ContentPermissionSetCreateManyRequest
      * Content permission set update requests.
      *
      * @param list<ContentPermissionSetCreateRequest>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

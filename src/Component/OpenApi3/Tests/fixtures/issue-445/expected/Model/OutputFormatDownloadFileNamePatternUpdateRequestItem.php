@@ -35,8 +35,6 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItem
     }
     /**
      * ID of the output format to set pattern for.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -55,8 +53,6 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItem
     /**
      * The patterns to use per metadata language.
      * The customer's default language is required.
-     *
-     * @return self
      */
     public function setPatterns(mixed $patterns): self
     {

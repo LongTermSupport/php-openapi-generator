@@ -37,8 +37,6 @@ class GpuInfoVram extends \ArrayObject
     }
     /**
      * The amount of VRAM allocated to the GPU.
-     *
-     * @return self
      */
     public function setAmount(int $amount): self
     {
@@ -55,8 +53,6 @@ class GpuInfoVram extends \ArrayObject
     }
     /**
      * The unit of measure for the VRAM.
-     *
-     * @return self
      */
     public function setUnit(string $unit): self
     {

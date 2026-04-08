@@ -33,8 +33,6 @@ class ResponseStatusMessages extends \ArrayObject
     }
     /**
      * @param list<StatusMessages> $messages
-     *
-     * @return self
      */
     public function setMessages(array $messages): self
     {

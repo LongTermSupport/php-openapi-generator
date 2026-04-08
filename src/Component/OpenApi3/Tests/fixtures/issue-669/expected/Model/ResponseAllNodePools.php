@@ -33,8 +33,6 @@ class ResponseAllNodePools extends \ArrayObject
     }
     /**
      * @param list<array<string, mixed>> $nodePools
-     *
-     * @return self
      */
     public function setNodePools(array $nodePools): self
     {

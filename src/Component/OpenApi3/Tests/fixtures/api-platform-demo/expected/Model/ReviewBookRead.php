@@ -44,8 +44,6 @@ class ReviewBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

@@ -33,8 +33,6 @@ class ApiCancelKnowledgeBaseIndexingJobOutput extends \ArrayObject
     }
     /**
      * IndexingJob description
-     *
-     * @return self
      */
     public function setJob(ApiIndexingJob $job): self
     {

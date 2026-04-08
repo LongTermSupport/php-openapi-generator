@@ -37,8 +37,6 @@ class DropletNetworks extends \ArrayObject
     }
     /**
      * @param list<NetworkV4> $v4
-     *
-     * @return self
      */
     public function setV4(array $v4): self
     {
@@ -55,8 +53,6 @@ class DropletNetworks extends \ArrayObject
     }
     /**
      * @param list<NetworkV6> $v6
-     *
-     * @return self
      */
     public function setV6(array $v6): self
     {

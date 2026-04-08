@@ -37,8 +37,6 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
     }
     /**
      * The project card's note
-     *
-     * @return self
      */
     public function setNote(?string $note): self
     {
@@ -55,8 +53,6 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
     }
     /**
      * Whether or not the card is archived
-     *
-     * @return self
      */
     public function setArchived(bool $archived): self
     {

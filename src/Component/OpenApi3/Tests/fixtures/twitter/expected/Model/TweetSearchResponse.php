@@ -39,8 +39,6 @@ class TweetSearchResponse extends \ArrayObject
     }
     /**
      * @param list<mixed> $data
-     *
-     * @return self
      */
     public function setData(array $data): self
     {
@@ -67,8 +65,6 @@ class TweetSearchResponse extends \ArrayObject
     }
     /**
      * @param list<mixed> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

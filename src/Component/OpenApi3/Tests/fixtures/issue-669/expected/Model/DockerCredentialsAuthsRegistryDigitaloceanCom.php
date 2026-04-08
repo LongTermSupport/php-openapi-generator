@@ -33,8 +33,6 @@ class DockerCredentialsAuthsRegistryDigitaloceanCom extends \ArrayObject
     }
     /**
      * A base64 encoded string containing credentials for the container registry.
-     *
-     * @return self
      */
     public function setAuth(string $auth): self
     {

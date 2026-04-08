@@ -33,8 +33,6 @@ class LinkToFirstPage extends \ArrayObject
     }
     /**
      * URI of the first page of the results.
-     *
-     * @return self
      */
     public function setFirst(string $first): self
     {

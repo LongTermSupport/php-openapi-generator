@@ -52,8 +52,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * Issue Simple
-     *
-     * @return self
      */
     public function setIssue(IssueSimple $issue): self
     {
@@ -70,8 +68,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * Comments provide a way for people to collaborate on an issue.
-     *
-     * @return self
      */
     public function setComment(IssueComment $comment): self
     {
@@ -88,8 +84,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * @param list<EventPayloadPagesItem> $pages
-     *
-     * @return self
      */
     public function setPages(array $pages): self
     {

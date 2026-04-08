@@ -143,8 +143,6 @@ class SchemaInUseContentSchemaException extends \ArrayObject
     }
     /**
      * @param list<string>|null $contentSchemaIds
-     *
-     * @return self
      */
     public function setContentSchemaIds(?array $contentSchemaIds): self
     {

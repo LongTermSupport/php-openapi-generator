@@ -44,8 +44,6 @@ class SearchResultTextMatchesItemMatchesItem extends \ArrayObject
     }
     /**
      * @param list<int> $indices
-     *
-     * @return self
      */
     public function setIndices(array $indices): self
     {

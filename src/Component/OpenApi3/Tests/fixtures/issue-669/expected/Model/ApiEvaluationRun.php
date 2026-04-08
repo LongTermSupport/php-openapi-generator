@@ -112,8 +112,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Whether agent is deleted
-     *
-     * @return self
      */
     public function setAgentDeleted(bool $agentDeleted): self
     {
@@ -130,8 +128,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * The agent deployment name
-     *
-     * @return self
      */
     public function setAgentDeploymentName(string $agentDeploymentName): self
     {
@@ -148,8 +144,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Agent name
-     *
-     * @return self
      */
     public function setAgentName(string $agentName): self
     {
@@ -166,8 +160,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Agent UUID.
-     *
-     * @return self
      */
     public function setAgentUuid(string $agentUuid): self
     {
@@ -184,8 +176,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Version hash
-     *
-     * @return self
      */
     public function setAgentVersionHash(string $agentVersionHash): self
     {
@@ -202,8 +192,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Agent workspace uuid
-     *
-     * @return self
      */
     public function setAgentWorkspaceUuid(string $agentWorkspaceUuid): self
     {
@@ -240,8 +228,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * The error description
-     *
-     * @return self
      */
     public function setErrorDescription(string $errorDescription): self
     {
@@ -258,8 +244,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Evaluation run UUID.
-     *
-     * @return self
      */
     public function setEvaluationRunUuid(string $evaluationRunUuid): self
     {
@@ -276,8 +260,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Evaluation test case workspace uuid
-     *
-     * @return self
      */
     public function setEvaluationTestCaseWorkspaceUuid(string $evaluationTestCaseWorkspaceUuid): self
     {
@@ -294,8 +276,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Run end time.
-     *
-     * @return self
      */
     public function setFinishedAt(\DateTime $finishedAt): self
     {
@@ -312,8 +292,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * The pass status of the evaluation run based on the star metric.
-     *
-     * @return self
      */
     public function setPassStatus(bool $passStatus): self
     {
@@ -330,8 +308,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Run queued time.
-     *
-     * @return self
      */
     public function setQueuedAt(\DateTime $queuedAt): self
     {
@@ -348,8 +324,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * @param list<ApiEvaluationMetricResult> $runLevelMetricResults
-     *
-     * @return self
      */
     public function setRunLevelMetricResults(array $runLevelMetricResults): self
     {
@@ -366,8 +340,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Run name.
-     *
-     * @return self
      */
     public function setRunName(string $runName): self
     {
@@ -394,8 +366,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Run start time.
-     *
-     * @return self
      */
     public function setStartedAt(\DateTime $startedAt): self
     {
@@ -412,8 +382,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Evaluation Run Statuses
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -430,8 +398,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Test case description.
-     *
-     * @return self
      */
     public function setTestCaseDescription(string $testCaseDescription): self
     {
@@ -448,8 +414,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Test case name.
-     *
-     * @return self
      */
     public function setTestCaseName(string $testCaseName): self
     {
@@ -466,8 +430,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Test-case UUID.
-     *
-     * @return self
      */
     public function setTestCaseUuid(string $testCaseUuid): self
     {
@@ -484,8 +446,6 @@ class ApiEvaluationRun extends \ArrayObject
     }
     /**
      * Test-case-version.
-     *
-     * @return self
      */
     public function setTestCaseVersion(int $testCaseVersion): self
     {

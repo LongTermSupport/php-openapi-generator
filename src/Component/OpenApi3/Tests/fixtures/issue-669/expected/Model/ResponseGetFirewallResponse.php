@@ -33,8 +33,6 @@ class ResponseGetFirewallResponse extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $firewall
-     *
-     * @return self
      */
     public function setFirewall(array $firewall): self
     {

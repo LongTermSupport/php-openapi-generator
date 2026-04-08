@@ -143,8 +143,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a Kubernetes cluster.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -161,8 +159,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A human-readable name for a Kubernetes cluster.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -179,8 +175,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the Kubernetes cluster is located.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -197,8 +191,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * The slug identifier for the version of Kubernetes used for the cluster. If set to a minor version (e.g. "1.14"), the latest version within it will be used (e.g. "1.14.6-do.1"); if set to "latest", the latest published version will be used. See the `/v2/kubernetes/options` endpoint to find all currently available versions.
-     *
-     * @return self
      */
     public function setVersion(string $version): self
     {
@@ -215,8 +207,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * The range of IP addresses for the overlay network of the Kubernetes cluster in CIDR notation.
-     *
-     * @return self
      */
     public function setClusterSubnet(string $clusterSubnet): self
     {
@@ -233,8 +223,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * The range of assignable IP addresses for services running in the Kubernetes cluster in CIDR notation.
-     *
-     * @return self
      */
     public function setServiceSubnet(string $serviceSubnet): self
     {
@@ -251,8 +239,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Kubernetes cluster is assigned.<br><br>Requires `vpc:read` scope.
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -269,8 +255,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * The public IPv4 address of the Kubernetes master node. This will not be set if high availability is configured on the cluster (v1.21+)
-     *
-     * @return self
      */
     public function setIpv4(string $ipv4): self
     {
@@ -287,8 +271,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * The base URL of the API server on the Kubernetes master node.
-     *
-     * @return self
      */
     public function setEndpoint(string $endpoint): self
     {
@@ -309,8 +291,6 @@ class ClusterRead extends \ArrayObject
      * An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged `k8s` and `k8s:$K8S_CLUSTER_ID`. <br><br>Requires `tag:read` scope.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -331,8 +311,6 @@ class ClusterRead extends \ArrayObject
      * An object specifying the details of the worker nodes available to the Kubernetes cluster.
      *
      * @param list<array<string, mixed>> $nodePools
-     *
-     * @return self
      */
     public function setNodePools(array $nodePools): self
     {
@@ -349,8 +327,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying the maintenance window policy for the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setMaintenancePolicy(?MaintenancePolicy $maintenancePolicy): self
     {
@@ -367,8 +343,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
-     *
-     * @return self
      */
     public function setAutoUpgrade(bool $autoUpgrade): self
     {
@@ -385,8 +359,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object containing a `state` attribute whose value is set to a string indicating the current status of the cluster.
-     *
-     * @return self
      */
     public function setStatus(ClusterReadStatus $status): self
     {
@@ -403,8 +375,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Kubernetes cluster was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -421,8 +391,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Kubernetes cluster was last updated.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -439,8 +407,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A boolean value indicating whether surge upgrade is enabled/disabled for the cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the outdated nodes.
-     *
-     * @return self
      */
     public function setSurgeUpgrade(bool $surgeUpgrade): self
     {
@@ -457,8 +423,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the control plane is run in a highly available configuration in the cluster. Highly available control planes incur less downtime. The property cannot be disabled.
-     *
-     * @return self
      */
     public function setHa(bool $ha): self
     {
@@ -475,8 +439,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * A read-only boolean value indicating if a container registry is integrated with the cluster.
-     *
-     * @return self
      */
     public function setRegistryEnabled(bool $registryEnabled): self
     {
@@ -497,8 +459,6 @@ class ClusterRead extends \ArrayObject
      * An array of integrated DOCR registries.
      *
      * @param list<string>|null $registries
-     *
-     * @return self
      */
     public function setRegistries(?array $registries): self
     {
@@ -515,8 +475,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
-     *
-     * @return self
      */
     public function setControlPlaneFirewall(?ControlPlaneFirewall $controlPlaneFirewall): self
     {
@@ -533,8 +491,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying custom cluster autoscaler configuration.
-     *
-     * @return self
      */
     public function setClusterAutoscalerConfiguration(?ClusterAutoscalerConfiguration $clusterAutoscalerConfiguration): self
     {
@@ -551,8 +507,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setRoutingAgent(?RoutingAgent $routingAgent): self
     {
@@ -569,8 +523,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
-     *
-     * @return self
      */
     public function setAmdGpuDevicePlugin(?AmdGpuDevicePlugin $amdGpuDevicePlugin): self
     {
@@ -587,8 +539,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setAmdGpuDeviceMetricsExporterPlugin(?AmdGpuDeviceMetricsExporterPlugin $amdGpuDeviceMetricsExporterPlugin): self
     {
@@ -605,8 +555,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
-     *
-     * @return self
      */
     public function setNvidiaGpuDevicePlugin(?NvidiaGpuDevicePlugin $nvidiaGpuDevicePlugin): self
     {
@@ -623,8 +571,6 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
-     *
-     * @return self
      */
     public function setRdmaSharedDevPlugin(?RdmaSharedDevPlugin $rdmaSharedDevPlugin): self
     {

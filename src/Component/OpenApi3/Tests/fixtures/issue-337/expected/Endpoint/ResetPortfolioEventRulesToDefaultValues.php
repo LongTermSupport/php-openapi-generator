@@ -57,7 +57,6 @@ class ResetPortfolioEventRulesToDefaultValues extends \LongTermSupport\OpenApiGe
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ResetPortfolioEventRulesToDefaultValuesBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ResetPortfolioEventRulesToDefaultValuesUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ResetPortfolioEventRulesToDefaultValuesForbiddenException

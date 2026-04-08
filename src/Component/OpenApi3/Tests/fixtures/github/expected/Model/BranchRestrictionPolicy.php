@@ -85,8 +85,6 @@ class BranchRestrictionPolicy extends \ArrayObject
     }
     /**
      * @param list<BranchRestrictionPolicyUsersItem> $users
-     *
-     * @return self
      */
     public function setUsers(array $users): self
     {
@@ -103,8 +101,6 @@ class BranchRestrictionPolicy extends \ArrayObject
     }
     /**
      * @param list<BranchRestrictionPolicyTeamsItem> $teams
-     *
-     * @return self
      */
     public function setTeams(array $teams): self
     {
@@ -121,8 +117,6 @@ class BranchRestrictionPolicy extends \ArrayObject
     }
     /**
      * @param list<BranchRestrictionPolicyAppsItem> $apps
-     *
-     * @return self
      */
     public function setApps(array $apps): self
     {

@@ -53,8 +53,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The commit message.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -71,8 +69,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The new file content, using Base64 encoding.
-     *
-     * @return self
      */
     public function setContent(string $content): self
     {
@@ -89,8 +85,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * **Required if you are updating a file**. The blob SHA of the file being replaced.
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {
@@ -107,8 +101,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
-     * @return self
      */
     public function setBranch(string $branch): self
     {
@@ -125,8 +117,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The person that committed the file. Default: the authenticated user.
-     *
-     * @return self
      */
     public function setCommitter(ReposOwnerRepoContentsPathPutBodyCommitter $committer): self
     {
@@ -143,8 +133,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
-     *
-     * @return self
      */
     public function setAuthor(ReposOwnerRepoContentsPathPutBodyAuthor $author): self
     {

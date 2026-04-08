@@ -65,8 +65,6 @@ class Label extends \ArrayObject
     }
     /**
      * URL for the label
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -83,8 +81,6 @@ class Label extends \ArrayObject
     }
     /**
      * The name of the label.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -111,8 +107,6 @@ class Label extends \ArrayObject
     }
     /**
      * 6-character hex code, without the leading #, identifying the color
-     *
-     * @return self
      */
     public function setColor(string $color): self
     {

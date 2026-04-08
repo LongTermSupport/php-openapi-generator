@@ -44,8 +44,6 @@ class CompactTweetFieldsReferencedTweetsItem extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

@@ -33,8 +33,6 @@ class AppsListRegionsResponse extends \ArrayObject
     }
     /**
      * @param list<AppsRegion> $regions
-     *
-     * @return self
      */
     public function setRegions(array $regions): self
     {

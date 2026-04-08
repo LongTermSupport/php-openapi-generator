@@ -61,8 +61,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The main text of the comment.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -89,8 +87,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
-     * @return self
      */
     public function setBodyVersion(string $bodyVersion): self
     {
@@ -157,8 +153,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The unique sequence number of a team discussion comment.
-     *
-     * @return self
      */
     public function setNumber(int $number): self
     {

@@ -37,8 +37,6 @@ class VpcNatGatewayGetVpcsItem extends \ArrayObject
     }
     /**
      * The unique identifier of the VPC to which the NAT gateway is attached.
-     *
-     * @return self
      */
     public function setVpcUuid(string $vpcUuid): self
     {
@@ -55,8 +53,6 @@ class VpcNatGatewayGetVpcsItem extends \ArrayObject
     }
     /**
      * The gateway IP address of the VPC NAT gateway.
-     *
-     * @return self
      */
     public function setGatewayIp(string $gatewayIp): self
     {

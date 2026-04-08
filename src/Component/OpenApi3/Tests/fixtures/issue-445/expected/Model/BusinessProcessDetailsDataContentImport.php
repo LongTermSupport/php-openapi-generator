@@ -36,8 +36,6 @@ class BusinessProcessDetailsDataContentImport extends BusinessProcessDetailsData
      * Items that were imported.
      *
      * @param list<ContentImportResult>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

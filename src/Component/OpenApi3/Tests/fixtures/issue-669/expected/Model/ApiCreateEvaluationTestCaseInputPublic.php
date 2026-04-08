@@ -63,8 +63,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Dataset against which the test‑case is executed.
-     *
-     * @return self
      */
     public function setDatasetUuid(string $datasetUuid): self
     {
@@ -81,8 +79,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Description of the test case.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -103,8 +99,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
      * Full metric list to use for evaluation test case.
      *
      * @param list<string> $metrics
-     *
-     * @return self
      */
     public function setMetrics(array $metrics): self
     {
@@ -121,8 +115,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the test case.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -149,8 +141,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * The workspace uuid.
-     *
-     * @return self
      */
     public function setWorkspaceUuid(string $workspaceUuid): self
     {

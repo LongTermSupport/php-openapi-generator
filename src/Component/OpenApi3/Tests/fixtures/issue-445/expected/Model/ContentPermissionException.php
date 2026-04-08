@@ -143,8 +143,6 @@ class ContentPermissionException extends \ArrayObject
     }
     /**
      * @param list<string>|null $contentRights
-     *
-     * @return self
      */
     public function setContentRights(?array $contentRights): self
     {

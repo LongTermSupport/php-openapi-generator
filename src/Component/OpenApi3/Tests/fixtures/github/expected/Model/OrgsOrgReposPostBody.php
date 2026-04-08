@@ -98,8 +98,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -116,8 +114,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * A short description of the repository.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -134,8 +130,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * A URL with more information about the repository.
-     *
-     * @return self
      */
     public function setHomepage(string $homepage): self
     {
@@ -152,8 +146,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to create a private repository or `false` to create a public one.
-     *
-     * @return self
      */
     public function setPrivate(bool $private): self
     {
@@ -172,8 +164,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     /**
      * Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. For more information, see "[Creating an internal repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.
      * The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {
@@ -190,8 +180,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable issues for this repository or `false` to disable them.
-     *
-     * @return self
      */
     public function setHasIssues(bool $hasIssues): self
     {
@@ -208,8 +196,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable projects for this repository or `false` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is `false`, and if you pass `true`, the API returns an error.
-     *
-     * @return self
      */
     public function setHasProjects(bool $hasProjects): self
     {
@@ -226,8 +212,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable the wiki for this repository or `false` to disable it.
-     *
-     * @return self
      */
     public function setHasWiki(bool $hasWiki): self
     {
@@ -244,8 +228,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to make this repo available as a template repository or `false` to prevent it.
-     *
-     * @return self
      */
     public function setIsTemplate(bool $isTemplate): self
     {
@@ -262,8 +244,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
-     * @return self
      */
     public function setTeamId(int $teamId): self
     {
@@ -280,8 +260,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Pass `true` to create an initial commit with empty README.
-     *
-     * @return self
      */
     public function setAutoInit(bool $autoInit): self
     {
@@ -298,8 +276,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Desired language or platform [.gitignore template](https://github.com/github/gitignore) to apply. Use the name of the template without the extension. For example, "Haskell".
-     *
-     * @return self
      */
     public function setGitignoreTemplate(string $gitignoreTemplate): self
     {
@@ -316,8 +292,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://help.github.com/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
-     *
-     * @return self
      */
     public function setLicenseTemplate(string $licenseTemplate): self
     {
@@ -334,8 +308,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging.
-     *
-     * @return self
      */
     public function setAllowSquashMerge(bool $allowSquashMerge): self
     {
@@ -352,8 +324,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits.
-     *
-     * @return self
      */
     public function setAllowMergeCommit(bool $allowMergeCommit): self
     {
@@ -370,8 +340,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging.
-     *
-     * @return self
      */
     public function setAllowRebaseMerge(bool $allowRebaseMerge): self
     {
@@ -388,8 +356,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion.
-     *
-     * @return self
      */
     public function setDeleteBranchOnMerge(bool $deleteBranchOnMerge): self
     {

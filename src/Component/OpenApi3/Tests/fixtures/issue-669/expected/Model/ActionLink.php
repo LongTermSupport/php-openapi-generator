@@ -41,8 +41,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -59,8 +57,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A string specifying the type of the related action.
-     *
-     * @return self
      */
     public function setRel(string $rel): self
     {
@@ -77,8 +73,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A URL that can be used to access the action.
-     *
-     * @return self
      */
     public function setHref(string $href): self
     {

@@ -38,8 +38,6 @@ class DisplayPattern
     }
     /**
      * The template engine used for parsing the display patterns.
-     *
-     * @return self
      */
     public function setTemplateEngine(mixed $templateEngine): self
     {
@@ -56,8 +54,6 @@ class DisplayPattern
     }
     /**
      * The display pattern type.
-     *
-     * @return self
      */
     public function setDisplayPatternType(mixed $displayPatternType): self
     {
@@ -74,8 +70,6 @@ class DisplayPattern
     }
     /**
      * Language specific pattern templates.
-     *
-     * @return self
      */
     public function setTemplates(mixed $templates): self
     {

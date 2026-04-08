@@ -41,8 +41,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Name of the validation
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Status of the validation
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -77,8 +73,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Additional notes or details about the validation
-     *
-     * @return self
      */
     public function setNote(string $note): self
     {

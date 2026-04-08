@@ -37,8 +37,6 @@ class ApiDropboxOauth2GetTokensOutput extends \ArrayObject
     }
     /**
      * The refresh token
-     *
-     * @return self
      */
     public function setRefreshToken(string $refreshToken): self
     {
@@ -55,8 +53,6 @@ class ApiDropboxOauth2GetTokensOutput extends \ArrayObject
     }
     /**
      * The access token
-     *
-     * @return self
      */
     public function setToken(string $token): self
     {

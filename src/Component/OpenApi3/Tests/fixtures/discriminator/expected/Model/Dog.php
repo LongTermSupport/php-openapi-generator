@@ -30,8 +30,6 @@ class Dog extends Pet
     }
     /**
      * the size of the pack the dog is from
-     *
-     * @return self
      */
     public function setPackSize(int $packSize): self
     {

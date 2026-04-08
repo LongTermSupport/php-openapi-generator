@@ -47,8 +47,6 @@ class ApiListKnowledgeBaseIndexingJobsOutput extends \ArrayObject
      * The indexing jobs
      *
      * @param list<ApiIndexingJob> $jobs
-     *
-     * @return self
      */
     public function setJobs(array $jobs): self
     {
@@ -65,8 +63,6 @@ class ApiListKnowledgeBaseIndexingJobsOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -83,8 +79,6 @@ class ApiListKnowledgeBaseIndexingJobsOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {

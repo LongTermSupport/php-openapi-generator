@@ -34,8 +34,6 @@ class ShareUser
     }
     /**
      * Name of user
-     *
-     * @return self
      */
     public function setDisplayName(string $displayName): self
     {
@@ -52,8 +50,6 @@ class ShareUser
     }
     /**
      * MD5 hash of email address. Can be used to display gravatar image
-     *
-     * @return self
      */
     public function setEmailHash(string $emailHash): self
     {

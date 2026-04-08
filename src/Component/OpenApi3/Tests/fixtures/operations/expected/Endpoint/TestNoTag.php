@@ -25,11 +25,6 @@ class TestNoTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     {
         return [[], null];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();

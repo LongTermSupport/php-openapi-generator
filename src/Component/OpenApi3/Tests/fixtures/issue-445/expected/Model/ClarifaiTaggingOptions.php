@@ -38,8 +38,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Override for the model to use
-     *
-     * @return self
      */
     public function setModel(?string $model): self
     {
@@ -56,8 +54,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Override for the language to use
-     *
-     * @return self
      */
     public function setLanguage(?string $language): self
     {
@@ -74,8 +70,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Minimum value a concept must have to be considered
-     *
-     * @return self
      */
     public function setMinimumValue(?string $minimumValue): self
     {

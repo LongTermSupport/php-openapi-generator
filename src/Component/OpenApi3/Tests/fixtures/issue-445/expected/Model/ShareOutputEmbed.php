@@ -30,8 +30,6 @@ class ShareOutputEmbed extends ShareOutputBase
     }
     /**
      * Share token for the shared output.
-     *
-     * @return self
      */
     public function setToken(?string $token): self
     {

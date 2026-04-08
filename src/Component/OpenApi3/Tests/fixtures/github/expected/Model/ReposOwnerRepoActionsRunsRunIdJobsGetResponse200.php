@@ -44,8 +44,6 @@ class ReposOwnerRepoActionsRunsRunIdJobsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<Job> $jobs
-     *
-     * @return self
      */
     public function setJobs(array $jobs): self
     {

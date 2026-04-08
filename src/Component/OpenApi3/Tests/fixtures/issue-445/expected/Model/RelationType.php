@@ -42,8 +42,6 @@ class RelationType
     }
     /**
      * The ID of the relation type.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -60,8 +58,6 @@ class RelationType
     }
     /**
      * Language specific relation names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -78,8 +74,6 @@ class RelationType
     }
     /**
      * Defines the type of the document target of the relation. Currently supported: Content, ListItem.
-     *
-     * @return self
      */
     public function setTargetDocType(string $targetDocType): self
     {
@@ -96,8 +90,6 @@ class RelationType
     }
     /**
      * An optional filter to limit the documents of type TargetDocType.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {

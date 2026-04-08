@@ -47,8 +47,6 @@ class ApiListAgentsOutputPublic extends \ArrayObject
      * Agents
      *
      * @param list<ApiAgentPublic> $agents
-     *
-     * @return self
      */
     public function setAgents(array $agents): self
     {
@@ -65,8 +63,6 @@ class ApiListAgentsOutputPublic extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
-     * @return self
      */
     public function setLinks(ApiLinks $links): self
     {
@@ -83,8 +79,6 @@ class ApiListAgentsOutputPublic extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
-     * @return self
      */
     public function setMeta(ApiMeta $meta): self
     {

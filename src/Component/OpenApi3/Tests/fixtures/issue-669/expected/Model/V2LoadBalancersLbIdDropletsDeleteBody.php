@@ -39,8 +39,6 @@ class V2LoadBalancersLbIdDropletsDeleteBody extends \ArrayObject
      * An array containing the IDs of the Droplets assigned to the load balancer.
      *
      * @param list<int> $dropletIds
-     *
-     * @return self
      */
     public function setDropletIds(array $dropletIds): self
     {

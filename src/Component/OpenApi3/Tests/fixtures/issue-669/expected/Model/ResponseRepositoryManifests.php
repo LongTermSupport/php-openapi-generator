@@ -35,8 +35,6 @@ class ResponseRepositoryManifests extends \ArrayObject
     }
     /**
      * @param list<RepositoryManifest> $manifests
-     *
-     * @return self
      */
     public function setManifests(array $manifests): self
     {

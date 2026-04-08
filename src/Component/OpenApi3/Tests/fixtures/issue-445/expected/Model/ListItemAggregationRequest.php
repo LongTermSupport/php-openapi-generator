@@ -85,8 +85,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -107,8 +105,6 @@ class ListItemAggregationRequest extends \ArrayObject
      * An optional list of search behaviors. All the passed behaviors will be applied.
      *
      * @param list<string>|null $searchBehaviors
-     *
-     * @return self
      */
     public function setSearchBehaviors(?array $searchBehaviors): self
     {
@@ -125,8 +121,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -157,8 +151,6 @@ class ListItemAggregationRequest extends \ArrayObject
      * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
      *
      * @param list<AggregationFilter>|null $aggregationFilters
-     *
-     * @return self
      */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
@@ -175,8 +167,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
-     * @return self
      */
     public function setIncludeAllSchemaChildren(bool $includeAllSchemaChildren): self
     {
@@ -193,8 +183,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have or not have broken references. By default it includes both.
-     *
-     * @return self
      */
     public function setBrokenDependenciesFilter(mixed $brokenDependenciesFilter): self
     {
@@ -215,8 +203,6 @@ class ListItemAggregationRequest extends \ArrayObject
      * Limits the search among the list items of the provided schemas.
      *
      * @param list<string>|null $schemaIds
-     *
-     * @return self
      */
     public function setSchemaIds(?array $schemaIds): self
     {
@@ -239,8 +225,6 @@ class ListItemAggregationRequest extends \ArrayObject
      * If not specified, all metadata languages defined in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -257,8 +241,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have the specified life cycle state. Defaults to ActiveOnly.
-     *
-     * @return self
      */
     public function setLifeCycleFilter(mixed $lifeCycleFilter): self
     {
@@ -279,8 +261,6 @@ class ListItemAggregationRequest extends \ArrayObject
      * List of aggregators that defines how the items should be aggregated.
      *
      * @param list<AggregatorBase> $aggregators
-     *
-     * @return self
      */
     public function setAggregators(array $aggregators): self
     {

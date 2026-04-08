@@ -34,8 +34,6 @@ class AppJobInvocations extends \ArrayObject
     }
     /**
      * @param list<AppJobInvocation> $jobInvocations
-     *
-     * @return self
      */
     public function setJobInvocations(array $jobInvocations): self
     {

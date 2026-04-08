@@ -37,8 +37,6 @@ class DropletActionChangeKernel extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -55,8 +53,6 @@ class DropletActionChangeKernel extends \ArrayObject
     }
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
-     * @return self
      */
     public function setKernel(int $kernel): self
     {

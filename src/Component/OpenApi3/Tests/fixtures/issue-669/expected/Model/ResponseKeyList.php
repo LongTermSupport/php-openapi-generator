@@ -35,8 +35,6 @@ class ResponseKeyList extends \ArrayObject
     }
     /**
      * @param list<Key> $keys
-     *
-     * @return self
      */
     public function setKeys(array $keys): self
     {

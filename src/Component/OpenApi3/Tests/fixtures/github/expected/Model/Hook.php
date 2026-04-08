@@ -65,8 +65,6 @@ class Hook extends \ArrayObject
     }
     /**
      * Unique identifier of the webhook.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -83,8 +81,6 @@ class Hook extends \ArrayObject
     }
     /**
      * The name of a valid service, use 'web' for a webhook.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -101,8 +97,6 @@ class Hook extends \ArrayObject
     }
     /**
      * Determines whether the hook is actually triggered on pushes.
-     *
-     * @return self
      */
     public function setActive(bool $active): self
     {
@@ -123,8 +117,6 @@ class Hook extends \ArrayObject
      * Determines what events the hook is triggered for. Default: ['push'].
      *
      * @param list<string> $events
-     *
-     * @return self
      */
     public function setEvents(array $events): self
     {

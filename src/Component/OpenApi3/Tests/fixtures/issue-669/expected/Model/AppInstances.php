@@ -33,8 +33,6 @@ class AppInstances extends \ArrayObject
     }
     /**
      * @param list<AppInstance> $instances
-     *
-     * @return self
      */
     public function setInstances(array $instances): self
     {

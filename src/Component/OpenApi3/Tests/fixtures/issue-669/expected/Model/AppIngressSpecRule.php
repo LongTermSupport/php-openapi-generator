@@ -42,8 +42,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The match configuration for the rule.
-     *
-     * @return self
      */
     public function setMatch(AppIngressSpecRuleMatch $match): self
     {
@@ -70,8 +68,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The component to route to. Only one of `component` or `redirect` may be set.
-     *
-     * @return self
      */
     public function setComponent(AppIngressSpecRuleRoutingComponent $component): self
     {
@@ -88,8 +84,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
-     *
-     * @return self
      */
     public function setRedirect(AppIngressSpecRuleRoutingRedirect $redirect): self
     {

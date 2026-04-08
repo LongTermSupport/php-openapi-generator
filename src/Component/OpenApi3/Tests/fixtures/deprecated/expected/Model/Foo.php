@@ -45,8 +45,6 @@ class Foo extends \ArrayObject
     }
     /**
      * @deprecated
-     *
-     * @return self
      */
     public function setBar(string $bar): self
     {

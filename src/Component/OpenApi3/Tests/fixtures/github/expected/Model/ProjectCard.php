@@ -56,8 +56,6 @@ class ProjectCard extends \ArrayObject
     }
     /**
      * The project card's ID
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -124,8 +122,6 @@ class ProjectCard extends \ArrayObject
     }
     /**
      * Whether or not the card is archived
-     *
-     * @return self
      */
     public function setArchived(bool $archived): self
     {

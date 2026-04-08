@@ -39,8 +39,6 @@ class ContentPermissionsUpdateRequest
      * These permissions control content accessibility for the users that do not own the content.
      *
      * @param list<string>|null $contentPermissionSetIds
-     *
-     * @return self
      */
     public function setContentPermissionSetIds(?array $contentPermissionSetIds): self
     {

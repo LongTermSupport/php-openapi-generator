@@ -79,8 +79,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of datasources indexed completed
-     *
-     * @return self
      */
     public function setCompletedDatasources(int $completedDatasources): self
     {
@@ -97,8 +95,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -119,8 +115,6 @@ class ApiIndexingJob extends \ArrayObject
      * Details on Data Sources included in the Indexing Job
      *
      * @param list<ApiIndexedDataSource> $dataSourceJobs
-     *
-     * @return self
      */
     public function setDataSourceJobs(array $dataSourceJobs): self
     {
@@ -137,8 +131,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * @param list<string> $dataSourceUuids
-     *
-     * @return self
      */
     public function setDataSourceUuids(array $dataSourceUuids): self
     {
@@ -165,8 +157,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Boolean value to determine if the indexing job details are available
-     *
-     * @return self
      */
     public function setIsReportAvailable(bool $isReportAvailable): self
     {
@@ -183,8 +173,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(string $knowledgeBaseUuid): self
     {
@@ -231,8 +219,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of tokens [This field is deprecated]
-     *
-     * @return self
      */
     public function setTokens(int $tokens): self
     {
@@ -249,8 +235,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of datasources being indexed
-     *
-     * @return self
      */
     public function setTotalDatasources(int $totalDatasources): self
     {
@@ -267,8 +251,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Total Tokens Consumed By the Indexing Job
-     *
-     * @return self
      */
     public function setTotalTokens(string $totalTokens): self
     {
@@ -285,8 +267,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Last modified
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -303,8 +283,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

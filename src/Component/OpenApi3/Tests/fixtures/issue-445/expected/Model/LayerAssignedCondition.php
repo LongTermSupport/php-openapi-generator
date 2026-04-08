@@ -30,8 +30,6 @@ class LayerAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Layer id to match on.
-     *
-     * @return self
      */
     public function setLayerId(?string $layerId): self
     {

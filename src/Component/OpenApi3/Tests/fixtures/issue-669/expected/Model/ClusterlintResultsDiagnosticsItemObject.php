@@ -41,8 +41,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * Name of the object
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -59,8 +57,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * The kind of Kubernetes API object
-     *
-     * @return self
      */
     public function setKind(string $kind): self
     {
@@ -77,8 +73,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * The namespace the object resides in the cluster.
-     *
-     * @return self
      */
     public function setNamespace(string $namespace): self
     {

@@ -36,8 +36,6 @@ class OutputFormatUpdateManyRequest
      * Output format items to be modified.
      *
      * @param list<OutputFormatUpdateManyRequestItem>|null $items
-     *
-     * @return self
      */
     public function setItems(?array $items): self
     {

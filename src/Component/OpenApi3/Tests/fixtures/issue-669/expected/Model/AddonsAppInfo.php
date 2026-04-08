@@ -47,8 +47,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
-     * @return self
      */
     public function setAppSlug(string $appSlug): self
     {
@@ -65,8 +63,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The Terms of Service URL for the resource.
-     *
-     * @return self
      */
     public function setTos(string $tos): self
     {
@@ -83,8 +79,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The End User License Agreement URL for the resource.
-     *
-     * @return self
      */
     public function setEula(string $eula): self
     {
@@ -105,8 +99,6 @@ class AddonsAppInfo extends \ArrayObject
      * A list of plans available for the resource.
      *
      * @param list<AddonsPlan> $plans
-     *
-     * @return self
      */
     public function setPlans(array $plans): self
     {

@@ -104,8 +104,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The ISBN of the book.
-     *
-     * @return self
      */
     public function setIsbn(?string $isbn): self
     {
@@ -122,8 +120,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -140,8 +136,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * A description of the item.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -158,8 +152,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
-     *
-     * @return self
      */
     public function setAuthor(string $author): self
     {
@@ -176,8 +168,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     *
-     * @return self
      */
     public function setPublicationDate(\DateTime $publicationDate): self
     {
@@ -198,8 +188,6 @@ class BookJsonld extends \ArrayObject
      * The book's reviews.
      *
      * @param list<string> $reviews
-     *
-     * @return self
      */
     public function setReviews(array $reviews): self
     {
@@ -216,8 +204,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The book's cover base64 encoded.
-     *
-     * @return self
      */
     public function setCover(?string $cover): self
     {

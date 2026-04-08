@@ -30,8 +30,6 @@ class ShareDataEmbed extends ShareDataBase
     }
     /**
      * Token for the embed share.
-     *
-     * @return self
      */
     public function setToken(string $token): self
     {

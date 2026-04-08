@@ -77,8 +77,6 @@ class BankMatchValidate extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
-     * @return self
      */
     public function setIbanResult(string $ibanResult): self
     {
@@ -125,8 +123,6 @@ class BankMatchValidate extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
-     * @return self
      */
     public function setScanResult(string $scanResult): self
     {
@@ -163,8 +159,6 @@ class BankMatchValidate extends \ArrayObject
     }
     /**
      * Request status, e.g. Success, Error, Warning
-     *
-     * @return self
      */
     public function setStatusResult(string $statusResult): self
     {
@@ -181,8 +175,6 @@ class BankMatchValidate extends \ArrayObject
     }
     /**
      * Explanation for error or warning, if applicable, otherwise empty quotation marks
-     *
-     * @return self
      */
     public function setStatusText(string $statusText): self
     {
@@ -199,8 +191,6 @@ class BankMatchValidate extends \ArrayObject
     }
     /**
      * Only applicable to Verification
-     *
-     * @return self
      */
     public function setVatResult(string $vatResult): self
     {

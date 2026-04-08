@@ -47,8 +47,6 @@ class TransferUploadFile extends \ArrayObject
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setIdentifier(?string $identifier): self
     {
@@ -65,8 +63,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Client generated identifier of the item.
-     *
-     * @return self
      */
     public function setRequestId(?string $requestId): self
     {
@@ -83,8 +79,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Target filename of file.
-     *
-     * @return self
      */
     public function setFileName(string $fileName): self
     {

@@ -302,8 +302,6 @@ class DocumentMetadata extends \ArrayObject
     }
     /**
      * @param list<string>|null $titles
-     *
-     * @return self
      */
     public function setTitles(?array $titles): self
     {
@@ -320,8 +318,6 @@ class DocumentMetadata extends \ArrayObject
     }
     /**
      * @param list<string>|null $imageTitles
-     *
-     * @return self
      */
     public function setImageTitles(?array $imageTitles): self
     {

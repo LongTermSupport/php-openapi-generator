@@ -33,8 +33,6 @@ class AmdGpuDeviceMetricsExporterPlugin extends \ArrayObject
     }
     /**
      * Indicates whether the AMD Device Metrics Exporter is enabled.
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {

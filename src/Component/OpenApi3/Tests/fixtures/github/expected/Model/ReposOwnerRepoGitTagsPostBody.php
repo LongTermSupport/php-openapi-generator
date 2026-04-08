@@ -49,8 +49,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The tag's name. This is typically a version (e.g., "v0.0.1").
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {
@@ -67,8 +65,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The tag message.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -85,8 +81,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the git object this is tagging.
-     *
-     * @return self
      */
     public function setObject(string $object): self
     {
@@ -103,8 +97,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -121,8 +113,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * An object with information about the individual creating the tag.
-     *
-     * @return self
      */
     public function setTagger(ReposOwnerRepoGitTagsPostBodyTagger $tagger): self
     {

@@ -37,8 +37,6 @@ class ApiRollbackToAgentVersionInputPublic extends \ArrayObject
     }
     /**
      * Agent unique identifier
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {
@@ -55,8 +53,6 @@ class ApiRollbackToAgentVersionInputPublic extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
-     * @return self
      */
     public function setVersionHash(string $versionHash): self
     {

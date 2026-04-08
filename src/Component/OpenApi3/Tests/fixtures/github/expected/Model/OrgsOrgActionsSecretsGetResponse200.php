@@ -44,8 +44,6 @@ class OrgsOrgActionsSecretsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<OrganizationActionsSecret> $secrets
-     *
-     * @return self
      */
     public function setSecrets(array $secrets): self
     {

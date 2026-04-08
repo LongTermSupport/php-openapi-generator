@@ -37,8 +37,6 @@ class DatabaseBackup extends \ArrayObject
     }
     /**
      * The name of an existing database cluster from which the backup will be restored.
-     *
-     * @return self
      */
     public function setDatabaseName(string $databaseName): self
     {
@@ -55,8 +53,6 @@ class DatabaseBackup extends \ArrayObject
     }
     /**
      * The timestamp of an existing database cluster backup in ISO8601 combined date and time format. The most recent backup will be used if excluded.
-     *
-     * @return self
      */
     public function setBackupCreatedAt(\DateTime $backupCreatedAt): self
     {

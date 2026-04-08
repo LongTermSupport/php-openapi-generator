@@ -69,8 +69,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database replica.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -87,8 +85,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * The name to give the read-only replicating
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -105,8 +101,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster.
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -123,8 +117,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating.
-     *
-     * @return self
      */
     public function setSize(string $size): self
     {
@@ -141,8 +133,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {
@@ -163,8 +153,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
      * A flat array of tag names as strings to apply to the read-only replica after it is created. Tag names can either be existing or new tags. <br><br>Requires `tag:create` scope.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -181,8 +169,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -199,8 +185,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
-     * @return self
      */
     public function setPrivateNetworkUuid(string $privateNetworkUuid): self
     {
@@ -237,8 +221,6 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
-     * @return self
      */
     public function setStorageSizeMib(int $storageSizeMib): self
     {

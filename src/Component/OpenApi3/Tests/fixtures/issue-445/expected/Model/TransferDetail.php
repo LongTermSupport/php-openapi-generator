@@ -93,8 +93,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * ID of transfer.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -111,8 +109,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Name of transfer.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -129,8 +125,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * State of transfer.
-     *
-     * @return self
      */
     public function setState(mixed $state): self
     {
@@ -147,8 +141,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Type of transfer.
-     *
-     * @return self
      */
     public function setTransferType(mixed $transferType): self
     {
@@ -165,8 +157,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Associated business process ID.
-     *
-     * @return self
      */
     public function setBusinessProcessId(?string $businessProcessId): self
     {
@@ -183,8 +173,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of files in transfer.
-     *
-     * @return self
      */
     public function setFileTransferCount(int $fileTransferCount): self
     {
@@ -201,8 +189,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * ID of collection created from transfer.
-     *
-     * @return self
      */
     public function setCollectionId(?string $collectionId): self
     {
@@ -219,8 +205,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -237,8 +221,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items processed.
-     *
-     * @return self
      */
     public function setItemProgress(int $itemProgress): self
     {
@@ -255,8 +237,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Total number of items.
-     *
-     * @return self
      */
     public function setItemCount(int $itemCount): self
     {
@@ -273,8 +253,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items currently being uploaded.
-     *
-     * @return self
      */
     public function setFileUploadInProgressCount(int $fileUploadInProgressCount): self
     {
@@ -291,8 +269,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items currently being processed in data extraction.
-     *
-     * @return self
      */
     public function setDataExtractionInProgressCount(int $dataExtractionInProgressCount): self
     {
@@ -309,8 +285,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items failed.
-     *
-     * @return self
      */
     public function setItemsFailed(int $itemsFailed): self
     {
@@ -327,8 +301,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items cancelled.
-     *
-     * @return self
      */
     public function setItemsCancelled(int $itemsCancelled): self
     {
@@ -345,8 +317,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Time stamp of last progress update from data extraction.
-     *
-     * @return self
      */
     public function setLastDataExtractionProgressTimeStamp(?\DateTime $lastDataExtractionProgressTimeStamp): self
     {
@@ -363,8 +333,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Time stamp of last progress update from upload.
-     *
-     * @return self
      */
     public function setLastFileUploadProgressTimeStamp(?\DateTime $lastFileUploadProgressTimeStamp): self
     {

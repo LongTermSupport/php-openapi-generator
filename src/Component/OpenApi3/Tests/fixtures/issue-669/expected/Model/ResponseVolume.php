@@ -33,8 +33,6 @@ class ResponseVolume extends \ArrayObject
     }
     /**
      * @param array<string, mixed> $volume
-     *
-     * @return self
      */
     public function setVolume(array $volume): self
     {

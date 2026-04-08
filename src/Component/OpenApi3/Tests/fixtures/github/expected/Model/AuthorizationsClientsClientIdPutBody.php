@@ -51,8 +51,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * The OAuth app client secret for which to create the token.
-     *
-     * @return self
      */
     public function setClientSecret(string $clientSecret): self
     {
@@ -73,8 +71,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
      * A list of scopes that this authorization is in.
      *
      * @param list<string>|null $scopes
-     *
-     * @return self
      */
     public function setScopes(?array $scopes): self
     {
@@ -91,8 +87,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
-     * @return self
      */
     public function setNote(string $note): self
     {
@@ -109,8 +103,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
-     * @return self
      */
     public function setNoteUrl(string $noteUrl): self
     {
@@ -127,8 +119,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
-     * @return self
      */
     public function setFingerprint(string $fingerprint): self
     {

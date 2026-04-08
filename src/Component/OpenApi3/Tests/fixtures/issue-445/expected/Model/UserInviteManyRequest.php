@@ -39,8 +39,6 @@ class UserInviteManyRequest extends \ArrayObject
      * User IDs.
      *
      * @param list<string> $userIds
-     *
-     * @return self
      */
     public function setUserIds(array $userIds): self
     {

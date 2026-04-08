@@ -30,8 +30,6 @@ class ContentOwnershipTransferRequest
     }
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
-     * @return self
      */
     public function setTransferUserId(string $transferUserId): self
     {

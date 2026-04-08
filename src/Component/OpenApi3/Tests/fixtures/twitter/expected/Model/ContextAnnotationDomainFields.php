@@ -41,8 +41,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * The unique id for a context annotation domain.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -59,8 +57,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * Name of the context annotation domain.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -77,8 +73,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * Description of the context annotation domain.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {

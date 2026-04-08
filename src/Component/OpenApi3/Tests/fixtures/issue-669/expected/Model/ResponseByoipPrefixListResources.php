@@ -35,8 +35,6 @@ class ResponseByoipPrefixListResources extends \ArrayObject
     }
     /**
      * @param list<ByoipPrefixResource> $ips
-     *
-     * @return self
      */
     public function setIps(array $ips): self
     {

@@ -77,8 +77,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a specific node pool.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -95,8 +93,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
     }
     /**
      * A human-readable name for the node pool.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -113,8 +109,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
     }
     /**
      * The number of Droplet instances in the node pool.
-     *
-     * @return self
      */
     public function setCount(int $count): self
     {
@@ -135,8 +129,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
      * An array containing the tags applied to the node pool. All node pools are automatically tagged `k8s`, `k8s-worker`, and `k8s:$K8S_CLUSTER_ID`. <br><br>Requires `tag:read` scope.
      *
      * @param list<string> $tags
-     *
-     * @return self
      */
     public function setTags(array $tags): self
     {
@@ -157,8 +149,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
      * An object of key/value mappings specifying labels to apply to all nodes in a pool. Labels will automatically be applied to all existing nodes and any subsequent nodes added to the pool. Note that when a label is removed, it is not deleted from the nodes in the pool.
      *
      * @param array<string, mixed>|null $labels
-     *
-     * @return self
      */
     public function setLabels(?array $labels): self
     {
@@ -179,8 +169,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
      * An array of taints to apply to all nodes in a pool. Taints will automatically be applied to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is deleted from all nodes in the pool.
      *
      * @param list<KubernetesNodePoolTaint> $taints
-     *
-     * @return self
      */
     public function setTaints(array $taints): self
     {
@@ -197,8 +185,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether auto-scaling is enabled for this node pool.
-     *
-     * @return self
      */
     public function setAutoScale(bool $autoScale): self
     {
@@ -215,8 +201,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
     }
     /**
      * The minimum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
-     * @return self
      */
     public function setMinNodes(int $minNodes): self
     {
@@ -233,8 +217,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
     }
     /**
      * The maximum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
-     * @return self
      */
     public function setMaxNodes(int $maxNodes): self
     {
@@ -255,8 +237,6 @@ class KubernetesNodePoolUpdate extends \ArrayObject
      * An object specifying the details of a specific worker node in a node pool.
      *
      * @param list<Node> $nodes
-     *
-     * @return self
      */
     public function setNodes(array $nodes): self
     {

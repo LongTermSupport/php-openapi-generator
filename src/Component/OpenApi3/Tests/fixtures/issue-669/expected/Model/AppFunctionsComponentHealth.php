@@ -44,8 +44,6 @@ class AppFunctionsComponentHealth extends \ArrayObject
     }
     /**
      * @param list<AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem> $functionsComponentHealthMetrics
-     *
-     * @return self
      */
     public function setFunctionsComponentHealthMetrics(array $functionsComponentHealthMetrics): self
     {

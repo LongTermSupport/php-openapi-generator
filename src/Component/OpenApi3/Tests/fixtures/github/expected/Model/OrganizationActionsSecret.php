@@ -40,8 +40,6 @@ class OrganizationActionsSecret extends \ArrayObject
     }
     /**
      * The name of the secret.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -78,8 +76,6 @@ class OrganizationActionsSecret extends \ArrayObject
     }
     /**
      * Visibility of a secret
-     *
-     * @return self
      */
     public function setVisibility(string $visibility): self
     {

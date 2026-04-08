@@ -50,8 +50,6 @@ class BusinessRuleTransformationGroup
      * The inputs of the transformation group.
      *
      * @param list<string>|null $inputs
-     *
-     * @return self
      */
     public function setInputs(?array $inputs): self
     {
@@ -72,8 +70,6 @@ class BusinessRuleTransformationGroup
      * A list of transformations to apply.
      *
      * @param list<BusinessRuleTransformation>|null $transformations
-     *
-     * @return self
      */
     public function setTransformations(?array $transformations): self
     {
@@ -90,8 +86,6 @@ class BusinessRuleTransformationGroup
     }
     /**
      * Variable name where the final result should be stored in.
-     *
-     * @return self
      */
     public function setStoreIn(?string $storeIn): self
     {
@@ -108,8 +102,6 @@ class BusinessRuleTransformationGroup
     }
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
-     * @return self
      */
     public function setTraceRefId(?string $traceRefId): self
     {

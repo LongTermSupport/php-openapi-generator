@@ -50,8 +50,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Direction of the mapping.
-     *
-     * @return self
      */
     public function setDirection(mixed $direction): self
     {
@@ -68,8 +66,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Priority of the mapping.
-     *
-     * @return self
      */
     public function setPriority(int $priority): self
     {
@@ -86,8 +82,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
-     * @return self
      */
     public function setStopProcessing(bool $stopProcessing): self
     {
@@ -104,8 +98,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Path to source property in XMP.
-     *
-     * @return self
      */
     public function setXmpPath(string $xmpPath): self
     {
@@ -122,8 +114,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Path to target property in metadata.
-     *
-     * @return self
      */
     public function setMetadataPath(string $metadataPath): self
     {
@@ -140,8 +130,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Optional additional configuration for the mapping.
-     *
-     * @return self
      */
     public function setConfiguration(mixed $configuration): self
     {

@@ -45,8 +45,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * First page
-     *
-     * @return self
      */
     public function setFirst(string $first): self
     {
@@ -63,8 +61,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Last page
-     *
-     * @return self
      */
     public function setLast(string $last): self
     {
@@ -81,8 +77,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Next page
-     *
-     * @return self
      */
     public function setNext(string $next): self
     {
@@ -99,8 +93,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Previous page
-     *
-     * @return self
      */
     public function setPrevious(string $previous): self
     {

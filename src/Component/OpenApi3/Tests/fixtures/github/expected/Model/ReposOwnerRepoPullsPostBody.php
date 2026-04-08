@@ -54,8 +54,6 @@ class ReposOwnerRepoPullsPostBody extends \ArrayObject
     }
     /**
      * The title of the new pull request.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -72,8 +70,6 @@ class ReposOwnerRepoPullsPostBody extends \ArrayObject
     }
     /**
      * The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`.
-     *
-     * @return self
      */
     public function setHead(string $head): self
     {
@@ -90,8 +86,6 @@ class ReposOwnerRepoPullsPostBody extends \ArrayObject
     }
     /**
      * The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
-     *
-     * @return self
      */
     public function setBase(string $base): self
     {
@@ -108,8 +102,6 @@ class ReposOwnerRepoPullsPostBody extends \ArrayObject
     }
     /**
      * The contents of the pull request.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -126,8 +118,6 @@ class ReposOwnerRepoPullsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether [maintainers can modify](https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
-     *
-     * @return self
      */
     public function setMaintainerCanModify(bool $maintainerCanModify): self
     {
@@ -144,8 +134,6 @@ class ReposOwnerRepoPullsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://help.github.com/en/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
-     *
-     * @return self
      */
     public function setDraft(bool $draft): self
     {

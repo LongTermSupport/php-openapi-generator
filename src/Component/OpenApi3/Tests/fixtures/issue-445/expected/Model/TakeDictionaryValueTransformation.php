@@ -30,8 +30,6 @@ class TakeDictionaryValueTransformation extends BusinessRuleTransformation
     }
     /**
      * Key of the item.
-     *
-     * @return self
      */
     public function setKey(?string $key): self
     {

@@ -132,8 +132,6 @@ class UserInactiveOrDeletedException extends \ArrayObject
     }
     /**
      * The ID of the inactive or deleted user in question.
-     *
-     * @return self
      */
     public function setAffectedUserId(?string $affectedUserId): self
     {

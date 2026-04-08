@@ -35,8 +35,6 @@ class ResponseSnapshots extends \ArrayObject
     }
     /**
      * @param list<Snapshots> $snapshots
-     *
-     * @return self
      */
     public function setSnapshots(array $snapshots): self
     {

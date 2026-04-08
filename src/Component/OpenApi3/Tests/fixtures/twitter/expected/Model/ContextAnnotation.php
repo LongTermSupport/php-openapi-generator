@@ -37,8 +37,6 @@ class ContextAnnotation extends \ArrayObject
     }
     /**
      * Represents the data for the context annotation domain.
-     *
-     * @return self
      */
     public function setDomain(ContextAnnotationDomainFields $domain): self
     {
@@ -55,8 +53,6 @@ class ContextAnnotation extends \ArrayObject
     }
     /**
      * Represents the data for the context annotation entity.
-     *
-     * @return self
      */
     public function setEntity(ContextAnnotationEntityFields $entity): self
     {

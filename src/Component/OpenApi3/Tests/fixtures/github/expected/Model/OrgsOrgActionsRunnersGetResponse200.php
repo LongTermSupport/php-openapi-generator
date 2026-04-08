@@ -44,8 +44,6 @@ class OrgsOrgActionsRunnersGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<Runner> $runners
-     *
-     * @return self
      */
     public function setRunners(array $runners): self
     {

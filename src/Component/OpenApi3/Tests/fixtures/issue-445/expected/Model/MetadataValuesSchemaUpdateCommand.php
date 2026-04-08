@@ -36,8 +36,6 @@ class MetadataValuesSchemaUpdateCommand extends MetadataValuesChangeCommandBase
      * An object containing the metadata values to add / update.
      *
      * @param array<string, mixed> $value
-     *
-     * @return self
      */
     public function setValue(array $value): self
     {

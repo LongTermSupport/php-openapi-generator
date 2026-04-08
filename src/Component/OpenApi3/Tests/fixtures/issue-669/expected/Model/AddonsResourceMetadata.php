@@ -37,8 +37,6 @@ class AddonsResourceMetadata extends \ArrayObject
     }
     /**
      * The name of the metadata item to be set.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class AddonsResourceMetadata extends \ArrayObject
     }
     /**
      * The value to be set for the metadata item, which can be a string or boolean.
-     *
-     * @return self
      */
     public function setValue(mixed $value): self
     {

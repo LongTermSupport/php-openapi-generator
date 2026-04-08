@@ -39,8 +39,6 @@ class ConnectionPools extends \ArrayObject
      * An array of connection pool objects.
      *
      * @param list<ConnectionPool> $pools
-     *
-     * @return self
      */
     public function setPools(array $pools): self
     {

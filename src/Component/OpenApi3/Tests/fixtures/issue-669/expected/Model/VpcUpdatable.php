@@ -37,8 +37,6 @@ class VpcUpdatable extends \ArrayObject
     }
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class VpcUpdatable extends \ArrayObject
     }
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {

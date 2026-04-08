@@ -33,8 +33,6 @@ class KubernetesNodePoolSize extends \ArrayObject
     }
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
-     * @return self
      */
     public function setSize(string $size): self
     {

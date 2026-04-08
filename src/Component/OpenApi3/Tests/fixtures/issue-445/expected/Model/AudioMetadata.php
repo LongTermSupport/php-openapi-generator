@@ -143,8 +143,6 @@ class AudioMetadata extends \ArrayObject
     }
     /**
      * @param list<AudioStream>|null $audioStreams
-     *
-     * @return self
      */
     public function setAudioStreams(?array $audioStreams): self
     {

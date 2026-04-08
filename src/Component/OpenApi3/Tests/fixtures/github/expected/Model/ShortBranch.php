@@ -67,8 +67,6 @@ class ShortBranch extends \ArrayObject
     }
     /**
      * Branch Protection
-     *
-     * @return self
      */
     public function setProtection(BranchProtection $protection): self
     {

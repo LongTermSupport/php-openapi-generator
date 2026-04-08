@@ -45,8 +45,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Hierarchical options
-     *
-     * @return self
      */
     public function setChildChunkSize(int $childChunkSize): self
     {
@@ -63,8 +61,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Section_Based and Fixed_Length options
-     *
-     * @return self
      */
     public function setMaxChunkSize(int $maxChunkSize): self
     {
@@ -81,8 +77,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Hierarchical options
-     *
-     * @return self
      */
     public function setParentChunkSize(int $parentChunkSize): self
     {
@@ -99,8 +93,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Semantic options
-     *
-     * @return self
      */
     public function setSemanticThreshold(float $semanticThreshold): self
     {

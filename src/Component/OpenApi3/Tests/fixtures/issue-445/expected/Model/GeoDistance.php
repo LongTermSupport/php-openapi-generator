@@ -34,8 +34,6 @@ class GeoDistance
     }
     /**
      * Language specific geo distance names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -52,8 +50,6 @@ class GeoDistance
     }
     /**
      * The distance in meters.
-     *
-     * @return self
      */
     public function setDistance(float $distance): self
     {

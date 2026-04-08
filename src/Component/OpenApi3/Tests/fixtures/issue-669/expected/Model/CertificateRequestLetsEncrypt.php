@@ -43,8 +43,6 @@ class CertificateRequestLetsEncrypt extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -61,8 +59,6 @@ class CertificateRequestLetsEncrypt extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -83,8 +79,6 @@ class CertificateRequestLetsEncrypt extends \ArrayObject
      * An array of fully qualified domain names (FQDNs) for which the certificate was issued. A certificate covering all subdomains can be issued using a wildcard (e.g. `*.example.com`).
      *
      * @param list<string> $dnsNames
-     *
-     * @return self
      */
     public function setDnsNames(array $dnsNames): self
     {

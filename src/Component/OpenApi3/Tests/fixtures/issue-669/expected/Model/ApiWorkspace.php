@@ -77,8 +77,6 @@ class ApiWorkspace extends \ArrayObject
      * Agents
      *
      * @param list<ApiAgent> $agents
-     *
-     * @return self
      */
     public function setAgents(array $agents): self
     {
@@ -95,8 +93,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Creation date
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -113,8 +109,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * The id of user who created this workspace
-     *
-     * @return self
      */
     public function setCreatedBy(string $createdBy): self
     {
@@ -131,8 +125,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * The email of the user who created this workspace
-     *
-     * @return self
      */
     public function setCreatedByEmail(string $createdByEmail): self
     {
@@ -149,8 +141,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Deleted date
-     *
-     * @return self
      */
     public function setDeletedAt(\DateTime $deletedAt): self
     {
@@ -167,8 +157,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Description of the workspace
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -189,8 +177,6 @@ class ApiWorkspace extends \ArrayObject
      * Evaluations
      *
      * @param list<ApiEvaluationTestCase> $evaluationTestCases
-     *
-     * @return self
      */
     public function setEvaluationTestCases(array $evaluationTestCases): self
     {
@@ -207,8 +193,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Name of the workspace
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -225,8 +209,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Update date
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -243,8 +225,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Unique id
-     *
-     * @return self
      */
     public function setUuid(string $uuid): self
     {

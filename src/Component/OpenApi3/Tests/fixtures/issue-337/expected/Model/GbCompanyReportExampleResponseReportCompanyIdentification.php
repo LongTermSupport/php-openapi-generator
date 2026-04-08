@@ -48,8 +48,6 @@ class GbCompanyReportExampleResponseReportCompanyIdentification extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassificationsItem> $activityClassifications
-     *
-     * @return self
      */
     public function setActivityClassifications(array $activityClassifications): self
     {
@@ -66,8 +64,6 @@ class GbCompanyReportExampleResponseReportCompanyIdentification extends \ArrayOb
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportCompanyIdentificationPreviousNamesItem> $previousNames
-     *
-     * @return self
      */
     public function setPreviousNames(array $previousNames): self
     {

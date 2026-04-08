@@ -33,8 +33,6 @@ class AlertBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the alert.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {

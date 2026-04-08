@@ -105,8 +105,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's Picturepark ID.
-     *
-     * @return self
      */
     public function setId(?string $id): self
     {
@@ -123,8 +121,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's first name.
-     *
-     * @return self
      */
     public function setFirstName(?string $firstName): self
     {
@@ -141,8 +137,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's last name.
-     *
-     * @return self
      */
     public function setLastName(?string $lastName): self
     {
@@ -159,8 +153,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Email address of the user (doubles as username).
-     *
-     * @return self
      */
     public function setEmailAddress(string $emailAddress): self
     {
@@ -177,8 +169,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Marks a user that was deleted from the system.
-     *
-     * @return self
      */
     public function setIsDeleted(bool $isDeleted): self
     {
@@ -199,8 +189,6 @@ class UserDetail extends \ArrayObject
      * User roles the user should be assigned to. Overwrites the original user roles.
      *
      * @param list<UserRoleAssignment>|null $userRoles
-     *
-     * @return self
      */
     public function setUserRoles(?array $userRoles): self
     {
@@ -217,8 +205,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Comment saved for the user.
-     *
-     * @return self
      */
     public function setComment(?string $comment): self
     {
@@ -235,8 +221,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
-     * @return self
      */
     public function setLanguageCode(?string $languageCode): self
     {
@@ -253,8 +237,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's address.
-     *
-     * @return self
      */
     public function setAddress(mixed $address): self
     {
@@ -271,8 +253,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
-     * @return self
      */
     public function setIdentityProviderId(?string $identityProviderId): self
     {
@@ -293,8 +273,6 @@ class UserDetail extends \ArrayObject
      * Owner tokens referencing the user.
      *
      * @param list<OwnerToken>|null $ownerTokens
-     *
-     * @return self
      */
     public function setOwnerTokens(?array $ownerTokens): self
     {
@@ -311,8 +289,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Authorization state the user is currently in.
-     *
-     * @return self
      */
     public function setAuthorizationState(mixed $authorizationState): self
     {
@@ -329,8 +305,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Locked users are unable to log in and use the system.
-     *
-     * @return self
      */
     public function setIsLocked(bool $isLocked): self
     {
@@ -347,8 +321,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Life cycle state the user is currently in.
-     *
-     * @return self
      */
     public function setLifeCycle(mixed $lifeCycle): self
     {
@@ -365,8 +337,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * The support user is a user created for Picturepark support personnel.
-     *
-     * @return self
      */
     public function setIsSupportUser(bool $isSupportUser): self
     {
@@ -383,8 +353,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
-     * @return self
      */
     public function setIsReadOnly(bool $isReadOnly): self
     {
@@ -401,8 +369,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
-     * @return self
      */
     public function setIsFederated(bool $isFederated): self
     {
@@ -419,8 +385,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {

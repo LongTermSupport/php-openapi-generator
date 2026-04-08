@@ -42,8 +42,6 @@ class VersionInfo
     }
     /**
      * The manual file version of Picturepark.Contract.dll.
-     *
-     * @return self
      */
     public function setFileVersion(?string $fileVersion): self
     {
@@ -60,8 +58,6 @@ class VersionInfo
     }
     /**
      * The GitVersionTask generated file product version of Picturepark.Configuration.dll.
-     *
-     * @return self
      */
     public function setFileProductVersion(?string $fileProductVersion): self
     {
@@ -78,8 +74,6 @@ class VersionInfo
     }
     /**
      * The current contract version stored in CustomerDoc / EnvironmentDoc.
-     *
-     * @return self
      */
     public function setContractVersion(?string $contractVersion): self
     {
@@ -96,8 +90,6 @@ class VersionInfo
     }
     /**
      * The bamboo release version. Only provided on bamboo deployments.
-     *
-     * @return self
      */
     public function setRelease(?string $release): self
     {

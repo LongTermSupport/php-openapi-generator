@@ -101,8 +101,6 @@ class Feed extends \ArrayObject
     }
     /**
      * @param list<string> $currentUserOrganizationUrls
-     *
-     * @return self
      */
     public function setCurrentUserOrganizationUrls(array $currentUserOrganizationUrls): self
     {

@@ -60,8 +60,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * API key ID
-     *
-     * @return self
      */
     public function setApiKeyUuid(string $apiKeyUuid): self
     {
@@ -78,8 +76,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key creation date
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -96,8 +92,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
-     * @return self
      */
     public function setCreatedBy(string $createdBy): self
     {
@@ -114,8 +108,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key deleted date
-     *
-     * @return self
      */
     public function setDeletedAt(\DateTime $deletedAt): self
     {
@@ -136,8 +128,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
      * Models supported by the openAI api key
      *
      * @param list<ApiModel> $models
-     *
-     * @return self
      */
     public function setModels(array $models): self
     {
@@ -154,8 +144,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Name of the key
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -182,8 +170,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key last updated date
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {

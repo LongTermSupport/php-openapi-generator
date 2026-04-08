@@ -33,8 +33,6 @@ class ReposOwnerRepoPullsPullNumberCommentsCommentIdRepliesPostBody extends \Arr
     }
     /**
      * The text of the review comment.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

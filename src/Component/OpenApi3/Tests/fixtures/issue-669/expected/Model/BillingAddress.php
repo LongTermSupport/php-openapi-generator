@@ -61,8 +61,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Street address line 1
-     *
-     * @return self
      */
     public function setAddressLine1(string $addressLine1): self
     {
@@ -79,8 +77,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Street address line 2
-     *
-     * @return self
      */
     public function setAddressLine2(string $addressLine2): self
     {
@@ -97,8 +93,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * City
-     *
-     * @return self
      */
     public function setCity(string $city): self
     {
@@ -115,8 +109,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Region
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -133,8 +125,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Postal code
-     *
-     * @return self
      */
     public function setPostalCode(string $postalCode): self
     {
@@ -151,8 +141,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Country (ISO2) code
-     *
-     * @return self
      */
     public function setCountryIso2Code(string $countryIso2Code): self
     {
@@ -169,8 +157,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Timestamp billing address was created
-     *
-     * @return self
      */
     public function setCreatedAt(string $createdAt): self
     {
@@ -187,8 +173,6 @@ class BillingAddress extends \ArrayObject
     }
     /**
      * Timestamp billing address was updated
-     *
-     * @return self
      */
     public function setUpdatedAt(string $updatedAt): self
     {

@@ -143,8 +143,6 @@ class SchemaMultipleTypesException extends \ArrayObject
     }
     /**
      * @param list<string>|null $schemaTypes
-     *
-     * @return self
      */
     public function setSchemaTypes(?array $schemaTypes): self
     {

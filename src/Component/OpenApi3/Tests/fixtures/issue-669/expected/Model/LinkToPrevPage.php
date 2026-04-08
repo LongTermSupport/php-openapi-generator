@@ -33,8 +33,6 @@ class LinkToPrevPage extends \ArrayObject
     }
     /**
      * URI of the previous page of the results.
-     *
-     * @return self
      */
     public function setPrev(string $prev): self
     {

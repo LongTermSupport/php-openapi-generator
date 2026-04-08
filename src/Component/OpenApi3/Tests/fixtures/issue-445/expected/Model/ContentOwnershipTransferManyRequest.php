@@ -36,8 +36,6 @@ class ContentOwnershipTransferManyRequest
      * List of Content Permissions ownership transfer items.
      *
      * @param list<ContentOwnershipTransferItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

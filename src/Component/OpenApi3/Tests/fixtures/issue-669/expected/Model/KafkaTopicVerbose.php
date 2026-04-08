@@ -46,8 +46,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -64,8 +62,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The state of the Kafka topic.
-     *
-     * @return self
      */
     public function setState(string $state): self
     {
@@ -82,8 +78,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
-     * @return self
      */
     public function setReplicationFactor(int $replicationFactor): self
     {
@@ -100,8 +94,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * @param list<KafkaTopicPartition> $partitions
-     *
-     * @return self
      */
     public function setPartitions(array $partitions): self
     {

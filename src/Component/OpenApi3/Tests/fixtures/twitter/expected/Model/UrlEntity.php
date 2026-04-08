@@ -65,8 +65,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
-     * @return self
      */
     public function setStart(int $start): self
     {
@@ -83,8 +81,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
-     * @return self
      */
     public function setEnd(int $end): self
     {
@@ -101,8 +97,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -119,8 +113,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
-     * @return self
      */
     public function setExpandedUrl(string $expandedUrl): self
     {
@@ -137,8 +129,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * The URL as displayed in the Twitter client.
-     *
-     * @return self
      */
     public function setDisplayUrl(string $displayUrl): self
     {
@@ -155,8 +145,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * HTTP Status Code.
-     *
-     * @return self
      */
     public function setStatus(int $status): self
     {
@@ -173,8 +161,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Title of the page the URL points to.
-     *
-     * @return self
      */
     public function setTitle(string $title): self
     {
@@ -191,8 +177,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Description of the URL landing page.
-     *
-     * @return self
      */
     public function setDescription(string $description): self
     {
@@ -209,8 +193,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * @param list<URLImage> $images
-     *
-     * @return self
      */
     public function setImages(array $images): self
     {

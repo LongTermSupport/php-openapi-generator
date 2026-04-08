@@ -96,8 +96,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {
@@ -114,8 +112,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * A rating.
-     *
-     * @return self
      */
     public function setRating(int $rating): self
     {
@@ -136,8 +132,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setLetter(?string $letter): self
     {
@@ -164,8 +158,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
-     * @return self
      */
     public function setAuthor(?string $author): self
     {
@@ -182,8 +174,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
-     * @return self
      */
     public function setPublicationDate(?\DateTime $publicationDate): self
     {

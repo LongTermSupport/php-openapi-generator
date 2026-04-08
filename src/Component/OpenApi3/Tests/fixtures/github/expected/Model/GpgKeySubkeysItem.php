@@ -88,8 +88,6 @@ class GpgKeySubkeysItem extends \ArrayObject
     }
     /**
      * @param list<mixed> $emails
-     *
-     * @return self
      */
     public function setEmails(array $emails): self
     {
@@ -106,8 +104,6 @@ class GpgKeySubkeysItem extends \ArrayObject
     }
     /**
      * @param list<mixed> $subkeys
-     *
-     * @return self
      */
     public function setSubkeys(array $subkeys): self
     {

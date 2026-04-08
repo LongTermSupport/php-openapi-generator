@@ -41,8 +41,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setSelf(Link $self): self
     {
@@ -59,8 +57,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setHtml(Link $html): self
     {
@@ -77,8 +73,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
-     * @return self
      */
     public function setPullRequest(Link $pullRequest): self
     {

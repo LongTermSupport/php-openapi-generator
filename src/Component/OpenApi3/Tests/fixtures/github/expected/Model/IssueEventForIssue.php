@@ -83,8 +83,6 @@ class IssueEventForIssue extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setActor(?SimpleUser $actor): self
     {

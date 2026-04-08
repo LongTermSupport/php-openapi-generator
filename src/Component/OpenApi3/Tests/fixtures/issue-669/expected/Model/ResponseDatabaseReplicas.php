@@ -33,8 +33,6 @@ class ResponseDatabaseReplicas extends \ArrayObject
     }
     /**
      * @param list<DatabaseReplicaRead> $replicas
-     *
-     * @return self
      */
     public function setReplicas(array $replicas): self
     {

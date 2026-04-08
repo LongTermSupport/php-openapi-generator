@@ -143,8 +143,6 @@ class OwnerTokenNotFoundException extends \ArrayObject
     }
     /**
      * @param list<string>|null $ownerTokenUserIds
-     *
-     * @return self
      */
     public function setOwnerTokenUserIds(?array $ownerTokenUserIds): self
     {

@@ -84,8 +84,6 @@ class ShareDetail
     }
     /**
      * Share ID.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -102,8 +100,6 @@ class ShareDetail
     }
     /**
      * Name of share.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -120,8 +116,6 @@ class ShareDetail
     }
     /**
      * Description of share entered by user.
-     *
-     * @return self
      */
     public function setDescription(?string $description): self
     {
@@ -138,8 +132,6 @@ class ShareDetail
     }
     /**
      * Creator of share.
-     *
-     * @return self
      */
     public function setCreator(mixed $creator): self
     {
@@ -156,8 +148,6 @@ class ShareDetail
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -178,8 +168,6 @@ class ShareDetail
      * Detailed information about contents in the share.
      *
      * @param list<ShareContentDetail> $contentSelections
-     *
-     * @return self
      */
     public function setContentSelections(array $contentSelections): self
     {
@@ -200,8 +188,6 @@ class ShareDetail
      * List of shared layers.
      *
      * @param list<string>|null $layerSchemaIds
-     *
-     * @return self
      */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
@@ -218,8 +204,6 @@ class ShareDetail
     }
     /**
      * Detail of share.
-     *
-     * @return self
      */
     public function setData(mixed $data): self
     {
@@ -236,8 +220,6 @@ class ShareDetail
     }
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
-     * @return self
      */
     public function setExpirationDate(?\DateTime $expirationDate): self
     {
@@ -254,8 +236,6 @@ class ShareDetail
     }
     /**
      * Info if share is already expired.
-     *
-     * @return self
      */
     public function setExpired(bool $expired): self
     {
@@ -272,8 +252,6 @@ class ShareDetail
     }
     /**
      * Defined access for contents in share.
-     *
-     * @return self
      */
     public function setOutputAccess(mixed $outputAccess): self
     {
@@ -290,8 +268,6 @@ class ShareDetail
     }
     /**
      * Type of share.
-     *
-     * @return self
      */
     public function setShareType(mixed $shareType): self
     {
@@ -312,8 +288,6 @@ class ShareDetail
      * Schema detail of the content and the layers.
      *
      * @param list<SchemaDetail>|null $schemas
-     *
-     * @return self
      */
     public function setSchemas(?array $schemas): self
     {

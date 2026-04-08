@@ -37,8 +37,6 @@ class DeleteRulesRequest extends \ArrayObject
     }
     /**
      * @param list<string> $ids
-     *
-     * @return self
      */
     public function setIds(array $ids): self
     {
@@ -55,8 +53,6 @@ class DeleteRulesRequest extends \ArrayObject
     }
     /**
      * @param list<string> $values
-     *
-     * @return self
      */
     public function setValues(array $values): self
     {

@@ -39,8 +39,6 @@ class ApiListWorkspacesOutput extends \ArrayObject
      * Workspaces
      *
      * @param list<ApiWorkspace> $workspaces
-     *
-     * @return self
      */
     public function setWorkspaces(array $workspaces): self
     {

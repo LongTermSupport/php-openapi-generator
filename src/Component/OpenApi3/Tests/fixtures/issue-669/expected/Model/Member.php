@@ -50,8 +50,6 @@ class Member extends \ArrayObject
     }
     /**
      * The unique identifier of the Droplet.
-     *
-     * @return self
      */
     public function setDropletId(int $dropletId): self
     {
@@ -68,8 +66,6 @@ class Member extends \ArrayObject
     }
     /**
      * The creation time of the Droplet in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -86,8 +82,6 @@ class Member extends \ArrayObject
     }
     /**
      * The last updated time of the Droplet in ISO8601 combined date and time format.
-     *
-     * @return self
      */
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
@@ -104,8 +98,6 @@ class Member extends \ArrayObject
     }
     /**
      * The health status of the Droplet.
-     *
-     * @return self
      */
     public function setHealthStatus(string $healthStatus): self
     {
@@ -122,8 +114,6 @@ class Member extends \ArrayObject
     }
     /**
      * The power status of the Droplet.
-     *
-     * @return self
      */
     public function setStatus(string $status): self
     {

@@ -37,8 +37,6 @@ class ApiDeleteKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Data source id
-     *
-     * @return self
      */
     public function setDataSourceUuid(string $dataSourceUuid): self
     {
@@ -55,8 +53,6 @@ class ApiDeleteKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
-     * @return self
      */
     public function setKnowledgeBaseUuid(string $knowledgeBaseUuid): self
     {

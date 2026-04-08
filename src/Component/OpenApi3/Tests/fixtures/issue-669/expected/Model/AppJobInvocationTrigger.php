@@ -41,8 +41,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * The type of trigger that initiated the job invocation.
-     *
-     * @return self
      */
     public function setType(string $type): self
     {
@@ -59,8 +57,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * The schedule for the job
-     *
-     * @return self
      */
     public function setScheduled(AppJobInvocationTriggerScheduled $scheduled): self
     {
@@ -77,8 +73,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * Details about the manual trigger, if applicable
-     *
-     * @return self
      */
     public function setManual(AppJobInvocationTriggerManual $manual): self
     {

@@ -54,8 +54,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * A short description of the enterprise.
-     *
-     * @return self
      */
     public function setDescription(?string $description): self
     {
@@ -82,8 +80,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The enterprise's website URL.
-     *
-     * @return self
      */
     public function setWebsiteUrl(?string $websiteUrl): self
     {
@@ -100,8 +96,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * Unique identifier of the enterprise
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -128,8 +122,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The name of the enterprise.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -146,8 +138,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The slug url identifier for the enterprise.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {

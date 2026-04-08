@@ -148,8 +148,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Simple
-     *
-     * @return self
      */
     public function setIssue(IssueSimple $issue): self
     {
@@ -166,8 +164,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Label
-     *
-     * @return self
      */
     public function setLabel(IssueEventLabel $label): self
     {
@@ -224,8 +220,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Groups of organization members that gives permissions on specified repositories.
-     *
-     * @return self
      */
     public function setRequestedTeam(Team $requestedTeam): self
     {
@@ -252,8 +246,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Milestone
-     *
-     * @return self
      */
     public function setMilestone(IssueEventMilestone $milestone): self
     {
@@ -270,8 +262,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Project Card
-     *
-     * @return self
      */
     public function setProjectCard(IssueEventProjectCard $projectCard): self
     {
@@ -288,8 +278,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Rename
-     *
-     * @return self
      */
     public function setRename(IssueEventRename $rename): self
     {

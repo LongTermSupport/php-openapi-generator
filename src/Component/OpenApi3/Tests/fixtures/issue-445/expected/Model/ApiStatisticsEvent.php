@@ -30,8 +30,6 @@ class ApiStatisticsEvent extends ApplicationEvent
     }
     /**
      * @param array<string, int>|null $requestsPerClient
-     *
-     * @return self
      */
     public function setRequestsPerClient(?array $requestsPerClient): self
     {

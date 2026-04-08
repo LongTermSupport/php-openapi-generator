@@ -48,8 +48,6 @@ class SystemStatus
      * The status of the search indices.
      *
      * @param list<StatusOfSearchIndexState>|null $searchIndicesStatus
-     *
-     * @return self
      */
     public function setSearchIndicesStatus(?array $searchIndicesStatus): self
     {
@@ -70,8 +68,6 @@ class SystemStatus
      * The status of the display values.
      *
      * @param list<StatusOfDisplayValuesState>|null $displayValuesStatus
-     *
-     * @return self
      */
     public function setDisplayValuesStatus(?array $displayValuesStatus): self
     {
@@ -92,8 +88,6 @@ class SystemStatus
      * The status of the contents and list items.
      *
      * @param list<StatusOfMetadataState>|null $metadataStatus
-     *
-     * @return self
      */
     public function setMetadataStatus(?array $metadataStatus): self
     {

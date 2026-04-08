@@ -43,8 +43,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Specifies compression quality used for ReduceFileSize.
-     *
-     * @return self
      */
     public function setJpegQuality(int $jpegQuality): self
     {
@@ -61,8 +59,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to linearize the output for fast web viewing.
-     *
-     * @return self
      */
     public function setFastWebView(bool $fastWebView): self
     {
@@ -79,8 +75,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to apply measures to decrease output size or not.
-     *
-     * @return self
      */
     public function setReduceFileSize(bool $reduceFileSize): self
     {
@@ -107,8 +101,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to extract document full text from this output.
-     *
-     * @return self
      */
     public function setExtractFullText(bool $extractFullText): self
     {

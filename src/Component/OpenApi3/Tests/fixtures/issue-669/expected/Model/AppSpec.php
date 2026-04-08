@@ -108,8 +108,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * The name of the app. Must be unique across all apps in the same account.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -126,8 +124,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * The slug form of the geographical origin of the app. Default: `nearest available`
-     *
-     * @return self
      */
     public function setRegion(string $region): self
     {
@@ -148,8 +144,6 @@ class AppSpec extends \ArrayObject
      * If set to `true`, the app will **not** be cached at the edge (CDN). Enable this option if you want to manage CDN configuration yourself—whether by using an external CDN provider or by handling static content and caching within your app. This setting is also recommended for apps that require real-time data or serve dynamic content, such as those using Server-Sent Events (SSE) over GET, or hosting an MCP (Model Context Protocol) Server that utilizes SSE.
      * **Note:** This feature is not available for static site components.
      * For more information, see [Disable CDN Cache](https://docs.digitalocean.com/products/app-platform/how-to/cache-content/#disable-cdn-cache).
-     *
-     * @return self
      */
     public function setDisableEdgeCache(bool $disableEdgeCache): self
     {
@@ -168,8 +162,6 @@ class AppSpec extends \ArrayObject
     /**
      * If set to `true`, email addresses in the app will not be obfuscated. This is
      * useful for apps that require email addresses to be visible (in the HTML markup).
-     *
-     * @return self
      */
     public function setDisableEmailObfuscation(bool $disableEmailObfuscation): self
     {
@@ -186,8 +178,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * If set to `true`, suspicious requests will go through additional security checks to help mitigate layer 7 DDoS attacks.
-     *
-     * @return self
      */
     public function setEnhancedThreatControlEnabled(bool $enhancedThreatControlEnabled): self
     {
@@ -208,8 +198,6 @@ class AppSpec extends \ArrayObject
      * A set of hostnames where the application will be available.
      *
      * @param list<AppDomainSpec> $domains
-     *
-     * @return self
      */
     public function setDomains(array $domains): self
     {
@@ -230,8 +218,6 @@ class AppSpec extends \ArrayObject
      * Workloads which expose publicly-accessible HTTP services.
      *
      * @param list<AppServiceSpec> $services
-     *
-     * @return self
      */
     public function setServices(array $services): self
     {
@@ -252,8 +238,6 @@ class AppSpec extends \ArrayObject
      * Content which can be rendered to static web assets.
      *
      * @param list<AppStaticSiteSpec> $staticSites
-     *
-     * @return self
      */
     public function setStaticSites(array $staticSites): self
     {
@@ -274,8 +258,6 @@ class AppSpec extends \ArrayObject
      * Pre and post deployment workloads which do not expose publicly-accessible HTTP routes.
      *
      * @param list<AppJobSpec> $jobs
-     *
-     * @return self
      */
     public function setJobs(array $jobs): self
     {
@@ -296,8 +278,6 @@ class AppSpec extends \ArrayObject
      * Workloads which do not expose publicly-accessible HTTP services.
      *
      * @param list<AppWorkerSpec> $workers
-     *
-     * @return self
      */
     public function setWorkers(array $workers): self
     {
@@ -318,8 +298,6 @@ class AppSpec extends \ArrayObject
      * Workloads which expose publicly-accessible HTTP services via Functions Components.
      *
      * @param list<AppFunctionsSpec> $functions
-     *
-     * @return self
      */
     public function setFunctions(array $functions): self
     {
@@ -342,8 +320,6 @@ class AppSpec extends \ArrayObject
      * application.
      *
      * @param list<AppDatabaseSpec> $databases
-     *
-     * @return self
      */
     public function setDatabases(array $databases): self
     {
@@ -360,8 +336,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification for app ingress configurations.
-     *
-     * @return self
      */
     public function setIngress(AppIngressSpec $ingress): self
     {
@@ -378,8 +352,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification for app egress configurations.
-     *
-     * @return self
      */
     public function setEgress(AppEgressSpec $egress): self
     {
@@ -396,8 +368,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
-     *
-     * @return self
      */
     public function setMaintenance(AppMaintenanceSpec $maintenance): self
     {

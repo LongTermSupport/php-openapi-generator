@@ -47,8 +47,6 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Lock the repositories being migrated at the start of the migration
-     *
-     * @return self
      */
     public function setLockRepositories(bool $lockRepositories): self
     {
@@ -65,8 +63,6 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Do not include attachments in the migration
-     *
-     * @return self
      */
     public function setExcludeAttachments(bool $excludeAttachments): self
     {
@@ -87,8 +83,6 @@ class UserMigrationsPostBody extends \ArrayObject
      * Exclude attributes from the API response to improve performance
      *
      * @param list<string> $exclude
-     *
-     * @return self
      */
     public function setExclude(array $exclude): self
     {
@@ -105,8 +99,6 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * @param list<string> $repositories
-     *
-     * @return self
      */
     public function setRepositories(array $repositories): self
     {

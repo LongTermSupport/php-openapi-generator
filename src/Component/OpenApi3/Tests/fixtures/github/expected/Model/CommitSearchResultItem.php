@@ -120,8 +120,6 @@ class CommitSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<CommitSearchResultItemParentsItem> $parents
-     *
-     * @return self
      */
     public function setParents(array $parents): self
     {
@@ -138,8 +136,6 @@ class CommitSearchResultItem extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {
@@ -176,8 +172,6 @@ class CommitSearchResultItem extends \ArrayObject
     }
     /**
      * @param list<SearchResultTextMatchesItem> $textMatches
-     *
-     * @return self
      */
     public function setTextMatches(array $textMatches): self
     {

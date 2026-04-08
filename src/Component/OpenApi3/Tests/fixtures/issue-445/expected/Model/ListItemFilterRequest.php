@@ -55,8 +55,6 @@ class ListItemFilterRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
-     * @return self
      */
     public function setSearchString(?string $searchString): self
     {
@@ -73,8 +71,6 @@ class ListItemFilterRequest
     }
     /**
      * An optional filter to limit the list items.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -91,8 +87,6 @@ class ListItemFilterRequest
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
-     * @return self
      */
     public function setIncludeAllSchemaChildren(bool $includeAllSchemaChildren): self
     {
@@ -113,8 +107,6 @@ class ListItemFilterRequest
      * Limits the search among the list items of the provided schemas.
      *
      * @param list<string>|null $schemaIds
-     *
-     * @return self
      */
     public function setSchemaIds(?array $schemaIds): self
     {
@@ -137,8 +129,6 @@ class ListItemFilterRequest
      * If not specified, all metadata languages defined in the system are used.
      *
      * @param list<string>|null $searchLanguages
-     *
-     * @return self
      */
     public function setSearchLanguages(?array $searchLanguages): self
     {
@@ -155,8 +145,6 @@ class ListItemFilterRequest
     }
     /**
      * Limits the search to the list items that have or not have broken references. By default it includes both.
-     *
-     * @return self
      */
     public function setBrokenDependenciesFilter(mixed $brokenDependenciesFilter): self
     {

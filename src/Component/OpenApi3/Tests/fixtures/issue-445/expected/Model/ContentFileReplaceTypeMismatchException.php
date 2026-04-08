@@ -147,8 +147,6 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     }
     /**
      * Content types
-     *
-     * @return self
      */
     public function setOriginalContentType(string $originalContentType): self
     {
@@ -165,8 +163,6 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     }
     /**
      * Content types
-     *
-     * @return self
      */
     public function setNewContentType(string $newContentType): self
     {

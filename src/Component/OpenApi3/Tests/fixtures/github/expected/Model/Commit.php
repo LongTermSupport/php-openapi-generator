@@ -126,8 +126,6 @@ class Commit extends \ArrayObject
     }
     /**
      * @param list<CommitParentsItem> $parents
-     *
-     * @return self
      */
     public function setParents(array $parents): self
     {
@@ -154,8 +152,6 @@ class Commit extends \ArrayObject
     }
     /**
      * @param list<CommitFilesItem> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {

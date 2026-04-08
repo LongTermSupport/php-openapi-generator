@@ -33,8 +33,6 @@ class ResponseMonitoringListDestinations extends \ArrayObject
     }
     /**
      * @param list<DestinationOmitCredentials> $destinations
-     *
-     * @return self
      */
     public function setDestinations(array $destinations): self
     {

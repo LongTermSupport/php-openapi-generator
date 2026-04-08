@@ -50,8 +50,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * Unique identifier of the repository invitation.
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -68,8 +66,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
-     * @return self
      */
     public function setRepository(MinimalRepository $repository): self
     {
@@ -106,8 +102,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * The permission associated with the invitation.
-     *
-     * @return self
      */
     public function setPermissions(string $permissions): self
     {
@@ -134,8 +128,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * URL for the repository invitation
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {

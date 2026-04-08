@@ -38,8 +38,6 @@ class ReposOwnerRepoContentsPathPutBodyCommitter extends \ArrayObject
     }
     /**
      * The name of the author or committer of the commit. You'll receive a `422` status code if `name` is omitted.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -56,8 +54,6 @@ class ReposOwnerRepoContentsPathPutBodyCommitter extends \ArrayObject
     }
     /**
      * The email of the author or committer of the commit. You'll receive a `422` status code if `email` is omitted.
-     *
-     * @return self
      */
     public function setEmail(string $email): self
     {

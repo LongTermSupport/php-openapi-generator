@@ -133,8 +133,6 @@ class GistSimple extends \ArrayObject
     }
     /**
      * @param array<string, GistSimpleFilesItem> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {
@@ -221,8 +219,6 @@ class GistSimple extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setOwner(?SimpleUser $owner): self
     {

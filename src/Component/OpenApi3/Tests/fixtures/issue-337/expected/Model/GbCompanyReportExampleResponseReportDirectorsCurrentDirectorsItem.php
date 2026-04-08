@@ -132,8 +132,6 @@ class GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItem extends 
     }
     /**
      * @param list<GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemPositionsItem> $positions
-     *
-     * @return self
      */
     public function setPositions(array $positions): self
     {

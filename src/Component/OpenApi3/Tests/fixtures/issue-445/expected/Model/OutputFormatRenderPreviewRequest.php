@@ -34,8 +34,6 @@ class OutputFormatRenderPreviewRequest
     }
     /**
      * The content for which the format should be rendered
-     *
-     * @return self
      */
     public function setContentId(?string $contentId): self
     {
@@ -52,8 +50,6 @@ class OutputFormatRenderPreviewRequest
     }
     /**
      * The format which should be rendered.
-     *
-     * @return self
      */
     public function setOutputFormat(mixed $outputFormat): self
     {

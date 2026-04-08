@@ -33,8 +33,6 @@ class RegistryRunGc extends \ArrayObject
     }
     /**
      * Type of the garbage collection to run against this registry
-     *
-     * @return self
      */
     public function setType(string $type): self
     {

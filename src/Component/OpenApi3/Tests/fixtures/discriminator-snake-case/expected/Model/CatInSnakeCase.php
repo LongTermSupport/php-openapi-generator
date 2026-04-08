@@ -30,8 +30,6 @@ class CatInSnakeCase extends Pet
     }
     /**
      * The measured skill for hunting
-     *
-     * @return self
      */
     public function setHuntingSkill(string $huntingSkill): self
     {

@@ -62,8 +62,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * UUID of the invoice
-     *
-     * @return self
      */
     public function setInvoiceUuid(string $invoiceUuid): self
     {
@@ -80,8 +78,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * ID of the invoice
-     *
-     * @return self
      */
     public function setInvoiceId(string $invoiceId): self
     {
@@ -98,8 +94,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
-     * @return self
      */
     public function setBillingPeriod(string $billingPeriod): self
     {
@@ -116,8 +110,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
-     * @return self
      */
     public function setAmount(string $amount): self
     {
@@ -134,8 +126,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Name of the DigitalOcean customer being invoiced.
-     *
-     * @return self
      */
     public function setUserName(string $userName): self
     {
@@ -162,8 +152,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Company of the DigitalOcean customer being invoiced, if set.
-     *
-     * @return self
      */
     public function setUserCompany(string $userCompany): self
     {
@@ -180,8 +168,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Email of the DigitalOcean customer being invoiced.
-     *
-     * @return self
      */
     public function setUserEmail(string $userEmail): self
     {

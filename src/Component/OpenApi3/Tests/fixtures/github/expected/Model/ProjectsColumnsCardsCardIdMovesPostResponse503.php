@@ -66,8 +66,6 @@ class ProjectsColumnsCardsCardIdMovesPostResponse503 extends \ArrayObject
     }
     /**
      * @param list<ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem> $errors
-     *
-     * @return self
      */
     public function setErrors(array $errors): self
     {

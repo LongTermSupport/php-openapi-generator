@@ -48,8 +48,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
-     * @return self
      */
     public function setSchemaId(string $schemaId): self
     {
@@ -66,8 +64,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
-     * @return self
      */
     public function setSchemaIndexingInfo(mixed $schemaIndexingInfo): self
     {
@@ -88,8 +84,6 @@ class FieldMultiRelation extends FieldBase
      * The relation types supported by the field.
      *
      * @param list<RelationType> $relationTypes
-     *
-     * @return self
      */
     public function setRelationTypes(array $relationTypes): self
     {
@@ -106,8 +100,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
-     * @return self
      */
     public function setMaximumItems(?int $maximumItems): self
     {
@@ -124,8 +116,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
-     * @return self
      */
     public function setMinimumItems(?int $minimumItems): self
     {

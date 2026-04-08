@@ -33,8 +33,6 @@ class TeamsTeamIdDiscussionsDiscussionNumberCommentsCommentNumberPatchBody exten
     }
     /**
      * The discussion comment's body text.
-     *
-     * @return self
      */
     public function setBody(string $body): self
     {

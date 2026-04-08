@@ -47,7 +47,6 @@ class MigrationsUnlockRepoForAuthenticatedUser extends \LongTermSupport\OpenApiG
     /**
      * {@inheritdoc}
      *
-     * @return null
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsUnlockRepoForAuthenticatedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsUnlockRepoForAuthenticatedUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsUnlockRepoForAuthenticatedUserUnauthorizedException

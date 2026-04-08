@@ -30,8 +30,6 @@ class ReservedIpActionAssign extends ReservedIpActionType
     }
     /**
      * The ID of the Droplet that the reserved IP will be assigned to.
-     *
-     * @return self
      */
     public function setDropletId(int $dropletId): self
     {

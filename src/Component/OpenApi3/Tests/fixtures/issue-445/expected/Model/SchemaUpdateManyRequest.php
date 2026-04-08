@@ -36,8 +36,6 @@ class SchemaUpdateManyRequest
      * The schemas to update.
      *
      * @param list<SchemaUpdateItem> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {

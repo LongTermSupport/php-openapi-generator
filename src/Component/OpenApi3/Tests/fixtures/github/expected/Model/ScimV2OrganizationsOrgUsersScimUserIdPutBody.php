@@ -51,8 +51,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     }
     /**
      * @param list<string> $schemas
-     *
-     * @return self
      */
     public function setSchemas(array $schemas): self
     {
@@ -89,8 +87,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     }
     /**
      * @param list<string> $groups
-     *
-     * @return self
      */
     public function setGroups(array $groups): self
     {
@@ -117,8 +113,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
-     * @return self
      */
     public function setUserName(string $userName): self
     {
@@ -149,8 +143,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
      * user emails
      *
      * @param list<ScimV2OrganizationsOrgUsersScimUserIdPutBodyEmailsItem> $emails
-     *
-     * @return self
      */
     public function setEmails(array $emails): self
     {

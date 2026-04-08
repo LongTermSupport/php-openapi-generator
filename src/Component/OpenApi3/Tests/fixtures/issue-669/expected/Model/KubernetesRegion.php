@@ -37,8 +37,6 @@ class KubernetesRegion extends \ArrayObject
     }
     /**
      * A DigitalOcean region where Kubernetes is available.
-     *
-     * @return self
      */
     public function setName(string $name): self
     {
@@ -55,8 +53,6 @@ class KubernetesRegion extends \ArrayObject
     }
     /**
      * The identifier for a region for use when creating a new cluster.
-     *
-     * @return self
      */
     public function setSlug(string $slug): self
     {

@@ -53,8 +53,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     }
     /**
      * Used to customize when cluster autoscaler scales down non-empty nodes by setting the node utilization threshold.
-     *
-     * @return self
      */
     public function setScaleDownUtilizationThreshold(float $scaleDownUtilizationThreshold): self
     {
@@ -71,8 +69,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     }
     /**
      * Used to customize how long a node is unneeded before being scaled down.
-     *
-     * @return self
      */
     public function setScaleDownUnneededTime(string $scaleDownUnneededTime): self
     {
@@ -113,8 +109,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
      * 
      *
      * @param list<string> $expanders
-     *
-     * @return self
      */
     public function setExpanders(array $expanders): self
     {

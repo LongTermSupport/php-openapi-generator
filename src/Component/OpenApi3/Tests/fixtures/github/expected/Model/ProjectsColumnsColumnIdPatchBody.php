@@ -33,8 +33,6 @@ class ProjectsColumnsColumnIdPatchBody extends \ArrayObject
     }
     /**
      * Name of the project column
-     *
-     * @return self
      */
     public function setName(string $name): self
     {

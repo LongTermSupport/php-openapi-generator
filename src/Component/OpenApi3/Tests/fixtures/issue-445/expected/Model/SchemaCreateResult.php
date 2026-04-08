@@ -30,8 +30,6 @@ class SchemaCreateResult
     }
     /**
      * The details of the created schema.
-     *
-     * @return self
      */
     public function setSchema(mixed $schema): self
     {

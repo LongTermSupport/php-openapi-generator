@@ -34,8 +34,6 @@ class DefaultUserFieldsEntities extends \ArrayObject
     }
     /**
      * Expanded details for the URL specified in the user's profile, with start and end indices.
-     *
-     * @return self
      */
     public function setUrl(DefaultUserFieldsEntitiesUrl $url): self
     {

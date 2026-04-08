@@ -34,8 +34,6 @@ class InvalidRequestProblemErrorsItem extends \ArrayObject
     }
     /**
      * @param array<string, list<string>> $parameters
-     *
-     * @return self
      */
     public function setParameters(array $parameters): self
     {

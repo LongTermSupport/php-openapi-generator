@@ -44,8 +44,6 @@ class CheckSuitePreference extends \ArrayObject
     }
     /**
      * A git repository
-     *
-     * @return self
      */
     public function setRepository(Repository $repository): self
     {

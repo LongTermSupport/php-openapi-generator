@@ -56,8 +56,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * Name of the tag
-     *
-     * @return self
      */
     public function setTag(string $tag): self
     {
@@ -84,8 +82,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * URL for the tag
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -102,8 +98,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * Message describing the purpose of the tag
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {

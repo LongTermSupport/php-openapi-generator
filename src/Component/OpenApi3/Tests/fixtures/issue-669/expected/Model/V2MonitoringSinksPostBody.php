@@ -39,8 +39,6 @@ class V2MonitoringSinksPostBody extends \ArrayObject
     }
     /**
      * A unique identifier for an already-existing destination.
-     *
-     * @return self
      */
     public function setDestinationUuid(string $destinationUuid): self
     {
@@ -61,8 +59,6 @@ class V2MonitoringSinksPostBody extends \ArrayObject
      * List of resources identified by their URNs.
      *
      * @param list<SinkResource> $resources
-     *
-     * @return self
      */
     public function setResources(array $resources): self
     {

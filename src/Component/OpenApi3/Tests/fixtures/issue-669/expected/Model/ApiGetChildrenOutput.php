@@ -39,8 +39,6 @@ class ApiGetChildrenOutput extends \ArrayObject
      * Child agents
      *
      * @param list<ApiAgent> $children
-     *
-     * @return self
      */
     public function setChildren(array $children): self
     {

@@ -42,11 +42,6 @@ class TeamsDeleteDiscussionInOrg extends \LongTermSupport\OpenApiGenerator\Compo
     {
         return [[], null];
     }
-    /**
-     * {@inheritdoc}
-     *
-     * @return null
-     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();

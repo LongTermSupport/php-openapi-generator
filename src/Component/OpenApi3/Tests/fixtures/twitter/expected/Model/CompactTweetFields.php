@@ -63,8 +63,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -81,8 +79,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
-     * @return self
      */
     public function setCreatedAt(\DateTime $createdAt): self
     {
@@ -99,8 +95,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
-     * @return self
      */
     public function setText(string $text): self
     {
@@ -117,8 +111,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setAuthorId(string $authorId): self
     {
@@ -135,8 +127,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
-     * @return self
      */
     public function setInReplyToUserId(string $inReplyToUserId): self
     {
@@ -157,8 +147,6 @@ class CompactTweetFields extends \ArrayObject
      * A list of Tweets this Tweet refers to. For example, if the parent Tweet is a Retweet, a Quoted Tweet or a Reply, it will include the related Tweet referenced to by its parent.
      *
      * @param list<CompactTweetFieldsReferencedTweetsItem> $referencedTweets
-     *
-     * @return self
      */
     public function setReferencedTweets(array $referencedTweets): self
     {
@@ -175,8 +163,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
-     * @return self
      */
     public function setAttachments(CompactTweetFieldsAttachments $attachments): self
     {
@@ -193,8 +179,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
-     * @return self
      */
     public function setWithheld(TweetWithheld $withheld): self
     {

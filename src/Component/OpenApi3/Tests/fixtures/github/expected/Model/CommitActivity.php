@@ -35,8 +35,6 @@ class CommitActivity extends \ArrayObject
     }
     /**
      * @param list<int> $days
-     *
-     * @return self
      */
     public function setDays(array $days): self
     {

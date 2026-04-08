@@ -33,8 +33,6 @@ class UpdateRegistry extends \ArrayObject
     }
     /**
      * A boolean value indicating that the garbage collection should be cancelled.
-     *
-     * @return self
      */
     public function setCancel(bool $cancel): self
     {

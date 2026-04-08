@@ -35,8 +35,6 @@ class ResponseVpcNatGateways extends \ArrayObject
     }
     /**
      * @param list<VpcNatGatewayGet> $vpcNatGateways
-     *
-     * @return self
      */
     public function setVpcNatGateways(array $vpcNatGateways): self
     {

@@ -33,8 +33,6 @@ class ApiCreateEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * Test‑case UUID.
-     *
-     * @return self
      */
     public function setTestCaseUuid(string $testCaseUuid): self
     {

@@ -54,8 +54,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * SHA for the commit
-     *
-     * @return self
      */
     public function setSha(string $sha): self
     {
@@ -92,8 +90,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Identifying information for the git-user
-     *
-     * @return self
      */
     public function setAuthor(GitCommitAuthor $author): self
     {
@@ -110,8 +106,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Identifying information for the git-user
-     *
-     * @return self
      */
     public function setCommitter(GitCommitCommitter $committer): self
     {
@@ -128,8 +122,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Message describing the purpose of the commit
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -156,8 +148,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * @param list<GitCommitParentsItem> $parents
-     *
-     * @return self
      */
     public function setParents(array $parents): self
     {

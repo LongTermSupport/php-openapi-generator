@@ -33,8 +33,6 @@ class ResponseDatabaseSchemaRegistryConfig extends \ArrayObject
     }
     /**
      * The compatibility level of the schema registry.
-     *
-     * @return self
      */
     public function setCompatibilityLevel(string $compatibilityLevel): self
     {

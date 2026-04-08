@@ -51,8 +51,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
-     * @return self
      */
     public function setTotalResults(int $totalResults): self
     {
@@ -73,8 +71,6 @@ class MetadataReferenceResult extends \ArrayObject
      * The matched documents.
      *
      * @param list<MetadataReference> $results
-     *
-     * @return self
      */
     public function setResults(array $results): self
     {
@@ -91,8 +87,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
-     * @return self
      */
     public function setElapsedMilliseconds(int $elapsedMilliseconds): self
     {
@@ -109,8 +103,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {
@@ -127,8 +119,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * Indicates if any reference is originating from an item that the current user does not have access to.
-     *
-     * @return self
      */
     public function setIsReferencedByRestrictedItem(?bool $isReferencedByRestrictedItem): self
     {

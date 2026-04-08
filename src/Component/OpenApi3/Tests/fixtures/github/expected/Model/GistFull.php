@@ -142,8 +142,6 @@ class GistFull extends \ArrayObject
     }
     /**
      * @param array<string, GistSimpleFilesItem> $files
-     *
-     * @return self
      */
     public function setFiles(array $files): self
     {
@@ -230,8 +228,6 @@ class GistFull extends \ArrayObject
     }
     /**
      * Simple User
-     *
-     * @return self
      */
     public function setOwner(?SimpleUser $owner): self
     {
@@ -258,8 +254,6 @@ class GistFull extends \ArrayObject
     }
     /**
      * @param list<GistFullforksItem> $forks
-     *
-     * @return self
      */
     public function setForks(array $forks): self
     {
@@ -276,8 +270,6 @@ class GistFull extends \ArrayObject
     }
     /**
      * @param list<GistFullhistoryItem> $history
-     *
-     * @return self
      */
     public function setHistory(array $history): self
     {

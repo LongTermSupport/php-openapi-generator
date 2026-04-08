@@ -41,8 +41,6 @@ class DocumentStillFormat extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
-     * @return self
      */
     public function setResizeAction(mixed $resizeAction): self
     {

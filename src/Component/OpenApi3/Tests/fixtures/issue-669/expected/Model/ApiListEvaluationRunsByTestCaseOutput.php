@@ -39,8 +39,6 @@ class ApiListEvaluationRunsByTestCaseOutput extends \ArrayObject
      * List of evaluation runs.
      *
      * @param list<ApiEvaluationRun> $evaluationRuns
-     *
-     * @return self
      */
     public function setEvaluationRuns(array $evaluationRuns): self
     {

@@ -41,8 +41,6 @@ class DatabaseStorageAutoscaleParams extends \ArrayObject
     }
     /**
      * Whether storage autoscaling is enabled for the cluster
-     *
-     * @return self
      */
     public function setEnabled(bool $enabled): self
     {
@@ -59,8 +57,6 @@ class DatabaseStorageAutoscaleParams extends \ArrayObject
     }
     /**
      * The storage usage threshold percentage that triggers autoscaling. When storage usage exceeds this percentage, additional storage will be added automatically.
-     *
-     * @return self
      */
     public function setThresholdPercent(int $thresholdPercent): self
     {
@@ -77,8 +73,6 @@ class DatabaseStorageAutoscaleParams extends \ArrayObject
     }
     /**
      * The amount of additional storage to add (in GiB) when autoscaling is triggered
-     *
-     * @return self
      */
     public function setIncrementGib(int $incrementGib): self
     {

@@ -55,8 +55,6 @@ class SearchLabelsGetResponse200 extends \ArrayObject
     }
     /**
      * @param list<LabelSearchResultItem> $items
-     *
-     * @return self
      */
     public function setItems(array $items): self
     {

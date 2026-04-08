@@ -33,8 +33,6 @@ class ApiGetScheduledIndexingOutput extends \ArrayObject
     }
     /**
      * Metadata for scheduled indexing entries
-     *
-     * @return self
      */
     public function setIndexingInfo(ApiScheduledIndexingInfo $indexingInfo): self
     {

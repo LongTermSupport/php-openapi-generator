@@ -41,8 +41,6 @@ class ResponseDatabaseBackupsScheduledBackupTime extends \ArrayObject
     }
     /**
      * The hour of the day when the backup is scheduled (in UTC).
-     *
-     * @return self
      */
     public function setBackupHour(int $backupHour): self
     {
@@ -59,8 +57,6 @@ class ResponseDatabaseBackupsScheduledBackupTime extends \ArrayObject
     }
     /**
      * The minute of the hour when the backup is scheduled.
-     *
-     * @return self
      */
     public function setBackupMinute(int $backupMinute): self
     {
@@ -77,8 +73,6 @@ class ResponseDatabaseBackupsScheduledBackupTime extends \ArrayObject
     }
     /**
      * The frequency, in hours, at which backups are taken.
-     *
-     * @return self
      */
     public function setBackupIntervalHours(int $backupIntervalHours): self
     {

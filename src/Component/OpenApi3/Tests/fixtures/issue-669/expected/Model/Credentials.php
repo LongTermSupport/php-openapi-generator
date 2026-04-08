@@ -71,8 +71,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * The URL used to access the cluster API server.
-     *
-     * @return self
      */
     public function setServer(string $server): self
     {
@@ -89,8 +87,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * A base64 encoding of bytes representing the certificate authority data for accessing the cluster.
-     *
-     * @return self
      */
     public function setCertificateAuthorityData(string $certificateAuthorityData): self
     {
@@ -125,8 +121,6 @@ class Credentials extends \ArrayObject
      * 
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setClientCertificateData(?string $clientCertificateData): self
     {
@@ -161,8 +155,6 @@ class Credentials extends \ArrayObject
      * 
      *
      * @deprecated
-     *
-     * @return self
      */
     public function setClientKeyData(?string $clientKeyData): self
     {
@@ -179,8 +171,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * An access token used to authenticate with the cluster. This is only returned for clusters with support for token-based authentication.
-     *
-     * @return self
      */
     public function setToken(string $token): self
     {
@@ -197,8 +187,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the access token expires.
-     *
-     * @return self
      */
     public function setExpiresAt(\DateTime $expiresAt): self
     {

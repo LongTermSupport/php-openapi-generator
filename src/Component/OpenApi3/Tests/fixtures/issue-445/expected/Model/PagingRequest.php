@@ -34,8 +34,6 @@ class PagingRequest
     }
     /**
      * Limits the number of the returned schemas. Defaults to 0.
-     *
-     * @return self
      */
     public function setLimit(int $limit): self
     {
@@ -52,8 +50,6 @@ class PagingRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
-     * @return self
      */
     public function setPageToken(?string $pageToken): self
     {

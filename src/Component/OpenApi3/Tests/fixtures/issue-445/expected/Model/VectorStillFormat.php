@@ -41,8 +41,6 @@ class VectorStillFormat extends FormatBase
     }
     /**
      * Specifies output dimensions for raster operation
-     *
-     * @return self
      */
     public function setResizeAction(mixed $resizeAction): self
     {

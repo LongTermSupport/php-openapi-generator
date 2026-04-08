@@ -50,8 +50,6 @@ class Page extends \ArrayObject
     }
     /**
      * The API address for accessing this Page resource.
-     *
-     * @return self
      */
     public function setUrl(string $url): self
     {
@@ -68,8 +66,6 @@ class Page extends \ArrayObject
     }
     /**
      * The status of the most recent build of the Page.
-     *
-     * @return self
      */
     public function setStatus(?string $status): self
     {
@@ -86,8 +82,6 @@ class Page extends \ArrayObject
     }
     /**
      * The Pages site's custom domain
-     *
-     * @return self
      */
     public function setCname(?string $cname): self
     {
@@ -104,8 +98,6 @@ class Page extends \ArrayObject
     }
     /**
      * Whether the Page has a custom 404 page.
-     *
-     * @return self
      */
     public function setCustom404(bool $custom404): self
     {
@@ -122,8 +114,6 @@ class Page extends \ArrayObject
     }
     /**
      * The web address the Page can be accessed from.
-     *
-     * @return self
      */
     public function setHtmlUrl(string $htmlUrl): self
     {

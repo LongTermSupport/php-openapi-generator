@@ -75,8 +75,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Unique identifier of the deployment
-     *
-     * @return self
      */
     public function setId(int $id): self
     {
@@ -113,8 +111,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * The ref to deploy. This can be a branch, tag, or sha.
-     *
-     * @return self
      */
     public function setRef(string $ref): self
     {
@@ -131,8 +127,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Parameter to specify a task to execute
-     *
-     * @return self
      */
     public function setTask(string $task): self
     {
@@ -169,8 +163,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Name for the target deployment environment.
-     *
-     * @return self
      */
     public function setEnvironment(string $environment): self
     {
@@ -247,8 +239,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Specifies if the given environment is will no longer exist at some point in hte future. Default: false.
-     *
-     * @return self
      */
     public function setTransientEnvironment(bool $transientEnvironment): self
     {
@@ -265,8 +255,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: false.
-     *
-     * @return self
      */
     public function setProductionEnvironment(bool $productionEnvironment): self
     {

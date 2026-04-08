@@ -36,8 +36,6 @@ class BusinessProcessDetailsDataCdnPurge extends BusinessProcessDetailsDataBase
     }
     /**
      * Serialized CDN configuration.
-     *
-     * @return self
      */
     public function setSerializedCdnConfiguration(string $serializedCdnConfiguration): self
     {
@@ -58,8 +56,6 @@ class BusinessProcessDetailsDataCdnPurge extends BusinessProcessDetailsDataBase
      * Jobs that were processed in the operation.
      *
      * @param list<CdnPurgeJobBase> $jobs
-     *
-     * @return self
      */
     public function setJobs(array $jobs): self
     {

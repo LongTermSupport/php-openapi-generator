@@ -88,8 +88,6 @@ class Channel
     }
     /**
      * ID of channel.
-     *
-     * @return self
      */
     public function setId(string $id): self
     {
@@ -106,8 +104,6 @@ class Channel
     }
     /**
      * Numeric sort order of the channel. Channels are returned ordered by this field.
-     *
-     * @return self
      */
     public function setSortOrder(int $sortOrder): self
     {
@@ -124,8 +120,6 @@ class Channel
     }
     /**
      * The search index ID where the channel requests the content from. Only RootContentSearchIndex is supported.
-     *
-     * @return self
      */
     public function setSearchIndexId(string $searchIndexId): self
     {
@@ -142,8 +136,6 @@ class Channel
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
-     * @return self
      */
     public function setFilter(mixed $filter): self
     {
@@ -160,8 +152,6 @@ class Channel
     }
     /**
      * Language specific names.
-     *
-     * @return self
      */
     public function setNames(mixed $names): self
     {
@@ -182,8 +172,6 @@ class Channel
      * Default sort order specified for the channel to sort the results of a content search.
      *
      * @param list<SortInfo> $sort
-     *
-     * @return self
      */
     public function setSort(array $sort): self
     {
@@ -204,8 +192,6 @@ class Channel
      * Fields to be used for sorting in content browser when displaying the channel. The information is only set and consumed by the client, not by the server.
      *
      * @param list<SortField> $sortFields
-     *
-     * @return self
      */
     public function setSortFields(array $sortFields): self
     {
@@ -226,8 +212,6 @@ class Channel
      * An optional list of aggregators. These aggregations are added by default on each aggregation requests.
      *
      * @param list<AggregatorBase> $aggregations
-     *
-     * @return self
      */
     public function setAggregations(array $aggregations): self
     {
@@ -248,8 +232,6 @@ class Channel
      * An Optional list of fields. These fields extend the list of simple search fields outside the bounds of any schema field configuration.
      *
      * @param list<string> $extendedSimpleSearchFields
-     *
-     * @return self
      */
     public function setExtendedSimpleSearchFields(array $extendedSimpleSearchFields): self
     {
@@ -270,8 +252,6 @@ class Channel
      * User roles granted access to the channel.
      *
      * @param list<string> $grantedUserRoleIds
-     *
-     * @return self
      */
     public function setGrantedUserRoleIds(array $grantedUserRoleIds): self
     {
@@ -288,8 +268,6 @@ class Channel
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
-     * @return self
      */
     public function setMissingResultsDisplayPatterns(mixed $missingResultsDisplayPatterns): self
     {
@@ -306,8 +284,6 @@ class Channel
     }
     /**
      * Audit information.
-     *
-     * @return self
      */
     public function setAudit(mixed $audit): self
     {
@@ -324,8 +300,6 @@ class Channel
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
-     * @return self
      */
     public function setViewForAll(bool $viewForAll): self
     {

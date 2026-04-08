@@ -48,8 +48,6 @@ class AppsDeploymentFunctions extends \ArrayObject
     }
     /**
      * The commit hash of the repository that was used to build this functions component.
-     *
-     * @return self
      */
     public function setSourceCommitHash(string $sourceCommitHash): self
     {
@@ -66,8 +64,6 @@ class AppsDeploymentFunctions extends \ArrayObject
     }
     /**
      * The namespace where the functions are deployed.
-     *
-     * @return self
      */
     public function setNamespace(string $namespace): self
     {

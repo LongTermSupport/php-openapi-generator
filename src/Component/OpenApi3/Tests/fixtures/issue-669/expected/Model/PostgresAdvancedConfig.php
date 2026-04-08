@@ -253,8 +253,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the maximum age (in transactions) that a table's pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID wraparound within the table. Note that the system will launch autovacuum processes to prevent wraparound even when autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-     *
-     * @return self
      */
     public function setAutovacuumFreezeMaxAge(int $autovacuumFreezeMaxAge): self
     {
@@ -271,8 +269,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the maximum number of autovacuum processes (other than the autovacuum launcher) that may be running at any one time. The default is three. This parameter can only be set at server start.
-     *
-     * @return self
      */
     public function setAutovacuumMaxWorkers(int $autovacuumMaxWorkers): self
     {
@@ -289,8 +285,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the minimum delay, in seconds, between autovacuum runs on any given database. The default is one minute.
-     *
-     * @return self
      */
     public function setAutovacuumNaptime(int $autovacuumNaptime): self
     {
@@ -307,8 +301,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the minimum number of updated or deleted tuples needed to trigger a VACUUM in any one table. The default is 50 tuples.
-     *
-     * @return self
      */
     public function setAutovacuumVacuumThreshold(int $autovacuumVacuumThreshold): self
     {
@@ -325,8 +317,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the minimum number of inserted, updated, or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-     *
-     * @return self
      */
     public function setAutovacuumAnalyzeThreshold(int $autovacuumAnalyzeThreshold): self
     {
@@ -343,8 +333,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies a fraction, in a decimal value, of the table size to add to autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-     *
-     * @return self
      */
     public function setAutovacuumVacuumScaleFactor(float $autovacuumVacuumScaleFactor): self
     {
@@ -361,8 +349,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies a fraction, in a decimal value, of the table size to add to autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2 (20% of table size).
-     *
-     * @return self
      */
     public function setAutovacuumAnalyzeScaleFactor(float $autovacuumAnalyzeScaleFactor): self
     {
@@ -379,8 +365,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the cost delay value, in milliseconds, that will be used in automatic VACUUM operations. If -1, uses the regular vacuum_cost_delay value, which is 20 milliseconds.
-     *
-     * @return self
      */
     public function setAutovacuumVacuumCostDelay(int $autovacuumVacuumCostDelay): self
     {
@@ -397,8 +381,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the cost limit value that will be used in automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit value will be used.
-     *
-     * @return self
      */
     public function setAutovacuumVacuumCostLimit(int $autovacuumVacuumCostLimit): self
     {
@@ -415,8 +397,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The hour of day (in UTC) when backup for the service starts. New backup only starts if previous backup has already completed.
-     *
-     * @return self
      */
     public function setBackupHour(int $backupHour): self
     {
@@ -433,8 +413,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The minute of the backup hour when backup for the service starts. New backup is only started if previous backup has already completed.
-     *
-     * @return self
      */
     public function setBackupMinute(int $backupMinute): self
     {
@@ -451,8 +429,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the delay, in milliseconds, between activity rounds for the background writer. Default is 200 ms.
-     *
-     * @return self
      */
     public function setBgwriterDelay(int $bgwriterDelay): self
     {
@@ -469,8 +445,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The amount of kilobytes that need to be written by the background writer before attempting to force the OS to issue these writes to underlying storage. Specified in kilobytes, default is 512.  Setting of 0 disables forced writeback.
-     *
-     * @return self
      */
     public function setBgwriterFlushAfter(int $bgwriterFlushAfter): self
     {
@@ -487,8 +461,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum number of buffers that the background writer can write. Setting this to zero disables background writing. Default is 100.
-     *
-     * @return self
      */
     public function setBgwriterLruMaxpages(int $bgwriterLruMaxpages): self
     {
@@ -505,8 +477,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The average recent need for new buffers is multiplied by bgwriter_lru_multiplier to arrive at an estimate of the number that will be needed during the next round, (up to bgwriter_lru_maxpages). 1.0 represents a “just in time” policy of writing exactly the number of buffers predicted to be needed. Larger values provide some cushion against spikes in demand, while smaller values intentionally leave writes to be done by server processes. The default is 2.0.
-     *
-     * @return self
      */
     public function setBgwriterLruMultiplier(float $bgwriterLruMultiplier): self
     {
@@ -523,8 +493,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The amount of time, in milliseconds, to wait on a lock before checking to see if there is a deadlock condition.
-     *
-     * @return self
      */
     public function setDeadlockTimeout(int $deadlockTimeout): self
     {
@@ -541,8 +509,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the default TOAST compression method for values of compressible columns (the default is lz4).
-     *
-     * @return self
      */
     public function setDefaultToastCompression(string $defaultToastCompression): self
     {
@@ -559,8 +525,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Time out sessions with open transactions after this number of milliseconds
-     *
-     * @return self
      */
     public function setIdleInTransactionSessionTimeout(int $idleInTransactionSessionTimeout): self
     {
@@ -577,8 +541,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Activates, in a boolean, the system-wide use of Just-in-Time Compilation (JIT).
-     *
-     * @return self
      */
     public function setJit(bool $jit): self
     {
@@ -595,8 +557,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Causes each action executed by autovacuum to be logged if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum actions. Minus-one (the default) disables logging autovacuum actions.
-     *
-     * @return self
      */
     public function setLogAutovacuumMinDuration(int $logAutovacuumMinDuration): self
     {
@@ -613,8 +573,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Controls the amount of detail written in the server log for each message that is logged.
-     *
-     * @return self
      */
     public function setLogErrorVerbosity(string $logErrorVerbosity): self
     {
@@ -631,8 +589,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Selects one of the available log-formats. These can support popular log analyzers like pgbadger, pganalyze, etc.
-     *
-     * @return self
      */
     public function setLogLinePrefix(string $logLinePrefix): self
     {
@@ -649,8 +605,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Log statements that take more than this number of milliseconds to run. If -1, disables.
-     *
-     * @return self
      */
     public function setLogMinDurationStatement(int $logMinDurationStatement): self
     {
@@ -667,8 +621,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum number of files that can be open per process.
-     *
-     * @return self
      */
     public function setMaxFilesPerProcess(int $maxFilesPerProcess): self
     {
@@ -685,8 +637,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum prepared transactions. Once increased, this parameter cannot be lowered from its set value.
-     *
-     * @return self
      */
     public function setMaxPreparedTransactions(int $maxPreparedTransactions): self
     {
@@ -703,8 +653,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum predicate locks per transaction.
-     *
-     * @return self
      */
     public function setMaxPredLocksPerTransaction(int $maxPredLocksPerTransaction): self
     {
@@ -721,8 +669,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum locks per transaction. Once increased, this parameter cannot be lowered from its set value.
-     *
-     * @return self
      */
     public function setMaxLocksPerTransaction(int $maxLocksPerTransaction): self
     {
@@ -739,8 +685,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Maximum depth of the stack in bytes.
-     *
-     * @return self
      */
     public function setMaxStackDepth(int $maxStackDepth): self
     {
@@ -757,8 +701,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Max standby archive delay in milliseconds.
-     *
-     * @return self
      */
     public function setMaxStandbyArchiveDelay(int $maxStandbyArchiveDelay): self
     {
@@ -775,8 +717,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Max standby streaming delay in milliseconds.
-     *
-     * @return self
      */
     public function setMaxStandbyStreamingDelay(int $maxStandbyStreamingDelay): self
     {
@@ -793,8 +733,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum replication slots.
-     *
-     * @return self
      */
     public function setMaxReplicationSlots(int $maxReplicationSlots): self
     {
@@ -811,8 +749,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum logical replication workers (taken from the pool of max_parallel_workers).
-     *
-     * @return self
      */
     public function setMaxLogicalReplicationWorkers(int $maxLogicalReplicationWorkers): self
     {
@@ -829,8 +765,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Sets the maximum number of workers that the system can support for parallel queries.
-     *
-     * @return self
      */
     public function setMaxParallelWorkers(int $maxParallelWorkers): self
     {
@@ -847,8 +781,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Sets the maximum number of workers that can be started by a single Gather or Gather Merge node.
-     *
-     * @return self
      */
     public function setMaxParallelWorkersPerGather(int $maxParallelWorkersPerGather): self
     {
@@ -865,8 +797,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Sets the maximum number of background processes that the system can support. Once increased, this parameter cannot be lowered from its set value.
-     *
-     * @return self
      */
     public function setMaxWorkerProcesses(int $maxWorkerProcesses): self
     {
@@ -883,8 +813,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Controls which role to use for pg_partman's scheduled background tasks. Must consist of alpha-numeric characters, dots, underscores, or dashes. May not start with dash or dot. Maximum of 64 characters.
-     *
-     * @return self
      */
     public function setPgPartmanBgwRole(string $pgPartmanBgwRole): self
     {
@@ -901,8 +829,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Sets the time interval to run pg_partman's scheduled tasks.
-     *
-     * @return self
      */
     public function setPgPartmanBgwInterval(int $pgPartmanBgwInterval): self
     {
@@ -919,8 +845,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Controls which statements are counted. Specify 'top' to track top-level statements (those issued directly by clients), 'all' to also track nested statements (such as statements invoked within functions), or 'none' to disable statement statistics collection. The default value is top.
-     *
-     * @return self
      */
     public function setPgStatStatementsTrack(string $pgStatStatementsTrack): self
     {
@@ -937,8 +861,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL temporary file limit in KiB. If -1, sets to unlimited.
-     *
-     * @return self
      */
     public function setTempFileLimit(int $tempFileLimit): self
     {
@@ -955,8 +877,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL service timezone
-     *
-     * @return self
      */
     public function setTimezone(string $timezone): self
     {
@@ -973,8 +893,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Specifies the number of bytes reserved to track the currently executing command for each active session.
-     *
-     * @return self
      */
     public function setTrackActivityQuerySize(int $trackActivityQuerySize): self
     {
@@ -991,8 +909,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Record commit time of transactions.
-     *
-     * @return self
      */
     public function setTrackCommitTimestamp(string $trackCommitTimestamp): self
     {
@@ -1009,8 +925,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Enables tracking of function call counts and time used.
-     *
-     * @return self
      */
     public function setTrackFunctions(string $trackFunctions): self
     {
@@ -1027,8 +941,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Enables timing of database I/O calls. This parameter is off by default, because it will repeatedly query the operating system for the current time, which may cause significant overhead on some platforms.
-     *
-     * @return self
      */
     public function setTrackIoTiming(string $trackIoTiming): self
     {
@@ -1045,8 +957,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum WAL senders. Once increased, this parameter cannot be lowered from its set value.
-     *
-     * @return self
      */
     public function setMaxWalSenders(int $maxWalSenders): self
     {
@@ -1063,8 +973,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Terminate replication connections that are inactive for longer than this amount of time, in milliseconds. Setting this value to zero disables the timeout. Must be either 0 or between 5000 and 10800000.
-     *
-     * @return self
      */
     public function setWalSenderTimeout(int $walSenderTimeout): self
     {
@@ -1081,8 +989,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * WAL flush interval in milliseconds. Note that setting this value to lower than the default 200ms may negatively impact performance
-     *
-     * @return self
      */
     public function setWalWriterDelay(int $walWriterDelay): self
     {
@@ -1099,8 +1005,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Percentage of total RAM that the database server uses for shared memory buffers.  Valid range is 20-60 (float), which corresponds to 20% - 60%.  This setting adjusts the shared_buffers configuration value.
-     *
-     * @return self
      */
     public function setSharedBuffersPercentage(float $sharedBuffersPercentage): self
     {
@@ -1117,8 +1021,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PGBouncer connection pooling settings
-     *
-     * @return self
      */
     public function setPgbouncer(PgbouncerAdvancedConfig $pgbouncer): self
     {
@@ -1135,8 +1037,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * The maximum amount of memory, in MB, used by a query operation (such as a sort or hash table) before writing to temporary disk files. Default is 1MB + 0.075% of total RAM (up to 32MB).
-     *
-     * @return self
      */
     public function setWorkMem(int $workMem): self
     {
@@ -1153,8 +1053,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * TimescaleDB extension configuration values
-     *
-     * @return self
      */
     public function setTimescaledb(TimescaledbAdvancedConfig $timescaledb): self
     {
@@ -1171,8 +1069,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Synchronous replication type. Note that the service plan also needs to support synchronous replication.
-     *
-     * @return self
      */
     public function setSynchronousReplication(string $synchronousReplication): self
     {
@@ -1189,8 +1085,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Enable the pg_stat_monitor extension. <b>Enabling this extension will cause the cluster to be restarted.</b> When this extension is enabled, pg_stat_statements results for utility commands are unreliable.
-     *
-     * @return self
      */
     public function setStatMonitorEnable(bool $statMonitorEnable): self
     {
@@ -1207,8 +1101,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Number of seconds of master unavailability before triggering database failover to standby. The default value is 60.
-     *
-     * @return self
      */
     public function setMaxFailoverReplicationTimeLag(int $maxFailoverReplicationTimeLag): self
     {
@@ -1225,8 +1117,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * Sets the PostgreSQL maximum number of concurrent connections to the database server. This is a limited-release parameter. Contact your account team to confirm your eligibility. You cannot decrease this parameter value when set. For services with a read replica, first increase the read replica's value. After the change is applied to the replica, you can increase the primary service's value. Changing this parameter causes a service restart.
-     *
-     * @return self
      */
     public function setMaxConnections(int $maxConnections): self
     {
@@ -1243,8 +1133,6 @@ class PostgresAdvancedConfig extends \ArrayObject
     }
     /**
      * PostgreSQL maximum WAL size (MB) reserved for replication slots. If -1 is specified, replication slots may retain an unlimited amount of WAL files. The default is -1 (upstream default). wal_keep_size minimum WAL size setting takes precedence over this.
-     *
-     * @return self
      */
     public function setMaxSlotWalKeepSize(int $maxSlotWalKeepSize): self
     {

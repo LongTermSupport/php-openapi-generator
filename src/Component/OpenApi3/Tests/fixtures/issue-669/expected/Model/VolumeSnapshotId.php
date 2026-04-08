@@ -33,8 +33,6 @@ class VolumeSnapshotId extends \ArrayObject
     }
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
-     * @return self
      */
     public function setSnapshotId(string $snapshotId): self
     {

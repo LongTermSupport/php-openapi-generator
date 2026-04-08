@@ -45,8 +45,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * The clusterlint check that resulted in the diagnostic.
-     *
-     * @return self
      */
     public function setCheckName(string $checkName): self
     {
@@ -63,8 +61,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Can be one of error, warning or suggestion.
-     *
-     * @return self
      */
     public function setSeverity(string $severity): self
     {
@@ -81,8 +77,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Feedback about the object for users to fix.
-     *
-     * @return self
      */
     public function setMessage(string $message): self
     {
@@ -99,8 +93,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Metadata about the Kubernetes API object the diagnostic is reported on.
-     *
-     * @return self
      */
     public function setObject(ClusterlintResultsDiagnosticsItemObject $object): self
     {

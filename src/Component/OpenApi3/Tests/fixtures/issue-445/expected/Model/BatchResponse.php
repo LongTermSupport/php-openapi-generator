@@ -36,8 +36,6 @@ class BatchResponse
      * Rows in the response.
      *
      * @param list<BatchResponseRow> $rows
-     *
-     * @return self
      */
     public function setRows(array $rows): self
     {

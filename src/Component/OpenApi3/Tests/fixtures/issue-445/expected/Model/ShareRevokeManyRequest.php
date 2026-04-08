@@ -30,8 +30,6 @@ class ShareRevokeManyRequest
     }
     /**
      * @param list<string>|null $ids
-     *
-     * @return self
      */
     public function setIds(?array $ids): self
     {

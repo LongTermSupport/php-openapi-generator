@@ -100,8 +100,8 @@ class AuthenticationRegistryTest extends TestCase
         $request
             ->method('withHeader')
             ->willReturnCallback(function (string $name, string $value) use ($request): \PHPUnit\Framework\MockObject\MockObject {
-                $this->assertEquals('A', $name);
-                $this->assertEquals('A', $value);
+                self::assertSame('A', $name);
+                self::assertSame('A', $value);
 
                 return $request;
             })
@@ -131,14 +131,14 @@ class AuthenticationRegistryTest extends TestCase
             ->method('withHeader')
             ->willReturnOnConsecutiveCalls(
                 new ReturnCallback(function (string $name, string $value) use ($request): \PHPUnit\Framework\MockObject\MockObject {
-                    $this->assertEquals('A', $name);
-                    $this->assertEquals('A', $value);
+                    self::assertSame('A', $name);
+                    self::assertSame('A', $value);
 
                     return $request;
                 }),
                 new ReturnCallback(function (string $name, string $value) use ($request): \PHPUnit\Framework\MockObject\MockObject {
-                    $this->assertEquals('C', $name);
-                    $this->assertEquals('C', $value);
+                    self::assertSame('C', $name);
+                    self::assertSame('C', $value);
 
                     return $request;
                 }),

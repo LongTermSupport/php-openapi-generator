@@ -49,20 +49,20 @@ class MultipartNestedObjectRuntimeTest extends TestCase
         $endpoint = new Expected\MultipartNestedObject\Endpoint\PostFile($body);
         $result   = $endpoint->getBody($serializer, $streamFactory);
 
-        $this->assertIsArray($result);
-        $this->assertCount(2, $result);
+        self::assertIsArray($result);
+        self::assertCount(2, $result);
         $headers = $result[0];
         $stream  = $result[1];
         \assert(\is_array($headers));
-        $this->assertArrayHasKey('Content-Type', $headers);
+        self::assertArrayHasKey('Content-Type', $headers);
         \assert(\is_array($headers['Content-Type']));
         $contentType = $headers['Content-Type'];
-        $this->assertIsString($contentType[0]);
-        $this->assertStringContainsString('multipart/form-data', $contentType[0]);
-        $this->assertInstanceOf(\Psr\Http\Message\StreamInterface::class, $stream);
+        self::assertIsString($contentType[0]);
+        self::assertStringContainsString('multipart/form-data', $contentType[0]);
+        self::assertInstanceOf(\Psr\Http\Message\StreamInterface::class, $stream);
 
         $streamContent = \is_object($result[1]) && method_exists($result[1], '__toString') ? (string)$result[1] : '';
-        $this->assertStringContainsString('file-content', $streamContent);
-        $this->assertStringContainsString('{"itemId":42,"itemType":"document"}', $streamContent);
+        self::assertStringContainsString('file-content', $streamContent);
+        self::assertStringContainsString('{"itemId":42,"itemType":"document"}', $streamContent);
     }
 }

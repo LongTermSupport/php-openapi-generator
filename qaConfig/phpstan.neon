@@ -32,9 +32,6 @@ parameters:
         - ../qaConfig/PHPStan/Rules
     treatPhpDocTypesAsCertain: false
     ignoreErrors:
-        # PHPUnit assertion methods — static methods called as instance methods ($this->assertXxx).
-        # Stylistic choice; rewriting every test to self::assertX would be churn for zero benefit.
-        - identifier: staticMethod.dynamicCall
         # new static() in factory methods — intentional for inheritance support
         - identifier: new.static
         # Runtime template traits only used in generated code, not scanned source

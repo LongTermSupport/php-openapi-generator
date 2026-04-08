@@ -17,12 +17,12 @@ class UniqueVariableScopeTest extends TestCase
         $uniqueVariableScope = new UniqueVariableScope();
 
         $name = $uniqueVariableScope->getUniqueName('name');
-        $this->assertEquals('name', $name);
+        self::assertSame('name', $name);
 
         $name = $uniqueVariableScope->getUniqueName('name');
-        $this->assertEquals('name_1', $name);
+        self::assertSame('name_1', $name);
 
         $name = $uniqueVariableScope->getUniqueName('name');
-        $this->assertEquals('name_2', $name);
+        self::assertSame('name_2', $name);
     }
 }

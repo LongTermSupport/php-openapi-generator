@@ -54,20 +54,20 @@ class JaneOpenApiResourceTest extends TestCase
 
         $generatedData = [];
 
-        $this->assertEquals(\count($expectedFinder), \count($generatedFinder), 'Assert same files for ' . $testDirectory->getRealPath());
+        self::assertCount(\count($expectedFinder), $generatedFinder, 'Assert same files for ' . $testDirectory->getRealPath());
 
         foreach ($generatedFinder as $generatedFile) {
             $generatedData[$generatedFile->getRelativePathname()] = $generatedFile->getRealPath();
         }
 
         foreach ($expectedFinder as $expectedFile) {
-            $this->assertArrayHasKey($expectedFile->getRelativePathname(), $generatedData);
+            self::assertArrayHasKey($expectedFile->getRelativePathname(), $generatedData);
 
             if ($expectedFile->isFile()) {
                 $expectedPath = $expectedFile->getRealPath();
                 $actualPath   = $generatedData[$expectedFile->getRelativePathname()];
 
-                $this->assertEquals(
+                self::assertSame(
                     \Safe\file_get_contents($expectedPath),
                     \Safe\file_get_contents($actualPath),
                     'Expected ' . $expectedPath . ' got ' . $actualPath . ' in ' . $name
@@ -107,12 +107,12 @@ class JaneOpenApiResourceTest extends TestCase
         } catch (GetEndpointUnauthorizedException $getEndpointUnauthorizedException) {
             // getError() return type is non-nullable Error per the generated exception class,
             // so the catch reaching here proves the exception was constructed correctly.
-            $this->assertEquals(401, $getEndpointUnauthorizedException->getCode());
+            self::assertSame(401, $getEndpointUnauthorizedException->getCode());
         }
 
         // 3. Test
         $client   = Client::create(null, [new AuthenticationRegistry([new ApiKeyAuthAuthentication('api_key')])]);
         $response = $client->getEndpoint();
-        $this->assertNotNull($response);
+        self::assertNotNull($response);
     }
 }

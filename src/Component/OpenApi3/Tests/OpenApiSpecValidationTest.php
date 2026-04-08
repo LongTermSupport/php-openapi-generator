@@ -30,11 +30,11 @@ class OpenApiSpecValidationTest extends TestCase
         $raw    = \Safe\file_get_contents($specPath);
         $parsed = \Safe\json_decode($raw, true);
         if (!\is_array($parsed)) {
-            $this->fail(\sprintf('Spec at %s did not decode to an array', $specPath));
+            self::fail(\sprintf('Spec at %s did not decode to an array', $specPath));
         }
         $version = $parsed['openapi'] ?? null;
         if (\is_string($version) && !\str_starts_with($version, '3.1.')) {
-            $this->markTestIncomplete(
+            self::markTestIncomplete(
                 \sprintf('Spec at %s is OpenAPI %s, not 3.1.x. Needs upgrading.', $specPath, $version)
             );
         }

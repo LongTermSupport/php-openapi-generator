@@ -32,8 +32,6 @@ parameters:
         - ../qaConfig/PHPStan/Rules
     treatPhpDocTypesAsCertain: false
     ignoreErrors:
-        # new static() in factory methods — intentional for inheritance support
-        - identifier: new.static
         # Runtime template traits in Generator/Runtime/data/ are scanned by PHPStan
         # (per CLAUDE.md, to validate \-prefixed FQCN usage and PHP correctness)
         # but never loaded as classes — they are parsed as templates and copied

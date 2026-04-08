@@ -20,7 +20,7 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\JaneOpenApi as Comm
 use PhpParser\ParserFactory;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
-class JaneOpenApi extends CommonJaneOpenApi
+final class JaneOpenApi extends CommonJaneOpenApi
 {
     protected const OBJECT_NORMALIZER_CLASS = JsonSchema\Normalizer\JaneObjectNormalizer::class;
 

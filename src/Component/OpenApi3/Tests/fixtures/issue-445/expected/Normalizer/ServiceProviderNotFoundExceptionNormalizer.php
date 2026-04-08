@@ -29,7 +29,7 @@ class ServiceProviderNotFoundExceptionNormalizer implements DenormalizerInterfac
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ServiceProviderNotFoundException::class;
+        return is_object($data) && $data::class === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ServiceProviderNotFoundException::class;
     }
     /**
      * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ServiceProviderNotFoundException or a Reference.

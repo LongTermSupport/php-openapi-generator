@@ -29,7 +29,7 @@ class ProtectedBranchRequiredSignaturesNormalizer implements DenormalizerInterfa
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures::class;
+        return is_object($data) && $data::class === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures::class;
     }
     /**
      * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchRequiredSignatures or a Reference.

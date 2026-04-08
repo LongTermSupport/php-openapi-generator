@@ -1973,7 +1973,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && array_key_exists(get_class($data), $this->normalizers);
+        return is_object($data) && array_key_exists($data::class, $this->normalizers);
     }
     /**
      * @return array<string, mixed>|\ArrayObject<string, mixed>|bool|float|int|string|null
@@ -1984,7 +1984,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
         if (!is_object($data)) {
             throw new \LogicException('Expected object, got ' . get_debug_type($data));
         }
-        $normalizerClass = $this->normalizers[get_class($data)];
+        $normalizerClass = $this->normalizers[$data::class];
         $normalizer = $this->getNormalizer($normalizerClass);
         $result = $normalizer->normalize($data, $format, $context);
         return $result;

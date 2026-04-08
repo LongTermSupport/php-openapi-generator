@@ -29,7 +29,7 @@ class PollNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Model\Poll::class;
+        return is_object($data) && $data::class === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Model\Poll::class;
     }
     /**
      * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Model\Poll or a Reference.

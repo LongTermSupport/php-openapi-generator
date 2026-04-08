@@ -29,7 +29,7 @@ class ListItemAggregationRequestNormalizer implements DenormalizerInterface, Nor
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemAggregationRequest::class;
+        return is_object($data) && $data::class === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemAggregationRequest::class;
     }
     /**
      * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemAggregationRequest or a Reference.

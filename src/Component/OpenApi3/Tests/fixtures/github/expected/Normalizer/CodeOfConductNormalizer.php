@@ -29,7 +29,7 @@ class CodeOfConductNormalizer implements DenormalizerInterface, NormalizerInterf
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeOfConduct::class;
+        return is_object($data) && $data::class === \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeOfConduct::class;
     }
     /**
      * The denormalized result is either a \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\CodeOfConduct or a Reference.

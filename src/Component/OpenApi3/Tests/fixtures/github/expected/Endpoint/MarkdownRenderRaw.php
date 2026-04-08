@@ -46,7 +46,6 @@ class MarkdownRenderRaw extends \LongTermSupport\OpenApiGenerator\Component\Open
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
-        $body = (string) $response->getBody();
         if ($contentType !== null && 200 === $status) {
         }
         if (304 === $status) {

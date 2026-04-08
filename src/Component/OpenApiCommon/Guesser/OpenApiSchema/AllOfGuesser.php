@@ -31,7 +31,7 @@ class AllOfGuesser extends BaseAllOfGuesser
     protected function isObjectSchema(mixed $allOf): bool
     {
         if (!\is_object($allOf)) {
-            throw new LogicException(\sprintf('Expected object in allOf, got %s', \get_debug_type($allOf)));
+            throw new LogicException(\sprintf('Expected object in allOf, got %s', get_debug_type($allOf)));
         }
 
         return method_exists($allOf, 'getType') && 'object' === $allOf->getType();
@@ -43,7 +43,7 @@ class AllOfGuesser extends BaseAllOfGuesser
     protected function getAllOfSchemaProperties(mixed $allOf): ?array
     {
         if (!\is_object($allOf)) {
-            throw new LogicException(\sprintf('Expected object in allOf, got %s', \get_debug_type($allOf)));
+            throw new LogicException(\sprintf('Expected object in allOf, got %s', get_debug_type($allOf)));
         }
 
         // References have no inline properties; they are processed via their own guessClass() call

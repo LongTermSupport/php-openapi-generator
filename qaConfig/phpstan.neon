@@ -26,6 +26,7 @@ rules:
     # php-qa-ci rules — code quality
     - LTS\PHPQA\PHPStan\Rules\ForbidInlinePhpstanIgnoreRule
     - LTS\PHPQA\PHPStan\Rules\RequireDeclareStrictTypesRule
+    - LTS\PHPQA\PHPStan\Rules\RequireTypeSuffixRule
 
 parameters:
     scanDirectories:

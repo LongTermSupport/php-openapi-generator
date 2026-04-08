@@ -22,6 +22,7 @@ use PhpParser\Node\Expr;
 use PhpParser\Node\Name;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
+use PhpParser\NodeFinder;
 use Symfony\Component\Serializer\SerializerInterface;
 
 trait GetTransformResponseBodyTrait
@@ -29,10 +30,11 @@ trait GetTransformResponseBodyTrait
     /** @return array{0: Stmt\ClassMethod, 1: array<string>, 2: array<string>} */
     public function getTransformResponseBody(OperationGuess $operation, string $endpointName, GuessClass $guessClass, ExceptionGenerator $exceptionGenerator, Context $context): array
     {
-        $outputStatements = [
-            new Stmt\Expression(new Expr\Assign(new Expr\Variable('status'), new Expr\MethodCall(new Expr\Variable('response'), 'getStatusCode'))),
-            new Stmt\Expression(new Expr\Assign(new Expr\Variable('body'), new Expr\Cast\String_(new Expr\MethodCall(new Expr\Variable('response'), 'getBody')))),
-        ];
+        // Locals `$status` and `$body` are prepended at the end, only if the
+        // body statements actually reference them. Building the body first and
+        // then walking it for references avoids emitting dead assignments like
+        // `$body = (string) $response->getBody();` when nothing reads it.
+        $outputStatements = [];
 
         $registry = $context->getRegistry();
         if (!$registry instanceof Registry) {
@@ -180,6 +182,21 @@ trait GetTransformResponseBodyTrait
             }
         }
 
+        // Prepend local assignments only if referenced by the body. `$status`
+        // is referenced by per-status if-conditions and by the unexpected
+        // status throw; `$body` is referenced by deserialize/json_decode calls
+        // and by the unexpected status throw.
+        $prelude = [];
+        if ($this->statementsReference($outputStatements, 'status')) {
+            $prelude[] = new Stmt\Expression(new Expr\Assign(new Expr\Variable('status'), new Expr\MethodCall(new Expr\Variable('response'), 'getStatusCode')));
+        }
+
+        if ($this->statementsReference($outputStatements, 'body')) {
+            $prelude[] = new Stmt\Expression(new Expr\Assign(new Expr\Variable('body'), new Expr\Cast\String_(new Expr\MethodCall(new Expr\Variable('response'), 'getBody'))));
+        }
+
+        $outputStatements = array_merge($prelude, $outputStatements);
+
         [$returnTypeNode, $returnDocType] = $this->buildReturnType($outputTypes);
 
         // `@return` only adds info when the phpdoc type is narrower than the
@@ -188,7 +205,7 @@ trait GetTransformResponseBodyTrait
         // `array`). Everything else — `null`, `\Foo\Bar`, `\Foo\Bar|null`,
         // `mixed` — is expressed perfectly by the native return type and the
         // phpdoc restates nothing but noise.
-        $docAddsReturnInfo = str_contains($returnDocType, '<');
+        $docAddsReturnInfo = str_contains((string)$returnDocType, '<');
 
         $hasThrows  = [] !== $throwTypes;
         $throwsDoc  = implode('', array_map(static fn (string $value): string => ' * @throws ' . $value . "\n", $throwTypes));
@@ -202,12 +219,14 @@ trait GetTransformResponseBodyTrait
             if ($docAddsReturnInfo) {
                 $docLines[] = ' * @return ' . $returnDocType;
             }
+
             if ($hasThrows) {
                 // Trim trailing newline from $throwsDoc so we can re-join cleanly.
                 foreach (explode("\n", rtrim($throwsDoc, "\n")) as $throwLine) {
                     $docLines[] = $throwLine;
                 }
             }
+
             $docLines[] = ' */';
 
             $classMethodAttributes = [
@@ -225,6 +244,28 @@ trait GetTransformResponseBodyTrait
             'returnType' => $returnTypeNode,
             'stmts'      => $outputStatements,
         ], $classMethodAttributes), $outputTypes, $throwTypes];
+    }
+
+    /**
+     * Walk the given statement nodes and return true if any `$varName`
+     * variable reference appears anywhere in the subtree. Used to decide
+     * whether the generated `transformResponseBody()` needs its `$status` /
+     * `$body` local assignments at all.
+     *
+     * @param array<Stmt> $stmts
+     */
+    private function statementsReference(array $stmts, string $varName): bool
+    {
+        $finder = new NodeFinder();
+
+        $match = $finder->findFirst(
+            $stmts,
+            static fn (Node $node): bool => $node instanceof Expr\Variable
+                && \is_string($node->name)
+                && $varName === $node->name
+        );
+
+        return $match instanceof Node;
     }
 
     /** @return array{0: array<string>, 1: array<string>, 2: array<Stmt>} */

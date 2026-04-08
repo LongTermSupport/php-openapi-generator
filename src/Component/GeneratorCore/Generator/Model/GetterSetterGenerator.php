@@ -130,6 +130,7 @@ trait GetterSetterGenerator
             foreach (array_map(rtrim(...), explode("\n", $property->getDescription())) as $line) {
                 $descriptionLines[] = ' * ' . $line;
             }
+
             $sections[] = $descriptionLines;
         }
 
@@ -163,6 +164,7 @@ trait GetterSetterGenerator
             foreach (array_map(rtrim(...), explode("\n", $property->getDescription())) as $line) {
                 $descriptionLines[] = ' * ' . $line;
             }
+
             $sections[] = $descriptionLines;
         }
 
@@ -192,10 +194,12 @@ trait GetterSetterGenerator
             if ($index > 0) {
                 $lines[] = ' *';
             }
+
             foreach ($section as $line) {
                 $lines[] = $line;
             }
         }
+
         $lines[] = ' */';
 
         return implode("\n", $lines);

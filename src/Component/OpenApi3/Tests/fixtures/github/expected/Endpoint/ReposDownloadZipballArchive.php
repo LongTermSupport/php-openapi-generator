@@ -46,7 +46,6 @@ class ReposDownloadZipballArchive extends \LongTermSupport\OpenApiGenerator\Comp
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
-        $body = (string) $response->getBody();
         if (302 === $status) {
             return null;
         }

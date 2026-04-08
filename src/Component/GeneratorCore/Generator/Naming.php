@@ -14,26 +14,6 @@ class Naming
 {
     use InflectorTrait;
 
-    /**
-     * Method names that ArrayObject defines and that generated accessors must
-     * not override with an incompatible signature. When a model extends
-     * \ArrayObject and a property's accessor would land on one of these names,
-     * we rename it (see {@see self::getReservedSafeMethodName()}). The
-     * `#[\ReturnTypeWillChange]` attribute is NOT a fix — it only suppresses
-     * PHP's runtime deprecation, it does NOT make the override covariant, so
-     * PHPStan still reports `method.childReturnType`.
-     *
-     * @var array<string, true>
-     */
-    private const array ARRAY_OBJECT_RESERVED_METHODS = [
-        'getFlags'         => true,
-        'setFlags'         => true,
-        'getIterator'      => true,
-        'setIteratorClass' => true,
-        'getIteratorClass' => true,
-        'getArrayCopy'     => true,
-    ];
-
     public const BAD_CLASS_NAME_REGEX = '/^
         ([0-9])|
         \b(
@@ -54,6 +34,26 @@ class Naming
             (bool|enum|false|finally|float|fn|int|iterable|match|mixed|never|null|object|parent|readonly|self|string|true|void|yield)
         )\b
     /ix';
+
+    /**
+     * Method names that ArrayObject defines and that generated accessors must
+     * not override with an incompatible signature. When a model extends
+     * \ArrayObject and a property's accessor would land on one of these names,
+     * we rename it (see {@see self::getReservedSafeMethodName()}). The
+     * `#[\ReturnTypeWillChange]` attribute is NOT a fix — it only suppresses
+     * PHP's runtime deprecation, it does NOT make the override covariant, so
+     * PHPStan still reports `method.childReturnType`.
+     *
+     * @var array<string, true>
+     */
+    private const array ARRAY_OBJECT_RESERVED_METHODS = [
+        'getFlags'         => true,
+        'setFlags'         => true,
+        'getIterator'      => true,
+        'setIteratorClass' => true,
+        'getIteratorClass' => true,
+        'getArrayCopy'     => true,
+    ];
 
     public function getPropertyName(string $name): string
     {

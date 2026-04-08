@@ -34,7 +34,7 @@ class OpenApiSpecValidationTest extends TestCase
         }
 
         $version = $parsed['openapi'] ?? null;
-        if (\is_string($version) && !\str_starts_with($version, '3.1.')) {
+        if (\is_string($version) && !str_starts_with($version, '3.1.')) {
             self::markTestIncomplete(
                 \sprintf('Spec at %s is OpenAPI %s, not 3.1.x. Needs upgrading.', $specPath, $version)
             );

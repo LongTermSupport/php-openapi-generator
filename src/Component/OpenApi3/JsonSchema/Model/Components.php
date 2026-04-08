@@ -17,42 +17,42 @@ class Components extends ArrayObject
     protected $initialized = [];
 
     /**
-     * @phpstan-var \ArrayObject<string, Reference|Schema>|null
+     * @phpstan-var ArrayObject<string, Reference|Schema>|null
      */
     protected ?ArrayObject $schemas = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, Reference|Response>|null
+     * @phpstan-var ArrayObject<string, Reference|Response>|null
      */
     protected ?ArrayObject $responses = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, Parameter|Reference>|null
+     * @phpstan-var ArrayObject<string, Parameter|Reference>|null
      */
     protected ?ArrayObject $parameters = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, Example|Reference>|null
+     * @phpstan-var ArrayObject<string, Example|Reference>|null
      */
     protected ?ArrayObject $examples = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, Reference|RequestBody>|null
+     * @phpstan-var ArrayObject<string, Reference|RequestBody>|null
      */
     protected ?ArrayObject $requestBodies = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, Header|Reference>|null
+     * @phpstan-var ArrayObject<string, Header|Reference>|null
      */
     protected ?ArrayObject $headers = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, APIKeySecurityScheme|HTTPSecurityScheme|OAuth2SecurityScheme|OpenIdConnectSecurityScheme|Reference>|null
+     * @phpstan-var ArrayObject<string, APIKeySecurityScheme|HTTPSecurityScheme|OAuth2SecurityScheme|OpenIdConnectSecurityScheme|Reference>|null
      */
     protected ?ArrayObject $securitySchemes = null;
 
     /**
-     * @phpstan-var \ArrayObject<string, Link|Reference>|null
+     * @phpstan-var ArrayObject<string, Link|Reference>|null
      */
     protected ?ArrayObject $links = null;
 

@@ -61,7 +61,7 @@ class GetUsers extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if ($contentType !== null && (200 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return json_decode($body);
         }
         return null;

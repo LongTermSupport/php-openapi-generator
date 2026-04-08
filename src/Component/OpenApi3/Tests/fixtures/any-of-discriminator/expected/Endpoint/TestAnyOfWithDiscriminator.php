@@ -42,10 +42,10 @@ class TestAnyOfWithDiscriminator extends \LongTermSupport\OpenApiGenerator\Compo
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if ($contentType !== null && (200 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBar', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBar::class, 'response body');
         }
-        if ($contentType !== null && (400 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (400 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\TestAnyOfWithDiscriminatorBadRequestException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBarWithMapping', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBarWithMapping::class, 'response body'), $response);
         }
         return null;

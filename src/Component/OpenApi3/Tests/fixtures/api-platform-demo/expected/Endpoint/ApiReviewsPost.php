@@ -70,16 +70,16 @@ class ApiReviewsPost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && 201 === $status) {
-            if (mb_strpos(strtolower($contentType), 'application/ld+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/ld+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/hal+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/hal+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/vnd.api+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/vnd.api+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead::class, 'response body');
             }
         }

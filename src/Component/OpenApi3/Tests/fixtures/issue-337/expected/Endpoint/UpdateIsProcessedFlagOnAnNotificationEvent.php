@@ -75,19 +75,19 @@ class UpdateIsProcessedFlagOnAnNotificationEvent extends \LongTermSupport\OpenAp
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if ($contentType !== null && (204 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (204 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return json_decode($body);
         }
-        if ($contentType !== null && (400 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (400 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventBadRequestException($response);
         }
-        if ($contentType !== null && (401 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (401 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventUnauthorizedException($response);
         }
-        if ($contentType !== null && (403 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventForbiddenException($response);
         }
-        if ($contentType !== null && (404 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateIsProcessedFlagOnAnNotificationEventNotFoundException($response);
         }
         return null;

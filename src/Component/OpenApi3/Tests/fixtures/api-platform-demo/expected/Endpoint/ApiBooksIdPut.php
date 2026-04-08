@@ -74,16 +74,16 @@ class ApiBooksIdPut extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && 200 === $status) {
-            if (mb_strpos(strtolower($contentType), 'application/ld+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/ld+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/hal+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/hal+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/vnd.api+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/vnd.api+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead::class, 'response body');
             }
         }

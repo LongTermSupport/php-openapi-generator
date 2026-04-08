@@ -78,16 +78,16 @@ class PutMonitoringPortfoliosPortfolioIdEventRulesCountryCode extends \LongTermS
         if (204 === $status) {
             return null;
         }
-        if ($contentType !== null && (400 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (400 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PutMonitoringPortfoliosPortfolioIdEventRulesCountryCodeBadRequestException($response);
         }
-        if ($contentType !== null && (401 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (401 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PutMonitoringPortfoliosPortfolioIdEventRulesCountryCodeUnauthorizedException($response);
         }
-        if ($contentType !== null && (403 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PutMonitoringPortfoliosPortfolioIdEventRulesCountryCodeForbiddenException($response);
         }
-        if ($contentType !== null && (404 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PutMonitoringPortfoliosPortfolioIdEventRulesCountryCodeNotFoundException($response);
         }
         return null;

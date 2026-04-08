@@ -79,14 +79,14 @@ class FindTweetsById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if ($contentType !== null && (200 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
+        if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Model\TweetLookupResponse', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Model\TweetLookupResponse::class, 'response body');
         }
         if ($contentType !== null) {
-            if (mb_strpos(strtolower($contentType), 'application/json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/json')) {
                 return json_decode($body);
             }
-            if (mb_strpos(strtolower($contentType), 'application/problem+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/problem+json')) {
                 return json_decode($body);
             }
         }

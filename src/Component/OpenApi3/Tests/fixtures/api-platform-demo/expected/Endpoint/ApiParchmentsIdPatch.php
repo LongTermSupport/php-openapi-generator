@@ -68,16 +68,16 @@ class ApiParchmentsIdPatch extends \LongTermSupport\OpenApiGenerator\Component\O
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && 200 === $status) {
-            if (mb_strpos(strtolower($contentType), 'application/ld+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/ld+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/hal+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/hal+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/vnd.api+json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/vnd.api+json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment::class, 'response body');
             }
-            if (mb_strpos(strtolower($contentType), 'application/json') !== false) {
+            if (str_contains(strtolower($contentType), 'application/json')) {
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment::class, 'response body');
             }
         }

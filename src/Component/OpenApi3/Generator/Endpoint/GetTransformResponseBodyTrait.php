@@ -275,17 +275,14 @@ trait GetTransformResponseBodyTrait
                 }
 
                 $statements[] = new Stmt\If_(
-                    new Expr\BinaryOp\NotIdentical(
-                        new Expr\FuncCall(new Name('mb_strpos'), [
-                            new Node\Arg(
-                                new Expr\FuncCall(new Name('strtolower'), [
-                                    new Node\Arg(new Expr\Variable('contentType')),
-                                ]),
-                            ),
-                            new Node\Arg(new Scalar\String_(strtolower($contentType))),
-                        ]),
-                        new Expr\ConstFetch(new Name('false'))
-                    ),
+                    new Expr\FuncCall(new Name('str_contains'), [
+                        new Node\Arg(
+                            new Expr\FuncCall(new Name('strtolower'), [
+                                new Node\Arg(new Expr\Variable('contentType')),
+                            ]),
+                        ),
+                        new Node\Arg(new Scalar\String_(strtolower($contentType))),
+                    ]),
                     [
                         'stmts' => [$returnStatement],
                     ]

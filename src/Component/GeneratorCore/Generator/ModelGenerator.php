@@ -78,7 +78,12 @@ class ModelGenerator implements GeneratorInterface
     /** @return array<int, Stmt\ClassMethod> */
     protected function doCreateClassMethods(ClassGuess $classGuess, Property $property, string $namespace, bool $strict): array
     {
-        return [$this->createGetter($property, $namespace, $strict), $this->createSetter($property, $namespace, $strict)];
+        $extendsArrayObject = $classGuess->willExtendArrayObject();
+
+        return [
+            $this->createGetter($property, $namespace, $strict, $extendsArrayObject),
+            $this->createSetter($property, $namespace, $strict, true, $extendsArrayObject),
+        ];
     }
 
     /**

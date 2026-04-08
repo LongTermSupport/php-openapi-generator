@@ -234,8 +234,7 @@ class DomainRecordCname extends \ArrayObject
      * An unsigned integer between 0-255 used for CAA records.
      *
      */
-    #[\ReturnTypeWillChange]
-    public function getFlags(): ?int
+    public function getFlagsField(): ?int
     {
         return $this->flags;
     }
@@ -245,8 +244,7 @@ class DomainRecordCname extends \ArrayObject
      *
      * @return self
      */
-    #[\ReturnTypeWillChange]
-    public function setFlags(?int $flags): self
+    public function setFlagsField(?int $flags): self
     {
         $this->initialized['flags'] = true;
         $this->flags = $flags;

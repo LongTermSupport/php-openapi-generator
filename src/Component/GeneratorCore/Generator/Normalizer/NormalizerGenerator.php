@@ -118,9 +118,13 @@ trait NormalizerGenerator
             $this->normalizeMethodStatements($dataVariable, $classGuess, $context)
         );
 
+        $extendsArrayObject = $classGuess->willExtendArrayObject();
+
         foreach ($classGuess->getProperties() as $property) {
             if (!$property->isReadOnly()) {
-                $propertyVar = new Expr\MethodCall($objectVariable, $this->getNaming()->getPrefixedMethodName('get', $property->getAccessorName()));
+                $getterName  = $this->getNaming()->getPrefixedMethodName('get', $property->getAccessorName());
+                $getterName  = $this->getNaming()->getReservedSafeMethodName($getterName, $extendsArrayObject);
+                $propertyVar = new Expr\MethodCall($objectVariable, $getterName);
 
                 // PHPStan doesn't narrow method-call return types through conditions.
                 // For nullable properties, assign the getter to a local variable so that

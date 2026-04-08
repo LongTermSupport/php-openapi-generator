@@ -14,6 +14,26 @@ class Naming
 {
     use InflectorTrait;
 
+    /**
+     * Method names that ArrayObject defines and that generated accessors must
+     * not override with an incompatible signature. When a model extends
+     * \ArrayObject and a property's accessor would land on one of these names,
+     * we rename it (see {@see self::getReservedSafeMethodName()}). The
+     * `#[\ReturnTypeWillChange]` attribute is NOT a fix — it only suppresses
+     * PHP's runtime deprecation, it does NOT make the override covariant, so
+     * PHPStan still reports `method.childReturnType`.
+     *
+     * @var array<string, true>
+     */
+    private const ARRAY_OBJECT_RESERVED_METHODS = [
+        'getFlags'         => true,
+        'setFlags'         => true,
+        'getIterator'      => true,
+        'setIteratorClass' => true,
+        'getIteratorClass' => true,
+        'getArrayCopy'     => true,
+    ];
+
     public const BAD_CLASS_NAME_REGEX = '/^
         ([0-9])|
         \b(
@@ -71,6 +91,26 @@ class Naming
         // since it's prefixed, it doesn't require to check if it start with a number
 
         return \sprintf('%s%s', $prefix, $this->getInflector()->classify($name));
+    }
+
+    /**
+     * Suffix the given accessor name with `Field` if (a) the model class extends
+     * \ArrayObject and (b) the accessor name would override an ArrayObject method
+     * with a different signature. Otherwise the original name is returned
+     * unchanged. Centralised here so {@see GetterSetterGenerator}, the normalizer
+     * generator, and the denormalizer generator all agree on the renamed name.
+     */
+    public function getReservedSafeMethodName(string $methodName, bool $extendsArrayObject): string
+    {
+        if (!$extendsArrayObject) {
+            return $methodName;
+        }
+
+        if (!isset(self::ARRAY_OBJECT_RESERVED_METHODS[$methodName])) {
+            return $methodName;
+        }
+
+        return $methodName . 'Field';
     }
 
     public function getClassName(string $name): string

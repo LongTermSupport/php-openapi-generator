@@ -37,14 +37,5 @@ parameters:
         - identifier: staticMethod.dynamicCall
         # new static() in factory methods — intentional for inheritance support
         - identifier: new.static
-        # issue-669 fixture: model has a `flags` property which collides with
-        # ArrayObject::getFlags(): int. The model emits getFlags(): ?int which
-        # is not covariant. This is a real generator template bug — when a
-        # property name collides with an ArrayObject built-in method, the
-        # generator should rename or skip the accessor. Until that's fixed,
-        # the issue-669 fixture must ignore this identifier.
-        -
-            identifier: method.childReturnType
-            path: ../src/Component/OpenApi3/Tests/fixtures/issue-669/expected/Model/*
         # Runtime template traits only used in generated code, not scanned source
         - identifier: trait.unused

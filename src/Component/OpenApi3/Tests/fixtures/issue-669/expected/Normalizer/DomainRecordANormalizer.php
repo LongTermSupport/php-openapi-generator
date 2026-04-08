@@ -81,7 +81,7 @@ class DomainRecordANormalizer implements DenormalizerInterface, NormalizerInterf
             unset($data['weight']);
         }
         if (\array_key_exists('flags', $data)) {
-            $object->setFlags(TypeValidator::assertNullableInt($data['flags'], 'flags'));
+            $object->setFlagsField(TypeValidator::assertNullableInt($data['flags'], 'flags'));
             unset($data['flags']);
         }
         if (\array_key_exists('tag', $data)) {
@@ -127,7 +127,7 @@ class DomainRecordANormalizer implements DenormalizerInterface, NormalizerInterf
         if ($data->isInitialized('weight') && null !== $val_2) {
             $dataArray['weight'] = $val_2;
         }
-        $val_3 = $data->getFlags();
+        $val_3 = $data->getFlagsField();
         if ($data->isInitialized('flags') && null !== $val_3) {
             $dataArray['flags'] = $val_3;
         }

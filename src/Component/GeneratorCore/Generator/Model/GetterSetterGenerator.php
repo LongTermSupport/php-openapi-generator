@@ -19,28 +19,11 @@ use PhpParser\Node\Stmt;
 trait GetterSetterGenerator
 {
     /**
-     * ArrayObject methods that generated getters/setters may collide with.
-     * When a collision is detected, #[\ReturnTypeWillChange] is added to
-     * suppress PHP's tentative return type deprecation and PHPStan's
-     * method.tentativeReturnType error.
-     *
-     * @var array<string, true>
-     */
-    private const ARRAY_OBJECT_METHODS = [
-        'getFlags'         => true,
-        'setFlags'         => true,
-        'getIterator'      => true,
-        'setIteratorClass' => true,
-        'getIteratorClass' => true,
-        'getArrayCopy'     => true,
-    ];
-
-    /**
      * The naming service.
      */
     abstract protected function getNaming(): Naming;
 
-    protected function createGetter(Property $property, string $namespace, bool $strict): Stmt\ClassMethod
+    protected function createGetter(Property $property, string $namespace, bool $strict, bool $extendsArrayObject = false): Stmt\ClassMethod
     {
         $returnType = $property->getType()->getTypeHint($namespace);
 
@@ -51,13 +34,7 @@ trait GetterSetterGenerator
         }
 
         $methodName = $this->getNaming()->getPrefixedMethodName('get', $property->getAccessorName());
-
-        $attrGroups = [];
-        if (isset(self::ARRAY_OBJECT_METHODS[$methodName])) {
-            $attrGroups[] = new \PhpParser\Node\AttributeGroup([
-                new \PhpParser\Node\Attribute(new Name\FullyQualified('ReturnTypeWillChange')),
-            ]);
-        }
+        $methodName = $this->getNaming()->getReservedSafeMethodName($methodName, $extendsArrayObject);
 
         $attributes = [];
         $doc        = $this->createGetterDoc($property, $namespace, $strict);
@@ -69,7 +46,6 @@ trait GetterSetterGenerator
             $methodName,
             [
                 'flags'      => Modifiers::PUBLIC,
-                'attrGroups' => $attrGroups,
                 'stmts'      => [
                     new Stmt\Return_(
                         new Expr\PropertyFetch(new Expr\Variable('this'), $property->getPhpName())
@@ -81,7 +57,7 @@ trait GetterSetterGenerator
         );
     }
 
-    protected function createSetter(Property $property, string $namespace, bool $strict, bool $fluent = true): Stmt\ClassMethod
+    protected function createSetter(Property $property, string $namespace, bool $strict, bool $fluent = true, bool $extendsArrayObject = false): Stmt\ClassMethod
     {
         $setType = $property->getType()->getTypeHint($namespace);
 
@@ -112,13 +88,7 @@ trait GetterSetterGenerator
         }
 
         $methodName = $this->getNaming()->getPrefixedMethodName('set', $property->getAccessorName());
-
-        $attrGroups = [];
-        if (isset(self::ARRAY_OBJECT_METHODS[$methodName])) {
-            $attrGroups[] = new \PhpParser\Node\AttributeGroup([
-                new \PhpParser\Node\Attribute(new Name\FullyQualified('ReturnTypeWillChange')),
-            ]);
-        }
+        $methodName = $this->getNaming()->getReservedSafeMethodName($methodName, $extendsArrayObject);
 
         $attributes = [];
         $doc        = $this->createSetterDoc($property, $namespace, $strict, $fluent);
@@ -130,7 +100,6 @@ trait GetterSetterGenerator
             $methodName,
             [
                 'flags'      => Modifiers::PUBLIC,
-                'attrGroups' => $attrGroups,
                 'params'     => [
                     new Param(
                         new Expr\Variable($property->getPhpName()),

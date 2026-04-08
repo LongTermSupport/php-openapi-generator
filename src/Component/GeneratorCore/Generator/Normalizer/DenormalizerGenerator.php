@@ -142,7 +142,8 @@ trait DenormalizerGenerator
             ]]);
         }
 
-        $unset = [] !== $classGuess->getExtensionsType();
+        $unset              = [] !== $classGuess->getExtensionsType();
+        $extendsArrayObject = $classGuess->willExtendArrayObject();
 
         $primitiveTypes = [Type::TYPE_STRING, Type::TYPE_INTEGER, Type::TYPE_FLOAT, Type::TYPE_BOOLEAN];
 
@@ -153,6 +154,9 @@ trait DenormalizerGenerator
                 new Arg(new Scalar\String_($property->getName())),
                 new Arg($dataVariable),
             ]);
+
+            $setterName = $this->getNaming()->getPrefixedMethodName('set', $property->getAccessorName());
+            $setterName = $this->getNaming()->getReservedSafeMethodName($setterName, $extendsArrayObject);
 
             if (\in_array($property->getType()->getName(), $primitiveTypes, true)) {
                 // Primitive types: use TypeValidator for clean type assertion with clear error messages.
@@ -172,7 +176,7 @@ trait DenormalizerGenerator
                 $mutatorStmt = [
                     new Stmt\Expression(new Expr\MethodCall(
                         $objectVariable,
-                        $this->getNaming()->getPrefixedMethodName('set', $property->getAccessorName()),
+                        $setterName,
                         [new Arg($validatedExpr)],
                     )),
                 ];
@@ -197,7 +201,7 @@ trait DenormalizerGenerator
                 $mutatorStmt = array_merge($denormalizationStatements, [
                     new Stmt\Expression(new Expr\MethodCall(
                         $objectVariable,
-                        $this->getNaming()->getPrefixedMethodName('set', $property->getAccessorName()),
+                        $setterName,
                         [new Arg($outputVar)],
                     )),
                 ], $unset ? [new Stmt\Unset_([$propertyVar])] : []);
@@ -228,7 +232,7 @@ trait DenormalizerGenerator
                     $statements[] = new Stmt\ElseIf_($invertCondition, [
                         new Stmt\Expression(new Expr\MethodCall(
                             $objectVariable,
-                            $this->getNaming()->getPrefixedMethodName('set', $property->getAccessorName()),
+                            $setterName,
                             [new Arg(new Expr\ConstFetch(new Name('null')))],
                         )),
                     ]);

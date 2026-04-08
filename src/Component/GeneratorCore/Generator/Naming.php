@@ -25,7 +25,7 @@ class Naming
      *
      * @var array<string, true>
      */
-    private const ARRAY_OBJECT_RESERVED_METHODS = [
+    private const array ARRAY_OBJECT_RESERVED_METHODS = [
         'getFlags'         => true,
         'setFlags'         => true,
         'getIterator'      => true,

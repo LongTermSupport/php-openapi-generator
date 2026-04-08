@@ -36,7 +36,7 @@ final class JaneOpenApi extends CommonJaneOpenApi
             throw new LogicException('Expected DenormalizerInterface, got ' . get_debug_type($serializer));
         }
 
-        return new static(
+        return new self(
             SchemaParser::class,
             GuesserFactory::create($serializer, $options),
             isset($options['strict']) ? (bool)$options['strict'] : true

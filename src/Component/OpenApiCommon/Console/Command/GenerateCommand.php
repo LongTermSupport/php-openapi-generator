@@ -115,6 +115,7 @@ class GenerateCommand extends BaseGenerateCommand
                         $type                  = mb_strtolower((string)$rawType);
                         $typeResolvers[$type]  = $this->formatClassName(\is_scalar($class) ? (string)$class : '');
                     }
+
                     continue;
                 }
 

@@ -32,6 +32,7 @@ class OpenApiSpecValidationTest extends TestCase
         if (!\is_array($parsed)) {
             self::fail(\sprintf('Spec at %s did not decode to an array', $specPath));
         }
+
         $version = $parsed['openapi'] ?? null;
         if (\is_string($version) && !\str_starts_with($version, '3.1.')) {
             self::markTestIncomplete(

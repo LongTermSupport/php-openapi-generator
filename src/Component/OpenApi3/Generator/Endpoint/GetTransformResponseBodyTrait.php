@@ -487,6 +487,7 @@ trait GetTransformResponseBodyTrait
                     $phpTypes[]      = new Node\Identifier('null');
                     $seenPhp['null'] = true;
                 }
+
                 $docTypes[] = 'null';
                 continue;
             }
@@ -496,6 +497,7 @@ trait GetTransformResponseBodyTrait
                     $phpTypes[]       = new Node\Identifier('array');
                     $seenPhp['array'] = true;
                 }
+
                 $docTypes[] = 'list<' . substr($type, 0, -2) . '>';
                 continue;
             }
@@ -505,6 +507,7 @@ trait GetTransformResponseBodyTrait
                 $phpTypes[]     = new Name\FullyQualified($fqcn);
                 $seenPhp[$fqcn] = true;
             }
+
             $docTypes[] = $type;
         }
 

@@ -31,7 +31,6 @@ class ShareDataBasic extends ShareDataBase
     protected array $internalRecipients;
     /**
      * Language of share.
-     *
      */
     protected ?string $languageCode = null;
     /**
@@ -80,7 +79,6 @@ class ShareDataBasic extends ShareDataBase
     }
     /**
      * Language of share.
-     *
      */
     public function getLanguageCode(): ?string
     {
@@ -88,7 +86,6 @@ class ShareDataBasic extends ShareDataBase
     }
     /**
      * Language of share.
-     *
      *
      * @return self
      */

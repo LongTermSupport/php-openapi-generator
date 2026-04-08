@@ -22,7 +22,6 @@ class CompanyEventsResponse extends \ArrayObject
     }
     /**
      * The total number of events returned for the given company.
-     *
      */
     protected float $totalCount;
     /**
@@ -31,12 +30,10 @@ class CompanyEventsResponse extends \ArrayObject
     protected array $data;
     /**
      * Paging parameters.
-     *
      */
     protected Paging $paging;
     /**
      * The total number of events returned for the given company.
-     *
      */
     public function getTotalCount(): float
     {
@@ -44,7 +41,6 @@ class CompanyEventsResponse extends \ArrayObject
     }
     /**
      * The total number of events returned for the given company.
-     *
      *
      * @return self
      */
@@ -74,7 +70,6 @@ class CompanyEventsResponse extends \ArrayObject
     }
     /**
      * Paging parameters.
-     *
      */
     public function getPaging(): Paging
     {
@@ -82,7 +77,6 @@ class CompanyEventsResponse extends \ArrayObject
     }
     /**
      * Paging parameters.
-     *
      *
      * @return self
      */

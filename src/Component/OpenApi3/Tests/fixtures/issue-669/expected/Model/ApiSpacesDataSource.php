@@ -22,18 +22,15 @@ class ApiSpacesDataSource extends \ArrayObject
     }
     /**
      * Spaces bucket name
-     *
      */
     protected string $bucketName;
     protected string $itemPath;
     /**
      * Region of bucket
-     *
      */
     protected string $region;
     /**
      * Spaces bucket name
-     *
      */
     public function getBucketName(): string
     {
@@ -41,7 +38,6 @@ class ApiSpacesDataSource extends \ArrayObject
     }
     /**
      * Spaces bucket name
-     *
      *
      * @return self
      */
@@ -63,7 +59,6 @@ class ApiSpacesDataSource extends \ArrayObject
     }
     /**
      * Region of bucket
-     *
      */
     public function getRegion(): string
     {
@@ -71,7 +66,6 @@ class ApiSpacesDataSource extends \ArrayObject
     }
     /**
      * Region of bucket
-     *
      *
      * @return self
      */

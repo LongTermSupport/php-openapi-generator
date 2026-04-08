@@ -22,13 +22,11 @@ class Installation extends \ArrayObject
     }
     /**
      * The ID of the installation.
-     *
      */
     protected int $id;
     protected SimpleUser|Enterprise|null $account = null;
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      */
     protected string $repositorySelection;
     protected string $accessTokensUrl;
@@ -37,7 +35,6 @@ class Installation extends \ArrayObject
     protected int $appId;
     /**
      * The ID of the user or organization this token is being scoped to.
-     *
      */
     protected int $targetId;
     protected string $targetType;
@@ -55,7 +52,6 @@ class Installation extends \ArrayObject
     protected ?string $contactEmail = null;
     /**
      * The ID of the installation.
-     *
      */
     public function getId(): int
     {
@@ -63,7 +59,6 @@ class Installation extends \ArrayObject
     }
     /**
      * The ID of the installation.
-     *
      *
      * @return self
      */
@@ -85,7 +80,6 @@ class Installation extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      */
     public function getRepositorySelection(): string
     {
@@ -93,7 +87,6 @@ class Installation extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      *
      * @return self
      */
@@ -145,7 +138,6 @@ class Installation extends \ArrayObject
     }
     /**
      * The ID of the user or organization this token is being scoped to.
-     *
      */
     public function getTargetId(): int
     {
@@ -153,7 +145,6 @@ class Installation extends \ArrayObject
     }
     /**
      * The ID of the user or organization this token is being scoped to.
-     *
      *
      * @return self
      */

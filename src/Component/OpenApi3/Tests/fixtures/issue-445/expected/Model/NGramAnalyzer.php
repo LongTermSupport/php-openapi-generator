@@ -19,17 +19,14 @@ class NGramAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: NGram
-     *
      */
     protected mixed $type = null;
     /**
      * The suffix for the analyzed field: ngram.
-     *
      */
     protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: NGram
-     *
      */
     public function getType(): mixed
     {
@@ -37,7 +34,6 @@ class NGramAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: NGram
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class NGramAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: ngram.
-     *
      */
     public function getFieldSuffix(): ?string
     {
@@ -57,7 +52,6 @@ class NGramAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: ngram.
-     *
      *
      * @return self
      */

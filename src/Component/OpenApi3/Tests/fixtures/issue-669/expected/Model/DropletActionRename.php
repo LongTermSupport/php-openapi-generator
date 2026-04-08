@@ -22,17 +22,14 @@ class DropletActionRename extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     /**
      * The new name for the Droplet.
-     *
      */
     protected string $name;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class DropletActionRename extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DropletActionRename extends \ArrayObject
     }
     /**
      * The new name for the Droplet.
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class DropletActionRename extends \ArrayObject
     }
     /**
      * The new name for the Droplet.
-     *
      *
      * @return self
      */

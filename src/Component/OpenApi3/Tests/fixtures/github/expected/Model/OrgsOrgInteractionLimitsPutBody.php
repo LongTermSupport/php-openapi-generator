@@ -22,12 +22,10 @@ class OrgsOrgInteractionLimitsPutBody extends \ArrayObject
     }
     /**
      * Specifies the group of GitHub users who can comment, open issues, or create pull requests in public repositories for the given organization. Must be one of: `existing_users`, `contributors_only`, or `collaborators_only`.
-     *
      */
     protected string $limit;
     /**
      * Specifies the group of GitHub users who can comment, open issues, or create pull requests in public repositories for the given organization. Must be one of: `existing_users`, `contributors_only`, or `collaborators_only`.
-     *
      */
     public function getLimit(): string
     {
@@ -35,7 +33,6 @@ class OrgsOrgInteractionLimitsPutBody extends \ArrayObject
     }
     /**
      * Specifies the group of GitHub users who can comment, open issues, or create pull requests in public repositories for the given organization. Must be one of: `existing_users`, `contributors_only`, or `collaborators_only`.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on. Only not analyzed fields are supported.
-     *
      */
     protected string $field;
     /**
      * It defines how many term buckets should be returned out of the overall terms list.
-     *
      */
     protected ?int $size = null;
     /**
@@ -41,7 +39,6 @@ class TermsRelationAggregator extends AggregatorBase
     protected ?array $excludes = null;
     /**
      * Limits the possible returned aggregation values by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -52,12 +49,10 @@ class TermsRelationAggregator extends AggregatorBase
     protected ?array $searchFields = null;
     /**
      * Type of the item target of the relation. It is used to resolve the target ID.
-     *
      */
     protected mixed $documentType = null;
     /**
      * The field's ID to execute the aggregation on. Only not analyzed fields are supported.
-     *
      */
     public function getField(): string
     {
@@ -65,7 +60,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on. Only not analyzed fields are supported.
-     *
      *
      * @return self
      */
@@ -77,7 +71,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * It defines how many term buckets should be returned out of the overall terms list.
-     *
      */
     public function getSize(): ?int
     {
@@ -85,7 +78,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * It defines how many term buckets should be returned out of the overall terms list.
-     *
      *
      * @return self
      */
@@ -141,7 +133,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * Limits the possible returned aggregation values by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -149,7 +140,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * Limits the possible returned aggregation values by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -183,7 +173,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * Type of the item target of the relation. It is used to resolve the target ID.
-     *
      */
     public function getDocumentType(): mixed
     {
@@ -191,7 +180,6 @@ class TermsRelationAggregator extends AggregatorBase
     }
     /**
      * Type of the item target of the relation. It is used to resolve the target ID.
-     *
      *
      * @return self
      */

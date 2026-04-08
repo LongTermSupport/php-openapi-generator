@@ -22,12 +22,10 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdPutBody extends \ArrayObject
     }
     /**
      * The body text of the pull request review.
-     *
      */
     protected string $body;
     /**
      * The body text of the pull request review.
-     *
      */
     public function getBody(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdPutBody extends \ArrayObject
     }
     /**
      * The body text of the pull request review.
-     *
      *
      * @return self
      */

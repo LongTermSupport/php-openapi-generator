@@ -22,22 +22,18 @@ class Check extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
      */
     protected string $id;
     /**
      * A human-friendly display name.
-     *
      */
     protected string $name;
     /**
      * The type of health check to perform.
-     *
      */
     protected string $type;
     /**
      * The endpoint to perform healthchecks on.
-     *
      */
     protected string $target;
     /**
@@ -48,12 +44,10 @@ class Check extends \ArrayObject
     protected array $regions;
     /**
      * A boolean value indicating whether the check is enabled/disabled.
-     *
      */
     protected bool $enabled = true;
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
      */
     public function getId(): string
     {
@@ -61,7 +55,6 @@ class Check extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
      *
      * @return self
      */
@@ -73,7 +66,6 @@ class Check extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
      */
     public function getName(): string
     {
@@ -81,7 +73,6 @@ class Check extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
      *
      * @return self
      */
@@ -93,7 +84,6 @@ class Check extends \ArrayObject
     }
     /**
      * The type of health check to perform.
-     *
      */
     public function getType(): string
     {
@@ -101,7 +91,6 @@ class Check extends \ArrayObject
     }
     /**
      * The type of health check to perform.
-     *
      *
      * @return self
      */
@@ -113,7 +102,6 @@ class Check extends \ArrayObject
     }
     /**
      * The endpoint to perform healthchecks on.
-     *
      */
     public function getTarget(): string
     {
@@ -121,7 +109,6 @@ class Check extends \ArrayObject
     }
     /**
      * The endpoint to perform healthchecks on.
-     *
      *
      * @return self
      */
@@ -155,7 +142,6 @@ class Check extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the check is enabled/disabled.
-     *
      */
     public function getEnabled(): bool
     {
@@ -163,7 +149,6 @@ class Check extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the check is enabled/disabled.
-     *
      *
      * @return self
      */

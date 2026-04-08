@@ -22,22 +22,18 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * The current page
-     *
      */
     protected int $page;
     /**
      * Total number of pages
-     *
      */
     protected int $pages;
     /**
      * Total amount of items over all pages
-     *
      */
     protected int $total;
     /**
      * The current page
-     *
      */
     public function getPage(): int
     {
@@ -45,7 +41,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * The current page
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * Total number of pages
-     *
      */
     public function getPages(): int
     {
@@ -65,7 +59,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * Total number of pages
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * Total amount of items over all pages
-     *
      */
     public function getTotal(): int
     {
@@ -85,7 +77,6 @@ class ApiMeta extends \ArrayObject
     }
     /**
      * Total amount of items over all pages
-     *
      *
      * @return self
      */

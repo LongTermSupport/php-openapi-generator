@@ -22,12 +22,10 @@ class UpdateRegistry extends \ArrayObject
     }
     /**
      * A boolean value indicating that the garbage collection should be cancelled.
-     *
      */
     protected bool $cancel;
     /**
      * A boolean value indicating that the garbage collection should be cancelled.
-     *
      */
     public function getCancel(): bool
     {
@@ -35,7 +33,6 @@ class UpdateRegistry extends \ArrayObject
     }
     /**
      * A boolean value indicating that the garbage collection should be cancelled.
-     *
      *
      * @return self
      */

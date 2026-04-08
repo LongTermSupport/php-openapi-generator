@@ -22,7 +22,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     protected string $name;
     protected AppsGitSourceSpec $git;
@@ -32,22 +31,18 @@ class AppJobSpec extends \ArrayObject
     protected AppsImageSourceSpec $image;
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      */
     protected string $dockerfilePath;
     /**
      * An optional build command to run while building this component from source.
-     *
      */
     protected string $buildCommand;
     /**
      * An optional run command to override the component's default.
-     *
      */
     protected string $runCommand;
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     protected string $sourceDir;
     /**
@@ -58,7 +53,6 @@ class AppJobSpec extends \ArrayObject
     protected array $envs;
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      */
     protected string $environmentSlug;
     /**
@@ -69,17 +63,14 @@ class AppJobSpec extends \ArrayObject
     protected array $logDestinations;
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     protected int $instanceCount = 1;
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     protected mixed $instanceSizeSlug = null;
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     protected AppComponentInstanceBaseAutoscaling $autoscaling;
     /**
@@ -87,13 +78,11 @@ class AppJobSpec extends \ArrayObject
      * - PRE_DEPLOY: Indicates a job that runs before an app deployment.
      * - POST_DEPLOY: Indicates a job that runs after an app deployment.
      * - FAILED_DEPLOY: Indicates a job that runs after a component fails to deploy.
-     *
      */
     protected string $kind = 'UNSPECIFIED';
     protected AppJobSpecTermination $termination;
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     public function getName(): string
     {
@@ -101,7 +90,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      *
      * @return self
      */
@@ -163,7 +151,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      */
     public function getDockerfilePath(): string
     {
@@ -171,7 +158,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      *
      * @return self
      */
@@ -183,7 +169,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
      */
     public function getBuildCommand(): string
     {
@@ -191,7 +176,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
      *
      * @return self
      */
@@ -203,7 +187,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
      */
     public function getRunCommand(): string
     {
@@ -211,7 +194,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
      *
      * @return self
      */
@@ -223,7 +205,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     public function getSourceDir(): string
     {
@@ -231,7 +212,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      *
      * @return self
      */
@@ -265,7 +245,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      */
     public function getEnvironmentSlug(): string
     {
@@ -273,7 +252,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      *
      * @return self
      */
@@ -307,7 +285,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     public function getInstanceCount(): int
     {
@@ -315,7 +292,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      *
      * @return self
      */
@@ -327,7 +303,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     public function getInstanceSizeSlug(): mixed
     {
@@ -335,7 +310,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      *
      * @return self
      */
@@ -347,7 +321,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     public function getAutoscaling(): AppComponentInstanceBaseAutoscaling
     {
@@ -355,7 +328,6 @@ class AppJobSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      *
      * @return self
      */
@@ -370,21 +342,19 @@ class AppJobSpec extends \ArrayObject
      * - PRE_DEPLOY: Indicates a job that runs before an app deployment.
      * - POST_DEPLOY: Indicates a job that runs after an app deployment.
      * - FAILED_DEPLOY: Indicates a job that runs after a component fails to deploy.
-     *
      */
     public function getKind(): string
     {
         return $this->kind;
     }
     /**
-    * - UNSPECIFIED: Default job type, will auto-complete to POST_DEPLOY kind.
-    - PRE_DEPLOY: Indicates a job that runs before an app deployment.
-    - POST_DEPLOY: Indicates a job that runs after an app deployment.
-    - FAILED_DEPLOY: Indicates a job that runs after a component fails to deploy.
-    *
-    *
-    * @return self
-    */
+     * - UNSPECIFIED: Default job type, will auto-complete to POST_DEPLOY kind.
+     * - PRE_DEPLOY: Indicates a job that runs before an app deployment.
+     * - POST_DEPLOY: Indicates a job that runs after an app deployment.
+     * - FAILED_DEPLOY: Indicates a job that runs after a component fails to deploy.
+     *
+     * @return self
+     */
     public function setKind(string $kind): self
     {
         $this->initialized['kind'] = true;

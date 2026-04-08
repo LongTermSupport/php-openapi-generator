@@ -22,27 +22,22 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The time the url expires at.
-     *
      */
     protected \DateTime $expiresAt;
     /**
      * The unique object key to store the file as.
-     *
      */
     protected string $objectKey;
     /**
      * The original file name.
-     *
      */
     protected string $originalFileName;
     /**
      * The actual presigned URL the client can use to upload the file directly.
-     *
      */
     protected string $presignedUrl;
     /**
      * The time the url expires at.
-     *
      */
     public function getExpiresAt(): \DateTime
     {
@@ -50,7 +45,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The time the url expires at.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The unique object key to store the file as.
-     *
      */
     public function getObjectKey(): string
     {
@@ -70,7 +63,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The unique object key to store the file as.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The original file name.
-     *
      */
     public function getOriginalFileName(): string
     {
@@ -90,7 +81,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The original file name.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The actual presigned URL the client can use to upload the file directly.
-     *
      */
     public function getPresignedUrl(): string
     {
@@ -110,7 +99,6 @@ class ApiFilePresignedUrlResponse extends \ArrayObject
     }
     /**
      * The actual presigned URL the client can use to upload the file directly.
-     *
      *
      * @return self
      */

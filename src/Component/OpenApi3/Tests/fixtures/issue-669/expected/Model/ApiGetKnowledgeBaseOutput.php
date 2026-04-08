@@ -23,7 +23,6 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
     protected string $databaseStatus = 'CREATING';
     /**
      * Knowledgebase Description
-     *
      */
     protected ApiKnowledgeBase $knowledgeBase;
     public function getDatabaseStatus(): string
@@ -38,7 +37,6 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * Knowledgebase Description
-     *
      */
     public function getKnowledgeBase(): ApiKnowledgeBase
     {
@@ -46,7 +44,6 @@ class ApiGetKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * Knowledgebase Description
-     *
      *
      * @return self
      */

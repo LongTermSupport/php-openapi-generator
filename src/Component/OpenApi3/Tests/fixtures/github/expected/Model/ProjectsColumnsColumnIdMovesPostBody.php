@@ -22,12 +22,10 @@ class ProjectsColumnsColumnIdMovesPostBody extends \ArrayObject
     }
     /**
      * The position of the column in a project
-     *
      */
     protected string $position;
     /**
      * The position of the column in a project
-     *
      */
     public function getPosition(): string
     {
@@ -35,7 +33,6 @@ class ProjectsColumnsColumnIdMovesPostBody extends \ArrayObject
     }
     /**
      * The position of the column in a project
-     *
      *
      * @return self
      */

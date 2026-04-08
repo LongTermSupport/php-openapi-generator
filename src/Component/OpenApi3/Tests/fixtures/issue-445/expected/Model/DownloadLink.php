@@ -19,17 +19,14 @@ class DownloadLink
     }
     /**
      * Token of the download, used to generate the url.
-     *
      */
     protected string $downloadToken;
     /**
      * Url of the download link.
-     *
      */
     protected string $downloadUrl;
     /**
      * Token of the download, used to generate the url.
-     *
      */
     public function getDownloadToken(): string
     {
@@ -37,7 +34,6 @@ class DownloadLink
     }
     /**
      * Token of the download, used to generate the url.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class DownloadLink
     }
     /**
      * Url of the download link.
-     *
      */
     public function getDownloadUrl(): string
     {
@@ -57,7 +52,6 @@ class DownloadLink
     }
     /**
      * Url of the download link.
-     *
      *
      * @return self
      */

@@ -22,7 +22,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The unique identifier for the block storage volume.
-     *
      */
     protected string $id;
     /**
@@ -33,22 +32,18 @@ class VolumesXfs extends \ArrayObject
     protected ?array $dropletIds = null;
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
      */
     protected string $name;
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
      */
     protected string $description;
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
      */
     protected int $sizeGigabytes;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
      */
     protected string $createdAt;
     /**
@@ -59,23 +54,19 @@ class VolumesXfs extends \ArrayObject
     protected ?array $tags = null;
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
      */
     protected string $snapshotId;
     /**
      * The name of the filesystem type to be used on the volume. When provided, the volume will automatically be formatted to the specified filesystem type. Currently, the available options are `ext4` and `xfs`. Pre-formatted volumes are automatically mounted when attached to Ubuntu, Debian, Fedora, Fedora Atomic, and CentOS Droplets created on or after April 26, 2018. Attaching pre-formatted volumes to other Droplets is not recommended.
-     *
      */
     protected string $filesystemType;
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     protected string $region;
     protected string $filesystemLabel;
     /**
      * The unique identifier for the block storage volume.
-     *
      */
     public function getId(): string
     {
@@ -83,7 +74,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The unique identifier for the block storage volume.
-     *
      *
      * @return self
      */
@@ -117,7 +107,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
      */
     public function getName(): string
     {
@@ -125,7 +114,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
      *
      * @return self
      */
@@ -137,7 +125,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
      */
     public function getDescription(): string
     {
@@ -145,7 +132,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
      *
      * @return self
      */
@@ -157,7 +143,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
      */
     public function getSizeGigabytes(): int
     {
@@ -165,7 +150,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
      *
      * @return self
      */
@@ -177,7 +161,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
      */
     public function getCreatedAt(): string
     {
@@ -185,7 +168,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
      *
      * @return self
      */
@@ -219,7 +201,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
      */
     public function getSnapshotId(): string
     {
@@ -227,7 +208,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
      *
      * @return self
      */
@@ -239,7 +219,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The name of the filesystem type to be used on the volume. When provided, the volume will automatically be formatted to the specified filesystem type. Currently, the available options are `ext4` and `xfs`. Pre-formatted volumes are automatically mounted when attached to Ubuntu, Debian, Fedora, Fedora Atomic, and CentOS Droplets created on or after April 26, 2018. Attaching pre-formatted volumes to other Droplets is not recommended.
-     *
      */
     public function getFilesystemType(): string
     {
@@ -247,7 +226,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The name of the filesystem type to be used on the volume. When provided, the volume will automatically be formatted to the specified filesystem type. Currently, the available options are `ext4` and `xfs`. Pre-formatted volumes are automatically mounted when attached to Ubuntu, Debian, Fedora, Fedora Atomic, and CentOS Droplets created on or after April 26, 2018. Attaching pre-formatted volumes to other Droplets is not recommended.
-     *
      *
      * @return self
      */
@@ -259,7 +237,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     public function getRegion(): string
     {
@@ -267,7 +244,6 @@ class VolumesXfs extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      *
      * @return self
      */

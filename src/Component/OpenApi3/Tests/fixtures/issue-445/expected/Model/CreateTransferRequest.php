@@ -19,12 +19,10 @@ class CreateTransferRequest
     }
     /**
      * Name of transfer.
-     *
      */
     protected string $name;
     /**
      * Type of transfer.
-     *
      */
     protected mixed $transferType = null;
     /**
@@ -45,17 +43,14 @@ class CreateTransferRequest
     protected ?array $webLinks = null;
     /**
      * Name of collection created after transfer.
-     *
      */
     protected ?string $collectionName = null;
     /**
      * A value indicating whether to create a collection after importing the transfer.
-     *
      */
     protected bool $createCollection;
     /**
      * Name of transfer.
-     *
      */
     public function getName(): string
     {
@@ -63,7 +58,6 @@ class CreateTransferRequest
     }
     /**
      * Name of transfer.
-     *
      *
      * @return self
      */
@@ -75,7 +69,6 @@ class CreateTransferRequest
     }
     /**
      * Type of transfer.
-     *
      */
     public function getTransferType(): mixed
     {
@@ -83,7 +76,6 @@ class CreateTransferRequest
     }
     /**
      * Type of transfer.
-     *
      *
      * @return self
      */
@@ -105,14 +97,14 @@ class CreateTransferRequest
         return $this->files;
     }
     /**
-    * Files uploaded in transfer.
-    The client is responsible for uploading files to backend.
-    Required when TransferType is FileUpload or FileUploadAutoImport.
-    *
-    * @param list<TransferUploadFile>|null $files
-    *
-    * @return self
-    */
+     * Files uploaded in transfer.
+     * The client is responsible for uploading files to backend.
+     * Required when TransferType is FileUpload or FileUploadAutoImport.
+     *
+     * @param list<TransferUploadFile>|null $files
+     *
+     * @return self
+     */
     public function setFiles(?array $files): self
     {
         $this->initialized['files'] = true;
@@ -131,14 +123,14 @@ class CreateTransferRequest
         return $this->webLinks;
     }
     /**
-    * Weblinks downloaded in transfer.
-    The backend will download files using HTTP, therefore public access to files is needed.
-    Required when TransferType is WebDownload.
-    *
-    * @param list<TransferWebLink>|null $webLinks
-    *
-    * @return self
-    */
+     * Weblinks downloaded in transfer.
+     * The backend will download files using HTTP, therefore public access to files is needed.
+     * Required when TransferType is WebDownload.
+     *
+     * @param list<TransferWebLink>|null $webLinks
+     *
+     * @return self
+     */
     public function setWebLinks(?array $webLinks): self
     {
         $this->initialized['webLinks'] = true;
@@ -147,7 +139,6 @@ class CreateTransferRequest
     }
     /**
      * Name of collection created after transfer.
-     *
      */
     public function getCollectionName(): ?string
     {
@@ -155,7 +146,6 @@ class CreateTransferRequest
     }
     /**
      * Name of collection created after transfer.
-     *
      *
      * @return self
      */
@@ -167,7 +157,6 @@ class CreateTransferRequest
     }
     /**
      * A value indicating whether to create a collection after importing the transfer.
-     *
      */
     public function getCreateCollection(): bool
     {
@@ -175,7 +164,6 @@ class CreateTransferRequest
     }
     /**
      * A value indicating whether to create a collection after importing the transfer.
-     *
      *
      * @return self
      */

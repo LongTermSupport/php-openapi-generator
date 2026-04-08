@@ -22,47 +22,38 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Street address line 1
-     *
      */
     protected string $addressLine1;
     /**
      * Street address line 2
-     *
      */
     protected string $addressLine2;
     /**
      * City
-     *
      */
     protected string $city;
     /**
      * Region
-     *
      */
     protected string $region;
     /**
      * Postal code
-     *
      */
     protected string $postalCode;
     /**
      * Country (ISO2) code
-     *
      */
     protected string $countryIso2Code;
     /**
      * Timestamp billing address was created
-     *
      */
     protected string $createdAt;
     /**
      * Timestamp billing address was updated
-     *
      */
     protected string $updatedAt;
     /**
      * Street address line 1
-     *
      */
     public function getAddressLine1(): string
     {
@@ -70,7 +61,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Street address line 1
-     *
      *
      * @return self
      */
@@ -82,7 +72,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Street address line 2
-     *
      */
     public function getAddressLine2(): string
     {
@@ -90,7 +79,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Street address line 2
-     *
      *
      * @return self
      */
@@ -102,7 +90,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * City
-     *
      */
     public function getCity(): string
     {
@@ -110,7 +97,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * City
-     *
      *
      * @return self
      */
@@ -122,7 +108,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Region
-     *
      */
     public function getRegion(): string
     {
@@ -130,7 +115,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Region
-     *
      *
      * @return self
      */
@@ -142,7 +126,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Postal code
-     *
      */
     public function getPostalCode(): string
     {
@@ -150,7 +133,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Postal code
-     *
      *
      * @return self
      */
@@ -162,7 +144,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Country (ISO2) code
-     *
      */
     public function getCountryIso2Code(): string
     {
@@ -170,7 +151,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Country (ISO2) code
-     *
      *
      * @return self
      */
@@ -182,7 +162,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Timestamp billing address was created
-     *
      */
     public function getCreatedAt(): string
     {
@@ -190,7 +169,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Timestamp billing address was created
-     *
      *
      * @return self
      */
@@ -202,7 +180,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Timestamp billing address was updated
-     *
      */
     public function getUpdatedAt(): string
     {
@@ -210,7 +187,6 @@ class InvoiceSummaryUserBillingAddress extends \ArrayObject
     }
     /**
      * Timestamp billing address was updated
-     *
      *
      * @return self
      */

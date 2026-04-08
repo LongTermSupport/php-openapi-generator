@@ -23,7 +23,6 @@ class ProjectCard extends \ArrayObject
     protected string $url;
     /**
      * The project card's ID
-     *
      */
     protected int $id;
     protected string $nodeId;
@@ -33,7 +32,6 @@ class ProjectCard extends \ArrayObject
     protected \DateTime $updatedAt;
     /**
      * Whether or not the card is archived
-     *
      */
     protected bool $archived;
     protected string $columnUrl;
@@ -51,7 +49,6 @@ class ProjectCard extends \ArrayObject
     }
     /**
      * The project card's ID
-     *
      */
     public function getId(): int
     {
@@ -59,7 +56,6 @@ class ProjectCard extends \ArrayObject
     }
     /**
      * The project card's ID
-     *
      *
      * @return self
      */
@@ -121,7 +117,6 @@ class ProjectCard extends \ArrayObject
     }
     /**
      * Whether or not the card is archived
-     *
      */
     public function getArchived(): bool
     {
@@ -129,7 +124,6 @@ class ProjectCard extends \ArrayObject
     }
     /**
      * Whether or not the card is archived
-     *
      *
      * @return self
      */

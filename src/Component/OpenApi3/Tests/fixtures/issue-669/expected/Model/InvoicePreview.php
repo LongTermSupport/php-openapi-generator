@@ -22,32 +22,26 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * The UUID of the invoice. The canonical reference for the invoice.
-     *
      */
     protected string $invoiceUuid;
     /**
      * ID of the invoice. Listed on the face of the invoice PDF as the "Invoice number".
-     *
      */
     protected string $invoiceId;
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
      */
     protected string $amount;
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
      */
     protected string $invoicePeriod;
     /**
      * Time the invoice was last updated.  This is only included with the invoice preview.
-     *
      */
     protected string $updatedAt;
     /**
      * The UUID of the invoice. The canonical reference for the invoice.
-     *
      */
     public function getInvoiceUuid(): string
     {
@@ -55,7 +49,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * The UUID of the invoice. The canonical reference for the invoice.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * ID of the invoice. Listed on the face of the invoice PDF as the "Invoice number".
-     *
      */
     public function getInvoiceId(): string
     {
@@ -75,7 +67,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * ID of the invoice. Listed on the face of the invoice PDF as the "Invoice number".
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
      */
     public function getAmount(): string
     {
@@ -95,7 +85,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
      */
     public function getInvoicePeriod(): string
     {
@@ -115,7 +103,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Time the invoice was last updated.  This is only included with the invoice preview.
-     *
      */
     public function getUpdatedAt(): string
     {
@@ -135,7 +121,6 @@ class InvoicePreview extends \ArrayObject
     }
     /**
      * Time the invoice was last updated.  This is only included with the invoice preview.
-     *
      *
      * @return self
      */

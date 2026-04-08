@@ -19,22 +19,18 @@ class ListItem
     }
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * The list item id.
-     *
      */
     protected string $id;
     /**
      * The id of the schema with schema type list.
-     *
      */
     protected ?string $contentSchemaId = null;
     /**
      * Contains language specific display values, rendered according to the list schema's display pattern configuration.
-     *
      */
     protected mixed $displayValues = null;
     /**
@@ -63,12 +59,10 @@ class ListItem
     protected ?array $brokenIndirectReferenceIds = null;
     /**
      * LifeCycle of list item
-     *
      */
     protected mixed $lifeCycle = null;
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -76,7 +70,6 @@ class ListItem
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -88,7 +81,6 @@ class ListItem
     }
     /**
      * The list item id.
-     *
      */
     public function getId(): string
     {
@@ -96,7 +88,6 @@ class ListItem
     }
     /**
      * The list item id.
-     *
      *
      * @return self
      */
@@ -108,7 +99,6 @@ class ListItem
     }
     /**
      * The id of the schema with schema type list.
-     *
      */
     public function getContentSchemaId(): ?string
     {
@@ -116,7 +106,6 @@ class ListItem
     }
     /**
      * The id of the schema with schema type list.
-     *
      *
      * @return self
      */
@@ -128,7 +117,6 @@ class ListItem
     }
     /**
      * Contains language specific display values, rendered according to the list schema's display pattern configuration.
-     *
      */
     public function getDisplayValues(): mixed
     {
@@ -136,7 +124,6 @@ class ListItem
     }
     /**
      * Contains language specific display values, rendered according to the list schema's display pattern configuration.
-     *
      *
      * @return self
      */
@@ -236,7 +223,6 @@ class ListItem
     }
     /**
      * LifeCycle of list item
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -244,7 +230,6 @@ class ListItem
     }
     /**
      * LifeCycle of list item
-     *
      *
      * @return self
      */

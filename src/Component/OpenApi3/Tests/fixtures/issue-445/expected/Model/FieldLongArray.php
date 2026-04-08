@@ -19,37 +19,30 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The long pattern structure.
-     *
      */
     protected ?string $pattern = null;
     /**
      * The minimum possible value.
-     *
      */
     protected ?float $minimum = null;
     /**
      * The maximum possible value.
-     *
      */
     protected ?float $maximum = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * The maximum number of items that can be stored.
-     *
      */
     protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
-     *
      */
     protected ?int $minimumItems = null;
     /**
      * The long pattern structure.
-     *
      */
     public function getPattern(): ?string
     {
@@ -57,7 +50,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The long pattern structure.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The minimum possible value.
-     *
      */
     public function getMinimum(): ?float
     {
@@ -77,7 +68,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The minimum possible value.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The maximum possible value.
-     *
      */
     public function getMaximum(): ?float
     {
@@ -97,7 +86,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The maximum possible value.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -117,7 +104,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      */
     public function getMaximumItems(): ?int
     {
@@ -137,7 +122,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      */
     public function getMinimumItems(): ?int
     {
@@ -157,7 +140,6 @@ class FieldLongArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      *
      * @return self
      */

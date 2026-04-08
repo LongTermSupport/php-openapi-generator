@@ -19,22 +19,18 @@ class ResizeAction
     }
     /**
      * Target width for the output.
-     *
      */
     protected int $width;
     /**
      * Target height for the output.
-     *
      */
     protected int $height;
     /**
      * Specifies additional resize behaviour.
-     *
      */
     protected mixed $resizeMode = null;
     /**
      * Target width for the output.
-     *
      */
     public function getWidth(): int
     {
@@ -42,7 +38,6 @@ class ResizeAction
     }
     /**
      * Target width for the output.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class ResizeAction
     }
     /**
      * Target height for the output.
-     *
      */
     public function getHeight(): int
     {
@@ -62,7 +56,6 @@ class ResizeAction
     }
     /**
      * Target height for the output.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class ResizeAction
     }
     /**
      * Specifies additional resize behaviour.
-     *
      */
     public function getResizeMode(): mixed
     {
@@ -82,7 +74,6 @@ class ResizeAction
     }
     /**
      * Specifies additional resize behaviour.
-     *
      *
      * @return self
      */

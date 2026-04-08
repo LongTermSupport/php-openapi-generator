@@ -19,17 +19,14 @@ class FieldDate extends FieldBase
     }
     /**
      * The date format structure.
-     *
      */
     protected ?string $format = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * The date format structure.
-     *
      */
     public function getFormat(): ?string
     {
@@ -37,7 +34,6 @@ class FieldDate extends FieldBase
     }
     /**
      * The date format structure.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class FieldDate extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -57,7 +52,6 @@ class FieldDate extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */

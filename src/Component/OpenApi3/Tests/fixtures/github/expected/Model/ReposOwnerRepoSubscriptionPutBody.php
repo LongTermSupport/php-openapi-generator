@@ -22,17 +22,14 @@ class ReposOwnerRepoSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Determines if notifications should be received from this repository.
-     *
      */
     protected bool $subscribed;
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
      */
     protected bool $ignored;
     /**
      * Determines if notifications should be received from this repository.
-     *
      */
     public function getSubscribed(): bool
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Determines if notifications should be received from this repository.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
      */
     public function getIgnored(): bool
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
      *
      * @return self
      */

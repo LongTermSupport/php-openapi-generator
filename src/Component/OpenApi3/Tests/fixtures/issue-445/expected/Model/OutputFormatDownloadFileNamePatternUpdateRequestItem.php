@@ -19,18 +19,15 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItem
     }
     /**
      * ID of the output format to set pattern for.
-     *
      */
     protected string $id;
     /**
      * The patterns to use per metadata language.
      * The customer's default language is required.
-     *
      */
     protected mixed $patterns = null;
     /**
      * ID of the output format to set pattern for.
-     *
      */
     public function getId(): string
     {
@@ -38,7 +35,6 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItem
     }
     /**
      * ID of the output format to set pattern for.
-     *
      *
      * @return self
      */
@@ -51,19 +47,17 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItem
     /**
      * The patterns to use per metadata language.
      * The customer's default language is required.
-     *
      */
     public function getPatterns(): mixed
     {
         return $this->patterns;
     }
     /**
-    * The patterns to use per metadata language.
-    The customer's default language is required.
-    *
-    *
-    * @return self
-    */
+     * The patterns to use per metadata language.
+     * The customer's default language is required.
+     *
+     * @return self
+     */
     public function setPatterns(mixed $patterns): self
     {
         $this->initialized['patterns'] = true;

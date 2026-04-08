@@ -22,7 +22,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesPostBody extends \ArrayObject
     }
     /**
      * The company Safe Number or Connect ID
-     *
      */
     protected string $id;
     protected string $personalReference;
@@ -30,7 +29,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesPostBody extends \ArrayObject
     protected string $personalLimit;
     /**
      * The company Safe Number or Connect ID
-     *
      */
     public function getId(): string
     {
@@ -38,7 +36,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesPostBody extends \ArrayObject
     }
     /**
      * The company Safe Number or Connect ID
-     *
      *
      * @return self
      */

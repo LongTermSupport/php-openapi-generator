@@ -22,7 +22,6 @@ class ScimV2OrganizationsOrgUsersPostBody extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      */
     protected string $userName;
     protected ScimV2OrganizationsOrgUsersPostBodyName $name;
@@ -45,7 +44,6 @@ class ScimV2OrganizationsOrgUsersPostBody extends \ArrayObject
     protected bool $active;
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      */
     public function getUserName(): string
     {
@@ -53,7 +51,6 @@ class ScimV2OrganizationsOrgUsersPostBody extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      *
      * @return self
      */

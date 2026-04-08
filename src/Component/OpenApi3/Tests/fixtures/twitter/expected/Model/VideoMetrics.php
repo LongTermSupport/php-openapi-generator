@@ -22,42 +22,34 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     protected string $mediaKey;
     /**
      * Number of times this video has been viewed.
-     *
      */
     protected int $viewCount;
     /**
      * Number of users who made it through 0% of the video.
-     *
      */
     protected int $playback0Count;
     /**
      * Number of users who made it through 25% of the video.
-     *
      */
     protected int $playback25Count;
     /**
      * Number of users who made it through 50% of the video.
-     *
      */
     protected int $playback50Count;
     /**
      * Number of users who made it through 75% of the video.
-     *
      */
     protected int $playback75Count;
     /**
      * Number of users who made it through 100% of the video.
-     *
      */
     protected int $playback100Count;
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     public function getMediaKey(): string
     {
@@ -65,7 +57,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of times this video has been viewed.
-     *
      */
     public function getViewCount(): int
     {
@@ -85,7 +75,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of times this video has been viewed.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 0% of the video.
-     *
      */
     public function getPlayback0Count(): int
     {
@@ -105,7 +93,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 0% of the video.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 25% of the video.
-     *
      */
     public function getPlayback25Count(): int
     {
@@ -125,7 +111,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 25% of the video.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 50% of the video.
-     *
      */
     public function getPlayback50Count(): int
     {
@@ -145,7 +129,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 50% of the video.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 75% of the video.
-     *
      */
     public function getPlayback75Count(): int
     {
@@ -165,7 +147,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 75% of the video.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 100% of the video.
-     *
      */
     public function getPlayback100Count(): int
     {
@@ -185,7 +165,6 @@ class VideoMetrics extends \ArrayObject
     }
     /**
      * Number of users who made it through 100% of the video.
-     *
      *
      * @return self
      */

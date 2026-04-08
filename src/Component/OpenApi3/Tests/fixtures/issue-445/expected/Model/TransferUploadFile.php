@@ -24,24 +24,20 @@ class TransferUploadFile extends \ArrayObject
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
      */
     protected ?string $identifier = null;
     /**
      * Client generated identifier of the item.
-     *
      */
     protected ?string $requestId = null;
     /**
      * Target filename of file.
-     *
      */
     protected string $fileName;
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
      */
     public function getIdentifier(): ?string
     {
@@ -49,7 +45,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
-     *
      *
      * @deprecated
      *
@@ -63,7 +58,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Client generated identifier of the item.
-     *
      */
     public function getRequestId(): ?string
     {
@@ -71,7 +65,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Client generated identifier of the item.
-     *
      *
      * @return self
      */
@@ -83,7 +76,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Target filename of file.
-     *
      */
     public function getFileName(): string
     {
@@ -91,7 +83,6 @@ class TransferUploadFile extends \ArrayObject
     }
     /**
      * Target filename of file.
-     *
      *
      * @return self
      */

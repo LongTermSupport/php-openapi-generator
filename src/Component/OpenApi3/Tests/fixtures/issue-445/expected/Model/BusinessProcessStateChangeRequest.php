@@ -19,22 +19,18 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * The new state of the business process.
-     *
      */
     protected string $state;
     /**
      * The new life cycle of the business process.
-     *
      */
     protected mixed $lifeCycle = null;
     /**
      * An optional notification update to be posted together with the transition.
-     *
      */
     protected mixed $notification = null;
     /**
      * The new state of the business process.
-     *
      */
     public function getState(): string
     {
@@ -42,7 +38,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * The new state of the business process.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * The new life cycle of the business process.
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -62,7 +56,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * The new life cycle of the business process.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * An optional notification update to be posted together with the transition.
-     *
      */
     public function getNotification(): mixed
     {
@@ -82,7 +74,6 @@ class BusinessProcessStateChangeRequest
     }
     /**
      * An optional notification update to be posted together with the transition.
-     *
      *
      * @return self
      */

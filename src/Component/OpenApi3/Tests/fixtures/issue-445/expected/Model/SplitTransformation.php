@@ -19,22 +19,18 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Separators to use, supports variables, an array of strings including escape sequences or null to split on any white space character.
-     *
      */
     protected mixed $separators = null;
     /**
      * Keeps empty items. Empty items will be returned as empty strings.
-     *
      */
     protected bool $keepEmpty;
     /**
      * Trims each entry for punctuation and white space.
-     *
      */
     protected bool $trim;
     /**
      * Separators to use, supports variables, an array of strings including escape sequences or null to split on any white space character.
-     *
      */
     public function getSeparators(): mixed
     {
@@ -42,7 +38,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Separators to use, supports variables, an array of strings including escape sequences or null to split on any white space character.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Keeps empty items. Empty items will be returned as empty strings.
-     *
      */
     public function getKeepEmpty(): bool
     {
@@ -62,7 +56,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Keeps empty items. Empty items will be returned as empty strings.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Trims each entry for punctuation and white space.
-     *
      */
     public function getTrim(): bool
     {
@@ -82,7 +74,6 @@ class SplitTransformation extends BusinessRuleTransformation
     }
     /**
      * Trims each entry for punctuation and white space.
-     *
      *
      * @return self
      */

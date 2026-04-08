@@ -22,32 +22,26 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A unique number that can be used to identify and reference a specific image.
-     *
      */
     protected int $id;
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      */
     protected string $name;
     /**
      * Describes the kind of image. It may be one of `base`, `snapshot`, `backup`, `custom`, or `admin`. Respectively, this specifies whether an image is a DigitalOcean base OS image, user-generated Droplet snapshot, automatically created Droplet backup, user-provided virtual machine image, or an image used for DigitalOcean managed resources (e.g. DOKS worker nodes).
-     *
      */
     protected string $type;
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      */
     protected string $distribution;
     /**
      * A uniquely identifying string that is associated with each of the DigitalOcean-provided public images. These can be used to reference a public image as an alternative to the numeric id.
-     *
      */
     protected ?string $slug = null;
     /**
      * This is a boolean value that indicates whether the image in question is public or not. An image that is public is available to all accounts. A non-public image is only accessible from your account.
-     *
      */
     protected bool $public;
     /**
@@ -58,22 +52,18 @@ class DropletImage extends \ArrayObject
     protected array $regions;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the image was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The minimum disk size in GB required for a Droplet to use this image.
-     *
      */
     protected ?int $minDiskSize = null;
     /**
      * The size of the image in gigabytes.
-     *
      */
     protected ?float $sizeGigabytes = null;
     /**
      * An optional free-form text field to describe an image.
-     *
      */
     protected string $description;
     /**
@@ -85,18 +75,15 @@ class DropletImage extends \ArrayObject
     /**
      * A status string indicating the state of a custom image. This may be `NEW`,
      *  `available`, `pending`, `deleted`, or `retired`.
-     *
      */
     protected string $status;
     /**
      * A string containing information about errors that may occur when importing
      *  a custom image.
-     *
      */
     protected string $errorMessage;
     /**
      * A unique number that can be used to identify and reference a specific image.
-     *
      */
     public function getId(): int
     {
@@ -104,7 +91,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A unique number that can be used to identify and reference a specific image.
-     *
      *
      * @return self
      */
@@ -116,7 +102,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      */
     public function getName(): string
     {
@@ -124,7 +109,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      *
      * @return self
      */
@@ -136,7 +120,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * Describes the kind of image. It may be one of `base`, `snapshot`, `backup`, `custom`, or `admin`. Respectively, this specifies whether an image is a DigitalOcean base OS image, user-generated Droplet snapshot, automatically created Droplet backup, user-provided virtual machine image, or an image used for DigitalOcean managed resources (e.g. DOKS worker nodes).
-     *
      */
     public function getType(): string
     {
@@ -144,7 +127,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * Describes the kind of image. It may be one of `base`, `snapshot`, `backup`, `custom`, or `admin`. Respectively, this specifies whether an image is a DigitalOcean base OS image, user-generated Droplet snapshot, automatically created Droplet backup, user-provided virtual machine image, or an image used for DigitalOcean managed resources (e.g. DOKS worker nodes).
-     *
      *
      * @return self
      */
@@ -156,7 +138,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      */
     public function getDistribution(): string
     {
@@ -164,7 +145,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      *
      * @return self
      */
@@ -176,7 +156,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A uniquely identifying string that is associated with each of the DigitalOcean-provided public images. These can be used to reference a public image as an alternative to the numeric id.
-     *
      */
     public function getSlug(): ?string
     {
@@ -184,7 +163,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A uniquely identifying string that is associated with each of the DigitalOcean-provided public images. These can be used to reference a public image as an alternative to the numeric id.
-     *
      *
      * @return self
      */
@@ -196,7 +174,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * This is a boolean value that indicates whether the image in question is public or not. An image that is public is available to all accounts. A non-public image is only accessible from your account.
-     *
      */
     public function getPublic(): bool
     {
@@ -204,7 +181,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * This is a boolean value that indicates whether the image in question is public or not. An image that is public is available to all accounts. A non-public image is only accessible from your account.
-     *
      *
      * @return self
      */
@@ -238,7 +214,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the image was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -246,7 +221,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the image was created.
-     *
      *
      * @return self
      */
@@ -258,7 +232,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The minimum disk size in GB required for a Droplet to use this image.
-     *
      */
     public function getMinDiskSize(): ?int
     {
@@ -266,7 +239,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The minimum disk size in GB required for a Droplet to use this image.
-     *
      *
      * @return self
      */
@@ -278,7 +250,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The size of the image in gigabytes.
-     *
      */
     public function getSizeGigabytes(): ?float
     {
@@ -286,7 +257,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * The size of the image in gigabytes.
-     *
      *
      * @return self
      */
@@ -298,7 +268,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
      */
     public function getDescription(): string
     {
@@ -306,7 +275,6 @@ class DropletImage extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
      *
      * @return self
      */
@@ -341,19 +309,17 @@ class DropletImage extends \ArrayObject
     /**
      * A status string indicating the state of a custom image. This may be `NEW`,
      *  `available`, `pending`, `deleted`, or `retired`.
-     *
      */
     public function getStatus(): string
     {
         return $this->status;
     }
     /**
-    * A status string indicating the state of a custom image. This may be `NEW`,
-    `available`, `pending`, `deleted`, or `retired`.
-    *
-    *
-    * @return self
-    */
+     * A status string indicating the state of a custom image. This may be `NEW`,
+     *  `available`, `pending`, `deleted`, or `retired`.
+     *
+     * @return self
+     */
     public function setStatus(string $status): self
     {
         $this->initialized['status'] = true;
@@ -363,19 +329,17 @@ class DropletImage extends \ArrayObject
     /**
      * A string containing information about errors that may occur when importing
      *  a custom image.
-     *
      */
     public function getErrorMessage(): string
     {
         return $this->errorMessage;
     }
     /**
-    * A string containing information about errors that may occur when importing
-    a custom image.
-    *
-    *
-    * @return self
-    */
+     * A string containing information about errors that may occur when importing
+     *  a custom image.
+     *
+     * @return self
+     */
     public function setErrorMessage(string $errorMessage): self
     {
         $this->initialized['errorMessage'] = true;

@@ -41,7 +41,6 @@ class GistSimple extends \ArrayObject
     protected string $commentsUrl;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $owner = null;
     protected bool $truncated;
@@ -215,7 +214,6 @@ class GistSimple extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getOwner(): ?SimpleUser
     {
@@ -223,7 +221,6 @@ class GistSimple extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

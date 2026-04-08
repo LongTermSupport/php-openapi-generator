@@ -19,18 +19,15 @@ class NamedCacheConfigurationBase
     }
     /**
      * Name of named cache.
-     *
      */
     protected ?string $name = null;
     /**
      * Indicates if the lookup should be case sensitive.
-     *
      */
     protected bool $caseSensitive;
     protected string $kind;
     /**
      * Name of named cache.
-     *
      */
     public function getName(): ?string
     {
@@ -38,7 +35,6 @@ class NamedCacheConfigurationBase
     }
     /**
      * Name of named cache.
-     *
      */
     public function setName(?string $name): void
     {
@@ -47,7 +43,6 @@ class NamedCacheConfigurationBase
     }
     /**
      * Indicates if the lookup should be case sensitive.
-     *
      */
     public function getCaseSensitive(): bool
     {
@@ -55,7 +50,6 @@ class NamedCacheConfigurationBase
     }
     /**
      * Indicates if the lookup should be case sensitive.
-     *
      */
     public function setCaseSensitive(bool $caseSensitive): void
     {

@@ -22,22 +22,18 @@ class DatabaseKafkaSchemaCreate extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      */
     protected string $subjectName;
     /**
      * The type of the schema.
-     *
      */
     protected string $schemaType;
     /**
      * The schema definition in the specified format.
-     *
      */
     protected string $schema;
     /**
      * The name of the schema subject.
-     *
      */
     public function getSubjectName(): string
     {
@@ -45,7 +41,6 @@ class DatabaseKafkaSchemaCreate extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class DatabaseKafkaSchemaCreate extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
      */
     public function getSchemaType(): string
     {
@@ -65,7 +59,6 @@ class DatabaseKafkaSchemaCreate extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class DatabaseKafkaSchemaCreate extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
      */
     public function getSchema(): string
     {
@@ -85,7 +77,6 @@ class DatabaseKafkaSchemaCreate extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
      *
      * @return self
      */

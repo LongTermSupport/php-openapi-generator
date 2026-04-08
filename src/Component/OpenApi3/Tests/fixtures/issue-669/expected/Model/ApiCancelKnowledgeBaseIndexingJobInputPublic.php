@@ -22,12 +22,10 @@ class ApiCancelKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for an indexing job.
-     *
      */
     protected string $uuid;
     /**
      * A unique identifier for an indexing job.
-     *
      */
     public function getUuid(): string
     {
@@ -35,7 +33,6 @@ class ApiCancelKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for an indexing job.
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * The organization or person who will own the new repository. To create a new repository in an organization, the authenticated user must be a member of the specified organization.
-     *
      */
     protected string $owner;
     /**
      * The name of the new repository.
-     *
      */
     protected string $name;
     /**
      * A short description of the new repository.
-     *
      */
     protected string $description;
     /**
      * Either `true` to create a new private repository or `false` to create a new public one.
-     *
      */
     protected bool $private = false;
     /**
      * The organization or person who will own the new repository. To create a new repository in an organization, the authenticated user must be a member of the specified organization.
-     *
      */
     public function getOwner(): string
     {
@@ -50,7 +45,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * The organization or person who will own the new repository. To create a new repository in an organization, the authenticated user must be a member of the specified organization.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * The name of the new repository.
-     *
      */
     public function getName(): string
     {
@@ -70,7 +63,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * The name of the new repository.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * A short description of the new repository.
-     *
      */
     public function getDescription(): string
     {
@@ -90,7 +81,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * A short description of the new repository.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * Either `true` to create a new private repository or `false` to create a new public one.
-     *
      */
     public function getPrivate(): bool
     {
@@ -110,7 +99,6 @@ class ReposTemplateOwnerTemplateRepoGeneratePostBody extends \ArrayObject
     }
     /**
      * Either `true` to create a new private repository or `false` to create a new public one.
-     *
      *
      * @return self
      */

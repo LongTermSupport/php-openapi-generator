@@ -19,22 +19,18 @@ class BusinessProcessSearchRequest
     }
     /**
      * Limits the document count of the result set.
-     *
      */
     protected int $limit = 30;
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     protected mixed $filter = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -46,12 +42,10 @@ class BusinessProcessSearchRequest
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the BusinessProcessSearchResult.
      * Warning! It severely affects performance.
-     *
      */
     protected bool $debugMode = false;
     /**
      * Limits the document count of the result set.
-     *
      */
     public function getLimit(): int
     {
@@ -59,7 +53,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * Limits the document count of the result set.
-     *
      *
      * @return self
      */
@@ -71,7 +64,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -79,7 +71,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      *
      * @return self
      */
@@ -91,7 +82,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -99,7 +89,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      *
      * @return self
      */
@@ -111,7 +100,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -119,7 +107,6 @@ class BusinessProcessSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -154,19 +141,17 @@ class BusinessProcessSearchRequest
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the BusinessProcessSearchResult.
      * Warning! It severely affects performance.
-     *
      */
     public function getDebugMode(): bool
     {
         return $this->debugMode;
     }
     /**
-    * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the BusinessProcessSearchResult.
-    Warning! It severely affects performance.
-    *
-    *
-    * @return self
-    */
+     * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the BusinessProcessSearchResult.
+     * Warning! It severely affects performance.
+     *
+     * @return self
+     */
     public function setDebugMode(bool $debugMode): self
     {
         $this->initialized['debugMode'] = true;

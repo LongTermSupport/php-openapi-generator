@@ -19,7 +19,6 @@ class UserRoleSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -36,22 +35,18 @@ class UserRoleSearchRequest
     protected ?array $sort = null;
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     protected int $limit = 30;
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * Filter applied to user roles.
-     *
      */
     protected mixed $filter = null;
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! It severely affects performance.
-     *
      */
     protected bool $debugMode = false;
     /**
@@ -62,12 +57,10 @@ class UserRoleSearchRequest
     protected ?array $searchLanguages = null;
     /**
      * Defines if the user roles with system user role Administrator is returned.
-     *
      */
     protected bool $includeAdministratorSystemUserRole;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -75,7 +68,6 @@ class UserRoleSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -131,7 +123,6 @@ class UserRoleSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     public function getLimit(): int
     {
@@ -139,7 +130,6 @@ class UserRoleSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      *
      * @return self
      */
@@ -151,7 +141,6 @@ class UserRoleSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -159,7 +148,6 @@ class UserRoleSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      *
      * @return self
      */
@@ -171,7 +159,6 @@ class UserRoleSearchRequest
     }
     /**
      * Filter applied to user roles.
-     *
      */
     public function getFilter(): mixed
     {
@@ -179,7 +166,6 @@ class UserRoleSearchRequest
     }
     /**
      * Filter applied to user roles.
-     *
      *
      * @return self
      */
@@ -191,7 +177,6 @@ class UserRoleSearchRequest
     }
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! It severely affects performance.
-     *
      */
     public function getDebugMode(): bool
     {
@@ -199,7 +184,6 @@ class UserRoleSearchRequest
     }
     /**
      * Enable debug mode to get as result of the Searched additional debug information. Warning! It severely affects performance.
-     *
      *
      * @return self
      */
@@ -233,7 +217,6 @@ class UserRoleSearchRequest
     }
     /**
      * Defines if the user roles with system user role Administrator is returned.
-     *
      */
     public function getIncludeAdministratorSystemUserRole(): bool
     {
@@ -241,7 +224,6 @@ class UserRoleSearchRequest
     }
     /**
      * Defines if the user roles with system user role Administrator is returned.
-     *
      *
      * @return self
      */

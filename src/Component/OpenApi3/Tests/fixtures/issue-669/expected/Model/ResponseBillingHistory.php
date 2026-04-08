@@ -27,7 +27,6 @@ class ResponseBillingHistory extends \ArrayObject
     protected PageLinks $links;
     /**
      * Information about the response itself.
-     *
      */
     protected MetaProperties $meta;
     /**
@@ -60,7 +59,6 @@ class ResponseBillingHistory extends \ArrayObject
     }
     /**
      * Information about the response itself.
-     *
      */
     public function getMeta(): MetaProperties
     {
@@ -68,7 +66,6 @@ class ResponseBillingHistory extends \ArrayObject
     }
     /**
      * Information about the response itself.
-     *
      *
      * @return self
      */

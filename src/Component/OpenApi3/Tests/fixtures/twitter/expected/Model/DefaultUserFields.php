@@ -22,37 +22,30 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
      */
     protected string $location;
     /**
      * The URL specified in the user's profile.
-     *
      */
     protected string $url;
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
      */
     protected string $description;
     /**
      * A list of metadata found in the user's profile description.
-     *
      */
     protected DefaultUserFieldsEntities $entities;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $mostRecentTweetId;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $pinnedTweetId;
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
      */
     public function getLocation(): string
     {
@@ -60,7 +53,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The URL specified in the user's profile.
-     *
      */
     public function getUrl(): string
     {
@@ -80,7 +71,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The URL specified in the user's profile.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
      */
     public function getDescription(): string
     {
@@ -100,7 +89,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * A list of metadata found in the user's profile description.
-     *
      */
     public function getEntities(): DefaultUserFieldsEntities
     {
@@ -120,7 +107,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * A list of metadata found in the user's profile description.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getMostRecentTweetId(): string
     {
@@ -140,7 +125,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getPinnedTweetId(): string
     {
@@ -160,7 +143,6 @@ class DefaultUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class V2RegistrySubscriptionPostBody extends \ArrayObject
     }
     /**
      * The slug of the subscription tier to sign up for.
-     *
      */
     protected string $tierSlug;
     /**
      * The slug of the subscription tier to sign up for.
-     *
      */
     public function getTierSlug(): string
     {
@@ -35,7 +33,6 @@ class V2RegistrySubscriptionPostBody extends \ArrayObject
     }
     /**
      * The slug of the subscription tier to sign up for.
-     *
      *
      * @return self
      */

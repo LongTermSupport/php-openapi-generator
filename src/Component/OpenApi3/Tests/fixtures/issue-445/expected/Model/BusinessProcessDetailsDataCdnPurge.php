@@ -19,7 +19,6 @@ class BusinessProcessDetailsDataCdnPurge extends BusinessProcessDetailsDataBase
     }
     /**
      * Serialized CDN configuration.
-     *
      */
     protected string $serializedCdnConfiguration;
     /**
@@ -30,7 +29,6 @@ class BusinessProcessDetailsDataCdnPurge extends BusinessProcessDetailsDataBase
     protected array $jobs;
     /**
      * Serialized CDN configuration.
-     *
      */
     public function getSerializedCdnConfiguration(): string
     {
@@ -38,7 +36,6 @@ class BusinessProcessDetailsDataCdnPurge extends BusinessProcessDetailsDataBase
     }
     /**
      * Serialized CDN configuration.
-     *
      *
      * @return self
      */

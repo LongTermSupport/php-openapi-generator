@@ -22,27 +22,22 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a certificate.
-     *
      */
     protected string $id;
     /**
      * A unique human-readable name referring to a certificate.
-     *
      */
     protected string $name;
     /**
      * A time value given in ISO8601 combined date and time format that represents the certificate's expiration date.
-     *
      */
     protected \DateTime $notAfter;
     /**
      * A unique identifier generated from the SHA-1 fingerprint of the certificate.
-     *
      */
     protected string $sha1Fingerprint;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the certificate was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -53,17 +48,14 @@ class Certificate extends \ArrayObject
     protected array $dnsNames;
     /**
      * A string representing the current state of the certificate. It may be `pending`, `verified`, or `error`.
-     *
      */
     protected string $state;
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      */
     protected string $type;
     /**
      * A unique ID that can be used to identify and reference a certificate.
-     *
      */
     public function getId(): string
     {
@@ -71,7 +63,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a certificate.
-     *
      *
      * @return self
      */
@@ -83,7 +74,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
      */
     public function getName(): string
     {
@@ -91,7 +81,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
      *
      * @return self
      */
@@ -103,7 +92,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents the certificate's expiration date.
-     *
      */
     public function getNotAfter(): \DateTime
     {
@@ -111,7 +99,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents the certificate's expiration date.
-     *
      *
      * @return self
      */
@@ -123,7 +110,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique identifier generated from the SHA-1 fingerprint of the certificate.
-     *
      */
     public function getSha1Fingerprint(): string
     {
@@ -131,7 +117,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A unique identifier generated from the SHA-1 fingerprint of the certificate.
-     *
      *
      * @return self
      */
@@ -143,7 +128,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the certificate was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -151,7 +135,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the certificate was created.
-     *
      *
      * @return self
      */
@@ -185,7 +168,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A string representing the current state of the certificate. It may be `pending`, `verified`, or `error`.
-     *
      */
     public function getState(): string
     {
@@ -193,7 +175,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A string representing the current state of the certificate. It may be `pending`, `verified`, or `error`.
-     *
      *
      * @return self
      */
@@ -205,7 +186,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      */
     public function getType(): string
     {
@@ -213,7 +193,6 @@ class Certificate extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      *
      * @return self
      */

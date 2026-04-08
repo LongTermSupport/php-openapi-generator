@@ -22,27 +22,22 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      */
     protected string $name;
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      */
     protected string $distribution;
     /**
      * An optional free-form text field to describe an image.
-     *
      */
     protected string $description;
     /**
      * A URL from which the custom Linux virtual machine image may be retrieved.  The image it points to must be in the raw, qcow2, vhdx, vdi, or vmdk format.  It may be compressed using gzip or bzip2 and must be smaller than 100 GB after being decompressed.
-     *
      */
     protected string $url;
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     protected string $region;
     /**
@@ -53,7 +48,6 @@ class ImageNewCustom extends \ArrayObject
     protected ?array $tags = null;
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      */
     public function getName(): string
     {
@@ -61,7 +55,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      *
      * @return self
      */
@@ -73,7 +66,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      */
     public function getDistribution(): string
     {
@@ -81,7 +73,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      *
      * @return self
      */
@@ -93,7 +84,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
      */
     public function getDescription(): string
     {
@@ -101,7 +91,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
      *
      * @return self
      */
@@ -113,7 +102,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * A URL from which the custom Linux virtual machine image may be retrieved.  The image it points to must be in the raw, qcow2, vhdx, vdi, or vmdk format.  It may be compressed using gzip or bzip2 and must be smaller than 100 GB after being decompressed.
-     *
      */
     public function getUrl(): string
     {
@@ -121,7 +109,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * A URL from which the custom Linux virtual machine image may be retrieved.  The image it points to must be in the raw, qcow2, vhdx, vdi, or vmdk format.  It may be compressed using gzip or bzip2 and must be smaller than 100 GB after being decompressed.
-     *
      *
      * @return self
      */
@@ -133,7 +120,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     public function getRegion(): string
     {
@@ -141,7 +127,6 @@ class ImageNewCustom extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      *
      * @return self
      */

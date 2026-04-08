@@ -19,17 +19,14 @@ class BusinessProcessWaitForStateResult
     }
     /**
      * The state that was hit.
-     *
      */
     protected ?string $stateHit = null;
     /**
      * The business process.
-     *
      */
     protected mixed $businessProcess = null;
     /**
      * The state that was hit.
-     *
      */
     public function getStateHit(): ?string
     {
@@ -37,7 +34,6 @@ class BusinessProcessWaitForStateResult
     }
     /**
      * The state that was hit.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class BusinessProcessWaitForStateResult
     }
     /**
      * The business process.
-     *
      */
     public function getBusinessProcess(): mixed
     {
@@ -57,7 +52,6 @@ class BusinessProcessWaitForStateResult
     }
     /**
      * The business process.
-     *
      *
      * @return self
      */

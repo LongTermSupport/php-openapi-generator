@@ -22,17 +22,14 @@ class AppsGitSourceSpec extends \ArrayObject
     }
     /**
      * The name of the branch to use
-     *
      */
     protected string $branch;
     /**
      * The clone URL of the repo. Example: `https://github.com/digitalocean/sample-golang.git`
-     *
      */
     protected string $repoCloneUrl;
     /**
      * The name of the branch to use
-     *
      */
     public function getBranch(): string
     {
@@ -40,7 +37,6 @@ class AppsGitSourceSpec extends \ArrayObject
     }
     /**
      * The name of the branch to use
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppsGitSourceSpec extends \ArrayObject
     }
     /**
      * The clone URL of the repo. Example: `https://github.com/digitalocean/sample-golang.git`
-     *
      */
     public function getRepoCloneUrl(): string
     {
@@ -60,7 +55,6 @@ class AppsGitSourceSpec extends \ArrayObject
     }
     /**
      * The clone URL of the repo. Example: `https://github.com/digitalocean/sample-golang.git`
-     *
      *
      * @return self
      */

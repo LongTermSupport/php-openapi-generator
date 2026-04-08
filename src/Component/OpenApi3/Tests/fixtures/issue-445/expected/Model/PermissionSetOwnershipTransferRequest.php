@@ -19,12 +19,10 @@ class PermissionSetOwnershipTransferRequest
     }
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
      */
     protected string $transferUserId;
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
      */
     public function getTransferUserId(): string
     {
@@ -32,7 +30,6 @@ class PermissionSetOwnershipTransferRequest
     }
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
      *
      * @return self
      */

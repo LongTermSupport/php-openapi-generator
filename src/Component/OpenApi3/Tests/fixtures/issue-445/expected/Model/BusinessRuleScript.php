@@ -19,12 +19,10 @@ class BusinessRuleScript extends BusinessRule
     }
     /**
      * Script
-     *
      */
     protected ?string $script = null;
     /**
      * Script
-     *
      */
     public function getScript(): ?string
     {
@@ -32,7 +30,6 @@ class BusinessRuleScript extends BusinessRule
     }
     /**
      * Script
-     *
      *
      * @return self
      */

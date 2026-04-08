@@ -22,22 +22,18 @@ class ContextAnnotationEntityFields extends \ArrayObject
     }
     /**
      * The unique id for a context annotation entity.
-     *
      */
     protected string $id;
     /**
      * Name of the context annotation entity.
-     *
      */
     protected string $name;
     /**
      * Description of the context annotation entity.
-     *
      */
     protected string $description;
     /**
      * The unique id for a context annotation entity.
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class ContextAnnotationEntityFields extends \ArrayObject
     }
     /**
      * The unique id for a context annotation entity.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ContextAnnotationEntityFields extends \ArrayObject
     }
     /**
      * Name of the context annotation entity.
-     *
      */
     public function getName(): string
     {
@@ -65,7 +59,6 @@ class ContextAnnotationEntityFields extends \ArrayObject
     }
     /**
      * Name of the context annotation entity.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ContextAnnotationEntityFields extends \ArrayObject
     }
     /**
      * Description of the context annotation entity.
-     *
      */
     public function getDescription(): string
     {
@@ -85,7 +77,6 @@ class ContextAnnotationEntityFields extends \ArrayObject
     }
     /**
      * Description of the context annotation entity.
-     *
      *
      * @return self
      */

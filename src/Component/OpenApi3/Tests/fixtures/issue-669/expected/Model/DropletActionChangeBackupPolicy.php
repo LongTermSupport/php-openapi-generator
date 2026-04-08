@@ -22,13 +22,11 @@ class DropletActionChangeBackupPolicy extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     protected DropletActionChangeBackupPolicybackupPolicy $backupPolicy;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -36,7 +34,6 @@ class DropletActionChangeBackupPolicy extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */

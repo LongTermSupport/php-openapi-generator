@@ -19,7 +19,6 @@ class ChannelCreateRequest
     }
     /**
      * ID of the channel.
-     *
      */
     protected ?string $id = null;
     /**
@@ -30,7 +29,6 @@ class ChannelCreateRequest
     protected ?array $sort = null;
     /**
      * Order in which the channels should be displayed.
-     *
      */
     protected int $sortOrder;
     /**
@@ -41,12 +39,10 @@ class ChannelCreateRequest
     protected array $sortFields;
     /**
      * Language specific channel names.
-     *
      */
     protected mixed $names = null;
     /**
      * Language specific names.
-     *
      */
     protected ?string $searchIndexId = null;
     /**
@@ -63,7 +59,6 @@ class ChannelCreateRequest
     protected ?array $aggregations = null;
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      */
     protected mixed $filter = null;
     /**
@@ -74,17 +69,14 @@ class ChannelCreateRequest
     protected ?array $extendedSimpleSearchFields = null;
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      */
     protected mixed $missingResultsDisplayPatterns = null;
     /**
      * Grants rights to all the users to view the channel.
-     *
      */
     protected bool $viewForAll;
     /**
      * ID of the channel.
-     *
      */
     public function getId(): ?string
     {
@@ -92,7 +84,6 @@ class ChannelCreateRequest
     }
     /**
      * ID of the channel.
-     *
      *
      * @return self
      */
@@ -126,7 +117,6 @@ class ChannelCreateRequest
     }
     /**
      * Order in which the channels should be displayed.
-     *
      */
     public function getSortOrder(): int
     {
@@ -134,7 +124,6 @@ class ChannelCreateRequest
     }
     /**
      * Order in which the channels should be displayed.
-     *
      *
      * @return self
      */
@@ -168,7 +157,6 @@ class ChannelCreateRequest
     }
     /**
      * Language specific channel names.
-     *
      */
     public function getNames(): mixed
     {
@@ -176,7 +164,6 @@ class ChannelCreateRequest
     }
     /**
      * Language specific channel names.
-     *
      *
      * @return self
      */
@@ -188,7 +175,6 @@ class ChannelCreateRequest
     }
     /**
      * Language specific names.
-     *
      */
     public function getSearchIndexId(): ?string
     {
@@ -196,7 +182,6 @@ class ChannelCreateRequest
     }
     /**
      * Language specific names.
-     *
      *
      * @return self
      */
@@ -252,7 +237,6 @@ class ChannelCreateRequest
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      */
     public function getFilter(): mixed
     {
@@ -260,7 +244,6 @@ class ChannelCreateRequest
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      *
      * @return self
      */
@@ -294,7 +277,6 @@ class ChannelCreateRequest
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      */
     public function getMissingResultsDisplayPatterns(): mixed
     {
@@ -302,7 +284,6 @@ class ChannelCreateRequest
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      *
      * @return self
      */
@@ -314,7 +295,6 @@ class ChannelCreateRequest
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
      */
     public function getViewForAll(): bool
     {
@@ -322,7 +302,6 @@ class ChannelCreateRequest
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
      *
      * @return self
      */

@@ -23,7 +23,6 @@ class TeamMembership extends \ArrayObject
     protected string $url;
     /**
      * The role of the user in the team.
-     *
      */
     protected string $role = 'member';
     protected string $state;
@@ -39,7 +38,6 @@ class TeamMembership extends \ArrayObject
     }
     /**
      * The role of the user in the team.
-     *
      */
     public function getRole(): string
     {
@@ -47,7 +45,6 @@ class TeamMembership extends \ArrayObject
     }
     /**
      * The role of the user in the team.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class SlackDetails extends \ArrayObject
     }
     /**
      * Slack channel to notify of an alert trigger.
-     *
      */
     protected string $channel;
     /**
      * Slack Webhook URL.
-     *
      */
     protected string $url;
     /**
      * Slack channel to notify of an alert trigger.
-     *
      */
     public function getChannel(): string
     {
@@ -40,7 +37,6 @@ class SlackDetails extends \ArrayObject
     }
     /**
      * Slack channel to notify of an alert trigger.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class SlackDetails extends \ArrayObject
     }
     /**
      * Slack Webhook URL.
-     *
      */
     public function getUrl(): string
     {
@@ -60,7 +55,6 @@ class SlackDetails extends \ArrayObject
     }
     /**
      * Slack Webhook URL.
-     *
      *
      * @return self
      */

@@ -22,7 +22,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
      */
     protected int $totalResults;
     /**
@@ -33,22 +32,18 @@ class MetadataReferenceResult extends \ArrayObject
     protected array $results;
     /**
      * The search execution time in milliseconds.
-     *
      */
     protected int $elapsedMilliseconds;
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * Indicates if any reference is originating from an item that the current user does not have access to.
-     *
      */
     protected ?bool $isReferencedByRestrictedItem = null;
     /**
      * The total number of matching documents.
-     *
      */
     public function getTotalResults(): int
     {
@@ -56,7 +51,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
      *
      * @return self
      */
@@ -90,7 +84,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
      */
     public function getElapsedMilliseconds(): int
     {
@@ -98,7 +91,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
      *
      * @return self
      */
@@ -110,7 +102,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -118,7 +109,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      *
      * @return self
      */
@@ -130,7 +120,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * Indicates if any reference is originating from an item that the current user does not have access to.
-     *
      */
     public function getIsReferencedByRestrictedItem(): ?bool
     {
@@ -138,7 +127,6 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * Indicates if any reference is originating from an item that the current user does not have access to.
-     *
      *
      * @return self
      */

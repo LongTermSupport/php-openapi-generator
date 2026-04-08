@@ -22,22 +22,18 @@ class Backup extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format at which the backup was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The size of the database backup in GBs.
-     *
      */
     protected float $sizeGigabytes;
     /**
      * Indicates if this backup is a full or an incremental one (available only for MySQL).
-     *
      */
     protected bool $incremental;
     /**
      * A time value given in ISO8601 combined date and time format at which the backup was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -45,7 +41,6 @@ class Backup extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format at which the backup was created.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class Backup extends \ArrayObject
     }
     /**
      * The size of the database backup in GBs.
-     *
      */
     public function getSizeGigabytes(): float
     {
@@ -65,7 +59,6 @@ class Backup extends \ArrayObject
     }
     /**
      * The size of the database backup in GBs.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class Backup extends \ArrayObject
     }
     /**
      * Indicates if this backup is a full or an incremental one (available only for MySQL).
-     *
      */
     public function getIncremental(): bool
     {
@@ -85,7 +77,6 @@ class Backup extends \ArrayObject
     }
     /**
      * Indicates if this backup is a full or an incremental one (available only for MySQL).
-     *
      *
      * @return self
      */

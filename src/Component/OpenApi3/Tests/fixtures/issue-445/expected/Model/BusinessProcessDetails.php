@@ -19,12 +19,10 @@ class BusinessProcessDetails extends BusinessProcess
     }
     /**
      * Details for the business process.
-     *
      */
     protected mixed $details = null;
     /**
      * Details for the business process.
-     *
      */
     public function getDetails(): mixed
     {
@@ -32,7 +30,6 @@ class BusinessProcessDetails extends BusinessProcess
     }
     /**
      * Details for the business process.
-     *
      *
      * @return self
      */

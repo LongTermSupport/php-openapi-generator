@@ -28,7 +28,6 @@ class IdentityProvider extends \ArrayObject
     protected ?array $claimMapping = null;
     /**
      * Name of the identity provider claim that holds group membership information
-     *
      */
     protected ?string $groupClaimType = null;
     /**
@@ -39,22 +38,18 @@ class IdentityProvider extends \ArrayObject
     protected ?array $groupMapping = null;
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
      */
     protected ?string $fallbackUserRoleId = null;
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
      */
     protected ?string $id = null;
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
      */
     protected ?string $name = null;
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
      */
     protected ?string $displayName = null;
     /**
@@ -81,7 +76,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Name of the identity provider claim that holds group membership information
-     *
      */
     public function getGroupClaimType(): ?string
     {
@@ -89,7 +83,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Name of the identity provider claim that holds group membership information
-     *
      *
      * @return self
      */
@@ -123,7 +116,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
      */
     public function getFallbackUserRoleId(): ?string
     {
@@ -131,7 +123,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
      *
      * @return self
      */
@@ -143,7 +134,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
      */
     public function getId(): ?string
     {
@@ -151,7 +141,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
      *
      * @return self
      */
@@ -163,7 +152,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
      */
     public function getName(): ?string
     {
@@ -171,7 +159,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
      *
      * @return self
      */
@@ -183,7 +170,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
      */
     public function getDisplayName(): ?string
     {
@@ -191,7 +177,6 @@ class IdentityProvider extends \ArrayObject
     }
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
      *
      * @return self
      */

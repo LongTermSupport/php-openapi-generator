@@ -28,27 +28,22 @@ class ApiWorkspace extends \ArrayObject
     protected array $agents;
     /**
      * Creation date
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The id of user who created this workspace
-     *
      */
     protected string $createdBy;
     /**
      * The email of the user who created this workspace
-     *
      */
     protected string $createdByEmail;
     /**
      * Deleted date
-     *
      */
     protected \DateTime $deletedAt;
     /**
      * Description of the workspace
-     *
      */
     protected string $description;
     /**
@@ -59,17 +54,14 @@ class ApiWorkspace extends \ArrayObject
     protected array $evaluationTestCases;
     /**
      * Name of the workspace
-     *
      */
     protected string $name;
     /**
      * Update date
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
@@ -96,7 +88,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Creation date
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -104,7 +95,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Creation date
-     *
      *
      * @return self
      */
@@ -116,7 +106,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * The id of user who created this workspace
-     *
      */
     public function getCreatedBy(): string
     {
@@ -124,7 +113,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * The id of user who created this workspace
-     *
      *
      * @return self
      */
@@ -136,7 +124,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * The email of the user who created this workspace
-     *
      */
     public function getCreatedByEmail(): string
     {
@@ -144,7 +131,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * The email of the user who created this workspace
-     *
      *
      * @return self
      */
@@ -156,7 +142,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Deleted date
-     *
      */
     public function getDeletedAt(): \DateTime
     {
@@ -164,7 +149,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Deleted date
-     *
      *
      * @return self
      */
@@ -176,7 +160,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Description of the workspace
-     *
      */
     public function getDescription(): string
     {
@@ -184,7 +167,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Description of the workspace
-     *
      *
      * @return self
      */
@@ -218,7 +200,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Name of the workspace
-     *
      */
     public function getName(): string
     {
@@ -226,7 +207,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Name of the workspace
-     *
      *
      * @return self
      */
@@ -238,7 +218,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Update date
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -246,7 +225,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Update date
-     *
      *
      * @return self
      */
@@ -258,7 +236,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -266,7 +243,6 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */

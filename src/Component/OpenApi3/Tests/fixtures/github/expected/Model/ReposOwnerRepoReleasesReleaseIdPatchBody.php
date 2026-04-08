@@ -22,37 +22,30 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
      */
     protected string $tagName;
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
      */
     protected string $targetCommitish;
     /**
      * The name of the release.
-     *
      */
     protected string $name;
     /**
      * Text describing the contents of the tag.
-     *
      */
     protected string $body;
     /**
      * `true` makes the release a draft, and `false` publishes the release.
-     *
      */
     protected bool $draft;
     /**
      * `true` to identify the release as a prerelease, `false` to identify the release as a full release.
-     *
      */
     protected bool $prerelease;
     /**
      * The name of the tag.
-     *
      */
     public function getTagName(): string
     {
@@ -60,7 +53,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
      */
     public function getTargetCommitish(): string
     {
@@ -80,7 +71,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the release.
-     *
      */
     public function getName(): string
     {
@@ -100,7 +89,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the release.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * Text describing the contents of the tag.
-     *
      */
     public function getBody(): string
     {
@@ -120,7 +107,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * Text describing the contents of the tag.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * `true` makes the release a draft, and `false` publishes the release.
-     *
      */
     public function getDraft(): bool
     {
@@ -140,7 +125,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * `true` makes the release a draft, and `false` publishes the release.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * `true` to identify the release as a prerelease, `false` to identify the release as a full release.
-     *
      */
     public function getPrerelease(): bool
     {
@@ -160,7 +143,6 @@ class ReposOwnerRepoReleasesReleaseIdPatchBody extends \ArrayObject
     }
     /**
      * `true` to identify the release as a prerelease, `false` to identify the release as a full release.
-     *
      *
      * @return self
      */

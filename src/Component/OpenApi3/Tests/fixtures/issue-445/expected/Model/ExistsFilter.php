@@ -20,25 +20,22 @@ class ExistsFilter extends FilterBase
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
      */
     protected string $field;
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
      */
     public function getField(): string
     {
         return $this->field;
     }
     /**
-    * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
-    (i.e. personLayer.address.street).
-    *
-    *
-    * @return self
-    */
+     * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
+     * (i.e. personLayer.address.street).
+     *
+     * @return self
+     */
     public function setField(string $field): self
     {
         $this->initialized['field'] = true;

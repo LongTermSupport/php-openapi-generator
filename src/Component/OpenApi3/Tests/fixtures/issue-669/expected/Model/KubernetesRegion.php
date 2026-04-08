@@ -22,17 +22,14 @@ class KubernetesRegion extends \ArrayObject
     }
     /**
      * A DigitalOcean region where Kubernetes is available.
-     *
      */
     protected string $name;
     /**
      * The identifier for a region for use when creating a new cluster.
-     *
      */
     protected string $slug;
     /**
      * A DigitalOcean region where Kubernetes is available.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class KubernetesRegion extends \ArrayObject
     }
     /**
      * A DigitalOcean region where Kubernetes is available.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class KubernetesRegion extends \ArrayObject
     }
     /**
      * The identifier for a region for use when creating a new cluster.
-     *
      */
     public function getSlug(): string
     {
@@ -60,7 +55,6 @@ class KubernetesRegion extends \ArrayObject
     }
     /**
      * The identifier for a region for use when creating a new cluster.
-     *
      *
      * @return self
      */

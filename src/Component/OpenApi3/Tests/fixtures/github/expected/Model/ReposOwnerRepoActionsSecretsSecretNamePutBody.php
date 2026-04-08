@@ -22,17 +22,14 @@ class ReposOwnerRepoActionsSecretsSecretNamePutBody extends \ArrayObject
     }
     /**
      * Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://developer.github.com/v3/actions/secrets/#get-a-repository-public-key) endpoint.
-     *
      */
     protected string $encryptedValue;
     /**
      * ID of the key you used to encrypt the secret.
-     *
      */
     protected string $keyId;
     /**
      * Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://developer.github.com/v3/actions/secrets/#get-a-repository-public-key) endpoint.
-     *
      */
     public function getEncryptedValue(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoActionsSecretsSecretNamePutBody extends \ArrayObject
     }
     /**
      * Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://developer.github.com/v3/actions/secrets/#get-a-repository-public-key) endpoint.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoActionsSecretsSecretNamePutBody extends \ArrayObject
     }
     /**
      * ID of the key you used to encrypt the secret.
-     *
      */
     public function getKeyId(): string
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoActionsSecretsSecretNamePutBody extends \ArrayObject
     }
     /**
      * ID of the key you used to encrypt the secret.
-     *
      *
      * @return self
      */

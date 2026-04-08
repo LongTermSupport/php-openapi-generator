@@ -27,7 +27,6 @@ class AppsDeploymentProgressStep extends \ArrayObject
      * 
      * `message_base` = "Building service"
      * `component_name` = "api"
-     *
      */
     protected string $messageBase;
     protected string $name;
@@ -63,21 +62,19 @@ class AppsDeploymentProgressStep extends \ArrayObject
      * 
      * `message_base` = "Building service"
      * `component_name` = "api"
-     *
      */
     public function getMessageBase(): string
     {
         return $this->messageBase;
     }
     /**
-    * The base of a human-readable description of the step intended to be combined with the component name for presentation. For example:
-    
-    `message_base` = "Building service"
-    `component_name` = "api"
-    *
-    *
-    * @return self
-    */
+     * The base of a human-readable description of the step intended to be combined with the component name for presentation. For example:
+     * 
+     * `message_base` = "Building service"
+     * `component_name` = "api"
+     *
+     * @return self
+     */
     public function setMessageBase(string $messageBase): self
     {
         $this->initialized['messageBase'] = true;

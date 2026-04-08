@@ -19,12 +19,10 @@ class OutputFormatSetXmpWritebackStateRequest
     }
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
      */
     protected bool $enabled;
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
      */
     public function getEnabled(): bool
     {
@@ -32,7 +30,6 @@ class OutputFormatSetXmpWritebackStateRequest
     }
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class AppJobInvocationTriggerManual extends \ArrayObject
     }
     /**
      * The user who triggered the job
-     *
      */
     protected AppJobInvocationTriggerManualUser $user;
     /**
      * The user who triggered the job
-     *
      */
     public function getUser(): AppJobInvocationTriggerManualUser
     {
@@ -35,7 +33,6 @@ class AppJobInvocationTriggerManual extends \ArrayObject
     }
     /**
      * The user who triggered the job
-     *
      *
      * @return self
      */

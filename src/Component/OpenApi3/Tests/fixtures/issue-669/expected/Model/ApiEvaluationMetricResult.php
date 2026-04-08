@@ -22,33 +22,27 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Error description if the metric could not be calculated.
-     *
      */
     protected string $errorDescription;
     /**
      * Metric name
-     *
      */
     protected string $metricName;
     protected string $metricValueType = 'METRIC_VALUE_TYPE_UNSPECIFIED';
     /**
      * The value of the metric as a number.
-     *
      */
     protected float $numberValue;
     /**
      * Reasoning of the metric result.
-     *
      */
     protected string $reasoning;
     /**
      * The value of the metric as a string.
-     *
      */
     protected string $stringValue;
     /**
      * Error description if the metric could not be calculated.
-     *
      */
     public function getErrorDescription(): string
     {
@@ -56,7 +50,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Error description if the metric could not be calculated.
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Metric name
-     *
      */
     public function getMetricName(): string
     {
@@ -76,7 +68,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Metric name
-     *
      *
      * @return self
      */
@@ -98,7 +89,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * The value of the metric as a number.
-     *
      */
     public function getNumberValue(): float
     {
@@ -106,7 +96,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * The value of the metric as a number.
-     *
      *
      * @return self
      */
@@ -118,7 +107,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Reasoning of the metric result.
-     *
      */
     public function getReasoning(): string
     {
@@ -126,7 +114,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * Reasoning of the metric result.
-     *
      *
      * @return self
      */
@@ -138,7 +125,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * The value of the metric as a string.
-     *
      */
     public function getStringValue(): string
     {
@@ -146,7 +132,6 @@ class ApiEvaluationMetricResult extends \ArrayObject
     }
     /**
      * The value of the metric as a string.
-     *
      *
      * @return self
      */

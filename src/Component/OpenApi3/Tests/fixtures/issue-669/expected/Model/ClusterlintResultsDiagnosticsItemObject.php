@@ -22,22 +22,18 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * Name of the object
-     *
      */
     protected string $name;
     /**
      * The kind of Kubernetes API object
-     *
      */
     protected string $kind;
     /**
      * The namespace the object resides in the cluster.
-     *
      */
     protected string $namespace;
     /**
      * Name of the object
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * Name of the object
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * The kind of Kubernetes API object
-     *
      */
     public function getKind(): string
     {
@@ -65,7 +59,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * The kind of Kubernetes API object
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * The namespace the object resides in the cluster.
-     *
      */
     public function getNamespace(): string
     {
@@ -85,7 +77,6 @@ class ClusterlintResultsDiagnosticsItemObject extends \ArrayObject
     }
     /**
      * The namespace the object resides in the cluster.
-     *
      *
      * @return self
      */

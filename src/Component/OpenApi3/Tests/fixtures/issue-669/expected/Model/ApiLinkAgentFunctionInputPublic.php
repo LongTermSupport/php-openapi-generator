@@ -22,27 +22,22 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      */
     protected string $agentUuid;
     /**
      * Function description
-     *
      */
     protected string $description;
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
      */
     protected string $faasName;
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
      */
     protected string $faasNamespace;
     /**
      * Function name
-     *
      */
     protected string $functionName;
     /**
@@ -59,7 +54,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     protected array $outputSchema;
     /**
      * Agent id
-     *
      */
     public function getAgentUuid(): string
     {
@@ -67,7 +61,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      *
      * @return self
      */
@@ -79,7 +72,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function description
-     *
      */
     public function getDescription(): string
     {
@@ -87,7 +79,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function description
-     *
      *
      * @return self
      */
@@ -99,7 +90,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
      */
     public function getFaasName(): string
     {
@@ -107,7 +97,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
      *
      * @return self
      */
@@ -119,7 +108,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
      */
     public function getFaasNamespace(): string
     {
@@ -127,7 +115,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
      *
      * @return self
      */
@@ -139,7 +126,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function name
-     *
      */
     public function getFunctionName(): string
     {
@@ -147,7 +133,6 @@ class ApiLinkAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function name
-     *
      *
      * @return self
      */

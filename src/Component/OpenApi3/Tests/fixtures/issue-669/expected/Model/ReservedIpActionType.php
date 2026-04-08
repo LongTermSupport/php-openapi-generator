@@ -22,12 +22,10 @@ class ReservedIpActionType extends \ArrayObject
     }
     /**
      * The type of action to initiate for the reserved IP.
-     *
      */
     protected string $type;
     /**
      * The type of action to initiate for the reserved IP.
-     *
      */
     public function getType(): string
     {
@@ -35,7 +33,6 @@ class ReservedIpActionType extends \ArrayObject
     }
     /**
      * The type of action to initiate for the reserved IP.
-     *
      */
     public function setType(string $type): void
     {

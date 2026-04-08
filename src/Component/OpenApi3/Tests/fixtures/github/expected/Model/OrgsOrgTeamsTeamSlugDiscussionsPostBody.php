@@ -22,22 +22,18 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * The discussion post's title.
-     *
      */
     protected string $title;
     /**
      * The discussion post's body text.
-     *
      */
     protected string $body;
     /**
      * Private posts are only visible to team members, organization owners, and team maintainers. Public posts are visible to all members of the organization. Set to `true` to create a private post.
-     *
      */
     protected bool $private = false;
     /**
      * The discussion post's title.
-     *
      */
     public function getTitle(): string
     {
@@ -45,7 +41,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * The discussion post's title.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * The discussion post's body text.
-     *
      */
     public function getBody(): string
     {
@@ -65,7 +59,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * The discussion post's body text.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * Private posts are only visible to team members, organization owners, and team maintainers. Public posts are visible to all members of the organization. Set to `true` to create a private post.
-     *
      */
     public function getPrivate(): bool
     {
@@ -85,7 +77,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsPostBody extends \ArrayObject
     }
     /**
      * Private posts are only visible to team members, organization owners, and team maintainers. Public posts are visible to all members of the organization. Set to `true` to create a private post.
-     *
      *
      * @return self
      */

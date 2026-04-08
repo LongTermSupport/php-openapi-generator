@@ -22,17 +22,14 @@ class DefaultTweetFieldsGeo extends \ArrayObject
     }
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
      */
     protected Point $coordinates;
     /**
      * The identifier for this place
-     *
      */
     protected string $placeId;
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
      */
     public function getCoordinates(): Point
     {
@@ -40,7 +37,6 @@ class DefaultTweetFieldsGeo extends \ArrayObject
     }
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DefaultTweetFieldsGeo extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
      */
     public function getPlaceId(): string
     {
@@ -60,7 +55,6 @@ class DefaultTweetFieldsGeo extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
      *
      * @return self
      */

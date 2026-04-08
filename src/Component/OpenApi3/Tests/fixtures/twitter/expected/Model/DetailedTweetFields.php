@@ -22,7 +22,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
      */
     protected DetailedTweetFieldsStats $stats;
     /**
@@ -31,22 +30,18 @@ class DetailedTweetFields extends \ArrayObject
     protected array $contextAnnotation;
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
      */
     protected bool $possiblySensitive;
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
      */
     protected string $lang;
     /**
      * The name of the app the user Tweeted from.
-     *
      */
     protected string $source;
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
      */
     public function getStats(): DetailedTweetFieldsStats
     {
@@ -54,7 +49,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
      *
      * @return self
      */
@@ -84,7 +78,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
      */
     public function getPossiblySensitive(): bool
     {
@@ -92,7 +85,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
      *
      * @return self
      */
@@ -104,7 +96,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
      */
     public function getLang(): string
     {
@@ -112,7 +103,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
      *
      * @return self
      */
@@ -124,7 +114,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * The name of the app the user Tweeted from.
-     *
      */
     public function getSource(): string
     {
@@ -132,7 +121,6 @@ class DetailedTweetFields extends \ArrayObject
     }
     /**
      * The name of the app the user Tweeted from.
-     *
      *
      * @return self
      */

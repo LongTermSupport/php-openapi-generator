@@ -30,12 +30,10 @@ class IssueEvent extends \ArrayObject
     protected \DateTime $createdAt;
     /**
      * Issue Simple
-     *
      */
     protected IssueSimple $issue;
     /**
      * Issue Event Label
-     *
      */
     protected IssueEventLabel $label;
     protected ?IssueEventAssignee $assignee = null;
@@ -44,23 +42,19 @@ class IssueEvent extends \ArrayObject
     protected ?IssueEventRequestedReviewer $requestedReviewer = null;
     /**
      * Groups of organization members that gives permissions on specified repositories.
-     *
      */
     protected Team $requestedTeam;
     protected IssueEventDismissedReview $dismissedReview;
     /**
      * Issue Event Milestone
-     *
      */
     protected IssueEventMilestone $milestone;
     /**
      * Issue Event Project Card
-     *
      */
     protected IssueEventProjectCard $projectCard;
     /**
      * Issue Event Rename
-     *
      */
     protected IssueEventRename $rename;
     protected string $authorAssociation;
@@ -147,7 +141,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Simple
-     *
      */
     public function getIssue(): IssueSimple
     {
@@ -155,7 +148,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Simple
-     *
      *
      * @return self
      */
@@ -167,7 +159,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Label
-     *
      */
     public function getLabel(): IssueEventLabel
     {
@@ -175,7 +166,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Label
-     *
      *
      * @return self
      */
@@ -227,7 +217,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Groups of organization members that gives permissions on specified repositories.
-     *
      */
     public function getRequestedTeam(): Team
     {
@@ -235,7 +224,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Groups of organization members that gives permissions on specified repositories.
-     *
      *
      * @return self
      */
@@ -257,7 +245,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Milestone
-     *
      */
     public function getMilestone(): IssueEventMilestone
     {
@@ -265,7 +252,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Milestone
-     *
      *
      * @return self
      */
@@ -277,7 +263,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Project Card
-     *
      */
     public function getProjectCard(): IssueEventProjectCard
     {
@@ -285,7 +270,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Project Card
-     *
      *
      * @return self
      */
@@ -297,7 +281,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Rename
-     *
      */
     public function getRename(): IssueEventRename
     {
@@ -305,7 +288,6 @@ class IssueEvent extends \ArrayObject
     }
     /**
      * Issue Event Rename
-     *
      *
      * @return self
      */

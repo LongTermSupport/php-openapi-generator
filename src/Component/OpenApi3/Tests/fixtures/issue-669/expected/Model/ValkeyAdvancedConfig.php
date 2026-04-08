@@ -29,42 +29,34 @@ class ValkeyAdvancedConfig extends \ArrayObject
      * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile_random`: Evict keys with expiration only in a random order.
      * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
      */
     protected string $valkeyMaxmemoryPolicy;
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
      */
     protected int $valkeyPubsubClientOutputBufferLimit;
     /**
      * Set number of valkey databases. Changing this will cause a restart of valkey service.
-     *
      */
     protected int $valkeyNumberOfDatabases;
     /**
      * Valkey IO thread count
-     *
      */
     protected int $valkeyIoThreads;
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
      */
     protected int $valkeyLfuLogFactor = 10;
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
      */
     protected int $valkeyLfuDecayTime = 1;
     /**
      * Require SSL to access Valkey
-     *
      */
     protected bool $valkeySsl = true;
     /**
      * Valkey idle connection timeout in seconds
-     *
      */
     protected int $valkeyTimeout = 300;
     /**
@@ -84,31 +76,26 @@ class ValkeyAdvancedConfig extends \ArrayObject
      * - `m` &mdash; Key miss events
      * - `n` &mdash; New key events
      * - `A` &mdash; Alias for `"g$lshztxed"`
-     *
      */
     protected string $valkeyNotifyKeyspaceEvents = '';
     /**
      * When persistence is 'rdb', Valkey does RDB dumps each 10 minutes if any key is changed. Also RDB dumps are done according to backup schedule for backup purposes. When persistence is 'off', no RDB dumps and backups are done, so data can be lost at any moment if service is restarted for any reason, or if service is powered off. Also service can't be forked.
-     *
      */
     protected string $valkeyPersistence;
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Valkey configuration acl-pubsub-default.
-     *
      */
     protected string $valkeyAclChannelsDefault;
     /**
      * Frequent RDB snapshots
      * When enabled, Valkey will create frequent local RDB snapshots. When disabled, Valkey will only take RDB snapshots when a backup is created, based on the backup schedule. This setting is ignored when valkey_persistence is set to off.
      * 
-     *
      */
     protected bool $frequentSnapshots = true;
     /**
      * Active expire effort
      * Valkey reclaims expired keys both when accessed and in the background. The background process scans for expired keys to free memory. Increasing the active-expire-effort setting (default 1, max 10) uses more CPU to reclaim expired keys faster, reducing memory usage but potentially increasing latency.
      * 
-     *
      */
     protected int $valkeyActiveExpireEffort = 1;
     /**
@@ -120,25 +107,23 @@ class ValkeyAdvancedConfig extends \ArrayObject
      * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile_random`: Evict keys with expiration only in a random order.
      * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
      */
     public function getValkeyMaxmemoryPolicy(): string
     {
         return $this->valkeyMaxmemoryPolicy;
     }
     /**
-    * A string specifying the desired eviction policy for a Caching or Valkey cluster.
-    
-    - `noeviction`: Don't evict any data, returns error when memory limit is reached.
-    - `allkeys_lru:` Evict any key, least recently used (LRU) first.
-    - `allkeys_random`: Evict keys in a random order.
-    - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
-    - `volatile_random`: Evict keys with expiration only in a random order.
-    - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-    *
-    *
-    * @return self
-    */
+     * A string specifying the desired eviction policy for a Caching or Valkey cluster.
+     * 
+     * - `noeviction`: Don't evict any data, returns error when memory limit is reached.
+     * - `allkeys_lru:` Evict any key, least recently used (LRU) first.
+     * - `allkeys_random`: Evict keys in a random order.
+     * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
+     * - `volatile_random`: Evict keys with expiration only in a random order.
+     * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
+     *
+     * @return self
+     */
     public function setValkeyMaxmemoryPolicy(string $valkeyMaxmemoryPolicy): self
     {
         $this->initialized['valkeyMaxmemoryPolicy'] = true;
@@ -147,7 +132,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
      */
     public function getValkeyPubsubClientOutputBufferLimit(): int
     {
@@ -155,7 +139,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
      *
      * @return self
      */
@@ -167,7 +150,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Set number of valkey databases. Changing this will cause a restart of valkey service.
-     *
      */
     public function getValkeyNumberOfDatabases(): int
     {
@@ -175,7 +157,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Set number of valkey databases. Changing this will cause a restart of valkey service.
-     *
      *
      * @return self
      */
@@ -187,7 +168,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Valkey IO thread count
-     *
      */
     public function getValkeyIoThreads(): int
     {
@@ -195,7 +175,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Valkey IO thread count
-     *
      *
      * @return self
      */
@@ -207,7 +186,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
      */
     public function getValkeyLfuLogFactor(): int
     {
@@ -215,7 +193,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
      *
      * @return self
      */
@@ -227,7 +204,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
      */
     public function getValkeyLfuDecayTime(): int
     {
@@ -235,7 +211,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
      *
      * @return self
      */
@@ -247,7 +222,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Require SSL to access Valkey
-     *
      */
     public function getValkeySsl(): bool
     {
@@ -255,7 +229,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Require SSL to access Valkey
-     *
      *
      * @return self
      */
@@ -267,7 +240,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Valkey idle connection timeout in seconds
-     *
      */
     public function getValkeyTimeout(): int
     {
@@ -275,7 +247,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Valkey idle connection timeout in seconds
-     *
      *
      * @return self
      */
@@ -302,33 +273,31 @@ class ValkeyAdvancedConfig extends \ArrayObject
      * - `m` &mdash; Key miss events
      * - `n` &mdash; New key events
      * - `A` &mdash; Alias for `"g$lshztxed"`
-     *
      */
     public function getValkeyNotifyKeyspaceEvents(): string
     {
         return $this->valkeyNotifyKeyspaceEvents;
     }
     /**
-    * Set notify-keyspace-events option. Requires at least `K` or `E` and accepts any combination of the following options. Setting the parameter to `""` disables notifications.
-    - `K` &mdash; Keyspace events
-    - `E` &mdash; Keyevent events
-    - `g` &mdash; Generic commands (e.g. `DEL`, `EXPIRE`, `RENAME`, ...)
-    - `$` &mdash; String commands
-    - `l` &mdash; List commands
-    - `s` &mdash; Set commands
-    - `h` &mdash; Hash commands
-    - `z` &mdash; Sorted set commands
-    - `t` &mdash; Stream commands
-    - `d` &mdash; Module key type events
-    - `x` &mdash; Expired events
-    - `e` &mdash; Evicted events
-    - `m` &mdash; Key miss events
-    - `n` &mdash; New key events
-    - `A` &mdash; Alias for `"g$lshztxed"`
-    *
-    *
-    * @return self
-    */
+     * Set notify-keyspace-events option. Requires at least `K` or `E` and accepts any combination of the following options. Setting the parameter to `""` disables notifications.
+     * - `K` &mdash; Keyspace events
+     * - `E` &mdash; Keyevent events
+     * - `g` &mdash; Generic commands (e.g. `DEL`, `EXPIRE`, `RENAME`, ...)
+     * - `$` &mdash; String commands
+     * - `l` &mdash; List commands
+     * - `s` &mdash; Set commands
+     * - `h` &mdash; Hash commands
+     * - `z` &mdash; Sorted set commands
+     * - `t` &mdash; Stream commands
+     * - `d` &mdash; Module key type events
+     * - `x` &mdash; Expired events
+     * - `e` &mdash; Evicted events
+     * - `m` &mdash; Key miss events
+     * - `n` &mdash; New key events
+     * - `A` &mdash; Alias for `"g$lshztxed"`
+     *
+     * @return self
+     */
     public function setValkeyNotifyKeyspaceEvents(string $valkeyNotifyKeyspaceEvents): self
     {
         $this->initialized['valkeyNotifyKeyspaceEvents'] = true;
@@ -337,7 +306,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * When persistence is 'rdb', Valkey does RDB dumps each 10 minutes if any key is changed. Also RDB dumps are done according to backup schedule for backup purposes. When persistence is 'off', no RDB dumps and backups are done, so data can be lost at any moment if service is restarted for any reason, or if service is powered off. Also service can't be forked.
-     *
      */
     public function getValkeyPersistence(): string
     {
@@ -345,7 +313,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * When persistence is 'rdb', Valkey does RDB dumps each 10 minutes if any key is changed. Also RDB dumps are done according to backup schedule for backup purposes. When persistence is 'off', no RDB dumps and backups are done, so data can be lost at any moment if service is restarted for any reason, or if service is powered off. Also service can't be forked.
-     *
      *
      * @return self
      */
@@ -357,7 +324,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Valkey configuration acl-pubsub-default.
-     *
      */
     public function getValkeyAclChannelsDefault(): string
     {
@@ -365,7 +331,6 @@ class ValkeyAdvancedConfig extends \ArrayObject
     }
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Valkey configuration acl-pubsub-default.
-     *
      *
      * @return self
      */
@@ -379,20 +344,18 @@ class ValkeyAdvancedConfig extends \ArrayObject
      * Frequent RDB snapshots
      * When enabled, Valkey will create frequent local RDB snapshots. When disabled, Valkey will only take RDB snapshots when a backup is created, based on the backup schedule. This setting is ignored when valkey_persistence is set to off.
      * 
-     *
      */
     public function getFrequentSnapshots(): bool
     {
         return $this->frequentSnapshots;
     }
     /**
-    * Frequent RDB snapshots
-    When enabled, Valkey will create frequent local RDB snapshots. When disabled, Valkey will only take RDB snapshots when a backup is created, based on the backup schedule. This setting is ignored when valkey_persistence is set to off.
-    
-    *
-    *
-    * @return self
-    */
+     * Frequent RDB snapshots
+     * When enabled, Valkey will create frequent local RDB snapshots. When disabled, Valkey will only take RDB snapshots when a backup is created, based on the backup schedule. This setting is ignored when valkey_persistence is set to off.
+     * 
+     *
+     * @return self
+     */
     public function setFrequentSnapshots(bool $frequentSnapshots): self
     {
         $this->initialized['frequentSnapshots'] = true;
@@ -403,20 +366,18 @@ class ValkeyAdvancedConfig extends \ArrayObject
      * Active expire effort
      * Valkey reclaims expired keys both when accessed and in the background. The background process scans for expired keys to free memory. Increasing the active-expire-effort setting (default 1, max 10) uses more CPU to reclaim expired keys faster, reducing memory usage but potentially increasing latency.
      * 
-     *
      */
     public function getValkeyActiveExpireEffort(): int
     {
         return $this->valkeyActiveExpireEffort;
     }
     /**
-    * Active expire effort
-    Valkey reclaims expired keys both when accessed and in the background. The background process scans for expired keys to free memory. Increasing the active-expire-effort setting (default 1, max 10) uses more CPU to reclaim expired keys faster, reducing memory usage but potentially increasing latency.
-    
-    *
-    *
-    * @return self
-    */
+     * Active expire effort
+     * Valkey reclaims expired keys both when accessed and in the background. The background process scans for expired keys to free memory. Increasing the active-expire-effort setting (default 1, max 10) uses more CPU to reclaim expired keys faster, reducing memory usage but potentially increasing latency.
+     * 
+     *
+     * @return self
+     */
     public function setValkeyActiveExpireEffort(int $valkeyActiveExpireEffort): self
     {
         $this->initialized['valkeyActiveExpireEffort'] = true;

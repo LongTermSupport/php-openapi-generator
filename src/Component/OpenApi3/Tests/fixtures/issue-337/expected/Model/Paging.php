@@ -22,27 +22,22 @@ class Paging extends \ArrayObject
     }
     /**
      * The maximum number of results returned per page.
-     *
      */
     protected float $size;
     /**
      * The page number of the previous page, null if there is no previous page available.
-     *
      */
     protected float $prev;
     /**
      * The page number of the next page, null if there is no next page available.
-     *
      */
     protected float $next;
     /**
      * The page number of the last page.
-     *
      */
     protected float $last;
     /**
      * The maximum number of results returned per page.
-     *
      */
     public function getSize(): float
     {
@@ -50,7 +45,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The maximum number of results returned per page.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the previous page, null if there is no previous page available.
-     *
      */
     public function getPrev(): float
     {
@@ -70,7 +63,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the previous page, null if there is no previous page available.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the next page, null if there is no next page available.
-     *
      */
     public function getNext(): float
     {
@@ -90,7 +81,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the next page, null if there is no next page available.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the last page.
-     *
      */
     public function getLast(): float
     {
@@ -110,7 +99,6 @@ class Paging extends \ArrayObject
     }
     /**
      * The page number of the last page.
-     *
      *
      * @return self
      */

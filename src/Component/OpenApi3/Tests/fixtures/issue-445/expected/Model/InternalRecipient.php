@@ -19,22 +19,18 @@ class InternalRecipient
     }
     /**
      * User information of recipient.
-     *
      */
     protected mixed $recipient = null;
     /**
      * Recipient specific token.
-     *
      */
     protected ?string $token = null;
     /**
      * URL to access the share for this recipient.
-     *
      */
     protected ?string $url = null;
     /**
      * User information of recipient.
-     *
      */
     public function getRecipient(): mixed
     {
@@ -42,7 +38,6 @@ class InternalRecipient
     }
     /**
      * User information of recipient.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class InternalRecipient
     }
     /**
      * Recipient specific token.
-     *
      */
     public function getToken(): ?string
     {
@@ -62,7 +56,6 @@ class InternalRecipient
     }
     /**
      * Recipient specific token.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class InternalRecipient
     }
     /**
      * URL to access the share for this recipient.
-     *
      */
     public function getUrl(): ?string
     {
@@ -82,7 +74,6 @@ class InternalRecipient
     }
     /**
      * URL to access the share for this recipient.
-     *
      *
      * @return self
      */

@@ -22,22 +22,18 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The human-readable name of the VPC NAT gateway.
-     *
      */
     protected string $name;
     /**
      * The type of the VPC NAT gateway.
-     *
      */
     protected string $type;
     /**
      * The region in which the VPC NAT gateway is created.
-     *
      */
     protected string $region;
     /**
      * The size of the VPC NAT gateway.
-     *
      */
     protected int $size;
     /**
@@ -48,22 +44,18 @@ class VpcNatGatewayCreate extends \ArrayObject
     protected array $vpcs;
     /**
      * The UDP timeout in seconds for the VPC NAT gateway.
-     *
      */
     protected int $udpTimeoutSeconds;
     /**
      * The ICMP timeout in seconds for the VPC NAT gateway.
-     *
      */
     protected int $icmpTimeoutSeconds;
     /**
      * The TCP timeout in seconds for the VPC NAT gateway.
-     *
      */
     protected int $tcpTimeoutSeconds;
     /**
      * The human-readable name of the VPC NAT gateway.
-     *
      */
     public function getName(): string
     {
@@ -71,7 +63,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The human-readable name of the VPC NAT gateway.
-     *
      *
      * @return self
      */
@@ -83,7 +74,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The type of the VPC NAT gateway.
-     *
      */
     public function getType(): string
     {
@@ -91,7 +81,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The type of the VPC NAT gateway.
-     *
      *
      * @return self
      */
@@ -103,7 +92,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The region in which the VPC NAT gateway is created.
-     *
      */
     public function getRegion(): string
     {
@@ -111,7 +99,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The region in which the VPC NAT gateway is created.
-     *
      *
      * @return self
      */
@@ -123,7 +110,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The size of the VPC NAT gateway.
-     *
      */
     public function getSize(): int
     {
@@ -131,7 +117,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The size of the VPC NAT gateway.
-     *
      *
      * @return self
      */
@@ -165,7 +150,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The UDP timeout in seconds for the VPC NAT gateway.
-     *
      */
     public function getUdpTimeoutSeconds(): int
     {
@@ -173,7 +157,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The UDP timeout in seconds for the VPC NAT gateway.
-     *
      *
      * @return self
      */
@@ -185,7 +168,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The ICMP timeout in seconds for the VPC NAT gateway.
-     *
      */
     public function getIcmpTimeoutSeconds(): int
     {
@@ -193,7 +175,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The ICMP timeout in seconds for the VPC NAT gateway.
-     *
      *
      * @return self
      */
@@ -205,7 +186,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The TCP timeout in seconds for the VPC NAT gateway.
-     *
      */
     public function getTcpTimeoutSeconds(): int
     {
@@ -213,7 +193,6 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * The TCP timeout in seconds for the VPC NAT gateway.
-     *
      *
      * @return self
      */

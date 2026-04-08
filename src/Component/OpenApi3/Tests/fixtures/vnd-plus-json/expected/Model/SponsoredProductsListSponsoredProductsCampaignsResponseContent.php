@@ -22,7 +22,6 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContent extends \Ar
     }
     /**
      * The total number of entities
-     *
      */
     protected int $totalResults;
     /**
@@ -31,7 +30,6 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContent extends \Ar
     protected array $campaigns;
     /**
      * The total number of entities
-     *
      */
     public function getTotalResults(): int
     {
@@ -39,7 +37,6 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContent extends \Ar
     }
     /**
      * The total number of entities
-     *
      *
      * @return self
      */

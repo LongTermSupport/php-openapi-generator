@@ -19,12 +19,10 @@ class FieldSingleRelation extends FieldBase
     }
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
      */
     protected string $schemaId;
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
      */
     protected mixed $schemaIndexingInfo = null;
     /**
@@ -35,7 +33,6 @@ class FieldSingleRelation extends FieldBase
     protected array $relationTypes;
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
      */
     public function getSchemaId(): string
     {
@@ -43,7 +40,6 @@ class FieldSingleRelation extends FieldBase
     }
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
      *
      * @return self
      */
@@ -55,7 +51,6 @@ class FieldSingleRelation extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
      */
     public function getSchemaIndexingInfo(): mixed
     {
@@ -63,7 +58,6 @@ class FieldSingleRelation extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
      *
      * @return self
      */

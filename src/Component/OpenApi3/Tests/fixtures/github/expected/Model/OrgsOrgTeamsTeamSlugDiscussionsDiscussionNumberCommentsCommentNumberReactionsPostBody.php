@@ -22,12 +22,10 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberCommentsCommentNumberReacti
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the team discussion comment.
-     *
      */
     protected string $content;
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the team discussion comment.
-     *
      */
     public function getContent(): string
     {
@@ -35,7 +33,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberCommentsCommentNumberReacti
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the team discussion comment.
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
     }
     /**
      * Result information of a schema import operation
-     *
      */
     protected mixed $schemaImportResult = null;
     /**
      * Result information of a list item import operation
-     *
      */
     protected mixed $listItemImportResult = null;
     /**
      * Result information of a schema import operation
-     *
      */
     public function getSchemaImportResult(): mixed
     {
@@ -37,7 +34,6 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
     }
     /**
      * Result information of a schema import operation
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
     }
     /**
      * Result information of a list item import operation
-     *
      */
     public function getListItemImportResult(): mixed
     {
@@ -57,7 +52,6 @@ class BusinessProcessDetailsDataSchemaImport extends BusinessProcessDetailsDataB
     }
     /**
      * Result information of a list item import operation
-     *
      *
      * @return self
      */

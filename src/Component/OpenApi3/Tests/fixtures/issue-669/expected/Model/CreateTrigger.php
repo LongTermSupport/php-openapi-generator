@@ -22,33 +22,27 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * The trigger's unique name within the namespace.
-     *
      */
     protected string $name;
     /**
      * Name of function(action) that exists in the given namespace.
-     *
      */
     protected string $function;
     /**
      * One of different type of triggers. Currently only SCHEDULED is supported.
-     *
      */
     protected string $type;
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      */
     protected bool $isEnabled;
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
      */
     protected ScheduledDetails $scheduledDetails;
     /**
      * The trigger's unique name within the namespace.
-     *
      */
     public function getName(): string
     {
@@ -56,7 +50,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * The trigger's unique name within the namespace.
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Name of function(action) that exists in the given namespace.
-     *
      */
     public function getFunction(): string
     {
@@ -76,7 +68,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Name of function(action) that exists in the given namespace.
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * One of different type of triggers. Currently only SCHEDULED is supported.
-     *
      */
     public function getType(): string
     {
@@ -96,7 +86,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * One of different type of triggers. Currently only SCHEDULED is supported.
-     *
      *
      * @return self
      */
@@ -108,7 +97,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      */
     public function getIsEnabled(): bool
     {
@@ -116,7 +104,6 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      *
      * @return self
      */
@@ -129,7 +116,6 @@ class CreateTrigger extends \ArrayObject
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
      */
     public function getScheduledDetails(): ScheduledDetails
     {
@@ -137,7 +123,7 @@ class CreateTrigger extends \ArrayObject
     }
     /**
      * Trigger details for SCHEDULED type, where body is optional.
-     *
+     * 
      *
      * @return self
      */

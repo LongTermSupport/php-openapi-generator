@@ -23,12 +23,10 @@ class DefaultPlace extends \ArrayObject
     protected string $format;
     /**
      * The identifier for this place
-     *
      */
     protected string $id;
     /**
      * The human readable name of this place.
-     *
      */
     protected string $name;
     protected string $countryCode;
@@ -51,7 +49,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
      */
     public function getId(): string
     {
@@ -59,7 +56,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * The identifier for this place
-     *
      *
      * @return self
      */
@@ -71,7 +67,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * The human readable name of this place.
-     *
      */
     public function getName(): string
     {
@@ -79,7 +74,6 @@ class DefaultPlace extends \ArrayObject
     }
     /**
      * The human readable name of this place.
-     *
      *
      * @return self
      */

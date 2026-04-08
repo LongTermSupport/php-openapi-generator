@@ -22,22 +22,18 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The unique identifier for the resource associated with the Droplet.
-     *
      */
     protected string $id;
     /**
      * The name of the resource associated with the Droplet.
-     *
      */
     protected string $name;
     /**
      * The cost of the resource in USD per month if the resource is retained after the Droplet is destroyed.
-     *
      */
     protected string $cost;
     /**
      * The unique identifier for the resource associated with the Droplet.
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The unique identifier for the resource associated with the Droplet.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The name of the resource associated with the Droplet.
-     *
      */
     public function getName(): string
     {
@@ -65,7 +59,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The name of the resource associated with the Droplet.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The cost of the resource in USD per month if the resource is retained after the Droplet is destroyed.
-     *
      */
     public function getCost(): string
     {
@@ -85,7 +77,6 @@ class AssociatedResource extends \ArrayObject
     }
     /**
      * The cost of the resource in USD per month if the resource is retained after the Droplet is destroyed.
-     *
      *
      * @return self
      */

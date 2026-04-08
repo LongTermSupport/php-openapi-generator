@@ -22,68 +22,55 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Which output format should be used as a source of data.
-     *
      */
     protected mixed $sourceOutputFormats = null;
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      */
     protected mixed $format = null;
     /**
      * Language specific names.
-     *
      */
     protected mixed $names = null;
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
      */
     protected string $retentionTime;
     /**
      * Optional patterns (liquid syntax) that produce the filename for item of this output format.
      * If set, the customer's default language is required.
-     *
      */
     protected mixed $downloadFileNamePatterns = null;
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
      */
     protected bool $viewForAll;
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
      */
     protected bool $enableXmpWriteback;
     /**
      * Output format ID.
-     *
      */
     protected ?string $id = null;
     /**
      * Marks if this is a system output format.
-     *
      */
     protected bool $system;
     /**
      * A dynamic output format is not rendered automatically, but only on demand.
-     *
      */
     protected bool $dynamic;
     /**
      * Specifies if output format should be taken into account during data extraction.
-     *
      */
     protected bool $dataExtraction;
     /**
      * Temporary outputs will not be backed up.
-     *
      */
     protected bool $temporary;
     /**
      * Which output format should be used as a source of data.
-     *
      */
     public function getSourceOutputFormats(): mixed
     {
@@ -91,7 +78,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Which output format should be used as a source of data.
-     *
      *
      * @return self
      */
@@ -103,7 +89,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      */
     public function getFormat(): mixed
     {
@@ -111,7 +96,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      *
      * @return self
      */
@@ -123,7 +107,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Language specific names.
-     *
      */
     public function getNames(): mixed
     {
@@ -131,7 +114,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Language specific names.
-     *
      *
      * @return self
      */
@@ -143,7 +125,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
      */
     public function getRetentionTime(): string
     {
@@ -151,7 +132,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
      *
      * @return self
      */
@@ -164,19 +144,17 @@ class OutputFormat extends \ArrayObject
     /**
      * Optional patterns (liquid syntax) that produce the filename for item of this output format.
      * If set, the customer's default language is required.
-     *
      */
     public function getDownloadFileNamePatterns(): mixed
     {
         return $this->downloadFileNamePatterns;
     }
     /**
-    * Optional patterns (liquid syntax) that produce the filename for item of this output format.
-    If set, the customer's default language is required.
-    *
-    *
-    * @return self
-    */
+     * Optional patterns (liquid syntax) that produce the filename for item of this output format.
+     * If set, the customer's default language is required.
+     *
+     * @return self
+     */
     public function setDownloadFileNamePatterns(mixed $downloadFileNamePatterns): self
     {
         $this->initialized['downloadFileNamePatterns'] = true;
@@ -185,7 +163,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
      */
     public function getViewForAll(): bool
     {
@@ -193,7 +170,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
      *
      * @return self
      */
@@ -205,7 +181,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
      */
     public function getEnableXmpWriteback(): bool
     {
@@ -213,7 +188,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
      *
      * @return self
      */
@@ -225,7 +199,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Output format ID.
-     *
      */
     public function getId(): ?string
     {
@@ -233,7 +206,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Output format ID.
-     *
      *
      * @return self
      */
@@ -245,7 +217,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Marks if this is a system output format.
-     *
      */
     public function getSystem(): bool
     {
@@ -253,7 +224,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Marks if this is a system output format.
-     *
      *
      * @return self
      */
@@ -265,7 +235,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * A dynamic output format is not rendered automatically, but only on demand.
-     *
      */
     public function getDynamic(): bool
     {
@@ -273,7 +242,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * A dynamic output format is not rendered automatically, but only on demand.
-     *
      *
      * @return self
      */
@@ -285,7 +253,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Specifies if output format should be taken into account during data extraction.
-     *
      */
     public function getDataExtraction(): bool
     {
@@ -293,7 +260,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Specifies if output format should be taken into account during data extraction.
-     *
      *
      * @return self
      */
@@ -305,7 +271,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Temporary outputs will not be backed up.
-     *
      */
     public function getTemporary(): bool
     {
@@ -313,7 +278,6 @@ class OutputFormat extends \ArrayObject
     }
     /**
      * Temporary outputs will not be backed up.
-     *
      *
      * @return self
      */

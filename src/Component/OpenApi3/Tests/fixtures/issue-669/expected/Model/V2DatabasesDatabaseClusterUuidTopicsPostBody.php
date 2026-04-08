@@ -22,23 +22,19 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
      */
     protected string $name;
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     protected int $replicationFactor;
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      */
     protected int $partitionCount;
     protected KafkaTopicConfig $config;
     /**
      * The name of the Kafka topic.
-     *
      */
     public function getName(): string
     {
@@ -46,7 +42,6 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     public function getReplicationFactor(): int
     {
@@ -66,7 +60,6 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      *
      * @return self
      */
@@ -78,7 +71,6 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      */
     public function getPartitionCount(): int
     {
@@ -86,7 +78,6 @@ class V2DatabasesDatabaseClusterUuidTopicsPostBody extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      *
      * @return self
      */

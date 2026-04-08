@@ -19,17 +19,14 @@ class IdpClaimToUserAttributeMapping
     }
     /**
      * Claim type name coming from external identity provider
-     *
      */
     protected ?string $claimType = null;
     /**
      * Path to a user attribute to synchronize
-     *
      */
     protected ?string $userAttributePath = null;
     /**
      * Claim type name coming from external identity provider
-     *
      */
     public function getClaimType(): ?string
     {
@@ -37,7 +34,6 @@ class IdpClaimToUserAttributeMapping
     }
     /**
      * Claim type name coming from external identity provider
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class IdpClaimToUserAttributeMapping
     }
     /**
      * Path to a user attribute to synchronize
-     *
      */
     public function getUserAttributePath(): ?string
     {
@@ -57,7 +52,6 @@ class IdpClaimToUserAttributeMapping
     }
     /**
      * Path to a user attribute to synchronize
-     *
      *
      * @return self
      */

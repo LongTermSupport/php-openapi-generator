@@ -22,47 +22,38 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Shows whether the notification event rule has been enabled for the given portfolio.
-     *
      */
     protected bool $isActive;
     /**
      * The unique identifier for the notification event rule.
-     *
      */
     protected float $ruleCode;
     /**
      * The ISO/Alpha 2 format country code for the notification event rule. "XX" is used for global rules that apply to companies from all countries.
-     *
      */
     protected string $ruleCountryCode;
     /**
      * The unique identifier of the `ruleType` for the notification event rule.
-     *
      */
     protected float $ruleType;
     /**
      * A short description of the `ruleType` for the notification event rule.
-     *
      */
     protected string $ruleTypeName;
     /**
      * The name for the notification event rule.
-     *
      */
     protected string $name;
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
      */
     protected string $param0;
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
      */
     protected string $param1;
     /**
      * Shows whether the notification event rule has been enabled for the given portfolio.
-     *
      */
     public function getIsActive(): bool
     {
@@ -70,7 +61,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Shows whether the notification event rule has been enabled for the given portfolio.
-     *
      *
      * @return self
      */
@@ -82,7 +72,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The unique identifier for the notification event rule.
-     *
      */
     public function getRuleCode(): float
     {
@@ -90,7 +79,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The unique identifier for the notification event rule.
-     *
      *
      * @return self
      */
@@ -102,7 +90,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The ISO/Alpha 2 format country code for the notification event rule. "XX" is used for global rules that apply to companies from all countries.
-     *
      */
     public function getRuleCountryCode(): string
     {
@@ -110,7 +97,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The ISO/Alpha 2 format country code for the notification event rule. "XX" is used for global rules that apply to companies from all countries.
-     *
      *
      * @return self
      */
@@ -122,7 +108,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the `ruleType` for the notification event rule.
-     *
      */
     public function getRuleType(): float
     {
@@ -130,7 +115,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the `ruleType` for the notification event rule.
-     *
      *
      * @return self
      */
@@ -142,7 +126,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * A short description of the `ruleType` for the notification event rule.
-     *
      */
     public function getRuleTypeName(): string
     {
@@ -150,7 +133,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * A short description of the `ruleType` for the notification event rule.
-     *
      *
      * @return self
      */
@@ -162,7 +144,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The name for the notification event rule.
-     *
      */
     public function getName(): string
     {
@@ -170,7 +151,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * The name for the notification event rule.
-     *
      *
      * @return self
      */
@@ -182,7 +162,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
      */
     public function getParam0(): string
     {
@@ -190,7 +169,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
      *
      * @return self
      */
@@ -202,7 +180,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
      */
     public function getParam1(): string
     {
@@ -210,7 +187,6 @@ class EventRulesResponse extends \ArrayObject
     }
     /**
      * Some notification event rules may include input parameters used to tailor the notifications generated to your preference.
-     *
      *
      * @return self
      */

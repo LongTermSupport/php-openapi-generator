@@ -22,27 +22,22 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Most recent Tweet Id returned by search query
-     *
      */
     protected string $newestId;
     /**
      * Oldest Tweet Id returned by search query
-     *
      */
     protected string $oldestId;
     /**
      * This value is used to get the next 'page' of results by providing it to the next_token parameter.
-     *
      */
     protected string $nextToken;
     /**
      * Number of search query results
-     *
      */
     protected int $resultCount;
     /**
      * Most recent Tweet Id returned by search query
-     *
      */
     public function getNewestId(): string
     {
@@ -50,7 +45,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Most recent Tweet Id returned by search query
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Oldest Tweet Id returned by search query
-     *
      */
     public function getOldestId(): string
     {
@@ -70,7 +63,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Oldest Tweet Id returned by search query
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * This value is used to get the next 'page' of results by providing it to the next_token parameter.
-     *
      */
     public function getNextToken(): string
     {
@@ -90,7 +81,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * This value is used to get the next 'page' of results by providing it to the next_token parameter.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Number of search query results
-     *
      */
     public function getResultCount(): int
     {
@@ -110,7 +99,6 @@ class TweetSearchResponseMeta extends \ArrayObject
     }
     /**
      * Number of search query results
-     *
      *
      * @return self
      */

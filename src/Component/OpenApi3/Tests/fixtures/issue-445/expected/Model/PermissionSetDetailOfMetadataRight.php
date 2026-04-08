@@ -19,12 +19,10 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * The permission set ID.
-     *
      */
     protected string $id;
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -41,22 +39,18 @@ class PermissionSetDetailOfMetadataRight
     protected ?array $userRolesPermissionSetRights = null;
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
      */
     protected bool $exclusive;
     /**
      * The owner token ID. Defines the permission set owner.
-     *
      */
     protected string $ownerTokenId;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * The permission set ID.
-     *
      */
     public function getId(): string
     {
@@ -64,7 +58,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * The permission set ID.
-     *
      *
      * @return self
      */
@@ -76,7 +69,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -84,7 +76,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */
@@ -140,7 +131,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
      */
     public function getExclusive(): bool
     {
@@ -148,7 +138,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
      *
      * @return self
      */
@@ -160,7 +149,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * The owner token ID. Defines the permission set owner.
-     *
      */
     public function getOwnerTokenId(): string
     {
@@ -168,7 +156,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * The owner token ID. Defines the permission set owner.
-     *
      *
      * @return self
      */
@@ -180,7 +167,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -188,7 +174,6 @@ class PermissionSetDetailOfMetadataRight
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */

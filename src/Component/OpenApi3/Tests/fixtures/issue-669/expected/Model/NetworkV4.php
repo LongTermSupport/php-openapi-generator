@@ -22,12 +22,10 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The IP address of the IPv4 network interface.
-     *
      */
     protected string $ipAddress;
     /**
      * The netmask of the IPv4 network interface.
-     *
      */
     protected string $netmask;
     /**
@@ -36,17 +34,14 @@ class NetworkV4 extends \ArrayObject
      * For private interfaces, a gateway is not provided. This is denoted by
      * returning `nil` as its value.
      * 
-     *
      */
     protected string $gateway;
     /**
      * The type of the IPv4 network interface.
-     *
      */
     protected string $type;
     /**
      * The IP address of the IPv4 network interface.
-     *
      */
     public function getIpAddress(): string
     {
@@ -54,7 +49,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The IP address of the IPv4 network interface.
-     *
      *
      * @return self
      */
@@ -66,7 +60,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The netmask of the IPv4 network interface.
-     *
      */
     public function getNetmask(): string
     {
@@ -74,7 +67,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The netmask of the IPv4 network interface.
-     *
      *
      * @return self
      */
@@ -90,22 +82,20 @@ class NetworkV4 extends \ArrayObject
      * For private interfaces, a gateway is not provided. This is denoted by
      * returning `nil` as its value.
      * 
-     *
      */
     public function getGateway(): string
     {
         return $this->gateway;
     }
     /**
-    * The gateway of the specified IPv4 network interface.
-    
-    For private interfaces, a gateway is not provided. This is denoted by
-    returning `nil` as its value.
-    
-    *
-    *
-    * @return self
-    */
+     * The gateway of the specified IPv4 network interface.
+     * 
+     * For private interfaces, a gateway is not provided. This is denoted by
+     * returning `nil` as its value.
+     * 
+     *
+     * @return self
+     */
     public function setGateway(string $gateway): self
     {
         $this->initialized['gateway'] = true;
@@ -114,7 +104,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The type of the IPv4 network interface.
-     *
      */
     public function getType(): string
     {
@@ -122,7 +111,6 @@ class NetworkV4 extends \ArrayObject
     }
     /**
      * The type of the IPv4 network interface.
-     *
      *
      * @return self
      */

@@ -22,22 +22,18 @@ class HashtagEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     protected int $start;
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     protected int $end;
     /**
      * The text of the Hashtag
-     *
      */
     protected string $tag;
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     public function getStart(): int
     {
@@ -45,7 +41,6 @@ class HashtagEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class HashtagEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     public function getEnd(): int
     {
@@ -65,7 +59,6 @@ class HashtagEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class HashtagEntity extends \ArrayObject
     }
     /**
      * The text of the Hashtag
-     *
      */
     public function getTag(): string
     {
@@ -85,7 +77,6 @@ class HashtagEntity extends \ArrayObject
     }
     /**
      * The text of the Hashtag
-     *
      *
      * @return self
      */

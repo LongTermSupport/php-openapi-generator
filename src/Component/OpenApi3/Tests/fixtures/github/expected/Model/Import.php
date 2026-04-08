@@ -24,7 +24,6 @@ class Import extends \ArrayObject
     protected string $useLfs;
     /**
      * The URL of the originating repository.
-     *
      */
     protected string $vcsUrl;
     protected string $svcRoot;
@@ -72,7 +71,6 @@ class Import extends \ArrayObject
     }
     /**
      * The URL of the originating repository.
-     *
      */
     public function getVcsUrl(): string
     {
@@ -80,7 +78,6 @@ class Import extends \ArrayObject
     }
     /**
      * The URL of the originating repository.
-     *
      *
      * @return self
      */

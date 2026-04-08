@@ -25,7 +25,6 @@ class IssueEventForIssue extends \ArrayObject
     protected string $url;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $actor = null;
     protected string $event;
@@ -77,7 +76,6 @@ class IssueEventForIssue extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getActor(): ?SimpleUser
     {
@@ -85,7 +83,6 @@ class IssueEventForIssue extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

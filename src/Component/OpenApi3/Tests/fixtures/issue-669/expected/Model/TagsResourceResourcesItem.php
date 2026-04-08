@@ -22,17 +22,14 @@ class TagsResourceResourcesItem extends \ArrayObject
     }
     /**
      * The identifier of a resource.
-     *
      */
     protected string $resourceId;
     /**
      * The type of the resource.
-     *
      */
     protected string $resourceType;
     /**
      * The identifier of a resource.
-     *
      */
     public function getResourceId(): string
     {
@@ -40,7 +37,6 @@ class TagsResourceResourcesItem extends \ArrayObject
     }
     /**
      * The identifier of a resource.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class TagsResourceResourcesItem extends \ArrayObject
     }
     /**
      * The type of the resource.
-     *
      */
     public function getResourceType(): string
     {
@@ -60,7 +55,6 @@ class TagsResourceResourcesItem extends \ArrayObject
     }
     /**
      * The type of the resource.
-     *
      *
      * @return self
      */

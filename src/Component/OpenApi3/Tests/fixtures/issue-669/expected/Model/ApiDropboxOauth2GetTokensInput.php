@@ -22,17 +22,14 @@ class ApiDropboxOauth2GetTokensInput extends \ArrayObject
     }
     /**
      * The oauth2 code from google
-     *
      */
     protected string $code;
     /**
      * Redirect url
-     *
      */
     protected string $redirectUrl;
     /**
      * The oauth2 code from google
-     *
      */
     public function getCode(): string
     {
@@ -40,7 +37,6 @@ class ApiDropboxOauth2GetTokensInput extends \ArrayObject
     }
     /**
      * The oauth2 code from google
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiDropboxOauth2GetTokensInput extends \ArrayObject
     }
     /**
      * Redirect url
-     *
      */
     public function getRedirectUrl(): string
     {
@@ -60,7 +55,6 @@ class ApiDropboxOauth2GetTokensInput extends \ArrayObject
     }
     /**
      * Redirect url
-     *
      *
      * @return self
      */

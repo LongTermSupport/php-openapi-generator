@@ -23,7 +23,6 @@ class ApiGoogleDriveDataSource extends \ArrayObject
     protected string $folderId;
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/google/tokens for reference.
-     *
      */
     protected string $refreshToken;
     public function getFolderId(): string
@@ -38,7 +37,6 @@ class ApiGoogleDriveDataSource extends \ArrayObject
     }
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/google/tokens for reference.
-     *
      */
     public function getRefreshToken(): string
     {
@@ -46,7 +44,6 @@ class ApiGoogleDriveDataSource extends \ArrayObject
     }
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/google/tokens for reference.
-     *
      *
      * @return self
      */

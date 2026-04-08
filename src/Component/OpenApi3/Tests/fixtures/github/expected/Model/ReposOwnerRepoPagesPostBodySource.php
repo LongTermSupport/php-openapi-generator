@@ -22,17 +22,14 @@ class ReposOwnerRepoPagesPostBodySource extends \ArrayObject
     }
     /**
      * The repository branch used to publish your [site's source files](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/). Can be either `master` or `gh-pages`.
-     *
      */
     protected string $branch;
     /**
      * The repository directory that includes the source files for the Pages site. When `branch` is `master`, you can change `path` to `/docs`. When `branch` is `gh-pages`, you are unable to specify a `path` other than `/`.
-     *
      */
     protected string $path;
     /**
      * The repository branch used to publish your [site's source files](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/). Can be either `master` or `gh-pages`.
-     *
      */
     public function getBranch(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoPagesPostBodySource extends \ArrayObject
     }
     /**
      * The repository branch used to publish your [site's source files](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/). Can be either `master` or `gh-pages`.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoPagesPostBodySource extends \ArrayObject
     }
     /**
      * The repository directory that includes the source files for the Pages site. When `branch` is `master`, you can change `path` to `/docs`. When `branch` is `gh-pages`, you are unable to specify a `path` other than `/`.
-     *
      */
     public function getPath(): string
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoPagesPostBodySource extends \ArrayObject
     }
     /**
      * The repository directory that includes the source files for the Pages site. When `branch` is `master`, you can change `path` to `/docs`. When `branch` is `gh-pages`, you are unable to specify a `path` other than `/`.
-     *
      *
      * @return self
      */

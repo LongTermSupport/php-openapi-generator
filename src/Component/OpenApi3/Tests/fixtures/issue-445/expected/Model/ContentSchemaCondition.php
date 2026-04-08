@@ -19,12 +19,10 @@ class ContentSchemaCondition extends BusinessRuleCondition
     }
     /**
      * Content schema id to match on.
-     *
      */
     protected ?string $schemaId = null;
     /**
      * Content schema id to match on.
-     *
      */
     public function getSchemaId(): ?string
     {
@@ -32,7 +30,6 @@ class ContentSchemaCondition extends BusinessRuleCondition
     }
     /**
      * Content schema id to match on.
-     *
      *
      * @return self
      */

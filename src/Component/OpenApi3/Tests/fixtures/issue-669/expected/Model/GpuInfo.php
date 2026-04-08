@@ -22,18 +22,15 @@ class GpuInfo extends \ArrayObject
     }
     /**
      * The number of GPUs allocated to the Droplet.
-     *
      */
     protected int $count;
     /**
      * The model of the GPU.
-     *
      */
     protected string $model;
     protected GpuInfoVram $vram;
     /**
      * The number of GPUs allocated to the Droplet.
-     *
      */
     public function getCount(): int
     {
@@ -41,7 +38,6 @@ class GpuInfo extends \ArrayObject
     }
     /**
      * The number of GPUs allocated to the Droplet.
-     *
      *
      * @return self
      */
@@ -53,7 +49,6 @@ class GpuInfo extends \ArrayObject
     }
     /**
      * The model of the GPU.
-     *
      */
     public function getModel(): string
     {
@@ -61,7 +56,6 @@ class GpuInfo extends \ArrayObject
     }
     /**
      * The model of the GPU.
-     *
      *
      * @return self
      */

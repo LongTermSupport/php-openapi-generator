@@ -22,17 +22,14 @@ class AppMetricsBandwidthUsageDetails extends \ArrayObject
     }
     /**
      * The ID of the app.
-     *
      */
     protected string $appId;
     /**
      * The used bandwidth amount in bytes.
-     *
      */
     protected string $bandwidthBytes;
     /**
      * The ID of the app.
-     *
      */
     public function getAppId(): string
     {
@@ -40,7 +37,6 @@ class AppMetricsBandwidthUsageDetails extends \ArrayObject
     }
     /**
      * The ID of the app.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppMetricsBandwidthUsageDetails extends \ArrayObject
     }
     /**
      * The used bandwidth amount in bytes.
-     *
      */
     public function getBandwidthBytes(): string
     {
@@ -60,7 +55,6 @@ class AppMetricsBandwidthUsageDetails extends \ArrayObject
     }
     /**
      * The used bandwidth amount in bytes.
-     *
      *
      * @return self
      */

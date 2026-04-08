@@ -22,17 +22,14 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
     }
     /**
      * An alternative way to provide auth information. for internal use only.
-     *
      */
     protected ApiAuditHeader $auditHeader;
     /**
      * Unique identifier
-     *
      */
     protected string $versionHash;
     /**
      * An alternative way to provide auth information. for internal use only.
-     *
      */
     public function getAuditHeader(): ApiAuditHeader
     {
@@ -40,7 +37,6 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
     }
     /**
      * An alternative way to provide auth information. for internal use only.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
      */
     public function getVersionHash(): string
     {
@@ -60,7 +55,6 @@ class ApiRollbackToAgentVersionOutput extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
      *
      * @return self
      */

@@ -19,7 +19,6 @@ class MetadataReference
     }
     /**
      * Target ID of reference.
-     *
      */
     protected string $targetMetadataItemId;
     /**
@@ -27,22 +26,18 @@ class MetadataReference
      * If this is true and the SourceMetadataItemId property is filled, the user does not have the
      * edit permission on the source metadata item. If the SourceMetadataItemId is null, the user also
      * does not have the view permission on that item.
-     *
      */
     protected bool $isRestricted;
     /**
      * ID of the source of the reference.
-     *
      */
     protected ?string $sourceMetadataItemId = null;
     /**
      * DocType of the source of the reference.
-     *
      */
     protected ?string $sourceDocType = null;
     /**
      * Target ID of reference.
-     *
      */
     public function getTargetMetadataItemId(): string
     {
@@ -50,7 +45,6 @@ class MetadataReference
     }
     /**
      * Target ID of reference.
-     *
      *
      * @return self
      */
@@ -65,21 +59,19 @@ class MetadataReference
      * If this is true and the SourceMetadataItemId property is filled, the user does not have the
      * edit permission on the source metadata item. If the SourceMetadataItemId is null, the user also
      * does not have the view permission on that item.
-     *
      */
     public function getIsRestricted(): bool
     {
         return $this->isRestricted;
     }
     /**
-    * Indicates if the source of the reference is restricted because of permissions.
-    If this is true and the SourceMetadataItemId property is filled, the user does not have the
-    edit permission on the source metadata item. If the SourceMetadataItemId is null, the user also
-    does not have the view permission on that item.
-    *
-    *
-    * @return self
-    */
+     * Indicates if the source of the reference is restricted because of permissions.
+     * If this is true and the SourceMetadataItemId property is filled, the user does not have the
+     * edit permission on the source metadata item. If the SourceMetadataItemId is null, the user also
+     * does not have the view permission on that item.
+     *
+     * @return self
+     */
     public function setIsRestricted(bool $isRestricted): self
     {
         $this->initialized['isRestricted'] = true;
@@ -88,7 +80,6 @@ class MetadataReference
     }
     /**
      * ID of the source of the reference.
-     *
      */
     public function getSourceMetadataItemId(): ?string
     {
@@ -96,7 +87,6 @@ class MetadataReference
     }
     /**
      * ID of the source of the reference.
-     *
      *
      * @return self
      */
@@ -108,7 +98,6 @@ class MetadataReference
     }
     /**
      * DocType of the source of the reference.
-     *
      */
     public function getSourceDocType(): ?string
     {
@@ -116,7 +105,6 @@ class MetadataReference
     }
     /**
      * DocType of the source of the reference.
-     *
      *
      * @return self
      */

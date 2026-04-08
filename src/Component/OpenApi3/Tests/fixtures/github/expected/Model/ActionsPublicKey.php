@@ -22,12 +22,10 @@ class ActionsPublicKey extends \ArrayObject
     }
     /**
      * The identifier for the key.
-     *
      */
     protected string $keyId;
     /**
      * The Base64 encoded public key.
-     *
      */
     protected string $key;
     protected int $id;
@@ -36,7 +34,6 @@ class ActionsPublicKey extends \ArrayObject
     protected string $createdAt;
     /**
      * The identifier for the key.
-     *
      */
     public function getKeyId(): string
     {
@@ -44,7 +41,6 @@ class ActionsPublicKey extends \ArrayObject
     }
     /**
      * The identifier for the key.
-     *
      *
      * @return self
      */
@@ -56,7 +52,6 @@ class ActionsPublicKey extends \ArrayObject
     }
     /**
      * The Base64 encoded public key.
-     *
      */
     public function getKey(): string
     {
@@ -64,7 +59,6 @@ class ActionsPublicKey extends \ArrayObject
     }
     /**
      * The Base64 encoded public key.
-     *
      *
      * @return self
      */

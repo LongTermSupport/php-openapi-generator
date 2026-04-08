@@ -22,12 +22,10 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The id of the check.
-     *
      */
     protected int $id;
     /**
      * The SHA of the commit that is being checked.
-     *
      */
     protected string $headSha;
     protected string $nodeId;
@@ -37,7 +35,6 @@ class CheckRun extends \ArrayObject
     protected ?string $detailsUrl = null;
     /**
      * The phase of the lifecycle that the check is currently in.
-     *
      */
     protected string $status;
     protected ?string $conclusion = null;
@@ -46,7 +43,6 @@ class CheckRun extends \ArrayObject
     protected CheckRunOutput $output;
     /**
      * The name of the check.
-     *
      */
     protected string $name;
     protected ?CheckRunCheckSuite $checkSuite = null;
@@ -54,7 +50,6 @@ class CheckRun extends \ArrayObject
     protected mixed $pullRequests = null;
     /**
      * The id of the check.
-     *
      */
     public function getId(): int
     {
@@ -62,7 +57,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The id of the check.
-     *
      *
      * @return self
      */
@@ -74,7 +68,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The SHA of the commit that is being checked.
-     *
      */
     public function getHeadSha(): string
     {
@@ -82,7 +75,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The SHA of the commit that is being checked.
-     *
      *
      * @return self
      */
@@ -144,7 +136,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the check is currently in.
-     *
      */
     public function getStatus(): string
     {
@@ -152,7 +143,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the check is currently in.
-     *
      *
      * @return self
      */
@@ -204,7 +194,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The name of the check.
-     *
      */
     public function getName(): string
     {
@@ -212,7 +201,6 @@ class CheckRun extends \ArrayObject
     }
     /**
      * The name of the check.
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class BusinessProcessWaitForLifeCycleResult
     }
     /**
      * The life cycle that was hit.
-     *
      */
     protected mixed $lifeCycleHit = null;
     /**
      * The business process.
-     *
      */
     protected mixed $businessProcess = null;
     /**
      * The life cycle that was hit.
-     *
      */
     public function getLifeCycleHit(): mixed
     {
@@ -37,7 +34,6 @@ class BusinessProcessWaitForLifeCycleResult
     }
     /**
      * The life cycle that was hit.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class BusinessProcessWaitForLifeCycleResult
     }
     /**
      * The business process.
-     *
      */
     public function getBusinessProcess(): mixed
     {
@@ -57,7 +52,6 @@ class BusinessProcessWaitForLifeCycleResult
     }
     /**
      * The business process.
-     *
      *
      * @return self
      */

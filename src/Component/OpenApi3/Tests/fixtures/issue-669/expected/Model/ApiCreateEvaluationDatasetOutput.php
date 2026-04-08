@@ -22,12 +22,10 @@ class ApiCreateEvaluationDatasetOutput extends \ArrayObject
     }
     /**
      * Evaluation dataset uuid.
-     *
      */
     protected string $evaluationDatasetUuid;
     /**
      * Evaluation dataset uuid.
-     *
      */
     public function getEvaluationDatasetUuid(): string
     {
@@ -35,7 +33,6 @@ class ApiCreateEvaluationDatasetOutput extends \ArrayObject
     }
     /**
      * Evaluation dataset uuid.
-     *
      *
      * @return self
      */

@@ -20,7 +20,6 @@ class ContentDetail
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.
-     *
      */
     protected string $contentSchemaId;
     /**
@@ -65,7 +64,6 @@ class ContentDetail
     protected ?array $metadata = null;
     /**
      * The content ID.
-     *
      */
     protected string $id;
     /**
@@ -83,32 +81,26 @@ class ContentDetail
     protected ?array $outputs = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * The owner token ID. Defines the content owner.
-     *
      */
     protected string $ownerTokenId;
     /**
      * The resolved owner.
-     *
      */
     protected mixed $owner = null;
     /**
      * Content type.
-     *
      */
     protected mixed $contentType = null;
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
      */
     protected mixed $displayValues = null;
     /**
      * The actual lifecycle value of the content. Becomes Inactive when the content is deleted.
-     *
      */
     protected mixed $lifeCycle = null;
     /**
@@ -119,25 +111,22 @@ class ContentDetail
     protected ?array $contentRights = null;
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
      */
     protected mixed $activity = null;
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.
-     *
      */
     public function getContentSchemaId(): string
     {
         return $this->contentSchemaId;
     }
     /**
-    * The ID of the content schema. The SchemaType of the specified schema must be Content.
-    The schema specifies the structure of the Content dictionary.
-    *
-    *
-    * @return self
-    */
+     * The ID of the content schema. The SchemaType of the specified schema must be Content.
+     * The schema specifies the structure of the Content dictionary.
+     *
+     * @return self
+     */
     public function setContentSchemaId(string $contentSchemaId): self
     {
         $this->initialized['contentSchemaId'] = true;
@@ -155,13 +144,13 @@ class ContentDetail
         return $this->layerSchemaIds;
     }
     /**
-    * An optional list of IDs of the schemas that form the layers of the content.
-    The SchemaType of the specified schemas must be Layer.
-    *
-    * @param list<string>|null $layerSchemaIds
-    *
-    * @return self
-    */
+     * An optional list of IDs of the schemas that form the layers of the content.
+     * The SchemaType of the specified schemas must be Layer.
+     *
+     * @param list<string>|null $layerSchemaIds
+     *
+     * @return self
+     */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
         $this->initialized['layerSchemaIds'] = true;
@@ -201,13 +190,13 @@ class ContentDetail
         return $this->brokenIndirectReferenceIds;
     }
     /**
-    * All the IDs of the indirectly referenced list items (tagboxes) that do not exist in the system.
-    They are referenced list items that reference at least a list item that do not exist in the system.
-    *
-    * @param list<string>|null $brokenIndirectReferenceIds
-    *
-    * @return self
-    */
+     * All the IDs of the indirectly referenced list items (tagboxes) that do not exist in the system.
+     * They are referenced list items that reference at least a list item that do not exist in the system.
+     *
+     * @param list<string>|null $brokenIndirectReferenceIds
+     *
+     * @return self
+     */
     public function setBrokenIndirectReferenceIds(?array $brokenIndirectReferenceIds): self
     {
         $this->initialized['brokenIndirectReferenceIds'] = true;
@@ -247,13 +236,13 @@ class ContentDetail
         return $this->content;
     }
     /**
-    * The content data of the content. It's an object of dynamic metadata whose structure is defined in the Content schema identified.
-    by the ContentSchemaId property.
-    *
-    * @param array<string, mixed>|null $content
-    *
-    * @return self
-    */
+     * The content data of the content. It's an object of dynamic metadata whose structure is defined in the Content schema identified.
+     * by the ContentSchemaId property.
+     *
+     * @param array<string, mixed>|null $content
+     *
+     * @return self
+     */
     public function setContent(?array $content): self
     {
         $this->initialized['content'] = true;
@@ -271,13 +260,13 @@ class ContentDetail
         return $this->metadata;
     }
     /**
-    * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
-    by the LayerSchemaIds property.
-    *
-    * @param array<string, mixed>|null $metadata
-    *
-    * @return self
-    */
+     * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
+     * by the LayerSchemaIds property.
+     *
+     * @param array<string, mixed>|null $metadata
+     *
+     * @return self
+     */
     public function setMetadata(?array $metadata): self
     {
         $this->initialized['metadata'] = true;
@@ -286,7 +275,6 @@ class ContentDetail
     }
     /**
      * The content ID.
-     *
      */
     public function getId(): string
     {
@@ -294,7 +282,6 @@ class ContentDetail
     }
     /**
      * The content ID.
-     *
      *
      * @return self
      */
@@ -337,13 +324,13 @@ class ContentDetail
         return $this->outputs;
     }
     /**
-    * The Outputs generated from the content. They identifies the rendered files generated by the system.
-    They are available only for file base contents, and they depends on the output formats configured in the system.
-    *
-    * @param list<Output>|null $outputs
-    *
-    * @return self
-    */
+     * The Outputs generated from the content. They identifies the rendered files generated by the system.
+     * They are available only for file base contents, and they depends on the output formats configured in the system.
+     *
+     * @param list<Output>|null $outputs
+     *
+     * @return self
+     */
     public function setOutputs(?array $outputs): self
     {
         $this->initialized['outputs'] = true;
@@ -352,7 +339,6 @@ class ContentDetail
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -360,7 +346,6 @@ class ContentDetail
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -372,7 +357,6 @@ class ContentDetail
     }
     /**
      * The owner token ID. Defines the content owner.
-     *
      */
     public function getOwnerTokenId(): string
     {
@@ -380,7 +364,6 @@ class ContentDetail
     }
     /**
      * The owner token ID. Defines the content owner.
-     *
      *
      * @return self
      */
@@ -392,7 +375,6 @@ class ContentDetail
     }
     /**
      * The resolved owner.
-     *
      */
     public function getOwner(): mixed
     {
@@ -400,7 +382,6 @@ class ContentDetail
     }
     /**
      * The resolved owner.
-     *
      *
      * @return self
      */
@@ -412,7 +393,6 @@ class ContentDetail
     }
     /**
      * Content type.
-     *
      */
     public function getContentType(): mixed
     {
@@ -420,7 +400,6 @@ class ContentDetail
     }
     /**
      * Content type.
-     *
      *
      * @return self
      */
@@ -432,7 +411,6 @@ class ContentDetail
     }
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
      */
     public function getDisplayValues(): mixed
     {
@@ -440,7 +418,6 @@ class ContentDetail
     }
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
      *
      * @return self
      */
@@ -452,7 +429,6 @@ class ContentDetail
     }
     /**
      * The actual lifecycle value of the content. Becomes Inactive when the content is deleted.
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -460,7 +436,6 @@ class ContentDetail
     }
     /**
      * The actual lifecycle value of the content. Becomes Inactive when the content is deleted.
-     *
      *
      * @return self
      */
@@ -494,7 +469,6 @@ class ContentDetail
     }
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
      */
     public function getActivity(): mixed
     {
@@ -502,7 +476,6 @@ class ContentDetail
     }
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
      *
      * @return self
      */

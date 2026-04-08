@@ -22,27 +22,22 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been Retweeted.
-     *
      */
     protected int $retweetCount;
     /**
      * Number of times this Tweet has been replied to.
-     *
      */
     protected int $replyCount;
     /**
      * Number of times this Tweet has been liked.
-     *
      */
     protected int $likeCount;
     /**
      * Number of times this Tweet has been quoted.
-     *
      */
     protected int $quoteCount;
     /**
      * Number of times this Tweet has been Retweeted.
-     *
      */
     public function getRetweetCount(): int
     {
@@ -50,7 +45,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been Retweeted.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been replied to.
-     *
      */
     public function getReplyCount(): int
     {
@@ -70,7 +63,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been replied to.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been liked.
-     *
      */
     public function getLikeCount(): int
     {
@@ -90,7 +81,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been liked.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been quoted.
-     *
      */
     public function getQuoteCount(): int
     {
@@ -110,7 +99,6 @@ class DetailedTweetFieldsStats extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been quoted.
-     *
      *
      * @return self
      */

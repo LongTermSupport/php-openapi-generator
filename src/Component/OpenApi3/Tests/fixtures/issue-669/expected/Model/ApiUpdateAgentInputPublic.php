@@ -29,57 +29,46 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     protected array $allowedDomains;
     /**
      * Optional anthropic key uuid for use with anthropic models
-     *
      */
     protected string $anthropicKeyUuid;
     /**
      * Optional update of conversation logs enabled
-     *
      */
     protected bool $conversationLogsEnabled;
     /**
      * Agent description
-     *
      */
     protected string $description;
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     protected string $instruction;
     /**
      * How many results should be considered from an attached knowledge base
-     *
      */
     protected int $k;
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
      */
     protected int $maxTokens;
     /**
      * Optional Model Provider uuid for use with provider models
-     *
      */
     protected string $modelProviderKeyUuid;
     /**
      * Identifier for the foundation model.
-     *
      */
     protected string $modelUuid;
     /**
      * Agent name
-     *
      */
     protected string $name;
     /**
      * Optional OpenAI key uuid for use with OpenAI models
-     *
      */
     protected string $openAiKeyUuid;
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
      */
     protected string $projectId;
     protected bool $provideCitations;
@@ -89,7 +78,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     protected string $retrievalMethod = 'RETRIEVAL_METHOD_UNKNOWN';
     /**
@@ -100,17 +88,14 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     protected array $tags;
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
      */
     protected float $temperature;
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
      */
     protected float $topP;
     /**
      * Unique agent id
-     *
      */
     protected string $uuid;
     public function getAgentLogInsightsEnabled(): bool
@@ -147,7 +132,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional anthropic key uuid for use with anthropic models
-     *
      */
     public function getAnthropicKeyUuid(): string
     {
@@ -155,7 +139,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional anthropic key uuid for use with anthropic models
-     *
      *
      * @return self
      */
@@ -167,7 +150,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional update of conversation logs enabled
-     *
      */
     public function getConversationLogsEnabled(): bool
     {
@@ -175,7 +157,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional update of conversation logs enabled
-     *
      *
      * @return self
      */
@@ -187,7 +168,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent description
-     *
      */
     public function getDescription(): string
     {
@@ -195,7 +175,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent description
-     *
      *
      * @return self
      */
@@ -207,7 +186,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     public function getInstruction(): string
     {
@@ -215,7 +193,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      *
      * @return self
      */
@@ -227,7 +204,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * How many results should be considered from an attached knowledge base
-     *
      */
     public function getK(): int
     {
@@ -235,7 +211,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * How many results should be considered from an attached knowledge base
-     *
      *
      * @return self
      */
@@ -247,7 +222,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
      */
     public function getMaxTokens(): int
     {
@@ -255,7 +229,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
      *
      * @return self
      */
@@ -267,7 +240,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional Model Provider uuid for use with provider models
-     *
      */
     public function getModelProviderKeyUuid(): string
     {
@@ -275,7 +247,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional Model Provider uuid for use with provider models
-     *
      *
      * @return self
      */
@@ -287,7 +258,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
      */
     public function getModelUuid(): string
     {
@@ -295,7 +265,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
      *
      * @return self
      */
@@ -307,7 +276,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
      */
     public function getName(): string
     {
@@ -315,7 +283,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
      *
      * @return self
      */
@@ -327,7 +294,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional OpenAI key uuid for use with OpenAI models
-     *
      */
     public function getOpenAiKeyUuid(): string
     {
@@ -335,7 +301,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional OpenAI key uuid for use with OpenAI models
-     *
      *
      * @return self
      */
@@ -347,7 +312,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
      */
     public function getProjectId(): string
     {
@@ -355,7 +319,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
      *
      * @return self
      */
@@ -381,22 +344,20 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     public function getRetrievalMethod(): string
     {
         return $this->retrievalMethod;
     }
     /**
-    * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
-    - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
-    - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
-    - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
-    - RETRIEVAL_METHOD_NONE: The retrieval method is none
-    *
-    *
-    * @return self
-    */
+     * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
+     *  - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
+     *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
+     *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
+     *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
+     *
+     * @return self
+     */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
         $this->initialized['retrievalMethod'] = true;
@@ -427,7 +388,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
      */
     public function getTemperature(): float
     {
@@ -435,7 +395,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
      *
      * @return self
      */
@@ -447,7 +406,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
      */
     public function getTopP(): float
     {
@@ -455,7 +413,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
      *
      * @return self
      */
@@ -467,7 +424,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
      */
     public function getUuid(): string
     {
@@ -475,7 +431,6 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
      *
      * @return self
      */

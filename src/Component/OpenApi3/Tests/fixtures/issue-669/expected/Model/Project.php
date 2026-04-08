@@ -22,27 +22,22 @@ class Project extends \ArrayObject
     }
     /**
      * The unique universal identifier of this project.
-     *
      */
     protected string $id;
     /**
      * The unique universal identifier of the project owner.
-     *
      */
     protected string $ownerUuid;
     /**
      * The integer id of the project owner.
-     *
      */
     protected int $ownerId;
     /**
      * The human-readable name for the project. The maximum length is 175 characters and the name must be unique.
-     *
      */
     protected string $name;
     /**
      * The description of the project. The maximum length is 255 characters.
-     *
      */
     protected string $description;
     /**
@@ -62,32 +57,26 @@ class Project extends \ArrayObject
      * If another value for purpose is specified, for example, "your custom purpose",
      * your purpose will be stored as `Other: your custom purpose`.
      * 
-     *
      */
     protected string $purpose;
     /**
      * The environment of the project's resources.
-     *
      */
     protected string $environment;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was updated.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * If true, all resources will be added to this project if no project is specified.
-     *
      */
     protected bool $isDefault;
     /**
      * The unique universal identifier of this project.
-     *
      */
     public function getId(): string
     {
@@ -95,7 +84,6 @@ class Project extends \ArrayObject
     }
     /**
      * The unique universal identifier of this project.
-     *
      *
      * @return self
      */
@@ -107,7 +95,6 @@ class Project extends \ArrayObject
     }
     /**
      * The unique universal identifier of the project owner.
-     *
      */
     public function getOwnerUuid(): string
     {
@@ -115,7 +102,6 @@ class Project extends \ArrayObject
     }
     /**
      * The unique universal identifier of the project owner.
-     *
      *
      * @return self
      */
@@ -127,7 +113,6 @@ class Project extends \ArrayObject
     }
     /**
      * The integer id of the project owner.
-     *
      */
     public function getOwnerId(): int
     {
@@ -135,7 +120,6 @@ class Project extends \ArrayObject
     }
     /**
      * The integer id of the project owner.
-     *
      *
      * @return self
      */
@@ -147,7 +131,6 @@ class Project extends \ArrayObject
     }
     /**
      * The human-readable name for the project. The maximum length is 175 characters and the name must be unique.
-     *
      */
     public function getName(): string
     {
@@ -155,7 +138,6 @@ class Project extends \ArrayObject
     }
     /**
      * The human-readable name for the project. The maximum length is 175 characters and the name must be unique.
-     *
      *
      * @return self
      */
@@ -167,7 +149,6 @@ class Project extends \ArrayObject
     }
     /**
      * The description of the project. The maximum length is 255 characters.
-     *
      */
     public function getDescription(): string
     {
@@ -175,7 +156,6 @@ class Project extends \ArrayObject
     }
     /**
      * The description of the project. The maximum length is 255 characters.
-     *
      *
      * @return self
      */
@@ -202,33 +182,31 @@ class Project extends \ArrayObject
      * If another value for purpose is specified, for example, "your custom purpose",
      * your purpose will be stored as `Other: your custom purpose`.
      * 
-     *
      */
     public function getPurpose(): string
     {
         return $this->purpose;
     }
     /**
-    * The purpose of the project. The maximum length is 255 characters. It can
-    have one of the following values:
-    
-    - Just trying out DigitalOcean
-    - Class project / Educational purposes
-    - Website or blog
-    - Web Application
-    - Service or API
-    - Mobile Application
-    - Machine learning / AI / Data processing
-    - IoT
-    - Operational / Developer tooling
-    
-    If another value for purpose is specified, for example, "your custom purpose",
-    your purpose will be stored as `Other: your custom purpose`.
-    
-    *
-    *
-    * @return self
-    */
+     * The purpose of the project. The maximum length is 255 characters. It can
+     * have one of the following values:
+     * 
+     * - Just trying out DigitalOcean
+     * - Class project / Educational purposes
+     * - Website or blog
+     * - Web Application
+     * - Service or API
+     * - Mobile Application
+     * - Machine learning / AI / Data processing
+     * - IoT
+     * - Operational / Developer tooling
+     * 
+     * If another value for purpose is specified, for example, "your custom purpose",
+     * your purpose will be stored as `Other: your custom purpose`.
+     * 
+     *
+     * @return self
+     */
     public function setPurpose(string $purpose): self
     {
         $this->initialized['purpose'] = true;
@@ -237,7 +215,6 @@ class Project extends \ArrayObject
     }
     /**
      * The environment of the project's resources.
-     *
      */
     public function getEnvironment(): string
     {
@@ -245,7 +222,6 @@ class Project extends \ArrayObject
     }
     /**
      * The environment of the project's resources.
-     *
      *
      * @return self
      */
@@ -257,7 +233,6 @@ class Project extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -265,7 +240,6 @@ class Project extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
      *
      * @return self
      */
@@ -277,7 +251,6 @@ class Project extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -285,7 +258,6 @@ class Project extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was updated.
-     *
      *
      * @return self
      */
@@ -297,7 +269,6 @@ class Project extends \ArrayObject
     }
     /**
      * If true, all resources will be added to this project if no project is specified.
-     *
      */
     public function getIsDefault(): bool
     {
@@ -305,7 +276,6 @@ class Project extends \ArrayObject
     }
     /**
      * If true, all resources will be added to this project if no project is specified.
-     *
      *
      * @return self
      */

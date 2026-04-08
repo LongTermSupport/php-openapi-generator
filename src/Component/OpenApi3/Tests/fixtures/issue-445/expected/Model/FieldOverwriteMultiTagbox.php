@@ -20,63 +20,53 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     /**
      * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema if
      * OverwriteFilter is set to true.
-     *
      */
     protected mixed $filter = null;
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteFilter;
     /**
      * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema if
      * OverwriteListItemCreateTemplate is set to true.
-     *
      */
     protected ?string $listItemCreateTemplate = null;
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteListItemCreateTemplate;
     /**
      * The maximum number of items that can be stored: this value will overwrite the existing MaximumItems value specified in the parent schema if
      * OverwriteMaximumItems is set to true.
-     *
      */
     protected ?int $maximumItems = null;
     /**
      * Enable the overwriting of the MaximumItems property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteMaximumItems;
     /**
      * The minimum number of items that must be stored: this value will overwrite the existing MinimumItems value specified in the parent schema if
      * OverwriteMinimumItems is set to true.
-     *
      */
     protected ?int $minimumItems = null;
     /**
      * Enable the overwriting of the MinimumItems property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteMinimumItems;
     /**
      * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema if
      * OverwriteFilter is set to true.
-     *
      */
     public function getFilter(): mixed
     {
         return $this->filter;
     }
     /**
-    * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema if
-    OverwriteFilter is set to true.
-    *
-    *
-    * @return self
-    */
+     * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema if
+     * OverwriteFilter is set to true.
+     *
+     * @return self
+     */
     public function setFilter(mixed $filter): self
     {
         $this->initialized['filter'] = true;
@@ -85,7 +75,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
-     *
      */
     public function getOverwriteFilter(): bool
     {
@@ -93,7 +82,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
-     *
      *
      * @return self
      */
@@ -106,19 +94,17 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     /**
      * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema if
      * OverwriteListItemCreateTemplate is set to true.
-     *
      */
     public function getListItemCreateTemplate(): ?string
     {
         return $this->listItemCreateTemplate;
     }
     /**
-    * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema if
-    OverwriteListItemCreateTemplate is set to true.
-    *
-    *
-    * @return self
-    */
+     * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema if
+     * OverwriteListItemCreateTemplate is set to true.
+     *
+     * @return self
+     */
     public function setListItemCreateTemplate(?string $listItemCreateTemplate): self
     {
         $this->initialized['listItemCreateTemplate'] = true;
@@ -127,7 +113,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
-     *
      */
     public function getOverwriteListItemCreateTemplate(): bool
     {
@@ -135,7 +120,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
-     *
      *
      * @return self
      */
@@ -148,19 +132,17 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     /**
      * The maximum number of items that can be stored: this value will overwrite the existing MaximumItems value specified in the parent schema if
      * OverwriteMaximumItems is set to true.
-     *
      */
     public function getMaximumItems(): ?int
     {
         return $this->maximumItems;
     }
     /**
-    * The maximum number of items that can be stored: this value will overwrite the existing MaximumItems value specified in the parent schema if
-    OverwriteMaximumItems is set to true.
-    *
-    *
-    * @return self
-    */
+     * The maximum number of items that can be stored: this value will overwrite the existing MaximumItems value specified in the parent schema if
+     * OverwriteMaximumItems is set to true.
+     *
+     * @return self
+     */
     public function setMaximumItems(?int $maximumItems): self
     {
         $this->initialized['maximumItems'] = true;
@@ -169,7 +151,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the MaximumItems property of the field specified by the Id property.
-     *
      */
     public function getOverwriteMaximumItems(): bool
     {
@@ -177,7 +158,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the MaximumItems property of the field specified by the Id property.
-     *
      *
      * @return self
      */
@@ -190,19 +170,17 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     /**
      * The minimum number of items that must be stored: this value will overwrite the existing MinimumItems value specified in the parent schema if
      * OverwriteMinimumItems is set to true.
-     *
      */
     public function getMinimumItems(): ?int
     {
         return $this->minimumItems;
     }
     /**
-    * The minimum number of items that must be stored: this value will overwrite the existing MinimumItems value specified in the parent schema if
-    OverwriteMinimumItems is set to true.
-    *
-    *
-    * @return self
-    */
+     * The minimum number of items that must be stored: this value will overwrite the existing MinimumItems value specified in the parent schema if
+     * OverwriteMinimumItems is set to true.
+     *
+     * @return self
+     */
     public function setMinimumItems(?int $minimumItems): self
     {
         $this->initialized['minimumItems'] = true;
@@ -211,7 +189,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the MinimumItems property of the field specified by the Id property.
-     *
      */
     public function getOverwriteMinimumItems(): bool
     {
@@ -219,7 +196,6 @@ class FieldOverwriteMultiTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the MinimumItems property of the field specified by the Id property.
-     *
      *
      * @return self
      */

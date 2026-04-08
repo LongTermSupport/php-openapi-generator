@@ -22,7 +22,6 @@ class V2VolumesVolumeIdSnapshotsPostBody extends \ArrayObject
     }
     /**
      * A human-readable name for the volume snapshot.
-     *
      */
     protected string $name;
     /**
@@ -33,7 +32,6 @@ class V2VolumesVolumeIdSnapshotsPostBody extends \ArrayObject
     protected ?array $tags = null;
     /**
      * A human-readable name for the volume snapshot.
-     *
      */
     public function getName(): string
     {
@@ -41,7 +39,6 @@ class V2VolumesVolumeIdSnapshotsPostBody extends \ArrayObject
     }
     /**
      * A human-readable name for the volume snapshot.
-     *
      *
      * @return self
      */

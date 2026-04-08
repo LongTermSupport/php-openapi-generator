@@ -19,33 +19,27 @@ class TaggingOptionsBase
     }
     /**
      * Override for the output format ID to tag.
-     *
      */
     protected ?string $tagOutputFormatId = null;
     /**
      * Override for the cache to use.
-     *
      */
     protected ?string $keywordLookupCacheName = null;
     /**
      * Override for the layer to assign.
-     *
      */
     protected ?string $taggingLayerId = null;
     /**
      * Override for the field id where found tags are stored.
-     *
      */
     protected ?string $foundTagsFieldId = null;
     /**
      * Override for the field id where not found tags are stored.
-     *
      */
     protected ?string $missingKeywordsFieldId = null;
     protected string $kind;
     /**
      * Override for the output format ID to tag.
-     *
      */
     public function getTagOutputFormatId(): ?string
     {
@@ -53,7 +47,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the output format ID to tag.
-     *
      */
     public function setTagOutputFormatId(?string $tagOutputFormatId): void
     {
@@ -62,7 +55,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the cache to use.
-     *
      */
     public function getKeywordLookupCacheName(): ?string
     {
@@ -70,7 +62,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the cache to use.
-     *
      */
     public function setKeywordLookupCacheName(?string $keywordLookupCacheName): void
     {
@@ -79,7 +70,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the layer to assign.
-     *
      */
     public function getTaggingLayerId(): ?string
     {
@@ -87,7 +77,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the layer to assign.
-     *
      */
     public function setTaggingLayerId(?string $taggingLayerId): void
     {
@@ -96,7 +85,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the field id where found tags are stored.
-     *
      */
     public function getFoundTagsFieldId(): ?string
     {
@@ -104,7 +92,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the field id where found tags are stored.
-     *
      */
     public function setFoundTagsFieldId(?string $foundTagsFieldId): void
     {
@@ -113,7 +100,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the field id where not found tags are stored.
-     *
      */
     public function getMissingKeywordsFieldId(): ?string
     {
@@ -121,7 +107,6 @@ class TaggingOptionsBase
     }
     /**
      * Override for the field id where not found tags are stored.
-     *
      */
     public function setMissingKeywordsFieldId(?string $missingKeywordsFieldId): void
     {

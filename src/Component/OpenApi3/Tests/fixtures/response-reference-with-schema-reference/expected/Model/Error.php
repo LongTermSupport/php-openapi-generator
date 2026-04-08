@@ -19,17 +19,14 @@ class Error
     }
     /**
      * An application-specific error code, expressed as a string value.
-     *
      */
     protected string $code;
     /**
      * A short, human-readable summary of the problem.
-     *
      */
     protected string $title;
     /**
      * An application-specific error code, expressed as a string value.
-     *
      */
     public function getCode(): string
     {
@@ -37,7 +34,6 @@ class Error
     }
     /**
      * An application-specific error code, expressed as a string value.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class Error
     }
     /**
      * A short, human-readable summary of the problem.
-     *
      */
     public function getTitle(): string
     {
@@ -57,7 +52,6 @@ class Error
     }
     /**
      * A short, human-readable summary of the problem.
-     *
      *
      * @return self
      */

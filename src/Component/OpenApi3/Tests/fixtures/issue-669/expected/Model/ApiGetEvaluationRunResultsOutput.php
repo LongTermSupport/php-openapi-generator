@@ -23,12 +23,10 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     protected ApiEvaluationRun $evaluationRun;
     /**
      * Links to other pages
-     *
      */
     protected ApiLinks $links;
     /**
      * Meta information about the data set
-     *
      */
     protected ApiMeta $meta;
     /**
@@ -49,7 +47,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      */
     public function getLinks(): ApiLinks
     {
@@ -57,7 +54,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      *
      * @return self
      */
@@ -69,7 +65,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      */
     public function getMeta(): ApiMeta
     {
@@ -77,7 +72,6 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      *
      * @return self
      */

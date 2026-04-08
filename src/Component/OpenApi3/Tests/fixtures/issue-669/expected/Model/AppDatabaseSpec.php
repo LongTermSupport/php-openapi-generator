@@ -22,17 +22,14 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if cluster_name is not set, a new cluster will be provisioned.
-     *
      */
     protected string $clusterName;
     /**
      * The name of the MySQL or PostgreSQL database to configure.
-     *
      */
     protected string $dbName;
     /**
      * The name of the MySQL or PostgreSQL user to configure.
-     *
      */
     protected string $dbUser;
     /**
@@ -43,27 +40,22 @@ class AppDatabaseSpec extends \ArrayObject
      * - KAFKA: Kafka
      * - OPENSEARCH: OpenSearch
      * - VALKEY: ValKey
-     *
      */
     protected string $engine = 'UNSET';
     /**
      * The database's name. The name must be unique across all components within the same app and cannot use capital letters.
-     *
      */
     protected string $name;
     /**
      * Whether this is a production or dev database.
-     *
      */
     protected bool $production;
     /**
      * The version of the database engine
-     *
      */
     protected string $version;
     /**
      * The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if cluster_name is not set, a new cluster will be provisioned.
-     *
      */
     public function getClusterName(): string
     {
@@ -71,7 +63,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if cluster_name is not set, a new cluster will be provisioned.
-     *
      *
      * @return self
      */
@@ -83,7 +74,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the MySQL or PostgreSQL database to configure.
-     *
      */
     public function getDbName(): string
     {
@@ -91,7 +81,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the MySQL or PostgreSQL database to configure.
-     *
      *
      * @return self
      */
@@ -103,7 +92,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the MySQL or PostgreSQL user to configure.
-     *
      */
     public function getDbUser(): string
     {
@@ -111,7 +99,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The name of the MySQL or PostgreSQL user to configure.
-     *
      *
      * @return self
      */
@@ -129,24 +116,22 @@ class AppDatabaseSpec extends \ArrayObject
      * - KAFKA: Kafka
      * - OPENSEARCH: OpenSearch
      * - VALKEY: ValKey
-     *
      */
     public function getEngine(): string
     {
         return $this->engine;
     }
     /**
-    * - MYSQL: MySQL
-    - PG: PostgreSQL
-    - REDIS: Caching
-    - MONGODB: MongoDB
-    - KAFKA: Kafka
-    - OPENSEARCH: OpenSearch
-    - VALKEY: ValKey
-    *
-    *
-    * @return self
-    */
+     * - MYSQL: MySQL
+     * - PG: PostgreSQL
+     * - REDIS: Caching
+     * - MONGODB: MongoDB
+     * - KAFKA: Kafka
+     * - OPENSEARCH: OpenSearch
+     * - VALKEY: ValKey
+     *
+     * @return self
+     */
     public function setEngine(string $engine): self
     {
         $this->initialized['engine'] = true;
@@ -155,7 +140,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The database's name. The name must be unique across all components within the same app and cannot use capital letters.
-     *
      */
     public function getName(): string
     {
@@ -163,7 +147,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The database's name. The name must be unique across all components within the same app and cannot use capital letters.
-     *
      *
      * @return self
      */
@@ -175,7 +158,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * Whether this is a production or dev database.
-     *
      */
     public function getProduction(): bool
     {
@@ -183,7 +165,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * Whether this is a production or dev database.
-     *
      *
      * @return self
      */
@@ -195,7 +176,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The version of the database engine
-     *
      */
     public function getVersion(): string
     {
@@ -203,7 +183,6 @@ class AppDatabaseSpec extends \ArrayObject
     }
     /**
      * The version of the database engine
-     *
      *
      * @return self
      */

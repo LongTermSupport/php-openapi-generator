@@ -22,17 +22,14 @@ class VpcNatGatewayCreateVpcsItem extends \ArrayObject
     }
     /**
      * The unique identifier of the VPC to which the NAT gateway is attached.
-     *
      */
     protected string $vpcUuid;
     /**
      * The classification of the NAT gateway as the default egress route for the VPC traffic.
-     *
      */
     protected bool $defaultGateway;
     /**
      * The unique identifier of the VPC to which the NAT gateway is attached.
-     *
      */
     public function getVpcUuid(): string
     {
@@ -40,7 +37,6 @@ class VpcNatGatewayCreateVpcsItem extends \ArrayObject
     }
     /**
      * The unique identifier of the VPC to which the NAT gateway is attached.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class VpcNatGatewayCreateVpcsItem extends \ArrayObject
     }
     /**
      * The classification of the NAT gateway as the default egress route for the VPC traffic.
-     *
      */
     public function getDefaultGateway(): bool
     {
@@ -60,7 +55,6 @@ class VpcNatGatewayCreateVpcsItem extends \ArrayObject
     }
     /**
      * The classification of the NAT gateway as the default egress route for the VPC traffic.
-     *
      *
      * @return self
      */

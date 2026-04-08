@@ -19,17 +19,14 @@ class SortInfo
     }
     /**
      * The field's ID to sort on.
-     *
      */
     protected ?string $field = null;
     /**
      * The sort direction (ascending/descending).
-     *
      */
     protected mixed $direction = null;
     /**
      * The field's ID to sort on.
-     *
      */
     public function getField(): ?string
     {
@@ -37,7 +34,6 @@ class SortInfo
     }
     /**
      * The field's ID to sort on.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class SortInfo
     }
     /**
      * The sort direction (ascending/descending).
-     *
      */
     public function getDirection(): mixed
     {
@@ -57,7 +52,6 @@ class SortInfo
     }
     /**
      * The sort direction (ascending/descending).
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class TakeDictionaryValueTransformation extends BusinessRuleTransformation
     }
     /**
      * Key of the item.
-     *
      */
     protected ?string $key = null;
     /**
      * Key of the item.
-     *
      */
     public function getKey(): ?string
     {
@@ -32,7 +30,6 @@ class TakeDictionaryValueTransformation extends BusinessRuleTransformation
     }
     /**
      * Key of the item.
-     *
      *
      * @return self
      */

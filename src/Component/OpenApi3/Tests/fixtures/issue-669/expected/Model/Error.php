@@ -22,22 +22,18 @@ class Error extends \ArrayObject
     }
     /**
      * A short identifier corresponding to the HTTP status code returned. For  example, the ID for a response returning a 404 status code would be "not_found."
-     *
      */
     protected string $id;
     /**
      * A message providing additional information about the error, including  details to help resolve it when possible.
-     *
      */
     protected string $message;
     /**
      * Optionally, some endpoints may include a request ID that should be provided when reporting bugs or opening support tickets to help identify the issue.
-     *
      */
     protected string $requestId;
     /**
      * A short identifier corresponding to the HTTP status code returned. For  example, the ID for a response returning a 404 status code would be "not_found."
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class Error extends \ArrayObject
     }
     /**
      * A short identifier corresponding to the HTTP status code returned. For  example, the ID for a response returning a 404 status code would be "not_found."
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class Error extends \ArrayObject
     }
     /**
      * A message providing additional information about the error, including  details to help resolve it when possible.
-     *
      */
     public function getMessage(): string
     {
@@ -65,7 +59,6 @@ class Error extends \ArrayObject
     }
     /**
      * A message providing additional information about the error, including  details to help resolve it when possible.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class Error extends \ArrayObject
     }
     /**
      * Optionally, some endpoints may include a request ID that should be provided when reporting bugs or opening support tickets to help identify the issue.
-     *
      */
     public function getRequestId(): string
     {
@@ -85,7 +77,6 @@ class Error extends \ArrayObject
     }
     /**
      * Optionally, some endpoints may include a request ID that should be provided when reporting bugs or opening support tickets to help identify the issue.
-     *
      *
      * @return self
      */

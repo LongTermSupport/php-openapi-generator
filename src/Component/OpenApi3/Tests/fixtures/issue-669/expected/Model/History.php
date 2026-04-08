@@ -22,42 +22,34 @@ class History extends \ArrayObject
     }
     /**
      * The unique identifier of the history event.
-     *
      */
     protected string $historyEventId;
     /**
      * The current number of Droplets in the autoscale pool.
-     *
      */
     protected int $currentInstanceCount;
     /**
      * The target number of Droplets for the autoscale pool after the scaling event.
-     *
      */
     protected int $desiredInstanceCount;
     /**
      * The reason for the scaling event.
-     *
      */
     protected string $reason;
     /**
      * The status of the scaling event.
-     *
      */
     protected string $status;
     /**
      * The creation time of the history event in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The last updated time of the history event in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * The unique identifier of the history event.
-     *
      */
     public function getHistoryEventId(): string
     {
@@ -65,7 +57,6 @@ class History extends \ArrayObject
     }
     /**
      * The unique identifier of the history event.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class History extends \ArrayObject
     }
     /**
      * The current number of Droplets in the autoscale pool.
-     *
      */
     public function getCurrentInstanceCount(): int
     {
@@ -85,7 +75,6 @@ class History extends \ArrayObject
     }
     /**
      * The current number of Droplets in the autoscale pool.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class History extends \ArrayObject
     }
     /**
      * The target number of Droplets for the autoscale pool after the scaling event.
-     *
      */
     public function getDesiredInstanceCount(): int
     {
@@ -105,7 +93,6 @@ class History extends \ArrayObject
     }
     /**
      * The target number of Droplets for the autoscale pool after the scaling event.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class History extends \ArrayObject
     }
     /**
      * The reason for the scaling event.
-     *
      */
     public function getReason(): string
     {
@@ -125,7 +111,6 @@ class History extends \ArrayObject
     }
     /**
      * The reason for the scaling event.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class History extends \ArrayObject
     }
     /**
      * The status of the scaling event.
-     *
      */
     public function getStatus(): string
     {
@@ -145,7 +129,6 @@ class History extends \ArrayObject
     }
     /**
      * The status of the scaling event.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class History extends \ArrayObject
     }
     /**
      * The creation time of the history event in ISO8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -165,7 +147,6 @@ class History extends \ArrayObject
     }
     /**
      * The creation time of the history event in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class History extends \ArrayObject
     }
     /**
      * The last updated time of the history event in ISO8601 combined date and time format.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -185,7 +165,6 @@ class History extends \ArrayObject
     }
     /**
      * The last updated time of the history event in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */

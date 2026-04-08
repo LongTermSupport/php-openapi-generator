@@ -23,27 +23,22 @@ class DefaultTweet extends \ArrayObject
     protected string $format;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $id;
     /**
      * Creation time of the Tweet.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The content of the Tweet.
-     *
      */
     protected string $text;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $authorId;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $inReplyToUserId;
     /**
@@ -54,17 +49,14 @@ class DefaultTweet extends \ArrayObject
     protected array $referencedTweets;
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      */
     protected CompactTweetFieldsAttachments $attachments;
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     protected TweetWithheld $withheld;
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      */
     protected DefaultTweetFieldsGeo $geo;
     protected FullTextEntities $entities;
@@ -80,7 +72,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getId(): string
     {
@@ -88,7 +79,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -100,7 +90,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -108,7 +97,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
      *
      * @return self
      */
@@ -120,7 +108,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
      */
     public function getText(): string
     {
@@ -128,7 +115,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
      *
      * @return self
      */
@@ -140,7 +126,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getAuthorId(): string
     {
@@ -148,7 +133,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -160,7 +144,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getInReplyToUserId(): string
     {
@@ -168,7 +151,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -202,7 +184,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      */
     public function getAttachments(): CompactTweetFieldsAttachments
     {
@@ -210,7 +191,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      *
      * @return self
      */
@@ -222,7 +202,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     public function getWithheld(): TweetWithheld
     {
@@ -230,7 +209,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      *
      * @return self
      */
@@ -242,7 +220,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      */
     public function getGeo(): DefaultTweetFieldsGeo
     {
@@ -250,7 +227,6 @@ class DefaultTweet extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      *
      * @return self
      */

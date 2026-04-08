@@ -22,33 +22,27 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Creation date
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Created by
-     *
      */
     protected string $createdBy;
     /**
      * Deleted date
-     *
      */
     protected \DateTime $deletedAt;
     /**
      * Name
-     *
      */
     protected string $name;
     protected string $secretKey;
     /**
      * Uuid
-     *
      */
     protected string $uuid;
     /**
      * Creation date
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -56,7 +50,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Creation date
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Created by
-     *
      */
     public function getCreatedBy(): string
     {
@@ -76,7 +68,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Created by
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Deleted date
-     *
      */
     public function getDeletedAt(): \DateTime
     {
@@ -96,7 +86,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Deleted date
-     *
      *
      * @return self
      */
@@ -108,7 +97,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Name
-     *
      */
     public function getName(): string
     {
@@ -116,7 +104,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Name
-     *
      *
      * @return self
      */
@@ -138,7 +125,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Uuid
-     *
      */
     public function getUuid(): string
     {
@@ -146,7 +132,6 @@ class ApiAgentAPIKeyInfo extends \ArrayObject
     }
     /**
      * Uuid
-     *
      *
      * @return self
      */

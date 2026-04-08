@@ -22,12 +22,10 @@ class RepositorySubscription extends \ArrayObject
     }
     /**
      * Determines if notifications should be received from this repository.
-     *
      */
     protected bool $subscribed;
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
      */
     protected bool $ignored;
     protected ?string $reason = null;
@@ -36,7 +34,6 @@ class RepositorySubscription extends \ArrayObject
     protected string $repositoryUrl;
     /**
      * Determines if notifications should be received from this repository.
-     *
      */
     public function getSubscribed(): bool
     {
@@ -44,7 +41,6 @@ class RepositorySubscription extends \ArrayObject
     }
     /**
      * Determines if notifications should be received from this repository.
-     *
      *
      * @return self
      */
@@ -56,7 +52,6 @@ class RepositorySubscription extends \ArrayObject
     }
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
      */
     public function getIgnored(): bool
     {
@@ -64,7 +59,6 @@ class RepositorySubscription extends \ArrayObject
     }
     /**
      * Determines if all notifications should be blocked from this repository.
-     *
      *
      * @return self
      */

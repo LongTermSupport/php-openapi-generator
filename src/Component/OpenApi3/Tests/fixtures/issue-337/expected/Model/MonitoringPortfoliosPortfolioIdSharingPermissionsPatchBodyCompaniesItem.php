@@ -22,17 +22,14 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ex
     }
     /**
      * A creditsafe user id.
-     *
      */
     protected string $csUserId;
     /**
      * Comma separated permissions. "View" permission gets automatically added to the user if "Add", "Edit", "Remove" permissions are set.
-     *
      */
     protected string $permissions;
     /**
      * A creditsafe user id.
-     *
      */
     public function getCsUserId(): string
     {
@@ -40,7 +37,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ex
     }
     /**
      * A creditsafe user id.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ex
     }
     /**
      * Comma separated permissions. "View" permission gets automatically added to the user if "Add", "Edit", "Remove" permissions are set.
-     *
      */
     public function getPermissions(): string
     {
@@ -60,7 +55,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ex
     }
     /**
      * Comma separated permissions. "View" permission gets automatically added to the user if "Add", "Edit", "Remove" permissions are set.
-     *
      *
      * @return self
      */

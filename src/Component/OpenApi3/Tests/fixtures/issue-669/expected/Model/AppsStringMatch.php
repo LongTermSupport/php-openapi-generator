@@ -22,24 +22,20 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * Exact string match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
      */
     protected string $exact;
     /**
      * Prefix-based match. Only 1 of `exact`, `prefix`, or `regex` must be set.
      *
      * @deprecated
-     *
      */
     protected string $prefix;
     /**
      * RE2 style regex-based match. Only 1 of `exact`, `prefix`, or `regex` must be set. For more information about RE2 syntax, see: https://github.com/google/re2/wiki/Syntax
-     *
      */
     protected string $regex;
     /**
      * Exact string match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
      */
     public function getExact(): string
     {
@@ -47,7 +43,6 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * Exact string match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
      *
      * @return self
      */
@@ -61,7 +56,6 @@ class AppsStringMatch extends \ArrayObject
      * Prefix-based match. Only 1 of `exact`, `prefix`, or `regex` must be set.
      *
      * @deprecated
-     *
      */
     public function getPrefix(): string
     {
@@ -69,7 +63,6 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * Prefix-based match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
      *
      * @deprecated
      *
@@ -83,7 +76,6 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * RE2 style regex-based match. Only 1 of `exact`, `prefix`, or `regex` must be set. For more information about RE2 syntax, see: https://github.com/google/re2/wiki/Syntax
-     *
      */
     public function getRegex(): string
     {
@@ -91,7 +83,6 @@ class AppsStringMatch extends \ArrayObject
     }
     /**
      * RE2 style regex-based match. Only 1 of `exact`, `prefix`, or `regex` must be set. For more information about RE2 syntax, see: https://github.com/google/re2/wiki/Syntax
-     *
      *
      * @return self
      */

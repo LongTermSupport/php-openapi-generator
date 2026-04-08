@@ -19,27 +19,22 @@ class ShareDetail
     }
     /**
      * Share ID.
-     *
      */
     protected string $id;
     /**
      * Name of share.
-     *
      */
     protected string $name;
     /**
      * Description of share entered by user.
-     *
      */
     protected ?string $description = null;
     /**
      * Creator of share.
-     *
      */
     protected mixed $creator = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
@@ -56,27 +51,22 @@ class ShareDetail
     protected ?array $layerSchemaIds = null;
     /**
      * Detail of share.
-     *
      */
     protected mixed $data = null;
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
      */
     protected ?\DateTime $expirationDate = null;
     /**
      * Info if share is already expired.
-     *
      */
     protected bool $expired;
     /**
      * Defined access for contents in share.
-     *
      */
     protected mixed $outputAccess = null;
     /**
      * Type of share.
-     *
      */
     protected mixed $shareType = null;
     /**
@@ -87,7 +77,6 @@ class ShareDetail
     protected ?array $schemas = null;
     /**
      * Share ID.
-     *
      */
     public function getId(): string
     {
@@ -95,7 +84,6 @@ class ShareDetail
     }
     /**
      * Share ID.
-     *
      *
      * @return self
      */
@@ -107,7 +95,6 @@ class ShareDetail
     }
     /**
      * Name of share.
-     *
      */
     public function getName(): string
     {
@@ -115,7 +102,6 @@ class ShareDetail
     }
     /**
      * Name of share.
-     *
      *
      * @return self
      */
@@ -127,7 +113,6 @@ class ShareDetail
     }
     /**
      * Description of share entered by user.
-     *
      */
     public function getDescription(): ?string
     {
@@ -135,7 +120,6 @@ class ShareDetail
     }
     /**
      * Description of share entered by user.
-     *
      *
      * @return self
      */
@@ -147,7 +131,6 @@ class ShareDetail
     }
     /**
      * Creator of share.
-     *
      */
     public function getCreator(): mixed
     {
@@ -155,7 +138,6 @@ class ShareDetail
     }
     /**
      * Creator of share.
-     *
      *
      * @return self
      */
@@ -167,7 +149,6 @@ class ShareDetail
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -175,7 +156,6 @@ class ShareDetail
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -231,7 +211,6 @@ class ShareDetail
     }
     /**
      * Detail of share.
-     *
      */
     public function getData(): mixed
     {
@@ -239,7 +218,6 @@ class ShareDetail
     }
     /**
      * Detail of share.
-     *
      *
      * @return self
      */
@@ -251,7 +229,6 @@ class ShareDetail
     }
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
      */
     public function getExpirationDate(): ?\DateTime
     {
@@ -259,7 +236,6 @@ class ShareDetail
     }
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
      *
      * @return self
      */
@@ -271,7 +247,6 @@ class ShareDetail
     }
     /**
      * Info if share is already expired.
-     *
      */
     public function getExpired(): bool
     {
@@ -279,7 +254,6 @@ class ShareDetail
     }
     /**
      * Info if share is already expired.
-     *
      *
      * @return self
      */
@@ -291,7 +265,6 @@ class ShareDetail
     }
     /**
      * Defined access for contents in share.
-     *
      */
     public function getOutputAccess(): mixed
     {
@@ -299,7 +272,6 @@ class ShareDetail
     }
     /**
      * Defined access for contents in share.
-     *
      *
      * @return self
      */
@@ -311,7 +283,6 @@ class ShareDetail
     }
     /**
      * Type of share.
-     *
      */
     public function getShareType(): mixed
     {
@@ -319,7 +290,6 @@ class ShareDetail
     }
     /**
      * Type of share.
-     *
      *
      * @return self
      */

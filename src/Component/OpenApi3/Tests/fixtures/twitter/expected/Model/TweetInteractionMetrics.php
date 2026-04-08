@@ -22,32 +22,26 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been liked.
-     *
      */
     protected int $likeCount;
     /**
      * Number of times this Tweet has been Retweeted.
-     *
      */
     protected int $retweetCount;
     /**
      * Number of times this Tweet has been quoted.
-     *
      */
     protected int $quoteCount;
     /**
      * Number of times this Tweet has been replied to.
-     *
      */
     protected int $replyCount;
     /**
      * Number of times this Tweet has been viewed.
-     *
      */
     protected int $impressionCount;
     /**
      * Number of times this Tweet has been liked.
-     *
      */
     public function getLikeCount(): int
     {
@@ -55,7 +49,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been liked.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been Retweeted.
-     *
      */
     public function getRetweetCount(): int
     {
@@ -75,7 +67,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been Retweeted.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been quoted.
-     *
      */
     public function getQuoteCount(): int
     {
@@ -95,7 +85,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been quoted.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been replied to.
-     *
      */
     public function getReplyCount(): int
     {
@@ -115,7 +103,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been replied to.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been viewed.
-     *
      */
     public function getImpressionCount(): int
     {
@@ -135,7 +121,6 @@ class TweetInteractionMetrics extends \ArrayObject
     }
     /**
      * Number of times this Tweet has been viewed.
-     *
      *
      * @return self
      */

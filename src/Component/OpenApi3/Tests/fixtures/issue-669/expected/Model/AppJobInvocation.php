@@ -25,7 +25,6 @@ class AppJobInvocation extends \ArrayObject
     protected string $deploymentId;
     /**
      * The phase of the job invocation
-     *
      */
     protected string $phase;
     protected AppJobInvocationTrigger $trigger;
@@ -64,7 +63,6 @@ class AppJobInvocation extends \ArrayObject
     }
     /**
      * The phase of the job invocation
-     *
      */
     public function getPhase(): string
     {
@@ -72,7 +70,6 @@ class AppJobInvocation extends \ArrayObject
     }
     /**
      * The phase of the job invocation
-     *
      *
      * @return self
      */

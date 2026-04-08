@@ -28,7 +28,6 @@ class CodeSearchResultItem extends \ArrayObject
     protected string $htmlUrl;
     /**
      * Minimal Repository
-     *
      */
     protected MinimalRepository $repository;
     protected int $score;
@@ -105,7 +104,6 @@ class CodeSearchResultItem extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      */
     public function getRepository(): MinimalRepository
     {
@@ -113,7 +111,6 @@ class CodeSearchResultItem extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      *
      * @return self
      */

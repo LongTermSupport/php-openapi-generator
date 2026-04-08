@@ -22,12 +22,10 @@ class GlbSettingsCdn extends \ArrayObject
     }
     /**
      * A boolean flag to enable CDN caching.
-     *
      */
     protected bool $isEnabled;
     /**
      * A boolean flag to enable CDN caching.
-     *
      */
     public function getIsEnabled(): bool
     {
@@ -35,7 +33,6 @@ class GlbSettingsCdn extends \ArrayObject
     }
     /**
      * A boolean flag to enable CDN caching.
-     *
      *
      * @return self
      */

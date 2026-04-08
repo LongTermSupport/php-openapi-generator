@@ -22,37 +22,30 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Time created at.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Name of the dataset.
-     *
      */
     protected string $datasetName;
     /**
      * UUID of the dataset.
-     *
      */
     protected string $datasetUuid;
     /**
      * The size of the dataset uploaded file in bytes.
-     *
      */
     protected string $fileSize;
     /**
      * Does the dataset have a ground truth column?
-     *
      */
     protected bool $hasGroundTruth;
     /**
      * Number of rows in the dataset.
-     *
      */
     protected int $rowCount;
     /**
      * Time created at.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -60,7 +53,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Time created at.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Name of the dataset.
-     *
      */
     public function getDatasetName(): string
     {
@@ -80,7 +71,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Name of the dataset.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * UUID of the dataset.
-     *
      */
     public function getDatasetUuid(): string
     {
@@ -100,7 +89,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * UUID of the dataset.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * The size of the dataset uploaded file in bytes.
-     *
      */
     public function getFileSize(): string
     {
@@ -120,7 +107,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * The size of the dataset uploaded file in bytes.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Does the dataset have a ground truth column?
-     *
      */
     public function getHasGroundTruth(): bool
     {
@@ -140,7 +125,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Does the dataset have a ground truth column?
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Number of rows in the dataset.
-     *
      */
     public function getRowCount(): int
     {
@@ -160,7 +143,6 @@ class ApiEvaluationDataset extends \ArrayObject
     }
     /**
      * Number of rows in the dataset.
-     *
      *
      * @return self
      */

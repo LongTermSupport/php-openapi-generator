@@ -22,12 +22,10 @@ class ReposOwnerRepoPullsCommentsCommentIdReactionsPostBody extends \ArrayObject
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the pull request review comment.
-     *
      */
     protected string $content;
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the pull request review comment.
-     *
      */
     public function getContent(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoPullsCommentsCommentIdReactionsPostBody extends \ArrayObject
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the pull request review comment.
-     *
      *
      * @return self
      */

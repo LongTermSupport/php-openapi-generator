@@ -22,27 +22,22 @@ class Droplet extends \ArrayObject
     }
     /**
      * A unique identifier for each Droplet instance. This is automatically generated upon Droplet creation.
-     *
      */
     protected int $id;
     /**
      * The human-readable name set for the Droplet instance.
-     *
      */
     protected string $name;
     /**
      * Memory of the Droplet in megabytes.
-     *
      */
     protected int $memory;
     /**
      * The number of virtual CPUs.
-     *
      */
     protected int $vcpus;
     /**
      * The size of the Droplet's disk in gigabytes.
-     *
      */
     protected int $disk;
     /**
@@ -53,12 +48,10 @@ class Droplet extends \ArrayObject
     protected array $diskInfo;
     /**
      * A boolean value indicating whether the Droplet has been locked, preventing actions by users.
-     *
      */
     protected bool $locked;
     /**
      * A status string indicating the state of the Droplet instance. This may be "new", "active", "off", or "archive".
-     *
      */
     protected string $status;
     /**
@@ -71,12 +64,10 @@ class Droplet extends \ArrayObject
      * 
      *
      * @deprecated
-     *
      */
     protected ?Kernel $kernel = null;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Droplet was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -108,12 +99,10 @@ class Droplet extends \ArrayObject
     protected Size $size;
     /**
      * The unique slug identifier for the size of this Droplet.
-     *
      */
     protected string $sizeSlug;
     /**
      * The details of the network that are configured for the Droplet instance.  This is an object that contains keys for IPv4 and IPv6. The value of each of these is an array that contains objects describing an individual IP resource allocated to the Droplet. These will define attributes like the IP address, netmask, and gateway of the specific network depending on the type of network it is.
-     *
      */
     protected DropletNetworks $networks;
     protected Region $region;
@@ -125,17 +114,14 @@ class Droplet extends \ArrayObject
     protected array $tags;
     /**
      * A string specifying the UUID of the VPC to which the Droplet is assigned.<br>Requires `vpc:read` scope.
-     *
      */
     protected string $vpcUuid;
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
      */
     protected GpuInfo $gpuInfo;
     /**
      * A unique identifier for each Droplet instance. This is automatically generated upon Droplet creation.
-     *
      */
     public function getId(): int
     {
@@ -143,7 +129,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A unique identifier for each Droplet instance. This is automatically generated upon Droplet creation.
-     *
      *
      * @return self
      */
@@ -155,7 +140,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The human-readable name set for the Droplet instance.
-     *
      */
     public function getName(): string
     {
@@ -163,7 +147,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The human-readable name set for the Droplet instance.
-     *
      *
      * @return self
      */
@@ -175,7 +158,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * Memory of the Droplet in megabytes.
-     *
      */
     public function getMemory(): int
     {
@@ -183,7 +165,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * Memory of the Droplet in megabytes.
-     *
      *
      * @return self
      */
@@ -195,7 +176,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The number of virtual CPUs.
-     *
      */
     public function getVcpus(): int
     {
@@ -203,7 +183,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The number of virtual CPUs.
-     *
      *
      * @return self
      */
@@ -215,7 +194,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The size of the Droplet's disk in gigabytes.
-     *
      */
     public function getDisk(): int
     {
@@ -223,7 +201,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The size of the Droplet's disk in gigabytes.
-     *
      *
      * @return self
      */
@@ -257,7 +234,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the Droplet has been locked, preventing actions by users.
-     *
      */
     public function getLocked(): bool
     {
@@ -265,7 +241,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the Droplet has been locked, preventing actions by users.
-     *
      *
      * @return self
      */
@@ -277,7 +252,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A status string indicating the state of the Droplet instance. This may be "new", "active", "off", or "archive".
-     *
      */
     public function getStatus(): string
     {
@@ -285,7 +259,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A status string indicating the state of the Droplet instance. This may be "new", "active", "off", or "archive".
-     *
      *
      * @return self
      */
@@ -305,26 +278,24 @@ class Droplet extends \ArrayObject
      * 
      *
      * @deprecated
-     *
      */
     public function getKernel(): ?Kernel
     {
         return $this->kernel;
     }
     /**
-    * **Note**: All Droplets created after March 2017 use internal kernels by default.
-    These Droplets will have this attribute set to `null`.
-    
-    The current [kernel](https://docs.digitalocean.com/products/droplets/how-to/kernel/)
-    for Droplets with externally managed kernels. This will initially be set to
-    the kernel of the base image when the Droplet is created.
-    
-    *
-    *
-    * @deprecated
-    *
-    * @return self
-    */
+     * **Note**: All Droplets created after March 2017 use internal kernels by default.
+     * These Droplets will have this attribute set to `null`.
+     * 
+     * The current [kernel](https://docs.digitalocean.com/products/droplets/how-to/kernel/)
+     * for Droplets with externally managed kernels. This will initially be set to
+     * the kernel of the base image when the Droplet is created.
+     * 
+     *
+     * @deprecated
+     *
+     * @return self
+     */
     public function setKernel(?Kernel $kernel): self
     {
         $this->initialized['kernel'] = true;
@@ -333,7 +304,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Droplet was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -341,7 +311,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the Droplet was created.
-     *
      *
      * @return self
      */
@@ -471,7 +440,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The unique slug identifier for the size of this Droplet.
-     *
      */
     public function getSizeSlug(): string
     {
@@ -479,7 +447,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The unique slug identifier for the size of this Droplet.
-     *
      *
      * @return self
      */
@@ -491,7 +458,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The details of the network that are configured for the Droplet instance.  This is an object that contains keys for IPv4 and IPv6. The value of each of these is an array that contains objects describing an individual IP resource allocated to the Droplet. These will define attributes like the IP address, netmask, and gateway of the specific network depending on the type of network it is.
-     *
      */
     public function getNetworks(): DropletNetworks
     {
@@ -499,7 +465,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * The details of the network that are configured for the Droplet instance.  This is an object that contains keys for IPv4 and IPv6. The value of each of these is an array that contains objects describing an individual IP resource allocated to the Droplet. These will define attributes like the IP address, netmask, and gateway of the specific network depending on the type of network it is.
-     *
      *
      * @return self
      */
@@ -543,7 +508,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Droplet is assigned.<br>Requires `vpc:read` scope.
-     *
      */
     public function getVpcUuid(): string
     {
@@ -551,7 +515,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Droplet is assigned.<br>Requires `vpc:read` scope.
-     *
      *
      * @return self
      */
@@ -563,7 +526,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
      */
     public function getGpuInfo(): GpuInfo
     {
@@ -571,7 +533,6 @@ class Droplet extends \ArrayObject
     }
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
      *
      * @return self
      */

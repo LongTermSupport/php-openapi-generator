@@ -22,37 +22,30 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
      */
     protected string $tagName;
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
      */
     protected string $targetCommitish;
     /**
      * The name of the release.
-     *
      */
     protected string $name;
     /**
      * Text describing the contents of the tag.
-     *
      */
     protected string $body;
     /**
      * `true` to create a draft (unpublished) release, `false` to create a published one.
-     *
      */
     protected bool $draft = false;
     /**
      * `true` to identify the release as a prerelease. `false` to identify the release as a full release.
-     *
      */
     protected bool $prerelease = false;
     /**
      * The name of the tag.
-     *
      */
     public function getTagName(): string
     {
@@ -60,7 +53,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
      */
     public function getTargetCommitish(): string
     {
@@ -80,7 +71,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually `master`).
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * The name of the release.
-     *
      */
     public function getName(): string
     {
@@ -100,7 +89,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * The name of the release.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * Text describing the contents of the tag.
-     *
      */
     public function getBody(): string
     {
@@ -120,7 +107,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * Text describing the contents of the tag.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * `true` to create a draft (unpublished) release, `false` to create a published one.
-     *
      */
     public function getDraft(): bool
     {
@@ -140,7 +125,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * `true` to create a draft (unpublished) release, `false` to create a published one.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * `true` to identify the release as a prerelease. `false` to identify the release as a full release.
-     *
      */
     public function getPrerelease(): bool
     {
@@ -160,7 +143,6 @@ class ReposOwnerRepoReleasesPostBody extends \ArrayObject
     }
     /**
      * `true` to identify the release as a prerelease. `false` to identify the release as a full release.
-     *
      *
      * @return self
      */

@@ -22,32 +22,26 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the partner attachment.
-     *
      */
     protected string $id;
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     protected string $name;
     /**
      * The current operational state of the attachment.
-     *
      */
     protected string $state;
     /**
      * The bandwidth (in Mbps) of the connection.
-     *
      */
     protected int $connectionBandwidthInMbps;
     /**
      * The region where the partner attachment is located.
-     *
      */
     protected string $region;
     /**
      * The Network as a Service (NaaS) provider for the partner attachment.
-     *
      */
     protected string $naasProvider;
     /**
@@ -58,17 +52,14 @@ class PartnerAttachment extends \ArrayObject
     protected array $vpcIds;
     /**
      * The BGP configuration for the partner attachment.
-     *
      */
     protected PartnerAttachmentBgp $bgp;
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Associated partner attachment UUID
-     *
      */
     protected string $parentUuid;
     /**
@@ -79,7 +70,6 @@ class PartnerAttachment extends \ArrayObject
     protected array $children;
     /**
      * A unique ID that can be used to identify and reference the partner attachment.
-     *
      */
     public function getId(): string
     {
@@ -87,7 +77,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the partner attachment.
-     *
      *
      * @return self
      */
@@ -99,7 +88,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     public function getName(): string
     {
@@ -107,7 +95,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      *
      * @return self
      */
@@ -119,7 +106,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The current operational state of the attachment.
-     *
      */
     public function getState(): string
     {
@@ -127,7 +113,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The current operational state of the attachment.
-     *
      *
      * @return self
      */
@@ -139,7 +124,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The bandwidth (in Mbps) of the connection.
-     *
      */
     public function getConnectionBandwidthInMbps(): int
     {
@@ -147,7 +131,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The bandwidth (in Mbps) of the connection.
-     *
      *
      * @return self
      */
@@ -159,7 +142,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The region where the partner attachment is located.
-     *
      */
     public function getRegion(): string
     {
@@ -167,7 +149,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The region where the partner attachment is located.
-     *
      *
      * @return self
      */
@@ -179,7 +160,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The Network as a Service (NaaS) provider for the partner attachment.
-     *
      */
     public function getNaasProvider(): string
     {
@@ -187,7 +167,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The Network as a Service (NaaS) provider for the partner attachment.
-     *
      *
      * @return self
      */
@@ -221,7 +200,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The BGP configuration for the partner attachment.
-     *
      */
     public function getBgp(): PartnerAttachmentBgp
     {
@@ -229,7 +207,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * The BGP configuration for the partner attachment.
-     *
      *
      * @return self
      */
@@ -241,7 +218,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -249,7 +225,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */
@@ -261,7 +236,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * Associated partner attachment UUID
-     *
      */
     public function getParentUuid(): string
     {
@@ -269,7 +243,6 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * Associated partner attachment UUID
-     *
      *
      * @return self
      */

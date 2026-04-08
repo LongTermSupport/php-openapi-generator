@@ -22,17 +22,14 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
     }
     /**
      * The project card's note
-     *
      */
     protected ?string $note = null;
     /**
      * Whether or not the card is archived
-     *
      */
     protected bool $archived;
     /**
      * The project card's note
-     *
      */
     public function getNote(): ?string
     {
@@ -40,7 +37,6 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
     }
     /**
      * The project card's note
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
     }
     /**
      * Whether or not the card is archived
-     *
      */
     public function getArchived(): bool
     {
@@ -60,7 +55,6 @@ class ProjectsColumnsCardsCardIdPatchBody extends \ArrayObject
     }
     /**
      * Whether or not the card is archived
-     *
      *
      * @return self
      */

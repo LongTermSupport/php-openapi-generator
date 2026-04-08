@@ -22,22 +22,18 @@ class StickySessions extends \ArrayObject
     }
     /**
      * An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`.
-     *
      */
     protected string $type = 'none';
     /**
      * The name of the cookie sent to the client. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
      */
     protected string $cookieName;
     /**
      * The number of seconds until the cookie set by the load balancer expires. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
      */
     protected int $cookieTtlSeconds;
     /**
      * An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`.
-     *
      */
     public function getType(): string
     {
@@ -45,7 +41,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * The name of the cookie sent to the client. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
      */
     public function getCookieName(): string
     {
@@ -65,7 +59,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * The name of the cookie sent to the client. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * The number of seconds until the cookie set by the load balancer expires. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
      */
     public function getCookieTtlSeconds(): int
     {
@@ -85,7 +77,6 @@ class StickySessions extends \ArrayObject
     }
     /**
      * The number of seconds until the cookie set by the load balancer expires. This attribute is only returned when using `cookies` for the sticky sessions type.
-     *
      *
      * @return self
      */

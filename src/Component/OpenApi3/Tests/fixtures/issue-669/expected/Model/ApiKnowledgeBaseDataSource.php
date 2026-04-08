@@ -22,82 +22,67 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * AWS S3 Data Source for Display
-     *
      */
     protected ApiAWSDataSourceDisplay $awsDataSource;
     /**
      * Name of storage bucket - Deprecated, moved to data_source_details
-     *
      */
     protected string $bucketName;
     /**
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     protected string $chunkingAlgorithm = 'CHUNKING_ALGORITHM_SECTION_BASED';
     /**
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     protected ApiChunkingOptions $chunkingOptions;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Dropbox Data Source for Display
-     *
      */
     protected ApiDropboxDataSourceDisplay $dropboxDataSource;
     /**
      * File to upload as data source for knowledge base.
-     *
      */
     protected ApiFileUploadDataSource $fileUploadDataSource;
     /**
      * Google Drive Data Source for Display
-     *
      */
     protected ApiGoogleDriveDataSourceDisplay $googleDriveDataSource;
     /**
      * Path of folder or object in bucket - Deprecated, moved to data_source_details
-     *
      */
     protected string $itemPath;
     protected ApiIndexedDataSource $lastDatasourceIndexingJob;
     /**
      * Region code - Deprecated, moved to data_source_details
-     *
      */
     protected string $region;
     /**
      * Spaces Bucket Data Source
-     *
      */
     protected ApiSpacesDataSource $spacesDataSource;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Unique id of knowledge base
-     *
      */
     protected string $uuid;
     /**
      * WebCrawlerDataSource
-     *
      */
     protected ApiWebCrawlerDataSource $webCrawlerDataSource;
     /**
      * AWS S3 Data Source for Display
-     *
      */
     public function getAwsDataSource(): ApiAWSDataSourceDisplay
     {
@@ -105,7 +90,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * AWS S3 Data Source for Display
-     *
      *
      * @return self
      */
@@ -117,7 +101,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Name of storage bucket - Deprecated, moved to data_source_details
-     *
      */
     public function getBucketName(): string
     {
@@ -125,7 +108,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Name of storage bucket - Deprecated, moved to data_source_details
-     *
      *
      * @return self
      */
@@ -139,7 +121,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     public function getChunkingAlgorithm(): string
     {
@@ -147,8 +128,8 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * The chunking algorithm to use for processing data sources.
-     **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
+     * 
+     * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      * @return self
      */
@@ -162,7 +143,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     public function getChunkingOptions(): ApiChunkingOptions
     {
@@ -170,8 +150,8 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Configuration options for the chunking algorithm.
-     **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
+     * 
+     * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      * @return self
      */
@@ -183,7 +163,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -191,7 +170,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -203,7 +181,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Dropbox Data Source for Display
-     *
      */
     public function getDropboxDataSource(): ApiDropboxDataSourceDisplay
     {
@@ -211,7 +188,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Dropbox Data Source for Display
-     *
      *
      * @return self
      */
@@ -223,7 +199,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
      */
     public function getFileUploadDataSource(): ApiFileUploadDataSource
     {
@@ -231,7 +206,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
      *
      * @return self
      */
@@ -243,7 +217,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Google Drive Data Source for Display
-     *
      */
     public function getGoogleDriveDataSource(): ApiGoogleDriveDataSourceDisplay
     {
@@ -251,7 +224,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Google Drive Data Source for Display
-     *
      *
      * @return self
      */
@@ -263,7 +235,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Path of folder or object in bucket - Deprecated, moved to data_source_details
-     *
      */
     public function getItemPath(): string
     {
@@ -271,7 +242,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Path of folder or object in bucket - Deprecated, moved to data_source_details
-     *
      *
      * @return self
      */
@@ -293,7 +263,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Region code - Deprecated, moved to data_source_details
-     *
      */
     public function getRegion(): string
     {
@@ -301,7 +270,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Region code - Deprecated, moved to data_source_details
-     *
      *
      * @return self
      */
@@ -313,7 +281,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
      */
     public function getSpacesDataSource(): ApiSpacesDataSource
     {
@@ -321,7 +288,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
      *
      * @return self
      */
@@ -333,7 +299,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -341,7 +306,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -353,7 +317,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Unique id of knowledge base
-     *
      */
     public function getUuid(): string
     {
@@ -361,7 +324,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * Unique id of knowledge base
-     *
      *
      * @return self
      */
@@ -373,7 +335,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
      */
     public function getWebCrawlerDataSource(): ApiWebCrawlerDataSource
     {
@@ -381,7 +342,6 @@ class ApiKnowledgeBaseDataSource extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class KafkaTopicPartitionConsumerGroupsItem extends \ArrayObject
     }
     /**
      * Name of the consumer group.
-     *
      */
     protected string $groupName;
     /**
      * The current offset of the consumer group.
-     *
      */
     protected int $offset;
     /**
      * Name of the consumer group.
-     *
      */
     public function getGroupName(): string
     {
@@ -40,7 +37,6 @@ class KafkaTopicPartitionConsumerGroupsItem extends \ArrayObject
     }
     /**
      * Name of the consumer group.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class KafkaTopicPartitionConsumerGroupsItem extends \ArrayObject
     }
     /**
      * The current offset of the consumer group.
-     *
      */
     public function getOffset(): int
     {
@@ -60,7 +55,6 @@ class KafkaTopicPartitionConsumerGroupsItem extends \ArrayObject
     }
     /**
      * The current offset of the consumer group.
-     *
      *
      * @return self
      */

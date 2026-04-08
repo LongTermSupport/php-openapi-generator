@@ -22,12 +22,10 @@ class ReposOwnerRepoIssuesCommentsCommentIdReactionsPostBody extends \ArrayObjec
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue comment.
-     *
      */
     protected string $content;
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue comment.
-     *
      */
     public function getContent(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoIssuesCommentsCommentIdReactionsPostBody extends \ArrayObjec
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue comment.
-     *
      *
      * @return self
      */

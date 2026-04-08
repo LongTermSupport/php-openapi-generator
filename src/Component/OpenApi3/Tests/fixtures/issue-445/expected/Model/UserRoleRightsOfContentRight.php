@@ -19,7 +19,6 @@ class UserRoleRightsOfContentRight
     }
     /**
      * The user role id.
-     *
      */
     protected ?string $userRoleId = null;
     /**
@@ -30,7 +29,6 @@ class UserRoleRightsOfContentRight
     protected ?array $rights = null;
     /**
      * The user role id.
-     *
      */
     public function getUserRoleId(): ?string
     {
@@ -38,7 +36,6 @@ class UserRoleRightsOfContentRight
     }
     /**
      * The user role id.
-     *
      *
      * @return self
      */

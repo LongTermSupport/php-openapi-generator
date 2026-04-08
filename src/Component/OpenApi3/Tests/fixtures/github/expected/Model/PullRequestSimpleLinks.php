@@ -22,47 +22,38 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     protected Link $comments;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $commits;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $statuses;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $html;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $issue;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $reviewComments;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $reviewComment;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $self;
     /**
      * Hypermedia Link
-     *
      */
     public function getComments(): Link
     {
@@ -70,7 +61,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -82,7 +72,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getCommits(): Link
     {
@@ -90,7 +79,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -102,7 +90,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getStatuses(): Link
     {
@@ -110,7 +97,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -122,7 +108,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getHtml(): Link
     {
@@ -130,7 +115,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -142,7 +126,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getIssue(): Link
     {
@@ -150,7 +133,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -162,7 +144,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getReviewComments(): Link
     {
@@ -170,7 +151,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -182,7 +162,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getReviewComment(): Link
     {
@@ -190,7 +169,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -202,7 +180,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getSelf(): Link
     {
@@ -210,7 +187,6 @@ class PullRequestSimpleLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */

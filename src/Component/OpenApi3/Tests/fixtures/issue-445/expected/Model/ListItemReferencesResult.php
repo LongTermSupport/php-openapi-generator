@@ -19,12 +19,10 @@ class ListItemReferencesResult
     }
     /**
      * List of references. Only available when requested in the request.
-     *
      */
     protected mixed $metadataReferences = null;
     /**
      * List of references. Only available when requested in the request.
-     *
      */
     public function getMetadataReferences(): mixed
     {
@@ -32,7 +30,6 @@ class ListItemReferencesResult
     }
     /**
      * List of references. Only available when requested in the request.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ApiCreateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Anthropic API key
-     *
      */
     protected string $apiKey;
     /**
      * Name of the key
-     *
      */
     protected string $name;
     /**
      * Anthropic API key
-     *
      */
     public function getApiKey(): string
     {
@@ -40,7 +37,6 @@ class ApiCreateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Anthropic API key
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiCreateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class ApiCreateAnthropicAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      *
      * @return self
      */

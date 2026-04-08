@@ -22,22 +22,18 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * OpenAI API key
-     *
      */
     protected string $apiKey;
     /**
      * API key ID
-     *
      */
     protected string $apiKeyUuid;
     /**
      * Name of the key
-     *
      */
     protected string $name;
     /**
      * OpenAI API key
-     *
      */
     public function getApiKey(): string
     {
@@ -45,7 +41,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * OpenAI API key
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
      */
     public function getApiKeyUuid(): string
     {
@@ -65,7 +59,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      */
     public function getName(): string
     {
@@ -85,7 +77,6 @@ class ApiUpdateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      *
      * @return self
      */

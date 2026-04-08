@@ -22,32 +22,26 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      */
     protected string $childAgentUuid;
     /**
      * Describes the case in which the child agent should be used
-     *
      */
     protected string $ifCase;
     /**
      * A unique identifier for the parent agent.
-     *
      */
     protected string $parentAgentUuid;
     /**
      * Route name
-     *
      */
     protected string $routeName;
     /**
      * Unique id of linkage
-     *
      */
     protected string $uuid;
     /**
      * Routed agent id
-     *
      */
     public function getChildAgentUuid(): string
     {
@@ -55,7 +49,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Describes the case in which the child agent should be used
-     *
      */
     public function getIfCase(): string
     {
@@ -75,7 +67,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Describes the case in which the child agent should be used
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      */
     public function getParentAgentUuid(): string
     {
@@ -95,7 +85,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Route name
-     *
      */
     public function getRouteName(): string
     {
@@ -115,7 +103,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Route name
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Unique id of linkage
-     *
      */
     public function getUuid(): string
     {
@@ -135,7 +121,6 @@ class ApiUpdateLinkedAgentInputPublic extends \ArrayObject
     }
     /**
      * Unique id of linkage
-     *
      *
      * @return self
      */

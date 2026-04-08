@@ -22,12 +22,10 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of datasources indexed completed
-     *
      */
     protected int $completedDatasources;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -43,12 +41,10 @@ class ApiIndexingJob extends \ArrayObject
     protected \DateTime $finishedAt;
     /**
      * Boolean value to determine if the indexing job details are available
-     *
      */
     protected bool $isReportAvailable;
     /**
      * Knowledge base id
-     *
      */
     protected string $knowledgeBaseUuid;
     protected string $phase = 'BATCH_JOB_PHASE_UNKNOWN';
@@ -56,32 +52,26 @@ class ApiIndexingJob extends \ArrayObject
     protected string $status = 'INDEX_JOB_STATUS_UNKNOWN';
     /**
      * Number of tokens [This field is deprecated]
-     *
      */
     protected int $tokens;
     /**
      * Number of datasources being indexed
-     *
      */
     protected int $totalDatasources;
     /**
      * Total Tokens Consumed By the Indexing Job
-     *
      */
     protected string $totalTokens;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
      * Number of datasources indexed completed
-     *
      */
     public function getCompletedDatasources(): int
     {
@@ -89,7 +79,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of datasources indexed completed
-     *
      *
      * @return self
      */
@@ -101,7 +90,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -109,7 +97,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -171,7 +158,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Boolean value to determine if the indexing job details are available
-     *
      */
     public function getIsReportAvailable(): bool
     {
@@ -179,7 +165,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Boolean value to determine if the indexing job details are available
-     *
      *
      * @return self
      */
@@ -191,7 +176,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      */
     public function getKnowledgeBaseUuid(): string
     {
@@ -199,7 +183,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      *
      * @return self
      */
@@ -241,7 +224,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of tokens [This field is deprecated]
-     *
      */
     public function getTokens(): int
     {
@@ -249,7 +231,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of tokens [This field is deprecated]
-     *
      *
      * @return self
      */
@@ -261,7 +242,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of datasources being indexed
-     *
      */
     public function getTotalDatasources(): int
     {
@@ -269,7 +249,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Number of datasources being indexed
-     *
      *
      * @return self
      */
@@ -281,7 +260,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Total Tokens Consumed By the Indexing Job
-     *
      */
     public function getTotalTokens(): string
     {
@@ -289,7 +267,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Total Tokens Consumed By the Indexing Job
-     *
      *
      * @return self
      */
@@ -301,7 +278,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -309,7 +285,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -321,7 +296,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -329,7 +303,6 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */

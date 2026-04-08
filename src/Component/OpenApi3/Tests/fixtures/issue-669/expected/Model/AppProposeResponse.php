@@ -22,44 +22,36 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * Indicates whether the app is a static app.
-     *
      */
     protected bool $appIsStatic;
     /**
      * Indicates whether the app name is available.
-     *
      */
     protected bool $appNameAvailable;
     /**
      * The suggested name if the proposed app name is unavailable.
-     *
      */
     protected string $appNameSuggestion;
     /**
      * The maximum number of free static apps the account can have. We will charge you for any additional static apps.
-     *
      */
     protected string $existingStaticApps;
     /**
      * The desired configuration of an application.
-     *
      */
     protected AppSpec $spec;
     /**
      * The monthly cost of the proposed app in USD.
-     *
      */
     protected int $appCost;
     /**
      * The monthly cost of the proposed app in USD using the previous pricing plan tier. For example, if you propose an app that uses the Professional tier, the `app_tier_downgrade_cost` field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses the lest expensive tier, the field is empty.
      *
      * @deprecated
-     *
      */
     protected int $appTierDowngradeCost;
     /**
      * Indicates whether the app is a static app.
-     *
      */
     public function getAppIsStatic(): bool
     {
@@ -67,7 +59,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * Indicates whether the app is a static app.
-     *
      *
      * @return self
      */
@@ -79,7 +70,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * Indicates whether the app name is available.
-     *
      */
     public function getAppNameAvailable(): bool
     {
@@ -87,7 +77,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * Indicates whether the app name is available.
-     *
      *
      * @return self
      */
@@ -99,7 +88,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The suggested name if the proposed app name is unavailable.
-     *
      */
     public function getAppNameSuggestion(): string
     {
@@ -107,7 +95,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The suggested name if the proposed app name is unavailable.
-     *
      *
      * @return self
      */
@@ -119,7 +106,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The maximum number of free static apps the account can have. We will charge you for any additional static apps.
-     *
      */
     public function getExistingStaticApps(): string
     {
@@ -127,7 +113,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The maximum number of free static apps the account can have. We will charge you for any additional static apps.
-     *
      *
      * @return self
      */
@@ -139,7 +124,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      */
     public function getSpec(): AppSpec
     {
@@ -147,7 +131,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      *
      * @return self
      */
@@ -159,7 +142,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The monthly cost of the proposed app in USD.
-     *
      */
     public function getAppCost(): int
     {
@@ -167,7 +149,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The monthly cost of the proposed app in USD.
-     *
      *
      * @return self
      */
@@ -181,7 +162,6 @@ class AppProposeResponse extends \ArrayObject
      * The monthly cost of the proposed app in USD using the previous pricing plan tier. For example, if you propose an app that uses the Professional tier, the `app_tier_downgrade_cost` field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses the lest expensive tier, the field is empty.
      *
      * @deprecated
-     *
      */
     public function getAppTierDowngradeCost(): int
     {
@@ -189,7 +169,6 @@ class AppProposeResponse extends \ArrayObject
     }
     /**
      * The monthly cost of the proposed app in USD using the previous pricing plan tier. For example, if you propose an app that uses the Professional tier, the `app_tier_downgrade_cost` field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses the lest expensive tier, the field is empty.
-     *
      *
      * @deprecated
      *

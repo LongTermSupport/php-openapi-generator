@@ -22,12 +22,10 @@ class ApiCreateModelAPIKeyOutput extends \ArrayObject
     }
     /**
      * Model API Key Info
-     *
      */
     protected ApiModelAPIKeyInfo $apiKeyInfo;
     /**
      * Model API Key Info
-     *
      */
     public function getApiKeyInfo(): ApiModelAPIKeyInfo
     {
@@ -35,7 +33,6 @@ class ApiCreateModelAPIKeyOutput extends \ArrayObject
     }
     /**
      * Model API Key Info
-     *
      *
      * @return self
      */

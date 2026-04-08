@@ -22,42 +22,34 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https`, or `tcp`.
-     *
      */
     protected string $protocol = 'http';
     /**
      * An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-     *
      */
     protected int $port = 80;
     /**
      * The path on the backend Droplets to which the load balancer instance will send a request.
-     *
      */
     protected string $path = '/';
     /**
      * The number of seconds between between two consecutive health checks.
-     *
      */
     protected int $checkIntervalSeconds = 10;
     /**
      * The number of seconds the load balancer instance will wait for a response until marking a health check as failed.
-     *
      */
     protected int $responseTimeoutSeconds = 5;
     /**
      * The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool.
-     *
      */
     protected int $unhealthyThreshold = 5;
     /**
      * The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool.
-     *
      */
     protected int $healthyThreshold = 3;
     /**
      * The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https`, or `tcp`.
-     *
      */
     public function getProtocol(): string
     {
@@ -65,7 +57,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https`, or `tcp`.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-     *
      */
     public function getPort(): int
     {
@@ -85,7 +75,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The path on the backend Droplets to which the load balancer instance will send a request.
-     *
      */
     public function getPath(): string
     {
@@ -105,7 +93,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The path on the backend Droplets to which the load balancer instance will send a request.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of seconds between between two consecutive health checks.
-     *
      */
     public function getCheckIntervalSeconds(): int
     {
@@ -125,7 +111,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of seconds between between two consecutive health checks.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of seconds the load balancer instance will wait for a response until marking a health check as failed.
-     *
      */
     public function getResponseTimeoutSeconds(): int
     {
@@ -145,7 +129,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of seconds the load balancer instance will wait for a response until marking a health check as failed.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool.
-     *
      */
     public function getUnhealthyThreshold(): int
     {
@@ -165,7 +147,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool.
-     *
      */
     public function getHealthyThreshold(): int
     {
@@ -185,7 +165,6 @@ class HealthCheck extends \ArrayObject
     }
     /**
      * The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool.
-     *
      *
      * @return self
      */

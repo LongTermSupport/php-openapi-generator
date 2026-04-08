@@ -22,17 +22,14 @@ class AccountTeam extends \ArrayObject
     }
     /**
      * The unique universal identifier for the current team.
-     *
      */
     protected string $uuid;
     /**
      * The name for the current team.
-     *
      */
     protected string $name;
     /**
      * The unique universal identifier for the current team.
-     *
      */
     public function getUuid(): string
     {
@@ -40,7 +37,6 @@ class AccountTeam extends \ArrayObject
     }
     /**
      * The unique universal identifier for the current team.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AccountTeam extends \ArrayObject
     }
     /**
      * The name for the current team.
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class AccountTeam extends \ArrayObject
     }
     /**
      * The name for the current team.
-     *
      *
      * @return self
      */

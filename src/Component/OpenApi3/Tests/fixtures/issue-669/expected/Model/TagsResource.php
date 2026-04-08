@@ -46,17 +46,17 @@ class TagsResource extends \ArrayObject
         return $this->resources;
     }
     /**
-    * An array of objects containing resource_id and resource_type
-    attributes.
-    
-    This response will only include resources that you are authorized to see.
-    For example, to see Droplets, include the `droplet:read` scope.
-    
-    *
-    * @param list<TagsResourceResourcesItem> $resources
-    *
-    * @return self
-    */
+     * An array of objects containing resource_id and resource_type
+     * attributes.
+     * 
+     * This response will only include resources that you are authorized to see.
+     * For example, to see Droplets, include the `droplet:read` scope.
+     * 
+     *
+     * @param list<TagsResourceResourcesItem> $resources
+     *
+     * @return self
+     */
     public function setResources(array $resources): self
     {
         $this->initialized['resources'] = true;

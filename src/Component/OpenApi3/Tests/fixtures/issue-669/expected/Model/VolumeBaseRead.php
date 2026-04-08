@@ -22,7 +22,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * The unique identifier for the block storage volume.
-     *
      */
     protected string $id;
     /**
@@ -33,22 +32,18 @@ class VolumeBaseRead extends \ArrayObject
     protected ?array $dropletIds = null;
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
      */
     protected string $name;
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
      */
     protected string $description;
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
      */
     protected int $sizeGigabytes;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
      */
     protected string $createdAt;
     /**
@@ -59,7 +54,6 @@ class VolumeBaseRead extends \ArrayObject
     protected ?array $tags = null;
     /**
      * The unique identifier for the block storage volume.
-     *
      */
     public function getId(): string
     {
@@ -67,7 +61,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * The unique identifier for the block storage volume.
-     *
      *
      * @return self
      */
@@ -101,7 +94,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
      */
     public function getName(): string
     {
@@ -109,7 +101,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * A human-readable name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
      *
      * @return self
      */
@@ -121,7 +112,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
      */
     public function getDescription(): string
     {
@@ -129,7 +119,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe a block storage volume.
-     *
      *
      * @return self
      */
@@ -141,7 +130,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
      */
     public function getSizeGigabytes(): int
     {
@@ -149,7 +137,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * The size of the block storage volume in GiB (1024^3). This field does not apply  when creating a volume from a snapshot.
-     *
      *
      * @return self
      */
@@ -161,7 +148,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
      */
     public function getCreatedAt(): string
     {
@@ -169,7 +155,6 @@ class VolumeBaseRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the block storage volume was created.
-     *
      *
      * @return self
      */

@@ -32,7 +32,6 @@ class IllegalAuthorizationStateTransitionException extends \ArrayObject
     protected ?string $requestedUserId = null;
     /**
      * User authorization state
-     *
      */
     protected string $authorizationState;
     protected ?string $transition = null;
@@ -138,7 +137,6 @@ class IllegalAuthorizationStateTransitionException extends \ArrayObject
     }
     /**
      * User authorization state
-     *
      */
     public function getAuthorizationState(): string
     {
@@ -146,7 +144,6 @@ class IllegalAuthorizationStateTransitionException extends \ArrayObject
     }
     /**
      * User authorization state
-     *
      *
      * @return self
      */

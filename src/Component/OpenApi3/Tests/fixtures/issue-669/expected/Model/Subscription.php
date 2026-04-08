@@ -23,12 +23,10 @@ class Subscription extends \ArrayObject
     protected SubscriptionTierBase $tier;
     /**
      * The time at which the subscription was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The time at which the subscription was last updated.
-     *
      */
     protected \DateTime $updatedAt;
     public function getTier(): SubscriptionTierBase
@@ -43,7 +41,6 @@ class Subscription extends \ArrayObject
     }
     /**
      * The time at which the subscription was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -51,7 +48,6 @@ class Subscription extends \ArrayObject
     }
     /**
      * The time at which the subscription was created.
-     *
      *
      * @return self
      */
@@ -63,7 +59,6 @@ class Subscription extends \ArrayObject
     }
     /**
      * The time at which the subscription was last updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -71,7 +66,6 @@ class Subscription extends \ArrayObject
     }
     /**
      * The time at which the subscription was last updated.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class ContentOwnershipTransferRequest
     }
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
      */
     protected string $transferUserId;
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
      */
     public function getTransferUserId(): string
     {
@@ -32,7 +30,6 @@ class ContentOwnershipTransferRequest
     }
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
      *
      * @return self
      */

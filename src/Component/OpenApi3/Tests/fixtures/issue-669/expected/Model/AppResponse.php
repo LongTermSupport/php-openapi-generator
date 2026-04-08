@@ -22,12 +22,10 @@ class AppResponse extends \ArrayObject
     }
     /**
      * An application's configuration and status.
-     *
      */
     protected App $app;
     /**
      * An application's configuration and status.
-     *
      */
     public function getApp(): App
     {
@@ -35,7 +33,6 @@ class AppResponse extends \ArrayObject
     }
     /**
      * An application's configuration and status.
-     *
      *
      * @return self
      */

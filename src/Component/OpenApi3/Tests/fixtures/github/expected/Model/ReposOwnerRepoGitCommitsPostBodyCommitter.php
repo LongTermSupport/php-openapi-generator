@@ -22,22 +22,18 @@ class ReposOwnerRepoGitCommitsPostBodyCommitter extends \ArrayObject
     }
     /**
      * The name of the author (or committer) of the commit
-     *
      */
     protected string $name;
     /**
      * The email of the author (or committer) of the commit
-     *
      */
     protected string $email;
     /**
      * Indicates when this commit was authored (or committed). This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $date;
     /**
      * The name of the author (or committer) of the commit
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class ReposOwnerRepoGitCommitsPostBodyCommitter extends \ArrayObject
     }
     /**
      * The name of the author (or committer) of the commit
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ReposOwnerRepoGitCommitsPostBodyCommitter extends \ArrayObject
     }
     /**
      * The email of the author (or committer) of the commit
-     *
      */
     public function getEmail(): string
     {
@@ -65,7 +59,6 @@ class ReposOwnerRepoGitCommitsPostBodyCommitter extends \ArrayObject
     }
     /**
      * The email of the author (or committer) of the commit
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ReposOwnerRepoGitCommitsPostBodyCommitter extends \ArrayObject
     }
     /**
      * Indicates when this commit was authored (or committed). This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getDate(): string
     {
@@ -85,7 +77,6 @@ class ReposOwnerRepoGitCommitsPostBodyCommitter extends \ArrayObject
     }
     /**
      * Indicates when this commit was authored (or committed). This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */

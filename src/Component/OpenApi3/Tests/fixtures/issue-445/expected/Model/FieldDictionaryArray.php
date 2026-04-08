@@ -19,22 +19,18 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * The maximum number of items that can be stored.
-     *
      */
     protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
-     *
      */
     protected ?int $minimumItems = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -42,7 +38,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      */
     public function getMaximumItems(): ?int
     {
@@ -62,7 +56,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      */
     public function getMinimumItems(): ?int
     {
@@ -82,7 +74,6 @@ class FieldDictionaryArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      *
      * @return self
      */

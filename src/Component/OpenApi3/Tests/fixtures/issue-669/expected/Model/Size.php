@@ -22,37 +22,30 @@ class Size extends \ArrayObject
     }
     /**
      * A human-readable string that is used to uniquely identify each size.
-     *
      */
     protected string $slug;
     /**
      * The amount of RAM allocated to Droplets created of this size. The value is represented in megabytes.
-     *
      */
     protected int $memory;
     /**
      * The number of CPUs allocated to Droplets of this size.
-     *
      */
     protected int $vcpus;
     /**
      * The amount of disk space set aside for Droplets of this size. The value is represented in gigabytes.
-     *
      */
     protected int $disk;
     /**
      * The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
-     *
      */
     protected float $transfer;
     /**
      * This attribute describes the monthly cost of this Droplet size if the Droplet is kept for an entire month. The value is measured in US dollars.
-     *
      */
     protected float $priceMonthly;
     /**
      * This describes the price of the Droplet size as measured hourly. The value is measured in US dollars.
-     *
      */
     protected float $priceHourly;
     /**
@@ -63,12 +56,10 @@ class Size extends \ArrayObject
     protected array $regions;
     /**
      * This is a boolean value that represents whether new Droplets can be created with this size.
-     *
      */
     protected bool $available = true;
     /**
      * A string describing the class of Droplets created from this size. For example: Basic, General Purpose, CPU-Optimized, Memory-Optimized, or Storage-Optimized.
-     *
      */
     protected string $description;
     /**
@@ -79,12 +70,10 @@ class Size extends \ArrayObject
     protected array $diskInfo;
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
      */
     protected GpuInfo $gpuInfo;
     /**
      * A human-readable string that is used to uniquely identify each size.
-     *
      */
     public function getSlug(): string
     {
@@ -92,7 +81,6 @@ class Size extends \ArrayObject
     }
     /**
      * A human-readable string that is used to uniquely identify each size.
-     *
      *
      * @return self
      */
@@ -104,7 +92,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of RAM allocated to Droplets created of this size. The value is represented in megabytes.
-     *
      */
     public function getMemory(): int
     {
@@ -112,7 +99,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of RAM allocated to Droplets created of this size. The value is represented in megabytes.
-     *
      *
      * @return self
      */
@@ -124,7 +110,6 @@ class Size extends \ArrayObject
     }
     /**
      * The number of CPUs allocated to Droplets of this size.
-     *
      */
     public function getVcpus(): int
     {
@@ -132,7 +117,6 @@ class Size extends \ArrayObject
     }
     /**
      * The number of CPUs allocated to Droplets of this size.
-     *
      *
      * @return self
      */
@@ -144,7 +128,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of disk space set aside for Droplets of this size. The value is represented in gigabytes.
-     *
      */
     public function getDisk(): int
     {
@@ -152,7 +135,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of disk space set aside for Droplets of this size. The value is represented in gigabytes.
-     *
      *
      * @return self
      */
@@ -164,7 +146,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
-     *
      */
     public function getTransfer(): float
     {
@@ -172,7 +153,6 @@ class Size extends \ArrayObject
     }
     /**
      * The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
-     *
      *
      * @return self
      */
@@ -184,7 +164,6 @@ class Size extends \ArrayObject
     }
     /**
      * This attribute describes the monthly cost of this Droplet size if the Droplet is kept for an entire month. The value is measured in US dollars.
-     *
      */
     public function getPriceMonthly(): float
     {
@@ -192,7 +171,6 @@ class Size extends \ArrayObject
     }
     /**
      * This attribute describes the monthly cost of this Droplet size if the Droplet is kept for an entire month. The value is measured in US dollars.
-     *
      *
      * @return self
      */
@@ -204,7 +182,6 @@ class Size extends \ArrayObject
     }
     /**
      * This describes the price of the Droplet size as measured hourly. The value is measured in US dollars.
-     *
      */
     public function getPriceHourly(): float
     {
@@ -212,7 +189,6 @@ class Size extends \ArrayObject
     }
     /**
      * This describes the price of the Droplet size as measured hourly. The value is measured in US dollars.
-     *
      *
      * @return self
      */
@@ -246,7 +222,6 @@ class Size extends \ArrayObject
     }
     /**
      * This is a boolean value that represents whether new Droplets can be created with this size.
-     *
      */
     public function getAvailable(): bool
     {
@@ -254,7 +229,6 @@ class Size extends \ArrayObject
     }
     /**
      * This is a boolean value that represents whether new Droplets can be created with this size.
-     *
      *
      * @return self
      */
@@ -266,7 +240,6 @@ class Size extends \ArrayObject
     }
     /**
      * A string describing the class of Droplets created from this size. For example: Basic, General Purpose, CPU-Optimized, Memory-Optimized, or Storage-Optimized.
-     *
      */
     public function getDescription(): string
     {
@@ -274,7 +247,6 @@ class Size extends \ArrayObject
     }
     /**
      * A string describing the class of Droplets created from this size. For example: Basic, General Purpose, CPU-Optimized, Memory-Optimized, or Storage-Optimized.
-     *
      *
      * @return self
      */
@@ -308,7 +280,6 @@ class Size extends \ArrayObject
     }
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
      */
     public function getGpuInfo(): GpuInfo
     {
@@ -316,7 +287,6 @@ class Size extends \ArrayObject
     }
     /**
      * An object containing information about the GPU capabilities of Droplets created with this size.
-     *
      *
      * @return self
      */

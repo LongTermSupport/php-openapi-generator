@@ -22,17 +22,14 @@ class OneClicks extends \ArrayObject
     }
     /**
      * The slug identifier for the 1-Click application.
-     *
      */
     protected string $slug;
     /**
      * The type of the 1-Click application.
-     *
      */
     protected string $type;
     /**
      * The slug identifier for the 1-Click application.
-     *
      */
     public function getSlug(): string
     {
@@ -40,7 +37,6 @@ class OneClicks extends \ArrayObject
     }
     /**
      * The slug identifier for the 1-Click application.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class OneClicks extends \ArrayObject
     }
     /**
      * The type of the 1-Click application.
-     *
      */
     public function getType(): string
     {
@@ -60,7 +55,6 @@ class OneClicks extends \ArrayObject
     }
     /**
      * The type of the 1-Click application.
-     *
      *
      * @return self
      */

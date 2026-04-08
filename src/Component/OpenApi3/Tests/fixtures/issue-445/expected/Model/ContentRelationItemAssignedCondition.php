@@ -19,17 +19,14 @@ class ContentRelationItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Content id that should be matched against.
-     *
      */
     protected ?string $contentId = null;
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * Content id that should be matched against.
-     *
      */
     public function getContentId(): ?string
     {
@@ -37,7 +34,6 @@ class ContentRelationItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Content id that should be matched against.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class ContentRelationItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -57,7 +52,6 @@ class ContentRelationItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */

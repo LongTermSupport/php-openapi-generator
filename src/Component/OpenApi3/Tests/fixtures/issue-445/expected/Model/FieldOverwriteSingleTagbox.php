@@ -20,41 +20,35 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
     /**
      * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema  if
      * OverwriteFilter is set to true.
-     *
      */
     protected mixed $filter = null;
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteFilter;
     /**
      * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema  if
      * OverwriteListItemCreateTemplate is set to true.
-     *
      */
     protected ?string $listItemCreateTemplate = null;
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteListItemCreateTemplate;
     /**
      * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema  if
      * OverwriteFilter is set to true.
-     *
      */
     public function getFilter(): mixed
     {
         return $this->filter;
     }
     /**
-    * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema  if
-    OverwriteFilter is set to true.
-    *
-    *
-    * @return self
-    */
+     * An optional filter to limit the list items: this value will overwrite the existing Filter value specified in the parent schema  if
+     * OverwriteFilter is set to true.
+     *
+     * @return self
+     */
     public function setFilter(mixed $filter): self
     {
         $this->initialized['filter'] = true;
@@ -63,7 +57,6 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
-     *
      */
     public function getOverwriteFilter(): bool
     {
@@ -71,7 +64,6 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the Filter property of the field specified by the Id property.
-     *
      *
      * @return self
      */
@@ -84,19 +76,17 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
     /**
      * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema  if
      * OverwriteListItemCreateTemplate is set to true.
-     *
      */
     public function getListItemCreateTemplate(): ?string
     {
         return $this->listItemCreateTemplate;
     }
     /**
-    * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema  if
-    OverwriteListItemCreateTemplate is set to true.
-    *
-    *
-    * @return self
-    */
+     * Json serialized template used for creating new list item: this value will overwrite the existing ListItemCreateTemplate value specified in the parent schema  if
+     * OverwriteListItemCreateTemplate is set to true.
+     *
+     * @return self
+     */
     public function setListItemCreateTemplate(?string $listItemCreateTemplate): self
     {
         $this->initialized['listItemCreateTemplate'] = true;
@@ -105,7 +95,6 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
-     *
      */
     public function getOverwriteListItemCreateTemplate(): bool
     {
@@ -113,7 +102,6 @@ class FieldOverwriteSingleTagbox extends FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the ListItemCreateTemplate property of the field specified by the Id property.
-     *
      *
      * @return self
      */

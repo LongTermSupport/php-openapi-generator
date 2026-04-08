@@ -23,22 +23,18 @@ class AppLogDestinationDefinition extends \ArrayObject
     protected string $name;
     /**
      * Papertrail configuration.
-     *
      */
     protected AppLogDestinationPapertrailSpec $papertrail;
     /**
      * DataDog configuration.
-     *
      */
     protected AppLogDestinationDatadogSpec $datadog;
     /**
      * Logtail configuration.
-     *
      */
     protected AppLogDestinationLogtailSpec $logtail;
     /**
      * OpenSearch configuration.
-     *
      */
     protected AppLogDestinationOpenSearchSpec $openSearch;
     public function getName(): string
@@ -53,7 +49,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * Papertrail configuration.
-     *
      */
     public function getPapertrail(): AppLogDestinationPapertrailSpec
     {
@@ -61,7 +56,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * Papertrail configuration.
-     *
      *
      * @return self
      */
@@ -73,7 +67,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * DataDog configuration.
-     *
      */
     public function getDatadog(): AppLogDestinationDatadogSpec
     {
@@ -81,7 +74,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * DataDog configuration.
-     *
      *
      * @return self
      */
@@ -93,7 +85,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * Logtail configuration.
-     *
      */
     public function getLogtail(): AppLogDestinationLogtailSpec
     {
@@ -101,7 +92,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * Logtail configuration.
-     *
      *
      * @return self
      */
@@ -113,7 +103,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * OpenSearch configuration.
-     *
      */
     public function getOpenSearch(): AppLogDestinationOpenSearchSpec
     {
@@ -121,7 +110,6 @@ class AppLogDestinationDefinition extends \ArrayObject
     }
     /**
      * OpenSearch configuration.
-     *
      *
      * @return self
      */

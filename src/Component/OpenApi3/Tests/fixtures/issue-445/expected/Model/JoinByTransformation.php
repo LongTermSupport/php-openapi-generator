@@ -19,12 +19,10 @@ class JoinByTransformation extends BusinessRuleTransformation
     }
     /**
      * Separator to use.
-     *
      */
     protected ?string $separator = null;
     /**
      * Separator to use.
-     *
      */
     public function getSeparator(): ?string
     {
@@ -32,7 +30,6 @@ class JoinByTransformation extends BusinessRuleTransformation
     }
     /**
      * Separator to use.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ApiUnlinkAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      */
     protected string $childAgentUuid;
     /**
      * Pagent agent id
-     *
      */
     protected string $parentAgentUuid;
     /**
      * Routed agent id
-     *
      */
     public function getChildAgentUuid(): string
     {
@@ -40,7 +37,6 @@ class ApiUnlinkAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiUnlinkAgentOutput extends \ArrayObject
     }
     /**
      * Pagent agent id
-     *
      */
     public function getParentAgentUuid(): string
     {
@@ -60,7 +55,6 @@ class ApiUnlinkAgentOutput extends \ArrayObject
     }
     /**
      * Pagent agent id
-     *
      *
      * @return self
      */

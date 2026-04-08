@@ -22,37 +22,30 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Description of the billing history entry.
-     *
      */
     protected string $description;
     /**
      * Amount of the billing history entry.
-     *
      */
     protected string $amount;
     /**
      * ID of the invoice associated with the billing history entry, if applicable.
-     *
      */
     protected string $invoiceId;
     /**
      * UUID of the invoice associated with the billing history entry, if applicable.
-     *
      */
     protected string $invoiceUuid;
     /**
      * Time the billing history entry occurred.
-     *
      */
     protected \DateTime $date;
     /**
      * Type of billing history entry.
-     *
      */
     protected string $type;
     /**
      * Description of the billing history entry.
-     *
      */
     public function getDescription(): string
     {
@@ -60,7 +53,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Description of the billing history entry.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Amount of the billing history entry.
-     *
      */
     public function getAmount(): string
     {
@@ -80,7 +71,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Amount of the billing history entry.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * ID of the invoice associated with the billing history entry, if applicable.
-     *
      */
     public function getInvoiceId(): string
     {
@@ -100,7 +89,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * ID of the invoice associated with the billing history entry, if applicable.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * UUID of the invoice associated with the billing history entry, if applicable.
-     *
      */
     public function getInvoiceUuid(): string
     {
@@ -120,7 +107,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * UUID of the invoice associated with the billing history entry, if applicable.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Time the billing history entry occurred.
-     *
      */
     public function getDate(): \DateTime
     {
@@ -140,7 +125,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Time the billing history entry occurred.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Type of billing history entry.
-     *
      */
     public function getType(): string
     {
@@ -160,7 +143,6 @@ class BillingHistory extends \ArrayObject
     }
     /**
      * Type of billing history entry.
-     *
      *
      * @return self
      */

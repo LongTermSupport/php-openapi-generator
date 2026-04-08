@@ -19,7 +19,6 @@ class BusinessRuleConfiguration
     }
     /**
      * Disables the rule completely.
-     *
      */
     protected bool $disableRuleEngine;
     /**
@@ -36,7 +35,6 @@ class BusinessRuleConfiguration
     protected ?array $caches = null;
     /**
      * Disables the rule completely.
-     *
      */
     public function getDisableRuleEngine(): bool
     {
@@ -44,7 +42,6 @@ class BusinessRuleConfiguration
     }
     /**
      * Disables the rule completely.
-     *
      *
      * @return self
      */

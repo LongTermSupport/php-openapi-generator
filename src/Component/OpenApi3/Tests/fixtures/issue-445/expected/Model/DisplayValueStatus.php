@@ -31,7 +31,6 @@ class DisplayValueStatus
     protected ?array $listSchemaIds = null;
     /**
      * The state of the display values compared to the schema structure (UpToDate = ok, Outdated = re-rendering needed).
-     *
      */
     protected mixed $state = null;
     /**
@@ -80,7 +79,6 @@ class DisplayValueStatus
     }
     /**
      * The state of the display values compared to the schema structure (UpToDate = ok, Outdated = re-rendering needed).
-     *
      */
     public function getState(): mixed
     {
@@ -88,7 +86,6 @@ class DisplayValueStatus
     }
     /**
      * The state of the display values compared to the schema structure (UpToDate = ok, Outdated = re-rendering needed).
-     *
      *
      * @return self
      */

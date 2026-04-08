@@ -22,7 +22,6 @@ class SubscriptionTierExtended extends \ArrayObject
     }
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
      */
     protected bool $eligible;
     /**
@@ -33,7 +32,6 @@ class SubscriptionTierExtended extends \ArrayObject
     protected array $eligibilityReasons;
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
      */
     public function getEligible(): bool
     {
@@ -41,7 +39,6 @@ class SubscriptionTierExtended extends \ArrayObject
     }
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
      *
      * @return self
      */

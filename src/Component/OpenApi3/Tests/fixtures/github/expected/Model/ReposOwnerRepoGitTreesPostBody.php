@@ -28,7 +28,6 @@ class ReposOwnerRepoGitTreesPostBody extends \ArrayObject
     protected array $tree;
     /**
      * The SHA1 of the tree you want to update with new data. If you don't set this, the commit will be created on top of everything; however, it will only contain your change, the rest of your files will show up as deleted.
-     *
      */
     protected string $baseTree;
     /**
@@ -55,7 +54,6 @@ class ReposOwnerRepoGitTreesPostBody extends \ArrayObject
     }
     /**
      * The SHA1 of the tree you want to update with new data. If you don't set this, the commit will be created on top of everything; however, it will only contain your change, the rest of your files will show up as deleted.
-     *
      */
     public function getBaseTree(): string
     {
@@ -63,7 +61,6 @@ class ReposOwnerRepoGitTreesPostBody extends \ArrayObject
     }
     /**
      * The SHA1 of the tree you want to update with new data. If you don't set this, the commit will be created on top of everything; however, it will only contain your change, the rest of your files will show up as deleted.
-     *
      *
      * @return self
      */

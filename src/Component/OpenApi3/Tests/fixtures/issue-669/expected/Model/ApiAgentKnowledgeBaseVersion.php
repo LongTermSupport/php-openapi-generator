@@ -22,22 +22,18 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Deletet at date / time
-     *
      */
     protected bool $isDeleted;
     /**
      * Name of the knowledge base
-     *
      */
     protected string $name;
     /**
      * Unique id of the knowledge base
-     *
      */
     protected string $uuid;
     /**
      * Deletet at date / time
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -45,7 +41,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Deletet at date / time
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Name of the knowledge base
-     *
      */
     public function getName(): string
     {
@@ -65,7 +59,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Name of the knowledge base
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Unique id of the knowledge base
-     *
      */
     public function getUuid(): string
     {
@@ -85,7 +77,6 @@ class ApiAgentKnowledgeBaseVersion extends \ArrayObject
     }
     /**
      * Unique id of the knowledge base
-     *
      *
      * @return self
      */

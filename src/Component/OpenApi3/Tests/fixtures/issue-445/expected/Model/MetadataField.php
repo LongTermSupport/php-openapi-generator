@@ -19,18 +19,15 @@ class MetadataField
     }
     /**
      * Path to the field in metadata.
-     *
      */
     protected string $path;
     /**
      * Indicates if the field can act as target for a mapping.
      * If field is read-only, it can only act as source of a mapping.
-     *
      */
     protected bool $isWritable;
     /**
      * Data type of the field.
-     *
      */
     protected mixed $dataType = null;
     /**
@@ -41,7 +38,6 @@ class MetadataField
     protected ?array $availableKeyFields = null;
     /**
      * Path to the field in metadata.
-     *
      */
     public function getPath(): string
     {
@@ -49,7 +45,6 @@ class MetadataField
     }
     /**
      * Path to the field in metadata.
-     *
      *
      * @return self
      */
@@ -62,19 +57,17 @@ class MetadataField
     /**
      * Indicates if the field can act as target for a mapping.
      * If field is read-only, it can only act as source of a mapping.
-     *
      */
     public function getIsWritable(): bool
     {
         return $this->isWritable;
     }
     /**
-    * Indicates if the field can act as target for a mapping.
-    If field is read-only, it can only act as source of a mapping.
-    *
-    *
-    * @return self
-    */
+     * Indicates if the field can act as target for a mapping.
+     * If field is read-only, it can only act as source of a mapping.
+     *
+     * @return self
+     */
     public function setIsWritable(bool $isWritable): self
     {
         $this->initialized['isWritable'] = true;
@@ -83,7 +76,6 @@ class MetadataField
     }
     /**
      * Data type of the field.
-     *
      */
     public function getDataType(): mixed
     {
@@ -91,7 +83,6 @@ class MetadataField
     }
     /**
      * Data type of the field.
-     *
      *
      * @return self
      */

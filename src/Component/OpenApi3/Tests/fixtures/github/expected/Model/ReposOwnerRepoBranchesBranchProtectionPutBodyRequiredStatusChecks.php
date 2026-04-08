@@ -22,7 +22,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks extends 
     }
     /**
      * Require branches to be up to date before merging.
-     *
      */
     protected bool $strict;
     /**
@@ -33,7 +32,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks extends 
     protected array $contexts;
     /**
      * Require branches to be up to date before merging.
-     *
      */
     public function getStrict(): bool
     {
@@ -41,7 +39,6 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks extends 
     }
     /**
      * Require branches to be up to date before merging.
-     *
      *
      * @return self
      */

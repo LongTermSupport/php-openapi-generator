@@ -19,23 +19,19 @@ class AggregationResultItem
     }
     /**
      * Value matched.
-     *
      */
     protected string $name;
     /**
      * Number of items matched.
-     *
      */
     protected int $count;
     /**
      * Ready to use filter to filter the data based on the aggregation result values.
      * It can be passed as one of the aggregation filters of an aggregation query: it returns documents meeting the aggregation condition.
-     *
      */
     protected mixed $filter = null;
     /**
      * True if the current result item matches on of the aggregation filters sent in the query.
-     *
      */
     protected bool $active;
     /**
@@ -46,7 +42,6 @@ class AggregationResultItem
     protected ?array $aggregationResults = null;
     /**
      * Value matched.
-     *
      */
     public function getName(): string
     {
@@ -54,7 +49,6 @@ class AggregationResultItem
     }
     /**
      * Value matched.
-     *
      *
      * @return self
      */
@@ -66,7 +60,6 @@ class AggregationResultItem
     }
     /**
      * Number of items matched.
-     *
      */
     public function getCount(): int
     {
@@ -74,7 +67,6 @@ class AggregationResultItem
     }
     /**
      * Number of items matched.
-     *
      *
      * @return self
      */
@@ -87,19 +79,17 @@ class AggregationResultItem
     /**
      * Ready to use filter to filter the data based on the aggregation result values.
      * It can be passed as one of the aggregation filters of an aggregation query: it returns documents meeting the aggregation condition.
-     *
      */
     public function getFilter(): mixed
     {
         return $this->filter;
     }
     /**
-    * Ready to use filter to filter the data based on the aggregation result values.
-    It can be passed as one of the aggregation filters of an aggregation query: it returns documents meeting the aggregation condition.
-    *
-    *
-    * @return self
-    */
+     * Ready to use filter to filter the data based on the aggregation result values.
+     * It can be passed as one of the aggregation filters of an aggregation query: it returns documents meeting the aggregation condition.
+     *
+     * @return self
+     */
     public function setFilter(mixed $filter): self
     {
         $this->initialized['filter'] = true;
@@ -108,7 +98,6 @@ class AggregationResultItem
     }
     /**
      * True if the current result item matches on of the aggregation filters sent in the query.
-     *
      */
     public function getActive(): bool
     {
@@ -116,7 +105,6 @@ class AggregationResultItem
     }
     /**
      * True if the current result item matches on of the aggregation filters sent in the query.
-     *
      *
      * @return self
      */

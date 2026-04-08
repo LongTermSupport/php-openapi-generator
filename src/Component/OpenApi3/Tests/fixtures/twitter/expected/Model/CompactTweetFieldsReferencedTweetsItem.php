@@ -23,7 +23,6 @@ class CompactTweetFieldsReferencedTweetsItem extends \ArrayObject
     protected string $type;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $id;
     public function getType(): string
@@ -38,7 +37,6 @@ class CompactTweetFieldsReferencedTweetsItem extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getId(): string
     {
@@ -46,7 +44,6 @@ class CompactTweetFieldsReferencedTweetsItem extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */

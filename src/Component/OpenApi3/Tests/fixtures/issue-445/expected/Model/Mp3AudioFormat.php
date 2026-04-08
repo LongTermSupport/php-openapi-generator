@@ -20,13 +20,11 @@ class Mp3AudioFormat extends FormatBase
     protected ?string $extension = null;
     /**
      * Gets or sets the encoding bitrate. This setting and Quality are mutually exclusive.
-     *
      */
     protected ?int $bitrate = null;
     /**
      * Gets or sets the encoding quality. This setting and Bitrate are mutually exclusive.
      * Values can be set it range of 0 to 9, where a lower value is a higher quality.
-     *
      */
     protected ?int $quality = null;
     public function getExtension(): ?string
@@ -41,7 +39,6 @@ class Mp3AudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding bitrate. This setting and Quality are mutually exclusive.
-     *
      */
     public function getBitrate(): ?int
     {
@@ -49,7 +46,6 @@ class Mp3AudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding bitrate. This setting and Quality are mutually exclusive.
-     *
      *
      * @return self
      */
@@ -62,19 +58,17 @@ class Mp3AudioFormat extends FormatBase
     /**
      * Gets or sets the encoding quality. This setting and Bitrate are mutually exclusive.
      * Values can be set it range of 0 to 9, where a lower value is a higher quality.
-     *
      */
     public function getQuality(): ?int
     {
         return $this->quality;
     }
     /**
-    * Gets or sets the encoding quality. This setting and Bitrate are mutually exclusive.
-    Values can be set it range of 0 to 9, where a lower value is a higher quality.
-    *
-    *
-    * @return self
-    */
+     * Gets or sets the encoding quality. This setting and Bitrate are mutually exclusive.
+     * Values can be set it range of 0 to 9, where a lower value is a higher quality.
+     *
+     * @return self
+     */
     public function setQuality(?int $quality): self
     {
         $this->initialized['quality'] = true;

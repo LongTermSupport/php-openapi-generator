@@ -30,31 +30,26 @@ class Release extends \ArrayObject
     protected string $nodeId;
     /**
      * The name of the tag.
-     *
      */
     protected string $tagName;
     /**
      * Specifies the commitish value that determines where the Git tag is created from.
-     *
      */
     protected string $targetCommitish;
     protected ?string $name = null;
     protected ?string $body = null;
     /**
      * true to create a draft (unpublished) release, false to create a published one.
-     *
      */
     protected bool $draft;
     /**
      * Whether to identify the release as a prerelease or a full release.
-     *
      */
     protected bool $prerelease;
     protected \DateTime $createdAt;
     protected ?\DateTime $publishedAt = null;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $author = null;
     /**
@@ -145,7 +140,6 @@ class Release extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
      */
     public function getTagName(): string
     {
@@ -153,7 +147,6 @@ class Release extends \ArrayObject
     }
     /**
      * The name of the tag.
-     *
      *
      * @return self
      */
@@ -165,7 +158,6 @@ class Release extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from.
-     *
      */
     public function getTargetCommitish(): string
     {
@@ -173,7 +165,6 @@ class Release extends \ArrayObject
     }
     /**
      * Specifies the commitish value that determines where the Git tag is created from.
-     *
      *
      * @return self
      */
@@ -205,7 +196,6 @@ class Release extends \ArrayObject
     }
     /**
      * true to create a draft (unpublished) release, false to create a published one.
-     *
      */
     public function getDraft(): bool
     {
@@ -213,7 +203,6 @@ class Release extends \ArrayObject
     }
     /**
      * true to create a draft (unpublished) release, false to create a published one.
-     *
      *
      * @return self
      */
@@ -225,7 +214,6 @@ class Release extends \ArrayObject
     }
     /**
      * Whether to identify the release as a prerelease or a full release.
-     *
      */
     public function getPrerelease(): bool
     {
@@ -233,7 +221,6 @@ class Release extends \ArrayObject
     }
     /**
      * Whether to identify the release as a prerelease or a full release.
-     *
      *
      * @return self
      */
@@ -265,7 +252,6 @@ class Release extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getAuthor(): ?SimpleUser
     {
@@ -273,7 +259,6 @@ class Release extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

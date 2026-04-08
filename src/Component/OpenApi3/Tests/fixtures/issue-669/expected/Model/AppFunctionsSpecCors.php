@@ -46,12 +46,10 @@ class AppFunctionsSpecCors extends \ArrayObject
     protected array $exposeHeaders;
     /**
      * An optional duration specifying how long browsers can cache the results of a preflight request. This configures the `Access-Control-Max-Age` header.
-     *
      */
     protected string $maxAge;
     /**
      * Whether browsers should expose the response to the client-side JavaScript code when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials` header.
-     *
      */
     protected bool $allowCredentials;
     /**
@@ -144,7 +142,6 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * An optional duration specifying how long browsers can cache the results of a preflight request. This configures the `Access-Control-Max-Age` header.
-     *
      */
     public function getMaxAge(): string
     {
@@ -152,7 +149,6 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * An optional duration specifying how long browsers can cache the results of a preflight request. This configures the `Access-Control-Max-Age` header.
-     *
      *
      * @return self
      */
@@ -164,7 +160,6 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * Whether browsers should expose the response to the client-side JavaScript code when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials` header.
-     *
      */
     public function getAllowCredentials(): bool
     {
@@ -172,7 +167,6 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * Whether browsers should expose the response to the client-side JavaScript code when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials` header.
-     *
      *
      * @return self
      */

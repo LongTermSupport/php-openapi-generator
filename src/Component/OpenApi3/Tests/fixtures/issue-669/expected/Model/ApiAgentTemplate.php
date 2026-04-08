@@ -22,12 +22,10 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The agent template's creation date
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Deprecated - Use summary instead
-     *
      */
     protected string $description;
     /**
@@ -38,12 +36,10 @@ class ApiAgentTemplate extends \ArrayObject
     protected array $guardrails;
     /**
      * Instructions for the agent template
-     *
      */
     protected string $instruction;
     /**
      * The 'k' value for the agent template
-     *
      */
     protected int $k;
     /**
@@ -54,32 +50,26 @@ class ApiAgentTemplate extends \ArrayObject
     protected array $knowledgeBases;
     /**
      * The long description of the agent template
-     *
      */
     protected string $longDescription;
     /**
      * The max_tokens setting for the agent template
-     *
      */
     protected int $maxTokens;
     /**
      * Description of a Model
-     *
      */
     protected ApiModel $model;
     /**
      * Name of the agent template
-     *
      */
     protected string $name;
     /**
      * The short description of the agent template
-     *
      */
     protected string $shortDescription;
     /**
      * The summary of the agent template
-     *
      */
     protected string $summary;
     /**
@@ -90,33 +80,27 @@ class ApiAgentTemplate extends \ArrayObject
     protected array $tags;
     /**
      * The temperature setting for the agent template
-     *
      */
     protected float $temperature;
     /**
      * - AGENT_TEMPLATE_TYPE_STANDARD: The standard agent template
      *  - AGENT_TEMPLATE_TYPE_ONE_CLICK: The one click agent template
-     *
      */
     protected string $templateType = 'AGENT_TEMPLATE_TYPE_STANDARD';
     /**
      * The top_p setting for the agent template
-     *
      */
     protected float $topP;
     /**
      * The agent template's last updated date
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
      * The agent template's creation date
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -124,7 +108,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The agent template's creation date
-     *
      *
      * @return self
      */
@@ -136,7 +119,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Deprecated - Use summary instead
-     *
      */
     public function getDescription(): string
     {
@@ -144,7 +126,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Deprecated - Use summary instead
-     *
      *
      * @return self
      */
@@ -178,7 +159,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Instructions for the agent template
-     *
      */
     public function getInstruction(): string
     {
@@ -186,7 +166,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Instructions for the agent template
-     *
      *
      * @return self
      */
@@ -198,7 +177,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The 'k' value for the agent template
-     *
      */
     public function getK(): int
     {
@@ -206,7 +184,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The 'k' value for the agent template
-     *
      *
      * @return self
      */
@@ -240,7 +217,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The long description of the agent template
-     *
      */
     public function getLongDescription(): string
     {
@@ -248,7 +224,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The long description of the agent template
-     *
      *
      * @return self
      */
@@ -260,7 +235,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The max_tokens setting for the agent template
-     *
      */
     public function getMaxTokens(): int
     {
@@ -268,7 +242,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The max_tokens setting for the agent template
-     *
      *
      * @return self
      */
@@ -280,7 +253,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
      */
     public function getModel(): ApiModel
     {
@@ -288,7 +260,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
      *
      * @return self
      */
@@ -300,7 +271,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Name of the agent template
-     *
      */
     public function getName(): string
     {
@@ -308,7 +278,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Name of the agent template
-     *
      *
      * @return self
      */
@@ -320,7 +289,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The short description of the agent template
-     *
      */
     public function getShortDescription(): string
     {
@@ -328,7 +296,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The short description of the agent template
-     *
      *
      * @return self
      */
@@ -340,7 +307,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The summary of the agent template
-     *
      */
     public function getSummary(): string
     {
@@ -348,7 +314,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The summary of the agent template
-     *
      *
      * @return self
      */
@@ -382,7 +347,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The temperature setting for the agent template
-     *
      */
     public function getTemperature(): float
     {
@@ -390,7 +354,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The temperature setting for the agent template
-     *
      *
      * @return self
      */
@@ -403,19 +366,17 @@ class ApiAgentTemplate extends \ArrayObject
     /**
      * - AGENT_TEMPLATE_TYPE_STANDARD: The standard agent template
      *  - AGENT_TEMPLATE_TYPE_ONE_CLICK: The one click agent template
-     *
      */
     public function getTemplateType(): string
     {
         return $this->templateType;
     }
     /**
-    * - AGENT_TEMPLATE_TYPE_STANDARD: The standard agent template
-    - AGENT_TEMPLATE_TYPE_ONE_CLICK: The one click agent template
-    *
-    *
-    * @return self
-    */
+     * - AGENT_TEMPLATE_TYPE_STANDARD: The standard agent template
+     *  - AGENT_TEMPLATE_TYPE_ONE_CLICK: The one click agent template
+     *
+     * @return self
+     */
     public function setTemplateType(string $templateType): self
     {
         $this->initialized['templateType'] = true;
@@ -424,7 +385,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The top_p setting for the agent template
-     *
      */
     public function getTopP(): float
     {
@@ -432,7 +392,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The top_p setting for the agent template
-     *
      *
      * @return self
      */
@@ -444,7 +403,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The agent template's last updated date
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -452,7 +410,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * The agent template's last updated date
-     *
      *
      * @return self
      */
@@ -464,7 +421,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -472,7 +428,6 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */

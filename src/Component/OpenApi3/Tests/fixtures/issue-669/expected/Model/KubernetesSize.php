@@ -22,17 +22,14 @@ class KubernetesSize extends \ArrayObject
     }
     /**
      * A Droplet size available for use in a Kubernetes node pool.
-     *
      */
     protected string $name;
     /**
      * The identifier for a size for use when creating a new cluster.
-     *
      */
     protected string $slug;
     /**
      * A Droplet size available for use in a Kubernetes node pool.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class KubernetesSize extends \ArrayObject
     }
     /**
      * A Droplet size available for use in a Kubernetes node pool.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class KubernetesSize extends \ArrayObject
     }
     /**
      * The identifier for a size for use when creating a new cluster.
-     *
      */
     public function getSlug(): string
     {
@@ -60,7 +55,6 @@ class KubernetesSize extends \ArrayObject
     }
     /**
      * The identifier for a size for use when creating a new cluster.
-     *
      *
      * @return self
      */

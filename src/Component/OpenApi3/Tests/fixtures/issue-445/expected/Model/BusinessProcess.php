@@ -19,52 +19,42 @@ class BusinessProcess
     }
     /**
      * ID of the business process.
-     *
      */
     protected string $id;
     /**
      * ID of the business process definition associated to the business process.
-     *
      */
     protected string $processDefinitionId;
     /**
      * ID of the document that is modified by the running of the business process. Used during the cancellation of the business process.
-     *
      */
     protected ?string $referenceId = null;
     /**
      * Type of the document that is modified by the running of the business process. Used during the cancellation of the business process.
-     *
      */
     protected ?string $referenceDocType = null;
     /**
      * True if the business process execution can be cancelled. False otherwise.
-     *
      */
     protected bool $supportsCancellation;
     /**
      * Scope of the business process.
-     *
      */
     protected mixed $businessProcessScope = null;
     /**
      * Current life cycle of the business process.
-     *
      */
     protected mixed $lifeCycle = null;
     /**
      * When the business process started.
-     *
      */
     protected \DateTime $startDate;
     /**
      * When the business process finished.
-     *
      */
     protected \DateTime $endDate;
     /**
      * Is the business process finished.
-     *
      */
     protected bool $finished;
     /**
@@ -75,23 +65,19 @@ class BusinessProcess
     protected ?array $stateHistory = null;
     /**
      * Current state of the business process.
-     *
      */
     protected ?string $currentState = null;
     /**
      * Timestamp when the business process last reported progress.
-     *
      */
     protected ?\DateTime $lastReportedProgress = null;
     /**
      * Id of the business process that will be automatically started after the completion of the current one, if any.
-     *
      */
     protected ?string $continuationBusinessProcessId = null;
     protected string $kind;
     /**
      * ID of the business process.
-     *
      */
     public function getId(): string
     {
@@ -99,7 +85,6 @@ class BusinessProcess
     }
     /**
      * ID of the business process.
-     *
      */
     public function setId(string $id): void
     {
@@ -108,7 +93,6 @@ class BusinessProcess
     }
     /**
      * ID of the business process definition associated to the business process.
-     *
      */
     public function getProcessDefinitionId(): string
     {
@@ -116,7 +100,6 @@ class BusinessProcess
     }
     /**
      * ID of the business process definition associated to the business process.
-     *
      */
     public function setProcessDefinitionId(string $processDefinitionId): void
     {
@@ -125,7 +108,6 @@ class BusinessProcess
     }
     /**
      * ID of the document that is modified by the running of the business process. Used during the cancellation of the business process.
-     *
      */
     public function getReferenceId(): ?string
     {
@@ -133,7 +115,6 @@ class BusinessProcess
     }
     /**
      * ID of the document that is modified by the running of the business process. Used during the cancellation of the business process.
-     *
      */
     public function setReferenceId(?string $referenceId): void
     {
@@ -142,7 +123,6 @@ class BusinessProcess
     }
     /**
      * Type of the document that is modified by the running of the business process. Used during the cancellation of the business process.
-     *
      */
     public function getReferenceDocType(): ?string
     {
@@ -150,7 +130,6 @@ class BusinessProcess
     }
     /**
      * Type of the document that is modified by the running of the business process. Used during the cancellation of the business process.
-     *
      */
     public function setReferenceDocType(?string $referenceDocType): void
     {
@@ -159,7 +138,6 @@ class BusinessProcess
     }
     /**
      * True if the business process execution can be cancelled. False otherwise.
-     *
      */
     public function getSupportsCancellation(): bool
     {
@@ -167,7 +145,6 @@ class BusinessProcess
     }
     /**
      * True if the business process execution can be cancelled. False otherwise.
-     *
      */
     public function setSupportsCancellation(bool $supportsCancellation): void
     {
@@ -176,7 +153,6 @@ class BusinessProcess
     }
     /**
      * Scope of the business process.
-     *
      */
     public function getBusinessProcessScope(): mixed
     {
@@ -184,7 +160,6 @@ class BusinessProcess
     }
     /**
      * Scope of the business process.
-     *
      */
     public function setBusinessProcessScope(mixed $businessProcessScope): void
     {
@@ -193,7 +168,6 @@ class BusinessProcess
     }
     /**
      * Current life cycle of the business process.
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -201,7 +175,6 @@ class BusinessProcess
     }
     /**
      * Current life cycle of the business process.
-     *
      */
     public function setLifeCycle(mixed $lifeCycle): void
     {
@@ -210,7 +183,6 @@ class BusinessProcess
     }
     /**
      * When the business process started.
-     *
      */
     public function getStartDate(): \DateTime
     {
@@ -218,7 +190,6 @@ class BusinessProcess
     }
     /**
      * When the business process started.
-     *
      */
     public function setStartDate(\DateTime $startDate): void
     {
@@ -227,7 +198,6 @@ class BusinessProcess
     }
     /**
      * When the business process finished.
-     *
      */
     public function getEndDate(): \DateTime
     {
@@ -235,7 +205,6 @@ class BusinessProcess
     }
     /**
      * When the business process finished.
-     *
      */
     public function setEndDate(\DateTime $endDate): void
     {
@@ -244,7 +213,6 @@ class BusinessProcess
     }
     /**
      * Is the business process finished.
-     *
      */
     public function getFinished(): bool
     {
@@ -252,7 +220,6 @@ class BusinessProcess
     }
     /**
      * Is the business process finished.
-     *
      */
     public function setFinished(bool $finished): void
     {
@@ -280,7 +247,6 @@ class BusinessProcess
     }
     /**
      * Current state of the business process.
-     *
      */
     public function getCurrentState(): ?string
     {
@@ -288,7 +254,6 @@ class BusinessProcess
     }
     /**
      * Current state of the business process.
-     *
      */
     public function setCurrentState(?string $currentState): void
     {
@@ -297,7 +262,6 @@ class BusinessProcess
     }
     /**
      * Timestamp when the business process last reported progress.
-     *
      */
     public function getLastReportedProgress(): ?\DateTime
     {
@@ -305,7 +269,6 @@ class BusinessProcess
     }
     /**
      * Timestamp when the business process last reported progress.
-     *
      */
     public function setLastReportedProgress(?\DateTime $lastReportedProgress): void
     {
@@ -314,7 +277,6 @@ class BusinessProcess
     }
     /**
      * Id of the business process that will be automatically started after the completion of the current one, if any.
-     *
      */
     public function getContinuationBusinessProcessId(): ?string
     {
@@ -322,7 +284,6 @@ class BusinessProcess
     }
     /**
      * Id of the business process that will be automatically started after the completion of the current one, if any.
-     *
      */
     public function setContinuationBusinessProcessId(?string $continuationBusinessProcessId): void
     {

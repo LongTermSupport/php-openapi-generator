@@ -22,32 +22,26 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Unique identifier for the allocation
-     *
      */
     protected int $id;
     /**
      * The BYOIP prefix UUID
-     *
      */
     protected string $byoip;
     /**
      * Region where the allocation is made
-     *
      */
     protected string $region;
     /**
      * The resource associated with the allocation
-     *
      */
     protected string $resource;
     /**
      * Time when the allocation was assigned
-     *
      */
     protected \DateTime $assignedAt;
     /**
      * Unique identifier for the allocation
-     *
      */
     public function getId(): int
     {
@@ -55,7 +49,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Unique identifier for the allocation
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * The BYOIP prefix UUID
-     *
      */
     public function getByoip(): string
     {
@@ -75,7 +67,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * The BYOIP prefix UUID
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Region where the allocation is made
-     *
      */
     public function getRegion(): string
     {
@@ -95,7 +85,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Region where the allocation is made
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * The resource associated with the allocation
-     *
      */
     public function getResource(): string
     {
@@ -115,7 +103,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * The resource associated with the allocation
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Time when the allocation was assigned
-     *
      */
     public function getAssignedAt(): \DateTime
     {
@@ -135,7 +121,6 @@ class ByoipPrefixResource extends \ArrayObject
     }
     /**
      * Time when the allocation was assigned
-     *
      *
      * @return self
      */

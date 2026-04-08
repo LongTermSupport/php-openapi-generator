@@ -22,22 +22,18 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The human-readable string you wish to use when displaying the Droplet name. The name, if set to a domain name managed in the DigitalOcean DNS management system, will configure a PTR record for the Droplet. The name set during creation will also determine the hostname for the Droplet in its internal configuration.
-     *
      */
     protected string $name;
     /**
      * The slug identifier for the region that you wish to deploy the Droplet in. If the specific datacenter is not not important, a slug prefix (e.g. `nyc`) can be used to deploy the Droplet in any of the that region's locations (`nyc1`, `nyc2`, or `nyc3`). If the region is omitted from the create request completely, the Droplet may deploy in any region.
-     *
      */
     protected string $region;
     /**
      * The slug identifier for the size that you wish to select for this Droplet.
-     *
      */
     protected string $size;
     /**
      * The image ID of a public or private image or the slug identifier for a public image. This image will be the base image for your Droplet.<br>Requires `image:read` scope.
-     *
      */
     protected mixed $image = null;
     /**
@@ -48,18 +44,15 @@ class DropletSingleCreate extends \ArrayObject
     protected array $sshKeys = array();
     /**
      * A boolean indicating whether automated backups should be enabled for the Droplet.
-     *
      */
     protected bool $backups = false;
     protected DropletCreateBackupPolicy $backupPolicy;
     /**
      * A boolean indicating whether to enable IPv6 on the Droplet.
-     *
      */
     protected bool $ipv6 = false;
     /**
      * A boolean indicating whether to install the DigitalOcean agent for monitoring.
-     *
      */
     protected bool $monitoring = false;
     /**
@@ -70,14 +63,12 @@ class DropletSingleCreate extends \ArrayObject
     protected ?array $tags = array();
     /**
      * A string containing 'user data' which may be used to configure the Droplet on first boot, often a 'cloud-config' file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
      */
     protected string $userData;
     /**
      * This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
      *
      * @deprecated
-     *
      */
     protected bool $privateNetworking = false;
     /**
@@ -88,17 +79,14 @@ class DropletSingleCreate extends \ArrayObject
     protected array $volumes = array();
     /**
      * A string specifying the UUID of the VPC to which the Droplet will be assigned. If excluded, the Droplet will be assigned to your account's default VPC for the region.<br>Requires `vpc:read` scope.
-     *
      */
     protected string $vpcUuid;
     /**
      * A boolean indicating whether to install the DigitalOcean agent used for providing access to the Droplet web console in the control panel. By default, the agent is installed on new Droplets but installation errors (i.e. OS not supported) are ignored. To prevent it from being installed, set to `false`. To make installation errors fatal, explicitly set it to `true`.
-     *
      */
     protected bool $withDropletAgent;
     /**
      * The human-readable string you wish to use when displaying the Droplet name. The name, if set to a domain name managed in the DigitalOcean DNS management system, will configure a PTR record for the Droplet. The name set during creation will also determine the hostname for the Droplet in its internal configuration.
-     *
      */
     public function getName(): string
     {
@@ -106,7 +94,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The human-readable string you wish to use when displaying the Droplet name. The name, if set to a domain name managed in the DigitalOcean DNS management system, will configure a PTR record for the Droplet. The name set during creation will also determine the hostname for the Droplet in its internal configuration.
-     *
      *
      * @return self
      */
@@ -118,7 +105,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The slug identifier for the region that you wish to deploy the Droplet in. If the specific datacenter is not not important, a slug prefix (e.g. `nyc`) can be used to deploy the Droplet in any of the that region's locations (`nyc1`, `nyc2`, or `nyc3`). If the region is omitted from the create request completely, the Droplet may deploy in any region.
-     *
      */
     public function getRegion(): string
     {
@@ -126,7 +112,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The slug identifier for the region that you wish to deploy the Droplet in. If the specific datacenter is not not important, a slug prefix (e.g. `nyc`) can be used to deploy the Droplet in any of the that region's locations (`nyc1`, `nyc2`, or `nyc3`). If the region is omitted from the create request completely, the Droplet may deploy in any region.
-     *
      *
      * @return self
      */
@@ -138,7 +123,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The slug identifier for the size that you wish to select for this Droplet.
-     *
      */
     public function getSize(): string
     {
@@ -146,7 +130,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The slug identifier for the size that you wish to select for this Droplet.
-     *
      *
      * @return self
      */
@@ -158,7 +141,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The image ID of a public or private image or the slug identifier for a public image. This image will be the base image for your Droplet.<br>Requires `image:read` scope.
-     *
      */
     public function getImage(): mixed
     {
@@ -166,7 +148,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * The image ID of a public or private image or the slug identifier for a public image. This image will be the base image for your Droplet.<br>Requires `image:read` scope.
-     *
      *
      * @return self
      */
@@ -200,7 +181,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether automated backups should be enabled for the Droplet.
-     *
      */
     public function getBackups(): bool
     {
@@ -208,7 +188,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether automated backups should be enabled for the Droplet.
-     *
      *
      * @return self
      */
@@ -230,7 +209,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to enable IPv6 on the Droplet.
-     *
      */
     public function getIpv6(): bool
     {
@@ -238,7 +216,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to enable IPv6 on the Droplet.
-     *
      *
      * @return self
      */
@@ -250,7 +227,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to install the DigitalOcean agent for monitoring.
-     *
      */
     public function getMonitoring(): bool
     {
@@ -258,7 +234,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to install the DigitalOcean agent for monitoring.
-     *
      *
      * @return self
      */
@@ -292,7 +267,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A string containing 'user data' which may be used to configure the Droplet on first boot, often a 'cloud-config' file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
      */
     public function getUserData(): string
     {
@@ -300,7 +274,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A string containing 'user data' which may be used to configure the Droplet on first boot, often a 'cloud-config' file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
      *
      * @return self
      */
@@ -314,7 +287,6 @@ class DropletSingleCreate extends \ArrayObject
      * This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
      *
      * @deprecated
-     *
      */
     public function getPrivateNetworking(): bool
     {
@@ -322,7 +294,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC for the region.
-     *
      *
      * @deprecated
      *
@@ -358,7 +329,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Droplet will be assigned. If excluded, the Droplet will be assigned to your account's default VPC for the region.<br>Requires `vpc:read` scope.
-     *
      */
     public function getVpcUuid(): string
     {
@@ -366,7 +336,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the Droplet will be assigned. If excluded, the Droplet will be assigned to your account's default VPC for the region.<br>Requires `vpc:read` scope.
-     *
      *
      * @return self
      */
@@ -378,7 +347,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to install the DigitalOcean agent used for providing access to the Droplet web console in the control panel. By default, the agent is installed on new Droplets but installation errors (i.e. OS not supported) are ignored. To prevent it from being installed, set to `false`. To make installation errors fatal, explicitly set it to `true`.
-     *
      */
     public function getWithDropletAgent(): bool
     {
@@ -386,7 +354,6 @@ class DropletSingleCreate extends \ArrayObject
     }
     /**
      * A boolean indicating whether to install the DigitalOcean agent used for providing access to the Droplet web console in the control panel. By default, the agent is installed on new Droplets but installation errors (i.e. OS not supported) are ignored. To prevent it from being installed, set to `false`. To make installation errors fatal, explicitly set it to `true`.
-     *
      *
      * @return self
      */

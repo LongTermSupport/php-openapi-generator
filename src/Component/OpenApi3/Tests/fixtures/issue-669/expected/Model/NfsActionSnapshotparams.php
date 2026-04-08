@@ -22,12 +22,10 @@ class NfsActionSnapshotparams extends \ArrayObject
     }
     /**
      * Snapshot name of the NFS share
-     *
      */
     protected string $name;
     /**
      * Snapshot name of the NFS share
-     *
      */
     public function getName(): string
     {
@@ -35,7 +33,6 @@ class NfsActionSnapshotparams extends \ArrayObject
     }
     /**
      * Snapshot name of the NFS share
-     *
      *
      * @return self
      */

@@ -19,13 +19,11 @@ class ShareDataBase
     }
     /**
      * The URL to access the share.
-     *
      */
     protected string $url;
     protected string $kind;
     /**
      * The URL to access the share.
-     *
      */
     public function getUrl(): string
     {
@@ -33,7 +31,6 @@ class ShareDataBase
     }
     /**
      * The URL to access the share.
-     *
      */
     public function setUrl(string $url): void
     {

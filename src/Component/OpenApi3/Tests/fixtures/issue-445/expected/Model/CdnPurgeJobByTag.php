@@ -19,12 +19,10 @@ class CdnPurgeJobByTag extends CdnPurgeJobBase
     }
     /**
      * The tag that should be purged.
-     *
      */
     protected string $tag;
     /**
      * The tag that should be purged.
-     *
      */
     public function getTag(): string
     {
@@ -32,7 +30,6 @@ class CdnPurgeJobByTag extends CdnPurgeJobBase
     }
     /**
      * The tag that should be purged.
-     *
      *
      * @return self
      */

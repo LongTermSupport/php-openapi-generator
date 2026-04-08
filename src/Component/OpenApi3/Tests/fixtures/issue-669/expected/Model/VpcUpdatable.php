@@ -22,17 +22,14 @@ class VpcUpdatable extends \ArrayObject
     }
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     protected string $name;
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
      */
     protected string $description;
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class VpcUpdatable extends \ArrayObject
     }
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class VpcUpdatable extends \ArrayObject
     }
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
      */
     public function getDescription(): string
     {
@@ -60,7 +55,6 @@ class VpcUpdatable extends \ArrayObject
     }
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
      *
      * @return self
      */

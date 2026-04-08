@@ -20,12 +20,10 @@ class IndexField
     protected ?string $id = null;
     /**
      * The field id.
-     *
      */
     protected ?string $fieldId = null;
     /**
      * The field's type name.
-     *
      */
     protected ?string $type = null;
     /**
@@ -43,22 +41,18 @@ class IndexField
     protected ?array $simpleSearchFields = null;
     /**
      * Contains the fields boost value.
-     *
      */
     protected float $boost;
     /**
      * Not to be returned for search query, but only used for mapping purposes
-     *
      */
     protected bool $ignoreForSearch;
     /**
      * The path of the Nested document this property belongs to. If set to null, it means that there is no Nested document
-     *
      */
     protected ?string $nestedPath = null;
     /**
      * Path to the sorting information in the DataSortValuesField sort index.
-     *
      */
     protected ?string $sortField = null;
     public function getId(): ?string
@@ -73,7 +67,6 @@ class IndexField
     }
     /**
      * The field id.
-     *
      */
     public function getFieldId(): ?string
     {
@@ -81,7 +74,6 @@ class IndexField
     }
     /**
      * The field id.
-     *
      *
      * @return self
      */
@@ -93,7 +85,6 @@ class IndexField
     }
     /**
      * The field's type name.
-     *
      */
     public function getType(): ?string
     {
@@ -101,7 +92,6 @@ class IndexField
     }
     /**
      * The field's type name.
-     *
      *
      * @return self
      */
@@ -144,13 +134,13 @@ class IndexField
         return $this->simpleSearchFields;
     }
     /**
-    * Contains all simple search field name variants of the field.
-    The amount of simple search fields can be equal or less to the amount of IndexFields, but never more.
-    *
-    * @param array<string, string>|null $simpleSearchFields
-    *
-    * @return self
-    */
+     * Contains all simple search field name variants of the field.
+     * The amount of simple search fields can be equal or less to the amount of IndexFields, but never more.
+     *
+     * @param array<string, string>|null $simpleSearchFields
+     *
+     * @return self
+     */
     public function setSimpleSearchFields(?array $simpleSearchFields): self
     {
         $this->initialized['simpleSearchFields'] = true;
@@ -159,7 +149,6 @@ class IndexField
     }
     /**
      * Contains the fields boost value.
-     *
      */
     public function getBoost(): float
     {
@@ -167,7 +156,6 @@ class IndexField
     }
     /**
      * Contains the fields boost value.
-     *
      *
      * @return self
      */
@@ -179,7 +167,6 @@ class IndexField
     }
     /**
      * Not to be returned for search query, but only used for mapping purposes
-     *
      */
     public function getIgnoreForSearch(): bool
     {
@@ -187,7 +174,6 @@ class IndexField
     }
     /**
      * Not to be returned for search query, but only used for mapping purposes
-     *
      *
      * @return self
      */
@@ -199,7 +185,6 @@ class IndexField
     }
     /**
      * The path of the Nested document this property belongs to. If set to null, it means that there is no Nested document
-     *
      */
     public function getNestedPath(): ?string
     {
@@ -207,7 +192,6 @@ class IndexField
     }
     /**
      * The path of the Nested document this property belongs to. If set to null, it means that there is no Nested document
-     *
      *
      * @return self
      */
@@ -219,7 +203,6 @@ class IndexField
     }
     /**
      * Path to the sorting information in the DataSortValuesField sort index.
-     *
      */
     public function getSortField(): ?string
     {
@@ -227,7 +210,6 @@ class IndexField
     }
     /**
      * Path to the sorting information in the DataSortValuesField sort index.
-     *
      *
      * @return self
      */

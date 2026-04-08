@@ -22,17 +22,14 @@ class CreateNamespace extends \ArrayObject
     }
     /**
      * The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace.
-     *
      */
     protected string $region;
     /**
      * The namespace's unique name.
-     *
      */
     protected string $label;
     /**
      * The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace.
-     *
      */
     public function getRegion(): string
     {
@@ -40,7 +37,6 @@ class CreateNamespace extends \ArrayObject
     }
     /**
      * The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class CreateNamespace extends \ArrayObject
     }
     /**
      * The namespace's unique name.
-     *
      */
     public function getLabel(): string
     {
@@ -60,7 +55,6 @@ class CreateNamespace extends \ArrayObject
     }
     /**
      * The namespace's unique name.
-     *
      *
      * @return self
      */

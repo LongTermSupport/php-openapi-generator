@@ -22,7 +22,6 @@ class ApiUpdateAgentDeploymentVisibilityInputPublic extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
@@ -31,12 +30,10 @@ class ApiUpdateAgentDeploymentVisibilityInputPublic extends \ArrayObject
      *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
      *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
      *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-     *
      */
     protected string $visibility = 'VISIBILITY_UNKNOWN';
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -44,7 +41,6 @@ class ApiUpdateAgentDeploymentVisibilityInputPublic extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */
@@ -60,22 +56,20 @@ class ApiUpdateAgentDeploymentVisibilityInputPublic extends \ArrayObject
      *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
      *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
      *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-     *
      */
     public function getVisibility(): string
     {
         return $this->visibility;
     }
     /**
-    * - VISIBILITY_UNKNOWN: The status of the deployment is unknown
-    - VISIBILITY_DISABLED: The deployment is disabled and will no longer service requests
-    - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
-    - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
-    - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-    *
-    *
-    * @return self
-    */
+     * - VISIBILITY_UNKNOWN: The status of the deployment is unknown
+     *  - VISIBILITY_DISABLED: The deployment is disabled and will no longer service requests
+     *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
+     *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
+     *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
+     *
+     * @return self
+     */
     public function setVisibility(string $visibility): self
     {
         $this->initialized['visibility'] = true;

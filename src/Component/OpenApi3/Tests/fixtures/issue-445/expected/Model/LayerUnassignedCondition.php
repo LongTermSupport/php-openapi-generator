@@ -19,12 +19,10 @@ class LayerUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * Layer id to match on.
-     *
      */
     protected ?string $layerId = null;
     /**
      * Layer id to match on.
-     *
      */
     public function getLayerId(): ?string
     {
@@ -32,7 +30,6 @@ class LayerUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * Layer id to match on.
-     *
      *
      * @return self
      */

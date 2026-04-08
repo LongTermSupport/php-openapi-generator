@@ -24,18 +24,15 @@ class Label extends \ArrayObject
     protected string $nodeId;
     /**
      * URL for the label
-     *
      */
     protected string $url;
     /**
      * The name of the label.
-     *
      */
     protected string $name;
     protected ?string $description = null;
     /**
      * 6-character hex code, without the leading #, identifying the color
-     *
      */
     protected string $color;
     protected bool $default;
@@ -61,7 +58,6 @@ class Label extends \ArrayObject
     }
     /**
      * URL for the label
-     *
      */
     public function getUrl(): string
     {
@@ -69,7 +65,6 @@ class Label extends \ArrayObject
     }
     /**
      * URL for the label
-     *
      *
      * @return self
      */
@@ -81,7 +76,6 @@ class Label extends \ArrayObject
     }
     /**
      * The name of the label.
-     *
      */
     public function getName(): string
     {
@@ -89,7 +83,6 @@ class Label extends \ArrayObject
     }
     /**
      * The name of the label.
-     *
      *
      * @return self
      */
@@ -111,7 +104,6 @@ class Label extends \ArrayObject
     }
     /**
      * 6-character hex code, without the leading #, identifying the color
-     *
      */
     public function getColor(): string
     {
@@ -119,7 +111,6 @@ class Label extends \ArrayObject
     }
     /**
      * 6-character hex code, without the leading #, identifying the color
-     *
      *
      * @return self
      */

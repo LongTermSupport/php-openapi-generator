@@ -19,22 +19,18 @@ class ListItemDeleteManyFilterRequest
     }
     /**
      * Filters the list items that need to be deleted.
-     *
      */
     protected mixed $filterRequest = null;
     /**
      * A value indicating whether references to the list item should be removed.
-     *
      */
     protected bool $forceReferenceRemoval;
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      */
     protected bool $notifyProgress;
     /**
      * Filters the list items that need to be deleted.
-     *
      */
     public function getFilterRequest(): mixed
     {
@@ -42,7 +38,6 @@ class ListItemDeleteManyFilterRequest
     }
     /**
      * Filters the list items that need to be deleted.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class ListItemDeleteManyFilterRequest
     }
     /**
      * A value indicating whether references to the list item should be removed.
-     *
      */
     public function getForceReferenceRemoval(): bool
     {
@@ -62,7 +56,6 @@ class ListItemDeleteManyFilterRequest
     }
     /**
      * A value indicating whether references to the list item should be removed.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class ListItemDeleteManyFilterRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -82,7 +74,6 @@ class ListItemDeleteManyFilterRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      *
      * @return self
      */

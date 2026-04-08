@@ -99,7 +99,6 @@ class RepoSearchResultItem extends \ArrayObject
     protected bool $archived;
     /**
      * Returns whether or not this repository disabled.
-     *
      */
     protected bool $disabled;
     protected ?RepoSearchResultItemLicense $license = null;
@@ -863,7 +862,6 @@ class RepoSearchResultItem extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
      */
     public function getDisabled(): bool
     {
@@ -871,7 +869,6 @@ class RepoSearchResultItem extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
      *
      * @return self
      */

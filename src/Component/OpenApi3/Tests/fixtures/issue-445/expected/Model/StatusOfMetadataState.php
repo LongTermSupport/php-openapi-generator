@@ -20,7 +20,6 @@ class StatusOfMetadataState
     protected ?string $id = null;
     /**
      * The state of the contents and list items
-     *
      */
     protected string $state;
     public function getId(): ?string
@@ -35,7 +34,6 @@ class StatusOfMetadataState
     }
     /**
      * The state of the contents and list items
-     *
      */
     public function getState(): string
     {
@@ -43,7 +41,6 @@ class StatusOfMetadataState
     }
     /**
      * The state of the contents and list items
-     *
      *
      * @return self
      */

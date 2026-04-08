@@ -24,7 +24,6 @@ class ResourceNotFoundProblem extends \ArrayObject
     protected string $parameter;
     /**
      * Value will match the schema of the field.
-     *
      */
     protected mixed $value = null;
     protected string $resourceType;
@@ -52,7 +51,6 @@ class ResourceNotFoundProblem extends \ArrayObject
     }
     /**
      * Value will match the schema of the field.
-     *
      */
     public function getValue(): mixed
     {
@@ -60,7 +58,6 @@ class ResourceNotFoundProblem extends \ArrayObject
     }
     /**
      * Value will match the schema of the field.
-     *
      *
      * @return self
      */

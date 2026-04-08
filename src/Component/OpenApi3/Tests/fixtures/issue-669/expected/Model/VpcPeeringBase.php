@@ -22,22 +22,18 @@ class VpcPeeringBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
      */
     protected string $id;
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The current status of the VPC peering.
-     *
      */
     protected string $status;
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class VpcPeeringBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class VpcPeeringBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -65,7 +59,6 @@ class VpcPeeringBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class VpcPeeringBase extends \ArrayObject
     }
     /**
      * The current status of the VPC peering.
-     *
      */
     public function getStatus(): string
     {
@@ -85,7 +77,6 @@ class VpcPeeringBase extends \ArrayObject
     }
     /**
      * The current status of the VPC peering.
-     *
      *
      * @return self
      */

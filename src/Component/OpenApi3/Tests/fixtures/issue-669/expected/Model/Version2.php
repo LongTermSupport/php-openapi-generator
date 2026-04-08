@@ -22,12 +22,10 @@ class Version2 extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      */
     protected string $version;
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      */
     public function getVersion(): string
     {
@@ -35,7 +33,6 @@ class Version2 extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      *
      * @return self
      */

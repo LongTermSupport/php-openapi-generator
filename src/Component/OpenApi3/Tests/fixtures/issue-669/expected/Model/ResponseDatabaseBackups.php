@@ -27,7 +27,6 @@ class ResponseDatabaseBackups extends \ArrayObject
     protected ResponseDatabaseBackupsScheduledBackupTime $scheduledBackupTime;
     /**
      * If a backup is currently in progress, this attribute shows the percentage of completion. If no backup is in progress, this attribute will be hidden.
-     *
      */
     protected string $backupProgress;
     /**
@@ -60,7 +59,6 @@ class ResponseDatabaseBackups extends \ArrayObject
     }
     /**
      * If a backup is currently in progress, this attribute shows the percentage of completion. If no backup is in progress, this attribute will be hidden.
-     *
      */
     public function getBackupProgress(): string
     {
@@ -68,7 +66,6 @@ class ResponseDatabaseBackups extends \ArrayObject
     }
     /**
      * If a backup is currently in progress, this attribute shows the percentage of completion. If no backup is in progress, this attribute will be hidden.
-     *
      *
      * @return self
      */

@@ -24,69 +24,58 @@ class Account extends \ArrayObject
      * The total number of Droplets current user or team may have active at one time.
      * <br><br>Requires `droplet:read` scope.
      * 
-     *
      */
     protected int $dropletLimit;
     /**
      * The total number of Floating IPs the current user or team may have.
      * <br><br>Requires `reserved_ip:read` scope.
      * 
-     *
      */
     protected int $floatingIpLimit;
     /**
      * The email address used by the current user to register for DigitalOcean.
-     *
      */
     protected string $email;
     /**
      * The display name for the current user.
-     *
      */
     protected string $name;
     /**
      * The unique universal identifier for the current user.
-     *
      */
     protected string $uuid;
     /**
      * If true, the user has verified their account via email. False otherwise.
-     *
      */
     protected bool $emailVerified = false;
     /**
      * This value is one of "active", "warning" or "locked".
-     *
      */
     protected string $status = 'active';
     /**
      * A human-readable message giving more details about the status of the account.
-     *
      */
     protected string $statusMessage;
     /**
      * When authorized in a team context, includes information about the current team.
-     *
      */
     protected AccountTeam $team;
     /**
      * The total number of Droplets current user or team may have active at one time.
      * <br><br>Requires `droplet:read` scope.
      * 
-     *
      */
     public function getDropletLimit(): int
     {
         return $this->dropletLimit;
     }
     /**
-    * The total number of Droplets current user or team may have active at one time.
-    <br><br>Requires `droplet:read` scope.
-    
-    *
-    *
-    * @return self
-    */
+     * The total number of Droplets current user or team may have active at one time.
+     * <br><br>Requires `droplet:read` scope.
+     * 
+     *
+     * @return self
+     */
     public function setDropletLimit(int $dropletLimit): self
     {
         $this->initialized['dropletLimit'] = true;
@@ -97,20 +86,18 @@ class Account extends \ArrayObject
      * The total number of Floating IPs the current user or team may have.
      * <br><br>Requires `reserved_ip:read` scope.
      * 
-     *
      */
     public function getFloatingIpLimit(): int
     {
         return $this->floatingIpLimit;
     }
     /**
-    * The total number of Floating IPs the current user or team may have.
-    <br><br>Requires `reserved_ip:read` scope.
-    
-    *
-    *
-    * @return self
-    */
+     * The total number of Floating IPs the current user or team may have.
+     * <br><br>Requires `reserved_ip:read` scope.
+     * 
+     *
+     * @return self
+     */
     public function setFloatingIpLimit(int $floatingIpLimit): self
     {
         $this->initialized['floatingIpLimit'] = true;
@@ -119,7 +106,6 @@ class Account extends \ArrayObject
     }
     /**
      * The email address used by the current user to register for DigitalOcean.
-     *
      */
     public function getEmail(): string
     {
@@ -127,7 +113,6 @@ class Account extends \ArrayObject
     }
     /**
      * The email address used by the current user to register for DigitalOcean.
-     *
      *
      * @return self
      */
@@ -139,7 +124,6 @@ class Account extends \ArrayObject
     }
     /**
      * The display name for the current user.
-     *
      */
     public function getName(): string
     {
@@ -147,7 +131,6 @@ class Account extends \ArrayObject
     }
     /**
      * The display name for the current user.
-     *
      *
      * @return self
      */
@@ -159,7 +142,6 @@ class Account extends \ArrayObject
     }
     /**
      * The unique universal identifier for the current user.
-     *
      */
     public function getUuid(): string
     {
@@ -167,7 +149,6 @@ class Account extends \ArrayObject
     }
     /**
      * The unique universal identifier for the current user.
-     *
      *
      * @return self
      */
@@ -179,7 +160,6 @@ class Account extends \ArrayObject
     }
     /**
      * If true, the user has verified their account via email. False otherwise.
-     *
      */
     public function getEmailVerified(): bool
     {
@@ -187,7 +167,6 @@ class Account extends \ArrayObject
     }
     /**
      * If true, the user has verified their account via email. False otherwise.
-     *
      *
      * @return self
      */
@@ -199,7 +178,6 @@ class Account extends \ArrayObject
     }
     /**
      * This value is one of "active", "warning" or "locked".
-     *
      */
     public function getStatus(): string
     {
@@ -207,7 +185,6 @@ class Account extends \ArrayObject
     }
     /**
      * This value is one of "active", "warning" or "locked".
-     *
      *
      * @return self
      */
@@ -219,7 +196,6 @@ class Account extends \ArrayObject
     }
     /**
      * A human-readable message giving more details about the status of the account.
-     *
      */
     public function getStatusMessage(): string
     {
@@ -227,7 +203,6 @@ class Account extends \ArrayObject
     }
     /**
      * A human-readable message giving more details about the status of the account.
-     *
      *
      * @return self
      */
@@ -239,7 +214,6 @@ class Account extends \ArrayObject
     }
     /**
      * When authorized in a team context, includes information about the current team.
-     *
      */
     public function getTeam(): AccountTeam
     {
@@ -247,7 +221,6 @@ class Account extends \ArrayObject
     }
     /**
      * When authorized in a team context, includes information about the current team.
-     *
      *
      * @return self
      */

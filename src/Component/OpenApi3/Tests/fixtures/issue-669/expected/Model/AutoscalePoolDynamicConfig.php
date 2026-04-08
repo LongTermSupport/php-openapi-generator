@@ -22,32 +22,26 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The minimum number of Droplets in an autoscale pool.
-     *
      */
     protected int $minInstances;
     /**
      * The maximum number of Droplets in an autoscale pool.
-     *
      */
     protected int $maxInstances;
     /**
      * Target CPU utilization as a decimal.
-     *
      */
     protected float $targetCpuUtilization;
     /**
      * Target memory utilization as a decimal.
-     *
      */
     protected float $targetMemoryUtilization;
     /**
      * The number of minutes to wait between scaling events in an autoscale pool. Defaults to 10 minutes.
-     *
      */
     protected int $cooldownMinutes;
     /**
      * The minimum number of Droplets in an autoscale pool.
-     *
      */
     public function getMinInstances(): int
     {
@@ -55,7 +49,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The minimum number of Droplets in an autoscale pool.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The maximum number of Droplets in an autoscale pool.
-     *
      */
     public function getMaxInstances(): int
     {
@@ -75,7 +67,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The maximum number of Droplets in an autoscale pool.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * Target CPU utilization as a decimal.
-     *
      */
     public function getTargetCpuUtilization(): float
     {
@@ -95,7 +85,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * Target CPU utilization as a decimal.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * Target memory utilization as a decimal.
-     *
      */
     public function getTargetMemoryUtilization(): float
     {
@@ -115,7 +103,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * Target memory utilization as a decimal.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The number of minutes to wait between scaling events in an autoscale pool. Defaults to 10 minutes.
-     *
      */
     public function getCooldownMinutes(): int
     {
@@ -135,7 +121,6 @@ class AutoscalePoolDynamicConfig extends \ArrayObject
     }
     /**
      * The number of minutes to wait between scaling events in an autoscale pool. Defaults to 10 minutes.
-     *
      *
      * @return self
      */

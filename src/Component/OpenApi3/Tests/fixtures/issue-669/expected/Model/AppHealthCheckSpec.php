@@ -22,42 +22,34 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of failed health checks before considered unhealthy.
-     *
      */
     protected int $failureThreshold;
     /**
      * The port on which the health check will be performed.
-     *
      */
     protected int $port;
     /**
      * The route path used for the HTTP health check ping. If not set, the HTTP health check will be disabled and a TCP health check used instead.
-     *
      */
     protected string $httpPath;
     /**
      * The number of seconds to wait before beginning health checks.
-     *
      */
     protected int $initialDelaySeconds;
     /**
      * The number of seconds to wait between health checks.
-     *
      */
     protected int $periodSeconds;
     /**
      * The number of successful health checks before considered healthy.
-     *
      */
     protected int $successThreshold;
     /**
      * The number of seconds after which the check times out.
-     *
      */
     protected int $timeoutSeconds;
     /**
      * The number of failed health checks before considered unhealthy.
-     *
      */
     public function getFailureThreshold(): int
     {
@@ -65,7 +57,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of failed health checks before considered unhealthy.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The port on which the health check will be performed.
-     *
      */
     public function getPort(): int
     {
@@ -85,7 +75,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The port on which the health check will be performed.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The route path used for the HTTP health check ping. If not set, the HTTP health check will be disabled and a TCP health check used instead.
-     *
      */
     public function getHttpPath(): string
     {
@@ -105,7 +93,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The route path used for the HTTP health check ping. If not set, the HTTP health check will be disabled and a TCP health check used instead.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds to wait before beginning health checks.
-     *
      */
     public function getInitialDelaySeconds(): int
     {
@@ -125,7 +111,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds to wait before beginning health checks.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds to wait between health checks.
-     *
      */
     public function getPeriodSeconds(): int
     {
@@ -145,7 +129,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds to wait between health checks.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of successful health checks before considered healthy.
-     *
      */
     public function getSuccessThreshold(): int
     {
@@ -165,7 +147,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of successful health checks before considered healthy.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds after which the check times out.
-     *
      */
     public function getTimeoutSeconds(): int
     {
@@ -185,7 +165,6 @@ class AppHealthCheckSpec extends \ArrayObject
     }
     /**
      * The number of seconds after which the check times out.
-     *
      *
      * @return self
      */

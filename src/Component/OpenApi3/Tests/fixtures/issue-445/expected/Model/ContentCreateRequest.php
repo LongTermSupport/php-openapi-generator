@@ -20,7 +20,6 @@ class ContentCreateRequest
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.
-     *
      */
     protected string $contentSchemaId;
     /**
@@ -54,25 +53,22 @@ class ContentCreateRequest
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     protected ?string $requestId = null;
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be Content.
      * The schema specifies the structure of the Content dictionary.
-     *
      */
     public function getContentSchemaId(): string
     {
         return $this->contentSchemaId;
     }
     /**
-    * The ID of the content schema. The SchemaType of the specified schema must be Content.
-    The schema specifies the structure of the Content dictionary.
-    *
-    *
-    * @return self
-    */
+     * The ID of the content schema. The SchemaType of the specified schema must be Content.
+     * The schema specifies the structure of the Content dictionary.
+     *
+     * @return self
+     */
     public function setContentSchemaId(string $contentSchemaId): self
     {
         $this->initialized['contentSchemaId'] = true;
@@ -90,13 +86,13 @@ class ContentCreateRequest
         return $this->layerSchemaIds;
     }
     /**
-    * An optional list of IDs of the schemas that form the layers of the content.
-    The SchemaType of the specified schemas must be Layer.
-    *
-    * @param list<string>|null $layerSchemaIds
-    *
-    * @return self
-    */
+     * An optional list of IDs of the schemas that form the layers of the content.
+     * The SchemaType of the specified schemas must be Layer.
+     *
+     * @param list<string>|null $layerSchemaIds
+     *
+     * @return self
+     */
     public function setLayerSchemaIds(?array $layerSchemaIds): self
     {
         $this->initialized['layerSchemaIds'] = true;
@@ -137,14 +133,14 @@ class ContentCreateRequest
         return $this->metadata;
     }
     /**
-    * The dynamic data structure matching the field schematics of the schemas with type layer (LayerSchemaIds).
-    The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
-    by the LayerSchemaIds property.
-    *
-    * @param array<string, mixed>|null $metadata
-    *
-    * @return self
-    */
+     * The dynamic data structure matching the field schematics of the schemas with type layer (LayerSchemaIds).
+     * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
+     * by the LayerSchemaIds property.
+     *
+     * @param array<string, mixed>|null $metadata
+     *
+     * @return self
+     */
     public function setMetadata(?array $metadata): self
     {
         $this->initialized['metadata'] = true;
@@ -177,20 +173,18 @@ class ContentCreateRequest
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     public function getRequestId(): ?string
     {
         return $this->requestId;
     }
     /**
-    * Optional client reference for this request.
-    Will be returned back in response to make easier for clients to match request items with the respective results.
-    It is not persisted anywhere and it is ignored in single operations.
-    *
-    *
-    * @return self
-    */
+     * Optional client reference for this request.
+     * Will be returned back in response to make easier for clients to match request items with the respective results.
+     * It is not persisted anywhere and it is ignored in single operations.
+     *
+     * @return self
+     */
     public function setRequestId(?string $requestId): self
     {
         $this->initialized['requestId'] = true;

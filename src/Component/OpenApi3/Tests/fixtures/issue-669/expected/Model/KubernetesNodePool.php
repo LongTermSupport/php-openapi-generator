@@ -22,22 +22,18 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
      */
     protected string $size;
     /**
      * A unique ID that can be used to identify and reference a specific node pool.
-     *
      */
     protected string $id;
     /**
      * A human-readable name for the node pool.
-     *
      */
     protected string $name;
     /**
      * The number of Droplet instances in the node pool.
-     *
      */
     protected int $count;
     /**
@@ -60,17 +56,14 @@ class KubernetesNodePool extends \ArrayObject
     protected array $taints;
     /**
      * A boolean value indicating whether auto-scaling is enabled for this node pool.
-     *
      */
     protected bool $autoScale;
     /**
      * The minimum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
      */
     protected int $minNodes;
     /**
      * The maximum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
      */
     protected int $maxNodes;
     /**
@@ -81,7 +74,6 @@ class KubernetesNodePool extends \ArrayObject
     protected array $nodes;
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
      */
     public function getSize(): string
     {
@@ -89,7 +81,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
      *
      * @return self
      */
@@ -101,7 +92,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a specific node pool.
-     *
      */
     public function getId(): string
     {
@@ -109,7 +99,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a specific node pool.
-     *
      *
      * @return self
      */
@@ -121,7 +110,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * A human-readable name for the node pool.
-     *
      */
     public function getName(): string
     {
@@ -129,7 +117,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * A human-readable name for the node pool.
-     *
      *
      * @return self
      */
@@ -141,7 +128,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The number of Droplet instances in the node pool.
-     *
      */
     public function getCount(): int
     {
@@ -149,7 +135,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The number of Droplet instances in the node pool.
-     *
      *
      * @return self
      */
@@ -227,7 +212,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * A boolean value indicating whether auto-scaling is enabled for this node pool.
-     *
      */
     public function getAutoScale(): bool
     {
@@ -235,7 +219,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * A boolean value indicating whether auto-scaling is enabled for this node pool.
-     *
      *
      * @return self
      */
@@ -247,7 +230,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The minimum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
      */
     public function getMinNodes(): int
     {
@@ -255,7 +237,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The minimum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
      *
      * @return self
      */
@@ -267,7 +248,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The maximum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
      */
     public function getMaxNodes(): int
     {
@@ -275,7 +255,6 @@ class KubernetesNodePool extends \ArrayObject
     }
     /**
      * The maximum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
-     *
      *
      * @return self
      */

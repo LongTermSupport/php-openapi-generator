@@ -22,12 +22,10 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Language specific schema names.
-     *
      */
     protected mixed $names = null;
     /**
      * Language specific schema descriptions.
-     *
      */
     protected mixed $descriptions = null;
     /**
@@ -65,7 +63,6 @@ class SchemaUpdateItem extends \ArrayObject
     protected ?array $sort = null;
     /**
      * Defines a schema as viewable by everyone. Everyone with ManageSchema user permission is able to see the schema.
-     *
      */
     protected bool $viewForAll;
     /**
@@ -89,12 +86,10 @@ class SchemaUpdateItem extends \ArrayObject
     protected ?array $referencedInContentSchemaIds = null;
     /**
      * Id of the schema to update
-     *
      */
     protected string $id;
     /**
      * Language specific schema names.
-     *
      */
     public function getNames(): mixed
     {
@@ -102,7 +97,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Language specific schema names.
-     *
      *
      * @return self
      */
@@ -114,7 +108,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Language specific schema descriptions.
-     *
      */
     public function getDescriptions(): mixed
     {
@@ -122,7 +115,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Language specific schema descriptions.
-     *
      *
      * @return self
      */
@@ -187,13 +179,13 @@ class SchemaUpdateItem extends \ArrayObject
         return $this->fieldsOverwrite;
     }
     /**
-    * A list of schema fields overwrite information. It is used to overwrite the field configuration coming from the parent schema.
-    Only a subset of properties of a FieldSingleTagbox and FieldMultiTagbox can be be overwritten. All other properties and fields cannot.
-    *
-    * @param list<FieldOverwriteBase>|null $fieldsOverwrite
-    *
-    * @return self
-    */
+     * A list of schema fields overwrite information. It is used to overwrite the field configuration coming from the parent schema.
+     * Only a subset of properties of a FieldSingleTagbox and FieldMultiTagbox can be be overwritten. All other properties and fields cannot.
+     *
+     * @param list<FieldOverwriteBase>|null $fieldsOverwrite
+     *
+     * @return self
+     */
     public function setFieldsOverwrite(?array $fieldsOverwrite): self
     {
         $this->initialized['fieldsOverwrite'] = true;
@@ -211,13 +203,13 @@ class SchemaUpdateItem extends \ArrayObject
         return $this->aggregations;
     }
     /**
-    * An optional list of aggregations to show grouped list item documents. When aggregations are defined for a List,
-    the UI uses such information to show the available filters and grouped results.
-    *
-    * @param list<AggregatorBase>|null $aggregations
-    *
-    * @return self
-    */
+     * An optional list of aggregations to show grouped list item documents. When aggregations are defined for a List,
+     * the UI uses such information to show the available filters and grouped results.
+     *
+     * @param list<AggregatorBase>|null $aggregations
+     *
+     * @return self
+     */
     public function setAggregations(?array $aggregations): self
     {
         $this->initialized['aggregations'] = true;
@@ -235,13 +227,13 @@ class SchemaUpdateItem extends \ArrayObject
         return $this->sort;
     }
     /**
-    * Sorts content documents and/or list items. In order for the sorting to work properly, the Sortable property of the related field
-    must be set to true. Multiple sorting is supported: they are applied in the specified order.
-    *
-    * @param list<SortInfo>|null $sort
-    *
-    * @return self
-    */
+     * Sorts content documents and/or list items. In order for the sorting to work properly, the Sortable property of the related field
+     * must be set to true. Multiple sorting is supported: they are applied in the specified order.
+     *
+     * @param list<SortInfo>|null $sort
+     *
+     * @return self
+     */
     public function setSort(?array $sort): self
     {
         $this->initialized['sort'] = true;
@@ -250,7 +242,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Defines a schema as viewable by everyone. Everyone with ManageSchema user permission is able to see the schema.
-     *
      */
     public function getViewForAll(): bool
     {
@@ -258,7 +249,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Defines a schema as viewable by everyone. Everyone with ManageSchema user permission is able to see the schema.
-     *
      *
      * @return self
      */
@@ -323,13 +313,13 @@ class SchemaUpdateItem extends \ArrayObject
         return $this->referencedInContentSchemaIds;
     }
     /**
-    * If the schema if of type Layer, the list contains the schemas with type Content
-    that reference the layer.
-    *
-    * @param list<string>|null $referencedInContentSchemaIds
-    *
-    * @return self
-    */
+     * If the schema if of type Layer, the list contains the schemas with type Content
+     * that reference the layer.
+     *
+     * @param list<string>|null $referencedInContentSchemaIds
+     *
+     * @return self
+     */
     public function setReferencedInContentSchemaIds(?array $referencedInContentSchemaIds): self
     {
         $this->initialized['referencedInContentSchemaIds'] = true;
@@ -338,7 +328,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Id of the schema to update
-     *
      */
     public function getId(): string
     {
@@ -346,7 +335,6 @@ class SchemaUpdateItem extends \ArrayObject
     }
     /**
      * Id of the schema to update
-     *
      *
      * @return self
      */

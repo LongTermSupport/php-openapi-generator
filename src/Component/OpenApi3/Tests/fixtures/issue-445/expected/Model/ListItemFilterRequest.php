@@ -19,17 +19,14 @@ class ListItemFilterRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
      * An optional filter to limit the list items.
-     *
      */
     protected mixed $filter = null;
     /**
      * Broadens the search to include all schema descendant list items.
-     *
      */
     protected bool $includeAllSchemaChildren;
     /**
@@ -47,12 +44,10 @@ class ListItemFilterRequest
     protected ?array $searchLanguages = null;
     /**
      * Limits the search to the list items that have or not have broken references. By default it includes both.
-     *
      */
     protected mixed $brokenDependenciesFilter = 'All';
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -60,7 +55,6 @@ class ListItemFilterRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -72,7 +66,6 @@ class ListItemFilterRequest
     }
     /**
      * An optional filter to limit the list items.
-     *
      */
     public function getFilter(): mixed
     {
@@ -80,7 +73,6 @@ class ListItemFilterRequest
     }
     /**
      * An optional filter to limit the list items.
-     *
      *
      * @return self
      */
@@ -92,7 +84,6 @@ class ListItemFilterRequest
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
      */
     public function getIncludeAllSchemaChildren(): bool
     {
@@ -100,7 +91,6 @@ class ListItemFilterRequest
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
      *
      * @return self
      */
@@ -143,13 +133,13 @@ class ListItemFilterRequest
         return $this->searchLanguages;
     }
     /**
-    * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
-    If not specified, all metadata languages defined in the system are used.
-    *
-    * @param list<string>|null $searchLanguages
-    *
-    * @return self
-    */
+     * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
+     * If not specified, all metadata languages defined in the system are used.
+     *
+     * @param list<string>|null $searchLanguages
+     *
+     * @return self
+     */
     public function setSearchLanguages(?array $searchLanguages): self
     {
         $this->initialized['searchLanguages'] = true;
@@ -158,7 +148,6 @@ class ListItemFilterRequest
     }
     /**
      * Limits the search to the list items that have or not have broken references. By default it includes both.
-     *
      */
     public function getBrokenDependenciesFilter(): mixed
     {
@@ -166,7 +155,6 @@ class ListItemFilterRequest
     }
     /**
      * Limits the search to the list items that have or not have broken references. By default it includes both.
-     *
      *
      * @return self
      */

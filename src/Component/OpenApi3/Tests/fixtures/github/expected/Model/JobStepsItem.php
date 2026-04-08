@@ -22,33 +22,27 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
      */
     protected string $status;
     /**
      * The outcome of the job.
-     *
      */
     protected ?string $conclusion = null;
     /**
      * The name of the job.
-     *
      */
     protected string $name;
     protected int $number;
     /**
      * The time that the step started, in ISO 8601 format.
-     *
      */
     protected ?\DateTime $startedAt = null;
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
      */
     protected ?\DateTime $completedAt = null;
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
      */
     public function getStatus(): string
     {
@@ -56,7 +50,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The outcome of the job.
-     *
      */
     public function getConclusion(): ?string
     {
@@ -76,7 +68,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The outcome of the job.
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The name of the job.
-     *
      */
     public function getName(): string
     {
@@ -96,7 +86,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The name of the job.
-     *
      *
      * @return self
      */
@@ -118,7 +107,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The time that the step started, in ISO 8601 format.
-     *
      */
     public function getStartedAt(): ?\DateTime
     {
@@ -126,7 +114,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The time that the step started, in ISO 8601 format.
-     *
      *
      * @return self
      */
@@ -138,7 +125,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
      */
     public function getCompletedAt(): ?\DateTime
     {
@@ -146,7 +132,6 @@ class JobStepsItem extends \ArrayObject
     }
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
      *
      * @return self
      */

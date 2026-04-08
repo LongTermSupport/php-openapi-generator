@@ -22,17 +22,14 @@ class UserEmailVisibilityPatchBody extends \ArrayObject
     }
     /**
      * An email address associated with the GitHub user account to manage.
-     *
      */
     protected string $email;
     /**
      * Denotes whether an email is publically visible.
-     *
      */
     protected string $visibility;
     /**
      * An email address associated with the GitHub user account to manage.
-     *
      */
     public function getEmail(): string
     {
@@ -40,7 +37,6 @@ class UserEmailVisibilityPatchBody extends \ArrayObject
     }
     /**
      * An email address associated with the GitHub user account to manage.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class UserEmailVisibilityPatchBody extends \ArrayObject
     }
     /**
      * Denotes whether an email is publically visible.
-     *
      */
     public function getVisibility(): string
     {
@@ -60,7 +55,6 @@ class UserEmailVisibilityPatchBody extends \ArrayObject
     }
     /**
      * Denotes whether an email is publically visible.
-     *
      *
      * @return self
      */

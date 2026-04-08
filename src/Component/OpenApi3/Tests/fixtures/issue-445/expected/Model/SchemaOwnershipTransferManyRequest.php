@@ -25,7 +25,6 @@ class SchemaOwnershipTransferManyRequest
     protected ?array $schemaIds = null;
     /**
      * The id of user to whom the schemas have to be transferred to.
-     *
      */
     protected ?string $transferUserId = null;
     /**
@@ -52,7 +51,6 @@ class SchemaOwnershipTransferManyRequest
     }
     /**
      * The id of user to whom the schemas have to be transferred to.
-     *
      */
     public function getTransferUserId(): ?string
     {
@@ -60,7 +58,6 @@ class SchemaOwnershipTransferManyRequest
     }
     /**
      * The id of user to whom the schemas have to be transferred to.
-     *
      *
      * @return self
      */

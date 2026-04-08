@@ -24,7 +24,6 @@ class UserSettings extends \ArrayObject
      * For Postgres clusters, set to `true` for a user with replication rights.
      * This option is not currently supported for other database engines.
      * 
-     *
      */
     protected bool $pgAllowReplication;
     /**
@@ -41,27 +40,24 @@ class UserSettings extends \ArrayObject
     protected array $acl;
     /**
      * MongoDB-specific settings for the user. This option is not currently supported for other database engines.
-     *
      */
     protected UserSettingsMongoUserSettings $mongoUserSettings;
     /**
      * For Postgres clusters, set to `true` for a user with replication rights.
      * This option is not currently supported for other database engines.
      * 
-     *
      */
     public function getPgAllowReplication(): bool
     {
         return $this->pgAllowReplication;
     }
     /**
-    * For Postgres clusters, set to `true` for a user with replication rights.
-    This option is not currently supported for other database engines.
-    
-    *
-    *
-    * @return self
-    */
+     * For Postgres clusters, set to `true` for a user with replication rights.
+     * This option is not currently supported for other database engines.
+     * 
+     *
+     * @return self
+     */
     public function setPgAllowReplication(bool $pgAllowReplication): self
     {
         $this->initialized['pgAllowReplication'] = true;
@@ -114,7 +110,6 @@ class UserSettings extends \ArrayObject
     }
     /**
      * MongoDB-specific settings for the user. This option is not currently supported for other database engines.
-     *
      */
     public function getMongoUserSettings(): UserSettingsMongoUserSettings
     {
@@ -122,7 +117,6 @@ class UserSettings extends \ArrayObject
     }
     /**
      * MongoDB-specific settings for the user. This option is not currently supported for other database engines.
-     *
      *
      * @return self
      */

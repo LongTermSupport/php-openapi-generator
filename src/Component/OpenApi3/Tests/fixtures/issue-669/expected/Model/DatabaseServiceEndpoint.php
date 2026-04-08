@@ -22,17 +22,14 @@ class DatabaseServiceEndpoint extends \ArrayObject
     }
     /**
      * A FQDN pointing to the database cluster's node(s).
-     *
      */
     protected string $host;
     /**
      * The port on which a service is listening.
-     *
      */
     protected int $port;
     /**
      * A FQDN pointing to the database cluster's node(s).
-     *
      */
     public function getHost(): string
     {
@@ -40,7 +37,6 @@ class DatabaseServiceEndpoint extends \ArrayObject
     }
     /**
      * A FQDN pointing to the database cluster's node(s).
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DatabaseServiceEndpoint extends \ArrayObject
     }
     /**
      * The port on which a service is listening.
-     *
      */
     public function getPort(): int
     {
@@ -60,7 +55,6 @@ class DatabaseServiceEndpoint extends \ArrayObject
     }
     /**
      * The port on which a service is listening.
-     *
      *
      * @return self
      */

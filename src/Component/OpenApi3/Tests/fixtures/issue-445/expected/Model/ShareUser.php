@@ -19,17 +19,14 @@ class ShareUser
     }
     /**
      * Name of user
-     *
      */
     protected string $displayName;
     /**
      * MD5 hash of email address. Can be used to display gravatar image
-     *
      */
     protected string $emailHash;
     /**
      * Name of user
-     *
      */
     public function getDisplayName(): string
     {
@@ -37,7 +34,6 @@ class ShareUser
     }
     /**
      * Name of user
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class ShareUser
     }
     /**
      * MD5 hash of email address. Can be used to display gravatar image
-     *
      */
     public function getEmailHash(): string
     {
@@ -57,7 +52,6 @@ class ShareUser
     }
     /**
      * MD5 hash of email address. Can be used to display gravatar image
-     *
      *
      * @return self
      */

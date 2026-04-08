@@ -22,12 +22,10 @@ class KubernetesNodePoolSize extends \ArrayObject
     }
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
      */
     protected string $size;
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
      */
     public function getSize(): string
     {
@@ -35,7 +33,6 @@ class KubernetesNodePoolSize extends \ArrayObject
     }
     /**
      * The slug identifier for the type of Droplet used as workers in the node pool.
-     *
      *
      * @return self
      */

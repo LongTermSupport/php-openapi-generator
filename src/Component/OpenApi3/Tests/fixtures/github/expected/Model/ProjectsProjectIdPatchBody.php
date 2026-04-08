@@ -22,32 +22,26 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * Name of the project
-     *
      */
     protected string $name;
     /**
      * Body of the project
-     *
      */
     protected ?string $body = null;
     /**
      * State of the project; either 'open' or 'closed'
-     *
      */
     protected string $state;
     /**
      * The baseline permission that all organization members have on this project
-     *
      */
     protected string $organizationPermission;
     /**
      * Whether or not this project can be seen by everyone.
-     *
      */
     protected bool $private;
     /**
      * Name of the project
-     *
      */
     public function getName(): string
     {
@@ -55,7 +49,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * Name of the project
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * Body of the project
-     *
      */
     public function getBody(): ?string
     {
@@ -75,7 +67,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * Body of the project
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * State of the project; either 'open' or 'closed'
-     *
      */
     public function getState(): string
     {
@@ -95,7 +85,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * State of the project; either 'open' or 'closed'
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * The baseline permission that all organization members have on this project
-     *
      */
     public function getOrganizationPermission(): string
     {
@@ -115,7 +103,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * The baseline permission that all organization members have on this project
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * Whether or not this project can be seen by everyone.
-     *
      */
     public function getPrivate(): bool
     {
@@ -135,7 +121,6 @@ class ProjectsProjectIdPatchBody extends \ArrayObject
     }
     /**
      * Whether or not this project can be seen by everyone.
-     *
      *
      * @return self
      */

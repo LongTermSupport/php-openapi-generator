@@ -22,17 +22,14 @@ class ImageActionTransfer extends \ArrayObject
     }
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
      */
     protected string $type;
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     protected string $region;
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class ImageActionTransfer extends \ArrayObject
     }
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ImageActionTransfer extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     public function getRegion(): string
     {
@@ -60,7 +55,6 @@ class ImageActionTransfer extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      *
      * @return self
      */

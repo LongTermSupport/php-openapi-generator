@@ -92,12 +92,10 @@ class FullRepository extends \ArrayObject
     protected bool $archived;
     /**
      * Returns whether or not this repository disabled.
-     *
      */
     protected bool $disabled;
     /**
      * The repository visibility: public, private, or internal.
-     *
      */
     protected string $visibility;
     protected \DateTime $pushedAt;
@@ -116,12 +114,10 @@ class FullRepository extends \ArrayObject
     protected ?FullRepositoryOrganization $organization = null;
     /**
      * A git repository
-     *
      */
     protected Repository $parent;
     /**
      * A git repository
-     *
      */
     protected Repository $source;
     protected int $forks;
@@ -130,7 +126,6 @@ class FullRepository extends \ArrayObject
     protected int $watchers;
     /**
      * Whether anonymous git access is allowed.
-     *
      */
     protected bool $anonymousAccessEnabled = true;
     public function getId(): int
@@ -813,7 +808,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
      */
     public function getDisabled(): bool
     {
@@ -821,7 +815,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
      *
      * @return self
      */
@@ -833,7 +826,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * The repository visibility: public, private, or internal.
-     *
      */
     public function getVisibility(): string
     {
@@ -841,7 +833,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * The repository visibility: public, private, or internal.
-     *
      *
      * @return self
      */
@@ -993,7 +984,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getParent(): Repository
     {
@@ -1001,7 +991,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */
@@ -1013,7 +1002,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getSource(): Repository
     {
@@ -1021,7 +1009,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */
@@ -1073,7 +1060,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * Whether anonymous git access is allowed.
-     *
      */
     public function getAnonymousAccessEnabled(): bool
     {
@@ -1081,7 +1067,6 @@ class FullRepository extends \ArrayObject
     }
     /**
      * Whether anonymous git access is allowed.
-     *
      *
      * @return self
      */

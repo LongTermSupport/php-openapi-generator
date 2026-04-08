@@ -26,14 +26,12 @@ class AuthorizationInstallation extends \ArrayObject
     protected array $permissions;
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      */
     protected string $repositorySelection;
     protected ?string $singleFileName = null;
     protected string $repositoriesUrl;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $account = null;
     /**
@@ -56,7 +54,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      */
     public function getRepositorySelection(): string
     {
@@ -64,7 +61,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      *
      * @return self
      */
@@ -96,7 +92,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getAccount(): ?SimpleUser
     {
@@ -104,7 +99,6 @@ class AuthorizationInstallation extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

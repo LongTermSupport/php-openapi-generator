@@ -27,12 +27,10 @@ class ParchmentJsonld extends \ArrayObject
     protected ?string $id2 = null;
     /**
      * The title of the book.
-     *
      */
     protected string $title;
     /**
      * A description of the item.
-     *
      */
     protected string $description;
     public function getContext(): mixed
@@ -77,7 +75,6 @@ class ParchmentJsonld extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      */
     public function getTitle(): string
     {
@@ -85,7 +82,6 @@ class ParchmentJsonld extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      *
      * @return self
      */
@@ -97,7 +93,6 @@ class ParchmentJsonld extends \ArrayObject
     }
     /**
      * A description of the item.
-     *
      */
     public function getDescription(): string
     {
@@ -105,7 +100,6 @@ class ParchmentJsonld extends \ArrayObject
     }
     /**
      * A description of the item.
-     *
      *
      * @return self
      */

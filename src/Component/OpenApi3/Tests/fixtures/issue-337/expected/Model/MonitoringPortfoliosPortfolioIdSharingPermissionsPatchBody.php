@@ -22,7 +22,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBody extends \ArrayO
     }
     /**
      * If set to "true", all user permissions will be revoked for the portfolio. By default set to "false".
-     *
      */
     protected string $revokeAll;
     /**
@@ -31,7 +30,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBody extends \ArrayO
     protected array $companies;
     /**
      * If set to "true", all user permissions will be revoked for the portfolio. By default set to "false".
-     *
      */
     public function getRevokeAll(): string
     {
@@ -39,7 +37,6 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBody extends \ArrayO
     }
     /**
      * If set to "true", all user permissions will be revoked for the portfolio. By default set to "false".
-     *
      *
      * @return self
      */

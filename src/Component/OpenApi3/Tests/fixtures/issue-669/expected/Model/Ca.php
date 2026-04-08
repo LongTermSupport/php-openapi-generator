@@ -22,12 +22,10 @@ class Ca extends \ArrayObject
     }
     /**
      * base64 encoding of the certificate used to secure database connections
-     *
      */
     protected string $certificate;
     /**
      * base64 encoding of the certificate used to secure database connections
-     *
      */
     public function getCertificate(): string
     {
@@ -35,7 +33,6 @@ class Ca extends \ArrayObject
     }
     /**
      * base64 encoding of the certificate used to secure database connections
-     *
      *
      * @return self
      */

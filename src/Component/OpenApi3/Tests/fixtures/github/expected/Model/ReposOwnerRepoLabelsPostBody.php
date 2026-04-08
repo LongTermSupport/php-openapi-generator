@@ -22,22 +22,18 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
      */
     protected string $name;
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
      */
     protected string $color;
     /**
      * A short description of the label.
-     *
      */
     protected string $description;
     /**
      * The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
      */
     public function getColor(): string
     {
@@ -65,7 +59,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * A short description of the label.
-     *
      */
     public function getDescription(): string
     {
@@ -85,7 +77,6 @@ class ReposOwnerRepoLabelsPostBody extends \ArrayObject
     }
     /**
      * A short description of the label.
-     *
      *
      * @return self
      */

@@ -19,7 +19,6 @@ class AssignLayerAction extends BusinessRuleAction
     }
     /**
      * The ID of the layer.
-     *
      */
     protected ?string $layerId = null;
     /**
@@ -30,7 +29,6 @@ class AssignLayerAction extends BusinessRuleAction
     protected ?array $defaultValues = null;
     /**
      * The ID of the layer.
-     *
      */
     public function getLayerId(): ?string
     {
@@ -38,7 +36,6 @@ class AssignLayerAction extends BusinessRuleAction
     }
     /**
      * The ID of the layer.
-     *
      *
      * @return self
      */

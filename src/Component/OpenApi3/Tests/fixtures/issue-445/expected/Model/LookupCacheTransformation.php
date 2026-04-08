@@ -19,12 +19,10 @@ class LookupCacheTransformation extends BusinessRuleTransformation
     }
     /**
      * Name of the cache to use.
-     *
      */
     protected ?string $namedCache = null;
     /**
      * Name of the cache to use.
-     *
      */
     public function getNamedCache(): ?string
     {
@@ -32,7 +30,6 @@ class LookupCacheTransformation extends BusinessRuleTransformation
     }
     /**
      * Name of the cache to use.
-     *
      *
      * @return self
      */

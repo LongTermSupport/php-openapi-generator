@@ -22,17 +22,14 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The title of the check run.
-     *
      */
     protected string $title;
     /**
      * The summary of the check run. This parameter supports Markdown.
-     *
      */
     protected string $summary;
     /**
      * The details of the check run. This parameter supports Markdown.
-     *
      */
     protected string $text;
     /**
@@ -49,7 +46,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     protected array $images;
     /**
      * The title of the check run.
-     *
      */
     public function getTitle(): string
     {
@@ -57,7 +53,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The title of the check run.
-     *
      *
      * @return self
      */
@@ -69,7 +64,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The summary of the check run. This parameter supports Markdown.
-     *
      */
     public function getSummary(): string
     {
@@ -77,7 +71,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The summary of the check run. This parameter supports Markdown.
-     *
      *
      * @return self
      */
@@ -89,7 +82,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The details of the check run. This parameter supports Markdown.
-     *
      */
     public function getText(): string
     {
@@ -97,7 +89,6 @@ class ReposOwnerRepoCheckRunsPostBodyOutput extends \ArrayObject
     }
     /**
      * The details of the check run. This parameter supports Markdown.
-     *
      *
      * @return self
      */

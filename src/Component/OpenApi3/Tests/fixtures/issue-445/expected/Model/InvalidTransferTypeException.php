@@ -31,7 +31,6 @@ class InvalidTransferTypeException extends \ArrayObject
     protected ?string $userId = null;
     /**
      * Type of the transfer
-     *
      */
     protected string $transferType;
     public function getTraceLevel(): string
@@ -126,7 +125,6 @@ class InvalidTransferTypeException extends \ArrayObject
     }
     /**
      * Type of the transfer
-     *
      */
     public function getTransferType(): string
     {
@@ -134,7 +132,6 @@ class InvalidTransferTypeException extends \ArrayObject
     }
     /**
      * Type of the transfer
-     *
      *
      * @return self
      */

@@ -23,7 +23,6 @@ class ApiUpdateEvaluationTestCaseOutput extends \ArrayObject
     protected string $testCaseUuid;
     /**
      * The new verson of the test case.
-     *
      */
     protected int $version;
     public function getTestCaseUuid(): string
@@ -38,7 +37,6 @@ class ApiUpdateEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * The new verson of the test case.
-     *
      */
     public function getVersion(): int
     {
@@ -46,7 +44,6 @@ class ApiUpdateEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * The new verson of the test case.
-     *
      *
      * @return self
      */

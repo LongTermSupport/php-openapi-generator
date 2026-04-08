@@ -22,12 +22,10 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberCommentsPostBody extends \A
     }
     /**
      * The discussion comment's body text.
-     *
      */
     protected string $body;
     /**
      * The discussion comment's body text.
-     *
      */
     public function getBody(): string
     {
@@ -35,7 +33,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberCommentsPostBody extends \A
     }
     /**
      * The discussion comment's body text.
-     *
      *
      * @return self
      */

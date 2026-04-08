@@ -19,22 +19,18 @@ class UserEmail
     }
     /**
      * First name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * Last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Email address
-     *
      */
     protected string $emailAddress;
     /**
      * First name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -42,7 +38,6 @@ class UserEmail
     }
     /**
      * First name.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class UserEmail
     }
     /**
      * Last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -62,7 +56,6 @@ class UserEmail
     }
     /**
      * Last name.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class UserEmail
     }
     /**
      * Email address
-     *
      */
     public function getEmailAddress(): string
     {
@@ -82,7 +74,6 @@ class UserEmail
     }
     /**
      * Email address
-     *
      *
      * @return self
      */

@@ -37,13 +37,11 @@ class App extends \ArrayObject
     protected AppPendingDeployment $pendingDeployment;
     /**
      * Requires `project:read` scope.
-     *
      */
     protected string $projectId;
     protected AppsRegion $region;
     /**
      * The desired configuration of an application.
-     *
      */
     protected AppSpec $spec;
     protected string $tierSlug;
@@ -184,7 +182,6 @@ class App extends \ArrayObject
     }
     /**
      * Requires `project:read` scope.
-     *
      */
     public function getProjectId(): string
     {
@@ -192,7 +189,6 @@ class App extends \ArrayObject
     }
     /**
      * Requires `project:read` scope.
-     *
      *
      * @return self
      */
@@ -214,7 +210,6 @@ class App extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      */
     public function getSpec(): AppSpec
     {
@@ -222,7 +217,6 @@ class App extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      *
      * @return self
      */

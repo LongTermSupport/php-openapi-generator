@@ -22,17 +22,14 @@ class ContentReferencesContentReferenceIdAttachmentsPostBody extends \ArrayObjec
     }
     /**
      * The title of the attachment
-     *
      */
     protected string $title;
     /**
      * The body of the attachment
-     *
      */
     protected string $body;
     /**
      * The title of the attachment
-     *
      */
     public function getTitle(): string
     {
@@ -40,7 +37,6 @@ class ContentReferencesContentReferenceIdAttachmentsPostBody extends \ArrayObjec
     }
     /**
      * The title of the attachment
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ContentReferencesContentReferenceIdAttachmentsPostBody extends \ArrayObjec
     }
     /**
      * The body of the attachment
-     *
      */
     public function getBody(): string
     {
@@ -60,7 +55,6 @@ class ContentReferencesContentReferenceIdAttachmentsPostBody extends \ArrayObjec
     }
     /**
      * The body of the attachment
-     *
      *
      * @return self
      */

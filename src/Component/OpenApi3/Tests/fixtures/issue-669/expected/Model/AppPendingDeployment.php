@@ -41,7 +41,6 @@ class AppPendingDeployment extends \ArrayObject
     protected array $services;
     /**
      * The desired configuration of an application.
-     *
      */
     protected AppSpec $spec;
     /**
@@ -180,7 +179,6 @@ class AppPendingDeployment extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      */
     public function getSpec(): AppSpec
     {
@@ -188,7 +186,6 @@ class AppPendingDeployment extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      *
      * @return self
      */

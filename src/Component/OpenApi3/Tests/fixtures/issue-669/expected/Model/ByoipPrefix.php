@@ -22,27 +22,22 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Unique identifier for the BYOIP prefix
-     *
      */
     protected string $uuid;
     /**
      * Name of the BYOIP prefix
-     *
      */
     protected string $name;
     /**
      * The IP prefix in CIDR notation
-     *
      */
     protected string $prefix;
     /**
      * Status of the BYOIP prefix
-     *
      */
     protected string $status;
     /**
      * Region where the BYOIP prefix is located
-     *
      */
     protected string $region;
     /**
@@ -53,27 +48,22 @@ class ByoipPrefix extends \ArrayObject
     protected array $validations;
     /**
      * Reason for failure, if applicable
-     *
      */
     protected string $failureReason;
     /**
      * Whether the BYOIP prefix is locked
-     *
      */
     protected bool $locked;
     /**
      * Whether the BYOIP prefix is being advertised
-     *
      */
     protected bool $advertised;
     /**
      * The ID of the project associated with the BYOIP prefix
-     *
      */
     protected string $projectId;
     /**
      * Unique identifier for the BYOIP prefix
-     *
      */
     public function getUuid(): string
     {
@@ -81,7 +71,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Unique identifier for the BYOIP prefix
-     *
      *
      * @return self
      */
@@ -93,7 +82,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Name of the BYOIP prefix
-     *
      */
     public function getName(): string
     {
@@ -101,7 +89,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Name of the BYOIP prefix
-     *
      *
      * @return self
      */
@@ -113,7 +100,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * The IP prefix in CIDR notation
-     *
      */
     public function getPrefix(): string
     {
@@ -121,7 +107,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * The IP prefix in CIDR notation
-     *
      *
      * @return self
      */
@@ -133,7 +118,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Status of the BYOIP prefix
-     *
      */
     public function getStatus(): string
     {
@@ -141,7 +125,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Status of the BYOIP prefix
-     *
      *
      * @return self
      */
@@ -153,7 +136,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Region where the BYOIP prefix is located
-     *
      */
     public function getRegion(): string
     {
@@ -161,7 +143,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Region where the BYOIP prefix is located
-     *
      *
      * @return self
      */
@@ -195,7 +176,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Reason for failure, if applicable
-     *
      */
     public function getFailureReason(): string
     {
@@ -203,7 +183,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Reason for failure, if applicable
-     *
      *
      * @return self
      */
@@ -215,7 +194,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix is locked
-     *
      */
     public function getLocked(): bool
     {
@@ -223,7 +201,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix is locked
-     *
      *
      * @return self
      */
@@ -235,7 +212,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix is being advertised
-     *
      */
     public function getAdvertised(): bool
     {
@@ -243,7 +219,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix is being advertised
-     *
      *
      * @return self
      */
@@ -255,7 +230,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * The ID of the project associated with the BYOIP prefix
-     *
      */
     public function getProjectId(): string
     {
@@ -263,7 +237,6 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * The ID of the project associated with the BYOIP prefix
-     *
      *
      * @return self
      */

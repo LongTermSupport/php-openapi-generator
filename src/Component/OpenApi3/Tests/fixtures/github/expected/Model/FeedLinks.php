@@ -22,37 +22,30 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $timeline;
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $user;
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $securityAdvisories;
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $currentUser;
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $currentUserPublic;
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $currentUserActor;
     /**
      * Hypermedia Link with Type
-     *
      */
     protected LinkWithType $currentUserOrganization;
     /**
@@ -61,7 +54,6 @@ class FeedLinks extends \ArrayObject
     protected array $currentUserOrganizations;
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getTimeline(): LinkWithType
     {
@@ -69,7 +61,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */
@@ -81,7 +72,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getUser(): LinkWithType
     {
@@ -89,7 +79,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */
@@ -101,7 +90,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getSecurityAdvisories(): LinkWithType
     {
@@ -109,7 +97,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */
@@ -121,7 +108,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getCurrentUser(): LinkWithType
     {
@@ -129,7 +115,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */
@@ -141,7 +126,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getCurrentUserPublic(): LinkWithType
     {
@@ -149,7 +133,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */
@@ -161,7 +144,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getCurrentUserActor(): LinkWithType
     {
@@ -169,7 +151,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */
@@ -181,7 +162,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      */
     public function getCurrentUserOrganization(): LinkWithType
     {
@@ -189,7 +169,6 @@ class FeedLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link with Type
-     *
      *
      * @return self
      */

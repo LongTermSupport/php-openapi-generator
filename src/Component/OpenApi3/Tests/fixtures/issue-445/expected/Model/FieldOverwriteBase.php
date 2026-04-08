@@ -19,24 +19,20 @@ class FieldOverwriteBase
     }
     /**
      * The field's ID whose information need to be overwritten.
-     *
      */
     protected ?string $id = null;
     /**
      * Defines if a field value is mandatory or not: this value will overwrite the existing Required value specified in the parent schema  if
      * OverwriteRequired is set to true.
-     *
      */
     protected bool $required;
     /**
      * Enable the overwriting of the Required property of the field specified by the Id property.
-     *
      */
     protected bool $overwriteRequired;
     protected string $kind;
     /**
      * The field's ID whose information need to be overwritten.
-     *
      */
     public function getId(): ?string
     {
@@ -44,7 +40,6 @@ class FieldOverwriteBase
     }
     /**
      * The field's ID whose information need to be overwritten.
-     *
      */
     public function setId(?string $id): void
     {
@@ -54,17 +49,15 @@ class FieldOverwriteBase
     /**
      * Defines if a field value is mandatory or not: this value will overwrite the existing Required value specified in the parent schema  if
      * OverwriteRequired is set to true.
-     *
      */
     public function getRequired(): bool
     {
         return $this->required;
     }
     /**
-    * Defines if a field value is mandatory or not: this value will overwrite the existing Required value specified in the parent schema  if
-    OverwriteRequired is set to true.
-    *
-    */
+     * Defines if a field value is mandatory or not: this value will overwrite the existing Required value specified in the parent schema  if
+     * OverwriteRequired is set to true.
+     */
     public function setRequired(bool $required): void
     {
         $this->initialized['required'] = true;
@@ -72,7 +65,6 @@ class FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the Required property of the field specified by the Id property.
-     *
      */
     public function getOverwriteRequired(): bool
     {
@@ -80,7 +72,6 @@ class FieldOverwriteBase
     }
     /**
      * Enable the overwriting of the Required property of the field specified by the Id property.
-     *
      */
     public function setOverwriteRequired(bool $overwriteRequired): void
     {

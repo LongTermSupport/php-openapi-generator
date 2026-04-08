@@ -19,33 +19,27 @@ class OutputDataBase
     }
     /**
      * The extension of the file.
-     *
      */
     protected ?string $fileExtension = null;
     /**
      * The path where the file is stored.
-     *
      */
     protected ?string $filePath = null;
     /**
      * The size of the file in bytes.
-     *
      */
     protected ?int $fileSizeInBytes = null;
     /**
      * The SHA-1 hash of the file.
-     *
      */
     protected ?string $sha1Hash = null;
     /**
      * The original filename of the file.
-     *
      */
     protected ?string $originalFileName = null;
     protected string $kind;
     /**
      * The extension of the file.
-     *
      */
     public function getFileExtension(): ?string
     {
@@ -53,7 +47,6 @@ class OutputDataBase
     }
     /**
      * The extension of the file.
-     *
      */
     public function setFileExtension(?string $fileExtension): void
     {
@@ -62,7 +55,6 @@ class OutputDataBase
     }
     /**
      * The path where the file is stored.
-     *
      */
     public function getFilePath(): ?string
     {
@@ -70,7 +62,6 @@ class OutputDataBase
     }
     /**
      * The path where the file is stored.
-     *
      */
     public function setFilePath(?string $filePath): void
     {
@@ -79,7 +70,6 @@ class OutputDataBase
     }
     /**
      * The size of the file in bytes.
-     *
      */
     public function getFileSizeInBytes(): ?int
     {
@@ -87,7 +77,6 @@ class OutputDataBase
     }
     /**
      * The size of the file in bytes.
-     *
      */
     public function setFileSizeInBytes(?int $fileSizeInBytes): void
     {
@@ -96,7 +85,6 @@ class OutputDataBase
     }
     /**
      * The SHA-1 hash of the file.
-     *
      */
     public function getSha1Hash(): ?string
     {
@@ -104,7 +92,6 @@ class OutputDataBase
     }
     /**
      * The SHA-1 hash of the file.
-     *
      */
     public function setSha1Hash(?string $sha1Hash): void
     {
@@ -113,7 +100,6 @@ class OutputDataBase
     }
     /**
      * The original filename of the file.
-     *
      */
     public function getOriginalFileName(): ?string
     {
@@ -121,7 +107,6 @@ class OutputDataBase
     }
     /**
      * The original filename of the file.
-     *
      */
     public function setOriginalFileName(?string $originalFileName): void
     {

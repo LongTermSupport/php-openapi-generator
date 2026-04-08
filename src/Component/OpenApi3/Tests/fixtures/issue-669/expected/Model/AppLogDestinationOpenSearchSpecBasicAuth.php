@@ -23,31 +23,27 @@ class AppLogDestinationOpenSearchSpecBasicAuth extends \ArrayObject
     /**
      * Username to authenticate with. Only required when `endpoint` is set.
      * Defaults to `doadmin` when `cluster_name` is set.
-     *
      */
     protected string $user;
     /**
      * Password for user defined in User. Is required when `endpoint` is set.
      * Cannot be set if using a DigitalOcean DBaaS OpenSearch cluster.
-     *
      */
     protected string $password;
     /**
      * Username to authenticate with. Only required when `endpoint` is set.
      * Defaults to `doadmin` when `cluster_name` is set.
-     *
      */
     public function getUser(): string
     {
         return $this->user;
     }
     /**
-    * Username to authenticate with. Only required when `endpoint` is set.
-    Defaults to `doadmin` when `cluster_name` is set.
-    *
-    *
-    * @return self
-    */
+     * Username to authenticate with. Only required when `endpoint` is set.
+     * Defaults to `doadmin` when `cluster_name` is set.
+     *
+     * @return self
+     */
     public function setUser(string $user): self
     {
         $this->initialized['user'] = true;
@@ -57,19 +53,17 @@ class AppLogDestinationOpenSearchSpecBasicAuth extends \ArrayObject
     /**
      * Password for user defined in User. Is required when `endpoint` is set.
      * Cannot be set if using a DigitalOcean DBaaS OpenSearch cluster.
-     *
      */
     public function getPassword(): string
     {
         return $this->password;
     }
     /**
-    * Password for user defined in User. Is required when `endpoint` is set.
-    Cannot be set if using a DigitalOcean DBaaS OpenSearch cluster.
-    *
-    *
-    * @return self
-    */
+     * Password for user defined in User. Is required when `endpoint` is set.
+     * Cannot be set if using a DigitalOcean DBaaS OpenSearch cluster.
+     *
+     * @return self
+     */
     public function setPassword(string $password): self
     {
         $this->initialized['password'] = true;

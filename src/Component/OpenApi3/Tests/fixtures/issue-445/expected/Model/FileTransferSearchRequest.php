@@ -19,7 +19,6 @@ class FileTransferSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -30,22 +29,18 @@ class FileTransferSearchRequest
     protected ?array $searchBehaviors = null;
     /**
      * Limits the document count of the result set.
-     *
      */
     protected int $limit = 30;
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     protected mixed $filter = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -53,7 +48,6 @@ class FileTransferSearchRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -87,7 +81,6 @@ class FileTransferSearchRequest
     }
     /**
      * Limits the document count of the result set.
-     *
      */
     public function getLimit(): int
     {
@@ -95,7 +88,6 @@ class FileTransferSearchRequest
     }
     /**
      * Limits the document count of the result set.
-     *
      *
      * @return self
      */
@@ -107,7 +99,6 @@ class FileTransferSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -115,7 +106,6 @@ class FileTransferSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      *
      * @return self
      */
@@ -127,7 +117,6 @@ class FileTransferSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -135,7 +124,6 @@ class FileTransferSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      *
      * @return self
      */

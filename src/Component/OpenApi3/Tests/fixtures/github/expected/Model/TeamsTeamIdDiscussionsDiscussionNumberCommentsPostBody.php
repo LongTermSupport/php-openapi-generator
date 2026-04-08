@@ -22,12 +22,10 @@ class TeamsTeamIdDiscussionsDiscussionNumberCommentsPostBody extends \ArrayObjec
     }
     /**
      * The discussion comment's body text.
-     *
      */
     protected string $body;
     /**
      * The discussion comment's body text.
-     *
      */
     public function getBody(): string
     {
@@ -35,7 +33,6 @@ class TeamsTeamIdDiscussionsDiscussionNumberCommentsPostBody extends \ArrayObjec
     }
     /**
      * The discussion comment's body text.
-     *
      *
      * @return self
      */

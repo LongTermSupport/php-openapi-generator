@@ -22,22 +22,18 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The name(s) to be applied to all Droplets in the autoscale pool.
-     *
      */
     protected string $name;
     /**
      * The datacenter in which all of the Droplets will be created.
-     *
      */
     protected string $region;
     /**
      * The Droplet size to be used for all Droplets in the autoscale pool.
-     *
      */
     protected string $size;
     /**
      * The Droplet image to be used for all Droplets in the autoscale pool. You may specify the slug or the image ID.
-     *
      */
     protected string $image;
     /**
@@ -60,34 +56,28 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The VPC where the Droplets in the autoscale pool will be created. The VPC must be in the region where you want to create the Droplets.
      * Requires `vpc:read` scope.
      * 
-     *
      */
     protected string $vpcUuid;
     /**
      * Installs the Droplet agent. This must be set to true to monitor Droplets for resource utilization scaling.
-     *
      */
     protected bool $withDropletAgent;
     /**
      * The project that the Droplets in the autoscale pool will belong to.
      * Requires `project:read` scope.
      * 
-     *
      */
     protected string $projectId;
     /**
      * Assigns a unique IPv6 address to each of the Droplets in the autoscale pool.
-     *
      */
     protected bool $ipv6;
     /**
      * A string containing user data that cloud-init consumes to configure a Droplet on first boot. User data is often a cloud-config file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
      */
     protected string $userData;
     /**
      * The name(s) to be applied to all Droplets in the autoscale pool.
-     *
      */
     public function getName(): string
     {
@@ -95,7 +85,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The name(s) to be applied to all Droplets in the autoscale pool.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The datacenter in which all of the Droplets will be created.
-     *
      */
     public function getRegion(): string
     {
@@ -115,7 +103,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The datacenter in which all of the Droplets will be created.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The Droplet size to be used for all Droplets in the autoscale pool.
-     *
      */
     public function getSize(): string
     {
@@ -135,7 +121,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The Droplet size to be used for all Droplets in the autoscale pool.
-     *
      *
      * @return self
      */
@@ -147,7 +132,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The Droplet image to be used for all Droplets in the autoscale pool. You may specify the slug or the image ID.
-     *
      */
     public function getImage(): string
     {
@@ -155,7 +139,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * The Droplet image to be used for all Droplets in the autoscale pool. You may specify the slug or the image ID.
-     *
      *
      * @return self
      */
@@ -177,14 +160,14 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
         return $this->sshKeys;
     }
     /**
-    * The SSH keys to be installed on the Droplets in the autoscale pool. You can either specify the key ID or the fingerprint.
-    Requires `ssh_key:read` scope.
-    
-    *
-    * @param list<string> $sshKeys
-    *
-    * @return self
-    */
+     * The SSH keys to be installed on the Droplets in the autoscale pool. You can either specify the key ID or the fingerprint.
+     * Requires `ssh_key:read` scope.
+     * 
+     *
+     * @param list<string> $sshKeys
+     *
+     * @return self
+     */
     public function setSshKeys(array $sshKeys): self
     {
         $this->initialized['sshKeys'] = true;
@@ -203,14 +186,14 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
         return $this->tags;
     }
     /**
-    * The tags to apply to each of the Droplets in the autoscale pool.
-    Requires `tag:read` scope.
-    
-    *
-    * @param list<string> $tags
-    *
-    * @return self
-    */
+     * The tags to apply to each of the Droplets in the autoscale pool.
+     * Requires `tag:read` scope.
+     * 
+     *
+     * @param list<string> $tags
+     *
+     * @return self
+     */
     public function setTags(array $tags): self
     {
         $this->initialized['tags'] = true;
@@ -221,20 +204,18 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The VPC where the Droplets in the autoscale pool will be created. The VPC must be in the region where you want to create the Droplets.
      * Requires `vpc:read` scope.
      * 
-     *
      */
     public function getVpcUuid(): string
     {
         return $this->vpcUuid;
     }
     /**
-    * The VPC where the Droplets in the autoscale pool will be created. The VPC must be in the region where you want to create the Droplets.
-    Requires `vpc:read` scope.
-    
-    *
-    *
-    * @return self
-    */
+     * The VPC where the Droplets in the autoscale pool will be created. The VPC must be in the region where you want to create the Droplets.
+     * Requires `vpc:read` scope.
+     * 
+     *
+     * @return self
+     */
     public function setVpcUuid(string $vpcUuid): self
     {
         $this->initialized['vpcUuid'] = true;
@@ -243,7 +224,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * Installs the Droplet agent. This must be set to true to monitor Droplets for resource utilization scaling.
-     *
      */
     public function getWithDropletAgent(): bool
     {
@@ -251,7 +231,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * Installs the Droplet agent. This must be set to true to monitor Droplets for resource utilization scaling.
-     *
      *
      * @return self
      */
@@ -265,20 +244,18 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The project that the Droplets in the autoscale pool will belong to.
      * Requires `project:read` scope.
      * 
-     *
      */
     public function getProjectId(): string
     {
         return $this->projectId;
     }
     /**
-    * The project that the Droplets in the autoscale pool will belong to.
-    Requires `project:read` scope.
-    
-    *
-    *
-    * @return self
-    */
+     * The project that the Droplets in the autoscale pool will belong to.
+     * Requires `project:read` scope.
+     * 
+     *
+     * @return self
+     */
     public function setProjectId(string $projectId): self
     {
         $this->initialized['projectId'] = true;
@@ -287,7 +264,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * Assigns a unique IPv6 address to each of the Droplets in the autoscale pool.
-     *
      */
     public function getIpv6(): bool
     {
@@ -295,7 +271,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * Assigns a unique IPv6 address to each of the Droplets in the autoscale pool.
-     *
      *
      * @return self
      */
@@ -307,7 +282,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * A string containing user data that cloud-init consumes to configure a Droplet on first boot. User data is often a cloud-config file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
      */
     public function getUserData(): string
     {
@@ -315,7 +289,6 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
     }
     /**
      * A string containing user data that cloud-init consumes to configure a Droplet on first boot. User data is often a cloud-config file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
      *
      * @return self
      */

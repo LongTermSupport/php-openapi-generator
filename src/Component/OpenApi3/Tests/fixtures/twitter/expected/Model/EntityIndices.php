@@ -22,17 +22,14 @@ class EntityIndices extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     protected int $start;
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     protected int $end;
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     public function getStart(): int
     {
@@ -40,7 +37,6 @@ class EntityIndices extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class EntityIndices extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     public function getEnd(): int
     {
@@ -60,7 +55,6 @@ class EntityIndices extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      *
      * @return self
      */

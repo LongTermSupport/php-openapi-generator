@@ -26,13 +26,11 @@ class ReleaseAsset extends \ArrayObject
     protected string $nodeId;
     /**
      * The file name of the asset.
-     *
      */
     protected string $name;
     protected ?string $label = null;
     /**
      * State of the release asset.
-     *
      */
     protected string $state;
     protected string $contentType;
@@ -83,7 +81,6 @@ class ReleaseAsset extends \ArrayObject
     }
     /**
      * The file name of the asset.
-     *
      */
     public function getName(): string
     {
@@ -91,7 +88,6 @@ class ReleaseAsset extends \ArrayObject
     }
     /**
      * The file name of the asset.
-     *
      *
      * @return self
      */
@@ -113,7 +109,6 @@ class ReleaseAsset extends \ArrayObject
     }
     /**
      * State of the release asset.
-     *
      */
     public function getState(): string
     {
@@ -121,7 +116,6 @@ class ReleaseAsset extends \ArrayObject
     }
     /**
      * State of the release asset.
-     *
      *
      * @return self
      */

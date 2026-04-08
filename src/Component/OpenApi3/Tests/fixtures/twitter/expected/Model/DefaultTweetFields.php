@@ -22,13 +22,11 @@ class DefaultTweetFields extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      */
     protected DefaultTweetFieldsGeo $geo;
     protected FullTextEntities $entities;
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      */
     public function getGeo(): DefaultTweetFieldsGeo
     {
@@ -36,7 +34,6 @@ class DefaultTweetFields extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ApiDeleteWorkspaceOutput extends \ArrayObject
     }
     /**
      * Workspace
-     *
      */
     protected string $workspaceUuid;
     /**
      * Workspace
-     *
      */
     public function getWorkspaceUuid(): string
     {
@@ -35,7 +33,6 @@ class ApiDeleteWorkspaceOutput extends \ArrayObject
     }
     /**
      * Workspace
-     *
      *
      * @return self
      */

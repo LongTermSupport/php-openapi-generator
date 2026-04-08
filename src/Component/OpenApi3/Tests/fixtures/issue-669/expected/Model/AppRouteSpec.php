@@ -22,17 +22,14 @@ class AppRouteSpec extends \ArrayObject
     }
     /**
      * (Deprecated - Use Ingress Rules instead). An HTTP path prefix. Paths must start with / and must be unique across all components within an app.
-     *
      */
     protected string $path;
     /**
      * An optional flag to preserve the path that is forwarded to the backend service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is `true`, the path will remain `/api/list`.
-     *
      */
     protected bool $preservePathPrefix;
     /**
      * (Deprecated - Use Ingress Rules instead). An HTTP path prefix. Paths must start with / and must be unique across all components within an app.
-     *
      */
     public function getPath(): string
     {
@@ -40,7 +37,6 @@ class AppRouteSpec extends \ArrayObject
     }
     /**
      * (Deprecated - Use Ingress Rules instead). An HTTP path prefix. Paths must start with / and must be unique across all components within an app.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppRouteSpec extends \ArrayObject
     }
     /**
      * An optional flag to preserve the path that is forwarded to the backend service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is `true`, the path will remain `/api/list`.
-     *
      */
     public function getPreservePathPrefix(): bool
     {
@@ -60,7 +55,6 @@ class AppRouteSpec extends \ArrayObject
     }
     /**
      * An optional flag to preserve the path that is forwarded to the backend service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is `true`, the path will remain `/api/list`.
-     *
      *
      * @return self
      */

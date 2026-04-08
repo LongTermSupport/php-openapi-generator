@@ -22,12 +22,10 @@ class DockerCredentialsAuthsRegistryDigitaloceanCom extends \ArrayObject
     }
     /**
      * A base64 encoded string containing credentials for the container registry.
-     *
      */
     protected string $auth;
     /**
      * A base64 encoded string containing credentials for the container registry.
-     *
      */
     public function getAuth(): string
     {
@@ -35,7 +33,6 @@ class DockerCredentialsAuthsRegistryDigitaloceanCom extends \ArrayObject
     }
     /**
      * A base64 encoded string containing credentials for the container registry.
-     *
      *
      * @return self
      */

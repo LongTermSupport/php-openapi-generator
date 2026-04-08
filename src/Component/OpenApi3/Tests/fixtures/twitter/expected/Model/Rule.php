@@ -22,22 +22,18 @@ class Rule extends \ArrayObject
     }
     /**
      * The filterlang value of the rule.
-     *
      */
     protected string $value;
     /**
      * A tag meant for the labeling of user provided rules.
-     *
      */
     protected string $tag;
     /**
      * Unique identifier of this rule.
-     *
      */
     protected string $id;
     /**
      * The filterlang value of the rule.
-     *
      */
     public function getValue(): string
     {
@@ -45,7 +41,6 @@ class Rule extends \ArrayObject
     }
     /**
      * The filterlang value of the rule.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class Rule extends \ArrayObject
     }
     /**
      * A tag meant for the labeling of user provided rules.
-     *
      */
     public function getTag(): string
     {
@@ -65,7 +59,6 @@ class Rule extends \ArrayObject
     }
     /**
      * A tag meant for the labeling of user provided rules.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class Rule extends \ArrayObject
     }
     /**
      * Unique identifier of this rule.
-     *
      */
     public function getId(): string
     {
@@ -85,7 +77,6 @@ class Rule extends \ArrayObject
     }
     /**
      * Unique identifier of this rule.
-     *
      *
      * @return self
      */

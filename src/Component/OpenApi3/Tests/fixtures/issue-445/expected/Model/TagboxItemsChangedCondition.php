@@ -19,12 +19,10 @@ class TagboxItemsChangedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -32,7 +30,6 @@ class TagboxItemsChangedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */

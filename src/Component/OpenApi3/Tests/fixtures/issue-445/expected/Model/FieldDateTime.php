@@ -19,22 +19,18 @@ class FieldDateTime extends FieldBase
     }
     /**
      * The date time format structure.
-     *
      */
     protected ?string $format = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
      */
     protected bool $initializeOnItemCreation = false;
     /**
      * The date time format structure.
-     *
      */
     public function getFormat(): ?string
     {
@@ -42,7 +38,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * The date time format structure.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -62,7 +56,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
      */
     public function getInitializeOnItemCreation(): bool
     {
@@ -82,7 +74,6 @@ class FieldDateTime extends FieldBase
     }
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
      *
      * @return self
      */

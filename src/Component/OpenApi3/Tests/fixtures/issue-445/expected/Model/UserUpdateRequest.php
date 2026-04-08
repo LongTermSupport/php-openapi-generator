@@ -22,27 +22,22 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's Picturepark ID.
-     *
      */
     protected ?string $id = null;
     /**
      * User's first name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * User's last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
-     *
      */
     protected string $emailAddress;
     /**
      * Marks a user that was deleted from the system.
-     *
      */
     protected bool $isDeleted;
     /**
@@ -53,27 +48,22 @@ class UserUpdateRequest extends \ArrayObject
     protected ?array $userRoles = null;
     /**
      * Comment saved for the user.
-     *
      */
     protected ?string $comment = null;
     /**
      * Preferred language, e.g. for correspondence.
-     *
      */
     protected ?string $languageCode = null;
     /**
      * User's address.
-     *
      */
     protected mixed $address = null;
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
      */
     protected ?string $identityProviderId = null;
     /**
      * User's Picturepark ID.
-     *
      */
     public function getId(): ?string
     {
@@ -81,7 +71,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's Picturepark ID.
-     *
      *
      * @return self
      */
@@ -93,7 +82,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's first name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -101,7 +89,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's first name.
-     *
      *
      * @return self
      */
@@ -113,7 +100,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -121,7 +107,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's last name.
-     *
      *
      * @return self
      */
@@ -133,7 +118,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Email address of the user (doubles as username).
-     *
      */
     public function getEmailAddress(): string
     {
@@ -141,7 +125,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Email address of the user (doubles as username).
-     *
      *
      * @return self
      */
@@ -153,7 +136,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Marks a user that was deleted from the system.
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -161,7 +143,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Marks a user that was deleted from the system.
-     *
      *
      * @return self
      */
@@ -195,7 +176,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Comment saved for the user.
-     *
      */
     public function getComment(): ?string
     {
@@ -203,7 +183,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Comment saved for the user.
-     *
      *
      * @return self
      */
@@ -215,7 +194,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
      */
     public function getLanguageCode(): ?string
     {
@@ -223,7 +201,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
      *
      * @return self
      */
@@ -235,7 +212,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's address.
-     *
      */
     public function getAddress(): mixed
     {
@@ -243,7 +219,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * User's address.
-     *
      *
      * @return self
      */
@@ -255,7 +230,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
      */
     public function getIdentityProviderId(): ?string
     {
@@ -263,7 +237,6 @@ class UserUpdateRequest extends \ArrayObject
     }
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
      *
      * @return self
      */

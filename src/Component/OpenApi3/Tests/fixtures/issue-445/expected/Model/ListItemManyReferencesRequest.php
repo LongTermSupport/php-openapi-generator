@@ -25,7 +25,6 @@ class ListItemManyReferencesRequest
     protected array $listItemIds;
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
      */
     protected mixed $references = null;
     /**
@@ -52,7 +51,6 @@ class ListItemManyReferencesRequest
     }
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
      */
     public function getReferences(): mixed
     {
@@ -60,7 +58,6 @@ class ListItemManyReferencesRequest
     }
     /**
      * Limits the number of the returned metadata references by setting paging information.
-     *
      *
      * @return self
      */

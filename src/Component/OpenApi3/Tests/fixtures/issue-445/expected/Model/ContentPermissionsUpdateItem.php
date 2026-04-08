@@ -29,7 +29,6 @@ class ContentPermissionsUpdateItem extends \ArrayObject
     protected ?array $contentPermissionSetIds = null;
     /**
      * ID of the content.
-     *
      */
     protected string $contentId;
     /**
@@ -43,13 +42,13 @@ class ContentPermissionsUpdateItem extends \ArrayObject
         return $this->contentPermissionSetIds;
     }
     /**
-    * A list of content permission set IDs which control content permissions that will be updated on the content.
-    These permissions control content accessibility for the users that do not own the content.
-    *
-    * @param list<string>|null $contentPermissionSetIds
-    *
-    * @return self
-    */
+     * A list of content permission set IDs which control content permissions that will be updated on the content.
+     * These permissions control content accessibility for the users that do not own the content.
+     *
+     * @param list<string>|null $contentPermissionSetIds
+     *
+     * @return self
+     */
     public function setContentPermissionSetIds(?array $contentPermissionSetIds): self
     {
         $this->initialized['contentPermissionSetIds'] = true;
@@ -58,7 +57,6 @@ class ContentPermissionsUpdateItem extends \ArrayObject
     }
     /**
      * ID of the content.
-     *
      */
     public function getContentId(): string
     {
@@ -66,7 +64,6 @@ class ContentPermissionsUpdateItem extends \ArrayObject
     }
     /**
      * ID of the content.
-     *
      *
      * @return self
      */

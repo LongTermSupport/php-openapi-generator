@@ -22,17 +22,14 @@ class AppServiceSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between selecting a container instance for termination and issuing the TERM signal. Selecting a container instance for termination begins an asynchronous drain of new requests on upstream load-balancers. (Default 15)
-     *
      */
     protected int $drainSeconds;
     /**
      * The number of seconds to wait between sending a TERM signal to a container and issuing a KILL which causes immediate shutdown. (Default 120)
-     *
      */
     protected int $gracePeriodSeconds;
     /**
      * The number of seconds to wait between selecting a container instance for termination and issuing the TERM signal. Selecting a container instance for termination begins an asynchronous drain of new requests on upstream load-balancers. (Default 15)
-     *
      */
     public function getDrainSeconds(): int
     {
@@ -40,7 +37,6 @@ class AppServiceSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between selecting a container instance for termination and issuing the TERM signal. Selecting a container instance for termination begins an asynchronous drain of new requests on upstream load-balancers. (Default 15)
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppServiceSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between sending a TERM signal to a container and issuing a KILL which causes immediate shutdown. (Default 120)
-     *
      */
     public function getGracePeriodSeconds(): int
     {
@@ -60,7 +55,6 @@ class AppServiceSpecTermination extends \ArrayObject
     }
     /**
      * The number of seconds to wait between sending a TERM signal to a container and issuing a KILL which causes immediate shutdown. (Default 120)
-     *
      *
      * @return self
      */

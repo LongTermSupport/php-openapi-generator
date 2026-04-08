@@ -22,17 +22,14 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The human-readable name of the share.
-     *
      */
     protected string $name;
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
      */
     protected int $sizeGib;
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
      */
     protected string $region;
     /**
@@ -43,7 +40,6 @@ class NfsRequest extends \ArrayObject
     protected array $vpcIds;
     /**
      * The human-readable name of the share.
-     *
      */
     public function getName(): string
     {
@@ -51,7 +47,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The human-readable name of the share.
-     *
      *
      * @return self
      */
@@ -63,7 +58,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
      */
     public function getSizeGib(): int
     {
@@ -71,7 +65,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
      *
      * @return self
      */
@@ -83,7 +76,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
      */
     public function getRegion(): string
     {
@@ -91,7 +83,6 @@ class NfsRequest extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
      *
      * @return self
      */

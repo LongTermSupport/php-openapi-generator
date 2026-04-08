@@ -22,39 +22,32 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     /**
      * A rating.
-     *
      */
     protected int $rating;
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     protected ?string $letter = null;
     /**
      * The item that is being reviewed/rated.
-     *
      */
     protected string $book;
     /**
      * The author of the review.
-     *
      */
     protected ?string $author = null;
     /**
      * Publication date of the review.
-     *
      */
     protected ?\DateTime $publicationDate = null;
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -62,7 +55,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */
@@ -74,7 +66,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
      */
     public function getRating(): int
     {
@@ -82,7 +73,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
      *
      * @return self
      */
@@ -96,7 +86,6 @@ class ReviewReviewWrite extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     public function getLetter(): ?string
     {
@@ -104,7 +93,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
-     *
      *
      * @deprecated
      *
@@ -118,7 +106,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
      */
     public function getBook(): string
     {
@@ -126,7 +113,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
      *
      * @return self
      */
@@ -138,7 +124,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      */
     public function getAuthor(): ?string
     {
@@ -146,7 +131,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      *
      * @return self
      */
@@ -158,7 +142,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      */
     public function getPublicationDate(): ?\DateTime
     {
@@ -166,7 +149,6 @@ class ReviewReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ProjectsColumnsCardsCardIdMovesPostBody extends \ArrayObject
     }
     /**
      * The position of the card in a column
-     *
      */
     protected string $position;
     /**
      * The unique identifier of the column the card should be moved to
-     *
      */
     protected int $columnId;
     /**
      * The position of the card in a column
-     *
      */
     public function getPosition(): string
     {
@@ -40,7 +37,6 @@ class ProjectsColumnsCardsCardIdMovesPostBody extends \ArrayObject
     }
     /**
      * The position of the card in a column
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ProjectsColumnsCardsCardIdMovesPostBody extends \ArrayObject
     }
     /**
      * The unique identifier of the column the card should be moved to
-     *
      */
     public function getColumnId(): int
     {
@@ -60,7 +55,6 @@ class ProjectsColumnsCardsCardIdMovesPostBody extends \ArrayObject
     }
     /**
      * The unique identifier of the column the card should be moved to
-     *
      *
      * @return self
      */

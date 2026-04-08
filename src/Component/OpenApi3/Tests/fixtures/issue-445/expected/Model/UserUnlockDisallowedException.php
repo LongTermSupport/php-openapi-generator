@@ -32,7 +32,6 @@ class UserUnlockDisallowedException extends \ArrayObject
     protected ?string $requestedUserId = null;
     /**
      * User authorization state
-     *
      */
     protected string $authorizationState;
     public function getTraceLevel(): string
@@ -137,7 +136,6 @@ class UserUnlockDisallowedException extends \ArrayObject
     }
     /**
      * User authorization state
-     *
      */
     public function getAuthorizationState(): string
     {
@@ -145,7 +143,6 @@ class UserUnlockDisallowedException extends \ArrayObject
     }
     /**
      * User authorization state
-     *
      *
      * @return self
      */

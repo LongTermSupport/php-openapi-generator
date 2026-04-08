@@ -19,23 +19,19 @@ class BusinessProcessCreateRequest
     }
     /**
      * Indicates if the system starting the business process supports cancellation.
-     *
      */
     protected bool $supportsCancellation;
     /**
      * Notification data to send to the user when creating the business process.
      * Set to null to not create a notification.
-     *
      */
     protected mixed $notification = null;
     /**
      * Initial state of the business process.
-     *
      */
     protected string $initialState;
     /**
      * Indicates if the system starting the business process supports cancellation.
-     *
      */
     public function getSupportsCancellation(): bool
     {
@@ -43,7 +39,6 @@ class BusinessProcessCreateRequest
     }
     /**
      * Indicates if the system starting the business process supports cancellation.
-     *
      *
      * @return self
      */
@@ -56,19 +51,17 @@ class BusinessProcessCreateRequest
     /**
      * Notification data to send to the user when creating the business process.
      * Set to null to not create a notification.
-     *
      */
     public function getNotification(): mixed
     {
         return $this->notification;
     }
     /**
-    * Notification data to send to the user when creating the business process.
-    Set to null to not create a notification.
-    *
-    *
-    * @return self
-    */
+     * Notification data to send to the user when creating the business process.
+     * Set to null to not create a notification.
+     *
+     * @return self
+     */
     public function setNotification(mixed $notification): self
     {
         $this->initialized['notification'] = true;
@@ -77,7 +70,6 @@ class BusinessProcessCreateRequest
     }
     /**
      * Initial state of the business process.
-     *
      */
     public function getInitialState(): string
     {
@@ -85,7 +77,6 @@ class BusinessProcessCreateRequest
     }
     /**
      * Initial state of the business process.
-     *
      *
      * @return self
      */

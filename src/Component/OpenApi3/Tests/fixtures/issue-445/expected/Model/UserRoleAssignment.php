@@ -19,17 +19,14 @@ class UserRoleAssignment
     }
     /**
      * User role assigned.
-     *
      */
     protected mixed $userRole = null;
     /**
      * Marks user roles that were assigned automatically to a federated user based on group mapping of a federated identity provider.
-     *
      */
     protected bool $isFederated;
     /**
      * User role assigned.
-     *
      */
     public function getUserRole(): mixed
     {
@@ -37,7 +34,6 @@ class UserRoleAssignment
     }
     /**
      * User role assigned.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class UserRoleAssignment
     }
     /**
      * Marks user roles that were assigned automatically to a federated user based on group mapping of a federated identity provider.
-     *
      */
     public function getIsFederated(): bool
     {
@@ -57,7 +52,6 @@ class UserRoleAssignment
     }
     /**
      * Marks user roles that were assigned automatically to a federated user based on group mapping of a federated identity provider.
-     *
      *
      * @return self
      */

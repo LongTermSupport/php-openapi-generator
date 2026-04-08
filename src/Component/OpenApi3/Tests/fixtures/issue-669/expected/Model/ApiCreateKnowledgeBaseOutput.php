@@ -22,12 +22,10 @@ class ApiCreateKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * Knowledgebase Description
-     *
      */
     protected ApiKnowledgeBase $knowledgeBase;
     /**
      * Knowledgebase Description
-     *
      */
     public function getKnowledgeBase(): ApiKnowledgeBase
     {
@@ -35,7 +33,6 @@ class ApiCreateKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * Knowledgebase Description
-     *
      *
      * @return self
      */

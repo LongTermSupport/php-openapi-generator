@@ -22,17 +22,14 @@ class CertificateCreateBase extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
      */
     protected string $name;
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      */
     protected string $type;
     /**
      * A unique human-readable name referring to a certificate.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class CertificateCreateBase extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class CertificateCreateBase extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      */
     public function getType(): string
     {
@@ -60,7 +55,6 @@ class CertificateCreateBase extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      *
      * @return self
      */

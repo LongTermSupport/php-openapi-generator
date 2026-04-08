@@ -19,12 +19,10 @@ class NotFilter extends FilterBase
     }
     /**
      * The filter to be negated.
-     *
      */
     protected mixed $filter = null;
     /**
      * The filter to be negated.
-     *
      */
     public function getFilter(): mixed
     {
@@ -32,7 +30,6 @@ class NotFilter extends FilterBase
     }
     /**
      * The filter to be negated.
-     *
      *
      * @return self
      */

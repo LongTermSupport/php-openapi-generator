@@ -19,7 +19,6 @@ class PermissionSetUpdateRequestOfContentRight
     }
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -36,7 +35,6 @@ class PermissionSetUpdateRequestOfContentRight
     protected ?array $userRolesPermissionSetRights = null;
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -44,7 +42,6 @@ class PermissionSetUpdateRequestOfContentRight
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */

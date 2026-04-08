@@ -22,12 +22,10 @@ class Credentials extends \ArrayObject
     }
     /**
      * The URL used to access the cluster API server.
-     *
      */
     protected string $server;
     /**
      * A base64 encoding of bytes representing the certificate authority data for accessing the cluster.
-     *
      */
     protected string $certificateAuthorityData;
     /**
@@ -41,7 +39,6 @@ class Credentials extends \ArrayObject
      * 
      *
      * @deprecated
-     *
      */
     protected ?string $clientCertificateData = null;
     /**
@@ -55,22 +52,18 @@ class Credentials extends \ArrayObject
      * 
      *
      * @deprecated
-     *
      */
     protected ?string $clientKeyData = null;
     /**
      * An access token used to authenticate with the cluster. This is only returned for clusters with support for token-based authentication.
-     *
      */
     protected string $token;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the access token expires.
-     *
      */
     protected \DateTime $expiresAt;
     /**
      * The URL used to access the cluster API server.
-     *
      */
     public function getServer(): string
     {
@@ -78,7 +71,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * The URL used to access the cluster API server.
-     *
      *
      * @return self
      */
@@ -90,7 +82,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * A base64 encoding of bytes representing the certificate authority data for accessing the cluster.
-     *
      */
     public function getCertificateAuthorityData(): string
     {
@@ -98,7 +89,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * A base64 encoding of bytes representing the certificate authority data for accessing the cluster.
-     *
      *
      * @return self
      */
@@ -119,27 +109,25 @@ class Credentials extends \ArrayObject
      * 
      *
      * @deprecated
-     *
      */
     public function getClientCertificateData(): ?string
     {
         return $this->clientCertificateData;
     }
     /**
-    * A base64 encoding of bytes representing the x509 client
-    certificate data for access the cluster. This is only returned for clusters
-    without support for token-based authentication.
-    
-    Newly created Kubernetes clusters do not return credentials using
-    certificate-based authentication. For additional information,
-    [see here](https://docs.digitalocean.com/products/kubernetes/how-to/connect-to-cluster/#authenticate).
-    
-    *
-    *
-    * @deprecated
-    *
-    * @return self
-    */
+     * A base64 encoding of bytes representing the x509 client
+     * certificate data for access the cluster. This is only returned for clusters
+     * without support for token-based authentication.
+     * 
+     * Newly created Kubernetes clusters do not return credentials using
+     * certificate-based authentication. For additional information,
+     * [see here](https://docs.digitalocean.com/products/kubernetes/how-to/connect-to-cluster/#authenticate).
+     * 
+     *
+     * @deprecated
+     *
+     * @return self
+     */
     public function setClientCertificateData(?string $clientCertificateData): self
     {
         $this->initialized['clientCertificateData'] = true;
@@ -157,27 +145,25 @@ class Credentials extends \ArrayObject
      * 
      *
      * @deprecated
-     *
      */
     public function getClientKeyData(): ?string
     {
         return $this->clientKeyData;
     }
     /**
-    * A base64 encoding of bytes representing the x509 client key
-    data for access the cluster. This is only returned for clusters without
-    support for token-based authentication.
-    
-    Newly created Kubernetes clusters do not return credentials using
-    certificate-based authentication. For additional information,
-    [see here](https://docs.digitalocean.com/products/kubernetes/how-to/connect-to-cluster/#authenticate).
-    
-    *
-    *
-    * @deprecated
-    *
-    * @return self
-    */
+     * A base64 encoding of bytes representing the x509 client key
+     * data for access the cluster. This is only returned for clusters without
+     * support for token-based authentication.
+     * 
+     * Newly created Kubernetes clusters do not return credentials using
+     * certificate-based authentication. For additional information,
+     * [see here](https://docs.digitalocean.com/products/kubernetes/how-to/connect-to-cluster/#authenticate).
+     * 
+     *
+     * @deprecated
+     *
+     * @return self
+     */
     public function setClientKeyData(?string $clientKeyData): self
     {
         $this->initialized['clientKeyData'] = true;
@@ -186,7 +172,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * An access token used to authenticate with the cluster. This is only returned for clusters with support for token-based authentication.
-     *
      */
     public function getToken(): string
     {
@@ -194,7 +179,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * An access token used to authenticate with the cluster. This is only returned for clusters with support for token-based authentication.
-     *
      *
      * @return self
      */
@@ -206,7 +190,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the access token expires.
-     *
      */
     public function getExpiresAt(): \DateTime
     {
@@ -214,7 +197,6 @@ class Credentials extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the access token expires.
-     *
      *
      * @return self
      */

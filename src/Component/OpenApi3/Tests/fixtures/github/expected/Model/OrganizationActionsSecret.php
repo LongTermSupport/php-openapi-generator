@@ -22,20 +22,17 @@ class OrganizationActionsSecret extends \ArrayObject
     }
     /**
      * The name of the secret.
-     *
      */
     protected string $name;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     /**
      * Visibility of a secret
-     *
      */
     protected string $visibility;
     protected string $selectedRepositoriesUrl;
     /**
      * The name of the secret.
-     *
      */
     public function getName(): string
     {
@@ -43,7 +40,6 @@ class OrganizationActionsSecret extends \ArrayObject
     }
     /**
      * The name of the secret.
-     *
      *
      * @return self
      */
@@ -75,7 +71,6 @@ class OrganizationActionsSecret extends \ArrayObject
     }
     /**
      * Visibility of a secret
-     *
      */
     public function getVisibility(): string
     {
@@ -83,7 +78,6 @@ class OrganizationActionsSecret extends \ArrayObject
     }
     /**
      * Visibility of a secret
-     *
      *
      * @return self
      */

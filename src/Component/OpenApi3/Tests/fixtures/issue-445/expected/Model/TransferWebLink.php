@@ -24,29 +24,24 @@ class TransferWebLink extends \ArrayObject
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
      */
     protected ?string $identifier = null;
     /**
      * Client generated identifier of the item.
-     *
      */
     protected ?string $requestId = null;
     /**
      * URL of the item.
-     *
      */
     protected string $url;
     /**
      * Optional target filename of the file.
-     *
      */
     protected ?string $fileName = null;
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
      */
     public function getIdentifier(): ?string
     {
@@ -54,7 +49,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
-     *
      *
      * @deprecated
      *
@@ -68,7 +62,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * Client generated identifier of the item.
-     *
      */
     public function getRequestId(): ?string
     {
@@ -76,7 +69,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * Client generated identifier of the item.
-     *
      *
      * @return self
      */
@@ -88,7 +80,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * URL of the item.
-     *
      */
     public function getUrl(): string
     {
@@ -96,7 +87,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * URL of the item.
-     *
      *
      * @return self
      */
@@ -108,7 +98,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * Optional target filename of the file.
-     *
      */
     public function getFileName(): ?string
     {
@@ -116,7 +105,6 @@ class TransferWebLink extends \ArrayObject
     }
     /**
      * Optional target filename of the file.
-     *
      *
      * @return self
      */

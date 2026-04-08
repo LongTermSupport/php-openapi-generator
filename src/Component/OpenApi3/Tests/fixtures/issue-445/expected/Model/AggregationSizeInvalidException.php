@@ -31,12 +31,10 @@ class AggregationSizeInvalidException extends \ArrayObject
     protected ?string $userId = null;
     /**
      * The name identifying the aggregation.
-     *
      */
     protected ?string $aggregationName = null;
     /**
      * The invalid size of the aggregation: size must be equal or greater than 1.
-     *
      */
     protected int $aggregationSize;
     public function getTraceLevel(): string
@@ -131,7 +129,6 @@ class AggregationSizeInvalidException extends \ArrayObject
     }
     /**
      * The name identifying the aggregation.
-     *
      */
     public function getAggregationName(): ?string
     {
@@ -139,7 +136,6 @@ class AggregationSizeInvalidException extends \ArrayObject
     }
     /**
      * The name identifying the aggregation.
-     *
      *
      * @return self
      */
@@ -151,7 +147,6 @@ class AggregationSizeInvalidException extends \ArrayObject
     }
     /**
      * The invalid size of the aggregation: size must be equal or greater than 1.
-     *
      */
     public function getAggregationSize(): int
     {
@@ -159,7 +154,6 @@ class AggregationSizeInvalidException extends \ArrayObject
     }
     /**
      * The invalid size of the aggregation: size must be equal or greater than 1.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ApiDeleteKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Data source id
-     *
      */
     protected string $dataSourceUuid;
     /**
      * Knowledge base id
-     *
      */
     protected string $knowledgeBaseUuid;
     /**
      * Data source id
-     *
      */
     public function getDataSourceUuid(): string
     {
@@ -40,7 +37,6 @@ class ApiDeleteKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Data source id
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiDeleteKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      */
     public function getKnowledgeBaseUuid(): string
     {
@@ -60,7 +55,6 @@ class ApiDeleteKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      *
      * @return self
      */

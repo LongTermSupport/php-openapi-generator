@@ -19,17 +19,14 @@ class GeoDistance
     }
     /**
      * Language specific geo distance names.
-     *
      */
     protected mixed $names = null;
     /**
      * The distance in meters.
-     *
      */
     protected float $distance;
     /**
      * Language specific geo distance names.
-     *
      */
     public function getNames(): mixed
     {
@@ -37,7 +34,6 @@ class GeoDistance
     }
     /**
      * Language specific geo distance names.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class GeoDistance
     }
     /**
      * The distance in meters.
-     *
      */
     public function getDistance(): float
     {
@@ -57,7 +52,6 @@ class GeoDistance
     }
     /**
      * The distance in meters.
-     *
      *
      * @return self
      */

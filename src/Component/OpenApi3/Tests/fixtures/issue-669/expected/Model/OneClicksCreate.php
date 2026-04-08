@@ -28,7 +28,6 @@ class OneClicksCreate extends \ArrayObject
     protected array $addonSlugs = array();
     /**
      * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
-     *
      */
     protected string $clusterUuid;
     /**
@@ -55,7 +54,6 @@ class OneClicksCreate extends \ArrayObject
     }
     /**
      * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
-     *
      */
     public function getClusterUuid(): string
     {
@@ -63,7 +61,6 @@ class OneClicksCreate extends \ArrayObject
     }
     /**
      * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
-     *
      *
      * @return self
      */

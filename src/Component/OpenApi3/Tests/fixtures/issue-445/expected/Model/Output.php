@@ -19,53 +19,43 @@ class Output
     }
     /**
      * The ID of the output. Can be null for dynamic outputs which are not rendered yet.
-     *
      */
     protected ?string $id = null;
     /**
      * The ID of the output format this output represents.
-     *
      */
     protected string $outputFormatId;
     /**
      * The ID of the content for which this output has been created.
-     *
      */
     protected string $contentId;
     /**
      * The rendering state of the output file.
-     *
      */
     protected mixed $renderingState = null;
     /**
      * Detail of the output that are format dependent.
-     *
      */
     protected mixed $detail = null;
     /**
      * Date and time of the backup of the output file.
-     *
      */
     protected ?\DateTime $backupTimestamp = null;
     /**
      * Number of rendering retry attempts left.
-     *
      */
     protected int $attemptsLeft;
     /**
      * Version counter incremented every time this output is rendered (or in case of Original when new original is uploaded).
-     *
      */
     protected int $fileVersion;
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     protected bool $dynamicRendering;
     protected string $kind;
     /**
      * The ID of the output. Can be null for dynamic outputs which are not rendered yet.
-     *
      */
     public function getId(): ?string
     {
@@ -73,7 +63,6 @@ class Output
     }
     /**
      * The ID of the output. Can be null for dynamic outputs which are not rendered yet.
-     *
      */
     public function setId(?string $id): void
     {
@@ -82,7 +71,6 @@ class Output
     }
     /**
      * The ID of the output format this output represents.
-     *
      */
     public function getOutputFormatId(): string
     {
@@ -90,7 +78,6 @@ class Output
     }
     /**
      * The ID of the output format this output represents.
-     *
      */
     public function setOutputFormatId(string $outputFormatId): void
     {
@@ -99,7 +86,6 @@ class Output
     }
     /**
      * The ID of the content for which this output has been created.
-     *
      */
     public function getContentId(): string
     {
@@ -107,7 +93,6 @@ class Output
     }
     /**
      * The ID of the content for which this output has been created.
-     *
      */
     public function setContentId(string $contentId): void
     {
@@ -116,7 +101,6 @@ class Output
     }
     /**
      * The rendering state of the output file.
-     *
      */
     public function getRenderingState(): mixed
     {
@@ -124,7 +108,6 @@ class Output
     }
     /**
      * The rendering state of the output file.
-     *
      */
     public function setRenderingState(mixed $renderingState): void
     {
@@ -133,7 +116,6 @@ class Output
     }
     /**
      * Detail of the output that are format dependent.
-     *
      */
     public function getDetail(): mixed
     {
@@ -141,7 +123,6 @@ class Output
     }
     /**
      * Detail of the output that are format dependent.
-     *
      */
     public function setDetail(mixed $detail): void
     {
@@ -150,7 +131,6 @@ class Output
     }
     /**
      * Date and time of the backup of the output file.
-     *
      */
     public function getBackupTimestamp(): ?\DateTime
     {
@@ -158,7 +138,6 @@ class Output
     }
     /**
      * Date and time of the backup of the output file.
-     *
      */
     public function setBackupTimestamp(?\DateTime $backupTimestamp): void
     {
@@ -167,7 +146,6 @@ class Output
     }
     /**
      * Number of rendering retry attempts left.
-     *
      */
     public function getAttemptsLeft(): int
     {
@@ -175,7 +153,6 @@ class Output
     }
     /**
      * Number of rendering retry attempts left.
-     *
      */
     public function setAttemptsLeft(int $attemptsLeft): void
     {
@@ -184,7 +161,6 @@ class Output
     }
     /**
      * Version counter incremented every time this output is rendered (or in case of Original when new original is uploaded).
-     *
      */
     public function getFileVersion(): int
     {
@@ -192,7 +168,6 @@ class Output
     }
     /**
      * Version counter incremented every time this output is rendered (or in case of Original when new original is uploaded).
-     *
      */
     public function setFileVersion(int $fileVersion): void
     {
@@ -201,7 +176,6 @@ class Output
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     public function getDynamicRendering(): bool
     {
@@ -209,7 +183,6 @@ class Output
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     public function setDynamicRendering(bool $dynamicRendering): void
     {

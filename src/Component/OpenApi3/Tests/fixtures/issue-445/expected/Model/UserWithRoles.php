@@ -25,52 +25,42 @@ class UserWithRoles
     protected ?array $userRoleIds = null;
     /**
      * User's Picturepark ID.
-     *
      */
     protected string $id;
     /**
      * User's first name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * User's last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
-     *
      */
     protected string $emailAddress;
     /**
      * Authorization state the user is currently in.
-     *
      */
     protected mixed $authorizationState = null;
     /**
      * Life cycle state the user is currently in.
-     *
      */
     protected mixed $lifeCycle = null;
     /**
      * A locked user is not allowed to log in.
-     *
      */
     protected bool $isLocked;
     /**
      * A support user is a user created for Picturepark support personnel.
-     *
      */
     protected bool $isSupportUser;
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
      */
     protected bool $isReadOnly;
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      */
     protected bool $isFederated;
     /**
@@ -97,7 +87,6 @@ class UserWithRoles
     }
     /**
      * User's Picturepark ID.
-     *
      */
     public function getId(): string
     {
@@ -105,7 +94,6 @@ class UserWithRoles
     }
     /**
      * User's Picturepark ID.
-     *
      *
      * @return self
      */
@@ -117,7 +105,6 @@ class UserWithRoles
     }
     /**
      * User's first name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -125,7 +112,6 @@ class UserWithRoles
     }
     /**
      * User's first name.
-     *
      *
      * @return self
      */
@@ -137,7 +123,6 @@ class UserWithRoles
     }
     /**
      * User's last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -145,7 +130,6 @@ class UserWithRoles
     }
     /**
      * User's last name.
-     *
      *
      * @return self
      */
@@ -157,7 +141,6 @@ class UserWithRoles
     }
     /**
      * Email address of the user (doubles as username).
-     *
      */
     public function getEmailAddress(): string
     {
@@ -165,7 +148,6 @@ class UserWithRoles
     }
     /**
      * Email address of the user (doubles as username).
-     *
      *
      * @return self
      */
@@ -177,7 +159,6 @@ class UserWithRoles
     }
     /**
      * Authorization state the user is currently in.
-     *
      */
     public function getAuthorizationState(): mixed
     {
@@ -185,7 +166,6 @@ class UserWithRoles
     }
     /**
      * Authorization state the user is currently in.
-     *
      *
      * @return self
      */
@@ -197,7 +177,6 @@ class UserWithRoles
     }
     /**
      * Life cycle state the user is currently in.
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -205,7 +184,6 @@ class UserWithRoles
     }
     /**
      * Life cycle state the user is currently in.
-     *
      *
      * @return self
      */
@@ -217,7 +195,6 @@ class UserWithRoles
     }
     /**
      * A locked user is not allowed to log in.
-     *
      */
     public function getIsLocked(): bool
     {
@@ -225,7 +202,6 @@ class UserWithRoles
     }
     /**
      * A locked user is not allowed to log in.
-     *
      *
      * @return self
      */
@@ -237,7 +213,6 @@ class UserWithRoles
     }
     /**
      * A support user is a user created for Picturepark support personnel.
-     *
      */
     public function getIsSupportUser(): bool
     {
@@ -245,7 +220,6 @@ class UserWithRoles
     }
     /**
      * A support user is a user created for Picturepark support personnel.
-     *
      *
      * @return self
      */
@@ -257,7 +231,6 @@ class UserWithRoles
     }
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
      */
     public function getIsReadOnly(): bool
     {
@@ -265,7 +238,6 @@ class UserWithRoles
     }
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
      *
      * @return self
      */
@@ -277,7 +249,6 @@ class UserWithRoles
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      */
     public function getIsFederated(): bool
     {
@@ -285,7 +256,6 @@ class UserWithRoles
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      *
      * @return self
      */

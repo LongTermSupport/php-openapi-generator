@@ -23,39 +23,32 @@ class ForwardingRule extends \ArrayObject
     /**
      * The protocol used for traffic to the load balancer. The possible values are: `http`, `https`, `http2`, `http3`, `tcp`, or `udp`. If you set the  `entry_protocol` to `udp`, the `target_protocol` must be set to `udp`.  When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
      * 
-     *
      */
     protected string $entryProtocol;
     /**
      * An integer representing the port on which the load balancer instance will listen.
-     *
      */
     protected int $entryPort;
     /**
      * The protocol used for traffic from the load balancer to the backend Droplets. The possible values are: `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `udp`, the `entry_protocol` must be set to  `udp`. When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
      * 
-     *
      */
     protected string $targetProtocol;
     /**
      * An integer representing the port on the backend Droplets to which the load balancer will send traffic.
-     *
      */
     protected int $targetPort;
     /**
      * The ID of the TLS certificate used for SSL termination if enabled.
-     *
      */
     protected string $certificateId;
     /**
      * A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets.
-     *
      */
     protected bool $tlsPassthrough;
     /**
      * The protocol used for traffic to the load balancer. The possible values are: `http`, `https`, `http2`, `http3`, `tcp`, or `udp`. If you set the  `entry_protocol` to `udp`, the `target_protocol` must be set to `udp`.  When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
      * 
-     *
      */
     public function getEntryProtocol(): string
     {
@@ -63,7 +56,7 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * The protocol used for traffic to the load balancer. The possible values are: `http`, `https`, `http2`, `http3`, `tcp`, or `udp`. If you set the  `entry_protocol` to `udp`, the `target_protocol` must be set to `udp`.  When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
-     *
+     * 
      *
      * @return self
      */
@@ -75,7 +68,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * An integer representing the port on which the load balancer instance will listen.
-     *
      */
     public function getEntryPort(): int
     {
@@ -83,7 +75,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * An integer representing the port on which the load balancer instance will listen.
-     *
      *
      * @return self
      */
@@ -96,7 +87,6 @@ class ForwardingRule extends \ArrayObject
     /**
      * The protocol used for traffic from the load balancer to the backend Droplets. The possible values are: `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `udp`, the `entry_protocol` must be set to  `udp`. When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
      * 
-     *
      */
     public function getTargetProtocol(): string
     {
@@ -104,7 +94,7 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * The protocol used for traffic from the load balancer to the backend Droplets. The possible values are: `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `udp`, the `entry_protocol` must be set to  `udp`. When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work properly.
-     *
+     * 
      *
      * @return self
      */
@@ -116,7 +106,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * An integer representing the port on the backend Droplets to which the load balancer will send traffic.
-     *
      */
     public function getTargetPort(): int
     {
@@ -124,7 +113,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * An integer representing the port on the backend Droplets to which the load balancer will send traffic.
-     *
      *
      * @return self
      */
@@ -136,7 +124,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * The ID of the TLS certificate used for SSL termination if enabled.
-     *
      */
     public function getCertificateId(): string
     {
@@ -144,7 +131,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * The ID of the TLS certificate used for SSL termination if enabled.
-     *
      *
      * @return self
      */
@@ -156,7 +142,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets.
-     *
      */
     public function getTlsPassthrough(): bool
     {
@@ -164,7 +149,6 @@ class ForwardingRule extends \ArrayObject
     }
     /**
      * A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets.
-     *
      *
      * @return self
      */

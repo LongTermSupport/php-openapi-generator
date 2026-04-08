@@ -19,27 +19,22 @@ class UserAuditDetail
     }
     /**
      * The date on which the document was created.
-     *
      */
     protected \DateTime $creationDate;
     /**
      * The last date on which the document was modified.
-     *
      */
     protected \DateTime $modificationDate;
     /**
      * ID of the user who created the document.
-     *
      */
     protected mixed $createdByUser = null;
     /**
      * ID of the last user who modified the document.
-     *
      */
     protected mixed $modifiedByUser = null;
     /**
      * The date on which the document was created.
-     *
      */
     public function getCreationDate(): \DateTime
     {
@@ -47,7 +42,6 @@ class UserAuditDetail
     }
     /**
      * The date on which the document was created.
-     *
      *
      * @return self
      */
@@ -59,7 +53,6 @@ class UserAuditDetail
     }
     /**
      * The last date on which the document was modified.
-     *
      */
     public function getModificationDate(): \DateTime
     {
@@ -67,7 +60,6 @@ class UserAuditDetail
     }
     /**
      * The last date on which the document was modified.
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class UserAuditDetail
     }
     /**
      * ID of the user who created the document.
-     *
      */
     public function getCreatedByUser(): mixed
     {
@@ -87,7 +78,6 @@ class UserAuditDetail
     }
     /**
      * ID of the user who created the document.
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class UserAuditDetail
     }
     /**
      * ID of the last user who modified the document.
-     *
      */
     public function getModifiedByUser(): mixed
     {
@@ -107,7 +96,6 @@ class UserAuditDetail
     }
     /**
      * ID of the last user who modified the document.
-     *
      *
      * @return self
      */

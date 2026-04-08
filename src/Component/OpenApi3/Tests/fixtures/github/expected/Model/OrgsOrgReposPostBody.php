@@ -22,93 +22,75 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      */
     protected string $name;
     /**
      * A short description of the repository.
-     *
      */
     protected string $description;
     /**
      * A URL with more information about the repository.
-     *
      */
     protected string $homepage;
     /**
      * Either `true` to create a private repository or `false` to create a public one.
-     *
      */
     protected bool $private = false;
     /**
      * Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. For more information, see "[Creating an internal repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.
      * The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
-     *
      */
     protected string $visibility;
     /**
      * Either `true` to enable issues for this repository or `false` to disable them.
-     *
      */
     protected bool $hasIssues = true;
     /**
      * Either `true` to enable projects for this repository or `false` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is `false`, and if you pass `true`, the API returns an error.
-     *
      */
     protected bool $hasProjects = true;
     /**
      * Either `true` to enable the wiki for this repository or `false` to disable it.
-     *
      */
     protected bool $hasWiki = true;
     /**
      * Either `true` to make this repo available as a template repository or `false` to prevent it.
-     *
      */
     protected bool $isTemplate = false;
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
      */
     protected int $teamId;
     /**
      * Pass `true` to create an initial commit with empty README.
-     *
      */
     protected bool $autoInit = false;
     /**
      * Desired language or platform [.gitignore template](https://github.com/github/gitignore) to apply. Use the name of the template without the extension. For example, "Haskell".
-     *
      */
     protected string $gitignoreTemplate;
     /**
      * Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://help.github.com/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
-     *
      */
     protected string $licenseTemplate;
     /**
      * Either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging.
-     *
      */
     protected bool $allowSquashMerge = true;
     /**
      * Either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits.
-     *
      */
     protected bool $allowMergeCommit = true;
     /**
      * Either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging.
-     *
      */
     protected bool $allowRebaseMerge = true;
     /**
      * Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion.
-     *
      */
     protected bool $deleteBranchOnMerge = false;
     /**
      * The name of the repository.
-     *
      */
     public function getName(): string
     {
@@ -116,7 +98,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      *
      * @return self
      */
@@ -128,7 +109,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * A short description of the repository.
-     *
      */
     public function getDescription(): string
     {
@@ -136,7 +116,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * A short description of the repository.
-     *
      *
      * @return self
      */
@@ -148,7 +127,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * A URL with more information about the repository.
-     *
      */
     public function getHomepage(): string
     {
@@ -156,7 +134,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * A URL with more information about the repository.
-     *
      *
      * @return self
      */
@@ -168,7 +145,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to create a private repository or `false` to create a public one.
-     *
      */
     public function getPrivate(): bool
     {
@@ -176,7 +152,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to create a private repository or `false` to create a public one.
-     *
      *
      * @return self
      */
@@ -189,19 +164,17 @@ class OrgsOrgReposPostBody extends \ArrayObject
     /**
      * Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. For more information, see "[Creating an internal repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.
      * The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
-     *
      */
     public function getVisibility(): string
     {
         return $this->visibility;
     }
     /**
-    * Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. For more information, see "[Creating an internal repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.  
-    The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
-    *
-    *
-    * @return self
-    */
+     * Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `visibility` can also be `internal`. For more information, see "[Creating an internal repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)" in the GitHub Help documentation.
+     * The `visibility` parameter overrides the `private` parameter when you use both parameters with the `nebula-preview` preview header.
+     *
+     * @return self
+     */
     public function setVisibility(string $visibility): self
     {
         $this->initialized['visibility'] = true;
@@ -210,7 +183,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable issues for this repository or `false` to disable them.
-     *
      */
     public function getHasIssues(): bool
     {
@@ -218,7 +190,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable issues for this repository or `false` to disable them.
-     *
      *
      * @return self
      */
@@ -230,7 +201,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable projects for this repository or `false` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is `false`, and if you pass `true`, the API returns an error.
-     *
      */
     public function getHasProjects(): bool
     {
@@ -238,7 +208,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable projects for this repository or `false` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is `false`, and if you pass `true`, the API returns an error.
-     *
      *
      * @return self
      */
@@ -250,7 +219,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable the wiki for this repository or `false` to disable it.
-     *
      */
     public function getHasWiki(): bool
     {
@@ -258,7 +226,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to enable the wiki for this repository or `false` to disable it.
-     *
      *
      * @return self
      */
@@ -270,7 +237,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to make this repo available as a template repository or `false` to prevent it.
-     *
      */
     public function getIsTemplate(): bool
     {
@@ -278,7 +244,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to make this repo available as a template repository or `false` to prevent it.
-     *
      *
      * @return self
      */
@@ -290,7 +255,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
      */
     public function getTeamId(): int
     {
@@ -298,7 +262,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
      *
      * @return self
      */
@@ -310,7 +273,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Pass `true` to create an initial commit with empty README.
-     *
      */
     public function getAutoInit(): bool
     {
@@ -318,7 +280,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Pass `true` to create an initial commit with empty README.
-     *
      *
      * @return self
      */
@@ -330,7 +291,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Desired language or platform [.gitignore template](https://github.com/github/gitignore) to apply. Use the name of the template without the extension. For example, "Haskell".
-     *
      */
     public function getGitignoreTemplate(): string
     {
@@ -338,7 +298,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Desired language or platform [.gitignore template](https://github.com/github/gitignore) to apply. Use the name of the template without the extension. For example, "Haskell".
-     *
      *
      * @return self
      */
@@ -350,7 +309,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://help.github.com/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
-     *
      */
     public function getLicenseTemplate(): string
     {
@@ -358,7 +316,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://help.github.com/articles/licensing-a-repository/#searching-github-by-license-type) as the `license_template` string. For example, "mit" or "mpl-2.0".
-     *
      *
      * @return self
      */
@@ -370,7 +327,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging.
-     *
      */
     public function getAllowSquashMerge(): bool
     {
@@ -378,7 +334,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging.
-     *
      *
      * @return self
      */
@@ -390,7 +345,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits.
-     *
      */
     public function getAllowMergeCommit(): bool
     {
@@ -398,7 +352,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits.
-     *
      *
      * @return self
      */
@@ -410,7 +363,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging.
-     *
      */
     public function getAllowRebaseMerge(): bool
     {
@@ -418,7 +370,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging.
-     *
      *
      * @return self
      */
@@ -430,7 +381,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion.
-     *
      */
     public function getDeleteBranchOnMerge(): bool
     {
@@ -438,7 +388,6 @@ class OrgsOrgReposPostBody extends \ArrayObject
     }
     /**
      * Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion.
-     *
      *
      * @return self
      */

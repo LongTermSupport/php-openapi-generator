@@ -29,7 +29,6 @@ class UserMarketplacePurchase extends \ArrayObject
     protected MarketplaceAccount $account;
     /**
      * Marketplace Listing Plan
-     *
      */
     protected MarketplaceListingPlan $plan;
     public function getBillingCycle(): string
@@ -104,7 +103,6 @@ class UserMarketplacePurchase extends \ArrayObject
     }
     /**
      * Marketplace Listing Plan
-     *
      */
     public function getPlan(): MarketplaceListingPlan
     {
@@ -112,7 +110,6 @@ class UserMarketplacePurchase extends \ArrayObject
     }
     /**
      * Marketplace Listing Plan
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class IdpGroupToUserRoleMapping
     }
     /**
      * Name of the group on external identity provider
-     *
      */
     protected ?string $group = null;
     /**
      * User role ID as defined in CP
-     *
      */
     protected ?string $userRoleId = null;
     /**
      * Name of the group on external identity provider
-     *
      */
     public function getGroup(): ?string
     {
@@ -37,7 +34,6 @@ class IdpGroupToUserRoleMapping
     }
     /**
      * Name of the group on external identity provider
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class IdpGroupToUserRoleMapping
     }
     /**
      * User role ID as defined in CP
-     *
      */
     public function getUserRoleId(): ?string
     {
@@ -57,7 +52,6 @@ class IdpGroupToUserRoleMapping
     }
     /**
      * User role ID as defined in CP
-     *
      *
      * @return self
      */

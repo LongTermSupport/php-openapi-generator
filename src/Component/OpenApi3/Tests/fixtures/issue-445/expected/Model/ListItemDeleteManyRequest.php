@@ -25,12 +25,10 @@ class ListItemDeleteManyRequest
     protected array $listItemIds;
     /**
      * A value indicating whether references to the list item should be removed.
-     *
      */
     protected bool $forceReferenceRemoval;
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      */
     protected bool $notifyProgress;
     /**
@@ -57,7 +55,6 @@ class ListItemDeleteManyRequest
     }
     /**
      * A value indicating whether references to the list item should be removed.
-     *
      */
     public function getForceReferenceRemoval(): bool
     {
@@ -65,7 +62,6 @@ class ListItemDeleteManyRequest
     }
     /**
      * A value indicating whether references to the list item should be removed.
-     *
      *
      * @return self
      */
@@ -77,7 +73,6 @@ class ListItemDeleteManyRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -85,7 +80,6 @@ class ListItemDeleteManyRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      *
      * @return self
      */

@@ -22,7 +22,6 @@ class UserKubernetesClusterUser extends \ArrayObject
     }
     /**
      * The username for the cluster admin user.
-     *
      */
     protected string $username;
     /**
@@ -33,7 +32,6 @@ class UserKubernetesClusterUser extends \ArrayObject
     protected array $groups;
     /**
      * The username for the cluster admin user.
-     *
      */
     public function getUsername(): string
     {
@@ -41,7 +39,6 @@ class UserKubernetesClusterUser extends \ArrayObject
     }
     /**
      * The username for the cluster admin user.
-     *
      *
      * @return self
      */

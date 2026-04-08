@@ -19,28 +19,23 @@ class PdfFormat extends FormatBase
     }
     /**
      * Specifies compression quality used for ReduceFileSize.
-     *
      */
     protected int $jpegQuality;
     /**
      * Whether to linearize the output for fast web viewing.
-     *
      */
     protected bool $fastWebView;
     /**
      * Whether to apply measures to decrease output size or not.
-     *
      */
     protected bool $reduceFileSize;
     protected ?string $extension = null;
     /**
      * Whether to extract document full text from this output.
-     *
      */
     protected bool $extractFullText;
     /**
      * Specifies compression quality used for ReduceFileSize.
-     *
      */
     public function getJpegQuality(): int
     {
@@ -48,7 +43,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Specifies compression quality used for ReduceFileSize.
-     *
      *
      * @return self
      */
@@ -60,7 +54,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to linearize the output for fast web viewing.
-     *
      */
     public function getFastWebView(): bool
     {
@@ -68,7 +61,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to linearize the output for fast web viewing.
-     *
      *
      * @return self
      */
@@ -80,7 +72,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to apply measures to decrease output size or not.
-     *
      */
     public function getReduceFileSize(): bool
     {
@@ -88,7 +79,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to apply measures to decrease output size or not.
-     *
      *
      * @return self
      */
@@ -110,7 +100,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to extract document full text from this output.
-     *
      */
     public function getExtractFullText(): bool
     {
@@ -118,7 +107,6 @@ class PdfFormat extends FormatBase
     }
     /**
      * Whether to extract document full text from this output.
-     *
      *
      * @return self
      */

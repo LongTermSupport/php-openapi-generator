@@ -22,12 +22,10 @@ class UserGpgKeysPostBody extends \ArrayObject
     }
     /**
      * A GPG key in ASCII-armored format.
-     *
      */
     protected string $armoredPublicKey;
     /**
      * A GPG key in ASCII-armored format.
-     *
      */
     public function getArmoredPublicKey(): string
     {
@@ -35,7 +33,6 @@ class UserGpgKeysPostBody extends \ArrayObject
     }
     /**
      * A GPG key in ASCII-armored format.
-     *
      *
      * @return self
      */

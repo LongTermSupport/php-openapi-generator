@@ -23,12 +23,10 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     protected string $datasetType = 'EVALUATION_DATASET_TYPE_UNKNOWN';
     /**
      * File to upload as data source for knowledge base.
-     *
      */
     protected ApiFileUploadDataSource $fileUploadDataset;
     /**
      * The name of the agent evaluation dataset.
-     *
      */
     protected string $name;
     public function getDatasetType(): string
@@ -43,7 +41,6 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
      */
     public function getFileUploadDataset(): ApiFileUploadDataSource
     {
@@ -51,7 +48,6 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
      *
      * @return self
      */
@@ -63,7 +59,6 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     }
     /**
      * The name of the agent evaluation dataset.
-     *
      */
     public function getName(): string
     {
@@ -71,7 +66,6 @@ class ApiCreateEvaluationDatasetInputPublic extends \ArrayObject
     }
     /**
      * The name of the agent evaluation dataset.
-     *
      *
      * @return self
      */

@@ -19,28 +19,23 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * Path to the object the tagbox is contained in.
-     *
      */
     protected ?string $path = null;
     /**
      * ID of the tagbox field.
-     *
      */
     protected ?string $fieldId = null;
     /**
      * List of refIds of the items that should be assigned.
-     *
      */
     protected mixed $refIds = null;
     /**
      * Indicates whether all the already assigned tags get replaced by the set specified in the action.
      * If false, the not already assigned tags get added, the rest is left as is.
-     *
      */
     protected bool $replace;
     /**
      * Path to the object the tagbox is contained in.
-     *
      */
     public function getPath(): ?string
     {
@@ -48,7 +43,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * Path to the object the tagbox is contained in.
-     *
      *
      * @return self
      */
@@ -60,7 +54,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * ID of the tagbox field.
-     *
      */
     public function getFieldId(): ?string
     {
@@ -68,7 +61,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * ID of the tagbox field.
-     *
      *
      * @return self
      */
@@ -80,7 +72,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be assigned.
-     *
      */
     public function getRefIds(): mixed
     {
@@ -88,7 +79,6 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be assigned.
-     *
      *
      * @return self
      */
@@ -101,19 +91,17 @@ class AssignTagboxItemsAction extends BusinessRuleAction
     /**
      * Indicates whether all the already assigned tags get replaced by the set specified in the action.
      * If false, the not already assigned tags get added, the rest is left as is.
-     *
      */
     public function getReplace(): bool
     {
         return $this->replace;
     }
     /**
-    * Indicates whether all the already assigned tags get replaced by the set specified in the action.
-    If false, the not already assigned tags get added, the rest is left as is.
-    *
-    *
-    * @return self
-    */
+     * Indicates whether all the already assigned tags get replaced by the set specified in the action.
+     * If false, the not already assigned tags get added, the rest is left as is.
+     *
+     * @return self
+     */
     public function setReplace(bool $replace): self
     {
         $this->initialized['replace'] = true;

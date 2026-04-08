@@ -22,29 +22,24 @@ class Enterprise extends \ArrayObject
     }
     /**
      * A short description of the enterprise.
-     *
      */
     protected ?string $description = null;
     protected string $htmlUrl;
     /**
      * The enterprise's website URL.
-     *
      */
     protected ?string $websiteUrl = null;
     /**
      * Unique identifier of the enterprise
-     *
      */
     protected int $id;
     protected string $nodeId;
     /**
      * The name of the enterprise.
-     *
      */
     protected string $name;
     /**
      * The slug url identifier for the enterprise.
-     *
      */
     protected string $slug;
     protected ?\DateTime $createdAt = null;
@@ -52,7 +47,6 @@ class Enterprise extends \ArrayObject
     protected string $avatarUrl;
     /**
      * A short description of the enterprise.
-     *
      */
     public function getDescription(): ?string
     {
@@ -60,7 +54,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * A short description of the enterprise.
-     *
      *
      * @return self
      */
@@ -82,7 +75,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The enterprise's website URL.
-     *
      */
     public function getWebsiteUrl(): ?string
     {
@@ -90,7 +82,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The enterprise's website URL.
-     *
      *
      * @return self
      */
@@ -102,7 +93,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * Unique identifier of the enterprise
-     *
      */
     public function getId(): int
     {
@@ -110,7 +100,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * Unique identifier of the enterprise
-     *
      *
      * @return self
      */
@@ -132,7 +121,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The name of the enterprise.
-     *
      */
     public function getName(): string
     {
@@ -140,7 +128,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The name of the enterprise.
-     *
      *
      * @return self
      */
@@ -152,7 +139,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The slug url identifier for the enterprise.
-     *
      */
     public function getSlug(): string
     {
@@ -160,7 +146,6 @@ class Enterprise extends \ArrayObject
     }
     /**
      * The slug url identifier for the enterprise.
-     *
      *
      * @return self
      */

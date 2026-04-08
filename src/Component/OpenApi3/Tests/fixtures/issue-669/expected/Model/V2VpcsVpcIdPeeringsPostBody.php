@@ -22,17 +22,14 @@ class V2VpcsVpcIdPeeringsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     protected string $name;
     /**
      * The ID of the VPC to peer with.
-     *
      */
     protected string $vpcId;
     /**
      * The name of the VPC peering. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class V2VpcsVpcIdPeeringsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class V2VpcsVpcIdPeeringsPostBody extends \ArrayObject
     }
     /**
      * The ID of the VPC to peer with.
-     *
      */
     public function getVpcId(): string
     {
@@ -60,7 +55,6 @@ class V2VpcsVpcIdPeeringsPostBody extends \ArrayObject
     }
     /**
      * The ID of the VPC to peer with.
-     *
      *
      * @return self
      */

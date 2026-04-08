@@ -22,17 +22,14 @@ class RepositoryBlob extends \ArrayObject
     }
     /**
      * The digest of the blob
-     *
      */
     protected string $digest;
     /**
      * The compressed size of the blob in bytes.
-     *
      */
     protected int $compressedSizeBytes;
     /**
      * The digest of the blob
-     *
      */
     public function getDigest(): string
     {
@@ -40,7 +37,6 @@ class RepositoryBlob extends \ArrayObject
     }
     /**
      * The digest of the blob
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class RepositoryBlob extends \ArrayObject
     }
     /**
      * The compressed size of the blob in bytes.
-     *
      */
     public function getCompressedSizeBytes(): int
     {
@@ -60,7 +55,6 @@ class RepositoryBlob extends \ArrayObject
     }
     /**
      * The compressed size of the blob in bytes.
-     *
      *
      * @return self
      */

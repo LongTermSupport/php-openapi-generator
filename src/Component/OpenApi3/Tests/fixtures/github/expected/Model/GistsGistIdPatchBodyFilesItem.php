@@ -22,17 +22,14 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
     }
     /**
      * The new content of the file
-     *
      */
     protected string $content;
     /**
      * The new filename for the file
-     *
      */
     protected ?string $filename = null;
     /**
      * The new content of the file
-     *
      */
     public function getContent(): string
     {
@@ -40,7 +37,6 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
     }
     /**
      * The new content of the file
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
     }
     /**
      * The new filename for the file
-     *
      */
     public function getFilename(): ?string
     {
@@ -60,7 +55,6 @@ class GistsGistIdPatchBodyFilesItem extends \ArrayObject
     }
     /**
      * The new filename for the file
-     *
      *
      * @return self
      */

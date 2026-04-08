@@ -22,17 +22,14 @@ class TriggerInfoScheduledRuns extends \ArrayObject
     }
     /**
      * Indicates last run time. null value indicates trigger not run yet.
-     *
      */
     protected ?string $lastRunAt = null;
     /**
      * Indicates next run time. null value indicates trigger will not run.
-     *
      */
     protected ?string $nextRunAt = null;
     /**
      * Indicates last run time. null value indicates trigger not run yet.
-     *
      */
     public function getLastRunAt(): ?string
     {
@@ -40,7 +37,6 @@ class TriggerInfoScheduledRuns extends \ArrayObject
     }
     /**
      * Indicates last run time. null value indicates trigger not run yet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class TriggerInfoScheduledRuns extends \ArrayObject
     }
     /**
      * Indicates next run time. null value indicates trigger will not run.
-     *
      */
     public function getNextRunAt(): ?string
     {
@@ -60,7 +55,6 @@ class TriggerInfoScheduledRuns extends \ArrayObject
     }
     /**
      * Indicates next run time. null value indicates trigger will not run.
-     *
      *
      * @return self
      */

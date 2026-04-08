@@ -22,27 +22,22 @@ class Domain extends \ArrayObject
     }
     /**
      * The name of the domain itself. This should follow the standard domain format of domain.TLD. For instance, `example.com` is a valid domain name.
-     *
      */
     protected string $name;
     /**
      * This optional attribute may contain an IP address. When provided, an A record will be automatically created pointing to the apex domain.
-     *
      */
     protected string $ipAddress;
     /**
      * This value is the time to live for the records on this domain, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
      */
     protected ?int $ttl = null;
     /**
      * This attribute contains the complete contents of the zone file for the selected domain. Individual domain record resources should be used to get more granular control over records. However, this attribute can also be used to get information about the SOA record, which is created automatically and is not accessible as an individual record resource.
-     *
      */
     protected ?string $zoneFile = null;
     /**
      * The name of the domain itself. This should follow the standard domain format of domain.TLD. For instance, `example.com` is a valid domain name.
-     *
      */
     public function getName(): string
     {
@@ -50,7 +45,6 @@ class Domain extends \ArrayObject
     }
     /**
      * The name of the domain itself. This should follow the standard domain format of domain.TLD. For instance, `example.com` is a valid domain name.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class Domain extends \ArrayObject
     }
     /**
      * This optional attribute may contain an IP address. When provided, an A record will be automatically created pointing to the apex domain.
-     *
      */
     public function getIpAddress(): string
     {
@@ -70,7 +63,6 @@ class Domain extends \ArrayObject
     }
     /**
      * This optional attribute may contain an IP address. When provided, an A record will be automatically created pointing to the apex domain.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class Domain extends \ArrayObject
     }
     /**
      * This value is the time to live for the records on this domain, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
      */
     public function getTtl(): ?int
     {
@@ -90,7 +81,6 @@ class Domain extends \ArrayObject
     }
     /**
      * This value is the time to live for the records on this domain, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class Domain extends \ArrayObject
     }
     /**
      * This attribute contains the complete contents of the zone file for the selected domain. Individual domain record resources should be used to get more granular control over records. However, this attribute can also be used to get information about the SOA record, which is created automatically and is not accessible as an individual record resource.
-     *
      */
     public function getZoneFile(): ?string
     {
@@ -110,7 +99,6 @@ class Domain extends \ArrayObject
     }
     /**
      * This attribute contains the complete contents of the zone file for the selected domain. Individual domain record resources should be used to get more granular control over records. However, this attribute can also be used to get information about the SOA record, which is created automatically and is not accessible as an individual record resource.
-     *
      *
      * @return self
      */

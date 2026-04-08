@@ -23,7 +23,6 @@ class ReviewBookRead extends \ArrayObject
     protected ?string $id = null;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     public function getId(): ?string
@@ -38,7 +37,6 @@ class ReviewBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -46,7 +44,6 @@ class ReviewBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */

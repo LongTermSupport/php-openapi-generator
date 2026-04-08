@@ -22,22 +22,18 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * The ID of the group
-     *
      */
     protected string $groupId;
     /**
      * The name of the group
-     *
      */
     protected string $groupName;
     /**
      * a description of the group
-     *
      */
     protected string $groupDescription;
     /**
      * The ID of the group
-     *
      */
     public function getGroupId(): string
     {
@@ -45,7 +41,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * The ID of the group
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * The name of the group
-     *
      */
     public function getGroupName(): string
     {
@@ -65,7 +59,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * The name of the group
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * a description of the group
-     *
      */
     public function getGroupDescription(): string
     {
@@ -85,7 +77,6 @@ class GroupMappingGroupsItem extends \ArrayObject
     }
     /**
      * a description of the group
-     *
      *
      * @return self
      */

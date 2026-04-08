@@ -19,13 +19,11 @@ class BusinessRuleCondition
     }
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
      */
     protected ?string $traceRefId = null;
     protected string $kind;
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
      */
     public function getTraceRefId(): ?string
     {
@@ -33,7 +31,6 @@ class BusinessRuleCondition
     }
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
      */
     public function setTraceRefId(?string $traceRefId): void
     {

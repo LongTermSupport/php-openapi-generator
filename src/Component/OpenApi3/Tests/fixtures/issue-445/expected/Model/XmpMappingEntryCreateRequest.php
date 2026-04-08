@@ -22,44 +22,36 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Direction of the mapping.
-     *
      */
     protected mixed $direction = null;
     /**
      * Priority of the mapping.
-     *
      */
     protected int $priority;
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      */
     protected bool $stopProcessing;
     /**
      * Path to source property in XMP.
-     *
      */
     protected string $xmpPath;
     /**
      * Path to target property in metadata.
-     *
      */
     protected string $metadataPath;
     /**
      * Optional additional configuration for the mapping.
-     *
      */
     protected mixed $configuration = null;
     /**
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     protected ?string $requestId = null;
     /**
      * Direction of the mapping.
-     *
      */
     public function getDirection(): mixed
     {
@@ -67,7 +59,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Direction of the mapping.
-     *
      *
      * @return self
      */
@@ -79,7 +70,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Priority of the mapping.
-     *
      */
     public function getPriority(): int
     {
@@ -87,7 +77,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Priority of the mapping.
-     *
      *
      * @return self
      */
@@ -99,7 +88,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      */
     public function getStopProcessing(): bool
     {
@@ -107,7 +95,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      *
      * @return self
      */
@@ -119,7 +106,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Path to source property in XMP.
-     *
      */
     public function getXmpPath(): string
     {
@@ -127,7 +113,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Path to source property in XMP.
-     *
      *
      * @return self
      */
@@ -139,7 +124,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Path to target property in metadata.
-     *
      */
     public function getMetadataPath(): string
     {
@@ -147,7 +131,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Path to target property in metadata.
-     *
      *
      * @return self
      */
@@ -159,7 +142,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Optional additional configuration for the mapping.
-     *
      */
     public function getConfiguration(): mixed
     {
@@ -167,7 +149,6 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
     }
     /**
      * Optional additional configuration for the mapping.
-     *
      *
      * @return self
      */
@@ -181,20 +162,18 @@ class XmpMappingEntryCreateRequest extends \ArrayObject
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     public function getRequestId(): ?string
     {
         return $this->requestId;
     }
     /**
-    * Optional client reference for this request.
-    Will be returned back in response to make easier for clients to match request items with the respective results.
-    It is not persisted anywhere and it is ignored in single operations.
-    *
-    *
-    * @return self
-    */
+     * Optional client reference for this request.
+     * Will be returned back in response to make easier for clients to match request items with the respective results.
+     * It is not persisted anywhere and it is ignored in single operations.
+     *
+     * @return self
+     */
     public function setRequestId(?string $requestId): self
     {
         $this->initialized['requestId'] = true;

@@ -22,19 +22,16 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * The hostname for the domain
-     *
      */
     protected string $domain;
     /**
      * - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
      * - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in bindable environment variables, and any other places that reference an app's live URL. Only one domain may be set as primary.
      * - ALIAS: A non-primary domain
-     *
      */
     protected string $type = 'UNSPECIFIED';
     /**
      * Indicates whether the domain includes all sub-domains, in addition to the given domain
-     *
      */
     protected bool $wildcard;
     /**
@@ -44,17 +41,14 @@ class AppDomainSpec extends \ArrayObject
      * 
      * For example, If the domain you are adding is `app.domain.com`, the zone
      * could be `domain.com`.
-     *
      */
     protected string $zone;
     /**
      * The minimum version of TLS a client application can use to access resources for the domain.  Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
-     *
      */
     protected string $minimumTlsVersion;
     /**
      * The hostname for the domain
-     *
      */
     public function getDomain(): string
     {
@@ -62,7 +56,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * The hostname for the domain
-     *
      *
      * @return self
      */
@@ -76,20 +69,18 @@ class AppDomainSpec extends \ArrayObject
      * - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
      * - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in bindable environment variables, and any other places that reference an app's live URL. Only one domain may be set as primary.
      * - ALIAS: A non-primary domain
-     *
      */
     public function getType(): string
     {
         return $this->type;
     }
     /**
-    * - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
-    - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in bindable environment variables, and any other places that reference an app's live URL. Only one domain may be set as primary.
-    - ALIAS: A non-primary domain
-    *
-    *
-    * @return self
-    */
+     * - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
+     * - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in bindable environment variables, and any other places that reference an app's live URL. Only one domain may be set as primary.
+     * - ALIAS: A non-primary domain
+     *
+     * @return self
+     */
     public function setType(string $type): self
     {
         $this->initialized['type'] = true;
@@ -98,7 +89,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * Indicates whether the domain includes all sub-domains, in addition to the given domain
-     *
      */
     public function getWildcard(): bool
     {
@@ -106,7 +96,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * Indicates whether the domain includes all sub-domains, in addition to the given domain
-     *
      *
      * @return self
      */
@@ -123,23 +112,21 @@ class AppDomainSpec extends \ArrayObject
      * 
      * For example, If the domain you are adding is `app.domain.com`, the zone
      * could be `domain.com`.
-     *
      */
     public function getZone(): string
     {
         return $this->zone;
     }
     /**
-    * Optional. If the domain uses DigitalOcean DNS and you would like App
-    Platform to automatically manage it for you, set this to the name of the
-    domain on your account.
-    
-    For example, If the domain you are adding is `app.domain.com`, the zone
-    could be `domain.com`.
-    *
-    *
-    * @return self
-    */
+     * Optional. If the domain uses DigitalOcean DNS and you would like App
+     * Platform to automatically manage it for you, set this to the name of the
+     * domain on your account.
+     * 
+     * For example, If the domain you are adding is `app.domain.com`, the zone
+     * could be `domain.com`.
+     *
+     * @return self
+     */
     public function setZone(string $zone): self
     {
         $this->initialized['zone'] = true;
@@ -148,7 +135,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * The minimum version of TLS a client application can use to access resources for the domain.  Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
-     *
      */
     public function getMinimumTlsVersion(): string
     {
@@ -156,7 +142,6 @@ class AppDomainSpec extends \ArrayObject
     }
     /**
      * The minimum version of TLS a client application can use to access resources for the domain.  Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
-     *
      *
      * @return self
      */

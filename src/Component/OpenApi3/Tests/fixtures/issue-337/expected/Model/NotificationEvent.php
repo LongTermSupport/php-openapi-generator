@@ -23,37 +23,30 @@ class NotificationEvent extends \ArrayObject
     protected Company $company;
     /**
      * The unique identifier of the event that triggered the generation of the `notificationEvent`. This identifier is consistent across all portfolios in the Global Monitoring product.
-     *
      */
     protected float $eventId;
     /**
      * The date that the event occured.
-     *
      */
     protected \DateTime $eventDate;
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     protected string $newValue;
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     protected string $oldValue;
     /**
      * The unique identifier for the `notificationEvent`. This identifier is tied to a specific `eventId` and `portfolioId`.
-     *
      */
     protected float $notificationEventId;
     /**
      * The unique identifier for the `ruleCode` that triggered the generation of the `notificationEvent`.
-     *
      */
     protected float $ruleCode;
     /**
      * The name of the notification event rule that triggered the generation of the `notificationEvent`.
-     *
      */
     protected string $ruleName;
     public function getCompany(): Company
@@ -68,7 +61,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier of the event that triggered the generation of the `notificationEvent`. This identifier is consistent across all portfolios in the Global Monitoring product.
-     *
      */
     public function getEventId(): float
     {
@@ -76,7 +68,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier of the event that triggered the generation of the `notificationEvent`. This identifier is consistent across all portfolios in the Global Monitoring product.
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The date that the event occured.
-     *
      */
     public function getEventDate(): \DateTime
     {
@@ -96,7 +86,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The date that the event occured.
-     *
      *
      * @return self
      */
@@ -108,7 +97,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     public function getNewValue(): string
     {
@@ -116,7 +104,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      *
      * @return self
      */
@@ -128,7 +115,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     public function getOldValue(): string
     {
@@ -136,7 +122,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      *
      * @return self
      */
@@ -148,7 +133,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier for the `notificationEvent`. This identifier is tied to a specific `eventId` and `portfolioId`.
-     *
      */
     public function getNotificationEventId(): float
     {
@@ -156,7 +140,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier for the `notificationEvent`. This identifier is tied to a specific `eventId` and `portfolioId`.
-     *
      *
      * @return self
      */
@@ -168,7 +151,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier for the `ruleCode` that triggered the generation of the `notificationEvent`.
-     *
      */
     public function getRuleCode(): float
     {
@@ -176,7 +158,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The unique identifier for the `ruleCode` that triggered the generation of the `notificationEvent`.
-     *
      *
      * @return self
      */
@@ -188,7 +169,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The name of the notification event rule that triggered the generation of the `notificationEvent`.
-     *
      */
     public function getRuleName(): string
     {
@@ -196,7 +176,6 @@ class NotificationEvent extends \ArrayObject
     }
     /**
      * The name of the notification event rule that triggered the generation of the `notificationEvent`.
-     *
      *
      * @return self
      */

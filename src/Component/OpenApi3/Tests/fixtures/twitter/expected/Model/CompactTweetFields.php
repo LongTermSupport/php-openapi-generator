@@ -22,27 +22,22 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $id;
     /**
      * Creation time of the Tweet.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The content of the Tweet.
-     *
      */
     protected string $text;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $authorId;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $inReplyToUserId;
     /**
@@ -53,17 +48,14 @@ class CompactTweetFields extends \ArrayObject
     protected array $referencedTweets;
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      */
     protected CompactTweetFieldsAttachments $attachments;
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     protected TweetWithheld $withheld;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getId(): string
     {
@@ -71,7 +63,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -83,7 +74,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -91,7 +81,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
      *
      * @return self
      */
@@ -103,7 +92,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
      */
     public function getText(): string
     {
@@ -111,7 +99,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
      *
      * @return self
      */
@@ -123,7 +110,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getAuthorId(): string
     {
@@ -131,7 +117,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -143,7 +128,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getInReplyToUserId(): string
     {
@@ -151,7 +135,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -185,7 +168,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      */
     public function getAttachments(): CompactTweetFieldsAttachments
     {
@@ -193,7 +175,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      *
      * @return self
      */
@@ -205,7 +186,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     public function getWithheld(): TweetWithheld
     {
@@ -213,7 +193,6 @@ class CompactTweetFields extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      *
      * @return self
      */

@@ -19,38 +19,31 @@ class BusinessRule
     }
     /**
      * User defined ID of the rule.
-     *
      */
     protected ?string $id = null;
     /**
      * Trigger point.
-     *
      */
     protected mixed $triggerPoint = null;
     /**
      * Enable.
-     *
      */
     protected bool $isEnabled;
     /**
      * Language specific rule names.
-     *
      */
     protected mixed $names = null;
     /**
      * Language specific rule description.
-     *
      */
     protected mixed $description = null;
     /**
      * Enable trace logs for this rule.
-     *
      */
     protected bool $enableTracing;
     protected string $kind;
     /**
      * User defined ID of the rule.
-     *
      */
     public function getId(): ?string
     {
@@ -58,7 +51,6 @@ class BusinessRule
     }
     /**
      * User defined ID of the rule.
-     *
      */
     public function setId(?string $id): void
     {
@@ -67,7 +59,6 @@ class BusinessRule
     }
     /**
      * Trigger point.
-     *
      */
     public function getTriggerPoint(): mixed
     {
@@ -75,7 +66,6 @@ class BusinessRule
     }
     /**
      * Trigger point.
-     *
      */
     public function setTriggerPoint(mixed $triggerPoint): void
     {
@@ -84,7 +74,6 @@ class BusinessRule
     }
     /**
      * Enable.
-     *
      */
     public function getIsEnabled(): bool
     {
@@ -92,7 +81,6 @@ class BusinessRule
     }
     /**
      * Enable.
-     *
      */
     public function setIsEnabled(bool $isEnabled): void
     {
@@ -101,7 +89,6 @@ class BusinessRule
     }
     /**
      * Language specific rule names.
-     *
      */
     public function getNames(): mixed
     {
@@ -109,7 +96,6 @@ class BusinessRule
     }
     /**
      * Language specific rule names.
-     *
      */
     public function setNames(mixed $names): void
     {
@@ -118,7 +104,6 @@ class BusinessRule
     }
     /**
      * Language specific rule description.
-     *
      */
     public function getDescription(): mixed
     {
@@ -126,7 +111,6 @@ class BusinessRule
     }
     /**
      * Language specific rule description.
-     *
      */
     public function setDescription(mixed $description): void
     {
@@ -135,7 +119,6 @@ class BusinessRule
     }
     /**
      * Enable trace logs for this rule.
-     *
      */
     public function getEnableTracing(): bool
     {
@@ -143,7 +126,6 @@ class BusinessRule
     }
     /**
      * Enable trace logs for this rule.
-     *
      */
     public function setEnableTracing(bool $enableTracing): void
     {

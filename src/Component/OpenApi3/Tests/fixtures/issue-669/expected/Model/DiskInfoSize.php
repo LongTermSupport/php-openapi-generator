@@ -22,17 +22,14 @@ class DiskInfoSize extends \ArrayObject
     }
     /**
      * The amount of space allocated to the disk.
-     *
      */
     protected int $amount;
     /**
      * The unit of measure for the disk size.
-     *
      */
     protected string $unit;
     /**
      * The amount of space allocated to the disk.
-     *
      */
     public function getAmount(): int
     {
@@ -40,7 +37,6 @@ class DiskInfoSize extends \ArrayObject
     }
     /**
      * The amount of space allocated to the disk.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DiskInfoSize extends \ArrayObject
     }
     /**
      * The unit of measure for the disk size.
-     *
      */
     public function getUnit(): string
     {
@@ -60,7 +55,6 @@ class DiskInfoSize extends \ArrayObject
     }
     /**
      * The unit of measure for the disk size.
-     *
      *
      * @return self
      */

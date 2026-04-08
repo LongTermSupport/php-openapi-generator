@@ -19,12 +19,10 @@ class SchemaCreateResult
     }
     /**
      * The details of the created schema.
-     *
      */
     protected mixed $schema = null;
     /**
      * The details of the created schema.
-     *
      */
     public function getSchema(): mixed
     {
@@ -32,7 +30,6 @@ class SchemaCreateResult
     }
     /**
      * The details of the created schema.
-     *
      *
      * @return self
      */

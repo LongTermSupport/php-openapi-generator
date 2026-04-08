@@ -22,47 +22,38 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new name of the user.
-     *
      */
     protected string $name;
     /**
      * The publicly visible email address of the user.
-     *
      */
     protected string $email;
     /**
      * The new blog URL of the user.
-     *
      */
     protected string $blog;
     /**
      * The new Twitter username of the user.
-     *
      */
     protected ?string $twitterUsername = null;
     /**
      * The new company of the user.
-     *
      */
     protected string $company;
     /**
      * The new location of the user.
-     *
      */
     protected string $location;
     /**
      * The new hiring availability of the user.
-     *
      */
     protected bool $hireable;
     /**
      * The new short biography of the user.
-     *
      */
     protected string $bio;
     /**
      * The new name of the user.
-     *
      */
     public function getName(): string
     {
@@ -70,7 +61,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new name of the user.
-     *
      *
      * @return self
      */
@@ -82,7 +72,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The publicly visible email address of the user.
-     *
      */
     public function getEmail(): string
     {
@@ -90,7 +79,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The publicly visible email address of the user.
-     *
      *
      * @return self
      */
@@ -102,7 +90,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new blog URL of the user.
-     *
      */
     public function getBlog(): string
     {
@@ -110,7 +97,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new blog URL of the user.
-     *
      *
      * @return self
      */
@@ -122,7 +108,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new Twitter username of the user.
-     *
      */
     public function getTwitterUsername(): ?string
     {
@@ -130,7 +115,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new Twitter username of the user.
-     *
      *
      * @return self
      */
@@ -142,7 +126,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new company of the user.
-     *
      */
     public function getCompany(): string
     {
@@ -150,7 +133,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new company of the user.
-     *
      *
      * @return self
      */
@@ -162,7 +144,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new location of the user.
-     *
      */
     public function getLocation(): string
     {
@@ -170,7 +151,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new location of the user.
-     *
      *
      * @return self
      */
@@ -182,7 +162,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new hiring availability of the user.
-     *
      */
     public function getHireable(): bool
     {
@@ -190,7 +169,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new hiring availability of the user.
-     *
      *
      * @return self
      */
@@ -202,7 +180,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new short biography of the user.
-     *
      */
     public function getBio(): string
     {
@@ -210,7 +187,6 @@ class UserPatchBody extends \ArrayObject
     }
     /**
      * The new short biography of the user.
-     *
      *
      * @return self
      */

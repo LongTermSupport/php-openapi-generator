@@ -22,12 +22,10 @@ class ApiCreateEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * Test‑case UUID.
-     *
      */
     protected string $testCaseUuid;
     /**
      * Test‑case UUID.
-     *
      */
     public function getTestCaseUuid(): string
     {
@@ -35,7 +33,6 @@ class ApiCreateEvaluationTestCaseOutput extends \ArrayObject
     }
     /**
      * Test‑case UUID.
-     *
      *
      * @return self
      */

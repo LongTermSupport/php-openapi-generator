@@ -24,7 +24,6 @@ class ReviewJsonhalBookRead extends \ArrayObject
     protected ?string $id = null;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     public function getLinks(): ReviewJsonhalBookReadLinks
@@ -49,7 +48,6 @@ class ReviewJsonhalBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -57,7 +55,6 @@ class ReviewJsonhalBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */

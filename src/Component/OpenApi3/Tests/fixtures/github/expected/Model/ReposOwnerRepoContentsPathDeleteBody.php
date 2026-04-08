@@ -22,32 +22,26 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The commit message.
-     *
      */
     protected string $message;
     /**
      * The blob SHA of the file being replaced.
-     *
      */
     protected string $sha;
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
      */
     protected string $branch;
     /**
      * object containing information about the committer.
-     *
      */
     protected ReposOwnerRepoContentsPathDeleteBodyCommitter $committer;
     /**
      * object containing information about the author.
-     *
      */
     protected ReposOwnerRepoContentsPathDeleteBodyAuthor $author;
     /**
      * The commit message.
-     *
      */
     public function getMessage(): string
     {
@@ -55,7 +49,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The commit message.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The blob SHA of the file being replaced.
-     *
      */
     public function getSha(): string
     {
@@ -75,7 +67,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The blob SHA of the file being replaced.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
      */
     public function getBranch(): string
     {
@@ -95,7 +85,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * object containing information about the committer.
-     *
      */
     public function getCommitter(): ReposOwnerRepoContentsPathDeleteBodyCommitter
     {
@@ -115,7 +103,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * object containing information about the committer.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * object containing information about the author.
-     *
      */
     public function getAuthor(): ReposOwnerRepoContentsPathDeleteBodyAuthor
     {
@@ -135,7 +121,6 @@ class ReposOwnerRepoContentsPathDeleteBody extends \ArrayObject
     }
     /**
      * object containing information about the author.
-     *
      *
      * @return self
      */

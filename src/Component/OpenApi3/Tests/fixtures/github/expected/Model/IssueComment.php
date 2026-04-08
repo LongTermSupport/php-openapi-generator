@@ -22,18 +22,15 @@ class IssueComment extends \ArrayObject
     }
     /**
      * Unique identifier of the issue comment
-     *
      */
     protected int $id;
     protected string $nodeId;
     /**
      * URL for the issue comment
-     *
      */
     protected string $url;
     /**
      * Contents of the issue comment
-     *
      */
     protected string $body;
     protected string $bodyText;
@@ -48,7 +45,6 @@ class IssueComment extends \ArrayObject
     protected ReactionRollup $reactions;
     /**
      * Unique identifier of the issue comment
-     *
      */
     public function getId(): int
     {
@@ -56,7 +52,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * Unique identifier of the issue comment
-     *
      *
      * @return self
      */
@@ -78,7 +73,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * URL for the issue comment
-     *
      */
     public function getUrl(): string
     {
@@ -86,7 +80,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * URL for the issue comment
-     *
      *
      * @return self
      */
@@ -98,7 +91,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * Contents of the issue comment
-     *
      */
     public function getBody(): string
     {
@@ -106,7 +98,6 @@ class IssueComment extends \ArrayObject
     }
     /**
      * Contents of the issue comment
-     *
      *
      * @return self
      */

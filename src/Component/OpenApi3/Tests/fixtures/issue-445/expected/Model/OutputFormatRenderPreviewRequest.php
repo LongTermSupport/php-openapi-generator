@@ -19,17 +19,14 @@ class OutputFormatRenderPreviewRequest
     }
     /**
      * The content for which the format should be rendered
-     *
      */
     protected ?string $contentId = null;
     /**
      * The format which should be rendered.
-     *
      */
     protected mixed $outputFormat = null;
     /**
      * The content for which the format should be rendered
-     *
      */
     public function getContentId(): ?string
     {
@@ -37,7 +34,6 @@ class OutputFormatRenderPreviewRequest
     }
     /**
      * The content for which the format should be rendered
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class OutputFormatRenderPreviewRequest
     }
     /**
      * The format which should be rendered.
-     *
      */
     public function getOutputFormat(): mixed
     {
@@ -57,7 +52,6 @@ class OutputFormatRenderPreviewRequest
     }
     /**
      * The format which should be rendered.
-     *
      *
      * @return self
      */

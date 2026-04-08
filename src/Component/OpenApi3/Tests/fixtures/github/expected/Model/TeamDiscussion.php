@@ -23,13 +23,11 @@ class TeamDiscussion extends \ArrayObject
     protected ?TeamDiscussionAuthor $author = null;
     /**
      * The main text of the discussion.
-     *
      */
     protected string $body;
     protected string $bodyHtml;
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
      */
     protected string $bodyVersion;
     protected int $commentsCount;
@@ -40,23 +38,19 @@ class TeamDiscussion extends \ArrayObject
     protected string $nodeId;
     /**
      * The unique sequence number of a team discussion.
-     *
      */
     protected int $number;
     /**
      * Whether or not this discussion should be pinned for easy retrieval.
-     *
      */
     protected bool $pinned;
     /**
      * Whether or not this discussion should be restricted to team members and organization administrators.
-     *
      */
     protected bool $private;
     protected string $teamUrl;
     /**
      * The title of the discussion.
-     *
      */
     protected string $title;
     protected \DateTime $updatedAt;
@@ -74,7 +68,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The main text of the discussion.
-     *
      */
     public function getBody(): string
     {
@@ -82,7 +75,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The main text of the discussion.
-     *
      *
      * @return self
      */
@@ -104,7 +96,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
      */
     public function getBodyVersion(): string
     {
@@ -112,7 +103,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
      *
      * @return self
      */
@@ -184,7 +174,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The unique sequence number of a team discussion.
-     *
      */
     public function getNumber(): int
     {
@@ -192,7 +181,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The unique sequence number of a team discussion.
-     *
      *
      * @return self
      */
@@ -204,7 +192,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * Whether or not this discussion should be pinned for easy retrieval.
-     *
      */
     public function getPinned(): bool
     {
@@ -212,7 +199,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * Whether or not this discussion should be pinned for easy retrieval.
-     *
      *
      * @return self
      */
@@ -224,7 +210,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * Whether or not this discussion should be restricted to team members and organization administrators.
-     *
      */
     public function getPrivate(): bool
     {
@@ -232,7 +217,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * Whether or not this discussion should be restricted to team members and organization administrators.
-     *
      *
      * @return self
      */
@@ -254,7 +238,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The title of the discussion.
-     *
      */
     public function getTitle(): string
     {
@@ -262,7 +245,6 @@ class TeamDiscussion extends \ArrayObject
     }
     /**
      * The title of the discussion.
-     *
      *
      * @return self
      */

@@ -23,72 +23,58 @@ class DefaultUser extends \ArrayObject
     protected string $format;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $id;
     /**
      * Creation time of this user.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The friendly name of this user, as shown on their profile.
-     *
      */
     protected string $name;
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     protected string $username;
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
      */
     protected bool $protected;
     /**
      * Indicate if this user is a verified Twitter User.
-     *
      */
     protected bool $verified;
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     protected UserWithheld $withheld;
     /**
      * The URL to the profile image for this user.
-     *
      */
     protected string $profileImageUrl;
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
      */
     protected string $location;
     /**
      * The URL specified in the user's profile.
-     *
      */
     protected string $url;
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
      */
     protected string $description;
     /**
      * A list of metadata found in the user's profile description.
-     *
      */
     protected DefaultUserFieldsEntities $entities;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $mostRecentTweetId;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $pinnedTweetId;
     public function getFormat(): string
@@ -103,7 +89,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getId(): string
     {
@@ -111,7 +96,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -123,7 +107,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Creation time of this user.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -131,7 +114,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Creation time of this user.
-     *
      *
      * @return self
      */
@@ -143,7 +125,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The friendly name of this user, as shown on their profile.
-     *
      */
     public function getName(): string
     {
@@ -151,7 +132,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The friendly name of this user, as shown on their profile.
-     *
      *
      * @return self
      */
@@ -163,7 +143,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     public function getUsername(): string
     {
@@ -171,7 +150,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      *
      * @return self
      */
@@ -183,7 +161,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
      */
     public function getProtected(): bool
     {
@@ -191,7 +168,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
      *
      * @return self
      */
@@ -203,7 +179,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Indicate if this user is a verified Twitter User.
-     *
      */
     public function getVerified(): bool
     {
@@ -211,7 +186,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Indicate if this user is a verified Twitter User.
-     *
      *
      * @return self
      */
@@ -223,7 +197,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     public function getWithheld(): UserWithheld
     {
@@ -231,7 +204,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      *
      * @return self
      */
@@ -243,7 +215,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The URL to the profile image for this user.
-     *
      */
     public function getProfileImageUrl(): string
     {
@@ -251,7 +222,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The URL to the profile image for this user.
-     *
      *
      * @return self
      */
@@ -263,7 +233,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
      */
     public function getLocation(): string
     {
@@ -271,7 +240,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
-     *
      *
      * @return self
      */
@@ -283,7 +251,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The URL specified in the user's profile.
-     *
      */
     public function getUrl(): string
     {
@@ -291,7 +258,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The URL specified in the user's profile.
-     *
      *
      * @return self
      */
@@ -303,7 +269,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
      */
     public function getDescription(): string
     {
@@ -311,7 +276,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * The text of this user's profile description (also known as bio), if the user provided one.
-     *
      *
      * @return self
      */
@@ -323,7 +287,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * A list of metadata found in the user's profile description.
-     *
      */
     public function getEntities(): DefaultUserFieldsEntities
     {
@@ -331,7 +294,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * A list of metadata found in the user's profile description.
-     *
      *
      * @return self
      */
@@ -343,7 +305,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getMostRecentTweetId(): string
     {
@@ -351,7 +312,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -363,7 +323,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getPinnedTweetId(): string
     {
@@ -371,7 +330,6 @@ class DefaultUser extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */

@@ -20,35 +20,30 @@ class GeoBoundingBoxFilter extends FilterBase
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
      */
     protected string $field;
     /**
      * The top left corner of the bounding box's geo location (latitude and longitude).
-     *
      */
     protected mixed $topLeft = null;
     /**
      * The bottom right corner of the bounding box's geo location (latitude and longitude).
-     *
      */
     protected mixed $bottomRight = null;
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
      */
     public function getField(): string
     {
         return $this->field;
     }
     /**
-    * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
-    (i.e. personLayer.address.street).
-    *
-    *
-    * @return self
-    */
+     * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
+     * (i.e. personLayer.address.street).
+     *
+     * @return self
+     */
     public function setField(string $field): self
     {
         $this->initialized['field'] = true;
@@ -57,7 +52,6 @@ class GeoBoundingBoxFilter extends FilterBase
     }
     /**
      * The top left corner of the bounding box's geo location (latitude and longitude).
-     *
      */
     public function getTopLeft(): mixed
     {
@@ -65,7 +59,6 @@ class GeoBoundingBoxFilter extends FilterBase
     }
     /**
      * The top left corner of the bounding box's geo location (latitude and longitude).
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class GeoBoundingBoxFilter extends FilterBase
     }
     /**
      * The bottom right corner of the bounding box's geo location (latitude and longitude).
-     *
      */
     public function getBottomRight(): mixed
     {
@@ -85,7 +77,6 @@ class GeoBoundingBoxFilter extends FilterBase
     }
     /**
      * The bottom right corner of the bounding box's geo location (latitude and longitude).
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * ASN of the local router.
-     *
      */
     protected int $localAsn;
     /**
      * ASN of the peer router
-     *
      */
     protected int $peerAsn;
     /**
      * IP of the DigitalOcean router
-     *
      */
     protected string $localRouterIp;
     /**
      * IP of the peer router
-     *
      */
     protected string $peerRouterIp;
     /**
      * ASN of the local router.
-     *
      */
     public function getLocalAsn(): int
     {
@@ -50,7 +45,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * ASN of the local router.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * ASN of the peer router
-     *
      */
     public function getPeerAsn(): int
     {
@@ -70,7 +63,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * ASN of the peer router
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * IP of the DigitalOcean router
-     *
      */
     public function getLocalRouterIp(): string
     {
@@ -90,7 +81,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * IP of the DigitalOcean router
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * IP of the peer router
-     *
      */
     public function getPeerRouterIp(): string
     {
@@ -110,7 +99,6 @@ class PartnerAttachmentBgp extends \ArrayObject
     }
     /**
      * IP of the peer router
-     *
      *
      * @return self
      */

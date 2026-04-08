@@ -22,42 +22,34 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The name of the opensearch index.
-     *
      */
     protected string $indexName;
     /**
      * The number of shards for the index.
-     *
      */
     protected int $numberOfShards;
     /**
      * The number of replicas for the index.
-     *
      */
     protected int $numberOfReplicas;
     /**
      * The size of the index.
-     *
      */
     protected int $size;
     /**
      * The date and time the index was created.
-     *
      */
     protected \DateTime $createdTime;
     /**
      * The status of the OpenSearch index.
-     *
      */
     protected string $status;
     /**
      * The health of the OpenSearch index.
-     *
      */
     protected string $health;
     /**
      * The name of the opensearch index.
-     *
      */
     public function getIndexName(): string
     {
@@ -65,7 +57,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The name of the opensearch index.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The number of shards for the index.
-     *
      */
     public function getNumberOfShards(): int
     {
@@ -85,7 +75,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The number of shards for the index.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The number of replicas for the index.
-     *
      */
     public function getNumberOfReplicas(): int
     {
@@ -105,7 +93,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The number of replicas for the index.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The size of the index.
-     *
      */
     public function getSize(): int
     {
@@ -125,7 +111,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The size of the index.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The date and time the index was created.
-     *
      */
     public function getCreatedTime(): \DateTime
     {
@@ -145,7 +129,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The date and time the index was created.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The status of the OpenSearch index.
-     *
      */
     public function getStatus(): string
     {
@@ -165,7 +147,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The status of the OpenSearch index.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The health of the OpenSearch index.
-     *
      */
     public function getHealth(): string
     {
@@ -185,7 +165,6 @@ class OpensearchIndex extends \ArrayObject
     }
     /**
      * The health of the OpenSearch index.
-     *
      *
      * @return self
      */

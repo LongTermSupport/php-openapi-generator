@@ -22,7 +22,6 @@ class Key extends \ArrayObject
     }
     /**
      * The access key's name.
-     *
      */
     protected string $name;
     /**
@@ -33,17 +32,14 @@ class Key extends \ArrayObject
     protected array $grants = array();
     /**
      * The Access Key ID used to access a bucket.
-     *
      */
     protected string $accessKey;
     /**
      * The date and time the key was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The access key's name.
-     *
      */
     public function getName(): string
     {
@@ -51,7 +47,6 @@ class Key extends \ArrayObject
     }
     /**
      * The access key's name.
-     *
      *
      * @return self
      */
@@ -85,7 +80,6 @@ class Key extends \ArrayObject
     }
     /**
      * The Access Key ID used to access a bucket.
-     *
      */
     public function getAccessKey(): string
     {
@@ -93,7 +87,6 @@ class Key extends \ArrayObject
     }
     /**
      * The Access Key ID used to access a bucket.
-     *
      *
      * @return self
      */
@@ -105,7 +98,6 @@ class Key extends \ArrayObject
     }
     /**
      * The date and time the key was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -113,7 +105,6 @@ class Key extends \ArrayObject
     }
     /**
      * The date and time the key was created.
-     *
      *
      * @return self
      */

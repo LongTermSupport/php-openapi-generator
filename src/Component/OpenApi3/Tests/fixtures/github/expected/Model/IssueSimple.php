@@ -56,7 +56,6 @@ class IssueSimple extends \ArrayObject
     protected string $timelineUrl;
     /**
      * A git repository
-     *
      */
     protected Repository $repository;
     protected ?IssueSimplePerformedViaGithubApp $performedViaGithubApp = null;
@@ -358,7 +357,6 @@ class IssueSimple extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getRepository(): Repository
     {
@@ -366,7 +364,6 @@ class IssueSimple extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */

@@ -22,42 +22,34 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Unique identifier for the app feature.
-     *
      */
     protected int $id;
     /**
      * Name of the feature.
-     *
      */
     protected string $name;
     /**
      * Feature type, indicating the kind of data it holds.
-     *
      */
     protected string $type;
     /**
      * Unit of measurement for the feature, if applicable. Units apply to allowance features.
-     *
      */
     protected string $unit;
     /**
      * Value of the feature, which can vary based on the type.
-     *
      */
     protected mixed $value = null;
     /**
      * Timestamp when the feature was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Timestamp when the feature was last updated.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Unique identifier for the app feature.
-     *
      */
     public function getId(): int
     {
@@ -65,7 +57,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Unique identifier for the app feature.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Name of the feature.
-     *
      */
     public function getName(): string
     {
@@ -85,7 +75,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Name of the feature.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Feature type, indicating the kind of data it holds.
-     *
      */
     public function getType(): string
     {
@@ -105,7 +93,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Feature type, indicating the kind of data it holds.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Unit of measurement for the feature, if applicable. Units apply to allowance features.
-     *
      */
     public function getUnit(): string
     {
@@ -125,7 +111,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Unit of measurement for the feature, if applicable. Units apply to allowance features.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Value of the feature, which can vary based on the type.
-     *
      */
     public function getValue(): mixed
     {
@@ -145,7 +129,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Value of the feature, which can vary based on the type.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Timestamp when the feature was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -165,7 +147,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Timestamp when the feature was created.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Timestamp when the feature was last updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -185,7 +165,6 @@ class AddonsFeature extends \ArrayObject
     }
     /**
      * Timestamp when the feature was last updated.
-     *
      *
      * @return self
      */

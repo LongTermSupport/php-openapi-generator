@@ -22,17 +22,14 @@ class AddonsResourceMetadata extends \ArrayObject
     }
     /**
      * The name of the metadata item to be set.
-     *
      */
     protected string $name;
     /**
      * The value to be set for the metadata item, which can be a string or boolean.
-     *
      */
     protected mixed $value = null;
     /**
      * The name of the metadata item to be set.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class AddonsResourceMetadata extends \ArrayObject
     }
     /**
      * The name of the metadata item to be set.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AddonsResourceMetadata extends \ArrayObject
     }
     /**
      * The value to be set for the metadata item, which can be a string or boolean.
-     *
      */
     public function getValue(): mixed
     {
@@ -60,7 +55,6 @@ class AddonsResourceMetadata extends \ArrayObject
     }
     /**
      * The value to be set for the metadata item, which can be a string or boolean.
-     *
      *
      * @return self
      */

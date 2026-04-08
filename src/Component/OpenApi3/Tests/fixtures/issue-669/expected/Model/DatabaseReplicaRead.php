@@ -22,27 +22,22 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database replica.
-     *
      */
     protected string $id;
     /**
      * The name to give the read-only replicating
-     *
      */
     protected string $name;
     /**
      * A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster.
-     *
      */
     protected string $region;
     /**
      * A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating.
-     *
      */
     protected string $size;
     /**
      * A string representing the current status of the database cluster.
-     *
      */
     protected string $status;
     /**
@@ -53,24 +48,20 @@ class DatabaseReplicaRead extends \ArrayObject
     protected array $tags;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      */
     protected string $privateNetworkUuid;
     protected DatabaseReplicaReadConnection $connection;
     protected DatabaseReplicaReadPrivateConnection $privateConnection;
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      */
     protected int $storageSizeMib;
     /**
      * A unique ID that can be used to identify and reference a database replica.
-     *
      */
     public function getId(): string
     {
@@ -78,7 +69,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database replica.
-     *
      *
      * @return self
      */
@@ -90,7 +80,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * The name to give the read-only replicating
-     *
      */
     public function getName(): string
     {
@@ -98,7 +87,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * The name to give the read-only replicating
-     *
      *
      * @return self
      */
@@ -110,7 +98,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster.
-     *
      */
     public function getRegion(): string
     {
@@ -118,7 +105,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster.
-     *
      *
      * @return self
      */
@@ -130,7 +116,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating.
-     *
      */
     public function getSize(): string
     {
@@ -138,7 +123,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating.
-     *
      *
      * @return self
      */
@@ -150,7 +134,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
      */
     public function getStatus(): string
     {
@@ -158,7 +141,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
      *
      * @return self
      */
@@ -192,7 +174,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -200,7 +181,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      *
      * @return self
      */
@@ -212,7 +192,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      */
     public function getPrivateNetworkUuid(): string
     {
@@ -220,7 +199,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      *
      * @return self
      */
@@ -252,7 +230,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      */
     public function getStorageSizeMib(): int
     {
@@ -260,7 +237,6 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      *
      * @return self
      */

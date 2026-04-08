@@ -19,7 +19,6 @@ class PermissionSetUserPermissionRights
     }
     /**
      * Permission set ID.
-     *
      */
     protected ?string $permissionSetId = null;
     /**
@@ -30,7 +29,6 @@ class PermissionSetUserPermissionRights
     protected ?array $permissionSetRights = null;
     /**
      * Permission set ID.
-     *
      */
     public function getPermissionSetId(): ?string
     {
@@ -38,7 +36,6 @@ class PermissionSetUserPermissionRights
     }
     /**
      * Permission set ID.
-     *
      *
      * @return self
      */

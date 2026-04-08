@@ -22,32 +22,26 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      */
     protected string $agentUuid;
     /**
      * Funciton description
-     *
      */
     protected string $description;
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
      */
     protected string $faasName;
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
      */
     protected string $faasNamespace;
     /**
      * Function name
-     *
      */
     protected string $functionName;
     /**
      * Function id
-     *
      */
     protected string $functionUuid;
     /**
@@ -64,7 +58,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     protected array $outputSchema;
     /**
      * Agent id
-     *
      */
     public function getAgentUuid(): string
     {
@@ -72,7 +65,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      *
      * @return self
      */
@@ -84,7 +76,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Funciton description
-     *
      */
     public function getDescription(): string
     {
@@ -92,7 +83,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Funciton description
-     *
      *
      * @return self
      */
@@ -104,7 +94,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
      */
     public function getFaasName(): string
     {
@@ -112,7 +101,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The name of the function in the DigitalOcean functions platform
-     *
      *
      * @return self
      */
@@ -124,7 +112,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
      */
     public function getFaasNamespace(): string
     {
@@ -132,7 +119,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * The namespace of the function in the DigitalOcean functions platform
-     *
      *
      * @return self
      */
@@ -144,7 +130,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function name
-     *
      */
     public function getFunctionName(): string
     {
@@ -152,7 +137,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function name
-     *
      *
      * @return self
      */
@@ -164,7 +148,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function id
-     *
      */
     public function getFunctionUuid(): string
     {
@@ -172,7 +155,6 @@ class ApiUpdateAgentFunctionInputPublic extends \ArrayObject
     }
     /**
      * Function id
-     *
      *
      * @return self
      */

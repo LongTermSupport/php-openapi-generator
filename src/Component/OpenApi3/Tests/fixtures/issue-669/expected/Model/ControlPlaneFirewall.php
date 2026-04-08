@@ -22,7 +22,6 @@ class ControlPlaneFirewall extends \ArrayObject
     }
     /**
      * Indicates whether the control plane firewall is enabled.
-     *
      */
     protected bool $enabled;
     /**
@@ -33,7 +32,6 @@ class ControlPlaneFirewall extends \ArrayObject
     protected array $allowedAddresses;
     /**
      * Indicates whether the control plane firewall is enabled.
-     *
      */
     public function getEnabled(): bool
     {
@@ -41,7 +39,6 @@ class ControlPlaneFirewall extends \ArrayObject
     }
     /**
      * Indicates whether the control plane firewall is enabled.
-     *
      *
      * @return self
      */

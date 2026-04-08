@@ -22,12 +22,10 @@ class LinkToNextPage extends \ArrayObject
     }
     /**
      * URI of the next page of the results.
-     *
      */
     protected string $next;
     /**
      * URI of the next page of the results.
-     *
      */
     public function getNext(): string
     {
@@ -35,7 +33,6 @@ class LinkToNextPage extends \ArrayObject
     }
     /**
      * URI of the next page of the results.
-     *
      *
      * @return self
      */

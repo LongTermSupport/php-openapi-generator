@@ -22,27 +22,22 @@ class ApiPages extends \ArrayObject
     }
     /**
      * First page
-     *
      */
     protected string $first;
     /**
      * Last page
-     *
      */
     protected string $last;
     /**
      * Next page
-     *
      */
     protected string $next;
     /**
      * Previous page
-     *
      */
     protected string $previous;
     /**
      * First page
-     *
      */
     public function getFirst(): string
     {
@@ -50,7 +45,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * First page
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Last page
-     *
      */
     public function getLast(): string
     {
@@ -70,7 +63,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Last page
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Next page
-     *
      */
     public function getNext(): string
     {
@@ -90,7 +81,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Next page
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Previous page
-     *
      */
     public function getPrevious(): string
     {
@@ -110,7 +99,6 @@ class ApiPages extends \ArrayObject
     }
     /**
      * Previous page
-     *
      *
      * @return self
      */

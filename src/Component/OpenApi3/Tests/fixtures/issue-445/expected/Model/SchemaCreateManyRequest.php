@@ -35,13 +35,13 @@ class SchemaCreateManyRequest
         return $this->schemas;
     }
     /**
-    * The schemas to create. Cyclic dependencies between schemas are supported, if they
-    are all in the same request.
-    *
-    * @param list<SchemaCreateRequest> $schemas
-    *
-    * @return self
-    */
+     * The schemas to create. Cyclic dependencies between schemas are supported, if they
+     * are all in the same request.
+     *
+     * @param list<SchemaCreateRequest> $schemas
+     *
+     * @return self
+     */
     public function setSchemas(array $schemas): self
     {
         $this->initialized['schemas'] = true;

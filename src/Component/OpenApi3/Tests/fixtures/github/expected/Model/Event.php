@@ -24,13 +24,11 @@ class Event extends \ArrayObject
     protected ?string $type = null;
     /**
      * Actor
-     *
      */
     protected Actor $actor;
     protected EventRepo $repo;
     /**
      * Actor
-     *
      */
     protected Actor $org;
     protected EventPayload $payload;
@@ -58,7 +56,6 @@ class Event extends \ArrayObject
     }
     /**
      * Actor
-     *
      */
     public function getActor(): Actor
     {
@@ -66,7 +63,6 @@ class Event extends \ArrayObject
     }
     /**
      * Actor
-     *
      *
      * @return self
      */
@@ -88,7 +84,6 @@ class Event extends \ArrayObject
     }
     /**
      * Actor
-     *
      */
     public function getOrg(): Actor
     {
@@ -96,7 +91,6 @@ class Event extends \ArrayObject
     }
     /**
      * Actor
-     *
      *
      * @return self
      */

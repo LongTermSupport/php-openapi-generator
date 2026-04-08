@@ -22,32 +22,26 @@ class URLFields extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      */
     protected string $url;
     /**
      * A validly formatted URL.
-     *
      */
     protected string $expandedUrl;
     /**
      * The URL as displayed in the Twitter client.
-     *
      */
     protected string $displayUrl;
     /**
      * HTTP Status Code.
-     *
      */
     protected int $status;
     /**
      * Title of the page the URL points to.
-     *
      */
     protected string $title;
     /**
      * Description of the URL landing page.
-     *
      */
     protected string $description;
     /**
@@ -56,7 +50,6 @@ class URLFields extends \ArrayObject
     protected array $images;
     /**
      * A validly formatted URL.
-     *
      */
     public function getUrl(): string
     {
@@ -64,7 +57,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      *
      * @return self
      */
@@ -76,7 +68,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      */
     public function getExpandedUrl(): string
     {
@@ -84,7 +75,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      *
      * @return self
      */
@@ -96,7 +86,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * The URL as displayed in the Twitter client.
-     *
      */
     public function getDisplayUrl(): string
     {
@@ -104,7 +93,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * The URL as displayed in the Twitter client.
-     *
      *
      * @return self
      */
@@ -116,7 +104,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * HTTP Status Code.
-     *
      */
     public function getStatus(): int
     {
@@ -124,7 +111,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * HTTP Status Code.
-     *
      *
      * @return self
      */
@@ -136,7 +122,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * Title of the page the URL points to.
-     *
      */
     public function getTitle(): string
     {
@@ -144,7 +129,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * Title of the page the URL points to.
-     *
      *
      * @return self
      */
@@ -156,7 +140,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * Description of the URL landing page.
-     *
      */
     public function getDescription(): string
     {
@@ -164,7 +147,6 @@ class URLFields extends \ArrayObject
     }
     /**
      * Description of the URL landing page.
-     *
      *
      * @return self
      */

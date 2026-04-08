@@ -24,19 +24,16 @@ class Artifact extends \ArrayObject
     protected string $nodeId;
     /**
      * The name of the artifact.
-     *
      */
     protected string $name;
     /**
      * The size in bytes of the artifact.
-     *
      */
     protected int $sizeInBytes;
     protected string $url;
     protected string $archiveDownloadUrl;
     /**
      * Whether or not the artifact has expired.
-     *
      */
     protected bool $expired;
     protected ?\DateTime $createdAt = null;
@@ -64,7 +61,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * The name of the artifact.
-     *
      */
     public function getName(): string
     {
@@ -72,7 +68,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * The name of the artifact.
-     *
      *
      * @return self
      */
@@ -84,7 +79,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * The size in bytes of the artifact.
-     *
      */
     public function getSizeInBytes(): int
     {
@@ -92,7 +86,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * The size in bytes of the artifact.
-     *
      *
      * @return self
      */
@@ -124,7 +117,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * Whether or not the artifact has expired.
-     *
      */
     public function getExpired(): bool
     {
@@ -132,7 +124,6 @@ class Artifact extends \ArrayObject
     }
     /**
      * Whether or not the artifact has expired.
-     *
      *
      * @return self
      */

@@ -23,26 +23,22 @@ class Deployment extends \ArrayObject
     protected string $url;
     /**
      * Unique identifier of the deployment
-     *
      */
     protected int $id;
     protected string $nodeId;
     protected string $sha;
     /**
      * The ref to deploy. This can be a branch, tag, or sha.
-     *
      */
     protected string $ref;
     /**
      * Parameter to specify a task to execute
-     *
      */
     protected string $task;
     protected DeploymentPayload $payload;
     protected string $originalEnvironment;
     /**
      * Name for the target deployment environment.
-     *
      */
     protected string $environment;
     protected ?string $description = null;
@@ -53,12 +49,10 @@ class Deployment extends \ArrayObject
     protected string $repositoryUrl;
     /**
      * Specifies if the given environment is will no longer exist at some point in hte future. Default: false.
-     *
      */
     protected bool $transientEnvironment;
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: false.
-     *
      */
     protected bool $productionEnvironment;
     protected ?DeploymentPerformedViaGithubApp $performedViaGithubApp = null;
@@ -74,7 +68,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Unique identifier of the deployment
-     *
      */
     public function getId(): int
     {
@@ -82,7 +75,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Unique identifier of the deployment
-     *
      *
      * @return self
      */
@@ -114,7 +106,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * The ref to deploy. This can be a branch, tag, or sha.
-     *
      */
     public function getRef(): string
     {
@@ -122,7 +113,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * The ref to deploy. This can be a branch, tag, or sha.
-     *
      *
      * @return self
      */
@@ -134,7 +124,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Parameter to specify a task to execute
-     *
      */
     public function getTask(): string
     {
@@ -142,7 +131,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Parameter to specify a task to execute
-     *
      *
      * @return self
      */
@@ -174,7 +162,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Name for the target deployment environment.
-     *
      */
     public function getEnvironment(): string
     {
@@ -182,7 +169,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Name for the target deployment environment.
-     *
      *
      * @return self
      */
@@ -254,7 +240,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Specifies if the given environment is will no longer exist at some point in hte future. Default: false.
-     *
      */
     public function getTransientEnvironment(): bool
     {
@@ -262,7 +247,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Specifies if the given environment is will no longer exist at some point in hte future. Default: false.
-     *
      *
      * @return self
      */
@@ -274,7 +258,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: false.
-     *
      */
     public function getProductionEnvironment(): bool
     {
@@ -282,7 +265,6 @@ class Deployment extends \ArrayObject
     }
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: false.
-     *
      *
      * @return self
      */

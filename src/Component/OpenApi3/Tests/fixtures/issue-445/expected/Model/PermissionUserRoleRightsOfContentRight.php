@@ -19,12 +19,10 @@ class PermissionUserRoleRightsOfContentRight
     }
     /**
      * The user role ID.
-     *
      */
     protected ?string $userRoleId = null;
     /**
      * Language specific user role names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -36,7 +34,6 @@ class PermissionUserRoleRightsOfContentRight
     protected ?array $rights = null;
     /**
      * The user role ID.
-     *
      */
     public function getUserRoleId(): ?string
     {
@@ -44,7 +41,6 @@ class PermissionUserRoleRightsOfContentRight
     }
     /**
      * The user role ID.
-     *
      *
      * @return self
      */
@@ -56,7 +52,6 @@ class PermissionUserRoleRightsOfContentRight
     }
     /**
      * Language specific user role names.
-     *
      */
     public function getNames(): mixed
     {
@@ -64,7 +59,6 @@ class PermissionUserRoleRightsOfContentRight
     }
     /**
      * Language specific user role names.
-     *
      *
      * @return self
      */
@@ -85,13 +79,13 @@ class PermissionUserRoleRightsOfContentRight
         return $this->rights;
     }
     /**
-    * List of rights: they can be content, metadata or permission set rights, depending on the type defined on the class
-    (ContentRight, MetadataRight, PermissionSetRight).
-    *
-    * @param list<string>|null $rights
-    *
-    * @return self
-    */
+     * List of rights: they can be content, metadata or permission set rights, depending on the type defined on the class
+     * (ContentRight, MetadataRight, PermissionSetRight).
+     *
+     * @param list<string>|null $rights
+     *
+     * @return self
+     */
     public function setRights(?array $rights): self
     {
         $this->initialized['rights'] = true;

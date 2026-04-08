@@ -22,49 +22,40 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of file transfer.
-     *
      */
     protected string $id;
     /**
      * Name of file transfer.
-     *
      */
     protected string $name;
     /**
      * Replaced in favor of RequestId. Client provided identifier.
      *
      * @deprecated
-     *
      */
     protected ?string $identifier = null;
     /**
      * Client provided identifier.
-     *
      */
     protected string $requestId;
     /**
      * ID of transfer.
-     *
      */
     protected string $transferId;
     /**
      * State of file transfer.
-     *
      */
     protected mixed $state = null;
     /**
      * ID of Content created for file.
-     *
      */
     protected ?string $contentId = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Metadata extracted for file.
-     *
      */
     protected mixed $fileMetadata = null;
     /**
@@ -75,7 +66,6 @@ class FileTransferDetail extends \ArrayObject
     protected ?array $outputItems = null;
     /**
      * ID of file transfer.
-     *
      */
     public function getId(): string
     {
@@ -83,7 +73,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of file transfer.
-     *
      *
      * @return self
      */
@@ -95,7 +84,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Name of file transfer.
-     *
      */
     public function getName(): string
     {
@@ -103,7 +91,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Name of file transfer.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class FileTransferDetail extends \ArrayObject
      * Replaced in favor of RequestId. Client provided identifier.
      *
      * @deprecated
-     *
      */
     public function getIdentifier(): ?string
     {
@@ -125,7 +111,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Replaced in favor of RequestId. Client provided identifier.
-     *
      *
      * @deprecated
      *
@@ -139,7 +124,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Client provided identifier.
-     *
      */
     public function getRequestId(): string
     {
@@ -147,7 +131,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Client provided identifier.
-     *
      *
      * @return self
      */
@@ -159,7 +142,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of transfer.
-     *
      */
     public function getTransferId(): string
     {
@@ -167,7 +149,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of transfer.
-     *
      *
      * @return self
      */
@@ -179,7 +160,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * State of file transfer.
-     *
      */
     public function getState(): mixed
     {
@@ -187,7 +167,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * State of file transfer.
-     *
      *
      * @return self
      */
@@ -199,7 +178,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of Content created for file.
-     *
      */
     public function getContentId(): ?string
     {
@@ -207,7 +185,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * ID of Content created for file.
-     *
      *
      * @return self
      */
@@ -219,7 +196,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -227,7 +203,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -239,7 +214,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Metadata extracted for file.
-     *
      */
     public function getFileMetadata(): mixed
     {
@@ -247,7 +221,6 @@ class FileTransferDetail extends \ArrayObject
     }
     /**
      * Metadata extracted for file.
-     *
      *
      * @return self
      */

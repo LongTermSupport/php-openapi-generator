@@ -25,7 +25,6 @@ class IdentityProviderEditable
     protected ?array $claimMapping = null;
     /**
      * Name of the identity provider claim that holds group membership information
-     *
      */
     protected ?string $groupClaimType = null;
     /**
@@ -36,7 +35,6 @@ class IdentityProviderEditable
     protected ?array $groupMapping = null;
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
      */
     protected ?string $fallbackUserRoleId = null;
     /**
@@ -63,7 +61,6 @@ class IdentityProviderEditable
     }
     /**
      * Name of the identity provider claim that holds group membership information
-     *
      */
     public function getGroupClaimType(): ?string
     {
@@ -71,7 +68,6 @@ class IdentityProviderEditable
     }
     /**
      * Name of the identity provider claim that holds group membership information
-     *
      *
      * @return self
      */
@@ -105,7 +101,6 @@ class IdentityProviderEditable
     }
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
      */
     public function getFallbackUserRoleId(): ?string
     {
@@ -113,7 +108,6 @@ class IdentityProviderEditable
     }
     /**
      * Optional user role ID that will be assigned to a user is none of the group mappings produce a match
-     *
      *
      * @return self
      */

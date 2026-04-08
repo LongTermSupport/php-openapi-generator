@@ -22,17 +22,14 @@ class ResponseDatabaseSchemaRegistrySubjectConfig extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      */
     protected string $subjectName;
     /**
      * The compatibility level of the schema registry.
-     *
      */
     protected string $compatibilityLevel;
     /**
      * The name of the schema subject.
-     *
      */
     public function getSubjectName(): string
     {
@@ -40,7 +37,6 @@ class ResponseDatabaseSchemaRegistrySubjectConfig extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ResponseDatabaseSchemaRegistrySubjectConfig extends \ArrayObject
     }
     /**
      * The compatibility level of the schema registry.
-     *
      */
     public function getCompatibilityLevel(): string
     {
@@ -60,7 +55,6 @@ class ResponseDatabaseSchemaRegistrySubjectConfig extends \ArrayObject
     }
     /**
      * The compatibility level of the schema registry.
-     *
      *
      * @return self
      */

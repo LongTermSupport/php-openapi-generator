@@ -22,53 +22,43 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      */
     protected int $id;
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
      */
     protected string $status = 'in-progress';
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
      */
     protected string $type;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
      */
     protected \DateTime $startedAt;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
      */
     protected ?\DateTime $completedAt = null;
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
      */
     protected ?int $resourceId = null;
     /**
      * The type of resource that the action is associated with.
-     *
      */
     protected string $resourceType;
     protected Region $region;
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      */
     protected ?string $regionSlug = null;
     /**
      * The UUID of the project to which the reserved IP currently belongs.
-     *
      */
     protected string $projectId;
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      */
     public function getId(): int
     {
@@ -76,7 +66,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      *
      * @return self
      */
@@ -88,7 +77,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
      */
     public function getStatus(): string
     {
@@ -96,7 +84,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
      *
      * @return self
      */
@@ -108,7 +95,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
      */
     public function getType(): string
     {
@@ -116,7 +102,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
      *
      * @return self
      */
@@ -128,7 +113,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
      */
     public function getStartedAt(): \DateTime
     {
@@ -136,7 +120,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
      *
      * @return self
      */
@@ -148,7 +131,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
      */
     public function getCompletedAt(): ?\DateTime
     {
@@ -156,7 +138,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
      *
      * @return self
      */
@@ -168,7 +149,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
      */
     public function getResourceId(): ?int
     {
@@ -176,7 +156,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
      *
      * @return self
      */
@@ -188,7 +167,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * The type of resource that the action is associated with.
-     *
      */
     public function getResourceType(): string
     {
@@ -196,7 +174,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * The type of resource that the action is associated with.
-     *
      *
      * @return self
      */
@@ -218,7 +195,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      */
     public function getRegionSlug(): ?string
     {
@@ -226,7 +202,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      *
      * @return self
      */
@@ -238,7 +213,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * The UUID of the project to which the reserved IP currently belongs.
-     *
      */
     public function getProjectId(): string
     {
@@ -246,7 +220,6 @@ class ResponseReservedIpActionAction extends \ArrayObject
     }
     /**
      * The UUID of the project to which the reserved IP currently belongs.
-     *
      *
      * @return self
      */

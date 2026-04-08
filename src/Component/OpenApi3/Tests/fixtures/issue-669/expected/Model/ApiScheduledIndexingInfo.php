@@ -22,7 +22,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Created at timestamp
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -33,47 +32,38 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     protected array $days;
     /**
      * Deleted at timestamp (if soft deleted)
-     *
      */
     protected \DateTime $deletedAt;
     /**
      * Whether the schedule is currently active
-     *
      */
     protected bool $isActive;
     /**
      * Knowledge base uuid associated with this schedule
-     *
      */
     protected string $knowledgeBaseUuid;
     /**
      * Last time the schedule was executed
-     *
      */
     protected \DateTime $lastRanAt;
     /**
      * Next scheduled run
-     *
      */
     protected \DateTime $nextRunAt;
     /**
      * Scheduled time of execution (HH:MM:SS format)
-     *
      */
     protected string $time;
     /**
      * Updated at timestamp
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Unique identifier for the scheduled indexing entry
-     *
      */
     protected string $uuid;
     /**
      * Created at timestamp
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -81,7 +71,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Created at timestamp
-     *
      *
      * @return self
      */
@@ -115,7 +104,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Deleted at timestamp (if soft deleted)
-     *
      */
     public function getDeletedAt(): \DateTime
     {
@@ -123,7 +111,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Deleted at timestamp (if soft deleted)
-     *
      *
      * @return self
      */
@@ -135,7 +122,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Whether the schedule is currently active
-     *
      */
     public function getIsActive(): bool
     {
@@ -143,7 +129,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Whether the schedule is currently active
-     *
      *
      * @return self
      */
@@ -155,7 +140,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Knowledge base uuid associated with this schedule
-     *
      */
     public function getKnowledgeBaseUuid(): string
     {
@@ -163,7 +147,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Knowledge base uuid associated with this schedule
-     *
      *
      * @return self
      */
@@ -175,7 +158,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Last time the schedule was executed
-     *
      */
     public function getLastRanAt(): \DateTime
     {
@@ -183,7 +165,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Last time the schedule was executed
-     *
      *
      * @return self
      */
@@ -195,7 +176,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Next scheduled run
-     *
      */
     public function getNextRunAt(): \DateTime
     {
@@ -203,7 +183,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Next scheduled run
-     *
      *
      * @return self
      */
@@ -215,7 +194,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Scheduled time of execution (HH:MM:SS format)
-     *
      */
     public function getTime(): string
     {
@@ -223,7 +201,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Scheduled time of execution (HH:MM:SS format)
-     *
      *
      * @return self
      */
@@ -235,7 +212,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Updated at timestamp
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -243,7 +219,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Updated at timestamp
-     *
      *
      * @return self
      */
@@ -255,7 +230,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Unique identifier for the scheduled indexing entry
-     *
      */
     public function getUuid(): string
     {
@@ -263,7 +237,6 @@ class ApiScheduledIndexingInfo extends \ArrayObject
     }
     /**
      * Unique identifier for the scheduled indexing entry
-     *
      *
      * @return self
      */

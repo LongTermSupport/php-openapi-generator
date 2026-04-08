@@ -22,12 +22,10 @@ class ProjectsProjectIdCollaboratorsUsernamePutBody extends \ArrayObject
     }
     /**
      * The permission to grant the collaborator.
-     *
      */
     protected string $permission = 'write';
     /**
      * The permission to grant the collaborator.
-     *
      */
     public function getPermission(): string
     {
@@ -35,7 +33,6 @@ class ProjectsProjectIdCollaboratorsUsernamePutBody extends \ArrayObject
     }
     /**
      * The permission to grant the collaborator.
-     *
      *
      * @return self
      */

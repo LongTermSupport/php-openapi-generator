@@ -22,17 +22,14 @@ class ContentOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
      */
     protected string $transferUserId;
     /**
      * The content ID.
-     *
      */
     protected string $contentId;
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
      */
     public function getTransferUserId(): string
     {
@@ -40,7 +37,6 @@ class ContentOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The ID of the user to whom the content ownership has to be transferred to.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ContentOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The content ID.
-     *
      */
     public function getContentId(): string
     {
@@ -60,7 +55,6 @@ class ContentOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The content ID.
-     *
      *
      * @return self
      */

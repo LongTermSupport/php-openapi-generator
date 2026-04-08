@@ -31,12 +31,10 @@ class ListItemFieldsBatchUpdateRequest
     protected array $changeCommands;
     /**
      * Allows updating list items with references to list items or contents that do not exist in the system.
-     *
      */
     protected bool $allowMissingDependencies;
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     protected bool $notifyProgress;
     /**
@@ -85,7 +83,6 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Allows updating list items with references to list items or contents that do not exist in the system.
-     *
      */
     public function getAllowMissingDependencies(): bool
     {
@@ -93,7 +90,6 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Allows updating list items with references to list items or contents that do not exist in the system.
-     *
      *
      * @return self
      */
@@ -105,7 +101,6 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -113,7 +108,6 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      *
      * @return self
      */

@@ -28,12 +28,10 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     protected array $knowledgeBaseDataSources;
     /**
      * Links to other pages
-     *
      */
     protected ApiLinks $links;
     /**
      * Meta information about the data set
-     *
      */
     protected ApiMeta $meta;
     /**
@@ -60,7 +58,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      */
     public function getLinks(): ApiLinks
     {
@@ -68,7 +65,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      *
      * @return self
      */
@@ -80,7 +76,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      */
     public function getMeta(): ApiMeta
     {
@@ -88,7 +83,6 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      *
      * @return self
      */

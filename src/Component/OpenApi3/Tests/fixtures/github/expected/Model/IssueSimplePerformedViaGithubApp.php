@@ -22,19 +22,16 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * Unique identifier of the GitHub app
-     *
      */
     protected int $id;
     /**
      * The slug name of the GitHub app
-     *
      */
     protected string $slug;
     protected string $nodeId;
     protected ?IntegrationOwner $owner = null;
     /**
      * The name of the GitHub app
-     *
      */
     protected string $name;
     protected ?string $description = null;
@@ -44,7 +41,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     protected \DateTime $updatedAt;
     /**
      * The set of permissions for the GitHub app
-     *
      */
     protected IntegrationPermissions $permissions;
     /**
@@ -55,7 +51,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     protected array $events;
     /**
      * The number of installations associated with the GitHub app
-     *
      */
     protected int $installationsCount;
     protected string $clientId;
@@ -64,7 +59,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     protected string $pem;
     /**
      * Unique identifier of the GitHub app
-     *
      */
     public function getId(): int
     {
@@ -72,7 +66,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * Unique identifier of the GitHub app
-     *
      *
      * @return self
      */
@@ -84,7 +77,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The slug name of the GitHub app
-     *
      */
     public function getSlug(): string
     {
@@ -92,7 +84,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The slug name of the GitHub app
-     *
      *
      * @return self
      */
@@ -124,7 +115,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The name of the GitHub app
-     *
      */
     public function getName(): string
     {
@@ -132,7 +122,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The name of the GitHub app
-     *
      *
      * @return self
      */
@@ -194,7 +183,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The set of permissions for the GitHub app
-     *
      */
     public function getPermissions(): IntegrationPermissions
     {
@@ -202,7 +190,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The set of permissions for the GitHub app
-     *
      *
      * @return self
      */
@@ -236,7 +223,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The number of installations associated with the GitHub app
-     *
      */
     public function getInstallationsCount(): int
     {
@@ -244,7 +230,6 @@ class IssueSimplePerformedViaGithubApp extends \ArrayObject
     }
     /**
      * The number of installations associated with the GitHub app
-     *
      *
      * @return self
      */

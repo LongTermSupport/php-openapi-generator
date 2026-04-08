@@ -22,7 +22,6 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutput extends \ArrayObject
     }
     /**
      * The ID generated for the request for Presigned URLs.
-     *
      */
     protected string $requestId;
     /**
@@ -33,7 +32,6 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutput extends \ArrayObject
     protected array $uploads;
     /**
      * The ID generated for the request for Presigned URLs.
-     *
      */
     public function getRequestId(): string
     {
@@ -41,7 +39,6 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutput extends \ArrayObject
     }
     /**
      * The ID generated for the request for Presigned URLs.
-     *
      *
      * @return self
      */

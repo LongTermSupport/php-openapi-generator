@@ -19,17 +19,14 @@ class BlacklistItem
     }
     /**
      * Friendly name of item.
-     *
      */
     protected string $name;
     /**
      * Pattern a file name must match to be excluded from the transfer.
-     *
      */
     protected string $match;
     /**
      * Friendly name of item.
-     *
      */
     public function getName(): string
     {
@@ -37,7 +34,6 @@ class BlacklistItem
     }
     /**
      * Friendly name of item.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class BlacklistItem
     }
     /**
      * Pattern a file name must match to be excluded from the transfer.
-     *
      */
     public function getMatch(): string
     {
@@ -57,7 +52,6 @@ class BlacklistItem
     }
     /**
      * Pattern a file name must match to be excluded from the transfer.
-     *
      *
      * @return self
      */

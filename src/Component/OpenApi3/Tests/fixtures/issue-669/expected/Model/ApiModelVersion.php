@@ -22,22 +22,18 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Major version number
-     *
      */
     protected int $major;
     /**
      * Minor version number
-     *
      */
     protected int $minor;
     /**
      * Patch version number
-     *
      */
     protected int $patch;
     /**
      * Major version number
-     *
      */
     public function getMajor(): int
     {
@@ -45,7 +41,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Major version number
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Minor version number
-     *
      */
     public function getMinor(): int
     {
@@ -65,7 +59,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Minor version number
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Patch version number
-     *
      */
     public function getPatch(): int
     {
@@ -85,7 +77,6 @@ class ApiModelVersion extends \ArrayObject
     }
     /**
      * Patch version number
-     *
      *
      * @return self
      */

@@ -23,34 +23,28 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     protected ReviewJsonhalReviewWriteLinks $links;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     /**
      * A rating.
-     *
      */
     protected int $rating;
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     protected ?string $letter = null;
     /**
      * The item that is being reviewed/rated.
-     *
      */
     protected string $book;
     /**
      * The author of the review.
-     *
      */
     protected ?string $author = null;
     /**
      * Publication date of the review.
-     *
      */
     protected ?\DateTime $publicationDate = null;
     public function getLinks(): ReviewJsonhalReviewWriteLinks
@@ -65,7 +59,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -73,7 +66,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */
@@ -85,7 +77,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
      */
     public function getRating(): int
     {
@@ -93,7 +84,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
      *
      * @return self
      */
@@ -107,7 +97,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     public function getLetter(): ?string
     {
@@ -115,7 +104,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
-     *
      *
      * @deprecated
      *
@@ -129,7 +117,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
      */
     public function getBook(): string
     {
@@ -137,7 +124,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
      *
      * @return self
      */
@@ -149,7 +135,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      */
     public function getAuthor(): ?string
     {
@@ -157,7 +142,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      *
      * @return self
      */
@@ -169,7 +153,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      */
     public function getPublicationDate(): ?\DateTime
     {
@@ -177,7 +160,6 @@ class ReviewJsonhalReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      *
      * @return self
      */

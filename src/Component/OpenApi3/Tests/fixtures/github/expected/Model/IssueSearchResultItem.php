@@ -59,7 +59,6 @@ class IssueSearchResultItem extends \ArrayObject
     protected bool $draft;
     /**
      * A git repository
-     *
      */
     protected Repository $repository;
     protected string $bodyHtml;
@@ -372,7 +371,6 @@ class IssueSearchResultItem extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getRepository(): Repository
     {
@@ -380,7 +378,6 @@ class IssueSearchResultItem extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */

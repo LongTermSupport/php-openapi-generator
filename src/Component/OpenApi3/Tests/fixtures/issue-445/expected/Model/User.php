@@ -19,32 +19,26 @@ class User
     }
     /**
      * User's Picturepark ID.
-     *
      */
     protected ?string $id = null;
     /**
      * User's first name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * User's last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
-     *
      */
     protected string $emailAddress;
     /**
      * Marks a user that was deleted from the system.
-     *
      */
     protected bool $isDeleted;
     /**
      * User's Picturepark ID.
-     *
      */
     public function getId(): ?string
     {
@@ -52,7 +46,6 @@ class User
     }
     /**
      * User's Picturepark ID.
-     *
      *
      * @return self
      */
@@ -64,7 +57,6 @@ class User
     }
     /**
      * User's first name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -72,7 +64,6 @@ class User
     }
     /**
      * User's first name.
-     *
      *
      * @return self
      */
@@ -84,7 +75,6 @@ class User
     }
     /**
      * User's last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -92,7 +82,6 @@ class User
     }
     /**
      * User's last name.
-     *
      *
      * @return self
      */
@@ -104,7 +93,6 @@ class User
     }
     /**
      * Email address of the user (doubles as username).
-     *
      */
     public function getEmailAddress(): string
     {
@@ -112,7 +100,6 @@ class User
     }
     /**
      * Email address of the user (doubles as username).
-     *
      *
      * @return self
      */
@@ -124,7 +111,6 @@ class User
     }
     /**
      * Marks a user that was deleted from the system.
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -132,7 +118,6 @@ class User
     }
     /**
      * Marks a user that was deleted from the system.
-     *
      *
      * @return self
      */

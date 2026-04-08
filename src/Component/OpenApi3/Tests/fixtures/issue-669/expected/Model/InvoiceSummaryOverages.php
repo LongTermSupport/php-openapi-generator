@@ -22,17 +22,14 @@ class InvoiceSummaryOverages extends \ArrayObject
     }
     /**
      * Name of the charge
-     *
      */
     protected string $name;
     /**
      * Total amount charged in USD
-     *
      */
     protected string $amount;
     /**
      * Name of the charge
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class InvoiceSummaryOverages extends \ArrayObject
     }
     /**
      * Name of the charge
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class InvoiceSummaryOverages extends \ArrayObject
     }
     /**
      * Total amount charged in USD
-     *
      */
     public function getAmount(): string
     {
@@ -60,7 +55,6 @@ class InvoiceSummaryOverages extends \ArrayObject
     }
     /**
      * Total amount charged in USD
-     *
      *
      * @return self
      */

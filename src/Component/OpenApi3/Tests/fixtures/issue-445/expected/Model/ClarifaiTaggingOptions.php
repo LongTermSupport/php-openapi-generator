@@ -19,22 +19,18 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Override for the model to use
-     *
      */
     protected ?string $model = null;
     /**
      * Override for the language to use
-     *
      */
     protected ?string $language = null;
     /**
      * Minimum value a concept must have to be considered
-     *
      */
     protected ?string $minimumValue = null;
     /**
      * Override for the model to use
-     *
      */
     public function getModel(): ?string
     {
@@ -42,7 +38,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Override for the model to use
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Override for the language to use
-     *
      */
     public function getLanguage(): ?string
     {
@@ -62,7 +56,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Override for the language to use
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Minimum value a concept must have to be considered
-     *
      */
     public function getMinimumValue(): ?string
     {
@@ -82,7 +74,6 @@ class ClarifaiTaggingOptions extends TaggingOptionsBase
     }
     /**
      * Minimum value a concept must have to be considered
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Hierarchical options
-     *
      */
     protected int $childChunkSize;
     /**
      * Section_Based and Fixed_Length options
-     *
      */
     protected int $maxChunkSize;
     /**
      * Hierarchical options
-     *
      */
     protected int $parentChunkSize;
     /**
      * Semantic options
-     *
      */
     protected float $semanticThreshold;
     /**
      * Hierarchical options
-     *
      */
     public function getChildChunkSize(): int
     {
@@ -50,7 +45,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Hierarchical options
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Section_Based and Fixed_Length options
-     *
      */
     public function getMaxChunkSize(): int
     {
@@ -70,7 +63,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Section_Based and Fixed_Length options
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Hierarchical options
-     *
      */
     public function getParentChunkSize(): int
     {
@@ -90,7 +81,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Hierarchical options
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Semantic options
-     *
      */
     public function getSemanticThreshold(): float
     {
@@ -110,7 +99,6 @@ class ApiChunkingOptions extends \ArrayObject
     }
     /**
      * Semantic options
-     *
      *
      * @return self
      */

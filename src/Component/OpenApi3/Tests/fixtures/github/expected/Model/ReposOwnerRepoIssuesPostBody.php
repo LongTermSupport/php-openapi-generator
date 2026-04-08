@@ -22,22 +22,18 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The title of the issue.
-     *
      */
     protected string $title;
     /**
      * The contents of the issue.
-     *
      */
     protected string $body;
     /**
      * Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
-     *
      */
     protected ?string $assignee = null;
     /**
      * The `number` of the milestone to associate this issue with. _NOTE: Only users with push access can set the milestone for new issues. The milestone is silently dropped otherwise._
-     *
      */
     protected ?int $milestone = null;
     /**
@@ -54,7 +50,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     protected array $assignees;
     /**
      * The title of the issue.
-     *
      */
     public function getTitle(): string
     {
@@ -62,7 +57,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The title of the issue.
-     *
      *
      * @return self
      */
@@ -74,7 +68,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The contents of the issue.
-     *
      */
     public function getBody(): string
     {
@@ -82,7 +75,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The contents of the issue.
-     *
      *
      * @return self
      */
@@ -94,7 +86,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
-     *
      */
     public function getAssignee(): ?string
     {
@@ -102,7 +93,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
-     *
      *
      * @return self
      */
@@ -114,7 +104,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The `number` of the milestone to associate this issue with. _NOTE: Only users with push access can set the milestone for new issues. The milestone is silently dropped otherwise._
-     *
      */
     public function getMilestone(): ?int
     {
@@ -122,7 +111,6 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * The `number` of the milestone to associate this issue with. _NOTE: Only users with push access can set the milestone for new issues. The milestone is silently dropped otherwise._
-     *
      *
      * @return self
      */

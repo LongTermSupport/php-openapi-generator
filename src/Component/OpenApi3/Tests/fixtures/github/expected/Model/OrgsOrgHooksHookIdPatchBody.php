@@ -22,7 +22,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#update-hook-config-params).
-     *
      */
     protected OrgsOrgHooksHookIdPatchBodyConfig $config;
     /**
@@ -33,13 +32,11 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     protected array $events = array(0 => 'push');
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      */
     protected bool $active = true;
     protected string $name;
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#update-hook-config-params).
-     *
      */
     public function getConfig(): OrgsOrgHooksHookIdPatchBodyConfig
     {
@@ -47,7 +44,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#update-hook-config-params).
-     *
      *
      * @return self
      */
@@ -81,7 +77,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      */
     public function getActive(): bool
     {
@@ -89,7 +84,6 @@ class OrgsOrgHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class Resource extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     protected string $urn;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
      */
     protected \DateTime $assignedAt;
     /**
      * The links object contains the `self` object, which contains the resource relationship.
-     *
      */
     protected ResourceLinks $links;
     /**
      * The status of assigning and fetching the resources.
-     *
      */
     protected string $status;
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     public function getUrn(): string
     {
@@ -50,7 +45,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class Resource extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
      */
     public function getAssignedAt(): \DateTime
     {
@@ -70,7 +63,6 @@ class Resource extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the project was created.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The links object contains the `self` object, which contains the resource relationship.
-     *
      */
     public function getLinks(): ResourceLinks
     {
@@ -90,7 +81,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The links object contains the `self` object, which contains the resource relationship.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The status of assigning and fetching the resources.
-     *
      */
     public function getStatus(): string
     {
@@ -110,7 +99,6 @@ class Resource extends \ArrayObject
     }
     /**
      * The status of assigning and fetching the resources.
-     *
      *
      * @return self
      */

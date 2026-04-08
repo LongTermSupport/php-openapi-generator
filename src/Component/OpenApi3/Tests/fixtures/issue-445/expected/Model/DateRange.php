@@ -19,22 +19,18 @@ class DateRange
     }
     /**
      * Language specific range names.
-     *
      */
     protected mixed $names = null;
     /**
      * The from value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
      */
     protected ?string $from = null;
     /**
      * The to value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
      */
     protected ?string $to = null;
     /**
      * Language specific range names.
-     *
      */
     public function getNames(): mixed
     {
@@ -42,7 +38,6 @@ class DateRange
     }
     /**
      * Language specific range names.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class DateRange
     }
     /**
      * The from value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
      */
     public function getFrom(): ?string
     {
@@ -62,7 +56,6 @@ class DateRange
     }
     /**
      * The from value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class DateRange
     }
     /**
      * The to value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
      */
     public function getTo(): ?string
     {
@@ -82,7 +74,6 @@ class DateRange
     }
     /**
      * The to value: it can be a datetime string or a pattern now(+-)(int)(YMDHm).
-     *
      *
      * @return self
      */

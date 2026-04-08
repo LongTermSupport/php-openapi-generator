@@ -22,12 +22,10 @@ class ApiDeleteScheduledIndexingOutput extends \ArrayObject
     }
     /**
      * Metadata for scheduled indexing entries
-     *
      */
     protected ApiScheduledIndexingInfo $indexingInfo;
     /**
      * Metadata for scheduled indexing entries
-     *
      */
     public function getIndexingInfo(): ApiScheduledIndexingInfo
     {
@@ -35,7 +33,6 @@ class ApiDeleteScheduledIndexingOutput extends \ArrayObject
     }
     /**
      * Metadata for scheduled indexing entries
-     *
      *
      * @return self
      */

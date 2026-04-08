@@ -22,42 +22,34 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the garbage collection.
-     *
      */
     protected string $uuid;
     /**
      * The name of the container registry.
-     *
      */
     protected string $registryName;
     /**
      * The current status of this garbage collection.
-     *
      */
     protected string $status;
     /**
      * The time the garbage collection was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The time the garbage collection was last updated.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * The number of blobs deleted as a result of this garbage collection.
-     *
      */
     protected int $blobsDeleted;
     /**
      * The number of bytes freed as a result of this garbage collection.
-     *
      */
     protected int $freedBytes;
     /**
      * A string specifying the UUID of the garbage collection.
-     *
      */
     public function getUuid(): string
     {
@@ -65,7 +57,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the garbage collection.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      */
     public function getRegistryName(): string
     {
@@ -85,7 +75,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The current status of this garbage collection.
-     *
      */
     public function getStatus(): string
     {
@@ -105,7 +93,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The current status of this garbage collection.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The time the garbage collection was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -125,7 +111,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The time the garbage collection was created.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The time the garbage collection was last updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -145,7 +129,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The time the garbage collection was last updated.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The number of blobs deleted as a result of this garbage collection.
-     *
      */
     public function getBlobsDeleted(): int
     {
@@ -165,7 +147,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The number of blobs deleted as a result of this garbage collection.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The number of bytes freed as a result of this garbage collection.
-     *
      */
     public function getFreedBytes(): int
     {
@@ -185,7 +165,6 @@ class GarbageCollection extends \ArrayObject
     }
     /**
      * The number of bytes freed as a result of this garbage collection.
-     *
      *
      * @return self
      */

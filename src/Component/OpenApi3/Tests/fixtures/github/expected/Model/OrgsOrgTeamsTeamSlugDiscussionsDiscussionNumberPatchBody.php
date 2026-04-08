@@ -22,17 +22,14 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberPatchBody extends \ArrayObj
     }
     /**
      * The discussion post's title.
-     *
      */
     protected string $title;
     /**
      * The discussion post's body text.
-     *
      */
     protected string $body;
     /**
      * The discussion post's title.
-     *
      */
     public function getTitle(): string
     {
@@ -40,7 +37,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberPatchBody extends \ArrayObj
     }
     /**
      * The discussion post's title.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberPatchBody extends \ArrayObj
     }
     /**
      * The discussion post's body text.
-     *
      */
     public function getBody(): string
     {
@@ -60,7 +55,6 @@ class OrgsOrgTeamsTeamSlugDiscussionsDiscussionNumberPatchBody extends \ArrayObj
     }
     /**
      * The discussion post's body text.
-     *
      *
      * @return self
      */

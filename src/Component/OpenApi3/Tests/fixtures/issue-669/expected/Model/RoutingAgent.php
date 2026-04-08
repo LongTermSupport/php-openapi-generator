@@ -22,12 +22,10 @@ class RoutingAgent extends \ArrayObject
     }
     /**
      * Indicates whether the routing-agent component is enabled.
-     *
      */
     protected bool $enabled;
     /**
      * Indicates whether the routing-agent component is enabled.
-     *
      */
     public function getEnabled(): bool
     {
@@ -35,7 +33,6 @@ class RoutingAgent extends \ArrayObject
     }
     /**
      * Indicates whether the routing-agent component is enabled.
-     *
      *
      * @return self
      */

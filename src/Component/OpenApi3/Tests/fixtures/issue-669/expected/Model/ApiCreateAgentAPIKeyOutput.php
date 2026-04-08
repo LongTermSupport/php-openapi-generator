@@ -22,12 +22,10 @@ class ApiCreateAgentAPIKeyOutput extends \ArrayObject
     }
     /**
      * Agent API Key Info
-     *
      */
     protected ApiAgentAPIKeyInfo $apiKeyInfo;
     /**
      * Agent API Key Info
-     *
      */
     public function getApiKeyInfo(): ApiAgentAPIKeyInfo
     {
@@ -35,7 +33,6 @@ class ApiCreateAgentAPIKeyOutput extends \ArrayObject
     }
     /**
      * Agent API Key Info
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class ContentRightAggregationCount
     }
     /**
      * ContentRight.
-     *
      */
     protected mixed $contentRight = null;
     /**
      * Found document count.
-     *
      */
     protected int $count;
     /**
      * ContentRight.
-     *
      */
     public function getContentRight(): mixed
     {
@@ -37,7 +34,6 @@ class ContentRightAggregationCount
     }
     /**
      * ContentRight.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class ContentRightAggregationCount
     }
     /**
      * Found document count.
-     *
      */
     public function getCount(): int
     {
@@ -57,7 +52,6 @@ class ContentRightAggregationCount
     }
     /**
      * Found document count.
-     *
      *
      * @return self
      */

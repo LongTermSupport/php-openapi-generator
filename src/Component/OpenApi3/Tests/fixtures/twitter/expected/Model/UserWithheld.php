@@ -28,7 +28,6 @@ class UserWithheld extends \ArrayObject
     protected array $countryCodes;
     /**
      * Indicates that the content being withheld is a `user`.
-     *
      */
     protected string $scope;
     /**
@@ -55,7 +54,6 @@ class UserWithheld extends \ArrayObject
     }
     /**
      * Indicates that the content being withheld is a `user`.
-     *
      */
     public function getScope(): string
     {
@@ -63,7 +61,6 @@ class UserWithheld extends \ArrayObject
     }
     /**
      * Indicates that the content being withheld is a `user`.
-     *
      *
      * @return self
      */

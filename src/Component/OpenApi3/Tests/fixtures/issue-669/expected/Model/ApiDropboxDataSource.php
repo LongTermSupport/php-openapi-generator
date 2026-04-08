@@ -23,7 +23,6 @@ class ApiDropboxDataSource extends \ArrayObject
     protected string $folder;
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/dropbox/tokens for reference.
-     *
      */
     protected string $refreshToken;
     public function getFolder(): string
@@ -38,7 +37,6 @@ class ApiDropboxDataSource extends \ArrayObject
     }
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/dropbox/tokens for reference.
-     *
      */
     public function getRefreshToken(): string
     {
@@ -46,7 +44,6 @@ class ApiDropboxDataSource extends \ArrayObject
     }
     /**
      * Refresh token. you can obrain a refresh token by following the oauth2 flow. see /v2/gen-ai/oauth2/dropbox/tokens for reference.
-     *
      *
      * @return self
      */

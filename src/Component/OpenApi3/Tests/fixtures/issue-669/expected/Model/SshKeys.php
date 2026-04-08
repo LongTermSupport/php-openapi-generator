@@ -22,27 +22,22 @@ class SshKeys extends \ArrayObject
     }
     /**
      * A unique identification number for this key. Can be used to embed a specific SSH key into a Droplet.
-     *
      */
     protected int $id;
     /**
      * A unique identifier that differentiates this key from other keys using a format that SSH recognizes. The fingerprint is created when the key is added to your account.
-     *
      */
     protected string $fingerprint;
     /**
      * The entire public key string that was uploaded. Embedded into the root user's `authorized_keys` file if you include this key during Droplet creation.
-     *
      */
     protected string $publicKey;
     /**
      * A human-readable display name for this key, used to easily identify the SSH keys when they are displayed.
-     *
      */
     protected string $name;
     /**
      * A unique identification number for this key. Can be used to embed a specific SSH key into a Droplet.
-     *
      */
     public function getId(): int
     {
@@ -50,7 +45,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * A unique identification number for this key. Can be used to embed a specific SSH key into a Droplet.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * A unique identifier that differentiates this key from other keys using a format that SSH recognizes. The fingerprint is created when the key is added to your account.
-     *
      */
     public function getFingerprint(): string
     {
@@ -70,7 +63,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * A unique identifier that differentiates this key from other keys using a format that SSH recognizes. The fingerprint is created when the key is added to your account.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * The entire public key string that was uploaded. Embedded into the root user's `authorized_keys` file if you include this key during Droplet creation.
-     *
      */
     public function getPublicKey(): string
     {
@@ -90,7 +81,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * The entire public key string that was uploaded. Embedded into the root user's `authorized_keys` file if you include this key during Droplet creation.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * A human-readable display name for this key, used to easily identify the SSH keys when they are displayed.
-     *
      */
     public function getName(): string
     {
@@ -110,7 +99,6 @@ class SshKeys extends \ArrayObject
     }
     /**
      * A human-readable display name for this key, used to easily identify the SSH keys when they are displayed.
-     *
      *
      * @return self
      */

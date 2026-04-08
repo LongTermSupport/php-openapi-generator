@@ -29,32 +29,26 @@ class RedisAdvancedConfig extends \ArrayObject
      * - `volatile-lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile-random`: Evict keys with expiration only in a random order.
      * - `volatile-ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
      */
     protected string $redisMaxmemoryPolicy;
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
      */
     protected int $redisPubsubClientOutputBufferLimit;
     /**
      * Set number of redis databases. Changing this will cause a restart of redis service.
-     *
      */
     protected int $redisNumberOfDatabases;
     /**
      * Caching IO thread count
-     *
      */
     protected int $redisIoThreads;
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
      */
     protected int $redisLfuLogFactor = 10;
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
      */
     protected int $redisLfuDecayTime = 1;
     /**
@@ -62,12 +56,10 @@ class RedisAdvancedConfig extends \ArrayObject
      * - When enabled, Caching accepts only SSL connections on port `25061`.
      * - When disabled, port `25060` is opened for non-SSL connections, while port `25061` remains available for SSL connections.
      * 
-     *
      */
     protected bool $redisSsl = true;
     /**
      * Caching idle connection timeout in seconds
-     *
      */
     protected int $redisTimeout = 300;
     /**
@@ -87,17 +79,14 @@ class RedisAdvancedConfig extends \ArrayObject
      * - `m` &mdash; Key miss events
      * - `n` &mdash; New key events
      * - `A` &mdash; Alias for `"g$lshztxed"`
-     *
      */
     protected string $redisNotifyKeyspaceEvents = '';
     /**
      * Creates an RDB dump of the database every 10 minutes that can be used  to recover data after a node crash. The database does not create the  dump if no keys have changed since the last dump. When set to `off`,  the database cannot fork services, and data can be lost if a service  is restarted or powered off. DigitalOcean Managed Caching databases  do not support the Append Only File (AOF) persistence method.
-     *
      */
     protected string $redisPersistence;
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Caching configuration acl-pubsub-default.
-     *
      */
     protected string $redisAclChannelsDefault;
     /**
@@ -109,25 +98,23 @@ class RedisAdvancedConfig extends \ArrayObject
      * - `volatile-lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile-random`: Evict keys with expiration only in a random order.
      * - `volatile-ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
      */
     public function getRedisMaxmemoryPolicy(): string
     {
         return $this->redisMaxmemoryPolicy;
     }
     /**
-    * A string specifying the desired eviction policy for the Caching cluster.
-    
-    - `noeviction`: Don't evict any data, returns error when memory limit is reached.
-    - `allkeys-lru:` Evict any key, least recently used (LRU) first.
-    - `allkeys-random`: Evict keys in a random order.
-    - `volatile-lru`: Evict keys with expiration only, least recently used (LRU) first.
-    - `volatile-random`: Evict keys with expiration only in a random order.
-    - `volatile-ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-    *
-    *
-    * @return self
-    */
+     * A string specifying the desired eviction policy for the Caching cluster.
+     * 
+     * - `noeviction`: Don't evict any data, returns error when memory limit is reached.
+     * - `allkeys-lru:` Evict any key, least recently used (LRU) first.
+     * - `allkeys-random`: Evict keys in a random order.
+     * - `volatile-lru`: Evict keys with expiration only, least recently used (LRU) first.
+     * - `volatile-random`: Evict keys with expiration only in a random order.
+     * - `volatile-ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
+     *
+     * @return self
+     */
     public function setRedisMaxmemoryPolicy(string $redisMaxmemoryPolicy): self
     {
         $this->initialized['redisMaxmemoryPolicy'] = true;
@@ -136,7 +123,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
      */
     public function getRedisPubsubClientOutputBufferLimit(): int
     {
@@ -144,7 +130,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Set output buffer limit for pub / sub clients in MB. The value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the available memory in the selected service plan.
-     *
      *
      * @return self
      */
@@ -156,7 +141,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Set number of redis databases. Changing this will cause a restart of redis service.
-     *
      */
     public function getRedisNumberOfDatabases(): int
     {
@@ -164,7 +148,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Set number of redis databases. Changing this will cause a restart of redis service.
-     *
      *
      * @return self
      */
@@ -176,7 +159,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Caching IO thread count
-     *
      */
     public function getRedisIoThreads(): int
     {
@@ -184,7 +166,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Caching IO thread count
-     *
      *
      * @return self
      */
@@ -196,7 +177,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
      */
     public function getRedisLfuLogFactor(): int
     {
@@ -204,7 +184,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies
-     *
      *
      * @return self
      */
@@ -216,7 +195,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
      */
     public function getRedisLfuDecayTime(): int
     {
@@ -224,7 +202,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * LFU maxmemory-policy counter decay time in minutes
-     *
      *
      * @return self
      */
@@ -239,21 +216,19 @@ class RedisAdvancedConfig extends \ArrayObject
      * - When enabled, Caching accepts only SSL connections on port `25061`.
      * - When disabled, port `25060` is opened for non-SSL connections, while port `25061` remains available for SSL connections.
      * 
-     *
      */
     public function getRedisSsl(): bool
     {
         return $this->redisSsl;
     }
     /**
-    * Require SSL to access Caching.
-    - When enabled, Caching accepts only SSL connections on port `25061`.
-    - When disabled, port `25060` is opened for non-SSL connections, while port `25061` remains available for SSL connections.
-    
-    *
-    *
-    * @return self
-    */
+     * Require SSL to access Caching.
+     * - When enabled, Caching accepts only SSL connections on port `25061`.
+     * - When disabled, port `25060` is opened for non-SSL connections, while port `25061` remains available for SSL connections.
+     * 
+     *
+     * @return self
+     */
     public function setRedisSsl(bool $redisSsl): self
     {
         $this->initialized['redisSsl'] = true;
@@ -262,7 +237,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Caching idle connection timeout in seconds
-     *
      */
     public function getRedisTimeout(): int
     {
@@ -270,7 +244,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Caching idle connection timeout in seconds
-     *
      *
      * @return self
      */
@@ -297,33 +270,31 @@ class RedisAdvancedConfig extends \ArrayObject
      * - `m` &mdash; Key miss events
      * - `n` &mdash; New key events
      * - `A` &mdash; Alias for `"g$lshztxed"`
-     *
      */
     public function getRedisNotifyKeyspaceEvents(): string
     {
         return $this->redisNotifyKeyspaceEvents;
     }
     /**
-    * Set notify-keyspace-events option. Requires at least `K` or `E` and accepts any combination of the following options. Setting the parameter to `""` disables notifications.
-    - `K` &mdash; Keyspace events
-    - `E` &mdash; Keyevent events
-    - `g` &mdash; Generic commands (e.g. `DEL`, `EXPIRE`, `RENAME`, ...)
-    - `$` &mdash; String commands
-    - `l` &mdash; List commands
-    - `s` &mdash; Set commands
-    - `h` &mdash; Hash commands
-    - `z` &mdash; Sorted set commands
-    - `t` &mdash; Stream commands
-    - `d` &mdash; Module key type events
-    - `x` &mdash; Expired events
-    - `e` &mdash; Evicted events
-    - `m` &mdash; Key miss events
-    - `n` &mdash; New key events
-    - `A` &mdash; Alias for `"g$lshztxed"`
-    *
-    *
-    * @return self
-    */
+     * Set notify-keyspace-events option. Requires at least `K` or `E` and accepts any combination of the following options. Setting the parameter to `""` disables notifications.
+     * - `K` &mdash; Keyspace events
+     * - `E` &mdash; Keyevent events
+     * - `g` &mdash; Generic commands (e.g. `DEL`, `EXPIRE`, `RENAME`, ...)
+     * - `$` &mdash; String commands
+     * - `l` &mdash; List commands
+     * - `s` &mdash; Set commands
+     * - `h` &mdash; Hash commands
+     * - `z` &mdash; Sorted set commands
+     * - `t` &mdash; Stream commands
+     * - `d` &mdash; Module key type events
+     * - `x` &mdash; Expired events
+     * - `e` &mdash; Evicted events
+     * - `m` &mdash; Key miss events
+     * - `n` &mdash; New key events
+     * - `A` &mdash; Alias for `"g$lshztxed"`
+     *
+     * @return self
+     */
     public function setRedisNotifyKeyspaceEvents(string $redisNotifyKeyspaceEvents): self
     {
         $this->initialized['redisNotifyKeyspaceEvents'] = true;
@@ -332,7 +303,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Creates an RDB dump of the database every 10 minutes that can be used  to recover data after a node crash. The database does not create the  dump if no keys have changed since the last dump. When set to `off`,  the database cannot fork services, and data can be lost if a service  is restarted or powered off. DigitalOcean Managed Caching databases  do not support the Append Only File (AOF) persistence method.
-     *
      */
     public function getRedisPersistence(): string
     {
@@ -340,7 +310,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Creates an RDB dump of the database every 10 minutes that can be used  to recover data after a node crash. The database does not create the  dump if no keys have changed since the last dump. When set to `off`,  the database cannot fork services, and data can be lost if a service  is restarted or powered off. DigitalOcean Managed Caching databases  do not support the Append Only File (AOF) persistence method.
-     *
      *
      * @return self
      */
@@ -352,7 +321,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Caching configuration acl-pubsub-default.
-     *
      */
     public function getRedisAclChannelsDefault(): string
     {
@@ -360,7 +328,6 @@ class RedisAdvancedConfig extends \ArrayObject
     }
     /**
      * Determines default pub/sub channels' ACL for new users if ACL is not supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option doesn't affect Caching configuration acl-pubsub-default.
-     *
      *
      * @return self
      */

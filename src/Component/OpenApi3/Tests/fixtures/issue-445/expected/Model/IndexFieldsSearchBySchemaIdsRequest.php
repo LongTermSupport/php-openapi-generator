@@ -27,7 +27,6 @@ class IndexFieldsSearchBySchemaIdsRequest
      * Controls how the search works which schemas should be considered in the search.
      * AllDescendantsFieldsOnRootSchema: All indexed fields from descendant schemas of root ones will be returned. Schemas that are not root schemas will be ignored.
      * SchemaAndParentFieldsOnly: Indexed fields of the requested schema and its parents will be returned.
-     *
      */
     protected mixed $searchMode = 'AllDescendantsFieldsOnRootSchema';
     /**
@@ -56,20 +55,18 @@ class IndexFieldsSearchBySchemaIdsRequest
      * Controls how the search works which schemas should be considered in the search.
      * AllDescendantsFieldsOnRootSchema: All indexed fields from descendant schemas of root ones will be returned. Schemas that are not root schemas will be ignored.
      * SchemaAndParentFieldsOnly: Indexed fields of the requested schema and its parents will be returned.
-     *
      */
     public function getSearchMode(): mixed
     {
         return $this->searchMode;
     }
     /**
-    * Controls how the search works which schemas should be considered in the search.
-    AllDescendantsFieldsOnRootSchema: All indexed fields from descendant schemas of root ones will be returned. Schemas that are not root schemas will be ignored.
-    SchemaAndParentFieldsOnly: Indexed fields of the requested schema and its parents will be returned.
-    *
-    *
-    * @return self
-    */
+     * Controls how the search works which schemas should be considered in the search.
+     * AllDescendantsFieldsOnRootSchema: All indexed fields from descendant schemas of root ones will be returned. Schemas that are not root schemas will be ignored.
+     * SchemaAndParentFieldsOnly: Indexed fields of the requested schema and its parents will be returned.
+     *
+     * @return self
+     */
     public function setSearchMode(mixed $searchMode): self
     {
         $this->initialized['searchMode'] = true;

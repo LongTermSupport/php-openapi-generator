@@ -19,7 +19,6 @@ class ListItemUpdateManyRequest
     }
     /**
      * Allows updating list items with references to list items or contents that don't exist in the system.
-     *
      */
     protected bool $allowMissingDependencies;
     /**
@@ -30,7 +29,6 @@ class ListItemUpdateManyRequest
     protected array $items;
     /**
      * Allows updating list items with references to list items or contents that don't exist in the system.
-     *
      */
     public function getAllowMissingDependencies(): bool
     {
@@ -38,7 +36,6 @@ class ListItemUpdateManyRequest
     }
     /**
      * Allows updating list items with references to list items or contents that don't exist in the system.
-     *
      *
      * @return self
      */

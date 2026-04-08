@@ -22,13 +22,11 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Unique identifier of the repository
-     *
      */
     protected int $id;
     protected string $nodeId;
     /**
      * The name of the repository.
-     *
      */
     protected string $name;
     protected string $fullName;
@@ -38,7 +36,6 @@ class TeamRepository extends \ArrayObject
     protected ?TeamRepositoryOwner $owner = null;
     /**
      * Whether the repository is private or public.
-     *
      */
     protected bool $private = false;
     protected string $htmlUrl;
@@ -94,13 +91,11 @@ class TeamRepository extends \ArrayObject
     protected int $size;
     /**
      * The default branch of the repository.
-     *
      */
     protected string $defaultBranch;
     protected int $openIssuesCount;
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
      */
     protected bool $isTemplate = false;
     /**
@@ -109,38 +104,31 @@ class TeamRepository extends \ArrayObject
     protected array $topics;
     /**
      * Whether issues are enabled.
-     *
      */
     protected bool $hasIssues = true;
     /**
      * Whether projects are enabled.
-     *
      */
     protected bool $hasProjects = true;
     /**
      * Whether the wiki is enabled.
-     *
      */
     protected bool $hasWiki = true;
     protected bool $hasPages;
     /**
      * Whether downloads are enabled.
-     *
      */
     protected bool $hasDownloads = true;
     /**
      * Whether the repository is archived.
-     *
      */
     protected bool $archived = false;
     /**
      * Returns whether or not this repository disabled.
-     *
      */
     protected bool $disabled;
     /**
      * The repository visibility: public, private, or internal.
-     *
      */
     protected string $visibility = 'public';
     protected ?\DateTime $pushedAt = null;
@@ -148,24 +136,20 @@ class TeamRepository extends \ArrayObject
     protected ?\DateTime $updatedAt = null;
     /**
      * Whether to allow rebase merges for pull requests.
-     *
      */
     protected bool $allowRebaseMerge = true;
     protected ?TeamRepositoryTemplateRepository $templateRepository = null;
     protected string $tempCloneToken;
     /**
      * Whether to allow squash merges for pull requests.
-     *
      */
     protected bool $allowSquashMerge = true;
     /**
      * Whether to delete head branches when pull requests are merged
-     *
      */
     protected bool $deleteBranchOnMerge = false;
     /**
      * Whether to allow merge commits for pull requests.
-     *
      */
     protected bool $allowMergeCommit = true;
     protected int $subscribersCount;
@@ -175,7 +159,6 @@ class TeamRepository extends \ArrayObject
     protected string $masterBranch;
     /**
      * Unique identifier of the repository
-     *
      */
     public function getId(): int
     {
@@ -183,7 +166,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Unique identifier of the repository
-     *
      *
      * @return self
      */
@@ -205,7 +187,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      */
     public function getName(): string
     {
@@ -213,7 +194,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      *
      * @return self
      */
@@ -275,7 +255,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether the repository is private or public.
-     *
      */
     public function getPrivate(): bool
     {
@@ -283,7 +262,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether the repository is private or public.
-     *
      *
      * @return self
      */
@@ -805,7 +783,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * The default branch of the repository.
-     *
      */
     public function getDefaultBranch(): string
     {
@@ -813,7 +790,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * The default branch of the repository.
-     *
      *
      * @return self
      */
@@ -835,7 +811,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
      */
     public function getIsTemplate(): bool
     {
@@ -843,7 +818,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
      *
      * @return self
      */
@@ -873,7 +847,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether issues are enabled.
-     *
      */
     public function getHasIssues(): bool
     {
@@ -881,7 +854,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether issues are enabled.
-     *
      *
      * @return self
      */
@@ -893,7 +865,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether projects are enabled.
-     *
      */
     public function getHasProjects(): bool
     {
@@ -901,7 +872,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether projects are enabled.
-     *
      *
      * @return self
      */
@@ -913,7 +883,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether the wiki is enabled.
-     *
      */
     public function getHasWiki(): bool
     {
@@ -921,7 +890,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether the wiki is enabled.
-     *
      *
      * @return self
      */
@@ -943,7 +911,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether downloads are enabled.
-     *
      */
     public function getHasDownloads(): bool
     {
@@ -951,7 +918,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether downloads are enabled.
-     *
      *
      * @return self
      */
@@ -963,7 +929,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether the repository is archived.
-     *
      */
     public function getArchived(): bool
     {
@@ -971,7 +936,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether the repository is archived.
-     *
      *
      * @return self
      */
@@ -983,7 +947,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
      */
     public function getDisabled(): bool
     {
@@ -991,7 +954,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Returns whether or not this repository disabled.
-     *
      *
      * @return self
      */
@@ -1003,7 +965,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * The repository visibility: public, private, or internal.
-     *
      */
     public function getVisibility(): string
     {
@@ -1011,7 +972,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * The repository visibility: public, private, or internal.
-     *
      *
      * @return self
      */
@@ -1053,7 +1013,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to allow rebase merges for pull requests.
-     *
      */
     public function getAllowRebaseMerge(): bool
     {
@@ -1061,7 +1020,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to allow rebase merges for pull requests.
-     *
      *
      * @return self
      */
@@ -1093,7 +1051,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to allow squash merges for pull requests.
-     *
      */
     public function getAllowSquashMerge(): bool
     {
@@ -1101,7 +1058,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to allow squash merges for pull requests.
-     *
      *
      * @return self
      */
@@ -1113,7 +1069,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to delete head branches when pull requests are merged
-     *
      */
     public function getDeleteBranchOnMerge(): bool
     {
@@ -1121,7 +1076,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to delete head branches when pull requests are merged
-     *
      *
      * @return self
      */
@@ -1133,7 +1087,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to allow merge commits for pull requests.
-     *
      */
     public function getAllowMergeCommit(): bool
     {
@@ -1141,7 +1094,6 @@ class TeamRepository extends \ArrayObject
     }
     /**
      * Whether to allow merge commits for pull requests.
-     *
      *
      * @return self
      */

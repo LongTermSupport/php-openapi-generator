@@ -22,7 +22,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The name of the Droplet backup plan.
-     *
      */
     protected string $name;
     /**
@@ -35,12 +34,10 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     protected array $possibleWindowStarts;
     /**
      * The number of hours that a backup window is open.
-     *
      */
     protected int $windowLengthHours;
     /**
      * The number of days that a backup will be kept.
-     *
      */
     protected int $retentionPeriodDays;
     /**
@@ -51,7 +48,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     protected array $possibleDays;
     /**
      * The name of the Droplet backup plan.
-     *
      */
     public function getName(): string
     {
@@ -59,7 +55,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The name of the Droplet backup plan.
-     *
      *
      * @return self
      */
@@ -81,14 +76,14 @@ class SupportedDropletBackupPolicy extends \ArrayObject
         return $this->possibleWindowStarts;
     }
     /**
-    * An array of integers representing the hours of the day that a backup can
-    start.
-    
-    *
-    * @param list<int> $possibleWindowStarts
-    *
-    * @return self
-    */
+     * An array of integers representing the hours of the day that a backup can
+     * start.
+     * 
+     *
+     * @param list<int> $possibleWindowStarts
+     *
+     * @return self
+     */
     public function setPossibleWindowStarts(array $possibleWindowStarts): self
     {
         $this->initialized['possibleWindowStarts'] = true;
@@ -97,7 +92,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The number of hours that a backup window is open.
-     *
      */
     public function getWindowLengthHours(): int
     {
@@ -105,7 +99,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The number of hours that a backup window is open.
-     *
      *
      * @return self
      */
@@ -117,7 +110,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The number of days that a backup will be kept.
-     *
      */
     public function getRetentionPeriodDays(): int
     {
@@ -125,7 +117,6 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The number of days that a backup will be kept.
-     *
      *
      * @return self
      */

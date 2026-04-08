@@ -19,12 +19,10 @@ class AggregatorBase
     }
     /**
      * The slug name of the aggregation. It must be unique per aggregation request.
-     *
      */
     protected string $name;
     /**
      * Language specific field names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -35,13 +33,11 @@ class AggregatorBase
     protected ?array $aggregators = null;
     /**
      * An optional filter to limit the data set the aggregation is operation on.
-     *
      */
     protected mixed $filter = null;
     protected string $kind;
     /**
      * The slug name of the aggregation. It must be unique per aggregation request.
-     *
      */
     public function getName(): string
     {
@@ -49,7 +45,6 @@ class AggregatorBase
     }
     /**
      * The slug name of the aggregation. It must be unique per aggregation request.
-     *
      */
     public function setName(string $name): void
     {
@@ -58,7 +53,6 @@ class AggregatorBase
     }
     /**
      * Language specific field names.
-     *
      */
     public function getNames(): mixed
     {
@@ -66,7 +60,6 @@ class AggregatorBase
     }
     /**
      * Language specific field names.
-     *
      */
     public function setNames(mixed $names): void
     {
@@ -94,7 +87,6 @@ class AggregatorBase
     }
     /**
      * An optional filter to limit the data set the aggregation is operation on.
-     *
      */
     public function getFilter(): mixed
     {
@@ -102,7 +94,6 @@ class AggregatorBase
     }
     /**
      * An optional filter to limit the data set the aggregation is operation on.
-     *
      */
     public function setFilter(mixed $filter): void
     {

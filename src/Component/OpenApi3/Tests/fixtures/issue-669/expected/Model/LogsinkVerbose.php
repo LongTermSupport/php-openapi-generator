@@ -22,19 +22,16 @@ class LogsinkVerbose extends \ArrayObject
     }
     /**
      * A unique identifier for Logsink
-     *
      */
     protected string $sinkId;
     /**
      * The name of the Logsink
-     *
      */
     protected string $sinkName;
     protected string $sinkType;
     protected RsyslogLogsink|ElasticsearchLogsink|OpensearchLogsink|DatadogLogsink $config;
     /**
      * A unique identifier for Logsink
-     *
      */
     public function getSinkId(): string
     {
@@ -42,7 +39,6 @@ class LogsinkVerbose extends \ArrayObject
     }
     /**
      * A unique identifier for Logsink
-     *
      *
      * @return self
      */
@@ -54,7 +50,6 @@ class LogsinkVerbose extends \ArrayObject
     }
     /**
      * The name of the Logsink
-     *
      */
     public function getSinkName(): string
     {
@@ -62,7 +57,6 @@ class LogsinkVerbose extends \ArrayObject
     }
     /**
      * The name of the Logsink
-     *
      *
      * @return self
      */

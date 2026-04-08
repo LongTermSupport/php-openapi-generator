@@ -22,12 +22,10 @@ class NodeStatus extends \ArrayObject
     }
     /**
      * A string indicating the current status of the node.
-     *
      */
     protected string $state;
     /**
      * A string indicating the current status of the node.
-     *
      */
     public function getState(): string
     {
@@ -35,7 +33,6 @@ class NodeStatus extends \ArrayObject
     }
     /**
      * A string indicating the current status of the node.
-     *
      *
      * @return self
      */

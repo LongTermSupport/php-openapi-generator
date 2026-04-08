@@ -25,7 +25,6 @@ class ContentDownloadLinkCreateRequest
     protected array $contents;
     /**
      * Indicates if a progress message shall be shown to the user, notifying once the download is completed.
-     *
      */
     protected bool $notifyProgress;
     /**
@@ -52,7 +51,6 @@ class ContentDownloadLinkCreateRequest
     }
     /**
      * Indicates if a progress message shall be shown to the user, notifying once the download is completed.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -60,7 +58,6 @@ class ContentDownloadLinkCreateRequest
     }
     /**
      * Indicates if a progress message shall be shown to the user, notifying once the download is completed.
-     *
      *
      * @return self
      */

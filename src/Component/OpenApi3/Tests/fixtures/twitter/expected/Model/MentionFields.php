@@ -22,12 +22,10 @@ class MentionFields extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     protected string $username;
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     public function getUsername(): string
     {
@@ -35,7 +33,6 @@ class MentionFields extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      *
      * @return self
      */

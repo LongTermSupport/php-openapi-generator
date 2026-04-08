@@ -22,17 +22,14 @@ class SinkResource extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     protected string $urn;
     /**
      * resource name
-     *
      */
     protected string $name;
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     public function getUrn(): string
     {
@@ -40,7 +37,6 @@ class SinkResource extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class SinkResource extends \ArrayObject
     }
     /**
      * resource name
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class SinkResource extends \ArrayObject
     }
     /**
      * resource name
-     *
      *
      * @return self
      */

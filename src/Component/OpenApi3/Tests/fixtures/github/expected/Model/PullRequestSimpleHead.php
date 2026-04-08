@@ -24,7 +24,6 @@ class PullRequestSimpleHead extends \ArrayObject
     protected string $ref;
     /**
      * A git repository
-     *
      */
     protected Repository $repo;
     protected string $sha;
@@ -51,7 +50,6 @@ class PullRequestSimpleHead extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getRepo(): Repository
     {
@@ -59,7 +57,6 @@ class PullRequestSimpleHead extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */

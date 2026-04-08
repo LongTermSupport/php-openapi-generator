@@ -25,7 +25,6 @@ class CheckSuite extends \ArrayObject
     protected ?string $headBranch = null;
     /**
      * The SHA of the head commit that is being checked.
-     *
      */
     protected string $headSha;
     protected ?string $status = null;
@@ -40,14 +39,12 @@ class CheckSuite extends \ArrayObject
     protected ?CheckSuiteApp $app = null;
     /**
      * Minimal Repository
-     *
      */
     protected MinimalRepository $repository;
     protected ?\DateTime $createdAt = null;
     protected ?\DateTime $updatedAt = null;
     /**
      * Simple Commit
-     *
      */
     protected SimpleCommit $headCommit;
     protected int $latestCheckRunsCount;
@@ -84,7 +81,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * The SHA of the head commit that is being checked.
-     *
      */
     public function getHeadSha(): string
     {
@@ -92,7 +88,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * The SHA of the head commit that is being checked.
-     *
      *
      * @return self
      */
@@ -182,7 +177,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      */
     public function getRepository(): MinimalRepository
     {
@@ -190,7 +184,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      *
      * @return self
      */
@@ -222,7 +215,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * Simple Commit
-     *
      */
     public function getHeadCommit(): SimpleCommit
     {
@@ -230,7 +222,6 @@ class CheckSuite extends \ArrayObject
     }
     /**
      * Simple Commit
-     *
      *
      * @return self
      */

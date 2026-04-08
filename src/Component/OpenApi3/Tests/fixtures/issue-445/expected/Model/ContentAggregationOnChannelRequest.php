@@ -19,7 +19,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -30,7 +29,6 @@ class ContentAggregationOnChannelRequest
     protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     protected mixed $filter = null;
     /**
@@ -47,7 +45,6 @@ class ContentAggregationOnChannelRequest
     /**
      * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
      * For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
-     *
      */
     protected ?string $channelId = null;
     /**
@@ -59,27 +56,22 @@ class ContentAggregationOnChannelRequest
     protected ?array $searchLanguages = null;
     /**
      * Limit the search to the contents belonging to the specified collection.
-     *
      */
     protected ?string $collectionId = null;
     /**
      * Limits the aggregation to the contents that have the specified life cycle state. Defaults to ActiveOnly.
-     *
      */
     protected mixed $lifeCycleFilter = 'ActiveOnly';
     /**
      * Limits the aggregation to the contents that have or not have broken references. By default it includes both.
-     *
      */
     protected mixed $brokenDependenciesFilter = 'All';
     /**
      * Type of search to be performed: search only in metadata, only in the extracted fulltext from the file or both. Default to Metadata.
-     *
      */
     protected mixed $searchType = 'Metadata';
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -87,7 +79,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -121,7 +112,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -129,7 +119,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      *
      * @return self
      */
@@ -154,17 +143,17 @@ class ContentAggregationOnChannelRequest
         return $this->aggregationFilters;
     }
     /**
-    * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
-    For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
-    by the aggregation filters are put in OR each other if they have the same AggregationName, and then such groups are put in AND.
-    For the aggregation values, only the original Filter of the search request is used to nail down the data to be considered for the aggregations. Then, on top of that, for each aggregator in the search request, a Filter is created to filter down the
-    aggregation results of that aggregation: depending if the AggregationName of the AggregationFilter matches the AggregationName of the Aggregator, the filter is put in OR (if it matches) or in AND (if it does not match it).
-    Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
-    *
-    * @param list<AggregationFilter>|null $aggregationFilters
-    *
-    * @return self
-    */
+     * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
+     * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
+     * by the aggregation filters are put in OR each other if they have the same AggregationName, and then such groups are put in AND.
+     * For the aggregation values, only the original Filter of the search request is used to nail down the data to be considered for the aggregations. Then, on top of that, for each aggregator in the search request, a Filter is created to filter down the
+     * aggregation results of that aggregation: depending if the AggregationName of the AggregationFilter matches the AggregationName of the Aggregator, the filter is put in OR (if it matches) or in AND (if it does not match it).
+     * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
+     *
+     * @param list<AggregationFilter>|null $aggregationFilters
+     *
+     * @return self
+     */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
         $this->initialized['aggregationFilters'] = true;
@@ -174,19 +163,17 @@ class ContentAggregationOnChannelRequest
     /**
      * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
      * For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
-     *
      */
     public function getChannelId(): ?string
     {
         return $this->channelId;
     }
     /**
-    * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
-    For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
-    *
-    *
-    * @return self
-    */
+     * Limits the simple search fields to the fields available in the specified channel. Defaults to RootChannel.
+     * For the ContentAggregationOnChannelRequest only, the existing aggregation saved on the channel are retrieved and used to perform the aggregation.
+     *
+     * @return self
+     */
     public function setChannelId(?string $channelId): self
     {
         $this->initialized['channelId'] = true;
@@ -204,13 +191,13 @@ class ContentAggregationOnChannelRequest
         return $this->searchLanguages;
     }
     /**
-    * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
-    If not specified, all metadata languages defined in the system are used.
-    *
-    * @param list<string>|null $searchLanguages
-    *
-    * @return self
-    */
+     * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
+     * If not specified, all metadata languages defined in the system are used.
+     *
+     * @param list<string>|null $searchLanguages
+     *
+     * @return self
+     */
     public function setSearchLanguages(?array $searchLanguages): self
     {
         $this->initialized['searchLanguages'] = true;
@@ -219,7 +206,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limit the search to the contents belonging to the specified collection.
-     *
      */
     public function getCollectionId(): ?string
     {
@@ -227,7 +213,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limit the search to the contents belonging to the specified collection.
-     *
      *
      * @return self
      */
@@ -239,7 +224,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limits the aggregation to the contents that have the specified life cycle state. Defaults to ActiveOnly.
-     *
      */
     public function getLifeCycleFilter(): mixed
     {
@@ -247,7 +231,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limits the aggregation to the contents that have the specified life cycle state. Defaults to ActiveOnly.
-     *
      *
      * @return self
      */
@@ -259,7 +242,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limits the aggregation to the contents that have or not have broken references. By default it includes both.
-     *
      */
     public function getBrokenDependenciesFilter(): mixed
     {
@@ -267,7 +249,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Limits the aggregation to the contents that have or not have broken references. By default it includes both.
-     *
      *
      * @return self
      */
@@ -279,7 +260,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Type of search to be performed: search only in metadata, only in the extracted fulltext from the file or both. Default to Metadata.
-     *
      */
     public function getSearchType(): mixed
     {
@@ -287,7 +267,6 @@ class ContentAggregationOnChannelRequest
     }
     /**
      * Type of search to be performed: search only in metadata, only in the extracted fulltext from the file or both. Default to Metadata.
-     *
      *
      * @return self
      */

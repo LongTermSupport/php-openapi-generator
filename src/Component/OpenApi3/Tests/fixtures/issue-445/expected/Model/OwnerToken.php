@@ -19,17 +19,14 @@ class OwnerToken
     }
     /**
      * The ownertoken id.
-     *
      */
     protected ?string $id = null;
     /**
      * The id of the user to whom this ownertoken currently belongs to.
-     *
      */
     protected ?string $userId = null;
     /**
      * The ownertoken id.
-     *
      */
     public function getId(): ?string
     {
@@ -37,7 +34,6 @@ class OwnerToken
     }
     /**
      * The ownertoken id.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class OwnerToken
     }
     /**
      * The id of the user to whom this ownertoken currently belongs to.
-     *
      */
     public function getUserId(): ?string
     {
@@ -57,7 +52,6 @@ class OwnerToken
     }
     /**
      * The id of the user to whom this ownertoken currently belongs to.
-     *
      *
      * @return self
      */

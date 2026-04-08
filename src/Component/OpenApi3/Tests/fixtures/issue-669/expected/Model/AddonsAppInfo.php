@@ -22,17 +22,14 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
      */
     protected string $appSlug;
     /**
      * The Terms of Service URL for the resource.
-     *
      */
     protected string $tos;
     /**
      * The End User License Agreement URL for the resource.
-     *
      */
     protected string $eula;
     /**
@@ -43,7 +40,6 @@ class AddonsAppInfo extends \ArrayObject
     protected array $plans;
     /**
      * The slug identifier for the application associated with the resource.
-     *
      */
     public function getAppSlug(): string
     {
@@ -51,7 +47,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
      *
      * @return self
      */
@@ -63,7 +58,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The Terms of Service URL for the resource.
-     *
      */
     public function getTos(): string
     {
@@ -71,7 +65,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The Terms of Service URL for the resource.
-     *
      *
      * @return self
      */
@@ -83,7 +76,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The End User License Agreement URL for the resource.
-     *
      */
     public function getEula(): string
     {
@@ -91,7 +83,6 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * The End User License Agreement URL for the resource.
-     *
      *
      * @return self
      */

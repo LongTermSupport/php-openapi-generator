@@ -69,13 +69,13 @@ class ImportTransferRequest
         return $this->metadata;
     }
     /**
-    * The metadata to be assigned to the imported content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
-    by the LayerSchemaIds property.
-    *
-    * @param array<string, mixed>|null $metadata
-    *
-    * @return self
-    */
+     * The metadata to be assigned to the imported content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
+     * by the LayerSchemaIds property.
+     *
+     * @param array<string, mixed>|null $metadata
+     *
+     * @return self
+     */
     public function setMetadata(?array $metadata): self
     {
         $this->initialized['metadata'] = true;

@@ -22,12 +22,10 @@ class ApplicationsClientIdTokenPostBody extends \ArrayObject
     }
     /**
      * The access_token of the OAuth application.
-     *
      */
     protected string $accessToken;
     /**
      * The access_token of the OAuth application.
-     *
      */
     public function getAccessToken(): string
     {
@@ -35,7 +33,6 @@ class ApplicationsClientIdTokenPostBody extends \ArrayObject
     }
     /**
      * The access_token of the OAuth application.
-     *
      *
      * @return self
      */

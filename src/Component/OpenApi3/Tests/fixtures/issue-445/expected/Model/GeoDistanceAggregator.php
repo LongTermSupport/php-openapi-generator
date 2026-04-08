@@ -19,12 +19,10 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
      */
     protected string $field;
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
      */
     protected mixed $location = null;
     /**
@@ -35,7 +33,6 @@ class GeoDistanceAggregator extends AggregatorBase
     protected array $ranges;
     /**
      * The field's ID to execute the aggregation on.
-     *
      */
     public function getField(): string
     {
@@ -43,7 +40,6 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
      *
      * @return self
      */
@@ -55,7 +51,6 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
      */
     public function getLocation(): mixed
     {
@@ -63,7 +58,6 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
      *
      * @return self
      */

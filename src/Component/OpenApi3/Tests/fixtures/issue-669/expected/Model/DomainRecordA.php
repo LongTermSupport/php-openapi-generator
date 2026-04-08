@@ -22,57 +22,46 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * A unique identifier for each domain record.
-     *
      */
     protected int $id;
     /**
      * The type of the DNS record. For example: A, CNAME, TXT, ...
-     *
      */
     protected string $type;
     /**
      * The host name, alias, or service being defined by the record.
-     *
      */
     protected string $name;
     /**
      * Variable data depending on record type. For example, the "data" value for an A record would be the IPv4 address to which the domain will be mapped. For a CAA record, it would contain the domain name of the CA being granted permission to issue certificates.
-     *
      */
     protected string $data;
     /**
      * The priority for SRV and MX records.
-     *
      */
     protected ?int $priority = null;
     /**
      * The port for SRV records.
-     *
      */
     protected ?int $port = null;
     /**
      * This value is the time to live for the record, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
      */
     protected int $ttl;
     /**
      * The weight for SRV records.
-     *
      */
     protected ?int $weight = null;
     /**
      * An unsigned integer between 0-255 used for CAA records.
-     *
      */
     protected ?int $flags = null;
     /**
      * The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef"
-     *
      */
     protected ?string $tag = null;
     /**
      * A unique identifier for each domain record.
-     *
      */
     public function getId(): int
     {
@@ -80,7 +69,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * A unique identifier for each domain record.
-     *
      *
      * @return self
      */
@@ -92,7 +80,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The type of the DNS record. For example: A, CNAME, TXT, ...
-     *
      */
     public function getType(): string
     {
@@ -100,7 +87,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The type of the DNS record. For example: A, CNAME, TXT, ...
-     *
      *
      * @return self
      */
@@ -112,7 +98,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The host name, alias, or service being defined by the record.
-     *
      */
     public function getName(): string
     {
@@ -120,7 +105,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The host name, alias, or service being defined by the record.
-     *
      *
      * @return self
      */
@@ -132,7 +116,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * Variable data depending on record type. For example, the "data" value for an A record would be the IPv4 address to which the domain will be mapped. For a CAA record, it would contain the domain name of the CA being granted permission to issue certificates.
-     *
      */
     public function getData(): string
     {
@@ -140,7 +123,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * Variable data depending on record type. For example, the "data" value for an A record would be the IPv4 address to which the domain will be mapped. For a CAA record, it would contain the domain name of the CA being granted permission to issue certificates.
-     *
      *
      * @return self
      */
@@ -152,7 +134,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The priority for SRV and MX records.
-     *
      */
     public function getPriority(): ?int
     {
@@ -160,7 +141,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The priority for SRV and MX records.
-     *
      *
      * @return self
      */
@@ -172,7 +152,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The port for SRV records.
-     *
      */
     public function getPort(): ?int
     {
@@ -180,7 +159,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The port for SRV records.
-     *
      *
      * @return self
      */
@@ -192,7 +170,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * This value is the time to live for the record, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
      */
     public function getTtl(): int
     {
@@ -200,7 +177,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * This value is the time to live for the record, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested.
-     *
      *
      * @return self
      */
@@ -212,7 +188,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The weight for SRV records.
-     *
      */
     public function getWeight(): ?int
     {
@@ -220,7 +195,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The weight for SRV records.
-     *
      *
      * @return self
      */
@@ -232,7 +206,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * An unsigned integer between 0-255 used for CAA records.
-     *
      */
     public function getFlagsField(): ?int
     {
@@ -240,7 +213,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * An unsigned integer between 0-255 used for CAA records.
-     *
      *
      * @return self
      */
@@ -252,7 +224,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef"
-     *
      */
     public function getTag(): ?string
     {
@@ -260,7 +231,6 @@ class DomainRecordA extends \ArrayObject
     }
     /**
      * The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef"
-     *
      *
      * @return self
      */

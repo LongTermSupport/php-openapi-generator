@@ -22,17 +22,14 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The IP address of the IPv6 network interface.
-     *
      */
     protected string $ipAddress;
     /**
      * The netmask of the IPv6 network interface.
-     *
      */
     protected int $netmask;
     /**
      * The gateway of the specified IPv6 network interface.
-     *
      */
     protected string $gateway;
     /**
@@ -40,12 +37,10 @@ class NetworkV6 extends \ArrayObject
      * 
      * **Note**: IPv6 private  networking is not currently supported.
      * 
-     *
      */
     protected string $type;
     /**
      * The IP address of the IPv6 network interface.
-     *
      */
     public function getIpAddress(): string
     {
@@ -53,7 +48,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The IP address of the IPv6 network interface.
-     *
      *
      * @return self
      */
@@ -65,7 +59,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The netmask of the IPv6 network interface.
-     *
      */
     public function getNetmask(): int
     {
@@ -73,7 +66,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The netmask of the IPv6 network interface.
-     *
      *
      * @return self
      */
@@ -85,7 +77,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The gateway of the specified IPv6 network interface.
-     *
      */
     public function getGateway(): string
     {
@@ -93,7 +84,6 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The gateway of the specified IPv6 network interface.
-     *
      *
      * @return self
      */
@@ -108,7 +98,6 @@ class NetworkV6 extends \ArrayObject
      * 
      * **Note**: IPv6 private  networking is not currently supported.
      * 
-     *
      */
     public function getType(): string
     {
@@ -116,8 +105,9 @@ class NetworkV6 extends \ArrayObject
     }
     /**
      * The type of the IPv6 network interface.
-     **Note**: IPv6 private  networking is not currently supported.
-     *
+     * 
+     * **Note**: IPv6 private  networking is not currently supported.
+     * 
      *
      * @return self
      */

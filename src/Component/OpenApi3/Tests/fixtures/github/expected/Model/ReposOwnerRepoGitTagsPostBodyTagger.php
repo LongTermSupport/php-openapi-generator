@@ -22,22 +22,18 @@ class ReposOwnerRepoGitTagsPostBodyTagger extends \ArrayObject
     }
     /**
      * The name of the author of the tag
-     *
      */
     protected string $name;
     /**
      * The email of the author of the tag
-     *
      */
     protected string $email;
     /**
      * When this object was tagged. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $date;
     /**
      * The name of the author of the tag
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class ReposOwnerRepoGitTagsPostBodyTagger extends \ArrayObject
     }
     /**
      * The name of the author of the tag
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ReposOwnerRepoGitTagsPostBodyTagger extends \ArrayObject
     }
     /**
      * The email of the author of the tag
-     *
      */
     public function getEmail(): string
     {
@@ -65,7 +59,6 @@ class ReposOwnerRepoGitTagsPostBodyTagger extends \ArrayObject
     }
     /**
      * The email of the author of the tag
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ReposOwnerRepoGitTagsPostBodyTagger extends \ArrayObject
     }
     /**
      * When this object was tagged. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getDate(): string
     {
@@ -85,7 +77,6 @@ class ReposOwnerRepoGitTagsPostBodyTagger extends \ArrayObject
     }
     /**
      * When this object was tagged. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */

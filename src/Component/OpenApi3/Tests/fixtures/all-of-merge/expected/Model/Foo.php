@@ -23,7 +23,6 @@ class Foo extends \ArrayObject
     protected string $bar;
     /**
      * A description
-     *
      */
     protected string $foo;
     public function getBar(): string
@@ -38,7 +37,6 @@ class Foo extends \ArrayObject
     }
     /**
      * A description
-     *
      */
     public function getFoo(): string
     {
@@ -46,7 +44,6 @@ class Foo extends \ArrayObject
     }
     /**
      * A description
-     *
      *
      * @return self
      */

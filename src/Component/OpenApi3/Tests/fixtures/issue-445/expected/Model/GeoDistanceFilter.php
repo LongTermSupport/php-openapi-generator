@@ -20,35 +20,30 @@ class GeoDistanceFilter extends FilterBase
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
      */
     protected string $field;
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
      */
     protected mixed $location = null;
     /**
      * The distance in meters from the point of origin.
-     *
      */
     protected float $distance;
     /**
      * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
      * (i.e. personLayer.address.street).
-     *
      */
     public function getField(): string
     {
         return $this->field;
     }
     /**
-    * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
-    (i.e. personLayer.address.street).
-    *
-    *
-    * @return self
-    */
+     * The field's name to execute the filter on. It is composed by the field ids of the hierarchy joined with "."
+     * (i.e. personLayer.address.street).
+     *
+     * @return self
+     */
     public function setField(string $field): self
     {
         $this->initialized['field'] = true;
@@ -57,7 +52,6 @@ class GeoDistanceFilter extends FilterBase
     }
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
      */
     public function getLocation(): mixed
     {
@@ -65,7 +59,6 @@ class GeoDistanceFilter extends FilterBase
     }
     /**
      * The point of origin to calculate the distance from (latitude/longitude).
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class GeoDistanceFilter extends FilterBase
     }
     /**
      * The distance in meters from the point of origin.
-     *
      */
     public function getDistance(): float
     {
@@ -85,7 +77,6 @@ class GeoDistanceFilter extends FilterBase
     }
     /**
      * The distance in meters from the point of origin.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ApiRollbackToAgentVersionInputPublic extends \ArrayObject
     }
     /**
      * Agent unique identifier
-     *
      */
     protected string $uuid;
     /**
      * Unique identifier
-     *
      */
     protected string $versionHash;
     /**
      * Agent unique identifier
-     *
      */
     public function getUuid(): string
     {
@@ -40,7 +37,6 @@ class ApiRollbackToAgentVersionInputPublic extends \ArrayObject
     }
     /**
      * Agent unique identifier
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiRollbackToAgentVersionInputPublic extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
      */
     public function getVersionHash(): string
     {
@@ -60,7 +55,6 @@ class ApiRollbackToAgentVersionInputPublic extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
      *
      * @return self
      */

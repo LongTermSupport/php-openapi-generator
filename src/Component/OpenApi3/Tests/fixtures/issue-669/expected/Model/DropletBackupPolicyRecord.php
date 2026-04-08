@@ -22,19 +22,16 @@ class DropletBackupPolicyRecord extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet.
-     *
      */
     protected int $dropletId;
     /**
      * A boolean value indicating whether backups are enabled for the Droplet.
-     *
      */
     protected bool $backupEnabled;
     protected DropletBackupPolicyRecordBackupPolicy $backupPolicy;
     protected DropletBackupPolicyRecordNextBackupWindow $nextBackupWindow;
     /**
      * The unique identifier for the Droplet.
-     *
      */
     public function getDropletId(): int
     {
@@ -42,7 +39,6 @@ class DropletBackupPolicyRecord extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet.
-     *
      *
      * @return self
      */
@@ -54,7 +50,6 @@ class DropletBackupPolicyRecord extends \ArrayObject
     }
     /**
      * A boolean value indicating whether backups are enabled for the Droplet.
-     *
      */
     public function getBackupEnabled(): bool
     {
@@ -62,7 +57,6 @@ class DropletBackupPolicyRecord extends \ArrayObject
     }
     /**
      * A boolean value indicating whether backups are enabled for the Droplet.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class ContentPermissionSetAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Permission set id to match on.
-     *
      */
     protected ?string $permissionSetId = null;
     /**
      * Permission set id to match on.
-     *
      */
     public function getPermissionSetId(): ?string
     {
@@ -32,7 +30,6 @@ class ContentPermissionSetAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Permission set id to match on.
-     *
      *
      * @return self
      */

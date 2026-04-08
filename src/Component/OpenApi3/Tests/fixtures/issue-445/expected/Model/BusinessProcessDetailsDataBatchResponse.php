@@ -19,17 +19,14 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
     }
     /**
      * The DocType on which the operation was performed.
-     *
      */
     protected string $docType;
     /**
      * The response of the batch operation.
-     *
      */
     protected mixed $response = null;
     /**
      * The DocType on which the operation was performed.
-     *
      */
     public function getDocType(): string
     {
@@ -37,7 +34,6 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
     }
     /**
      * The DocType on which the operation was performed.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
     }
     /**
      * The response of the batch operation.
-     *
      */
     public function getResponse(): mixed
     {
@@ -57,7 +52,6 @@ class BusinessProcessDetailsDataBatchResponse extends BusinessProcessDetailsData
     }
     /**
      * The response of the batch operation.
-     *
      *
      * @return self
      */

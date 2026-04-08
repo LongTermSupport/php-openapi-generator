@@ -19,17 +19,14 @@ class BusinessRuleTraceLog
     }
     /**
      * ID of the trace.
-     *
      */
     protected ?string $id = null;
     /**
      * ID of the document.
-     *
      */
     protected ?string $documentId = null;
     /**
      * Type of the document.
-     *
      */
     protected mixed $documentType = null;
     /**
@@ -58,12 +55,10 @@ class BusinessRuleTraceLog
     protected ?array $generalErrors = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * ID of the trace.
-     *
      */
     public function getId(): ?string
     {
@@ -71,7 +66,6 @@ class BusinessRuleTraceLog
     }
     /**
      * ID of the trace.
-     *
      *
      * @return self
      */
@@ -83,7 +77,6 @@ class BusinessRuleTraceLog
     }
     /**
      * ID of the document.
-     *
      */
     public function getDocumentId(): ?string
     {
@@ -91,7 +84,6 @@ class BusinessRuleTraceLog
     }
     /**
      * ID of the document.
-     *
      *
      * @return self
      */
@@ -103,7 +95,6 @@ class BusinessRuleTraceLog
     }
     /**
      * Type of the document.
-     *
      */
     public function getDocumentType(): mixed
     {
@@ -111,7 +102,6 @@ class BusinessRuleTraceLog
     }
     /**
      * Type of the document.
-     *
      *
      * @return self
      */
@@ -211,7 +201,6 @@ class BusinessRuleTraceLog
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -219,7 +208,6 @@ class BusinessRuleTraceLog
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */

@@ -25,12 +25,10 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     protected array $keyFieldIds;
     /**
      * Indicates if lookup shall be performed case sensitive.
-     *
      */
     protected bool $caseSensitive;
     /**
      * Indicates if child schemas should also be included.
-     *
      */
     protected bool $includeAllSchemaChildren;
     /**
@@ -57,7 +55,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * Indicates if lookup shall be performed case sensitive.
-     *
      */
     public function getCaseSensitive(): bool
     {
@@ -65,7 +62,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * Indicates if lookup shall be performed case sensitive.
-     *
      *
      * @return self
      */
@@ -77,7 +73,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * Indicates if child schemas should also be included.
-     *
      */
     public function getIncludeAllSchemaChildren(): bool
     {
@@ -85,7 +80,6 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * Indicates if child schemas should also be included.
-     *
      *
      * @return self
      */

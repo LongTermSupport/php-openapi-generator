@@ -23,12 +23,10 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     protected string $agentWorkspaceName;
     /**
      * Dataset against which the test‑case is executed.
-     *
      */
     protected string $datasetUuid;
     /**
      * Description of the test case.
-     *
      */
     protected string $description;
     /**
@@ -39,13 +37,11 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     protected array $metrics;
     /**
      * Name of the test case.
-     *
      */
     protected string $name;
     protected ApiStarMetric $starMetric;
     /**
      * The workspace uuid.
-     *
      */
     protected string $workspaceUuid;
     public function getAgentWorkspaceName(): string
@@ -60,7 +56,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Dataset against which the test‑case is executed.
-     *
      */
     public function getDatasetUuid(): string
     {
@@ -68,7 +63,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Dataset against which the test‑case is executed.
-     *
      *
      * @return self
      */
@@ -80,7 +74,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Description of the test case.
-     *
      */
     public function getDescription(): string
     {
@@ -88,7 +81,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Description of the test case.
-     *
      *
      * @return self
      */
@@ -122,7 +114,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the test case.
-     *
      */
     public function getName(): string
     {
@@ -130,7 +121,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the test case.
-     *
      *
      * @return self
      */
@@ -152,7 +142,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * The workspace uuid.
-     *
      */
     public function getWorkspaceUuid(): string
     {
@@ -160,7 +149,6 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * The workspace uuid.
-     *
      *
      * @return self
      */

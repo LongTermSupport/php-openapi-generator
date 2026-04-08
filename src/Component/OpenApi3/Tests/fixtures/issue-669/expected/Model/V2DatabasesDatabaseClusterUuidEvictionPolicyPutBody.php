@@ -29,7 +29,6 @@ class V2DatabasesDatabaseClusterUuidEvictionPolicyPutBody extends \ArrayObject
      * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile_random`: Evict keys with expiration only in a random order.
      * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
      */
     protected string $evictionPolicy;
     /**
@@ -41,25 +40,23 @@ class V2DatabasesDatabaseClusterUuidEvictionPolicyPutBody extends \ArrayObject
      * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
      * - `volatile_random`: Evict keys with expiration only in a random order.
      * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
      */
     public function getEvictionPolicy(): string
     {
         return $this->evictionPolicy;
     }
     /**
-    * A string specifying the desired eviction policy for a Caching or Valkey cluster.
-    
-    - `noeviction`: Don't evict any data, returns error when memory limit is reached.
-    - `allkeys_lru:` Evict any key, least recently used (LRU) first.
-    - `allkeys_random`: Evict keys in a random order.
-    - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
-    - `volatile_random`: Evict keys with expiration only in a random order.
-    - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-    *
-    *
-    * @return self
-    */
+     * A string specifying the desired eviction policy for a Caching or Valkey cluster.
+     * 
+     * - `noeviction`: Don't evict any data, returns error when memory limit is reached.
+     * - `allkeys_lru:` Evict any key, least recently used (LRU) first.
+     * - `allkeys_random`: Evict keys in a random order.
+     * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
+     * - `volatile_random`: Evict keys with expiration only in a random order.
+     * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
+     *
+     * @return self
+     */
     public function setEvictionPolicy(string $evictionPolicy): self
     {
         $this->initialized['evictionPolicy'] = true;

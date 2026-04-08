@@ -23,13 +23,11 @@ class AppAlertSpec extends \ArrayObject
     protected string $rule = 'UNSPECIFIED_RULE';
     /**
      * Is the alert disabled?
-     *
      */
     protected bool $disabled;
     protected string $operator = 'UNSPECIFIED_OPERATOR';
     /**
      * Threshold value for alert
-     *
      */
     protected float $value;
     protected string $window = 'UNSPECIFIED_WINDOW';
@@ -45,7 +43,6 @@ class AppAlertSpec extends \ArrayObject
     }
     /**
      * Is the alert disabled?
-     *
      */
     public function getDisabled(): bool
     {
@@ -53,7 +50,6 @@ class AppAlertSpec extends \ArrayObject
     }
     /**
      * Is the alert disabled?
-     *
      *
      * @return self
      */
@@ -75,7 +71,6 @@ class AppAlertSpec extends \ArrayObject
     }
     /**
      * Threshold value for alert
-     *
      */
     public function getValue(): float
     {
@@ -83,7 +78,6 @@ class AppAlertSpec extends \ArrayObject
     }
     /**
      * Threshold value for alert
-     *
      *
      * @return self
      */

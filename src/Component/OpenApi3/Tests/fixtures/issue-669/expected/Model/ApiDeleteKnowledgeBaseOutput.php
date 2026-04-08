@@ -22,12 +22,10 @@ class ApiDeleteKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * The id of the deleted knowledge base
-     *
      */
     protected string $uuid;
     /**
      * The id of the deleted knowledge base
-     *
      */
     public function getUuid(): string
     {
@@ -35,7 +33,6 @@ class ApiDeleteKnowledgeBaseOutput extends \ArrayObject
     }
     /**
      * The id of the deleted knowledge base
-     *
      *
      * @return self
      */

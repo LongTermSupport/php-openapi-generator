@@ -22,22 +22,18 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Api key
-     *
      */
     protected string $apiKey;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Created by user id from DO
-     *
      */
     protected string $createdBy;
     /**
      * Agent description
-     *
      */
     protected string $description;
     protected string $faasName;
@@ -48,7 +44,6 @@ class ApiAgentFunction extends \ArrayObject
     protected array $inputSchema;
     /**
      * Name
-     *
      */
     protected string $name;
     /**
@@ -57,22 +52,18 @@ class ApiAgentFunction extends \ArrayObject
     protected array $outputSchema;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Download your agent here
-     *
      */
     protected string $url;
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
      * Api key
-     *
      */
     public function getApiKey(): string
     {
@@ -80,7 +71,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Api key
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -100,7 +89,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
      */
     public function getCreatedBy(): string
     {
@@ -120,7 +107,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Agent description
-     *
      */
     public function getDescription(): string
     {
@@ -140,7 +125,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Agent description
-     *
      *
      * @return self
      */
@@ -190,7 +174,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Name
-     *
      */
     public function getName(): string
     {
@@ -198,7 +181,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Name
-     *
      *
      * @return self
      */
@@ -228,7 +210,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -236,7 +217,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -248,7 +228,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Download your agent here
-     *
      */
     public function getUrl(): string
     {
@@ -256,7 +235,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Download your agent here
-     *
      *
      * @return self
      */
@@ -268,7 +246,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -276,7 +253,6 @@ class ApiAgentFunction extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */

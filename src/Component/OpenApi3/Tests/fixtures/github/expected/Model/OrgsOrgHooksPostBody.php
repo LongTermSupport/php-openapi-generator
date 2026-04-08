@@ -22,12 +22,10 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Must be passed as "web".
-     *
      */
     protected string $name;
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#create-hook-config-params).
-     *
      */
     protected OrgsOrgHooksPostBodyConfig $config;
     /**
@@ -38,12 +36,10 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     protected array $events = array(0 => 'push');
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      */
     protected bool $active = true;
     /**
      * Must be passed as "web".
-     *
      */
     public function getName(): string
     {
@@ -51,7 +47,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Must be passed as "web".
-     *
      *
      * @return self
      */
@@ -63,7 +58,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#create-hook-config-params).
-     *
      */
     public function getConfig(): OrgsOrgHooksPostBodyConfig
     {
@@ -71,7 +65,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/orgs/hooks/#create-hook-config-params).
-     *
      *
      * @return self
      */
@@ -105,7 +98,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      */
     public function getActive(): bool
     {
@@ -113,7 +105,6 @@ class OrgsOrgHooksPostBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      *
      * @return self
      */

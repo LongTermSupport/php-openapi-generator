@@ -22,18 +22,15 @@ class UpdateTrigger extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      */
     protected bool $isEnabled;
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
      */
     protected ScheduledDetails $scheduledDetails;
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      */
     public function getIsEnabled(): bool
     {
@@ -41,7 +38,6 @@ class UpdateTrigger extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      *
      * @return self
      */
@@ -54,7 +50,6 @@ class UpdateTrigger extends \ArrayObject
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
      */
     public function getScheduledDetails(): ScheduledDetails
     {
@@ -62,7 +57,7 @@ class UpdateTrigger extends \ArrayObject
     }
     /**
      * Trigger details for SCHEDULED type, where body is optional.
-     *
+     * 
      *
      * @return self
      */

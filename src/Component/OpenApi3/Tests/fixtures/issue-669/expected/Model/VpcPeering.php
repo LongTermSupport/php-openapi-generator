@@ -22,17 +22,14 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
      */
     protected string $id;
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The current status of the VPC peering.
-     *
      */
     protected string $status;
     /**
@@ -43,12 +40,10 @@ class VpcPeering extends \ArrayObject
     protected array $vpcIds;
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
      */
     protected string $name;
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
      */
     public function getId(): string
     {
@@ -56,7 +51,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC peering.
-     *
      *
      * @return self
      */
@@ -68,7 +62,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -76,7 +69,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */
@@ -88,7 +80,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * The current status of the VPC peering.
-     *
      */
     public function getStatus(): string
     {
@@ -96,7 +87,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * The current status of the VPC peering.
-     *
      *
      * @return self
      */
@@ -130,7 +120,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
      */
     public function getName(): string
     {
@@ -138,7 +127,6 @@ class VpcPeering extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
      *
      * @return self
      */

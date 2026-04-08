@@ -26,7 +26,6 @@ class AppsGetLogsResponse extends \ArrayObject
     protected array $historicUrls;
     /**
      * A URL of the real-time live logs. This URL may use either the `https://` or `wss://` protocols and will keep pushing live logs as they become available.
-     *
      */
     protected string $liveUrl;
     /**
@@ -49,7 +48,6 @@ class AppsGetLogsResponse extends \ArrayObject
     }
     /**
      * A URL of the real-time live logs. This URL may use either the `https://` or `wss://` protocols and will keep pushing live logs as they become available.
-     *
      */
     public function getLiveUrl(): string
     {
@@ -57,7 +55,6 @@ class AppsGetLogsResponse extends \ArrayObject
     }
     /**
      * A URL of the real-time live logs. This URL may use either the `https://` or `wss://` protocols and will keep pushing live logs as they become available.
-     *
      *
      * @return self
      */

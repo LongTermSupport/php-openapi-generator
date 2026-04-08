@@ -22,17 +22,14 @@ class AppJobInvocationTriggerScheduledSchedule extends \ArrayObject
     }
     /**
      * The cron expression defining the schedule
-     *
      */
     protected string $cron;
     /**
      * The time zone for the schedule
-     *
      */
     protected string $timeZone;
     /**
      * The cron expression defining the schedule
-     *
      */
     public function getCron(): string
     {
@@ -40,7 +37,6 @@ class AppJobInvocationTriggerScheduledSchedule extends \ArrayObject
     }
     /**
      * The cron expression defining the schedule
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppJobInvocationTriggerScheduledSchedule extends \ArrayObject
     }
     /**
      * The time zone for the schedule
-     *
      */
     public function getTimeZone(): string
     {
@@ -60,7 +55,6 @@ class AppJobInvocationTriggerScheduledSchedule extends \ArrayObject
     }
     /**
      * The time zone for the schedule
-     *
      *
      * @return self
      */

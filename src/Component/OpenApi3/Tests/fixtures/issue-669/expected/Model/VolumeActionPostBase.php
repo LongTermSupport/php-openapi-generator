@@ -22,17 +22,14 @@ class VolumeActionPostBase extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
      */
     protected string $type;
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     protected string $region;
     /**
      * The volume action to initiate.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class VolumeActionPostBase extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class VolumeActionPostBase extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     public function getRegion(): string
     {
@@ -60,7 +55,6 @@ class VolumeActionPostBase extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      *
      * @return self
      */

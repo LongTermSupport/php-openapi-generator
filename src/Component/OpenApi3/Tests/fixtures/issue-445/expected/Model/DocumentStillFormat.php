@@ -20,7 +20,6 @@ class DocumentStillFormat extends FormatBase
     protected ?string $extension = null;
     /**
      * Allows resizing of the image.
-     *
      */
     protected mixed $resizeAction = null;
     public function getExtension(): ?string
@@ -35,7 +34,6 @@ class DocumentStillFormat extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
      */
     public function getResizeAction(): mixed
     {
@@ -43,7 +41,6 @@ class DocumentStillFormat extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
      *
      * @return self
      */

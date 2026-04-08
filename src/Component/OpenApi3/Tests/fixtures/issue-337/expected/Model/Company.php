@@ -22,37 +22,30 @@ class Company extends \ArrayObject
     }
     /**
      * The connectId of the company that triggered the `notificationEvent`. A connectId is the primary Company identifier that is used to uniquely identify all companies across Creditsafe's Universe and Partner Network.
-     *
      */
     protected string $id;
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the `notificationEvent`.
-     *
      */
     protected string $safeNumber;
     /**
      * The name of the company that triggered the `notificationEvent`.
-     *
      */
     protected string $name;
     /**
      * ISO/Alpha 2 format country code of the company that triggered the `notificationEvent`.
-     *
      */
     protected string $countryCode;
     /**
      * The portfolio Id of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
      */
     protected float $portfolioId;
     /**
      * The name of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
      */
     protected string $portfolioName;
     /**
      * The connectId of the company that triggered the `notificationEvent`. A connectId is the primary Company identifier that is used to uniquely identify all companies across Creditsafe's Universe and Partner Network.
-     *
      */
     public function getId(): string
     {
@@ -60,7 +53,6 @@ class Company extends \ArrayObject
     }
     /**
      * The connectId of the company that triggered the `notificationEvent`. A connectId is the primary Company identifier that is used to uniquely identify all companies across Creditsafe's Universe and Partner Network.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class Company extends \ArrayObject
     }
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the `notificationEvent`.
-     *
      */
     public function getSafeNumber(): string
     {
@@ -80,7 +71,6 @@ class Company extends \ArrayObject
     }
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the `notificationEvent`.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class Company extends \ArrayObject
     }
     /**
      * The name of the company that triggered the `notificationEvent`.
-     *
      */
     public function getName(): string
     {
@@ -100,7 +89,6 @@ class Company extends \ArrayObject
     }
     /**
      * The name of the company that triggered the `notificationEvent`.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class Company extends \ArrayObject
     }
     /**
      * ISO/Alpha 2 format country code of the company that triggered the `notificationEvent`.
-     *
      */
     public function getCountryCode(): string
     {
@@ -120,7 +107,6 @@ class Company extends \ArrayObject
     }
     /**
      * ISO/Alpha 2 format country code of the company that triggered the `notificationEvent`.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class Company extends \ArrayObject
     }
     /**
      * The portfolio Id of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
      */
     public function getPortfolioId(): float
     {
@@ -140,7 +125,6 @@ class Company extends \ArrayObject
     }
     /**
      * The portfolio Id of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class Company extends \ArrayObject
     }
     /**
      * The name of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
      */
     public function getPortfolioName(): string
     {
@@ -160,7 +143,6 @@ class Company extends \ArrayObject
     }
     /**
      * The name of the portfolio that contains the company that triggered the `notificationEvent`.
-     *
      *
      * @return self
      */

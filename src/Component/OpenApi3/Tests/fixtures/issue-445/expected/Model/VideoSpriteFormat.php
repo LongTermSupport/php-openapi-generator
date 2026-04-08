@@ -19,23 +19,19 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * Specifies the dimensions of a single frame in the sprite.
-     *
      */
     protected mixed $spriteResizeAction = null;
     /**
      * Limit for the number of frames to generate.
-     *
      */
     protected int $maxNumberOfSprites;
     /**
      * JPEG-quality to use for the sprite.
-     *
      */
     protected int $quality;
     protected ?string $extension = null;
     /**
      * Specifies the dimensions of a single frame in the sprite.
-     *
      */
     public function getSpriteResizeAction(): mixed
     {
@@ -43,7 +39,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * Specifies the dimensions of a single frame in the sprite.
-     *
      *
      * @return self
      */
@@ -55,7 +50,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * Limit for the number of frames to generate.
-     *
      */
     public function getMaxNumberOfSprites(): int
     {
@@ -63,7 +57,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * Limit for the number of frames to generate.
-     *
      *
      * @return self
      */
@@ -75,7 +68,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * JPEG-quality to use for the sprite.
-     *
      */
     public function getQuality(): int
     {
@@ -83,7 +75,6 @@ class VideoSpriteFormat extends FormatBase
     }
     /**
      * JPEG-quality to use for the sprite.
-     *
      *
      * @return self
      */

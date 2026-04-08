@@ -31,7 +31,6 @@ class MetadataStatus
     protected ?array $listSchemaIds = null;
     /**
      * The global state of the Contents and ListItems compared to the schema structure (Green = ok, Red = update needed).
-     *
      */
     protected mixed $state = null;
     /**
@@ -86,7 +85,6 @@ class MetadataStatus
     }
     /**
      * The global state of the Contents and ListItems compared to the schema structure (Green = ok, Red = update needed).
-     *
      */
     public function getState(): mixed
     {
@@ -94,7 +92,6 @@ class MetadataStatus
     }
     /**
      * The global state of the Contents and ListItems compared to the schema structure (Green = ok, Red = update needed).
-     *
      *
      * @return self
      */

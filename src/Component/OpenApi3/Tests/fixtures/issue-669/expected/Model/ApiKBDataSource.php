@@ -22,62 +22,51 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * AWS S3 Data Source
-     *
      */
     protected ApiAWSDataSource $awsDataSource;
     /**
      * Deprecated, moved to data_source_details
-     *
      */
     protected string $bucketName;
     /**
      * Deprecated, moved to data_source_details
-     *
      */
     protected string $bucketRegion;
     /**
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     protected string $chunkingAlgorithm = 'CHUNKING_ALGORITHM_SECTION_BASED';
     /**
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     protected ApiChunkingOptions $chunkingOptions;
     /**
      * Dropbox Data Source
-     *
      */
     protected ApiDropboxDataSource $dropboxDataSource;
     /**
      * File to upload as data source for knowledge base.
-     *
      */
     protected ApiFileUploadDataSource $fileUploadDataSource;
     /**
      * Google Drive Data Source
-     *
      */
     protected ApiGoogleDriveDataSource $googleDriveDataSource;
     protected string $itemPath;
     /**
      * Spaces Bucket Data Source
-     *
      */
     protected ApiSpacesDataSource $spacesDataSource;
     /**
      * WebCrawlerDataSource
-     *
      */
     protected ApiWebCrawlerDataSource $webCrawlerDataSource;
     /**
      * AWS S3 Data Source
-     *
      */
     public function getAwsDataSource(): ApiAWSDataSource
     {
@@ -85,7 +74,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * AWS S3 Data Source
-     *
      *
      * @return self
      */
@@ -97,7 +85,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Deprecated, moved to data_source_details
-     *
      */
     public function getBucketName(): string
     {
@@ -105,7 +92,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Deprecated, moved to data_source_details
-     *
      *
      * @return self
      */
@@ -117,7 +103,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Deprecated, moved to data_source_details
-     *
      */
     public function getBucketRegion(): string
     {
@@ -125,7 +110,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Deprecated, moved to data_source_details
-     *
      *
      * @return self
      */
@@ -139,7 +123,6 @@ class ApiKBDataSource extends \ArrayObject
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     public function getChunkingAlgorithm(): string
     {
@@ -147,8 +130,8 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * The chunking algorithm to use for processing data sources.
-     **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
+     * 
+     * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      * @return self
      */
@@ -162,7 +145,6 @@ class ApiKBDataSource extends \ArrayObject
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     public function getChunkingOptions(): ApiChunkingOptions
     {
@@ -170,8 +152,8 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Configuration options for the chunking algorithm.
-     **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
+     * 
+     * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      * @return self
      */
@@ -183,7 +165,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Dropbox Data Source
-     *
      */
     public function getDropboxDataSource(): ApiDropboxDataSource
     {
@@ -191,7 +172,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Dropbox Data Source
-     *
      *
      * @return self
      */
@@ -203,7 +183,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
      */
     public function getFileUploadDataSource(): ApiFileUploadDataSource
     {
@@ -211,7 +190,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * File to upload as data source for knowledge base.
-     *
      *
      * @return self
      */
@@ -223,7 +201,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Google Drive Data Source
-     *
      */
     public function getGoogleDriveDataSource(): ApiGoogleDriveDataSource
     {
@@ -231,7 +208,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Google Drive Data Source
-     *
      *
      * @return self
      */
@@ -253,7 +229,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
      */
     public function getSpacesDataSource(): ApiSpacesDataSource
     {
@@ -261,7 +236,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
      *
      * @return self
      */
@@ -273,7 +247,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
      */
     public function getWebCrawlerDataSource(): ApiWebCrawlerDataSource
     {
@@ -281,7 +254,6 @@ class ApiKBDataSource extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
      *
      * @return self
      */

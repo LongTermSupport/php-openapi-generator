@@ -22,28 +22,23 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * Spaces bucket name
-     *
      */
     protected string $bucketName;
     protected string $itemPath;
     /**
      * The AWS Key ID
-     *
      */
     protected string $keyId;
     /**
      * Region of bucket
-     *
      */
     protected string $region;
     /**
      * The AWS Secret Key
-     *
      */
     protected string $secretKey;
     /**
      * Spaces bucket name
-     *
      */
     public function getBucketName(): string
     {
@@ -51,7 +46,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * Spaces bucket name
-     *
      *
      * @return self
      */
@@ -73,7 +67,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * The AWS Key ID
-     *
      */
     public function getKeyId(): string
     {
@@ -81,7 +74,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * The AWS Key ID
-     *
      *
      * @return self
      */
@@ -93,7 +85,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * Region of bucket
-     *
      */
     public function getRegion(): string
     {
@@ -101,7 +92,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * Region of bucket
-     *
      *
      * @return self
      */
@@ -113,7 +103,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * The AWS Secret Key
-     *
      */
     public function getSecretKey(): string
     {
@@ -121,7 +110,6 @@ class ApiAWSDataSource extends \ArrayObject
     }
     /**
      * The AWS Secret Key
-     *
      *
      * @return self
      */

@@ -28,7 +28,6 @@ class ApiMoveAgentsToWorkspaceInputPublic extends \ArrayObject
     protected array $agentUuids;
     /**
      * Workspace uuid to move agents to
-     *
      */
     protected string $workspaceUuid;
     /**
@@ -55,7 +54,6 @@ class ApiMoveAgentsToWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Workspace uuid to move agents to
-     *
      */
     public function getWorkspaceUuid(): string
     {
@@ -63,7 +61,6 @@ class ApiMoveAgentsToWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Workspace uuid to move agents to
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * Duration of the video in seconds.
-     *
      */
     protected float $durationInSeconds;
     /**
      * With of the video.
-     *
      */
     protected int $width;
     /**
      * Height of the video.
-     *
      */
     protected int $height;
     /**
@@ -40,7 +37,6 @@ class OutputDataVideo extends OutputDataBase
     protected ?array $sprites = null;
     /**
      * Duration of the video in seconds.
-     *
      */
     public function getDurationInSeconds(): float
     {
@@ -48,7 +44,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * Duration of the video in seconds.
-     *
      *
      * @return self
      */
@@ -60,7 +55,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * With of the video.
-     *
      */
     public function getWidth(): int
     {
@@ -68,7 +62,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * With of the video.
-     *
      *
      * @return self
      */
@@ -80,7 +73,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * Height of the video.
-     *
      */
     public function getHeight(): int
     {
@@ -88,7 +80,6 @@ class OutputDataVideo extends OutputDataBase
     }
     /**
      * Height of the video.
-     *
      *
      * @return self
      */

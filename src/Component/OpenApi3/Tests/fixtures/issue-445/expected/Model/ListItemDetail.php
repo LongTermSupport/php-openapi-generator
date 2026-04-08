@@ -19,12 +19,10 @@ class ListItemDetail
     }
     /**
      * The list item ID.
-     *
      */
     protected string $id;
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
      */
     protected string $contentSchemaId;
     /**
@@ -36,7 +34,6 @@ class ListItemDetail
     protected ?array $content = null;
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
      */
     protected mixed $displayValues = null;
     /**
@@ -60,17 +57,14 @@ class ListItemDetail
     protected ?array $brokenIndirectReferenceIds = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
      */
     protected mixed $activity = null;
     /**
      * The list item ID.
-     *
      */
     public function getId(): string
     {
@@ -78,7 +72,6 @@ class ListItemDetail
     }
     /**
      * The list item ID.
-     *
      *
      * @return self
      */
@@ -90,7 +83,6 @@ class ListItemDetail
     }
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
      */
     public function getContentSchemaId(): string
     {
@@ -98,7 +90,6 @@ class ListItemDetail
     }
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
      *
      * @return self
      */
@@ -119,13 +110,13 @@ class ListItemDetail
         return $this->content;
     }
     /**
-    * The content data of the list item. It's an object of dynamic metadata whose structure is defined in the Content schema specified
-    by the ContentSchemaId property.
-    *
-    * @param array<string, mixed>|null $content
-    *
-    * @return self
-    */
+     * The content data of the list item. It's an object of dynamic metadata whose structure is defined in the Content schema specified
+     * by the ContentSchemaId property.
+     *
+     * @param array<string, mixed>|null $content
+     *
+     * @return self
+     */
     public function setContent(?array $content): self
     {
         $this->initialized['content'] = true;
@@ -134,7 +125,6 @@ class ListItemDetail
     }
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
      */
     public function getDisplayValues(): mixed
     {
@@ -142,7 +132,6 @@ class ListItemDetail
     }
     /**
      * Contains language specific display values. They are calculated values based on the template stored in the Content schema DisplayPatterns property.
-     *
      *
      * @return self
      */
@@ -207,13 +196,13 @@ class ListItemDetail
         return $this->brokenIndirectReferenceIds;
     }
     /**
-    * All the IDs of the indirectly referenced list items (tagboxes) that do not exist in the system.
-    They are referenced list items that reference at least a list item that do not exist in the system.
-    *
-    * @param list<string>|null $brokenIndirectReferenceIds
-    *
-    * @return self
-    */
+     * All the IDs of the indirectly referenced list items (tagboxes) that do not exist in the system.
+     * They are referenced list items that reference at least a list item that do not exist in the system.
+     *
+     * @param list<string>|null $brokenIndirectReferenceIds
+     *
+     * @return self
+     */
     public function setBrokenIndirectReferenceIds(?array $brokenIndirectReferenceIds): self
     {
         $this->initialized['brokenIndirectReferenceIds'] = true;
@@ -222,7 +211,6 @@ class ListItemDetail
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -230,7 +218,6 @@ class ListItemDetail
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -242,7 +229,6 @@ class ListItemDetail
     }
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
      */
     public function getActivity(): mixed
     {
@@ -250,7 +236,6 @@ class ListItemDetail
     }
     /**
      * Activity information: dynamically mapped from configured metadata fields or from audit information if no mapping is configured.
-     *
      *
      * @return self
      */

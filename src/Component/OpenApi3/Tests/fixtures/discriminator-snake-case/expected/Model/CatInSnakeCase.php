@@ -19,12 +19,10 @@ class CatInSnakeCase extends Pet
     }
     /**
      * The measured skill for hunting
-     *
      */
     protected string $huntingSkill = 'lazy';
     /**
      * The measured skill for hunting
-     *
      */
     public function getHuntingSkill(): string
     {
@@ -32,7 +30,6 @@ class CatInSnakeCase extends Pet
     }
     /**
      * The measured skill for hunting
-     *
      *
      * @return self
      */

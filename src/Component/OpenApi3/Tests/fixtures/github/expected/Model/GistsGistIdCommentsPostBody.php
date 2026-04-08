@@ -22,12 +22,10 @@ class GistsGistIdCommentsPostBody extends \ArrayObject
     }
     /**
      * The comment text.
-     *
      */
     protected string $body;
     /**
      * The comment text.
-     *
      */
     public function getBody(): string
     {
@@ -35,7 +33,6 @@ class GistsGistIdCommentsPostBody extends \ArrayObject
     }
     /**
      * The comment text.
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class SimpleAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: Simple
-     *
      */
     protected mixed $type = null;
     /**
      * The suffix for the analyzed field: simple.
-     *
      */
     protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: Simple
-     *
      */
     public function getType(): mixed
     {
@@ -37,7 +34,6 @@ class SimpleAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: Simple
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class SimpleAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: simple.
-     *
      */
     public function getFieldSuffix(): ?string
     {
@@ -57,7 +52,6 @@ class SimpleAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: simple.
-     *
      *
      * @return self
      */

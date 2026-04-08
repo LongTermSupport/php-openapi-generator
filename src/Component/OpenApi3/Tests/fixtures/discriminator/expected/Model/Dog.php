@@ -19,12 +19,10 @@ class Dog extends Pet
     }
     /**
      * the size of the pack the dog is from
-     *
      */
     protected int $packSize = 0;
     /**
      * the size of the pack the dog is from
-     *
      */
     public function getPackSize(): int
     {
@@ -32,7 +30,6 @@ class Dog extends Pet
     }
     /**
      * the size of the pack the dog is from
-     *
      *
      * @return self
      */

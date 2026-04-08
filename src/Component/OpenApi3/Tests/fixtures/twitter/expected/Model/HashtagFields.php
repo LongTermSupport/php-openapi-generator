@@ -22,12 +22,10 @@ class HashtagFields extends \ArrayObject
     }
     /**
      * The text of the Hashtag
-     *
      */
     protected string $tag;
     /**
      * The text of the Hashtag
-     *
      */
     public function getTag(): string
     {
@@ -35,7 +33,6 @@ class HashtagFields extends \ArrayObject
     }
     /**
      * The text of the Hashtag
-     *
      *
      * @return self
      */

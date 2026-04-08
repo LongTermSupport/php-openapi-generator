@@ -19,22 +19,18 @@ class UserCreateRequest
     }
     /**
      * User's first name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * User's last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
-     *
      */
     protected string $emailAddress;
     /**
      * Preferred language, e.g. for correspondence.
-     *
      */
     protected ?string $languageCode = null;
     /**
@@ -45,12 +41,10 @@ class UserCreateRequest
     protected ?array $userRoleIds = null;
     /**
      * User address.
-     *
      */
     protected mixed $address = null;
     /**
      * User's first name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -58,7 +52,6 @@ class UserCreateRequest
     }
     /**
      * User's first name.
-     *
      *
      * @return self
      */
@@ -70,7 +63,6 @@ class UserCreateRequest
     }
     /**
      * User's last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -78,7 +70,6 @@ class UserCreateRequest
     }
     /**
      * User's last name.
-     *
      *
      * @return self
      */
@@ -90,7 +81,6 @@ class UserCreateRequest
     }
     /**
      * Email address of the user (doubles as username).
-     *
      */
     public function getEmailAddress(): string
     {
@@ -98,7 +88,6 @@ class UserCreateRequest
     }
     /**
      * Email address of the user (doubles as username).
-     *
      *
      * @return self
      */
@@ -110,7 +99,6 @@ class UserCreateRequest
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
      */
     public function getLanguageCode(): ?string
     {
@@ -118,7 +106,6 @@ class UserCreateRequest
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
      *
      * @return self
      */
@@ -152,7 +139,6 @@ class UserCreateRequest
     }
     /**
      * User address.
-     *
      */
     public function getAddress(): mixed
     {
@@ -160,7 +146,6 @@ class UserCreateRequest
     }
     /**
      * User address.
-     *
      *
      * @return self
      */

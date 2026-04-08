@@ -22,38 +22,31 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Direction of the mapping.
-     *
      */
     protected mixed $direction = null;
     /**
      * Priority of the mapping.
-     *
      */
     protected int $priority;
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      */
     protected bool $stopProcessing;
     /**
      * Path to source property in XMP.
-     *
      */
     protected string $xmpPath;
     /**
      * Path to target property in metadata.
-     *
      */
     protected string $metadataPath;
     /**
      * Optional additional configuration for the mapping.
-     *
      */
     protected mixed $configuration = null;
     protected string $id;
     /**
      * Direction of the mapping.
-     *
      */
     public function getDirection(): mixed
     {
@@ -61,7 +54,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Direction of the mapping.
-     *
      *
      * @return self
      */
@@ -73,7 +65,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Priority of the mapping.
-     *
      */
     public function getPriority(): int
     {
@@ -81,7 +72,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Priority of the mapping.
-     *
      *
      * @return self
      */
@@ -93,7 +83,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      */
     public function getStopProcessing(): bool
     {
@@ -101,7 +90,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      *
      * @return self
      */
@@ -113,7 +101,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Path to source property in XMP.
-     *
      */
     public function getXmpPath(): string
     {
@@ -121,7 +108,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Path to source property in XMP.
-     *
      *
      * @return self
      */
@@ -133,7 +119,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Path to target property in metadata.
-     *
      */
     public function getMetadataPath(): string
     {
@@ -141,7 +126,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Path to target property in metadata.
-     *
      *
      * @return self
      */
@@ -153,7 +137,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Optional additional configuration for the mapping.
-     *
      */
     public function getConfiguration(): mixed
     {
@@ -161,7 +144,6 @@ class XmpMappingEntry extends \ArrayObject
     }
     /**
      * Optional additional configuration for the mapping.
-     *
      *
      * @return self
      */

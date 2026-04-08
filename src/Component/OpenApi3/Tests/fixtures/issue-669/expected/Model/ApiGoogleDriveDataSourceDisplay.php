@@ -23,7 +23,6 @@ class ApiGoogleDriveDataSourceDisplay extends \ArrayObject
     protected string $folderId;
     /**
      * Name of the selected folder if available
-     *
      */
     protected string $folderName;
     public function getFolderId(): string
@@ -38,7 +37,6 @@ class ApiGoogleDriveDataSourceDisplay extends \ArrayObject
     }
     /**
      * Name of the selected folder if available
-     *
      */
     public function getFolderName(): string
     {
@@ -46,7 +44,6 @@ class ApiGoogleDriveDataSourceDisplay extends \ArrayObject
     }
     /**
      * Name of the selected folder if available
-     *
      *
      * @return self
      */

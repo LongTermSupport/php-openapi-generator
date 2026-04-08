@@ -23,7 +23,6 @@ class SourceDatabase extends \ArrayObject
     protected SourceDatabaseSource $source;
     /**
      * Enables SSL encryption when connecting to the source database.
-     *
      */
     protected bool $disableSsl;
     /**
@@ -44,7 +43,6 @@ class SourceDatabase extends \ArrayObject
     }
     /**
      * Enables SSL encryption when connecting to the source database.
-     *
      */
     public function getDisableSsl(): bool
     {
@@ -52,7 +50,6 @@ class SourceDatabase extends \ArrayObject
     }
     /**
      * Enables SSL encryption when connecting to the source database.
-     *
      *
      * @return self
      */

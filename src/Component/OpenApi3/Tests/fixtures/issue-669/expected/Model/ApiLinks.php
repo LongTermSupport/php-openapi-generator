@@ -22,12 +22,10 @@ class ApiLinks extends \ArrayObject
     }
     /**
      * Information about how to reach other pages
-     *
      */
     protected ApiPages $pages;
     /**
      * Information about how to reach other pages
-     *
      */
     public function getPages(): ApiPages
     {
@@ -35,7 +33,6 @@ class ApiLinks extends \ArrayObject
     }
     /**
      * Information about how to reach other pages
-     *
      *
      * @return self
      */

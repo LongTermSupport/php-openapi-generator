@@ -22,22 +22,18 @@ class KafkaTopicBase extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
      */
     protected string $name;
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     protected int $replicationFactor;
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      */
     protected int $partitionCount;
     /**
      * The name of the Kafka topic.
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class KafkaTopicBase extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class KafkaTopicBase extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     public function getReplicationFactor(): int
     {
@@ -65,7 +59,6 @@ class KafkaTopicBase extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class KafkaTopicBase extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      */
     public function getPartitionCount(): int
     {
@@ -85,7 +77,6 @@ class KafkaTopicBase extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      *
      * @return self
      */

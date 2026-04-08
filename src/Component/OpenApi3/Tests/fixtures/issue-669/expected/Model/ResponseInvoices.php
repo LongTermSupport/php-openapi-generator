@@ -26,7 +26,6 @@ class ResponseInvoices extends \ArrayObject
     protected array $invoices;
     /**
      * The invoice preview.
-     *
      */
     protected InvoicePreview $invoicePreview;
     protected PageLinks $links;
@@ -51,7 +50,6 @@ class ResponseInvoices extends \ArrayObject
     }
     /**
      * The invoice preview.
-     *
      */
     public function getInvoicePreview(): InvoicePreview
     {
@@ -59,7 +57,6 @@ class ResponseInvoices extends \ArrayObject
     }
     /**
      * The invoice preview.
-     *
      *
      * @return self
      */

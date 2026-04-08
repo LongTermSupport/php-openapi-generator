@@ -22,18 +22,15 @@ class ReposOwnerRepoReleasesAssetsAssetIdPatchBody extends \ArrayObject
     }
     /**
      * The file name of the asset.
-     *
      */
     protected string $name;
     /**
      * An alternate short description of the asset. Used in place of the filename.
-     *
      */
     protected string $label;
     protected string $state;
     /**
      * The file name of the asset.
-     *
      */
     public function getName(): string
     {
@@ -41,7 +38,6 @@ class ReposOwnerRepoReleasesAssetsAssetIdPatchBody extends \ArrayObject
     }
     /**
      * The file name of the asset.
-     *
      *
      * @return self
      */
@@ -53,7 +49,6 @@ class ReposOwnerRepoReleasesAssetsAssetIdPatchBody extends \ArrayObject
     }
     /**
      * An alternate short description of the asset. Used in place of the filename.
-     *
      */
     public function getLabel(): string
     {
@@ -61,7 +56,6 @@ class ReposOwnerRepoReleasesAssetsAssetIdPatchBody extends \ArrayObject
     }
     /**
      * An alternate short description of the asset. Used in place of the filename.
-     *
      *
      * @return self
      */

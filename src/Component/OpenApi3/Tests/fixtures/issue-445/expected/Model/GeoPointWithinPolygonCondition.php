@@ -19,7 +19,6 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
@@ -31,7 +30,6 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
     protected ?array $polygon = null;
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -39,7 +37,6 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */
@@ -60,13 +57,13 @@ class GeoPointWithinPolygonCondition extends BusinessRuleCondition
         return $this->polygon;
     }
     /**
-    * List of points that form the polygon for the geo fence.
-    Must include at least 3 points.
-    *
-    * @param list<LatLon>|null $polygon
-    *
-    * @return self
-    */
+     * List of points that form the polygon for the geo fence.
+     * Must include at least 3 points.
+     *
+     * @param list<LatLon>|null $polygon
+     *
+     * @return self
+     */
     public function setPolygon(?array $polygon): self
     {
         $this->initialized['polygon'] = true;

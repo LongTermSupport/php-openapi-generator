@@ -22,13 +22,11 @@ class State extends \ArrayObject
     }
     /**
      * A map of region to regional state
-     *
      */
     protected RegionalState $regions;
     protected PreviousOutage $previousOutage;
     /**
      * A map of region to regional state
-     *
      */
     public function getRegions(): RegionalState
     {
@@ -36,7 +34,6 @@ class State extends \ArrayObject
     }
     /**
      * A map of region to regional state
-     *
      *
      * @return self
      */

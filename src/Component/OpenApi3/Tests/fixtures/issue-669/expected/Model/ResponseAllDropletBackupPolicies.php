@@ -42,14 +42,14 @@ class ResponseAllDropletBackupPolicies extends \ArrayObject
         return $this->policies;
     }
     /**
-    * A map where the keys are the Droplet IDs and the values are
-    objects containing the backup policy information for each Droplet.
-    
-    *
-    * @param array<string, DropletBackupPolicyRecord> $policies
-    *
-    * @return self
-    */
+     * A map where the keys are the Droplet IDs and the values are
+     * objects containing the backup policy information for each Droplet.
+     * 
+     *
+     * @param array<string, DropletBackupPolicyRecord> $policies
+     *
+     * @return self
+     */
     public function setPolicies(array $policies): self
     {
         $this->initialized['policies'] = true;

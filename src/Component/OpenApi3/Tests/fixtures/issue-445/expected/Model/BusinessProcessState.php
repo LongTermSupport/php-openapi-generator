@@ -19,22 +19,18 @@ class BusinessProcessState
     }
     /**
      * State of the business process
-     *
      */
     protected string $state;
     /**
      * Date and time of when the state transition was performed.
-     *
      */
     protected \DateTime $timestamp;
     /**
      * Eventual error associated to the state transition.
-     *
      */
     protected mixed $error = null;
     /**
      * State of the business process
-     *
      */
     public function getState(): string
     {
@@ -42,7 +38,6 @@ class BusinessProcessState
     }
     /**
      * State of the business process
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class BusinessProcessState
     }
     /**
      * Date and time of when the state transition was performed.
-     *
      */
     public function getTimestamp(): \DateTime
     {
@@ -62,7 +56,6 @@ class BusinessProcessState
     }
     /**
      * Date and time of when the state transition was performed.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class BusinessProcessState
     }
     /**
      * Eventual error associated to the state transition.
-     *
      */
     public function getError(): mixed
     {
@@ -82,7 +74,6 @@ class BusinessProcessState
     }
     /**
      * Eventual error associated to the state transition.
-     *
      *
      * @return self
      */

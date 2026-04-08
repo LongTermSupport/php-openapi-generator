@@ -22,37 +22,30 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug where the resource is located.
-     *
      */
     protected string $regionSlug;
     /**
      * The unique identifier of the resource on which the action is being performed.
-     *
      */
     protected string $resourceId;
     /**
      * The type of resource on which the action is being performed.
-     *
      */
     protected string $resourceType;
     /**
      * The timestamp when the action was started.
-     *
      */
     protected \DateTime $startedAt;
     /**
      * The current status of the action.
-     *
      */
     protected string $status;
     /**
      * The type of action being performed.
-     *
      */
     protected string $type;
     /**
      * The DigitalOcean region slug where the resource is located.
-     *
      */
     public function getRegionSlug(): string
     {
@@ -60,7 +53,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug where the resource is located.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The unique identifier of the resource on which the action is being performed.
-     *
      */
     public function getResourceId(): string
     {
@@ -80,7 +71,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The unique identifier of the resource on which the action is being performed.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The type of resource on which the action is being performed.
-     *
      */
     public function getResourceType(): string
     {
@@ -100,7 +89,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The type of resource on which the action is being performed.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The timestamp when the action was started.
-     *
      */
     public function getStartedAt(): \DateTime
     {
@@ -120,7 +107,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The timestamp when the action was started.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The current status of the action.
-     *
      */
     public function getStatus(): string
     {
@@ -140,7 +125,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The current status of the action.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The type of action being performed.
-     *
      */
     public function getType(): string
     {
@@ -160,7 +143,6 @@ class NfsActionsResponseAction extends \ArrayObject
     }
     /**
      * The type of action being performed.
-     *
      *
      * @return self
      */

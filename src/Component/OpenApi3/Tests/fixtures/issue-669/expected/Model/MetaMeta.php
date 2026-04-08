@@ -22,12 +22,10 @@ class MetaMeta extends \ArrayObject
     }
     /**
      * Number of objects returned by the request.
-     *
      */
     protected int $total;
     /**
      * Number of objects returned by the request.
-     *
      */
     public function getTotal(): int
     {
@@ -35,7 +33,6 @@ class MetaMeta extends \ArrayObject
     }
     /**
      * Number of objects returned by the request.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ReposOwnerRepoInvitationsInvitationIdPatchBody extends \ArrayObject
     }
     /**
      * The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
-     *
      */
     protected string $permissions;
     /**
      * The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
-     *
      */
     public function getPermissions(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoInvitationsInvitationIdPatchBody extends \ArrayObject
     }
     /**
      * The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
-     *
      *
      * @return self
      */

@@ -22,32 +22,26 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
      */
     protected string $name;
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      */
     protected string $type;
     /**
      * The contents of a PEM-formatted private-key corresponding to the SSL certificate.
-     *
      */
     protected string $privateKey;
     /**
      * The contents of a PEM-formatted public SSL certificate.
-     *
      */
     protected string $leafCertificate;
     /**
      * The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate.
-     *
      */
     protected string $certificateChain;
     /**
      * A unique human-readable name referring to a certificate.
-     *
      */
     public function getName(): string
     {
@@ -55,7 +49,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * A unique human-readable name referring to a certificate.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      */
     public function getType(): string
     {
@@ -75,7 +67,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * A string representing the type of the certificate. The value will be `custom` for a user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The contents of a PEM-formatted private-key corresponding to the SSL certificate.
-     *
      */
     public function getPrivateKey(): string
     {
@@ -95,7 +85,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The contents of a PEM-formatted private-key corresponding to the SSL certificate.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The contents of a PEM-formatted public SSL certificate.
-     *
      */
     public function getLeafCertificate(): string
     {
@@ -115,7 +103,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The contents of a PEM-formatted public SSL certificate.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate.
-     *
      */
     public function getCertificateChain(): string
     {
@@ -135,7 +121,6 @@ class CertificateRequestCustom extends \ArrayObject
     }
     /**
      * The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate.
-     *
      *
      * @return self
      */

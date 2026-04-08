@@ -22,22 +22,18 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem extends \ArrayO
     }
     /**
      * The alternative text for the image.
-     *
      */
     protected string $alt;
     /**
      * The full URL of the image.
-     *
      */
     protected string $imageUrl;
     /**
      * A short image description.
-     *
      */
     protected string $caption;
     /**
      * The alternative text for the image.
-     *
      */
     public function getAlt(): string
     {
@@ -45,7 +41,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem extends \ArrayO
     }
     /**
      * The alternative text for the image.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem extends \ArrayO
     }
     /**
      * The full URL of the image.
-     *
      */
     public function getImageUrl(): string
     {
@@ -65,7 +59,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem extends \ArrayO
     }
     /**
      * The full URL of the image.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem extends \ArrayO
     }
     /**
      * A short image description.
-     *
      */
     public function getCaption(): string
     {
@@ -85,7 +77,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem extends \ArrayO
     }
     /**
      * A short image description.
-     *
      *
      * @return self
      */

@@ -19,32 +19,26 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Image
-     *
      */
     protected ?string $image = null;
     /**
      * The source to be used for content of type Video
-     *
      */
     protected ?string $video = null;
     /**
      * The source to be used for content of type Document
-     *
      */
     protected ?string $document = null;
     /**
      * The source to be used for content of type Audio
-     *
      */
     protected ?string $audio = null;
     /**
      * The source to be used for content of type Vector
-     *
      */
     protected ?string $vector = null;
     /**
      * The source to be used for content of type Image
-     *
      */
     public function getImage(): ?string
     {
@@ -52,7 +46,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Image
-     *
      *
      * @return self
      */
@@ -64,7 +57,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Video
-     *
      */
     public function getVideo(): ?string
     {
@@ -72,7 +64,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Video
-     *
      *
      * @return self
      */
@@ -84,7 +75,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Document
-     *
      */
     public function getDocument(): ?string
     {
@@ -92,7 +82,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Document
-     *
      *
      * @return self
      */
@@ -104,7 +93,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Audio
-     *
      */
     public function getAudio(): ?string
     {
@@ -112,7 +100,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Audio
-     *
      *
      * @return self
      */
@@ -124,7 +111,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Vector
-     *
      */
     public function getVector(): ?string
     {
@@ -132,7 +118,6 @@ class SourceOutputFormats
     }
     /**
      * The source to be used for content of type Vector
-     *
      *
      * @return self
      */

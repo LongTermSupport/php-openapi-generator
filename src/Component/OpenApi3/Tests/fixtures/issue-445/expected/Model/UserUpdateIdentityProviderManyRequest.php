@@ -28,7 +28,6 @@ class UserUpdateIdentityProviderManyRequest extends \ArrayObject
     protected array $userIds;
     /**
      * Identity provider to assign to users.
-     *
      */
     protected string $identityProviderId;
     /**
@@ -55,7 +54,6 @@ class UserUpdateIdentityProviderManyRequest extends \ArrayObject
     }
     /**
      * Identity provider to assign to users.
-     *
      */
     public function getIdentityProviderId(): string
     {
@@ -63,7 +61,6 @@ class UserUpdateIdentityProviderManyRequest extends \ArrayObject
     }
     /**
      * Identity provider to assign to users.
-     *
      *
      * @return self
      */

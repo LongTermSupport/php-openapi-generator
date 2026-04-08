@@ -22,47 +22,38 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The name of the subscription tier.
-     *
      */
     protected string $name;
     /**
      * The slug identifier of the subscription tier.
-     *
      */
     protected string $slug;
     /**
      * The number of repositories included in the subscription tier. `0` indicates that the subscription tier includes unlimited repositories.
-     *
      */
     protected int $includedRepositories;
     /**
      * The amount of storage included in the subscription tier in bytes.
-     *
      */
     protected int $includedStorageBytes;
     /**
      * A boolean indicating whether the subscription tier supports additional storage above what is included in the base plan at an additional cost per GiB used.
-     *
      */
     protected bool $allowStorageOverage;
     /**
      * The amount of outbound data transfer included in the subscription tier in bytes.
-     *
      */
     protected int $includedBandwidthBytes;
     /**
      * The monthly cost of the subscription tier in cents.
-     *
      */
     protected int $monthlyPriceInCents;
     /**
      * The price paid in cents per GiB for additional storage beyond what is included in the subscription plan.
-     *
      */
     protected int $storageOveragePriceInCents;
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
      */
     protected bool $eligible;
     /**
@@ -73,7 +64,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     protected array $eligibilityReasons;
     /**
      * The name of the subscription tier.
-     *
      */
     public function getName(): string
     {
@@ -81,7 +71,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The name of the subscription tier.
-     *
      *
      * @return self
      */
@@ -93,7 +82,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The slug identifier of the subscription tier.
-     *
      */
     public function getSlug(): string
     {
@@ -101,7 +89,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The slug identifier of the subscription tier.
-     *
      *
      * @return self
      */
@@ -113,7 +100,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The number of repositories included in the subscription tier. `0` indicates that the subscription tier includes unlimited repositories.
-     *
      */
     public function getIncludedRepositories(): int
     {
@@ -121,7 +107,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The number of repositories included in the subscription tier. `0` indicates that the subscription tier includes unlimited repositories.
-     *
      *
      * @return self
      */
@@ -133,7 +118,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The amount of storage included in the subscription tier in bytes.
-     *
      */
     public function getIncludedStorageBytes(): int
     {
@@ -141,7 +125,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The amount of storage included in the subscription tier in bytes.
-     *
      *
      * @return self
      */
@@ -153,7 +136,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * A boolean indicating whether the subscription tier supports additional storage above what is included in the base plan at an additional cost per GiB used.
-     *
      */
     public function getAllowStorageOverage(): bool
     {
@@ -161,7 +143,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * A boolean indicating whether the subscription tier supports additional storage above what is included in the base plan at an additional cost per GiB used.
-     *
      *
      * @return self
      */
@@ -173,7 +154,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The amount of outbound data transfer included in the subscription tier in bytes.
-     *
      */
     public function getIncludedBandwidthBytes(): int
     {
@@ -181,7 +161,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The amount of outbound data transfer included in the subscription tier in bytes.
-     *
      *
      * @return self
      */
@@ -193,7 +172,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The monthly cost of the subscription tier in cents.
-     *
      */
     public function getMonthlyPriceInCents(): int
     {
@@ -201,7 +179,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The monthly cost of the subscription tier in cents.
-     *
      *
      * @return self
      */
@@ -213,7 +190,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The price paid in cents per GiB for additional storage beyond what is included in the subscription plan.
-     *
      */
     public function getStorageOveragePriceInCents(): int
     {
@@ -221,7 +197,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * The price paid in cents per GiB for additional storage beyond what is included in the subscription plan.
-     *
      *
      * @return self
      */
@@ -233,7 +208,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
      */
     public function getEligible(): bool
     {
@@ -241,7 +215,6 @@ class ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem extends \Array
     }
     /**
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
-     *
      *
      * @return self
      */

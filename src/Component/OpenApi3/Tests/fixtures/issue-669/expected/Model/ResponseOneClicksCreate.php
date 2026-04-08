@@ -22,12 +22,10 @@ class ResponseOneClicksCreate extends \ArrayObject
     }
     /**
      * A message about the result of the request.
-     *
      */
     protected string $message;
     /**
      * A message about the result of the request.
-     *
      */
     public function getMessage(): string
     {
@@ -35,7 +33,6 @@ class ResponseOneClicksCreate extends \ArrayObject
     }
     /**
      * A message about the result of the request.
-     *
      *
      * @return self
      */

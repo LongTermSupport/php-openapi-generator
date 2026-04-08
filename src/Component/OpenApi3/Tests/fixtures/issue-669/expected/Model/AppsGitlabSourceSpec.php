@@ -22,22 +22,18 @@ class AppsGitlabSourceSpec extends \ArrayObject
     }
     /**
      * The name of the branch to use
-     *
      */
     protected string $branch;
     /**
      * Whether to automatically deploy new commits made to the repo
-     *
      */
     protected bool $deployOnPush;
     /**
      * The name of the repo in the format owner/repo. Example: `digitalocean/sample-golang`
-     *
      */
     protected string $repo;
     /**
      * The name of the branch to use
-     *
      */
     public function getBranch(): string
     {
@@ -45,7 +41,6 @@ class AppsGitlabSourceSpec extends \ArrayObject
     }
     /**
      * The name of the branch to use
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AppsGitlabSourceSpec extends \ArrayObject
     }
     /**
      * Whether to automatically deploy new commits made to the repo
-     *
      */
     public function getDeployOnPush(): bool
     {
@@ -65,7 +59,6 @@ class AppsGitlabSourceSpec extends \ArrayObject
     }
     /**
      * Whether to automatically deploy new commits made to the repo
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AppsGitlabSourceSpec extends \ArrayObject
     }
     /**
      * The name of the repo in the format owner/repo. Example: `digitalocean/sample-golang`
-     *
      */
     public function getRepo(): string
     {
@@ -85,7 +77,6 @@ class AppsGitlabSourceSpec extends \ArrayObject
     }
     /**
      * The name of the repo in the format owner/repo. Example: `digitalocean/sample-golang`
-     *
      *
      * @return self
      */

@@ -22,22 +22,18 @@ class DropletActionResize extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     /**
      * When `true`, the Droplet's disk will be resized in addition to its RAM and CPU. This is a permanent change and cannot be reversed as a Droplet's disk size cannot be decreased.
-     *
      */
     protected bool $disk;
     /**
      * The slug identifier for the size to which you wish to resize the Droplet.
-     *
      */
     protected string $size;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -45,7 +41,6 @@ class DropletActionResize extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class DropletActionResize extends \ArrayObject
     }
     /**
      * When `true`, the Droplet's disk will be resized in addition to its RAM and CPU. This is a permanent change and cannot be reversed as a Droplet's disk size cannot be decreased.
-     *
      */
     public function getDisk(): bool
     {
@@ -65,7 +59,6 @@ class DropletActionResize extends \ArrayObject
     }
     /**
      * When `true`, the Droplet's disk will be resized in addition to its RAM and CPU. This is a permanent change and cannot be reversed as a Droplet's disk size cannot be decreased.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class DropletActionResize extends \ArrayObject
     }
     /**
      * The slug identifier for the size to which you wish to resize the Droplet.
-     *
      */
     public function getSize(): string
     {
@@ -85,7 +77,6 @@ class DropletActionResize extends \ArrayObject
     }
     /**
      * The slug identifier for the size to which you wish to resize the Droplet.
-     *
      *
      * @return self
      */

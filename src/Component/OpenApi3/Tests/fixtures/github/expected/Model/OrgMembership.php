@@ -26,7 +26,6 @@ class OrgMembership extends \ArrayObject
     protected string $organizationUrl;
     /**
      * Organization Simple
-     *
      */
     protected OrganizationSimple $organization;
     protected ?OrgMembershipUser $user = null;
@@ -73,7 +72,6 @@ class OrgMembership extends \ArrayObject
     }
     /**
      * Organization Simple
-     *
      */
     public function getOrganization(): OrganizationSimple
     {
@@ -81,7 +79,6 @@ class OrgMembership extends \ArrayObject
     }
     /**
      * Organization Simple
-     *
      *
      * @return self
      */

@@ -27,7 +27,6 @@ class ReposOwnerRepoCollaboratorsUsernamePutBody extends \ArrayObject
      * \* `admin` - can pull, push and administer this repository.
      * \* `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
      * \* `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
-     *
      */
     protected string $permission = 'push';
     protected string $permissions;
@@ -38,23 +37,21 @@ class ReposOwnerRepoCollaboratorsUsernamePutBody extends \ArrayObject
      * \* `admin` - can pull, push and administer this repository.
      * \* `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
      * \* `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
-     *
      */
     public function getPermission(): string
     {
         return $this->permission;
     }
     /**
-    * The permission to grant the collaborator. **Only valid on organization-owned repositories.** Can be one of:  
-    \* `pull` - can pull, but not push to or administer this repository.  
-    \* `push` - can pull and push, but not administer this repository.  
-    \* `admin` - can pull, push and administer this repository.  
-    \* `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.  
-    \* `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
-    *
-    *
-    * @return self
-    */
+     * The permission to grant the collaborator. **Only valid on organization-owned repositories.** Can be one of:
+     * \* `pull` - can pull, but not push to or administer this repository.
+     * \* `push` - can pull and push, but not administer this repository.
+     * \* `admin` - can pull, push and administer this repository.
+     * \* `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+     * \* `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+     *
+     * @return self
+     */
     public function setPermission(string $permission): self
     {
         $this->initialized['permission'] = true;

@@ -22,22 +22,18 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on Ubuntu runner machines.
-     *
      */
     protected int $uBUNTU;
     /**
      * Total minutes used on macOS runner machines.
-     *
      */
     protected int $mACOS;
     /**
      * Total minutes used on Windows runner machines.
-     *
      */
     protected int $wINDOWS;
     /**
      * Total minutes used on Ubuntu runner machines.
-     *
      */
     public function getUBUNTU(): int
     {
@@ -45,7 +41,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on Ubuntu runner machines.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on macOS runner machines.
-     *
      */
     public function getMACOS(): int
     {
@@ -65,7 +59,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on macOS runner machines.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on Windows runner machines.
-     *
      */
     public function getWINDOWS(): int
     {
@@ -85,7 +77,6 @@ class ActionsBillingUsageMinutesUsedBreakdown extends \ArrayObject
     }
     /**
      * Total minutes used on Windows runner machines.
-     *
      *
      * @return self
      */

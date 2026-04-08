@@ -22,7 +22,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
      */
     protected int $totalResults;
     /**
@@ -33,22 +32,18 @@ class ContentSearchResult extends \ArrayObject
     protected array $results;
     /**
      * The search execution time in milliseconds.
-     *
      */
     protected int $elapsedMilliseconds;
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * The search string used to query the data.
-     *
      */
     protected ?string $searchString = null;
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
      */
     protected bool $isSearchStringRewritten;
     /**
@@ -71,7 +66,6 @@ class ContentSearchResult extends \ArrayObject
     protected ?array $rightsAggregationsCounts = null;
     /**
      * The total number of matching documents.
-     *
      */
     public function getTotalResults(): int
     {
@@ -79,7 +73,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * The total number of matching documents.
-     *
      *
      * @return self
      */
@@ -113,7 +106,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
      */
     public function getElapsedMilliseconds(): int
     {
@@ -121,7 +113,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * The search execution time in milliseconds.
-     *
      *
      * @return self
      */
@@ -133,7 +124,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -141,7 +131,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      *
      * @return self
      */
@@ -153,7 +142,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * The search string used to query the data.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -161,7 +149,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * The search string used to query the data.
-     *
      *
      * @return self
      */
@@ -173,7 +160,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
      */
     public function getIsSearchStringRewritten(): bool
     {
@@ -181,7 +167,6 @@ class ContentSearchResult extends \ArrayObject
     }
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
      *
      * @return self
      */

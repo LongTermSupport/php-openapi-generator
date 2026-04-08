@@ -22,7 +22,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Anthropic API Key Info
-     *
      */
     protected ApiAnthropicAPIKeyInfo $anthropicApiKey;
     /**
@@ -39,7 +38,6 @@ class ApiAgent extends \ArrayObject
     protected array $apiKeys;
     /**
      * A Chatbot
-     *
      */
     protected ApiChatbot $chatbot;
     /**
@@ -56,22 +54,18 @@ class ApiAgent extends \ArrayObject
     protected array $childAgents;
     /**
      * Whether conversation logs are enabled for the agent
-     *
      */
     protected bool $conversationLogsEnabled;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Description of deployment
-     *
      */
     protected ApiDeployment $deployment;
     /**
      * Description of agent
-     *
      */
     protected string $description;
     /**
@@ -87,7 +81,6 @@ class ApiAgent extends \ArrayObject
     protected string $ifCase;
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     protected string $instruction;
     protected int $k;
@@ -101,18 +94,15 @@ class ApiAgent extends \ArrayObject
     protected int $maxTokens;
     /**
      * Description of a Model
-     *
      */
     protected ApiModel $model;
     protected ApiModelProviderKeyInfo $modelProviderKey;
     /**
      * Agent name
-     *
      */
     protected string $name;
     /**
      * OpenAI API Key Info
-     *
      */
     protected ApiOpenAIAPIKeyInfo $openaiApiKey;
     /**
@@ -124,12 +114,10 @@ class ApiAgent extends \ArrayObject
     protected string $projectId;
     /**
      * Whether the agent should provide in-response citations
-     *
      */
     protected bool $provideCitations;
     /**
      * Region code
-     *
      */
     protected string $region;
     /**
@@ -138,18 +126,15 @@ class ApiAgent extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     protected string $retrievalMethod = 'RETRIEVAL_METHOD_UNKNOWN';
     /**
      * Creation of route date / time
-     *
      */
     protected \DateTime $routeCreatedAt;
     protected string $routeCreatedBy;
     /**
      * Route name
-     *
      */
     protected string $routeName;
     protected string $routeUuid;
@@ -162,33 +147,27 @@ class ApiAgent extends \ArrayObject
     protected float $temperature;
     /**
      * Represents an AgentTemplate entity
-     *
      */
     protected ApiAgentTemplate $template;
     protected float $topP;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Access your agent under this url
-     *
      */
     protected string $url;
     /**
      * Id of user that created the agent
-     *
      */
     protected string $userId;
     /**
      * Unique agent id
-     *
      */
     protected string $uuid;
     /**
      * The latest version of the agent
-     *
      */
     protected string $versionHash;
     /**
@@ -201,7 +180,6 @@ class ApiAgent extends \ArrayObject
     protected ApiWorkspace $workspace;
     /**
      * Anthropic API Key Info
-     *
      */
     public function getAnthropicApiKey(): ApiAnthropicAPIKeyInfo
     {
@@ -209,7 +187,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Anthropic API Key Info
-     *
      *
      * @return self
      */
@@ -265,7 +242,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * A Chatbot
-     *
      */
     public function getChatbot(): ApiChatbot
     {
@@ -273,7 +249,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * A Chatbot
-     *
      *
      * @return self
      */
@@ -329,7 +304,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Whether conversation logs are enabled for the agent
-     *
      */
     public function getConversationLogsEnabled(): bool
     {
@@ -337,7 +311,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Whether conversation logs are enabled for the agent
-     *
      *
      * @return self
      */
@@ -349,7 +322,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -357,7 +329,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -369,7 +340,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of deployment
-     *
      */
     public function getDeployment(): ApiDeployment
     {
@@ -377,7 +347,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of deployment
-     *
      *
      * @return self
      */
@@ -389,7 +358,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of agent
-     *
      */
     public function getDescription(): string
     {
@@ -397,7 +365,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of agent
-     *
      *
      * @return self
      */
@@ -459,7 +426,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     public function getInstruction(): string
     {
@@ -467,7 +433,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      *
      * @return self
      */
@@ -531,7 +496,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
      */
     public function getModel(): ApiModel
     {
@@ -539,7 +503,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
      *
      * @return self
      */
@@ -561,7 +524,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent name
-     *
      */
     public function getName(): string
     {
@@ -569,7 +531,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent name
-     *
      *
      * @return self
      */
@@ -581,7 +542,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * OpenAI API Key Info
-     *
      */
     public function getOpenaiApiKey(): ApiOpenAIAPIKeyInfo
     {
@@ -589,7 +549,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * OpenAI API Key Info
-     *
      *
      * @return self
      */
@@ -633,7 +592,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
      */
     public function getProvideCitations(): bool
     {
@@ -641,7 +599,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
      *
      * @return self
      */
@@ -653,7 +610,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Region code
-     *
      */
     public function getRegion(): string
     {
@@ -661,7 +617,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Region code
-     *
      *
      * @return self
      */
@@ -677,22 +632,20 @@ class ApiAgent extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     public function getRetrievalMethod(): string
     {
         return $this->retrievalMethod;
     }
     /**
-    * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
-    - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
-    - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
-    - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
-    - RETRIEVAL_METHOD_NONE: The retrieval method is none
-    *
-    *
-    * @return self
-    */
+     * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
+     *  - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
+     *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
+     *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
+     *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
+     *
+     * @return self
+     */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
         $this->initialized['retrievalMethod'] = true;
@@ -701,7 +654,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Creation of route date / time
-     *
      */
     public function getRouteCreatedAt(): \DateTime
     {
@@ -709,7 +661,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Creation of route date / time
-     *
      *
      * @return self
      */
@@ -731,7 +682,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Route name
-     *
      */
     public function getRouteName(): string
     {
@@ -739,7 +689,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Route name
-     *
      *
      * @return self
      */
@@ -793,7 +742,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Represents an AgentTemplate entity
-     *
      */
     public function getTemplate(): ApiAgentTemplate
     {
@@ -801,7 +749,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Represents an AgentTemplate entity
-     *
      *
      * @return self
      */
@@ -823,7 +770,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -831,7 +777,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -843,7 +788,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Access your agent under this url
-     *
      */
     public function getUrl(): string
     {
@@ -851,7 +795,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Access your agent under this url
-     *
      *
      * @return self
      */
@@ -863,7 +806,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Id of user that created the agent
-     *
      */
     public function getUserId(): string
     {
@@ -871,7 +813,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Id of user that created the agent
-     *
      *
      * @return self
      */
@@ -883,7 +824,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
      */
     public function getUuid(): string
     {
@@ -891,7 +831,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
      *
      * @return self
      */
@@ -903,7 +842,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * The latest version of the agent
-     *
      */
     public function getVersionHash(): string
     {
@@ -911,7 +849,6 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * The latest version of the agent
-     *
      *
      * @return self
      */

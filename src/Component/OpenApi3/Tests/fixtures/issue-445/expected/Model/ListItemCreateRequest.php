@@ -19,7 +19,6 @@ class ListItemCreateRequest
     }
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
      */
     protected string $contentSchemaId;
     /**
@@ -32,12 +31,10 @@ class ListItemCreateRequest
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     protected ?string $requestId = null;
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
      */
     public function getContentSchemaId(): string
     {
@@ -45,7 +42,6 @@ class ListItemCreateRequest
     }
     /**
      * The ID of the content schema. The SchemaType of the specified schema must be List.
-     *
      *
      * @return self
      */
@@ -81,20 +77,18 @@ class ListItemCreateRequest
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     public function getRequestId(): ?string
     {
         return $this->requestId;
     }
     /**
-    * Optional client reference for this request.
-    Will be returned back in response to make easier for clients to match request items with the respective results.
-    It is not persisted anywhere and it is ignored in single operations.
-    *
-    *
-    * @return self
-    */
+     * Optional client reference for this request.
+     * Will be returned back in response to make easier for clients to match request items with the respective results.
+     * It is not persisted anywhere and it is ignored in single operations.
+     *
+     * @return self
+     */
     public function setRequestId(?string $requestId): self
     {
         $this->initialized['requestId'] = true;

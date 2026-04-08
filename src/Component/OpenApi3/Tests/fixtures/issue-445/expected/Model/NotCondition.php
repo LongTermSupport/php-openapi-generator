@@ -19,12 +19,10 @@ class NotCondition extends BusinessRuleCondition
     }
     /**
      * Inner condition.
-     *
      */
     protected mixed $condition = null;
     /**
      * Inner condition.
-     *
      */
     public function getCondition(): mixed
     {
@@ -32,7 +30,6 @@ class NotCondition extends BusinessRuleCondition
     }
     /**
      * Inner condition.
-     *
      *
      * @return self
      */

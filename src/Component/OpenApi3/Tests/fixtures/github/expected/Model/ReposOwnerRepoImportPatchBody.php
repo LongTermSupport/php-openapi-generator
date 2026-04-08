@@ -22,19 +22,16 @@ class ReposOwnerRepoImportPatchBody extends \ArrayObject
     }
     /**
      * The username to provide to the originating repository.
-     *
      */
     protected string $vcsUsername;
     /**
      * The password to provide to the originating repository.
-     *
      */
     protected string $vcsPassword;
     protected string $vcs;
     protected string $tfvcProject;
     /**
      * The username to provide to the originating repository.
-     *
      */
     public function getVcsUsername(): string
     {
@@ -42,7 +39,6 @@ class ReposOwnerRepoImportPatchBody extends \ArrayObject
     }
     /**
      * The username to provide to the originating repository.
-     *
      *
      * @return self
      */
@@ -54,7 +50,6 @@ class ReposOwnerRepoImportPatchBody extends \ArrayObject
     }
     /**
      * The password to provide to the originating repository.
-     *
      */
     public function getVcsPassword(): string
     {
@@ -62,7 +57,6 @@ class ReposOwnerRepoImportPatchBody extends \ArrayObject
     }
     /**
      * The password to provide to the originating repository.
-     *
      *
      * @return self
      */

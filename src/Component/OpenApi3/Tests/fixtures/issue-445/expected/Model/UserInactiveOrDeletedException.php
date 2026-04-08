@@ -31,7 +31,6 @@ class UserInactiveOrDeletedException extends \ArrayObject
     protected ?string $userId = null;
     /**
      * The ID of the inactive or deleted user in question.
-     *
      */
     protected ?string $affectedUserId = null;
     public function getTraceLevel(): string
@@ -126,7 +125,6 @@ class UserInactiveOrDeletedException extends \ArrayObject
     }
     /**
      * The ID of the inactive or deleted user in question.
-     *
      */
     public function getAffectedUserId(): ?string
     {
@@ -134,7 +132,6 @@ class UserInactiveOrDeletedException extends \ArrayObject
     }
     /**
      * The ID of the inactive or deleted user in question.
-     *
      *
      * @return self
      */

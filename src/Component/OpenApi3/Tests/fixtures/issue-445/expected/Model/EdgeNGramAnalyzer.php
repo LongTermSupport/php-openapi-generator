@@ -19,17 +19,14 @@ class EdgeNGramAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: EdgeNGram
-     *
      */
     protected mixed $type = null;
     /**
      * The suffix for the analyzed field: edgengram.
-     *
      */
     protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: EdgeNGram
-     *
      */
     public function getType(): mixed
     {
@@ -37,7 +34,6 @@ class EdgeNGramAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: EdgeNGram
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class EdgeNGramAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: edgengram.
-     *
      */
     public function getFieldSuffix(): ?string
     {
@@ -57,7 +52,6 @@ class EdgeNGramAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: edgengram.
-     *
      *
      * @return self
      */

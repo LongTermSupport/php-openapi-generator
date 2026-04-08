@@ -22,22 +22,18 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Name of the validation
-     *
      */
     protected string $name;
     /**
      * Status of the validation
-     *
      */
     protected string $status;
     /**
      * Additional notes or details about the validation
-     *
      */
     protected string $note;
     /**
      * Name of the validation
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Name of the validation
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Status of the validation
-     *
      */
     public function getStatus(): string
     {
@@ -65,7 +59,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Status of the validation
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Additional notes or details about the validation
-     *
      */
     public function getNote(): string
     {
@@ -85,7 +77,6 @@ class ByoipPrefixValidationsItem extends \ArrayObject
     }
     /**
      * Additional notes or details about the validation
-     *
      *
      * @return self
      */

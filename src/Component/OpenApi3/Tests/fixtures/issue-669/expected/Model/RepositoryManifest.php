@@ -22,32 +22,26 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      */
     protected string $registryName;
     /**
      * The name of the repository.
-     *
      */
     protected string $repository;
     /**
      * The manifest digest
-     *
      */
     protected string $digest;
     /**
      * The compressed size of the manifest in bytes.
-     *
      */
     protected int $compressedSizeBytes;
     /**
      * The uncompressed size of the manifest in bytes (this size is calculated asynchronously so it may not be immediately available).
-     *
      */
     protected int $sizeBytes;
     /**
      * The time the manifest was last updated.
-     *
      */
     protected \DateTime $updatedAt;
     /**
@@ -64,7 +58,6 @@ class RepositoryManifest extends \ArrayObject
     protected array $blobs;
     /**
      * The name of the container registry.
-     *
      */
     public function getRegistryName(): string
     {
@@ -72,7 +65,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      *
      * @return self
      */
@@ -84,7 +76,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      */
     public function getRepository(): string
     {
@@ -92,7 +83,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      *
      * @return self
      */
@@ -104,7 +94,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The manifest digest
-     *
      */
     public function getDigest(): string
     {
@@ -112,7 +101,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The manifest digest
-     *
      *
      * @return self
      */
@@ -124,7 +112,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The compressed size of the manifest in bytes.
-     *
      */
     public function getCompressedSizeBytes(): int
     {
@@ -132,7 +119,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The compressed size of the manifest in bytes.
-     *
      *
      * @return self
      */
@@ -144,7 +130,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The uncompressed size of the manifest in bytes (this size is calculated asynchronously so it may not be immediately available).
-     *
      */
     public function getSizeBytes(): int
     {
@@ -152,7 +137,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The uncompressed size of the manifest in bytes (this size is calculated asynchronously so it may not be immediately available).
-     *
      *
      * @return self
      */
@@ -164,7 +148,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The time the manifest was last updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -172,7 +155,6 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * The time the manifest was last updated.
-     *
      *
      * @return self
      */

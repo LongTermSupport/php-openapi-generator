@@ -19,12 +19,10 @@ class OutputSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     protected int $limit = 30;
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     protected ?string $pageToken = null;
     /**
@@ -53,7 +51,6 @@ class OutputSearchRequest
     protected ?array $outputFormatIds = null;
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     public function getLimit(): int
     {
@@ -61,7 +58,6 @@ class OutputSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      *
      * @return self
      */
@@ -73,7 +69,6 @@ class OutputSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -81,7 +76,6 @@ class OutputSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      *
      * @return self
      */

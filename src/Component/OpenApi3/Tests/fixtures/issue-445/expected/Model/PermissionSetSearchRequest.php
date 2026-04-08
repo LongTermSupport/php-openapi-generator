@@ -19,7 +19,6 @@ class PermissionSetSearchRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -34,24 +33,20 @@ class PermissionSetSearchRequest
     protected ?array $sort = null;
     /**
      * Limits the number of the returned schemas. Defaults to 30.
-     *
      */
     protected int $limit = 30;
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     protected ?string $pageToken = null;
     protected mixed $filter = null;
     /**
      * Filters based on the PermissionSetRight of the user.
-     *
      */
     protected mixed $rightFilter = null;
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the result.
      * Warning! It severely affects performance.
-     *
      */
     protected bool $debugMode = false;
     /**
@@ -63,7 +58,6 @@ class PermissionSetSearchRequest
     protected ?array $searchLanguages = null;
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -71,7 +65,6 @@ class PermissionSetSearchRequest
     }
     /**
      * The string used to query the data. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -123,7 +116,6 @@ class PermissionSetSearchRequest
     }
     /**
      * Limits the number of the returned schemas. Defaults to 30.
-     *
      */
     public function getLimit(): int
     {
@@ -131,7 +123,6 @@ class PermissionSetSearchRequest
     }
     /**
      * Limits the number of the returned schemas. Defaults to 30.
-     *
      *
      * @return self
      */
@@ -143,7 +134,6 @@ class PermissionSetSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -151,7 +141,6 @@ class PermissionSetSearchRequest
     }
     /**
      * The token used to retrieve the next page of results. It must be null on first request and only filled with the returned pageToken to request next page of results.
-     *
      *
      * @return self
      */
@@ -173,7 +162,6 @@ class PermissionSetSearchRequest
     }
     /**
      * Filters based on the PermissionSetRight of the user.
-     *
      */
     public function getRightFilter(): mixed
     {
@@ -181,7 +169,6 @@ class PermissionSetSearchRequest
     }
     /**
      * Filters based on the PermissionSetRight of the user.
-     *
      *
      * @return self
      */
@@ -194,19 +181,17 @@ class PermissionSetSearchRequest
     /**
      * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the result.
      * Warning! It severely affects performance.
-     *
      */
     public function getDebugMode(): bool
     {
         return $this->debugMode;
     }
     /**
-    * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the result.
-    Warning! It severely affects performance.
-    *
-    *
-    * @return self
-    */
+     * Enable debug mode: additional debug information regarding the query execution and reason of the matched documents are returned in the result.
+     * Warning! It severely affects performance.
+     *
+     * @return self
+     */
     public function setDebugMode(bool $debugMode): self
     {
         $this->initialized['debugMode'] = true;
@@ -224,13 +209,13 @@ class PermissionSetSearchRequest
         return $this->searchLanguages;
     }
     /**
-    * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
-    If not specified, all metadata languages defined in the system are used.
-    *
-    * @param list<string>|null $searchLanguages
-    *
-    * @return self
-    */
+     * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
+     * If not specified, all metadata languages defined in the system are used.
+     *
+     * @param list<string>|null $searchLanguages
+     *
+     * @return self
+     */
     public function setSearchLanguages(?array $searchLanguages): self
     {
         $this->initialized['searchLanguages'] = true;

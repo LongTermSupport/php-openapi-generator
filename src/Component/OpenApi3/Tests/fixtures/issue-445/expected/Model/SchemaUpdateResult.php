@@ -19,12 +19,10 @@ class SchemaUpdateResult
     }
     /**
      * The details of the updated schema.
-     *
      */
     protected mixed $schema = null;
     /**
      * The details of the updated schema.
-     *
      */
     public function getSchema(): mixed
     {
@@ -32,7 +30,6 @@ class SchemaUpdateResult
     }
     /**
      * The details of the updated schema.
-     *
      *
      * @return self
      */

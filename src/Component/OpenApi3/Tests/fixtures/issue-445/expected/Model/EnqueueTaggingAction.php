@@ -19,12 +19,10 @@ class EnqueueTaggingAction extends BusinessRuleAction
     }
     /**
      * Options to use while tagging.
-     *
      */
     protected mixed $options = null;
     /**
      * Options to use while tagging.
-     *
      */
     public function getOptions(): mixed
     {
@@ -32,7 +30,6 @@ class EnqueueTaggingAction extends BusinessRuleAction
     }
     /**
      * Options to use while tagging.
-     *
      *
      * @return self
      */

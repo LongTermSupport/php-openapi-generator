@@ -19,47 +19,38 @@ class UserAddress
     }
     /**
      * Company address line
-     *
      */
     protected ?string $company = null;
     /**
      * Company department.
-     *
      */
     protected ?string $department = null;
     /**
      * Street and house number.
-     *
      */
     protected ?string $address = null;
     /**
      * Additional address line.
-     *
      */
     protected ?string $alternativeAddress = null;
     /**
      * ZIP code.
-     *
      */
     protected ?string $zip = null;
     /**
      * City or town.
-     *
      */
     protected ?string $city = null;
     /**
      * Phone number.
-     *
      */
     protected ?string $phone = null;
     /**
      * Country code.
-     *
      */
     protected ?string $countryCode = null;
     /**
      * Company address line
-     *
      */
     public function getCompany(): ?string
     {
@@ -67,7 +58,6 @@ class UserAddress
     }
     /**
      * Company address line
-     *
      *
      * @return self
      */
@@ -79,7 +69,6 @@ class UserAddress
     }
     /**
      * Company department.
-     *
      */
     public function getDepartment(): ?string
     {
@@ -87,7 +76,6 @@ class UserAddress
     }
     /**
      * Company department.
-     *
      *
      * @return self
      */
@@ -99,7 +87,6 @@ class UserAddress
     }
     /**
      * Street and house number.
-     *
      */
     public function getAddress(): ?string
     {
@@ -107,7 +94,6 @@ class UserAddress
     }
     /**
      * Street and house number.
-     *
      *
      * @return self
      */
@@ -119,7 +105,6 @@ class UserAddress
     }
     /**
      * Additional address line.
-     *
      */
     public function getAlternativeAddress(): ?string
     {
@@ -127,7 +112,6 @@ class UserAddress
     }
     /**
      * Additional address line.
-     *
      *
      * @return self
      */
@@ -139,7 +123,6 @@ class UserAddress
     }
     /**
      * ZIP code.
-     *
      */
     public function getZip(): ?string
     {
@@ -147,7 +130,6 @@ class UserAddress
     }
     /**
      * ZIP code.
-     *
      *
      * @return self
      */
@@ -159,7 +141,6 @@ class UserAddress
     }
     /**
      * City or town.
-     *
      */
     public function getCity(): ?string
     {
@@ -167,7 +148,6 @@ class UserAddress
     }
     /**
      * City or town.
-     *
      *
      * @return self
      */
@@ -179,7 +159,6 @@ class UserAddress
     }
     /**
      * Phone number.
-     *
      */
     public function getPhone(): ?string
     {
@@ -187,7 +166,6 @@ class UserAddress
     }
     /**
      * Phone number.
-     *
      *
      * @return self
      */
@@ -199,7 +177,6 @@ class UserAddress
     }
     /**
      * Country code.
-     *
      */
     public function getCountryCode(): ?string
     {
@@ -207,7 +184,6 @@ class UserAddress
     }
     /**
      * Country code.
-     *
      *
      * @return self
      */

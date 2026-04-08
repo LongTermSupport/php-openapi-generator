@@ -22,17 +22,14 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     }
     /**
      * **Required**.
-     *
      */
     protected string $title;
     /**
      * Can contain Markdown.
-     *
      */
     protected string $summary;
     /**
      * Can contain Markdown.
-     *
      */
     protected string $text;
     /**
@@ -49,7 +46,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     protected array $images;
     /**
      * **Required**.
-     *
      */
     public function getTitle(): string
     {
@@ -57,7 +53,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     }
     /**
      * **Required**.
-     *
      *
      * @return self
      */
@@ -69,7 +64,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     }
     /**
      * Can contain Markdown.
-     *
      */
     public function getSummary(): string
     {
@@ -77,7 +71,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     }
     /**
      * Can contain Markdown.
-     *
      *
      * @return self
      */
@@ -89,7 +82,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     }
     /**
      * Can contain Markdown.
-     *
      */
     public function getText(): string
     {
@@ -97,7 +89,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput extends \ArrayObject
     }
     /**
      * Can contain Markdown.
-     *
      *
      * @return self
      */

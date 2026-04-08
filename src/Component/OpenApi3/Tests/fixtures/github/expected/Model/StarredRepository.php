@@ -23,7 +23,6 @@ class StarredRepository extends \ArrayObject
     protected \DateTime $starredAt;
     /**
      * A git repository
-     *
      */
     protected Repository $repo;
     public function getStarredAt(): \DateTime
@@ -38,7 +37,6 @@ class StarredRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getRepo(): Repository
     {
@@ -46,7 +44,6 @@ class StarredRepository extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */

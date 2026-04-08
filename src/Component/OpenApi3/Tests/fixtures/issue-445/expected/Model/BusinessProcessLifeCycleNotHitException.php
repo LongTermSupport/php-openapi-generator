@@ -36,7 +36,6 @@ class BusinessProcessLifeCycleNotHitException extends \ArrayObject
     protected ?array $expected = null;
     /**
      * Life cycle of the business process
-     *
      */
     protected string $actual;
     public function getTraceLevel(): string
@@ -159,7 +158,6 @@ class BusinessProcessLifeCycleNotHitException extends \ArrayObject
     }
     /**
      * Life cycle of the business process
-     *
      */
     public function getActual(): string
     {
@@ -167,7 +165,6 @@ class BusinessProcessLifeCycleNotHitException extends \ArrayObject
     }
     /**
      * Life cycle of the business process
-     *
      *
      * @return self
      */

@@ -22,7 +22,6 @@ class Poll extends \ArrayObject
     }
     /**
      * Unique identifier of this poll.
-     *
      */
     protected string $id;
     /**
@@ -34,7 +33,6 @@ class Poll extends \ArrayObject
     protected int $durationMinutes;
     /**
      * Unique identifier of this poll.
-     *
      */
     public function getId(): string
     {
@@ -42,7 +40,6 @@ class Poll extends \ArrayObject
     }
     /**
      * Unique identifier of this poll.
-     *
      *
      * @return self
      */

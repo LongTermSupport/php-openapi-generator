@@ -20,7 +20,6 @@ class TransferEvent extends ApplicationEvent
     protected ?string $transferId = null;
     /**
      * Transfer states
-     *
      */
     protected string $state;
     public function getTransferId(): ?string
@@ -35,7 +34,6 @@ class TransferEvent extends ApplicationEvent
     }
     /**
      * Transfer states
-     *
      */
     public function getState(): string
     {
@@ -43,7 +41,6 @@ class TransferEvent extends ApplicationEvent
     }
     /**
      * Transfer states
-     *
      *
      * @return self
      */

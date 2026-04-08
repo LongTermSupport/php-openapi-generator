@@ -22,12 +22,10 @@ class ResponseDatabaseSchemaRegistryConfig extends \ArrayObject
     }
     /**
      * The compatibility level of the schema registry.
-     *
      */
     protected string $compatibilityLevel;
     /**
      * The compatibility level of the schema registry.
-     *
      */
     public function getCompatibilityLevel(): string
     {
@@ -35,7 +33,6 @@ class ResponseDatabaseSchemaRegistryConfig extends \ArrayObject
     }
     /**
      * The compatibility level of the schema registry.
-     *
      *
      * @return self
      */

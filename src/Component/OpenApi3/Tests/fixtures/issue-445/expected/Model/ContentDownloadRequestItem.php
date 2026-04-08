@@ -19,17 +19,14 @@ class ContentDownloadRequestItem
     }
     /**
      * ID of the content that is going to be downloaded.
-     *
      */
     protected string $contentId;
     /**
      * ID of the output format that is going to be downloaded.
-     *
      */
     protected string $outputFormatId;
     /**
      * ID of the content that is going to be downloaded.
-     *
      */
     public function getContentId(): string
     {
@@ -37,7 +34,6 @@ class ContentDownloadRequestItem
     }
     /**
      * ID of the content that is going to be downloaded.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class ContentDownloadRequestItem
     }
     /**
      * ID of the output format that is going to be downloaded.
-     *
      */
     public function getOutputFormatId(): string
     {
@@ -57,7 +52,6 @@ class ContentDownloadRequestItem
     }
     /**
      * ID of the output format that is going to be downloaded.
-     *
      *
      * @return self
      */

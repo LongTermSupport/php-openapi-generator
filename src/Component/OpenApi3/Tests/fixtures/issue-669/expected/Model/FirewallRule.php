@@ -22,32 +22,26 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * A unique ID for the firewall rule itself.
-     *
      */
     protected string $uuid;
     /**
      * A unique ID for the database cluster to which the rule is applied.
-     *
      */
     protected string $clusterUuid;
     /**
      * The type of resource that the firewall rule allows to access the database cluster.
-     *
      */
     protected string $type;
     /**
      * The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
-     *
      */
     protected string $value;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall rule was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A unique ID for the firewall rule itself.
-     *
      */
     public function getUuid(): string
     {
@@ -55,7 +49,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * A unique ID for the firewall rule itself.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * A unique ID for the database cluster to which the rule is applied.
-     *
      */
     public function getClusterUuid(): string
     {
@@ -75,7 +67,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * A unique ID for the database cluster to which the rule is applied.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * The type of resource that the firewall rule allows to access the database cluster.
-     *
      */
     public function getType(): string
     {
@@ -95,7 +85,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * The type of resource that the firewall rule allows to access the database cluster.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
-     *
      */
     public function getValue(): string
     {
@@ -115,7 +103,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall rule was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -135,7 +121,6 @@ class FirewallRule extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall rule was created.
-     *
      *
      * @return self
      */

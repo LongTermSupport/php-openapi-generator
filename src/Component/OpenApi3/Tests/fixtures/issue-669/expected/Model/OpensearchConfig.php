@@ -22,42 +22,34 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * A unique identifier for a configuration.
-     *
      */
     protected string $id;
     /**
      * Credentials for an OpenSearch cluster user. Optional if `cluster_uuid` is passed.
-     *
      */
     protected OpensearchConfigCredentials $credentials;
     /**
      * host of the OpenSearch cluster
-     *
      */
     protected string $endpoint;
     /**
      * A unique identifier for a managed OpenSearch cluster.
-     *
      */
     protected string $clusterUuid;
     /**
      * Name of a managed OpenSearch cluster.
-     *
      */
     protected string $clusterName;
     /**
      * OpenSearch index to send logs to.
-     *
      */
     protected string $indexName;
     /**
      * Number of days to retain logs in OpenSearch (default: 14)
-     *
      */
     protected int $retentionDays;
     /**
      * A unique identifier for a configuration.
-     *
      */
     public function getId(): string
     {
@@ -65,7 +57,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * A unique identifier for a configuration.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * Credentials for an OpenSearch cluster user. Optional if `cluster_uuid` is passed.
-     *
      */
     public function getCredentials(): OpensearchConfigCredentials
     {
@@ -85,7 +75,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * Credentials for an OpenSearch cluster user. Optional if `cluster_uuid` is passed.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * host of the OpenSearch cluster
-     *
      */
     public function getEndpoint(): string
     {
@@ -105,7 +93,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * host of the OpenSearch cluster
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * A unique identifier for a managed OpenSearch cluster.
-     *
      */
     public function getClusterUuid(): string
     {
@@ -125,7 +111,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * A unique identifier for a managed OpenSearch cluster.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * Name of a managed OpenSearch cluster.
-     *
      */
     public function getClusterName(): string
     {
@@ -145,7 +129,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * Name of a managed OpenSearch cluster.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * OpenSearch index to send logs to.
-     *
      */
     public function getIndexName(): string
     {
@@ -165,7 +147,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * OpenSearch index to send logs to.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * Number of days to retain logs in OpenSearch (default: 14)
-     *
      */
     public function getRetentionDays(): int
     {
@@ -185,7 +165,6 @@ class OpensearchConfig extends \ArrayObject
     }
     /**
      * Number of days to retain logs in OpenSearch (default: 14)
-     *
      *
      * @return self
      */

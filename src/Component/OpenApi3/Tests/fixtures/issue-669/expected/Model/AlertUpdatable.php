@@ -22,37 +22,30 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
      */
     protected string $name;
     /**
      * The type of alert.
-     *
      */
     protected string $type;
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
      */
     protected int $threshold;
     /**
      * The comparison operator used against the alert's threshold.
-     *
      */
     protected string $comparison;
     /**
      * The notification settings for a trigger alert.
-     *
      */
     protected Notification $notifications;
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
      */
     protected string $period;
     /**
      * A human-friendly display name.
-     *
      */
     public function getName(): string
     {
@@ -60,7 +53,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The type of alert.
-     *
      */
     public function getType(): string
     {
@@ -80,7 +71,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The type of alert.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
      */
     public function getThreshold(): int
     {
@@ -100,7 +89,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The comparison operator used against the alert's threshold.
-     *
      */
     public function getComparison(): string
     {
@@ -120,7 +107,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The comparison operator used against the alert's threshold.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The notification settings for a trigger alert.
-     *
      */
     public function getNotifications(): Notification
     {
@@ -140,7 +125,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * The notification settings for a trigger alert.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
      */
     public function getPeriod(): string
     {
@@ -160,7 +143,6 @@ class AlertUpdatable extends \ArrayObject
     }
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
      *
      * @return self
      */

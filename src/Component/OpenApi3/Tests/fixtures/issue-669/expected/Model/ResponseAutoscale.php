@@ -22,12 +22,10 @@ class ResponseAutoscale extends \ArrayObject
     }
     /**
      * Contains all autoscaling configuration for a database cluster
-     *
      */
     protected DatabaseAutoscaleParams $autoscale;
     /**
      * Contains all autoscaling configuration for a database cluster
-     *
      */
     public function getAutoscale(): DatabaseAutoscaleParams
     {
@@ -35,7 +33,6 @@ class ResponseAutoscale extends \ArrayObject
     }
     /**
      * Contains all autoscaling configuration for a database cluster
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ApiGetKnowledgeBaseIndexingJobOutput extends \ArrayObject
     }
     /**
      * IndexingJob description
-     *
      */
     protected ApiIndexingJob $job;
     /**
      * IndexingJob description
-     *
      */
     public function getJob(): ApiIndexingJob
     {
@@ -35,7 +33,6 @@ class ApiGetKnowledgeBaseIndexingJobOutput extends \ArrayObject
     }
     /**
      * IndexingJob description
-     *
      *
      * @return self
      */

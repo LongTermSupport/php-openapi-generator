@@ -22,13 +22,11 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdDismissalsPutBody extends \Arr
     }
     /**
      * The message for the pull request review dismissal
-     *
      */
     protected string $message;
     protected string $event;
     /**
      * The message for the pull request review dismissal
-     *
      */
     public function getMessage(): string
     {
@@ -36,7 +34,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdDismissalsPutBody extends \Arr
     }
     /**
      * The message for the pull request review dismissal
-     *
      *
      * @return self
      */

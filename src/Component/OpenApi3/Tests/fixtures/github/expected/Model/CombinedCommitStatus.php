@@ -29,7 +29,6 @@ class CombinedCommitStatus extends \ArrayObject
     protected int $totalCount;
     /**
      * Minimal Repository
-     *
      */
     protected MinimalRepository $repository;
     protected string $commitUrl;
@@ -84,7 +83,6 @@ class CombinedCommitStatus extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      */
     public function getRepository(): MinimalRepository
     {
@@ -92,7 +90,6 @@ class CombinedCommitStatus extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      *
      * @return self
      */

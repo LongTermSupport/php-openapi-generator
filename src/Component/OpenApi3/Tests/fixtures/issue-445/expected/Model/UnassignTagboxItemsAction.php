@@ -19,22 +19,18 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * Path to the object the tagbox is contained in.
-     *
      */
     protected ?string $path = null;
     /**
      * ID of the tagbox field.
-     *
      */
     protected ?string $fieldId = null;
     /**
      * List of refIds of the items that should be removed.
-     *
      */
     protected mixed $refIds = null;
     /**
      * Path to the object the tagbox is contained in.
-     *
      */
     public function getPath(): ?string
     {
@@ -42,7 +38,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * Path to the object the tagbox is contained in.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * ID of the tagbox field.
-     *
      */
     public function getFieldId(): ?string
     {
@@ -62,7 +56,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * ID of the tagbox field.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be removed.
-     *
      */
     public function getRefIds(): mixed
     {
@@ -82,7 +74,6 @@ class UnassignTagboxItemsAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be removed.
-     *
      *
      * @return self
      */

@@ -22,22 +22,18 @@ class CombinedBillingUsage extends \ArrayObject
     }
     /**
      * Numbers of days left in billing cycle.
-     *
      */
     protected int $daysLeftInBillingCycle;
     /**
      * Estimated storage space (GB) used in billing cycle.
-     *
      */
     protected int $estimatedPaidStorageForMonth;
     /**
      * Estimated sum of free and paid storage space (GB) used in billing cycle.
-     *
      */
     protected int $estimatedStorageForMonth;
     /**
      * Numbers of days left in billing cycle.
-     *
      */
     public function getDaysLeftInBillingCycle(): int
     {
@@ -45,7 +41,6 @@ class CombinedBillingUsage extends \ArrayObject
     }
     /**
      * Numbers of days left in billing cycle.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class CombinedBillingUsage extends \ArrayObject
     }
     /**
      * Estimated storage space (GB) used in billing cycle.
-     *
      */
     public function getEstimatedPaidStorageForMonth(): int
     {
@@ -65,7 +59,6 @@ class CombinedBillingUsage extends \ArrayObject
     }
     /**
      * Estimated storage space (GB) used in billing cycle.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class CombinedBillingUsage extends \ArrayObject
     }
     /**
      * Estimated sum of free and paid storage space (GB) used in billing cycle.
-     *
      */
     public function getEstimatedStorageForMonth(): int
     {
@@ -85,7 +77,6 @@ class CombinedBillingUsage extends \ArrayObject
     }
     /**
      * Estimated sum of free and paid storage space (GB) used in billing cycle.
-     *
      *
      * @return self
      */

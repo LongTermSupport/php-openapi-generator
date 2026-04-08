@@ -34,12 +34,10 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     protected array $agentUuids;
     /**
      * The name of the run.
-     *
      */
     protected string $runName;
     /**
      * Test-case UUID to run
-     *
      */
     protected string $testCaseUuid;
     /**
@@ -88,7 +86,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * The name of the run.
-     *
      */
     public function getRunName(): string
     {
@@ -96,7 +93,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * The name of the run.
-     *
      *
      * @return self
      */
@@ -108,7 +104,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Test-case UUID to run
-     *
      */
     public function getTestCaseUuid(): string
     {
@@ -116,7 +111,6 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Test-case UUID to run
-     *
      *
      * @return self
      */

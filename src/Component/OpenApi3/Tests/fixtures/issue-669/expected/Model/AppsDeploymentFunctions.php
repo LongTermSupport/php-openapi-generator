@@ -23,12 +23,10 @@ class AppsDeploymentFunctions extends \ArrayObject
     protected string $name;
     /**
      * The commit hash of the repository that was used to build this functions component.
-     *
      */
     protected string $sourceCommitHash;
     /**
      * The namespace where the functions are deployed.
-     *
      */
     protected string $namespace;
     public function getName(): string
@@ -43,7 +41,6 @@ class AppsDeploymentFunctions extends \ArrayObject
     }
     /**
      * The commit hash of the repository that was used to build this functions component.
-     *
      */
     public function getSourceCommitHash(): string
     {
@@ -51,7 +48,6 @@ class AppsDeploymentFunctions extends \ArrayObject
     }
     /**
      * The commit hash of the repository that was used to build this functions component.
-     *
      *
      * @return self
      */
@@ -63,7 +59,6 @@ class AppsDeploymentFunctions extends \ArrayObject
     }
     /**
      * The namespace where the functions are deployed.
-     *
      */
     public function getNamespace(): string
     {
@@ -71,7 +66,6 @@ class AppsDeploymentFunctions extends \ArrayObject
     }
     /**
      * The namespace where the functions are deployed.
-     *
      *
      * @return self
      */

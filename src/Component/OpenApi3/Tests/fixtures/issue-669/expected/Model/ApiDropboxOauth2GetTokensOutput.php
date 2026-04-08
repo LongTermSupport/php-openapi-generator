@@ -22,17 +22,14 @@ class ApiDropboxOauth2GetTokensOutput extends \ArrayObject
     }
     /**
      * The refresh token
-     *
      */
     protected string $refreshToken;
     /**
      * The access token
-     *
      */
     protected string $token;
     /**
      * The refresh token
-     *
      */
     public function getRefreshToken(): string
     {
@@ -40,7 +37,6 @@ class ApiDropboxOauth2GetTokensOutput extends \ArrayObject
     }
     /**
      * The refresh token
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiDropboxOauth2GetTokensOutput extends \ArrayObject
     }
     /**
      * The access token
-     *
      */
     public function getToken(): string
     {
@@ -60,7 +55,6 @@ class ApiDropboxOauth2GetTokensOutput extends \ArrayObject
     }
     /**
      * The access token
-     *
      *
      * @return self
      */

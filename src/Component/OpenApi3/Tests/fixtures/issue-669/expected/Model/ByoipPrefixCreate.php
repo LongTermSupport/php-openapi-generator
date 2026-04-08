@@ -22,22 +22,18 @@ class ByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The IP prefix in CIDR notation to bring
-     *
      */
     protected string $prefix;
     /**
      * The region where the prefix will be created
-     *
      */
     protected string $region;
     /**
      * The signature hash for the prefix creation request
-     *
      */
     protected string $signature;
     /**
      * The IP prefix in CIDR notation to bring
-     *
      */
     public function getPrefix(): string
     {
@@ -45,7 +41,6 @@ class ByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The IP prefix in CIDR notation to bring
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The region where the prefix will be created
-     *
      */
     public function getRegion(): string
     {
@@ -65,7 +59,6 @@ class ByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The region where the prefix will be created
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The signature hash for the prefix creation request
-     *
      */
     public function getSignature(): string
     {
@@ -85,7 +77,6 @@ class ByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The signature hash for the prefix creation request
-     *
      *
      * @return self
      */

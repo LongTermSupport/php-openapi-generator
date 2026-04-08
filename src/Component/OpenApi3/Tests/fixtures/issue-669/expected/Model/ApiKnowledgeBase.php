@@ -22,35 +22,29 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Time when the knowledge base was added to the agent
-     *
      */
     protected \DateTime $addedToAgentAt;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     protected string $databaseId;
     protected string $embeddingModelUuid;
     /**
      * Whether the knowledge base is public or not
-     *
      */
     protected bool $isPublic;
     /**
      * IndexingJob description
-     *
      */
     protected ApiIndexingJob $lastIndexingJob;
     /**
      * Name of knowledge base
-     *
      */
     protected string $name;
     protected string $projectId;
     /**
      * Region code
-     *
      */
     protected string $region;
     /**
@@ -61,22 +55,18 @@ class ApiKnowledgeBase extends \ArrayObject
     protected array $tags;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Id of user that created the knowledge base
-     *
      */
     protected string $userId;
     /**
      * Unique id for knowledge base
-     *
      */
     protected string $uuid;
     /**
      * Time when the knowledge base was added to the agent
-     *
      */
     public function getAddedToAgentAt(): \DateTime
     {
@@ -84,7 +74,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Time when the knowledge base was added to the agent
-     *
      *
      * @return self
      */
@@ -96,7 +85,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -104,7 +92,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -136,7 +123,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Whether the knowledge base is public or not
-     *
      */
     public function getIsPublic(): bool
     {
@@ -144,7 +130,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Whether the knowledge base is public or not
-     *
      *
      * @return self
      */
@@ -156,7 +141,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * IndexingJob description
-     *
      */
     public function getLastIndexingJob(): ApiIndexingJob
     {
@@ -164,7 +148,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * IndexingJob description
-     *
      *
      * @return self
      */
@@ -176,7 +159,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Name of knowledge base
-     *
      */
     public function getName(): string
     {
@@ -184,7 +166,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Name of knowledge base
-     *
      *
      * @return self
      */
@@ -206,7 +187,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Region code
-     *
      */
     public function getRegion(): string
     {
@@ -214,7 +194,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Region code
-     *
      *
      * @return self
      */
@@ -248,7 +227,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -256,7 +234,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -268,7 +245,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Id of user that created the knowledge base
-     *
      */
     public function getUserId(): string
     {
@@ -276,7 +252,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Id of user that created the knowledge base
-     *
      *
      * @return self
      */
@@ -288,7 +263,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Unique id for knowledge base
-     *
      */
     public function getUuid(): string
     {
@@ -296,7 +270,6 @@ class ApiKnowledgeBase extends \ArrayObject
     }
     /**
      * Unique id for knowledge base
-     *
      *
      * @return self
      */

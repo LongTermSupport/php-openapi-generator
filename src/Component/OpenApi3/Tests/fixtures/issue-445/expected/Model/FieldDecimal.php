@@ -19,27 +19,22 @@ class FieldDecimal extends FieldBase
     }
     /**
      * The decimal pattern structure.
-     *
      */
     protected ?string $pattern = null;
     /**
      * The minimum possible value.
-     *
      */
     protected ?float $minimum = null;
     /**
      * The maximum possible value.
-     *
      */
     protected ?float $maximum = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * The decimal pattern structure.
-     *
      */
     public function getPattern(): ?string
     {
@@ -47,7 +42,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * The decimal pattern structure.
-     *
      *
      * @return self
      */
@@ -59,7 +53,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * The minimum possible value.
-     *
      */
     public function getMinimum(): ?float
     {
@@ -67,7 +60,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * The minimum possible value.
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * The maximum possible value.
-     *
      */
     public function getMaximum(): ?float
     {
@@ -87,7 +78,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * The maximum possible value.
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -107,7 +96,6 @@ class FieldDecimal extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */

@@ -19,27 +19,22 @@ class RelationType
     }
     /**
      * The ID of the relation type.
-     *
      */
     protected string $id;
     /**
      * Language specific relation names.
-     *
      */
     protected mixed $names = null;
     /**
      * Defines the type of the document target of the relation. Currently supported: Content, ListItem.
-     *
      */
     protected string $targetDocType;
     /**
      * An optional filter to limit the documents of type TargetDocType.
-     *
      */
     protected mixed $filter = null;
     /**
      * The ID of the relation type.
-     *
      */
     public function getId(): string
     {
@@ -47,7 +42,6 @@ class RelationType
     }
     /**
      * The ID of the relation type.
-     *
      *
      * @return self
      */
@@ -59,7 +53,6 @@ class RelationType
     }
     /**
      * Language specific relation names.
-     *
      */
     public function getNames(): mixed
     {
@@ -67,7 +60,6 @@ class RelationType
     }
     /**
      * Language specific relation names.
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class RelationType
     }
     /**
      * Defines the type of the document target of the relation. Currently supported: Content, ListItem.
-     *
      */
     public function getTargetDocType(): string
     {
@@ -87,7 +78,6 @@ class RelationType
     }
     /**
      * Defines the type of the document target of the relation. Currently supported: Content, ListItem.
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class RelationType
     }
     /**
      * An optional filter to limit the documents of type TargetDocType.
-     *
      */
     public function getFilter(): mixed
     {
@@ -107,7 +96,6 @@ class RelationType
     }
     /**
      * An optional filter to limit the documents of type TargetDocType.
-     *
      *
      * @return self
      */

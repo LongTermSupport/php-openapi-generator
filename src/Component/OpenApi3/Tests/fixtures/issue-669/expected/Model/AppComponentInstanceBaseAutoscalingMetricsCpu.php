@@ -22,12 +22,10 @@ class AppComponentInstanceBaseAutoscalingMetricsCpu extends \ArrayObject
     }
     /**
      * The average target CPU utilization for the component.
-     *
      */
     protected int $percent = 80;
     /**
      * The average target CPU utilization for the component.
-     *
      */
     public function getPercent(): int
     {
@@ -35,7 +33,6 @@ class AppComponentInstanceBaseAutoscalingMetricsCpu extends \ArrayObject
     }
     /**
      * The average target CPU utilization for the component.
-     *
      *
      * @return self
      */

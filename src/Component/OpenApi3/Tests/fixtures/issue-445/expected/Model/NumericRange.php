@@ -19,22 +19,18 @@ class NumericRange
     }
     /**
      * Language specific range names.
-     *
      */
     protected mixed $names = null;
     /**
      * The from value.
-     *
      */
     protected ?float $from = null;
     /**
      * The to value.
-     *
      */
     protected ?float $to = null;
     /**
      * Language specific range names.
-     *
      */
     public function getNames(): mixed
     {
@@ -42,7 +38,6 @@ class NumericRange
     }
     /**
      * Language specific range names.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class NumericRange
     }
     /**
      * The from value.
-     *
      */
     public function getFrom(): ?float
     {
@@ -62,7 +56,6 @@ class NumericRange
     }
     /**
      * The from value.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class NumericRange
     }
     /**
      * The to value.
-     *
      */
     public function getTo(): ?float
     {
@@ -82,7 +74,6 @@ class NumericRange
     }
     /**
      * The to value.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class NotificationsThreadsThreadIdSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Whether to block all notifications from a thread.
-     *
      */
     protected bool $ignored = false;
     /**
      * Whether to block all notifications from a thread.
-     *
      */
     public function getIgnored(): bool
     {
@@ -35,7 +33,6 @@ class NotificationsThreadsThreadIdSubscriptionPutBody extends \ArrayObject
     }
     /**
      * Whether to block all notifications from a thread.
-     *
      *
      * @return self
      */

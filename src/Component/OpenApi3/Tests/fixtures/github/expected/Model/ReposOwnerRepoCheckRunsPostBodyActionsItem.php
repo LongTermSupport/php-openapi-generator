@@ -22,22 +22,18 @@ class ReposOwnerRepoCheckRunsPostBodyActionsItem extends \ArrayObject
     }
     /**
      * The text to be displayed on a button in the web UI. The maximum size is 20 characters.
-     *
      */
     protected string $label;
     /**
      * A short explanation of what this action would do. The maximum size is 40 characters.
-     *
      */
     protected string $description;
     /**
      * A reference for the action on the integrator's system. The maximum size is 20 characters.
-     *
      */
     protected string $identifier;
     /**
      * The text to be displayed on a button in the web UI. The maximum size is 20 characters.
-     *
      */
     public function getLabel(): string
     {
@@ -45,7 +41,6 @@ class ReposOwnerRepoCheckRunsPostBodyActionsItem extends \ArrayObject
     }
     /**
      * The text to be displayed on a button in the web UI. The maximum size is 20 characters.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ReposOwnerRepoCheckRunsPostBodyActionsItem extends \ArrayObject
     }
     /**
      * A short explanation of what this action would do. The maximum size is 40 characters.
-     *
      */
     public function getDescription(): string
     {
@@ -65,7 +59,6 @@ class ReposOwnerRepoCheckRunsPostBodyActionsItem extends \ArrayObject
     }
     /**
      * A short explanation of what this action would do. The maximum size is 40 characters.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ReposOwnerRepoCheckRunsPostBodyActionsItem extends \ArrayObject
     }
     /**
      * A reference for the action on the integrator's system. The maximum size is 20 characters.
-     *
      */
     public function getIdentifier(): string
     {
@@ -85,7 +77,6 @@ class ReposOwnerRepoCheckRunsPostBodyActionsItem extends \ArrayObject
     }
     /**
      * A reference for the action on the integrator's system. The maximum size is 20 characters.
-     *
      *
      * @return self
      */

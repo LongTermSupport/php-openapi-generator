@@ -22,43 +22,35 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Which output format should be used as a source of data.
-     *
      */
     protected mixed $sourceOutputFormats = null;
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      */
     protected mixed $format = null;
     /**
      * Language specific names.
-     *
      */
     protected mixed $names = null;
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
      */
     protected string $retentionTime;
     /**
      * Optional patterns (liquid syntax) that produce the filename for item of this output format.
      * If set, the customer's default language is required.
-     *
      */
     protected mixed $downloadFileNamePatterns = null;
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
      */
     protected bool $viewForAll;
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
      */
     protected bool $enableXmpWriteback;
     /**
      * Which output format should be used as a source of data.
-     *
      */
     public function getSourceOutputFormats(): mixed
     {
@@ -66,7 +58,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Which output format should be used as a source of data.
-     *
      *
      * @return self
      */
@@ -78,7 +69,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      */
     public function getFormat(): mixed
     {
@@ -86,7 +76,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      *
      * @return self
      */
@@ -98,7 +87,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Language specific names.
-     *
      */
     public function getNames(): mixed
     {
@@ -106,7 +94,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Language specific names.
-     *
      *
      * @return self
      */
@@ -118,7 +105,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
      */
     public function getRetentionTime(): string
     {
@@ -126,7 +112,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * How long should the dynamic outputs created from this format be kept.
-     *
      *
      * @return self
      */
@@ -139,19 +124,17 @@ class OutputFormatEditable extends \ArrayObject
     /**
      * Optional patterns (liquid syntax) that produce the filename for item of this output format.
      * If set, the customer's default language is required.
-     *
      */
     public function getDownloadFileNamePatterns(): mixed
     {
         return $this->downloadFileNamePatterns;
     }
     /**
-    * Optional patterns (liquid syntax) that produce the filename for item of this output format.
-    If set, the customer's default language is required.
-    *
-    *
-    * @return self
-    */
+     * Optional patterns (liquid syntax) that produce the filename for item of this output format.
+     * If set, the customer's default language is required.
+     *
+     * @return self
+     */
     public function setDownloadFileNamePatterns(mixed $downloadFileNamePatterns): self
     {
         $this->initialized['downloadFileNamePatterns'] = true;
@@ -160,7 +143,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
      */
     public function getViewForAll(): bool
     {
@@ -168,7 +150,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Indicates if outputs derived from original output format should be accessible also for users not having AccessOriginal permission on the content.
-     *
      *
      * @return self
      */
@@ -180,7 +161,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
      */
     public function getEnableXmpWriteback(): bool
     {
@@ -188,7 +168,6 @@ class OutputFormatEditable extends \ArrayObject
     }
     /**
      * Indicates if metadata should be written into XMP header of outputs where applicable and configured.
-     *
      *
      * @return self
      */

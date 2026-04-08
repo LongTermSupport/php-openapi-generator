@@ -22,7 +22,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Uuid of the agent this version belongs to
-     *
      */
     protected string $agentUuid;
     /**
@@ -51,62 +50,50 @@ class ApiAgentVersion extends \ArrayObject
     protected array $attachedKnowledgebases;
     /**
      * Whether the version is able to be rolled back to
-     *
      */
     protected bool $canRollback;
     /**
      * Creation date
-     *
      */
     protected \DateTime $createdAt;
     /**
      * User who created this version
-     *
      */
     protected string $createdByEmail;
     /**
      * Whether this is the currently applied configuration
-     *
      */
     protected bool $currentlyApplied;
     /**
      * Description of the agent
-     *
      */
     protected string $description;
     /**
      * Unique identifier
-     *
      */
     protected string $id;
     /**
      * Instruction for the agent
-     *
      */
     protected string $instruction;
     /**
      * K value for the agent's configuration
-     *
      */
     protected int $k;
     /**
      * Max tokens setting for the agent
-     *
      */
     protected int $maxTokens;
     /**
      * Name of model associated to the agent version
-     *
      */
     protected string $modelName;
     /**
      * Name of the agent
-     *
      */
     protected string $name;
     /**
      * Whether the agent should provide in-response citations
-     *
      */
     protected bool $provideCitations;
     /**
@@ -115,7 +102,6 @@ class ApiAgentVersion extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     protected string $retrievalMethod = 'RETRIEVAL_METHOD_UNKNOWN';
     /**
@@ -126,27 +112,22 @@ class ApiAgentVersion extends \ArrayObject
     protected array $tags;
     /**
      * Temperature setting for the agent
-     *
      */
     protected float $temperature;
     /**
      * Top_p setting for the agent
-     *
      */
     protected float $topP;
     /**
      * Action triggering the configuration update
-     *
      */
     protected string $triggerAction;
     /**
      * Version hash
-     *
      */
     protected string $versionHash;
     /**
      * Uuid of the agent this version belongs to
-     *
      */
     public function getAgentUuid(): string
     {
@@ -154,7 +135,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Uuid of the agent this version belongs to
-     *
      *
      * @return self
      */
@@ -254,7 +234,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether the version is able to be rolled back to
-     *
      */
     public function getCanRollback(): bool
     {
@@ -262,7 +241,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether the version is able to be rolled back to
-     *
      *
      * @return self
      */
@@ -274,7 +252,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Creation date
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -282,7 +259,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Creation date
-     *
      *
      * @return self
      */
@@ -294,7 +270,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * User who created this version
-     *
      */
     public function getCreatedByEmail(): string
     {
@@ -302,7 +277,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * User who created this version
-     *
      *
      * @return self
      */
@@ -314,7 +288,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether this is the currently applied configuration
-     *
      */
     public function getCurrentlyApplied(): bool
     {
@@ -322,7 +295,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether this is the currently applied configuration
-     *
      *
      * @return self
      */
@@ -334,7 +306,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Description of the agent
-     *
      */
     public function getDescription(): string
     {
@@ -342,7 +313,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Description of the agent
-     *
      *
      * @return self
      */
@@ -354,7 +324,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
      */
     public function getId(): string
     {
@@ -362,7 +331,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Unique identifier
-     *
      *
      * @return self
      */
@@ -374,7 +342,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Instruction for the agent
-     *
      */
     public function getInstruction(): string
     {
@@ -382,7 +349,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Instruction for the agent
-     *
      *
      * @return self
      */
@@ -394,7 +360,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * K value for the agent's configuration
-     *
      */
     public function getK(): int
     {
@@ -402,7 +367,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * K value for the agent's configuration
-     *
      *
      * @return self
      */
@@ -414,7 +378,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Max tokens setting for the agent
-     *
      */
     public function getMaxTokens(): int
     {
@@ -422,7 +385,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Max tokens setting for the agent
-     *
      *
      * @return self
      */
@@ -434,7 +396,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Name of model associated to the agent version
-     *
      */
     public function getModelName(): string
     {
@@ -442,7 +403,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Name of model associated to the agent version
-     *
      *
      * @return self
      */
@@ -454,7 +414,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Name of the agent
-     *
      */
     public function getName(): string
     {
@@ -462,7 +421,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Name of the agent
-     *
      *
      * @return self
      */
@@ -474,7 +432,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
      */
     public function getProvideCitations(): bool
     {
@@ -482,7 +439,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
      *
      * @return self
      */
@@ -498,22 +454,20 @@ class ApiAgentVersion extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     public function getRetrievalMethod(): string
     {
         return $this->retrievalMethod;
     }
     /**
-    * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
-    - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
-    - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
-    - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
-    - RETRIEVAL_METHOD_NONE: The retrieval method is none
-    *
-    *
-    * @return self
-    */
+     * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
+     *  - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
+     *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
+     *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
+     *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
+     *
+     * @return self
+     */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
         $this->initialized['retrievalMethod'] = true;
@@ -544,7 +498,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Temperature setting for the agent
-     *
      */
     public function getTemperature(): float
     {
@@ -552,7 +505,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Temperature setting for the agent
-     *
      *
      * @return self
      */
@@ -564,7 +516,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Top_p setting for the agent
-     *
      */
     public function getTopP(): float
     {
@@ -572,7 +523,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Top_p setting for the agent
-     *
      *
      * @return self
      */
@@ -584,7 +534,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Action triggering the configuration update
-     *
      */
     public function getTriggerAction(): string
     {
@@ -592,7 +541,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Action triggering the configuration update
-     *
      *
      * @return self
      */
@@ -604,7 +552,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Version hash
-     *
      */
     public function getVersionHash(): string
     {
@@ -612,7 +559,6 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Version hash
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ApiCreateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * OpenAI API key
-     *
      */
     protected string $apiKey;
     /**
      * Name of the key
-     *
      */
     protected string $name;
     /**
      * OpenAI API key
-     *
      */
     public function getApiKey(): string
     {
@@ -40,7 +37,6 @@ class ApiCreateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * OpenAI API key
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiCreateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class ApiCreateOpenAIAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      *
      * @return self
      */

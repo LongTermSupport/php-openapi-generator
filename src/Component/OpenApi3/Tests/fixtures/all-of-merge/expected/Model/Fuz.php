@@ -22,12 +22,10 @@ class Fuz extends \ArrayObject
     }
     /**
      * A description
-     *
      */
     protected string $bar;
     /**
      * A description
-     *
      */
     public function getBar(): string
     {
@@ -35,7 +33,6 @@ class Fuz extends \ArrayObject
     }
     /**
      * A description
-     *
      *
      * @return self
      */

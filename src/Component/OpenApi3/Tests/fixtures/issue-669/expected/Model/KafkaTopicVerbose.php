@@ -22,17 +22,14 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
      */
     protected string $name;
     /**
      * The state of the Kafka topic.
-     *
      */
     protected string $state;
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     protected int $replicationFactor;
     /**
@@ -42,7 +39,6 @@ class KafkaTopicVerbose extends \ArrayObject
     protected KafkaTopicConfig $config;
     /**
      * The name of the Kafka topic.
-     *
      */
     public function getName(): string
     {
@@ -50,7 +46,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The name of the Kafka topic.
-     *
      *
      * @return self
      */
@@ -62,7 +57,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The state of the Kafka topic.
-     *
      */
     public function getState(): string
     {
@@ -70,7 +64,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The state of the Kafka topic.
-     *
      *
      * @return self
      */
@@ -82,7 +75,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     public function getReplicationFactor(): int
     {
@@ -90,7 +82,6 @@ class KafkaTopicVerbose extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      *
      * @return self
      */

@@ -28,7 +28,6 @@ class ApiChatbot extends \ArrayObject
     protected string $logo;
     /**
      * Name of chatbot
-     *
      */
     protected string $name;
     protected string $primaryColor;
@@ -74,7 +73,6 @@ class ApiChatbot extends \ArrayObject
     }
     /**
      * Name of chatbot
-     *
      */
     public function getName(): string
     {
@@ -82,7 +80,6 @@ class ApiChatbot extends \ArrayObject
     }
     /**
      * Name of chatbot
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class Content
     }
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * The id of the schema with schema type content.
-     *
      */
     protected string $contentSchemaId;
     /**
      * The content type of this content. All except Virtual are binary files.
-     *
      */
     protected mixed $contentType = null;
     /**
@@ -65,12 +62,10 @@ class Content
     protected ?array $brokenRelationTargetIds = null;
     /**
      * Life cycle of content
-     *
      */
     protected mixed $lifeCycle = null;
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -78,7 +73,6 @@ class Content
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -90,7 +84,6 @@ class Content
     }
     /**
      * The id of the schema with schema type content.
-     *
      */
     public function getContentSchemaId(): string
     {
@@ -98,7 +91,6 @@ class Content
     }
     /**
      * The id of the schema with schema type content.
-     *
      *
      * @return self
      */
@@ -110,7 +102,6 @@ class Content
     }
     /**
      * The content type of this content. All except Virtual are binary files.
-     *
      */
     public function getContentType(): mixed
     {
@@ -118,7 +109,6 @@ class Content
     }
     /**
      * The content type of this content. All except Virtual are binary files.
-     *
      *
      * @return self
      */
@@ -250,7 +240,6 @@ class Content
     }
     /**
      * Life cycle of content
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -258,7 +247,6 @@ class Content
     }
     /**
      * Life cycle of content
-     *
      *
      * @return self
      */

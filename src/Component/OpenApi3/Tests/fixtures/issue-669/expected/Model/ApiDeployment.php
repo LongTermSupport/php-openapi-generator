@@ -22,28 +22,23 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Name
-     *
      */
     protected string $name;
     protected string $status = 'STATUS_UNKNOWN';
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Access your deployed agent here
-     *
      */
     protected string $url;
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
@@ -52,12 +47,10 @@ class ApiDeployment extends \ArrayObject
      *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
      *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
      *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-     *
      */
     protected string $visibility = 'VISIBILITY_UNKNOWN';
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -65,7 +58,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -77,7 +69,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Name
-     *
      */
     public function getName(): string
     {
@@ -85,7 +76,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Name
-     *
      *
      * @return self
      */
@@ -107,7 +97,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -115,7 +104,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -127,7 +115,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Access your deployed agent here
-     *
      */
     public function getUrl(): string
     {
@@ -135,7 +122,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Access your deployed agent here
-     *
      *
      * @return self
      */
@@ -147,7 +133,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -155,7 +140,6 @@ class ApiDeployment extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */
@@ -171,22 +155,20 @@ class ApiDeployment extends \ArrayObject
      *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
      *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
      *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-     *
      */
     public function getVisibility(): string
     {
         return $this->visibility;
     }
     /**
-    * - VISIBILITY_UNKNOWN: The status of the deployment is unknown
-    - VISIBILITY_DISABLED: The deployment is disabled and will no longer service requests
-    - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
-    - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
-    - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
-    *
-    *
-    * @return self
-    */
+     * - VISIBILITY_UNKNOWN: The status of the deployment is unknown
+     *  - VISIBILITY_DISABLED: The deployment is disabled and will no longer service requests
+     *  - VISIBILITY_PLAYGROUND: Deprecated: No longer a valid state
+     *  - VISIBILITY_PUBLIC: The deployment is public and will service requests from the public internet
+     *  - VISIBILITY_PRIVATE: The deployment is private and will only service requests from other agents, or through API keys
+     *
+     * @return self
+     */
     public function setVisibility(string $visibility): self
     {
         $this->initialized['visibility'] = true;

@@ -19,32 +19,26 @@ class ContentShareReference
     }
     /**
      * ID of the share.
-     *
      */
     protected ?string $id = null;
     /**
      * Name of the share.
-     *
      */
     protected ?string $name = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Type of the share.
-     *
      */
     protected mixed $shareType = null;
     /**
      * The email address of the user who created the share.
-     *
      */
     protected ?string $emailAddress = null;
     /**
      * ID of the share.
-     *
      */
     public function getId(): ?string
     {
@@ -52,7 +46,6 @@ class ContentShareReference
     }
     /**
      * ID of the share.
-     *
      *
      * @return self
      */
@@ -64,7 +57,6 @@ class ContentShareReference
     }
     /**
      * Name of the share.
-     *
      */
     public function getName(): ?string
     {
@@ -72,7 +64,6 @@ class ContentShareReference
     }
     /**
      * Name of the share.
-     *
      *
      * @return self
      */
@@ -84,7 +75,6 @@ class ContentShareReference
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -92,7 +82,6 @@ class ContentShareReference
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -104,7 +93,6 @@ class ContentShareReference
     }
     /**
      * Type of the share.
-     *
      */
     public function getShareType(): mixed
     {
@@ -112,7 +100,6 @@ class ContentShareReference
     }
     /**
      * Type of the share.
-     *
      *
      * @return self
      */
@@ -124,7 +111,6 @@ class ContentShareReference
     }
     /**
      * The email address of the user who created the share.
-     *
      */
     public function getEmailAddress(): ?string
     {
@@ -132,7 +118,6 @@ class ContentShareReference
     }
     /**
      * The email address of the user who created the share.
-     *
      *
      * @return self
      */

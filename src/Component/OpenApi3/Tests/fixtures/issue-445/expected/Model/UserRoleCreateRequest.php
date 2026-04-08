@@ -22,7 +22,6 @@ class UserRoleCreateRequest extends \ArrayObject
     }
     /**
      * Language specific user role names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -35,12 +34,10 @@ class UserRoleCreateRequest extends \ArrayObject
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     protected ?string $requestId = null;
     /**
      * Language specific user role names.
-     *
      */
     public function getNames(): mixed
     {
@@ -48,7 +45,6 @@ class UserRoleCreateRequest extends \ArrayObject
     }
     /**
      * Language specific user role names.
-     *
      *
      * @return self
      */
@@ -84,20 +80,18 @@ class UserRoleCreateRequest extends \ArrayObject
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     public function getRequestId(): ?string
     {
         return $this->requestId;
     }
     /**
-    * Optional client reference for this request.
-    Will be returned back in response to make easier for clients to match request items with the respective results.
-    It is not persisted anywhere and it is ignored in single operations.
-    *
-    *
-    * @return self
-    */
+     * Optional client reference for this request.
+     * Will be returned back in response to make easier for clients to match request items with the respective results.
+     * It is not persisted anywhere and it is ignored in single operations.
+     *
+     * @return self
+     */
     public function setRequestId(?string $requestId): self
     {
         $this->initialized['requestId'] = true;

@@ -22,12 +22,10 @@ class BookReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      */
     protected string $title;
     /**
      * The title of the book.
-     *
      */
     public function getTitle(): string
     {
@@ -35,7 +33,6 @@ class BookReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      *
      * @return self
      */

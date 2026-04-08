@@ -22,7 +22,6 @@ class GistsGistIdPatchBody extends \ArrayObject
     }
     /**
      * Description of the gist
-     *
      */
     protected string $description;
     /**
@@ -33,7 +32,6 @@ class GistsGistIdPatchBody extends \ArrayObject
     protected array $files;
     /**
      * Description of the gist
-     *
      */
     public function getDescription(): string
     {
@@ -41,7 +39,6 @@ class GistsGistIdPatchBody extends \ArrayObject
     }
     /**
      * Description of the gist
-     *
      *
      * @return self
      */

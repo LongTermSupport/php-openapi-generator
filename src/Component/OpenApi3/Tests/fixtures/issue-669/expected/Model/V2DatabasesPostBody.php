@@ -22,57 +22,46 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database cluster.
-     *
      */
     protected string $id;
     /**
      * A unique, human-readable name referring to a database cluster.
-     *
      */
     protected string $name;
     /**
      * A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, and "valkey" for Valkey.
-     *
      */
     protected string $engine;
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      */
     protected string $version;
     /**
      * A string representing the semantic version of the database engine in use for the cluster.
-     *
      */
     protected string $semanticVersion;
     /**
      * The number of nodes in the database cluster.
-     *
      */
     protected int $numNodes;
     /**
      * The slug identifier representing the size of the nodes in the database cluster.
-     *
      */
     protected string $size;
     /**
      * The slug identifier for the region where the database cluster is located.
-     *
      */
     protected string $region;
     /**
      * A string representing the current status of the database cluster.
-     *
      */
     protected string $status;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      */
     protected string $privateNetworkUuid;
     /**
@@ -89,12 +78,10 @@ class V2DatabasesPostBody extends \ArrayObject
     protected ?array $dbNames = null;
     /**
      * The connection details for OpenSearch dashboard.
-     *
      */
     protected DatabaseClusterUiConnection $uiConnection;
     /**
      * The connection details for Schema Registry.
-     *
      */
     protected DatabaseClusterSchemaRegistryConnection $schemaRegistryConnection;
     protected DatabaseClusterConnection $connection;
@@ -108,7 +95,6 @@ class V2DatabasesPostBody extends \ArrayObject
     protected DatabaseClusterMaintenanceWindow $maintenanceWindow;
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:update` scope.
-     *
      */
     protected string $projectId;
     /**
@@ -117,17 +103,14 @@ class V2DatabasesPostBody extends \ArrayObject
     protected array $rules;
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      */
     protected string $versionEndOfLife;
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      */
     protected string $versionEndOfAvailability;
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      */
     protected int $storageSizeMib;
     /**
@@ -138,13 +121,11 @@ class V2DatabasesPostBody extends \ArrayObject
     protected array $metricsEndpoints;
     /**
      * Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
-     *
      */
     protected DatabaseClusterAutoscale $autoscale;
     protected DatabaseBackup $backupRestore;
     /**
      * A unique ID that can be used to identify and reference a database cluster.
-     *
      */
     public function getId(): string
     {
@@ -152,7 +133,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database cluster.
-     *
      *
      * @return self
      */
@@ -164,7 +144,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A unique, human-readable name referring to a database cluster.
-     *
      */
     public function getName(): string
     {
@@ -172,7 +151,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A unique, human-readable name referring to a database cluster.
-     *
      *
      * @return self
      */
@@ -184,7 +162,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, and "valkey" for Valkey.
-     *
      */
     public function getEngine(): string
     {
@@ -192,7 +169,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, and "valkey" for Valkey.
-     *
      *
      * @return self
      */
@@ -204,7 +180,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      */
     public function getVersion(): string
     {
@@ -212,7 +187,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      *
      * @return self
      */
@@ -224,7 +198,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string representing the semantic version of the database engine in use for the cluster.
-     *
      */
     public function getSemanticVersion(): string
     {
@@ -232,7 +205,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string representing the semantic version of the database engine in use for the cluster.
-     *
      *
      * @return self
      */
@@ -244,7 +216,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The number of nodes in the database cluster.
-     *
      */
     public function getNumNodes(): int
     {
@@ -252,7 +223,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The number of nodes in the database cluster.
-     *
      *
      * @return self
      */
@@ -264,7 +234,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The slug identifier representing the size of the nodes in the database cluster.
-     *
      */
     public function getSize(): string
     {
@@ -272,7 +241,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The slug identifier representing the size of the nodes in the database cluster.
-     *
      *
      * @return self
      */
@@ -284,7 +252,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the database cluster is located.
-     *
      */
     public function getRegion(): string
     {
@@ -292,7 +259,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the database cluster is located.
-     *
      *
      * @return self
      */
@@ -304,7 +270,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
      */
     public function getStatus(): string
     {
@@ -312,7 +277,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
      *
      * @return self
      */
@@ -324,7 +288,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -332,7 +295,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      *
      * @return self
      */
@@ -344,7 +306,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      */
     public function getPrivateNetworkUuid(): string
     {
@@ -352,7 +313,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      *
      * @return self
      */
@@ -408,15 +368,13 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The connection details for OpenSearch dashboard.
-     *
      */
     public function getUiConnection(): DatabaseClusterUiConnection
     {
         return $this->uiConnection;
     }
     /**
-     * The connection details for OpenSearch dashboard. 
-     *
+     * The connection details for OpenSearch dashboard.
      *
      * @return self
      */
@@ -428,7 +386,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The connection details for Schema Registry.
-     *
      */
     public function getSchemaRegistryConnection(): DatabaseClusterSchemaRegistryConnection
     {
@@ -436,7 +393,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The connection details for Schema Registry.
-     *
      *
      * @return self
      */
@@ -516,7 +472,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:update` scope.
-     *
      */
     public function getProjectId(): string
     {
@@ -524,7 +479,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:update` scope.
-     *
      *
      * @return self
      */
@@ -554,7 +508,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      */
     public function getVersionEndOfLife(): string
     {
@@ -562,7 +515,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      *
      * @return self
      */
@@ -574,7 +526,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      */
     public function getVersionEndOfAvailability(): string
     {
@@ -582,7 +533,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      *
      * @return self
      */
@@ -594,7 +544,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      */
     public function getStorageSizeMib(): int
     {
@@ -602,7 +551,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      *
      * @return self
      */
@@ -636,7 +584,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
-     *
      */
     public function getAutoscale(): DatabaseClusterAutoscale
     {
@@ -644,7 +591,6 @@ class V2DatabasesPostBody extends \ArrayObject
     }
     /**
      * Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
-     *
      *
      * @return self
      */

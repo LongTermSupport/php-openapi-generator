@@ -19,17 +19,14 @@ class SortField
     }
     /**
      * The path of the field ({schemaId}.{fieldId})
-     *
      */
     protected string $path;
     /**
      * The translated name of the field to be shown in the UI.
-     *
      */
     protected mixed $names = null;
     /**
      * The path of the field ({schemaId}.{fieldId})
-     *
      */
     public function getPath(): string
     {
@@ -37,7 +34,6 @@ class SortField
     }
     /**
      * The path of the field ({schemaId}.{fieldId})
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class SortField
     }
     /**
      * The translated name of the field to be shown in the UI.
-     *
      */
     public function getNames(): mixed
     {
@@ -57,7 +52,6 @@ class SortField
     }
     /**
      * The translated name of the field to be shown in the UI.
-     *
      *
      * @return self
      */

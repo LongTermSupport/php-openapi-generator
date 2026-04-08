@@ -22,12 +22,10 @@ class DetailedUserFields extends \ArrayObject
     }
     /**
      * A list of metrics for this user
-     *
      */
     protected DetailedUserFieldsStats $stats;
     /**
      * A list of metrics for this user
-     *
      */
     public function getStats(): DetailedUserFieldsStats
     {
@@ -35,7 +33,6 @@ class DetailedUserFields extends \ArrayObject
     }
     /**
      * A list of metrics for this user
-     *
      *
      * @return self
      */

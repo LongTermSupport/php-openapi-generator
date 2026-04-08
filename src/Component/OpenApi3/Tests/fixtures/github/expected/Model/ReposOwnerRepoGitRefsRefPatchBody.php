@@ -22,17 +22,14 @@ class ReposOwnerRepoGitRefsRefPatchBody extends \ArrayObject
     }
     /**
      * The SHA1 value to set this reference to
-     *
      */
     protected string $sha;
     /**
      * Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to `false` will make sure you're not overwriting work.
-     *
      */
     protected bool $force = false;
     /**
      * The SHA1 value to set this reference to
-     *
      */
     public function getSha(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoGitRefsRefPatchBody extends \ArrayObject
     }
     /**
      * The SHA1 value to set this reference to
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoGitRefsRefPatchBody extends \ArrayObject
     }
     /**
      * Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to `false` will make sure you're not overwriting work.
-     *
      */
     public function getForce(): bool
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoGitRefsRefPatchBody extends \ArrayObject
     }
     /**
      * Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to `false` will make sure you're not overwriting work.
-     *
      *
      * @return self
      */

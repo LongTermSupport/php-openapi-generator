@@ -20,22 +20,18 @@ class AacAudioFormat extends FormatBase
     protected ?string $extension = null;
     /**
      * Gets or sets the encoding profile.
-     *
      */
     protected mixed $profile = null;
     /**
      * Gets or sets the encoding coder.
-     *
      */
     protected mixed $coder = null;
     /**
      * Gets or sets the bitrate of the encoding in kbps.
-     *
      */
     protected ?int $bitrate = null;
     /**
      * Gets or sets the encoding variable bit rate (VBR) - 1 is lowest quality and 5 is highest quality.
-     *
      */
     protected ?int $variableBitRate = null;
     public function getExtension(): ?string
@@ -50,7 +46,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding profile.
-     *
      */
     public function getProfile(): mixed
     {
@@ -58,7 +53,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding profile.
-     *
      *
      * @return self
      */
@@ -70,7 +64,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding coder.
-     *
      */
     public function getCoder(): mixed
     {
@@ -78,7 +71,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding coder.
-     *
      *
      * @return self
      */
@@ -90,7 +82,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the bitrate of the encoding in kbps.
-     *
      */
     public function getBitrate(): ?int
     {
@@ -98,7 +89,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the bitrate of the encoding in kbps.
-     *
      *
      * @return self
      */
@@ -110,7 +100,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding variable bit rate (VBR) - 1 is lowest quality and 5 is highest quality.
-     *
      */
     public function getVariableBitRate(): ?int
     {
@@ -118,7 +107,6 @@ class AacAudioFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding variable bit rate (VBR) - 1 is lowest quality and 5 is highest quality.
-     *
      *
      * @return self
      */

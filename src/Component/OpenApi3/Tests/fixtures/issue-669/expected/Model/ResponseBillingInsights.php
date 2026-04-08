@@ -28,17 +28,14 @@ class ResponseBillingInsights extends \ArrayObject
     protected array $dataPoints;
     /**
      * Total number of items available across all pages
-     *
      */
     protected int $totalItems;
     /**
      * Total number of pages available
-     *
      */
     protected int $totalPages;
     /**
      * Current page number
-     *
      */
     protected int $currentPage;
     /**
@@ -65,7 +62,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Total number of items available across all pages
-     *
      */
     public function getTotalItems(): int
     {
@@ -73,7 +69,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Total number of items available across all pages
-     *
      *
      * @return self
      */
@@ -85,7 +80,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Total number of pages available
-     *
      */
     public function getTotalPages(): int
     {
@@ -93,7 +87,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Total number of pages available
-     *
      *
      * @return self
      */
@@ -105,7 +98,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Current page number
-     *
      */
     public function getCurrentPage(): int
     {
@@ -113,7 +105,6 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Current page number
-     *
      *
      * @return self
      */

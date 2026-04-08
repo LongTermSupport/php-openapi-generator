@@ -22,27 +22,22 @@ class Runner extends \ArrayObject
     }
     /**
      * The id of the runner.
-     *
      */
     protected int $id;
     /**
      * The name of the runner.
-     *
      */
     protected string $name;
     /**
      * The Operating System of the runner.
-     *
      */
     protected string $os;
     /**
      * The status of the runner.
-     *
      */
     protected string $status;
     /**
      * The id of the runner.
-     *
      */
     public function getId(): int
     {
@@ -50,7 +45,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The id of the runner.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The name of the runner.
-     *
      */
     public function getName(): string
     {
@@ -70,7 +63,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The name of the runner.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The Operating System of the runner.
-     *
      */
     public function getOs(): string
     {
@@ -90,7 +81,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The Operating System of the runner.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The status of the runner.
-     *
      */
     public function getStatus(): string
     {
@@ -110,7 +99,6 @@ class Runner extends \ArrayObject
     }
     /**
      * The status of the runner.
-     *
      *
      * @return self
      */

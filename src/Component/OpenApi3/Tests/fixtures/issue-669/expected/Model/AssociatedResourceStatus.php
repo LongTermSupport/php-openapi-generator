@@ -22,27 +22,22 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * An object containing information about a resource scheduled for deletion.
-     *
      */
     protected DestroyedAssociatedResource $droplet;
     /**
      * An object containing additional information about resource related to a Droplet requested to be destroyed.
-     *
      */
     protected AssociatedResourceStatusResources $resources;
     /**
      * A time value given in ISO8601 combined date and time format indicating when the requested action was completed.
-     *
      */
     protected \DateTime $completedAt;
     /**
      * A count of the associated resources that failed to be destroyed, if any.
-     *
      */
     protected int $failures;
     /**
      * An object containing information about a resource scheduled for deletion.
-     *
      */
     public function getDroplet(): DestroyedAssociatedResource
     {
@@ -50,7 +45,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * An object containing information about a resource scheduled for deletion.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * An object containing additional information about resource related to a Droplet requested to be destroyed.
-     *
      */
     public function getResources(): AssociatedResourceStatusResources
     {
@@ -70,7 +63,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * An object containing additional information about resource related to a Droplet requested to be destroyed.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format indicating when the requested action was completed.
-     *
      */
     public function getCompletedAt(): \DateTime
     {
@@ -90,7 +81,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format indicating when the requested action was completed.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * A count of the associated resources that failed to be destroyed, if any.
-     *
      */
     public function getFailures(): int
     {
@@ -110,7 +99,6 @@ class AssociatedResourceStatus extends \ArrayObject
     }
     /**
      * A count of the associated resources that failed to be destroyed, if any.
-     *
      *
      * @return self
      */

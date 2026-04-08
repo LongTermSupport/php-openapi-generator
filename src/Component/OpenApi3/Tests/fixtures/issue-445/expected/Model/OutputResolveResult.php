@@ -19,37 +19,30 @@ class OutputResolveResult
     }
     /**
      * ID of output.
-     *
      */
     protected ?string $id = null;
     /**
      * ID of output format.
-     *
      */
     protected string $outputFormatId;
     /**
      * ID of content.
-     *
      */
     protected string $contentId;
     /**
      * Rendering state of output.
-     *
      */
     protected mixed $renderingState = null;
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     protected bool $dynamicRendering;
     /**
      * Size of file, if already known
-     *
      */
     protected ?int $fileSize = null;
     /**
      * ID of output.
-     *
      */
     public function getId(): ?string
     {
@@ -57,7 +50,6 @@ class OutputResolveResult
     }
     /**
      * ID of output.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class OutputResolveResult
     }
     /**
      * ID of output format.
-     *
      */
     public function getOutputFormatId(): string
     {
@@ -77,7 +68,6 @@ class OutputResolveResult
     }
     /**
      * ID of output format.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class OutputResolveResult
     }
     /**
      * ID of content.
-     *
      */
     public function getContentId(): string
     {
@@ -97,7 +86,6 @@ class OutputResolveResult
     }
     /**
      * ID of content.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class OutputResolveResult
     }
     /**
      * Rendering state of output.
-     *
      */
     public function getRenderingState(): mixed
     {
@@ -117,7 +104,6 @@ class OutputResolveResult
     }
     /**
      * Rendering state of output.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class OutputResolveResult
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     public function getDynamicRendering(): bool
     {
@@ -137,7 +122,6 @@ class OutputResolveResult
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class OutputResolveResult
     }
     /**
      * Size of file, if already known
-     *
      */
     public function getFileSize(): ?int
     {
@@ -157,7 +140,6 @@ class OutputResolveResult
     }
     /**
      * Size of file, if already known
-     *
      *
      * @return self
      */

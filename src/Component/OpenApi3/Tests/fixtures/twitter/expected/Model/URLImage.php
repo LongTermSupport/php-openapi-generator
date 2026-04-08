@@ -22,22 +22,18 @@ class URLImage extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      */
     protected string $url;
     /**
      * The height of the media in pixels
-     *
      */
     protected int $height;
     /**
      * The width of the media in pixels
-     *
      */
     protected int $width;
     /**
      * A validly formatted URL.
-     *
      */
     public function getUrl(): string
     {
@@ -45,7 +41,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      */
     public function getHeight(): int
     {
@@ -65,7 +59,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      */
     public function getWidth(): int
     {
@@ -85,7 +77,6 @@ class URLImage extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      *
      * @return self
      */

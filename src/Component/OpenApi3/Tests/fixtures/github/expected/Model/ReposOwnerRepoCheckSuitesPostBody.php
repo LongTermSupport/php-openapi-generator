@@ -22,12 +22,10 @@ class ReposOwnerRepoCheckSuitesPostBody extends \ArrayObject
     }
     /**
      * The sha of the head commit.
-     *
      */
     protected string $headSha;
     /**
      * The sha of the head commit.
-     *
      */
     public function getHeadSha(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoCheckSuitesPostBody extends \ArrayObject
     }
     /**
      * The sha of the head commit.
-     *
      *
      * @return self
      */

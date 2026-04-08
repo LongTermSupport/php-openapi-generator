@@ -22,17 +22,14 @@ class ScheduledDetails extends \ArrayObject
     }
     /**
      * valid cron expression string which is required for SCHEDULED type triggers.
-     *
      */
     protected string $cron;
     /**
      * Optional data to be sent to function while triggering the function.
-     *
      */
     protected ?ScheduledDetailsBody $body = null;
     /**
      * valid cron expression string which is required for SCHEDULED type triggers.
-     *
      */
     public function getCron(): string
     {
@@ -40,7 +37,6 @@ class ScheduledDetails extends \ArrayObject
     }
     /**
      * valid cron expression string which is required for SCHEDULED type triggers.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ScheduledDetails extends \ArrayObject
     }
     /**
      * Optional data to be sent to function while triggering the function.
-     *
      */
     public function getBody(): ?ScheduledDetailsBody
     {
@@ -60,7 +55,6 @@ class ScheduledDetails extends \ArrayObject
     }
     /**
      * Optional data to be sent to function while triggering the function.
-     *
      *
      * @return self
      */

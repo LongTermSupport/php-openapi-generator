@@ -19,22 +19,18 @@ class BusinessRuleTracedAction
     }
     /**
      * Trace reference ID of action
-     *
      */
     protected ?string $traceRefId = null;
     /**
      * Indicates if the action modified the document
-     *
      */
     protected bool $documentModified;
     /**
      * Additional information provided by the trace
-     *
      */
     protected ?string $text = null;
     /**
      * Trace reference ID of action
-     *
      */
     public function getTraceRefId(): ?string
     {
@@ -42,7 +38,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Trace reference ID of action
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Indicates if the action modified the document
-     *
      */
     public function getDocumentModified(): bool
     {
@@ -62,7 +56,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Indicates if the action modified the document
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Additional information provided by the trace
-     *
      */
     public function getText(): ?string
     {
@@ -82,7 +74,6 @@ class BusinessRuleTracedAction
     }
     /**
      * Additional information provided by the trace
-     *
      *
      * @return self
      */

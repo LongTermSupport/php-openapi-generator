@@ -22,24 +22,20 @@ class ReposOwnerRepoKeysPostBody extends \ArrayObject
     }
     /**
      * A name for the key.
-     *
      */
     protected string $title;
     /**
      * The contents of the key.
-     *
      */
     protected string $key;
     /**
      * If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.
      * 
      * Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://help.github.com/articles/permission-levels-for-a-user-account-repository/)."
-     *
      */
     protected bool $readOnly;
     /**
      * A name for the key.
-     *
      */
     public function getTitle(): string
     {
@@ -47,7 +43,6 @@ class ReposOwnerRepoKeysPostBody extends \ArrayObject
     }
     /**
      * A name for the key.
-     *
      *
      * @return self
      */
@@ -59,7 +54,6 @@ class ReposOwnerRepoKeysPostBody extends \ArrayObject
     }
     /**
      * The contents of the key.
-     *
      */
     public function getKey(): string
     {
@@ -67,7 +61,6 @@ class ReposOwnerRepoKeysPostBody extends \ArrayObject
     }
     /**
      * The contents of the key.
-     *
      *
      * @return self
      */
@@ -81,20 +74,18 @@ class ReposOwnerRepoKeysPostBody extends \ArrayObject
      * If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.
      * 
      * Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://help.github.com/articles/permission-levels-for-a-user-account-repository/)."
-     *
      */
     public function getReadOnly(): bool
     {
         return $this->readOnly;
     }
     /**
-    * If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.  
-     
-    Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://help.github.com/articles/permission-levels-for-a-user-account-repository/)."
-    *
-    *
-    * @return self
-    */
+     * If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.
+     * 
+     * Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://help.github.com/articles/permission-levels-for-a-user-account-repository/)."
+     *
+     * @return self
+     */
     public function setReadOnly(bool $readOnly): self
     {
         $this->initialized['readOnly'] = true;

@@ -31,13 +31,11 @@ class AppsInstanceSize extends \ArrayObject
     protected string $slug;
     /**
      * @deprecated
-     *
      */
     protected string $tierDowngradeTo;
     protected string $tierSlug;
     /**
      * @deprecated
-     *
      */
     protected string $tierUpgradeTo;
     protected string $usdPerMonth;
@@ -134,14 +132,12 @@ class AppsInstanceSize extends \ArrayObject
     }
     /**
      * @deprecated
-     *
      */
     public function getTierDowngradeTo(): string
     {
         return $this->tierDowngradeTo;
     }
     /**
-     *
      * @deprecated
      *
      * @return self
@@ -164,14 +160,12 @@ class AppsInstanceSize extends \ArrayObject
     }
     /**
      * @deprecated
-     *
      */
     public function getTierUpgradeTo(): string
     {
         return $this->tierUpgradeTo;
     }
     /**
-     *
      * @deprecated
      *
      * @return self

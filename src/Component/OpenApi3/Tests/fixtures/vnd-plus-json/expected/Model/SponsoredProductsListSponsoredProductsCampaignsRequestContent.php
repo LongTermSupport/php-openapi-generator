@@ -22,22 +22,18 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * Number of records to include in the paginated response. Defaults to max page size for given API
-     *
      */
     protected int $maxResults;
     /**
      * token value allowing to navigate to the next response page
-     *
      */
     protected string $nextToken;
     /**
      * Whether to get entity with extended data fields such as creationDate, lastUpdateDate, servingStatus
-     *
      */
     protected bool $includeExtendedDataFields;
     /**
      * Number of records to include in the paginated response. Defaults to max page size for given API
-     *
      */
     public function getMaxResults(): int
     {
@@ -45,7 +41,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * Number of records to include in the paginated response. Defaults to max page size for given API
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * token value allowing to navigate to the next response page
-     *
      */
     public function getNextToken(): string
     {
@@ -65,7 +59,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * token value allowing to navigate to the next response page
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * Whether to get entity with extended data fields such as creationDate, lastUpdateDate, servingStatus
-     *
      */
     public function getIncludeExtendedDataFields(): bool
     {
@@ -85,7 +77,6 @@ class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \Arr
     }
     /**
      * Whether to get entity with extended data fields such as creationDate, lastUpdateDate, servingStatus
-     *
      *
      * @return self
      */

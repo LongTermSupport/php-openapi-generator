@@ -22,12 +22,10 @@ class AppLogDestinationLogtailSpec extends \ArrayObject
     }
     /**
      * Logtail token.
-     *
      */
     protected string $token;
     /**
      * Logtail token.
-     *
      */
     public function getToken(): string
     {
@@ -35,7 +33,6 @@ class AppLogDestinationLogtailSpec extends \ArrayObject
     }
     /**
      * Logtail token.
-     *
      *
      * @return self
      */

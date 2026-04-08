@@ -22,12 +22,10 @@ class NfsActionsResponse extends \ArrayObject
     }
     /**
      * The action that was submitted.
-     *
      */
     protected NfsActionsResponseAction $action;
     /**
      * The action that was submitted.
-     *
      */
     public function getAction(): NfsActionsResponseAction
     {
@@ -35,7 +33,6 @@ class NfsActionsResponse extends \ArrayObject
     }
     /**
      * The action that was submitted.
-     *
      *
      * @return self
      */

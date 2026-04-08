@@ -22,27 +22,22 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Title for the automatic commit message.
-     *
      */
     protected string $commitTitle;
     /**
      * Extra detail to append to automatic commit message.
-     *
      */
     protected string $commitMessage;
     /**
      * SHA that pull request head must match to allow merge.
-     *
      */
     protected string $sha;
     /**
      * Merge method to use. Possible values are `merge`, `squash` or `rebase`. Default is `merge`.
-     *
      */
     protected string $mergeMethod;
     /**
      * Title for the automatic commit message.
-     *
      */
     public function getCommitTitle(): string
     {
@@ -50,7 +45,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Title for the automatic commit message.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Extra detail to append to automatic commit message.
-     *
      */
     public function getCommitMessage(): string
     {
@@ -70,7 +63,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Extra detail to append to automatic commit message.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * SHA that pull request head must match to allow merge.
-     *
      */
     public function getSha(): string
     {
@@ -90,7 +81,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * SHA that pull request head must match to allow merge.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Merge method to use. Possible values are `merge`, `squash` or `rebase`. Default is `merge`.
-     *
      */
     public function getMergeMethod(): string
     {
@@ -110,7 +99,6 @@ class ReposOwnerRepoPullsPullNumberMergePutBody extends \ArrayObject
     }
     /**
      * Merge method to use. Possible values are `merge`, `squash` or `rebase`. Default is `merge`.
-     *
      *
      * @return self
      */

@@ -22,32 +22,26 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The backup plan used for the Droplet. The plan can be either `daily` or `weekly`.
-     *
      */
     protected string $plan;
     /**
      * The day of the week on which the backup will occur.
-     *
      */
     protected string $weekday;
     /**
      * The hour of the day that the backup window will start.
-     *
      */
     protected int $hour;
     /**
      * The length of the backup window starting from `hour`.
-     *
      */
     protected int $windowLengthHours;
     /**
      * The number of days the backup will be retained.
-     *
      */
     protected int $retentionPeriodDays;
     /**
      * The backup plan used for the Droplet. The plan can be either `daily` or `weekly`.
-     *
      */
     public function getPlan(): string
     {
@@ -55,7 +49,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The backup plan used for the Droplet. The plan can be either `daily` or `weekly`.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The day of the week on which the backup will occur.
-     *
      */
     public function getWeekday(): string
     {
@@ -75,7 +67,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The day of the week on which the backup will occur.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The hour of the day that the backup window will start.
-     *
      */
     public function getHour(): int
     {
@@ -95,7 +85,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The hour of the day that the backup window will start.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The length of the backup window starting from `hour`.
-     *
      */
     public function getWindowLengthHours(): int
     {
@@ -115,7 +103,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The length of the backup window starting from `hour`.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The number of days the backup will be retained.
-     *
      */
     public function getRetentionPeriodDays(): int
     {
@@ -135,7 +121,6 @@ class DropletActionChangeBackupPolicybackupPolicy extends \ArrayObject
     }
     /**
      * The number of days the backup will be retained.
-     *
      *
      * @return self
      */

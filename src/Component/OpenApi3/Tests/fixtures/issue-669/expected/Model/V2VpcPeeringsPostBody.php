@@ -22,7 +22,6 @@ class V2VpcPeeringsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
      */
     protected string $name;
     /**
@@ -33,7 +32,6 @@ class V2VpcPeeringsPostBody extends \ArrayObject
     protected array $vpcIds;
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
      */
     public function getName(): string
     {
@@ -41,7 +39,6 @@ class V2VpcPeeringsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
-     *
      *
      * @return self
      */

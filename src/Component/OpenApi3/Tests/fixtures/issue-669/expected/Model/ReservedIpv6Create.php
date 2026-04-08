@@ -22,12 +22,10 @@ class ReservedIpv6Create extends \ArrayObject
     }
     /**
      * The slug identifier for the region the reserved IPv6 will be reserved to.
-     *
      */
     protected string $regionSlug;
     /**
      * The slug identifier for the region the reserved IPv6 will be reserved to.
-     *
      */
     public function getRegionSlug(): string
     {
@@ -35,7 +33,6 @@ class ReservedIpv6Create extends \ArrayObject
     }
     /**
      * The slug identifier for the region the reserved IPv6 will be reserved to.
-     *
      *
      * @return self
      */

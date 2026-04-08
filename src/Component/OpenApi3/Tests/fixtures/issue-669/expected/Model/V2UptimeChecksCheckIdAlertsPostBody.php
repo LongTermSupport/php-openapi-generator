@@ -22,42 +22,34 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the alert.
-     *
      */
     protected string $id;
     /**
      * A human-friendly display name.
-     *
      */
     protected string $name;
     /**
      * The type of alert.
-     *
      */
     protected string $type;
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
      */
     protected int $threshold;
     /**
      * The comparison operator used against the alert's threshold.
-     *
      */
     protected string $comparison;
     /**
      * The notification settings for a trigger alert.
-     *
      */
     protected Notification $notifications;
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
      */
     protected string $period;
     /**
      * A unique ID that can be used to identify and reference the alert.
-     *
      */
     public function getId(): string
     {
@@ -65,7 +57,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the alert.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
      */
     public function getName(): string
     {
@@ -85,7 +75,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * A human-friendly display name.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The type of alert.
-     *
      */
     public function getType(): string
     {
@@ -105,7 +93,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The type of alert.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
      */
     public function getThreshold(): int
     {
@@ -125,7 +111,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The threshold at which the alert will enter a trigger state. The specific threshold is dependent on the alert type.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The comparison operator used against the alert's threshold.
-     *
      */
     public function getComparison(): string
     {
@@ -145,7 +129,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The comparison operator used against the alert's threshold.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The notification settings for a trigger alert.
-     *
      */
     public function getNotifications(): Notification
     {
@@ -165,7 +147,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * The notification settings for a trigger alert.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
      */
     public function getPeriod(): string
     {
@@ -185,7 +165,6 @@ class V2UptimeChecksCheckIdAlertsPostBody extends \ArrayObject
     }
     /**
      * Period of time the threshold must be exceeded to trigger the alert.
-     *
      *
      * @return self
      */

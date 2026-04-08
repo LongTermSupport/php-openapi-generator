@@ -22,22 +22,18 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * API key ID
-     *
      */
     protected string $apiKeyUuid;
     /**
      * Key creation date
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Created by user id from DO
-     *
      */
     protected string $createdBy;
     /**
      * Key deleted date
-     *
      */
     protected \DateTime $deletedAt;
     /**
@@ -48,18 +44,15 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     protected array $models;
     /**
      * Name of the key
-     *
      */
     protected string $name;
     protected string $provider = 'MODEL_PROVIDER_DIGITALOCEAN';
     /**
      * Key last updated date
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * API key ID
-     *
      */
     public function getApiKeyUuid(): string
     {
@@ -67,7 +60,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * API key ID
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key creation date
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -87,7 +78,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key creation date
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
      */
     public function getCreatedBy(): string
     {
@@ -107,7 +96,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
      *
      * @return self
      */
@@ -119,7 +107,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key deleted date
-     *
      */
     public function getDeletedAt(): \DateTime
     {
@@ -127,7 +114,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key deleted date
-     *
      *
      * @return self
      */
@@ -161,7 +147,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      */
     public function getName(): string
     {
@@ -169,7 +154,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Name of the key
-     *
      *
      * @return self
      */
@@ -191,7 +175,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key last updated date
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -199,7 +182,6 @@ class ApiModelProviderKeyInfo extends \ArrayObject
     }
     /**
      * Key last updated date
-     *
      *
      * @return self
      */

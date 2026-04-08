@@ -22,17 +22,14 @@ class DropletActionSnapshot extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     /**
      * The name to give the new snapshot of the Droplet.
-     *
      */
     protected string $name;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class DropletActionSnapshot extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DropletActionSnapshot extends \ArrayObject
     }
     /**
      * The name to give the new snapshot of the Droplet.
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class DropletActionSnapshot extends \ArrayObject
     }
     /**
      * The name to give the new snapshot of the Droplet.
-     *
      *
      * @return self
      */

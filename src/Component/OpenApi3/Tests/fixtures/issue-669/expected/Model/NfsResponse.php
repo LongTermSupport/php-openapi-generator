@@ -22,32 +22,26 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the NFS share.
-     *
      */
     protected string $id;
     /**
      * The human-readable name of the share.
-     *
      */
     protected string $name;
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
      */
     protected int $sizeGib;
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
      */
     protected string $region;
     /**
      * The current status of the share.
-     *
      */
     protected string $status;
     /**
      * Timestamp for when the NFS share was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -58,17 +52,14 @@ class NfsResponse extends \ArrayObject
     protected array $vpcIds;
     /**
      * Path at which the share will be available, to be mounted at a target of the user's choice within the client
-     *
      */
     protected string $mountPath;
     /**
      * The host IP of the NFS server that will be accessible from the associated VPC
-     *
      */
     protected string $host;
     /**
      * The unique identifier of the NFS share.
-     *
      */
     public function getId(): string
     {
@@ -76,7 +67,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The unique identifier of the NFS share.
-     *
      *
      * @return self
      */
@@ -88,7 +78,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The human-readable name of the share.
-     *
      */
     public function getName(): string
     {
@@ -96,7 +85,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The human-readable name of the share.
-     *
      *
      * @return self
      */
@@ -108,7 +96,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
      */
     public function getSizeGib(): int
     {
@@ -116,7 +103,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
-     *
      *
      * @return self
      */
@@ -128,7 +114,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
      */
     public function getRegion(): string
     {
@@ -136,7 +121,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
-     *
      *
      * @return self
      */
@@ -148,7 +132,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The current status of the share.
-     *
      */
     public function getStatus(): string
     {
@@ -156,7 +139,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The current status of the share.
-     *
      *
      * @return self
      */
@@ -168,7 +150,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * Timestamp for when the NFS share was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -176,7 +157,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * Timestamp for when the NFS share was created.
-     *
      *
      * @return self
      */
@@ -210,7 +190,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * Path at which the share will be available, to be mounted at a target of the user's choice within the client
-     *
      */
     public function getMountPath(): string
     {
@@ -218,7 +197,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * Path at which the share will be available, to be mounted at a target of the user's choice within the client
-     *
      *
      * @return self
      */
@@ -230,7 +208,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The host IP of the NFS server that will be accessible from the associated VPC
-     *
      */
     public function getHost(): string
     {
@@ -238,7 +215,6 @@ class NfsResponse extends \ArrayObject
     }
     /**
      * The host IP of the NFS server that will be accessible from the associated VPC
-     *
      *
      * @return self
      */

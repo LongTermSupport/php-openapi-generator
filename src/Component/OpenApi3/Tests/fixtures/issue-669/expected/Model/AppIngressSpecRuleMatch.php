@@ -22,17 +22,14 @@ class AppIngressSpecRuleMatch extends \ArrayObject
     }
     /**
      * The path to match on.
-     *
      */
     protected AppIngressSpecRuleStringMatchPrefix $path;
     /**
      * The authority to match on.
-     *
      */
     protected AppIngressSpecRuleStringMatchExact $authority;
     /**
      * The path to match on.
-     *
      */
     public function getPath(): AppIngressSpecRuleStringMatchPrefix
     {
@@ -40,7 +37,6 @@ class AppIngressSpecRuleMatch extends \ArrayObject
     }
     /**
      * The path to match on.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppIngressSpecRuleMatch extends \ArrayObject
     }
     /**
      * The authority to match on.
-     *
      */
     public function getAuthority(): AppIngressSpecRuleStringMatchExact
     {
@@ -60,7 +55,6 @@ class AppIngressSpecRuleMatch extends \ArrayObject
     }
     /**
      * The authority to match on.
-     *
      *
      * @return self
      */

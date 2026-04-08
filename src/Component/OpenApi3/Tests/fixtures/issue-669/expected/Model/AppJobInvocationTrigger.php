@@ -22,22 +22,18 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * The type of trigger that initiated the job invocation.
-     *
      */
     protected string $type = 'UNKNOWN';
     /**
      * The schedule for the job
-     *
      */
     protected AppJobInvocationTriggerScheduled $scheduled;
     /**
      * Details about the manual trigger, if applicable
-     *
      */
     protected AppJobInvocationTriggerManual $manual;
     /**
      * The type of trigger that initiated the job invocation.
-     *
      */
     public function getType(): string
     {
@@ -45,7 +41,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * The type of trigger that initiated the job invocation.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * The schedule for the job
-     *
      */
     public function getScheduled(): AppJobInvocationTriggerScheduled
     {
@@ -65,7 +59,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * The schedule for the job
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * Details about the manual trigger, if applicable
-     *
      */
     public function getManual(): AppJobInvocationTriggerManual
     {
@@ -85,7 +77,6 @@ class AppJobInvocationTrigger extends \ArrayObject
     }
     /**
      * Details about the manual trigger, if applicable
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class Balance extends \ArrayObject
     }
     /**
      * Balance as of the `generated_at` time.  This value includes the `account_balance` and `month_to_date_usage`.
-     *
      */
     protected string $monthToDateBalance;
     /**
      * Current balance of the customer's most recent billing activity. Does not reflect `month_to_date_usage`.
-     *
      */
     protected string $accountBalance;
     /**
      * Amount used in the current billing period as of the `generated_at` time.
-     *
      */
     protected string $monthToDateUsage;
     /**
      * The time at which balances were most recently generated.
-     *
      */
     protected \DateTime $generatedAt;
     /**
      * Balance as of the `generated_at` time.  This value includes the `account_balance` and `month_to_date_usage`.
-     *
      */
     public function getMonthToDateBalance(): string
     {
@@ -50,7 +45,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Balance as of the `generated_at` time.  This value includes the `account_balance` and `month_to_date_usage`.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Current balance of the customer's most recent billing activity. Does not reflect `month_to_date_usage`.
-     *
      */
     public function getAccountBalance(): string
     {
@@ -70,7 +63,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Current balance of the customer's most recent billing activity. Does not reflect `month_to_date_usage`.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Amount used in the current billing period as of the `generated_at` time.
-     *
      */
     public function getMonthToDateUsage(): string
     {
@@ -90,7 +81,6 @@ class Balance extends \ArrayObject
     }
     /**
      * Amount used in the current billing period as of the `generated_at` time.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class Balance extends \ArrayObject
     }
     /**
      * The time at which balances were most recently generated.
-     *
      */
     public function getGeneratedAt(): \DateTime
     {
@@ -110,7 +99,6 @@ class Balance extends \ArrayObject
     }
     /**
      * The time at which balances were most recently generated.
-     *
      *
      * @return self
      */

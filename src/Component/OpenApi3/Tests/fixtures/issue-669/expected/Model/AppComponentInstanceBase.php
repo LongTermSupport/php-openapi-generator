@@ -22,22 +22,18 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     protected int $instanceCount = 1;
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     protected mixed $instanceSizeSlug = null;
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     protected AppComponentInstanceBaseAutoscaling $autoscaling;
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     public function getInstanceCount(): int
     {
@@ -45,7 +41,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     public function getInstanceSizeSlug(): mixed
     {
@@ -65,7 +59,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     public function getAutoscaling(): AppComponentInstanceBaseAutoscaling
     {
@@ -85,7 +77,6 @@ class AppComponentInstanceBase extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      *
      * @return self
      */

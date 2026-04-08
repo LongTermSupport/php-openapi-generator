@@ -22,27 +22,22 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * The unique identifier for the resource scheduled for deletion.
-     *
      */
     protected string $id;
     /**
      * The name of the resource scheduled for deletion.
-     *
      */
     protected string $name;
     /**
      * A time value given in ISO8601 combined date and time format indicating when the resource was destroyed if the request was successful.
-     *
      */
     protected \DateTime $destroyedAt;
     /**
      * A string indicating that the resource was not successfully destroyed and providing additional information.
-     *
      */
     protected string $errorMessage;
     /**
      * The unique identifier for the resource scheduled for deletion.
-     *
      */
     public function getId(): string
     {
@@ -50,7 +45,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * The unique identifier for the resource scheduled for deletion.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * The name of the resource scheduled for deletion.
-     *
      */
     public function getName(): string
     {
@@ -70,7 +63,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * The name of the resource scheduled for deletion.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format indicating when the resource was destroyed if the request was successful.
-     *
      */
     public function getDestroyedAt(): \DateTime
     {
@@ -90,7 +81,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format indicating when the resource was destroyed if the request was successful.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * A string indicating that the resource was not successfully destroyed and providing additional information.
-     *
      */
     public function getErrorMessage(): string
     {
@@ -110,7 +99,6 @@ class DestroyedAssociatedResource extends \ArrayObject
     }
     /**
      * A string indicating that the resource was not successfully destroyed and providing additional information.
-     *
      *
      * @return self
      */

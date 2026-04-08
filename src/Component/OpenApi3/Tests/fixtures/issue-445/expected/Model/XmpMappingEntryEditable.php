@@ -19,37 +19,30 @@ class XmpMappingEntryEditable
     }
     /**
      * Direction of the mapping.
-     *
      */
     protected mixed $direction = null;
     /**
      * Priority of the mapping.
-     *
      */
     protected int $priority;
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      */
     protected bool $stopProcessing;
     /**
      * Path to source property in XMP.
-     *
      */
     protected string $xmpPath;
     /**
      * Path to target property in metadata.
-     *
      */
     protected string $metadataPath;
     /**
      * Optional additional configuration for the mapping.
-     *
      */
     protected mixed $configuration = null;
     /**
      * Direction of the mapping.
-     *
      */
     public function getDirection(): mixed
     {
@@ -57,7 +50,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Direction of the mapping.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Priority of the mapping.
-     *
      */
     public function getPriority(): int
     {
@@ -77,7 +68,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Priority of the mapping.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      */
     public function getStopProcessing(): bool
     {
@@ -97,7 +86,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Stop processing further mappings for the same field if a value was found.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Path to source property in XMP.
-     *
      */
     public function getXmpPath(): string
     {
@@ -117,7 +104,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Path to source property in XMP.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Path to target property in metadata.
-     *
      */
     public function getMetadataPath(): string
     {
@@ -137,7 +122,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Path to target property in metadata.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Optional additional configuration for the mapping.
-     *
      */
     public function getConfiguration(): mixed
     {
@@ -157,7 +140,6 @@ class XmpMappingEntryEditable
     }
     /**
      * Optional additional configuration for the mapping.
-     *
      *
      * @return self
      */

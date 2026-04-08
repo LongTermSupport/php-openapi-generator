@@ -19,22 +19,18 @@ class ErrorResponse
     }
     /**
      * Serialized PictureparkBusinessException.
-     *
      */
     protected ?string $exception = null;
     /**
      * Trace ID.
-     *
      */
     protected ?string $traceId = null;
     /**
      * Trace job ID.
-     *
      */
     protected ?string $traceJobId = null;
     /**
      * Serialized PictureparkBusinessException.
-     *
      */
     public function getException(): ?string
     {
@@ -42,7 +38,6 @@ class ErrorResponse
     }
     /**
      * Serialized PictureparkBusinessException.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class ErrorResponse
     }
     /**
      * Trace ID.
-     *
      */
     public function getTraceId(): ?string
     {
@@ -62,7 +56,6 @@ class ErrorResponse
     }
     /**
      * Trace ID.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class ErrorResponse
     }
     /**
      * Trace job ID.
-     *
      */
     public function getTraceJobId(): ?string
     {
@@ -82,7 +74,6 @@ class ErrorResponse
     }
     /**
      * Trace job ID.
-     *
      *
      * @return self
      */

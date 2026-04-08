@@ -22,17 +22,14 @@ class CurrentUtilization extends \ArrayObject
     }
     /**
      * The average memory utilization of the autoscale pool.
-     *
      */
     protected float $memory;
     /**
      * The average CPU utilization of the autoscale pool.
-     *
      */
     protected float $cpu;
     /**
      * The average memory utilization of the autoscale pool.
-     *
      */
     public function getMemory(): float
     {
@@ -40,7 +37,6 @@ class CurrentUtilization extends \ArrayObject
     }
     /**
      * The average memory utilization of the autoscale pool.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class CurrentUtilization extends \ArrayObject
     }
     /**
      * The average CPU utilization of the autoscale pool.
-     *
      */
     public function getCpu(): float
     {
@@ -60,7 +55,6 @@ class CurrentUtilization extends \ArrayObject
     }
     /**
      * The average CPU utilization of the autoscale pool.
-     *
      *
      * @return self
      */

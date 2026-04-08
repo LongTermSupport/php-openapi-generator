@@ -22,22 +22,18 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      */
     protected int $id;
     /**
      * A string specifying the type of the related action.
-     *
      */
     protected string $rel;
     /**
      * A URL that can be used to access the action.
-     *
      */
     protected string $href;
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      */
     public function getId(): int
     {
@@ -45,7 +41,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A string specifying the type of the related action.
-     *
      */
     public function getRel(): string
     {
@@ -65,7 +59,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A string specifying the type of the related action.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A URL that can be used to access the action.
-     *
      */
     public function getHref(): string
     {
@@ -85,7 +77,6 @@ class ActionLink extends \ArrayObject
     }
     /**
      * A URL that can be used to access the action.
-     *
      *
      * @return self
      */

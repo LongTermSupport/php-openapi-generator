@@ -22,17 +22,14 @@ class ClusterStatus extends \ArrayObject
     }
     /**
      * A string indicating the current status of the cluster.
-     *
      */
     protected string $state;
     /**
      * An optional message providing additional information about the current cluster state.
-     *
      */
     protected string $message;
     /**
      * A string indicating the current status of the cluster.
-     *
      */
     public function getState(): string
     {
@@ -40,7 +37,6 @@ class ClusterStatus extends \ArrayObject
     }
     /**
      * A string indicating the current status of the cluster.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ClusterStatus extends \ArrayObject
     }
     /**
      * An optional message providing additional information about the current cluster state.
-     *
      */
     public function getMessage(): string
     {
@@ -60,7 +55,6 @@ class ClusterStatus extends \ArrayObject
     }
     /**
      * An optional message providing additional information about the current cluster state.
-     *
      *
      * @return self
      */

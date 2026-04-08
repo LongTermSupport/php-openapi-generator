@@ -19,32 +19,26 @@ class TiffFormat extends FormatBase
     }
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
      */
     protected mixed $colorProfile = null;
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
      */
     protected mixed $colorTransformationIntent = null;
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
      */
     protected ?float $horizontalResolution = null;
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
      */
     protected ?float $verticalResolution = null;
     /**
      * Copy clipping paths from input.
-     *
      */
     protected bool $keepClippingPath;
     /**
      * Allows resizing of the image.
-     *
      */
     protected mixed $resizeAction = null;
     /**
@@ -55,23 +49,19 @@ class TiffFormat extends FormatBase
     protected ?array $actions = null;
     /**
      * Specifies whether color channels should be premultiplied with alpha (associated alpha) or not (unassociated alpha).
-     *
      */
     protected bool $alphaPremultiplied;
     /**
      * Specifies the compression type to use.
-     *
      */
     protected mixed $compressionType = null;
     /**
      * Preserve (including size affecting changes) unspecified extraChannels.
-     *
      */
     protected bool $includeUnspecifiedTiffExtraChannels;
     protected ?string $extension = null;
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
      */
     public function getColorProfile(): mixed
     {
@@ -79,7 +69,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
      *
      * @return self
      */
@@ -91,7 +80,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
      */
     public function getColorTransformationIntent(): mixed
     {
@@ -99,7 +87,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
      *
      * @return self
      */
@@ -111,7 +98,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
      */
     public function getHorizontalResolution(): ?float
     {
@@ -119,7 +105,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
      *
      * @return self
      */
@@ -131,7 +116,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
      */
     public function getVerticalResolution(): ?float
     {
@@ -139,7 +123,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
      *
      * @return self
      */
@@ -151,7 +134,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Copy clipping paths from input.
-     *
      */
     public function getKeepClippingPath(): bool
     {
@@ -159,7 +141,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Copy clipping paths from input.
-     *
      *
      * @return self
      */
@@ -171,7 +152,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
      */
     public function getResizeAction(): mixed
     {
@@ -179,7 +159,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
      *
      * @return self
      */
@@ -213,7 +192,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Specifies whether color channels should be premultiplied with alpha (associated alpha) or not (unassociated alpha).
-     *
      */
     public function getAlphaPremultiplied(): bool
     {
@@ -221,7 +199,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Specifies whether color channels should be premultiplied with alpha (associated alpha) or not (unassociated alpha).
-     *
      *
      * @return self
      */
@@ -233,7 +210,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Specifies the compression type to use.
-     *
      */
     public function getCompressionType(): mixed
     {
@@ -241,7 +217,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Specifies the compression type to use.
-     *
      *
      * @return self
      */
@@ -253,7 +228,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Preserve (including size affecting changes) unspecified extraChannels.
-     *
      */
     public function getIncludeUnspecifiedTiffExtraChannels(): bool
     {
@@ -261,7 +235,6 @@ class TiffFormat extends FormatBase
     }
     /**
      * Preserve (including size affecting changes) unspecified extraChannels.
-     *
      *
      * @return self
      */

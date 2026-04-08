@@ -22,22 +22,18 @@ class AppComponentInstanceBaseAutoscaling extends \ArrayObject
     }
     /**
      * The minimum amount of instances for this component. Must be less than max_instance_count.
-     *
      */
     protected int $minInstanceCount;
     /**
      * The maximum amount of instances for this component. Must be more than min_instance_count.
-     *
      */
     protected int $maxInstanceCount;
     /**
      * The metrics that the component is scaled on.
-     *
      */
     protected AppComponentInstanceBaseAutoscalingMetrics $metrics;
     /**
      * The minimum amount of instances for this component. Must be less than max_instance_count.
-     *
      */
     public function getMinInstanceCount(): int
     {
@@ -45,7 +41,6 @@ class AppComponentInstanceBaseAutoscaling extends \ArrayObject
     }
     /**
      * The minimum amount of instances for this component. Must be less than max_instance_count.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AppComponentInstanceBaseAutoscaling extends \ArrayObject
     }
     /**
      * The maximum amount of instances for this component. Must be more than min_instance_count.
-     *
      */
     public function getMaxInstanceCount(): int
     {
@@ -65,7 +59,6 @@ class AppComponentInstanceBaseAutoscaling extends \ArrayObject
     }
     /**
      * The maximum amount of instances for this component. Must be more than min_instance_count.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AppComponentInstanceBaseAutoscaling extends \ArrayObject
     }
     /**
      * The metrics that the component is scaled on.
-     *
      */
     public function getMetrics(): AppComponentInstanceBaseAutoscalingMetrics
     {
@@ -85,7 +77,6 @@ class AppComponentInstanceBaseAutoscaling extends \ArrayObject
     }
     /**
      * The metrics that the component is scaled on.
-     *
      *
      * @return self
      */

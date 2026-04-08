@@ -22,22 +22,18 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The ID of the most recent migration.
-     *
      */
     protected string $id;
     /**
      * The current status of the migration.
-     *
      */
     protected string $status;
     /**
      * The time the migration was initiated, in ISO 8601 format.
-     *
      */
     protected string $createdAt;
     /**
      * The ID of the most recent migration.
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The ID of the most recent migration.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The current status of the migration.
-     *
      */
     public function getStatus(): string
     {
@@ -65,7 +59,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The current status of the migration.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The time the migration was initiated, in ISO 8601 format.
-     *
      */
     public function getCreatedAt(): string
     {
@@ -85,7 +77,6 @@ class OnlineMigration extends \ArrayObject
     }
     /**
      * The time the migration was initiated, in ISO 8601 format.
-     *
      *
      * @return self
      */

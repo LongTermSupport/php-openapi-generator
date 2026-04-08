@@ -19,22 +19,18 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Execution scope.
-     *
      */
     protected mixed $executionScope = null;
     /**
      * Document type.
-     *
      */
     protected mixed $documentType = null;
     /**
      * Action performed.
-     *
      */
     protected mixed $action = null;
     /**
      * Execution scope.
-     *
      */
     public function getExecutionScope(): mixed
     {
@@ -42,7 +38,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Execution scope.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Document type.
-     *
      */
     public function getDocumentType(): mixed
     {
@@ -62,7 +56,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Document type.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Action performed.
-     *
      */
     public function getAction(): mixed
     {
@@ -82,7 +74,6 @@ class BusinessRuleTriggerPoint
     }
     /**
      * Action performed.
-     *
      *
      * @return self
      */

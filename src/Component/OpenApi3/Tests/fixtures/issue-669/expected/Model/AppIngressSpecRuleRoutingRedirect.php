@@ -22,32 +22,26 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * An optional URI path to redirect to. Note: if this is specified the whole URI of the original request will be overwritten to this value, irrespective of the original request URI being matched.
-     *
      */
     protected string $uri;
     /**
      * The authority/host to redirect to. This can be a hostname or IP address. Note: use `port` to set the port.
-     *
      */
     protected string $authority;
     /**
      * The port to redirect to.
-     *
      */
     protected int $port;
     /**
      * The scheme to redirect to. Supported values are `http` or `https`. Default: `https`.
-     *
      */
     protected string $scheme;
     /**
      * The redirect code to use. Defaults to `302`. Supported values are 300, 301, 302, 303, 304, 307, 308.
-     *
      */
     protected int $redirectCode;
     /**
      * An optional URI path to redirect to. Note: if this is specified the whole URI of the original request will be overwritten to this value, irrespective of the original request URI being matched.
-     *
      */
     public function getUri(): string
     {
@@ -55,7 +49,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * An optional URI path to redirect to. Note: if this is specified the whole URI of the original request will be overwritten to this value, irrespective of the original request URI being matched.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The authority/host to redirect to. This can be a hostname or IP address. Note: use `port` to set the port.
-     *
      */
     public function getAuthority(): string
     {
@@ -75,7 +67,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The authority/host to redirect to. This can be a hostname or IP address. Note: use `port` to set the port.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The port to redirect to.
-     *
      */
     public function getPort(): int
     {
@@ -95,7 +85,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The port to redirect to.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The scheme to redirect to. Supported values are `http` or `https`. Default: `https`.
-     *
      */
     public function getScheme(): string
     {
@@ -115,7 +103,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The scheme to redirect to. Supported values are `http` or `https`. Default: `https`.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The redirect code to use. Defaults to `302`. Supported values are 300, 301, 302, 303, 304, 307, 308.
-     *
      */
     public function getRedirectCode(): int
     {
@@ -135,7 +121,6 @@ class AppIngressSpecRuleRoutingRedirect extends \ArrayObject
     }
     /**
      * The redirect code to use. Defaults to `302`. Supported values are 300, 301, 302, 303, 304, 307, 308.
-     *
      *
      * @return self
      */

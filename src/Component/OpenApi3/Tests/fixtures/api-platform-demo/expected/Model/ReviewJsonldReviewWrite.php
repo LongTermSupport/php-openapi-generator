@@ -25,34 +25,28 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     protected string $type;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     /**
      * A rating.
-     *
      */
     protected int $rating;
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     protected ?string $letter = null;
     /**
      * The item that is being reviewed/rated.
-     *
      */
     protected string $book;
     /**
      * The author of the review.
-     *
      */
     protected ?string $author = null;
     /**
      * Publication date of the review.
-     *
      */
     protected ?\DateTime $publicationDate = null;
     public function getContext(): mixed
@@ -87,7 +81,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -95,7 +88,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */
@@ -107,7 +99,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
      */
     public function getRating(): int
     {
@@ -115,7 +106,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * A rating.
-     *
      *
      * @return self
      */
@@ -129,7 +119,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     public function getLetter(): ?string
     {
@@ -137,7 +126,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
-     *
      *
      * @deprecated
      *
@@ -151,7 +139,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
      */
     public function getBook(): string
     {
@@ -159,7 +146,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * The item that is being reviewed/rated.
-     *
      *
      * @return self
      */
@@ -171,7 +157,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      */
     public function getAuthor(): ?string
     {
@@ -179,7 +164,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      *
      * @return self
      */
@@ -191,7 +175,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      */
     public function getPublicationDate(): ?\DateTime
     {
@@ -199,7 +182,6 @@ class ReviewJsonldReviewWrite extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      *
      * @return self
      */

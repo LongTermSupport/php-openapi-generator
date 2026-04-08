@@ -24,27 +24,24 @@ class OrgsOrgMembershipsUsernamePutBody extends \ArrayObject
      * The role to give the user in the organization. Can be one of:
      * \* `admin` - The user will become an owner of the organization.
      * \* `member` - The user will become a non-owner member of the organization.
-     *
      */
     protected string $role = 'member';
     /**
      * The role to give the user in the organization. Can be one of:
      * \* `admin` - The user will become an owner of the organization.
      * \* `member` - The user will become a non-owner member of the organization.
-     *
      */
     public function getRole(): string
     {
         return $this->role;
     }
     /**
-    * The role to give the user in the organization. Can be one of:  
-    \* `admin` - The user will become an owner of the organization.  
-    \* `member` - The user will become a non-owner member of the organization.
-    *
-    *
-    * @return self
-    */
+     * The role to give the user in the organization. Can be one of:
+     * \* `admin` - The user will become an owner of the organization.
+     * \* `member` - The user will become a non-owner member of the organization.
+     *
+     * @return self
+     */
     public function setRole(string $role): self
     {
         $this->initialized['role'] = true;

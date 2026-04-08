@@ -22,27 +22,22 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The id for schema.
-     *
      */
     protected int $schemaId;
     /**
      * The name of the schema subject.
-     *
      */
     protected string $subjectName;
     /**
      * The type of the schema.
-     *
      */
     protected string $schemaType;
     /**
      * The schema definition in the specified format.
-     *
      */
     protected string $schema;
     /**
      * The id for schema.
-     *
      */
     public function getSchemaId(): int
     {
@@ -50,7 +45,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The id for schema.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      */
     public function getSubjectName(): string
     {
@@ -70,7 +63,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
      */
     public function getSchemaType(): string
     {
@@ -90,7 +81,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
      */
     public function getSchema(): string
     {
@@ -110,7 +99,6 @@ class ResponseKafkaSchema extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
      *
      * @return self
      */

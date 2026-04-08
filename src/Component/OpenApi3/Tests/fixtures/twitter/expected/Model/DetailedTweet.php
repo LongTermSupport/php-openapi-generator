@@ -23,27 +23,22 @@ class DetailedTweet extends \ArrayObject
     protected string $format;
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $id;
     /**
      * Creation time of the Tweet.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The content of the Tweet.
-     *
      */
     protected string $text;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $authorId;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $inReplyToUserId;
     /**
@@ -54,23 +49,19 @@ class DetailedTweet extends \ArrayObject
     protected array $referencedTweets;
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      */
     protected CompactTweetFieldsAttachments $attachments;
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     protected TweetWithheld $withheld;
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      */
     protected DefaultTweetFieldsGeo $geo;
     protected FullTextEntities $entities;
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
      */
     protected DetailedTweetFieldsStats $stats;
     /**
@@ -79,17 +70,14 @@ class DetailedTweet extends \ArrayObject
     protected array $contextAnnotation;
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
      */
     protected bool $possiblySensitive;
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
      */
     protected string $lang;
     /**
      * The name of the app the user Tweeted from.
-     *
      */
     protected string $source;
     public function getFormat(): string
@@ -104,7 +92,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getId(): string
     {
@@ -112,7 +99,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this Tweet. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -124,7 +110,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -132,7 +117,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Creation time of the Tweet.
-     *
      *
      * @return self
      */
@@ -144,7 +128,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
      */
     public function getText(): string
     {
@@ -152,7 +135,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The content of the Tweet.
-     *
      *
      * @return self
      */
@@ -164,7 +146,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getAuthorId(): string
     {
@@ -172,7 +153,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -184,7 +164,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getInReplyToUserId(): string
     {
@@ -192,7 +171,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -226,7 +204,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      */
     public function getAttachments(): CompactTweetFieldsAttachments
     {
@@ -234,7 +211,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Specifies the type of attachments (if any) present in this Tweet.
-     *
      *
      * @return self
      */
@@ -246,7 +222,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     public function getWithheld(): TweetWithheld
     {
@@ -254,7 +229,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      *
      * @return self
      */
@@ -266,7 +240,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      */
     public function getGeo(): DefaultTweetFieldsGeo
     {
@@ -274,7 +247,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The location tagged on the Tweet, if the user provided one.
-     *
      *
      * @return self
      */
@@ -296,7 +268,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
      */
     public function getStats(): DetailedTweetFieldsStats
     {
@@ -304,7 +275,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Engagement metrics for the Tweet at the time of the request.
-     *
      *
      * @return self
      */
@@ -334,7 +304,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
      */
     public function getPossiblySensitive(): bool
     {
@@ -342,7 +311,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Indicates if this Tweet contains URLs marked as sensitive, for example content suitable for mature audiences.
-     *
      *
      * @return self
      */
@@ -354,7 +322,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
      */
     public function getLang(): string
     {
@@ -362,7 +329,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * Language of the Tweet, if detected by Twitter. Returned as a BCP47 language tag.
-     *
      *
      * @return self
      */
@@ -374,7 +340,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The name of the app the user Tweeted from.
-     *
      */
     public function getSource(): string
     {
@@ -382,7 +347,6 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * The name of the app the user Tweeted from.
-     *
      *
      * @return self
      */

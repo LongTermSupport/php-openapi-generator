@@ -22,12 +22,10 @@ class Database extends \ArrayObject
     }
     /**
      * The name of the database.
-     *
      */
     protected string $name;
     /**
      * The name of the database.
-     *
      */
     public function getName(): string
     {
@@ -35,7 +33,6 @@ class Database extends \ArrayObject
     }
     /**
      * The name of the database.
-     *
      *
      * @return self
      */

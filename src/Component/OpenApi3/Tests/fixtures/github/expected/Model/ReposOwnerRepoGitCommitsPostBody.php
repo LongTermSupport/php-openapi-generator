@@ -22,12 +22,10 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The commit message
-     *
      */
     protected string $message;
     /**
      * The SHA of the tree object this commit points to
-     *
      */
     protected string $tree;
     /**
@@ -38,22 +36,18 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     protected array $parents;
     /**
      * Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
-     *
      */
     protected ReposOwnerRepoGitCommitsPostBodyAuthor $author;
     /**
      * Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
-     *
      */
     protected ReposOwnerRepoGitCommitsPostBodyCommitter $committer;
     /**
      * The [PGP signature](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) of the commit. GitHub adds the signature to the `gpgsig` header of the created commit. For a commit signature to be verifiable by Git or GitHub, it must be an ASCII-armored detached PGP signature over the string commit as it would be written to the object database. To pass a `signature` parameter, you need to first manually create a valid PGP signature, which can be complicated. You may find it easier to [use the command line](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work) to create signed commits.
-     *
      */
     protected string $signature;
     /**
      * The commit message
-     *
      */
     public function getMessage(): string
     {
@@ -61,7 +55,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The commit message
-     *
      *
      * @return self
      */
@@ -73,7 +66,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the tree object this commit points to
-     *
      */
     public function getTree(): string
     {
@@ -81,7 +73,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the tree object this commit points to
-     *
      *
      * @return self
      */
@@ -115,7 +106,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
-     *
      */
     public function getAuthor(): ReposOwnerRepoGitCommitsPostBodyAuthor
     {
@@ -123,7 +113,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
-     *
      *
      * @return self
      */
@@ -135,7 +124,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
-     *
      */
     public function getCommitter(): ReposOwnerRepoGitCommitsPostBodyCommitter
     {
@@ -143,7 +131,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
-     *
      *
      * @return self
      */
@@ -155,7 +142,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The [PGP signature](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) of the commit. GitHub adds the signature to the `gpgsig` header of the created commit. For a commit signature to be verifiable by Git or GitHub, it must be an ASCII-armored detached PGP signature over the string commit as it would be written to the object database. To pass a `signature` parameter, you need to first manually create a valid PGP signature, which can be complicated. You may find it easier to [use the command line](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work) to create signed commits.
-     *
      */
     public function getSignature(): string
     {
@@ -163,7 +149,6 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The [PGP signature](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) of the commit. GitHub adds the signature to the `gpgsig` header of the created commit. For a commit signature to be verifiable by Git or GitHub, it must be an ASCII-armored detached PGP signature over the string commit as it would be written to the object database. To pass a `signature` parameter, you need to first manually create a valid PGP signature, which can be complicated. You may find it easier to [use the command line](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work) to create signed commits.
-     *
      *
      * @return self
      */

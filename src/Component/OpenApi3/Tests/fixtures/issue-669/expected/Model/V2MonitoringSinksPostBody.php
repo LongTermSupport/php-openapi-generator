@@ -22,7 +22,6 @@ class V2MonitoringSinksPostBody extends \ArrayObject
     }
     /**
      * A unique identifier for an already-existing destination.
-     *
      */
     protected string $destinationUuid;
     /**
@@ -33,7 +32,6 @@ class V2MonitoringSinksPostBody extends \ArrayObject
     protected array $resources;
     /**
      * A unique identifier for an already-existing destination.
-     *
      */
     public function getDestinationUuid(): string
     {
@@ -41,7 +39,6 @@ class V2MonitoringSinksPostBody extends \ArrayObject
     }
     /**
      * A unique identifier for an already-existing destination.
-     *
      *
      * @return self
      */

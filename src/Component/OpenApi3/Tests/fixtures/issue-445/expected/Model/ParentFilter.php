@@ -19,17 +19,14 @@ class ParentFilter extends FilterBase
     }
     /**
      * The type of the parent document.
-     *
      */
     protected string $parentType;
     /**
      * The filter to be applied on the child document. All kinds of filters are accepted.
-     *
      */
     protected mixed $filter = null;
     /**
      * The type of the parent document.
-     *
      */
     public function getParentType(): string
     {
@@ -37,7 +34,6 @@ class ParentFilter extends FilterBase
     }
     /**
      * The type of the parent document.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class ParentFilter extends FilterBase
     }
     /**
      * The filter to be applied on the child document. All kinds of filters are accepted.
-     *
      */
     public function getFilter(): mixed
     {
@@ -57,7 +52,6 @@ class ParentFilter extends FilterBase
     }
     /**
      * The filter to be applied on the child document. All kinds of filters are accepted.
-     *
      *
      * @return self
      */

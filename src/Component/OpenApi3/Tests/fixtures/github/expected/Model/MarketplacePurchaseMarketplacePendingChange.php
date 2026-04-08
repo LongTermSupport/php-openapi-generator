@@ -26,7 +26,6 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
     protected int $id;
     /**
      * Marketplace Listing Plan
-     *
      */
     protected MarketplaceListingPlan $plan;
     public function getIsInstalled(): bool
@@ -71,7 +70,6 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
     }
     /**
      * Marketplace Listing Plan
-     *
      */
     public function getPlan(): MarketplaceListingPlan
     {
@@ -79,7 +77,6 @@ class MarketplacePurchaseMarketplacePendingChange extends \ArrayObject
     }
     /**
      * Marketplace Listing Plan
-     *
      *
      * @return self
      */

@@ -23,25 +23,22 @@ class ResponseTagsExisting extends \ArrayObject
     /**
      * A tag is a label that can be applied to a resource (currently Droplets, Images, Volumes, Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on it.
      * Tags have two attributes: a user defined `name` attribute and an embedded `resources` attribute with information about resources that have been tagged.
-     *
      */
     protected Tags $tag;
     /**
      * A tag is a label that can be applied to a resource (currently Droplets, Images, Volumes, Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on it.
      * Tags have two attributes: a user defined `name` attribute and an embedded `resources` attribute with information about resources that have been tagged.
-     *
      */
     public function getTag(): Tags
     {
         return $this->tag;
     }
     /**
-    * A tag is a label that can be applied to a resource (currently Droplets, Images, Volumes, Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on it.
-    Tags have two attributes: a user defined `name` attribute and an embedded `resources` attribute with information about resources that have been tagged.
-    *
-    *
-    * @return self
-    */
+     * A tag is a label that can be applied to a resource (currently Droplets, Images, Volumes, Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on it.
+     * Tags have two attributes: a user defined `name` attribute and an embedded `resources` attribute with information about resources that have been tagged.
+     *
+     * @return self
+     */
     public function setTag(Tags $tag): self
     {
         $this->initialized['tag'] = true;

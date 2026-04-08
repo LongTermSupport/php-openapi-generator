@@ -68,7 +68,6 @@ class PullRequestSimple extends \ArrayObject
     protected string $authorAssociation;
     /**
      * Indicates whether or not the pull request is a draft.
-     *
      */
     protected bool $draft;
     public function getUrl(): string
@@ -445,7 +444,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * Indicates whether or not the pull request is a draft.
-     *
      */
     public function getDraft(): bool
     {
@@ -453,7 +451,6 @@ class PullRequestSimple extends \ArrayObject
     }
     /**
      * Indicates whether or not the pull request is a draft.
-     *
      *
      * @return self
      */

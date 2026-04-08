@@ -19,37 +19,30 @@ class Sprite
     }
     /**
      * The width of the sprite.
-     *
      */
     protected int $width;
     /**
      * The height of the sprite.
-     *
      */
     protected int $height;
     /**
      * Y coordinate of the sprite in the saved file.
-     *
      */
     protected int $y;
     /**
      * X coordinate of the sprite in the saved file.
-     *
      */
     protected int $x;
     /**
      * The starting point in time of the sprite in the video.
-     *
      */
     protected string $start;
     /**
      * The ending point in time of the sprite in the video.
-     *
      */
     protected string $end;
     /**
      * The width of the sprite.
-     *
      */
     public function getWidth(): int
     {
@@ -57,7 +50,6 @@ class Sprite
     }
     /**
      * The width of the sprite.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class Sprite
     }
     /**
      * The height of the sprite.
-     *
      */
     public function getHeight(): int
     {
@@ -77,7 +68,6 @@ class Sprite
     }
     /**
      * The height of the sprite.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class Sprite
     }
     /**
      * Y coordinate of the sprite in the saved file.
-     *
      */
     public function getY(): int
     {
@@ -97,7 +86,6 @@ class Sprite
     }
     /**
      * Y coordinate of the sprite in the saved file.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class Sprite
     }
     /**
      * X coordinate of the sprite in the saved file.
-     *
      */
     public function getX(): int
     {
@@ -117,7 +104,6 @@ class Sprite
     }
     /**
      * X coordinate of the sprite in the saved file.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class Sprite
     }
     /**
      * The starting point in time of the sprite in the video.
-     *
      */
     public function getStart(): string
     {
@@ -137,7 +122,6 @@ class Sprite
     }
     /**
      * The starting point in time of the sprite in the video.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class Sprite
     }
     /**
      * The ending point in time of the sprite in the video.
-     *
      */
     public function getEnd(): string
     {
@@ -157,7 +140,6 @@ class Sprite
     }
     /**
      * The ending point in time of the sprite in the video.
-     *
      *
      * @return self
      */

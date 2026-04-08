@@ -19,7 +19,6 @@ class NumericRangeAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
      */
     protected ?string $field = null;
     /**
@@ -30,7 +29,6 @@ class NumericRangeAggregator extends AggregatorBase
     protected array $ranges;
     /**
      * The field's ID to execute the aggregation on.
-     *
      */
     public function getField(): ?string
     {
@@ -38,7 +36,6 @@ class NumericRangeAggregator extends AggregatorBase
     }
     /**
      * The field's ID to execute the aggregation on.
-     *
      *
      * @return self
      */

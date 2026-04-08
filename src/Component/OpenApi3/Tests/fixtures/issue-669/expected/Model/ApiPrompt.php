@@ -28,19 +28,16 @@ class ApiPrompt extends \ArrayObject
     protected array $evaluationTraceSpans;
     /**
      * The ground truth for the prompt.
-     *
      */
     protected string $groundTruth;
     protected string $input;
     /**
      * The number of input tokens used in the prompt.
-     *
      */
     protected string $inputTokens;
     protected string $output;
     /**
      * The number of output tokens used in the prompt.
-     *
      */
     protected string $outputTokens;
     /**
@@ -51,7 +48,6 @@ class ApiPrompt extends \ArrayObject
     protected array $promptChunks;
     /**
      * Prompt ID
-     *
      */
     protected int $promptId;
     /**
@@ -62,7 +58,6 @@ class ApiPrompt extends \ArrayObject
     protected array $promptLevelMetricResults;
     /**
      * The trace id for the prompt.
-     *
      */
     protected string $traceId;
     /**
@@ -89,7 +84,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The ground truth for the prompt.
-     *
      */
     public function getGroundTruth(): string
     {
@@ -97,7 +91,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The ground truth for the prompt.
-     *
      *
      * @return self
      */
@@ -119,7 +112,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The number of input tokens used in the prompt.
-     *
      */
     public function getInputTokens(): string
     {
@@ -127,7 +119,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The number of input tokens used in the prompt.
-     *
      *
      * @return self
      */
@@ -149,7 +140,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The number of output tokens used in the prompt.
-     *
      */
     public function getOutputTokens(): string
     {
@@ -157,7 +147,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The number of output tokens used in the prompt.
-     *
      *
      * @return self
      */
@@ -191,7 +180,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * Prompt ID
-     *
      */
     public function getPromptId(): int
     {
@@ -199,7 +187,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * Prompt ID
-     *
      *
      * @return self
      */
@@ -233,7 +220,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The trace id for the prompt.
-     *
      */
     public function getTraceId(): string
     {
@@ -241,7 +227,6 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The trace id for the prompt.
-     *
      *
      * @return self
      */

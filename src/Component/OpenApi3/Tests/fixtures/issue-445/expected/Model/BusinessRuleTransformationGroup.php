@@ -31,12 +31,10 @@ class BusinessRuleTransformationGroup
     protected ?array $transformations = null;
     /**
      * Variable name where the final result should be stored in.
-     *
      */
     protected ?string $storeIn = null;
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
      */
     protected ?string $traceRefId = null;
     /**
@@ -85,7 +83,6 @@ class BusinessRuleTransformationGroup
     }
     /**
      * Variable name where the final result should be stored in.
-     *
      */
     public function getStoreIn(): ?string
     {
@@ -93,7 +90,6 @@ class BusinessRuleTransformationGroup
     }
     /**
      * Variable name where the final result should be stored in.
-     *
      *
      * @return self
      */
@@ -105,7 +101,6 @@ class BusinessRuleTransformationGroup
     }
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
      */
     public function getTraceRefId(): ?string
     {
@@ -113,7 +108,6 @@ class BusinessRuleTransformationGroup
     }
     /**
      * Optional trace log reference ID set by the system when EnableTracing is set to true on the associated rule.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ResponseClusterlintRun extends \ArrayObject
     }
     /**
      * ID of the clusterlint run that can be used later to fetch the diagnostics.
-     *
      */
     protected string $runId;
     /**
      * ID of the clusterlint run that can be used later to fetch the diagnostics.
-     *
      */
     public function getRunId(): string
     {
@@ -35,7 +33,6 @@ class ResponseClusterlintRun extends \ArrayObject
     }
     /**
      * ID of the clusterlint run that can be used later to fetch the diagnostics.
-     *
      *
      * @return self
      */

@@ -19,7 +19,6 @@ class BusinessRuleTracedRule
     }
     /**
      * Configuration of the rule as it was running. Enriched with trace ref IDs.
-     *
      */
     protected mixed $configuration = null;
     /**
@@ -30,7 +29,6 @@ class BusinessRuleTracedRule
     protected ?array $evaluations = null;
     /**
      * Configuration of the rule as it was running. Enriched with trace ref IDs.
-     *
      */
     public function getConfiguration(): mixed
     {
@@ -38,7 +36,6 @@ class BusinessRuleTracedRule
     }
     /**
      * Configuration of the rule as it was running. Enriched with trace ref IDs.
-     *
      *
      * @return self
      */

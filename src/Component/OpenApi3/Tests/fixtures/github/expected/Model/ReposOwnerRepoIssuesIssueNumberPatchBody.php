@@ -22,27 +22,22 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * The title of the issue.
-     *
      */
     protected string $title;
     /**
      * The contents of the issue.
-     *
      */
     protected string $body;
     /**
      * Login for the user that this issue should be assigned to. **This field is deprecated.**
-     *
      */
     protected string $assignee;
     /**
      * State of the issue. Either `open` or `closed`.
-     *
      */
     protected string $state;
     /**
      * The `number` of the milestone to associate this issue with or `null` to remove current. _NOTE: Only users with push access can set the milestone for issues. The milestone is silently dropped otherwise._
-     *
      */
     protected ?int $milestone = null;
     /**
@@ -59,7 +54,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     protected array $assignees;
     /**
      * The title of the issue.
-     *
      */
     public function getTitle(): string
     {
@@ -67,7 +61,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * The title of the issue.
-     *
      *
      * @return self
      */
@@ -79,7 +72,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * The contents of the issue.
-     *
      */
     public function getBody(): string
     {
@@ -87,7 +79,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * The contents of the issue.
-     *
      *
      * @return self
      */
@@ -99,7 +90,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * Login for the user that this issue should be assigned to. **This field is deprecated.**
-     *
      */
     public function getAssignee(): string
     {
@@ -107,7 +97,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * Login for the user that this issue should be assigned to. **This field is deprecated.**
-     *
      *
      * @return self
      */
@@ -119,7 +108,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * State of the issue. Either `open` or `closed`.
-     *
      */
     public function getState(): string
     {
@@ -127,7 +115,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * State of the issue. Either `open` or `closed`.
-     *
      *
      * @return self
      */
@@ -139,7 +126,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * The `number` of the milestone to associate this issue with or `null` to remove current. _NOTE: Only users with push access can set the milestone for issues. The milestone is silently dropped otherwise._
-     *
      */
     public function getMilestone(): ?int
     {
@@ -147,7 +133,6 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * The `number` of the milestone to associate this issue with or `null` to remove current. _NOTE: Only users with push access can set the milestone for issues. The milestone is silently dropped otherwise._
-     *
      *
      * @return self
      */

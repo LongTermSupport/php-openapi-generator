@@ -19,7 +19,6 @@ class ShareContent
     }
     /**
      * Content ID to share.
-     *
      */
     protected string $contentId;
     /**
@@ -30,7 +29,6 @@ class ShareContent
     protected ?array $outputFormatIds = null;
     /**
      * Content ID to share.
-     *
      */
     public function getContentId(): string
     {
@@ -38,7 +36,6 @@ class ShareContent
     }
     /**
      * Content ID to share.
-     *
      *
      * @return self
      */

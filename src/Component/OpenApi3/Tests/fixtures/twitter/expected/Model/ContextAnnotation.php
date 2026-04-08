@@ -22,17 +22,14 @@ class ContextAnnotation extends \ArrayObject
     }
     /**
      * Represents the data for the context annotation domain.
-     *
      */
     protected ContextAnnotationDomainFields $domain;
     /**
      * Represents the data for the context annotation entity.
-     *
      */
     protected ContextAnnotationEntityFields $entity;
     /**
      * Represents the data for the context annotation domain.
-     *
      */
     public function getDomain(): ContextAnnotationDomainFields
     {
@@ -40,7 +37,6 @@ class ContextAnnotation extends \ArrayObject
     }
     /**
      * Represents the data for the context annotation domain.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ContextAnnotation extends \ArrayObject
     }
     /**
      * Represents the data for the context annotation entity.
-     *
      */
     public function getEntity(): ContextAnnotationEntityFields
     {
@@ -60,7 +55,6 @@ class ContextAnnotation extends \ArrayObject
     }
     /**
      * Represents the data for the context annotation entity.
-     *
      *
      * @return self
      */

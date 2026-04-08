@@ -22,12 +22,10 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Lock the repositories being migrated at the start of the migration
-     *
      */
     protected bool $lockRepositories;
     /**
      * Do not include attachments in the migration
-     *
      */
     protected bool $excludeAttachments;
     /**
@@ -42,7 +40,6 @@ class UserMigrationsPostBody extends \ArrayObject
     protected array $repositories;
     /**
      * Lock the repositories being migrated at the start of the migration
-     *
      */
     public function getLockRepositories(): bool
     {
@@ -50,7 +47,6 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Lock the repositories being migrated at the start of the migration
-     *
      *
      * @return self
      */
@@ -62,7 +58,6 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Do not include attachments in the migration
-     *
      */
     public function getExcludeAttachments(): bool
     {
@@ -70,7 +65,6 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Do not include attachments in the migration
-     *
      *
      * @return self
      */

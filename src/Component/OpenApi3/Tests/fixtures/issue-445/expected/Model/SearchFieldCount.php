@@ -19,22 +19,18 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store filter information for a schema.
-     *
      */
     protected int $indexedField;
     /**
      * The number of fields created in the search index to store search information for a schema.
-     *
      */
     protected int $simpleSearchField;
     /**
      * The number of fields created in the search index to store sorting information for a schema.
-     *
      */
     protected int $sortableField;
     /**
      * The number of fields created in the search index to store filter information for a schema.
-     *
      */
     public function getIndexedField(): int
     {
@@ -42,7 +38,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store filter information for a schema.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store search information for a schema.
-     *
      */
     public function getSimpleSearchField(): int
     {
@@ -62,7 +56,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store search information for a schema.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store sorting information for a schema.
-     *
      */
     public function getSortableField(): int
     {
@@ -82,7 +74,6 @@ class SearchFieldCount
     }
     /**
      * The number of fields created in the search index to store sorting information for a schema.
-     *
      *
      * @return self
      */

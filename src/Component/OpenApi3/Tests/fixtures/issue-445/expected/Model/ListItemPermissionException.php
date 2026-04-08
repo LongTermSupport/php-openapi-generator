@@ -32,7 +32,6 @@ class ListItemPermissionException extends \ArrayObject
     protected ?string $listItemId = null;
     /**
      * Metadata rights
-     *
      */
     protected string $metadataRight;
     public function getTraceLevel(): string
@@ -137,7 +136,6 @@ class ListItemPermissionException extends \ArrayObject
     }
     /**
      * Metadata rights
-     *
      */
     public function getMetadataRight(): string
     {
@@ -145,7 +143,6 @@ class ListItemPermissionException extends \ArrayObject
     }
     /**
      * Metadata rights
-     *
      *
      * @return self
      */

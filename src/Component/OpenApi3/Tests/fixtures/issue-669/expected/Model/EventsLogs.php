@@ -22,27 +22,22 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * ID of the particular event.
-     *
      */
     protected string $id;
     /**
      * The name of cluster.
-     *
      */
     protected string $clusterName;
     /**
      * Type of the event.
-     *
      */
     protected string $eventType;
     /**
      * The time of the generation of a event.
-     *
      */
     protected string $createTime;
     /**
      * ID of the particular event.
-     *
      */
     public function getId(): string
     {
@@ -50,7 +45,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * ID of the particular event.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * The name of cluster.
-     *
      */
     public function getClusterName(): string
     {
@@ -70,7 +63,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * The name of cluster.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * Type of the event.
-     *
      */
     public function getEventType(): string
     {
@@ -90,7 +81,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * Type of the event.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * The time of the generation of a event.
-     *
      */
     public function getCreateTime(): string
     {
@@ -110,7 +99,6 @@ class EventsLogs extends \ArrayObject
     }
     /**
      * The time of the generation of a event.
-     *
      *
      * @return self
      */

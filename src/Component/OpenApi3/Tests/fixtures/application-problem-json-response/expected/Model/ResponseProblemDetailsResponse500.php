@@ -22,27 +22,22 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * http or custom status code corresponding to this operation
-     *
      */
     protected int $status;
     /**
      * http or custom status message corresponding to this operation
-     *
      */
     protected string $title;
     /**
      * Explanation for the status.
-     *
      */
     protected string $type;
     /**
      * More details about the error.
-     *
      */
     protected string $detail;
     /**
      * http or custom status code corresponding to this operation
-     *
      */
     public function getStatus(): int
     {
@@ -50,7 +45,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * http or custom status code corresponding to this operation
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * http or custom status message corresponding to this operation
-     *
      */
     public function getTitle(): string
     {
@@ -70,7 +63,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * http or custom status message corresponding to this operation
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * Explanation for the status.
-     *
      */
     public function getType(): string
     {
@@ -90,7 +81,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * Explanation for the status.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * More details about the error.
-     *
      */
     public function getDetail(): string
     {
@@ -110,7 +99,6 @@ class ResponseProblemDetailsResponse500 extends \ArrayObject
     }
     /**
      * More details about the error.
-     *
      *
      * @return self
      */

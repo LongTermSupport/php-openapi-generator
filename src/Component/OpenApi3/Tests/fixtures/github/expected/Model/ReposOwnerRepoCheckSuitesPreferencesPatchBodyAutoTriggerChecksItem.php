@@ -22,17 +22,14 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem extends
     }
     /**
      * The `id` of the GitHub App.
-     *
      */
     protected int $appId;
     /**
      * Set to `true` to enable automatic creation of CheckSuite events upon pushes to the repository, or `false` to disable them.
-     *
      */
     protected bool $setting = true;
     /**
      * The `id` of the GitHub App.
-     *
      */
     public function getAppId(): int
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem extends
     }
     /**
      * The `id` of the GitHub App.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem extends
     }
     /**
      * Set to `true` to enable automatic creation of CheckSuite events upon pushes to the repository, or `false` to disable them.
-     *
      */
     public function getSetting(): bool
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoCheckSuitesPreferencesPatchBodyAutoTriggerChecksItem extends
     }
     /**
      * Set to `true` to enable automatic creation of CheckSuite events upon pushes to the repository, or `false` to disable them.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class DropletActionChangeKernel extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
      */
     protected int $kernel;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class DropletActionChangeKernel extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DropletActionChangeKernel extends \ArrayObject
     }
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
      */
     public function getKernel(): int
     {
@@ -60,7 +55,6 @@ class DropletActionChangeKernel extends \ArrayObject
     }
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
      *
      * @return self
      */

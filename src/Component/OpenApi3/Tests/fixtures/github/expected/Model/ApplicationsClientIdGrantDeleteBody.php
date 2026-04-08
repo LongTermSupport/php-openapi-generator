@@ -22,12 +22,10 @@ class ApplicationsClientIdGrantDeleteBody extends \ArrayObject
     }
     /**
      * The OAuth access token used to authenticate to the GitHub API.
-     *
      */
     protected string $accessToken;
     /**
      * The OAuth access token used to authenticate to the GitHub API.
-     *
      */
     public function getAccessToken(): string
     {
@@ -35,7 +33,6 @@ class ApplicationsClientIdGrantDeleteBody extends \ArrayObject
     }
     /**
      * The OAuth access token used to authenticate to the GitHub API.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class PermissionSetOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
      */
     protected string $transferUserId;
     /**
      * The permission set ID.
-     *
      */
     protected ?string $permissionSetId = null;
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
      */
     public function getTransferUserId(): string
     {
@@ -40,7 +37,6 @@ class PermissionSetOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The ID of the user to whom the permission set ownership should be transferred to.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class PermissionSetOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
      */
     public function getPermissionSetId(): ?string
     {
@@ -60,7 +55,6 @@ class PermissionSetOwnershipTransferItem extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
      *
      * @return self
      */

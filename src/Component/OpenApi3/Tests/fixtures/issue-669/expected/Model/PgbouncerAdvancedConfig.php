@@ -22,7 +22,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Run server_reset_query (DISCARD ALL) in all pooling modes.
-     *
      */
     protected bool $serverResetQueryAlways;
     /**
@@ -33,42 +32,34 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     protected array $ignoreStartupParameters;
     /**
      * If current server connections are below this number, adds more. Improves behavior when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the pool size.
-     *
      */
     protected int $minPoolSize;
     /**
      * The pooler closes any unused server connection that has been connected longer than this amount of seconds.
-     *
      */
     protected int $serverLifetime;
     /**
      * Drops server connections if they have been idle more than this many seconds.  If 0, timeout is disabled.
-     *
      */
     protected int $serverIdleTimeout;
     /**
      * If non-zero, automatically creates a pool of that size per user when a pool doesn't exist.
-     *
      */
     protected int $autodbPoolSize;
     /**
      * PGBouncer pool mode
-     *
      */
     protected string $autodbPoolMode;
     /**
      * Only allows a maximum this many server connections per database (regardless of user). If 0, allows unlimited connections.
-     *
      */
     protected int $autodbMaxDbConnections;
     /**
      * If the automatically-created database pools have been unused this many seconds, they are freed. If 0, timeout is disabled.
-     *
      */
     protected int $autodbIdleTimeout;
     /**
      * Run server_reset_query (DISCARD ALL) in all pooling modes.
-     *
      */
     public function getServerResetQueryAlways(): bool
     {
@@ -76,7 +67,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Run server_reset_query (DISCARD ALL) in all pooling modes.
-     *
      *
      * @return self
      */
@@ -110,7 +100,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If current server connections are below this number, adds more. Improves behavior when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the pool size.
-     *
      */
     public function getMinPoolSize(): int
     {
@@ -118,7 +107,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If current server connections are below this number, adds more. Improves behavior when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the pool size.
-     *
      *
      * @return self
      */
@@ -130,7 +118,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * The pooler closes any unused server connection that has been connected longer than this amount of seconds.
-     *
      */
     public function getServerLifetime(): int
     {
@@ -138,7 +125,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * The pooler closes any unused server connection that has been connected longer than this amount of seconds.
-     *
      *
      * @return self
      */
@@ -150,7 +136,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Drops server connections if they have been idle more than this many seconds.  If 0, timeout is disabled.
-     *
      */
     public function getServerIdleTimeout(): int
     {
@@ -158,7 +143,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Drops server connections if they have been idle more than this many seconds.  If 0, timeout is disabled.
-     *
      *
      * @return self
      */
@@ -170,7 +154,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If non-zero, automatically creates a pool of that size per user when a pool doesn't exist.
-     *
      */
     public function getAutodbPoolSize(): int
     {
@@ -178,7 +161,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If non-zero, automatically creates a pool of that size per user when a pool doesn't exist.
-     *
      *
      * @return self
      */
@@ -190,7 +172,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * PGBouncer pool mode
-     *
      */
     public function getAutodbPoolMode(): string
     {
@@ -198,7 +179,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * PGBouncer pool mode
-     *
      *
      * @return self
      */
@@ -210,7 +190,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Only allows a maximum this many server connections per database (regardless of user). If 0, allows unlimited connections.
-     *
      */
     public function getAutodbMaxDbConnections(): int
     {
@@ -218,7 +197,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * Only allows a maximum this many server connections per database (regardless of user). If 0, allows unlimited connections.
-     *
      *
      * @return self
      */
@@ -230,7 +208,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If the automatically-created database pools have been unused this many seconds, they are freed. If 0, timeout is disabled.
-     *
      */
     public function getAutodbIdleTimeout(): int
     {
@@ -238,7 +215,6 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * If the automatically-created database pools have been unused this many seconds, they are freed. If 0, timeout is disabled.
-     *
      *
      * @return self
      */

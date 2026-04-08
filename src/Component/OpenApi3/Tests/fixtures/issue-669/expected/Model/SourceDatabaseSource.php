@@ -22,32 +22,26 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
      */
     protected string $host;
     /**
      * The port on which the database cluster is listening.
-     *
      */
     protected int $port;
     /**
      * The name of the default database.
-     *
      */
     protected string $dbname;
     /**
      * The default user for the database.
-     *
      */
     protected string $username;
     /**
      * The randomly generated password for the default user.
-     *
      */
     protected string $password;
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
      */
     public function getHost(): string
     {
@@ -55,7 +49,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The port on which the database cluster is listening.
-     *
      */
     public function getPort(): int
     {
@@ -75,7 +67,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The port on which the database cluster is listening.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The name of the default database.
-     *
      */
     public function getDbname(): string
     {
@@ -95,7 +85,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The name of the default database.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The default user for the database.
-     *
      */
     public function getUsername(): string
     {
@@ -115,7 +103,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The default user for the database.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The randomly generated password for the default user.
-     *
      */
     public function getPassword(): string
     {
@@ -135,7 +121,6 @@ class SourceDatabaseSource extends \ArrayObject
     }
     /**
      * The randomly generated password for the default user.
-     *
      *
      * @return self
      */

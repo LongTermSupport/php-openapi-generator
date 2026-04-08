@@ -22,17 +22,14 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional Anthropic API key ID to use with Anthropic models
-     *
      */
     protected string $anthropicKeyUuid;
     /**
      * A text description of the agent, not used in inference
-     *
      */
     protected string $description;
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     protected string $instruction;
     /**
@@ -44,27 +41,22 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     protected string $modelProviderKeyUuid;
     /**
      * Identifier for the foundation model.
-     *
      */
     protected string $modelUuid;
     /**
      * Agent name
-     *
      */
     protected string $name;
     /**
      * Optional OpenAI API key ID to use with OpenAI models
-     *
      */
     protected string $openAiKeyUuid;
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
      */
     protected string $projectId;
     /**
      * The DigitalOcean region to deploy your agent in
-     *
      */
     protected string $region;
     /**
@@ -75,12 +67,10 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     protected array $tags;
     /**
      * Identifier for the workspace
-     *
      */
     protected string $workspaceUuid;
     /**
      * Optional Anthropic API key ID to use with Anthropic models
-     *
      */
     public function getAnthropicKeyUuid(): string
     {
@@ -88,7 +78,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional Anthropic API key ID to use with Anthropic models
-     *
      *
      * @return self
      */
@@ -100,7 +89,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * A text description of the agent, not used in inference
-     *
      */
     public function getDescription(): string
     {
@@ -108,7 +96,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * A text description of the agent, not used in inference
-     *
      *
      * @return self
      */
@@ -120,7 +107,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     public function getInstruction(): string
     {
@@ -128,7 +114,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      *
      * @return self
      */
@@ -172,7 +157,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
      */
     public function getModelUuid(): string
     {
@@ -180,7 +164,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
      *
      * @return self
      */
@@ -192,7 +175,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
      */
     public function getName(): string
     {
@@ -200,7 +182,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
      *
      * @return self
      */
@@ -212,7 +193,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional OpenAI API key ID to use with OpenAI models
-     *
      */
     public function getOpenAiKeyUuid(): string
     {
@@ -220,7 +200,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional OpenAI API key ID to use with OpenAI models
-     *
      *
      * @return self
      */
@@ -232,7 +211,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
      */
     public function getProjectId(): string
     {
@@ -240,7 +218,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this agent will belong to
-     *
      *
      * @return self
      */
@@ -252,7 +229,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * The DigitalOcean region to deploy your agent in
-     *
      */
     public function getRegion(): string
     {
@@ -260,7 +236,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * The DigitalOcean region to deploy your agent in
-     *
      *
      * @return self
      */
@@ -294,7 +269,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the workspace
-     *
      */
     public function getWorkspaceUuid(): string
     {
@@ -302,7 +276,6 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the workspace
-     *
      *
      * @return self
      */

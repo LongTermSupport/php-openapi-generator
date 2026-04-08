@@ -22,32 +22,26 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The name of the opensearch index.
-     *
      */
     protected string $indexName;
     /**
      * The number of shards for the index.
-     *
      */
     protected int $numberOfShards;
     /**
      * The number of replicas for the index.
-     *
      */
     protected int $numberOfReplicas;
     /**
      * The size of the index.
-     *
      */
     protected int $size;
     /**
      * The date and time the index was created.
-     *
      */
     protected \DateTime $createdTime;
     /**
      * The name of the opensearch index.
-     *
      */
     public function getIndexName(): string
     {
@@ -55,7 +49,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The name of the opensearch index.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The number of shards for the index.
-     *
      */
     public function getNumberOfShards(): int
     {
@@ -75,7 +67,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The number of shards for the index.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The number of replicas for the index.
-     *
      */
     public function getNumberOfReplicas(): int
     {
@@ -95,7 +85,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The number of replicas for the index.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The size of the index.
-     *
      */
     public function getSize(): int
     {
@@ -115,7 +103,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The size of the index.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The date and time the index was created.
-     *
      */
     public function getCreatedTime(): \DateTime
     {
@@ -135,7 +121,6 @@ class OpensearchIndexBase extends \ArrayObject
     }
     /**
      * The date and time the index was created.
-     *
      *
      * @return self
      */

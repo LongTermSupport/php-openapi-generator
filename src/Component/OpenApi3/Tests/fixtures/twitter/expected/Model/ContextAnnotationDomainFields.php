@@ -22,22 +22,18 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * The unique id for a context annotation domain.
-     *
      */
     protected string $id;
     /**
      * Name of the context annotation domain.
-     *
      */
     protected string $name;
     /**
      * Description of the context annotation domain.
-     *
      */
     protected string $description;
     /**
      * The unique id for a context annotation domain.
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * The unique id for a context annotation domain.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * Name of the context annotation domain.
-     *
      */
     public function getName(): string
     {
@@ -65,7 +59,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * Name of the context annotation domain.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * Description of the context annotation domain.
-     *
      */
     public function getDescription(): string
     {
@@ -85,7 +77,6 @@ class ContextAnnotationDomainFields extends \ArrayObject
     }
     /**
      * Description of the context annotation domain.
-     *
      *
      * @return self
      */

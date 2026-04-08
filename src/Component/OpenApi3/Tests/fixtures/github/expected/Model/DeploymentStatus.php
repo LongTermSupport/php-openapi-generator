@@ -25,23 +25,19 @@ class DeploymentStatus extends \ArrayObject
     protected string $nodeId;
     /**
      * The state of the status.
-     *
      */
     protected string $state;
     protected ?DeploymentStatusCreator $creator = null;
     /**
      * A short description of the status.
-     *
      */
     protected string $description = '';
     /**
      * The environment of the deployment that the status is for.
-     *
      */
     protected string $environment = '';
     /**
      * Deprecated: the URL to associate with this status.
-     *
      */
     protected string $targetUrl = '';
     protected \DateTime $createdAt;
@@ -50,12 +46,10 @@ class DeploymentStatus extends \ArrayObject
     protected string $repositoryUrl;
     /**
      * The URL for accessing your environment.
-     *
      */
     protected string $environmentUrl = '';
     /**
      * The URL to associate with this status.
-     *
      */
     protected string $logUrl = '';
     protected ?DeploymentStatusPerformedViaGithubApp $performedViaGithubApp = null;
@@ -91,7 +85,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The state of the status.
-     *
      */
     public function getState(): string
     {
@@ -99,7 +92,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The state of the status.
-     *
      *
      * @return self
      */
@@ -121,7 +113,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * A short description of the status.
-     *
      */
     public function getDescription(): string
     {
@@ -129,7 +120,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * A short description of the status.
-     *
      *
      * @return self
      */
@@ -141,7 +131,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The environment of the deployment that the status is for.
-     *
      */
     public function getEnvironment(): string
     {
@@ -149,7 +138,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The environment of the deployment that the status is for.
-     *
      *
      * @return self
      */
@@ -161,7 +149,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * Deprecated: the URL to associate with this status.
-     *
      */
     public function getTargetUrl(): string
     {
@@ -169,7 +156,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * Deprecated: the URL to associate with this status.
-     *
      *
      * @return self
      */
@@ -221,7 +207,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The URL for accessing your environment.
-     *
      */
     public function getEnvironmentUrl(): string
     {
@@ -229,7 +214,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The URL for accessing your environment.
-     *
      *
      * @return self
      */
@@ -241,7 +225,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The URL to associate with this status.
-     *
      */
     public function getLogUrl(): string
     {
@@ -249,7 +232,6 @@ class DeploymentStatus extends \ArrayObject
     }
     /**
      * The URL to associate with this status.
-     *
      *
      * @return self
      */

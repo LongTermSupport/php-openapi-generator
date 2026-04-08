@@ -31,12 +31,10 @@ class ReferenceUpdateException extends \ArrayObject
     protected ?string $userId = null;
     /**
      * This is the source of the reference.
-     *
      */
     protected ?string $referenceItemId = null;
     /**
      * This is the DocType of the source of the reference.
-     *
      */
     protected ?string $referenceType = null;
     /**
@@ -137,7 +135,6 @@ class ReferenceUpdateException extends \ArrayObject
     }
     /**
      * This is the source of the reference.
-     *
      */
     public function getReferenceItemId(): ?string
     {
@@ -145,7 +142,6 @@ class ReferenceUpdateException extends \ArrayObject
     }
     /**
      * This is the source of the reference.
-     *
      *
      * @return self
      */
@@ -157,7 +153,6 @@ class ReferenceUpdateException extends \ArrayObject
     }
     /**
      * This is the DocType of the source of the reference.
-     *
      */
     public function getReferenceType(): ?string
     {
@@ -165,7 +160,6 @@ class ReferenceUpdateException extends \ArrayObject
     }
     /**
      * This is the DocType of the source of the reference.
-     *
      *
      * @return self
      */

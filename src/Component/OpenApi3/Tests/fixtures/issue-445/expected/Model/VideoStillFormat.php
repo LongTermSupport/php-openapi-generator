@@ -20,7 +20,6 @@ class VideoStillFormat extends FormatBase
     protected ?string $extension = null;
     /**
      * Specifies the position from which to produce the image.
-     *
      */
     protected int $positionInSeconds;
     public function getExtension(): ?string
@@ -35,7 +34,6 @@ class VideoStillFormat extends FormatBase
     }
     /**
      * Specifies the position from which to produce the image.
-     *
      */
     public function getPositionInSeconds(): int
     {
@@ -43,7 +41,6 @@ class VideoStillFormat extends FormatBase
     }
     /**
      * Specifies the position from which to produce the image.
-     *
      *
      * @return self
      */

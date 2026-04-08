@@ -25,7 +25,6 @@ class ContentRestoreManyRequest
     protected array $contentIds;
     /**
      * Allows creating contents that refer to list items or contents that don't exist in the system.
-     *
      */
     protected bool $allowMissingDependencies;
     /**
@@ -52,7 +51,6 @@ class ContentRestoreManyRequest
     }
     /**
      * Allows creating contents that refer to list items or contents that don't exist in the system.
-     *
      */
     public function getAllowMissingDependencies(): bool
     {
@@ -60,7 +58,6 @@ class ContentRestoreManyRequest
     }
     /**
      * Allows creating contents that refer to list items or contents that don't exist in the system.
-     *
      *
      * @return self
      */

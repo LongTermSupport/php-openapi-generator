@@ -22,12 +22,10 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
      */
     protected string $name;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -38,17 +36,14 @@ class SnapshotsBase extends \ArrayObject
     protected array $regions;
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      */
     protected int $minDiskSize;
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      */
     protected float $sizeGigabytes;
     /**
      * A human-readable name for the snapshot.
-     *
      */
     public function getName(): string
     {
@@ -56,7 +51,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
      *
      * @return self
      */
@@ -68,7 +62,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -76,7 +69,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      *
      * @return self
      */
@@ -110,7 +102,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      */
     public function getMinDiskSize(): int
     {
@@ -118,7 +109,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      *
      * @return self
      */
@@ -130,7 +120,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      */
     public function getSizeGigabytes(): float
     {
@@ -138,7 +127,6 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      *
      * @return self
      */

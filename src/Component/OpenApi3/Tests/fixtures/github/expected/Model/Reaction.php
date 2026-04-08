@@ -25,7 +25,6 @@ class Reaction extends \ArrayObject
     protected ?ReactionUser $user = null;
     /**
      * The reaction to use
-     *
      */
     protected string $content;
     protected \DateTime $createdAt;
@@ -61,7 +60,6 @@ class Reaction extends \ArrayObject
     }
     /**
      * The reaction to use
-     *
      */
     public function getContent(): string
     {
@@ -69,7 +67,6 @@ class Reaction extends \ArrayObject
     }
     /**
      * The reaction to use
-     *
      *
      * @return self
      */

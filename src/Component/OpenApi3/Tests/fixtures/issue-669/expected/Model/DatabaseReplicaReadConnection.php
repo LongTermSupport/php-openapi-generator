@@ -22,42 +22,34 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * A connection string in the format accepted by the `psql` command. This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
      */
     protected string $uri;
     /**
      * The name of the default database.
-     *
      */
     protected string $database;
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
      */
     protected string $host;
     /**
      * The port on which the database cluster is listening.
-     *
      */
     protected int $port;
     /**
      * The default user for the database.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     protected string $user;
     /**
      * The randomly generated password for the default user.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     protected string $password;
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
      */
     protected bool $ssl;
     /**
      * A connection string in the format accepted by the `psql` command. This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
      */
     public function getUri(): string
     {
@@ -65,7 +57,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * A connection string in the format accepted by the `psql` command. This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The name of the default database.
-     *
      */
     public function getDatabase(): string
     {
@@ -85,7 +75,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The name of the default database.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
      */
     public function getHost(): string
     {
@@ -105,7 +93,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The FQDN pointing to the database cluster's current primary node.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The port on which the database cluster is listening.
-     *
      */
     public function getPort(): int
     {
@@ -125,7 +111,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The port on which the database cluster is listening.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The default user for the database.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     public function getUser(): string
     {
@@ -145,7 +129,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The default user for the database.<br><br>Requires `database:view_credentials` scope.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The randomly generated password for the default user.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     public function getPassword(): string
     {
@@ -165,7 +147,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * The randomly generated password for the default user.<br><br>Requires `database:view_credentials` scope.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
      */
     public function getSsl(): bool
     {
@@ -185,7 +165,6 @@ class DatabaseReplicaReadConnection extends \ArrayObject
     }
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
      *
      * @return self
      */

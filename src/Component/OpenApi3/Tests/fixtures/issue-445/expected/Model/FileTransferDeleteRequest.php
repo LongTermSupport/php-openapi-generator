@@ -19,7 +19,6 @@ class FileTransferDeleteRequest
     }
     /**
      * ID of transfer.
-     *
      */
     protected string $transferId;
     /**
@@ -30,7 +29,6 @@ class FileTransferDeleteRequest
     protected array $fileTransferIds;
     /**
      * ID of transfer.
-     *
      */
     public function getTransferId(): string
     {
@@ -38,7 +36,6 @@ class FileTransferDeleteRequest
     }
     /**
      * ID of transfer.
-     *
      *
      * @return self
      */

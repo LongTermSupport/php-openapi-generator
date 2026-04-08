@@ -32,7 +32,6 @@ class Status extends \ArrayObject
     protected string $updatedAt;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $creator = null;
     public function getUrl(): string
@@ -137,7 +136,6 @@ class Status extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getCreator(): ?SimpleUser
     {
@@ -145,7 +143,6 @@ class Status extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

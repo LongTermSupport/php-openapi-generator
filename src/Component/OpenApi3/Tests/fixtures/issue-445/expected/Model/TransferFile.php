@@ -21,19 +21,16 @@ class TransferFile
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
      */
     protected ?string $identifier = null;
     /**
      * Client generated identifier of the item.
-     *
      */
     protected ?string $requestId = null;
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
      *
      * @deprecated
-     *
      */
     public function getIdentifier(): ?string
     {
@@ -41,7 +38,6 @@ class TransferFile
     }
     /**
      * Replaced in favor of RequestId. Client generated identifier of the item.
-     *
      *
      * @deprecated
      *
@@ -55,7 +51,6 @@ class TransferFile
     }
     /**
      * Client generated identifier of the item.
-     *
      */
     public function getRequestId(): ?string
     {
@@ -63,7 +58,6 @@ class TransferFile
     }
     /**
      * Client generated identifier of the item.
-     *
      *
      * @return self
      */

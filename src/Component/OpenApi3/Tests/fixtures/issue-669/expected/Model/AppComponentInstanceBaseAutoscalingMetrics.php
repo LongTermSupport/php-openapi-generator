@@ -22,12 +22,10 @@ class AppComponentInstanceBaseAutoscalingMetrics extends \ArrayObject
     }
     /**
      * Settings for scaling the component based on CPU utilization.
-     *
      */
     protected AppComponentInstanceBaseAutoscalingMetricsCpu $cpu;
     /**
      * Settings for scaling the component based on CPU utilization.
-     *
      */
     public function getCpu(): AppComponentInstanceBaseAutoscalingMetricsCpu
     {
@@ -35,7 +33,6 @@ class AppComponentInstanceBaseAutoscalingMetrics extends \ArrayObject
     }
     /**
      * Settings for scaling the component based on CPU utilization.
-     *
      *
      * @return self
      */

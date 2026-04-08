@@ -22,32 +22,26 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The tag's name. This is typically a version (e.g., "v0.0.1").
-     *
      */
     protected string $tag;
     /**
      * The tag message.
-     *
      */
     protected string $message;
     /**
      * The SHA of the git object this is tagging.
-     *
      */
     protected string $object;
     /**
      * The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
-     *
      */
     protected string $type;
     /**
      * An object with information about the individual creating the tag.
-     *
      */
     protected ReposOwnerRepoGitTagsPostBodyTagger $tagger;
     /**
      * The tag's name. This is typically a version (e.g., "v0.0.1").
-     *
      */
     public function getTag(): string
     {
@@ -55,7 +49,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The tag's name. This is typically a version (e.g., "v0.0.1").
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The tag message.
-     *
      */
     public function getMessage(): string
     {
@@ -75,7 +67,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The tag message.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the git object this is tagging.
-     *
      */
     public function getObject(): string
     {
@@ -95,7 +85,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the git object this is tagging.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
-     *
      */
     public function getType(): string
     {
@@ -115,7 +103,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * An object with information about the individual creating the tag.
-     *
      */
     public function getTagger(): ReposOwnerRepoGitTagsPostBodyTagger
     {
@@ -135,7 +121,6 @@ class ReposOwnerRepoGitTagsPostBody extends \ArrayObject
     }
     /**
      * An object with information about the individual creating the tag.
-     *
      *
      * @return self
      */

@@ -25,7 +25,6 @@ class BookJsonldReviewRead extends \ArrayObject
     protected string $type;
     /**
      * The title of the book.
-     *
      */
     protected string $title;
     public function getContext(): mixed
@@ -60,7 +59,6 @@ class BookJsonldReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      */
     public function getTitle(): string
     {
@@ -68,7 +66,6 @@ class BookJsonldReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      *
      * @return self
      */

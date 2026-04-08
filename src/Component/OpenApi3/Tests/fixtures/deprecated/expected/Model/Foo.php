@@ -24,7 +24,6 @@ class Foo extends \ArrayObject
     protected string $email;
     /**
      * @deprecated
-     *
      */
     protected string $bar;
     public function getEmail(): string
@@ -39,14 +38,12 @@ class Foo extends \ArrayObject
     }
     /**
      * @deprecated
-     *
      */
     public function getBar(): string
     {
         return $this->bar;
     }
     /**
-     *
      * @deprecated
      *
      * @return self

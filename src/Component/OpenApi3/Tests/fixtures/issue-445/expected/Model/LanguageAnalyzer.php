@@ -19,17 +19,14 @@ class LanguageAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: Language
-     *
      */
     protected mixed $type = null;
     /**
      * The suffix for the analyzed field: language.
-     *
      */
     protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: Language
-     *
      */
     public function getType(): mixed
     {
@@ -37,7 +34,6 @@ class LanguageAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: Language
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class LanguageAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: language.
-     *
      */
     public function getFieldSuffix(): ?string
     {
@@ -57,7 +52,6 @@ class LanguageAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: language.
-     *
      *
      * @return self
      */

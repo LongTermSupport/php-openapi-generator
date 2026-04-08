@@ -19,38 +19,31 @@ class ShareOutputBase
     }
     /**
      * Content ID.
-     *
      */
     protected string $contentId;
     /**
      * Output format ID.
-     *
      */
     protected string $outputFormatId;
     /**
      * Url to directly view output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
-     *
      */
     protected ?string $viewUrl = null;
     /**
      * Url to directly download output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
-     *
      */
     protected ?string $downloadUrl = null;
     /**
      * Output details.
-     *
      */
     protected mixed $detail = null;
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     protected bool $dynamicRendering;
     protected string $kind;
     /**
      * Content ID.
-     *
      */
     public function getContentId(): string
     {
@@ -58,7 +51,6 @@ class ShareOutputBase
     }
     /**
      * Content ID.
-     *
      */
     public function setContentId(string $contentId): void
     {
@@ -67,7 +59,6 @@ class ShareOutputBase
     }
     /**
      * Output format ID.
-     *
      */
     public function getOutputFormatId(): string
     {
@@ -75,7 +66,6 @@ class ShareOutputBase
     }
     /**
      * Output format ID.
-     *
      */
     public function setOutputFormatId(string $outputFormatId): void
     {
@@ -84,7 +74,6 @@ class ShareOutputBase
     }
     /**
      * Url to directly view output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
-     *
      */
     public function getViewUrl(): ?string
     {
@@ -92,7 +81,6 @@ class ShareOutputBase
     }
     /**
      * Url to directly view output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
-     *
      */
     public function setViewUrl(?string $viewUrl): void
     {
@@ -101,7 +89,6 @@ class ShareOutputBase
     }
     /**
      * Url to directly download output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
-     *
      */
     public function getDownloadUrl(): ?string
     {
@@ -109,7 +96,6 @@ class ShareOutputBase
     }
     /**
      * Url to directly download output. In case of BasicShare if not fetched using a token, a placeholder {token} is included which needs to be replaced with the recipient's token
-     *
      */
     public function setDownloadUrl(?string $downloadUrl): void
     {
@@ -118,7 +104,6 @@ class ShareOutputBase
     }
     /**
      * Output details.
-     *
      */
     public function getDetail(): mixed
     {
@@ -126,7 +111,6 @@ class ShareOutputBase
     }
     /**
      * Output details.
-     *
      */
     public function setDetail(mixed $detail): void
     {
@@ -135,7 +119,6 @@ class ShareOutputBase
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     public function getDynamicRendering(): bool
     {
@@ -143,7 +126,6 @@ class ShareOutputBase
     }
     /**
      * Whether this Output belongs to a dynamic OutputFormat
-     *
      */
     public function setDynamicRendering(bool $dynamicRendering): void
     {

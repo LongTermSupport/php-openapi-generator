@@ -19,7 +19,6 @@ class BaseResultOfFileTransfer
     }
     /**
      * The total number of matching documents.
-     *
      */
     protected int $totalResults;
     /**
@@ -30,17 +29,14 @@ class BaseResultOfFileTransfer
     protected array $results;
     /**
      * The search execution time in milliseconds.
-     *
      */
     protected int $elapsedMilliseconds;
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * The total number of matching documents.
-     *
      */
     public function getTotalResults(): int
     {
@@ -48,7 +44,6 @@ class BaseResultOfFileTransfer
     }
     /**
      * The total number of matching documents.
-     *
      *
      * @return self
      */
@@ -82,7 +77,6 @@ class BaseResultOfFileTransfer
     }
     /**
      * The search execution time in milliseconds.
-     *
      */
     public function getElapsedMilliseconds(): int
     {
@@ -90,7 +84,6 @@ class BaseResultOfFileTransfer
     }
     /**
      * The search execution time in milliseconds.
-     *
      *
      * @return self
      */
@@ -102,7 +95,6 @@ class BaseResultOfFileTransfer
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -110,7 +102,6 @@ class BaseResultOfFileTransfer
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      *
      * @return self
      */

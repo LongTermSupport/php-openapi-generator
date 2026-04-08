@@ -19,42 +19,34 @@ class Transfer
     }
     /**
      * ID of transfer.
-     *
      */
     protected string $id;
     /**
      * Name of transfer.
-     *
      */
     protected string $name;
     /**
      * State of transfer.
-     *
      */
     protected mixed $state = null;
     /**
      * Type of transfer.
-     *
      */
     protected mixed $transferType = null;
     /**
      * Associated business process ID.
-     *
      */
     protected ?string $businessProcessId = null;
     /**
      * Number of files in transfer.
-     *
      */
     protected int $fileTransferCount;
     /**
      * ID of collection created from transfer.
-     *
      */
     protected ?string $collectionId = null;
     /**
      * ID of transfer.
-     *
      */
     public function getId(): string
     {
@@ -62,7 +54,6 @@ class Transfer
     }
     /**
      * ID of transfer.
-     *
      *
      * @return self
      */
@@ -74,7 +65,6 @@ class Transfer
     }
     /**
      * Name of transfer.
-     *
      */
     public function getName(): string
     {
@@ -82,7 +72,6 @@ class Transfer
     }
     /**
      * Name of transfer.
-     *
      *
      * @return self
      */
@@ -94,7 +83,6 @@ class Transfer
     }
     /**
      * State of transfer.
-     *
      */
     public function getState(): mixed
     {
@@ -102,7 +90,6 @@ class Transfer
     }
     /**
      * State of transfer.
-     *
      *
      * @return self
      */
@@ -114,7 +101,6 @@ class Transfer
     }
     /**
      * Type of transfer.
-     *
      */
     public function getTransferType(): mixed
     {
@@ -122,7 +108,6 @@ class Transfer
     }
     /**
      * Type of transfer.
-     *
      *
      * @return self
      */
@@ -134,7 +119,6 @@ class Transfer
     }
     /**
      * Associated business process ID.
-     *
      */
     public function getBusinessProcessId(): ?string
     {
@@ -142,7 +126,6 @@ class Transfer
     }
     /**
      * Associated business process ID.
-     *
      *
      * @return self
      */
@@ -154,7 +137,6 @@ class Transfer
     }
     /**
      * Number of files in transfer.
-     *
      */
     public function getFileTransferCount(): int
     {
@@ -162,7 +144,6 @@ class Transfer
     }
     /**
      * Number of files in transfer.
-     *
      *
      * @return self
      */
@@ -174,7 +155,6 @@ class Transfer
     }
     /**
      * ID of collection created from transfer.
-     *
      */
     public function getCollectionId(): ?string
     {
@@ -182,7 +162,6 @@ class Transfer
     }
     /**
      * ID of collection created from transfer.
-     *
      *
      * @return self
      */

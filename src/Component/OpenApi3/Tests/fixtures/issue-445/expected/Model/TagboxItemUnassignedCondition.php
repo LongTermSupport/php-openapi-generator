@@ -19,17 +19,14 @@ class TagboxItemUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * Ref Id of the list item that was unassigned from the tagbox
-     *
      */
     protected ?string $refId = null;
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -37,7 +34,6 @@ class TagboxItemUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class TagboxItemUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * Ref Id of the list item that was unassigned from the tagbox
-     *
      */
     public function getRefId(): ?string
     {
@@ -57,7 +52,6 @@ class TagboxItemUnassignedCondition extends BusinessRuleCondition
     }
     /**
      * Ref Id of the list item that was unassigned from the tagbox
-     *
      *
      * @return self
      */

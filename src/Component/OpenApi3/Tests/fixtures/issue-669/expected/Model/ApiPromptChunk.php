@@ -22,32 +22,26 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The usage percentage of the chunk.
-     *
      */
     protected float $chunkUsagePct;
     /**
      * Indicates if the chunk was used in the prompt.
-     *
      */
     protected bool $chunkUsed;
     /**
      * The index uuid (Knowledge Base) of the chunk.
-     *
      */
     protected string $indexUuid;
     /**
      * The source name for the chunk, e.g., the file name or document title.
-     *
      */
     protected string $sourceName;
     /**
      * Text content of the chunk.
-     *
      */
     protected string $text;
     /**
      * The usage percentage of the chunk.
-     *
      */
     public function getChunkUsagePct(): float
     {
@@ -55,7 +49,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The usage percentage of the chunk.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * Indicates if the chunk was used in the prompt.
-     *
      */
     public function getChunkUsed(): bool
     {
@@ -75,7 +67,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * Indicates if the chunk was used in the prompt.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The index uuid (Knowledge Base) of the chunk.
-     *
      */
     public function getIndexUuid(): string
     {
@@ -95,7 +85,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The index uuid (Knowledge Base) of the chunk.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The source name for the chunk, e.g., the file name or document title.
-     *
      */
     public function getSourceName(): string
     {
@@ -115,7 +103,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * The source name for the chunk, e.g., the file name or document title.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * Text content of the chunk.
-     *
      */
     public function getText(): string
     {
@@ -135,7 +121,6 @@ class ApiPromptChunk extends \ArrayObject
     }
     /**
      * Text content of the chunk.
-     *
      *
      * @return self
      */

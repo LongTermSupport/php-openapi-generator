@@ -25,7 +25,6 @@ class BankMatchVerify extends \ArrayObject
     protected string $iban;
     /**
      * Match or No Match
-     *
      */
     protected string $ibanResult;
     protected string $ibanText;
@@ -33,24 +32,20 @@ class BankMatchVerify extends \ArrayObject
     protected string $safeNumber;
     /**
      * Match or No Match
-     *
      */
     protected string $scanResult;
     protected string $scanText;
     protected string $sortCode;
     /**
      * Request status, e.g. Success, Error, Warning
-     *
      */
     protected string $statusResult;
     /**
      * Explanation for error or warning, if applicable, otherwise empty quotation marks
-     *
      */
     protected string $statusText;
     /**
      * Match or No Match
-     *
      */
     protected string $vatResult;
     protected string $vatText;
@@ -86,7 +81,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
      */
     public function getIbanResult(): string
     {
@@ -94,7 +88,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
      *
      * @return self
      */
@@ -136,7 +129,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
      */
     public function getScanResult(): string
     {
@@ -144,7 +136,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
      *
      * @return self
      */
@@ -176,7 +167,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Request status, e.g. Success, Error, Warning
-     *
      */
     public function getStatusResult(): string
     {
@@ -184,7 +174,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Request status, e.g. Success, Error, Warning
-     *
      *
      * @return self
      */
@@ -196,7 +185,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Explanation for error or warning, if applicable, otherwise empty quotation marks
-     *
      */
     public function getStatusText(): string
     {
@@ -204,7 +192,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Explanation for error or warning, if applicable, otherwise empty quotation marks
-     *
      *
      * @return self
      */
@@ -216,7 +203,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
      */
     public function getVatResult(): string
     {
@@ -224,7 +210,6 @@ class BankMatchVerify extends \ArrayObject
     }
     /**
      * Match or No Match
-     *
      *
      * @return self
      */

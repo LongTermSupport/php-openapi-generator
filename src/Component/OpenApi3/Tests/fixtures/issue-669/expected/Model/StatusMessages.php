@@ -22,17 +22,14 @@ class StatusMessages extends \ArrayObject
     }
     /**
      * Status information about the cluster which impacts it's lifecycle.
-     *
      */
     protected string $message;
     /**
      * A timestamp in ISO8601 format that represents when the status message was emitted.
-     *
      */
     protected \DateTime $timestamp;
     /**
      * Status information about the cluster which impacts it's lifecycle.
-     *
      */
     public function getMessage(): string
     {
@@ -40,7 +37,6 @@ class StatusMessages extends \ArrayObject
     }
     /**
      * Status information about the cluster which impacts it's lifecycle.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class StatusMessages extends \ArrayObject
     }
     /**
      * A timestamp in ISO8601 format that represents when the status message was emitted.
-     *
      */
     public function getTimestamp(): \DateTime
     {
@@ -60,7 +55,6 @@ class StatusMessages extends \ArrayObject
     }
     /**
      * A timestamp in ISO8601 format that represents when the status message was emitted.
-     *
      *
      * @return self
      */

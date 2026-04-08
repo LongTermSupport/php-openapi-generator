@@ -22,12 +22,10 @@ class MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem extend
     }
     /**
      * Company Safe Number or Connect ID. Not required when removeAll query parameter is set to true.
-     *
      */
     protected string $id;
     /**
      * Company Safe Number or Connect ID. Not required when removeAll query parameter is set to true.
-     *
      */
     public function getId(): string
     {
@@ -35,7 +33,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem extend
     }
     /**
      * Company Safe Number or Connect ID. Not required when removeAll query parameter is set to true.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
      */
     protected string $type;
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     protected string $region;
     /**
      * The unique identifier for the Droplet the volume will be attached or detached from.
-     *
      */
     protected int $dropletId;
     /**
@@ -43,7 +40,6 @@ class VolumeActionPostAttach extends \ArrayObject
     protected ?array $tags = null;
     /**
      * The volume action to initiate.
-     *
      */
     public function getType(): string
     {
@@ -51,7 +47,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
      *
      * @return self
      */
@@ -63,7 +58,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     public function getRegion(): string
     {
@@ -71,7 +65,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      *
      * @return self
      */
@@ -83,7 +76,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet the volume will be attached or detached from.
-     *
      */
     public function getDropletId(): int
     {
@@ -91,7 +83,6 @@ class VolumeActionPostAttach extends \ArrayObject
     }
     /**
      * The unique identifier for the Droplet the volume will be attached or detached from.
-     *
      *
      * @return self
      */

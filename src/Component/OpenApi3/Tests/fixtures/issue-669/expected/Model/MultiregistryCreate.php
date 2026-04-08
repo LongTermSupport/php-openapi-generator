@@ -22,22 +22,18 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
      */
     protected string $name;
     /**
      * The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint.
-     *
      */
     protected string $subscriptionTierSlug;
     /**
      * Slug of the region where registry data is stored. When not provided, a region will be selected.
-     *
      */
     protected string $region;
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint.
-     *
      */
     public function getSubscriptionTierSlug(): string
     {
@@ -65,7 +59,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * Slug of the region where registry data is stored. When not provided, a region will be selected.
-     *
      */
     public function getRegion(): string
     {
@@ -85,7 +77,6 @@ class MultiregistryCreate extends \ArrayObject
     }
     /**
      * Slug of the region where registry data is stored. When not provided, a region will be selected.
-     *
      *
      * @return self
      */

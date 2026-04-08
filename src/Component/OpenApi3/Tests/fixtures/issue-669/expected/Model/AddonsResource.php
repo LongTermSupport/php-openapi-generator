@@ -22,47 +22,38 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The unique identifier for the addon resource.
-     *
      */
     protected string $uuid;
     /**
      * The name of the addon resource.
-     *
      */
     protected string $name;
     /**
      * The state the resource is currently in.
-     *
      */
     protected string $state;
     /**
      * The name of the application associated with the resource.
-     *
      */
     protected string $appName;
     /**
      * The slug identifier for the application associated with the resource.
-     *
      */
     protected string $appSlug;
     /**
      * The name of the plan associated with the resource.
-     *
      */
     protected string $planName;
     /**
      * The slug identifier for the plan associated with the resource.
-     *
      */
     protected string $planSlug;
     /**
      * The price of the plan per month in US dollars.
-     *
      */
     protected int $planPricePerMonth;
     /**
      * Indicates if the resource has configuration values set by the vendor.
-     *
      */
     protected bool $hasConfig;
     /**
@@ -73,17 +64,14 @@ class AddonsResource extends \ArrayObject
     protected array $metadata;
     /**
      * The Single Sign-On URL for the resource, if applicable.
-     *
      */
     protected string $ssoUrl;
     /**
      * A message related to the resource, if applicable.
-     *
      */
     protected string $message;
     /**
      * The unique identifier for the addon resource.
-     *
      */
     public function getUuid(): string
     {
@@ -91,7 +79,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The unique identifier for the addon resource.
-     *
      *
      * @return self
      */
@@ -103,7 +90,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the addon resource.
-     *
      */
     public function getName(): string
     {
@@ -111,7 +97,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the addon resource.
-     *
      *
      * @return self
      */
@@ -123,7 +108,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The state the resource is currently in.
-     *
      */
     public function getState(): string
     {
@@ -131,7 +115,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The state the resource is currently in.
-     *
      *
      * @return self
      */
@@ -143,7 +126,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the application associated with the resource.
-     *
      */
     public function getAppName(): string
     {
@@ -151,7 +133,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the application associated with the resource.
-     *
      *
      * @return self
      */
@@ -163,7 +144,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
      */
     public function getAppSlug(): string
     {
@@ -171,7 +151,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
      *
      * @return self
      */
@@ -183,7 +162,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the plan associated with the resource.
-     *
      */
     public function getPlanName(): string
     {
@@ -191,7 +169,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The name of the plan associated with the resource.
-     *
      *
      * @return self
      */
@@ -203,7 +180,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The slug identifier for the plan associated with the resource.
-     *
      */
     public function getPlanSlug(): string
     {
@@ -211,7 +187,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The slug identifier for the plan associated with the resource.
-     *
      *
      * @return self
      */
@@ -223,7 +198,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The price of the plan per month in US dollars.
-     *
      */
     public function getPlanPricePerMonth(): int
     {
@@ -231,7 +205,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The price of the plan per month in US dollars.
-     *
      *
      * @return self
      */
@@ -243,7 +216,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * Indicates if the resource has configuration values set by the vendor.
-     *
      */
     public function getHasConfig(): bool
     {
@@ -251,7 +223,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * Indicates if the resource has configuration values set by the vendor.
-     *
      *
      * @return self
      */
@@ -285,7 +256,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The Single Sign-On URL for the resource, if applicable.
-     *
      */
     public function getSsoUrl(): string
     {
@@ -293,7 +263,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * The Single Sign-On URL for the resource, if applicable.
-     *
      *
      * @return self
      */
@@ -305,7 +274,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * A message related to the resource, if applicable.
-     *
      */
     public function getMessage(): string
     {
@@ -313,7 +281,6 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * A message related to the resource, if applicable.
-     *
      *
      * @return self
      */

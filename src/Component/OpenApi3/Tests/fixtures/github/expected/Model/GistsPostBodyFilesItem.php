@@ -22,12 +22,10 @@ class GistsPostBodyFilesItem extends \ArrayObject
     }
     /**
      * Content of the file
-     *
      */
     protected string $content;
     /**
      * Content of the file
-     *
      */
     public function getContent(): string
     {
@@ -35,7 +33,6 @@ class GistsPostBodyFilesItem extends \ArrayObject
     }
     /**
      * Content of the file
-     *
      *
      * @return self
      */

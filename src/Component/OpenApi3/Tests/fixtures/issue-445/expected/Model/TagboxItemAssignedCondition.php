@@ -19,17 +19,14 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * Ref Id of the list item that was assigned in the tagbox
-     *
      */
     protected ?string $refId = null;
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -37,7 +34,6 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Ref Id of the list item that was assigned in the tagbox
-     *
      */
     public function getRefId(): ?string
     {
@@ -57,7 +52,6 @@ class TagboxItemAssignedCondition extends BusinessRuleCondition
     }
     /**
      * Ref Id of the list item that was assigned in the tagbox
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's Picturepark ID.
-     *
      */
     protected ?string $id = null;
     /**
      * User's first name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * User's last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Email address of the user (doubles as username).
-     *
      */
     protected string $emailAddress;
     /**
      * Marks a user that was deleted from the system.
-     *
      */
     protected bool $isDeleted;
     /**
@@ -53,22 +48,18 @@ class UserDetail extends \ArrayObject
     protected ?array $userRoles = null;
     /**
      * Comment saved for the user.
-     *
      */
     protected ?string $comment = null;
     /**
      * Preferred language, e.g. for correspondence.
-     *
      */
     protected ?string $languageCode = null;
     /**
      * User's address.
-     *
      */
     protected mixed $address = null;
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
      */
     protected ?string $identityProviderId = null;
     /**
@@ -79,42 +70,34 @@ class UserDetail extends \ArrayObject
     protected ?array $ownerTokens = null;
     /**
      * Authorization state the user is currently in.
-     *
      */
     protected mixed $authorizationState = null;
     /**
      * Locked users are unable to log in and use the system.
-     *
      */
     protected bool $isLocked;
     /**
      * Life cycle state the user is currently in.
-     *
      */
     protected mixed $lifeCycle = null;
     /**
      * The support user is a user created for Picturepark support personnel.
-     *
      */
     protected bool $isSupportUser;
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
      */
     protected bool $isReadOnly;
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      */
     protected bool $isFederated;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * User's Picturepark ID.
-     *
      */
     public function getId(): ?string
     {
@@ -122,7 +105,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's Picturepark ID.
-     *
      *
      * @return self
      */
@@ -134,7 +116,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's first name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -142,7 +123,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's first name.
-     *
      *
      * @return self
      */
@@ -154,7 +134,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -162,7 +141,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's last name.
-     *
      *
      * @return self
      */
@@ -174,7 +152,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Email address of the user (doubles as username).
-     *
      */
     public function getEmailAddress(): string
     {
@@ -182,7 +159,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Email address of the user (doubles as username).
-     *
      *
      * @return self
      */
@@ -194,7 +170,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Marks a user that was deleted from the system.
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -202,7 +177,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Marks a user that was deleted from the system.
-     *
      *
      * @return self
      */
@@ -236,7 +210,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Comment saved for the user.
-     *
      */
     public function getComment(): ?string
     {
@@ -244,7 +217,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Comment saved for the user.
-     *
      *
      * @return self
      */
@@ -256,7 +228,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
      */
     public function getLanguageCode(): ?string
     {
@@ -264,7 +235,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Preferred language, e.g. for correspondence.
-     *
      *
      * @return self
      */
@@ -276,7 +246,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's address.
-     *
      */
     public function getAddress(): mixed
     {
@@ -284,7 +253,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * User's address.
-     *
      *
      * @return self
      */
@@ -296,7 +264,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
      */
     public function getIdentityProviderId(): ?string
     {
@@ -304,7 +271,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Identity provider that governs this user or null for Picturepark's own IdentityServer.
-     *
      *
      * @return self
      */
@@ -338,7 +304,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Authorization state the user is currently in.
-     *
      */
     public function getAuthorizationState(): mixed
     {
@@ -346,7 +311,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Authorization state the user is currently in.
-     *
      *
      * @return self
      */
@@ -358,7 +322,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Locked users are unable to log in and use the system.
-     *
      */
     public function getIsLocked(): bool
     {
@@ -366,7 +329,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Locked users are unable to log in and use the system.
-     *
      *
      * @return self
      */
@@ -378,7 +340,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Life cycle state the user is currently in.
-     *
      */
     public function getLifeCycle(): mixed
     {
@@ -386,7 +347,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Life cycle state the user is currently in.
-     *
      *
      * @return self
      */
@@ -398,7 +358,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * The support user is a user created for Picturepark support personnel.
-     *
      */
     public function getIsSupportUser(): bool
     {
@@ -406,7 +365,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * The support user is a user created for Picturepark support personnel.
-     *
      *
      * @return self
      */
@@ -418,7 +376,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
      */
     public function getIsReadOnly(): bool
     {
@@ -426,7 +383,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Read-only users can't be removed from the system, e.g. service user.
-     *
      *
      * @return self
      */
@@ -438,7 +394,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      */
     public function getIsFederated(): bool
     {
@@ -446,7 +401,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      *
      * @return self
      */
@@ -458,7 +412,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -466,7 +419,6 @@ class UserDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */

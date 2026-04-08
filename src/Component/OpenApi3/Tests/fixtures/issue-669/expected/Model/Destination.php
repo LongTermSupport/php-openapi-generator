@@ -22,25 +22,21 @@ class Destination extends \ArrayObject
     }
     /**
      * A unique identifier for a destination.
-     *
      */
     protected string $id;
     /**
      * destination name
-     *
      */
     protected string $name;
     /**
      * The destination type. `opensearch_dbaas` for a DigitalOcean managed OpenSearch
      * cluster or `opensearch_ext` for an externally managed one.
      * 
-     *
      */
     protected string $type;
     protected OpensearchConfig $config;
     /**
      * A unique identifier for a destination.
-     *
      */
     public function getId(): string
     {
@@ -48,7 +44,6 @@ class Destination extends \ArrayObject
     }
     /**
      * A unique identifier for a destination.
-     *
      *
      * @return self
      */
@@ -60,7 +55,6 @@ class Destination extends \ArrayObject
     }
     /**
      * destination name
-     *
      */
     public function getName(): string
     {
@@ -68,7 +62,6 @@ class Destination extends \ArrayObject
     }
     /**
      * destination name
-     *
      *
      * @return self
      */
@@ -82,20 +75,18 @@ class Destination extends \ArrayObject
      * The destination type. `opensearch_dbaas` for a DigitalOcean managed OpenSearch
      * cluster or `opensearch_ext` for an externally managed one.
      * 
-     *
      */
     public function getType(): string
     {
         return $this->type;
     }
     /**
-    * The destination type. `opensearch_dbaas` for a DigitalOcean managed OpenSearch
-    cluster or `opensearch_ext` for an externally managed one.
-    
-    *
-    *
-    * @return self
-    */
+     * The destination type. `opensearch_dbaas` for a DigitalOcean managed OpenSearch
+     * cluster or `opensearch_ext` for an externally managed one.
+     * 
+     *
+     * @return self
+     */
     public function setType(string $type): self
     {
         $this->initialized['type'] = true;

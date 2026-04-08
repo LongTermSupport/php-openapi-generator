@@ -19,22 +19,18 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Trace reference ID of condition.
-     *
      */
     protected ?string $traceRefId = null;
     /**
      * Indicates if this condition evaluated to true.
-     *
      */
     protected bool $satisfied;
     /**
      * Additional reason why condition evaluated to given result.
-     *
      */
     protected ?string $reason = null;
     /**
      * Trace reference ID of condition.
-     *
      */
     public function getTraceRefId(): ?string
     {
@@ -42,7 +38,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Trace reference ID of condition.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Indicates if this condition evaluated to true.
-     *
      */
     public function getSatisfied(): bool
     {
@@ -62,7 +56,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Indicates if this condition evaluated to true.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Additional reason why condition evaluated to given result.
-     *
      */
     public function getReason(): ?string
     {
@@ -82,7 +74,6 @@ class BusinessRuleTracedEvaluationCondition
     }
     /**
      * Additional reason why condition evaluated to given result.
-     *
      *
      * @return self
      */

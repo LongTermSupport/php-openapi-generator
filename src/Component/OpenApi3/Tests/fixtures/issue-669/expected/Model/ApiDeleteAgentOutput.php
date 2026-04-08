@@ -22,12 +22,10 @@ class ApiDeleteAgentOutput extends \ArrayObject
     }
     /**
      * An Agent
-     *
      */
     protected ApiAgent $agent;
     /**
      * An Agent
-     *
      */
     public function getAgent(): ApiAgent
     {
@@ -35,7 +33,6 @@ class ApiDeleteAgentOutput extends \ArrayObject
     }
     /**
      * An Agent
-     *
      *
      * @return self
      */

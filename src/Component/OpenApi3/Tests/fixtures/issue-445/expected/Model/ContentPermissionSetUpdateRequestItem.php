@@ -22,7 +22,6 @@ class ContentPermissionSetUpdateRequestItem extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -39,12 +38,10 @@ class ContentPermissionSetUpdateRequestItem extends \ArrayObject
     protected ?array $userRolesPermissionSetRights = null;
     /**
      * The permission set ID.
-     *
      */
     protected string $id;
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -52,7 +49,6 @@ class ContentPermissionSetUpdateRequestItem extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */
@@ -108,7 +104,6 @@ class ContentPermissionSetUpdateRequestItem extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
      */
     public function getId(): string
     {
@@ -116,7 +111,6 @@ class ContentPermissionSetUpdateRequestItem extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
      *
      * @return self
      */

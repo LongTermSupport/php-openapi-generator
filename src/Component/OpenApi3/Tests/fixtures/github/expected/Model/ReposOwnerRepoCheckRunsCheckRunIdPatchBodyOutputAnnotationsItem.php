@@ -22,52 +22,42 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The path of the file to add an annotation to. For example, `assets/css/main.css`.
-     *
      */
     protected string $path;
     /**
      * The start line of the annotation.
-     *
      */
     protected int $startLine;
     /**
      * The end line of the annotation.
-     *
      */
     protected int $endLine;
     /**
      * The start column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
      */
     protected int $startColumn;
     /**
      * The end column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
      */
     protected int $endColumn;
     /**
      * The level of the annotation. Can be one of `notice`, `warning`, or `failure`.
-     *
      */
     protected string $annotationLevel;
     /**
      * A short description of the feedback for these lines of code. The maximum size is 64 KB.
-     *
      */
     protected string $message;
     /**
      * The title that represents the annotation. The maximum size is 255 characters.
-     *
      */
     protected string $title;
     /**
      * Details about this annotation. The maximum size is 64 KB.
-     *
      */
     protected string $rawDetails;
     /**
      * The path of the file to add an annotation to. For example, `assets/css/main.css`.
-     *
      */
     public function getPath(): string
     {
@@ -75,7 +65,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The path of the file to add an annotation to. For example, `assets/css/main.css`.
-     *
      *
      * @return self
      */
@@ -87,7 +76,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The start line of the annotation.
-     *
      */
     public function getStartLine(): int
     {
@@ -95,7 +83,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The start line of the annotation.
-     *
      *
      * @return self
      */
@@ -107,7 +94,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The end line of the annotation.
-     *
      */
     public function getEndLine(): int
     {
@@ -115,7 +101,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The end line of the annotation.
-     *
      *
      * @return self
      */
@@ -127,7 +112,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The start column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
      */
     public function getStartColumn(): int
     {
@@ -135,7 +119,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The start column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
      *
      * @return self
      */
@@ -147,7 +130,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The end column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
      */
     public function getEndColumn(): int
     {
@@ -155,7 +137,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The end column of the annotation. Annotations only support `start_column` and `end_column` on the same line. Omit this parameter if `start_line` and `end_line` have different values.
-     *
      *
      * @return self
      */
@@ -167,7 +148,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The level of the annotation. Can be one of `notice`, `warning`, or `failure`.
-     *
      */
     public function getAnnotationLevel(): string
     {
@@ -175,7 +155,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The level of the annotation. Can be one of `notice`, `warning`, or `failure`.
-     *
      *
      * @return self
      */
@@ -187,7 +166,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * A short description of the feedback for these lines of code. The maximum size is 64 KB.
-     *
      */
     public function getMessage(): string
     {
@@ -195,7 +173,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * A short description of the feedback for these lines of code. The maximum size is 64 KB.
-     *
      *
      * @return self
      */
@@ -207,7 +184,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The title that represents the annotation. The maximum size is 255 characters.
-     *
      */
     public function getTitle(): string
     {
@@ -215,7 +191,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * The title that represents the annotation. The maximum size is 255 characters.
-     *
      *
      * @return self
      */
@@ -227,7 +202,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * Details about this annotation. The maximum size is 64 KB.
-     *
      */
     public function getRawDetails(): string
     {
@@ -235,7 +209,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputAnnotationsItem extends \A
     }
     /**
      * Details about this annotation. The maximum size is 64 KB.
-     *
      *
      * @return self
      */

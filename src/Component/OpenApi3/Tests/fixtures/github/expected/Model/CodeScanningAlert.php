@@ -23,28 +23,23 @@ class CodeScanningAlert extends \ArrayObject
     protected int $number;
     /**
      * A unique identifier for the rule used to detect the alert.
-     *
      */
     protected string $ruleId;
     /**
      * The severity of the alert.
-     *
      */
     protected string $ruleSeverity;
     /**
      * A short description of the rule used to detect the alert.
-     *
      */
     protected string $ruleDescription;
     /**
      * The name of the tool used to detect the alert.
-     *
      */
     protected ?string $tool = null;
     protected \DateTime $createdAt;
     /**
      * Whether or not the alert is open.
-     *
      */
     protected bool $open;
     protected ?CodeScanningAlertClosedBy $closedBy = null;
@@ -64,7 +59,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * A unique identifier for the rule used to detect the alert.
-     *
      */
     public function getRuleId(): string
     {
@@ -72,7 +66,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * A unique identifier for the rule used to detect the alert.
-     *
      *
      * @return self
      */
@@ -84,7 +77,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * The severity of the alert.
-     *
      */
     public function getRuleSeverity(): string
     {
@@ -92,7 +84,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * The severity of the alert.
-     *
      *
      * @return self
      */
@@ -104,7 +95,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * A short description of the rule used to detect the alert.
-     *
      */
     public function getRuleDescription(): string
     {
@@ -112,7 +102,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * A short description of the rule used to detect the alert.
-     *
      *
      * @return self
      */
@@ -124,7 +113,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * The name of the tool used to detect the alert.
-     *
      */
     public function getTool(): ?string
     {
@@ -132,7 +120,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * The name of the tool used to detect the alert.
-     *
      *
      * @return self
      */
@@ -154,7 +141,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * Whether or not the alert is open.
-     *
      */
     public function getOpen(): bool
     {
@@ -162,7 +148,6 @@ class CodeScanningAlert extends \ArrayObject
     }
     /**
      * Whether or not the alert is open.
-     *
      *
      * @return self
      */

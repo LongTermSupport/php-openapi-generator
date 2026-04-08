@@ -19,7 +19,6 @@ class BusinessRuleConfigurable extends BusinessRule
     }
     /**
      * The condition that makes this rule trigger.
-     *
      */
     protected mixed $condition = null;
     /**
@@ -36,7 +35,6 @@ class BusinessRuleConfigurable extends BusinessRule
     protected ?array $actions = null;
     /**
      * The condition that makes this rule trigger.
-     *
      */
     public function getCondition(): mixed
     {
@@ -44,7 +42,6 @@ class BusinessRuleConfigurable extends BusinessRule
     }
     /**
      * The condition that makes this rule trigger.
-     *
      *
      * @return self
      */

@@ -22,28 +22,23 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      */
     protected string $registryName;
     /**
      * The name of the repository.
-     *
      */
     protected string $name;
     protected RepositoryManifest $latestManifest;
     /**
      * The number of tags in the repository.
-     *
      */
     protected int $tagCount;
     /**
      * The number of manifests in the repository.
-     *
      */
     protected int $manifestCount;
     /**
      * The name of the container registry.
-     *
      */
     public function getRegistryName(): string
     {
@@ -51,7 +46,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      *
      * @return self
      */
@@ -63,7 +57,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      */
     public function getName(): string
     {
@@ -71,7 +64,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      *
      * @return self
      */
@@ -93,7 +85,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The number of tags in the repository.
-     *
      */
     public function getTagCount(): int
     {
@@ -101,7 +92,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The number of tags in the repository.
-     *
      *
      * @return self
      */
@@ -113,7 +103,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The number of manifests in the repository.
-     *
      */
     public function getManifestCount(): int
     {
@@ -121,7 +110,6 @@ class RepositoryV2 extends \ArrayObject
     }
     /**
      * The number of manifests in the repository.
-     *
      *
      * @return self
      */

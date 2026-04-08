@@ -22,7 +22,6 @@ class ReposOwnerRepoTransferPostBody extends \ArrayObject
     }
     /**
      * **Required:** The username or organization name the repository will be transferred to.
-     *
      */
     protected string $newOwner;
     /**
@@ -33,7 +32,6 @@ class ReposOwnerRepoTransferPostBody extends \ArrayObject
     protected array $teamIds;
     /**
      * **Required:** The username or organization name the repository will be transferred to.
-     *
      */
     public function getNewOwner(): string
     {
@@ -41,7 +39,6 @@ class ReposOwnerRepoTransferPostBody extends \ArrayObject
     }
     /**
      * **Required:** The username or organization name the repository will be transferred to.
-     *
      *
      * @return self
      */

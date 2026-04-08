@@ -25,13 +25,11 @@ class ProjectColumn extends \ArrayObject
     protected string $cardsUrl;
     /**
      * The unique identifier of the project column
-     *
      */
     protected int $id;
     protected string $nodeId;
     /**
      * Name of the project column
-     *
      */
     protected string $name;
     protected \DateTime $createdAt;
@@ -68,7 +66,6 @@ class ProjectColumn extends \ArrayObject
     }
     /**
      * The unique identifier of the project column
-     *
      */
     public function getId(): int
     {
@@ -76,7 +73,6 @@ class ProjectColumn extends \ArrayObject
     }
     /**
      * The unique identifier of the project column
-     *
      *
      * @return self
      */
@@ -98,7 +94,6 @@ class ProjectColumn extends \ArrayObject
     }
     /**
      * Name of the project column
-     *
      */
     public function getName(): string
     {
@@ -106,7 +101,6 @@ class ProjectColumn extends \ArrayObject
     }
     /**
      * Name of the project column
-     *
      *
      * @return self
      */

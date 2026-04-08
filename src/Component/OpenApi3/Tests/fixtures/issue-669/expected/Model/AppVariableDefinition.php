@@ -22,30 +22,25 @@ class AppVariableDefinition extends \ArrayObject
     }
     /**
      * The variable name
-     *
      */
     protected string $key;
     /**
      * - RUN_TIME: Made available only at run-time
      * - BUILD_TIME: Made available only at build-time
      * - RUN_AND_BUILD_TIME: Made available at both build and run-time
-     *
      */
     protected string $scope = 'RUN_AND_BUILD_TIME';
     /**
      * - GENERAL: A plain-text environment variable
      * - SECRET: A secret encrypted environment variable
-     *
      */
     protected string $type = 'GENERAL';
     /**
      * The value. If the type is `SECRET`, the value will be encrypted on first submission. On following submissions, the encrypted value should be used.
-     *
      */
     protected string $value;
     /**
      * The variable name
-     *
      */
     public function getKey(): string
     {
@@ -53,7 +48,6 @@ class AppVariableDefinition extends \ArrayObject
     }
     /**
      * The variable name
-     *
      *
      * @return self
      */
@@ -67,20 +61,18 @@ class AppVariableDefinition extends \ArrayObject
      * - RUN_TIME: Made available only at run-time
      * - BUILD_TIME: Made available only at build-time
      * - RUN_AND_BUILD_TIME: Made available at both build and run-time
-     *
      */
     public function getScope(): string
     {
         return $this->scope;
     }
     /**
-    * - RUN_TIME: Made available only at run-time
-    - BUILD_TIME: Made available only at build-time
-    - RUN_AND_BUILD_TIME: Made available at both build and run-time
-    *
-    *
-    * @return self
-    */
+     * - RUN_TIME: Made available only at run-time
+     * - BUILD_TIME: Made available only at build-time
+     * - RUN_AND_BUILD_TIME: Made available at both build and run-time
+     *
+     * @return self
+     */
     public function setScope(string $scope): self
     {
         $this->initialized['scope'] = true;
@@ -90,19 +82,17 @@ class AppVariableDefinition extends \ArrayObject
     /**
      * - GENERAL: A plain-text environment variable
      * - SECRET: A secret encrypted environment variable
-     *
      */
     public function getType(): string
     {
         return $this->type;
     }
     /**
-    * - GENERAL: A plain-text environment variable
-    - SECRET: A secret encrypted environment variable
-    *
-    *
-    * @return self
-    */
+     * - GENERAL: A plain-text environment variable
+     * - SECRET: A secret encrypted environment variable
+     *
+     * @return self
+     */
     public function setType(string $type): self
     {
         $this->initialized['type'] = true;
@@ -111,7 +101,6 @@ class AppVariableDefinition extends \ArrayObject
     }
     /**
      * The value. If the type is `SECRET`, the value will be encrypted on first submission. On following submissions, the encrypted value should be used.
-     *
      */
     public function getValue(): string
     {
@@ -119,7 +108,6 @@ class AppVariableDefinition extends \ArrayObject
     }
     /**
      * The value. If the type is `SECRET`, the value will be encrypted on first submission. On following submissions, the encrypted value should be used.
-     *
      *
      * @return self
      */

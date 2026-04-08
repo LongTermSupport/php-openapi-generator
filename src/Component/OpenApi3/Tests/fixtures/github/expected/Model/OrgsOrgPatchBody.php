@@ -22,47 +22,38 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * Billing email address. This address is not publicized.
-     *
      */
     protected string $billingEmail;
     /**
      * The company name.
-     *
      */
     protected string $company;
     /**
      * The publicly visible email address.
-     *
      */
     protected string $email;
     /**
      * The Twitter username of the company.
-     *
      */
     protected string $twitterUsername;
     /**
      * The location.
-     *
      */
     protected string $location;
     /**
      * The shorthand name of the company.
-     *
      */
     protected string $name;
     /**
      * The description of the company.
-     *
      */
     protected string $description;
     /**
      * Toggles whether an organization can use organization projects.
-     *
      */
     protected bool $hasOrganizationProjects;
     /**
      * Toggles whether repositories that belong to the organization can use repository projects.
-     *
      */
     protected bool $hasRepositoryProjects;
     /**
@@ -71,7 +62,6 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `write` - can pull and push, but not administer this repository.
      * \* `admin` - can pull, push, and administer this repository.
      * \* `none` - no permissions granted by default.
-     *
      */
     protected string $defaultRepositoryPermission = 'read';
     /**
@@ -80,7 +70,6 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `false` - only organization owners can create repositories.
      * Default: `true`
      * **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details. **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details.
-     *
      */
     protected bool $membersCanCreateRepositories = true;
     /**
@@ -88,7 +77,6 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `true` - all organization members can create internal repositories.
      * \* `false` - only organization owners can create internal repositories.
      * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-     *
      */
     protected bool $membersCanCreateInternalRepositories;
     /**
@@ -96,7 +84,6 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `true` - all organization members can create private repositories.
      * \* `false` - only organization owners can create private repositories.
      * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-     *
      */
     protected bool $membersCanCreatePrivateRepositories;
     /**
@@ -104,7 +91,6 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `true` - all organization members can create public repositories.
      * \* `false` - only organization owners can create public repositories.
      * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-     *
      */
     protected bool $membersCanCreatePublicRepositories;
     /**
@@ -113,13 +99,11 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `private` - members can create private repositories. This option is only available to repositories that are part of an organization on GitHub Enterprise Cloud.
      * \* `none` - only admin members can create repositories.
      * **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See [this note](https://developer.github.com/v3/orgs/#members_can_create_repositories) for details.
-     *
      */
     protected string $membersAllowedRepositoryCreationType;
     protected string $blog;
     /**
      * Billing email address. This address is not publicized.
-     *
      */
     public function getBillingEmail(): string
     {
@@ -127,7 +111,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * Billing email address. This address is not publicized.
-     *
      *
      * @return self
      */
@@ -139,7 +122,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The company name.
-     *
      */
     public function getCompany(): string
     {
@@ -147,7 +129,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The company name.
-     *
      *
      * @return self
      */
@@ -159,7 +140,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The publicly visible email address.
-     *
      */
     public function getEmail(): string
     {
@@ -167,7 +147,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The publicly visible email address.
-     *
      *
      * @return self
      */
@@ -179,7 +158,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The Twitter username of the company.
-     *
      */
     public function getTwitterUsername(): string
     {
@@ -187,7 +165,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The Twitter username of the company.
-     *
      *
      * @return self
      */
@@ -199,7 +176,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The location.
-     *
      */
     public function getLocation(): string
     {
@@ -207,7 +183,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The location.
-     *
      *
      * @return self
      */
@@ -219,7 +194,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The shorthand name of the company.
-     *
      */
     public function getName(): string
     {
@@ -227,7 +201,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The shorthand name of the company.
-     *
      *
      * @return self
      */
@@ -239,7 +212,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The description of the company.
-     *
      */
     public function getDescription(): string
     {
@@ -247,7 +219,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The description of the company.
-     *
      *
      * @return self
      */
@@ -259,7 +230,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * Toggles whether an organization can use organization projects.
-     *
      */
     public function getHasOrganizationProjects(): bool
     {
@@ -267,7 +237,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * Toggles whether an organization can use organization projects.
-     *
      *
      * @return self
      */
@@ -279,7 +248,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * Toggles whether repositories that belong to the organization can use repository projects.
-     *
      */
     public function getHasRepositoryProjects(): bool
     {
@@ -287,7 +255,6 @@ class OrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * Toggles whether repositories that belong to the organization can use repository projects.
-     *
      *
      * @return self
      */
@@ -303,22 +270,20 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `write` - can pull and push, but not administer this repository.
      * \* `admin` - can pull, push, and administer this repository.
      * \* `none` - no permissions granted by default.
-     *
      */
     public function getDefaultRepositoryPermission(): string
     {
         return $this->defaultRepositoryPermission;
     }
     /**
-    * Default permission level members have for organization repositories:  
-    \* `read` - can pull, but not push to or administer this repository.  
-    \* `write` - can pull and push, but not administer this repository.  
-    \* `admin` - can pull, push, and administer this repository.  
-    \* `none` - no permissions granted by default.
-    *
-    *
-    * @return self
-    */
+     * Default permission level members have for organization repositories:
+     * \* `read` - can pull, but not push to or administer this repository.
+     * \* `write` - can pull and push, but not administer this repository.
+     * \* `admin` - can pull, push, and administer this repository.
+     * \* `none` - no permissions granted by default.
+     *
+     * @return self
+     */
     public function setDefaultRepositoryPermission(string $defaultRepositoryPermission): self
     {
         $this->initialized['defaultRepositoryPermission'] = true;
@@ -331,22 +296,20 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `false` - only organization owners can create repositories.
      * Default: `true`
      * **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details. **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details.
-     *
      */
     public function getMembersCanCreateRepositories(): bool
     {
         return $this->membersCanCreateRepositories;
     }
     /**
-    * Toggles the ability of non-admin organization members to create repositories. Can be one of:  
-    \* `true` - all organization members can create repositories.  
-    \* `false` - only organization owners can create repositories.  
-    Default: `true`  
-    **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details. **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details.
-    *
-    *
-    * @return self
-    */
+     * Toggles the ability of non-admin organization members to create repositories. Can be one of:
+     * \* `true` - all organization members can create repositories.
+     * \* `false` - only organization owners can create repositories.
+     * Default: `true`
+     * **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details. **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details.
+     *
+     * @return self
+     */
     public function setMembersCanCreateRepositories(bool $membersCanCreateRepositories): self
     {
         $this->initialized['membersCanCreateRepositories'] = true;
@@ -358,21 +321,19 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `true` - all organization members can create internal repositories.
      * \* `false` - only organization owners can create internal repositories.
      * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-     *
      */
     public function getMembersCanCreateInternalRepositories(): bool
     {
         return $this->membersCanCreateInternalRepositories;
     }
     /**
-    * Toggles whether organization members can create internal repositories, which are visible to all enterprise members. You can only allow members to create internal repositories if your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. Can be one of:  
-    \* `true` - all organization members can create internal repositories.  
-    \* `false` - only organization owners can create internal repositories.  
-    Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-    *
-    *
-    * @return self
-    */
+     * Toggles whether organization members can create internal repositories, which are visible to all enterprise members. You can only allow members to create internal repositories if your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. Can be one of:
+     * \* `true` - all organization members can create internal repositories.
+     * \* `false` - only organization owners can create internal repositories.
+     * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
+     *
+     * @return self
+     */
     public function setMembersCanCreateInternalRepositories(bool $membersCanCreateInternalRepositories): self
     {
         $this->initialized['membersCanCreateInternalRepositories'] = true;
@@ -384,21 +345,19 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `true` - all organization members can create private repositories.
      * \* `false` - only organization owners can create private repositories.
      * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-     *
      */
     public function getMembersCanCreatePrivateRepositories(): bool
     {
         return $this->membersCanCreatePrivateRepositories;
     }
     /**
-    * Toggles whether organization members can create private repositories, which are visible to organization members with permission. Can be one of:  
-    \* `true` - all organization members can create private repositories.  
-    \* `false` - only organization owners can create private repositories.  
-    Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-    *
-    *
-    * @return self
-    */
+     * Toggles whether organization members can create private repositories, which are visible to organization members with permission. Can be one of:
+     * \* `true` - all organization members can create private repositories.
+     * \* `false` - only organization owners can create private repositories.
+     * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
+     *
+     * @return self
+     */
     public function setMembersCanCreatePrivateRepositories(bool $membersCanCreatePrivateRepositories): self
     {
         $this->initialized['membersCanCreatePrivateRepositories'] = true;
@@ -410,21 +369,19 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `true` - all organization members can create public repositories.
      * \* `false` - only organization owners can create public repositories.
      * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-     *
      */
     public function getMembersCanCreatePublicRepositories(): bool
     {
         return $this->membersCanCreatePublicRepositories;
     }
     /**
-    * Toggles whether organization members can create public repositories, which are visible to anyone. Can be one of:  
-    \* `true` - all organization members can create public repositories.  
-    \* `false` - only organization owners can create public repositories.  
-    Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
-    *
-    *
-    * @return self
-    */
+     * Toggles whether organization members can create public repositories, which are visible to anyone. Can be one of:
+     * \* `true` - all organization members can create public repositories.
+     * \* `false` - only organization owners can create public repositories.
+     * Default: `true`. For more information, see "[Restricting repository creation in your organization](https://help.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
+     *
+     * @return self
+     */
     public function setMembersCanCreatePublicRepositories(bool $membersCanCreatePublicRepositories): self
     {
         $this->initialized['membersCanCreatePublicRepositories'] = true;
@@ -437,22 +394,20 @@ class OrgsOrgPatchBody extends \ArrayObject
      * \* `private` - members can create private repositories. This option is only available to repositories that are part of an organization on GitHub Enterprise Cloud.
      * \* `none` - only admin members can create repositories.
      * **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See [this note](https://developer.github.com/v3/orgs/#members_can_create_repositories) for details.
-     *
      */
     public function getMembersAllowedRepositoryCreationType(): string
     {
         return $this->membersAllowedRepositoryCreationType;
     }
     /**
-    * Specifies which types of repositories non-admin organization members can create. Can be one of:  
-    \* `all` - all organization members can create public and private repositories.  
-    \* `private` - members can create private repositories. This option is only available to repositories that are part of an organization on GitHub Enterprise Cloud.  
-    \* `none` - only admin members can create repositories.  
-    **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See [this note](https://developer.github.com/v3/orgs/#members_can_create_repositories) for details.
-    *
-    *
-    * @return self
-    */
+     * Specifies which types of repositories non-admin organization members can create. Can be one of:
+     * \* `all` - all organization members can create public and private repositories.
+     * \* `private` - members can create private repositories. This option is only available to repositories that are part of an organization on GitHub Enterprise Cloud.
+     * \* `none` - only admin members can create repositories.
+     * **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See [this note](https://developer.github.com/v3/orgs/#members_can_create_repositories) for details.
+     *
+     * @return self
+     */
     public function setMembersAllowedRepositoryCreationType(string $membersAllowedRepositoryCreationType): self
     {
         $this->initialized['membersAllowedRepositoryCreationType'] = true;

@@ -25,17 +25,14 @@ class Video extends \ArrayObject
     protected int $durationMs;
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     protected string $mediaKey;
     /**
      * The height of the media in pixels
-     *
      */
     protected int $height;
     /**
      * The width of the media in pixels
-     *
      */
     protected int $width;
     public function getType(): string
@@ -70,7 +67,6 @@ class Video extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     public function getMediaKey(): string
     {
@@ -78,7 +74,6 @@ class Video extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      *
      * @return self
      */
@@ -90,7 +85,6 @@ class Video extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      */
     public function getHeight(): int
     {
@@ -98,7 +92,6 @@ class Video extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      *
      * @return self
      */
@@ -110,7 +103,6 @@ class Video extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      */
     public function getWidth(): int
     {
@@ -118,7 +110,6 @@ class Video extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      *
      * @return self
      */

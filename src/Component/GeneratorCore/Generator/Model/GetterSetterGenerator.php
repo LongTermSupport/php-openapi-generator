@@ -124,30 +124,27 @@ trait GetterSetterGenerator
             return null;
         }
 
-        $description = ['/**'];
+        $sections = [];
         if ($hasDescription) {
+            $descriptionLines = [];
             foreach (array_map(rtrim(...), explode("\n", $property->getDescription())) as $line) {
-                $description[] = ' * ' . $line;
+                $descriptionLines[] = ' * ' . $line;
             }
-
-            $description[] = ' *';
+            $sections[] = $descriptionLines;
         }
 
         if ($isDeprecated) {
-            $description[] = ' * @deprecated';
-            $description[] = ' *';
+            $sections[] = [' * @deprecated'];
         }
 
         if ($docAddsTypeInfo) {
-            $description[] = \sprintf(
+            $sections[] = [\sprintf(
                 ' * @return %s',
                 $this->getDocType($property, $namespace, $strict)
-            );
+            )];
         }
 
-        $description[] = ' */';
-
-        return new Doc(implode("\n", $description));
+        return new Doc($this->formatDocBlock($sections));
     }
 
     protected function createSetterDoc(Property $property, string $namespace, bool $strict, bool $fluent): ?Doc
@@ -160,29 +157,49 @@ trait GetterSetterGenerator
             return null;
         }
 
-        $description = ['/**'];
+        $sections = [];
         if ($hasDescription) {
-            $description[] = ' * ' . $property->getDescription();
-            $description[] = ' *';
+            $descriptionLines = [];
+            foreach (array_map(rtrim(...), explode("\n", $property->getDescription())) as $line) {
+                $descriptionLines[] = ' * ' . $line;
+            }
+            $sections[] = $descriptionLines;
         }
 
         if ($docAddsTypeInfo) {
-            $description[] = \sprintf(' * @param %s %s', $this->getDocType($property, $namespace, $strict), '$' . $property->getPhpName());
+            $sections[] = [\sprintf(' * @param %s %s', $this->getDocType($property, $namespace, $strict), '$' . $property->getPhpName())];
         }
 
         if ($isDeprecated) {
-            $description[] = ' *';
-            $description[] = ' * @deprecated';
+            $sections[] = [' * @deprecated'];
         }
 
-        if ($fluent && ($docAddsTypeInfo || $hasDescription || $isDeprecated)) {
-            $description[] = ' *';
-            $description[] = ' * @return self';
+        if ($fluent) {
+            $sections[] = [' * @return self'];
         }
 
-        $description[] = ' */';
+        return new Doc($this->formatDocBlock($sections));
+    }
 
-        return new Doc(implode("\n", $description));
+    /**
+     * Assemble docblock sections into a PHPDoc comment, separating sections with a single empty ` *` line.
+     *
+     * @param list<list<string>> $sections
+     */
+    private function formatDocBlock(array $sections): string
+    {
+        $lines = ['/**'];
+        foreach ($sections as $index => $section) {
+            if ($index > 0) {
+                $lines[] = ' *';
+            }
+            foreach ($section as $line) {
+                $lines[] = $line;
+            }
+        }
+        $lines[] = ' */';
+
+        return implode("\n", $lines);
     }
 
     /**

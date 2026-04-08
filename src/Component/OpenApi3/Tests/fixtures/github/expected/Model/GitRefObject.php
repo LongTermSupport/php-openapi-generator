@@ -23,7 +23,6 @@ class GitRefObject extends \ArrayObject
     protected string $type;
     /**
      * SHA for the reference
-     *
      */
     protected string $sha;
     protected string $url;
@@ -39,7 +38,6 @@ class GitRefObject extends \ArrayObject
     }
     /**
      * SHA for the reference
-     *
      */
     public function getSha(): string
     {
@@ -47,7 +45,6 @@ class GitRefObject extends \ArrayObject
     }
     /**
      * SHA for the reference
-     *
      *
      * @return self
      */

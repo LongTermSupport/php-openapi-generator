@@ -19,12 +19,10 @@ class TakeArrayValueTransformation extends BusinessRuleTransformation
     }
     /**
      * Index of the item.
-     *
      */
     protected ?string $index = null;
     /**
      * Index of the item.
-     *
      */
     public function getIndex(): ?string
     {
@@ -32,7 +30,6 @@ class TakeArrayValueTransformation extends BusinessRuleTransformation
     }
     /**
      * Index of the item.
-     *
      *
      * @return self
      */

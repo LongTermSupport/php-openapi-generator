@@ -19,7 +19,6 @@ class ShareContentDetail
     }
     /**
      * The id of the schema with schema type content.
-     *
      */
     protected string $contentSchemaId;
     /**
@@ -44,7 +43,6 @@ class ShareContentDetail
     protected ?array $metadata = null;
     /**
      * Content ID.
-     *
      */
     protected string $id;
     /**
@@ -55,22 +53,18 @@ class ShareContentDetail
     protected array $outputs;
     /**
      * The type of content
-     *
      */
     protected mixed $contentType = null;
     /**
      * Contains language specific display values, rendered according to the content schema's display pattern configuration.
-     *
      */
     protected mixed $displayValues = null;
     /**
      * Contains an URL that can be used to retrieve the icon corresponding to the file type.
-     *
      */
     protected ?string $iconUrl = null;
     /**
      * The id of the schema with schema type content.
-     *
      */
     public function getContentSchemaId(): string
     {
@@ -78,7 +72,6 @@ class ShareContentDetail
     }
     /**
      * The id of the schema with schema type content.
-     *
      *
      * @return self
      */
@@ -121,13 +114,13 @@ class ShareContentDetail
         return $this->content;
     }
     /**
-    * The content data. It's an object of dynamic metadata whose structure is defined in the Content schema specified
-    by the ContentSchemaId property.
-    *
-    * @param array<string, mixed> $content
-    *
-    * @return self
-    */
+     * The content data. It's an object of dynamic metadata whose structure is defined in the Content schema specified
+     * by the ContentSchemaId property.
+     *
+     * @param array<string, mixed> $content
+     *
+     * @return self
+     */
     public function setContent(array $content): self
     {
         $this->initialized['content'] = true;
@@ -145,13 +138,13 @@ class ShareContentDetail
         return $this->metadata;
     }
     /**
-    * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
-    by the LayerSchemaIds property.
-    *
-    * @param array<string, mixed>|null $metadata
-    *
-    * @return self
-    */
+     * The metadata belonging to the layers of the content. It's a dictionary of dynamic metadata whose structure is defined in the Layer schemas identified
+     * by the LayerSchemaIds property.
+     *
+     * @param array<string, mixed>|null $metadata
+     *
+     * @return self
+     */
     public function setMetadata(?array $metadata): self
     {
         $this->initialized['metadata'] = true;
@@ -160,7 +153,6 @@ class ShareContentDetail
     }
     /**
      * Content ID.
-     *
      */
     public function getId(): string
     {
@@ -168,7 +160,6 @@ class ShareContentDetail
     }
     /**
      * Content ID.
-     *
      *
      * @return self
      */
@@ -202,7 +193,6 @@ class ShareContentDetail
     }
     /**
      * The type of content
-     *
      */
     public function getContentType(): mixed
     {
@@ -210,7 +200,6 @@ class ShareContentDetail
     }
     /**
      * The type of content
-     *
      *
      * @return self
      */
@@ -222,7 +211,6 @@ class ShareContentDetail
     }
     /**
      * Contains language specific display values, rendered according to the content schema's display pattern configuration.
-     *
      */
     public function getDisplayValues(): mixed
     {
@@ -230,7 +218,6 @@ class ShareContentDetail
     }
     /**
      * Contains language specific display values, rendered according to the content schema's display pattern configuration.
-     *
      *
      * @return self
      */
@@ -242,7 +229,6 @@ class ShareContentDetail
     }
     /**
      * Contains an URL that can be used to retrieve the icon corresponding to the file type.
-     *
      */
     public function getIconUrl(): ?string
     {
@@ -250,7 +236,6 @@ class ShareContentDetail
     }
     /**
      * Contains an URL that can be used to retrieve the icon corresponding to the file type.
-     *
      *
      * @return self
      */

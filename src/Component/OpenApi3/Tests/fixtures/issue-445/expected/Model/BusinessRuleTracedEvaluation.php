@@ -19,7 +19,6 @@ class BusinessRuleTracedEvaluation
     }
     /**
      * Indicates if the rule was found to be executable.
-     *
      */
     protected bool $conditionSatisfied;
     /**
@@ -48,7 +47,6 @@ class BusinessRuleTracedEvaluation
     protected ?array $variables = null;
     /**
      * Indicates if the rule was found to be executable.
-     *
      */
     public function getConditionSatisfied(): bool
     {
@@ -56,7 +54,6 @@ class BusinessRuleTracedEvaluation
     }
     /**
      * Indicates if the rule was found to be executable.
-     *
      *
      * @return self
      */

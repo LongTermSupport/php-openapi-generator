@@ -22,17 +22,14 @@ class AssociatedKubernetesResource extends \ArrayObject
     }
     /**
      * The ID of a resource associated with a Kubernetes cluster.
-     *
      */
     protected string $id;
     /**
      * The name of a resource associated with a Kubernetes cluster.
-     *
      */
     protected string $name;
     /**
      * The ID of a resource associated with a Kubernetes cluster.
-     *
      */
     public function getId(): string
     {
@@ -40,7 +37,6 @@ class AssociatedKubernetesResource extends \ArrayObject
     }
     /**
      * The ID of a resource associated with a Kubernetes cluster.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AssociatedKubernetesResource extends \ArrayObject
     }
     /**
      * The name of a resource associated with a Kubernetes cluster.
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class AssociatedKubernetesResource extends \ArrayObject
     }
     /**
      * The name of a resource associated with a Kubernetes cluster.
-     *
      *
      * @return self
      */

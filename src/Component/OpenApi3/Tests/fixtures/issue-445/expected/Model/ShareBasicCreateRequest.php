@@ -25,12 +25,10 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     protected ?array $recipientEmails = null;
     /**
      * System language used for share (mail and detail page). en or de.
-     *
      */
     protected string $languageCode;
     /**
      * Set to true to disable the creation of notifications and emails to recipients.
-     *
      */
     protected bool $suppressNotifications;
     /**
@@ -57,7 +55,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     }
     /**
      * System language used for share (mail and detail page). en or de.
-     *
      */
     public function getLanguageCode(): string
     {
@@ -65,7 +62,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     }
     /**
      * System language used for share (mail and detail page). en or de.
-     *
      *
      * @return self
      */
@@ -77,7 +73,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     }
     /**
      * Set to true to disable the creation of notifications and emails to recipients.
-     *
      */
     public function getSuppressNotifications(): bool
     {
@@ -85,7 +80,6 @@ class ShareBasicCreateRequest extends ShareBaseCreateRequest
     }
     /**
      * Set to true to disable the creation of notifications and emails to recipients.
-     *
      *
      * @return self
      */

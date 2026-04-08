@@ -22,12 +22,10 @@ class Organization extends \ArrayObject
     }
     /**
      * Unique login name of the organization
-     *
      */
     protected string $login;
     /**
      * URL for the organization
-     *
      */
     protected string $url;
     protected int $id;
@@ -42,38 +40,31 @@ class Organization extends \ArrayObject
     protected ?string $description = null;
     /**
      * Display blog url for the organization
-     *
      */
     protected string $blog;
     protected string $htmlUrl;
     /**
      * Display name for the organization
-     *
      */
     protected string $name;
     /**
      * Display company name for the organization
-     *
      */
     protected string $company;
     /**
      * Display location for the organization
-     *
      */
     protected string $location;
     /**
      * Display email for the organization
-     *
      */
     protected string $email;
     /**
      * Specifies if organization projects are enabled for this org
-     *
      */
     protected bool $hasOrganizationProjects;
     /**
      * Specifies if repository projects are enabled for repositories that belong to this org
-     *
      */
     protected bool $hasRepositoryProjects;
     protected bool $isVerified;
@@ -87,7 +78,6 @@ class Organization extends \ArrayObject
     protected OrganizationPlan $plan;
     /**
      * Unique login name of the organization
-     *
      */
     public function getLogin(): string
     {
@@ -95,7 +85,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Unique login name of the organization
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class Organization extends \ArrayObject
     }
     /**
      * URL for the organization
-     *
      */
     public function getUrl(): string
     {
@@ -115,7 +103,6 @@ class Organization extends \ArrayObject
     }
     /**
      * URL for the organization
-     *
      *
      * @return self
      */
@@ -227,7 +214,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display blog url for the organization
-     *
      */
     public function getBlog(): string
     {
@@ -235,7 +221,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display blog url for the organization
-     *
      *
      * @return self
      */
@@ -257,7 +242,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display name for the organization
-     *
      */
     public function getName(): string
     {
@@ -265,7 +249,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display name for the organization
-     *
      *
      * @return self
      */
@@ -277,7 +260,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display company name for the organization
-     *
      */
     public function getCompany(): string
     {
@@ -285,7 +267,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display company name for the organization
-     *
      *
      * @return self
      */
@@ -297,7 +278,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display location for the organization
-     *
      */
     public function getLocation(): string
     {
@@ -305,7 +285,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display location for the organization
-     *
      *
      * @return self
      */
@@ -317,7 +296,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display email for the organization
-     *
      */
     public function getEmail(): string
     {
@@ -325,7 +303,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Display email for the organization
-     *
      *
      * @return self
      */
@@ -337,7 +314,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Specifies if organization projects are enabled for this org
-     *
      */
     public function getHasOrganizationProjects(): bool
     {
@@ -345,7 +321,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Specifies if organization projects are enabled for this org
-     *
      *
      * @return self
      */
@@ -357,7 +332,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Specifies if repository projects are enabled for repositories that belong to this org
-     *
      */
     public function getHasRepositoryProjects(): bool
     {
@@ -365,7 +339,6 @@ class Organization extends \ArrayObject
     }
     /**
      * Specifies if repository projects are enabled for repositories that belong to this org
-     *
      *
      * @return self
      */

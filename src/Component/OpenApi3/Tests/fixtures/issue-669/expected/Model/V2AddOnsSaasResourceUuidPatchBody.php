@@ -22,12 +22,10 @@ class V2AddOnsSaasResourceUuidPatchBody extends \ArrayObject
     }
     /**
      * The new name for the add-on resource.
-     *
      */
     protected string $name;
     /**
      * The new name for the add-on resource.
-     *
      */
     public function getName(): string
     {
@@ -35,7 +33,6 @@ class V2AddOnsSaasResourceUuidPatchBody extends \ArrayObject
     }
     /**
      * The new name for the add-on resource.
-     *
      *
      * @return self
      */

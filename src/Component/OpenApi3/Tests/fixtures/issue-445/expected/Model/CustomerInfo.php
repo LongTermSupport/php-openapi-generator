@@ -19,37 +19,30 @@ class CustomerInfo
     }
     /**
      * The customer ID.
-     *
      */
     protected string $customerId;
     /**
      * The name of the customer instance.
-     *
      */
     protected string $name;
     /**
      * Alias of the customer instance.
-     *
      */
     protected string $customerAlias;
     /**
      * The base URL of identity server to authenticate the user using OpenID Connect.
-     *
      */
     protected string $identityServerUrl;
     /**
      * The base API URL.
-     *
      */
     protected string $apiUrl;
     /**
      * Information if the query details can be enabled when searching. For debug purposes only.
-     *
      */
     protected bool $enableQueryDetails;
     /**
      * Configured languages of customer instance (system, metadata, default).
-     *
      */
     protected mixed $languageConfiguration = null;
     /**
@@ -79,17 +72,14 @@ class CustomerInfo
     protected \DateTime $modificationDate;
     /**
      * Url to access Frontend service
-     *
      */
     protected string $baseUrl;
     /**
      * Base bath to access logos of customer (including trailing slash), available images: name, full, small, background
-     *
      */
     protected string $logosUrl;
     /**
      * The customer ID.
-     *
      */
     public function getCustomerId(): string
     {
@@ -97,7 +87,6 @@ class CustomerInfo
     }
     /**
      * The customer ID.
-     *
      *
      * @return self
      */
@@ -109,7 +98,6 @@ class CustomerInfo
     }
     /**
      * The name of the customer instance.
-     *
      */
     public function getName(): string
     {
@@ -117,7 +105,6 @@ class CustomerInfo
     }
     /**
      * The name of the customer instance.
-     *
      *
      * @return self
      */
@@ -129,7 +116,6 @@ class CustomerInfo
     }
     /**
      * Alias of the customer instance.
-     *
      */
     public function getCustomerAlias(): string
     {
@@ -137,7 +123,6 @@ class CustomerInfo
     }
     /**
      * Alias of the customer instance.
-     *
      *
      * @return self
      */
@@ -149,7 +134,6 @@ class CustomerInfo
     }
     /**
      * The base URL of identity server to authenticate the user using OpenID Connect.
-     *
      */
     public function getIdentityServerUrl(): string
     {
@@ -157,7 +141,6 @@ class CustomerInfo
     }
     /**
      * The base URL of identity server to authenticate the user using OpenID Connect.
-     *
      *
      * @return self
      */
@@ -169,7 +152,6 @@ class CustomerInfo
     }
     /**
      * The base API URL.
-     *
      */
     public function getApiUrl(): string
     {
@@ -177,7 +159,6 @@ class CustomerInfo
     }
     /**
      * The base API URL.
-     *
      *
      * @return self
      */
@@ -189,7 +170,6 @@ class CustomerInfo
     }
     /**
      * Information if the query details can be enabled when searching. For debug purposes only.
-     *
      */
     public function getEnableQueryDetails(): bool
     {
@@ -197,7 +177,6 @@ class CustomerInfo
     }
     /**
      * Information if the query details can be enabled when searching. For debug purposes only.
-     *
      *
      * @return self
      */
@@ -209,7 +188,6 @@ class CustomerInfo
     }
     /**
      * Configured languages of customer instance (system, metadata, default).
-     *
      */
     public function getLanguageConfiguration(): mixed
     {
@@ -217,7 +195,6 @@ class CustomerInfo
     }
     /**
      * Configured languages of customer instance (system, metadata, default).
-     *
      *
      * @return self
      */
@@ -327,7 +304,6 @@ class CustomerInfo
     }
     /**
      * Url to access Frontend service
-     *
      */
     public function getBaseUrl(): string
     {
@@ -335,7 +311,6 @@ class CustomerInfo
     }
     /**
      * Url to access Frontend service
-     *
      *
      * @return self
      */
@@ -347,7 +322,6 @@ class CustomerInfo
     }
     /**
      * Base bath to access logos of customer (including trailing slash), available images: name, full, small, background
-     *
      */
     public function getLogosUrl(): string
     {
@@ -355,7 +329,6 @@ class CustomerInfo
     }
     /**
      * Base bath to access logos of customer (including trailing slash), available images: name, full, small, background
-     *
      *
      * @return self
      */

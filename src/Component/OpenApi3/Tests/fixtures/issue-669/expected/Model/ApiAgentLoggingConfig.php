@@ -22,37 +22,30 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Galileo project identifier
-     *
      */
     protected string $galileoProjectId;
     /**
      * Name of the Galileo project
-     *
      */
     protected string $galileoProjectName;
     /**
      * Whether insights are enabled
-     *
      */
     protected bool $insightsEnabled;
     /**
      * Timestamp when insights were enabled
-     *
      */
     protected \DateTime $insightsEnabledAt;
     /**
      * Identifier for the log stream
-     *
      */
     protected string $logStreamId;
     /**
      * Name of the log stream
-     *
      */
     protected string $logStreamName;
     /**
      * Galileo project identifier
-     *
      */
     public function getGalileoProjectId(): string
     {
@@ -60,7 +53,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Galileo project identifier
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Name of the Galileo project
-     *
      */
     public function getGalileoProjectName(): string
     {
@@ -80,7 +71,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Name of the Galileo project
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Whether insights are enabled
-     *
      */
     public function getInsightsEnabled(): bool
     {
@@ -100,7 +89,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Whether insights are enabled
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Timestamp when insights were enabled
-     *
      */
     public function getInsightsEnabledAt(): \DateTime
     {
@@ -120,7 +107,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Timestamp when insights were enabled
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Identifier for the log stream
-     *
      */
     public function getLogStreamId(): string
     {
@@ -140,7 +125,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Identifier for the log stream
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Name of the log stream
-     *
      */
     public function getLogStreamName(): string
     {
@@ -160,7 +143,6 @@ class ApiAgentLoggingConfig extends \ArrayObject
     }
     /**
      * Name of the log stream
-     *
      *
      * @return self
      */

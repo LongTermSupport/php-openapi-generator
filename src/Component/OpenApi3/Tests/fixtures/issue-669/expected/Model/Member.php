@@ -22,33 +22,27 @@ class Member extends \ArrayObject
     }
     /**
      * The unique identifier of the Droplet.
-     *
      */
     protected int $dropletId;
     /**
      * The creation time of the Droplet in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The last updated time of the Droplet in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * The health status of the Droplet.
-     *
      */
     protected string $healthStatus;
     /**
      * The power status of the Droplet.
-     *
      */
     protected string $status;
     protected MemberCurrentUtilization $currentUtilization;
     /**
      * The unique identifier of the Droplet.
-     *
      */
     public function getDropletId(): int
     {
@@ -56,7 +50,6 @@ class Member extends \ArrayObject
     }
     /**
      * The unique identifier of the Droplet.
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class Member extends \ArrayObject
     }
     /**
      * The creation time of the Droplet in ISO8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -76,7 +68,6 @@ class Member extends \ArrayObject
     }
     /**
      * The creation time of the Droplet in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class Member extends \ArrayObject
     }
     /**
      * The last updated time of the Droplet in ISO8601 combined date and time format.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -96,7 +86,6 @@ class Member extends \ArrayObject
     }
     /**
      * The last updated time of the Droplet in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */
@@ -108,7 +97,6 @@ class Member extends \ArrayObject
     }
     /**
      * The health status of the Droplet.
-     *
      */
     public function getHealthStatus(): string
     {
@@ -116,7 +104,6 @@ class Member extends \ArrayObject
     }
     /**
      * The health status of the Droplet.
-     *
      *
      * @return self
      */
@@ -128,7 +115,6 @@ class Member extends \ArrayObject
     }
     /**
      * The power status of the Droplet.
-     *
      */
     public function getStatus(): string
     {
@@ -136,7 +122,6 @@ class Member extends \ArrayObject
     }
     /**
      * The power status of the Droplet.
-     *
      *
      * @return self
      */

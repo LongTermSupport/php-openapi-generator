@@ -19,12 +19,10 @@ class Share
     }
     /**
      * Share ID.
-     *
      */
     protected string $id;
     /**
      * Name of share.
-     *
      */
     protected ?string $name = null;
     /**
@@ -35,27 +33,22 @@ class Share
     protected array $contentIds;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
      */
     protected ?\DateTime $expirationDate = null;
     /**
      * Type of share.
-     *
      */
     protected mixed $shareType = null;
     /**
      * Share is readonly if the current user is not the creator but only the recipient.
-     *
      */
     protected bool $isReadOnly;
     /**
      * Share ID.
-     *
      */
     public function getId(): string
     {
@@ -63,7 +56,6 @@ class Share
     }
     /**
      * Share ID.
-     *
      *
      * @return self
      */
@@ -75,7 +67,6 @@ class Share
     }
     /**
      * Name of share.
-     *
      */
     public function getName(): ?string
     {
@@ -83,7 +74,6 @@ class Share
     }
     /**
      * Name of share.
-     *
      *
      * @return self
      */
@@ -117,7 +107,6 @@ class Share
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -125,7 +114,6 @@ class Share
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -137,7 +125,6 @@ class Share
     }
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
      */
     public function getExpirationDate(): ?\DateTime
     {
@@ -145,7 +132,6 @@ class Share
     }
     /**
      * Date when share expires and cannot be accessed anymore.
-     *
      *
      * @return self
      */
@@ -157,7 +143,6 @@ class Share
     }
     /**
      * Type of share.
-     *
      */
     public function getShareType(): mixed
     {
@@ -165,7 +150,6 @@ class Share
     }
     /**
      * Type of share.
-     *
      *
      * @return self
      */
@@ -177,7 +161,6 @@ class Share
     }
     /**
      * Share is readonly if the current user is not the creator but only the recipient.
-     *
      */
     public function getIsReadOnly(): bool
     {
@@ -185,7 +168,6 @@ class Share
     }
     /**
      * Share is readonly if the current user is not the creator but only the recipient.
-     *
      *
      * @return self
      */

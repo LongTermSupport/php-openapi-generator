@@ -22,12 +22,10 @@ class LinkToFirstPage extends \ArrayObject
     }
     /**
      * URI of the first page of the results.
-     *
      */
     protected string $first;
     /**
      * URI of the first page of the results.
-     *
      */
     public function getFirst(): string
     {
@@ -35,7 +33,6 @@ class LinkToFirstPage extends \ArrayObject
     }
     /**
      * URI of the first page of the results.
-     *
      *
      * @return self
      */

@@ -19,7 +19,6 @@ class UserRoleEditable
     }
     /**
      * Language specific user role names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -30,7 +29,6 @@ class UserRoleEditable
     protected array $userRights;
     /**
      * Language specific user role names.
-     *
      */
     public function getNames(): mixed
     {
@@ -38,7 +36,6 @@ class UserRoleEditable
     }
     /**
      * Language specific user role names.
-     *
      *
      * @return self
      */

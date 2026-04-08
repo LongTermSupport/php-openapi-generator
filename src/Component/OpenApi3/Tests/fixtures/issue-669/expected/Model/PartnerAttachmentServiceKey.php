@@ -23,7 +23,6 @@ class PartnerAttachmentServiceKey extends \ArrayObject
     protected string $value;
     /**
      * A time value given in the ISO 8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     protected string $state;
@@ -39,7 +38,6 @@ class PartnerAttachmentServiceKey extends \ArrayObject
     }
     /**
      * A time value given in the ISO 8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -47,7 +45,6 @@ class PartnerAttachmentServiceKey extends \ArrayObject
     }
     /**
      * A time value given in the ISO 8601 combined date and time format.
-     *
      *
      * @return self
      */

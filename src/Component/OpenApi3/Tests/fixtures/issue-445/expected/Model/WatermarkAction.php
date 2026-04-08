@@ -19,47 +19,38 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Identifies the image to be used as watermark
-     *
      */
     protected ?string $watermarkFilePath = null;
     /**
      * Margin to the left border of the image, in pixels
-     *
      */
     protected ?int $marginLeft = null;
     /**
      * Margin to the top of the image, in pixels
-     *
      */
     protected ?int $marginTop = null;
     /**
      * Margin to the right border of the image, in pixels
-     *
      */
     protected ?int $marginRight = null;
     /**
      * Margin to the bottom of the image, in pixels
-     *
      */
     protected ?int $marginBottom = null;
     /**
      * Scales the opacity of the watermark
-     *
      */
     protected float $opacity;
     /**
      * Scales the watermark width according to the size of the final image.
-     *
      */
     protected float $widthRatio;
     /**
      * Scales the watermark height according to the size of the final image.
-     *
      */
     protected float $heightRatio;
     /**
      * Identifies the image to be used as watermark
-     *
      */
     public function getWatermarkFilePath(): ?string
     {
@@ -67,7 +58,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Identifies the image to be used as watermark
-     *
      *
      * @return self
      */
@@ -79,7 +69,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the left border of the image, in pixels
-     *
      */
     public function getMarginLeft(): ?int
     {
@@ -87,7 +76,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the left border of the image, in pixels
-     *
      *
      * @return self
      */
@@ -99,7 +87,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the top of the image, in pixels
-     *
      */
     public function getMarginTop(): ?int
     {
@@ -107,7 +94,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the top of the image, in pixels
-     *
      *
      * @return self
      */
@@ -119,7 +105,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the right border of the image, in pixels
-     *
      */
     public function getMarginRight(): ?int
     {
@@ -127,7 +112,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the right border of the image, in pixels
-     *
      *
      * @return self
      */
@@ -139,7 +123,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the bottom of the image, in pixels
-     *
      */
     public function getMarginBottom(): ?int
     {
@@ -147,7 +130,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Margin to the bottom of the image, in pixels
-     *
      *
      * @return self
      */
@@ -159,7 +141,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the opacity of the watermark
-     *
      */
     public function getOpacity(): float
     {
@@ -167,7 +148,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the opacity of the watermark
-     *
      *
      * @return self
      */
@@ -179,7 +159,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the watermark width according to the size of the final image.
-     *
      */
     public function getWidthRatio(): float
     {
@@ -187,7 +166,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the watermark width according to the size of the final image.
-     *
      *
      * @return self
      */
@@ -199,7 +177,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the watermark height according to the size of the final image.
-     *
      */
     public function getHeightRatio(): float
     {
@@ -207,7 +184,6 @@ class WatermarkAction extends ImageActionBase
     }
     /**
      * Scales the watermark height according to the size of the final image.
-     *
      *
      * @return self
      */

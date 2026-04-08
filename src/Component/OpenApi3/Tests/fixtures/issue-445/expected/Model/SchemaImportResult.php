@@ -19,17 +19,14 @@ class SchemaImportResult
     }
     /**
      * Number of schemas imported
-     *
      */
     protected int $importedSchemaCount;
     /**
      * Number of schema skipped during import phase because they were already found in the system
-     *
      */
     protected int $skippedSchemaCount;
     /**
      * Total number of schemas requested to be imported
-     *
      */
     protected int $totalSchemaCount;
     /**
@@ -46,7 +43,6 @@ class SchemaImportResult
     protected ?array $importedSchemaIds = null;
     /**
      * Number of schemas imported
-     *
      */
     public function getImportedSchemaCount(): int
     {
@@ -54,7 +50,6 @@ class SchemaImportResult
     }
     /**
      * Number of schemas imported
-     *
      *
      * @return self
      */
@@ -66,7 +61,6 @@ class SchemaImportResult
     }
     /**
      * Number of schema skipped during import phase because they were already found in the system
-     *
      */
     public function getSkippedSchemaCount(): int
     {
@@ -74,7 +68,6 @@ class SchemaImportResult
     }
     /**
      * Number of schema skipped during import phase because they were already found in the system
-     *
      *
      * @return self
      */
@@ -86,7 +79,6 @@ class SchemaImportResult
     }
     /**
      * Total number of schemas requested to be imported
-     *
      */
     public function getTotalSchemaCount(): int
     {
@@ -94,7 +86,6 @@ class SchemaImportResult
     }
     /**
      * Total number of schemas requested to be imported
-     *
      *
      * @return self
      */

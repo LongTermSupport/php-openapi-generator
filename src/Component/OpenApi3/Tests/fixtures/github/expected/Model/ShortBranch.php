@@ -25,7 +25,6 @@ class ShortBranch extends \ArrayObject
     protected bool $protected;
     /**
      * Branch Protection
-     *
      */
     protected BranchProtection $protection;
     protected string $protectionUrl;
@@ -61,7 +60,6 @@ class ShortBranch extends \ArrayObject
     }
     /**
      * Branch Protection
-     *
      */
     public function getProtection(): BranchProtection
     {
@@ -69,7 +67,6 @@ class ShortBranch extends \ArrayObject
     }
     /**
      * Branch Protection
-     *
      *
      * @return self
      */

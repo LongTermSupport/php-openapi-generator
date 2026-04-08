@@ -33,7 +33,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     protected bool $active;
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      */
     protected string $userName;
     protected ScimV2OrganizationsOrgUsersScimUserIdPutBodyName $name;
@@ -111,7 +110,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      */
     public function getUserName(): string
     {
@@ -119,7 +117,6 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      *
      * @return self
      */

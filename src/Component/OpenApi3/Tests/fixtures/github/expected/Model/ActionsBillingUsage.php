@@ -22,23 +22,19 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The sum of the free and paid GitHub Actions minutes used.
-     *
      */
     protected int $totalMinutesUsed;
     /**
      * The total paid GitHub Actions minutes used.
-     *
      */
     protected int $totalPaidMinutesUsed;
     /**
      * The amount of free GitHub Actions minutes available.
-     *
      */
     protected int $includedMinutes;
     protected ActionsBillingUsageMinutesUsedBreakdown $minutesUsedBreakdown;
     /**
      * The sum of the free and paid GitHub Actions minutes used.
-     *
      */
     public function getTotalMinutesUsed(): int
     {
@@ -46,7 +42,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The sum of the free and paid GitHub Actions minutes used.
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The total paid GitHub Actions minutes used.
-     *
      */
     public function getTotalPaidMinutesUsed(): int
     {
@@ -66,7 +60,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The total paid GitHub Actions minutes used.
-     *
      *
      * @return self
      */
@@ -78,7 +71,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The amount of free GitHub Actions minutes available.
-     *
      */
     public function getIncludedMinutes(): int
     {
@@ -86,7 +78,6 @@ class ActionsBillingUsage extends \ArrayObject
     }
     /**
      * The amount of free GitHub Actions minutes available.
-     *
      *
      * @return self
      */

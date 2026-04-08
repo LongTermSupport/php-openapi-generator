@@ -25,7 +25,6 @@ class ChannelUpdateRequest
     protected ?array $sort = null;
     /**
      * Order in which the channels should be displayed.
-     *
      */
     protected int $sortOrder;
     /**
@@ -42,7 +41,6 @@ class ChannelUpdateRequest
     protected array $names;
     /**
      * Language specific names.
-     *
      */
     protected ?string $searchIndexId = null;
     /**
@@ -59,7 +57,6 @@ class ChannelUpdateRequest
     protected ?array $aggregations = null;
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      */
     protected mixed $filter = null;
     /**
@@ -70,12 +67,10 @@ class ChannelUpdateRequest
     protected ?array $extendedSimpleSearchFields = null;
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      */
     protected mixed $missingResultsDisplayPatterns = null;
     /**
      * Grants rights to all the users to view the channel.
-     *
      */
     protected bool $viewForAll;
     /**
@@ -102,7 +97,6 @@ class ChannelUpdateRequest
     }
     /**
      * Order in which the channels should be displayed.
-     *
      */
     public function getSortOrder(): int
     {
@@ -110,7 +104,6 @@ class ChannelUpdateRequest
     }
     /**
      * Order in which the channels should be displayed.
-     *
      *
      * @return self
      */
@@ -166,7 +159,6 @@ class ChannelUpdateRequest
     }
     /**
      * Language specific names.
-     *
      */
     public function getSearchIndexId(): ?string
     {
@@ -174,7 +166,6 @@ class ChannelUpdateRequest
     }
     /**
      * Language specific names.
-     *
      *
      * @return self
      */
@@ -230,7 +221,6 @@ class ChannelUpdateRequest
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      */
     public function getFilter(): mixed
     {
@@ -238,7 +228,6 @@ class ChannelUpdateRequest
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      *
      * @return self
      */
@@ -272,7 +261,6 @@ class ChannelUpdateRequest
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      */
     public function getMissingResultsDisplayPatterns(): mixed
     {
@@ -280,7 +268,6 @@ class ChannelUpdateRequest
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      *
      * @return self
      */
@@ -292,7 +279,6 @@ class ChannelUpdateRequest
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
      */
     public function getViewForAll(): bool
     {
@@ -300,7 +286,6 @@ class ChannelUpdateRequest
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
      *
      * @return self
      */

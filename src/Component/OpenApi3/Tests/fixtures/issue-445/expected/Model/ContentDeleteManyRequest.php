@@ -25,12 +25,10 @@ class ContentDeleteManyRequest
     protected array $contentIds;
     /**
      * A value indicating whether references to the contents should be removed.
-     *
      */
     protected bool $forceReferenceRemoval;
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      */
     protected bool $notifyProgress;
     /**
@@ -57,7 +55,6 @@ class ContentDeleteManyRequest
     }
     /**
      * A value indicating whether references to the contents should be removed.
-     *
      */
     public function getForceReferenceRemoval(): bool
     {
@@ -65,7 +62,6 @@ class ContentDeleteManyRequest
     }
     /**
      * A value indicating whether references to the contents should be removed.
-     *
      *
      * @return self
      */
@@ -77,7 +73,6 @@ class ContentDeleteManyRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -85,7 +80,6 @@ class ContentDeleteManyRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the delete request.
-     *
      *
      * @return self
      */

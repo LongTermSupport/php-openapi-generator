@@ -22,12 +22,10 @@ class ByoipPrefixUpdate extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix should be advertised
-     *
      */
     protected bool $advertise;
     /**
      * Whether the BYOIP prefix should be advertised
-     *
      */
     public function getAdvertise(): bool
     {
@@ -35,7 +33,6 @@ class ByoipPrefixUpdate extends \ArrayObject
     }
     /**
      * Whether the BYOIP prefix should be advertised
-     *
      *
      * @return self
      */

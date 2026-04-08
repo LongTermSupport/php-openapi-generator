@@ -22,115 +22,93 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * URL for the pull request review comment
-     *
      */
     protected string $url;
     /**
      * The ID of the pull request review to which the comment belongs.
-     *
      */
     protected ?int $pullRequestReviewId = null;
     /**
      * The ID of the pull request review comment.
-     *
      */
     protected int $id;
     /**
      * The node ID of the pull request review comment.
-     *
      */
     protected string $nodeId;
     /**
      * The diff of the line that the comment refers to.
-     *
      */
     protected string $diffHunk;
     /**
      * The relative path of the file to which the comment applies.
-     *
      */
     protected string $path;
     /**
      * The line index in the diff to which the comment applies.
-     *
      */
     protected int $position;
     /**
      * The index of the original line in the diff to which the comment applies.
-     *
      */
     protected int $originalPosition;
     /**
      * The SHA of the commit to which the comment applies.
-     *
      */
     protected string $commitId;
     /**
      * The SHA of the original commit to which the comment applies.
-     *
      */
     protected string $originalCommitId;
     /**
      * The comment ID to reply to.
-     *
      */
     protected int $inReplyToId;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $user = null;
     /**
      * The text of the comment.
-     *
      */
     protected string $body;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     /**
      * HTML URL for the pull request review comment.
-     *
      */
     protected string $htmlUrl;
     /**
      * URL for the pull request that the review comment belongs to.
-     *
      */
     protected string $pullRequestUrl;
     /**
      * How the author of the comment is associated with the pull request.
-     *
      */
     protected string $authorAssociation;
     protected PullRequestReviewCommentLinks $links;
     /**
      * The first line of the range for a multi-line comment.
-     *
      */
     protected ?int $startLine = null;
     /**
      * The first line of the range for a multi-line comment.
-     *
      */
     protected ?int $originalStartLine = null;
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      */
     protected ?string $startSide = 'RIGHT';
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     protected int $line;
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     protected int $originalLine;
     /**
      * The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
-     *
      */
     protected string $side = 'RIGHT';
     protected ReactionRollup $reactions;
@@ -138,7 +116,6 @@ class PullRequestReviewComment extends \ArrayObject
     protected string $bodyText;
     /**
      * URL for the pull request review comment
-     *
      */
     public function getUrl(): string
     {
@@ -146,7 +123,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * URL for the pull request review comment
-     *
      *
      * @return self
      */
@@ -158,7 +134,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The ID of the pull request review to which the comment belongs.
-     *
      */
     public function getPullRequestReviewId(): ?int
     {
@@ -166,7 +141,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The ID of the pull request review to which the comment belongs.
-     *
      *
      * @return self
      */
@@ -178,7 +152,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The ID of the pull request review comment.
-     *
      */
     public function getId(): int
     {
@@ -186,7 +159,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The ID of the pull request review comment.
-     *
      *
      * @return self
      */
@@ -198,7 +170,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The node ID of the pull request review comment.
-     *
      */
     public function getNodeId(): string
     {
@@ -206,7 +177,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The node ID of the pull request review comment.
-     *
      *
      * @return self
      */
@@ -218,7 +188,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The diff of the line that the comment refers to.
-     *
      */
     public function getDiffHunk(): string
     {
@@ -226,7 +195,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The diff of the line that the comment refers to.
-     *
      *
      * @return self
      */
@@ -238,7 +206,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The relative path of the file to which the comment applies.
-     *
      */
     public function getPath(): string
     {
@@ -246,7 +213,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The relative path of the file to which the comment applies.
-     *
      *
      * @return self
      */
@@ -258,7 +224,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The line index in the diff to which the comment applies.
-     *
      */
     public function getPosition(): int
     {
@@ -266,7 +231,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The line index in the diff to which the comment applies.
-     *
      *
      * @return self
      */
@@ -278,7 +242,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The index of the original line in the diff to which the comment applies.
-     *
      */
     public function getOriginalPosition(): int
     {
@@ -286,7 +249,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The index of the original line in the diff to which the comment applies.
-     *
      *
      * @return self
      */
@@ -298,7 +260,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The SHA of the commit to which the comment applies.
-     *
      */
     public function getCommitId(): string
     {
@@ -306,7 +267,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The SHA of the commit to which the comment applies.
-     *
      *
      * @return self
      */
@@ -318,7 +278,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The SHA of the original commit to which the comment applies.
-     *
      */
     public function getOriginalCommitId(): string
     {
@@ -326,7 +285,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The SHA of the original commit to which the comment applies.
-     *
      *
      * @return self
      */
@@ -338,7 +296,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The comment ID to reply to.
-     *
      */
     public function getInReplyToId(): int
     {
@@ -346,7 +303,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The comment ID to reply to.
-     *
      *
      * @return self
      */
@@ -358,7 +314,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getUser(): ?SimpleUser
     {
@@ -366,7 +321,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */
@@ -378,7 +332,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The text of the comment.
-     *
      */
     public function getBody(): string
     {
@@ -386,7 +339,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The text of the comment.
-     *
      *
      * @return self
      */
@@ -418,7 +370,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * HTML URL for the pull request review comment.
-     *
      */
     public function getHtmlUrl(): string
     {
@@ -426,7 +377,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * HTML URL for the pull request review comment.
-     *
      *
      * @return self
      */
@@ -438,7 +388,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * URL for the pull request that the review comment belongs to.
-     *
      */
     public function getPullRequestUrl(): string
     {
@@ -446,7 +395,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * URL for the pull request that the review comment belongs to.
-     *
      *
      * @return self
      */
@@ -458,7 +406,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * How the author of the comment is associated with the pull request.
-     *
      */
     public function getAuthorAssociation(): string
     {
@@ -466,7 +413,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * How the author of the comment is associated with the pull request.
-     *
      *
      * @return self
      */
@@ -488,7 +434,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
      */
     public function getStartLine(): ?int
     {
@@ -496,7 +441,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */
@@ -508,7 +452,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
      */
     public function getOriginalStartLine(): ?int
     {
@@ -516,7 +459,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */
@@ -528,7 +470,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      */
     public function getStartSide(): ?string
     {
@@ -536,7 +477,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */
@@ -548,7 +488,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     public function getLine(): int
     {
@@ -556,7 +495,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      *
      * @return self
      */
@@ -568,7 +506,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     public function getOriginalLine(): int
     {
@@ -576,7 +513,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      *
      * @return self
      */
@@ -588,7 +524,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
-     *
      */
     public function getSide(): string
     {
@@ -596,7 +531,6 @@ class PullRequestReviewComment extends \ArrayObject
     }
     /**
      * The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
-     *
      *
      * @return self
      */

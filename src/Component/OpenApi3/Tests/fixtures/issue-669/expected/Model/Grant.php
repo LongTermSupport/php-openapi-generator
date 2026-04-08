@@ -22,17 +22,14 @@ class Grant extends \ArrayObject
     }
     /**
      * The name of the bucket.
-     *
      */
     protected string $bucket;
     /**
      * The permission to grant to the user. Possible values are `read`, `readwrite`, `fullaccess`, or an empty string.
-     *
      */
     protected string $permission;
     /**
      * The name of the bucket.
-     *
      */
     public function getBucket(): string
     {
@@ -40,7 +37,6 @@ class Grant extends \ArrayObject
     }
     /**
      * The name of the bucket.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class Grant extends \ArrayObject
     }
     /**
      * The permission to grant to the user. Possible values are `read`, `readwrite`, `fullaccess`, or an empty string.
-     *
      */
     public function getPermission(): string
     {
@@ -60,7 +55,6 @@ class Grant extends \ArrayObject
     }
     /**
      * The permission to grant to the user. Possible values are `read`, `readwrite`, `fullaccess`, or an empty string.
-     *
      *
      * @return self
      */

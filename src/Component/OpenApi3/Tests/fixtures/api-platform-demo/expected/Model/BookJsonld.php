@@ -26,27 +26,22 @@ class BookJsonld extends \ArrayObject
     protected ?string $id2 = null;
     /**
      * The ISBN of the book.
-     *
      */
     protected ?string $isbn = null;
     /**
      * The title of the book.
-     *
      */
     protected string $title;
     /**
      * A description of the item.
-     *
      */
     protected string $description;
     /**
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
-     *
      */
     protected string $author;
     /**
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     *
      */
     protected \DateTime $publicationDate;
     /**
@@ -57,7 +52,6 @@ class BookJsonld extends \ArrayObject
     protected array $reviews;
     /**
      * The book's cover base64 encoded.
-     *
      */
     protected ?string $cover = null;
     protected ?\DateTime $archivedAt = null;
@@ -103,7 +97,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The ISBN of the book.
-     *
      */
     public function getIsbn(): ?string
     {
@@ -111,7 +104,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The ISBN of the book.
-     *
      *
      * @return self
      */
@@ -123,7 +115,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      */
     public function getTitle(): string
     {
@@ -131,7 +122,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      *
      * @return self
      */
@@ -143,7 +133,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * A description of the item.
-     *
      */
     public function getDescription(): string
     {
@@ -151,7 +140,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * A description of the item.
-     *
      *
      * @return self
      */
@@ -163,7 +151,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
-     *
      */
     public function getAuthor(): string
     {
@@ -171,7 +158,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
-     *
      *
      * @return self
      */
@@ -183,7 +169,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     *
      */
     public function getPublicationDate(): \DateTime
     {
@@ -191,7 +176,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     *
      *
      * @return self
      */
@@ -225,7 +209,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The book's cover base64 encoded.
-     *
      */
     public function getCover(): ?string
     {
@@ -233,7 +216,6 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The book's cover base64 encoded.
-     *
      *
      * @return self
      */

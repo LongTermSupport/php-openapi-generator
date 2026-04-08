@@ -22,22 +22,18 @@ class AppIngressSpecRuleRoutingComponent extends \ArrayObject
     }
     /**
      * The name of the component to route to.
-     *
      */
     protected string $name;
     /**
      * An optional flag to preserve the path that is forwarded to the backend service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is `true`, the path will remain `/api/list`. Note: this is not applicable for Functions Components and is mutually exclusive with `rewrite`.
-     *
      */
     protected string $preservePathPrefix;
     /**
      * An optional field that will rewrite the path of the component to be what is specified here. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If you specified the rewrite to be `/v1/`, requests to `/api/list` would be rewritten to `/v1/list`. Note: this is mutually exclusive with `preserve_path_prefix`.
-     *
      */
     protected string $rewrite;
     /**
      * The name of the component to route to.
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class AppIngressSpecRuleRoutingComponent extends \ArrayObject
     }
     /**
      * The name of the component to route to.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AppIngressSpecRuleRoutingComponent extends \ArrayObject
     }
     /**
      * An optional flag to preserve the path that is forwarded to the backend service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is `true`, the path will remain `/api/list`. Note: this is not applicable for Functions Components and is mutually exclusive with `rewrite`.
-     *
      */
     public function getPreservePathPrefix(): string
     {
@@ -65,7 +59,6 @@ class AppIngressSpecRuleRoutingComponent extends \ArrayObject
     }
     /**
      * An optional flag to preserve the path that is forwarded to the backend service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is `true`, the path will remain `/api/list`. Note: this is not applicable for Functions Components and is mutually exclusive with `rewrite`.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AppIngressSpecRuleRoutingComponent extends \ArrayObject
     }
     /**
      * An optional field that will rewrite the path of the component to be what is specified here. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If you specified the rewrite to be `/v1/`, requests to `/api/list` would be rewritten to `/v1/list`. Note: this is mutually exclusive with `preserve_path_prefix`.
-     *
      */
     public function getRewrite(): string
     {
@@ -85,7 +77,6 @@ class AppIngressSpecRuleRoutingComponent extends \ArrayObject
     }
     /**
      * An optional field that will rewrite the path of the component to be what is specified here. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If you specified the rewrite to be `/v1/`, requests to `/api/list` would be rewritten to `/v1/list`. Note: this is mutually exclusive with `preserve_path_prefix`.
-     *
      *
      * @return self
      */

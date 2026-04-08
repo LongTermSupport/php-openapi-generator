@@ -22,23 +22,19 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      */
     protected string $childAgentUuid;
     /**
      * A unique identifier for the parent agent.
-     *
      */
     protected string $parentAgentUuid;
     protected bool $rollback;
     /**
      * Unique id of linkage
-     *
      */
     protected string $uuid;
     /**
      * Routed agent id
-     *
      */
     public function getChildAgentUuid(): string
     {
@@ -46,7 +42,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      */
     public function getParentAgentUuid(): string
     {
@@ -66,7 +60,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      *
      * @return self
      */
@@ -88,7 +81,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * Unique id of linkage
-     *
      */
     public function getUuid(): string
     {
@@ -96,7 +88,6 @@ class ApiUpdateLinkedAgentOutput extends \ArrayObject
     }
     /**
      * Unique id of linkage
-     *
      *
      * @return self
      */

@@ -22,23 +22,19 @@ class Repository extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      */
     protected string $registryName;
     /**
      * The name of the repository.
-     *
      */
     protected string $name;
     protected RepositoryTag $latestTag;
     /**
      * The number of tags in the repository.
-     *
      */
     protected int $tagCount;
     /**
      * The name of the container registry.
-     *
      */
     public function getRegistryName(): string
     {
@@ -46,7 +42,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The name of the container registry.
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      */
     public function getName(): string
     {
@@ -66,7 +60,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      *
      * @return self
      */
@@ -88,7 +81,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The number of tags in the repository.
-     *
      */
     public function getTagCount(): int
     {
@@ -96,7 +88,6 @@ class Repository extends \ArrayObject
     }
     /**
      * The number of tags in the repository.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ApiGenerateOauth2URLOutput extends \ArrayObject
     }
     /**
      * The oauth2 url
-     *
      */
     protected string $url;
     /**
      * The oauth2 url
-     *
      */
     public function getUrl(): string
     {
@@ -35,7 +33,6 @@ class ApiGenerateOauth2URLOutput extends \ArrayObject
     }
     /**
      * The oauth2 url
-     *
      *
      * @return self
      */

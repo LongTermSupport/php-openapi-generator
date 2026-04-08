@@ -22,87 +22,70 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * ID of transfer.
-     *
      */
     protected string $id;
     /**
      * Name of transfer.
-     *
      */
     protected string $name;
     /**
      * State of transfer.
-     *
      */
     protected mixed $state = null;
     /**
      * Type of transfer.
-     *
      */
     protected mixed $transferType = null;
     /**
      * Associated business process ID.
-     *
      */
     protected ?string $businessProcessId = null;
     /**
      * Number of files in transfer.
-     *
      */
     protected int $fileTransferCount;
     /**
      * ID of collection created from transfer.
-     *
      */
     protected ?string $collectionId = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Number of items processed.
-     *
      */
     protected int $itemProgress;
     /**
      * Total number of items.
-     *
      */
     protected int $itemCount;
     /**
      * Number of items currently being uploaded.
-     *
      */
     protected int $fileUploadInProgressCount;
     /**
      * Number of items currently being processed in data extraction.
-     *
      */
     protected int $dataExtractionInProgressCount;
     /**
      * Number of items failed.
-     *
      */
     protected int $itemsFailed;
     /**
      * Number of items cancelled.
-     *
      */
     protected int $itemsCancelled;
     /**
      * Time stamp of last progress update from data extraction.
-     *
      */
     protected ?\DateTime $lastDataExtractionProgressTimeStamp = null;
     /**
      * Time stamp of last progress update from upload.
-     *
      */
     protected ?\DateTime $lastFileUploadProgressTimeStamp = null;
     /**
      * ID of transfer.
-     *
      */
     public function getId(): string
     {
@@ -110,7 +93,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * ID of transfer.
-     *
      *
      * @return self
      */
@@ -122,7 +104,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Name of transfer.
-     *
      */
     public function getName(): string
     {
@@ -130,7 +111,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Name of transfer.
-     *
      *
      * @return self
      */
@@ -142,7 +122,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * State of transfer.
-     *
      */
     public function getState(): mixed
     {
@@ -150,7 +129,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * State of transfer.
-     *
      *
      * @return self
      */
@@ -162,7 +140,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Type of transfer.
-     *
      */
     public function getTransferType(): mixed
     {
@@ -170,7 +147,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Type of transfer.
-     *
      *
      * @return self
      */
@@ -182,7 +158,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Associated business process ID.
-     *
      */
     public function getBusinessProcessId(): ?string
     {
@@ -190,7 +165,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Associated business process ID.
-     *
      *
      * @return self
      */
@@ -202,7 +176,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of files in transfer.
-     *
      */
     public function getFileTransferCount(): int
     {
@@ -210,7 +183,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of files in transfer.
-     *
      *
      * @return self
      */
@@ -222,7 +194,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * ID of collection created from transfer.
-     *
      */
     public function getCollectionId(): ?string
     {
@@ -230,7 +201,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * ID of collection created from transfer.
-     *
      *
      * @return self
      */
@@ -242,7 +212,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -250,7 +219,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -262,7 +230,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items processed.
-     *
      */
     public function getItemProgress(): int
     {
@@ -270,7 +237,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items processed.
-     *
      *
      * @return self
      */
@@ -282,7 +248,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Total number of items.
-     *
      */
     public function getItemCount(): int
     {
@@ -290,7 +255,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Total number of items.
-     *
      *
      * @return self
      */
@@ -302,7 +266,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items currently being uploaded.
-     *
      */
     public function getFileUploadInProgressCount(): int
     {
@@ -310,7 +273,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items currently being uploaded.
-     *
      *
      * @return self
      */
@@ -322,7 +284,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items currently being processed in data extraction.
-     *
      */
     public function getDataExtractionInProgressCount(): int
     {
@@ -330,7 +291,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items currently being processed in data extraction.
-     *
      *
      * @return self
      */
@@ -342,7 +302,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items failed.
-     *
      */
     public function getItemsFailed(): int
     {
@@ -350,7 +309,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items failed.
-     *
      *
      * @return self
      */
@@ -362,7 +320,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items cancelled.
-     *
      */
     public function getItemsCancelled(): int
     {
@@ -370,7 +327,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Number of items cancelled.
-     *
      *
      * @return self
      */
@@ -382,7 +338,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Time stamp of last progress update from data extraction.
-     *
      */
     public function getLastDataExtractionProgressTimeStamp(): ?\DateTime
     {
@@ -390,7 +345,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Time stamp of last progress update from data extraction.
-     *
      *
      * @return self
      */
@@ -402,7 +356,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Time stamp of last progress update from upload.
-     *
      */
     public function getLastFileUploadProgressTimeStamp(): ?\DateTime
     {
@@ -410,7 +363,6 @@ class TransferDetail extends \ArrayObject
     }
     /**
      * Time stamp of last progress update from upload.
-     *
      *
      * @return self
      */

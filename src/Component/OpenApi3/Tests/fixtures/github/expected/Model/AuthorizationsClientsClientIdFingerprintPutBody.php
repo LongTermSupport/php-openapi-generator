@@ -22,7 +22,6 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     }
     /**
      * The OAuth app client secret for which to create the token.
-     *
      */
     protected string $clientSecret;
     /**
@@ -33,17 +32,14 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     protected ?array $scopes = null;
     /**
      * A note to remind you what the OAuth token is for.
-     *
      */
     protected string $note;
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      */
     protected string $noteUrl;
     /**
      * The OAuth app client secret for which to create the token.
-     *
      */
     public function getClientSecret(): string
     {
@@ -51,7 +47,6 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     }
     /**
      * The OAuth app client secret for which to create the token.
-     *
      *
      * @return self
      */
@@ -85,7 +80,6 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
      */
     public function getNote(): string
     {
@@ -93,7 +87,6 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
      *
      * @return self
      */
@@ -105,7 +98,6 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      */
     public function getNoteUrl(): string
     {
@@ -113,7 +105,6 @@ class AuthorizationsClientsClientIdFingerprintPutBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      *
      * @return self
      */

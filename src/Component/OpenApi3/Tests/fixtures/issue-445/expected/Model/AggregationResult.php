@@ -19,12 +19,10 @@ class AggregationResult
     }
     /**
      * Name of the aggregation.
-     *
      */
     protected string $name;
     /**
      * When there are lots of unique terms, Elastic Search only returns the top terms; this number is the sum of the document counts for all buckets that are not part of the response.
-     *
      */
     protected ?int $sumOtherDocCount = null;
     /**
@@ -36,7 +34,6 @@ class AggregationResult
     protected ?array $aggregationResultItems = null;
     /**
      * Name of the aggregation.
-     *
      */
     public function getName(): string
     {
@@ -44,7 +41,6 @@ class AggregationResult
     }
     /**
      * Name of the aggregation.
-     *
      *
      * @return self
      */
@@ -56,7 +52,6 @@ class AggregationResult
     }
     /**
      * When there are lots of unique terms, Elastic Search only returns the top terms; this number is the sum of the document counts for all buckets that are not part of the response.
-     *
      */
     public function getSumOtherDocCount(): ?int
     {
@@ -64,7 +59,6 @@ class AggregationResult
     }
     /**
      * When there are lots of unique terms, Elastic Search only returns the top terms; this number is the sum of the document counts for all buckets that are not part of the response.
-     *
      *
      * @return self
      */
@@ -85,13 +79,13 @@ class AggregationResult
         return $this->aggregationResultItems;
     }
     /**
-    * Items returned for the aggregation. Each item consists of a bucket with the matched value and the number of matches.
-    Optionally inner aggregations for further drill down can be available.
-    *
-    * @param list<AggregationResultItem>|null $aggregationResultItems
-    *
-    * @return self
-    */
+     * Items returned for the aggregation. Each item consists of a bucket with the matched value and the number of matches.
+     * Optionally inner aggregations for further drill down can be available.
+     *
+     * @param list<AggregationResultItem>|null $aggregationResultItems
+     *
+     * @return self
+     */
     public function setAggregationResultItems(?array $aggregationResultItems): self
     {
         $this->initialized['aggregationResultItems'] = true;

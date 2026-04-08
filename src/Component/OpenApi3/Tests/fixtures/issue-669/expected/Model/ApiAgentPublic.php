@@ -22,7 +22,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * A Chatbot
-     *
      */
     protected ApiChatbot $chatbot;
     /**
@@ -33,62 +32,50 @@ class ApiAgentPublic extends \ArrayObject
     protected array $chatbotIdentifiers;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Description of deployment
-     *
      */
     protected ApiDeployment $deployment;
     /**
      * Description of agent
-     *
      */
     protected string $description;
     /**
      * Instructions to the agent on how to use the route
-     *
      */
     protected string $ifCase;
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     protected string $instruction;
     /**
      * How many results should be considered from an attached knowledge base
-     *
      */
     protected int $k;
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
      */
     protected int $maxTokens;
     /**
      * Description of a Model
-     *
      */
     protected ApiModel $model;
     /**
      * Agent name
-     *
      */
     protected string $name;
     /**
      * The DigitalOcean project ID associated with the agent
-     *
      */
     protected string $projectId;
     /**
      * Whether the agent should provide in-response citations
-     *
      */
     protected bool $provideCitations;
     /**
      * Region code
-     *
      */
     protected string $region;
     /**
@@ -97,27 +84,22 @@ class ApiAgentPublic extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     protected string $retrievalMethod = 'RETRIEVAL_METHOD_UNKNOWN';
     /**
      * Creation of route date / time
-     *
      */
     protected \DateTime $routeCreatedAt;
     /**
      * Id of user that created the route
-     *
      */
     protected string $routeCreatedBy;
     /**
      * Route name
-     *
      */
     protected string $routeName;
     /**
      * Route uuid
-     *
      */
     protected string $routeUuid;
     /**
@@ -128,47 +110,38 @@ class ApiAgentPublic extends \ArrayObject
     protected array $tags;
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
      */
     protected float $temperature;
     /**
      * Represents an AgentTemplate entity
-     *
      */
     protected ApiAgentTemplate $template;
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
      */
     protected float $topP;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Access your agent under this url
-     *
      */
     protected string $url;
     /**
      * Id of user that created the agent
-     *
      */
     protected string $userId;
     /**
      * Unique agent id
-     *
      */
     protected string $uuid;
     /**
      * The latest version of the agent
-     *
      */
     protected string $versionHash;
     /**
      * A Chatbot
-     *
      */
     public function getChatbot(): ApiChatbot
     {
@@ -176,7 +149,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * A Chatbot
-     *
      *
      * @return self
      */
@@ -210,7 +182,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -218,7 +189,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -230,7 +200,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Description of deployment
-     *
      */
     public function getDeployment(): ApiDeployment
     {
@@ -238,7 +207,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Description of deployment
-     *
      *
      * @return self
      */
@@ -250,7 +218,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Description of agent
-     *
      */
     public function getDescription(): string
     {
@@ -258,7 +225,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Description of agent
-     *
      *
      * @return self
      */
@@ -270,7 +236,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Instructions to the agent on how to use the route
-     *
      */
     public function getIfCase(): string
     {
@@ -278,7 +243,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Instructions to the agent on how to use the route
-     *
      *
      * @return self
      */
@@ -290,7 +254,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      */
     public function getInstruction(): string
     {
@@ -298,7 +261,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Agent instruction. Instructions help your agent to perform its job effectively. See [Write Effective Agent Instructions](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#agent-instructions) for best practices.
-     *
      *
      * @return self
      */
@@ -310,7 +272,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * How many results should be considered from an attached knowledge base
-     *
      */
     public function getK(): int
     {
@@ -318,7 +279,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * How many results should be considered from an attached knowledge base
-     *
      *
      * @return self
      */
@@ -330,7 +290,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
      */
     public function getMaxTokens(): int
     {
@@ -338,7 +297,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Specifies the maximum number of tokens the model can process in a single input or output, set as a number between 1 and 512. This determines the length of each response.
-     *
      *
      * @return self
      */
@@ -350,7 +308,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
      */
     public function getModel(): ApiModel
     {
@@ -358,7 +315,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Description of a Model
-     *
      *
      * @return self
      */
@@ -370,7 +326,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
      */
     public function getName(): string
     {
@@ -378,7 +333,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Agent name
-     *
      *
      * @return self
      */
@@ -390,7 +344,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * The DigitalOcean project ID associated with the agent
-     *
      */
     public function getProjectId(): string
     {
@@ -398,7 +351,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * The DigitalOcean project ID associated with the agent
-     *
      *
      * @return self
      */
@@ -410,7 +362,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
      */
     public function getProvideCitations(): bool
     {
@@ -418,7 +369,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Whether the agent should provide in-response citations
-     *
      *
      * @return self
      */
@@ -430,7 +380,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Region code
-     *
      */
     public function getRegion(): string
     {
@@ -438,7 +387,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Region code
-     *
      *
      * @return self
      */
@@ -454,22 +402,20 @@ class ApiAgentPublic extends \ArrayObject
      *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
      *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
      *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
-     *
      */
     public function getRetrievalMethod(): string
     {
         return $this->retrievalMethod;
     }
     /**
-    * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
-    - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
-    - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
-    - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
-    - RETRIEVAL_METHOD_NONE: The retrieval method is none
-    *
-    *
-    * @return self
-    */
+     * - RETRIEVAL_METHOD_UNKNOWN: The retrieval method is unknown
+     *  - RETRIEVAL_METHOD_REWRITE: The retrieval method is rewrite
+     *  - RETRIEVAL_METHOD_STEP_BACK: The retrieval method is step back
+     *  - RETRIEVAL_METHOD_SUB_QUERIES: The retrieval method is sub queries
+     *  - RETRIEVAL_METHOD_NONE: The retrieval method is none
+     *
+     * @return self
+     */
     public function setRetrievalMethod(string $retrievalMethod): self
     {
         $this->initialized['retrievalMethod'] = true;
@@ -478,7 +424,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Creation of route date / time
-     *
      */
     public function getRouteCreatedAt(): \DateTime
     {
@@ -486,7 +431,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Creation of route date / time
-     *
      *
      * @return self
      */
@@ -498,7 +442,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Id of user that created the route
-     *
      */
     public function getRouteCreatedBy(): string
     {
@@ -506,7 +449,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Id of user that created the route
-     *
      *
      * @return self
      */
@@ -518,7 +460,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Route name
-     *
      */
     public function getRouteName(): string
     {
@@ -526,7 +467,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Route name
-     *
      *
      * @return self
      */
@@ -538,7 +478,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Route uuid
-     *
      */
     public function getRouteUuid(): string
     {
@@ -546,7 +485,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Route uuid
-     *
      *
      * @return self
      */
@@ -580,7 +518,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
      */
     public function getTemperature(): float
     {
@@ -588,7 +525,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Controls the model’s creativity, specified as a number between 0 and 1. Lower values produce more predictable and conservative responses, while higher values encourage creativity and variation.
-     *
      *
      * @return self
      */
@@ -600,7 +536,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Represents an AgentTemplate entity
-     *
      */
     public function getTemplate(): ApiAgentTemplate
     {
@@ -608,7 +543,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Represents an AgentTemplate entity
-     *
      *
      * @return self
      */
@@ -620,7 +554,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
      */
     public function getTopP(): float
     {
@@ -628,7 +561,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Defines the cumulative probability threshold for word selection, specified as a number between 0 and 1. Higher values allow for more diverse outputs, while lower values ensure focused and coherent responses.
-     *
      *
      * @return self
      */
@@ -640,7 +572,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -648,7 +579,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -660,7 +590,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Access your agent under this url
-     *
      */
     public function getUrl(): string
     {
@@ -668,7 +597,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Access your agent under this url
-     *
      *
      * @return self
      */
@@ -680,7 +608,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Id of user that created the agent
-     *
      */
     public function getUserId(): string
     {
@@ -688,7 +615,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Id of user that created the agent
-     *
      *
      * @return self
      */
@@ -700,7 +626,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
      */
     public function getUuid(): string
     {
@@ -708,7 +633,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Unique agent id
-     *
      *
      * @return self
      */
@@ -720,7 +644,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * The latest version of the agent
-     *
      */
     public function getVersionHash(): string
     {
@@ -728,7 +651,6 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * The latest version of the agent
-     *
      *
      * @return self
      */

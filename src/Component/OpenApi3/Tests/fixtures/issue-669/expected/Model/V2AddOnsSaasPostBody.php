@@ -22,17 +22,14 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
      */
     protected string $appSlug;
     /**
      * The slug identifier for the plan associated with the resource.
-     *
      */
     protected string $planSlug;
     /**
      * The name of the addon resource.
-     *
      */
     protected string $name;
     /**
@@ -43,17 +40,14 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     protected array $metadata;
     /**
      * ID of the droplet to be linked to this resource, if applicable.
-     *
      */
     protected int $linkedDropletId;
     /**
      * UUID of the fleet/project to which this resource will belong.
-     *
      */
     protected string $fleetUuid;
     /**
      * The slug identifier for the application associated with the resource.
-     *
      */
     public function getAppSlug(): string
     {
@@ -61,7 +55,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the application associated with the resource.
-     *
      *
      * @return self
      */
@@ -73,7 +66,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the plan associated with the resource.
-     *
      */
     public function getPlanSlug(): string
     {
@@ -81,7 +73,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the plan associated with the resource.
-     *
      *
      * @return self
      */
@@ -93,7 +84,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The name of the addon resource.
-     *
      */
     public function getName(): string
     {
@@ -101,7 +91,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * The name of the addon resource.
-     *
      *
      * @return self
      */
@@ -135,7 +124,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * ID of the droplet to be linked to this resource, if applicable.
-     *
      */
     public function getLinkedDropletId(): int
     {
@@ -143,7 +131,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * ID of the droplet to be linked to this resource, if applicable.
-     *
      *
      * @return self
      */
@@ -155,7 +142,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * UUID of the fleet/project to which this resource will belong.
-     *
      */
     public function getFleetUuid(): string
     {
@@ -163,7 +149,6 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * UUID of the fleet/project to which this resource will belong.
-     *
      *
      * @return self
      */

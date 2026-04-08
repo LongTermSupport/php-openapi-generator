@@ -23,22 +23,18 @@ class Kernel extends \ArrayObject
     }
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
      */
     protected int $id;
     /**
      * The display name of the kernel. This is shown in the web UI and is generally a descriptive title for the kernel in question.
-     *
      */
     protected string $name;
     /**
      * A standard kernel version string representing the version, patch, and release information.
-     *
      */
     protected string $version;
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
      */
     public function getId(): int
     {
@@ -46,7 +42,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * A unique number used to identify and reference a specific kernel.
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * The display name of the kernel. This is shown in the web UI and is generally a descriptive title for the kernel in question.
-     *
      */
     public function getName(): string
     {
@@ -66,7 +60,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * The display name of the kernel. This is shown in the web UI and is generally a descriptive title for the kernel in question.
-     *
      *
      * @return self
      */
@@ -78,7 +71,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * A standard kernel version string representing the version, patch, and release information.
-     *
      */
     public function getVersion(): string
     {
@@ -86,7 +78,6 @@ class Kernel extends \ArrayObject
     }
     /**
      * A standard kernel version string representing the version, patch, and release information.
-     *
      *
      * @return self
      */

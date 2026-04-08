@@ -40,17 +40,14 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     protected array $removeScopes;
     /**
      * A note to remind you what the OAuth token is for.
-     *
      */
     protected string $note;
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      */
     protected string $noteUrl;
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
      */
     protected string $fingerprint;
     /**
@@ -121,7 +118,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
      */
     public function getNote(): string
     {
@@ -129,7 +125,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
      *
      * @return self
      */
@@ -141,7 +136,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      */
     public function getNoteUrl(): string
     {
@@ -149,7 +143,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      *
      * @return self
      */
@@ -161,7 +154,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
      */
     public function getFingerprint(): string
     {
@@ -169,7 +161,6 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
      *
      * @return self
      */

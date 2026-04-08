@@ -22,12 +22,10 @@ class ImageActionBase extends \ArrayObject
     }
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
      */
     protected string $type;
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
      */
     public function getType(): string
     {
@@ -35,7 +33,6 @@ class ImageActionBase extends \ArrayObject
     }
     /**
      * The action to be taken on the image. Can be either `convert` or `transfer`.
-     *
      *
      * @return self
      */

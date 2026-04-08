@@ -22,17 +22,14 @@ class OutputFormatSetXmpWritebackStateRequestItem extends \ArrayObject
     }
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
      */
     protected bool $enabled;
     /**
      * ID of the output format to set XMP writeback state for.
-     *
      */
     protected string $id;
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
      */
     public function getEnabled(): bool
     {
@@ -40,7 +37,6 @@ class OutputFormatSetXmpWritebackStateRequestItem extends \ArrayObject
     }
     /**
      * Indicates if XMP writeback shall be enabled for the format.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class OutputFormatSetXmpWritebackStateRequestItem extends \ArrayObject
     }
     /**
      * ID of the output format to set XMP writeback state for.
-     *
      */
     public function getId(): string
     {
@@ -60,7 +55,6 @@ class OutputFormatSetXmpWritebackStateRequestItem extends \ArrayObject
     }
     /**
      * ID of the output format to set XMP writeback state for.
-     *
      *
      * @return self
      */

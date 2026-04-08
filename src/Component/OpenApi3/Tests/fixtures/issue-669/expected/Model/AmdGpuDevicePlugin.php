@@ -22,12 +22,10 @@ class AmdGpuDevicePlugin extends \ArrayObject
     }
     /**
      * Indicates whether the AMD GPU Device Plugin is enabled.
-     *
      */
     protected bool $enabled;
     /**
      * Indicates whether the AMD GPU Device Plugin is enabled.
-     *
      */
     public function getEnabled(): bool
     {
@@ -35,7 +33,6 @@ class AmdGpuDevicePlugin extends \ArrayObject
     }
     /**
      * Indicates whether the AMD GPU Device Plugin is enabled.
-     *
      *
      * @return self
      */

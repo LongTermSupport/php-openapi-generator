@@ -22,22 +22,18 @@ class VpcBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC.
-     *
      */
     protected string $id;
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     protected string $urn;
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A unique ID that can be used to identify and reference the VPC.
-     *
      */
     public function getId(): string
     {
@@ -45,7 +41,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the VPC.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     public function getUrn(): string
     {
@@ -65,7 +59,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -85,7 +77,6 @@ class VpcBase extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format.
-     *
      *
      * @return self
      */

@@ -22,24 +22,20 @@ class GitCommit extends \ArrayObject
     }
     /**
      * SHA for the commit
-     *
      */
     protected string $sha;
     protected string $nodeId;
     protected string $url;
     /**
      * Identifying information for the git-user
-     *
      */
     protected GitCommitAuthor $author;
     /**
      * Identifying information for the git-user
-     *
      */
     protected GitCommitCommitter $committer;
     /**
      * Message describing the purpose of the commit
-     *
      */
     protected string $message;
     protected GitCommitTree $tree;
@@ -51,7 +47,6 @@ class GitCommit extends \ArrayObject
     protected string $htmlUrl;
     /**
      * SHA for the commit
-     *
      */
     public function getSha(): string
     {
@@ -59,7 +54,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * SHA for the commit
-     *
      *
      * @return self
      */
@@ -91,7 +85,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Identifying information for the git-user
-     *
      */
     public function getAuthor(): GitCommitAuthor
     {
@@ -99,7 +92,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Identifying information for the git-user
-     *
      *
      * @return self
      */
@@ -111,7 +103,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Identifying information for the git-user
-     *
      */
     public function getCommitter(): GitCommitCommitter
     {
@@ -119,7 +110,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Identifying information for the git-user
-     *
      *
      * @return self
      */
@@ -131,7 +121,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Message describing the purpose of the commit
-     *
      */
     public function getMessage(): string
     {
@@ -139,7 +128,6 @@ class GitCommit extends \ArrayObject
     }
     /**
      * Message describing the purpose of the commit
-     *
      *
      * @return self
      */

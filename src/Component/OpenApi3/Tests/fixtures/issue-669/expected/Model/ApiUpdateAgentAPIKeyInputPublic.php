@@ -22,22 +22,18 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      */
     protected string $agentUuid;
     /**
      * API key ID
-     *
      */
     protected string $apiKeyUuid;
     /**
      * Name
-     *
      */
     protected string $name;
     /**
      * Agent id
-     *
      */
     public function getAgentUuid(): string
     {
@@ -45,7 +41,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
      */
     public function getApiKeyUuid(): string
     {
@@ -65,7 +59,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name
-     *
      */
     public function getName(): string
     {
@@ -85,7 +77,6 @@ class ApiUpdateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name
-     *
      *
      * @return self
      */

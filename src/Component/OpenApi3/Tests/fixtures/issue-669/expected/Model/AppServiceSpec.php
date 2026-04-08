@@ -22,7 +22,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     protected string $name;
     protected AppsGitSourceSpec $git;
@@ -32,22 +31,18 @@ class AppServiceSpec extends \ArrayObject
     protected AppsImageSourceSpec $image;
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      */
     protected string $dockerfilePath;
     /**
      * An optional build command to run while building this component from source.
-     *
      */
     protected string $buildCommand;
     /**
      * An optional run command to override the component's default.
-     *
      */
     protected string $runCommand;
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     protected string $sourceDir;
     /**
@@ -58,7 +53,6 @@ class AppServiceSpec extends \ArrayObject
     protected array $envs;
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      */
     protected string $environmentSlug;
     /**
@@ -69,17 +63,14 @@ class AppServiceSpec extends \ArrayObject
     protected array $logDestinations;
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     protected int $instanceCount = 1;
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     protected mixed $instanceSizeSlug = null;
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     protected AppComponentInstanceBaseAutoscaling $autoscaling;
     protected AppServiceSpeccors $cors;
@@ -91,13 +82,11 @@ class AppServiceSpec extends \ArrayObject
      * - `HTTP`: The app is serving the HTTP protocol. Default.
      * - `HTTP2`: The app is serving the HTTP/2 protocol. Currently, this needs to be implemented in the service by serving HTTP/2 cleartext (h2c).
      * 
-     *
      */
     protected string $protocol;
     /**
      * The internal port on which this service's run command will listen. Default: 8080
      * If there is not an environment variable with the name `PORT`, one will be automatically added with its value set to the value of this field.
-     *
      */
     protected int $httpPort;
     /**
@@ -117,7 +106,6 @@ class AppServiceSpec extends \ArrayObject
     protected AppServiceSpecTermination $termination;
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     public function getName(): string
     {
@@ -125,7 +113,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      *
      * @return self
      */
@@ -187,7 +174,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      */
     public function getDockerfilePath(): string
     {
@@ -195,7 +181,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      *
      * @return self
      */
@@ -207,7 +192,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
      */
     public function getBuildCommand(): string
     {
@@ -215,7 +199,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
      *
      * @return self
      */
@@ -227,7 +210,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
      */
     public function getRunCommand(): string
     {
@@ -235,7 +217,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
      *
      * @return self
      */
@@ -247,7 +228,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     public function getSourceDir(): string
     {
@@ -255,7 +235,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      *
      * @return self
      */
@@ -289,7 +268,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      */
     public function getEnvironmentSlug(): string
     {
@@ -297,7 +275,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      *
      * @return self
      */
@@ -331,7 +308,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     public function getInstanceCount(): int
     {
@@ -339,7 +315,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      *
      * @return self
      */
@@ -351,7 +326,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     public function getInstanceSizeSlug(): mixed
     {
@@ -359,7 +333,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      *
      * @return self
      */
@@ -371,7 +344,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     public function getAutoscaling(): AppComponentInstanceBaseAutoscaling
     {
@@ -379,7 +351,6 @@ class AppServiceSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      *
      * @return self
      */
@@ -425,22 +396,20 @@ class AppServiceSpec extends \ArrayObject
      * - `HTTP`: The app is serving the HTTP protocol. Default.
      * - `HTTP2`: The app is serving the HTTP/2 protocol. Currently, this needs to be implemented in the service by serving HTTP/2 cleartext (h2c).
      * 
-     *
      */
     public function getProtocol(): string
     {
         return $this->protocol;
     }
     /**
-    * The protocol which the service uses to serve traffic on the http_port.
-    
-    - `HTTP`: The app is serving the HTTP protocol. Default.
-    - `HTTP2`: The app is serving the HTTP/2 protocol. Currently, this needs to be implemented in the service by serving HTTP/2 cleartext (h2c).
-    
-    *
-    *
-    * @return self
-    */
+     * The protocol which the service uses to serve traffic on the http_port.
+     * 
+     * - `HTTP`: The app is serving the HTTP protocol. Default.
+     * - `HTTP2`: The app is serving the HTTP/2 protocol. Currently, this needs to be implemented in the service by serving HTTP/2 cleartext (h2c).
+     * 
+     *
+     * @return self
+     */
     public function setProtocol(string $protocol): self
     {
         $this->initialized['protocol'] = true;
@@ -450,19 +419,17 @@ class AppServiceSpec extends \ArrayObject
     /**
      * The internal port on which this service's run command will listen. Default: 8080
      * If there is not an environment variable with the name `PORT`, one will be automatically added with its value set to the value of this field.
-     *
      */
     public function getHttpPort(): int
     {
         return $this->httpPort;
     }
     /**
-    * The internal port on which this service's run command will listen. Default: 8080
-    If there is not an environment variable with the name `PORT`, one will be automatically added with its value set to the value of this field.
-    *
-    *
-    * @return self
-    */
+     * The internal port on which this service's run command will listen. Default: 8080
+     * If there is not an environment variable with the name `PORT`, one will be automatically added with its value set to the value of this field.
+     *
+     * @return self
+     */
     public function setHttpPort(int $httpPort): self
     {
         $this->initialized['httpPort'] = true;

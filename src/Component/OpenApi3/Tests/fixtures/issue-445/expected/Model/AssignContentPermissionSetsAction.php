@@ -19,17 +19,14 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * IDs of the permission sets to assign.
-     *
      */
     protected mixed $permissionSetIds = null;
     /**
      * Indicates whether the already assigned permissions should be replaced or merged.
-     *
      */
     protected bool $replace;
     /**
      * IDs of the permission sets to assign.
-     *
      */
     public function getPermissionSetIds(): mixed
     {
@@ -37,7 +34,6 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * IDs of the permission sets to assign.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * Indicates whether the already assigned permissions should be replaced or merged.
-     *
      */
     public function getReplace(): bool
     {
@@ -57,7 +52,6 @@ class AssignContentPermissionSetsAction extends BusinessRuleAction
     }
     /**
      * Indicates whether the already assigned permissions should be replaced or merged.
-     *
      *
      * @return self
      */

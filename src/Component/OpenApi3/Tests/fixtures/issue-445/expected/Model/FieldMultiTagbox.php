@@ -19,43 +19,35 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * The ID of the schema to be used as tagbox (it must be of type List).
-     *
      */
     protected string $schemaId;
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
      */
     protected mixed $schemaIndexingInfo = null;
     /**
      * The maximum number of items that can be stored.
-     *
      */
     protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
-     *
      */
     protected ?int $minimumItems = null;
     /**
      * An optional filter to limit the returned list items.
-     *
      */
     protected mixed $filter = null;
     /**
      * Json serialized template used for creating new list item (no logic is implemented in backend).
-     *
      */
     protected ?string $listItemCreateTemplate = null;
     /**
      * Defines the display pattern type to be used (Name or List only) when showing a tagbox item in view mode. Defaults to "Name".
      * The information is only consumed by the client application. No actual logic is implemented in the backend.
-     *
      */
     protected mixed $viewModeDisplayPatternType = 'Name';
     /**
      * The ID of the schema to be used as tagbox (it must be of type List).
-     *
      */
     public function getSchemaId(): string
     {
@@ -63,7 +55,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * The ID of the schema to be used as tagbox (it must be of type List).
-     *
      *
      * @return self
      */
@@ -75,7 +66,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
      */
     public function getSchemaIndexingInfo(): mixed
     {
@@ -83,7 +73,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
      *
      * @return self
      */
@@ -95,7 +84,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      */
     public function getMaximumItems(): ?int
     {
@@ -103,7 +91,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      *
      * @return self
      */
@@ -115,7 +102,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      */
     public function getMinimumItems(): ?int
     {
@@ -123,7 +109,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      *
      * @return self
      */
@@ -135,7 +120,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * An optional filter to limit the returned list items.
-     *
      */
     public function getFilter(): mixed
     {
@@ -143,7 +127,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * An optional filter to limit the returned list items.
-     *
      *
      * @return self
      */
@@ -155,7 +138,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * Json serialized template used for creating new list item (no logic is implemented in backend).
-     *
      */
     public function getListItemCreateTemplate(): ?string
     {
@@ -163,7 +145,6 @@ class FieldMultiTagbox extends FieldBase
     }
     /**
      * Json serialized template used for creating new list item (no logic is implemented in backend).
-     *
      *
      * @return self
      */
@@ -176,19 +157,17 @@ class FieldMultiTagbox extends FieldBase
     /**
      * Defines the display pattern type to be used (Name or List only) when showing a tagbox item in view mode. Defaults to "Name".
      * The information is only consumed by the client application. No actual logic is implemented in the backend.
-     *
      */
     public function getViewModeDisplayPatternType(): mixed
     {
         return $this->viewModeDisplayPatternType;
     }
     /**
-    * Defines the display pattern type to be used (Name or List only) when showing a tagbox item in view mode. Defaults to "Name".
-    The information is only consumed by the client application. No actual logic is implemented in the backend.
-    *
-    *
-    * @return self
-    */
+     * Defines the display pattern type to be used (Name or List only) when showing a tagbox item in view mode. Defaults to "Name".
+     * The information is only consumed by the client application. No actual logic is implemented in the backend.
+     *
+     * @return self
+     */
     public function setViewModeDisplayPatternType(mixed $viewModeDisplayPatternType): self
     {
         $this->initialized['viewModeDisplayPatternType'] = true;

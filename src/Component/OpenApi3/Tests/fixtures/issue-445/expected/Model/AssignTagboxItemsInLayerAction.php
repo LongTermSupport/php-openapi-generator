@@ -19,23 +19,19 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     }
     /**
      * Named cache to use for lookup, should be of type SchemaTagboxFilterLookupNamedCacheConfiguration
-     *
      */
     protected ?string $namedCache = null;
     /**
      * List of refIds of the items that should be assigned.
-     *
      */
     protected mixed $refIds = null;
     /**
      * Indicates where the assignment should be additive to the already assigned tags
      * or if existing tags should be replaced.
-     *
      */
     protected bool $replace;
     /**
      * Named cache to use for lookup, should be of type SchemaTagboxFilterLookupNamedCacheConfiguration
-     *
      */
     public function getNamedCache(): ?string
     {
@@ -43,7 +39,6 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     }
     /**
      * Named cache to use for lookup, should be of type SchemaTagboxFilterLookupNamedCacheConfiguration
-     *
      *
      * @return self
      */
@@ -55,7 +50,6 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be assigned.
-     *
      */
     public function getRefIds(): mixed
     {
@@ -63,7 +57,6 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     }
     /**
      * List of refIds of the items that should be assigned.
-     *
      *
      * @return self
      */
@@ -76,19 +69,17 @@ class AssignTagboxItemsInLayerAction extends BusinessRuleAction
     /**
      * Indicates where the assignment should be additive to the already assigned tags
      * or if existing tags should be replaced.
-     *
      */
     public function getReplace(): bool
     {
         return $this->replace;
     }
     /**
-    * Indicates where the assignment should be additive to the already assigned tags
-    or if existing tags should be replaced.
-    *
-    *
-    * @return self
-    */
+     * Indicates where the assignment should be additive to the already assigned tags
+     * or if existing tags should be replaced.
+     *
+     * @return self
+     */
     public function setReplace(bool $replace): self
     {
         $this->initialized['replace'] = true;

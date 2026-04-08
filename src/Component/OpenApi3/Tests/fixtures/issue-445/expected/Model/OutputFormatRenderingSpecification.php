@@ -19,17 +19,14 @@ class OutputFormatRenderingSpecification
     }
     /**
      * Which output format should be used as a source of data.
-     *
      */
     protected mixed $sourceOutputFormats = null;
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      */
     protected mixed $format = null;
     /**
      * Which output format should be used as a source of data.
-     *
      */
     public function getSourceOutputFormats(): mixed
     {
@@ -37,7 +34,6 @@ class OutputFormatRenderingSpecification
     }
     /**
      * Which output format should be used as a source of data.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class OutputFormatRenderingSpecification
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      */
     public function getFormat(): mixed
     {
@@ -57,7 +52,6 @@ class OutputFormatRenderingSpecification
     }
     /**
      * Information about the technical format of the data, e.g. JPEG, AAC or video still.
-     *
      *
      * @return self
      */

@@ -24,12 +24,10 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     protected string $message;
     /**
      * Fresh Investigation Unique Identifier
-     *
      */
     protected string $orderID;
     /**
      * Fresh Investigation Internal Identifier
-     *
      */
     protected string $transactionID;
     public function getCorrelationId(): string
@@ -54,7 +52,6 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     }
     /**
      * Fresh Investigation Unique Identifier
-     *
      */
     public function getOrderID(): string
     {
@@ -62,7 +59,6 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     }
     /**
      * Fresh Investigation Unique Identifier
-     *
      *
      * @return self
      */
@@ -74,7 +70,6 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     }
     /**
      * Fresh Investigation Internal Identifier
-     *
      */
     public function getTransactionID(): string
     {
@@ -82,7 +77,6 @@ class SubmittedFreshInvestigationRepsonse extends \ArrayObject
     }
     /**
      * Fresh Investigation Internal Identifier
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ApiGetIndexingJobDetailsSignedURLOutput extends \ArrayObject
     }
     /**
      * The signed url for downloading the indexing job details
-     *
      */
     protected string $signedUrl;
     /**
      * The signed url for downloading the indexing job details
-     *
      */
     public function getSignedUrl(): string
     {
@@ -35,7 +33,6 @@ class ApiGetIndexingJobDetailsSignedURLOutput extends \ArrayObject
     }
     /**
      * The signed url for downloading the indexing job details
-     *
      *
      * @return self
      */

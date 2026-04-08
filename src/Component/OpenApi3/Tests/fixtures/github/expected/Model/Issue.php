@@ -24,7 +24,6 @@ class Issue extends \ArrayObject
     protected string $nodeId;
     /**
      * URL for the issue
-     *
      */
     protected string $url;
     protected string $repositoryUrl;
@@ -34,22 +33,18 @@ class Issue extends \ArrayObject
     protected string $htmlUrl;
     /**
      * Number uniquely identifying the issue within its repository
-     *
      */
     protected int $number;
     /**
      * State of the issue; either 'open' or 'closed'
-     *
      */
     protected string $state;
     /**
      * Title of the issue
-     *
      */
     protected string $title;
     /**
      * Contents of the issue
-     *
      */
     protected string $body;
     protected ?IssueUser $user = null;
@@ -78,7 +73,6 @@ class Issue extends \ArrayObject
     protected string $timelineUrl;
     /**
      * A git repository
-     *
      */
     protected Repository $repository;
     protected ?IssuePerformedViaGithubApp $performedViaGithubApp = null;
@@ -106,7 +100,6 @@ class Issue extends \ArrayObject
     }
     /**
      * URL for the issue
-     *
      */
     public function getUrl(): string
     {
@@ -114,7 +107,6 @@ class Issue extends \ArrayObject
     }
     /**
      * URL for the issue
-     *
      *
      * @return self
      */
@@ -176,7 +168,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Number uniquely identifying the issue within its repository
-     *
      */
     public function getNumber(): int
     {
@@ -184,7 +175,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Number uniquely identifying the issue within its repository
-     *
      *
      * @return self
      */
@@ -196,7 +186,6 @@ class Issue extends \ArrayObject
     }
     /**
      * State of the issue; either 'open' or 'closed'
-     *
      */
     public function getState(): string
     {
@@ -204,7 +193,6 @@ class Issue extends \ArrayObject
     }
     /**
      * State of the issue; either 'open' or 'closed'
-     *
      *
      * @return self
      */
@@ -216,7 +204,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Title of the issue
-     *
      */
     public function getTitle(): string
     {
@@ -224,7 +211,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Title of the issue
-     *
      *
      * @return self
      */
@@ -236,7 +222,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Contents of the issue
-     *
      */
     public function getBody(): string
     {
@@ -244,7 +229,6 @@ class Issue extends \ArrayObject
     }
     /**
      * Contents of the issue
-     *
      *
      * @return self
      */
@@ -436,7 +420,6 @@ class Issue extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getRepository(): Repository
     {
@@ -444,7 +427,6 @@ class Issue extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */

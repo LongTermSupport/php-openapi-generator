@@ -19,7 +19,6 @@ class ShareSearchAndAggregationBaseRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -30,7 +29,6 @@ class ShareSearchAndAggregationBaseRequest
     protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     protected mixed $filter = null;
     /**
@@ -46,7 +44,6 @@ class ShareSearchAndAggregationBaseRequest
     protected ?array $aggregationFilters = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -54,7 +51,6 @@ class ShareSearchAndAggregationBaseRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -88,7 +84,6 @@ class ShareSearchAndAggregationBaseRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -96,7 +91,6 @@ class ShareSearchAndAggregationBaseRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      *
      * @return self
      */
@@ -121,17 +115,17 @@ class ShareSearchAndAggregationBaseRequest
         return $this->aggregationFilters;
     }
     /**
-    * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
-    For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
-    by the aggregation filters are put in OR each other if they have the same AggregationName, and then such groups are put in AND.
-    For the aggregation values, only the original Filter of the search request is used to nail down the data to be considered for the aggregations. Then, on top of that, for each aggregator in the search request, a Filter is created to filter down the
-    aggregation results of that aggregation: depending if the AggregationName of the AggregationFilter matches the AggregationName of the Aggregator, the filter is put in OR (if it matches) or in AND (if it does not match it).
-    Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
-    *
-    * @param list<AggregationFilter>|null $aggregationFilters
-    *
-    * @return self
-    */
+     * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
+     * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
+     * by the aggregation filters are put in OR each other if they have the same AggregationName, and then such groups are put in AND.
+     * For the aggregation values, only the original Filter of the search request is used to nail down the data to be considered for the aggregations. Then, on top of that, for each aggregator in the search request, a Filter is created to filter down the
+     * aggregation results of that aggregation: depending if the AggregationName of the AggregationFilter matches the AggregationName of the Aggregator, the filter is put in OR (if it matches) or in AND (if it does not match it).
+     * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
+     *
+     * @param list<AggregationFilter>|null $aggregationFilters
+     *
+     * @return self
+     */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
         $this->initialized['aggregationFilters'] = true;

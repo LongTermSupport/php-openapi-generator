@@ -28,12 +28,10 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     protected array $agentUuids;
     /**
      * Description of the workspace
-     *
      */
     protected string $description;
     /**
      * Name of the workspace
-     *
      */
     protected string $name;
     /**
@@ -60,7 +58,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Description of the workspace
-     *
      */
     public function getDescription(): string
     {
@@ -68,7 +65,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Description of the workspace
-     *
      *
      * @return self
      */
@@ -80,7 +76,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Name of the workspace
-     *
      */
     public function getName(): string
     {
@@ -88,7 +83,6 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Name of the workspace
-     *
      *
      * @return self
      */

@@ -22,28 +22,23 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * The public IP address of the reserved IP. It also serves as its identifier.
-     *
      */
     protected string $ip;
     protected ReservedIpRegion $region;
     /**
      * The Droplet that the reserved IP has been assigned to. When you query a reserved IP, if it is assigned to a Droplet, the entire Droplet object will be returned. If it is not assigned, the value will be null.<br><br>Requires `droplet:read` scope.
-     *
      */
     protected mixed $droplet = null;
     /**
      * A boolean value indicating whether or not the reserved IP has pending actions preventing new ones from being submitted.
-     *
      */
     protected bool $locked;
     /**
      * The UUID of the project to which the reserved IP currently belongs.<br><br>Requires `project:read` scope.
-     *
      */
     protected string $projectId;
     /**
      * The public IP address of the reserved IP. It also serves as its identifier.
-     *
      */
     public function getIp(): string
     {
@@ -51,7 +46,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * The public IP address of the reserved IP. It also serves as its identifier.
-     *
      *
      * @return self
      */
@@ -73,7 +67,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * The Droplet that the reserved IP has been assigned to. When you query a reserved IP, if it is assigned to a Droplet, the entire Droplet object will be returned. If it is not assigned, the value will be null.<br><br>Requires `droplet:read` scope.
-     *
      */
     public function getDroplet(): mixed
     {
@@ -81,7 +74,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * The Droplet that the reserved IP has been assigned to. When you query a reserved IP, if it is assigned to a Droplet, the entire Droplet object will be returned. If it is not assigned, the value will be null.<br><br>Requires `droplet:read` scope.
-     *
      *
      * @return self
      */
@@ -93,7 +85,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * A boolean value indicating whether or not the reserved IP has pending actions preventing new ones from being submitted.
-     *
      */
     public function getLocked(): bool
     {
@@ -101,7 +92,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * A boolean value indicating whether or not the reserved IP has pending actions preventing new ones from being submitted.
-     *
      *
      * @return self
      */
@@ -113,7 +103,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * The UUID of the project to which the reserved IP currently belongs.<br><br>Requires `project:read` scope.
-     *
      */
     public function getProjectId(): string
     {
@@ -121,7 +110,6 @@ class ReservedIp extends \ArrayObject
     }
     /**
      * The UUID of the project to which the reserved IP currently belongs.<br><br>Requires `project:read` scope.
-     *
      *
      * @return self
      */

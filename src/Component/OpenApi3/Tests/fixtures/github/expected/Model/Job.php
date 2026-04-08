@@ -22,46 +22,38 @@ class Job extends \ArrayObject
     }
     /**
      * The id of the job.
-     *
      */
     protected int $id;
     /**
      * The id of the associated workflow run.
-     *
      */
     protected int $runId;
     protected string $runUrl;
     protected string $nodeId;
     /**
      * The SHA of the commit that is being run.
-     *
      */
     protected string $headSha;
     protected string $url;
     protected ?string $htmlUrl = null;
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
      */
     protected string $status;
     /**
      * The outcome of the job.
-     *
      */
     protected ?string $conclusion = null;
     /**
      * The time that the job started, in ISO 8601 format.
-     *
      */
     protected \DateTime $startedAt;
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
      */
     protected ?\DateTime $completedAt = null;
     /**
      * The name of the job.
-     *
      */
     protected string $name;
     /**
@@ -73,7 +65,6 @@ class Job extends \ArrayObject
     protected string $checkRunUrl;
     /**
      * The id of the job.
-     *
      */
     public function getId(): int
     {
@@ -81,7 +72,6 @@ class Job extends \ArrayObject
     }
     /**
      * The id of the job.
-     *
      *
      * @return self
      */
@@ -93,7 +83,6 @@ class Job extends \ArrayObject
     }
     /**
      * The id of the associated workflow run.
-     *
      */
     public function getRunId(): int
     {
@@ -101,7 +90,6 @@ class Job extends \ArrayObject
     }
     /**
      * The id of the associated workflow run.
-     *
      *
      * @return self
      */
@@ -133,7 +121,6 @@ class Job extends \ArrayObject
     }
     /**
      * The SHA of the commit that is being run.
-     *
      */
     public function getHeadSha(): string
     {
@@ -141,7 +128,6 @@ class Job extends \ArrayObject
     }
     /**
      * The SHA of the commit that is being run.
-     *
      *
      * @return self
      */
@@ -173,7 +159,6 @@ class Job extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
      */
     public function getStatus(): string
     {
@@ -181,7 +166,6 @@ class Job extends \ArrayObject
     }
     /**
      * The phase of the lifecycle that the job is currently in.
-     *
      *
      * @return self
      */
@@ -193,7 +177,6 @@ class Job extends \ArrayObject
     }
     /**
      * The outcome of the job.
-     *
      */
     public function getConclusion(): ?string
     {
@@ -201,7 +184,6 @@ class Job extends \ArrayObject
     }
     /**
      * The outcome of the job.
-     *
      *
      * @return self
      */
@@ -213,7 +195,6 @@ class Job extends \ArrayObject
     }
     /**
      * The time that the job started, in ISO 8601 format.
-     *
      */
     public function getStartedAt(): \DateTime
     {
@@ -221,7 +202,6 @@ class Job extends \ArrayObject
     }
     /**
      * The time that the job started, in ISO 8601 format.
-     *
      *
      * @return self
      */
@@ -233,7 +213,6 @@ class Job extends \ArrayObject
     }
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
      */
     public function getCompletedAt(): ?\DateTime
     {
@@ -241,7 +220,6 @@ class Job extends \ArrayObject
     }
     /**
      * The time that the job finished, in ISO 8601 format.
-     *
      *
      * @return self
      */
@@ -253,7 +231,6 @@ class Job extends \ArrayObject
     }
     /**
      * The name of the job.
-     *
      */
     public function getName(): string
     {
@@ -261,7 +238,6 @@ class Job extends \ArrayObject
     }
     /**
      * The name of the job.
-     *
      *
      * @return self
      */

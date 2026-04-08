@@ -32,12 +32,10 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     protected ?string $contentId = null;
     /**
      * Content types
-     *
      */
     protected string $originalContentType;
     /**
      * Content types
-     *
      */
     protected string $newContentType;
     public function getTraceLevel(): string
@@ -142,7 +140,6 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     }
     /**
      * Content types
-     *
      */
     public function getOriginalContentType(): string
     {
@@ -150,7 +147,6 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     }
     /**
      * Content types
-     *
      *
      * @return self
      */
@@ -162,7 +158,6 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     }
     /**
      * Content types
-     *
      */
     public function getNewContentType(): string
     {
@@ -170,7 +165,6 @@ class ContentFileReplaceTypeMismatchException extends \ArrayObject
     }
     /**
      * Content types
-     *
      *
      * @return self
      */

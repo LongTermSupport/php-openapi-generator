@@ -22,17 +22,14 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * Id of the clusterlint run that can be used later to fetch the diagnostics.
-     *
      */
     protected string $runId;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was made.
-     *
      */
     protected \DateTime $requestedAt;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was completed.
-     *
      */
     protected \DateTime $completedAt;
     /**
@@ -43,7 +40,6 @@ class ClusterlintResults extends \ArrayObject
     protected array $diagnostics;
     /**
      * Id of the clusterlint run that can be used later to fetch the diagnostics.
-     *
      */
     public function getRunId(): string
     {
@@ -51,7 +47,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * Id of the clusterlint run that can be used later to fetch the diagnostics.
-     *
      *
      * @return self
      */
@@ -63,7 +58,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was made.
-     *
      */
     public function getRequestedAt(): \DateTime
     {
@@ -71,7 +65,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was made.
-     *
      *
      * @return self
      */
@@ -83,7 +76,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was completed.
-     *
      */
     public function getCompletedAt(): \DateTime
     {
@@ -91,7 +83,6 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the schedule clusterlint run request was completed.
-     *
      *
      * @return self
      */

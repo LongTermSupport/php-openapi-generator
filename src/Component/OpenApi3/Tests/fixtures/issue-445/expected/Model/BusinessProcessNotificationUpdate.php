@@ -19,28 +19,23 @@ class BusinessProcessNotificationUpdate
     }
     /**
      * The title the message that is shown to the user should have.
-     *
      */
     protected mixed $title = null;
     /**
      * The message shown to the user.
-     *
      */
     protected mixed $message = null;
     /**
      * An optional navigation link that allows the user to jump to a page giving more information
      * about the process.
-     *
      */
     protected ?string $navigationLink = null;
     /**
      * The event type of the notification.
-     *
      */
     protected mixed $eventType = null;
     /**
      * The title the message that is shown to the user should have.
-     *
      */
     public function getTitle(): mixed
     {
@@ -48,7 +43,6 @@ class BusinessProcessNotificationUpdate
     }
     /**
      * The title the message that is shown to the user should have.
-     *
      *
      * @return self
      */
@@ -60,7 +54,6 @@ class BusinessProcessNotificationUpdate
     }
     /**
      * The message shown to the user.
-     *
      */
     public function getMessage(): mixed
     {
@@ -68,7 +61,6 @@ class BusinessProcessNotificationUpdate
     }
     /**
      * The message shown to the user.
-     *
      *
      * @return self
      */
@@ -81,19 +73,17 @@ class BusinessProcessNotificationUpdate
     /**
      * An optional navigation link that allows the user to jump to a page giving more information
      * about the process.
-     *
      */
     public function getNavigationLink(): ?string
     {
         return $this->navigationLink;
     }
     /**
-    * An optional navigation link that allows the user to jump to a page giving more information
-    about the process.
-    *
-    *
-    * @return self
-    */
+     * An optional navigation link that allows the user to jump to a page giving more information
+     * about the process.
+     *
+     * @return self
+     */
     public function setNavigationLink(?string $navigationLink): self
     {
         $this->initialized['navigationLink'] = true;
@@ -102,7 +92,6 @@ class BusinessProcessNotificationUpdate
     }
     /**
      * The event type of the notification.
-     *
      */
     public function getEventType(): mixed
     {
@@ -110,7 +99,6 @@ class BusinessProcessNotificationUpdate
     }
     /**
      * The event type of the notification.
-     *
      *
      * @return self
      */

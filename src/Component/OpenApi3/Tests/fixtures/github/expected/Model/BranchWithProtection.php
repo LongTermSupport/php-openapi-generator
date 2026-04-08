@@ -23,14 +23,12 @@ class BranchWithProtection extends \ArrayObject
     protected string $name;
     /**
      * Commit
-     *
      */
     protected Commit $commit;
     protected BranchWithProtectionLinks $links;
     protected bool $protected;
     /**
      * Branch Protection
-     *
      */
     protected BranchProtection $protection;
     protected string $protectionUrl;
@@ -48,7 +46,6 @@ class BranchWithProtection extends \ArrayObject
     }
     /**
      * Commit
-     *
      */
     public function getCommit(): Commit
     {
@@ -56,7 +53,6 @@ class BranchWithProtection extends \ArrayObject
     }
     /**
      * Commit
-     *
      *
      * @return self
      */
@@ -88,7 +84,6 @@ class BranchWithProtection extends \ArrayObject
     }
     /**
      * Branch Protection
-     *
      */
     public function getProtection(): BranchProtection
     {
@@ -96,7 +91,6 @@ class BranchWithProtection extends \ArrayObject
     }
     /**
      * Branch Protection
-     *
      *
      * @return self
      */

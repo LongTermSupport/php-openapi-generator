@@ -19,22 +19,18 @@ class XmpField
     }
     /**
      * Path of the field in XMP.
-     *
      */
     protected ?string $path = null;
     /**
      * Indicates if the field can be written to.
-     *
      */
     protected bool $isWritable;
     /**
      * Data type of the field.
-     *
      */
     protected mixed $dataType = null;
     /**
      * Path of the field in XMP.
-     *
      */
     public function getPath(): ?string
     {
@@ -42,7 +38,6 @@ class XmpField
     }
     /**
      * Path of the field in XMP.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class XmpField
     }
     /**
      * Indicates if the field can be written to.
-     *
      */
     public function getIsWritable(): bool
     {
@@ -62,7 +56,6 @@ class XmpField
     }
     /**
      * Indicates if the field can be written to.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class XmpField
     }
     /**
      * Data type of the field.
-     *
      */
     public function getDataType(): mixed
     {
@@ -82,7 +74,6 @@ class XmpField
     }
     /**
      * Data type of the field.
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The ID of the attachment
-     *
      */
     protected int $id;
     /**
      * The title of the attachment
-     *
      */
     protected string $title;
     /**
      * The body of the attachment
-     *
      */
     protected string $body;
     /**
      * The node_id of the content attachment
-     *
      */
     protected string $nodeId;
     /**
      * The ID of the attachment
-     *
      */
     public function getId(): int
     {
@@ -50,7 +45,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The ID of the attachment
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The title of the attachment
-     *
      */
     public function getTitle(): string
     {
@@ -70,7 +63,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The title of the attachment
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The body of the attachment
-     *
      */
     public function getBody(): string
     {
@@ -90,7 +81,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The body of the attachment
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The node_id of the content attachment
-     *
      */
     public function getNodeId(): string
     {
@@ -110,7 +99,6 @@ class ContentReferenceAttachment extends \ArrayObject
     }
     /**
      * The node_id of the content attachment
-     *
      *
      * @return self
      */

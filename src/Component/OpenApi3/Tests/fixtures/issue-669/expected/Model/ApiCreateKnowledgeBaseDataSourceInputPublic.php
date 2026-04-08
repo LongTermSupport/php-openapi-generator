@@ -22,41 +22,34 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * AWS S3 Data Source
-     *
      */
     protected ApiAWSDataSource $awsDataSource;
     /**
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     protected string $chunkingAlgorithm = 'CHUNKING_ALGORITHM_SECTION_BASED';
     /**
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     protected ApiChunkingOptions $chunkingOptions;
     /**
      * Knowledge base id
-     *
      */
     protected string $knowledgeBaseUuid;
     /**
      * Spaces Bucket Data Source
-     *
      */
     protected ApiSpacesDataSource $spacesDataSource;
     /**
      * WebCrawlerDataSource
-     *
      */
     protected ApiWebCrawlerDataSource $webCrawlerDataSource;
     /**
      * AWS S3 Data Source
-     *
      */
     public function getAwsDataSource(): ApiAWSDataSource
     {
@@ -64,7 +57,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * AWS S3 Data Source
-     *
      *
      * @return self
      */
@@ -78,7 +70,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * The chunking algorithm to use for processing data sources.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     public function getChunkingAlgorithm(): string
     {
@@ -86,8 +77,8 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * The chunking algorithm to use for processing data sources.
-     **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
+     * 
+     * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      * @return self
      */
@@ -101,7 +92,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
      * Configuration options for the chunking algorithm.
      * 
      * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
      */
     public function getChunkingOptions(): ApiChunkingOptions
     {
@@ -109,8 +99,8 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Configuration options for the chunking algorithm.
-     **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
-     *
+     * 
+     * **Note: This feature requires enabling the knowledgebase enhancements feature preview flag.**
      *
      * @return self
      */
@@ -122,7 +112,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      */
     public function getKnowledgeBaseUuid(): string
     {
@@ -130,7 +119,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      *
      * @return self
      */
@@ -142,7 +130,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
      */
     public function getSpacesDataSource(): ApiSpacesDataSource
     {
@@ -150,7 +137,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * Spaces Bucket Data Source
-     *
      *
      * @return self
      */
@@ -162,7 +148,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
      */
     public function getWebCrawlerDataSource(): ApiWebCrawlerDataSource
     {
@@ -170,7 +155,6 @@ class ApiCreateKnowledgeBaseDataSourceInputPublic extends \ArrayObject
     }
     /**
      * WebCrawlerDataSource
-     *
      *
      * @return self
      */

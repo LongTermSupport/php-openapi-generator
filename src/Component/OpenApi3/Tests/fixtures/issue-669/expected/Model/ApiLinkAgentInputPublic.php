@@ -22,23 +22,19 @@ class ApiLinkAgentInputPublic extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      */
     protected string $childAgentUuid;
     protected string $ifCase;
     /**
      * A unique identifier for the parent agent.
-     *
      */
     protected string $parentAgentUuid;
     /**
      * Name of route
-     *
      */
     protected string $routeName;
     /**
      * Routed agent id
-     *
      */
     public function getChildAgentUuid(): string
     {
@@ -46,7 +42,6 @@ class ApiLinkAgentInputPublic extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      *
      * @return self
      */
@@ -68,7 +63,6 @@ class ApiLinkAgentInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      */
     public function getParentAgentUuid(): string
     {
@@ -76,7 +70,6 @@ class ApiLinkAgentInputPublic extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      *
      * @return self
      */
@@ -88,7 +81,6 @@ class ApiLinkAgentInputPublic extends \ArrayObject
     }
     /**
      * Name of route
-     *
      */
     public function getRouteName(): string
     {
@@ -96,7 +88,6 @@ class ApiLinkAgentInputPublic extends \ArrayObject
     }
     /**
      * Name of route
-     *
      *
      * @return self
      */

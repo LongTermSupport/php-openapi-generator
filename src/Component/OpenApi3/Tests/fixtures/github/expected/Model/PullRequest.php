@@ -34,18 +34,15 @@ class PullRequest extends \ArrayObject
     protected string $statusesUrl;
     /**
      * Number uniquely identifying the pull request within its repository.
-     *
      */
     protected int $number;
     /**
      * State of this Pull Request. Either `open` or `closed`.
-     *
      */
     protected string $state;
     protected bool $locked;
     /**
      * The title of the pull request.
-     *
      */
     protected string $title;
     protected ?PullRequestUser $user = null;
@@ -80,7 +77,6 @@ class PullRequest extends \ArrayObject
     protected string $authorAssociation;
     /**
      * Indicates whether or not the pull request is a draft.
-     *
      */
     protected bool $draft;
     protected bool $merged;
@@ -92,7 +88,6 @@ class PullRequest extends \ArrayObject
     protected int $reviewComments;
     /**
      * Indicates whether maintainers can modify the pull request.
-     *
      */
     protected bool $maintainerCanModify;
     protected int $commits;
@@ -221,7 +216,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Number uniquely identifying the pull request within its repository.
-     *
      */
     public function getNumber(): int
     {
@@ -229,7 +223,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Number uniquely identifying the pull request within its repository.
-     *
      *
      * @return self
      */
@@ -241,7 +234,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * State of this Pull Request. Either `open` or `closed`.
-     *
      */
     public function getState(): string
     {
@@ -249,7 +241,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * State of this Pull Request. Either `open` or `closed`.
-     *
      *
      * @return self
      */
@@ -271,7 +262,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * The title of the pull request.
-     *
      */
     public function getTitle(): string
     {
@@ -279,7 +269,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * The title of the pull request.
-     *
      *
      * @return self
      */
@@ -503,7 +492,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Indicates whether or not the pull request is a draft.
-     *
      */
     public function getDraft(): bool
     {
@@ -511,7 +499,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Indicates whether or not the pull request is a draft.
-     *
      *
      * @return self
      */
@@ -593,7 +580,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Indicates whether maintainers can modify the pull request.
-     *
      */
     public function getMaintainerCanModify(): bool
     {
@@ -601,7 +587,6 @@ class PullRequest extends \ArrayObject
     }
     /**
      * Indicates whether maintainers can modify the pull request.
-     *
      *
      * @return self
      */

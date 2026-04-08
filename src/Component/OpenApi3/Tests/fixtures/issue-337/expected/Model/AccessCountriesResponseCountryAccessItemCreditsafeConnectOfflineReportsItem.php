@@ -24,22 +24,18 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     protected string $countryIso2;
     /**
      * Date of when the service was enabled
-     *
      */
     protected string $startDate;
     /**
      * Date of when the service will expire
-     *
      */
     protected string $expireDate;
     /**
      * Measure of total usage available in the service
-     *
      */
     protected int $paid;
     /**
      * Service usage
-     *
      */
     protected int $used;
     public function getName(): string
@@ -64,7 +60,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Date of when the service was enabled
-     *
      */
     public function getStartDate(): string
     {
@@ -72,7 +67,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Date of when the service was enabled
-     *
      *
      * @return self
      */
@@ -84,7 +78,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Date of when the service will expire
-     *
      */
     public function getExpireDate(): string
     {
@@ -92,7 +85,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Date of when the service will expire
-     *
      *
      * @return self
      */
@@ -104,7 +96,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Measure of total usage available in the service
-     *
      */
     public function getPaid(): int
     {
@@ -112,7 +103,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Measure of total usage available in the service
-     *
      *
      * @return self
      */
@@ -124,7 +114,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Service usage
-     *
      */
     public function getUsed(): int
     {
@@ -132,7 +121,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsIte
     }
     /**
      * Service usage
-     *
      *
      * @return self
      */

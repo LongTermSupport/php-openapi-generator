@@ -22,22 +22,18 @@ class PollOption extends \ArrayObject
     }
     /**
      * Position of this choice in the poll.
-     *
      */
     protected int $position;
     /**
      * The text of a poll choice.
-     *
      */
     protected string $label;
     /**
      * Number of users who voted for this choice.
-     *
      */
     protected int $votes;
     /**
      * Position of this choice in the poll.
-     *
      */
     public function getPosition(): int
     {
@@ -45,7 +41,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * Position of this choice in the poll.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * The text of a poll choice.
-     *
      */
     public function getLabel(): string
     {
@@ -65,7 +59,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * The text of a poll choice.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * Number of users who voted for this choice.
-     *
      */
     public function getVotes(): int
     {
@@ -85,7 +77,6 @@ class PollOption extends \ArrayObject
     }
     /**
      * Number of users who voted for this choice.
-     *
      *
      * @return self
      */

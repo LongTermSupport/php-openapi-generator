@@ -22,17 +22,14 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The unique identifier for the snapshot or backup.
-     *
      */
     protected int $id;
     /**
      * A human-readable name for the snapshot.
-     *
      */
     protected string $name;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -43,22 +40,18 @@ class DropletSnapshot extends \ArrayObject
     protected array $regions;
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      */
     protected int $minDiskSize;
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      */
     protected float $sizeGigabytes;
     /**
      * Describes the kind of image. It may be one of `snapshot` or `backup`. This specifies whether an image is a user-generated Droplet snapshot or automatically created Droplet backup.
-     *
      */
     protected string $type;
     /**
      * The unique identifier for the snapshot or backup.
-     *
      */
     public function getId(): int
     {
@@ -66,7 +59,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The unique identifier for the snapshot or backup.
-     *
      *
      * @return self
      */
@@ -78,7 +70,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
      */
     public function getName(): string
     {
@@ -86,7 +77,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
      *
      * @return self
      */
@@ -98,7 +88,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -106,7 +95,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      *
      * @return self
      */
@@ -140,7 +128,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      */
     public function getMinDiskSize(): int
     {
@@ -148,7 +135,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      *
      * @return self
      */
@@ -160,7 +146,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      */
     public function getSizeGigabytes(): float
     {
@@ -168,7 +153,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      *
      * @return self
      */
@@ -180,7 +164,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * Describes the kind of image. It may be one of `snapshot` or `backup`. This specifies whether an image is a user-generated Droplet snapshot or automatically created Droplet backup.
-     *
      */
     public function getType(): string
     {
@@ -188,7 +171,6 @@ class DropletSnapshot extends \ArrayObject
     }
     /**
      * Describes the kind of image. It may be one of `snapshot` or `backup`. This specifies whether an image is a user-generated Droplet snapshot or automatically created Droplet backup.
-     *
      *
      * @return self
      */

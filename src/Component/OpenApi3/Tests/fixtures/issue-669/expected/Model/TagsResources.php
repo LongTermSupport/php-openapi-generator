@@ -22,12 +22,10 @@ class TagsResources extends \ArrayObject
     }
     /**
      * The number of tagged objects for this type of resource.
-     *
      */
     protected int $count;
     /**
      * The URI for the last tagged object for this type of resource.
-     *
      */
     protected string $lastTaggedUri;
     protected TagsResourcesdroplets $droplets;
@@ -37,7 +35,6 @@ class TagsResources extends \ArrayObject
     protected TagsResourcesdatabases $databases;
     /**
      * The number of tagged objects for this type of resource.
-     *
      */
     public function getCount(): int
     {
@@ -45,7 +42,6 @@ class TagsResources extends \ArrayObject
     }
     /**
      * The number of tagged objects for this type of resource.
-     *
      *
      * @return self
      */
@@ -57,7 +53,6 @@ class TagsResources extends \ArrayObject
     }
     /**
      * The URI for the last tagged object for this type of resource.
-     *
      */
     public function getLastTaggedUri(): string
     {
@@ -65,7 +60,6 @@ class TagsResources extends \ArrayObject
     }
     /**
      * The URI for the last tagged object for this type of resource.
-     *
      *
      * @return self
      */

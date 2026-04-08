@@ -24,7 +24,6 @@ class ApiEvaluationMetric extends \ArrayObject
     protected string $description;
     /**
      * If true, the metric is inverted, meaning that a lower value is better.
-     *
      */
     protected bool $inverted;
     protected bool $isMetricGoal;
@@ -35,12 +34,10 @@ class ApiEvaluationMetric extends \ArrayObject
     protected string $metricValueType = 'METRIC_VALUE_TYPE_UNSPECIFIED';
     /**
      * The maximum value for the metric.
-     *
      */
     protected float $rangeMax;
     /**
      * The minimum value for the metric.
-     *
      */
     protected float $rangeMin;
     public function getCategory(): string
@@ -65,7 +62,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * If true, the metric is inverted, meaning that a lower value is better.
-     *
      */
     public function getInverted(): bool
     {
@@ -73,7 +69,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * If true, the metric is inverted, meaning that a lower value is better.
-     *
      *
      * @return self
      */
@@ -145,7 +140,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * The maximum value for the metric.
-     *
      */
     public function getRangeMax(): float
     {
@@ -153,7 +147,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * The maximum value for the metric.
-     *
      *
      * @return self
      */
@@ -165,7 +158,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * The minimum value for the metric.
-     *
      */
     public function getRangeMin(): float
     {
@@ -173,7 +165,6 @@ class ApiEvaluationMetric extends \ArrayObject
     }
     /**
      * The minimum value for the metric.
-     *
      *
      * @return self
      */

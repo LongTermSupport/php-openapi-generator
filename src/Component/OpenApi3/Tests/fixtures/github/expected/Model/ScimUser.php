@@ -28,17 +28,14 @@ class ScimUser extends \ArrayObject
     protected array $schemas;
     /**
      * Unique identifier of an external identity
-     *
      */
     protected string $id;
     /**
      * The ID of the User.
-     *
      */
     protected ?string $externalId = null;
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      */
     protected ?string $userName = null;
     protected ScimUserName $name;
@@ -50,13 +47,11 @@ class ScimUser extends \ArrayObject
     protected array $emails;
     /**
      * The active status of the User.
-     *
      */
     protected bool $active;
     protected ScimUserMeta $meta;
     /**
      * The ID of the organization.
-     *
      */
     protected int $organizationId;
     /**
@@ -95,7 +90,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Unique identifier of an external identity
-     *
      */
     public function getId(): string
     {
@@ -103,7 +97,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Unique identifier of an external identity
-     *
      *
      * @return self
      */
@@ -115,7 +108,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The ID of the User.
-     *
      */
     public function getExternalId(): ?string
     {
@@ -123,7 +115,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The ID of the User.
-     *
      *
      * @return self
      */
@@ -135,7 +126,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      */
     public function getUserName(): ?string
     {
@@ -143,7 +133,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Configured by the admin. Could be an email, login, or username
-     *
      *
      * @return self
      */
@@ -187,7 +176,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The active status of the User.
-     *
      */
     public function getActive(): bool
     {
@@ -195,7 +183,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The active status of the User.
-     *
      *
      * @return self
      */
@@ -217,7 +204,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The ID of the organization.
-     *
      */
     public function getOrganizationId(): int
     {
@@ -225,7 +211,6 @@ class ScimUser extends \ArrayObject
     }
     /**
      * The ID of the organization.
-     *
      *
      * @return self
      */

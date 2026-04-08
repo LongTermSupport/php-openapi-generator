@@ -22,37 +22,30 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key creation date
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Created by user id from DO
-     *
      */
     protected string $createdBy;
     /**
      * Key deleted date
-     *
      */
     protected \DateTime $deletedAt;
     /**
      * Name
-     *
      */
     protected string $name;
     /**
      * Key last updated date
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Uuid
-     *
      */
     protected string $uuid;
     /**
      * Key creation date
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -60,7 +53,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key creation date
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
      */
     public function getCreatedBy(): string
     {
@@ -80,7 +71,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Created by user id from DO
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key deleted date
-     *
      */
     public function getDeletedAt(): \DateTime
     {
@@ -100,7 +89,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key deleted date
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Name
-     *
      */
     public function getName(): string
     {
@@ -120,7 +107,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Name
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key last updated date
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -140,7 +125,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Key last updated date
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Uuid
-     *
      */
     public function getUuid(): string
     {
@@ -160,7 +143,6 @@ class ApiAnthropicAPIKeyInfo extends \ArrayObject
     }
     /**
      * Uuid
-     *
      *
      * @return self
      */

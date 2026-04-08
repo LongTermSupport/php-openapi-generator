@@ -22,38 +22,31 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * UUID of the invoice
-     *
      */
     protected string $invoiceUuid;
     /**
      * ID of the invoice
-     *
      */
     protected string $invoiceId;
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
      */
     protected string $billingPeriod;
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
      */
     protected string $amount;
     /**
      * Name of the DigitalOcean customer being invoiced.
-     *
      */
     protected string $userName;
     protected InvoiceSummaryUserBillingAddress $userBillingAddress;
     /**
      * Company of the DigitalOcean customer being invoiced, if set.
-     *
      */
     protected string $userCompany;
     /**
      * Email of the DigitalOcean customer being invoiced.
-     *
      */
     protected string $userEmail;
     protected InvoiceSummaryProductCharges $productCharges;
@@ -62,7 +55,6 @@ class InvoiceSummary extends \ArrayObject
     protected InvoiceSummaryCreditsAndAdjustments $creditsAndAdjustments;
     /**
      * UUID of the invoice
-     *
      */
     public function getInvoiceUuid(): string
     {
@@ -70,7 +62,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * UUID of the invoice
-     *
      *
      * @return self
      */
@@ -82,7 +73,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * ID of the invoice
-     *
      */
     public function getInvoiceId(): string
     {
@@ -90,7 +80,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * ID of the invoice
-     *
      *
      * @return self
      */
@@ -102,7 +91,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
      */
     public function getBillingPeriod(): string
     {
@@ -110,7 +98,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
-     *
      *
      * @return self
      */
@@ -122,7 +109,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
      */
     public function getAmount(): string
     {
@@ -130,7 +116,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Total amount of the invoice, in USD.  This will reflect month-to-date usage in the invoice preview.
-     *
      *
      * @return self
      */
@@ -142,7 +127,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Name of the DigitalOcean customer being invoiced.
-     *
      */
     public function getUserName(): string
     {
@@ -150,7 +134,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Name of the DigitalOcean customer being invoiced.
-     *
      *
      * @return self
      */
@@ -172,7 +155,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Company of the DigitalOcean customer being invoiced, if set.
-     *
      */
     public function getUserCompany(): string
     {
@@ -180,7 +162,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Company of the DigitalOcean customer being invoiced, if set.
-     *
      *
      * @return self
      */
@@ -192,7 +173,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Email of the DigitalOcean customer being invoiced.
-     *
      */
     public function getUserEmail(): string
     {
@@ -200,7 +180,6 @@ class InvoiceSummary extends \ArrayObject
     }
     /**
      * Email of the DigitalOcean customer being invoiced.
-     *
      *
      * @return self
      */

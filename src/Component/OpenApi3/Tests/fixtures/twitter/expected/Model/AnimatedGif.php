@@ -24,17 +24,14 @@ class AnimatedGif extends \ArrayObject
     protected string $previewImageUrl;
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     protected string $mediaKey;
     /**
      * The height of the media in pixels
-     *
      */
     protected int $height;
     /**
      * The width of the media in pixels
-     *
      */
     protected int $width;
     public function getType(): string
@@ -59,7 +56,6 @@ class AnimatedGif extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     public function getMediaKey(): string
     {
@@ -67,7 +63,6 @@ class AnimatedGif extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      *
      * @return self
      */
@@ -79,7 +74,6 @@ class AnimatedGif extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      */
     public function getHeight(): int
     {
@@ -87,7 +81,6 @@ class AnimatedGif extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      *
      * @return self
      */
@@ -99,7 +92,6 @@ class AnimatedGif extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      */
     public function getWidth(): int
     {
@@ -107,7 +99,6 @@ class AnimatedGif extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      *
      * @return self
      */

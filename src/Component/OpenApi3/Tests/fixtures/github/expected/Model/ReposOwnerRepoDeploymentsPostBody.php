@@ -22,17 +22,14 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * The ref to deploy. This can be a branch, tag, or SHA.
-     *
      */
     protected string $ref;
     /**
      * Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
-     *
      */
     protected string $task = 'deploy';
     /**
      * Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.
-     *
      */
     protected bool $autoMerge = true;
     /**
@@ -43,35 +40,29 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     protected array $requiredContexts;
     /**
      * JSON payload with extra information about the deployment.
-     *
      */
     protected string $payload = '';
     /**
      * Name for the target deployment environment (e.g., `production`, `staging`, `qa`).
-     *
      */
     protected string $environment = 'production';
     /**
      * Short description of the deployment.
-     *
      */
     protected ?string $description = '';
     /**
      * Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: `false`
      * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type. **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-     *
      */
     protected bool $transientEnvironment = false;
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.
      * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-     *
      */
     protected bool $productionEnvironment;
     protected string $createdAt;
     /**
      * The ref to deploy. This can be a branch, tag, or SHA.
-     *
      */
     public function getRef(): string
     {
@@ -79,7 +70,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * The ref to deploy. This can be a branch, tag, or SHA.
-     *
      *
      * @return self
      */
@@ -91,7 +81,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
-     *
      */
     public function getTask(): string
     {
@@ -99,7 +88,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
-     *
      *
      * @return self
      */
@@ -111,7 +99,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.
-     *
      */
     public function getAutoMerge(): bool
     {
@@ -119,7 +106,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.
-     *
      *
      * @return self
      */
@@ -153,7 +139,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * JSON payload with extra information about the deployment.
-     *
      */
     public function getPayload(): string
     {
@@ -161,7 +146,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * JSON payload with extra information about the deployment.
-     *
      *
      * @return self
      */
@@ -173,7 +157,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Name for the target deployment environment (e.g., `production`, `staging`, `qa`).
-     *
      */
     public function getEnvironment(): string
     {
@@ -181,7 +164,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Name for the target deployment environment (e.g., `production`, `staging`, `qa`).
-     *
      *
      * @return self
      */
@@ -193,7 +175,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Short description of the deployment.
-     *
      */
     public function getDescription(): ?string
     {
@@ -201,7 +182,6 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * Short description of the deployment.
-     *
      *
      * @return self
      */
@@ -214,19 +194,17 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     /**
      * Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: `false`
      * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type. **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-     *
      */
     public function getTransientEnvironment(): bool
     {
         return $this->transientEnvironment;
     }
     /**
-    * Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: `false`  
-    **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type. **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-    *
-    *
-    * @return self
-    */
+     * Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: `false`
+     * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type. **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
+     *
+     * @return self
+     */
     public function setTransientEnvironment(bool $transientEnvironment): self
     {
         $this->initialized['transientEnvironment'] = true;
@@ -236,19 +214,17 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     /**
      * Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.
      * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-     *
      */
     public function getProductionEnvironment(): bool
     {
         return $this->productionEnvironment;
     }
     /**
-    * Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.  
-    **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
-    *
-    *
-    * @return self
-    */
+     * Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.
+     * **Note:** This parameter requires you to use the [`application/vnd.github.ant-man-preview+json`](https://developer.github.com/v3/previews/#enhanced-deployments) custom media type.
+     *
+     * @return self
+     */
     public function setProductionEnvironment(bool $productionEnvironment): self
     {
         $this->initialized['productionEnvironment'] = true;

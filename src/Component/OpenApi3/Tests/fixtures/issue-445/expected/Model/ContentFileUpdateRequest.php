@@ -19,12 +19,10 @@ class ContentFileUpdateRequest
     }
     /**
      * ID of the file transfer to use to replace the content file.
-     *
      */
     protected string $fileTransferId;
     /**
      * ID of the file transfer to use to replace the content file.
-     *
      */
     public function getFileTransferId(): string
     {
@@ -32,7 +30,6 @@ class ContentFileUpdateRequest
     }
     /**
      * ID of the file transfer to use to replace the content file.
-     *
      *
      * @return self
      */

@@ -22,57 +22,46 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The ISO/Alpha 2 format country code for the user's country.
-     *
      */
     protected string $countryCode;
     /**
      * The date that the Global Monitoring user account was created.
-     *
      */
     protected \DateTime $createdDate;
     /**
      * The unique identifier for the user's customer account, used across the Creditsafe product suite.
-     *
      */
     protected float $csCustomerId;
     /**
      * The unique identifier for the user's account, used across the Creditsafe product suite.
-     *
      */
     protected float $csUserId;
     /**
      * If auto-tracker is enabled, any companies that you pull a credit report for are automatically added to the portfolio that you have selected as default.
-     *
      */
     protected bool $isAutoTracker;
     /**
      * The language code for the user's preferred language.
-     *
      */
     protected string $languageCode;
     /**
      * The date the the user last accessed the Global Monitoring product.
-     *
      */
     protected \DateTime $lastAccessDate;
     /**
      * The date that the user's details were last modified.
-     *
      */
     protected \DateTime $modifiedDate;
     /**
      * The date that the user's contract is currently set to expire. From this date onward, the user will be unable to access to Global Monitoring product.
-     *
      */
     protected \DateTime $contractEndDate;
     /**
      * The internal identifier used to reference the user's account through the Global Monitoring product.
-     *
      */
     protected float $userId;
     /**
      * The ISO/Alpha 2 format country code for the user's country.
-     *
      */
     public function getCountryCode(): string
     {
@@ -80,7 +69,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The ISO/Alpha 2 format country code for the user's country.
-     *
      *
      * @return self
      */
@@ -92,7 +80,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the Global Monitoring user account was created.
-     *
      */
     public function getCreatedDate(): \DateTime
     {
@@ -100,7 +87,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the Global Monitoring user account was created.
-     *
      *
      * @return self
      */
@@ -112,7 +98,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The unique identifier for the user's customer account, used across the Creditsafe product suite.
-     *
      */
     public function getCsCustomerId(): float
     {
@@ -120,7 +105,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The unique identifier for the user's customer account, used across the Creditsafe product suite.
-     *
      *
      * @return self
      */
@@ -132,7 +116,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The unique identifier for the user's account, used across the Creditsafe product suite.
-     *
      */
     public function getCsUserId(): float
     {
@@ -140,7 +123,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The unique identifier for the user's account, used across the Creditsafe product suite.
-     *
      *
      * @return self
      */
@@ -152,7 +134,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * If auto-tracker is enabled, any companies that you pull a credit report for are automatically added to the portfolio that you have selected as default.
-     *
      */
     public function getIsAutoTracker(): bool
     {
@@ -160,7 +141,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * If auto-tracker is enabled, any companies that you pull a credit report for are automatically added to the portfolio that you have selected as default.
-     *
      *
      * @return self
      */
@@ -172,7 +152,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The language code for the user's preferred language.
-     *
      */
     public function getLanguageCode(): string
     {
@@ -180,7 +159,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The language code for the user's preferred language.
-     *
      *
      * @return self
      */
@@ -192,7 +170,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date the the user last accessed the Global Monitoring product.
-     *
      */
     public function getLastAccessDate(): \DateTime
     {
@@ -200,7 +177,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date the the user last accessed the Global Monitoring product.
-     *
      *
      * @return self
      */
@@ -212,7 +188,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the user's details were last modified.
-     *
      */
     public function getModifiedDate(): \DateTime
     {
@@ -220,7 +195,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the user's details were last modified.
-     *
      *
      * @return self
      */
@@ -232,7 +206,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the user's contract is currently set to expire. From this date onward, the user will be unable to access to Global Monitoring product.
-     *
      */
     public function getContractEndDate(): \DateTime
     {
@@ -240,7 +213,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The date that the user's contract is currently set to expire. From this date onward, the user will be unable to access to Global Monitoring product.
-     *
      *
      * @return self
      */
@@ -252,7 +224,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The internal identifier used to reference the user's account through the Global Monitoring product.
-     *
      */
     public function getUserId(): float
     {
@@ -260,7 +231,6 @@ class UserDetails extends \ArrayObject
     }
     /**
      * The internal identifier used to reference the user's account through the Global Monitoring product.
-     *
      *
      * @return self
      */

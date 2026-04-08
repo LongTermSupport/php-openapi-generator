@@ -22,12 +22,10 @@ class ApiCreateOpenAIAPIKeyOutput extends \ArrayObject
     }
     /**
      * OpenAI API Key Info
-     *
      */
     protected ApiOpenAIAPIKeyInfo $apiKeyInfo;
     /**
      * OpenAI API Key Info
-     *
      */
     public function getApiKeyInfo(): ApiOpenAIAPIKeyInfo
     {
@@ -35,7 +33,6 @@ class ApiCreateOpenAIAPIKeyOutput extends \ArrayObject
     }
     /**
      * OpenAI API Key Info
-     *
      *
      * @return self
      */

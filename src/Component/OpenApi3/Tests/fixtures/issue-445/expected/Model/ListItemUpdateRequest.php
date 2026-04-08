@@ -28,7 +28,6 @@ class ListItemUpdateRequest
      * Merge: the values specified in the Content object are merged to the existing content.
      * Replace: the values specified in the Content object entirely replace any existing content.
      * Defaults to Merge.
-     *
      */
     protected mixed $contentFieldsUpdateOptions = 'Merge';
     /**
@@ -58,21 +57,19 @@ class ListItemUpdateRequest
      * Merge: the values specified in the Content object are merged to the existing content.
      * Replace: the values specified in the Content object entirely replace any existing content.
      * Defaults to Merge.
-     *
      */
     public function getContentFieldsUpdateOptions(): mixed
     {
         return $this->contentFieldsUpdateOptions;
     }
     /**
-    * Options to modify the behavior for updating the content.
-    Merge: the values specified in the Content object are merged to the existing content.
-    Replace: the values specified in the Content object entirely replace any existing content.
-    Defaults to Merge.
-    *
-    *
-    * @return self
-    */
+     * Options to modify the behavior for updating the content.
+     * Merge: the values specified in the Content object are merged to the existing content.
+     * Replace: the values specified in the Content object entirely replace any existing content.
+     * Defaults to Merge.
+     *
+     * @return self
+     */
     public function setContentFieldsUpdateOptions(mixed $contentFieldsUpdateOptions): self
     {
         $this->initialized['contentFieldsUpdateOptions'] = true;

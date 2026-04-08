@@ -23,41 +23,35 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
     /**
      * OpenSearch API Endpoint. Only HTTPS is supported. Format: https://<host>:<port>.
      * Cannot be specified if `cluster_name` is also specified.
-     *
      */
     protected string $endpoint;
     /**
      * Configure Username and/or Password for Basic authentication.
-     *
      */
     protected AppLogDestinationOpenSearchSpecBasicAuth $basicAuth;
     /**
      * The index name to use for the logs. If not set, the default index name is "logs".
-     *
      */
     protected string $indexName = 'logs';
     /**
      * The name of a DigitalOcean DBaaS OpenSearch cluster to use as a log forwarding destination.
      * Cannot be specified if `endpoint` is also specified.
-     *
      */
     protected string $clusterName;
     /**
      * OpenSearch API Endpoint. Only HTTPS is supported. Format: https://<host>:<port>.
      * Cannot be specified if `cluster_name` is also specified.
-     *
      */
     public function getEndpoint(): string
     {
         return $this->endpoint;
     }
     /**
-    * OpenSearch API Endpoint. Only HTTPS is supported. Format: https://<host>:<port>.
-    Cannot be specified if `cluster_name` is also specified.
-    *
-    *
-    * @return self
-    */
+     * OpenSearch API Endpoint. Only HTTPS is supported. Format: https://<host>:<port>.
+     * Cannot be specified if `cluster_name` is also specified.
+     *
+     * @return self
+     */
     public function setEndpoint(string $endpoint): self
     {
         $this->initialized['endpoint'] = true;
@@ -66,7 +60,6 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
     }
     /**
      * Configure Username and/or Password for Basic authentication.
-     *
      */
     public function getBasicAuth(): AppLogDestinationOpenSearchSpecBasicAuth
     {
@@ -74,7 +67,6 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
     }
     /**
      * Configure Username and/or Password for Basic authentication.
-     *
      *
      * @return self
      */
@@ -86,7 +78,6 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
     }
     /**
      * The index name to use for the logs. If not set, the default index name is "logs".
-     *
      */
     public function getIndexName(): string
     {
@@ -94,7 +85,6 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
     }
     /**
      * The index name to use for the logs. If not set, the default index name is "logs".
-     *
      *
      * @return self
      */
@@ -107,19 +97,17 @@ class AppLogDestinationOpenSearchSpec extends \ArrayObject
     /**
      * The name of a DigitalOcean DBaaS OpenSearch cluster to use as a log forwarding destination.
      * Cannot be specified if `endpoint` is also specified.
-     *
      */
     public function getClusterName(): string
     {
         return $this->clusterName;
     }
     /**
-    * The name of a DigitalOcean DBaaS OpenSearch cluster to use as a log forwarding destination.
-    Cannot be specified if `endpoint` is also specified.
-    *
-    *
-    * @return self
-    */
+     * The name of a DigitalOcean DBaaS OpenSearch cluster to use as a log forwarding destination.
+     * Cannot be specified if `endpoint` is also specified.
+     *
+     * @return self
+     */
     public function setClusterName(string $clusterName): self
     {
         $this->initialized['clusterName'] = true;

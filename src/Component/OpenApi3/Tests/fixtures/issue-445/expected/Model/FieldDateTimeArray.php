@@ -19,32 +19,26 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * The date time format structure.
-     *
      */
     protected ?string $format = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
      */
     protected bool $initializeOnItemCreation = false;
     /**
      * The maximum number of items that can be stored.
-     *
      */
     protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
-     *
      */
     protected ?int $minimumItems = null;
     /**
      * The date time format structure.
-     *
      */
     public function getFormat(): ?string
     {
@@ -52,7 +46,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * The date time format structure.
-     *
      *
      * @return self
      */
@@ -64,7 +57,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -72,7 +64,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */
@@ -84,7 +75,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
      */
     public function getInitializeOnItemCreation(): bool
     {
@@ -92,7 +82,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * If set to true, the date time value is automatically set when a content or list item is created.
-     *
      *
      * @return self
      */
@@ -104,7 +93,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      */
     public function getMaximumItems(): ?int
     {
@@ -112,7 +100,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      *
      * @return self
      */
@@ -124,7 +111,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      */
     public function getMinimumItems(): ?int
     {
@@ -132,7 +118,6 @@ class FieldDateTimeArray extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      *
      * @return self
      */

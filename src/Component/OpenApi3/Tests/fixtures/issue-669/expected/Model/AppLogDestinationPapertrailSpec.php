@@ -22,12 +22,10 @@ class AppLogDestinationPapertrailSpec extends \ArrayObject
     }
     /**
      * Papertrail syslog endpoint.
-     *
      */
     protected string $endpoint;
     /**
      * Papertrail syslog endpoint.
-     *
      */
     public function getEndpoint(): string
     {
@@ -35,7 +33,6 @@ class AppLogDestinationPapertrailSpec extends \ArrayObject
     }
     /**
      * Papertrail syslog endpoint.
-     *
      *
      * @return self
      */

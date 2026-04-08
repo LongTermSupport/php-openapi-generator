@@ -19,29 +19,24 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * Path to the object the value should be inserted in.
-     *
      */
     protected ?string $path = null;
     /**
      * ID of the field, the value should be inserted in.
-     *
      */
     protected ?string $fieldId = null;
     /**
      * Value to assign.
-     *
      */
     protected mixed $value = null;
     /**
      * Indicates whether existing values should be replaced.
      * Note: for multi fieldsets and relations, this setting controls, if the value is added
      * to the already existing values or if the existing values shall be overwritten.
-     *
      */
     protected bool $replace;
     /**
      * Path to the object the value should be inserted in.
-     *
      */
     public function getPath(): ?string
     {
@@ -49,7 +44,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * Path to the object the value should be inserted in.
-     *
      *
      * @return self
      */
@@ -61,7 +55,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * ID of the field, the value should be inserted in.
-     *
      */
     public function getFieldId(): ?string
     {
@@ -69,7 +62,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * ID of the field, the value should be inserted in.
-     *
      *
      * @return self
      */
@@ -81,7 +73,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * Value to assign.
-     *
      */
     public function getValue(): mixed
     {
@@ -89,7 +80,6 @@ class AssignValueAction extends BusinessRuleAction
     }
     /**
      * Value to assign.
-     *
      *
      * @return self
      */
@@ -103,20 +93,18 @@ class AssignValueAction extends BusinessRuleAction
      * Indicates whether existing values should be replaced.
      * Note: for multi fieldsets and relations, this setting controls, if the value is added
      * to the already existing values or if the existing values shall be overwritten.
-     *
      */
     public function getReplace(): bool
     {
         return $this->replace;
     }
     /**
-    * Indicates whether existing values should be replaced.
-    Note: for multi fieldsets and relations, this setting controls, if the value is added
-    to the already existing values or if the existing values shall be overwritten.
-    *
-    *
-    * @return self
-    */
+     * Indicates whether existing values should be replaced.
+     * Note: for multi fieldsets and relations, this setting controls, if the value is added
+     * to the already existing values or if the existing values shall be overwritten.
+     *
+     * @return self
+     */
     public function setReplace(bool $replace): self
     {
         $this->initialized['replace'] = true;

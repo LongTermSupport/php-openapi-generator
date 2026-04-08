@@ -22,17 +22,14 @@ class ApiAgentTemplateGuardrail extends \ArrayObject
     }
     /**
      * Priority of the guardrail
-     *
      */
     protected int $priority;
     /**
      * Uuid of the guardrail
-     *
      */
     protected string $uuid;
     /**
      * Priority of the guardrail
-     *
      */
     public function getPriority(): int
     {
@@ -40,7 +37,6 @@ class ApiAgentTemplateGuardrail extends \ArrayObject
     }
     /**
      * Priority of the guardrail
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiAgentTemplateGuardrail extends \ArrayObject
     }
     /**
      * Uuid of the guardrail
-     *
      */
     public function getUuid(): string
     {
@@ -60,7 +55,6 @@ class ApiAgentTemplateGuardrail extends \ArrayObject
     }
     /**
      * Uuid of the guardrail
-     *
      *
      * @return self
      */

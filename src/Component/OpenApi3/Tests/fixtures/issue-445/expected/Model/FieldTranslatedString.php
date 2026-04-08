@@ -19,17 +19,14 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * Contains a regex validation pattern.
-     *
      */
     protected ?string $pattern = null;
     /**
      * The minimum string's lenght.
-     *
      */
     protected ?int $minimumLength = null;
     /**
      * The maximum string's length.
-     *
      */
     protected ?int $maximumLength = null;
     /**
@@ -48,7 +45,6 @@ class FieldTranslatedString extends FieldBase
     protected ?array $simpleSearchAnalyzers = null;
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
      */
     protected bool $multiLine;
     /**
@@ -62,17 +58,14 @@ class FieldTranslatedString extends FieldBase
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
      * 
-     *
      */
     protected ?string $template = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * Contains a regex validation pattern.
-     *
      */
     public function getPattern(): ?string
     {
@@ -80,7 +73,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * Contains a regex validation pattern.
-     *
      *
      * @return self
      */
@@ -92,7 +84,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * The minimum string's lenght.
-     *
      */
     public function getMinimumLength(): ?int
     {
@@ -100,7 +91,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * The minimum string's lenght.
-     *
      *
      * @return self
      */
@@ -112,7 +102,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * The maximum string's length.
-     *
      */
     public function getMaximumLength(): ?int
     {
@@ -120,7 +109,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * The maximum string's length.
-     *
      *
      * @return self
      */
@@ -141,13 +129,13 @@ class FieldTranslatedString extends FieldBase
         return $this->indexAnalyzers;
     }
     /**
-    * Defines how the value must be analyzed for filtering by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
-    The analyzers are applied only if the Index property is set to true.
-    *
-    * @param list<AnalyzerBase>|null $indexAnalyzers
-    *
-    * @return self
-    */
+     * Defines how the value must be analyzed for filtering by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
+     * The analyzers are applied only if the Index property is set to true.
+     *
+     * @param list<AnalyzerBase>|null $indexAnalyzers
+     *
+     * @return self
+     */
     public function setIndexAnalyzers(?array $indexAnalyzers): self
     {
         $this->initialized['indexAnalyzers'] = true;
@@ -165,13 +153,13 @@ class FieldTranslatedString extends FieldBase
         return $this->simpleSearchAnalyzers;
     }
     /**
-    * Defines how the value must be analyzed for searches by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
-    The analyzers are applied only if the SimpleSearch property is set to true.
-    *
-    * @param list<AnalyzerBase>|null $simpleSearchAnalyzers
-    *
-    * @return self
-    */
+     * Defines how the value must be analyzed for searches by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
+     * The analyzers are applied only if the SimpleSearch property is set to true.
+     *
+     * @param list<AnalyzerBase>|null $simpleSearchAnalyzers
+     *
+     * @return self
+     */
     public function setSimpleSearchAnalyzers(?array $simpleSearchAnalyzers): self
     {
         $this->initialized['simpleSearchAnalyzers'] = true;
@@ -180,7 +168,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
      */
     public function getMultiLine(): bool
     {
@@ -188,7 +175,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
      *
      * @return self
      */
@@ -210,14 +196,14 @@ class FieldTranslatedString extends FieldBase
         return $this->requiredMetadataLanguages;
     }
     /**
-    * Sets the required metadata languages for the translation field. The langauge configuration limits the available metadata languages.
-    If Required is true, the field and all its metadata languages are required.
-    If Required is false, the field can be left empty, but as soon as a value is entered all required metadata languages are mandatory.
-    *
-    * @param list<string>|null $requiredMetadataLanguages
-    *
-    * @return self
-    */
+     * Sets the required metadata languages for the translation field. The langauge configuration limits the available metadata languages.
+     * If Required is true, the field and all its metadata languages are required.
+     * If Required is false, the field can be left empty, but as soon as a value is entered all required metadata languages are mandatory.
+     *
+     * @param list<string>|null $requiredMetadataLanguages
+     *
+     * @return self
+     */
     public function setRequiredMetadataLanguages(?array $requiredMetadataLanguages): self
     {
         $this->initialized['requiredMetadataLanguages'] = true;
@@ -227,7 +213,6 @@ class FieldTranslatedString extends FieldBase
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
      * 
-     *
      */
     public function getTemplate(): ?string
     {
@@ -235,7 +220,7 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
-     *
+     * 
      *
      * @return self
      */
@@ -247,7 +232,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -255,7 +239,6 @@ class FieldTranslatedString extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */

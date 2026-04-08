@@ -22,22 +22,18 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Amount of the charge
-     *
      */
     protected string $amount;
     /**
      * Description of the charge
-     *
      */
     protected string $name;
     /**
      * Number of times the charge was applied
-     *
      */
     protected string $count;
     /**
      * Amount of the charge
-     *
      */
     public function getAmount(): string
     {
@@ -45,7 +41,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Amount of the charge
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Description of the charge
-     *
      */
     public function getName(): string
     {
@@ -65,7 +59,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Description of the charge
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Number of times the charge was applied
-     *
      */
     public function getCount(): string
     {
@@ -85,7 +77,6 @@ class ProductChargeItem extends \ArrayObject
     }
     /**
      * Number of times the charge was applied
-     *
      *
      * @return self
      */

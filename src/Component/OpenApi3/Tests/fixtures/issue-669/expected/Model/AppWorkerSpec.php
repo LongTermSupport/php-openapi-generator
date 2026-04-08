@@ -22,7 +22,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     protected string $name;
     protected AppsGitSourceSpec $git;
@@ -32,22 +31,18 @@ class AppWorkerSpec extends \ArrayObject
     protected AppsImageSourceSpec $image;
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      */
     protected string $dockerfilePath;
     /**
      * An optional build command to run while building this component from source.
-     *
      */
     protected string $buildCommand;
     /**
      * An optional run command to override the component's default.
-     *
      */
     protected string $runCommand;
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     protected string $sourceDir;
     /**
@@ -58,7 +53,6 @@ class AppWorkerSpec extends \ArrayObject
     protected array $envs;
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      */
     protected string $environmentSlug;
     /**
@@ -69,24 +63,20 @@ class AppWorkerSpec extends \ArrayObject
     protected array $logDestinations;
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     protected int $instanceCount = 1;
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     protected mixed $instanceSizeSlug = null;
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     protected AppComponentInstanceBaseAutoscaling $autoscaling;
     protected AppWorkerSpecTermination $termination;
     protected AppHealthCheckSpec $livenessHealthCheck;
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     public function getName(): string
     {
@@ -94,7 +84,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      *
      * @return self
      */
@@ -156,7 +145,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      */
     public function getDockerfilePath(): string
     {
@@ -164,7 +152,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The path to the Dockerfile relative to the root of the repo. If set, it will be used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
      *
      * @return self
      */
@@ -176,7 +163,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
      */
     public function getBuildCommand(): string
     {
@@ -184,7 +170,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An optional build command to run while building this component from source.
-     *
      *
      * @return self
      */
@@ -196,7 +181,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
      */
     public function getRunCommand(): string
     {
@@ -204,7 +188,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An optional run command to override the component's default.
-     *
      *
      * @return self
      */
@@ -216,7 +199,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     public function getSourceDir(): string
     {
@@ -224,7 +206,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      *
      * @return self
      */
@@ -258,7 +239,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      */
     public function getEnvironmentSlug(): string
     {
@@ -266,7 +246,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * An environment slug describing the type of this app. For a full list, please refer to [the product documentation](https://docs.digitalocean.com/products/app-platform/).
-     *
      *
      * @return self
      */
@@ -300,7 +279,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      */
     public function getInstanceCount(): int
     {
@@ -308,7 +286,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The amount of instances that this component should be scaled to. Default: 1. Must not be set if autoscaling is used.
-     *
      *
      * @return self
      */
@@ -320,7 +297,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      */
     public function getInstanceSizeSlug(): mixed
     {
@@ -328,7 +304,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * The instance size to use for this component. Default: `apps-s-1vcpu-0.5gb`
-     *
      *
      * @return self
      */
@@ -340,7 +315,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      */
     public function getAutoscaling(): AppComponentInstanceBaseAutoscaling
     {
@@ -348,7 +322,6 @@ class AppWorkerSpec extends \ArrayObject
     }
     /**
      * Configuration for automatically scaling this component based on metrics.
-     *
      *
      * @return self
      */

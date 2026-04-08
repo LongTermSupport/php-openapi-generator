@@ -20,7 +20,6 @@ class CustomerChangeEvent extends ApplicationEvent
     protected ?string $documentType = null;
     /**
      * Lifecycle
-     *
      */
     protected string $lifeCycle;
     public function getDocumentType(): ?string
@@ -35,7 +34,6 @@ class CustomerChangeEvent extends ApplicationEvent
     }
     /**
      * Lifecycle
-     *
      */
     public function getLifeCycle(): string
     {
@@ -43,7 +41,6 @@ class CustomerChangeEvent extends ApplicationEvent
     }
     /**
      * Lifecycle
-     *
      *
      * @return self
      */

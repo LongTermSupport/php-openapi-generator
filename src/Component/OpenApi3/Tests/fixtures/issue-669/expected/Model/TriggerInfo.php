@@ -22,49 +22,40 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
      */
     protected string $namespace;
     /**
      * The trigger's unique name within the namespace.
-     *
      */
     protected string $name;
     /**
      * Name of function(action) that exists in the given namespace.
-     *
      */
     protected string $function;
     /**
      * String which indicates the type of trigger source like SCHEDULED.
-     *
      */
     protected string $type;
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      */
     protected bool $isEnabled;
     /**
      * UTC time string.
-     *
      */
     protected string $createdAt;
     /**
      * UTC time string.
-     *
      */
     protected string $updatedAt;
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
      */
     protected ScheduledDetails $scheduledDetails;
     protected TriggerInfoScheduledRuns $scheduledRuns;
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
      */
     public function getNamespace(): string
     {
@@ -72,7 +63,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
      *
      * @return self
      */
@@ -84,7 +74,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * The trigger's unique name within the namespace.
-     *
      */
     public function getName(): string
     {
@@ -92,7 +81,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * The trigger's unique name within the namespace.
-     *
      *
      * @return self
      */
@@ -104,7 +92,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * Name of function(action) that exists in the given namespace.
-     *
      */
     public function getFunction(): string
     {
@@ -112,7 +99,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * Name of function(action) that exists in the given namespace.
-     *
      *
      * @return self
      */
@@ -124,7 +110,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * String which indicates the type of trigger source like SCHEDULED.
-     *
      */
     public function getType(): string
     {
@@ -132,7 +117,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * String which indicates the type of trigger source like SCHEDULED.
-     *
      *
      * @return self
      */
@@ -144,7 +128,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      */
     public function getIsEnabled(): bool
     {
@@ -152,7 +135,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * Indicates weather the trigger is paused or unpaused.
-     *
      *
      * @return self
      */
@@ -164,7 +146,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      */
     public function getCreatedAt(): string
     {
@@ -172,7 +153,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      *
      * @return self
      */
@@ -184,7 +164,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      */
     public function getUpdatedAt(): string
     {
@@ -192,7 +171,6 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      *
      * @return self
      */
@@ -205,7 +183,6 @@ class TriggerInfo extends \ArrayObject
     /**
      * Trigger details for SCHEDULED type, where body is optional.
      * 
-     *
      */
     public function getScheduledDetails(): ScheduledDetails
     {
@@ -213,7 +190,7 @@ class TriggerInfo extends \ArrayObject
     }
     /**
      * Trigger details for SCHEDULED type, where body is optional.
-     *
+     * 
      *
      * @return self
      */

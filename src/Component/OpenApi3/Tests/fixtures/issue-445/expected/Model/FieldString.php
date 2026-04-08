@@ -19,22 +19,18 @@ class FieldString extends FieldBase
     }
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
-     *
      */
     protected ?string $template = null;
     /**
      * Contains a regex validation pattern.
-     *
      */
     protected ?string $pattern = null;
     /**
      * The minimum string's lenght.
-     *
      */
     protected ?int $minimumLength = null;
     /**
      * The maximum string's length.
-     *
      */
     protected ?int $maximumLength = null;
     /**
@@ -53,7 +49,6 @@ class FieldString extends FieldBase
     protected ?array $simpleSearchAnalyzers = null;
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
      */
     protected bool $multiLine;
     /**
@@ -64,12 +59,10 @@ class FieldString extends FieldBase
     protected ?array $grantedValues = null;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
-     *
      */
     public function getTemplate(): ?string
     {
@@ -77,7 +70,6 @@ class FieldString extends FieldBase
     }
     /**
      * A DotLiquid template. If set, it transforms the field in a calculated field, so that its value is calculated based on this template.
-     *
      *
      * @return self
      */
@@ -89,7 +81,6 @@ class FieldString extends FieldBase
     }
     /**
      * Contains a regex validation pattern.
-     *
      */
     public function getPattern(): ?string
     {
@@ -97,7 +88,6 @@ class FieldString extends FieldBase
     }
     /**
      * Contains a regex validation pattern.
-     *
      *
      * @return self
      */
@@ -109,7 +99,6 @@ class FieldString extends FieldBase
     }
     /**
      * The minimum string's lenght.
-     *
      */
     public function getMinimumLength(): ?int
     {
@@ -117,7 +106,6 @@ class FieldString extends FieldBase
     }
     /**
      * The minimum string's lenght.
-     *
      *
      * @return self
      */
@@ -129,7 +117,6 @@ class FieldString extends FieldBase
     }
     /**
      * The maximum string's length.
-     *
      */
     public function getMaximumLength(): ?int
     {
@@ -137,7 +124,6 @@ class FieldString extends FieldBase
     }
     /**
      * The maximum string's length.
-     *
      *
      * @return self
      */
@@ -158,13 +144,13 @@ class FieldString extends FieldBase
         return $this->indexAnalyzers;
     }
     /**
-    * Defines how the value must be analyzed for filtering by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
-    The analyzers are applied only if the Index property is set to true.
-    *
-    * @param list<AnalyzerBase>|null $indexAnalyzers
-    *
-    * @return self
-    */
+     * Defines how the value must be analyzed for filtering by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
+     * The analyzers are applied only if the Index property is set to true.
+     *
+     * @param list<AnalyzerBase>|null $indexAnalyzers
+     *
+     * @return self
+     */
     public function setIndexAnalyzers(?array $indexAnalyzers): self
     {
         $this->initialized['indexAnalyzers'] = true;
@@ -182,13 +168,13 @@ class FieldString extends FieldBase
         return $this->simpleSearchAnalyzers;
     }
     /**
-    * Defines how the value must be analyzed for searches by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
-    The analyzers are applied only if the SimpleSearch property is set to true.
-    *
-    * @param list<AnalyzerBase>|null $simpleSearchAnalyzers
-    *
-    * @return self
-    */
+     * Defines how the value must be analyzed for searches by ElasticSearch. A string field can have multiple analyzers, but only one per analyzer type.
+     * The analyzers are applied only if the SimpleSearch property is set to true.
+     *
+     * @param list<AnalyzerBase>|null $simpleSearchAnalyzers
+     *
+     * @return self
+     */
     public function setSimpleSearchAnalyzers(?array $simpleSearchAnalyzers): self
     {
         $this->initialized['simpleSearchAnalyzers'] = true;
@@ -197,7 +183,6 @@ class FieldString extends FieldBase
     }
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
      */
     public function getMultiLine(): bool
     {
@@ -205,7 +190,6 @@ class FieldString extends FieldBase
     }
     /**
      * Defines that the field value must be displayed in a multiline component.
-     *
      *
      * @return self
      */
@@ -239,7 +223,6 @@ class FieldString extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -247,7 +230,6 @@ class FieldString extends FieldBase
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */

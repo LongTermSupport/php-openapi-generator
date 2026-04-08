@@ -19,22 +19,18 @@ class DisplayPattern
     }
     /**
      * The template engine used for parsing the display patterns.
-     *
      */
     protected mixed $templateEngine = null;
     /**
      * The display pattern type.
-     *
      */
     protected mixed $displayPatternType = null;
     /**
      * Language specific pattern templates.
-     *
      */
     protected mixed $templates = null;
     /**
      * The template engine used for parsing the display patterns.
-     *
      */
     public function getTemplateEngine(): mixed
     {
@@ -42,7 +38,6 @@ class DisplayPattern
     }
     /**
      * The template engine used for parsing the display patterns.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class DisplayPattern
     }
     /**
      * The display pattern type.
-     *
      */
     public function getDisplayPatternType(): mixed
     {
@@ -62,7 +56,6 @@ class DisplayPattern
     }
     /**
      * The display pattern type.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class DisplayPattern
     }
     /**
      * Language specific pattern templates.
-     *
      */
     public function getTemplates(): mixed
     {
@@ -82,7 +74,6 @@ class DisplayPattern
     }
     /**
      * Language specific pattern templates.
-     *
      *
      * @return self
      */

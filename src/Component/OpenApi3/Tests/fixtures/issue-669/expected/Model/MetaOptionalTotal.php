@@ -22,12 +22,10 @@ class MetaOptionalTotal extends \ArrayObject
     }
     /**
      * Information about the response itself.
-     *
      */
     protected MetaProperties $meta;
     /**
      * Information about the response itself.
-     *
      */
     public function getMeta(): MetaProperties
     {
@@ -35,7 +33,6 @@ class MetaOptionalTotal extends \ArrayObject
     }
     /**
      * Information about the response itself.
-     *
      *
      * @return self
      */

@@ -26,7 +26,6 @@ class ReposOwnerRepoIssuesIssueNumberLockPutBody extends \ArrayObject
      * \* `too heated`
      * \* `resolved`
      * \* `spam`
-     *
      */
     protected string $lockReason;
     /**
@@ -35,22 +34,20 @@ class ReposOwnerRepoIssuesIssueNumberLockPutBody extends \ArrayObject
      * \* `too heated`
      * \* `resolved`
      * \* `spam`
-     *
      */
     public function getLockReason(): string
     {
         return $this->lockReason;
     }
     /**
-    * The reason for locking the issue or pull request conversation. Lock will fail if you don't use one of these reasons:  
-    \* `off-topic`  
-    \* `too heated`  
-    \* `resolved`  
-    \* `spam`
-    *
-    *
-    * @return self
-    */
+     * The reason for locking the issue or pull request conversation. Lock will fail if you don't use one of these reasons:
+     * \* `off-topic`
+     * \* `too heated`
+     * \* `resolved`
+     * \* `spam`
+     *
+     * @return self
+     */
     public function setLockReason(string $lockReason): self
     {
         $this->initialized['lockReason'] = true;

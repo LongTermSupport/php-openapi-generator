@@ -22,43 +22,35 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the check. For example, "code-coverage".
-     *
      */
     protected string $name;
     /**
      * The URL of the integrator's site that has the full details of the check.
-     *
      */
     protected string $detailsUrl;
     /**
      * A reference for the run on the integrator's system.
-     *
      */
     protected string $externalId;
     /**
      * This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $startedAt;
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
      */
     protected string $status;
     /**
      * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`.
      * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-     *
      */
     protected string $conclusion;
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $completedAt;
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object-1) description.
-     *
      */
     protected ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput $output;
     /**
@@ -69,7 +61,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     protected array $actions;
     /**
      * The name of the check. For example, "code-coverage".
-     *
      */
     public function getName(): string
     {
@@ -77,7 +68,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The name of the check. For example, "code-coverage".
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The URL of the integrator's site that has the full details of the check.
-     *
      */
     public function getDetailsUrl(): string
     {
@@ -97,7 +86,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The URL of the integrator's site that has the full details of the check.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * A reference for the run on the integrator's system.
-     *
      */
     public function getExternalId(): string
     {
@@ -117,7 +104,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * A reference for the run on the integrator's system.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getStartedAt(): string
     {
@@ -137,7 +122,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
      */
     public function getStatus(): string
     {
@@ -157,7 +140,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
      *
      * @return self
      */
@@ -170,19 +152,17 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     /**
      * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`.
      * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-     *
      */
     public function getConclusion(): string
     {
         return $this->conclusion;
     }
     /**
-    * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`.  
-    **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-    *
-    *
-    * @return self
-    */
+     * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`.
+     * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
+     *
+     * @return self
+     */
     public function setConclusion(string $conclusion): self
     {
         $this->initialized['conclusion'] = true;
@@ -191,7 +171,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getCompletedAt(): string
     {
@@ -199,7 +178,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */
@@ -211,7 +189,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object-1) description.
-     *
      */
     public function getOutput(): ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutput
     {
@@ -219,7 +196,6 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object-1) description.
-     *
      *
      * @return self
      */

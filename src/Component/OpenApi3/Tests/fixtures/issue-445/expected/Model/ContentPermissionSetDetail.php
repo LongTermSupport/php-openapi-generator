@@ -22,12 +22,10 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
      */
     protected string $id;
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -44,22 +42,18 @@ class ContentPermissionSetDetail extends \ArrayObject
     protected ?array $userRolesPermissionSetRights = null;
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
      */
     protected bool $exclusive;
     /**
      * The owner token ID. Defines the permission set owner.
-     *
      */
     protected string $ownerTokenId;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * The permission set ID.
-     *
      */
     public function getId(): string
     {
@@ -67,7 +61,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * The permission set ID.
-     *
      *
      * @return self
      */
@@ -79,7 +72,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -87,7 +79,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */
@@ -143,7 +134,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
      */
     public function getExclusive(): bool
     {
@@ -151,7 +141,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * When true this permission set will derogate all other configured permission sets on the Content Item or List Item.
-     *
      *
      * @return self
      */
@@ -163,7 +152,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * The owner token ID. Defines the permission set owner.
-     *
      */
     public function getOwnerTokenId(): string
     {
@@ -171,7 +159,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * The owner token ID. Defines the permission set owner.
-     *
      *
      * @return self
      */
@@ -183,7 +170,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -191,7 +177,6 @@ class ContentPermissionSetDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */

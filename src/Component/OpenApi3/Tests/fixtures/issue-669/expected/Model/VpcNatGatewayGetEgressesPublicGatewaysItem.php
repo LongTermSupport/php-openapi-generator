@@ -22,12 +22,10 @@ class VpcNatGatewayGetEgressesPublicGatewaysItem extends \ArrayObject
     }
     /**
      * IPv4 address of the public gateway.
-     *
      */
     protected string $ipv4;
     /**
      * IPv4 address of the public gateway.
-     *
      */
     public function getIpv4(): string
     {
@@ -35,7 +33,6 @@ class VpcNatGatewayGetEgressesPublicGatewaysItem extends \ArrayObject
     }
     /**
      * IPv4 address of the public gateway.
-     *
      *
      * @return self
      */

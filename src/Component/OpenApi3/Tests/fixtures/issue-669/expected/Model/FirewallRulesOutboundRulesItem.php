@@ -22,18 +22,15 @@ class FirewallRulesOutboundRulesItem extends \ArrayObject
     }
     /**
      * The type of traffic to be allowed. This may be one of `tcp`, `udp`, or `icmp`.
-     *
      */
     protected string $protocol;
     /**
      * The ports on which traffic will be allowed specified as a string containing a single port, a range (e.g. "8000-9000"), or "0" when all ports are open for a protocol. For ICMP rules this parameter will always return "0".
-     *
      */
     protected string $ports;
     protected FirewallRulesOutboundRulesItemdestinations $destinations;
     /**
      * The type of traffic to be allowed. This may be one of `tcp`, `udp`, or `icmp`.
-     *
      */
     public function getProtocol(): string
     {
@@ -41,7 +38,6 @@ class FirewallRulesOutboundRulesItem extends \ArrayObject
     }
     /**
      * The type of traffic to be allowed. This may be one of `tcp`, `udp`, or `icmp`.
-     *
      *
      * @return self
      */
@@ -53,7 +49,6 @@ class FirewallRulesOutboundRulesItem extends \ArrayObject
     }
     /**
      * The ports on which traffic will be allowed specified as a string containing a single port, a range (e.g. "8000-9000"), or "0" when all ports are open for a protocol. For ICMP rules this parameter will always return "0".
-     *
      */
     public function getPorts(): string
     {
@@ -61,7 +56,6 @@ class FirewallRulesOutboundRulesItem extends \ArrayObject
     }
     /**
      * The ports on which traffic will be allowed specified as a string containing a single port, a range (e.g. "8000-9000"), or "0" when all ports are open for a protocol. For ICMP rules this parameter will always return "0".
-     *
      *
      * @return self
      */

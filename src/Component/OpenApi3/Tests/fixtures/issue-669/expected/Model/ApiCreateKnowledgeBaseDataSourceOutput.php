@@ -22,12 +22,10 @@ class ApiCreateKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Data Source configuration for Knowledge Bases
-     *
      */
     protected ApiKnowledgeBaseDataSource $knowledgeBaseDataSource;
     /**
      * Data Source configuration for Knowledge Bases
-     *
      */
     public function getKnowledgeBaseDataSource(): ApiKnowledgeBaseDataSource
     {
@@ -35,7 +33,6 @@ class ApiCreateKnowledgeBaseDataSourceOutput extends \ArrayObject
     }
     /**
      * Data Source configuration for Knowledge Bases
-     *
      *
      * @return self
      */

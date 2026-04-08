@@ -31,12 +31,10 @@ class AppFunctionsSpec extends \ArrayObject
     protected array $routes;
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     protected string $name;
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     protected string $sourceDir;
     /**
@@ -97,7 +95,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      */
     public function getName(): string
     {
@@ -105,7 +102,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * The name. Must be unique across all components within the same app.
-     *
      *
      * @return self
      */
@@ -117,7 +113,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      */
     public function getSourceDir(): string
     {
@@ -125,7 +120,6 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * An optional path to the working directory to use for the build. For Dockerfile builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
      *
      * @return self
      */

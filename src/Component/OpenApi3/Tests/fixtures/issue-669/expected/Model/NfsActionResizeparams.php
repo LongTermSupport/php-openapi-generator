@@ -22,12 +22,10 @@ class NfsActionResizeparams extends \ArrayObject
     }
     /**
      * The new size for the NFS share.
-     *
      */
     protected int $sizeGib;
     /**
      * The new size for the NFS share.
-     *
      */
     public function getSizeGib(): int
     {
@@ -35,7 +33,6 @@ class NfsActionResizeparams extends \ArrayObject
     }
     /**
      * The new size for the NFS share.
-     *
      *
      * @return self
      */

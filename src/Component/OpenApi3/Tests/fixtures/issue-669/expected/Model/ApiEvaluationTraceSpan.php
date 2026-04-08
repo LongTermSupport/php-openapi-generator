@@ -22,7 +22,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * When the span was created
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -33,7 +32,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     protected array $input;
     /**
      * Name/identifier for the span
-     *
      */
     protected string $name;
     /**
@@ -56,12 +54,10 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     protected array $spanLevelMetricResults;
     /**
      * Types of spans in a trace
-     *
      */
     protected string $type = 'TRACE_SPAN_TYPE_UNKNOWN';
     /**
      * When the span was created
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -69,7 +65,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * When the span was created
-     *
      *
      * @return self
      */
@@ -103,7 +98,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Name/identifier for the span
-     *
      */
     public function getName(): string
     {
@@ -111,7 +105,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Name/identifier for the span
-     *
      *
      * @return self
      */
@@ -189,7 +182,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Types of spans in a trace
-     *
      */
     public function getType(): string
     {
@@ -197,7 +189,6 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Types of spans in a trace
-     *
      *
      * @return self
      */

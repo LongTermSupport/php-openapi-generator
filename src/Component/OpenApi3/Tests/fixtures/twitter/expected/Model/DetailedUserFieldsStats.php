@@ -22,27 +22,22 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * Number of users who are following this user.
-     *
      */
     protected int $followersCount;
     /**
      * Number of users this user is following.
-     *
      */
     protected int $followingCount;
     /**
      * The number of Tweets (including Retweets) posted by this user.
-     *
      */
     protected int $tweetCount;
     /**
      * The number of lists that include this user.
-     *
      */
     protected int $listedCount;
     /**
      * Number of users who are following this user.
-     *
      */
     public function getFollowersCount(): int
     {
@@ -50,7 +45,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * Number of users who are following this user.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * Number of users this user is following.
-     *
      */
     public function getFollowingCount(): int
     {
@@ -70,7 +63,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * Number of users this user is following.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * The number of Tweets (including Retweets) posted by this user.
-     *
      */
     public function getTweetCount(): int
     {
@@ -90,7 +81,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * The number of Tweets (including Retweets) posted by this user.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * The number of lists that include this user.
-     *
      */
     public function getListedCount(): int
     {
@@ -110,7 +99,6 @@ class DetailedUserFieldsStats extends \ArrayObject
     }
     /**
      * The number of lists that include this user.
-     *
      *
      * @return self
      */

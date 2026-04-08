@@ -22,17 +22,14 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     }
     /**
      * ID of the IdP group.
-     *
      */
     protected string $groupId;
     /**
      * Name of the IdP group.
-     *
      */
     protected string $groupName;
     /**
      * Description of the IdP group.
-     *
      */
     protected string $groupDescription;
     protected string $id;
@@ -40,7 +37,6 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     protected string $description;
     /**
      * ID of the IdP group.
-     *
      */
     public function getGroupId(): string
     {
@@ -48,7 +44,6 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     }
     /**
      * ID of the IdP group.
-     *
      *
      * @return self
      */
@@ -60,7 +55,6 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     }
     /**
      * Name of the IdP group.
-     *
      */
     public function getGroupName(): string
     {
@@ -68,7 +62,6 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     }
     /**
      * Name of the IdP group.
-     *
      *
      * @return self
      */
@@ -80,7 +73,6 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     }
     /**
      * Description of the IdP group.
-     *
      */
     public function getGroupDescription(): string
     {
@@ -88,7 +80,6 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyGroupsItem extends \ArrayObject
     }
     /**
      * Description of the IdP group.
-     *
      *
      * @return self
      */

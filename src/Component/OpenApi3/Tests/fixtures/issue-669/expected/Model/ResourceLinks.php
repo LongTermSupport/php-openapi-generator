@@ -22,12 +22,10 @@ class ResourceLinks extends \ArrayObject
     }
     /**
      * A URI that can be used to retrieve the resource.
-     *
      */
     protected string $self;
     /**
      * A URI that can be used to retrieve the resource.
-     *
      */
     public function getSelf(): string
     {
@@ -35,7 +33,6 @@ class ResourceLinks extends \ArrayObject
     }
     /**
      * A URI that can be used to retrieve the resource.
-     *
      *
      * @return self
      */

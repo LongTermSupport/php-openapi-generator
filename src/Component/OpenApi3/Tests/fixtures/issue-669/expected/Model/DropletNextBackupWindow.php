@@ -22,17 +22,14 @@ class DropletNextBackupWindow extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format specifying the start of the Droplet's backup window.
-     *
      */
     protected \DateTime $start;
     /**
      * A time value given in ISO8601 combined date and time format specifying the end of the Droplet's backup window.
-     *
      */
     protected \DateTime $end;
     /**
      * A time value given in ISO8601 combined date and time format specifying the start of the Droplet's backup window.
-     *
      */
     public function getStart(): \DateTime
     {
@@ -40,7 +37,6 @@ class DropletNextBackupWindow extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format specifying the start of the Droplet's backup window.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DropletNextBackupWindow extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format specifying the end of the Droplet's backup window.
-     *
      */
     public function getEnd(): \DateTime
     {
@@ -60,7 +55,6 @@ class DropletNextBackupWindow extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format specifying the end of the Droplet's backup window.
-     *
      *
      * @return self
      */

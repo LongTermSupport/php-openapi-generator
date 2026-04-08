@@ -22,17 +22,14 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     protected string $name;
     /**
      * Bandwidth (in Mbps) of the connection.
-     *
      */
     protected int $connectionBandwidthInMbps;
     /**
      * The region to create the partner attachment.
-     *
      */
     protected string $region;
     protected string $naasProvider;
@@ -44,22 +41,18 @@ class PartnerAttachmentWritable extends \ArrayObject
     protected array $vpcIds;
     /**
      * Optional associated partner attachment UUID
-     *
      */
     protected string $parentUuid;
     /**
      * Optional BGP configurations
-     *
      */
     protected PartnerAttachmentWritableBgp $bgp;
     /**
      * Optional redundancy zone for the partner attachment.
-     *
      */
     protected string $redundancyZone;
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     public function getName(): string
     {
@@ -67,7 +60,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Bandwidth (in Mbps) of the connection.
-     *
      */
     public function getConnectionBandwidthInMbps(): int
     {
@@ -87,7 +78,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Bandwidth (in Mbps) of the connection.
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * The region to create the partner attachment.
-     *
      */
     public function getRegion(): string
     {
@@ -107,7 +96,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * The region to create the partner attachment.
-     *
      *
      * @return self
      */
@@ -151,7 +139,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional associated partner attachment UUID
-     *
      */
     public function getParentUuid(): string
     {
@@ -159,7 +146,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional associated partner attachment UUID
-     *
      *
      * @return self
      */
@@ -171,7 +157,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional BGP configurations
-     *
      */
     public function getBgp(): PartnerAttachmentWritableBgp
     {
@@ -179,7 +164,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional BGP configurations
-     *
      *
      * @return self
      */
@@ -191,7 +175,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional redundancy zone for the partner attachment.
-     *
      */
     public function getRedundancyZone(): string
     {
@@ -199,7 +182,6 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * Optional redundancy zone for the partner attachment.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
      */
     protected string $schemaId;
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
      */
     protected mixed $schemaIndexingInfo = null;
     /**
@@ -35,17 +33,14 @@ class FieldMultiRelation extends FieldBase
     protected array $relationTypes;
     /**
      * The maximum number of items that can be stored.
-     *
      */
     protected ?int $maximumItems = null;
     /**
      * The minimum number of items that must be stored.
-     *
      */
     protected ?int $minimumItems = null;
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
      */
     public function getSchemaId(): string
     {
@@ -53,7 +48,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The ID of the schema used for relation metadata (it must be of type Struct, and it cannot be a system schema).
-     *
      *
      * @return self
      */
@@ -65,7 +59,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
      */
     public function getSchemaIndexingInfo(): mixed
     {
@@ -73,7 +66,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property.
-     *
      *
      * @return self
      */
@@ -107,7 +99,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      */
     public function getMaximumItems(): ?int
     {
@@ -115,7 +106,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The maximum number of items that can be stored.
-     *
      *
      * @return self
      */
@@ -127,7 +117,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      */
     public function getMinimumItems(): ?int
     {
@@ -135,7 +124,6 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The minimum number of items that must be stored.
-     *
      *
      * @return self
      */

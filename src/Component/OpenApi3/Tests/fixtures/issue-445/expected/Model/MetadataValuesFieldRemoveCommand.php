@@ -19,12 +19,10 @@ class MetadataValuesFieldRemoveCommand extends MetadataValuesChangeCommandBase
     }
     /**
      * The path of the field to be removed within the specified schema (i.e. remove the street from the address of a person: fieldPath = "address.streetName", schemaId = "PersonLayer")
-     *
      */
     protected string $fieldPath;
     /**
      * The path of the field to be removed within the specified schema (i.e. remove the street from the address of a person: fieldPath = "address.streetName", schemaId = "PersonLayer")
-     *
      */
     public function getFieldPath(): string
     {
@@ -32,7 +30,6 @@ class MetadataValuesFieldRemoveCommand extends MetadataValuesChangeCommandBase
     }
     /**
      * The path of the field to be removed within the specified schema (i.e. remove the street from the address of a person: fieldPath = "address.streetName", schemaId = "PersonLayer")
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class FloatingIPsAction extends \ArrayObject
     }
     /**
      * The type of action to initiate for the floating IP.
-     *
      */
     protected string $type;
     /**
      * The type of action to initiate for the floating IP.
-     *
      */
     public function getType(): string
     {
@@ -35,7 +33,6 @@ class FloatingIPsAction extends \ArrayObject
     }
     /**
      * The type of action to initiate for the floating IP.
-     *
      */
     public function setType(string $type): void
     {

@@ -19,27 +19,22 @@ class CropAction extends ImageActionBase
     }
     /**
      * X-Coordinate of top left point of the cropping rectangle.
-     *
      */
     protected int $x;
     /**
      * Y-Coordinate of top left point of the cropping rectangle.
-     *
      */
     protected int $y;
     /**
      * Width of the cropping rectangle.
-     *
      */
     protected int $width;
     /**
      * Height of the cropping rectangle.
-     *
      */
     protected int $height;
     /**
      * X-Coordinate of top left point of the cropping rectangle.
-     *
      */
     public function getX(): int
     {
@@ -47,7 +42,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * X-Coordinate of top left point of the cropping rectangle.
-     *
      *
      * @return self
      */
@@ -59,7 +53,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Y-Coordinate of top left point of the cropping rectangle.
-     *
      */
     public function getY(): int
     {
@@ -67,7 +60,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Y-Coordinate of top left point of the cropping rectangle.
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Width of the cropping rectangle.
-     *
      */
     public function getWidth(): int
     {
@@ -87,7 +78,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Width of the cropping rectangle.
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Height of the cropping rectangle.
-     *
      */
     public function getHeight(): int
     {
@@ -107,7 +96,6 @@ class CropAction extends ImageActionBase
     }
     /**
      * Height of the cropping rectangle.
-     *
      *
      * @return self
      */

@@ -23,7 +23,6 @@ class ProtectedBranch extends \ArrayObject
     protected string $url;
     /**
      * Status Check Policy
-     *
      */
     protected StatusCheckPolicy $requiredStatusChecks;
     protected ProtectedBranchRequiredPullRequestReviews $requiredPullRequestReviews;
@@ -34,7 +33,6 @@ class ProtectedBranch extends \ArrayObject
     protected ProtectedBranchAllowDeletions $allowDeletions;
     /**
      * Branch Restriction Policy
-     *
      */
     protected BranchRestrictionPolicy $restrictions;
     public function getUrl(): string
@@ -49,7 +47,6 @@ class ProtectedBranch extends \ArrayObject
     }
     /**
      * Status Check Policy
-     *
      */
     public function getRequiredStatusChecks(): StatusCheckPolicy
     {
@@ -57,7 +54,6 @@ class ProtectedBranch extends \ArrayObject
     }
     /**
      * Status Check Policy
-     *
      *
      * @return self
      */
@@ -129,7 +125,6 @@ class ProtectedBranch extends \ArrayObject
     }
     /**
      * Branch Restriction Policy
-     *
      */
     public function getRestrictions(): BranchRestrictionPolicy
     {
@@ -137,7 +132,6 @@ class ProtectedBranch extends \ArrayObject
     }
     /**
      * Branch Restriction Policy
-     *
      *
      * @return self
      */

@@ -22,7 +22,6 @@ class LogsinkBase extends \ArrayObject
     }
     /**
      * The name of the Logsink
-     *
      */
     protected string $sinkName;
     /**
@@ -34,12 +33,10 @@ class LogsinkBase extends \ArrayObject
      * 
      * More details about the configuration can be found in the `config` property.
      * 
-     *
      */
     protected string $sinkType;
     /**
      * The name of the Logsink
-     *
      */
     public function getSinkName(): string
     {
@@ -47,7 +44,6 @@ class LogsinkBase extends \ArrayObject
     }
     /**
      * The name of the Logsink
-     *
      *
      * @return self
      */
@@ -66,25 +62,23 @@ class LogsinkBase extends \ArrayObject
      * 
      * More details about the configuration can be found in the `config` property.
      * 
-     *
      */
     public function getSinkType(): string
     {
         return $this->sinkType;
     }
     /**
-    * Type of logsink integration.
-    
-    - Use `datadog` for Datadog integration **only with MongoDB clusters**.
-    - For non-MongoDB clusters, use `rsyslog` for general syslog forwarding.
-    - Other supported types include `elasticsearch` and `opensearch`.
-    
-    More details about the configuration can be found in the `config` property.
-    
-    *
-    *
-    * @return self
-    */
+     * Type of logsink integration.
+     * 
+     * - Use `datadog` for Datadog integration **only with MongoDB clusters**.
+     * - For non-MongoDB clusters, use `rsyslog` for general syslog forwarding.
+     * - Other supported types include `elasticsearch` and `opensearch`.
+     * 
+     * More details about the configuration can be found in the `config` property.
+     * 
+     *
+     * @return self
+     */
     public function setSinkType(string $sinkType): self
     {
         $this->initialized['sinkType'] = true;

@@ -22,19 +22,16 @@ class AppsCreateAppRequest extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      */
     protected AppSpec $spec;
     /**
      * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
      * <br><br>Requires `project:update` scope.
      * 
-     *
      */
     protected string $projectId;
     /**
      * The desired configuration of an application.
-     *
      */
     public function getSpec(): AppSpec
     {
@@ -42,7 +39,6 @@ class AppsCreateAppRequest extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      *
      * @return self
      */
@@ -56,20 +52,18 @@ class AppsCreateAppRequest extends \ArrayObject
      * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
      * <br><br>Requires `project:update` scope.
      * 
-     *
      */
     public function getProjectId(): string
     {
         return $this->projectId;
     }
     /**
-    * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
-    <br><br>Requires `project:update` scope.
-    
-    *
-    *
-    * @return self
-    */
+     * The ID of the project the app should be assigned to. If omitted, it will be assigned to your default project.
+     * <br><br>Requires `project:update` scope.
+     * 
+     *
+     * @return self
+     */
     public function setProjectId(string $projectId): self
     {
         $this->initialized['projectId'] = true;

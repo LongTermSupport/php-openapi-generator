@@ -22,12 +22,10 @@ class RdmaSharedDevPlugin extends \ArrayObject
     }
     /**
      * Indicates whether the RDMA shared device plugin is enabled.
-     *
      */
     protected bool $enabled;
     /**
      * Indicates whether the RDMA shared device plugin is enabled.
-     *
      */
     public function getEnabled(): bool
     {
@@ -35,7 +33,6 @@ class RdmaSharedDevPlugin extends \ArrayObject
     }
     /**
      * Indicates whether the RDMA shared device plugin is enabled.
-     *
      *
      * @return self
      */

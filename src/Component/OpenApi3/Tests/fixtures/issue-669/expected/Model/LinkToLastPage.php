@@ -22,12 +22,10 @@ class LinkToLastPage extends \ArrayObject
     }
     /**
      * URI of the last page of the results.
-     *
      */
     protected string $last;
     /**
      * URI of the last page of the results.
-     *
      */
     public function getLast(): string
     {
@@ -35,7 +33,6 @@ class LinkToLastPage extends \ArrayObject
     }
     /**
      * URI of the last page of the results.
-     *
      *
      * @return self
      */

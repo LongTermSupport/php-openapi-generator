@@ -19,13 +19,11 @@ class MetadataValuesChangeCommandBase
     }
     /**
      * The ID of the schema to which the operation scope is addressed.
-     *
      */
     protected string $schemaId;
     protected string $kind;
     /**
      * The ID of the schema to which the operation scope is addressed.
-     *
      */
     public function getSchemaId(): string
     {
@@ -33,7 +31,6 @@ class MetadataValuesChangeCommandBase
     }
     /**
      * The ID of the schema to which the operation scope is addressed.
-     *
      */
     public function setSchemaId(string $schemaId): void
     {

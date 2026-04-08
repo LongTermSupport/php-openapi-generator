@@ -22,7 +22,6 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Indicates if the content is being withheld for on the basis of copyright infringement.
-     *
      */
     protected bool $copyright;
     /**
@@ -33,12 +32,10 @@ class TweetWithheld extends \ArrayObject
     protected array $countryCodes;
     /**
      * Indicates whether the content being withheld is the `tweet` or a `user`.
-     *
      */
     protected string $scope;
     /**
      * Indicates if the content is being withheld for on the basis of copyright infringement.
-     *
      */
     public function getCopyright(): bool
     {
@@ -46,7 +43,6 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Indicates if the content is being withheld for on the basis of copyright infringement.
-     *
      *
      * @return self
      */
@@ -80,7 +76,6 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Indicates whether the content being withheld is the `tweet` or a `user`.
-     *
      */
     public function getScope(): string
     {
@@ -88,7 +83,6 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Indicates whether the content being withheld is the `tweet` or a `user`.
-     *
      *
      * @return self
      */

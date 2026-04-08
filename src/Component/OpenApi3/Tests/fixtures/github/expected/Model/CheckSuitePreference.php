@@ -23,7 +23,6 @@ class CheckSuitePreference extends \ArrayObject
     protected CheckSuitePreferencePreferences $preferences;
     /**
      * A git repository
-     *
      */
     protected Repository $repository;
     public function getPreferences(): CheckSuitePreferencePreferences
@@ -38,7 +37,6 @@ class CheckSuitePreference extends \ArrayObject
     }
     /**
      * A git repository
-     *
      */
     public function getRepository(): Repository
     {
@@ -46,7 +44,6 @@ class CheckSuitePreference extends \ArrayObject
     }
     /**
      * A git repository
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class ForwardLinks extends \ArrayObject
     }
     /**
      * URI of the last page of the results.
-     *
      */
     protected string $last;
     /**
      * URI of the next page of the results.
-     *
      */
     protected string $next;
     /**
      * URI of the last page of the results.
-     *
      */
     public function getLast(): string
     {
@@ -40,7 +37,6 @@ class ForwardLinks extends \ArrayObject
     }
     /**
      * URI of the last page of the results.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ForwardLinks extends \ArrayObject
     }
     /**
      * URI of the next page of the results.
-     *
      */
     public function getNext(): string
     {
@@ -60,7 +55,6 @@ class ForwardLinks extends \ArrayObject
     }
     /**
      * URI of the next page of the results.
-     *
      *
      * @return self
      */

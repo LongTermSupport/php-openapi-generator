@@ -19,7 +19,6 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Filters the list items on which the change commands must be applied.
-     *
      */
     protected mixed $filterRequest = null;
     /**
@@ -30,17 +29,14 @@ class ListItemFieldsBatchUpdateFilterRequest
     protected array $changeCommands;
     /**
      * Allow updating list items with references to list items or contents that do not exist in the system.
-     *
      */
     protected bool $allowMissingDependencies;
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     protected bool $notifyProgress;
     /**
      * Filters the list items on which the change commands must be applied.
-     *
      */
     public function getFilterRequest(): mixed
     {
@@ -48,7 +44,6 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Filters the list items on which the change commands must be applied.
-     *
      *
      * @return self
      */
@@ -82,7 +77,6 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Allow updating list items with references to list items or contents that do not exist in the system.
-     *
      */
     public function getAllowMissingDependencies(): bool
     {
@@ -90,7 +84,6 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Allow updating list items with references to list items or contents that do not exist in the system.
-     *
      *
      * @return self
      */
@@ -102,7 +95,6 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -110,7 +102,6 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      *
      * @return self
      */

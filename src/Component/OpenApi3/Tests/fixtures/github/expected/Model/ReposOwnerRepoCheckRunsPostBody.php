@@ -22,48 +22,39 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The name of the check. For example, "code-coverage".
-     *
      */
     protected string $name;
     /**
      * The SHA of the commit.
-     *
      */
     protected string $headSha;
     /**
      * The URL of the integrator's site that has the full details of the check. If the integrator does not provide this, then the homepage of the GitHub app is used.
-     *
      */
     protected string $detailsUrl;
     /**
      * A reference for the run on the integrator's system.
-     *
      */
     protected string $externalId;
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
      */
     protected string $status = 'queued';
     /**
      * The time that the check run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $startedAt;
     /**
      * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`. When the conclusion is `action_required`, additional details should be provided on the site specified by `details_url`.
      * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-     *
      */
     protected string $conclusion;
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $completedAt;
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object) description.
-     *
      */
     protected ReposOwnerRepoCheckRunsPostBodyOutput $output;
     /**
@@ -74,7 +65,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     protected array $actions;
     /**
      * The name of the check. For example, "code-coverage".
-     *
      */
     public function getName(): string
     {
@@ -82,7 +72,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The name of the check. For example, "code-coverage".
-     *
      *
      * @return self
      */
@@ -94,7 +83,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the commit.
-     *
      */
     public function getHeadSha(): string
     {
@@ -102,7 +90,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The SHA of the commit.
-     *
      *
      * @return self
      */
@@ -114,7 +101,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The URL of the integrator's site that has the full details of the check. If the integrator does not provide this, then the homepage of the GitHub app is used.
-     *
      */
     public function getDetailsUrl(): string
     {
@@ -122,7 +108,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The URL of the integrator's site that has the full details of the check. If the integrator does not provide this, then the homepage of the GitHub app is used.
-     *
      *
      * @return self
      */
@@ -134,7 +119,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * A reference for the run on the integrator's system.
-     *
      */
     public function getExternalId(): string
     {
@@ -142,7 +126,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * A reference for the run on the integrator's system.
-     *
      *
      * @return self
      */
@@ -154,7 +137,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
      */
     public function getStatus(): string
     {
@@ -162,7 +144,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The current status. Can be one of `queued`, `in_progress`, or `completed`.
-     *
      *
      * @return self
      */
@@ -174,7 +155,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The time that the check run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getStartedAt(): string
     {
@@ -182,7 +162,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The time that the check run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */
@@ -195,19 +174,17 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     /**
      * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`. When the conclusion is `action_required`, additional details should be provided on the site specified by `details_url`.
      * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-     *
      */
     public function getConclusion(): string
     {
         return $this->conclusion;
     }
     /**
-    * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`. When the conclusion is `action_required`, additional details should be provided on the site specified by `details_url`.  
-    **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
-    *
-    *
-    * @return self
-    */
+     * **Required if you provide `completed_at` or a `status` of `completed`**. The final conclusion of the check. Can be one of `success`, `failure`, `neutral`, `cancelled`, `skipped`, `timed_out`, or `action_required`. When the conclusion is `action_required`, additional details should be provided on the site specified by `details_url`.
+     * **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. Only GitHub can change a check run conclusion to `stale`.
+     *
+     * @return self
+     */
     public function setConclusion(string $conclusion): self
     {
         $this->initialized['conclusion'] = true;
@@ -216,7 +193,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getCompletedAt(): string
     {
@@ -224,7 +200,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */
@@ -236,7 +211,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object) description.
-     *
      */
     public function getOutput(): ReposOwnerRepoCheckRunsPostBodyOutput
     {
@@ -244,7 +218,6 @@ class ReposOwnerRepoCheckRunsPostBody extends \ArrayObject
     }
     /**
      * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://developer.github.com/v3/checks/runs/#output-object) description.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class MemberCurrentUtilization extends \ArrayObject
     }
     /**
      * The memory utilization average of the individual Droplet.
-     *
      */
     protected float $memory;
     /**
      * The CPU utilization average of the individual Droplet.
-     *
      */
     protected float $cpu;
     /**
      * The memory utilization average of the individual Droplet.
-     *
      */
     public function getMemory(): float
     {
@@ -40,7 +37,6 @@ class MemberCurrentUtilization extends \ArrayObject
     }
     /**
      * The memory utilization average of the individual Droplet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class MemberCurrentUtilization extends \ArrayObject
     }
     /**
      * The CPU utilization average of the individual Droplet.
-     *
      */
     public function getCpu(): float
     {
@@ -60,7 +55,6 @@ class MemberCurrentUtilization extends \ArrayObject
     }
     /**
      * The CPU utilization average of the individual Droplet.
-     *
      *
      * @return self
      */

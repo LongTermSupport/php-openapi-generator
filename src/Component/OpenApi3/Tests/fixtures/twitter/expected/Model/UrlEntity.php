@@ -22,42 +22,34 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     protected int $start;
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     protected int $end;
     /**
      * A validly formatted URL.
-     *
      */
     protected string $url;
     /**
      * A validly formatted URL.
-     *
      */
     protected string $expandedUrl;
     /**
      * The URL as displayed in the Twitter client.
-     *
      */
     protected string $displayUrl;
     /**
      * HTTP Status Code.
-     *
      */
     protected int $status;
     /**
      * Title of the page the URL points to.
-     *
      */
     protected string $title;
     /**
      * Description of the URL landing page.
-     *
      */
     protected string $description;
     /**
@@ -66,7 +58,6 @@ class UrlEntity extends \ArrayObject
     protected array $images;
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     public function getStart(): int
     {
@@ -74,7 +65,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      *
      * @return self
      */
@@ -86,7 +76,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     public function getEnd(): int
     {
@@ -94,7 +83,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      *
      * @return self
      */
@@ -106,7 +94,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      */
     public function getUrl(): string
     {
@@ -114,7 +101,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      *
      * @return self
      */
@@ -126,7 +112,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      */
     public function getExpandedUrl(): string
     {
@@ -134,7 +119,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * A validly formatted URL.
-     *
      *
      * @return self
      */
@@ -146,7 +130,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * The URL as displayed in the Twitter client.
-     *
      */
     public function getDisplayUrl(): string
     {
@@ -154,7 +137,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * The URL as displayed in the Twitter client.
-     *
      *
      * @return self
      */
@@ -166,7 +148,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * HTTP Status Code.
-     *
      */
     public function getStatus(): int
     {
@@ -174,7 +155,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * HTTP Status Code.
-     *
      *
      * @return self
      */
@@ -186,7 +166,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Title of the page the URL points to.
-     *
      */
     public function getTitle(): string
     {
@@ -194,7 +173,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Title of the page the URL points to.
-     *
      *
      * @return self
      */
@@ -206,7 +184,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Description of the URL landing page.
-     *
      */
     public function getDescription(): string
     {
@@ -214,7 +191,6 @@ class UrlEntity extends \ArrayObject
     }
     /**
      * Description of the URL landing page.
-     *
      *
      * @return self
      */

@@ -22,27 +22,22 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * The clusterlint check that resulted in the diagnostic.
-     *
      */
     protected string $checkName;
     /**
      * Can be one of error, warning or suggestion.
-     *
      */
     protected string $severity;
     /**
      * Feedback about the object for users to fix.
-     *
      */
     protected string $message;
     /**
      * Metadata about the Kubernetes API object the diagnostic is reported on.
-     *
      */
     protected ClusterlintResultsDiagnosticsItemObject $object;
     /**
      * The clusterlint check that resulted in the diagnostic.
-     *
      */
     public function getCheckName(): string
     {
@@ -50,7 +45,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * The clusterlint check that resulted in the diagnostic.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Can be one of error, warning or suggestion.
-     *
      */
     public function getSeverity(): string
     {
@@ -70,7 +63,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Can be one of error, warning or suggestion.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Feedback about the object for users to fix.
-     *
      */
     public function getMessage(): string
     {
@@ -90,7 +81,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Feedback about the object for users to fix.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Metadata about the Kubernetes API object the diagnostic is reported on.
-     *
      */
     public function getObject(): ClusterlintResultsDiagnosticsItemObject
     {
@@ -110,7 +99,6 @@ class ClusterlintResultsDiagnosticsItem extends \ArrayObject
     }
     /**
      * Metadata about the Kubernetes API object the diagnostic is reported on.
-     *
      *
      * @return self
      */

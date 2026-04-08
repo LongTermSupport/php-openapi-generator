@@ -19,12 +19,10 @@ class ShareOutputEmbed extends ShareOutputBase
     }
     /**
      * Share token for the shared output.
-     *
      */
     protected ?string $token = null;
     /**
      * Share token for the shared output.
-     *
      */
     public function getToken(): ?string
     {
@@ -32,7 +30,6 @@ class ShareOutputEmbed extends ShareOutputBase
     }
     /**
      * Share token for the shared output.
-     *
      *
      * @return self
      */

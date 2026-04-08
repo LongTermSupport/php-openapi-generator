@@ -22,12 +22,10 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBodyCompaniesItem extends 
     }
     /**
      * Company Safe Number or Connect ID. Not required when copyAll query parameter is set to true.
-     *
      */
     protected string $id;
     /**
      * Company Safe Number or Connect ID. Not required when copyAll query parameter is set to true.
-     *
      */
     public function getId(): string
     {
@@ -35,7 +33,6 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBodyCompaniesItem extends 
     }
     /**
      * Company Safe Number or Connect ID. Not required when copyAll query parameter is set to true.
-     *
      *
      * @return self
      */

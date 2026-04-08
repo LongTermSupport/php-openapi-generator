@@ -22,23 +22,19 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The match configuration for the rule.
-     *
      */
     protected AppIngressSpecRuleMatch $match;
     protected AppsCorsPolicy $cors;
     /**
      * The component to route to. Only one of `component` or `redirect` may be set.
-     *
      */
     protected AppIngressSpecRuleRoutingComponent $component;
     /**
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
-     *
      */
     protected AppIngressSpecRuleRoutingRedirect $redirect;
     /**
      * The match configuration for the rule.
-     *
      */
     public function getMatch(): AppIngressSpecRuleMatch
     {
@@ -46,7 +42,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The match configuration for the rule.
-     *
      *
      * @return self
      */
@@ -68,7 +63,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The component to route to. Only one of `component` or `redirect` may be set.
-     *
      */
     public function getComponent(): AppIngressSpecRuleRoutingComponent
     {
@@ -76,7 +70,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The component to route to. Only one of `component` or `redirect` may be set.
-     *
      *
      * @return self
      */
@@ -88,7 +81,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
-     *
      */
     public function getRedirect(): AppIngressSpecRuleRoutingRedirect
     {
@@ -96,7 +88,6 @@ class AppIngressSpecRule extends \ArrayObject
     }
     /**
      * The redirect configuration for the rule. Only one of `component` or `redirect` may be set.
-     *
      *
      * @return self
      */

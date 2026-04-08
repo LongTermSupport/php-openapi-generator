@@ -22,7 +22,6 @@ class GistsPostBody extends \ArrayObject
     }
     /**
      * Description of the gist
-     *
      */
     protected string $description;
     /**
@@ -34,7 +33,6 @@ class GistsPostBody extends \ArrayObject
     protected mixed $public = null;
     /**
      * Description of the gist
-     *
      */
     public function getDescription(): string
     {
@@ -42,7 +40,6 @@ class GistsPostBody extends \ArrayObject
     }
     /**
      * Description of the gist
-     *
      *
      * @return self
      */

@@ -19,44 +19,36 @@ class FileTransfer
     }
     /**
      * ID of file transfer.
-     *
      */
     protected string $id;
     /**
      * Name of file transfer.
-     *
      */
     protected string $name;
     /**
      * Replaced in favor of RequestId. Client provided identifier.
      *
      * @deprecated
-     *
      */
     protected ?string $identifier = null;
     /**
      * Client provided identifier.
-     *
      */
     protected string $requestId;
     /**
      * ID of transfer.
-     *
      */
     protected string $transferId;
     /**
      * State of file transfer.
-     *
      */
     protected mixed $state = null;
     /**
      * ID of Content created for file.
-     *
      */
     protected ?string $contentId = null;
     /**
      * ID of file transfer.
-     *
      */
     public function getId(): string
     {
@@ -64,7 +56,6 @@ class FileTransfer
     }
     /**
      * ID of file transfer.
-     *
      *
      * @return self
      */
@@ -76,7 +67,6 @@ class FileTransfer
     }
     /**
      * Name of file transfer.
-     *
      */
     public function getName(): string
     {
@@ -84,7 +74,6 @@ class FileTransfer
     }
     /**
      * Name of file transfer.
-     *
      *
      * @return self
      */
@@ -98,7 +87,6 @@ class FileTransfer
      * Replaced in favor of RequestId. Client provided identifier.
      *
      * @deprecated
-     *
      */
     public function getIdentifier(): ?string
     {
@@ -106,7 +94,6 @@ class FileTransfer
     }
     /**
      * Replaced in favor of RequestId. Client provided identifier.
-     *
      *
      * @deprecated
      *
@@ -120,7 +107,6 @@ class FileTransfer
     }
     /**
      * Client provided identifier.
-     *
      */
     public function getRequestId(): string
     {
@@ -128,7 +114,6 @@ class FileTransfer
     }
     /**
      * Client provided identifier.
-     *
      *
      * @return self
      */
@@ -140,7 +125,6 @@ class FileTransfer
     }
     /**
      * ID of transfer.
-     *
      */
     public function getTransferId(): string
     {
@@ -148,7 +132,6 @@ class FileTransfer
     }
     /**
      * ID of transfer.
-     *
      *
      * @return self
      */
@@ -160,7 +143,6 @@ class FileTransfer
     }
     /**
      * State of file transfer.
-     *
      */
     public function getState(): mixed
     {
@@ -168,7 +150,6 @@ class FileTransfer
     }
     /**
      * State of file transfer.
-     *
      *
      * @return self
      */
@@ -180,7 +161,6 @@ class FileTransfer
     }
     /**
      * ID of Content created for file.
-     *
      */
     public function getContentId(): ?string
     {
@@ -188,7 +168,6 @@ class FileTransfer
     }
     /**
      * ID of Content created for file.
-     *
      *
      * @return self
      */

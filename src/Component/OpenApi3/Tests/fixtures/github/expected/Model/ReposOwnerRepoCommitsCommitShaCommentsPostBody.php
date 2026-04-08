@@ -22,27 +22,22 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * The contents of the comment.
-     *
      */
     protected string $body;
     /**
      * Relative path of the file to comment on.
-     *
      */
     protected string $path;
     /**
      * Line index in the diff to comment on.
-     *
      */
     protected int $position;
     /**
      * **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
-     *
      */
     protected int $line;
     /**
      * The contents of the comment.
-     *
      */
     public function getBody(): string
     {
@@ -50,7 +45,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * The contents of the comment.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * Relative path of the file to comment on.
-     *
      */
     public function getPath(): string
     {
@@ -70,7 +63,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * Relative path of the file to comment on.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * Line index in the diff to comment on.
-     *
      */
     public function getPosition(): int
     {
@@ -90,7 +81,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * Line index in the diff to comment on.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
-     *
      */
     public function getLine(): int
     {
@@ -110,7 +99,6 @@ class ReposOwnerRepoCommitsCommitShaCommentsPostBody extends \ArrayObject
     }
     /**
      * **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
-     *
      *
      * @return self
      */

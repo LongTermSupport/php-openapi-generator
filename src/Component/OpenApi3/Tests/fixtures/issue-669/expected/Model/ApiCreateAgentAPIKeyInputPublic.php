@@ -22,17 +22,14 @@ class ApiCreateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      */
     protected string $agentUuid;
     /**
      * A human friendly name to identify the key
-     *
      */
     protected string $name;
     /**
      * Agent id
-     *
      */
     public function getAgentUuid(): string
     {
@@ -40,7 +37,6 @@ class ApiCreateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Agent id
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiCreateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * A human friendly name to identify the key
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class ApiCreateAgentAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * A human friendly name to identify the key
-     *
      *
      * @return self
      */

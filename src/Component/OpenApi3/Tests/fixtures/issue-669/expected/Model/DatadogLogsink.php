@@ -22,17 +22,14 @@ class DatadogLogsink extends \ArrayObject
     }
     /**
      * Datadog connection URL
-     *
      */
     protected string $site;
     /**
      * Datadog API key
-     *
      */
     protected string $datadogApiKey;
     /**
      * Datadog connection URL
-     *
      */
     public function getSite(): string
     {
@@ -40,7 +37,6 @@ class DatadogLogsink extends \ArrayObject
     }
     /**
      * Datadog connection URL
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DatadogLogsink extends \ArrayObject
     }
     /**
      * Datadog API key
-     *
      */
     public function getDatadogApiKey(): string
     {
@@ -60,7 +55,6 @@ class DatadogLogsink extends \ArrayObject
     }
     /**
      * Datadog API key
-     *
      *
      * @return self
      */

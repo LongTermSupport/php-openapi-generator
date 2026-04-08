@@ -22,12 +22,10 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The secret key used to access the bucket. We return secret keys only once upon creation. Make sure to copy the key and securely store it.
-     *
      */
     protected string $secretKey;
     /**
      * The access key's name.
-     *
      */
     protected string $name;
     /**
@@ -38,17 +36,14 @@ class KeyCreateResponse extends \ArrayObject
     protected array $grants = array();
     /**
      * The Access Key ID used to access a bucket.
-     *
      */
     protected string $accessKey;
     /**
      * The date and time the key was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The secret key used to access the bucket. We return secret keys only once upon creation. Make sure to copy the key and securely store it.
-     *
      */
     public function getSecretKey(): string
     {
@@ -56,7 +51,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The secret key used to access the bucket. We return secret keys only once upon creation. Make sure to copy the key and securely store it.
-     *
      *
      * @return self
      */
@@ -68,7 +62,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The access key's name.
-     *
      */
     public function getName(): string
     {
@@ -76,7 +69,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The access key's name.
-     *
      *
      * @return self
      */
@@ -110,7 +102,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The Access Key ID used to access a bucket.
-     *
      */
     public function getAccessKey(): string
     {
@@ -118,7 +109,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The Access Key ID used to access a bucket.
-     *
      *
      * @return self
      */
@@ -130,7 +120,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The date and time the key was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -138,7 +127,6 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The date and time the key was created.
-     *
      *
      * @return self
      */

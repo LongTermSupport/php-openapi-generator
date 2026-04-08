@@ -23,12 +23,10 @@ class EventPayload extends \ArrayObject
     protected string $action;
     /**
      * Issue Simple
-     *
      */
     protected IssueSimple $issue;
     /**
      * Comments provide a way for people to collaborate on an issue.
-     *
      */
     protected IssueComment $comment;
     /**
@@ -47,7 +45,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * Issue Simple
-     *
      */
     public function getIssue(): IssueSimple
     {
@@ -55,7 +52,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * Issue Simple
-     *
      *
      * @return self
      */
@@ -67,7 +63,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * Comments provide a way for people to collaborate on an issue.
-     *
      */
     public function getComment(): IssueComment
     {
@@ -75,7 +70,6 @@ class EventPayload extends \ArrayObject
     }
     /**
      * Comments provide a way for people to collaborate on an issue.
-     *
      *
      * @return self
      */

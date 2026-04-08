@@ -22,27 +22,22 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * IP of the DO router
-     *
      */
     protected string $localRouterIp;
     /**
      * IP of the Naas Provider router
-     *
      */
     protected string $peerRouterIp;
     /**
      * ASN of the peer router
-     *
      */
     protected int $peerRouterAsn;
     /**
      * BGP Auth Key
-     *
      */
     protected string $authKey;
     /**
      * IP of the DO router
-     *
      */
     public function getLocalRouterIp(): string
     {
@@ -50,7 +45,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * IP of the DO router
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * IP of the Naas Provider router
-     *
      */
     public function getPeerRouterIp(): string
     {
@@ -70,7 +63,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * IP of the Naas Provider router
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * ASN of the peer router
-     *
      */
     public function getPeerRouterAsn(): int
     {
@@ -90,7 +81,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * ASN of the peer router
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * BGP Auth Key
-     *
      */
     public function getAuthKey(): string
     {
@@ -110,7 +99,6 @@ class PartnerAttachmentWritableBgp extends \ArrayObject
     }
     /**
      * BGP Auth Key
-     *
      *
      * @return self
      */

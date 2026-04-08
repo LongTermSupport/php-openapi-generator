@@ -22,12 +22,10 @@ class TeamsTeamIdDiscussionsDiscussionNumberReactionsPostBody extends \ArrayObje
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the team discussion.
-     *
      */
     protected string $content;
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the team discussion.
-     *
      */
     public function getContent(): string
     {
@@ -35,7 +33,6 @@ class TeamsTeamIdDiscussionsDiscussionNumberReactionsPostBody extends \ArrayObje
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the team discussion.
-     *
      *
      * @return self
      */

@@ -22,33 +22,27 @@ class Registry extends \ArrayObject
     }
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
      */
     protected string $name;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the registry was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Slug of the region where registry data is stored
-     *
      */
     protected string $region;
     /**
      * The amount of storage used in the registry in bytes.
-     *
      */
     protected int $storageUsageBytes;
     /**
      * The time at which the storage usage was updated. Storage usage is calculated asynchronously, and may not immediately reflect pushes to the registry.
-     *
      */
     protected \DateTime $storageUsageBytesUpdatedAt;
     protected Registrysubscription $subscription;
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
      */
     public function getName(): string
     {
@@ -56,7 +50,6 @@ class Registry extends \ArrayObject
     }
     /**
      * A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class Registry extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the registry was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -76,7 +68,6 @@ class Registry extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the registry was created.
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class Registry extends \ArrayObject
     }
     /**
      * Slug of the region where registry data is stored
-     *
      */
     public function getRegion(): string
     {
@@ -96,7 +86,6 @@ class Registry extends \ArrayObject
     }
     /**
      * Slug of the region where registry data is stored
-     *
      *
      * @return self
      */
@@ -108,7 +97,6 @@ class Registry extends \ArrayObject
     }
     /**
      * The amount of storage used in the registry in bytes.
-     *
      */
     public function getStorageUsageBytes(): int
     {
@@ -116,7 +104,6 @@ class Registry extends \ArrayObject
     }
     /**
      * The amount of storage used in the registry in bytes.
-     *
      *
      * @return self
      */
@@ -128,7 +115,6 @@ class Registry extends \ArrayObject
     }
     /**
      * The time at which the storage usage was updated. Storage usage is calculated asynchronously, and may not immediately reflect pushes to the registry.
-     *
      */
     public function getStorageUsageBytesUpdatedAt(): \DateTime
     {
@@ -136,7 +122,6 @@ class Registry extends \ArrayObject
     }
     /**
      * The time at which the storage usage was updated. Storage usage is calculated asynchronously, and may not immediately reflect pushes to the registry.
-     *
      *
      * @return self
      */

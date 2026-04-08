@@ -22,22 +22,18 @@ class VpcMember extends \ArrayObject
     }
     /**
      * The name of the resource.
-     *
      */
     protected string $name;
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     protected string $urn;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the resource was created.
-     *
      */
     protected string $createdAt;
     /**
      * The name of the resource.
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * The name of the resource.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      */
     public function getUrn(): string
     {
@@ -65,7 +59,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * The uniform resource name (URN) for the resource in the format do:resource_type:resource_id.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the resource was created.
-     *
      */
     public function getCreatedAt(): string
     {
@@ -85,7 +77,6 @@ class VpcMember extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the resource was created.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class SessionRenewalEvent extends ApplicationEvent
     }
     /**
      * User authorization state
-     *
      */
     protected string $authorizationState;
     /**
      * User authorization state
-     *
      */
     public function getAuthorizationState(): string
     {
@@ -32,7 +30,6 @@ class SessionRenewalEvent extends ApplicationEvent
     }
     /**
      * User authorization state
-     *
      *
      * @return self
      */

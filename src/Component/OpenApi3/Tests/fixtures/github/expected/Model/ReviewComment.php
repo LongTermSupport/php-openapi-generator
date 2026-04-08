@@ -43,32 +43,26 @@ class ReviewComment extends \ArrayObject
     protected string $bodyHtml;
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      */
     protected string $side = 'RIGHT';
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      */
     protected ?string $startSide = 'RIGHT';
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     protected int $line;
     /**
      * The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     protected int $originalLine;
     /**
      * The first line of the range for a multi-line comment.
-     *
      */
     protected ?int $startLine = null;
     /**
      * The original first line of the range for a multi-line comment.
-     *
      */
     protected ?int $originalStartLine = null;
     public function getUrl(): string
@@ -283,7 +277,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      */
     public function getSide(): string
     {
@@ -291,7 +284,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */
@@ -303,7 +295,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      */
     public function getStartSide(): ?string
     {
@@ -311,7 +302,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The side of the first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */
@@ -323,7 +313,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     public function getLine(): int
     {
@@ -331,7 +320,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      *
      * @return self
      */
@@ -343,7 +331,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      */
     public function getOriginalLine(): int
     {
@@ -351,7 +338,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
-     *
      *
      * @return self
      */
@@ -363,7 +349,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
      */
     public function getStartLine(): ?int
     {
@@ -371,7 +356,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */
@@ -383,7 +367,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The original first line of the range for a multi-line comment.
-     *
      */
     public function getOriginalStartLine(): ?int
     {
@@ -391,7 +374,6 @@ class ReviewComment extends \ArrayObject
     }
     /**
      * The original first line of the range for a multi-line comment.
-     *
      *
      * @return self
      */

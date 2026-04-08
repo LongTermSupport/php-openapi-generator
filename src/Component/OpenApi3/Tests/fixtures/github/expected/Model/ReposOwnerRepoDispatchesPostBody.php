@@ -22,7 +22,6 @@ class ReposOwnerRepoDispatchesPostBody extends \ArrayObject
     }
     /**
      * **Required:** A custom webhook event name.
-     *
      */
     protected string $eventType;
     /**
@@ -33,7 +32,6 @@ class ReposOwnerRepoDispatchesPostBody extends \ArrayObject
     protected array $clientPayload;
     /**
      * **Required:** A custom webhook event name.
-     *
      */
     public function getEventType(): string
     {
@@ -41,7 +39,6 @@ class ReposOwnerRepoDispatchesPostBody extends \ArrayObject
     }
     /**
      * **Required:** A custom webhook event name.
-     *
      *
      * @return self
      */

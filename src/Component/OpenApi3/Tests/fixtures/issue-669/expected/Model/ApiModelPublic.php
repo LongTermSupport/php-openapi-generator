@@ -22,77 +22,62 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Agreement Description
-     *
      */
     protected ApiAgreement $agreement;
     /**
      * Creation date / time
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Human-readable model identifier
-     *
      */
     protected string $id;
     /**
      * True if it is a foundational model provided by do
-     *
      */
     protected bool $isFoundational;
     /**
      * Default chunking size limit to show in UI
-     *
      */
     protected int $kbDefaultChunkSize;
     /**
      * Maximum chunk size limit of model
-     *
      */
     protected int $kbMaxChunkSize;
     /**
      * Minimum chunking size token limits if model supports KNOWLEDGEBASE usecase
-     *
      */
     protected int $kbMinChunkSize;
     /**
      * Display name of the model
-     *
      */
     protected string $name;
     /**
      * Unique id of the model, this model is based on
-     *
      */
     protected string $parentUuid;
     /**
      * Last modified
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Model has been fully uploaded
-     *
      */
     protected bool $uploadComplete;
     /**
      * Download url
-     *
      */
     protected string $url;
     /**
      * Unique id
-     *
      */
     protected string $uuid;
     /**
      * Version Information about a Model
-     *
      */
     protected ApiModelVersion $version;
     /**
      * Agreement Description
-     *
      */
     public function getAgreement(): ApiAgreement
     {
@@ -100,7 +85,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Agreement Description
-     *
      *
      * @return self
      */
@@ -112,7 +96,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -120,7 +103,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Creation date / time
-     *
      *
      * @return self
      */
@@ -132,7 +114,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Human-readable model identifier
-     *
      */
     public function getId(): string
     {
@@ -140,7 +121,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Human-readable model identifier
-     *
      *
      * @return self
      */
@@ -152,7 +132,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * True if it is a foundational model provided by do
-     *
      */
     public function getIsFoundational(): bool
     {
@@ -160,7 +139,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * True if it is a foundational model provided by do
-     *
      *
      * @return self
      */
@@ -172,7 +150,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Default chunking size limit to show in UI
-     *
      */
     public function getKbDefaultChunkSize(): int
     {
@@ -180,7 +157,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Default chunking size limit to show in UI
-     *
      *
      * @return self
      */
@@ -192,7 +168,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Maximum chunk size limit of model
-     *
      */
     public function getKbMaxChunkSize(): int
     {
@@ -200,7 +175,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Maximum chunk size limit of model
-     *
      *
      * @return self
      */
@@ -212,7 +186,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Minimum chunking size token limits if model supports KNOWLEDGEBASE usecase
-     *
      */
     public function getKbMinChunkSize(): int
     {
@@ -220,7 +193,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Minimum chunking size token limits if model supports KNOWLEDGEBASE usecase
-     *
      *
      * @return self
      */
@@ -232,7 +204,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Display name of the model
-     *
      */
     public function getName(): string
     {
@@ -240,7 +211,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Display name of the model
-     *
      *
      * @return self
      */
@@ -252,7 +222,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Unique id of the model, this model is based on
-     *
      */
     public function getParentUuid(): string
     {
@@ -260,7 +229,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Unique id of the model, this model is based on
-     *
      *
      * @return self
      */
@@ -272,7 +240,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Last modified
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -280,7 +247,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Last modified
-     *
      *
      * @return self
      */
@@ -292,7 +258,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Model has been fully uploaded
-     *
      */
     public function getUploadComplete(): bool
     {
@@ -300,7 +265,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Model has been fully uploaded
-     *
      *
      * @return self
      */
@@ -312,7 +276,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Download url
-     *
      */
     public function getUrl(): string
     {
@@ -320,7 +283,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Download url
-     *
      *
      * @return self
      */
@@ -332,7 +294,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Unique id
-     *
      */
     public function getUuid(): string
     {
@@ -340,7 +301,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Unique id
-     *
      *
      * @return self
      */
@@ -352,7 +312,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Version Information about a Model
-     *
      */
     public function getVersion(): ApiModelVersion
     {
@@ -360,7 +319,6 @@ class ApiModelPublic extends \ArrayObject
     }
     /**
      * Version Information about a Model
-     *
      *
      * @return self
      */

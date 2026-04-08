@@ -22,22 +22,18 @@ class CommonMediaFields extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     protected string $mediaKey;
     /**
      * The height of the media in pixels
-     *
      */
     protected int $height;
     /**
      * The width of the media in pixels
-     *
      */
     protected int $width;
     /**
      * The Media Key identifier for this attachment.
-     *
      */
     public function getMediaKey(): string
     {
@@ -45,7 +41,6 @@ class CommonMediaFields extends \ArrayObject
     }
     /**
      * The Media Key identifier for this attachment.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class CommonMediaFields extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      */
     public function getHeight(): int
     {
@@ -65,7 +59,6 @@ class CommonMediaFields extends \ArrayObject
     }
     /**
      * The height of the media in pixels
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class CommonMediaFields extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      */
     public function getWidth(): int
     {
@@ -85,7 +77,6 @@ class CommonMediaFields extends \ArrayObject
     }
     /**
      * The width of the media in pixels
-     *
      *
      * @return self
      */

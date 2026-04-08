@@ -22,17 +22,14 @@ class ReposOwnerRepoGitBlobsPostBody extends \ArrayObject
     }
     /**
      * The new blob's content.
-     *
      */
     protected string $content;
     /**
      * The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
-     *
      */
     protected string $encoding = 'utf-8';
     /**
      * The new blob's content.
-     *
      */
     public function getContent(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoGitBlobsPostBody extends \ArrayObject
     }
     /**
      * The new blob's content.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoGitBlobsPostBody extends \ArrayObject
     }
     /**
      * The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
-     *
      */
     public function getEncoding(): string
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoGitBlobsPostBody extends \ArrayObject
     }
     /**
      * The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
-     *
      *
      * @return self
      */

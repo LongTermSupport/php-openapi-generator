@@ -22,22 +22,18 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * DNS name or IPv4 address of the rsyslog server
-     *
      */
     protected string $server;
     /**
      * The internal port on which the rsyslog server is listening
-     *
      */
     protected int $port;
     /**
      * Use TLS (as the messages are not filtered and may contain sensitive information, it is highly recommended to set this to true if the remote server supports it)
-     *
      */
     protected bool $tls;
     /**
      * Message format used by the server, this can be either rfc3164 (the old BSD style message format), `rfc5424` (current syslog message format) or custom
-     *
      */
     protected string $format;
     /**
@@ -62,32 +58,26 @@ class RsyslogLogsink extends \ArrayObject
      *   - Ensure the TLS checkbox is enabled.
      * - Note: This configuration applies to **non-Mongo clusters only**. For **Mongo clusters**, use the `datadog_logsink` integration instead.
      * 
-     *
      */
     protected string $logline;
     /**
      * content of the structured data block of rfc5424 message
-     *
      */
     protected string $sd;
     /**
      * PEM encoded CA certificate
-     *
      */
     protected string $ca;
     /**
      * (PEM format) client key if the server requires client authentication
-     *
      */
     protected string $key;
     /**
      * (PEM format) client cert to use
-     *
      */
     protected string $cert;
     /**
      * DNS name or IPv4 address of the rsyslog server
-     *
      */
     public function getServer(): string
     {
@@ -95,7 +85,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * DNS name or IPv4 address of the rsyslog server
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * The internal port on which the rsyslog server is listening
-     *
      */
     public function getPort(): int
     {
@@ -115,7 +103,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * The internal port on which the rsyslog server is listening
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * Use TLS (as the messages are not filtered and may contain sensitive information, it is highly recommended to set this to true if the remote server supports it)
-     *
      */
     public function getTls(): bool
     {
@@ -135,7 +121,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * Use TLS (as the messages are not filtered and may contain sensitive information, it is highly recommended to set this to true if the remote server supports it)
-     *
      *
      * @return self
      */
@@ -147,7 +132,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * Message format used by the server, this can be either rfc3164 (the old BSD style message format), `rfc5424` (current syslog message format) or custom
-     *
      */
     public function getFormat(): string
     {
@@ -155,7 +139,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * Message format used by the server, this can be either rfc3164 (the old BSD style message format), `rfc5424` (current syslog message format) or custom
-     *
      *
      * @return self
      */
@@ -187,38 +170,36 @@ class RsyslogLogsink extends \ArrayObject
      *   - Ensure the TLS checkbox is enabled.
      * - Note: This configuration applies to **non-Mongo clusters only**. For **Mongo clusters**, use the `datadog_logsink` integration instead.
      * 
-     *
      */
     public function getLogline(): string
     {
         return $this->logline;
     }
     /**
-    * Conditional (required if `format` == `custom`).
-    
-    Syslog log line template for a custom format, supporting limited rsyslog style templating (using `%tag%`). Supported tags are: `HOSTNAME`, `app-name`, `msg`, `msgid`, `pri`, `procid`, `structured-data`, `timestamp` and `timestamp:::date-rfc3339`.
-    
-    ---
-    **Datadog Integration Example for Non-Mongo clusters**:
-    ```
-    DD_KEY <%pri%>1 %timestamp:::date-rfc3339% %HOSTNAME%.DB_NAME %app-name% - - - %msg%
-    ```
-    - Replace `DD_KEY` with your actual Datadog API key.
-    - Replace `DB_NAME` with the actual name of your database cluster.
-    - Configure the Server:
-     - US Region: Use `intake.logs.datadoghq.com`
-     - EU Region: Use `tcp-intake.logs.datadoghq.eu`
-    - Configure the Port:
-     - US Region: Use port `10516`
-     - EU Region: Use port `443`
-    - Enable TLS:
-     - Ensure the TLS checkbox is enabled.
-    - Note: This configuration applies to **non-Mongo clusters only**. For **Mongo clusters**, use the `datadog_logsink` integration instead.
-    
-    *
-    *
-    * @return self
-    */
+     * Conditional (required if `format` == `custom`).
+     * 
+     * Syslog log line template for a custom format, supporting limited rsyslog style templating (using `%tag%`). Supported tags are: `HOSTNAME`, `app-name`, `msg`, `msgid`, `pri`, `procid`, `structured-data`, `timestamp` and `timestamp:::date-rfc3339`.
+     * 
+     * ---
+     * **Datadog Integration Example for Non-Mongo clusters**:
+     * ```
+     * DD_KEY <%pri%>1 %timestamp:::date-rfc3339% %HOSTNAME%.DB_NAME %app-name% - - - %msg%
+     * ```
+     * - Replace `DD_KEY` with your actual Datadog API key.
+     * - Replace `DB_NAME` with the actual name of your database cluster.
+     * - Configure the Server:
+     *   - US Region: Use `intake.logs.datadoghq.com`
+     *   - EU Region: Use `tcp-intake.logs.datadoghq.eu`
+     * - Configure the Port:
+     *   - US Region: Use port `10516`
+     *   - EU Region: Use port `443`
+     * - Enable TLS:
+     *   - Ensure the TLS checkbox is enabled.
+     * - Note: This configuration applies to **non-Mongo clusters only**. For **Mongo clusters**, use the `datadog_logsink` integration instead.
+     * 
+     *
+     * @return self
+     */
     public function setLogline(string $logline): self
     {
         $this->initialized['logline'] = true;
@@ -227,7 +208,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * content of the structured data block of rfc5424 message
-     *
      */
     public function getSd(): string
     {
@@ -235,7 +215,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * content of the structured data block of rfc5424 message
-     *
      *
      * @return self
      */
@@ -247,7 +226,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * PEM encoded CA certificate
-     *
      */
     public function getCa(): string
     {
@@ -255,7 +233,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * PEM encoded CA certificate
-     *
      *
      * @return self
      */
@@ -267,7 +244,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * (PEM format) client key if the server requires client authentication
-     *
      */
     public function getKey(): string
     {
@@ -275,7 +251,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * (PEM format) client key if the server requires client authentication
-     *
      *
      * @return self
      */
@@ -287,7 +262,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * (PEM format) client cert to use
-     *
      */
     public function getCert(): string
     {
@@ -295,7 +269,6 @@ class RsyslogLogsink extends \ArrayObject
     }
     /**
      * (PEM format) client cert to use
-     *
      *
      * @return self
      */

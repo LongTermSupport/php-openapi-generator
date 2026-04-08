@@ -22,47 +22,38 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     protected string $id;
     /**
      * Creation time of this user.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * The friendly name of this user, as shown on their profile.
-     *
      */
     protected string $name;
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     protected string $username;
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
      */
     protected bool $protected;
     /**
      * Indicate if this user is a verified Twitter User.
-     *
      */
     protected bool $verified;
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     protected UserWithheld $withheld;
     /**
      * The URL to the profile image for this user.
-     *
      */
     protected string $profileImageUrl;
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      */
     public function getId(): string
     {
@@ -70,7 +61,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Unique identifier of this User. This is returned as a string in order to avoid complications with languages and tools that cannot handle large integers.
-     *
      *
      * @return self
      */
@@ -82,7 +72,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Creation time of this user.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -90,7 +79,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Creation time of this user.
-     *
      *
      * @return self
      */
@@ -102,7 +90,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The friendly name of this user, as shown on their profile.
-     *
      */
     public function getName(): string
     {
@@ -110,7 +97,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The friendly name of this user, as shown on their profile.
-     *
      *
      * @return self
      */
@@ -122,7 +108,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     public function getUsername(): string
     {
@@ -130,7 +115,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      *
      * @return self
      */
@@ -142,7 +126,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
      */
     public function getProtected(): bool
     {
@@ -150,7 +133,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
-     *
      *
      * @return self
      */
@@ -162,7 +144,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicate if this user is a verified Twitter User.
-     *
      */
     public function getVerified(): bool
     {
@@ -170,7 +151,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicate if this user is a verified Twitter User.
-     *
      *
      * @return self
      */
@@ -182,7 +162,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      */
     public function getWithheld(): UserWithheld
     {
@@ -190,7 +169,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
-     *
      *
      * @return self
      */
@@ -202,7 +180,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The URL to the profile image for this user.
-     *
      */
     public function getProfileImageUrl(): string
     {
@@ -210,7 +187,6 @@ class CompactUserFields extends \ArrayObject
     }
     /**
      * The URL to the profile image for this user.
-     *
      *
      * @return self
      */

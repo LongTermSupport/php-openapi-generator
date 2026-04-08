@@ -22,17 +22,14 @@ class TagsResourcesimgages extends \ArrayObject
     }
     /**
      * The number of tagged objects for this type of resource.
-     *
      */
     protected int $count;
     /**
      * The URI for the last tagged object for this type of resource.
-     *
      */
     protected string $lastTaggedUri;
     /**
      * The number of tagged objects for this type of resource.
-     *
      */
     public function getCount(): int
     {
@@ -40,7 +37,6 @@ class TagsResourcesimgages extends \ArrayObject
     }
     /**
      * The number of tagged objects for this type of resource.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class TagsResourcesimgages extends \ArrayObject
     }
     /**
      * The URI for the last tagged object for this type of resource.
-     *
      */
     public function getLastTaggedUri(): string
     {
@@ -60,7 +55,6 @@ class TagsResourcesimgages extends \ArrayObject
     }
     /**
      * The URI for the last tagged object for this type of resource.
-     *
      *
      * @return self
      */

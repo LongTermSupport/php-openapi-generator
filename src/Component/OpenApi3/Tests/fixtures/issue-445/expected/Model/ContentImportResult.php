@@ -19,32 +19,26 @@ class ContentImportResult
     }
     /**
      * ID of the file transfer.
-     *
      */
     protected string $fileTransferId;
     /**
      * ID of the resulting content.
-     *
      */
     protected ?string $contentId = null;
     /**
      * State of the item.
-     *
      */
     protected ?string $state = null;
     /**
      * Indicates if the operation succeeded.
-     *
      */
     protected bool $succeeded;
     /**
      * If the operation did not succeeded, this contains error related information.
-     *
      */
     protected mixed $error = null;
     /**
      * ID of the file transfer.
-     *
      */
     public function getFileTransferId(): string
     {
@@ -52,7 +46,6 @@ class ContentImportResult
     }
     /**
      * ID of the file transfer.
-     *
      *
      * @return self
      */
@@ -64,7 +57,6 @@ class ContentImportResult
     }
     /**
      * ID of the resulting content.
-     *
      */
     public function getContentId(): ?string
     {
@@ -72,7 +64,6 @@ class ContentImportResult
     }
     /**
      * ID of the resulting content.
-     *
      *
      * @return self
      */
@@ -84,7 +75,6 @@ class ContentImportResult
     }
     /**
      * State of the item.
-     *
      */
     public function getState(): ?string
     {
@@ -92,7 +82,6 @@ class ContentImportResult
     }
     /**
      * State of the item.
-     *
      *
      * @return self
      */
@@ -104,7 +93,6 @@ class ContentImportResult
     }
     /**
      * Indicates if the operation succeeded.
-     *
      */
     public function getSucceeded(): bool
     {
@@ -112,7 +100,6 @@ class ContentImportResult
     }
     /**
      * Indicates if the operation succeeded.
-     *
      *
      * @return self
      */
@@ -124,7 +111,6 @@ class ContentImportResult
     }
     /**
      * If the operation did not succeeded, this contains error related information.
-     *
      */
     public function getError(): mixed
     {
@@ -132,7 +118,6 @@ class ContentImportResult
     }
     /**
      * If the operation did not succeeded, this contains error related information.
-     *
      *
      * @return self
      */

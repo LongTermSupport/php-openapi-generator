@@ -24,7 +24,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
      * Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional.
      * If not provided, we create a new database for the knowledge base in
      * the same region as the knowledge base.
-     *
      */
     protected string $databaseId;
     /**
@@ -35,22 +34,18 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     protected array $datasources;
     /**
      * Identifier for the [embedding model](https://docs.digitalocean.com/products/genai-platform/details/models/#embedding-models).
-     *
      */
     protected string $embeddingModelUuid;
     /**
      * Name of the knowledge base.
-     *
      */
     protected string $name;
     /**
      * Identifier of the DigitalOcean project this knowledge base will belong to.
-     *
      */
     protected string $projectId;
     /**
      * The datacenter region to deploy the knowledge base in.
-     *
      */
     protected string $region;
     /**
@@ -61,27 +56,24 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     protected array $tags;
     /**
      * The VPC to deploy the knowledge base database in
-     *
      */
     protected string $vpcUuid;
     /**
      * Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional.
      * If not provided, we create a new database for the knowledge base in
      * the same region as the knowledge base.
-     *
      */
     public function getDatabaseId(): string
     {
         return $this->databaseId;
     }
     /**
-    * Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional.
-    If not provided, we create a new database for the knowledge base in
-    the same region as the knowledge base.
-    *
-    *
-    * @return self
-    */
+     * Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional.
+     * If not provided, we create a new database for the knowledge base in
+     * the same region as the knowledge base.
+     *
+     * @return self
+     */
     public function setDatabaseId(string $databaseId): self
     {
         $this->initialized['databaseId'] = true;
@@ -112,7 +104,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the [embedding model](https://docs.digitalocean.com/products/genai-platform/details/models/#embedding-models).
-     *
      */
     public function getEmbeddingModelUuid(): string
     {
@@ -120,7 +111,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the [embedding model](https://docs.digitalocean.com/products/genai-platform/details/models/#embedding-models).
-     *
      *
      * @return self
      */
@@ -132,7 +122,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the knowledge base.
-     *
      */
     public function getName(): string
     {
@@ -140,7 +129,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the knowledge base.
-     *
      *
      * @return self
      */
@@ -152,7 +140,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier of the DigitalOcean project this knowledge base will belong to.
-     *
      */
     public function getProjectId(): string
     {
@@ -160,7 +147,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier of the DigitalOcean project this knowledge base will belong to.
-     *
      *
      * @return self
      */
@@ -172,7 +158,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The datacenter region to deploy the knowledge base in.
-     *
      */
     public function getRegion(): string
     {
@@ -180,7 +165,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The datacenter region to deploy the knowledge base in.
-     *
      *
      * @return self
      */
@@ -214,7 +198,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The VPC to deploy the knowledge base database in
-     *
      */
     public function getVpcUuid(): string
     {
@@ -222,7 +205,6 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The VPC to deploy the knowledge base database in
-     *
      *
      * @return self
      */

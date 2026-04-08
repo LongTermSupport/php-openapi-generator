@@ -22,18 +22,15 @@ class KafkaTopicUpdate extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     protected int $replicationFactor;
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      */
     protected int $partitionCount;
     protected KafkaTopicConfig $config;
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      */
     public function getReplicationFactor(): int
     {
@@ -41,7 +38,6 @@ class KafkaTopicUpdate extends \ArrayObject
     }
     /**
      * The number of nodes to replicate data across the cluster.
-     *
      *
      * @return self
      */
@@ -53,7 +49,6 @@ class KafkaTopicUpdate extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      */
     public function getPartitionCount(): int
     {
@@ -61,7 +56,6 @@ class KafkaTopicUpdate extends \ArrayObject
     }
     /**
      * The number of partitions available for the topic. On update, this value can only be increased.
-     *
      *
      * @return self
      */

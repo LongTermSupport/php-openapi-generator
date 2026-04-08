@@ -22,12 +22,10 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The slug identifier for an available version of Kubernetes for use when creating or updating a cluster. The string contains both the upstream version of Kubernetes as well as the DigitalOcean revision.
-     *
      */
     protected string $slug;
     /**
      * The upstream version string for the version of Kubernetes provided by a given slug.
-     *
      */
     protected string $kubernetesVersion;
     /**
@@ -38,7 +36,6 @@ class KubernetesVersion extends \ArrayObject
     protected array $supportedFeatures;
     /**
      * The slug identifier for an available version of Kubernetes for use when creating or updating a cluster. The string contains both the upstream version of Kubernetes as well as the DigitalOcean revision.
-     *
      */
     public function getSlug(): string
     {
@@ -46,7 +43,6 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The slug identifier for an available version of Kubernetes for use when creating or updating a cluster. The string contains both the upstream version of Kubernetes as well as the DigitalOcean revision.
-     *
      *
      * @return self
      */
@@ -58,7 +54,6 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The upstream version string for the version of Kubernetes provided by a given slug.
-     *
      */
     public function getKubernetesVersion(): string
     {
@@ -66,7 +61,6 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The upstream version string for the version of Kubernetes provided by a given slug.
-     *
      *
      * @return self
      */

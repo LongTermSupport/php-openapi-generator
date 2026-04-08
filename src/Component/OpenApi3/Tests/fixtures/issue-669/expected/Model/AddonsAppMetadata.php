@@ -22,27 +22,22 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * Unique identifier for the addon metadata item.
-     *
      */
     protected int $id;
     /**
      * The name of the metadata item.
-     *
      */
     protected string $name;
     /**
      * The display name of the metadata item.
-     *
      */
     protected string $displayName;
     /**
      * A brief description of the metadata item.
-     *
      */
     protected string $description;
     /**
      * The data type of the metadata value.
-     *
      */
     protected string $type;
     /**
@@ -51,7 +46,6 @@ class AddonsAppMetadata extends \ArrayObject
     protected array $options;
     /**
      * Unique identifier for the addon metadata item.
-     *
      */
     public function getId(): int
     {
@@ -59,7 +53,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * Unique identifier for the addon metadata item.
-     *
      *
      * @return self
      */
@@ -71,7 +64,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The name of the metadata item.
-     *
      */
     public function getName(): string
     {
@@ -79,7 +71,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The name of the metadata item.
-     *
      *
      * @return self
      */
@@ -91,7 +82,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The display name of the metadata item.
-     *
      */
     public function getDisplayName(): string
     {
@@ -99,7 +89,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The display name of the metadata item.
-     *
      *
      * @return self
      */
@@ -111,7 +100,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * A brief description of the metadata item.
-     *
      */
     public function getDescription(): string
     {
@@ -119,7 +107,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * A brief description of the metadata item.
-     *
      *
      * @return self
      */
@@ -131,7 +118,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The data type of the metadata value.
-     *
      */
     public function getType(): string
     {
@@ -139,7 +125,6 @@ class AddonsAppMetadata extends \ArrayObject
     }
     /**
      * The data type of the metadata value.
-     *
      *
      * @return self
      */

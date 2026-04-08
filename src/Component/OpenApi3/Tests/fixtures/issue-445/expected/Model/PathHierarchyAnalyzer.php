@@ -19,17 +19,14 @@ class PathHierarchyAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: PathHierarchy
-     *
      */
     protected mixed $type = null;
     /**
      * The suffix for the analyzed field: pathhierarchy.
-     *
      */
     protected ?string $fieldSuffix = null;
     /**
      * The analyzer type: PathHierarchy
-     *
      */
     public function getType(): mixed
     {
@@ -37,7 +34,6 @@ class PathHierarchyAnalyzer extends AnalyzerBase
     }
     /**
      * The analyzer type: PathHierarchy
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class PathHierarchyAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: pathhierarchy.
-     *
      */
     public function getFieldSuffix(): ?string
     {
@@ -57,7 +52,6 @@ class PathHierarchyAnalyzer extends AnalyzerBase
     }
     /**
      * The suffix for the analyzed field: pathhierarchy.
-     *
      *
      * @return self
      */

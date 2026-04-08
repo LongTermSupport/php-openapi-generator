@@ -22,32 +22,26 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * Url for inference server
-     *
      */
     protected string $inferenceUrl;
     /**
      * Region code
-     *
      */
     protected string $region;
     /**
      * This datacenter is capable of running batch jobs
-     *
      */
     protected bool $servesBatch;
     /**
      * This datacenter is capable of serving inference
-     *
      */
     protected bool $servesInference;
     /**
      * The url for the inference streaming server
-     *
      */
     protected string $streamInferenceUrl;
     /**
      * Url for inference server
-     *
      */
     public function getInferenceUrl(): string
     {
@@ -55,7 +49,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * Url for inference server
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * Region code
-     *
      */
     public function getRegion(): string
     {
@@ -75,7 +67,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * Region code
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * This datacenter is capable of running batch jobs
-     *
      */
     public function getServesBatch(): bool
     {
@@ -95,7 +85,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * This datacenter is capable of running batch jobs
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * This datacenter is capable of serving inference
-     *
      */
     public function getServesInference(): bool
     {
@@ -115,7 +103,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * This datacenter is capable of serving inference
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * The url for the inference streaming server
-     *
      */
     public function getStreamInferenceUrl(): string
     {
@@ -135,7 +121,6 @@ class GenaiapiRegion extends \ArrayObject
     }
     /**
      * The url for the inference streaming server
-     *
      *
      * @return self
      */

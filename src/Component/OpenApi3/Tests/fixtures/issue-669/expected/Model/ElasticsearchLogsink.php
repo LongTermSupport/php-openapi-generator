@@ -22,32 +22,26 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch connection URL
-     *
      */
     protected string $url;
     /**
      * Elasticsearch index prefix
-     *
      */
     protected string $indexPrefix;
     /**
      * Maximum number of days of logs to keep
-     *
      */
     protected int $indexDaysMax = 7;
     /**
      * Elasticsearch request timeout limit
-     *
      */
     protected float $timeout = 10;
     /**
      * PEM encoded CA certificate
-     *
      */
     protected string $ca;
     /**
      * Elasticsearch connection URL
-     *
      */
     public function getUrl(): string
     {
@@ -55,7 +49,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch connection URL
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch index prefix
-     *
      */
     public function getIndexPrefix(): string
     {
@@ -75,7 +67,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch index prefix
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Maximum number of days of logs to keep
-     *
      */
     public function getIndexDaysMax(): int
     {
@@ -95,7 +85,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Maximum number of days of logs to keep
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch request timeout limit
-     *
      */
     public function getTimeout(): float
     {
@@ -115,7 +103,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * Elasticsearch request timeout limit
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * PEM encoded CA certificate
-     *
      */
     public function getCa(): string
     {
@@ -135,7 +121,6 @@ class ElasticsearchLogsink extends \ArrayObject
     }
     /**
      * PEM encoded CA certificate
-     *
      *
      * @return self
      */

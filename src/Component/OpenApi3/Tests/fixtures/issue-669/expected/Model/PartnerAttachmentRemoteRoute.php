@@ -22,12 +22,10 @@ class PartnerAttachmentRemoteRoute extends \ArrayObject
     }
     /**
      * A CIDR block representing a remote route.
-     *
      */
     protected string $cidr;
     /**
      * A CIDR block representing a remote route.
-     *
      */
     public function getCidr(): string
     {
@@ -35,7 +33,6 @@ class PartnerAttachmentRemoteRoute extends \ArrayObject
     }
     /**
      * A CIDR block representing a remote route.
-     *
      *
      * @return self
      */

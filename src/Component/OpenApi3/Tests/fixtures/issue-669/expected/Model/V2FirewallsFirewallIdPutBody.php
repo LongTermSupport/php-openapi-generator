@@ -22,17 +22,14 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a firewall.
-     *
      */
     protected string $id;
     /**
      * A status string indicating the current state of the firewall. This can be "waiting", "succeeded", or "failed".
-     *
      */
     protected string $status;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -43,7 +40,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     protected array $pendingChanges;
     /**
      * A human-readable name for a firewall. The name must begin with an alphanumeric character. Subsequent characters must either be alphanumeric characters, a period (.), or a dash (-).
-     *
      */
     protected string $name;
     /**
@@ -66,7 +62,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     protected ?array $outboundRules = null;
     /**
      * A unique ID that can be used to identify and reference a firewall.
-     *
      */
     public function getId(): string
     {
@@ -74,7 +69,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a firewall.
-     *
      *
      * @return self
      */
@@ -86,7 +80,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A status string indicating the current state of the firewall. This can be "waiting", "succeeded", or "failed".
-     *
      */
     public function getStatus(): string
     {
@@ -94,7 +87,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A status string indicating the current state of the firewall. This can be "waiting", "succeeded", or "failed".
-     *
      *
      * @return self
      */
@@ -106,7 +98,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -114,7 +105,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the firewall was created.
-     *
      *
      * @return self
      */
@@ -148,7 +138,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A human-readable name for a firewall. The name must begin with an alphanumeric character. Subsequent characters must either be alphanumeric characters, a period (.), or a dash (-).
-     *
      */
     public function getName(): string
     {
@@ -156,7 +145,6 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * A human-readable name for a firewall. The name must begin with an alphanumeric character. Subsequent characters must either be alphanumeric characters, a period (.), or a dash (-).
-     *
      *
      * @return self
      */

@@ -23,28 +23,23 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     protected string $countryName;
     /**
      * Company Report template. Full reports are default
-     *
      */
     protected string $templateName;
     protected string $countryIso2;
     /**
      * Date of when the service was enabled
-     *
      */
     protected string $startDate;
     /**
      * Date of when the service will expire
-     *
      */
     protected string $expireDate;
     /**
      * Measure of total usage available in the service
-     *
      */
     protected int $paid;
     /**
      * Service usage
-     *
      */
     protected int $used;
     public function getCountryName(): string
@@ -59,7 +54,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Company Report template. Full reports are default
-     *
      */
     public function getTemplateName(): string
     {
@@ -67,7 +61,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Company Report template. Full reports are default
-     *
      *
      * @return self
      */
@@ -89,7 +82,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Date of when the service was enabled
-     *
      */
     public function getStartDate(): string
     {
@@ -97,7 +89,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Date of when the service was enabled
-     *
      *
      * @return self
      */
@@ -109,7 +100,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Date of when the service will expire
-     *
      */
     public function getExpireDate(): string
     {
@@ -117,7 +107,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Date of when the service will expire
-     *
      *
      * @return self
      */
@@ -129,7 +118,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Measure of total usage available in the service
-     *
      */
     public function getPaid(): int
     {
@@ -137,7 +125,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Measure of total usage available in the service
-     *
      *
      * @return self
      */
@@ -149,7 +136,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Service usage
-     *
      */
     public function getUsed(): int
     {
@@ -157,7 +143,6 @@ class AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem
     }
     /**
      * Service usage
-     *
      *
      * @return self
      */

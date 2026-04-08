@@ -20,7 +20,6 @@ class VectorStillFormat extends FormatBase
     protected ?string $extension = null;
     /**
      * Specifies output dimensions for raster operation
-     *
      */
     protected mixed $resizeAction = null;
     public function getExtension(): ?string
@@ -35,7 +34,6 @@ class VectorStillFormat extends FormatBase
     }
     /**
      * Specifies output dimensions for raster operation
-     *
      */
     public function getResizeAction(): mixed
     {
@@ -43,7 +41,6 @@ class VectorStillFormat extends FormatBase
     }
     /**
      * Specifies output dimensions for raster operation
-     *
      *
      * @return self
      */

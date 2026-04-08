@@ -22,42 +22,34 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a CDN endpoint.
-     *
      */
     protected string $id;
     /**
      * The fully qualified domain name (FQDN) for the origin server which provides the content for the CDN. This is currently restricted to a Space.
-     *
      */
     protected string $origin;
     /**
      * The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-     *
      */
     protected string $endpoint;
     /**
      * The amount of time the content is cached by the CDN's edge servers in seconds. TTL must be one of 60, 600, 3600, 86400, or 604800. Defaults to 3600 (one hour) when excluded.
-     *
      */
     protected int $ttl = 3600;
     /**
      * The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-     *
      */
     protected string $certificateId;
     /**
      * The fully qualified domain name (FQDN) of the custom subdomain used with the CDN endpoint.
-     *
      */
     protected string $customDomain;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the CDN endpoint was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A unique ID that can be used to identify and reference a CDN endpoint.
-     *
      */
     public function getId(): string
     {
@@ -65,7 +57,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a CDN endpoint.
-     *
      *
      * @return self
      */
@@ -77,7 +68,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) for the origin server which provides the content for the CDN. This is currently restricted to a Space.
-     *
      */
     public function getOrigin(): string
     {
@@ -85,7 +75,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) for the origin server which provides the content for the CDN. This is currently restricted to a Space.
-     *
      *
      * @return self
      */
@@ -97,7 +86,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-     *
      */
     public function getEndpoint(): string
     {
@@ -105,7 +93,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-     *
      *
      * @return self
      */
@@ -117,7 +104,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The amount of time the content is cached by the CDN's edge servers in seconds. TTL must be one of 60, 600, 3600, 86400, or 604800. Defaults to 3600 (one hour) when excluded.
-     *
      */
     public function getTtl(): int
     {
@@ -125,7 +111,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The amount of time the content is cached by the CDN's edge servers in seconds. TTL must be one of 60, 600, 3600, 86400, or 604800. Defaults to 3600 (one hour) when excluded.
-     *
      *
      * @return self
      */
@@ -137,7 +122,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-     *
      */
     public function getCertificateId(): string
     {
@@ -145,7 +129,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-     *
      *
      * @return self
      */
@@ -157,7 +140,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) of the custom subdomain used with the CDN endpoint.
-     *
      */
     public function getCustomDomain(): string
     {
@@ -165,7 +147,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * The fully qualified domain name (FQDN) of the custom subdomain used with the CDN endpoint.
-     *
      *
      * @return self
      */
@@ -177,7 +158,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the CDN endpoint was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -185,7 +165,6 @@ class CdnEndpoint extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the CDN endpoint was created.
-     *
      *
      * @return self
      */

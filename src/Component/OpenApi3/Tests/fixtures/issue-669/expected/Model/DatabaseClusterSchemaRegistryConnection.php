@@ -22,37 +22,30 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
      */
     protected string $uri;
     /**
      * The FQDN pointing to the schema registry connection uri.
-     *
      */
     protected string $host;
     /**
      * The port on which the schema registry is listening.
-     *
      */
     protected int $port;
     /**
      * The default user for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     protected string $user;
     /**
      * The randomly generated password for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     protected string $password;
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
      */
     protected bool $ssl;
     /**
      * This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
      */
     public function getUri(): string
     {
@@ -60,7 +53,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * This is provided as a convenience and should be able to be constructed by the other attributes.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The FQDN pointing to the schema registry connection uri.
-     *
      */
     public function getHost(): string
     {
@@ -80,7 +71,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The FQDN pointing to the schema registry connection uri.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The port on which the schema registry is listening.
-     *
      */
     public function getPort(): int
     {
@@ -100,7 +89,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The port on which the schema registry is listening.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The default user for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     public function getUser(): string
     {
@@ -120,7 +107,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The default user for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The randomly generated password for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
      */
     public function getPassword(): string
     {
@@ -140,7 +125,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * The randomly generated password for the schema registry.<br><br>Requires `database:view_credentials` scope.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
      */
     public function getSsl(): bool
     {
@@ -160,7 +143,6 @@ class DatabaseClusterSchemaRegistryConnection extends \ArrayObject
     }
     /**
      * A boolean value indicating if the connection should be made over SSL.
-     *
      *
      * @return self
      */

@@ -19,32 +19,26 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
      */
     protected mixed $colorProfile = null;
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
      */
     protected mixed $colorTransformationIntent = null;
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
      */
     protected ?float $horizontalResolution = null;
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
      */
     protected ?float $verticalResolution = null;
     /**
      * Copy clipping paths from input.
-     *
      */
     protected bool $keepClippingPath;
     /**
      * Allows resizing of the image.
-     *
      */
     protected mixed $resizeAction = null;
     /**
@@ -55,7 +49,6 @@ class ImageFormatBase extends FormatBase
     protected ?array $actions = null;
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
      */
     public function getColorProfile(): mixed
     {
@@ -63,7 +56,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Color profile to use. Colorspace is derived from the chosen profile.
-     *
      *
      * @return self
      */
@@ -75,7 +67,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
      */
     public function getColorTransformationIntent(): mixed
     {
@@ -83,7 +74,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * The method of conversion for color spaces (e.g. CMYK to RGB). Further information can be found here: http://www.colourphil.co.uk/rendering_intents.shtml
-     *
      *
      * @return self
      */
@@ -95,7 +85,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
      */
     public function getHorizontalResolution(): ?float
     {
@@ -103,7 +92,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Horizontal resolution in dpi (dots per inch)
-     *
      *
      * @return self
      */
@@ -115,7 +103,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
      */
     public function getVerticalResolution(): ?float
     {
@@ -123,7 +110,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Vertical resolution in dpi (dots per inch)
-     *
      *
      * @return self
      */
@@ -135,7 +121,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Copy clipping paths from input.
-     *
      */
     public function getKeepClippingPath(): bool
     {
@@ -143,7 +128,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Copy clipping paths from input.
-     *
      *
      * @return self
      */
@@ -155,7 +139,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
      */
     public function getResizeAction(): mixed
     {
@@ -163,7 +146,6 @@ class ImageFormatBase extends FormatBase
     }
     /**
      * Allows resizing of the image.
-     *
      *
      * @return self
      */

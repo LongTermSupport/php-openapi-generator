@@ -22,17 +22,14 @@ class AppPropose extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      */
     protected AppSpec $spec;
     /**
      * An optional ID of an existing app. If set, the spec will be treated as a proposed update to the specified app. The existing app is not modified using this method.
-     *
      */
     protected string $appId;
     /**
      * The desired configuration of an application.
-     *
      */
     public function getSpec(): AppSpec
     {
@@ -40,7 +37,6 @@ class AppPropose extends \ArrayObject
     }
     /**
      * The desired configuration of an application.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppPropose extends \ArrayObject
     }
     /**
      * An optional ID of an existing app. If set, the spec will be treated as a proposed update to the specified app. The existing app is not modified using this method.
-     *
      */
     public function getAppId(): string
     {
@@ -60,7 +55,6 @@ class AppPropose extends \ArrayObject
     }
     /**
      * An optional ID of an existing app. If set, the spec will be treated as a proposed update to the specified app. The existing app is not modified using this method.
-     *
      *
      * @return self
      */

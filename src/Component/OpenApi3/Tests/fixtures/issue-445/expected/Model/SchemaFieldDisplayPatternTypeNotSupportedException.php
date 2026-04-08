@@ -32,7 +32,6 @@ class SchemaFieldDisplayPatternTypeNotSupportedException extends \ArrayObject
     protected ?string $fieldId = null;
     /**
      * The display pattern type
-     *
      */
     protected string $displayPatternType;
     /**
@@ -141,7 +140,6 @@ class SchemaFieldDisplayPatternTypeNotSupportedException extends \ArrayObject
     }
     /**
      * The display pattern type
-     *
      */
     public function getDisplayPatternType(): string
     {
@@ -149,7 +147,6 @@ class SchemaFieldDisplayPatternTypeNotSupportedException extends \ArrayObject
     }
     /**
      * The display pattern type
-     *
      *
      * @return self
      */

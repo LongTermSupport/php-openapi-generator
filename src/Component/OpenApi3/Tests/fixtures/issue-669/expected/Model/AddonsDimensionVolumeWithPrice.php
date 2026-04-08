@@ -22,27 +22,22 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * Unique identifier for the addon.
-     *
      */
     protected int $id;
     /**
      * The minimum volume for the volume pricing tier.
-     *
      */
     protected int $lowVolume;
     /**
      * The maximum volume for the volume pricing tier.
-     *
      */
     protected int $maxVolume;
     /**
      * The price per unit for the volume tier in US dollars.
-     *
      */
     protected string $pricePerUnit;
     /**
      * Unique identifier for the addon.
-     *
      */
     public function getId(): int
     {
@@ -50,7 +45,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * Unique identifier for the addon.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The minimum volume for the volume pricing tier.
-     *
      */
     public function getLowVolume(): int
     {
@@ -70,7 +63,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The minimum volume for the volume pricing tier.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The maximum volume for the volume pricing tier.
-     *
      */
     public function getMaxVolume(): int
     {
@@ -90,7 +81,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The maximum volume for the volume pricing tier.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The price per unit for the volume tier in US dollars.
-     *
      */
     public function getPricePerUnit(): string
     {
@@ -110,7 +99,6 @@ class AddonsDimensionVolumeWithPrice extends \ArrayObject
     }
     /**
      * The price per unit for the volume tier in US dollars.
-     *
      *
      * @return self
      */

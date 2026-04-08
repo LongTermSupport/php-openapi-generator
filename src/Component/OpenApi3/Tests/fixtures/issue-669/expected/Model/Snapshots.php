@@ -22,17 +22,14 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The unique identifier for the snapshot.
-     *
      */
     protected string $id;
     /**
      * A human-readable name for the snapshot.
-     *
      */
     protected string $name;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
@@ -43,22 +40,18 @@ class Snapshots extends \ArrayObject
     protected array $regions;
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      */
     protected int $minDiskSize;
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      */
     protected float $sizeGigabytes;
     /**
      * The unique identifier for the resource that the snapshot originated from.
-     *
      */
     protected string $resourceId;
     /**
      * The type of resource that the snapshot originated from.
-     *
      */
     protected string $resourceType;
     /**
@@ -69,7 +62,6 @@ class Snapshots extends \ArrayObject
     protected ?array $tags = null;
     /**
      * The unique identifier for the snapshot.
-     *
      */
     public function getId(): string
     {
@@ -77,7 +69,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The unique identifier for the snapshot.
-     *
      *
      * @return self
      */
@@ -89,7 +80,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
      */
     public function getName(): string
     {
@@ -97,7 +87,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * A human-readable name for the snapshot.
-     *
      *
      * @return self
      */
@@ -109,7 +98,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -117,7 +105,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the snapshot was created.
-     *
      *
      * @return self
      */
@@ -151,7 +138,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      */
     public function getMinDiskSize(): int
     {
@@ -159,7 +145,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
      *
      * @return self
      */
@@ -171,7 +156,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      */
     public function getSizeGigabytes(): float
     {
@@ -179,7 +163,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The billable size of the snapshot in gigabytes.
-     *
      *
      * @return self
      */
@@ -191,7 +174,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The unique identifier for the resource that the snapshot originated from.
-     *
      */
     public function getResourceId(): string
     {
@@ -199,7 +181,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The unique identifier for the resource that the snapshot originated from.
-     *
      *
      * @return self
      */
@@ -211,7 +192,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The type of resource that the snapshot originated from.
-     *
      */
     public function getResourceType(): string
     {
@@ -219,7 +199,6 @@ class Snapshots extends \ArrayObject
     }
     /**
      * The type of resource that the snapshot originated from.
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class AlphaHandlingAction extends ImageActionBase
     }
     /**
      * Specifies the kind of alpha handling to be applied.
-     *
      */
     protected mixed $alphaHandling = null;
     /**
      * Specifies potentially needed color information for alpha handling. Must be given in RGB hex format (8 bit per channel).
-     *
      */
     protected ?string $replacementRgbColorHexCode = null;
     /**
      * Specifies the kind of alpha handling to be applied.
-     *
      */
     public function getAlphaHandling(): mixed
     {
@@ -37,7 +34,6 @@ class AlphaHandlingAction extends ImageActionBase
     }
     /**
      * Specifies the kind of alpha handling to be applied.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class AlphaHandlingAction extends ImageActionBase
     }
     /**
      * Specifies potentially needed color information for alpha handling. Must be given in RGB hex format (8 bit per channel).
-     *
      */
     public function getReplacementRgbColorHexCode(): ?string
     {
@@ -57,7 +52,6 @@ class AlphaHandlingAction extends ImageActionBase
     }
     /**
      * Specifies potentially needed color information for alpha handling. Must be given in RGB hex format (8 bit per channel).
-     *
      *
      * @return self
      */

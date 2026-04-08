@@ -22,22 +22,18 @@ class GitCommitAuthor extends \ArrayObject
     }
     /**
      * Timestamp of the commit
-     *
      */
     protected \DateTime $date;
     /**
      * Git email address of the user
-     *
      */
     protected string $email;
     /**
      * Name of the git user
-     *
      */
     protected string $name;
     /**
      * Timestamp of the commit
-     *
      */
     public function getDate(): \DateTime
     {
@@ -45,7 +41,6 @@ class GitCommitAuthor extends \ArrayObject
     }
     /**
      * Timestamp of the commit
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class GitCommitAuthor extends \ArrayObject
     }
     /**
      * Git email address of the user
-     *
      */
     public function getEmail(): string
     {
@@ -65,7 +59,6 @@ class GitCommitAuthor extends \ArrayObject
     }
     /**
      * Git email address of the user
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class GitCommitAuthor extends \ArrayObject
     }
     /**
      * Name of the git user
-     *
      */
     public function getName(): string
     {
@@ -85,7 +77,6 @@ class GitCommitAuthor extends \ArrayObject
     }
     /**
      * Name of the git user
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class OutputDataDocument extends OutputDataBase
     }
     /**
      * Number of document's pages.
-     *
      */
     protected int $pageCount;
     /**
      * Number of document's pages.
-     *
      */
     public function getPageCount(): int
     {
@@ -32,7 +30,6 @@ class OutputDataDocument extends OutputDataBase
     }
     /**
      * Number of document's pages.
-     *
      *
      * @return self
      */

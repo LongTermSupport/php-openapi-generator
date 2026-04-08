@@ -22,12 +22,10 @@ class UserMembershipsOrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The state that the membership should be in. Only `"active"` will be accepted.
-     *
      */
     protected string $state;
     /**
      * The state that the membership should be in. Only `"active"` will be accepted.
-     *
      */
     public function getState(): string
     {
@@ -35,7 +33,6 @@ class UserMembershipsOrgsOrgPatchBody extends \ArrayObject
     }
     /**
      * The state that the membership should be in. Only `"active"` will be accepted.
-     *
      *
      * @return self
      */

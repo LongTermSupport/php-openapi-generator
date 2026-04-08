@@ -22,14 +22,12 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * Unique identifier of the review
-     *
      */
     protected int $id;
     protected string $nodeId;
     protected ?PullRequestReviewUser $user = null;
     /**
      * The text of the review.
-     *
      */
     protected string $body;
     protected string $state;
@@ -39,7 +37,6 @@ class PullRequestReview extends \ArrayObject
     protected \DateTime $submittedAt;
     /**
      * A commit SHA for the review.
-     *
      */
     protected string $commitId;
     protected string $bodyHtml;
@@ -47,7 +44,6 @@ class PullRequestReview extends \ArrayObject
     protected string $authorAssociation;
     /**
      * Unique identifier of the review
-     *
      */
     public function getId(): int
     {
@@ -55,7 +51,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * Unique identifier of the review
-     *
      *
      * @return self
      */
@@ -87,7 +82,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * The text of the review.
-     *
      */
     public function getBody(): string
     {
@@ -95,7 +89,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * The text of the review.
-     *
      *
      * @return self
      */
@@ -157,7 +150,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * A commit SHA for the review.
-     *
      */
     public function getCommitId(): string
     {
@@ -165,7 +157,6 @@ class PullRequestReview extends \ArrayObject
     }
     /**
      * A commit SHA for the review.
-     *
      *
      * @return self
      */

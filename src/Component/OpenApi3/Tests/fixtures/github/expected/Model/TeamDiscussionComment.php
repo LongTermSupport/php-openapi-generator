@@ -23,13 +23,11 @@ class TeamDiscussionComment extends \ArrayObject
     protected ?TeamDiscussionCommentAuthor $author = null;
     /**
      * The main text of the comment.
-     *
      */
     protected string $body;
     protected string $bodyHtml;
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
      */
     protected string $bodyVersion;
     protected \DateTime $createdAt;
@@ -39,7 +37,6 @@ class TeamDiscussionComment extends \ArrayObject
     protected string $nodeId;
     /**
      * The unique sequence number of a team discussion comment.
-     *
      */
     protected int $number;
     protected \DateTime $updatedAt;
@@ -57,7 +54,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The main text of the comment.
-     *
      */
     public function getBody(): string
     {
@@ -65,7 +61,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The main text of the comment.
-     *
      *
      * @return self
      */
@@ -87,7 +82,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
      */
     public function getBodyVersion(): string
     {
@@ -95,7 +89,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-     *
      *
      * @return self
      */
@@ -157,7 +150,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The unique sequence number of a team discussion comment.
-     *
      */
     public function getNumber(): int
     {
@@ -165,7 +157,6 @@ class TeamDiscussionComment extends \ArrayObject
     }
     /**
      * The unique sequence number of a team discussion comment.
-     *
      *
      * @return self
      */

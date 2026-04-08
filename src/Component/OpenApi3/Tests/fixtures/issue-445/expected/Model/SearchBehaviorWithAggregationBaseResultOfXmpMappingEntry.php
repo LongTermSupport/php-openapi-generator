@@ -22,7 +22,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The total number of matching documents.
-     *
      */
     protected int $totalResults;
     /**
@@ -33,22 +32,18 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     protected array $results;
     /**
      * The search execution time in milliseconds.
-     *
      */
     protected int $elapsedMilliseconds;
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * The search string used to query the data.
-     *
      */
     protected ?string $searchString = null;
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
      */
     protected bool $isSearchStringRewritten;
     /**
@@ -65,7 +60,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     protected ?array $aggregationResults = null;
     /**
      * The total number of matching documents.
-     *
      */
     public function getTotalResults(): int
     {
@@ -73,7 +67,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The total number of matching documents.
-     *
      *
      * @return self
      */
@@ -107,7 +100,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The search execution time in milliseconds.
-     *
      */
     public function getElapsedMilliseconds(): int
     {
@@ -115,7 +107,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The search execution time in milliseconds.
-     *
      *
      * @return self
      */
@@ -127,7 +118,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -135,7 +125,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * An optional token to access the next page of results for those endpoints that support backend scrolling logic.
-     *
      *
      * @return self
      */
@@ -147,7 +136,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The search string used to query the data.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -155,7 +143,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The search string used to query the data.
-     *
      *
      * @return self
      */
@@ -167,7 +154,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
      */
     public function getIsSearchStringRewritten(): bool
     {
@@ -175,7 +161,6 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * Flag to notify if the SearchString was modified compared to the original requested one.
-     *
      *
      * @return self
      */

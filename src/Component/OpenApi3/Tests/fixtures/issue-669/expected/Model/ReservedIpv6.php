@@ -22,23 +22,19 @@ class ReservedIpv6 extends \ArrayObject
     }
     /**
      * The public IP address of the reserved IPv6. It also serves as its identifier.
-     *
      */
     protected string $ip;
     /**
      * The date and time when the reserved IPv6 was reserved.
-     *
      */
     protected \DateTime $reservedAt;
     /**
      * The region that the reserved IPv6 is reserved to. When you query a reserved IPv6,the region_slug will be returned.
-     *
      */
     protected string $regionSlug;
     protected mixed $droplet = null;
     /**
      * The public IP address of the reserved IPv6. It also serves as its identifier.
-     *
      */
     public function getIp(): string
     {
@@ -46,7 +42,6 @@ class ReservedIpv6 extends \ArrayObject
     }
     /**
      * The public IP address of the reserved IPv6. It also serves as its identifier.
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class ReservedIpv6 extends \ArrayObject
     }
     /**
      * The date and time when the reserved IPv6 was reserved.
-     *
      */
     public function getReservedAt(): \DateTime
     {
@@ -66,7 +60,6 @@ class ReservedIpv6 extends \ArrayObject
     }
     /**
      * The date and time when the reserved IPv6 was reserved.
-     *
      *
      * @return self
      */
@@ -78,7 +71,6 @@ class ReservedIpv6 extends \ArrayObject
     }
     /**
      * The region that the reserved IPv6 is reserved to. When you query a reserved IPv6,the region_slug will be returned.
-     *
      */
     public function getRegionSlug(): string
     {
@@ -86,7 +78,6 @@ class ReservedIpv6 extends \ArrayObject
     }
     /**
      * The region that the reserved IPv6 is reserved to. When you query a reserved IPv6,the region_slug will be returned.
-     *
      *
      * @return self
      */

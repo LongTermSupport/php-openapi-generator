@@ -22,12 +22,10 @@ class ApiCreateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * A human friendly name to identify the key
-     *
      */
     protected string $name;
     /**
      * A human friendly name to identify the key
-     *
      */
     public function getName(): string
     {
@@ -35,7 +33,6 @@ class ApiCreateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * A human friendly name to identify the key
-     *
      *
      * @return self
      */

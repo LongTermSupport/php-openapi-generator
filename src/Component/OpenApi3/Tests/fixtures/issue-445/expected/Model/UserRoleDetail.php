@@ -22,7 +22,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * Language specific user role names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -33,17 +32,14 @@ class UserRoleDetail extends \ArrayObject
     protected array $userRights;
     /**
      * User role ID.
-     *
      */
     protected string $id;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Language specific user role names.
-     *
      */
     public function getNames(): mixed
     {
@@ -51,7 +47,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * Language specific user role names.
-     *
      *
      * @return self
      */
@@ -85,7 +80,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * User role ID.
-     *
      */
     public function getId(): string
     {
@@ -93,7 +87,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * User role ID.
-     *
      *
      * @return self
      */
@@ -105,7 +98,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -113,7 +105,6 @@ class UserRoleDetail extends \ArrayObject
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */

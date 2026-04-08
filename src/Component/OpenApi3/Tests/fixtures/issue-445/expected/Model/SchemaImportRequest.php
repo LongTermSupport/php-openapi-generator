@@ -19,22 +19,18 @@ class SchemaImportRequest
     }
     /**
      * ID of the file transfer identifying the file previously uploaded.
-     *
      */
     protected string $fileTransferId;
     /**
      * Allow creating list items that refer to list items or contents that don't exist in the system.
-     *
      */
     protected bool $allowMissingDependencies;
     /**
      * Import the list items belonging to the schema.
-     *
      */
     protected bool $importListItems;
     /**
      * ID of the file transfer identifying the file previously uploaded.
-     *
      */
     public function getFileTransferId(): string
     {
@@ -42,7 +38,6 @@ class SchemaImportRequest
     }
     /**
      * ID of the file transfer identifying the file previously uploaded.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class SchemaImportRequest
     }
     /**
      * Allow creating list items that refer to list items or contents that don't exist in the system.
-     *
      */
     public function getAllowMissingDependencies(): bool
     {
@@ -62,7 +56,6 @@ class SchemaImportRequest
     }
     /**
      * Allow creating list items that refer to list items or contents that don't exist in the system.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class SchemaImportRequest
     }
     /**
      * Import the list items belonging to the schema.
-     *
      */
     public function getImportListItems(): bool
     {
@@ -82,7 +74,6 @@ class SchemaImportRequest
     }
     /**
      * Import the list items belonging to the schema.
-     *
      *
      * @return self
      */

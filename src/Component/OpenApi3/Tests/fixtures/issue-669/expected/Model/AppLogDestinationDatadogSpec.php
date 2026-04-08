@@ -22,17 +22,14 @@ class AppLogDestinationDatadogSpec extends \ArrayObject
     }
     /**
      * Datadog HTTP log intake endpoint.
-     *
      */
     protected string $endpoint;
     /**
      * Datadog API key.
-     *
      */
     protected string $apiKey;
     /**
      * Datadog HTTP log intake endpoint.
-     *
      */
     public function getEndpoint(): string
     {
@@ -40,7 +37,6 @@ class AppLogDestinationDatadogSpec extends \ArrayObject
     }
     /**
      * Datadog HTTP log intake endpoint.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class AppLogDestinationDatadogSpec extends \ArrayObject
     }
     /**
      * Datadog API key.
-     *
      */
     public function getApiKey(): string
     {
@@ -60,7 +55,6 @@ class AppLogDestinationDatadogSpec extends \ArrayObject
     }
     /**
      * Datadog API key.
-     *
      *
      * @return self
      */

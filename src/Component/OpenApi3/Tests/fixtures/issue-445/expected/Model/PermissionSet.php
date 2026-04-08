@@ -19,23 +19,19 @@ class PermissionSet
     }
     /**
      * The permission set ID.
-     *
      */
     protected string $id;
     /**
      * When true this permission set will derogate all other configured permission sets.
      * Cannot be changed after creation.
-     *
      */
     protected bool $exclusive;
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
      * The permission set ID.
-     *
      */
     public function getId(): string
     {
@@ -43,7 +39,6 @@ class PermissionSet
     }
     /**
      * The permission set ID.
-     *
      *
      * @return self
      */
@@ -56,19 +51,17 @@ class PermissionSet
     /**
      * When true this permission set will derogate all other configured permission sets.
      * Cannot be changed after creation.
-     *
      */
     public function getExclusive(): bool
     {
         return $this->exclusive;
     }
     /**
-    * When true this permission set will derogate all other configured permission sets.
-    Cannot be changed after creation.
-    *
-    *
-    * @return self
-    */
+     * When true this permission set will derogate all other configured permission sets.
+     * Cannot be changed after creation.
+     *
+     * @return self
+     */
     public function setExclusive(bool $exclusive): self
     {
         $this->initialized['exclusive'] = true;
@@ -77,7 +70,6 @@ class PermissionSet
     }
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -85,7 +77,6 @@ class PermissionSet
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */

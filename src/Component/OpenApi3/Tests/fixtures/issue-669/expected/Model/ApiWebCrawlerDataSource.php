@@ -22,7 +22,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * The base url to crawl.
-     *
      */
     protected string $baseUrl;
     /**
@@ -34,12 +33,10 @@ class ApiWebCrawlerDataSource extends \ArrayObject
      *  - DOMAIN: Crawl the base URL and linked pages within the same domain.
      *  - SUBDOMAINS: Crawl the base URL and linked pages for any subdomain.
      *  - SITEMAP: Crawl URLs discovered in the sitemap.
-     *
      */
     protected string $crawlingOption = 'UNKNOWN';
     /**
      * Whether to ingest and index media (images, etc.) on web pages.
-     *
      */
     protected bool $embedMedia;
     /**
@@ -50,7 +47,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     protected array $excludeTags;
     /**
      * The base url to crawl.
-     *
      */
     public function getBaseUrl(): string
     {
@@ -58,7 +54,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * The base url to crawl.
-     *
      *
      * @return self
      */
@@ -77,25 +72,23 @@ class ApiWebCrawlerDataSource extends \ArrayObject
      *  - DOMAIN: Crawl the base URL and linked pages within the same domain.
      *  - SUBDOMAINS: Crawl the base URL and linked pages for any subdomain.
      *  - SITEMAP: Crawl URLs discovered in the sitemap.
-     *
      */
     public function getCrawlingOption(): string
     {
         return $this->crawlingOption;
     }
     /**
-    * Options for specifying how URLs found on pages should be handled.
-    
-    - UNKNOWN: Default unknown value
-    - SCOPED: Only include the base URL.
-    - PATH: Crawl the base URL and linked pages within the URL path.
-    - DOMAIN: Crawl the base URL and linked pages within the same domain.
-    - SUBDOMAINS: Crawl the base URL and linked pages for any subdomain.
-    - SITEMAP: Crawl URLs discovered in the sitemap.
-    *
-    *
-    * @return self
-    */
+     * Options for specifying how URLs found on pages should be handled.
+     * 
+     *  - UNKNOWN: Default unknown value
+     *  - SCOPED: Only include the base URL.
+     *  - PATH: Crawl the base URL and linked pages within the URL path.
+     *  - DOMAIN: Crawl the base URL and linked pages within the same domain.
+     *  - SUBDOMAINS: Crawl the base URL and linked pages for any subdomain.
+     *  - SITEMAP: Crawl URLs discovered in the sitemap.
+     *
+     * @return self
+     */
     public function setCrawlingOption(string $crawlingOption): self
     {
         $this->initialized['crawlingOption'] = true;
@@ -104,7 +97,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * Whether to ingest and index media (images, etc.) on web pages.
-     *
      */
     public function getEmbedMedia(): bool
     {
@@ -112,7 +104,6 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * Whether to ingest and index media (images, etc.) on web pages.
-     *
      *
      * @return self
      */

@@ -19,7 +19,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the simple search fields to the fields available in the specified channel.
-     *
      */
     protected ?string $channelId = null;
     /**
@@ -30,32 +29,26 @@ class ContentFilterRequest
     protected ?array $searchLanguages = null;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
      * Type of search to be performed: against metadata, extracted fulltext from documents or both. Default to Metadata.
-     *
      */
     protected mixed $searchType = null;
     /**
      * The collection id.
-     *
      */
     protected ?string $collectionId = null;
     /**
      * An optional search filter. Limits the content document result set.
-     *
      */
     protected mixed $filter = null;
     /**
      * Limits the content document result set to that life cycle state. Defaults to ActiveOnly.
-     *
      */
     protected mixed $lifeCycleFilter = null;
     /**
      * Filter the content document result set to those that have or not have broken references
-     *
      */
     protected mixed $brokenDependenciesFilter = null;
     /**
@@ -66,7 +59,6 @@ class ContentFilterRequest
     protected ?array $rightsFilter = null;
     /**
      * Limits the simple search fields to the fields available in the specified channel.
-     *
      */
     public function getChannelId(): ?string
     {
@@ -74,7 +66,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the simple search fields to the fields available in the specified channel.
-     *
      *
      * @return self
      */
@@ -108,7 +99,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -116,7 +106,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -128,7 +117,6 @@ class ContentFilterRequest
     }
     /**
      * Type of search to be performed: against metadata, extracted fulltext from documents or both. Default to Metadata.
-     *
      */
     public function getSearchType(): mixed
     {
@@ -136,7 +124,6 @@ class ContentFilterRequest
     }
     /**
      * Type of search to be performed: against metadata, extracted fulltext from documents or both. Default to Metadata.
-     *
      *
      * @return self
      */
@@ -148,7 +135,6 @@ class ContentFilterRequest
     }
     /**
      * The collection id.
-     *
      */
     public function getCollectionId(): ?string
     {
@@ -156,7 +142,6 @@ class ContentFilterRequest
     }
     /**
      * The collection id.
-     *
      *
      * @return self
      */
@@ -168,7 +153,6 @@ class ContentFilterRequest
     }
     /**
      * An optional search filter. Limits the content document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -176,7 +160,6 @@ class ContentFilterRequest
     }
     /**
      * An optional search filter. Limits the content document result set.
-     *
      *
      * @return self
      */
@@ -188,7 +171,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the content document result set to that life cycle state. Defaults to ActiveOnly.
-     *
      */
     public function getLifeCycleFilter(): mixed
     {
@@ -196,7 +178,6 @@ class ContentFilterRequest
     }
     /**
      * Limits the content document result set to that life cycle state. Defaults to ActiveOnly.
-     *
      *
      * @return self
      */
@@ -208,7 +189,6 @@ class ContentFilterRequest
     }
     /**
      * Filter the content document result set to those that have or not have broken references
-     *
      */
     public function getBrokenDependenciesFilter(): mixed
     {
@@ -216,7 +196,6 @@ class ContentFilterRequest
     }
     /**
      * Filter the content document result set to those that have or not have broken references
-     *
      *
      * @return self
      */

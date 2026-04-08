@@ -22,17 +22,14 @@ class ReposOwnerRepoProjectsPostBody extends \ArrayObject
     }
     /**
      * The name of the project.
-     *
      */
     protected string $name;
     /**
      * The description of the project.
-     *
      */
     protected string $body;
     /**
      * The name of the project.
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoProjectsPostBody extends \ArrayObject
     }
     /**
      * The name of the project.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoProjectsPostBody extends \ArrayObject
     }
     /**
      * The description of the project.
-     *
      */
     public function getBody(): string
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoProjectsPostBody extends \ArrayObject
     }
     /**
      * The description of the project.
-     *
      *
      * @return self
      */

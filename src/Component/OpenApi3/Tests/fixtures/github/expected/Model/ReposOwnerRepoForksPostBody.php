@@ -22,12 +22,10 @@ class ReposOwnerRepoForksPostBody extends \ArrayObject
     }
     /**
      * Optional parameter to specify the organization name if forking into an organization.
-     *
      */
     protected string $organization;
     /**
      * Optional parameter to specify the organization name if forking into an organization.
-     *
      */
     public function getOrganization(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoForksPostBody extends \ArrayObject
     }
     /**
      * Optional parameter to specify the organization name if forking into an organization.
-     *
      *
      * @return self
      */

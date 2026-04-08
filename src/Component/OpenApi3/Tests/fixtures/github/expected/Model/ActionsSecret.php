@@ -22,14 +22,12 @@ class ActionsSecret extends \ArrayObject
     }
     /**
      * The name of the secret.
-     *
      */
     protected string $name;
     protected \DateTime $createdAt;
     protected \DateTime $updatedAt;
     /**
      * The name of the secret.
-     *
      */
     public function getName(): string
     {
@@ -37,7 +35,6 @@ class ActionsSecret extends \ArrayObject
     }
     /**
      * The name of the secret.
-     *
      *
      * @return self
      */

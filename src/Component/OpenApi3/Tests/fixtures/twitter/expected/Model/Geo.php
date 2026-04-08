@@ -27,7 +27,6 @@ class Geo extends \ArrayObject
     protected array $bbox;
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
      */
     protected Point $geometry;
     /**
@@ -64,7 +63,6 @@ class Geo extends \ArrayObject
     }
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
      */
     public function getGeometry(): Point
     {
@@ -72,7 +70,6 @@ class Geo extends \ArrayObject
     }
     /**
      * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class ProjectsColumnsColumnIdPatchBody extends \ArrayObject
     }
     /**
      * Name of the project column
-     *
      */
     protected string $name;
     /**
      * Name of the project column
-     *
      */
     public function getName(): string
     {
@@ -35,7 +33,6 @@ class ProjectsColumnsColumnIdPatchBody extends \ArrayObject
     }
     /**
      * Name of the project column
-     *
      *
      * @return self
      */

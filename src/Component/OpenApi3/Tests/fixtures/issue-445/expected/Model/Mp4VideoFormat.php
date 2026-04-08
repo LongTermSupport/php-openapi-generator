@@ -19,23 +19,19 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Allows resizing of the video.
-     *
      */
     protected mixed $resizeAction = null;
     /**
      * Gets or sets the encoding audio codec.
-     *
      */
     protected mixed $audioCodec = null;
     /**
      * Gets or sets the encoding codec preset.
-     *
      */
     protected mixed $preset = null;
     protected ?string $extension = null;
     /**
      * Allows resizing of the video.
-     *
      */
     public function getResizeAction(): mixed
     {
@@ -43,7 +39,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Allows resizing of the video.
-     *
      *
      * @return self
      */
@@ -55,7 +50,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding audio codec.
-     *
      */
     public function getAudioCodec(): mixed
     {
@@ -63,7 +57,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding audio codec.
-     *
      *
      * @return self
      */
@@ -75,7 +68,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding codec preset.
-     *
      */
     public function getPreset(): mixed
     {
@@ -83,7 +75,6 @@ class Mp4VideoFormat extends FormatBase
     }
     /**
      * Gets or sets the encoding codec preset.
-     *
      *
      * @return self
      */

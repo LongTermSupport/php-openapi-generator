@@ -22,7 +22,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/repos/hooks/#create-hook-config-params).
-     *
      */
     protected ReposOwnerRepoHooksHookIdPatchBodyConfig $config;
     /**
@@ -45,12 +44,10 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     protected array $removeEvents;
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      */
     protected bool $active = true;
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/repos/hooks/#create-hook-config-params).
-     *
      */
     public function getConfig(): ReposOwnerRepoHooksHookIdPatchBodyConfig
     {
@@ -58,7 +55,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Key/value pairs to provide settings for this webhook. [These are defined below](https://developer.github.com/v3/repos/hooks/#create-hook-config-params).
-     *
      *
      * @return self
      */
@@ -136,7 +132,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      */
     public function getActive(): bool
     {
@@ -144,7 +139,6 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
-     *
      *
      * @return self
      */

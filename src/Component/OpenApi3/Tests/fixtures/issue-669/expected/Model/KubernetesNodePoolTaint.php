@@ -22,22 +22,18 @@ class KubernetesNodePoolTaint extends \ArrayObject
     }
     /**
      * An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the key value pair would be `special=gpu`.
-     *
      */
     protected string $key;
     /**
      * An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the key value pair would be `special=gpu`.
-     *
      */
     protected string $value;
     /**
      * How the node reacts to pods that it won't tolerate. Available effect values are `NoSchedule`, `PreferNoSchedule`, and `NoExecute`.
-     *
      */
     protected string $effect;
     /**
      * An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the key value pair would be `special=gpu`.
-     *
      */
     public function getKey(): string
     {
@@ -45,7 +41,6 @@ class KubernetesNodePoolTaint extends \ArrayObject
     }
     /**
      * An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the key value pair would be `special=gpu`.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class KubernetesNodePoolTaint extends \ArrayObject
     }
     /**
      * An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the key value pair would be `special=gpu`.
-     *
      */
     public function getValue(): string
     {
@@ -65,7 +59,6 @@ class KubernetesNodePoolTaint extends \ArrayObject
     }
     /**
      * An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the key value pair would be `special=gpu`.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class KubernetesNodePoolTaint extends \ArrayObject
     }
     /**
      * How the node reacts to pods that it won't tolerate. Available effect values are `NoSchedule`, `PreferNoSchedule`, and `NoExecute`.
-     *
      */
     public function getEffect(): string
     {
@@ -85,7 +77,6 @@ class KubernetesNodePoolTaint extends \ArrayObject
     }
     /**
      * How the node reacts to pods that it won't tolerate. Available effect values are `NoSchedule`, `PreferNoSchedule`, and `NoExecute`.
-     *
      *
      * @return self
      */

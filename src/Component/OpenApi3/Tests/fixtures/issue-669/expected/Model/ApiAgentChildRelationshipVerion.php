@@ -22,32 +22,26 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Name of the child agent
-     *
      */
     protected string $agentName;
     /**
      * Child agent unique identifier
-     *
      */
     protected string $childAgentUuid;
     /**
      * If case
-     *
      */
     protected string $ifCase;
     /**
      * Child agent is deleted
-     *
      */
     protected bool $isDeleted;
     /**
      * Route name
-     *
      */
     protected string $routeName;
     /**
      * Name of the child agent
-     *
      */
     public function getAgentName(): string
     {
@@ -55,7 +49,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Name of the child agent
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Child agent unique identifier
-     *
      */
     public function getChildAgentUuid(): string
     {
@@ -75,7 +67,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Child agent unique identifier
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * If case
-     *
      */
     public function getIfCase(): string
     {
@@ -95,7 +85,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * If case
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Child agent is deleted
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -115,7 +103,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Child agent is deleted
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Route name
-     *
      */
     public function getRouteName(): string
     {
@@ -135,7 +121,6 @@ class ApiAgentChildRelationshipVerion extends \ArrayObject
     }
     /**
      * Route name
-     *
      *
      * @return self
      */

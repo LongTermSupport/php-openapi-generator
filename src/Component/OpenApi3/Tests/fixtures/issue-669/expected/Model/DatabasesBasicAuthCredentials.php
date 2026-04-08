@@ -22,17 +22,14 @@ class DatabasesBasicAuthCredentials extends \ArrayObject
     }
     /**
      * basic authentication username for metrics HTTP endpoint
-     *
      */
     protected string $basicAuthUsername;
     /**
      * basic authentication password for metrics HTTP endpoint
-     *
      */
     protected string $basicAuthPassword;
     /**
      * basic authentication username for metrics HTTP endpoint
-     *
      */
     public function getBasicAuthUsername(): string
     {
@@ -40,7 +37,6 @@ class DatabasesBasicAuthCredentials extends \ArrayObject
     }
     /**
      * basic authentication username for metrics HTTP endpoint
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DatabasesBasicAuthCredentials extends \ArrayObject
     }
     /**
      * basic authentication password for metrics HTTP endpoint
-     *
      */
     public function getBasicAuthPassword(): string
     {
@@ -60,7 +55,6 @@ class DatabasesBasicAuthCredentials extends \ArrayObject
     }
     /**
      * basic authentication password for metrics HTTP endpoint
-     *
      *
      * @return self
      */

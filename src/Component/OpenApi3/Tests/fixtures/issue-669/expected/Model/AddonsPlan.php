@@ -22,42 +22,34 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * ID of a given plan.
-     *
      */
     protected int $id;
     /**
      * ID of the app associated with this plan.
-     *
      */
     protected int $appId;
     /**
      * Display name for a given plan.
-     *
      */
     protected string $displayName;
     /**
      * Description of an app plan.
-     *
      */
     protected string $description;
     /**
      * Slug identifier for the plan.
-     *
      */
     protected string $slug;
     /**
      * Price of a month's usage of the plan in US dollars.
-     *
      */
     protected int $pricePerMonth;
     /**
      * Indicates if the plan is currently active.
-     *
      */
     protected bool $active;
     /**
      * Current state of the plan.
-     *
      */
     protected string $state;
     /**
@@ -68,27 +60,22 @@ class AddonsPlan extends \ArrayObject
     protected array $features;
     /**
      * Timestamp when the plan was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * Timestamp when the plan was last updated.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * Indicates if the plan is available for selection.
-     *
      */
     protected bool $available;
     /**
      * Unique identifier for the plan.
-     *
      */
     protected string $uuid;
     /**
      * Indicates if this plan is the default option for the app.
-     *
      */
     protected bool $byDefault;
     /**
@@ -99,7 +86,6 @@ class AddonsPlan extends \ArrayObject
     protected array $dimensions;
     /**
      * ID of a given plan.
-     *
      */
     public function getId(): int
     {
@@ -107,7 +93,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * ID of a given plan.
-     *
      *
      * @return self
      */
@@ -119,7 +104,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * ID of the app associated with this plan.
-     *
      */
     public function getAppId(): int
     {
@@ -127,7 +111,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * ID of the app associated with this plan.
-     *
      *
      * @return self
      */
@@ -139,7 +122,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Display name for a given plan.
-     *
      */
     public function getDisplayName(): string
     {
@@ -147,7 +129,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Display name for a given plan.
-     *
      *
      * @return self
      */
@@ -159,7 +140,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Description of an app plan.
-     *
      */
     public function getDescription(): string
     {
@@ -167,7 +147,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Description of an app plan.
-     *
      *
      * @return self
      */
@@ -179,7 +158,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Slug identifier for the plan.
-     *
      */
     public function getSlug(): string
     {
@@ -187,7 +165,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Slug identifier for the plan.
-     *
      *
      * @return self
      */
@@ -199,7 +176,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Price of a month's usage of the plan in US dollars.
-     *
      */
     public function getPricePerMonth(): int
     {
@@ -207,7 +183,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Price of a month's usage of the plan in US dollars.
-     *
      *
      * @return self
      */
@@ -219,7 +194,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if the plan is currently active.
-     *
      */
     public function getActive(): bool
     {
@@ -227,7 +201,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if the plan is currently active.
-     *
      *
      * @return self
      */
@@ -239,7 +212,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Current state of the plan.
-     *
      */
     public function getState(): string
     {
@@ -247,7 +219,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Current state of the plan.
-     *
      *
      * @return self
      */
@@ -281,7 +252,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Timestamp when the plan was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -289,7 +259,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Timestamp when the plan was created.
-     *
      *
      * @return self
      */
@@ -301,7 +270,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Timestamp when the plan was last updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -309,7 +277,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Timestamp when the plan was last updated.
-     *
      *
      * @return self
      */
@@ -321,7 +288,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if the plan is available for selection.
-     *
      */
     public function getAvailable(): bool
     {
@@ -329,7 +295,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if the plan is available for selection.
-     *
      *
      * @return self
      */
@@ -341,7 +306,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Unique identifier for the plan.
-     *
      */
     public function getUuid(): string
     {
@@ -349,7 +313,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Unique identifier for the plan.
-     *
      *
      * @return self
      */
@@ -361,7 +324,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if this plan is the default option for the app.
-     *
      */
     public function getByDefault(): bool
     {
@@ -369,7 +331,6 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * Indicates if this plan is the default option for the app.
-     *
      *
      * @return self
      */

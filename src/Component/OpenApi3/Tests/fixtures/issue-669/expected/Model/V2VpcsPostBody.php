@@ -22,27 +22,22 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     protected string $name;
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
      */
     protected string $description;
     /**
      * The slug identifier for the region where the VPC will be created.
-     *
      */
     protected string $region;
     /**
      * The range of IP addresses in the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be smaller than `/28` nor larger than `/16`. If no IP range is specified, a `/20` network range is generated that won't conflict with other VPC networks in your account.
-     *
      */
     protected string $ipRange;
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      */
     public function getName(): string
     {
@@ -50,7 +45,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes, and periods.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
      */
     public function getDescription(): string
     {
@@ -70,7 +63,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * A free-form text field for describing the VPC's purpose. It may be a maximum of 255 characters.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the VPC will be created.
-     *
      */
     public function getRegion(): string
     {
@@ -90,7 +81,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the VPC will be created.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * The range of IP addresses in the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be smaller than `/28` nor larger than `/16`. If no IP range is specified, a `/20` network range is generated that won't conflict with other VPC networks in your account.
-     *
      */
     public function getIpRange(): string
     {
@@ -110,7 +99,6 @@ class V2VpcsPostBody extends \ArrayObject
     }
     /**
      * The range of IP addresses in the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be smaller than `/28` nor larger than `/16`. If no IP range is specified, a `/20` network range is generated that won't conflict with other VPC networks in your account.
-     *
      *
      * @return self
      */

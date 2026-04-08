@@ -22,17 +22,14 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdEventsPostBody extends \ArrayO
     }
     /**
      * The body text of the pull request review
-     *
      */
     protected string $body;
     /**
      * The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
-     *
      */
     protected string $event;
     /**
      * The body text of the pull request review
-     *
      */
     public function getBody(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdEventsPostBody extends \ArrayO
     }
     /**
      * The body text of the pull request review
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdEventsPostBody extends \ArrayO
     }
     /**
      * The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
-     *
      */
     public function getEvent(): string
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoPullsPullNumberReviewsReviewIdEventsPostBody extends \ArrayO
     }
     /**
      * The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
-     *
      *
      * @return self
      */

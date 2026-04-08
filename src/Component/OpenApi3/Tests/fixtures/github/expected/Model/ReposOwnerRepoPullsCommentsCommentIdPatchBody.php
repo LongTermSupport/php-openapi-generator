@@ -22,12 +22,10 @@ class ReposOwnerRepoPullsCommentsCommentIdPatchBody extends \ArrayObject
     }
     /**
      * The text of the reply to the review comment.
-     *
      */
     protected string $body;
     /**
      * The text of the reply to the review comment.
-     *
      */
     public function getBody(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoPullsCommentsCommentIdPatchBody extends \ArrayObject
     }
     /**
      * The text of the reply to the review comment.
-     *
      *
      * @return self
      */

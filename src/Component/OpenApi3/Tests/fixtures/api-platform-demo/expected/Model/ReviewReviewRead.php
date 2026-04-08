@@ -23,30 +23,25 @@ class ReviewReviewRead extends \ArrayObject
     protected ?string $id = null;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     /**
      * A rating.
-     *
      */
     protected int $rating;
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     protected ?string $letter = null;
     protected BookReviewRead $book;
     /**
      * The author of the review.
-     *
      */
     protected ?string $author = null;
     /**
      * Publication date of the review.
-     *
      */
     protected ?\DateTime $publicationDate = null;
     public function getId(): ?string
@@ -61,7 +56,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -69,7 +63,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */
@@ -81,7 +74,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * A rating.
-     *
      */
     public function getRating(): int
     {
@@ -89,7 +81,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * A rating.
-     *
      *
      * @return self
      */
@@ -103,7 +94,6 @@ class ReviewReviewRead extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     public function getLetter(): ?string
     {
@@ -111,7 +101,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
-     *
      *
      * @deprecated
      *
@@ -135,7 +124,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      */
     public function getAuthor(): ?string
     {
@@ -143,7 +131,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      *
      * @return self
      */
@@ -155,7 +142,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      */
     public function getPublicationDate(): ?\DateTime
     {
@@ -163,7 +149,6 @@ class ReviewReviewRead extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      *
      * @return self
      */

@@ -19,17 +19,14 @@ class ShareBaseUpdateRequest
     }
     /**
      * Name of share.
-     *
      */
     protected string $name;
     /**
      * Optional date when share expires and cannot be accessed anymore.
-     *
      */
     protected ?\DateTime $expirationDate = null;
     /**
      * Optional description of share.
-     *
      */
     protected ?string $description = null;
     /**
@@ -46,13 +43,11 @@ class ShareBaseUpdateRequest
     protected ?array $layerSchemaIds = null;
     /**
      * Access for content outputs in share.
-     *
      */
     protected mixed $outputAccess = null;
     protected string $kind;
     /**
      * Name of share.
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Name of share.
-     *
      */
     public function setName(string $name): void
     {
@@ -69,7 +63,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Optional date when share expires and cannot be accessed anymore.
-     *
      */
     public function getExpirationDate(): ?\DateTime
     {
@@ -77,7 +70,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Optional date when share expires and cannot be accessed anymore.
-     *
      */
     public function setExpirationDate(?\DateTime $expirationDate): void
     {
@@ -86,7 +78,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Optional description of share.
-     *
      */
     public function getDescription(): ?string
     {
@@ -94,7 +85,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Optional description of share.
-     *
      */
     public function setDescription(?string $description): void
     {
@@ -141,7 +131,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Access for content outputs in share.
-     *
      */
     public function getOutputAccess(): mixed
     {
@@ -149,7 +138,6 @@ class ShareBaseUpdateRequest
     }
     /**
      * Access for content outputs in share.
-     *
      */
     public function setOutputAccess(mixed $outputAccess): void
     {

@@ -19,17 +19,14 @@ class FieldSingleFieldset extends FieldBase
     }
     /**
      * The ID of the schema to be used as fieldset (it must be of type Struct).
-     *
      */
     protected string $schemaId;
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
      */
     protected mixed $schemaIndexingInfo = null;
     /**
      * The ID of the schema to be used as fieldset (it must be of type Struct).
-     *
      */
     public function getSchemaId(): string
     {
@@ -37,7 +34,6 @@ class FieldSingleFieldset extends FieldBase
     }
     /**
      * The ID of the schema to be used as fieldset (it must be of type Struct).
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class FieldSingleFieldset extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
      */
     public function getSchemaIndexingInfo(): mixed
     {
@@ -57,7 +52,6 @@ class FieldSingleFieldset extends FieldBase
     }
     /**
      * Indexing information of fields of the related schema identified by the SchemaId property
-     *
      *
      * @return self
      */

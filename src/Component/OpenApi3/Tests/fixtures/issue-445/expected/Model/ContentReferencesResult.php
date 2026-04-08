@@ -19,17 +19,14 @@ class ContentReferencesResult
     }
     /**
      * List of references. Only available when requested in the request.
-     *
      */
     protected mixed $metadataReferences = null;
     /**
      * List of share references
-     *
      */
     protected mixed $shareReferences = null;
     /**
      * List of references. Only available when requested in the request.
-     *
      */
     public function getMetadataReferences(): mixed
     {
@@ -37,7 +34,6 @@ class ContentReferencesResult
     }
     /**
      * List of references. Only available when requested in the request.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class ContentReferencesResult
     }
     /**
      * List of share references
-     *
      */
     public function getShareReferences(): mixed
     {
@@ -57,7 +52,6 @@ class ContentReferencesResult
     }
     /**
      * List of share references
-     *
      *
      * @return self
      */

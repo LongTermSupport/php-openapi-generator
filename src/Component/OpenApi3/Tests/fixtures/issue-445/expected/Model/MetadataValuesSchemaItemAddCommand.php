@@ -20,35 +20,30 @@ class MetadataValuesSchemaItemAddCommand extends MetadataValuesChangeCommandBase
     /**
      * The path of the field relative to the Content or Layer schema values defined by the schemaId property.
      * (i.e. add a team (existing list item) to the work information of a person: fieldPath = "workInfo.teams", schemaId = "PersonLayer").
-     *
      */
     protected string $fieldPath;
     /**
      * The field namespace
-     *
      */
     protected string $fieldNamespace;
     /**
      * The ID of the list item to be added.
-     *
      */
     protected string $referenceId;
     /**
      * The path of the field relative to the Content or Layer schema values defined by the schemaId property.
      * (i.e. add a team (existing list item) to the work information of a person: fieldPath = "workInfo.teams", schemaId = "PersonLayer").
-     *
      */
     public function getFieldPath(): string
     {
         return $this->fieldPath;
     }
     /**
-    * The path of the field relative to the Content or Layer schema values defined by the schemaId property.
-    (i.e. add a team (existing list item) to the work information of a person: fieldPath = "workInfo.teams", schemaId = "PersonLayer").
-    *
-    *
-    * @return self
-    */
+     * The path of the field relative to the Content or Layer schema values defined by the schemaId property.
+     * (i.e. add a team (existing list item) to the work information of a person: fieldPath = "workInfo.teams", schemaId = "PersonLayer").
+     *
+     * @return self
+     */
     public function setFieldPath(string $fieldPath): self
     {
         $this->initialized['fieldPath'] = true;
@@ -57,7 +52,6 @@ class MetadataValuesSchemaItemAddCommand extends MetadataValuesChangeCommandBase
     }
     /**
      * The field namespace
-     *
      */
     public function getFieldNamespace(): string
     {
@@ -65,7 +59,6 @@ class MetadataValuesSchemaItemAddCommand extends MetadataValuesChangeCommandBase
     }
     /**
      * The field namespace
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class MetadataValuesSchemaItemAddCommand extends MetadataValuesChangeCommandBase
     }
     /**
      * The ID of the list item to be added.
-     *
      */
     public function getReferenceId(): string
     {
@@ -85,7 +77,6 @@ class MetadataValuesSchemaItemAddCommand extends MetadataValuesChangeCommandBase
     }
     /**
      * The ID of the list item to be added.
-     *
      *
      * @return self
      */

@@ -22,32 +22,26 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Description of the function
-     *
      */
     protected string $description;
     /**
      * FaaS name of the function
-     *
      */
     protected string $faasName;
     /**
      * FaaS namespace of the function
-     *
      */
     protected string $faasNamespace;
     /**
      * Whether the function is deleted
-     *
      */
     protected bool $isDeleted;
     /**
      * Name of the function
-     *
      */
     protected string $name;
     /**
      * Description of the function
-     *
      */
     public function getDescription(): string
     {
@@ -55,7 +49,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Description of the function
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * FaaS name of the function
-     *
      */
     public function getFaasName(): string
     {
@@ -75,7 +67,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * FaaS name of the function
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * FaaS namespace of the function
-     *
      */
     public function getFaasNamespace(): string
     {
@@ -95,7 +85,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * FaaS namespace of the function
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Whether the function is deleted
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -115,7 +103,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Whether the function is deleted
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Name of the function
-     *
      */
     public function getName(): string
     {
@@ -135,7 +121,6 @@ class ApiAgentFunctionVersion extends \ArrayObject
     }
     /**
      * Name of the function
-     *
      *
      * @return self
      */

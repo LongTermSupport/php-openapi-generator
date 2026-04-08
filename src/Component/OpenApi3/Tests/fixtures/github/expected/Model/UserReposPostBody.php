@@ -22,92 +22,74 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      */
     protected string $name;
     /**
      * A short description of the repository.
-     *
      */
     protected string $description;
     /**
      * A URL with more information about the repository.
-     *
      */
     protected string $homepage;
     /**
      * Whether the repository is private or public.
-     *
      */
     protected bool $private = false;
     /**
      * Whether issues are enabled.
-     *
      */
     protected bool $hasIssues = true;
     /**
      * Whether projects are enabled.
-     *
      */
     protected bool $hasProjects = true;
     /**
      * Whether the wiki is enabled.
-     *
      */
     protected bool $hasWiki = true;
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
      */
     protected int $teamId;
     /**
      * Whether the repository is initialized with a minimal README.
-     *
      */
     protected bool $autoInit = false;
     /**
      * The desired language or platform to apply to the .gitignore.
-     *
      */
     protected string $gitignoreTemplate;
     /**
      * The license keyword of the open source license for this repository.
-     *
      */
     protected string $licenseTemplate;
     /**
      * Whether to allow squash merges for pull requests.
-     *
      */
     protected bool $allowSquashMerge = true;
     /**
      * Whether to allow merge commits for pull requests.
-     *
      */
     protected bool $allowMergeCommit = true;
     /**
      * Whether to allow rebase merges for pull requests.
-     *
      */
     protected bool $allowRebaseMerge = true;
     /**
      * Whether to delete head branches when pull requests are merged
-     *
      */
     protected bool $deleteBranchOnMerge = false;
     /**
      * Whether downloads are enabled.
-     *
      */
     protected bool $hasDownloads = true;
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
      */
     protected bool $isTemplate = false;
     /**
      * The name of the repository.
-     *
      */
     public function getName(): string
     {
@@ -115,7 +97,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The name of the repository.
-     *
      *
      * @return self
      */
@@ -127,7 +108,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * A short description of the repository.
-     *
      */
     public function getDescription(): string
     {
@@ -135,7 +115,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * A short description of the repository.
-     *
      *
      * @return self
      */
@@ -147,7 +126,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * A URL with more information about the repository.
-     *
      */
     public function getHomepage(): string
     {
@@ -155,7 +133,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * A URL with more information about the repository.
-     *
      *
      * @return self
      */
@@ -167,7 +144,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the repository is private or public.
-     *
      */
     public function getPrivate(): bool
     {
@@ -175,7 +151,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the repository is private or public.
-     *
      *
      * @return self
      */
@@ -187,7 +162,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether issues are enabled.
-     *
      */
     public function getHasIssues(): bool
     {
@@ -195,7 +169,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether issues are enabled.
-     *
      *
      * @return self
      */
@@ -207,7 +180,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether projects are enabled.
-     *
      */
     public function getHasProjects(): bool
     {
@@ -215,7 +187,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether projects are enabled.
-     *
      *
      * @return self
      */
@@ -227,7 +198,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the wiki is enabled.
-     *
      */
     public function getHasWiki(): bool
     {
@@ -235,7 +205,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the wiki is enabled.
-     *
      *
      * @return self
      */
@@ -247,7 +216,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
      */
     public function getTeamId(): int
     {
@@ -255,7 +223,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.
-     *
      *
      * @return self
      */
@@ -267,7 +234,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the repository is initialized with a minimal README.
-     *
      */
     public function getAutoInit(): bool
     {
@@ -275,7 +241,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether the repository is initialized with a minimal README.
-     *
      *
      * @return self
      */
@@ -287,7 +252,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The desired language or platform to apply to the .gitignore.
-     *
      */
     public function getGitignoreTemplate(): string
     {
@@ -295,7 +259,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The desired language or platform to apply to the .gitignore.
-     *
      *
      * @return self
      */
@@ -307,7 +270,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The license keyword of the open source license for this repository.
-     *
      */
     public function getLicenseTemplate(): string
     {
@@ -315,7 +277,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * The license keyword of the open source license for this repository.
-     *
      *
      * @return self
      */
@@ -327,7 +288,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow squash merges for pull requests.
-     *
      */
     public function getAllowSquashMerge(): bool
     {
@@ -335,7 +295,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow squash merges for pull requests.
-     *
      *
      * @return self
      */
@@ -347,7 +306,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow merge commits for pull requests.
-     *
      */
     public function getAllowMergeCommit(): bool
     {
@@ -355,7 +313,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow merge commits for pull requests.
-     *
      *
      * @return self
      */
@@ -367,7 +324,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow rebase merges for pull requests.
-     *
      */
     public function getAllowRebaseMerge(): bool
     {
@@ -375,7 +331,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to allow rebase merges for pull requests.
-     *
      *
      * @return self
      */
@@ -387,7 +342,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to delete head branches when pull requests are merged
-     *
      */
     public function getDeleteBranchOnMerge(): bool
     {
@@ -395,7 +349,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether to delete head branches when pull requests are merged
-     *
      *
      * @return self
      */
@@ -407,7 +360,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether downloads are enabled.
-     *
      */
     public function getHasDownloads(): bool
     {
@@ -415,7 +367,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether downloads are enabled.
-     *
      *
      * @return self
      */
@@ -427,7 +378,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
      */
     public function getIsTemplate(): bool
     {
@@ -435,7 +385,6 @@ class UserReposPostBody extends \ArrayObject
     }
     /**
      * Whether this repository acts as a template that can be used to generate new repositories.
-     *
      *
      * @return self
      */

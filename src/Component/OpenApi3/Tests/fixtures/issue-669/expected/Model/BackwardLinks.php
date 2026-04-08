@@ -22,17 +22,14 @@ class BackwardLinks extends \ArrayObject
     }
     /**
      * URI of the first page of the results.
-     *
      */
     protected string $first;
     /**
      * URI of the previous page of the results.
-     *
      */
     protected string $prev;
     /**
      * URI of the first page of the results.
-     *
      */
     public function getFirst(): string
     {
@@ -40,7 +37,6 @@ class BackwardLinks extends \ArrayObject
     }
     /**
      * URI of the first page of the results.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class BackwardLinks extends \ArrayObject
     }
     /**
      * URI of the previous page of the results.
-     *
      */
     public function getPrev(): string
     {
@@ -60,7 +55,6 @@ class BackwardLinks extends \ArrayObject
     }
     /**
      * URI of the previous page of the results.
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class CheckBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
      */
     protected string $id;
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
      */
     public function getId(): string
     {
@@ -35,7 +33,6 @@ class CheckBase extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference the check.
-     *
      *
      * @return self
      */

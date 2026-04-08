@@ -22,12 +22,10 @@ class NfsSnapshotGetResponse extends \ArrayObject
     }
     /**
      * Represents an NFS snapshot.
-     *
      */
     protected NfsSnapshotResponse $snapshot;
     /**
      * Represents an NFS snapshot.
-     *
      */
     public function getSnapshot(): NfsSnapshotResponse
     {
@@ -35,7 +33,6 @@ class NfsSnapshotGetResponse extends \ArrayObject
     }
     /**
      * Represents an NFS snapshot.
-     *
      *
      * @return self
      */

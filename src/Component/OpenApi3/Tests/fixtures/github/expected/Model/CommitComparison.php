@@ -27,12 +27,10 @@ class CommitComparison extends \ArrayObject
     protected string $patchUrl;
     /**
      * Commit
-     *
      */
     protected Commit $baseCommit;
     /**
      * Commit
-     *
      */
     protected Commit $mergeBaseCommit;
     protected string $status;
@@ -99,7 +97,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * Commit
-     *
      */
     public function getBaseCommit(): Commit
     {
@@ -107,7 +104,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * Commit
-     *
      *
      * @return self
      */
@@ -119,7 +115,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * Commit
-     *
      */
     public function getMergeBaseCommit(): Commit
     {
@@ -127,7 +122,6 @@ class CommitComparison extends \ArrayObject
     }
     /**
      * Commit
-     *
      *
      * @return self
      */

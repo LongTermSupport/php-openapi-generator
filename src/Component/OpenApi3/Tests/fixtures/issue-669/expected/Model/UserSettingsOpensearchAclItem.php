@@ -22,17 +22,14 @@ class UserSettingsOpensearchAclItem extends \ArrayObject
     }
     /**
      * A regex for matching the indexes that this ACL should apply to.
-     *
      */
     protected string $index;
     /**
      * Permission set applied to the ACL. 'read' allows user to read from the index. 'write' allows for user to write to the index. 'readwrite' allows for both 'read' and 'write' permission. 'deny'(default) restricts user from performing any operation over an index. 'admin' allows for 'readwrite' as well as any operations to administer the index.
-     *
      */
     protected string $permission;
     /**
      * A regex for matching the indexes that this ACL should apply to.
-     *
      */
     public function getIndex(): string
     {
@@ -40,7 +37,6 @@ class UserSettingsOpensearchAclItem extends \ArrayObject
     }
     /**
      * A regex for matching the indexes that this ACL should apply to.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class UserSettingsOpensearchAclItem extends \ArrayObject
     }
     /**
      * Permission set applied to the ACL. 'read' allows user to read from the index. 'write' allows for user to write to the index. 'readwrite' allows for both 'read' and 'write' permission. 'deny'(default) restricts user from performing any operation over an index. 'admin' allows for 'readwrite' as well as any operations to administer the index.
-     *
      */
     public function getPermission(): string
     {
@@ -60,7 +55,6 @@ class UserSettingsOpensearchAclItem extends \ArrayObject
     }
     /**
      * Permission set applied to the ACL. 'read' allows user to read from the index. 'write' allows for user to write to the index. 'readwrite' allows for both 'read' and 'write' permission. 'deny'(default) restricts user from performing any operation over an index. 'admin' allows for 'readwrite' as well as any operations to administer the index.
-     *
      *
      * @return self
      */

@@ -26,30 +26,25 @@ class ReviewJsonldReviewRead extends \ArrayObject
     protected ?string $id2 = null;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     /**
      * A rating.
-     *
      */
     protected int $rating;
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     protected ?string $letter = null;
     protected BookJsonldReviewRead $book;
     /**
      * The author of the review.
-     *
      */
     protected ?string $author = null;
     /**
      * Publication date of the review.
-     *
      */
     protected ?\DateTime $publicationDate = null;
     public function getId(): string
@@ -94,7 +89,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -102,7 +96,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */
@@ -114,7 +107,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * A rating.
-     *
      */
     public function getRating(): int
     {
@@ -122,7 +114,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * A rating.
-     *
      *
      * @return self
      */
@@ -136,7 +127,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
      * DEPRECATED (use rating now): A letter to rate the book.
      *
      * @deprecated
-     *
      */
     public function getLetter(): ?string
     {
@@ -144,7 +134,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * DEPRECATED (use rating now): A letter to rate the book.
-     *
      *
      * @deprecated
      *
@@ -168,7 +157,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      */
     public function getAuthor(): ?string
     {
@@ -176,7 +164,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * The author of the review.
-     *
      *
      * @return self
      */
@@ -188,7 +175,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      */
     public function getPublicationDate(): ?\DateTime
     {
@@ -196,7 +182,6 @@ class ReviewJsonldReviewRead extends \ArrayObject
     }
     /**
      * Publication date of the review.
-     *
      *
      * @return self
      */

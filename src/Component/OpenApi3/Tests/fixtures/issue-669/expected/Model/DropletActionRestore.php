@@ -22,17 +22,14 @@ class DropletActionRestore extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     /**
      * The ID of a backup of the current Droplet instance to restore from.
-     *
      */
     protected int $image;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class DropletActionRestore extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DropletActionRestore extends \ArrayObject
     }
     /**
      * The ID of a backup of the current Droplet instance to restore from.
-     *
      */
     public function getImage(): int
     {
@@ -60,7 +55,6 @@ class DropletActionRestore extends \ArrayObject
     }
     /**
      * The ID of a backup of the current Droplet instance to restore from.
-     *
      *
      * @return self
      */

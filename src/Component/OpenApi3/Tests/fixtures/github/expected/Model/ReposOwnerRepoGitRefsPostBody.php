@@ -22,18 +22,15 @@ class ReposOwnerRepoGitRefsPostBody extends \ArrayObject
     }
     /**
      * The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
-     *
      */
     protected string $ref;
     /**
      * The SHA1 value for this reference.
-     *
      */
     protected string $sha;
     protected string $key;
     /**
      * The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
-     *
      */
     public function getRef(): string
     {
@@ -41,7 +38,6 @@ class ReposOwnerRepoGitRefsPostBody extends \ArrayObject
     }
     /**
      * The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
-     *
      *
      * @return self
      */
@@ -53,7 +49,6 @@ class ReposOwnerRepoGitRefsPostBody extends \ArrayObject
     }
     /**
      * The SHA1 value for this reference.
-     *
      */
     public function getSha(): string
     {
@@ -61,7 +56,6 @@ class ReposOwnerRepoGitRefsPostBody extends \ArrayObject
     }
     /**
      * The SHA1 value for this reference.
-     *
      *
      * @return self
      */

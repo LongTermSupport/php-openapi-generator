@@ -28,7 +28,6 @@ class ApiStartKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     protected array $dataSourceUuids;
     /**
      * Knowledge base id
-     *
      */
     protected string $knowledgeBaseUuid;
     /**
@@ -55,7 +54,6 @@ class ApiStartKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      */
     public function getKnowledgeBaseUuid(): string
     {
@@ -63,7 +61,6 @@ class ApiStartKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      *
      * @return self
      */

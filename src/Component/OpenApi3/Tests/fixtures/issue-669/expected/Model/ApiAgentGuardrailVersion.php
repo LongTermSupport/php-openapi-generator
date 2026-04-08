@@ -22,27 +22,22 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Whether the guardrail is deleted
-     *
      */
     protected bool $isDeleted;
     /**
      * Guardrail Name
-     *
      */
     protected string $name;
     /**
      * Guardrail Priority
-     *
      */
     protected int $priority;
     /**
      * Guardrail UUID
-     *
      */
     protected string $uuid;
     /**
      * Whether the guardrail is deleted
-     *
      */
     public function getIsDeleted(): bool
     {
@@ -50,7 +45,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Whether the guardrail is deleted
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail Name
-     *
      */
     public function getName(): string
     {
@@ -70,7 +63,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail Name
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail Priority
-     *
      */
     public function getPriority(): int
     {
@@ -90,7 +81,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail Priority
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail UUID
-     *
      */
     public function getUuid(): string
     {
@@ -110,7 +99,6 @@ class ApiAgentGuardrailVersion extends \ArrayObject
     }
     /**
      * Guardrail UUID
-     *
      *
      * @return self
      */

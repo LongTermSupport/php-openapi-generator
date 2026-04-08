@@ -28,7 +28,6 @@ class AppMetricsBandwidthUsage extends \ArrayObject
     protected array $appBandwidthUsage;
     /**
      * The date for the metrics data.
-     *
      */
     protected \DateTime $date;
     /**
@@ -55,7 +54,6 @@ class AppMetricsBandwidthUsage extends \ArrayObject
     }
     /**
      * The date for the metrics data.
-     *
      */
     public function getDate(): \DateTime
     {
@@ -63,7 +61,6 @@ class AppMetricsBandwidthUsage extends \ArrayObject
     }
     /**
      * The date for the metrics data.
-     *
      *
      * @return self
      */

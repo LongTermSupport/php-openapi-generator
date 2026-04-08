@@ -25,7 +25,6 @@ class GistComment extends \ArrayObject
     protected string $url;
     /**
      * The comment text.
-     *
      */
     protected string $body;
     protected ?GistCommentUser $user = null;
@@ -64,7 +63,6 @@ class GistComment extends \ArrayObject
     }
     /**
      * The comment text.
-     *
      */
     public function getBody(): string
     {
@@ -72,7 +70,6 @@ class GistComment extends \ArrayObject
     }
     /**
      * The comment text.
-     *
      *
      * @return self
      */

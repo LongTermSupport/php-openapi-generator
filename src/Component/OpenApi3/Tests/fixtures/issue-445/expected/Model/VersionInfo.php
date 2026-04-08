@@ -19,27 +19,22 @@ class VersionInfo
     }
     /**
      * The manual file version of Picturepark.Contract.dll.
-     *
      */
     protected ?string $fileVersion = null;
     /**
      * The GitVersionTask generated file product version of Picturepark.Configuration.dll.
-     *
      */
     protected ?string $fileProductVersion = null;
     /**
      * The current contract version stored in CustomerDoc / EnvironmentDoc.
-     *
      */
     protected ?string $contractVersion = null;
     /**
      * The bamboo release version. Only provided on bamboo deployments.
-     *
      */
     protected ?string $release = null;
     /**
      * The manual file version of Picturepark.Contract.dll.
-     *
      */
     public function getFileVersion(): ?string
     {
@@ -47,7 +42,6 @@ class VersionInfo
     }
     /**
      * The manual file version of Picturepark.Contract.dll.
-     *
      *
      * @return self
      */
@@ -59,7 +53,6 @@ class VersionInfo
     }
     /**
      * The GitVersionTask generated file product version of Picturepark.Configuration.dll.
-     *
      */
     public function getFileProductVersion(): ?string
     {
@@ -67,7 +60,6 @@ class VersionInfo
     }
     /**
      * The GitVersionTask generated file product version of Picturepark.Configuration.dll.
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class VersionInfo
     }
     /**
      * The current contract version stored in CustomerDoc / EnvironmentDoc.
-     *
      */
     public function getContractVersion(): ?string
     {
@@ -87,7 +78,6 @@ class VersionInfo
     }
     /**
      * The current contract version stored in CustomerDoc / EnvironmentDoc.
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class VersionInfo
     }
     /**
      * The bamboo release version. Only provided on bamboo deployments.
-     *
      */
     public function getRelease(): ?string
     {
@@ -107,7 +96,6 @@ class VersionInfo
     }
     /**
      * The bamboo release version. Only provided on bamboo deployments.
-     *
      *
      * @return self
      */

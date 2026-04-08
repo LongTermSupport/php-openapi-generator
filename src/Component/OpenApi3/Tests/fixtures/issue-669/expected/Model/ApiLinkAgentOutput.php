@@ -22,17 +22,14 @@ class ApiLinkAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      */
     protected string $childAgentUuid;
     /**
      * A unique identifier for the parent agent.
-     *
      */
     protected string $parentAgentUuid;
     /**
      * Routed agent id
-     *
      */
     public function getChildAgentUuid(): string
     {
@@ -40,7 +37,6 @@ class ApiLinkAgentOutput extends \ArrayObject
     }
     /**
      * Routed agent id
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiLinkAgentOutput extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      */
     public function getParentAgentUuid(): string
     {
@@ -60,7 +55,6 @@ class ApiLinkAgentOutput extends \ArrayObject
     }
     /**
      * A unique identifier for the parent agent.
-     *
      *
      * @return self
      */

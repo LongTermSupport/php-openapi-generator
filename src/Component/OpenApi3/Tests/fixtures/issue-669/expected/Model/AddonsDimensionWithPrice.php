@@ -22,27 +22,22 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Unique identifier for the dimension.
-     *
      */
     protected int $id;
     /**
      * Unique string identifier for the dimension, tied to a price.
-     *
      */
     protected string $sku;
     /**
      * Slug identifier for the dimension.
-     *
      */
     protected string $slug;
     /**
      * Display name for the dimension.
-     *
      */
     protected string $displayName;
     /**
      * Name of the feature associated with the dimension.
-     *
      */
     protected string $featureName;
     /**
@@ -53,7 +48,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     protected array $volumes;
     /**
      * Unique identifier for the dimension.
-     *
      */
     public function getId(): int
     {
@@ -61,7 +55,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Unique identifier for the dimension.
-     *
      *
      * @return self
      */
@@ -73,7 +66,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Unique string identifier for the dimension, tied to a price.
-     *
      */
     public function getSku(): string
     {
@@ -81,7 +73,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Unique string identifier for the dimension, tied to a price.
-     *
      *
      * @return self
      */
@@ -93,7 +84,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Slug identifier for the dimension.
-     *
      */
     public function getSlug(): string
     {
@@ -101,7 +91,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Slug identifier for the dimension.
-     *
      *
      * @return self
      */
@@ -113,7 +102,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Display name for the dimension.
-     *
      */
     public function getDisplayName(): string
     {
@@ -121,7 +109,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Display name for the dimension.
-     *
      *
      * @return self
      */
@@ -133,7 +120,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Name of the feature associated with the dimension.
-     *
      */
     public function getFeatureName(): string
     {
@@ -141,7 +127,6 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * Name of the feature associated with the dimension.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class SchemaTagboxFilterLookupNamedCacheConfiguration extends NamedCacheConfigur
     }
     /**
      * The layer id.
-     *
      */
     protected ?string $schemaId = null;
     /**
      * The layer id.
-     *
      */
     public function getSchemaId(): ?string
     {
@@ -32,7 +30,6 @@ class SchemaTagboxFilterLookupNamedCacheConfiguration extends NamedCacheConfigur
     }
     /**
      * The layer id.
-     *
      *
      * @return self
      */

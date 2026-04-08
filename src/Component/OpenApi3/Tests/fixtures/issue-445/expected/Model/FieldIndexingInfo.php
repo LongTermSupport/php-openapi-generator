@@ -19,37 +19,30 @@ class FieldIndexingInfo
     }
     /**
      * The field ID.
-     *
      */
     protected string $id;
     /**
      * Field is stored for filtering.
-     *
      */
     protected bool $index;
     /**
      * Field is stored for simple search.
-     *
      */
     protected bool $simpleSearch;
     /**
      * Field is stored for sorting.
-     *
      */
     protected bool $sortable;
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     protected float $boost = 1;
     /**
      * Indexing information of schema's fields related to this field (if existing).
-     *
      */
     protected mixed $relatedSchemaIndexing = null;
     /**
      * The field ID.
-     *
      */
     public function getId(): string
     {
@@ -57,7 +50,6 @@ class FieldIndexingInfo
     }
     /**
      * The field ID.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for filtering.
-     *
      */
     public function getIndex(): bool
     {
@@ -77,7 +68,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for filtering.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for simple search.
-     *
      */
     public function getSimpleSearch(): bool
     {
@@ -97,7 +86,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for simple search.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for sorting.
-     *
      */
     public function getSortable(): bool
     {
@@ -117,7 +104,6 @@ class FieldIndexingInfo
     }
     /**
      * Field is stored for sorting.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class FieldIndexingInfo
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      */
     public function getBoost(): float
     {
@@ -137,7 +122,6 @@ class FieldIndexingInfo
     }
     /**
      * Value to prioritize search results. Set to 1 by default. Ignored if SimpleSearch not set to true.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class FieldIndexingInfo
     }
     /**
      * Indexing information of schema's fields related to this field (if existing).
-     *
      */
     public function getRelatedSchemaIndexing(): mixed
     {
@@ -157,7 +140,6 @@ class FieldIndexingInfo
     }
     /**
      * Indexing information of schema's fields related to this field (if existing).
-     *
      *
      * @return self
      */

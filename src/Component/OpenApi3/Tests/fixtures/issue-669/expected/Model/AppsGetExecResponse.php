@@ -22,12 +22,10 @@ class AppsGetExecResponse extends \ArrayObject
     }
     /**
      * A websocket URL that allows sending/receiving console input and receiving console output.
-     *
      */
     protected string $url;
     /**
      * A websocket URL that allows sending/receiving console input and receiving console output.
-     *
      */
     public function getUrl(): string
     {
@@ -35,7 +33,6 @@ class AppsGetExecResponse extends \ArrayObject
     }
     /**
      * A websocket URL that allows sending/receiving console input and receiving console output.
-     *
      *
      * @return self
      */

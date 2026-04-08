@@ -19,7 +19,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
      */
     protected ?string $schemaId = null;
     /**
@@ -30,17 +29,14 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     protected ?array $keyFields = null;
     /**
      * An optional filter to narrow down the cached list items
-     *
      */
     protected mixed $filter = null;
     /**
      * Include child schemas when caching list items
-     *
      */
     protected bool $includeAllSchemaChildren;
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
      */
     public function getSchemaId(): ?string
     {
@@ -48,7 +44,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
      *
      * @return self
      */
@@ -82,7 +77,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * An optional filter to narrow down the cached list items
-     *
      */
     public function getFilter(): mixed
     {
@@ -90,7 +84,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * An optional filter to narrow down the cached list items
-     *
      *
      * @return self
      */
@@ -102,7 +95,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * Include child schemas when caching list items
-     *
      */
     public function getIncludeAllSchemaChildren(): bool
     {
@@ -110,7 +102,6 @@ class ListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * Include child schemas when caching list items
-     *
      *
      * @return self
      */

@@ -22,12 +22,10 @@ class AuthenticationSuccessResponse extends \ArrayObject
     }
     /**
      * Authentication Token
-     *
      */
     protected string $token;
     /**
      * Authentication Token
-     *
      */
     public function getToken(): string
     {
@@ -35,7 +33,6 @@ class AuthenticationSuccessResponse extends \ArrayObject
     }
     /**
      * Authentication Token
-     *
      *
      * @return self
      */

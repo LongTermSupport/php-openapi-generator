@@ -22,27 +22,22 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * The title of the milestone.
-     *
      */
     protected string $title;
     /**
      * The state of the milestone. Either `open` or `closed`.
-     *
      */
     protected string $state = 'open';
     /**
      * A description of the milestone.
-     *
      */
     protected string $description;
     /**
      * The milestone due date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     protected string $dueOn;
     /**
      * The title of the milestone.
-     *
      */
     public function getTitle(): string
     {
@@ -50,7 +45,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * The title of the milestone.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * The state of the milestone. Either `open` or `closed`.
-     *
      */
     public function getState(): string
     {
@@ -70,7 +63,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * The state of the milestone. Either `open` or `closed`.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * A description of the milestone.
-     *
      */
     public function getDescription(): string
     {
@@ -90,7 +81,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * A description of the milestone.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * The milestone due date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      */
     public function getDueOn(): string
     {
@@ -110,7 +99,6 @@ class ReposOwnerRepoMilestonesPostBody extends \ArrayObject
     }
     /**
      * The milestone due date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-     *
      *
      * @return self
      */

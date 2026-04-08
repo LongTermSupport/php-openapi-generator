@@ -19,17 +19,14 @@ class ListItemImportResult
     }
     /**
      * Number of list items imported
-     *
      */
     protected int $importedListItemCount;
     /**
      * Number of list items skipped during import phase because they were already found in the system
-     *
      */
     protected int $skippedListItemCount;
     /**
      * Total number of list items requested to be imported
-     *
      */
     protected int $totalListItemCount;
     /**
@@ -46,7 +43,6 @@ class ListItemImportResult
     protected ?array $importedListItemIds = null;
     /**
      * Number of list items imported
-     *
      */
     public function getImportedListItemCount(): int
     {
@@ -54,7 +50,6 @@ class ListItemImportResult
     }
     /**
      * Number of list items imported
-     *
      *
      * @return self
      */
@@ -66,7 +61,6 @@ class ListItemImportResult
     }
     /**
      * Number of list items skipped during import phase because they were already found in the system
-     *
      */
     public function getSkippedListItemCount(): int
     {
@@ -74,7 +68,6 @@ class ListItemImportResult
     }
     /**
      * Number of list items skipped during import phase because they were already found in the system
-     *
      *
      * @return self
      */
@@ -86,7 +79,6 @@ class ListItemImportResult
     }
     /**
      * Total number of list items requested to be imported
-     *
      */
     public function getTotalListItemCount(): int
     {
@@ -94,7 +86,6 @@ class ListItemImportResult
     }
     /**
      * Total number of list items requested to be imported
-     *
      *
      * @return self
      */

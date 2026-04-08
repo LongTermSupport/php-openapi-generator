@@ -22,7 +22,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * The OAuth app client secret for which to create the token.
-     *
      */
     protected string $clientSecret;
     /**
@@ -33,22 +32,18 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     protected ?array $scopes = null;
     /**
      * A note to remind you what the OAuth token is for.
-     *
      */
     protected string $note;
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      */
     protected string $noteUrl;
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
      */
     protected string $fingerprint;
     /**
      * The OAuth app client secret for which to create the token.
-     *
      */
     public function getClientSecret(): string
     {
@@ -56,7 +51,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * The OAuth app client secret for which to create the token.
-     *
      *
      * @return self
      */
@@ -90,7 +84,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
      */
     public function getNote(): string
     {
@@ -98,7 +91,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A note to remind you what the OAuth token is for.
-     *
      *
      * @return self
      */
@@ -110,7 +102,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      */
     public function getNoteUrl(): string
     {
@@ -118,7 +109,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A URL to remind you what app the OAuth token is for.
-     *
      *
      * @return self
      */
@@ -130,7 +120,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
      */
     public function getFingerprint(): string
     {
@@ -138,7 +127,6 @@ class AuthorizationsClientsClientIdPutBody extends \ArrayObject
     }
     /**
      * A unique string to distinguish an authorization from others created for the same client ID and user.
-     *
      *
      * @return self
      */

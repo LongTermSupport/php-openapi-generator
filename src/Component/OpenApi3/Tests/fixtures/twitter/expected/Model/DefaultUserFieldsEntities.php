@@ -22,13 +22,11 @@ class DefaultUserFieldsEntities extends \ArrayObject
     }
     /**
      * Expanded details for the URL specified in the user's profile, with start and end indices.
-     *
      */
     protected DefaultUserFieldsEntitiesUrl $url;
     protected FullTextEntities $description;
     /**
      * Expanded details for the URL specified in the user's profile, with start and end indices.
-     *
      */
     public function getUrl(): DefaultUserFieldsEntitiesUrl
     {
@@ -36,7 +34,6 @@ class DefaultUserFieldsEntities extends \ArrayObject
     }
     /**
      * Expanded details for the URL specified in the user's profile, with start and end indices.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class NfsAction extends \ArrayObject
     }
     /**
      * The type of action to initiate for the NFS share (such as resize or snapshot).
-     *
      */
     protected string $type;
     /**
      * The DigitalOcean region slug (e.g. atl1, nyc2) where the NFS snapshot resides.
-     *
      */
     protected string $region;
     /**
      * The type of action to initiate for the NFS share (such as resize or snapshot).
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class NfsAction extends \ArrayObject
     }
     /**
      * The type of action to initiate for the NFS share (such as resize or snapshot).
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class NfsAction extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g. atl1, nyc2) where the NFS snapshot resides.
-     *
      */
     public function getRegion(): string
     {
@@ -60,7 +55,6 @@ class NfsAction extends \ArrayObject
     }
     /**
      * The DigitalOcean region slug (e.g. atl1, nyc2) where the NFS snapshot resides.
-     *
      *
      * @return self
      */

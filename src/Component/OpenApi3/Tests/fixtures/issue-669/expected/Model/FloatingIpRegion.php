@@ -22,12 +22,10 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * The display name of the region.  This will be a full name that is used in the control panel and other interfaces.
-     *
      */
     protected string $name;
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      */
     protected string $slug;
     /**
@@ -38,7 +36,6 @@ class FloatingIpRegion extends \ArrayObject
     protected array $features;
     /**
      * This is a boolean value that represents whether new Droplets can be created in this region.
-     *
      */
     protected bool $available;
     /**
@@ -49,7 +46,6 @@ class FloatingIpRegion extends \ArrayObject
     protected array $sizes;
     /**
      * The display name of the region.  This will be a full name that is used in the control panel and other interfaces.
-     *
      */
     public function getName(): string
     {
@@ -57,7 +53,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * The display name of the region.  This will be a full name that is used in the control panel and other interfaces.
-     *
      *
      * @return self
      */
@@ -69,7 +64,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      */
     public function getSlug(): string
     {
@@ -77,7 +71,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      *
      * @return self
      */
@@ -111,7 +104,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * This is a boolean value that represents whether new Droplets can be created in this region.
-     *
      */
     public function getAvailable(): bool
     {
@@ -119,7 +111,6 @@ class FloatingIpRegion extends \ArrayObject
     }
     /**
      * This is a boolean value that represents whether new Droplets can be created in this region.
-     *
      *
      * @return self
      */

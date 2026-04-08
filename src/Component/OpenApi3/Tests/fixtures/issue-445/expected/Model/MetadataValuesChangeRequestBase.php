@@ -25,12 +25,10 @@ class MetadataValuesChangeRequestBase
     protected array $changeCommands;
     /**
      * Allows updating contents with references to list items or contents that do not exist in the system.
-     *
      */
     protected bool $allowMissingDependencies;
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     protected bool $notifyProgress;
     protected string $kind;
@@ -55,7 +53,6 @@ class MetadataValuesChangeRequestBase
     }
     /**
      * Allows updating contents with references to list items or contents that do not exist in the system.
-     *
      */
     public function getAllowMissingDependencies(): bool
     {
@@ -63,7 +60,6 @@ class MetadataValuesChangeRequestBase
     }
     /**
      * Allows updating contents with references to list items or contents that do not exist in the system.
-     *
      */
     public function setAllowMissingDependencies(bool $allowMissingDependencies): void
     {
@@ -72,7 +68,6 @@ class MetadataValuesChangeRequestBase
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     public function getNotifyProgress(): bool
     {
@@ -80,7 +75,6 @@ class MetadataValuesChangeRequestBase
     }
     /**
      * Create a progress notification and notify on progress. Notifications are shown in the UI only to the same use who triggered the batch update.
-     *
      */
     public function setNotifyProgress(bool $notifyProgress): void
     {

@@ -24,7 +24,6 @@ class BadRequestError extends \ArrayObject
     protected string $message;
     /**
      * Provides further information on why the request was rejected
-     *
      */
     protected string $details;
     public function getCorrelationId(): string
@@ -49,7 +48,6 @@ class BadRequestError extends \ArrayObject
     }
     /**
      * Provides further information on why the request was rejected
-     *
      */
     public function getDetails(): string
     {
@@ -57,7 +55,6 @@ class BadRequestError extends \ArrayObject
     }
     /**
      * Provides further information on why the request was rejected
-     *
      *
      * @return self
      */

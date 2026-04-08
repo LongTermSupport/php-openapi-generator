@@ -22,22 +22,18 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * Size of the topic partition in bytes.
-     *
      */
     protected int $size;
     /**
      * An identifier for the partition.
-     *
      */
     protected int $id;
     /**
      * The number of nodes that are in-sync (have the latest data) for the given partition
-     *
      */
     protected int $inSyncReplicas;
     /**
      * The earliest consumer offset amongst consumer groups.
-     *
      */
     protected int $earliestOffset;
     /**
@@ -46,7 +42,6 @@ class KafkaTopicPartition extends \ArrayObject
     protected ?array $consumerGroups = null;
     /**
      * Size of the topic partition in bytes.
-     *
      */
     public function getSize(): int
     {
@@ -54,7 +49,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * Size of the topic partition in bytes.
-     *
      *
      * @return self
      */
@@ -66,7 +60,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * An identifier for the partition.
-     *
      */
     public function getId(): int
     {
@@ -74,7 +67,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * An identifier for the partition.
-     *
      *
      * @return self
      */
@@ -86,7 +78,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * The number of nodes that are in-sync (have the latest data) for the given partition
-     *
      */
     public function getInSyncReplicas(): int
     {
@@ -94,7 +85,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * The number of nodes that are in-sync (have the latest data) for the given partition
-     *
      *
      * @return self
      */
@@ -106,7 +96,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * The earliest consumer offset amongst consumer groups.
-     *
      */
     public function getEarliestOffset(): int
     {
@@ -114,7 +103,6 @@ class KafkaTopicPartition extends \ArrayObject
     }
     /**
      * The earliest consumer offset amongst consumer groups.
-     *
      *
      * @return self
      */

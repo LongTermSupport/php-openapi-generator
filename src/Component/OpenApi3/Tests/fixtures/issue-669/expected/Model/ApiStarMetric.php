@@ -25,13 +25,11 @@ class ApiStarMetric extends \ArrayObject
     /**
      * The success threshold for the star metric.
      * This is a value that the metric must reach to be considered successful.
-     *
      */
     protected float $successThreshold;
     /**
      * The success threshold for the star metric.
      * This is a percentage value between 0 and 100.
-     *
      */
     protected int $successThresholdPct;
     public function getMetricUuid(): string
@@ -57,19 +55,17 @@ class ApiStarMetric extends \ArrayObject
     /**
      * The success threshold for the star metric.
      * This is a value that the metric must reach to be considered successful.
-     *
      */
     public function getSuccessThreshold(): float
     {
         return $this->successThreshold;
     }
     /**
-    * The success threshold for the star metric.
-    This is a value that the metric must reach to be considered successful.
-    *
-    *
-    * @return self
-    */
+     * The success threshold for the star metric.
+     * This is a value that the metric must reach to be considered successful.
+     *
+     * @return self
+     */
     public function setSuccessThreshold(float $successThreshold): self
     {
         $this->initialized['successThreshold'] = true;
@@ -79,19 +75,17 @@ class ApiStarMetric extends \ArrayObject
     /**
      * The success threshold for the star metric.
      * This is a percentage value between 0 and 100.
-     *
      */
     public function getSuccessThresholdPct(): int
     {
         return $this->successThresholdPct;
     }
     /**
-    * The success threshold for the star metric.
-    This is a percentage value between 0 and 100.
-    *
-    *
-    * @return self
-    */
+     * The success threshold for the star metric.
+     * This is a percentage value between 0 and 100.
+     *
+     * @return self
+     */
     public function setSuccessThresholdPct(int $successThresholdPct): self
     {
         $this->initialized['successThresholdPct'] = true;

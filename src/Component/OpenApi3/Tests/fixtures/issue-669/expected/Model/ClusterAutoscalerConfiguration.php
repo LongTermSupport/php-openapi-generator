@@ -22,12 +22,10 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     }
     /**
      * Used to customize when cluster autoscaler scales down non-empty nodes by setting the node utilization threshold.
-     *
      */
     protected float $scaleDownUtilizationThreshold;
     /**
      * Used to customize how long a node is unneeded before being scaled down.
-     *
      */
     protected string $scaleDownUnneededTime;
     /**
@@ -48,7 +46,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     protected array $expanders;
     /**
      * Used to customize when cluster autoscaler scales down non-empty nodes by setting the node utilization threshold.
-     *
      */
     public function getScaleDownUtilizationThreshold(): float
     {
@@ -56,7 +53,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     }
     /**
      * Used to customize when cluster autoscaler scales down non-empty nodes by setting the node utilization threshold.
-     *
      *
      * @return self
      */
@@ -68,7 +64,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     }
     /**
      * Used to customize how long a node is unneeded before being scaled down.
-     *
      */
     public function getScaleDownUnneededTime(): string
     {
@@ -76,7 +71,6 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
     }
     /**
      * Used to customize how long a node is unneeded before being scaled down.
-     *
      *
      * @return self
      */
@@ -106,22 +100,22 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
         return $this->expanders;
     }
     /**
-    * Customizes expanders used by cluster-autoscaler.
-    The autoscaler will apply each expander from the provided list to narrow down the selection of node types created to scale up,
-    until either a single node type is left, or the list of expanders is exhausted.
-    If this flag is unset, autoscaler will use its default expander `random`.
-    Passing an empty list (_not_ `null`) will unset any previous expander customizations.
-    
-    Available expanders:
-    - `random`: Randomly selects a node group to scale.
-    - `priority`: Selects the node group with the highest priority as per [user-provided configuration](https://docs.digitalocean.com/products/kubernetes/how-to/autoscale/#configuring-priority-expander)
-    - `least_waste`: Selects the node group that will result in the least amount of idle resources.
-    
-    *
-    * @param list<string> $expanders
-    *
-    * @return self
-    */
+     * Customizes expanders used by cluster-autoscaler.
+     * The autoscaler will apply each expander from the provided list to narrow down the selection of node types created to scale up,
+     * until either a single node type is left, or the list of expanders is exhausted.
+     * If this flag is unset, autoscaler will use its default expander `random`.
+     * Passing an empty list (_not_ `null`) will unset any previous expander customizations.
+     * 
+     * Available expanders:
+     * - `random`: Randomly selects a node group to scale.
+     * - `priority`: Selects the node group with the highest priority as per [user-provided configuration](https://docs.digitalocean.com/products/kubernetes/how-to/autoscale/#configuring-priority-expander)
+     * - `least_waste`: Selects the node group that will result in the least amount of idle resources.
+     * 
+     *
+     * @param list<string> $expanders
+     *
+     * @return self
+     */
     public function setExpanders(array $expanders): self
     {
         $this->initialized['expanders'] = true;

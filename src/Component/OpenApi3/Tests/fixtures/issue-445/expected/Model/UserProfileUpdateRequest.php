@@ -19,37 +19,30 @@ class UserProfileUpdateRequest
     }
     /**
      * ID of the user.
-     *
      */
     protected ?string $id = null;
     /**
      * Email address.
-     *
      */
     protected ?string $emailAddress = null;
     /**
      * First name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * Last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Language code.
-     *
      */
     protected ?string $languageCode = null;
     /**
      * Address.
-     *
      */
     protected mixed $address = null;
     /**
      * ID of the user.
-     *
      */
     public function getId(): ?string
     {
@@ -57,7 +50,6 @@ class UserProfileUpdateRequest
     }
     /**
      * ID of the user.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Email address.
-     *
      */
     public function getEmailAddress(): ?string
     {
@@ -77,7 +68,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Email address.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class UserProfileUpdateRequest
     }
     /**
      * First name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -97,7 +86,6 @@ class UserProfileUpdateRequest
     }
     /**
      * First name.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -117,7 +104,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Last name.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Language code.
-     *
      */
     public function getLanguageCode(): ?string
     {
@@ -137,7 +122,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Language code.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Address.
-     *
      */
     public function getAddress(): mixed
     {
@@ -157,7 +140,6 @@ class UserProfileUpdateRequest
     }
     /**
      * Address.
-     *
      *
      * @return self
      */

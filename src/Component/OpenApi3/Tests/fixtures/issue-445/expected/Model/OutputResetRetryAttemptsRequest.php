@@ -43,7 +43,6 @@ class OutputResetRetryAttemptsRequest
     protected ?array $outputFormatIds = null;
     /**
      * Should the successful filter results also be reset (and subsequently re-rendered)?
-     *
      */
     protected bool $includeCompleted;
     /**
@@ -136,7 +135,6 @@ class OutputResetRetryAttemptsRequest
     }
     /**
      * Should the successful filter results also be reset (and subsequently re-rendered)?
-     *
      */
     public function getIncludeCompleted(): bool
     {
@@ -144,7 +142,6 @@ class OutputResetRetryAttemptsRequest
     }
     /**
      * Should the successful filter results also be reset (and subsequently re-rendered)?
-     *
      *
      * @return self
      */

@@ -22,32 +22,27 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * Unique identifier of the repository invitation.
-     *
      */
     protected int $id;
     /**
      * Minimal Repository
-     *
      */
     protected MinimalRepository $repository;
     protected ?RepositoryInvitationInvitee $invitee = null;
     protected ?RepositoryInvitationInviter $inviter = null;
     /**
      * The permission associated with the invitation.
-     *
      */
     protected string $permissions;
     protected \DateTime $createdAt;
     /**
      * URL for the repository invitation
-     *
      */
     protected string $url;
     protected string $htmlUrl;
     protected string $nodeId;
     /**
      * Unique identifier of the repository invitation.
-     *
      */
     public function getId(): int
     {
@@ -55,7 +50,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * Unique identifier of the repository invitation.
-     *
      *
      * @return self
      */
@@ -67,7 +61,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      */
     public function getRepository(): MinimalRepository
     {
@@ -75,7 +68,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      *
      * @return self
      */
@@ -107,7 +99,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * The permission associated with the invitation.
-     *
      */
     public function getPermissions(): string
     {
@@ -115,7 +106,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * The permission associated with the invitation.
-     *
      *
      * @return self
      */
@@ -137,7 +127,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * URL for the repository invitation
-     *
      */
     public function getUrl(): string
     {
@@ -145,7 +134,6 @@ class RepositoryInvitation extends \ArrayObject
     }
     /**
      * URL for the repository invitation
-     *
      *
      * @return self
      */

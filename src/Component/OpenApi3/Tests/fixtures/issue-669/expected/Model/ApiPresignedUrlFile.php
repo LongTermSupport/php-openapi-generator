@@ -22,17 +22,14 @@ class ApiPresignedUrlFile extends \ArrayObject
     }
     /**
      * Local filename
-     *
      */
     protected string $fileName;
     /**
      * The size of the file in bytes.
-     *
      */
     protected string $fileSize;
     /**
      * Local filename
-     *
      */
     public function getFileName(): string
     {
@@ -40,7 +37,6 @@ class ApiPresignedUrlFile extends \ArrayObject
     }
     /**
      * Local filename
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiPresignedUrlFile extends \ArrayObject
     }
     /**
      * The size of the file in bytes.
-     *
      */
     public function getFileSize(): string
     {
@@ -60,7 +55,6 @@ class ApiPresignedUrlFile extends \ArrayObject
     }
     /**
      * The size of the file in bytes.
-     *
      *
      * @return self
      */

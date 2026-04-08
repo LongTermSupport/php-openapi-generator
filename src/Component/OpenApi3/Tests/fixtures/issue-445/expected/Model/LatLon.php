@@ -19,17 +19,14 @@ class LatLon
     }
     /**
      * Latitude
-     *
      */
     protected float $lat;
     /**
      * Longitude
-     *
      */
     protected float $lon;
     /**
      * Latitude
-     *
      */
     public function getLat(): float
     {
@@ -37,7 +34,6 @@ class LatLon
     }
     /**
      * Latitude
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class LatLon
     }
     /**
      * Longitude
-     *
      */
     public function getLon(): float
     {
@@ -57,7 +52,6 @@ class LatLon
     }
     /**
      * Longitude
-     *
      *
      * @return self
      */

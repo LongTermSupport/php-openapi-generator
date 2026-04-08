@@ -27,17 +27,14 @@ class IssueMilestone extends \ArrayObject
     protected string $nodeId;
     /**
      * The number of the milestone.
-     *
      */
     protected int $number;
     /**
      * The state of the milestone.
-     *
      */
     protected string $state = 'open';
     /**
      * The title of the milestone.
-     *
      */
     protected string $title;
     protected ?string $description = null;
@@ -100,7 +97,6 @@ class IssueMilestone extends \ArrayObject
     }
     /**
      * The number of the milestone.
-     *
      */
     public function getNumber(): int
     {
@@ -108,7 +104,6 @@ class IssueMilestone extends \ArrayObject
     }
     /**
      * The number of the milestone.
-     *
      *
      * @return self
      */
@@ -120,7 +115,6 @@ class IssueMilestone extends \ArrayObject
     }
     /**
      * The state of the milestone.
-     *
      */
     public function getState(): string
     {
@@ -128,7 +122,6 @@ class IssueMilestone extends \ArrayObject
     }
     /**
      * The state of the milestone.
-     *
      *
      * @return self
      */
@@ -140,7 +133,6 @@ class IssueMilestone extends \ArrayObject
     }
     /**
      * The title of the milestone.
-     *
      */
     public function getTitle(): string
     {
@@ -148,7 +140,6 @@ class IssueMilestone extends \ArrayObject
     }
     /**
      * The title of the milestone.
-     *
      *
      * @return self
      */

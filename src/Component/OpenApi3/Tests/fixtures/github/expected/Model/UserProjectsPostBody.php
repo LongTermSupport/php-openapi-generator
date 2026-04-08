@@ -22,17 +22,14 @@ class UserProjectsPostBody extends \ArrayObject
     }
     /**
      * Name of the project
-     *
      */
     protected string $name;
     /**
      * Body of the project
-     *
      */
     protected ?string $body = null;
     /**
      * Name of the project
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class UserProjectsPostBody extends \ArrayObject
     }
     /**
      * Name of the project
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class UserProjectsPostBody extends \ArrayObject
     }
     /**
      * Body of the project
-     *
      */
     public function getBody(): ?string
     {
@@ -60,7 +55,6 @@ class UserProjectsPostBody extends \ArrayObject
     }
     /**
      * Body of the project
-     *
      *
      * @return self
      */

@@ -22,7 +22,6 @@ class AutoscalePoolCreate extends \ArrayObject
     }
     /**
      * The human-readable name of the autoscale pool. This field cannot be updated
-     *
      */
     protected string $name;
     /**
@@ -34,7 +33,6 @@ class AutoscalePoolCreate extends \ArrayObject
     protected AutoscalePoolDropletTemplate $dropletTemplate;
     /**
      * The human-readable name of the autoscale pool. This field cannot be updated
-     *
      */
     public function getName(): string
     {
@@ -42,7 +40,6 @@ class AutoscalePoolCreate extends \ArrayObject
     }
     /**
      * The human-readable name of the autoscale pool. This field cannot be updated
-     *
      *
      * @return self
      */

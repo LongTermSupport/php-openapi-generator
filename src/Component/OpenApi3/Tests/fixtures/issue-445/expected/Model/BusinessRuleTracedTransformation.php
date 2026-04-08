@@ -19,22 +19,18 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Trace reference ID of transformation.
-     *
      */
     protected ?string $traceRefId = null;
     /**
      * Serialized JSON of input of transformation
-     *
      */
     protected ?string $input = null;
     /**
      * Serialized JSON of output of transformation
-     *
      */
     protected ?string $output = null;
     /**
      * Trace reference ID of transformation.
-     *
      */
     public function getTraceRefId(): ?string
     {
@@ -42,7 +38,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Trace reference ID of transformation.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Serialized JSON of input of transformation
-     *
      */
     public function getInput(): ?string
     {
@@ -62,7 +56,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Serialized JSON of input of transformation
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Serialized JSON of output of transformation
-     *
      */
     public function getOutput(): ?string
     {
@@ -82,7 +74,6 @@ class BusinessRuleTracedTransformation
     }
     /**
      * Serialized JSON of output of transformation
-     *
      *
      * @return self
      */

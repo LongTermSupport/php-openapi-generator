@@ -19,12 +19,10 @@ class ShareDataEmbed extends ShareDataBase
     }
     /**
      * Token for the embed share.
-     *
      */
     protected string $token;
     /**
      * Token for the embed share.
-     *
      */
     public function getToken(): string
     {
@@ -32,7 +30,6 @@ class ShareDataEmbed extends ShareDataBase
     }
     /**
      * Token for the embed share.
-     *
      *
      * @return self
      */

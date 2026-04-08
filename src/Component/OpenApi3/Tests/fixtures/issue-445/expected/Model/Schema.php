@@ -19,12 +19,10 @@ class Schema
     }
     /**
      * The schema ID. It is unique throughout the whole customer setup.
-     *
      */
     protected string $id;
     /**
      * The parent schema ID.
-     *
      */
     protected ?string $parentSchemaId = null;
     /**
@@ -35,12 +33,10 @@ class Schema
     protected ?array $types = null;
     /**
      * Language specific schema names.
-     *
      */
     protected mixed $names = null;
     /**
      * Language specific schema descriptions.
-     *
      */
     protected mixed $descriptions = null;
     /**
@@ -51,27 +47,22 @@ class Schema
     protected ?array $layerSchemaIds = null;
     /**
      * The count of all fields.
-     *
      */
     protected int $fieldCount;
     /**
      * The count of all schema descendants with an immediate inheritance.
-     *
      */
     protected int $childCount;
     /**
      * The descendant depth of the schema.
-     *
      */
     protected int $level;
     /**
      * Identifies a system provided schema. A system schema cannot be created, updated or deleted.
-     *
      */
     protected bool $system;
     /**
      * The schema ID. It is unique throughout the whole customer setup.
-     *
      */
     public function getId(): string
     {
@@ -79,7 +70,6 @@ class Schema
     }
     /**
      * The schema ID. It is unique throughout the whole customer setup.
-     *
      *
      * @return self
      */
@@ -91,7 +81,6 @@ class Schema
     }
     /**
      * The parent schema ID.
-     *
      */
     public function getParentSchemaId(): ?string
     {
@@ -99,7 +88,6 @@ class Schema
     }
     /**
      * The parent schema ID.
-     *
      *
      * @return self
      */
@@ -133,7 +121,6 @@ class Schema
     }
     /**
      * Language specific schema names.
-     *
      */
     public function getNames(): mixed
     {
@@ -141,7 +128,6 @@ class Schema
     }
     /**
      * Language specific schema names.
-     *
      *
      * @return self
      */
@@ -153,7 +139,6 @@ class Schema
     }
     /**
      * Language specific schema descriptions.
-     *
      */
     public function getDescriptions(): mixed
     {
@@ -161,7 +146,6 @@ class Schema
     }
     /**
      * Language specific schema descriptions.
-     *
      *
      * @return self
      */
@@ -195,7 +179,6 @@ class Schema
     }
     /**
      * The count of all fields.
-     *
      */
     public function getFieldCount(): int
     {
@@ -203,7 +186,6 @@ class Schema
     }
     /**
      * The count of all fields.
-     *
      *
      * @return self
      */
@@ -215,7 +197,6 @@ class Schema
     }
     /**
      * The count of all schema descendants with an immediate inheritance.
-     *
      */
     public function getChildCount(): int
     {
@@ -223,7 +204,6 @@ class Schema
     }
     /**
      * The count of all schema descendants with an immediate inheritance.
-     *
      *
      * @return self
      */
@@ -235,7 +215,6 @@ class Schema
     }
     /**
      * The descendant depth of the schema.
-     *
      */
     public function getLevel(): int
     {
@@ -243,7 +222,6 @@ class Schema
     }
     /**
      * The descendant depth of the schema.
-     *
      *
      * @return self
      */
@@ -255,7 +233,6 @@ class Schema
     }
     /**
      * Identifies a system provided schema. A system schema cannot be created, updated or deleted.
-     *
      */
     public function getSystem(): bool
     {
@@ -263,7 +240,6 @@ class Schema
     }
     /**
      * Identifies a system provided schema. A system schema cannot be created, updated or deleted.
-     *
      *
      * @return self
      */

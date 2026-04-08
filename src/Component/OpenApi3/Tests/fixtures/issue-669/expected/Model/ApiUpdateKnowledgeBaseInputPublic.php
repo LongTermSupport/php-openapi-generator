@@ -22,22 +22,18 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean database this knowledge base will use, optiona.
-     *
      */
     protected string $databaseId;
     /**
      * Identifier for the foundation model.
-     *
      */
     protected string $embeddingModelUuid;
     /**
      * Knowledge base name
-     *
      */
     protected string $name;
     /**
      * The id of the DigitalOcean project this knowledge base will belong to
-     *
      */
     protected string $projectId;
     /**
@@ -48,12 +44,10 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     protected array $tags;
     /**
      * Knowledge base id
-     *
      */
     protected string $uuid;
     /**
      * The id of the DigitalOcean database this knowledge base will use, optiona.
-     *
      */
     public function getDatabaseId(): string
     {
@@ -61,7 +55,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean database this knowledge base will use, optiona.
-     *
      *
      * @return self
      */
@@ -73,7 +66,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
      */
     public function getEmbeddingModelUuid(): string
     {
@@ -81,7 +73,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Identifier for the foundation model.
-     *
      *
      * @return self
      */
@@ -93,7 +84,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base name
-     *
      */
     public function getName(): string
     {
@@ -101,7 +91,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base name
-     *
      *
      * @return self
      */
@@ -113,7 +102,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this knowledge base will belong to
-     *
      */
     public function getProjectId(): string
     {
@@ -121,7 +109,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The id of the DigitalOcean project this knowledge base will belong to
-     *
      *
      * @return self
      */
@@ -155,7 +142,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      */
     public function getUuid(): string
     {
@@ -163,7 +149,6 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base id
-     *
      *
      * @return self
      */

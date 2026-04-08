@@ -19,42 +19,34 @@ class UserProfile
     }
     /**
      * ID of the user.
-     *
      */
     protected ?string $id = null;
     /**
      * Email address.
-     *
      */
     protected ?string $emailAddress = null;
     /**
      * First name.
-     *
      */
     protected ?string $firstName = null;
     /**
      * Last name.
-     *
      */
     protected ?string $lastName = null;
     /**
      * Language code.
-     *
      */
     protected ?string $languageCode = null;
     /**
      * Address.
-     *
      */
     protected mixed $address = null;
     /**
      * Authorization state.
-     *
      */
     protected mixed $authorizationState = null;
     /**
      * Indicates if the user is locked.
-     *
      */
     protected bool $isLocked;
     /**
@@ -71,7 +63,6 @@ class UserProfile
     protected ?array $userRoleIds = null;
     /**
      * Indicates if the user has not accepted the latest terms of consent.
-     *
      */
     protected bool $termsConsentExpired;
     /**
@@ -82,17 +73,14 @@ class UserProfile
     protected ?array $systemUserRoles = null;
     /**
      * Indicates if the user has the developer flag set.
-     *
      */
     protected bool $isDeveloper;
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      */
     protected bool $isFederated;
     /**
      * ID of the user.
-     *
      */
     public function getId(): ?string
     {
@@ -100,7 +88,6 @@ class UserProfile
     }
     /**
      * ID of the user.
-     *
      *
      * @return self
      */
@@ -112,7 +99,6 @@ class UserProfile
     }
     /**
      * Email address.
-     *
      */
     public function getEmailAddress(): ?string
     {
@@ -120,7 +106,6 @@ class UserProfile
     }
     /**
      * Email address.
-     *
      *
      * @return self
      */
@@ -132,7 +117,6 @@ class UserProfile
     }
     /**
      * First name.
-     *
      */
     public function getFirstName(): ?string
     {
@@ -140,7 +124,6 @@ class UserProfile
     }
     /**
      * First name.
-     *
      *
      * @return self
      */
@@ -152,7 +135,6 @@ class UserProfile
     }
     /**
      * Last name.
-     *
      */
     public function getLastName(): ?string
     {
@@ -160,7 +142,6 @@ class UserProfile
     }
     /**
      * Last name.
-     *
      *
      * @return self
      */
@@ -172,7 +153,6 @@ class UserProfile
     }
     /**
      * Language code.
-     *
      */
     public function getLanguageCode(): ?string
     {
@@ -180,7 +160,6 @@ class UserProfile
     }
     /**
      * Language code.
-     *
      *
      * @return self
      */
@@ -192,7 +171,6 @@ class UserProfile
     }
     /**
      * Address.
-     *
      */
     public function getAddress(): mixed
     {
@@ -200,7 +178,6 @@ class UserProfile
     }
     /**
      * Address.
-     *
      *
      * @return self
      */
@@ -212,7 +189,6 @@ class UserProfile
     }
     /**
      * Authorization state.
-     *
      */
     public function getAuthorizationState(): mixed
     {
@@ -220,7 +196,6 @@ class UserProfile
     }
     /**
      * Authorization state.
-     *
      *
      * @return self
      */
@@ -232,7 +207,6 @@ class UserProfile
     }
     /**
      * Indicates if the user is locked.
-     *
      */
     public function getIsLocked(): bool
     {
@@ -240,7 +214,6 @@ class UserProfile
     }
     /**
      * Indicates if the user is locked.
-     *
      *
      * @return self
      */
@@ -296,7 +269,6 @@ class UserProfile
     }
     /**
      * Indicates if the user has not accepted the latest terms of consent.
-     *
      */
     public function getTermsConsentExpired(): bool
     {
@@ -304,7 +276,6 @@ class UserProfile
     }
     /**
      * Indicates if the user has not accepted the latest terms of consent.
-     *
      *
      * @return self
      */
@@ -338,7 +309,6 @@ class UserProfile
     }
     /**
      * Indicates if the user has the developer flag set.
-     *
      */
     public function getIsDeveloper(): bool
     {
@@ -346,7 +316,6 @@ class UserProfile
     }
     /**
      * Indicates if the user has the developer flag set.
-     *
      *
      * @return self
      */
@@ -358,7 +327,6 @@ class UserProfile
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      */
     public function getIsFederated(): bool
     {
@@ -366,7 +334,6 @@ class UserProfile
     }
     /**
      * Federated user is a user who is (currently) governed by an external identity provider.
-     *
      *
      * @return self
      */

@@ -23,7 +23,6 @@ class Thread extends \ArrayObject
     protected string $id;
     /**
      * Minimal Repository
-     *
      */
     protected MinimalRepository $repository;
     protected ThreadSubject $subject;
@@ -45,7 +44,6 @@ class Thread extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      */
     public function getRepository(): MinimalRepository
     {
@@ -53,7 +51,6 @@ class Thread extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      *
      * @return self
      */

@@ -28,12 +28,10 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     protected array $days;
     /**
      * Knowledge base uuid for which the schedule is created
-     *
      */
     protected string $knowledgeBaseUuid;
     /**
      * Time of execution (HH:MM) UTC
-     *
      */
     protected string $time;
     /**
@@ -60,7 +58,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base uuid for which the schedule is created
-     *
      */
     public function getKnowledgeBaseUuid(): string
     {
@@ -68,7 +65,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Knowledge base uuid for which the schedule is created
-     *
      *
      * @return self
      */
@@ -80,7 +76,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Time of execution (HH:MM) UTC
-     *
      */
     public function getTime(): string
     {
@@ -88,7 +83,6 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Time of execution (HH:MM) UTC
-     *
      *
      * @return self
      */

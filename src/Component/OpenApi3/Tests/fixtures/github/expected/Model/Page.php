@@ -22,33 +22,27 @@ class Page extends \ArrayObject
     }
     /**
      * The API address for accessing this Page resource.
-     *
      */
     protected string $url;
     /**
      * The status of the most recent build of the Page.
-     *
      */
     protected ?string $status = null;
     /**
      * The Pages site's custom domain
-     *
      */
     protected ?string $cname = null;
     /**
      * Whether the Page has a custom 404 page.
-     *
      */
     protected bool $custom404 = false;
     /**
      * The web address the Page can be accessed from.
-     *
      */
     protected string $htmlUrl;
     protected PagesSourceHash $source;
     /**
      * The API address for accessing this Page resource.
-     *
      */
     public function getUrl(): string
     {
@@ -56,7 +50,6 @@ class Page extends \ArrayObject
     }
     /**
      * The API address for accessing this Page resource.
-     *
      *
      * @return self
      */
@@ -68,7 +61,6 @@ class Page extends \ArrayObject
     }
     /**
      * The status of the most recent build of the Page.
-     *
      */
     public function getStatus(): ?string
     {
@@ -76,7 +68,6 @@ class Page extends \ArrayObject
     }
     /**
      * The status of the most recent build of the Page.
-     *
      *
      * @return self
      */
@@ -88,7 +79,6 @@ class Page extends \ArrayObject
     }
     /**
      * The Pages site's custom domain
-     *
      */
     public function getCname(): ?string
     {
@@ -96,7 +86,6 @@ class Page extends \ArrayObject
     }
     /**
      * The Pages site's custom domain
-     *
      *
      * @return self
      */
@@ -108,7 +97,6 @@ class Page extends \ArrayObject
     }
     /**
      * Whether the Page has a custom 404 page.
-     *
      */
     public function getCustom404(): bool
     {
@@ -116,7 +104,6 @@ class Page extends \ArrayObject
     }
     /**
      * Whether the Page has a custom 404 page.
-     *
      *
      * @return self
      */
@@ -128,7 +115,6 @@ class Page extends \ArrayObject
     }
     /**
      * The web address the Page can be accessed from.
-     *
      */
     public function getHtmlUrl(): string
     {
@@ -136,7 +122,6 @@ class Page extends \ArrayObject
     }
     /**
      * The web address the Page can be accessed from.
-     *
      *
      * @return self
      */

@@ -22,22 +22,18 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     protected Link $self;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $html;
     /**
      * Hypermedia Link
-     *
      */
     protected Link $pullRequest;
     /**
      * Hypermedia Link
-     *
      */
     public function getSelf(): Link
     {
@@ -45,7 +41,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getHtml(): Link
     {
@@ -65,7 +59,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      */
     public function getPullRequest(): Link
     {
@@ -85,7 +77,6 @@ class ReviewCommentLinks extends \ArrayObject
     }
     /**
      * Hypermedia Link
-     *
      *
      * @return self
      */

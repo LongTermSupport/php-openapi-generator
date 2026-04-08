@@ -27,7 +27,6 @@ class OrganizationInvitation extends \ArrayObject
     protected string $createdAt;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $inviter = null;
     protected int $teamCount;
@@ -86,7 +85,6 @@ class OrganizationInvitation extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getInviter(): ?SimpleUser
     {
@@ -94,7 +92,6 @@ class OrganizationInvitation extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

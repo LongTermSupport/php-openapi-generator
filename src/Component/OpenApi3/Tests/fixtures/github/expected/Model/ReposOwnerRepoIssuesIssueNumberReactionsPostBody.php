@@ -22,12 +22,10 @@ class ReposOwnerRepoIssuesIssueNumberReactionsPostBody extends \ArrayObject
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue.
-     *
      */
     protected string $content;
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue.
-     *
      */
     public function getContent(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoIssuesIssueNumberReactionsPostBody extends \ArrayObject
     }
     /**
      * The [reaction type](https://developer.github.com/v3/reactions/#reaction-types) to add to the issue.
-     *
      *
      * @return self
      */

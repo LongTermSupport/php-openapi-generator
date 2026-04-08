@@ -22,22 +22,18 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * The new description of the workspace
-     *
      */
     protected string $description;
     /**
      * The new name of the workspace
-     *
      */
     protected string $name;
     /**
      * Workspace UUID.
-     *
      */
     protected string $workspaceUuid;
     /**
      * The new description of the workspace
-     *
      */
     public function getDescription(): string
     {
@@ -45,7 +41,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * The new description of the workspace
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * The new name of the workspace
-     *
      */
     public function getName(): string
     {
@@ -65,7 +59,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * The new name of the workspace
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Workspace UUID.
-     *
      */
     public function getWorkspaceUuid(): string
     {
@@ -85,7 +77,6 @@ class ApiUpdateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Workspace UUID.
-     *
      *
      * @return self
      */

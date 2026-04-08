@@ -19,12 +19,10 @@ class SchemaOwnershipTransferRequest
     }
     /**
      * The id of the user to whom the schema has to be transferred to.
-     *
      */
     protected ?string $transferUserId = null;
     /**
      * The id of the user to whom the schema has to be transferred to.
-     *
      */
     public function getTransferUserId(): ?string
     {
@@ -32,7 +30,6 @@ class SchemaOwnershipTransferRequest
     }
     /**
      * The id of the user to whom the schema has to be transferred to.
-     *
      *
      * @return self
      */

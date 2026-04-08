@@ -19,37 +19,30 @@ class LiveStreamSearchRequest
     }
     /**
      * Sets the start date and time for results based on Timestamp attribute.
-     *
      */
     protected \DateTime $from;
     /**
      * Sets the end date and time for results based on Timestamp attribute.
-     *
      */
     protected \DateTime $to;
     /**
      * Optionally limits the result to only the specified scope type.
-     *
      */
     protected ?string $scopeType = null;
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     protected mixed $filter = null;
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     protected int $limit = 30;
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * Sets the start date and time for results based on Timestamp attribute.
-     *
      */
     public function getFrom(): \DateTime
     {
@@ -57,7 +50,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Sets the start date and time for results based on Timestamp attribute.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Sets the end date and time for results based on Timestamp attribute.
-     *
      */
     public function getTo(): \DateTime
     {
@@ -77,7 +68,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Sets the end date and time for results based on Timestamp attribute.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Optionally limits the result to only the specified scope type.
-     *
      */
     public function getScopeType(): ?string
     {
@@ -97,7 +86,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Optionally limits the result to only the specified scope type.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class LiveStreamSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -117,7 +104,6 @@ class LiveStreamSearchRequest
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     public function getLimit(): int
     {
@@ -137,7 +122,6 @@ class LiveStreamSearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class LiveStreamSearchRequest
     }
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -157,7 +140,6 @@ class LiveStreamSearchRequest
     }
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
      *
      * @return self
      */

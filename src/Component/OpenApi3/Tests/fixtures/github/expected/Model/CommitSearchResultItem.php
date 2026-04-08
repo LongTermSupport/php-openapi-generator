@@ -33,7 +33,6 @@ class CommitSearchResultItem extends \ArrayObject
     protected array $parents;
     /**
      * Minimal Repository
-     *
      */
     protected MinimalRepository $repository;
     protected int $score;
@@ -132,7 +131,6 @@ class CommitSearchResultItem extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      */
     public function getRepository(): MinimalRepository
     {
@@ -140,7 +138,6 @@ class CommitSearchResultItem extends \ArrayObject
     }
     /**
      * Minimal Repository
-     *
      *
      * @return self
      */

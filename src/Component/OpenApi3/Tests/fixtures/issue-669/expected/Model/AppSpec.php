@@ -22,30 +22,25 @@ class AppSpec extends \ArrayObject
     }
     /**
      * The name of the app. Must be unique across all apps in the same account.
-     *
      */
     protected string $name;
     /**
      * The slug form of the geographical origin of the app. Default: `nearest available`
-     *
      */
     protected string $region;
     /**
      * If set to `true`, the app will **not** be cached at the edge (CDN). Enable this option if you want to manage CDN configuration yourself—whether by using an external CDN provider or by handling static content and caching within your app. This setting is also recommended for apps that require real-time data or serve dynamic content, such as those using Server-Sent Events (SSE) over GET, or hosting an MCP (Model Context Protocol) Server that utilizes SSE.
      * **Note:** This feature is not available for static site components.
      * For more information, see [Disable CDN Cache](https://docs.digitalocean.com/products/app-platform/how-to/cache-content/#disable-cdn-cache).
-     *
      */
     protected bool $disableEdgeCache = false;
     /**
      * If set to `true`, email addresses in the app will not be obfuscated. This is
      * useful for apps that require email addresses to be visible (in the HTML markup).
-     *
      */
     protected bool $disableEmailObfuscation = false;
     /**
      * If set to `true`, suspicious requests will go through additional security checks to help mitigate layer 7 DDoS attacks.
-     *
      */
     protected bool $enhancedThreatControlEnabled = false;
     /**
@@ -93,23 +88,19 @@ class AppSpec extends \ArrayObject
     protected array $databases;
     /**
      * Specification for app ingress configurations.
-     *
      */
     protected AppIngressSpec $ingress;
     /**
      * Specification for app egress configurations.
-     *
      */
     protected AppEgressSpec $egress;
     /**
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
-     *
      */
     protected AppMaintenanceSpec $maintenance;
     protected AppsVpc $vpc;
     /**
      * The name of the app. Must be unique across all apps in the same account.
-     *
      */
     public function getName(): string
     {
@@ -117,7 +108,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * The name of the app. Must be unique across all apps in the same account.
-     *
      *
      * @return self
      */
@@ -129,7 +119,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * The slug form of the geographical origin of the app. Default: `nearest available`
-     *
      */
     public function getRegion(): string
     {
@@ -137,7 +126,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * The slug form of the geographical origin of the app. Default: `nearest available`
-     *
      *
      * @return self
      */
@@ -151,20 +139,18 @@ class AppSpec extends \ArrayObject
      * If set to `true`, the app will **not** be cached at the edge (CDN). Enable this option if you want to manage CDN configuration yourself—whether by using an external CDN provider or by handling static content and caching within your app. This setting is also recommended for apps that require real-time data or serve dynamic content, such as those using Server-Sent Events (SSE) over GET, or hosting an MCP (Model Context Protocol) Server that utilizes SSE.
      * **Note:** This feature is not available for static site components.
      * For more information, see [Disable CDN Cache](https://docs.digitalocean.com/products/app-platform/how-to/cache-content/#disable-cdn-cache).
-     *
      */
     public function getDisableEdgeCache(): bool
     {
         return $this->disableEdgeCache;
     }
     /**
-    * If set to `true`, the app will **not** be cached at the edge (CDN). Enable this option if you want to manage CDN configuration yourself—whether by using an external CDN provider or by handling static content and caching within your app. This setting is also recommended for apps that require real-time data or serve dynamic content, such as those using Server-Sent Events (SSE) over GET, or hosting an MCP (Model Context Protocol) Server that utilizes SSE.
-    **Note:** This feature is not available for static site components.
-    For more information, see [Disable CDN Cache](https://docs.digitalocean.com/products/app-platform/how-to/cache-content/#disable-cdn-cache).
-    *
-    *
-    * @return self
-    */
+     * If set to `true`, the app will **not** be cached at the edge (CDN). Enable this option if you want to manage CDN configuration yourself—whether by using an external CDN provider or by handling static content and caching within your app. This setting is also recommended for apps that require real-time data or serve dynamic content, such as those using Server-Sent Events (SSE) over GET, or hosting an MCP (Model Context Protocol) Server that utilizes SSE.
+     * **Note:** This feature is not available for static site components.
+     * For more information, see [Disable CDN Cache](https://docs.digitalocean.com/products/app-platform/how-to/cache-content/#disable-cdn-cache).
+     *
+     * @return self
+     */
     public function setDisableEdgeCache(bool $disableEdgeCache): self
     {
         $this->initialized['disableEdgeCache'] = true;
@@ -174,19 +160,17 @@ class AppSpec extends \ArrayObject
     /**
      * If set to `true`, email addresses in the app will not be obfuscated. This is
      * useful for apps that require email addresses to be visible (in the HTML markup).
-     *
      */
     public function getDisableEmailObfuscation(): bool
     {
         return $this->disableEmailObfuscation;
     }
     /**
-    * If set to `true`, email addresses in the app will not be obfuscated. This is
-    useful for apps that require email addresses to be visible (in the HTML markup).
-    *
-    *
-    * @return self
-    */
+     * If set to `true`, email addresses in the app will not be obfuscated. This is
+     * useful for apps that require email addresses to be visible (in the HTML markup).
+     *
+     * @return self
+     */
     public function setDisableEmailObfuscation(bool $disableEmailObfuscation): self
     {
         $this->initialized['disableEmailObfuscation'] = true;
@@ -195,7 +179,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * If set to `true`, suspicious requests will go through additional security checks to help mitigate layer 7 DDoS attacks.
-     *
      */
     public function getEnhancedThreatControlEnabled(): bool
     {
@@ -203,7 +186,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * If set to `true`, suspicious requests will go through additional security checks to help mitigate layer 7 DDoS attacks.
-     *
      *
      * @return self
      */
@@ -356,13 +338,13 @@ class AppSpec extends \ArrayObject
         return $this->databases;
     }
     /**
-    * Database instances which can provide persistence to workloads within the
-    application.
-    *
-    * @param list<AppDatabaseSpec> $databases
-    *
-    * @return self
-    */
+     * Database instances which can provide persistence to workloads within the
+     * application.
+     *
+     * @param list<AppDatabaseSpec> $databases
+     *
+     * @return self
+     */
     public function setDatabases(array $databases): self
     {
         $this->initialized['databases'] = true;
@@ -371,7 +353,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification for app ingress configurations.
-     *
      */
     public function getIngress(): AppIngressSpec
     {
@@ -379,7 +360,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification for app ingress configurations.
-     *
      *
      * @return self
      */
@@ -391,7 +371,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification for app egress configurations.
-     *
      */
     public function getEgress(): AppEgressSpec
     {
@@ -399,7 +378,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification for app egress configurations.
-     *
      *
      * @return self
      */
@@ -411,7 +389,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
-     *
      */
     public function getMaintenance(): AppMaintenanceSpec
     {
@@ -419,7 +396,6 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Specification to configure maintenance settings for the app, such as maintenance mode and archiving the app.
-     *
      *
      * @return self
      */

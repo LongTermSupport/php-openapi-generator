@@ -22,22 +22,18 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      */
     protected string $name;
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      */
     protected string $distribution;
     /**
      * An optional free-form text field to describe an image.
-     *
      */
     protected string $description;
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * The display name that has been given to an image.  This is what is shown in the control panel and is generally a descriptive title for the image in question.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      */
     public function getDistribution(): string
     {
@@ -65,7 +59,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * The name of a custom image's distribution. Currently, the valid values are  `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be used in its place.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
      */
     public function getDescription(): string
     {
@@ -85,7 +77,6 @@ class ImageUpdate extends \ArrayObject
     }
     /**
      * An optional free-form text field to describe an image.
-     *
      *
      * @return self
      */

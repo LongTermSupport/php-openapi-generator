@@ -22,17 +22,14 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     }
     /**
      * The day of the week on which to apply maintenance updates.
-     *
      */
     protected string $day;
     /**
      * The hour in UTC at which maintenance updates will be applied in 24 hour format.
-     *
      */
     protected string $hour;
     /**
      * A boolean value indicating whether any maintenance is scheduled to be performed in the next window.
-     *
      */
     protected bool $pending;
     /**
@@ -43,7 +40,6 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     protected array $description;
     /**
      * The day of the week on which to apply maintenance updates.
-     *
      */
     public function getDay(): string
     {
@@ -51,7 +47,6 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     }
     /**
      * The day of the week on which to apply maintenance updates.
-     *
      *
      * @return self
      */
@@ -63,7 +58,6 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     }
     /**
      * The hour in UTC at which maintenance updates will be applied in 24 hour format.
-     *
      */
     public function getHour(): string
     {
@@ -71,7 +65,6 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     }
     /**
      * The hour in UTC at which maintenance updates will be applied in 24 hour format.
-     *
      *
      * @return self
      */
@@ -83,7 +76,6 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     }
     /**
      * A boolean value indicating whether any maintenance is scheduled to be performed in the next window.
-     *
      */
     public function getPending(): bool
     {
@@ -91,7 +83,6 @@ class DatabaseClusterMaintenanceWindow extends \ArrayObject
     }
     /**
      * A boolean value indicating whether any maintenance is scheduled to be performed in the next window.
-     *
      *
      * @return self
      */

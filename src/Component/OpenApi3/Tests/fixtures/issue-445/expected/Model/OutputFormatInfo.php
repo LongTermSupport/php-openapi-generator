@@ -19,17 +19,14 @@ class OutputFormatInfo
     }
     /**
      * Output ID.
-     *
      */
     protected string $id;
     /**
      * Output translations.
-     *
      */
     protected mixed $names = null;
     /**
      * Output ID.
-     *
      */
     public function getId(): string
     {
@@ -37,7 +34,6 @@ class OutputFormatInfo
     }
     /**
      * Output ID.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class OutputFormatInfo
     }
     /**
      * Output translations.
-     *
      */
     public function getNames(): mixed
     {
@@ -57,7 +52,6 @@ class OutputFormatInfo
     }
     /**
      * Output translations.
-     *
      *
      * @return self
      */

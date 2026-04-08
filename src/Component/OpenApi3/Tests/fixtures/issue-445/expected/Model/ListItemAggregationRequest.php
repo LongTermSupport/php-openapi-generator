@@ -22,7 +22,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     protected ?string $searchString = null;
     /**
@@ -33,7 +32,6 @@ class ListItemAggregationRequest extends \ArrayObject
     protected ?array $searchBehaviors = null;
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     protected mixed $filter = null;
     /**
@@ -49,12 +47,10 @@ class ListItemAggregationRequest extends \ArrayObject
     protected ?array $aggregationFilters = null;
     /**
      * Broadens the search to include all schema descendant list items.
-     *
      */
     protected bool $includeAllSchemaChildren;
     /**
      * Limits the aggregation to the list items that have or not have broken references. By default it includes both.
-     *
      */
     protected mixed $brokenDependenciesFilter = 'All';
     /**
@@ -72,7 +68,6 @@ class ListItemAggregationRequest extends \ArrayObject
     protected ?array $searchLanguages = null;
     /**
      * Limits the aggregation to the list items that have the specified life cycle state. Defaults to ActiveOnly.
-     *
      */
     protected mixed $lifeCycleFilter = 'ActiveOnly';
     /**
@@ -83,7 +78,6 @@ class ListItemAggregationRequest extends \ArrayObject
     protected array $aggregators;
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      */
     public function getSearchString(): ?string
     {
@@ -91,7 +85,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the search by using a query string filter. The Lucene query string syntax is supported.
-     *
      *
      * @return self
      */
@@ -125,7 +118,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      */
     public function getFilter(): mixed
     {
@@ -133,7 +125,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * An optional search filter. Limits the document result set.
-     *
      *
      * @return self
      */
@@ -158,17 +149,17 @@ class ListItemAggregationRequest extends \ArrayObject
         return $this->aggregationFilters;
     }
     /**
-    * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
-    For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
-    by the aggregation filters are put in OR each other if they have the same AggregationName, and then such groups are put in AND.
-    For the aggregation values, only the original Filter of the search request is used to nail down the data to be considered for the aggregations. Then, on top of that, for each aggregator in the search request, a Filter is created to filter down the
-    aggregation results of that aggregation: depending if the AggregationName of the AggregationFilter matches the AggregationName of the Aggregator, the filter is put in OR (if it matches) or in AND (if it does not match it).
-    Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
-    *
-    * @param list<AggregationFilter>|null $aggregationFilters
-    *
-    * @return self
-    */
+     * Special filters used to filter down independently the aggregations' values and the search results on specific conditions.
+     * For the search results, the aggregation filters are used to create a Filter that is put in AND with the eventual existing Filter of the search request to nail down the search results. The filters generated
+     * by the aggregation filters are put in OR each other if they have the same AggregationName, and then such groups are put in AND.
+     * For the aggregation values, only the original Filter of the search request is used to nail down the data to be considered for the aggregations. Then, on top of that, for each aggregator in the search request, a Filter is created to filter down the
+     * aggregation results of that aggregation: depending if the AggregationName of the AggregationFilter matches the AggregationName of the Aggregator, the filter is put in OR (if it matches) or in AND (if it does not match it).
+     * Moreover, an AggregationFilter ensures that the related value is returned in the AggregationResults also if the top aggregation values returned by default do not contain it.
+     *
+     * @param list<AggregationFilter>|null $aggregationFilters
+     *
+     * @return self
+     */
     public function setAggregationFilters(?array $aggregationFilters): self
     {
         $this->initialized['aggregationFilters'] = true;
@@ -177,7 +168,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
      */
     public function getIncludeAllSchemaChildren(): bool
     {
@@ -185,7 +175,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Broadens the search to include all schema descendant list items.
-     *
      *
      * @return self
      */
@@ -197,7 +186,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have or not have broken references. By default it includes both.
-     *
      */
     public function getBrokenDependenciesFilter(): mixed
     {
@@ -205,7 +193,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have or not have broken references. By default it includes both.
-     *
      *
      * @return self
      */
@@ -248,13 +235,13 @@ class ListItemAggregationRequest extends \ArrayObject
         return $this->searchLanguages;
     }
     /**
-    * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
-    If not specified, all metadata languages defined in the system are used.
-    *
-    * @param list<string>|null $searchLanguages
-    *
-    * @return self
-    */
+     * When searching in multi language fields, limit the searchable fields to the ones corresponding to the specified languages.
+     * If not specified, all metadata languages defined in the system are used.
+     *
+     * @param list<string>|null $searchLanguages
+     *
+     * @return self
+     */
     public function setSearchLanguages(?array $searchLanguages): self
     {
         $this->initialized['searchLanguages'] = true;
@@ -263,7 +250,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have the specified life cycle state. Defaults to ActiveOnly.
-     *
      */
     public function getLifeCycleFilter(): mixed
     {
@@ -271,7 +257,6 @@ class ListItemAggregationRequest extends \ArrayObject
     }
     /**
      * Limits the aggregation to the list items that have the specified life cycle state. Defaults to ActiveOnly.
-     *
      *
      * @return self
      */

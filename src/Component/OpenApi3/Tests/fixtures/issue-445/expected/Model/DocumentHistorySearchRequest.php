@@ -19,37 +19,30 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the start date of the search request. By default no limitation set.
-     *
      */
     protected \DateTime $from;
     /**
      * Limits the end date of the search request. By default no limitation set.
-     *
      */
     protected \DateTime $to;
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     protected int $limit = 30;
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
      */
     protected ?string $pageToken = null;
     /**
      * Limits the search to a specific document ID. E.g. contentId
-     *
      */
     protected ?string $documentId = null;
     /**
      * The document version to search. Default to -1 to not limit to a specific document version.
-     *
      */
     protected int $documentVersion = -1;
     /**
      * Limits the search to a specific document type.
-     *
      */
     protected ?string $documentType = null;
     /**
@@ -60,7 +53,6 @@ class DocumentHistorySearchRequest
     protected ?array $sort = null;
     /**
      * Limits the start date of the search request. By default no limitation set.
-     *
      */
     public function getFrom(): \DateTime
     {
@@ -68,7 +60,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the start date of the search request. By default no limitation set.
-     *
      *
      * @return self
      */
@@ -80,7 +71,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the end date of the search request. By default no limitation set.
-     *
      */
     public function getTo(): \DateTime
     {
@@ -88,7 +78,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the end date of the search request. By default no limitation set.
-     *
      *
      * @return self
      */
@@ -100,7 +89,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      */
     public function getLimit(): int
     {
@@ -108,7 +96,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the document count of the result set. Defaults to 30.
-     *
      *
      * @return self
      */
@@ -120,7 +107,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
      */
     public function getPageToken(): ?string
     {
@@ -128,7 +114,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * To get a large amount of data, page token returned from the response can be used to get all data.
-     *
      *
      * @return self
      */
@@ -140,7 +125,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the search to a specific document ID. E.g. contentId
-     *
      */
     public function getDocumentId(): ?string
     {
@@ -148,7 +132,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the search to a specific document ID. E.g. contentId
-     *
      *
      * @return self
      */
@@ -160,7 +143,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * The document version to search. Default to -1 to not limit to a specific document version.
-     *
      */
     public function getDocumentVersion(): int
     {
@@ -168,7 +150,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * The document version to search. Default to -1 to not limit to a specific document version.
-     *
      *
      * @return self
      */
@@ -180,7 +161,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the search to a specific document type.
-     *
      */
     public function getDocumentType(): ?string
     {
@@ -188,7 +168,6 @@ class DocumentHistorySearchRequest
     }
     /**
      * Limits the search to a specific document type.
-     *
      *
      * @return self
      */

@@ -128,27 +128,35 @@ trait PropertyGenerator
             return null;
         }
 
-        $description = ['/**'];
+        $sections = [];
         if ($hasDescription) {
+            $descriptionLines = [];
             foreach (array_map(rtrim(...), explode("\n", $property->getDescription())) as $line) {
-                $description[] = ' * ' . $line;
+                $descriptionLines[] = ' * ' . $line;
             }
-
-            $description[] = ' *';
+            $sections[] = $descriptionLines;
         }
 
         if ($isDeprecated) {
-            $description[] = ' * @deprecated';
-            $description[] = ' *';
+            $sections[] = [' * @deprecated'];
         }
 
         if ($includeVar) {
-            $description[] = \sprintf(' * @var %s', $docTypeHint);
+            $sections[] = [\sprintf(' * @var %s', $docTypeHint)];
         }
 
-        $description[] = ' */';
+        $lines = ['/**'];
+        foreach ($sections as $index => $section) {
+            if ($index > 0) {
+                $lines[] = ' *';
+            }
+            foreach ($section as $line) {
+                $lines[] = $line;
+            }
+        }
+        $lines[] = ' */';
 
-        return new Doc(implode("\n", $description));
+        return new Doc(implode("\n", $lines));
     }
 
     private function getDefaultAsExpr(mixed $value): Stmt\Expression

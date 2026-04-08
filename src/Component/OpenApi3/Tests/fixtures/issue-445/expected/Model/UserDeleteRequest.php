@@ -19,12 +19,10 @@ class UserDeleteRequest
     }
     /**
      * User ID of user who will take over the ownership of the content currently owned by the deleted user.
-     *
      */
     protected ?string $ownerTokenTransferUserId = null;
     /**
      * User ID of user who will take over the ownership of the content currently owned by the deleted user.
-     *
      */
     public function getOwnerTokenTransferUserId(): ?string
     {
@@ -32,7 +30,6 @@ class UserDeleteRequest
     }
     /**
      * User ID of user who will take over the ownership of the content currently owned by the deleted user.
-     *
      *
      * @return self
      */

@@ -22,23 +22,19 @@ class ReposOwnerRepoLabelsNamePatchBody extends \ArrayObject
     }
     /**
      * The new name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
      */
     protected string $newName;
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
      */
     protected string $color;
     /**
      * A short description of the label.
-     *
      */
     protected string $description;
     protected string $name;
     /**
      * The new name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
      */
     public function getNewName(): string
     {
@@ -46,7 +42,6 @@ class ReposOwnerRepoLabelsNamePatchBody extends \ArrayObject
     }
     /**
      * The new name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/).
-     *
      *
      * @return self
      */
@@ -58,7 +53,6 @@ class ReposOwnerRepoLabelsNamePatchBody extends \ArrayObject
     }
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
      */
     public function getColor(): string
     {
@@ -66,7 +60,6 @@ class ReposOwnerRepoLabelsNamePatchBody extends \ArrayObject
     }
     /**
      * The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`.
-     *
      *
      * @return self
      */
@@ -78,7 +71,6 @@ class ReposOwnerRepoLabelsNamePatchBody extends \ArrayObject
     }
     /**
      * A short description of the label.
-     *
      */
     public function getDescription(): string
     {
@@ -86,7 +78,6 @@ class ReposOwnerRepoLabelsNamePatchBody extends \ArrayObject
     }
     /**
      * A short description of the label.
-     *
      *
      * @return self
      */

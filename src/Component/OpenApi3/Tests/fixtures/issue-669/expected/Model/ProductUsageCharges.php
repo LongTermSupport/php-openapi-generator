@@ -22,12 +22,10 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * Description of usage charges
-     *
      */
     protected string $name;
     /**
      * Total amount charged
-     *
      */
     protected string $amount;
     /**
@@ -38,7 +36,6 @@ class ProductUsageCharges extends \ArrayObject
     protected array $items;
     /**
      * Description of usage charges
-     *
      */
     public function getName(): string
     {
@@ -46,7 +43,6 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * Description of usage charges
-     *
      *
      * @return self
      */
@@ -58,7 +54,6 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * Total amount charged
-     *
      */
     public function getAmount(): string
     {
@@ -66,7 +61,6 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * Total amount charged
-     *
      *
      * @return self
      */

@@ -22,18 +22,15 @@ class ReposOwnerRepoImportAuthorsAuthorIdPatchBody extends \ArrayObject
     }
     /**
      * The new Git author email.
-     *
      */
     protected string $email;
     /**
      * The new Git author name.
-     *
      */
     protected string $name;
     protected string $remoteId;
     /**
      * The new Git author email.
-     *
      */
     public function getEmail(): string
     {
@@ -41,7 +38,6 @@ class ReposOwnerRepoImportAuthorsAuthorIdPatchBody extends \ArrayObject
     }
     /**
      * The new Git author email.
-     *
      *
      * @return self
      */
@@ -53,7 +49,6 @@ class ReposOwnerRepoImportAuthorsAuthorIdPatchBody extends \ArrayObject
     }
     /**
      * The new Git author name.
-     *
      */
     public function getName(): string
     {
@@ -61,7 +56,6 @@ class ReposOwnerRepoImportAuthorsAuthorIdPatchBody extends \ArrayObject
     }
     /**
      * The new Git author name.
-     *
      *
      * @return self
      */

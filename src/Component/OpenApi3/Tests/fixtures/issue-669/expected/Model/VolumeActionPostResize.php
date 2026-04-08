@@ -22,22 +22,18 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
      */
     protected string $type;
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     protected string $region;
     /**
      * The new size of the block storage volume in GiB (1024^3).
-     *
      */
     protected int $sizeGigabytes;
     /**
      * The volume action to initiate.
-     *
      */
     public function getType(): string
     {
@@ -45,7 +41,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The volume action to initiate.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      */
     public function getRegion(): string
     {
@@ -65,7 +59,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the resource will initially be available.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The new size of the block storage volume in GiB (1024^3).
-     *
      */
     public function getSizeGigabytes(): int
     {
@@ -85,7 +77,6 @@ class VolumeActionPostResize extends \ArrayObject
     }
     /**
      * The new size of the block storage volume in GiB (1024^3).
-     *
      *
      * @return self
      */

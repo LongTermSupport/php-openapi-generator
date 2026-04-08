@@ -22,12 +22,10 @@ class ReservedIpv6ActionType extends \ArrayObject
     }
     /**
      * The type of action to initiate for the reserved IPv6.
-     *
      */
     protected string $type;
     /**
      * The type of action to initiate for the reserved IPv6.
-     *
      */
     public function getType(): string
     {
@@ -35,7 +33,6 @@ class ReservedIpv6ActionType extends \ArrayObject
     }
     /**
      * The type of action to initiate for the reserved IPv6.
-     *
      */
     public function setType(string $type): void
     {

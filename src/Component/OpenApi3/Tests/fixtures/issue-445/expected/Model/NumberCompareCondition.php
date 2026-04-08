@@ -19,22 +19,18 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field.
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * Mode to use for comparison.
-     *
      */
     protected mixed $mode = null;
     /**
      * Value to compare to.
-     *
      */
     protected float $value;
     /**
      * JSON path to the field.
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -42,7 +38,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field.
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * Mode to use for comparison.
-     *
      */
     public function getMode(): mixed
     {
@@ -62,7 +56,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * Mode to use for comparison.
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * Value to compare to.
-     *
      */
     public function getValue(): float
     {
@@ -82,7 +74,6 @@ class NumberCompareCondition extends BusinessRuleCondition
     }
     /**
      * Value to compare to.
-     *
      *
      * @return self
      */

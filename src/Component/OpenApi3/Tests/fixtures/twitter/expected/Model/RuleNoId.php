@@ -22,17 +22,14 @@ class RuleNoId extends \ArrayObject
     }
     /**
      * The filterlang value of the rule.
-     *
      */
     protected string $value;
     /**
      * A tag meant for the labeling of user provided rules.
-     *
      */
     protected string $tag;
     /**
      * The filterlang value of the rule.
-     *
      */
     public function getValue(): string
     {
@@ -40,7 +37,6 @@ class RuleNoId extends \ArrayObject
     }
     /**
      * The filterlang value of the rule.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class RuleNoId extends \ArrayObject
     }
     /**
      * A tag meant for the labeling of user provided rules.
-     *
      */
     public function getTag(): string
     {
@@ -60,7 +55,6 @@ class RuleNoId extends \ArrayObject
     }
     /**
      * A tag meant for the labeling of user provided rules.
-     *
      *
      * @return self
      */

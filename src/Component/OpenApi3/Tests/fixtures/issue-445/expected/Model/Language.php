@@ -19,32 +19,26 @@ class Language
     }
     /**
      * Language translations.
-     *
      */
     protected mixed $name = null;
     /**
      * IETF language tag. E.g en, en-US, de.
-     *
      */
     protected string $ietf;
     /**
      * Two letter ISO language code. E.g. en, de.
-     *
      */
     protected ?string $twoLetterISOLanguageName = null;
     /**
      * Three letter ISO language code. E.g. eng, deu.
-     *
      */
     protected ?string $threeLetterISOLanguageName = null;
     /**
      * Region code of the language. E.g. US, DE, CH.
-     *
      */
     protected ?string $regionCode = null;
     /**
      * Language translations.
-     *
      */
     public function getName(): mixed
     {
@@ -52,7 +46,6 @@ class Language
     }
     /**
      * Language translations.
-     *
      *
      * @return self
      */
@@ -64,7 +57,6 @@ class Language
     }
     /**
      * IETF language tag. E.g en, en-US, de.
-     *
      */
     public function getIetf(): string
     {
@@ -72,7 +64,6 @@ class Language
     }
     /**
      * IETF language tag. E.g en, en-US, de.
-     *
      *
      * @return self
      */
@@ -84,7 +75,6 @@ class Language
     }
     /**
      * Two letter ISO language code. E.g. en, de.
-     *
      */
     public function getTwoLetterISOLanguageName(): ?string
     {
@@ -92,7 +82,6 @@ class Language
     }
     /**
      * Two letter ISO language code. E.g. en, de.
-     *
      *
      * @return self
      */
@@ -104,7 +93,6 @@ class Language
     }
     /**
      * Three letter ISO language code. E.g. eng, deu.
-     *
      */
     public function getThreeLetterISOLanguageName(): ?string
     {
@@ -112,7 +100,6 @@ class Language
     }
     /**
      * Three letter ISO language code. E.g. eng, deu.
-     *
      *
      * @return self
      */
@@ -124,7 +111,6 @@ class Language
     }
     /**
      * Region code of the language. E.g. US, DE, CH.
-     *
      */
     public function getRegionCode(): ?string
     {
@@ -132,7 +118,6 @@ class Language
     }
     /**
      * Region code of the language. E.g. US, DE, CH.
-     *
      *
      * @return self
      */

@@ -22,57 +22,46 @@ class Event extends \ArrayObject
     }
     /**
      * The unique identifier for the event.
-     *
      */
     protected float $eventId;
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the event.
-     *
      */
     protected float $companyId;
     /**
      * The portfolio Id of the portfolio that contains the company that you requested event information for.
-     *
      */
     protected float $portfolioId;
     /**
      * A short description of the company event.
-     *
      */
     protected string $ruleName;
     /**
      * The local event code for the event.
-     *
      */
     protected string $localEventCode;
     /**
      * The global event code that has been mapped to the local event.
-     *
      */
     protected string $globalEventCode;
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     protected string $newValue;
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     protected string $oldValue;
     /**
      * The date that the event occured.
-     *
      */
     protected \DateTime $eventDate;
     /**
      * The date that the event was created in the Creditsafe database.
-     *
      */
     protected \DateTime $createdDate;
     /**
      * The unique identifier for the event.
-     *
      */
     public function getEventId(): float
     {
@@ -80,7 +69,6 @@ class Event extends \ArrayObject
     }
     /**
      * The unique identifier for the event.
-     *
      *
      * @return self
      */
@@ -92,7 +80,6 @@ class Event extends \ArrayObject
     }
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the event.
-     *
      */
     public function getCompanyId(): float
     {
@@ -100,7 +87,6 @@ class Event extends \ArrayObject
     }
     /**
      * The Safe Number (Creditsafe's identifier on all Companies owned in the Creditsafe Universe) of the company that triggered the event.
-     *
      *
      * @return self
      */
@@ -112,7 +98,6 @@ class Event extends \ArrayObject
     }
     /**
      * The portfolio Id of the portfolio that contains the company that you requested event information for.
-     *
      */
     public function getPortfolioId(): float
     {
@@ -120,7 +105,6 @@ class Event extends \ArrayObject
     }
     /**
      * The portfolio Id of the portfolio that contains the company that you requested event information for.
-     *
      *
      * @return self
      */
@@ -132,7 +116,6 @@ class Event extends \ArrayObject
     }
     /**
      * A short description of the company event.
-     *
      */
     public function getRuleName(): string
     {
@@ -140,7 +123,6 @@ class Event extends \ArrayObject
     }
     /**
      * A short description of the company event.
-     *
      *
      * @return self
      */
@@ -152,7 +134,6 @@ class Event extends \ArrayObject
     }
     /**
      * The local event code for the event.
-     *
      */
     public function getLocalEventCode(): string
     {
@@ -160,7 +141,6 @@ class Event extends \ArrayObject
     }
     /**
      * The local event code for the event.
-     *
      *
      * @return self
      */
@@ -172,7 +152,6 @@ class Event extends \ArrayObject
     }
     /**
      * The global event code that has been mapped to the local event.
-     *
      */
     public function getGlobalEventCode(): string
     {
@@ -180,7 +159,6 @@ class Event extends \ArrayObject
     }
     /**
      * The global event code that has been mapped to the local event.
-     *
      *
      * @return self
      */
@@ -192,7 +170,6 @@ class Event extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     public function getNewValue(): string
     {
@@ -200,7 +177,6 @@ class Event extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      *
      * @return self
      */
@@ -212,7 +188,6 @@ class Event extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      */
     public function getOldValue(): string
     {
@@ -220,7 +195,6 @@ class Event extends \ArrayObject
     }
     /**
      * Some events contain an `oldValue` and `newValue` (e.g. a change in Credit Limit).
-     *
      *
      * @return self
      */
@@ -232,7 +206,6 @@ class Event extends \ArrayObject
     }
     /**
      * The date that the event occured.
-     *
      */
     public function getEventDate(): \DateTime
     {
@@ -240,7 +213,6 @@ class Event extends \ArrayObject
     }
     /**
      * The date that the event occured.
-     *
      *
      * @return self
      */
@@ -252,7 +224,6 @@ class Event extends \ArrayObject
     }
     /**
      * The date that the event was created in the Creditsafe database.
-     *
      */
     public function getCreatedDate(): \DateTime
     {
@@ -260,7 +231,6 @@ class Event extends \ArrayObject
     }
     /**
      * The date that the event was created in the Creditsafe database.
-     *
      *
      * @return self
      */

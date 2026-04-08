@@ -19,37 +19,30 @@ class BatchResponseRow
     }
     /**
      * Id of the item.
-     *
      */
     protected string $id;
     /**
      * Indicates if the operation succeeded.
-     *
      */
     protected bool $succeeded;
     /**
      * Status code of the operation.
-     *
      */
     protected int $status;
     /**
      * New version of the item.
-     *
      */
     protected int $version;
     /**
      * If the operation did not succeed, this contains error information.
-     *
      */
     protected mixed $error = null;
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
      */
     protected ?string $requestId = null;
     /**
      * Id of the item.
-     *
      */
     public function getId(): string
     {
@@ -57,7 +50,6 @@ class BatchResponseRow
     }
     /**
      * Id of the item.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class BatchResponseRow
     }
     /**
      * Indicates if the operation succeeded.
-     *
      */
     public function getSucceeded(): bool
     {
@@ -77,7 +68,6 @@ class BatchResponseRow
     }
     /**
      * Indicates if the operation succeeded.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class BatchResponseRow
     }
     /**
      * Status code of the operation.
-     *
      */
     public function getStatus(): int
     {
@@ -97,7 +86,6 @@ class BatchResponseRow
     }
     /**
      * Status code of the operation.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class BatchResponseRow
     }
     /**
      * New version of the item.
-     *
      */
     public function getVersion(): int
     {
@@ -117,7 +104,6 @@ class BatchResponseRow
     }
     /**
      * New version of the item.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class BatchResponseRow
     }
     /**
      * If the operation did not succeed, this contains error information.
-     *
      */
     public function getError(): mixed
     {
@@ -137,7 +122,6 @@ class BatchResponseRow
     }
     /**
      * If the operation did not succeed, this contains error information.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class BatchResponseRow
     }
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
      */
     public function getRequestId(): ?string
     {
@@ -157,7 +140,6 @@ class BatchResponseRow
     }
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
      *
      * @return self
      */

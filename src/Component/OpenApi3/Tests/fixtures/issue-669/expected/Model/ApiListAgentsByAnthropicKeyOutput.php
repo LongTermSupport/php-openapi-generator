@@ -26,12 +26,10 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     protected array $agents;
     /**
      * Links to other pages
-     *
      */
     protected ApiLinks $links;
     /**
      * Meta information about the data set
-     *
      */
     protected ApiMeta $meta;
     /**
@@ -54,7 +52,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      */
     public function getLinks(): ApiLinks
     {
@@ -62,7 +59,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      *
      * @return self
      */
@@ -74,7 +70,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      */
     public function getMeta(): ApiMeta
     {
@@ -82,7 +77,6 @@ class ApiListAgentsByAnthropicKeyOutput extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      *
      * @return self
      */

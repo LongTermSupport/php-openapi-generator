@@ -22,7 +22,6 @@ class ReposOwnerRepoActionsWorkflowsWorkflowIdDispatchesPostBody extends \ArrayO
     }
     /**
      * The reference of the workflow run. The reference can be a branch, tag, or a commit SHA.
-     *
      */
     protected string $ref;
     /**
@@ -33,7 +32,6 @@ class ReposOwnerRepoActionsWorkflowsWorkflowIdDispatchesPostBody extends \ArrayO
     protected array $inputs;
     /**
      * The reference of the workflow run. The reference can be a branch, tag, or a commit SHA.
-     *
      */
     public function getRef(): string
     {
@@ -41,7 +39,6 @@ class ReposOwnerRepoActionsWorkflowsWorkflowIdDispatchesPostBody extends \ArrayO
     }
     /**
      * The reference of the workflow run. The reference can be a branch, tag, or a commit SHA.
-     *
      *
      * @return self
      */

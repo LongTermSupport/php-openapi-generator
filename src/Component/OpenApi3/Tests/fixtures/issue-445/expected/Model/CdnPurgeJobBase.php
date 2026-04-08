@@ -19,18 +19,15 @@ class CdnPurgeJobBase
     }
     /**
      * Indicates if the operation was performed successfully.
-     *
      */
     protected bool $success;
     /**
      * Number of retries left until the operation is considered as failed.
-     *
      */
     protected int $retriesLeft;
     protected string $kind;
     /**
      * Indicates if the operation was performed successfully.
-     *
      */
     public function getSuccess(): bool
     {
@@ -38,7 +35,6 @@ class CdnPurgeJobBase
     }
     /**
      * Indicates if the operation was performed successfully.
-     *
      */
     public function setSuccess(bool $success): void
     {
@@ -47,7 +43,6 @@ class CdnPurgeJobBase
     }
     /**
      * Number of retries left until the operation is considered as failed.
-     *
      */
     public function getRetriesLeft(): int
     {
@@ -55,7 +50,6 @@ class CdnPurgeJobBase
     }
     /**
      * Number of retries left until the operation is considered as failed.
-     *
      */
     public function setRetriesLeft(int $retriesLeft): void
     {

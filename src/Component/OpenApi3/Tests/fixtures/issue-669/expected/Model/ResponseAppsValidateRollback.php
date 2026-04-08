@@ -22,7 +22,6 @@ class ResponseAppsValidateRollback extends \ArrayObject
     }
     /**
      * Indicates whether the app can be rolled back to the specified deployment.
-     *
      */
     protected bool $valid;
     protected ResponseAppsValidateRollbackError $error;
@@ -34,7 +33,6 @@ class ResponseAppsValidateRollback extends \ArrayObject
     protected array $warnings;
     /**
      * Indicates whether the app can be rolled back to the specified deployment.
-     *
      */
     public function getValid(): bool
     {
@@ -42,7 +40,6 @@ class ResponseAppsValidateRollback extends \ArrayObject
     }
     /**
      * Indicates whether the app can be rolled back to the specified deployment.
-     *
      *
      * @return self
      */

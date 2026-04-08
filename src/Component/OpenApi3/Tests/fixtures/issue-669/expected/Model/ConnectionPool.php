@@ -22,27 +22,22 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * A unique name for the connection pool. Must be between 3 and 60 characters.
-     *
      */
     protected string $name;
     /**
      * The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-     *
      */
     protected string $mode;
     /**
      * The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster.
-     *
      */
     protected int $size;
     /**
      * The database for use with the connection pool.
-     *
      */
     protected string $db;
     /**
      * The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user.
-     *
      */
     protected string $user;
     protected ConnectionPoolConnection $connection;
@@ -51,7 +46,6 @@ class ConnectionPool extends \ArrayObject
     protected ConnectionPoolStandbyPrivateConnection $standbyPrivateConnection;
     /**
      * A unique name for the connection pool. Must be between 3 and 60 characters.
-     *
      */
     public function getName(): string
     {
@@ -59,7 +53,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * A unique name for the connection pool. Must be between 3 and 60 characters.
-     *
      *
      * @return self
      */
@@ -71,7 +64,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-     *
      */
     public function getMode(): string
     {
@@ -79,7 +71,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-     *
      *
      * @return self
      */
@@ -91,7 +82,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster.
-     *
      */
     public function getSize(): int
     {
@@ -99,7 +89,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster.
-     *
      *
      * @return self
      */
@@ -111,7 +100,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The database for use with the connection pool.
-     *
      */
     public function getDb(): string
     {
@@ -119,7 +107,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The database for use with the connection pool.
-     *
      *
      * @return self
      */
@@ -131,7 +118,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user.
-     *
      */
     public function getUser(): string
     {
@@ -139,7 +125,6 @@ class ConnectionPool extends \ArrayObject
     }
     /**
      * The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user.
-     *
      *
      * @return self
      */

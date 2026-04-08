@@ -22,12 +22,10 @@ class VolumeSnapshotId extends \ArrayObject
     }
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
      */
     protected string $snapshotId;
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
      */
     public function getSnapshotId(): string
     {
@@ -35,7 +33,6 @@ class VolumeSnapshotId extends \ArrayObject
     }
     /**
      * The unique identifier for the volume snapshot from which to create the volume.
-     *
      *
      * @return self
      */

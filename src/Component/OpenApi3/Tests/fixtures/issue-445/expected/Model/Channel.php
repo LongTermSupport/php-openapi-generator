@@ -19,27 +19,22 @@ class Channel
     }
     /**
      * ID of channel.
-     *
      */
     protected string $id;
     /**
      * Numeric sort order of the channel. Channels are returned ordered by this field.
-     *
      */
     protected int $sortOrder;
     /**
      * The search index ID where the channel requests the content from. Only RootContentSearchIndex is supported.
-     *
      */
     protected string $searchIndexId;
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      */
     protected mixed $filter = null;
     /**
      * Language specific names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -74,22 +69,18 @@ class Channel
     protected array $grantedUserRoleIds;
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      */
     protected mixed $missingResultsDisplayPatterns = null;
     /**
      * Audit information.
-     *
      */
     protected mixed $audit = null;
     /**
      * Grants rights to all the users to view the channel.
-     *
      */
     protected bool $viewForAll;
     /**
      * ID of channel.
-     *
      */
     public function getId(): string
     {
@@ -97,7 +88,6 @@ class Channel
     }
     /**
      * ID of channel.
-     *
      *
      * @return self
      */
@@ -109,7 +99,6 @@ class Channel
     }
     /**
      * Numeric sort order of the channel. Channels are returned ordered by this field.
-     *
      */
     public function getSortOrder(): int
     {
@@ -117,7 +106,6 @@ class Channel
     }
     /**
      * Numeric sort order of the channel. Channels are returned ordered by this field.
-     *
      *
      * @return self
      */
@@ -129,7 +117,6 @@ class Channel
     }
     /**
      * The search index ID where the channel requests the content from. Only RootContentSearchIndex is supported.
-     *
      */
     public function getSearchIndexId(): string
     {
@@ -137,7 +124,6 @@ class Channel
     }
     /**
      * The search index ID where the channel requests the content from. Only RootContentSearchIndex is supported.
-     *
      *
      * @return self
      */
@@ -149,7 +135,6 @@ class Channel
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      */
     public function getFilter(): mixed
     {
@@ -157,7 +142,6 @@ class Channel
     }
     /**
      * An optional search filter. Limits the content document result set on each search and aggregation request.
-     *
      *
      * @return self
      */
@@ -169,7 +153,6 @@ class Channel
     }
     /**
      * Language specific names.
-     *
      */
     public function getNames(): mixed
     {
@@ -177,7 +160,6 @@ class Channel
     }
     /**
      * Language specific names.
-     *
      *
      * @return self
      */
@@ -299,7 +281,6 @@ class Channel
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      */
     public function getMissingResultsDisplayPatterns(): mixed
     {
@@ -307,7 +288,6 @@ class Channel
     }
     /**
      * Display pattern to use for rendering details when 0 results are returned
-     *
      *
      * @return self
      */
@@ -319,7 +299,6 @@ class Channel
     }
     /**
      * Audit information.
-     *
      */
     public function getAudit(): mixed
     {
@@ -327,7 +306,6 @@ class Channel
     }
     /**
      * Audit information.
-     *
      *
      * @return self
      */
@@ -339,7 +317,6 @@ class Channel
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
      */
     public function getViewForAll(): bool
     {
@@ -347,7 +324,6 @@ class Channel
     }
     /**
      * Grants rights to all the users to view the channel.
-     *
      *
      * @return self
      */

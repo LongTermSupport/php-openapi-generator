@@ -19,7 +19,6 @@ class PermissionSetCreateRequestOfMetadataRight
     }
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -36,19 +35,16 @@ class PermissionSetCreateRequestOfMetadataRight
     protected ?array $userRolesPermissionSetRights = null;
     /**
      * When true this permission set will derogate all other configured permission sets on Content Items or List Items.
-     *
      */
     protected bool $exclusive;
     /**
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     protected ?string $requestId = null;
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -56,7 +52,6 @@ class PermissionSetCreateRequestOfMetadataRight
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */
@@ -112,7 +107,6 @@ class PermissionSetCreateRequestOfMetadataRight
     }
     /**
      * When true this permission set will derogate all other configured permission sets on Content Items or List Items.
-     *
      */
     public function getExclusive(): bool
     {
@@ -120,7 +114,6 @@ class PermissionSetCreateRequestOfMetadataRight
     }
     /**
      * When true this permission set will derogate all other configured permission sets on Content Items or List Items.
-     *
      *
      * @return self
      */
@@ -134,20 +127,18 @@ class PermissionSetCreateRequestOfMetadataRight
      * Optional client reference for this request.
      * Will be returned back in response to make easier for clients to match request items with the respective results.
      * It is not persisted anywhere and it is ignored in single operations.
-     *
      */
     public function getRequestId(): ?string
     {
         return $this->requestId;
     }
     /**
-    * Optional client reference for this request.
-    Will be returned back in response to make easier for clients to match request items with the respective results.
-    It is not persisted anywhere and it is ignored in single operations.
-    *
-    *
-    * @return self
-    */
+     * Optional client reference for this request.
+     * Will be returned back in response to make easier for clients to match request items with the respective results.
+     * It is not persisted anywhere and it is ignored in single operations.
+     *
+     * @return self
+     */
     public function setRequestId(?string $requestId): self
     {
         $this->initialized['requestId'] = true;

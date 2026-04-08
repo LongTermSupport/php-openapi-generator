@@ -22,17 +22,14 @@ class UserKeysPostBody extends \ArrayObject
     }
     /**
      * A descriptive name for the new key.
-     *
      */
     protected string $title;
     /**
      * The public SSH key to add to your GitHub account.
-     *
      */
     protected string $key;
     /**
      * A descriptive name for the new key.
-     *
      */
     public function getTitle(): string
     {
@@ -40,7 +37,6 @@ class UserKeysPostBody extends \ArrayObject
     }
     /**
      * A descriptive name for the new key.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class UserKeysPostBody extends \ArrayObject
     }
     /**
      * The public SSH key to add to your GitHub account.
-     *
      */
     public function getKey(): string
     {
@@ -60,7 +55,6 @@ class UserKeysPostBody extends \ArrayObject
     }
     /**
      * The public SSH key to add to your GitHub account.
-     *
      *
      * @return self
      */

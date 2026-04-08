@@ -19,22 +19,18 @@ class IdentityProviderBasicInfo
     }
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
      */
     protected ?string $id = null;
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
      */
     protected ?string $name = null;
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
      */
     protected ?string $displayName = null;
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
      */
     public function getId(): ?string
     {
@@ -42,7 +38,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Identity provider ID (has to match an existing IdP defined in IdentityServer)
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
      */
     public function getName(): ?string
     {
@@ -62,7 +56,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Name of the identity provider as defined in IdentityServer
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
      */
     public function getDisplayName(): ?string
     {
@@ -82,7 +74,6 @@ class IdentityProviderBasicInfo
     }
     /**
      * Display name of the identity provider as defined in IdentityServer
-     *
      *
      * @return self
      */

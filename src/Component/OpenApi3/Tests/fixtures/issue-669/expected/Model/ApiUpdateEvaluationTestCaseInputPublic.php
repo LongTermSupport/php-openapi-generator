@@ -22,29 +22,24 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Dataset against which the test‑case is executed.
-     *
      */
     protected string $datasetUuid;
     /**
      * Description of the test case.
-     *
      */
     protected string $description;
     protected ApiEvaluationTestCaseMetricList $metrics;
     /**
      * Name of the test case.
-     *
      */
     protected string $name;
     protected ApiStarMetric $starMetric;
     /**
      * Test-case UUID to update
-     *
      */
     protected string $testCaseUuid;
     /**
      * Dataset against which the test‑case is executed.
-     *
      */
     public function getDatasetUuid(): string
     {
@@ -52,7 +47,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Dataset against which the test‑case is executed.
-     *
      *
      * @return self
      */
@@ -64,7 +58,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Description of the test case.
-     *
      */
     public function getDescription(): string
     {
@@ -72,7 +65,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Description of the test case.
-     *
      *
      * @return self
      */
@@ -94,7 +86,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the test case.
-     *
      */
     public function getName(): string
     {
@@ -102,7 +93,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Name of the test case.
-     *
      *
      * @return self
      */
@@ -124,7 +114,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Test-case UUID to update
-     *
      */
     public function getTestCaseUuid(): string
     {
@@ -132,7 +121,6 @@ class ApiUpdateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Test-case UUID to update
-     *
      *
      * @return self
      */

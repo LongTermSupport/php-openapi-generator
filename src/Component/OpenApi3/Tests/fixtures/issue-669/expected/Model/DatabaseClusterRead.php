@@ -22,57 +22,46 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database cluster.
-     *
      */
     protected string $id;
     /**
      * A unique, human-readable name referring to a database cluster.
-     *
      */
     protected string $name;
     /**
      * A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, and "valkey" for Valkey.
-     *
      */
     protected string $engine;
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      */
     protected string $version;
     /**
      * A string representing the semantic version of the database engine in use for the cluster.
-     *
      */
     protected string $semanticVersion;
     /**
      * The number of nodes in the database cluster.
-     *
      */
     protected int $numNodes;
     /**
      * The slug identifier representing the size of the nodes in the database cluster.
-     *
      */
     protected string $size;
     /**
      * The slug identifier for the region where the database cluster is located.
-     *
      */
     protected string $region;
     /**
      * A string representing the current status of the database cluster.
-     *
      */
     protected string $status;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      */
     protected string $privateNetworkUuid;
     /**
@@ -89,12 +78,10 @@ class DatabaseClusterRead extends \ArrayObject
     protected ?array $dbNames = null;
     /**
      * The connection details for OpenSearch dashboard.
-     *
      */
     protected DatabaseClusterReadUiConnection $uiConnection;
     /**
      * The connection details for Schema Registry.
-     *
      */
     protected DatabaseClusterReadSchemaRegistryConnection $schemaRegistryConnection;
     protected DatabaseClusterReadConnection $connection;
@@ -108,7 +95,6 @@ class DatabaseClusterRead extends \ArrayObject
     protected DatabaseClusterReadMaintenanceWindow $maintenanceWindow;
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:read` scope.
-     *
      */
     protected string $projectId;
     /**
@@ -117,17 +103,14 @@ class DatabaseClusterRead extends \ArrayObject
     protected array $rules;
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      */
     protected string $versionEndOfLife;
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      */
     protected string $versionEndOfAvailability;
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      */
     protected int $storageSizeMib;
     /**
@@ -138,7 +121,6 @@ class DatabaseClusterRead extends \ArrayObject
     protected array $metricsEndpoints;
     /**
      * A unique ID that can be used to identify and reference a database cluster.
-     *
      */
     public function getId(): string
     {
@@ -146,7 +128,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A unique ID that can be used to identify and reference a database cluster.
-     *
      *
      * @return self
      */
@@ -158,7 +139,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A unique, human-readable name referring to a database cluster.
-     *
      */
     public function getName(): string
     {
@@ -166,7 +146,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A unique, human-readable name referring to a database cluster.
-     *
      *
      * @return self
      */
@@ -178,7 +157,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, and "valkey" for Valkey.
-     *
      */
     public function getEngine(): string
     {
@@ -186,7 +164,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, and "valkey" for Valkey.
-     *
      *
      * @return self
      */
@@ -198,7 +175,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      */
     public function getVersion(): string
     {
@@ -206,7 +182,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string representing the version of the database engine in use for the cluster.
-     *
      *
      * @return self
      */
@@ -218,7 +193,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string representing the semantic version of the database engine in use for the cluster.
-     *
      */
     public function getSemanticVersion(): string
     {
@@ -226,7 +200,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string representing the semantic version of the database engine in use for the cluster.
-     *
      *
      * @return self
      */
@@ -238,7 +211,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The number of nodes in the database cluster.
-     *
      */
     public function getNumNodes(): int
     {
@@ -246,7 +218,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The number of nodes in the database cluster.
-     *
      *
      * @return self
      */
@@ -258,7 +229,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The slug identifier representing the size of the nodes in the database cluster.
-     *
      */
     public function getSize(): string
     {
@@ -266,7 +236,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The slug identifier representing the size of the nodes in the database cluster.
-     *
      *
      * @return self
      */
@@ -278,7 +247,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the database cluster is located.
-     *
      */
     public function getRegion(): string
     {
@@ -286,7 +254,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The slug identifier for the region where the database cluster is located.
-     *
      *
      * @return self
      */
@@ -298,7 +265,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
      */
     public function getStatus(): string
     {
@@ -306,7 +272,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string representing the current status of the database cluster.
-     *
      *
      * @return self
      */
@@ -318,7 +283,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -326,7 +290,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-     *
      *
      * @return self
      */
@@ -338,7 +301,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      */
     public function getPrivateNetworkUuid(): string
     {
@@ -346,7 +308,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
-     *
      *
      * @return self
      */
@@ -402,15 +363,13 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The connection details for OpenSearch dashboard.
-     *
      */
     public function getUiConnection(): DatabaseClusterReadUiConnection
     {
         return $this->uiConnection;
     }
     /**
-     * The connection details for OpenSearch dashboard. 
-     *
+     * The connection details for OpenSearch dashboard.
      *
      * @return self
      */
@@ -422,7 +381,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The connection details for Schema Registry.
-     *
      */
     public function getSchemaRegistryConnection(): DatabaseClusterReadSchemaRegistryConnection
     {
@@ -430,7 +388,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The connection details for Schema Registry.
-     *
      *
      * @return self
      */
@@ -510,7 +467,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:read` scope.
-     *
      */
     public function getProjectId(): string
     {
@@ -518,7 +474,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * The ID of the project that the database cluster is assigned to. If excluded when creating a new database cluster, it will be assigned to your default project.<br><br>Requires `project:read` scope.
-     *
      *
      * @return self
      */
@@ -548,7 +503,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      */
     public function getVersionEndOfLife(): string
     {
@@ -556,7 +510,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      *
      * @return self
      */
@@ -568,7 +521,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      */
     public function getVersionEndOfAvailability(): string
     {
@@ -576,7 +528,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      *
      * @return self
      */
@@ -588,7 +539,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      */
     public function getStorageSizeMib(): int
     {
@@ -596,7 +546,6 @@ class DatabaseClusterRead extends \ArrayObject
     }
     /**
      * Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
-     *
      *
      * @return self
      */

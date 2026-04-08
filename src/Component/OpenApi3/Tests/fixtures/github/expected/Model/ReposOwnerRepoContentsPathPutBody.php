@@ -22,37 +22,30 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The commit message.
-     *
      */
     protected string $message;
     /**
      * The new file content, using Base64 encoding.
-     *
      */
     protected string $content;
     /**
      * **Required if you are updating a file**. The blob SHA of the file being replaced.
-     *
      */
     protected string $sha;
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
      */
     protected string $branch;
     /**
      * The person that committed the file. Default: the authenticated user.
-     *
      */
     protected ReposOwnerRepoContentsPathPutBodyCommitter $committer;
     /**
      * The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
-     *
      */
     protected ReposOwnerRepoContentsPathPutBodyAuthor $author;
     /**
      * The commit message.
-     *
      */
     public function getMessage(): string
     {
@@ -60,7 +53,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The commit message.
-     *
      *
      * @return self
      */
@@ -72,7 +64,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The new file content, using Base64 encoding.
-     *
      */
     public function getContent(): string
     {
@@ -80,7 +71,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The new file content, using Base64 encoding.
-     *
      *
      * @return self
      */
@@ -92,7 +82,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * **Required if you are updating a file**. The blob SHA of the file being replaced.
-     *
      */
     public function getSha(): string
     {
@@ -100,7 +89,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * **Required if you are updating a file**. The blob SHA of the file being replaced.
-     *
      *
      * @return self
      */
@@ -112,7 +100,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
      */
     public function getBranch(): string
     {
@@ -120,7 +107,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The branch name. Default: the repository’s default branch (usually `master`)
-     *
      *
      * @return self
      */
@@ -132,7 +118,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The person that committed the file. Default: the authenticated user.
-     *
      */
     public function getCommitter(): ReposOwnerRepoContentsPathPutBodyCommitter
     {
@@ -140,7 +125,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The person that committed the file. Default: the authenticated user.
-     *
      *
      * @return self
      */
@@ -152,7 +136,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
-     *
      */
     public function getAuthor(): ReposOwnerRepoContentsPathPutBodyAuthor
     {
@@ -160,7 +143,6 @@ class ReposOwnerRepoContentsPathPutBody extends \ArrayObject
     }
     /**
      * The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
-     *
      *
      * @return self
      */

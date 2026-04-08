@@ -22,17 +22,14 @@ class ReposOwnerRepoContentsPathDeleteBodyCommitter extends \ArrayObject
     }
     /**
      * The name of the author (or committer) of the commit
-     *
      */
     protected string $name;
     /**
      * The email of the author (or committer) of the commit
-     *
      */
     protected string $email;
     /**
      * The name of the author (or committer) of the commit
-     *
      */
     public function getName(): string
     {
@@ -40,7 +37,6 @@ class ReposOwnerRepoContentsPathDeleteBodyCommitter extends \ArrayObject
     }
     /**
      * The name of the author (or committer) of the commit
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ReposOwnerRepoContentsPathDeleteBodyCommitter extends \ArrayObject
     }
     /**
      * The email of the author (or committer) of the commit
-     *
      */
     public function getEmail(): string
     {
@@ -60,7 +55,6 @@ class ReposOwnerRepoContentsPathDeleteBodyCommitter extends \ArrayObject
     }
     /**
      * The email of the author (or committer) of the commit
-     *
      *
      * @return self
      */

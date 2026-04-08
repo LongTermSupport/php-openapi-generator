@@ -22,48 +22,39 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
      */
     protected string $type;
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
      */
     protected ?int $resourceId = null;
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      */
     protected int $id;
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
      */
     protected string $status = 'in-progress';
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
      */
     protected \DateTime $startedAt;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
      */
     protected ?\DateTime $completedAt = null;
     /**
      * The type of resource that the action is associated with.
-     *
      */
     protected string $resourceType;
     protected Region $region;
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      */
     protected ?string $regionSlug = null;
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
      */
     public function getType(): string
     {
@@ -71,7 +62,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * This is the type of action that the object represents. For example, this could be "transfer" to represent the state of an image transfer action.
-     *
      *
      * @return self
      */
@@ -83,7 +73,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
      */
     public function getResourceId(): ?int
     {
@@ -91,7 +80,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A unique identifier for the resource that the action is associated with.
-     *
      *
      * @return self
      */
@@ -103,7 +91,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      */
     public function getId(): int
     {
@@ -111,7 +98,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A unique numeric ID that can be used to identify and reference an action.
-     *
      *
      * @return self
      */
@@ -123,7 +109,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
      */
     public function getStatus(): string
     {
@@ -131,7 +116,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
      *
      * @return self
      */
@@ -143,7 +127,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
      */
     public function getStartedAt(): \DateTime
     {
@@ -151,7 +134,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was initiated.
-     *
      *
      * @return self
      */
@@ -163,7 +145,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
      */
     public function getCompletedAt(): ?\DateTime
     {
@@ -171,7 +152,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the action was completed.
-     *
      *
      * @return self
      */
@@ -183,7 +163,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * The type of resource that the action is associated with.
-     *
      */
     public function getResourceType(): string
     {
@@ -191,7 +170,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * The type of resource that the action is associated with.
-     *
      *
      * @return self
      */
@@ -213,7 +191,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      */
     public function getRegionSlug(): ?string
     {
@@ -221,7 +198,6 @@ class VolumeAction extends \ArrayObject
     }
     /**
      * A human-readable string that is used as a unique identifier for each region.
-     *
      *
      * @return self
      */

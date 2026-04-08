@@ -19,17 +19,14 @@ class OutputDataImage extends OutputDataBase
     }
     /**
      * The width of the image.
-     *
      */
     protected int $width;
     /**
      * The height of the image.
-     *
      */
     protected int $height;
     /**
      * The width of the image.
-     *
      */
     public function getWidth(): int
     {
@@ -37,7 +34,6 @@ class OutputDataImage extends OutputDataBase
     }
     /**
      * The width of the image.
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class OutputDataImage extends OutputDataBase
     }
     /**
      * The height of the image.
-     *
      */
     public function getHeight(): int
     {
@@ -57,7 +52,6 @@ class OutputDataImage extends OutputDataBase
     }
     /**
      * The height of the image.
-     *
      *
      * @return self
      */

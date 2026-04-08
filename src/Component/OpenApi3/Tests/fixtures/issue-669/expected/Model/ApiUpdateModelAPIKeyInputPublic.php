@@ -22,17 +22,14 @@ class ApiUpdateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
      */
     protected string $apiKeyUuid;
     /**
      * Name
-     *
      */
     protected string $name;
     /**
      * API key ID
-     *
      */
     public function getApiKeyUuid(): string
     {
@@ -40,7 +37,6 @@ class ApiUpdateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * API key ID
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiUpdateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name
-     *
      */
     public function getName(): string
     {
@@ -60,7 +55,6 @@ class ApiUpdateModelAPIKeyInputPublic extends \ArrayObject
     }
     /**
      * Name
-     *
      *
      * @return self
      */

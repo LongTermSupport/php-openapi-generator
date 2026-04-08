@@ -28,12 +28,10 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     protected array $repositories;
     /**
      * Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
-     *
      */
     protected bool $lockRepositories = false;
     /**
      * Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
-     *
      */
     protected bool $excludeAttachments = false;
     /**
@@ -64,7 +62,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
-     *
      */
     public function getLockRepositories(): bool
     {
@@ -72,7 +69,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
-     *
      *
      * @return self
      */
@@ -84,7 +80,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
-     *
      */
     public function getExcludeAttachments(): bool
     {
@@ -92,7 +87,6 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
-     *
      *
      * @return self
      */

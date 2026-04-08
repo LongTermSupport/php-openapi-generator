@@ -19,12 +19,10 @@ class OutputDataAudio extends OutputDataBase
     }
     /**
      * Duration of the audio stream in seconds.
-     *
      */
     protected ?float $durationInSeconds = null;
     /**
      * Duration of the audio stream in seconds.
-     *
      */
     public function getDurationInSeconds(): ?float
     {
@@ -32,7 +30,6 @@ class OutputDataAudio extends OutputDataBase
     }
     /**
      * Duration of the audio stream in seconds.
-     *
      *
      * @return self
      */

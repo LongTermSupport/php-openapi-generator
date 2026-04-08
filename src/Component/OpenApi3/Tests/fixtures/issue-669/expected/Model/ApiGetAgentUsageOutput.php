@@ -22,17 +22,14 @@ class ApiGetAgentUsageOutput extends \ArrayObject
     }
     /**
      * Resource Usage Description
-     *
      */
     protected ApiResourceUsage $logInsightsUsage;
     /**
      * Resource Usage Description
-     *
      */
     protected ApiResourceUsage $usage;
     /**
      * Resource Usage Description
-     *
      */
     public function getLogInsightsUsage(): ApiResourceUsage
     {
@@ -40,7 +37,6 @@ class ApiGetAgentUsageOutput extends \ArrayObject
     }
     /**
      * Resource Usage Description
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class ApiGetAgentUsageOutput extends \ArrayObject
     }
     /**
      * Resource Usage Description
-     *
      */
     public function getUsage(): ApiResourceUsage
     {
@@ -60,7 +55,6 @@ class ApiGetAgentUsageOutput extends \ArrayObject
     }
     /**
      * Resource Usage Description
-     *
      *
      * @return self
      */

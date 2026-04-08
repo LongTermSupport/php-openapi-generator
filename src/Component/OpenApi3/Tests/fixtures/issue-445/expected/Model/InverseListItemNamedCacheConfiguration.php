@@ -19,27 +19,22 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
      */
     protected ?string $schemaId = null;
     /**
      * ID of the field that yields the value
-     *
      */
     protected ?string $valueField = null;
     /**
      * An optional filter to narrow down the cached list items
-     *
      */
     protected mixed $filter = null;
     /**
      * Include child schemas when caching list items
-     *
      */
     protected bool $includeAllSchemaChildren;
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
      */
     public function getSchemaId(): ?string
     {
@@ -47,7 +42,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the schema to cache (should have SchemaType = List)
-     *
      *
      * @return self
      */
@@ -59,7 +53,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the field that yields the value
-     *
      */
     public function getValueField(): ?string
     {
@@ -67,7 +60,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * ID of the field that yields the value
-     *
      *
      * @return self
      */
@@ -79,7 +71,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * An optional filter to narrow down the cached list items
-     *
      */
     public function getFilter(): mixed
     {
@@ -87,7 +78,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * An optional filter to narrow down the cached list items
-     *
      *
      * @return self
      */
@@ -99,7 +89,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * Include child schemas when caching list items
-     *
      */
     public function getIncludeAllSchemaChildren(): bool
     {
@@ -107,7 +96,6 @@ class InverseListItemNamedCacheConfiguration extends NamedCacheConfigurationBase
     }
     /**
      * Include child schemas when caching list items
-     *
      *
      * @return self
      */

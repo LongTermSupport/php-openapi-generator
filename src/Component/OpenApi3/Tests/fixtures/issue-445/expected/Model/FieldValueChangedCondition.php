@@ -19,17 +19,14 @@ class FieldValueChangedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * Expected value for the field to have to satisfy the condition
-     *
      */
     protected mixed $expectedValue = null;
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -37,7 +34,6 @@ class FieldValueChangedCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */
@@ -49,7 +45,6 @@ class FieldValueChangedCondition extends BusinessRuleCondition
     }
     /**
      * Expected value for the field to have to satisfy the condition
-     *
      */
     public function getExpectedValue(): mixed
     {
@@ -57,7 +52,6 @@ class FieldValueChangedCondition extends BusinessRuleCondition
     }
     /**
      * Expected value for the field to have to satisfy the condition
-     *
      *
      * @return self
      */

@@ -22,22 +22,18 @@ class Domains extends \ArrayObject
     }
     /**
      * FQDN to associate with a Global load balancer.
-     *
      */
     protected string $name;
     /**
      * A boolean value indicating if the domain is already managed by DigitalOcean. If true, all A and AAAA records required to enable Global load balancers will be automatically added.
-     *
      */
     protected bool $isManaged;
     /**
      * The ID of the TLS certificate used for SSL termination.
-     *
      */
     protected string $certificateId;
     /**
      * FQDN to associate with a Global load balancer.
-     *
      */
     public function getName(): string
     {
@@ -45,7 +41,6 @@ class Domains extends \ArrayObject
     }
     /**
      * FQDN to associate with a Global load balancer.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class Domains extends \ArrayObject
     }
     /**
      * A boolean value indicating if the domain is already managed by DigitalOcean. If true, all A and AAAA records required to enable Global load balancers will be automatically added.
-     *
      */
     public function getIsManaged(): bool
     {
@@ -65,7 +59,6 @@ class Domains extends \ArrayObject
     }
     /**
      * A boolean value indicating if the domain is already managed by DigitalOcean. If true, all A and AAAA records required to enable Global load balancers will be automatically added.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class Domains extends \ArrayObject
     }
     /**
      * The ID of the TLS certificate used for SSL termination.
-     *
      */
     public function getCertificateId(): string
     {
@@ -85,7 +77,6 @@ class Domains extends \ArrayObject
     }
     /**
      * The ID of the TLS certificate used for SSL termination.
-     *
      *
      * @return self
      */

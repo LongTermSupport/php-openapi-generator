@@ -19,12 +19,10 @@ class SchemaExistsResponse
     }
     /**
      * It indicates if it exists.
-     *
      */
     protected bool $exists;
     /**
      * It indicates if it exists.
-     *
      */
     public function getExists(): bool
     {
@@ -32,7 +30,6 @@ class SchemaExistsResponse
     }
     /**
      * It indicates if it exists.
-     *
      *
      * @return self
      */

@@ -22,17 +22,14 @@ class GpuInfoVram extends \ArrayObject
     }
     /**
      * The amount of VRAM allocated to the GPU.
-     *
      */
     protected int $amount;
     /**
      * The unit of measure for the VRAM.
-     *
      */
     protected string $unit;
     /**
      * The amount of VRAM allocated to the GPU.
-     *
      */
     public function getAmount(): int
     {
@@ -40,7 +37,6 @@ class GpuInfoVram extends \ArrayObject
     }
     /**
      * The amount of VRAM allocated to the GPU.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class GpuInfoVram extends \ArrayObject
     }
     /**
      * The unit of measure for the VRAM.
-     *
      */
     public function getUnit(): string
     {
@@ -60,7 +55,6 @@ class GpuInfoVram extends \ArrayObject
     }
     /**
      * The unit of measure for the VRAM.
-     *
      *
      * @return self
      */

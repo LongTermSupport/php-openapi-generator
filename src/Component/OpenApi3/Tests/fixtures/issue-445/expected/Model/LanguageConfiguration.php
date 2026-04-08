@@ -31,7 +31,6 @@ class LanguageConfiguration
     protected ?array $metadataLanguages = null;
     /**
      * The default language. Not the be confused with the metadata fallback language x-default.
-     *
      */
     protected ?string $defaultLanguage = null;
     /**
@@ -80,7 +79,6 @@ class LanguageConfiguration
     }
     /**
      * The default language. Not the be confused with the metadata fallback language x-default.
-     *
      */
     public function getDefaultLanguage(): ?string
     {
@@ -88,7 +86,6 @@ class LanguageConfiguration
     }
     /**
      * The default language. Not the be confused with the metadata fallback language x-default.
-     *
      *
      * @return self
      */

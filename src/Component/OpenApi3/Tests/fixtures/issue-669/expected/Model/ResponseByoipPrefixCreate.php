@@ -22,22 +22,18 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The unique identifier for the BYOIP prefix
-     *
      */
     protected string $uuid;
     /**
      * The region where the prefix is created
-     *
      */
     protected string $region;
     /**
      * The status of the BYOIP prefix
-     *
      */
     protected string $status;
     /**
      * The unique identifier for the BYOIP prefix
-     *
      */
     public function getUuid(): string
     {
@@ -45,7 +41,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The unique identifier for the BYOIP prefix
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The region where the prefix is created
-     *
      */
     public function getRegion(): string
     {
@@ -65,7 +59,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The region where the prefix is created
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The status of the BYOIP prefix
-     *
      */
     public function getStatus(): string
     {
@@ -85,7 +77,6 @@ class ResponseByoipPrefixCreate extends \ArrayObject
     }
     /**
      * The status of the BYOIP prefix
-     *
      *
      * @return self
      */

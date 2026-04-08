@@ -22,27 +22,22 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Name of the component, from the app spec.
-     *
      */
     protected string $componentName;
     /**
      * Supported compute component by DigitalOcean App Platform.
-     *
      */
     protected string $componentType;
     /**
      * Name of the instance, which is a unique identifier for the instance.
-     *
      */
     protected string $instanceName;
     /**
      * Readable identifier, an alias of the instance name, reference for mapping insights to instance names.
-     *
      */
     protected string $instanceAlias;
     /**
      * Name of the component, from the app spec.
-     *
      */
     public function getComponentName(): string
     {
@@ -50,7 +45,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Name of the component, from the app spec.
-     *
      *
      * @return self
      */
@@ -62,7 +56,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Supported compute component by DigitalOcean App Platform.
-     *
      */
     public function getComponentType(): string
     {
@@ -70,7 +63,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Supported compute component by DigitalOcean App Platform.
-     *
      *
      * @return self
      */
@@ -82,7 +74,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Name of the instance, which is a unique identifier for the instance.
-     *
      */
     public function getInstanceName(): string
     {
@@ -90,7 +81,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Name of the instance, which is a unique identifier for the instance.
-     *
      *
      * @return self
      */
@@ -102,7 +92,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Readable identifier, an alias of the instance name, reference for mapping insights to instance names.
-     *
      */
     public function getInstanceAlias(): string
     {
@@ -110,7 +99,6 @@ class AppInstance extends \ArrayObject
     }
     /**
      * Readable identifier, an alias of the instance name, reference for mapping insights to instance names.
-     *
      *
      * @return self
      */

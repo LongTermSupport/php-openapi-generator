@@ -19,37 +19,30 @@ class BulkResponseRow
     }
     /**
      * ID of the document.
-     *
      */
     protected string $id;
     /**
      * Version of the document.
-     *
      */
     protected int $version;
     /**
      * Eventual error.
-     *
      */
     protected ?string $error = null;
     /**
      * True if item successfully saved. False otherwise.
-     *
      */
     protected bool $succeeded;
     /**
      * Returned status code.
-     *
      */
     protected int $status;
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
      */
     protected ?string $requestId = null;
     /**
      * ID of the document.
-     *
      */
     public function getId(): string
     {
@@ -57,7 +50,6 @@ class BulkResponseRow
     }
     /**
      * ID of the document.
-     *
      *
      * @return self
      */
@@ -69,7 +61,6 @@ class BulkResponseRow
     }
     /**
      * Version of the document.
-     *
      */
     public function getVersion(): int
     {
@@ -77,7 +68,6 @@ class BulkResponseRow
     }
     /**
      * Version of the document.
-     *
      *
      * @return self
      */
@@ -89,7 +79,6 @@ class BulkResponseRow
     }
     /**
      * Eventual error.
-     *
      */
     public function getError(): ?string
     {
@@ -97,7 +86,6 @@ class BulkResponseRow
     }
     /**
      * Eventual error.
-     *
      *
      * @return self
      */
@@ -109,7 +97,6 @@ class BulkResponseRow
     }
     /**
      * True if item successfully saved. False otherwise.
-     *
      */
     public function getSucceeded(): bool
     {
@@ -117,7 +104,6 @@ class BulkResponseRow
     }
     /**
      * True if item successfully saved. False otherwise.
-     *
      *
      * @return self
      */
@@ -129,7 +115,6 @@ class BulkResponseRow
     }
     /**
      * Returned status code.
-     *
      */
     public function getStatus(): int
     {
@@ -137,7 +122,6 @@ class BulkResponseRow
     }
     /**
      * Returned status code.
-     *
      *
      * @return self
      */
@@ -149,7 +133,6 @@ class BulkResponseRow
     }
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
      */
     public function getRequestId(): ?string
     {
@@ -157,7 +140,6 @@ class BulkResponseRow
     }
     /**
      * The identifier provided by user in the corresponding request (or null if none was provided). Used only in bulk creation.
-     *
      *
      * @return self
      */

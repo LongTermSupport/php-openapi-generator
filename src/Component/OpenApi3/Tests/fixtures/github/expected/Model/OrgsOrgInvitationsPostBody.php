@@ -22,12 +22,10 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * **Required unless you provide `email`**. GitHub user ID for the person you are inviting.
-     *
      */
     protected int $inviteeId;
     /**
      * **Required unless you provide `invitee_id`**. Email address of the person you are inviting, which can be an existing GitHub user.
-     *
      */
     protected string $email;
     /**
@@ -35,7 +33,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
      * \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
      * \* `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.
      * \* `billing_manager` - Non-owner organization members with ability to manage the billing settings of your organization.
-     *
      */
     protected string $role = 'direct_member';
     /**
@@ -46,7 +43,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     protected array $teamIds;
     /**
      * **Required unless you provide `email`**. GitHub user ID for the person you are inviting.
-     *
      */
     public function getInviteeId(): int
     {
@@ -54,7 +50,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * **Required unless you provide `email`**. GitHub user ID for the person you are inviting.
-     *
      *
      * @return self
      */
@@ -66,7 +61,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * **Required unless you provide `invitee_id`**. Email address of the person you are inviting, which can be an existing GitHub user.
-     *
      */
     public function getEmail(): string
     {
@@ -74,7 +68,6 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * **Required unless you provide `invitee_id`**. Email address of the person you are inviting, which can be an existing GitHub user.
-     *
      *
      * @return self
      */
@@ -89,21 +82,19 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
      * \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
      * \* `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.
      * \* `billing_manager` - Non-owner organization members with ability to manage the billing settings of your organization.
-     *
      */
     public function getRole(): string
     {
         return $this->role;
     }
     /**
-    * Specify role for new member. Can be one of:  
-    \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.  
-    \* `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.  
-    \* `billing_manager` - Non-owner organization members with ability to manage the billing settings of your organization.
-    *
-    *
-    * @return self
-    */
+     * Specify role for new member. Can be one of:
+     * \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
+     * \* `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.
+     * \* `billing_manager` - Non-owner organization members with ability to manage the billing settings of your organization.
+     *
+     * @return self
+     */
     public function setRole(string $role): self
     {
         $this->initialized['role'] = true;

@@ -19,22 +19,18 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      */
     protected ?string $fieldPath = null;
     /**
      * Regular expression
-     *
      */
     protected ?string $regex = null;
     /**
      * Optional variable name to store the matched regex groups in
-     *
      */
     protected ?string $storeIn = null;
     /**
      * JSON path to the field
-     *
      */
     public function getFieldPath(): ?string
     {
@@ -42,7 +38,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * JSON path to the field
-     *
      *
      * @return self
      */
@@ -54,7 +49,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * Regular expression
-     *
      */
     public function getRegex(): ?string
     {
@@ -62,7 +56,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * Regular expression
-     *
      *
      * @return self
      */
@@ -74,7 +67,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * Optional variable name to store the matched regex groups in
-     *
      */
     public function getStoreIn(): ?string
     {
@@ -82,7 +74,6 @@ class MatchRegexCondition extends BusinessRuleCondition
     }
     /**
      * Optional variable name to store the matched regex groups in
-     *
      *
      * @return self
      */

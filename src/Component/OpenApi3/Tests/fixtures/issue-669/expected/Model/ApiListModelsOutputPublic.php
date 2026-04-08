@@ -22,12 +22,10 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      */
     protected ApiLinks $links;
     /**
      * Meta information about the data set
-     *
      */
     protected ApiMeta $meta;
     /**
@@ -38,7 +36,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
     protected array $models;
     /**
      * Links to other pages
-     *
      */
     public function getLinks(): ApiLinks
     {
@@ -46,7 +43,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * Links to other pages
-     *
      *
      * @return self
      */
@@ -58,7 +54,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      */
     public function getMeta(): ApiMeta
     {
@@ -66,7 +61,6 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * Meta information about the data set
-     *
      *
      * @return self
      */

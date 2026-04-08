@@ -22,12 +22,10 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * The token used for authentication
-     *
      */
     protected string $token;
     /**
      * The time this token expires
-     *
      */
     protected \DateTime $expiresAt;
     /**
@@ -43,12 +41,10 @@ class AuthenticationToken extends \ArrayObject
     protected ?string $singleFile = null;
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      */
     protected string $repositorySelection;
     /**
      * The token used for authentication
-     *
      */
     public function getToken(): string
     {
@@ -56,7 +52,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * The token used for authentication
-     *
      *
      * @return self
      */
@@ -68,7 +63,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * The time this token expires
-     *
      */
     public function getExpiresAt(): \DateTime
     {
@@ -76,7 +70,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * The time this token expires
-     *
      *
      * @return self
      */
@@ -138,7 +131,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      */
     public function getRepositorySelection(): string
     {
@@ -146,7 +138,6 @@ class AuthenticationToken extends \ArrayObject
     }
     /**
      * Describe whether all repositories have been selected or there's a selection involved
-     *
      *
      * @return self
      */

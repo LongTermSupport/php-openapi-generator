@@ -22,22 +22,18 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * Indicates whether maintenance mode should be enabled for the app.
-     *
      */
     protected bool $enabled;
     /**
      * Indicates whether the app should be archived. Setting this to true implies that enabled is set to true.
-     *
      */
     protected bool $archive;
     /**
      * A custom offline page to display when maintenance mode is enabled or the app is archived.
-     *
      */
     protected string $offlinePageUrl;
     /**
      * Indicates whether maintenance mode should be enabled for the app.
-     *
      */
     public function getEnabled(): bool
     {
@@ -45,7 +41,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * Indicates whether maintenance mode should be enabled for the app.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * Indicates whether the app should be archived. Setting this to true implies that enabled is set to true.
-     *
      */
     public function getArchive(): bool
     {
@@ -65,7 +59,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * Indicates whether the app should be archived. Setting this to true implies that enabled is set to true.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * A custom offline page to display when maintenance mode is enabled or the app is archived.
-     *
      */
     public function getOfflinePageUrl(): string
     {
@@ -85,7 +77,6 @@ class AppMaintenanceSpec extends \ArrayObject
     }
     /**
      * A custom offline page to display when maintenance mode is enabled or the app is archived.
-     *
      *
      * @return self
      */

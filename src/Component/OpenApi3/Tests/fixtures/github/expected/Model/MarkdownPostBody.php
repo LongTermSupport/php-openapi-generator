@@ -22,22 +22,18 @@ class MarkdownPostBody extends \ArrayObject
     }
     /**
      * The Markdown text to render in HTML.
-     *
      */
     protected string $text;
     /**
      * The rendering mode.
-     *
      */
     protected string $mode = 'markdown';
     /**
      * The repository context to use when creating references in `gfm` mode.
-     *
      */
     protected string $context;
     /**
      * The Markdown text to render in HTML.
-     *
      */
     public function getText(): string
     {
@@ -45,7 +41,6 @@ class MarkdownPostBody extends \ArrayObject
     }
     /**
      * The Markdown text to render in HTML.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class MarkdownPostBody extends \ArrayObject
     }
     /**
      * The rendering mode.
-     *
      */
     public function getMode(): string
     {
@@ -65,7 +59,6 @@ class MarkdownPostBody extends \ArrayObject
     }
     /**
      * The rendering mode.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class MarkdownPostBody extends \ArrayObject
     }
     /**
      * The repository context to use when creating references in `gfm` mode.
-     *
      */
     public function getContext(): string
     {
@@ -85,7 +77,6 @@ class MarkdownPostBody extends \ArrayObject
     }
     /**
      * The repository context to use when creating references in `gfm` mode.
-     *
      *
      * @return self
      */

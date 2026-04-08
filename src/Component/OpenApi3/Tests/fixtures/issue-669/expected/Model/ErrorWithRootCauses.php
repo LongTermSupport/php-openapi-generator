@@ -22,7 +22,6 @@ class ErrorWithRootCauses extends \ArrayObject
     }
     /**
      * A message providing information about the error.
-     *
      */
     protected string $error;
     /**
@@ -39,7 +38,6 @@ class ErrorWithRootCauses extends \ArrayObject
     protected array $rootCauses;
     /**
      * A message providing information about the error.
-     *
      */
     public function getError(): string
     {
@@ -47,7 +45,6 @@ class ErrorWithRootCauses extends \ArrayObject
     }
     /**
      * A message providing information about the error.
-     *
      *
      * @return self
      */

@@ -22,62 +22,50 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Name of the product being billed in the invoice item.
-     *
      */
     protected string $product;
     /**
      * UUID of the resource billing in the invoice item if available.
-     *
      */
     protected string $resourceUuid;
     /**
      * ID of the resource billing in the invoice item if available.
-     *
      */
     protected string $resourceId;
     /**
      * Description of the invoice item when it is a grouped set of usage, such  as DOKS or databases.
-     *
      */
     protected string $groupDescription;
     /**
      * Description of the invoice item.
-     *
      */
     protected string $description;
     /**
      * Billed amount of this invoice item. Billed in USD.
-     *
      */
     protected string $amount;
     /**
      * Duration of time this invoice item was used and subsequently billed.
-     *
      */
     protected string $duration;
     /**
      * Unit of time for duration.
-     *
      */
     protected string $durationUnit;
     /**
      * Time the invoice item began to be billed for usage.
-     *
      */
     protected string $startTime;
     /**
      * Time the invoice item stopped being billed for usage.
-     *
      */
     protected string $endTime;
     /**
      * Name of the DigitalOcean Project this resource belongs to.
-     *
      */
     protected string $projectName;
     /**
      * Name of the product being billed in the invoice item.
-     *
      */
     public function getProduct(): string
     {
@@ -85,7 +73,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Name of the product being billed in the invoice item.
-     *
      *
      * @return self
      */
@@ -97,7 +84,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * UUID of the resource billing in the invoice item if available.
-     *
      */
     public function getResourceUuid(): string
     {
@@ -105,7 +91,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * UUID of the resource billing in the invoice item if available.
-     *
      *
      * @return self
      */
@@ -117,7 +102,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * ID of the resource billing in the invoice item if available.
-     *
      */
     public function getResourceId(): string
     {
@@ -125,7 +109,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * ID of the resource billing in the invoice item if available.
-     *
      *
      * @return self
      */
@@ -137,7 +120,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Description of the invoice item when it is a grouped set of usage, such  as DOKS or databases.
-     *
      */
     public function getGroupDescription(): string
     {
@@ -145,7 +127,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Description of the invoice item when it is a grouped set of usage, such  as DOKS or databases.
-     *
      *
      * @return self
      */
@@ -157,7 +138,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Description of the invoice item.
-     *
      */
     public function getDescription(): string
     {
@@ -165,7 +145,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Description of the invoice item.
-     *
      *
      * @return self
      */
@@ -177,7 +156,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Billed amount of this invoice item. Billed in USD.
-     *
      */
     public function getAmount(): string
     {
@@ -185,7 +163,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Billed amount of this invoice item. Billed in USD.
-     *
      *
      * @return self
      */
@@ -197,7 +174,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Duration of time this invoice item was used and subsequently billed.
-     *
      */
     public function getDuration(): string
     {
@@ -205,7 +181,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Duration of time this invoice item was used and subsequently billed.
-     *
      *
      * @return self
      */
@@ -217,7 +192,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Unit of time for duration.
-     *
      */
     public function getDurationUnit(): string
     {
@@ -225,7 +199,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Unit of time for duration.
-     *
      *
      * @return self
      */
@@ -237,7 +210,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Time the invoice item began to be billed for usage.
-     *
      */
     public function getStartTime(): string
     {
@@ -245,7 +217,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Time the invoice item began to be billed for usage.
-     *
      *
      * @return self
      */
@@ -257,7 +228,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Time the invoice item stopped being billed for usage.
-     *
      */
     public function getEndTime(): string
     {
@@ -265,7 +235,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Time the invoice item stopped being billed for usage.
-     *
      *
      * @return self
      */
@@ -277,7 +246,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Name of the DigitalOcean Project this resource belongs to.
-     *
      */
     public function getProjectName(): string
     {
@@ -285,7 +253,6 @@ class InvoiceItem extends \ArrayObject
     }
     /**
      * Name of the DigitalOcean Project this resource belongs to.
-     *
      *
      * @return self
      */

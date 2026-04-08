@@ -22,22 +22,18 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      */
     protected ?string $endOfLife = null;
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      */
     protected ?string $endOfAvailability = null;
     /**
      * The engine version.
-     *
      */
     protected string $version;
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      */
     public function getEndOfLife(): ?string
     {
@@ -45,7 +41,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be supported. If null, the version does not have an end of life timeline.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      */
     public function getEndOfAvailability(): ?string
     {
@@ -65,7 +59,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * The engine version.
-     *
      */
     public function getVersion(): string
     {
@@ -85,7 +77,6 @@ class DatabaseVersionAvailability extends \ArrayObject
     }
     /**
      * The engine version.
-     *
      *
      * @return self
      */

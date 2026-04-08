@@ -22,13 +22,11 @@ class GitCommitTree extends \ArrayObject
     }
     /**
      * SHA for the commit
-     *
      */
     protected string $sha;
     protected string $url;
     /**
      * SHA for the commit
-     *
      */
     public function getSha(): string
     {
@@ -36,7 +34,6 @@ class GitCommitTree extends \ArrayObject
     }
     /**
      * SHA for the commit
-     *
      *
      * @return self
      */

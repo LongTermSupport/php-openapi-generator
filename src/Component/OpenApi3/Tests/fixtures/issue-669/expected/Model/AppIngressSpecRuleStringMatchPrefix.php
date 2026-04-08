@@ -22,12 +22,10 @@ class AppIngressSpecRuleStringMatchPrefix extends \ArrayObject
     }
     /**
      * Prefix-based match. For example, `/api` will match `/api`, `/api/`, and any nested paths such as `/api/v1/endpoint`.
-     *
      */
     protected string $prefix;
     /**
      * Prefix-based match. For example, `/api` will match `/api`, `/api/`, and any nested paths such as `/api/v1/endpoint`.
-     *
      */
     public function getPrefix(): string
     {
@@ -35,7 +33,6 @@ class AppIngressSpecRuleStringMatchPrefix extends \ArrayObject
     }
     /**
      * Prefix-based match. For example, `/api` will match `/api`, `/api/`, and any nested paths such as `/api/v1/endpoint`.
-     *
      *
      * @return self
      */

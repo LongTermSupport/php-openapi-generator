@@ -22,7 +22,6 @@ class ContentPermissionSetUpdateRequest extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
      */
     protected mixed $names = null;
     /**
@@ -39,7 +38,6 @@ class ContentPermissionSetUpdateRequest extends \ArrayObject
     protected ?array $userRolesPermissionSetRights = null;
     /**
      * Language specific permission set names.
-     *
      */
     public function getNames(): mixed
     {
@@ -47,7 +45,6 @@ class ContentPermissionSetUpdateRequest extends \ArrayObject
     }
     /**
      * Language specific permission set names.
-     *
      *
      * @return self
      */

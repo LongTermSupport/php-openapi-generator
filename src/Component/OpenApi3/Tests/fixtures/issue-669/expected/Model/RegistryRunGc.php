@@ -22,12 +22,10 @@ class RegistryRunGc extends \ArrayObject
     }
     /**
      * Type of the garbage collection to run against this registry
-     *
      */
     protected string $type;
     /**
      * Type of the garbage collection to run against this registry
-     *
      */
     public function getType(): string
     {
@@ -35,7 +33,6 @@ class RegistryRunGc extends \ArrayObject
     }
     /**
      * Type of the garbage collection to run against this registry
-     *
      *
      * @return self
      */

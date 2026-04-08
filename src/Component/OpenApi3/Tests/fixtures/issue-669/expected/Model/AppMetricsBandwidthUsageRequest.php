@@ -28,7 +28,6 @@ class AppMetricsBandwidthUsageRequest extends \ArrayObject
     protected array $appIds;
     /**
      * Optional day to query. Only the date component of the timestamp will be considered. Default: yesterday.
-     *
      */
     protected \DateTime $date;
     /**
@@ -55,7 +54,6 @@ class AppMetricsBandwidthUsageRequest extends \ArrayObject
     }
     /**
      * Optional day to query. Only the date component of the timestamp will be considered. Default: yesterday.
-     *
      */
     public function getDate(): \DateTime
     {
@@ -63,7 +61,6 @@ class AppMetricsBandwidthUsageRequest extends \ArrayObject
     }
     /**
      * Optional day to query. Only the date component of the timestamp will be considered. Default: yesterday.
-     *
      *
      * @return self
      */

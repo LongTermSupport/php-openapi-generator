@@ -22,7 +22,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A human-readable name for a Kubernetes cluster.
-     *
      */
     protected string $name;
     /**
@@ -33,62 +32,50 @@ class ClusterUpdate extends \ArrayObject
     protected array $tags;
     /**
      * An object specifying the maintenance window policy for the Kubernetes cluster.
-     *
      */
     protected ?MaintenancePolicy $maintenancePolicy = null;
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
-     *
      */
     protected bool $autoUpgrade = false;
     /**
      * A boolean value indicating whether surge upgrade is enabled/disabled for the cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the outdated nodes.
-     *
      */
     protected bool $surgeUpgrade = false;
     /**
      * A boolean value indicating whether the control plane is run in a highly available configuration in the cluster. Highly available control planes incur less downtime. The property cannot be disabled.
-     *
      */
     protected bool $ha = false;
     /**
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
-     *
      */
     protected ?ControlPlaneFirewall $controlPlaneFirewall = null;
     /**
      * An object specifying custom cluster autoscaler configuration.
-     *
      */
     protected ?ClusterAutoscalerConfiguration $clusterAutoscalerConfiguration = null;
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
-     *
      */
     protected ?RoutingAgent $routingAgent = null;
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
-     *
      */
     protected ?AmdGpuDevicePlugin $amdGpuDevicePlugin = null;
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
-     *
      */
     protected ?AmdGpuDeviceMetricsExporterPlugin $amdGpuDeviceMetricsExporterPlugin = null;
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
-     *
      */
     protected ?NvidiaGpuDevicePlugin $nvidiaGpuDevicePlugin = null;
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
-     *
      */
     protected ?RdmaSharedDevPlugin $rdmaSharedDevPlugin = null;
     /**
      * A human-readable name for a Kubernetes cluster.
-     *
      */
     public function getName(): string
     {
@@ -96,7 +83,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A human-readable name for a Kubernetes cluster.
-     *
      *
      * @return self
      */
@@ -130,7 +116,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying the maintenance window policy for the Kubernetes cluster.
-     *
      */
     public function getMaintenancePolicy(): ?MaintenancePolicy
     {
@@ -138,7 +123,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying the maintenance window policy for the Kubernetes cluster.
-     *
      *
      * @return self
      */
@@ -150,7 +134,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
-     *
      */
     public function getAutoUpgrade(): bool
     {
@@ -158,7 +141,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
-     *
      *
      * @return self
      */
@@ -170,7 +152,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether surge upgrade is enabled/disabled for the cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the outdated nodes.
-     *
      */
     public function getSurgeUpgrade(): bool
     {
@@ -178,7 +159,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether surge upgrade is enabled/disabled for the cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the outdated nodes.
-     *
      *
      * @return self
      */
@@ -190,7 +170,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the control plane is run in a highly available configuration in the cluster. Highly available control planes incur less downtime. The property cannot be disabled.
-     *
      */
     public function getHa(): bool
     {
@@ -198,7 +177,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * A boolean value indicating whether the control plane is run in a highly available configuration in the cluster. Highly available control planes incur less downtime. The property cannot be disabled.
-     *
      *
      * @return self
      */
@@ -210,7 +188,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
-     *
      */
     public function getControlPlaneFirewall(): ?ControlPlaneFirewall
     {
@@ -218,7 +195,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying the control plane firewall for the Kubernetes cluster. Control plane firewall is in early availability (invite only).
-     *
      *
      * @return self
      */
@@ -230,7 +206,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying custom cluster autoscaler configuration.
-     *
      */
     public function getClusterAutoscalerConfiguration(): ?ClusterAutoscalerConfiguration
     {
@@ -238,7 +213,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying custom cluster autoscaler configuration.
-     *
      *
      * @return self
      */
@@ -250,7 +224,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
-     *
      */
     public function getRoutingAgent(): ?RoutingAgent
     {
@@ -258,7 +231,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the routing-agent component should be enabled for the Kubernetes cluster.
-     *
      *
      * @return self
      */
@@ -270,7 +242,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
-     *
      */
     public function getAmdGpuDevicePlugin(): ?AmdGpuDevicePlugin
     {
@@ -278,7 +249,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an AMD GPU node pool.
-     *
      *
      * @return self
      */
@@ -290,7 +260,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
-     *
      */
     public function getAmdGpuDeviceMetricsExporterPlugin(): ?AmdGpuDeviceMetricsExporterPlugin
     {
@@ -298,7 +267,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the AMD Device Metrics Exporter should be enabled in the Kubernetes cluster.
-     *
      *
      * @return self
      */
@@ -310,7 +278,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
-     *
      */
     public function getNvidiaGpuDevicePlugin(): ?NvidiaGpuDevicePlugin
     {
@@ -318,7 +285,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the Nvidia GPU Device Plugin should be enabled in the Kubernetes cluster. It's enabled by default for clusters with an Nvidia GPU node pool.
-     *
      *
      * @return self
      */
@@ -330,7 +296,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
-     *
      */
     public function getRdmaSharedDevPlugin(): ?RdmaSharedDevPlugin
     {
@@ -338,7 +303,6 @@ class ClusterUpdate extends \ArrayObject
     }
     /**
      * An object specifying whether the RDMA shared device plugin should be enabled in the Kubernetes cluster.
-     *
      *
      * @return self
      */

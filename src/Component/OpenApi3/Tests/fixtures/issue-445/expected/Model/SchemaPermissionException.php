@@ -32,7 +32,6 @@ class SchemaPermissionException extends \ArrayObject
     protected ?string $schemaId = null;
     /**
      * Metadata rights
-     *
      */
     protected string $metadataRight;
     public function getTraceLevel(): string
@@ -137,7 +136,6 @@ class SchemaPermissionException extends \ArrayObject
     }
     /**
      * Metadata rights
-     *
      */
     public function getMetadataRight(): string
     {
@@ -145,7 +143,6 @@ class SchemaPermissionException extends \ArrayObject
     }
     /**
      * Metadata rights
-     *
      *
      * @return self
      */

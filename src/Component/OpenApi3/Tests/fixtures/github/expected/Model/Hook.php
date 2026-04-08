@@ -23,17 +23,14 @@ class Hook extends \ArrayObject
     protected string $type;
     /**
      * Unique identifier of the webhook.
-     *
      */
     protected int $id;
     /**
      * The name of a valid service, use 'web' for a webhook.
-     *
      */
     protected string $name;
     /**
      * Determines whether the hook is actually triggered on pushes.
-     *
      */
     protected bool $active;
     /**
@@ -61,7 +58,6 @@ class Hook extends \ArrayObject
     }
     /**
      * Unique identifier of the webhook.
-     *
      */
     public function getId(): int
     {
@@ -69,7 +65,6 @@ class Hook extends \ArrayObject
     }
     /**
      * Unique identifier of the webhook.
-     *
      *
      * @return self
      */
@@ -81,7 +76,6 @@ class Hook extends \ArrayObject
     }
     /**
      * The name of a valid service, use 'web' for a webhook.
-     *
      */
     public function getName(): string
     {
@@ -89,7 +83,6 @@ class Hook extends \ArrayObject
     }
     /**
      * The name of a valid service, use 'web' for a webhook.
-     *
      *
      * @return self
      */
@@ -101,7 +94,6 @@ class Hook extends \ArrayObject
     }
     /**
      * Determines whether the hook is actually triggered on pushes.
-     *
      */
     public function getActive(): bool
     {
@@ -109,7 +101,6 @@ class Hook extends \ArrayObject
     }
     /**
      * Determines whether the hook is actually triggered on pushes.
-     *
      *
      * @return self
      */

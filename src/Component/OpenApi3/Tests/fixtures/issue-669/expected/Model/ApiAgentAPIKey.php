@@ -22,12 +22,10 @@ class ApiAgentAPIKey extends \ArrayObject
     }
     /**
      * Api key
-     *
      */
     protected string $apiKey;
     /**
      * Api key
-     *
      */
     public function getApiKey(): string
     {
@@ -35,7 +33,6 @@ class ApiAgentAPIKey extends \ArrayObject
     }
     /**
      * Api key
-     *
      *
      * @return self
      */

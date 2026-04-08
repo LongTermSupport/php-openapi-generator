@@ -22,27 +22,22 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * User login that owns the underlying credential.
-     *
      */
     protected string $login;
     /**
      * Unique identifier for the credential.
-     *
      */
     protected int $credentialId;
     /**
      * Human-readable description of the credential type.
-     *
      */
     protected string $credentialType;
     /**
      * Last eight characters of the credential. Only included in responses with credential_type of personal access token.
-     *
      */
     protected string $tokenLastEight;
     /**
      * Date when the credential was authorized for use.
-     *
      */
     protected \DateTime $credentialAuthorizedAt;
     /**
@@ -53,17 +48,14 @@ class CredentialAuthorization extends \ArrayObject
     protected array $scopes;
     /**
      * Unique string to distinguish the credential. Only included in responses with credential_type of SSH Key.
-     *
      */
     protected string $fingerprint;
     /**
      * Date when the credential was last accessed. May be null if it was never accessed
-     *
      */
     protected ?\DateTime $credentialAccessedAt = null;
     /**
      * User login that owns the underlying credential.
-     *
      */
     public function getLogin(): string
     {
@@ -71,7 +63,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * User login that owns the underlying credential.
-     *
      *
      * @return self
      */
@@ -83,7 +74,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Unique identifier for the credential.
-     *
      */
     public function getCredentialId(): int
     {
@@ -91,7 +81,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Unique identifier for the credential.
-     *
      *
      * @return self
      */
@@ -103,7 +92,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Human-readable description of the credential type.
-     *
      */
     public function getCredentialType(): string
     {
@@ -111,7 +99,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Human-readable description of the credential type.
-     *
      *
      * @return self
      */
@@ -123,7 +110,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Last eight characters of the credential. Only included in responses with credential_type of personal access token.
-     *
      */
     public function getTokenLastEight(): string
     {
@@ -131,7 +117,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Last eight characters of the credential. Only included in responses with credential_type of personal access token.
-     *
      *
      * @return self
      */
@@ -143,7 +128,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Date when the credential was authorized for use.
-     *
      */
     public function getCredentialAuthorizedAt(): \DateTime
     {
@@ -151,7 +135,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Date when the credential was authorized for use.
-     *
      *
      * @return self
      */
@@ -185,7 +168,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Unique string to distinguish the credential. Only included in responses with credential_type of SSH Key.
-     *
      */
     public function getFingerprint(): string
     {
@@ -193,7 +175,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Unique string to distinguish the credential. Only included in responses with credential_type of SSH Key.
-     *
      *
      * @return self
      */
@@ -205,7 +186,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Date when the credential was last accessed. May be null if it was never accessed
-     *
      */
     public function getCredentialAccessedAt(): ?\DateTime
     {
@@ -213,7 +193,6 @@ class CredentialAuthorization extends \ArrayObject
     }
     /**
      * Date when the credential was last accessed. May be null if it was never accessed
-     *
      *
      * @return self
      */

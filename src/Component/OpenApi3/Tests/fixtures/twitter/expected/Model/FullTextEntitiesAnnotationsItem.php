@@ -22,32 +22,26 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     protected int $start;
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     protected int $end;
     /**
      * Confidence factor for annotation type.
-     *
      */
     protected float $probability;
     /**
      * Annotation type.
-     *
      */
     protected string $type;
     /**
      * Text used to determine annotation.
-     *
      */
     protected string $normalizedText;
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     public function getStart(): int
     {
@@ -55,7 +49,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     public function getEnd(): int
     {
@@ -75,7 +67,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Confidence factor for annotation type.
-     *
      */
     public function getProbability(): float
     {
@@ -95,7 +85,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Confidence factor for annotation type.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Annotation type.
-     *
      */
     public function getType(): string
     {
@@ -115,7 +103,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Annotation type.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Text used to determine annotation.
-     *
      */
     public function getNormalizedText(): string
     {
@@ -135,7 +121,6 @@ class FullTextEntitiesAnnotationsItem extends \ArrayObject
     }
     /**
      * Text used to determine annotation.
-     *
      *
      * @return self
      */

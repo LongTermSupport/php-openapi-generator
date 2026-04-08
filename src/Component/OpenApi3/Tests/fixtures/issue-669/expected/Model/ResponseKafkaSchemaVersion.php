@@ -22,32 +22,26 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The id for schema.
-     *
      */
     protected int $schemaId;
     /**
      * The version of the schema.
-     *
      */
     protected string $version;
     /**
      * The name of the schema subject.
-     *
      */
     protected string $subjectName;
     /**
      * The type of the schema.
-     *
      */
     protected string $schemaType;
     /**
      * The schema definition in the specified format.
-     *
      */
     protected string $schema;
     /**
      * The id for schema.
-     *
      */
     public function getSchemaId(): int
     {
@@ -55,7 +49,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The id for schema.
-     *
      *
      * @return self
      */
@@ -67,7 +60,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The version of the schema.
-     *
      */
     public function getVersion(): string
     {
@@ -75,7 +67,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The version of the schema.
-     *
      *
      * @return self
      */
@@ -87,7 +78,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      */
     public function getSubjectName(): string
     {
@@ -95,7 +85,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The name of the schema subject.
-     *
      *
      * @return self
      */
@@ -107,7 +96,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
      */
     public function getSchemaType(): string
     {
@@ -115,7 +103,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The type of the schema.
-     *
      *
      * @return self
      */
@@ -127,7 +114,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
      */
     public function getSchema(): string
     {
@@ -135,7 +121,6 @@ class ResponseKafkaSchemaVersion extends \ArrayObject
     }
     /**
      * The schema definition in the specified format.
-     *
      *
      * @return self
      */

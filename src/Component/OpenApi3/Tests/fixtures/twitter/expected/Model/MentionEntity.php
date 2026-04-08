@@ -22,22 +22,18 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     protected int $start;
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     protected int $end;
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     protected string $username;
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      */
     public function getStart(): int
     {
@@ -45,7 +41,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity starts.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      */
     public function getEnd(): int
     {
@@ -65,7 +59,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * Index (zero-based) at which position this entity ends.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      */
     public function getUsername(): string
     {
@@ -85,7 +77,6 @@ class MentionEntity extends \ArrayObject
     }
     /**
      * The Twitter handle (screen name) of this user.
-     *
      *
      * @return self
      */

@@ -32,7 +32,6 @@ class TeamProject extends \ArrayObject
     protected string $state;
     /**
      * Simple User
-     *
      */
     protected ?SimpleUser $creator = null;
     protected string $createdAt;
@@ -142,7 +141,6 @@ class TeamProject extends \ArrayObject
     }
     /**
      * Simple User
-     *
      */
     public function getCreator(): ?SimpleUser
     {
@@ -150,7 +148,6 @@ class TeamProject extends \ArrayObject
     }
     /**
      * Simple User
-     *
      *
      * @return self
      */

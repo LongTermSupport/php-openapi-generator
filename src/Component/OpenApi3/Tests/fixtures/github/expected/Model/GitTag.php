@@ -23,18 +23,15 @@ class GitTag extends \ArrayObject
     protected string $nodeId;
     /**
      * Name of the tag
-     *
      */
     protected string $tag;
     protected string $sha;
     /**
      * URL for the tag
-     *
      */
     protected string $url;
     /**
      * Message describing the purpose of the tag
-     *
      */
     protected string $message;
     protected GitTagTagger $tagger;
@@ -52,7 +49,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * Name of the tag
-     *
      */
     public function getTag(): string
     {
@@ -60,7 +56,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * Name of the tag
-     *
      *
      * @return self
      */
@@ -82,7 +77,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * URL for the tag
-     *
      */
     public function getUrl(): string
     {
@@ -90,7 +84,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * URL for the tag
-     *
      *
      * @return self
      */
@@ -102,7 +95,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * Message describing the purpose of the tag
-     *
      */
     public function getMessage(): string
     {
@@ -110,7 +102,6 @@ class GitTag extends \ArrayObject
     }
     /**
      * Message describing the purpose of the tag
-     *
      *
      * @return self
      */

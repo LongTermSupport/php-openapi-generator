@@ -27,7 +27,6 @@ class AppsRegion extends \ArrayObject
     protected array $dataCenters;
     /**
      * Whether or not the region is presented as the default.
-     *
      */
     protected bool $default;
     protected bool $disabled;
@@ -65,7 +64,6 @@ class AppsRegion extends \ArrayObject
     }
     /**
      * Whether or not the region is presented as the default.
-     *
      */
     public function getDefault(): bool
     {
@@ -73,7 +71,6 @@ class AppsRegion extends \ArrayObject
     }
     /**
      * Whether or not the region is presented as the default.
-     *
      *
      * @return self
      */

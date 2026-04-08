@@ -22,17 +22,14 @@ class DropletActionRebuild extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     protected string $type;
     /**
      * The image ID of a public or private image or the slug identifier for a public image. The Droplet will be rebuilt using this image as its base.
-     *
      */
     protected mixed $image = null;
     /**
      * The type of action to initiate for the Droplet.
-     *
      */
     public function getType(): string
     {
@@ -40,7 +37,6 @@ class DropletActionRebuild extends \ArrayObject
     }
     /**
      * The type of action to initiate for the Droplet.
-     *
      *
      * @return self
      */
@@ -52,7 +48,6 @@ class DropletActionRebuild extends \ArrayObject
     }
     /**
      * The image ID of a public or private image or the slug identifier for a public image. The Droplet will be rebuilt using this image as its base.
-     *
      */
     public function getImage(): mixed
     {
@@ -60,7 +55,6 @@ class DropletActionRebuild extends \ArrayObject
     }
     /**
      * The image ID of a public or private image or the slug identifier for a public image. The Droplet will be rebuilt using this image as its base.
-     *
      *
      * @return self
      */

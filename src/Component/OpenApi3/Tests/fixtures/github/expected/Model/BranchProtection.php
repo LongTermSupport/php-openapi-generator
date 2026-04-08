@@ -24,17 +24,14 @@ class BranchProtection extends \ArrayObject
     protected BranchProtectionRequiredStatusChecks $requiredStatusChecks;
     /**
      * Protected Branch Admin Enforced
-     *
      */
     protected ProtectedBranchAdminEnforced $enforceAdmins;
     /**
      * Protected Branch Pull Request Review
-     *
      */
     protected ProtectedBranchPullRequestReview $requiredPullRequestReviews;
     /**
      * Branch Restriction Policy
-     *
      */
     protected BranchRestrictionPolicy $restrictions;
     protected BranchProtectionRequiredLinearHistory $requiredLinearHistory;
@@ -65,7 +62,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Protected Branch Admin Enforced
-     *
      */
     public function getEnforceAdmins(): ProtectedBranchAdminEnforced
     {
@@ -73,7 +69,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Protected Branch Admin Enforced
-     *
      *
      * @return self
      */
@@ -85,7 +80,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Protected Branch Pull Request Review
-     *
      */
     public function getRequiredPullRequestReviews(): ProtectedBranchPullRequestReview
     {
@@ -93,7 +87,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Protected Branch Pull Request Review
-     *
      *
      * @return self
      */
@@ -105,7 +98,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Branch Restriction Policy
-     *
      */
     public function getRestrictions(): BranchRestrictionPolicy
     {
@@ -113,7 +105,6 @@ class BranchProtection extends \ArrayObject
     }
     /**
      * Branch Restriction Policy
-     *
      *
      * @return self
      */

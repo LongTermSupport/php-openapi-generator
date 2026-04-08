@@ -22,14 +22,12 @@ class InteractionLimit extends \ArrayObject
     }
     /**
      * The interaction limit to enable.
-     *
      */
     protected string $limit;
     protected string $origin;
     protected \DateTime $expiresAt;
     /**
      * The interaction limit to enable.
-     *
      */
     public function getLimit(): string
     {
@@ -37,7 +35,6 @@ class InteractionLimit extends \ArrayObject
     }
     /**
      * The interaction limit to enable.
-     *
      *
      * @return self
      */

@@ -19,12 +19,10 @@ class NestedAggregator extends AggregatorBase
     }
     /**
      * The path pointing to the nested object.
-     *
      */
     protected string $path;
     /**
      * The path pointing to the nested object.
-     *
      */
     public function getPath(): string
     {
@@ -32,7 +30,6 @@ class NestedAggregator extends AggregatorBase
     }
     /**
      * The path pointing to the nested object.
-     *
      *
      * @return self
      */

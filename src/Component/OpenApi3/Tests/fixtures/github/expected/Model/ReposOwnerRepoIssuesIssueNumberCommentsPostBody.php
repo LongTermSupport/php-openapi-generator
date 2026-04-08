@@ -22,12 +22,10 @@ class ReposOwnerRepoIssuesIssueNumberCommentsPostBody extends \ArrayObject
     }
     /**
      * The contents of the comment.
-     *
      */
     protected string $body;
     /**
      * The contents of the comment.
-     *
      */
     public function getBody(): string
     {
@@ -35,7 +33,6 @@ class ReposOwnerRepoIssuesIssueNumberCommentsPostBody extends \ArrayObject
     }
     /**
      * The contents of the comment.
-     *
      *
      * @return self
      */

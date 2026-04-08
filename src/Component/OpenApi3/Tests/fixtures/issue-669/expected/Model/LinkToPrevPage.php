@@ -22,12 +22,10 @@ class LinkToPrevPage extends \ArrayObject
     }
     /**
      * URI of the previous page of the results.
-     *
      */
     protected string $prev;
     /**
      * URI of the previous page of the results.
-     *
      */
     public function getPrev(): string
     {
@@ -35,7 +33,6 @@ class LinkToPrevPage extends \ArrayObject
     }
     /**
      * URI of the previous page of the results.
-     *
      *
      * @return self
      */

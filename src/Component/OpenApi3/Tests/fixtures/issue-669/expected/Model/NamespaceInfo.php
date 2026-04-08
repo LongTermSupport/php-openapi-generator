@@ -22,48 +22,39 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's API hostname. Each function in a namespace is provided an endpoint at the namespace's hostname.
-     *
      */
     protected string $apiHost;
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
      */
     protected string $namespace;
     /**
      * UTC time string.
-     *
      */
     protected string $createdAt;
     /**
      * UTC time string.
-     *
      */
     protected string $updatedAt;
     /**
      * The namespace's unique name.
-     *
      */
     protected string $label;
     /**
      * The namespace's datacenter region.
-     *
      */
     protected string $region;
     /**
      * The namespace's Universally Unique Identifier.
-     *
      */
     protected string $uuid;
     /**
      * A random alpha numeric string. This key is used in conjunction with the namespace's UUID to authenticate
      * a user to use the namespace via `doctl`, DigitalOcean's official CLI.
-     *
      */
     protected string $key;
     /**
      * The namespace's API hostname. Each function in a namespace is provided an endpoint at the namespace's hostname.
-     *
      */
     public function getApiHost(): string
     {
@@ -71,7 +62,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's API hostname. Each function in a namespace is provided an endpoint at the namespace's hostname.
-     *
      *
      * @return self
      */
@@ -83,7 +73,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
      */
     public function getNamespace(): string
     {
@@ -91,7 +80,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * A unique string format of UUID with a prefix fn-.
-     *
      *
      * @return self
      */
@@ -103,7 +91,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      */
     public function getCreatedAt(): string
     {
@@ -111,7 +98,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      *
      * @return self
      */
@@ -123,7 +109,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      */
     public function getUpdatedAt(): string
     {
@@ -131,7 +116,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * UTC time string.
-     *
      *
      * @return self
      */
@@ -143,7 +127,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's unique name.
-     *
      */
     public function getLabel(): string
     {
@@ -151,7 +134,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's unique name.
-     *
      *
      * @return self
      */
@@ -163,7 +145,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's datacenter region.
-     *
      */
     public function getRegion(): string
     {
@@ -171,7 +152,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's datacenter region.
-     *
      *
      * @return self
      */
@@ -183,7 +163,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's Universally Unique Identifier.
-     *
      */
     public function getUuid(): string
     {
@@ -191,7 +170,6 @@ class NamespaceInfo extends \ArrayObject
     }
     /**
      * The namespace's Universally Unique Identifier.
-     *
      *
      * @return self
      */
@@ -204,19 +182,17 @@ class NamespaceInfo extends \ArrayObject
     /**
      * A random alpha numeric string. This key is used in conjunction with the namespace's UUID to authenticate
      * a user to use the namespace via `doctl`, DigitalOcean's official CLI.
-     *
      */
     public function getKey(): string
     {
         return $this->key;
     }
     /**
-    * A random alpha numeric string. This key is used in conjunction with the namespace's UUID to authenticate
-    a user to use the namespace via `doctl`, DigitalOcean's official CLI.
-    *
-    *
-    * @return self
-    */
+     * A random alpha numeric string. This key is used in conjunction with the namespace's UUID to authenticate
+     * a user to use the namespace via `doctl`, DigitalOcean's official CLI.
+     *
+     * @return self
+     */
     public function setKey(string $key): self
     {
         $this->initialized['key'] = true;

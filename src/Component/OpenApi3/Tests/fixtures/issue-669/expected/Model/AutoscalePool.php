@@ -22,12 +22,10 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A unique identifier for each autoscale pool instance. This is automatically generated upon autoscale pool creation.
-     *
      */
     protected string $id;
     /**
      * The human-readable name set for the autoscale pool.
-     *
      */
     protected string $name;
     /**
@@ -40,27 +38,22 @@ class AutoscalePool extends \ArrayObject
     protected CurrentUtilization $currentUtilization;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was created.
-     *
      */
     protected \DateTime $createdAt;
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was last updated.
-     *
      */
     protected \DateTime $updatedAt;
     /**
      * The current status of the autoscale pool.
-     *
      */
     protected string $status;
     /**
      * The number of active Droplets in the autoscale pool.
-     *
      */
     protected int $activeResourcesCount;
     /**
      * A unique identifier for each autoscale pool instance. This is automatically generated upon autoscale pool creation.
-     *
      */
     public function getId(): string
     {
@@ -68,7 +61,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A unique identifier for each autoscale pool instance. This is automatically generated upon autoscale pool creation.
-     *
      *
      * @return self
      */
@@ -80,7 +72,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The human-readable name set for the autoscale pool.
-     *
      */
     public function getName(): string
     {
@@ -88,7 +79,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The human-readable name set for the autoscale pool.
-     *
      *
      * @return self
      */
@@ -142,7 +132,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was created.
-     *
      */
     public function getCreatedAt(): \DateTime
     {
@@ -150,7 +139,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was created.
-     *
      *
      * @return self
      */
@@ -162,7 +150,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was last updated.
-     *
      */
     public function getUpdatedAt(): \DateTime
     {
@@ -170,7 +157,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * A time value given in ISO8601 combined date and time format that represents when the autoscale pool was last updated.
-     *
      *
      * @return self
      */
@@ -182,7 +168,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The current status of the autoscale pool.
-     *
      */
     public function getStatus(): string
     {
@@ -190,7 +175,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The current status of the autoscale pool.
-     *
      *
      * @return self
      */
@@ -202,7 +186,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The number of active Droplets in the autoscale pool.
-     *
      */
     public function getActiveResourcesCount(): int
     {
@@ -210,7 +193,6 @@ class AutoscalePool extends \ArrayObject
     }
     /**
      * The number of active Droplets in the autoscale pool.
-     *
      *
      * @return self
      */

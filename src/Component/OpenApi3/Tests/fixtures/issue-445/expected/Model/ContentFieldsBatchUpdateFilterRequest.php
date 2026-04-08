@@ -19,12 +19,10 @@ class ContentFieldsBatchUpdateFilterRequest extends MetadataValuesChangeRequestB
     }
     /**
      * Filters the contents on which the change commands must be applied.
-     *
      */
     protected mixed $filterRequest = null;
     /**
      * Filters the contents on which the change commands must be applied.
-     *
      */
     public function getFilterRequest(): mixed
     {
@@ -32,7 +30,6 @@ class ContentFieldsBatchUpdateFilterRequest extends MetadataValuesChangeRequestB
     }
     /**
      * Filters the contents on which the change commands must be applied.
-     *
      *
      * @return self
      */

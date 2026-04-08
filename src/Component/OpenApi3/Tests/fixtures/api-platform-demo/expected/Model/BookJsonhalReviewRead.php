@@ -23,7 +23,6 @@ class BookJsonhalReviewRead extends \ArrayObject
     protected BookJsonhalReviewReadLinks $links;
     /**
      * The title of the book.
-     *
      */
     protected string $title;
     public function getLinks(): BookJsonhalReviewReadLinks
@@ -38,7 +37,6 @@ class BookJsonhalReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      */
     public function getTitle(): string
     {
@@ -46,7 +44,6 @@ class BookJsonhalReviewRead extends \ArrayObject
     }
     /**
      * The title of the book.
-     *
      *
      * @return self
      */

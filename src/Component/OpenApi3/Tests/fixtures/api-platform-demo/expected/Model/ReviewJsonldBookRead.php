@@ -26,7 +26,6 @@ class ReviewJsonldBookRead extends \ArrayObject
     protected ?string $id2 = null;
     /**
      * The actual body of the review.
-     *
      */
     protected string $body;
     public function getContext(): mixed
@@ -71,7 +70,6 @@ class ReviewJsonldBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      */
     public function getBody(): string
     {
@@ -79,7 +77,6 @@ class ReviewJsonldBookRead extends \ArrayObject
     }
     /**
      * The actual body of the review.
-     *
      *
      * @return self
      */

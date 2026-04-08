@@ -22,22 +22,18 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * ID of the IdP group.
-     *
      */
     protected string $groupId;
     /**
      * Name of the IdP group.
-     *
      */
     protected string $groupName;
     /**
      * Description of the IdP group.
-     *
      */
     protected string $groupDescription;
     /**
      * ID of the IdP group.
-     *
      */
     public function getGroupId(): string
     {
@@ -45,7 +41,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * ID of the IdP group.
-     *
      *
      * @return self
      */
@@ -57,7 +52,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * Name of the IdP group.
-     *
      */
     public function getGroupName(): string
     {
@@ -65,7 +59,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * Name of the IdP group.
-     *
      *
      * @return self
      */
@@ -77,7 +70,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * Description of the IdP group.
-     *
      */
     public function getGroupDescription(): string
     {
@@ -85,7 +77,6 @@ class OrgsOrgTeamsTeamSlugTeamSyncGroupMappingsPatchBodyGroupsItem extends \Arra
     }
     /**
      * Description of the IdP group.
-     *
      *
      * @return self
      */

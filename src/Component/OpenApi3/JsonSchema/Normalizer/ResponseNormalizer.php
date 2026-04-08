@@ -61,9 +61,11 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
 
         if (\array_key_exists('headers', $data) && null !== $data['headers']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference> $values */
+            $values = [];
             if (\is_array($data['headers'])) {
                 foreach ($data['headers'] as $key => $value) {
+                    $key     = TypeValidator::assertStringKey($key, 'headers');
                     $value_1 = $value;
                     if (\is_array($value) && isset($value['$ref'])) {
                         $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference::class, 'json', $context);
@@ -71,6 +73,7 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
                         $value_1 = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header::class, 'json', $context);
                     }
 
+                    /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference $value_1 */
                     $values[$key] = $value_1;
                 }
             }
@@ -82,10 +85,14 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
 
         if (\array_key_exists('content', $data) && null !== $data['content']) {
-            $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType> $values_1 */
+            $values_1 = [];
             if (\is_array($data['content'])) {
                 foreach ($data['content'] as $key_1 => $value_2) {
-                    $values_1[$key_1] = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType::class, 'json', $context);
+                    $key_1 = TypeValidator::assertStringKey($key_1, 'content');
+                    /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType $denormMediaType */
+                    $denormMediaType  = $this->denormalizer->denormalize($value_2, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType::class, 'json', $context);
+                    $values_1[$key_1] = $denormMediaType;
                 }
             }
 
@@ -96,9 +103,11 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
 
         if (\array_key_exists('links', $data) && null !== $data['links']) {
-            $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Link|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference> $values_2 */
+            $values_2 = [];
             if (\is_array($data['links'])) {
                 foreach ($data['links'] as $key_2 => $value_3) {
+                    $key_2   = TypeValidator::assertStringKey($key_2, 'links');
                     $value_4 = $value_3;
                     if (\is_array($value_3) && isset($value_3['$ref'])) {
                         $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference::class, 'json', $context);
@@ -106,6 +115,7 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
                         $value_4 = $this->denormalizer->denormalize($value_3, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Link::class, 'json', $context);
                     }
 
+                    /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Link|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference $value_4 */
                     $values_2[$key_2] = $value_4;
                 }
             }
@@ -117,10 +127,7 @@ class ResponseNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
 
         foreach ($data as $key_3 => $value_5) {
-            if (!\is_string($key_3)) {
-                continue;
-            }
-
+            $key_3 = TypeValidator::assertStringKey($key_3, 'Response');
             if (1 === \Safe\preg_match('/^x-/', $key_3)) {
                 $object[$key_3] = $value_5;
             }

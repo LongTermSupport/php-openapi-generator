@@ -239,9 +239,7 @@ class OperationNormalizer implements DenormalizerInterface, NormalizerInterface,
         }
 
         foreach ($data as $key_3 => $value_11) {
-            if (!\is_string($key_3)) {
-                continue;
-            }
+            $key_3 = TypeValidator::assertStringKey($key_3, 'Operation');
 
             if (1 === \Safe\preg_match('/^x-/', $key_3)) {
                 $object[$key_3] = $value_11;

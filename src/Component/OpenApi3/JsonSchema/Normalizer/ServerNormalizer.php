@@ -68,10 +68,14 @@ class ServerNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         if (\array_key_exists('variables', $data) && null !== $data['variables']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\ServerVariable> $values */
+            $values = [];
             if (\is_array($data['variables'])) {
                 foreach ($data['variables'] as $key => $value) {
-                    $values[$key] = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\ServerVariable::class, 'json', $context);
+                    $key = TypeValidator::assertStringKey($key, 'variables');
+                    /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\ServerVariable $denormVar */
+                    $denormVar    = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\ServerVariable::class, 'json', $context);
+                    $values[$key] = $denormVar;
                 }
             }
 
@@ -82,10 +86,7 @@ class ServerNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         foreach ($data as $key_1 => $value_1) {
-            if (!\is_string($key_1)) {
-                continue;
-            }
-
+            $key_1 = TypeValidator::assertStringKey($key_1, 'Server');
             if (1 === \Safe\preg_match('/^x-/', $key_1)) {
                 $object[$key_1] = $value_1;
             }

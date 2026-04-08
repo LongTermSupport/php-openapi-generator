@@ -57,7 +57,7 @@ class ServerVariableNormalizer implements DenormalizerInterface, NormalizerInter
             $values = [];
             if (\is_array($data['enum'])) {
                 foreach ($data['enum'] as $value) {
-                    $values[] = $value;
+                    $values[] = TypeValidator::assertString($value, 'enum[]');
                 }
             }
 

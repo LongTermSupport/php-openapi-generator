@@ -75,14 +75,14 @@ class XMLNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         }
 
         if (\array_key_exists('attribute', $data) && null !== $data['attribute']) {
-            $object->setAttribute($data['attribute']);
+            $object->setAttribute(TypeValidator::assertBool($data['attribute'], 'attribute'));
             unset($data['attribute']);
         } elseif (\array_key_exists('attribute', $data) && null === $data['attribute']) {
             $object->setAttribute(null);
         }
 
         if (\array_key_exists('wrapped', $data) && null !== $data['wrapped']) {
-            $object->setWrapped($data['wrapped']);
+            $object->setWrapped(TypeValidator::assertBool($data['wrapped'], 'wrapped'));
             unset($data['wrapped']);
         } elseif (\array_key_exists('wrapped', $data) && null === $data['wrapped']) {
             $object->setWrapped(null);

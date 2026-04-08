@@ -341,11 +341,12 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         if (\array_key_exists('properties', $data) && null !== $data['properties']) {
-            /** @var ArrayObject<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema> $values_5 */
-            $values_5 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema> $values_5 */
+            $values_5 = [];
             /** @var array<mixed> $propertiesArr */
             $propertiesArr = $data['properties'];
             foreach ($propertiesArr as $key => $value_10) {
+                $key      = TypeValidator::assertStringKey($key, 'properties');
                 $value_11 = $value_10;
                 if (\is_array($value_10) && isset($value_10['$ref'])) {
                     $value_11 = $this->denormalizer->denormalize($value_10, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference::class, 'json', $context);
@@ -354,7 +355,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
                 }
 
                 /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema $value_11 */
-                $values_5[(string)$key] = $value_11;
+                $values_5[$key] = $value_11;
             }
 
             $object->setProperties($values_5);
@@ -399,7 +400,9 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         if (\array_key_exists('default', $data) && null !== $data['default']) {
-            $object->setDefault($data['default']);
+            /** @var array<mixed>|bool|float|int|string $defaultVal */
+            $defaultVal = $data['default'];
+            $object->setDefault($defaultVal);
             unset($data['default']);
         } elseif (\array_key_exists('default', $data) && null === $data['default']) {
             $object->setDefault(null);
@@ -476,9 +479,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         foreach ($data as $key_1 => $value_13) {
-            if (!\is_string($key_1)) {
-                continue;
-            }
+            $key_1 = TypeValidator::assertStringKey($key_1, 'Schema');
 
             if (1 === \Safe\preg_match('/^x-/', $key_1)) {
                 $object[$key_1] = $value_13;

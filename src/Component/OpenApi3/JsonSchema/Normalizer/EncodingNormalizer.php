@@ -60,10 +60,14 @@ class EncodingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
 
         if (\array_key_exists('headers', $data) && null !== $data['headers']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header> $values */
+            $values = [];
             if (\is_array($data['headers'])) {
                 foreach ($data['headers'] as $key => $value) {
-                    $values[$key] = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header::class, 'json', $context);
+                    $key = TypeValidator::assertStringKey($key, 'headers');
+                    /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header $denormHeader */
+                    $denormHeader = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Header::class, 'json', $context);
+                    $values[$key] = $denormHeader;
                 }
             }
 
@@ -73,19 +77,19 @@ class EncodingNormalizer implements DenormalizerInterface, NormalizerInterface, 
         }
 
         if (\array_key_exists('style', $data) && null !== $data['style']) {
-            $object->setStyle($data['style']);
+            $object->setStyle(TypeValidator::assertString($data['style'], 'style'));
         } elseif (\array_key_exists('style', $data) && null === $data['style']) {
             $object->setStyle(null);
         }
 
         if (\array_key_exists('explode', $data) && null !== $data['explode']) {
-            $object->setExplode($data['explode']);
+            $object->setExplode(TypeValidator::assertBool($data['explode'], 'explode'));
         } elseif (\array_key_exists('explode', $data) && null === $data['explode']) {
             $object->setExplode(null);
         }
 
         if (\array_key_exists('allowReserved', $data) && null !== $data['allowReserved']) {
-            $object->setAllowReserved($data['allowReserved']);
+            $object->setAllowReserved(TypeValidator::assertBool($data['allowReserved'], 'allowReserved'));
         } elseif (\array_key_exists('allowReserved', $data) && null === $data['allowReserved']) {
             $object->setAllowReserved(null);
         }

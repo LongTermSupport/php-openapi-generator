@@ -60,10 +60,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $schemasArr */
             $schemasArr = $data['schemas'];
             foreach ($schemasArr as $key => $value) {
-                if (!\is_string($key)) {
-                    continue;
-                }
-
+                $key = TypeValidator::assertStringKey($key, 'schemas');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key) && null !== $value) {
                     $value_1 = $value;
                     if (\is_array($value) && isset($value['$ref'])) {
@@ -90,10 +87,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $responsesArr */
             $responsesArr = $data['responses'];
             foreach ($responsesArr as $key_1 => $value_2) {
-                if (!\is_string($key_1)) {
-                    continue;
-                }
-
+                $key_1 = TypeValidator::assertStringKey($key_1, 'responses');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_1) && null !== $value_2) {
                     $value_3 = $value_2;
                     if (\is_array($value_2) && isset($value_2['$ref'])) {
@@ -120,10 +114,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $parametersArr */
             $parametersArr = $data['parameters'];
             foreach ($parametersArr as $key_2 => $value_4) {
-                if (!\is_string($key_2)) {
-                    continue;
-                }
-
+                $key_2 = TypeValidator::assertStringKey($key_2, 'parameters');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_2) && null !== $value_4) {
                     $value_5 = $value_4;
                     if (\is_array($value_4) && isset($value_4['$ref'])) {
@@ -150,10 +141,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $examplesArr */
             $examplesArr = $data['examples'];
             foreach ($examplesArr as $key_3 => $value_6) {
-                if (!\is_string($key_3)) {
-                    continue;
-                }
-
+                $key_3 = TypeValidator::assertStringKey($key_3, 'examples');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_3) && null !== $value_6) {
                     $value_7 = $value_6;
                     if (\is_array($value_6) && isset($value_6['$ref'])) {
@@ -180,10 +168,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $requestBodiesArr */
             $requestBodiesArr = $data['requestBodies'];
             foreach ($requestBodiesArr as $key_4 => $value_8) {
-                if (!\is_string($key_4)) {
-                    continue;
-                }
-
+                $key_4 = TypeValidator::assertStringKey($key_4, 'requestBodies');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_4) && null !== $value_8) {
                     $value_9 = $value_8;
                     if (\is_array($value_8) && isset($value_8['$ref'])) {
@@ -210,10 +195,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $headersArr */
             $headersArr = $data['headers'];
             foreach ($headersArr as $key_5 => $value_10) {
-                if (!\is_string($key_5)) {
-                    continue;
-                }
-
+                $key_5 = TypeValidator::assertStringKey($key_5, 'headers');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_5) && null !== $value_10) {
                     $value_11 = $value_10;
                     if (\is_array($value_10) && isset($value_10['$ref'])) {
@@ -240,10 +222,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $securitySchemesArr */
             $securitySchemesArr = $data['securitySchemes'];
             foreach ($securitySchemesArr as $key_6 => $value_12) {
-                if (!\is_string($key_6)) {
-                    continue;
-                }
-
+                $key_6 = TypeValidator::assertStringKey($key_6, 'securitySchemes');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_6) && null !== $value_12) {
                     $value_13 = $value_12;
                     if (\is_array($value_12) && isset($value_12['$ref'])) {
@@ -276,10 +255,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $linksArr */
             $linksArr = $data['links'];
             foreach ($linksArr as $key_7 => $value_14) {
-                if (!\is_string($key_7)) {
-                    continue;
-                }
-
+                $key_7 = TypeValidator::assertStringKey($key_7, 'links');
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_7) && null !== $value_14) {
                     $value_15 = $value_14;
                     if (\is_array($value_14) && isset($value_14['$ref'])) {
@@ -306,9 +282,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
             /** @var array<mixed> $callbacksArr */
             $callbacksArr = $data['callbacks'];
             foreach ($callbacksArr as $key_8 => $value_16) {
-                if (!\is_string($key_8)) {
-                    continue;
-                }
+                $key_8 = TypeValidator::assertStringKey($key_8, 'callbacks');
 
                 if (1 === \Safe\preg_match('/^[a-zA-Z0-9\.\-_]+$/', $key_8) && null !== $value_16) {
                     $value_17 = $value_16;
@@ -317,9 +291,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
                     } elseif (\is_array($value_16)) {
                         $values_9 = [];
                         foreach ($value_16 as $key_9 => $value_18) {
-                            if (!\is_string($key_9)) {
-                                continue;
-                            }
+                            $key_9 = TypeValidator::assertStringKey($key_9, 'callbacks.' . $key_8);
 
                             if (1 === \Safe\preg_match('/^x-/', $key_9) && null !== $value_18) {
                                 $values_9[$key_9] = $value_18;
@@ -343,9 +315,7 @@ class ComponentsNormalizer implements DenormalizerInterface, NormalizerInterface
         }
 
         foreach ($data as $key_10 => $value_19) {
-            if (!\is_string($key_10)) {
-                continue;
-            }
+            $key_10 = TypeValidator::assertStringKey($key_10, 'Components');
 
             if (1 === \Safe\preg_match('/^x-/', $key_10)) {
                 $object[$key_10] = $value_19;

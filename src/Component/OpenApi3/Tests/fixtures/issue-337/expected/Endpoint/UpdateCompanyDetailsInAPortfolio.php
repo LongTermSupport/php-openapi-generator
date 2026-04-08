@@ -75,7 +75,8 @@ class UpdateCompanyDetailsInAPortfolio extends \LongTermSupport\OpenApiGenerator
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && 204 === $status) {
+        if (204 === $status) {
+            return null;
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos(strtolower($contentType), 'application/json') !== false)) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioBadRequestException($response);

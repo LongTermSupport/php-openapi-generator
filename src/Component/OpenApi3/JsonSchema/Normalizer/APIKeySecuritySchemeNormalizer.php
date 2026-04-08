@@ -45,13 +45,12 @@ class APIKeySecuritySchemeNormalizer implements DenormalizerInterface, Normalize
         }
 
         /** @var array<string, mixed> $data */
-        /** @var array<string, string> $context */
         if (isset($data['$ref'])) {
-            return new Reference($data['$ref'], $context['document-origin']);
+            return new Reference(TypeValidator::assertString($data['$ref'], '$ref'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
 
         if (isset($data['$recursiveRef'])) {
-            return new Reference($data['$recursiveRef'], $context['document-origin']);
+            return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
 
         if (\array_key_exists('type', $data) && null !== $data['type']) {

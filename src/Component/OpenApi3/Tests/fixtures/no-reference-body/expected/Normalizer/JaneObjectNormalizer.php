@@ -76,6 +76,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
         return $result;
     }
     /**
+     * @param class-string $normalizerClass
      * @return NormalizerInterface&DenormalizerInterface&NormalizerAwareInterface&DenormalizerAwareInterface
      */
     private function getNormalizer(string $normalizerClass)
@@ -83,6 +84,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
         return $this->normalizersCache[$normalizerClass] ?? $this->initNormalizer($normalizerClass);
     }
     /**
+     * @param class-string $normalizerClass
      * @return NormalizerInterface&DenormalizerInterface&NormalizerAwareInterface&DenormalizerAwareInterface
      */
     private function initNormalizer(string $normalizerClass)

@@ -61,10 +61,14 @@ class RequestBodyNormalizer implements DenormalizerInterface, NormalizerInterfac
         }
 
         if (\array_key_exists('content', $data) && null !== $data['content']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType> $values */
+            $values = [];
             if (\is_array($data['content'])) {
                 foreach ($data['content'] as $key => $value) {
-                    $values[$key] = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType::class, 'json', $context);
+                    $key = TypeValidator::assertStringKey($key, 'content');
+                    /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType $denormMediaType */
+                    $denormMediaType = $this->denormalizer->denormalize($value, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType::class, 'json', $context);
+                    $values[$key]    = $denormMediaType;
                 }
             }
 
@@ -75,16 +79,14 @@ class RequestBodyNormalizer implements DenormalizerInterface, NormalizerInterfac
         }
 
         if (\array_key_exists('required', $data) && null !== $data['required']) {
-            $object->setRequired($data['required']);
+            $object->setRequired(TypeValidator::assertBool($data['required'], 'required'));
             unset($data['required']);
         } elseif (\array_key_exists('required', $data) && null === $data['required']) {
             $object->setRequired(null);
         }
 
         foreach ($data as $key_1 => $value_1) {
-            if (!\is_string($key_1)) {
-                continue;
-            }
+            $key_1 = TypeValidator::assertStringKey($key_1, 'RequestBody');
 
             if (1 === \Safe\preg_match('/^x-/', $key_1)) {
                 $object[$key_1] = $value_1;

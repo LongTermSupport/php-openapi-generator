@@ -68,9 +68,11 @@ class LinkNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         }
 
         if (\array_key_exists('parameters', $data) && null !== $data['parameters']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, mixed> $values */
+            $values = [];
             if (\is_array($data['parameters'])) {
                 foreach ($data['parameters'] as $key => $value) {
+                    $key          = TypeValidator::assertStringKey($key, 'parameters');
                     $values[$key] = $value;
                 }
             }
@@ -103,10 +105,7 @@ class LinkNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         }
 
         foreach ($data as $key_1 => $value_1) {
-            if (!\is_string($key_1)) {
-                continue;
-            }
-
+            $key_1 = TypeValidator::assertStringKey($key_1, 'Link');
             if (1 === \Safe\preg_match('/^x-/', $key_1)) {
                 $object[$key_1] = $value_1;
             }

@@ -133,14 +133,12 @@ class HeaderNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         if (\array_key_exists('content', $data) && null !== $data['content']) {
-            /** @var ArrayObject<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType> $values */
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType> $values */
+            $values = [];
             /** @var array<mixed> $contentArr */
             $contentArr = $data['content'];
             foreach ($contentArr as $key => $value_1) {
-                if (!\is_string($key)) {
-                    continue;
-                }
+                $key = TypeValidator::assertStringKey($key, 'content');
 
                 /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType $denormMediaType */
                 $denormMediaType = $this->denormalizer->denormalize($value_1, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType::class, 'json', $context);
@@ -161,14 +159,12 @@ class HeaderNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         if (\array_key_exists('examples', $data) && null !== $data['examples']) {
-            /** @var ArrayObject<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Example|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference> $values_1 */
-            $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Example|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference> $values_1 */
+            $values_1 = [];
             /** @var array<mixed> $examplesArr */
             $examplesArr = $data['examples'];
             foreach ($examplesArr as $key_1 => $value_2) {
-                if (!\is_string($key_1)) {
-                    continue;
-                }
+                $key_1 = TypeValidator::assertStringKey($key_1, 'examples');
 
                 $value_3 = $value_2;
                 if (\is_array($value_2) && isset($value_2['$ref'])) {
@@ -188,9 +184,7 @@ class HeaderNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         foreach ($data as $key_2 => $value_4) {
-            if (!\is_string($key_2)) {
-                continue;
-            }
+            $key_2 = TypeValidator::assertStringKey($key_2, 'Header');
 
             if (1 === \Safe\preg_match('/^x-/', $key_2)) {
                 $object[$key_2] = $value_4;

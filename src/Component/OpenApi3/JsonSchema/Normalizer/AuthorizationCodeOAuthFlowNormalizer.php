@@ -75,10 +75,12 @@ class AuthorizationCodeOAuthFlowNormalizer implements DenormalizerInterface, Nor
         }
 
         if (\array_key_exists('scopes', $data) && null !== $data['scopes']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, string> $values */
+            $values = [];
             if (\is_array($data['scopes'])) {
                 foreach ($data['scopes'] as $key => $value) {
-                    $values[$key] = $value;
+                    $key          = TypeValidator::assertStringKey($key, 'scopes');
+                    $values[$key] = TypeValidator::assertString($value, 'scopes.' . $key);
                 }
             }
 
@@ -89,10 +91,7 @@ class AuthorizationCodeOAuthFlowNormalizer implements DenormalizerInterface, Nor
         }
 
         foreach ($data as $key_1 => $value_1) {
-            if (!\is_string($key_1)) {
-                continue;
-            }
-
+            $key_1 = TypeValidator::assertStringKey($key_1, 'AuthorizationCodeOAuthFlow');
             if (1 === \Safe\preg_match('/^x-/', $key_1)) {
                 $object[$key_1] = $value_1;
             }

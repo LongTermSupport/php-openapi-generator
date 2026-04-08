@@ -174,9 +174,7 @@ class OpenApiNormalizer implements DenormalizerInterface, NormalizerInterface, D
         }
 
         foreach ($data as $key_2 => $value_6) {
-            if (!\is_string($key_2)) {
-                continue;
-            }
+            $key_2 = TypeValidator::assertStringKey($key_2, 'OpenApi');
 
             if (1 === \Safe\preg_match('/^x-/', $key_2)) {
                 $object[$key_2] = $value_6;

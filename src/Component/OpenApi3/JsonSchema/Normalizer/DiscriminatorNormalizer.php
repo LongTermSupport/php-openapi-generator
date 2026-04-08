@@ -60,10 +60,12 @@ class DiscriminatorNormalizer implements DenormalizerInterface, NormalizerInterf
         }
 
         if (\array_key_exists('mapping', $data) && null !== $data['mapping']) {
-            $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
+            /** @var array<string, string> $values */
+            $values = [];
             if (\is_array($data['mapping'])) {
                 foreach ($data['mapping'] as $key => $value) {
-                    $values[$key] = $value;
+                    $key          = TypeValidator::assertStringKey($key, 'mapping');
+                    $values[$key] = TypeValidator::assertString($value, 'mapping.' . $key);
                 }
             }
 

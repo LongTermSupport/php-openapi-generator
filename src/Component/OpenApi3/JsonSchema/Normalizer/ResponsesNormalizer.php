@@ -61,6 +61,7 @@ class ResponsesNormalizer implements DenormalizerInterface, NormalizerInterface,
                 $value = $this->denormalizer->denormalize($data['default'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Response::class, 'json', $context);
             }
 
+            /** @var \LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Response $value */
             $object->setDefault($value);
             unset($data['default']);
         } elseif (\array_key_exists('default', $data) && null === $data['default']) {

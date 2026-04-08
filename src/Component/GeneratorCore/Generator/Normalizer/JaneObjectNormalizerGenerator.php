@@ -196,7 +196,7 @@ trait JaneObjectNormalizerGenerator
                 )),
             ],
         ], [
-            'comments' => [new Doc("/**\n * @return NormalizerInterface&DenormalizerInterface&NormalizerAwareInterface&DenormalizerAwareInterface\n */")],
+            'comments' => [new Doc("/**\n * @param class-string \$normalizerClass\n * @return NormalizerInterface&DenormalizerInterface&NormalizerAwareInterface&DenormalizerAwareInterface\n */")],
         ]);
     }
 
@@ -249,7 +249,7 @@ trait JaneObjectNormalizerGenerator
                 new Stmt\Return_(new Expr\Variable('normalizer')),
             ],
         ], [
-            'comments' => [new Doc("/**\n * @return NormalizerInterface&DenormalizerInterface&NormalizerAwareInterface&DenormalizerAwareInterface\n */")],
+            'comments' => [new Doc("/**\n * @param class-string \$normalizerClass\n * @return NormalizerInterface&DenormalizerInterface&NormalizerAwareInterface&DenormalizerAwareInterface\n */")],
         ]);
     }
 }

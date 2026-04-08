@@ -95,4 +95,18 @@ final class TypeValidator
 
         return self::assertBool($value, $field);
     }
+
+    /**
+     * Coerce a foreach key to a string. OpenAPI object keys are strings, but PHP
+     * (and JSON/YAML decoders) coerce numeric string keys to int — e.g. response
+     * status code "400" decodes to int 400. Coerce back to string so callers always
+     * see consistent typed keys, never silently drop data.
+     */
+    public static function assertStringKey(int|string $key, string $field): string
+    {
+        // $field retained for symmetry with other validators and for future error paths.
+        unset($field);
+
+        return (string)$key;
+    }
 }

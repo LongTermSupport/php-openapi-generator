@@ -30,7 +30,7 @@ class TestObjectListBodyParameter extends \LongTermSupport\OpenApiGenerator\Comp
      */
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, ?\Psr\Http\Message\StreamFactoryInterface $streamFactory = null): array
     {
-        if (is_array($this->body) and isset($this->body[0]) and $this->body[0] instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema) {
+        if (is_array($this->body) && isset($this->body[0]) && $this->body[0] instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema) {
             return [['Content-Type' => ['application/json']], $serializer->serialize($this->body, 'json')];
         }
         return [[], null];

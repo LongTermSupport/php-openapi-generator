@@ -57,7 +57,7 @@ class DateTimeType extends ObjectType
     #[Override]
     public function createConditionStatement(Expr $input): Expr
     {
-        return new Expr\BinaryOp\LogicalAnd(
+        return new Expr\BinaryOp\BooleanAnd(
             new Expr\FuncCall(
                 new Name('is_string'),
                 [

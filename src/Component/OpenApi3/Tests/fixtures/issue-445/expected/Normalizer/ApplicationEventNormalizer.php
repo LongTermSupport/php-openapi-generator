@@ -42,63 +42,63 @@ class ApplicationEventNormalizer implements DenormalizerInterface, NormalizerInt
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'TransferEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TransferEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ReindexEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ReindexEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ReindexEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentDetailViewEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentDetailViewEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetailViewEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentDownloadEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentDownloadEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDownloadEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SessionRenewalEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SessionRenewalEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SessionRenewalEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SharePageViewEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SharePageViewEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SharePageViewEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ApiStatisticsEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ApiStatisticsEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ApiStatisticsEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OutputRenderedEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputRenderedEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputRenderedEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ConfigurationChangeEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ConfigurationChangeEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ConfigurationChangeEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'CustomerChangeEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'CustomerChangeEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CustomerChangeEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SearchReindexCompletedEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SearchReindexCompletedEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SearchReindexCompletedEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessRuleFiredEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessRuleFiredEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleFiredEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessCancellationRequestedEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessCancellationRequestedEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessCancellationRequestedEvent', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'XmpWritebackCompletedEvent' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'XmpWritebackCompletedEvent' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpWritebackCompletedEvent', $format, $context);
             return $result;
         }

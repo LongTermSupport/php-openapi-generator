@@ -42,7 +42,7 @@ class BusinessProcessNormalizer implements DenormalizerInterface, NormalizerInte
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessDetails' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessDetails' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetails', $format, $context);
             return $result;
         }

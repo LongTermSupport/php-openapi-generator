@@ -27,7 +27,7 @@ trait DenormalizerGenerator
         if ($classGuess instanceof ParentClass) {
             foreach ($classGuess->getChildEntryKeys() as $discriminatorValue) {
                 $statements[] = new Stmt\If_(
-                    new Expr\BinaryOp\LogicalAnd(
+                    new Expr\BinaryOp\BooleanAnd(
                         new Expr\FuncCall(new Name('array_key_exists'), [
                             new Arg(new Scalar\String_($classGuess->getDiscriminator())),
                             new Arg(new Expr\Variable('data')),

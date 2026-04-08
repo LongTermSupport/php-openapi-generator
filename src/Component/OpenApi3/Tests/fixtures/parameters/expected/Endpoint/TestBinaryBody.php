@@ -30,7 +30,7 @@ class TestBinaryBody extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
      */
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, ?\Psr\Http\Message\StreamFactoryInterface $streamFactory = null): array
     {
-        if (is_string($this->body) or is_resource($this->body) or $this->body instanceof \Psr\Http\Message\StreamInterface) {
+        if (is_string($this->body) || is_resource($this->body) || $this->body instanceof \Psr\Http\Message\StreamInterface) {
             return [['Content-Type' => ['test/plain']], $this->body];
         }
         return [[], null];

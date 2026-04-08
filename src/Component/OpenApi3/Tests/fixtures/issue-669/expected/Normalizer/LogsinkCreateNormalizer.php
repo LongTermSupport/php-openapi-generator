@@ -58,16 +58,16 @@ class LogsinkCreateNormalizer implements DenormalizerInterface, NormalizerInterf
         }
         if (\array_key_exists('config', $data)) {
             $value = $data['config'];
-            if (is_array($data['config']) and isset($data['config']['server']) and isset($data['config']['port']) and isset($data['config']['tls']) and (isset($data['config']['format']) and ($data['config']['format'] === 'rfc5424' or $data['config']['format'] === 'rfc3164' or $data['config']['format'] === 'custom'))) {
+            if (is_array($data['config']) && isset($data['config']['server']) && isset($data['config']['port']) && isset($data['config']['tls']) && (isset($data['config']['format']) && ($data['config']['format'] === 'rfc5424' || $data['config']['format'] === 'rfc3164' || $data['config']['format'] === 'custom'))) {
                 $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RsyslogLogsink::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\RsyslogLogsink::class, 'RsyslogLogsink');
                 $value = $value_1;
-            } elseif (is_array($data['config']) and isset($data['config']['url']) and isset($data['config']['index_prefix'])) {
+            } elseif (is_array($data['config']) && isset($data['config']['url']) && isset($data['config']['index_prefix'])) {
                 $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ElasticsearchLogsink::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ElasticsearchLogsink::class, 'ElasticsearchLogsink');
                 $value = $value_2;
-            } elseif (is_array($data['config']) and isset($data['config']['url']) and isset($data['config']['index_prefix'])) {
+            } elseif (is_array($data['config']) && isset($data['config']['url']) && isset($data['config']['index_prefix'])) {
                 $value_3 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchLogsink::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\OpensearchLogsink::class, 'OpensearchLogsink');
                 $value = $value_3;
-            } elseif (is_array($data['config']) and isset($data['config']['site']) and isset($data['config']['datadog_api_key'])) {
+            } elseif (is_array($data['config']) && isset($data['config']['site']) && isset($data['config']['datadog_api_key'])) {
                 $value_4 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['config'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatadogLogsink::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\DatadogLogsink::class, 'DatadogLogsink');
                 $value = $value_4;
             } else {

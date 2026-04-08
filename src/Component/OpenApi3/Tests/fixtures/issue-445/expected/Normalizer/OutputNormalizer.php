@@ -42,7 +42,7 @@ class OutputNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'OutputDetail' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDetail' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDetail', $format, $context);
             return $result;
         }

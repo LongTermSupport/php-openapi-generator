@@ -42,79 +42,79 @@ class FormatBaseNormalizer implements DenormalizerInterface, NormalizerInterface
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ImageFormatBase' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ImageFormatBase' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ImageFormatBase', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OriginalFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OriginalFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OriginalFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'JpegFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'JpegFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\JpegFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'PngFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'PngFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PngFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TiffFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TiffFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TiffFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'VideoFormatBase' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'VideoFormatBase' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VideoFormatBase', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AudioFormatBase' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AudioFormatBase' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AudioFormatBase', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'Mp4VideoFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'Mp4VideoFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Mp4VideoFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'VideoSpriteFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'VideoSpriteFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VideoSpriteFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'VideoStillFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'VideoStillFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VideoStillFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AacAudioFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AacAudioFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AacAudioFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AudioStillFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AudioStillFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AudioStillFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'Mp3AudioFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'Mp3AudioFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Mp3AudioFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'DocumentFormatBase' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'DocumentFormatBase' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentFormatBase', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'DocumentStillFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'DocumentStillFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentStillFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'PdfFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'PdfFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PdfFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'VectorFormatBase' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'VectorFormatBase' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VectorFormatBase', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SvgFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SvgFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SvgFormat', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'VectorStillFormat' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'VectorStillFormat' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VectorStillFormat', $format, $context);
             return $result;
         }

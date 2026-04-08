@@ -50,10 +50,10 @@ class FooBarNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
         if (\array_key_exists('what', $data)) {
             $value = $data['what'];
-            if (is_array($data['what']) and (isset($data['what']['type']) and $data['what']['type'] === '#/components/schemas/Foo')) {
+            if (is_array($data['what']) && (isset($data['what']['type']) && $data['what']['type'] === '#/components/schemas/Foo')) {
                 $value_1 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['what'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Foo::class, 'Foo');
                 $value = $value_1;
-            } elseif (is_array($data['what']) and (isset($data['what']['type']) and $data['what']['type'] === '#/components/schemas/Bar')) {
+            } elseif (is_array($data['what']) && (isset($data['what']['type']) && $data['what']['type'] === '#/components/schemas/Bar')) {
                 $value_2 = TypeValidator::assertInstanceOf($this->denormalizer->denormalize($data['what'], \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar::class, 'json', $context), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\Bar::class, 'Bar');
                 $value = $value_2;
             } else {

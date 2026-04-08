@@ -103,7 +103,7 @@ class ObjectType extends Type
                             new Scalar\String_($value)
                         );
                     } else {
-                        $logicalOr = new Expr\BinaryOp\LogicalOr(
+                        $logicalOr = new Expr\BinaryOp\BooleanOr(
                             $logicalOr,
                             new Expr\BinaryOp\Identical(
                                 new Expr\ArrayDimFetch($input, new Scalar\String_($key)),
@@ -115,9 +115,9 @@ class ObjectType extends Type
             }
 
             if (null !== $logicalOr) {
-                $conditionStatement = new Expr\BinaryOp\LogicalAnd($conditionStatement, new Expr\BinaryOp\LogicalAnd($issetCondition, $logicalOr));
+                $conditionStatement = new Expr\BinaryOp\BooleanAnd($conditionStatement, new Expr\BinaryOp\BooleanAnd($issetCondition, $logicalOr));
             } else {
-                $conditionStatement = new Expr\BinaryOp\LogicalAnd($conditionStatement, $issetCondition);
+                $conditionStatement = new Expr\BinaryOp\BooleanAnd($conditionStatement, $issetCondition);
             }
         }
 

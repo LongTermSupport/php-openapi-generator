@@ -42,15 +42,15 @@ class NamedCacheConfigurationBaseNormalizer implements DenormalizerInterface, No
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ListItemNamedCacheConfiguration' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ListItemNamedCacheConfiguration' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemNamedCacheConfiguration', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SchemaTagboxFilterLookupNamedCacheConfiguration' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SchemaTagboxFilterLookupNamedCacheConfiguration' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaTagboxFilterLookupNamedCacheConfiguration', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'InverseListItemNamedCacheConfiguration' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'InverseListItemNamedCacheConfiguration' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\InverseListItemNamedCacheConfiguration', $format, $context);
             return $result;
         }

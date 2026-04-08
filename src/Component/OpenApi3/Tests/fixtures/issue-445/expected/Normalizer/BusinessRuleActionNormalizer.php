@@ -42,43 +42,43 @@ class BusinessRuleActionNormalizer implements DenormalizerInterface, NormalizerI
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'AssignLayerAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AssignLayerAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AssignLayerAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'UnassignLayerAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'UnassignLayerAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UnassignLayerAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AssignValueAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AssignValueAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AssignValueAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AssignTagboxItemsAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AssignTagboxItemsAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AssignTagboxItemsAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'UnassignTagboxItemsAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'UnassignTagboxItemsAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UnassignTagboxItemsAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AssignContentPermissionSetsAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AssignContentPermissionSetsAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AssignContentPermissionSetsAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'UnassignContentPermissionSetsAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'UnassignContentPermissionSetsAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UnassignContentPermissionSetsAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ProduceMessageAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ProduceMessageAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ProduceMessageAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AssignTagboxItemsInLayerAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AssignTagboxItemsInLayerAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AssignTagboxItemsInLayerAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'EnqueueTaggingAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'EnqueueTaggingAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\EnqueueTaggingAction', $format, $context);
             return $result;
         }

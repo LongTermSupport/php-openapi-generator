@@ -42,11 +42,11 @@ class ShareBaseUpdateRequestNormalizer implements DenormalizerInterface, Normali
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ShareBasicUpdateRequest' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareBasicUpdateRequest' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareBasicUpdateRequest', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ShareEmbedUpdateRequest' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareEmbedUpdateRequest' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareEmbedUpdateRequest', $format, $context);
             return $result;
         }

@@ -42,31 +42,31 @@ class BusinessRuleTransformationNormalizer implements DenormalizerInterface, Nor
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'TakeDictionaryValueTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TakeDictionaryValueTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TakeDictionaryValueTransformation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TakeArrayValueTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TakeArrayValueTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TakeArrayValueTransformation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'JoinByTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'JoinByTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\JoinByTransformation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'LookupCacheTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'LookupCacheTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LookupCacheTransformation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NGramTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NGramTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NGramTransformation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ProjectionTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ProjectionTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ProjectionTransformation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SplitTransformation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SplitTransformation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SplitTransformation', $format, $context);
             return $result;
         }

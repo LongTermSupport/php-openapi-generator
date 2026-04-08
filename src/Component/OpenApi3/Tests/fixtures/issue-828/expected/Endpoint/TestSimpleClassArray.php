@@ -30,7 +30,7 @@ class TestSimpleClassArray extends \LongTermSupport\OpenApiGenerator\Component\O
      */
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, ?\Psr\Http\Message\StreamFactoryInterface $streamFactory = null): array
     {
-        if (is_array($this->body) and isset($this->body[0]) and $this->body[0] instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue828\Model\Bar) {
+        if (is_array($this->body) && isset($this->body[0]) && $this->body[0] instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue828\Model\Bar) {
             return [['Content-Type' => ['application/json']], $serializer->serialize($this->body, 'json')];
         }
         return [[], null];

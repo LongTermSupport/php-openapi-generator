@@ -42,83 +42,83 @@ class FieldBaseNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'FieldBoolean' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldBoolean' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldBoolean', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldDate' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldDate' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldDate', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldDateTime' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldDateTime' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldDateTime', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldDateTimeArray' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldDateTimeArray' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldDateTimeArray', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldDecimal' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldDecimal' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldDecimal', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldDictionary' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldDictionary' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldDictionary', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldDictionaryArray' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldDictionaryArray' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldDictionaryArray', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldGeoPoint' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldGeoPoint' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldGeoPoint', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldTrigger' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldTrigger' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldTrigger', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldLong' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldLong' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldLong', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldLongArray' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldLongArray' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldLongArray', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldSingleFieldset' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldSingleFieldset' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldSingleFieldset', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldMultiFieldset' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldMultiFieldset' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldMultiFieldset', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldSingleTagbox' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldSingleTagbox' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldSingleTagbox', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldMultiTagbox' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldMultiTagbox' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldMultiTagbox', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldString' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldString' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldString', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldStringArray' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldStringArray' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldStringArray', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldTranslatedString' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldTranslatedString' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldTranslatedString', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldSingleRelation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldSingleRelation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldSingleRelation', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldMultiRelation' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldMultiRelation' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldMultiRelation', $format, $context);
             return $result;
         }

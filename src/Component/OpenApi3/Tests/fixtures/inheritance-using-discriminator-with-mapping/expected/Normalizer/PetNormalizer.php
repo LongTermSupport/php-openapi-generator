@@ -42,11 +42,11 @@ class PetNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('petType', $data) and 'weird-pet-type-for-cat' === $data['petType']) {
+        if (array_key_exists('petType', $data) && 'weird-pet-type-for-cat' === $data['petType']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\InheritanceUsingDiscriminatorWithMapping\Model\Cat', $format, $context);
             return $result;
         }
-        if (array_key_exists('petType', $data) and 'weird-pet-type-for-dog' === $data['petType']) {
+        if (array_key_exists('petType', $data) && 'weird-pet-type-for-dog' === $data['petType']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\InheritanceUsingDiscriminatorWithMapping\Model\Dog', $format, $context);
             return $result;
         }

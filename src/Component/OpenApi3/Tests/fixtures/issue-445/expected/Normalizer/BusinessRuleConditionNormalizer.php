@@ -42,91 +42,91 @@ class BusinessRuleConditionNormalizer implements DenormalizerInterface, Normaliz
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'BooleanCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BooleanCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BooleanCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AndCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AndCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AndCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OrCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OrCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OrCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'LayerAssignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'LayerAssignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerAssignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'LayerUnassignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'LayerUnassignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayerUnassignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentPermissionSetAssignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentPermissionSetAssignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetAssignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentPermissionSetUnassignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentPermissionSetUnassignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetUnassignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldValueChangedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldValueChangedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldValueChangedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MatchRegexCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MatchRegexCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MatchRegexCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TagboxItemAssignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TagboxItemAssignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TagboxItemAssignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TagboxItemUnassignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TagboxItemUnassignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TagboxItemUnassignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentSchemaCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentSchemaCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSchemaCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NumberCompareCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NumberCompareCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumberCompareCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentRelationItemAssignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentRelationItemAssignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentRelationItemAssignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentRelationItemUnassignedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentRelationItemUnassignedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentRelationItemUnassignedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'GeoPointWithinPolygonCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'GeoPointWithinPolygonCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\GeoPointWithinPolygonCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentPermissionSetsChangedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentPermissionSetsChangedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetsChangedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentRelationItemsChangedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentRelationItemsChangedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentRelationItemsChangedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'LayersChangedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'LayersChangedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LayersChangedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TagboxItemsChangedCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TagboxItemsChangedCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TagboxItemsChangedCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldEmptyCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldEmptyCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldEmptyCondition', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NotCondition' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NotCondition' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NotCondition', $format, $context);
             return $result;
         }

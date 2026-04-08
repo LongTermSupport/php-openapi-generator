@@ -42,11 +42,11 @@ class BusinessRuleNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'BusinessRuleConfigurable' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessRuleConfigurable' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfigurable', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessRuleScript' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessRuleScript' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleScript', $format, $context);
             return $result;
         }

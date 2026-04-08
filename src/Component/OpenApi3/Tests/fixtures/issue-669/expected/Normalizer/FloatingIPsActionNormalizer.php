@@ -42,11 +42,11 @@ class FloatingIPsActionNormalizer implements DenormalizerInterface, NormalizerIn
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('type', $data) and 'assign' === $data['type']) {
+        if (array_key_exists('type', $data) && 'assign' === $data['type']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpActionAssign', $format, $context);
             return $result;
         }
-        if (array_key_exists('type', $data) and 'unassign' === $data['type']) {
+        if (array_key_exists('type', $data) && 'unassign' === $data['type']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\FloatingIpActionUnassign', $format, $context);
             return $result;
         }

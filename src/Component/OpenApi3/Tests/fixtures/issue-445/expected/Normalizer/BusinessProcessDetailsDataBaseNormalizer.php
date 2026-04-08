@@ -42,19 +42,19 @@ class BusinessProcessDetailsDataBaseNormalizer implements DenormalizerInterface,
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessDetailsDataBatchResponse' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessDetailsDataBatchResponse' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetailsDataBatchResponse', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessDetailsDataSchemaImport' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessDetailsDataSchemaImport' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetailsDataSchemaImport', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessDetailsDataCdnPurge' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessDetailsDataCdnPurge' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetailsDataCdnPurge', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'BusinessProcessDetailsDataContentImport' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'BusinessProcessDetailsDataContentImport' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetailsDataContentImport', $format, $context);
             return $result;
         }

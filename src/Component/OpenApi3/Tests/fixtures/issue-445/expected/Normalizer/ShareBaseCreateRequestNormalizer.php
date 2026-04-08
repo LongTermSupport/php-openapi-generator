@@ -42,11 +42,11 @@ class ShareBaseCreateRequestNormalizer implements DenormalizerInterface, Normali
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ShareBasicCreateRequest' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareBasicCreateRequest' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareBasicCreateRequest', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ShareEmbedCreateRequest' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareEmbedCreateRequest' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareEmbedCreateRequest', $format, $context);
             return $result;
         }

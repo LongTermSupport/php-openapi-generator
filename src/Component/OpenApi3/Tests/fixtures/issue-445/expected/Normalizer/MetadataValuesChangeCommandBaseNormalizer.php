@@ -42,31 +42,31 @@ class MetadataValuesChangeCommandBaseNormalizer implements DenormalizerInterface
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesSchemaUpdateCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesSchemaUpdateCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesSchemaUpdateCommand', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesSchemaUpsertCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesSchemaUpsertCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesSchemaUpsertCommand', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesSchemaRemoveCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesSchemaRemoveCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesSchemaRemoveCommand', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesSchemaReplaceCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesSchemaReplaceCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesSchemaReplaceCommand', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesFieldRemoveCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesFieldRemoveCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesFieldRemoveCommand', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesSchemaItemAddCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesSchemaItemAddCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesSchemaItemAddCommand', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'MetadataValuesSchemaItemRemoveCommand' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'MetadataValuesSchemaItemRemoveCommand' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataValuesSchemaItemRemoveCommand', $format, $context);
             return $result;
         }

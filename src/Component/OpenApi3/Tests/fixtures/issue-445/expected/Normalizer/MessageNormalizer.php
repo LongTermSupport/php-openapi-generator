@@ -42,15 +42,15 @@ class MessageNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ConsoleMessage' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ConsoleMessage' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ConsoleMessage', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NodeInfoMessage' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NodeInfoMessage' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NodeInfoMessage', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'LiveStreamMessage' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'LiveStreamMessage' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamMessage', $format, $context);
             return $result;
         }

@@ -42,11 +42,11 @@ class TaggingOptionsBaseNormalizer implements DenormalizerInterface, NormalizerI
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ClarifaiTaggingOptions' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ClarifaiTaggingOptions' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ClarifaiTaggingOptions', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SimulatedTaggingOptions' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SimulatedTaggingOptions' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SimulatedTaggingOptions', $format, $context);
             return $result;
         }

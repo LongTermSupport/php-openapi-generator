@@ -42,11 +42,11 @@ class MetadataValuesChangeRequestBaseNormalizer implements DenormalizerInterface
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ContentFieldsBatchUpdateFilterRequest' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentFieldsBatchUpdateFilterRequest' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFieldsBatchUpdateFilterRequest', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ContentFieldsBatchUpdateRequest' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ContentFieldsBatchUpdateRequest' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFieldsBatchUpdateRequest', $format, $context);
             return $result;
         }

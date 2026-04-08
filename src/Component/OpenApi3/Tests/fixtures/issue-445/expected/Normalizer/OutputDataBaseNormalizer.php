@@ -42,27 +42,27 @@ class OutputDataBaseNormalizer implements DenormalizerInterface, NormalizerInter
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'OutputDataImage' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDataImage' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataImage', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OutputDataAudio' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDataAudio' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataAudio', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OutputDataVideo' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDataVideo' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataVideo', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OutputDataDocument' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDataDocument' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataDocument', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OutputDataVector' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDataVector' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataVector', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OutputDataDefault' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OutputDataDefault' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDataDefault', $format, $context);
             return $result;
         }

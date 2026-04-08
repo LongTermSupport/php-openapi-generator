@@ -96,8 +96,8 @@ abstract class AbstractBodyContentGenerator implements RequestBodyContentGenerat
         $class = $schemaObj->getNamespace() . '\Model\\' . $classGuess->getName();
 
         if (true === $array) {
-            return new Expr\BinaryOp\LogicalAnd(
-                new Expr\BinaryOp\LogicalAnd(
+            return new Expr\BinaryOp\BooleanAnd(
+                new Expr\BinaryOp\BooleanAnd(
                     new Expr\FuncCall(new Name('is_array'), [new Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'body'))]),
                     new Expr\FuncCall(new Name('isset'), [new Arg(new Expr\ArrayDimFetch(
                         new Expr\PropertyFetch(new Expr\Variable('this'), 'body'),
@@ -172,8 +172,8 @@ abstract class AbstractBodyContentGenerator implements RequestBodyContentGenerat
         $convertArray = [
             'string'  => [
                 'default' => new Expr\FuncCall(new Name('is_string'), [$inputArg]),
-                'binary'  => new Expr\BinaryOp\LogicalOr(
-                    new Expr\BinaryOp\LogicalOr(
+                'binary'  => new Expr\BinaryOp\BooleanOr(
+                    new Expr\BinaryOp\BooleanOr(
                         new Expr\FuncCall(new Name('is_string'), [$inputArg]),
                         new Expr\FuncCall(new Name('is_resource'), [$inputArg])
                     ),
@@ -196,8 +196,8 @@ abstract class AbstractBodyContentGenerator implements RequestBodyContentGenerat
                 'default' => new Expr\Instanceof_($fetch, new Name('\stdClass')),
             ],
             'file'    => [
-                'default' => new Expr\BinaryOp\LogicalOr(
-                    new Expr\BinaryOp\LogicalOr(
+                'default' => new Expr\BinaryOp\BooleanOr(
+                    new Expr\BinaryOp\BooleanOr(
                         new Expr\FuncCall(new Name('is_string'), [$inputArg]),
                         new Expr\FuncCall(new Name('is_resource'), [$inputArg])
                     ),

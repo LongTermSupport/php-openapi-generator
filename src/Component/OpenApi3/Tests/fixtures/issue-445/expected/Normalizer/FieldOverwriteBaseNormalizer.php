@@ -42,11 +42,11 @@ class FieldOverwriteBaseNormalizer implements DenormalizerInterface, NormalizerI
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'FieldOverwriteSingleTagbox' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldOverwriteSingleTagbox' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteSingleTagbox', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'FieldOverwriteMultiTagbox' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'FieldOverwriteMultiTagbox' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldOverwriteMultiTagbox', $format, $context);
             return $result;
         }

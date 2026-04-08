@@ -42,11 +42,11 @@ class ShareDataBaseNormalizer implements DenormalizerInterface, NormalizerInterf
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ShareDataEmbed' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareDataEmbed' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDataEmbed', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ShareDataBasic' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareDataBasic' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDataBasic', $format, $context);
             return $result;
         }

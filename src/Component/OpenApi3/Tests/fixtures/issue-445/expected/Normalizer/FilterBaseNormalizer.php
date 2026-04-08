@@ -42,63 +42,63 @@ class FilterBaseNormalizer implements DenormalizerInterface, NormalizerInterface
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'AndFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AndFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AndFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'OrFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'OrFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OrFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NotFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NotFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NotFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'DateRangeFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'DateRangeFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DateRangeFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ExistsFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ExistsFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ExistsFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'GeoBoundingBoxFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'GeoBoundingBoxFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\GeoBoundingBoxFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'GeoDistanceFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'GeoDistanceFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\GeoDistanceFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NestedFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NestedFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NestedFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NumericRangeFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NumericRangeFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'PrefixFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'PrefixFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PrefixFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TermFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TermFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TermFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TermsFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TermsFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TermsFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'AggregationFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AggregationFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AggregationFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ChildFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ChildFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChildFilter', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ParentFilter' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ParentFilter' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ParentFilter', $format, $context);
             return $result;
         }

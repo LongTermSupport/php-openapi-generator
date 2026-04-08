@@ -42,19 +42,19 @@ class ImageActionBaseNormalizer implements DenormalizerInterface, NormalizerInte
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'AlphaHandlingAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'AlphaHandlingAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\AlphaHandlingAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'CropAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'CropAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CropAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'UnsharpenMaskAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'UnsharpenMaskAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UnsharpenMaskAction', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'WatermarkAction' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'WatermarkAction' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\WatermarkAction', $format, $context);
             return $result;
         }

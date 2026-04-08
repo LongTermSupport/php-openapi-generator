@@ -42,11 +42,11 @@ class CdnPurgeJobBaseNormalizer implements DenormalizerInterface, NormalizerInte
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'CdnPurgeJobByTag' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'CdnPurgeJobByTag' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CdnPurgeJobByTag', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'CdnPurgeJobByUri' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'CdnPurgeJobByUri' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CdnPurgeJobByUri', $format, $context);
             return $result;
         }

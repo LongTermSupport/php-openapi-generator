@@ -42,7 +42,7 @@ class XmpMappingEntryConfigurationBaseNormalizer implements DenormalizerInterfac
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'XmpMappingEntryConfigurationTagbox' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'XmpMappingEntryConfigurationTagbox' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryConfigurationTagbox', $format, $context);
             return $result;
         }

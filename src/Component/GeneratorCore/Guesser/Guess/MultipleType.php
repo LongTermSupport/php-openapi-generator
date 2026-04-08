@@ -169,7 +169,7 @@ class MultipleType extends Type
 
             $condition = $type->createConditionStatement($input);
             if (null !== $this->discriminatorProperty) {
-                $condition = new Expr\BinaryOp\LogicalAnd($condition, $this->createDiscriminatorCondition($input, $discriminant));
+                $condition = new Expr\BinaryOp\BooleanAnd($condition, $this->createDiscriminatorCondition($input, $discriminant));
             }
 
             $statement = array_merge($typeStatements, [new Stmt\Expression(new Expr\Assign($output, $typeOutput))]);
@@ -336,6 +336,6 @@ class MultipleType extends Type
             new Scalar\String_($discriminant)
         );
 
-        return new Expr\BinaryOp\LogicalAnd($issetCondition, $valueCondition);
+        return new Expr\BinaryOp\BooleanAnd($issetCondition, $valueCondition);
     }
 }

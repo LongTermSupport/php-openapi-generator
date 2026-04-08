@@ -42,23 +42,23 @@ class AnalyzerBaseNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'EdgeNGramAnalyzer' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'EdgeNGramAnalyzer' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\EdgeNGramAnalyzer', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'LanguageAnalyzer' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'LanguageAnalyzer' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LanguageAnalyzer', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NGramAnalyzer' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NGramAnalyzer' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NGramAnalyzer', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'PathHierarchyAnalyzer' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'PathHierarchyAnalyzer' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PathHierarchyAnalyzer', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'SimpleAnalyzer' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'SimpleAnalyzer' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SimpleAnalyzer', $format, $context);
             return $result;
         }

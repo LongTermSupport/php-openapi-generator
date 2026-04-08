@@ -42,11 +42,11 @@ class ShareOutputBaseNormalizer implements DenormalizerInterface, NormalizerInte
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'ShareOutputBasic' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareOutputBasic' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareOutputBasic', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'ShareOutputEmbed' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'ShareOutputEmbed' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareOutputEmbed', $format, $context);
             return $result;
         }

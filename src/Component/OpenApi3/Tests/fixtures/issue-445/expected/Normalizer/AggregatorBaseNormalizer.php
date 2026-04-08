@@ -42,31 +42,31 @@ class AggregatorBaseNormalizer implements DenormalizerInterface, NormalizerInter
         if (!\is_array($data)) {
             return $object;
         }
-        if (array_key_exists('kind', $data) and 'DateRangeAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'DateRangeAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DateRangeAggregator', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'GeoDistanceAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'GeoDistanceAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\GeoDistanceAggregator', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NestedAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NestedAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NestedAggregator', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'NumericRangeAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'NumericRangeAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\NumericRangeAggregator', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TermsAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TermsAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TermsAggregator', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TermsRelationAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TermsRelationAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TermsRelationAggregator', $format, $context);
             return $result;
         }
-        if (array_key_exists('kind', $data) and 'TermsEnumAggregator' === $data['kind']) {
+        if (array_key_exists('kind', $data) && 'TermsEnumAggregator' === $data['kind']) {
             $result = $this->denormalizer->denormalize($data, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TermsEnumAggregator', $format, $context);
             return $result;
         }

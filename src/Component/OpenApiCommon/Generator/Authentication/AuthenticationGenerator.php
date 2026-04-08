@@ -30,21 +30,28 @@ trait AuthenticationGenerator
                         $fetchedValue = new Expr\PropertyFetch(new Expr\Variable('this'), 'token');
                         break;
                     case SecuritySchemeGuess::SCHEME_BASIC:
+                        // base64_encode($this->username . ':' . $this->password)
                         $fetchedValue = new Expr\FuncCall(new Name('base64_encode'), [
-                            new Node\Arg(new Expr\FuncCall(new Name('sprintf'), [
-                                new Node\Arg(new Scalar\String_('%s:%s')),
-                                new Node\Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'username')),
-                                new Node\Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'password')),
-                            ])),
+                            new Node\Arg(new Expr\BinaryOp\Concat(
+                                new Expr\BinaryOp\Concat(
+                                    new Expr\PropertyFetch(new Expr\Variable('this'), 'username'),
+                                    new Scalar\String_(':')
+                                ),
+                                new Expr\PropertyFetch(new Expr\Variable('this'), 'password')
+                            )),
                         ]);
                         break;
                 }
 
                 if (null !== $fetchedValue) {
-                    $stmts[] = new Stmt\Expression(new Expr\Assign(new Expr\Variable('header'), new Expr\FuncCall(new Name('sprintf'), [
-                        new Node\Arg(new Scalar\String_($securityScheme->getScheme() . ' %s')),
-                        new Node\Arg($fetchedValue),
-                    ])));
+                    // $header = '<scheme> ' . <fetchedValue>
+                    $stmts[] = new Stmt\Expression(new Expr\Assign(
+                        new Expr\Variable('header'),
+                        new Expr\BinaryOp\Concat(
+                            new Scalar\String_($securityScheme->getScheme() . ' '),
+                            $fetchedValue
+                        )
+                    ));
                     $stmts[] = new Stmt\Expression(new Expr\Assign(new Expr\Variable('request'), new Expr\MethodCall(new Expr\Variable('request'), 'withHeader', [
                         new Node\Arg(new Scalar\String_('Authorization')),
                         new Node\Arg(new Expr\Variable('header')),

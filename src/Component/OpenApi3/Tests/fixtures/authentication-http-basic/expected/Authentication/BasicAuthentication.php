@@ -18,7 +18,7 @@ class BasicAuthentication implements \LongTermSupport\OpenApiGenerator\Component
     }
     public function authentication(\Psr\Http\Message\RequestInterface $request): \Psr\Http\Message\RequestInterface
     {
-        $header = sprintf('Basic %s', base64_encode(sprintf('%s:%s', $this->username, $this->password)));
+        $header = 'Basic ' . base64_encode($this->username . ':' . $this->password);
         $request = $request->withHeader('Authorization', $header);
         return $request;
     }

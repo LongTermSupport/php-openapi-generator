@@ -16,7 +16,7 @@ class BearerAuthentication implements \LongTermSupport\OpenApiGenerator\Componen
     }
     public function authentication(\Psr\Http\Message\RequestInterface $request): \Psr\Http\Message\RequestInterface
     {
-        $header = sprintf('Bearer %s', $this->token);
+        $header = 'Bearer ' . $this->token;
         $request = $request->withHeader('Authorization', $header);
         return $request;
     }

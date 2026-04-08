@@ -83,7 +83,7 @@ bin/console php-openapi:generate --config-file .php-openapi
 
 ## Maintained by
 
-[Long Term Support Ltd](https://ltscommerce.dev) — [joseph@ltscommerce.dev](mailto:joseph@ltscommerce.dev)
+[Long Term Support Ltd](https://ltscommerce.dev) — joseph@ltscommerce.dev
 
 ## Credits
 

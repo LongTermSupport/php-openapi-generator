@@ -34,5 +34,9 @@ parameters:
     ignoreErrors:
         # new static() in factory methods — intentional for inheritance support
         - identifier: new.static
-        # Runtime template traits only used in generated code, not scanned source
+        # Runtime template traits in Generator/Runtime/data/ are scanned by PHPStan
+        # (per CLAUDE.md, to validate \-prefixed FQCN usage and PHP correctness)
+        # but never loaded as classes — they are parsed as templates and copied
+        # verbatim into generated code under arbitrary destination namespaces.
+        # The trait.unused warning is therefore a structural false positive.
         - identifier: trait.unused

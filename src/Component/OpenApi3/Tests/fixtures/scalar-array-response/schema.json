@@ -1,0 +1,105 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Scalar Array Response",
+        "version": "1.0"
+    },
+    "paths": {
+        "/strings": {
+            "get": {
+                "operationId": "get_strings",
+                "description": "Returns a list of strings.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ints": {
+            "get": {
+                "operationId": "get_ints",
+                "description": "Returns a list of integers.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/nullable-strings": {
+            "get": {
+                "operationId": "get_nullable_strings",
+                "description": "Returns a list of nullable strings (OAS 3.1 multi-type).",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": ["string", "null"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/widget": {
+            "get": {
+                "operationId": "get_widget",
+                "description": "Returns a widget object (ensures model runtime files are generated).",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Widget"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Widget": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "count": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

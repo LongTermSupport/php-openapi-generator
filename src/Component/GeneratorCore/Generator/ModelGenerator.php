@@ -68,72 +68,6 @@ class ModelGenerator implements GeneratorInterface
     }
 
     /**
-     * Generate a typed collection class for a model.
-     *
-     * Example for model `BarItem` in namespace `Foo\Model`:
-     *
-     *   final class BarItemCollection {
-     *       /** @var list<\Foo\Model\BarItem> * /
-     *       public private(set) array $items;
-     *       public function __construct(\Foo\Model\BarItem ...$items) {
-     *           $this->items = array_values($items);
-     *       }
-     *   }
-     *
-     * The variadic constructor enforces the element type at the PHP level so
-     * PHPStan does not need generics to understand the contents.
-     */
-    private function generateCollectionClass(string $modelName, string $namespace, Schema $schema): void
-    {
-        $collectionName = $modelName . 'Collection';
-        $itemFqcn       = new Name\FullyQualified($namespace . '\\' . $modelName);
-
-        $collectionClass = new Stmt\Class_($collectionName, [
-            'flags' => Modifiers::FINAL,
-            'stmts' => [
-                new Stmt\Property(
-                    Modifiers::PUBLIC | Modifiers::PRIVATE_SET,
-                    [new Node\PropertyItem('items')],
-                    ['comments' => [new Comment\Doc(
-                        '/** @var list<\\' . $namespace . '\\' . $modelName . '> */',
-                    )]],
-                    new Identifier('array'),
-                ),
-                new Stmt\ClassMethod('__construct', [
-                    'flags'  => Modifiers::PUBLIC,
-                    'params' => [
-                        new Param(
-                            var:      new Expr\Variable('items'),
-                            default:  null,
-                            type:     $itemFqcn,
-                            byRef:    false,
-                            variadic: true,
-                        ),
-                    ],
-                    'stmts'  => [
-                        new Stmt\Expression(
-                            new Expr\Assign(
-                                new Expr\PropertyFetch(new Expr\Variable('this'), 'items'),
-                                new Expr\FuncCall(
-                                    new Name('array_values'),
-                                    [new Node\Arg(new Expr\Variable('items'))],
-                                ),
-                            ),
-                        ),
-                    ],
-                ]),
-            ],
-        ]);
-
-        $namespaceStmt = new Stmt\Namespace_(new Name($namespace), [$collectionClass]);
-        $schema->addFile(new File(
-            $schema->getDirectory() . '/Model/' . $collectionName . '.php',
-            $namespaceStmt,
-            self::FILE_TYPE_MODEL,
-        ));
-    }
-
-    /**
      * The naming service.
      */
     protected function getNaming(): Naming
@@ -173,5 +107,72 @@ class ModelGenerator implements GeneratorInterface
             [] !== $class->getExtensionsType(),
             $class->isDeprecated()
         );
+    }
+
+    /**
+     * Generate a typed collection class for a model.
+     *
+     * Example for model `BarItem` in namespace `Foo\Model`:
+     *
+     *   final class BarItemCollection {
+     *
+     *       /** @var list<\Foo\Model\BarItem> * /
+     *       public private(set) array $items;
+     *       public function __construct(\Foo\Model\BarItem ...$items) {
+     *           $this->items = array_values($items);
+     *       }
+     *   }
+     *
+     * The variadic constructor enforces the element type at the PHP level so
+     * PHPStan does not need generics to understand the contents.
+     */
+    private function generateCollectionClass(string $modelName, string $namespace, Schema $schema): void
+    {
+        $collectionName = $modelName . 'Collection';
+        $itemFqcn       = new Name\FullyQualified($namespace . '\\' . $modelName);
+
+        $collectionClass = new Stmt\Class_($collectionName, [
+            'flags' => Modifiers::FINAL,
+            'stmts' => [
+                new Stmt\Property(
+                    Modifiers::PUBLIC | Modifiers::PRIVATE_SET,
+                    [new Node\PropertyItem('items')],
+                    ['comments' => [new Comment\Doc(
+                        '/** @var list<\\' . $namespace . '\\' . $modelName . '> */',
+                    )]],
+                    new Identifier('array'),
+                ),
+                new Stmt\ClassMethod('__construct', [
+                    'flags'  => Modifiers::PUBLIC,
+                    'params' => [
+                        new Param(
+                            var: new Expr\Variable('items'),
+                            default: null,
+                            type: $itemFqcn,
+                            byRef: false,
+                            variadic: true,
+                        ),
+                    ],
+                    'stmts'  => [
+                        new Stmt\Expression(
+                            new Expr\Assign(
+                                new Expr\PropertyFetch(new Expr\Variable('this'), 'items'),
+                                new Expr\FuncCall(
+                                    new Name('array_values'),
+                                    [new Node\Arg(new Expr\Variable('items'))],
+                                ),
+                            ),
+                        ),
+                    ],
+                ]),
+            ],
+        ]);
+
+        $namespaceStmt = new Stmt\Namespace_(new Name($namespace), [$collectionClass]);
+        $schema->addFile(new File(
+            $schema->getDirectory() . '/Model/' . $collectionName . '.php',
+            $namespaceStmt,
+            self::FILE_TYPE_MODEL,
+        ));
     }
 }

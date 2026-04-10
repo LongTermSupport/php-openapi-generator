@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator;
 
+use LogicException;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 use PhpParser\Comment;
@@ -64,7 +65,7 @@ class OperationGenerator
         // When any return type is `mixed`, fall through to the bare-mixed path.
         if ([] !== $returnTypes && !\in_array('mixed', $returnTypes, true)) {
             // Always include ResponseInterface — FETCH_RESPONSE mode returns the raw PSR-7 response.
-            $allReturnTypes = array_unique([...$returnTypes, '\Psr\Http\Message\ResponseInterface']);
+            $allReturnTypes = array_unique([...$returnTypes, \Psr\Http\Message\ResponseInterface::class]);
 
             // Build native PHP return type.
             // Array types (e.g. Foo[]) are not valid native PHP types — they collapse to `array`.
@@ -109,7 +110,7 @@ class OperationGenerator
 
             $condition = array_shift($conditions);
             if (null === $condition) {
-                throw new \LogicException('Expected at least one type condition — $allReturnTypes was empty');
+                throw new LogicException('Expected at least one type condition — $allReturnTypes was empty');
             }
 
             foreach ($conditions as $cond) {
@@ -146,7 +147,6 @@ class OperationGenerator
     }
 
     /**
-     * @param array<string> $returnTypes
      * @param array<string> $throwTypes
      */
     /**

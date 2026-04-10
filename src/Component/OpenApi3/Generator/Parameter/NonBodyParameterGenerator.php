@@ -347,10 +347,12 @@ class NonBodyParameterGenerator extends ParameterGenerator
                 if (!\is_string($t)) {
                     continue;
                 }
+
                 if ('null' === $t) {
                     $result['null'] = true;
                     continue;
                 }
+
                 if (\array_key_exists($t, $convertArray)) {
                     foreach ($convertArray[$t] as $mapped) {
                         $result[$mapped] = true;
@@ -359,9 +361,11 @@ class NonBodyParameterGenerator extends ParameterGenerator
                     $result['mixed'] = true;
                 }
             }
+
             if (true === $schema->getNullable()) {
                 $result['null'] = true;
             }
+
             $keys = array_keys($result);
 
             return [] === $keys ? ['mixed'] : $keys;

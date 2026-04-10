@@ -106,6 +106,166 @@ final class TypeValidator
         return $value;
     }
     /**
+     * @return list<string>
+     */
+    public static function assertListOfString(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of string, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (!\is_string($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of string, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<string|null>
+     */
+    public static function assertListOfNullableString(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of string|null, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (null !== $item && !\is_string($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of string|null, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<int>
+     */
+    public static function assertListOfInt(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of int, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (!\is_int($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of int, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<int|null>
+     */
+    public static function assertListOfNullableInt(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of int|null, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (null !== $item && !\is_int($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of int|null, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<float>
+     */
+    public static function assertListOfFloat(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of float, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (\is_int($item)) {
+                $list[] = (float) $item;
+                continue;
+            }
+            if (!\is_float($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of float, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<float|null>
+     */
+    public static function assertListOfNullableFloat(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of float|null, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (null === $item) {
+                $list[] = null;
+                continue;
+            }
+            if (\is_int($item)) {
+                $list[] = (float) $item;
+                continue;
+            }
+            if (!\is_float($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of float|null, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<bool>
+     */
+    public static function assertListOfBool(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of bool, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (\is_int($item) && (0 === $item || 1 === $item)) {
+                $list[] = 1 === $item;
+                continue;
+            }
+            if (!\is_bool($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of bool, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
+     * @return list<bool|null>
+     */
+    public static function assertListOfNullableBool(mixed $value, string $field): array
+    {
+        if (!\is_array($value)) {
+            throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of bool|null, got %s', $field, \get_debug_type($value)));
+        }
+        $list = [];
+        foreach ($value as $item) {
+            if (null === $item) {
+                $list[] = null;
+                continue;
+            }
+            if (\is_int($item) && (0 === $item || 1 === $item)) {
+                $list[] = 1 === $item;
+                continue;
+            }
+            if (!\is_bool($item)) {
+                throw new \UnexpectedValueException(\sprintf('Field "%s" expected list of bool|null, got element %s', $field, \get_debug_type($item)));
+            }
+            $list[] = $item;
+        }
+        return $list;
+    }
+    /**
      * Type-guard a value as a list of instances of a class. Used by generated
      * endpoint `transformResponseBody` for array-of-object response bodies.
      *

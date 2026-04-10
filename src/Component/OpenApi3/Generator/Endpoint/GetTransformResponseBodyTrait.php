@@ -482,10 +482,50 @@ trait GetTransformResponseBodyTrait
                 $serializeStmt = $assertCall;
             }
         } elseif ($schema instanceof Schema) {
-            $returnType    = 'mixed';
-            $serializeStmt = new Expr\FuncCall(new Name('json_decode'), [
-                new Node\Arg(new Expr\Variable('body')),
-            ]);
+            if ($isArray) {
+                $itemsSchema = $schema->getItems();
+                if ($itemsSchema instanceof Schema) {
+                    $scalarResult = $this->resolveScalarCollection($itemsSchema, $context);
+                    if (null !== $scalarResult) {
+                        [$returnType, $assertMethod] = $scalarResult;
+
+                        $typeValidatorClass = new Name\FullyQualified(
+                            $context->getCurrentSchema()->getNamespace() . '\Runtime\Normalizer\TypeValidator'
+                        );
+
+                        $assertCall = new Expr\StaticCall(
+                            $typeValidatorClass,
+                            $assertMethod,
+                            [
+                                new Node\Arg(new Expr\FuncCall(new Name\FullyQualified('json_decode'), [
+                                    new Node\Arg(new Expr\Variable('body')),
+                                ])),
+                                new Node\Arg(new Scalar\String_('response body')),
+                            ]
+                        );
+
+                        $serializeStmt = new Expr\New_(
+                            new Name\FullyQualified(ltrim((string)$returnType, '\\')),
+                            [new Node\Arg($assertCall, false, true)],
+                        );
+                    } else {
+                        $returnType    = 'mixed';
+                        $serializeStmt = new Expr\FuncCall(new Name('json_decode'), [
+                            new Node\Arg(new Expr\Variable('body')),
+                        ]);
+                    }
+                } else {
+                    $returnType    = 'mixed';
+                    $serializeStmt = new Expr\FuncCall(new Name('json_decode'), [
+                        new Node\Arg(new Expr\Variable('body')),
+                    ]);
+                }
+            } else {
+                $returnType    = 'mixed';
+                $serializeStmt = new Expr\FuncCall(new Name('json_decode'), [
+                    new Node\Arg(new Expr\Variable('body')),
+                ]);
+            }
         }
 
         $contentStatement = new Stmt\Return_($serializeStmt);
@@ -510,6 +550,86 @@ trait GetTransformResponseBodyTrait
         }
 
         return [$returnType, $throwType, $contentStatement];
+    }
+
+    /**
+     * Resolves a scalar array item schema to a typed runtime collection class and its
+     * corresponding TypeValidator assertion method.
+     *
+     * Supports the 4 JSON Schema scalar primitives (string, integer, number, boolean)
+     * and their nullable counterparts. Multi-type combinations beyond T|null fall back
+     * to null (which causes the caller to emit mixed/json_decode).
+     *
+     * Class names are derived by sorting type segments alphabetically and concatenating,
+     * e.g. string|null → NullString → NullStringCollection.
+     *
+     * @return array{0: string, 1: string}|null ['\Ns\Runtime\Model\TypeCollection', 'assertListOfType']
+     */
+    private function resolveScalarCollection(Schema $itemsSchema, Context $context): ?array
+    {
+        $itemType = $itemsSchema->getType();
+
+        // Normalise: a scalar type string becomes a single-element list;
+        // OAS 3.1 allows an array of types (e.g. ["string", "null"]).
+        if (\is_array($itemType)) {
+            $types = $itemType;
+        } elseif (\is_string($itemType)) {
+            $types = [$itemType];
+        } else {
+            $types = [];
+        }
+
+        // OAS 3.0 nullable flag — treat as adding "null" to the type list.
+        if (true === $itemsSchema->getNullable() && !\in_array('null', $types, true)) {
+            $types[] = 'null';
+        }
+
+        // Map JSON Schema primitive types to collection class name segments.
+        $segmentMap = [
+            'string'  => 'String',
+            'integer' => 'Int',
+            'number'  => 'Float',
+            'boolean' => 'Bool',
+            'null'    => 'Null',
+        ];
+
+        // Supported compound names → TypeValidator method.
+        $classToMethod = [
+            'Bool'       => 'assertListOfBool',
+            'BoolNull'   => 'assertListOfNullableBool',
+            'Float'      => 'assertListOfFloat',
+            'FloatNull'  => 'assertListOfNullableFloat',
+            'Int'        => 'assertListOfInt',
+            'IntNull'    => 'assertListOfNullableInt',
+            'NullString' => 'assertListOfNullableString',
+            'String'     => 'assertListOfString',
+        ];
+
+        $segments = [];
+        foreach ($types as $type) {
+            if (!\array_key_exists($type, $segmentMap)) {
+                return null; // Unknown type — fall back to mixed
+            }
+
+            $segments[] = $segmentMap[$type];
+        }
+
+        if ([] === $segments) {
+            return null;
+        }
+
+        sort($segments); // Alphabetical for consistent naming
+        $segmentsKey = implode('', $segments); // e.g. 'String', 'IntNull', 'NullString'
+        $className   = $segmentsKey . 'Collection';
+
+        if (!\array_key_exists($segmentsKey, $classToMethod)) {
+            return null; // Unsupported combination — fall back to mixed
+        }
+
+        $namespace = $context->getCurrentSchema()->getNamespace();
+        $fqcn      = '\\' . $namespace . '\Runtime\Model\\' . $className;
+
+        return [$fqcn, $classToMethod[$segmentsKey]];
     }
 
     /**

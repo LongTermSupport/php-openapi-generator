@@ -5,6 +5,64 @@
         "version": "1.0"
     },
     "paths": {
+        "/widget/{widgetId}": {
+            "get": {
+                "operationId": "get_widget_by_id",
+                "description": "Fetches a widget by its ID.",
+                "parameters": [
+                    {
+                        "name": "widgetId",
+                        "in": "path",
+                        "required": true,
+                        "description": "Widget ID (string or integer)",
+                        "schema": {
+                            "type": ["string", "integer"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Widget"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/legacy/{legacyId}": {
+            "get": {
+                "operationId": "get_legacy",
+                "description": "Fetches a legacy resource by its ID.",
+                "parameters": [
+                    {
+                        "name": "legacyId",
+                        "in": "path",
+                        "required": true,
+                        "description": "Legacy ID (string, integer, or null)",
+                        "schema": {
+                            "type": ["string", "null", "integer"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Widget"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/widget": {
             "get": {
                 "operationId": "get_widget",

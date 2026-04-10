@@ -73,12 +73,11 @@ trait GetGetUriTrait
                             ]));
                         }
 
-                        // 'string' (and null/default, which GetConstructorTrait also maps to a
-                        // `string` property) → no cast needed. Casting `string` to `string`
-                        // triggers PHPStan `cast.useless`. Property type matches schema type
-                        // because GetConstructorTrait emits `protected string $param` for
-                        // string-typed (or untyped) path parameters.
-                        if ('string' === $type || null === $type) {
+                        // 'string', null (untyped), or array (OAS 3.1 multi-type) → no cast needed.
+                        // For array types (e.g. ["string", "integer"]), GetConstructorTrait emits
+                        // `protected string $param` and assigns via strval(), so the property is
+                        // already `string`. Casting `string` to `string` triggers PHPStan `cast.useless`.
+                        if ('string' === $type || null === $type || \is_array($type)) {
                             return new ArrayItem($propertyFetch);
                         }
 

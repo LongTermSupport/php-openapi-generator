@@ -70,13 +70,16 @@ trait GetConstructorTrait
 
                 $paramName = $parameter->getName() ?? '';
 
-                // When anyOf is present, the constructor parameter is untyped (mixed)
-                // but path parameters always become URL strings. Use strval() to safely
-                // convert mixed to string, avoiding both assign.propertyType and cast.mixed.
-                $schemaAnyOf = $paramSchema instanceof Schema ? $paramSchema->getAnyOf() : null;
-                $hasAnyOf    = null !== $schemaAnyOf && [] !== $schemaAnyOf;
+                // When anyOf is present or the schema type is an OAS 3.1 array of types,
+                // the constructor parameter will be a union type (e.g. string|int|null).
+                // Path parameters always become URL strings, so use strval() to safely
+                // convert to string, avoiding assign.propertyType errors.
+                $schemaAnyOf  = $paramSchema instanceof Schema ? $paramSchema->getAnyOf() : null;
+                $hasAnyOf     = null !== $schemaAnyOf && [] !== $schemaAnyOf;
+                $schemaType   = $paramSchema instanceof Schema ? $paramSchema->getType() : null;
+                $hasMultiType = \is_array($schemaType);
 
-                $assignValue = $hasAnyOf
+                $assignValue = ($hasAnyOf || $hasMultiType)
                     ? new Expr\FuncCall(new Name('strval'), [new Node\Arg(new Expr\Variable($this->getInflector()->camelize($paramName)))])
                     : new Expr\Variable($this->getInflector()->camelize($paramName));
 

@@ -96,6 +96,13 @@ class NonBodyParameterGenerator extends ParameterGenerator
 
         if (1 === \count($types)) {
             $methodParameter->type = new Node\Name($types[0]);
+        } elseif (\count($types) > 1) {
+            $methodParameter->type = new Node\UnionType(array_map(
+                static fn (string $t): Node\Identifier|Node\Name => \in_array($t, ['int', 'float', 'bool', 'string', 'array', 'null'], true)
+                    ? new Node\Identifier($t)
+                    : new Node\Name($t),
+                $types
+            ));
         }
 
         return $methodParameter;
@@ -330,6 +337,35 @@ class NonBodyParameterGenerator extends ParameterGenerator
             'object'  => ['array'],
             'file'    => ['string', 'resource', '\\' . StreamInterface::class],
         ];
+
+        // OAS 3.1 allows type to be an array of scalar types (e.g. ["string", "null", "integer"]).
+        // SchemaNormalizer strips "null" from the type array and sets nullable=true instead,
+        // so we must check getNullable() to restore null into the union.
+        if (\is_array($type)) {
+            $result = [];
+            foreach ($type as $t) {
+                if (!\is_string($t)) {
+                    continue;
+                }
+                if ('null' === $t) {
+                    $result['null'] = true;
+                    continue;
+                }
+                if (\array_key_exists($t, $convertArray)) {
+                    foreach ($convertArray[$t] as $mapped) {
+                        $result[$mapped] = true;
+                    }
+                } else {
+                    $result['mixed'] = true;
+                }
+            }
+            if (true === $schema->getNullable()) {
+                $result['null'] = true;
+            }
+            $keys = array_keys($result);
+
+            return [] === $keys ? ['mixed'] : $keys;
+        }
 
         if (!\is_string($type) || !\array_key_exists($type, $convertArray)) {
             return ['mixed'];

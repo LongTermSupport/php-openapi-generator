@@ -428,30 +428,28 @@ trait GetTransformResponseBodyTrait
 
         if ($classGuess instanceof \LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess) {
             $schemaObj = $context->getRegistry()->getSchema($classGuess->getReference());
-            $class     = ($schemaObj instanceof \LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema ? $schemaObj->getNamespace() : '') . '\Model\\' . $classGuess->getName();
+            // $class is the element class — never has a [] suffix.
+            // ExceptionGenerator already knows $isArray and appends [] to $class itself.
+            $class = ($schemaObj instanceof \LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema ? $schemaObj->getNamespace() : '') . '\Model\\' . $classGuess->getName();
 
             if ($isArray) {
-                $class .= '[]';
+                // Array responses return a typed collection, not bare `array`.
+                $collectionClass = $class . 'Collection';
+                $returnType      = '\\' . $collectionClass;
+            } else {
+                $returnType = '\\' . $class;
             }
 
-            $returnType = '\\' . $class;
-
-            // Symfony's serializer is type-unsafe (`deserialize()` returns `mixed`).
-            // We wrap the deserialize call in a runtime type guard so this method
-            // can advertise a precise union return type. The wrap costs almost
-            // nothing at runtime (one instanceof) but turns the entire endpoint
-            // surface from `mixed` into concrete model classes that PHPStan can
-            // prove. The element class (without `[]`) is used as the assertion
-            // class-string; the deserialize call still receives the full
-            // `\Foo\Bar[]` type so Symfony unwraps the array itself.
-            $elementClass = $isArray ? substr($class, 0, -2) : $class;
+            // Symfony deserializer still receives `\Foo\Bar[]` to unwrap the JSON array;
+            // the element class (without `[]`) is used for runtime assertListOf validation.
+            $deserializeType = $isArray ? ($class . '[]') : $class;
 
             $deserializeCall = new Expr\MethodCall(
                 new Expr\Variable('serializer'),
                 'deserialize',
                 [
                     new Node\Arg(new Expr\Variable('body')),
-                    new Node\Arg(new Scalar\String_($class)),
+                    new Node\Arg(new Scalar\String_($deserializeType)),
                     new Node\Arg(new Scalar\String_('json')),
                 ]
             );
@@ -460,18 +458,29 @@ trait GetTransformResponseBodyTrait
                 $context->getCurrentSchema()->getNamespace() . '\Runtime\Normalizer\TypeValidator'
             );
 
-            $serializeStmt = new Expr\StaticCall(
+            $assertCall = new Expr\StaticCall(
                 $typeValidatorClass,
                 $isArray ? 'assertListOf' : 'assertInstanceOf',
                 [
                     new Node\Arg($deserializeCall),
                     new Node\Arg(new Expr\ClassConstFetch(
-                        new Name\FullyQualified(ltrim($elementClass, '\\')),
+                        new Name\FullyQualified(ltrim($class, '\\')),
                         'class'
                     )),
                     new Node\Arg(new Scalar\String_('response body')),
                 ]
             );
+
+            if ($isArray) {
+                // Wrap the validated list in a typed collection via spread constructor:
+                // new BarItemCollection(...TypeValidator::assertListOf(...))
+                $serializeStmt = new Expr\New_(
+                    new Name\FullyQualified(ltrim($collectionClass, '\\')),
+                    [new Node\Arg($assertCall, false, true)],
+                );
+            } else {
+                $serializeStmt = $assertCall;
+            }
         } elseif ($schema instanceof Schema) {
             $returnType    = 'mixed';
             $serializeStmt = new Expr\FuncCall(new Name('json_decode'), [

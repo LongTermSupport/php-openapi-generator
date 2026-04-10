@@ -16,9 +16,13 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\PostFooInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\UnexpectedStatusCodeException
      */
-    public function postFoo(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\FooPayload $requestBody = null, string $fetch = self::FETCH_OBJECT): mixed
+    public function postFoo(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\FooPayload $requestBody = null, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Endpoint\PostFoo($requestBody), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Endpoint\PostFoo($requestBody), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

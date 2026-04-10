@@ -16,9 +16,13 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\PatchEntityBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\PatchEntityNotFoundException
      */
-    public function patchEntity(int $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Model\PatchableEntity $requestBody, string $fetch = self::FETCH_OBJECT): mixed
+    public function patchEntity(int $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Model\PatchableEntity $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Endpoint\PatchEntity($id, $requestBody), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Endpoint\PatchEntity($id, $requestBody), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

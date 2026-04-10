@@ -12,23 +12,35 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function getFoo(string $fetch = self::FETCH_OBJECT): mixed
+    public function getFoo(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint\GetFoo(), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint\GetFoo(), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function getBar(string $fetch = self::FETCH_OBJECT): mixed
+    public function getBar(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint\GetBar(), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint\GetBar(), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function getBaz(string $fetch = self::FETCH_OBJECT): mixed
+    public function getBaz(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint\GetBaz(), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint\GetBaz(), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

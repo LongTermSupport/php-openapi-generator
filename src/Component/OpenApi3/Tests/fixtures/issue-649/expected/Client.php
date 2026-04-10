@@ -21,9 +21,13 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function testGetWithDefaultValuesInPathParameters(string $testPath, string $bar, string $foo = 'foo', array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): mixed
+    public function testGetWithDefaultValuesInPathParameters(string $testPath, string $bar, string $foo = 'foo', array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Endpoint\TestGetWithDefaultValuesInPathParameters($testPath, $bar, $foo, $queryParameters, $headerParameters), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Endpoint\TestGetWithDefaultValuesInPathParameters($testPath, $bar, $foo, $queryParameters, $headerParameters), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

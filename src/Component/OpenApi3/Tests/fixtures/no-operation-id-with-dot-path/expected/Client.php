@@ -13,17 +13,25 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM700PostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function postMessageM700(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM700PostBody $requestBody, string $fetch = self::FETCH_OBJECT): mixed
+    public function postMessageM700(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM700PostBody $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Endpoint\PostMessageM700($requestBody), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Endpoint\PostMessageM700($requestBody), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM70047PostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function postMessageM70047(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM70047PostBody $requestBody, string $fetch = self::FETCH_OBJECT): mixed
+    public function postMessageM70047(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM70047PostBody $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Endpoint\PostMessageM70047($requestBody), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Endpoint\PostMessageM70047($requestBody), $fetch);
+        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

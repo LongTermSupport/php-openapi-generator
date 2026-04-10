@@ -14,25 +14,37 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string|int $widgetId Widget ID (string or integer)
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function getWidgetById(string|int $widgetId, string $fetch = self::FETCH_OBJECT): mixed
+    public function getWidgetById(string|int $widgetId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Endpoint\GetWidgetById($widgetId), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Endpoint\GetWidgetById($widgetId), $fetch);
+        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * Fetches a legacy resource by its ID.
      * @param string|int|null $legacyId Legacy ID (string, integer, or null)
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function getLegacy(string|int|null $legacyId, string $fetch = self::FETCH_OBJECT): mixed
+    public function getLegacy(string|int|null $legacyId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Endpoint\GetLegacy($legacyId), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Endpoint\GetLegacy($legacyId), $fetch);
+        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      */
-    public function getWidget(string $fetch = self::FETCH_OBJECT): mixed
+    public function getWidget(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget|\Psr\Http\Message\ResponseInterface
     {
-        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Endpoint\GetWidget(), $fetch);
+        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Endpoint\GetWidget(), $fetch);
+        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget || $result instanceof \Psr\Http\Message\ResponseInterface) {
+            return $result;
+        }
+        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

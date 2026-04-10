@@ -135,11 +135,10 @@ class ExceptionGenerator
             }
 
             $allFqdns  = $this->generatedExceptions[$exceptionKey]['fqdns'];
-            $modelType = $isArray
-                ? new Name('array')
-                : (\count($allFqdns) > 1
-                    ? new Node\UnionType(array_map(static fn (string $fqdn): Name => new Name('\\' . $fqdn), $allFqdns))
-                    : new Name('\\' . $classFqdn));
+            $multiType = \count($allFqdns) > 1
+                ? new Node\UnionType(array_map(static fn (string $fqdn): Name => new Name('\\' . $fqdn), $allFqdns))
+                : new Name('\\' . $classFqdn);
+            $modelType = $isArray ? new Name('array') : $multiType;
 
             $methodName         = 'get' . ucfirst($propertyName);
             $propertyAttributes = $isArray ? ['comments' => [new Doc(\sprintf("/**\n * @var %s[]\n */", '\\' . $classFqdn))]] : [];

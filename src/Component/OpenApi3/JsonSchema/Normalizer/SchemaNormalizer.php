@@ -227,7 +227,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
                 /** @var string[] $types */
                 $types        = $data['type'];
                 $hasNull      = \in_array('null', $types, true);
-                $nonNullTypes = array_values(array_filter($types, static fn ($t): bool => 'null' !== $t));
+                $nonNullTypes = array_values(array_filter($types, static fn (string $t): bool => 'null' !== $t));
                 if (\count($nonNullTypes) > 1) {
                     // Multiple non-null types: store as array (e.g. ["string", "integer"])
                     $object->setType($nonNullTypes);
@@ -235,6 +235,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $firstNonNullType = $nonNullTypes[0] ?? null;
                     $object->setType($firstNonNullType);
                 }
+
                 if ($hasNull) {
                     $object->setNullable(true);
                 }

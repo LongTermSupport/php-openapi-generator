@@ -33,7 +33,8 @@ class SecurityGuesser implements GuesserInterface, ClassGuesserInterface
         }
 
         $apiKeyName          = ($object instanceof APIKeySecurityScheme) ? $object->getName() : null;
-        $variableName        = $object instanceof HTTPSecurityScheme ? $name : ($object instanceof APIKeySecurityScheme ? ($apiKeyName ?? $name) : $name);
+        $apiKeyVariableName  = $object instanceof APIKeySecurityScheme ? ($apiKeyName ?? $name) : $name;
+        $variableName        = $object instanceof HTTPSecurityScheme ? $name : $apiKeyVariableName;
         $securitySchemeGuess = new SecuritySchemeGuess($name, $object, $variableName, $object->getType());
         switch ($securitySchemeGuess->getType()) {
             case SecuritySchemeGuess::TYPE_HTTP:

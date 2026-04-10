@@ -59,7 +59,15 @@ abstract class Client
                 $value = $value ? 'true' : 'false';
             }
             if (\is_array($value)) {
-                $value = array_map(static fn(mixed $v): string => \is_string($v) ? $v : (\is_scalar($v) ? (string) $v : throw new \LogicException('Expected scalar header value, got ' . get_debug_type($v))), $value);
+                $value = array_map(static function (mixed $v): string {
+                    if (\is_string($v)) {
+                        return $v;
+                    }
+                    if (\is_scalar($v)) {
+                        return (string) $v;
+                    }
+                    throw new \LogicException('Expected scalar header value, got ' . get_debug_type($v));
+                }, $value);
             } elseif (!\is_string($value)) {
                 throw new \LogicException('Expected string or array for header value, got ' . get_debug_type($value));
             }

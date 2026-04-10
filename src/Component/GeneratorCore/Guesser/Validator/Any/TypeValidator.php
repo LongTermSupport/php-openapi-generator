@@ -34,8 +34,9 @@ class TypeValidator implements ValidatorInterface
             throw new LogicException('Expected JsonSchema, got ' . get_debug_type($object));
         }
 
-        $rawType  = $object->getType();
-        $typeList = \is_array($rawType) ? $rawType : (\is_string($rawType) ? [$rawType] : []);
+        $rawType      = $object->getType();
+        $stringAsList = \is_string($rawType) ? [$rawType] : [];
+        $typeList     = \is_array($rawType) ? $rawType : $stringAsList;
 
         /** @var array<string, int> $types */
         $types = [];

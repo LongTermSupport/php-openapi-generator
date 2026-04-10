@@ -835,7 +835,7 @@ class JsonSchemaNormalizer implements DenormalizerInterface, NormalizerInterface
             } elseif (\is_string($data['type'])) {
                 $object->setType($data['type']);
             } else {
-                throw new \LogicException('Expected string|array for type field, got ' . get_debug_type($data['type']));
+                throw new LogicException('Expected string|array for type field, got ' . get_debug_type($data['type']));
             }
         } elseif (\array_key_exists('type', $data) && null === $data['type']) {
             $object->setType(null);

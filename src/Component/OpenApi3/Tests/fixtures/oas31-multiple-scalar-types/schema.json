@@ -1,0 +1,42 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "OAS 3.1 multiple scalar types",
+        "version": "1.0"
+    },
+    "paths": {
+        "/widget": {
+            "get": {
+                "operationId": "get_widget",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Widget"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Widget": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "employeeCount": {
+                        "type": ["string", "null", "integer"],
+                        "description": "Can be a string, integer, or null (OAS 3.1 multiple scalar types)"
+                    }
+                }
+            }
+        }
+    }
+}

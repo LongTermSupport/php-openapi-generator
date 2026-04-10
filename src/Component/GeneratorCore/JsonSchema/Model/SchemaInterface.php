@@ -13,7 +13,10 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Mo
  */
 interface SchemaInterface
 {
-    public function getType(): mixed;
+    /**
+     * @return string|string[]|null
+     */
+    public function getType(): string|array|null;
 
     /** @return array<string, mixed>|null */
     public function getProperties(): ?array;

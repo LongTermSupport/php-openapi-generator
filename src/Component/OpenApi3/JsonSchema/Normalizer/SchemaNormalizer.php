@@ -222,14 +222,19 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
 
         if (\array_key_exists('type', $data) && null !== $data['type']) {
-            // OAS 3.1: type can be an array like ["string", "null"]
+            // OAS 3.1: type can be an array like ["string", "null", "integer"]
             if (\is_array($data['type'])) {
+                /** @var string[] $types */
                 $types        = $data['type'];
                 $hasNull      = \in_array('null', $types, true);
                 $nonNullTypes = array_values(array_filter($types, static fn ($t): bool => 'null' !== $t));
-                /** @var scalar|null $firstNonNullType */
-                $firstNonNullType = $nonNullTypes[0] ?? null;
-                $object->setType(null !== $firstNonNullType ? (string)$firstNonNullType : null);
+                if (\count($nonNullTypes) > 1) {
+                    // Multiple non-null types: store as array (e.g. ["string", "integer"])
+                    $object->setType($nonNullTypes);
+                } else {
+                    $firstNonNullType = $nonNullTypes[0] ?? null;
+                    $object->setType($firstNonNullType);
+                }
                 if ($hasNull) {
                     $object->setNullable(true);
                 }

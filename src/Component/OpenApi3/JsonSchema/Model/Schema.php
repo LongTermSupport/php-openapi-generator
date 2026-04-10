@@ -53,7 +53,8 @@ class Schema extends ArrayObject implements SchemaInterface
      */
     protected ?array $enum = null;
 
-    protected ?string $type = null;
+    /** @var string|string[]|null */
+    protected string|array|null $type = null;
 
     protected Schema|Reference|\LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference|null $not = null;
 
@@ -329,12 +330,18 @@ class Schema extends ArrayObject implements SchemaInterface
         return $this;
     }
 
-    public function getType(): ?string
+    /**
+     * @return string|string[]|null
+     */
+    public function getType(): string|array|null
     {
         return $this->type;
     }
 
-    public function setType(?string $type): self
+    /**
+     * @param string|string[]|null $type
+     */
+    public function setType(string|array|null $type): self
     {
         $this->initialized['type'] = true;
         $this->type                = $type;

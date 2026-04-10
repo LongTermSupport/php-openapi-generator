@@ -173,7 +173,8 @@ class JsonSchema implements SchemaInterface
      */
     protected $enum;
 
-    protected mixed $type;
+    /** @var string|string[]|null */
+    protected string|array|null $type = null;
 
     public function isInitialized(string $property): bool
     {
@@ -1031,17 +1032,17 @@ class JsonSchema implements SchemaInterface
     }
 
     /**
-     * @return mixed|array<mixed>
+     * @return string|string[]|null
      */
-    public function getType(): mixed
+    public function getType(): string|array|null
     {
         return $this->type;
     }
 
     /**
-     * @param mixed|array<mixed> $type
+     * @param string|string[]|null $type
      */
-    public function setType($type): self
+    public function setType(string|array|null $type): self
     {
         $this->initialized['type'] = true;
         $this->type                = $type;

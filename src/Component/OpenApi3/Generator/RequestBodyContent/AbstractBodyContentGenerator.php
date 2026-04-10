@@ -47,7 +47,10 @@ abstract class AbstractBodyContentGenerator implements RequestBodyContentGenerat
                 throw new LogicException('Expected Schema or null, got ' . get_debug_type($schema));
             }
 
-            $types = $this->schemaTypeToPHP($schema instanceof Schema ? $schema->getType() : null, $schema instanceof Schema ? $schema->getFormat() : null);
+            $rawType    = $schema instanceof Schema ? $schema->getType() : null;
+            $schemaType = \is_string($rawType) ? $rawType : null;
+            $format     = $schema instanceof Schema ? $schema->getFormat() : null;
+            $types      = $this->schemaTypeToPHP($schemaType, $format);
 
             if (true === $array) {
                 $types = array_map(static fn (string $type): string => $type . '[]', $types);
@@ -85,7 +88,11 @@ abstract class AbstractBodyContentGenerator implements RequestBodyContentGenerat
                 throw new LogicException('Expected Schema or null, got ' . get_debug_type($schema));
             }
 
-            return $this->typeToCondition($schema instanceof Schema ? $schema->getType() : null, $schema instanceof Schema ? $schema->getFormat() : null, new Expr\PropertyFetch(new Expr\Variable('this'), 'body'));
+            $rawType2    = $schema instanceof Schema ? $schema->getType() : null;
+            $schemaType2 = \is_string($rawType2) ? $rawType2 : null;
+            $format2     = $schema instanceof Schema ? $schema->getFormat() : null;
+
+            return $this->typeToCondition($schemaType2, $format2, new Expr\PropertyFetch(new Expr\Variable('this'), 'body'));
         }
 
         $schemaObj = $registry->getSchema($classGuess->getReference());

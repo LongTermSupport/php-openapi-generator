@@ -828,15 +828,15 @@ class JsonSchemaNormalizer implements DenormalizerInterface, NormalizerInterface
         }
 
         if (\array_key_exists('type', $data) && null !== $data['type']) {
-            $value_40 = $data['type'];
             if (\is_array($data['type']) && $this->isOnlyNumericKeys($data['type'])) {
-                $values_18 = $data['type'];
-                $value_40  = $values_18;
-            } elseif (isset($data['type'])) {
-                $value_40 = $data['type'];
+                /** @var string[] $typeArray */
+                $typeArray = $data['type'];
+                $object->setType($typeArray);
+            } elseif (\is_string($data['type'])) {
+                $object->setType($data['type']);
+            } else {
+                throw new \LogicException('Expected string|array for type field, got ' . get_debug_type($data['type']));
             }
-
-            $object->setType($value_40);
         } elseif (\array_key_exists('type', $data) && null === $data['type']) {
             $object->setType(null);
         }

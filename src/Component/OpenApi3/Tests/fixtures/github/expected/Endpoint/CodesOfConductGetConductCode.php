@@ -63,7 +63,7 @@ class CodesOfConductGetConductCode extends \LongTermSupport\OpenApiGenerator\Com
         if ($contentType !== null && (415 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\CodesOfConductGetConductCodeUnsupportedMediaTypeException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponsePreviewHeaderMissing', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ResponsePreviewHeaderMissing::class, 'response body'), $response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /codes_of_conduct/{key}');
     }
     /**
      * @return list<string>

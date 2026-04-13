@@ -69,7 +69,7 @@ class ReposGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
         if (301 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /repos/{owner}/{repo}');
     }
     /**
      * @return list<string>

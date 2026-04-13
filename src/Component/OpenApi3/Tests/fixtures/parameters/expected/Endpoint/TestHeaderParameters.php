@@ -65,7 +65,7 @@ class TestHeaderParameters extends \LongTermSupport\OpenApiGenerator\Component\O
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-header');
     }
     /**
      * @return list<string>

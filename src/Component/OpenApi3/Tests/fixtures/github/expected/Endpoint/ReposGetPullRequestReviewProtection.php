@@ -59,7 +59,7 @@ class ReposGetPullRequestReviewProtection extends \LongTermSupport\OpenApiGenera
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/vnd.github.luke-cage-preview+json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReview', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProtectedBranchPullRequestReview::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews');
     }
     /**
      * @return list<string>

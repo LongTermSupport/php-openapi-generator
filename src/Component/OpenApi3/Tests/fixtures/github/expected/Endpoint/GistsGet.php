@@ -63,7 +63,7 @@ class GistsGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
         if (304 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /gists/{gist_id}');
     }
     /**
      * @return list<string>

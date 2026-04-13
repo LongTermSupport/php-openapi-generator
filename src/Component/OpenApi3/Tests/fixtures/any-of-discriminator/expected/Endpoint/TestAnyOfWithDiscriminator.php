@@ -48,7 +48,7 @@ class TestAnyOfWithDiscriminator extends \LongTermSupport\OpenApiGenerator\Compo
         if ($contentType !== null && (400 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\TestAnyOfWithDiscriminatorBadRequestException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBarWithMapping', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBarWithMapping::class, 'response body'), $response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-simple');
     }
     /**
      * @return list<string>

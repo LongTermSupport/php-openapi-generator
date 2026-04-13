@@ -56,7 +56,7 @@ class ActionsRemoveSelectedRepoFromOrgSecret extends \LongTermSupport\OpenApiGen
         if (409 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActionsRemoveSelectedRepoFromOrgSecretConflictException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}');
     }
     /**
      * @return list<string>

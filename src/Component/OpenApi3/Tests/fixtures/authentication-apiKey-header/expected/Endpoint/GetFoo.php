@@ -44,7 +44,7 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationApiKeyHeader\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationApiKeyHeader\Model\Foo', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationApiKeyHeader\Model\Foo::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationApiKeyHeader\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationApiKeyHeader\Exception\UnexpectedStatusCodeException($status, $body, 'GET /foo');
     }
     /**
      * @return list<string>

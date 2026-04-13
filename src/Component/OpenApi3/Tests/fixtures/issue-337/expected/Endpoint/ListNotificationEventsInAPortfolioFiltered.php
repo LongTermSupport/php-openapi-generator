@@ -103,7 +103,7 @@ class ListNotificationEventsInAPortfolioFiltered extends \LongTermSupport\OpenAp
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListNotificationEventsInAPortfolioFilteredNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'GET /monitoring/portfolios/{portfolioId}/notificationEvents');
     }
     /**
      * @return list<string>

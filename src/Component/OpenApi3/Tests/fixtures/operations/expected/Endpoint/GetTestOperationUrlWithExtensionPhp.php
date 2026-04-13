@@ -37,7 +37,7 @@ class GetTestOperationUrlWithExtensionPhp extends \LongTermSupport\OpenApiGenera
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-operation-url-with-extension.php');
     }
     /**
      * @return list<string>

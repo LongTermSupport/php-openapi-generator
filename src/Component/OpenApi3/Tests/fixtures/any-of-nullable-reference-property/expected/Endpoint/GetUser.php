@@ -48,7 +48,7 @@ class GetUser extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\GetUserNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\UnexpectedStatusCodeException($status, $body, 'GET /user');
     }
     /**
      * @return list<string>

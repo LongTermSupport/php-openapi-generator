@@ -34,7 +34,7 @@ class TestHost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-exception');
     }
     /**
      * @return list<string>

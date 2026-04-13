@@ -52,7 +52,7 @@ class ReposDeleteRelease extends \LongTermSupport\OpenApiGenerator\Component\Ope
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /repos/{owner}/{repo}/releases/{release_id}');
     }
     /**
      * @return list<string>

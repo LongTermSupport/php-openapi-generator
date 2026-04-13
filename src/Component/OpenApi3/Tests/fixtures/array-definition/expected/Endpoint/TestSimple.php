@@ -44,7 +44,7 @@ class TestSimple extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Model\BarItemCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Runtime\Normalizer\TypeValidator::assertListOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Model\BarItem[]', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Model\BarItem::class, 'response body'));
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-simple');
     }
     /**
      * @return list<string>

@@ -87,7 +87,7 @@ class SyncPortfolioCompaniesToCSVRecords extends \LongTermSupport\OpenApiGenerat
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'POST /monitoring/portfolios/{portfolioId}/sync');
     }
     /**
      * @return list<string>

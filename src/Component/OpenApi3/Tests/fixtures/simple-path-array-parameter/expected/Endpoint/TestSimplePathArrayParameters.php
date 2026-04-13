@@ -57,7 +57,7 @@ class TestSimplePathArrayParameters extends \LongTermSupport\OpenApiGenerator\Co
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\SimplePathArrayParameter\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\SimplePathArrayParameter\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-simple-path-array-parameters/{string}/{array}/{stringRef}/{arrayRef}');
     }
     /**
      * @return list<string>

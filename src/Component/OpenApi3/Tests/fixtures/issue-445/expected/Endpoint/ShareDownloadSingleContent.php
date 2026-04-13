@@ -129,7 +129,7 @@ class ShareDownloadSingleContent extends \LongTermSupport\OpenApiGenerator\Compo
         if (412 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentPreconditionFailedException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body, 'GET /v1/Shares/d/{token}/{contentId}/{outputFormatId}');
     }
     /**
      * @return list<string>

@@ -68,7 +68,7 @@ class TestPostWithPathParameters extends \LongTermSupport\OpenApiGenerator\Compo
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-path-parameters/{testPath}');
     }
     /**
      * @return list<string>

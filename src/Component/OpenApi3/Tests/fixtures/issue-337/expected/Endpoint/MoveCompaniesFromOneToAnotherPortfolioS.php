@@ -100,7 +100,7 @@ class MoveCompaniesFromOneToAnotherPortfolioS extends \LongTermSupport\OpenApiGe
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\MoveCompaniesFromOneToAnotherPortfolioSNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'POST /monitoring/portfolios/{portfolioId}/companies/remove');
     }
     /**
      * @return list<string>

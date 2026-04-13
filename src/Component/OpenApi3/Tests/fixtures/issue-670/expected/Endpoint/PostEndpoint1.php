@@ -47,7 +47,7 @@ class PostEndpoint1 extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException($status, $body, 'POST /endpoint/1');
     }
     /**
      * @return list<string>

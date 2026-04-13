@@ -44,7 +44,7 @@ class GetInts extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Model\IntCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Normalizer\TypeValidator::assertListOfInt(\json_decode($body), 'response body'));
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Exception\UnexpectedStatusCodeException($status, $body, 'GET /ints');
     }
     /**
      * @return list<string>

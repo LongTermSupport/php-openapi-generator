@@ -52,7 +52,7 @@ class ReposRemoveStatusCheckProtection extends \LongTermSupport\OpenApiGenerator
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks');
     }
     /**
      * @return list<string>

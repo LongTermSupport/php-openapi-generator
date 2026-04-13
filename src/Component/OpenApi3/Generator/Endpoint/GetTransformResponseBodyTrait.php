@@ -184,6 +184,7 @@ trait GetTransformResponseBodyTrait
                             [
                                 new Node\Arg(new Expr\Variable('status')),
                                 new Node\Arg(new Expr\Variable('body')),
+                                new Node\Arg(new Scalar\String_(\strtoupper($operation->getMethod()) . ' ' . $operation->getPath())),
                             ]
                         )
                     )),

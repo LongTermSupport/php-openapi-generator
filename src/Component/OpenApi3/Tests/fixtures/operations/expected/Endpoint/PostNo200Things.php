@@ -37,7 +37,7 @@ class PostNo200Things extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body, 'POST /no-200-things');
     }
     /**
      * @return list<string>

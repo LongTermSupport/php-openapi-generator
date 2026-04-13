@@ -97,7 +97,7 @@ class OutputFormatRenderFormatPreview extends \LongTermSupport\OpenApiGenerator\
         if (412 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewPreconditionFailedException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body, 'POST /v1/OutputFormats/preview');
     }
     /**
      * @return list<string>

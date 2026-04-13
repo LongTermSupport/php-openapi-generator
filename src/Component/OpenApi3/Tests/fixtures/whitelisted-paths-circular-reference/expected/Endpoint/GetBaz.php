@@ -44,7 +44,7 @@ class GetBaz extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Baz', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Model\Baz::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsCircularReference\Exception\UnexpectedStatusCodeException($status, $body, 'GET /baz');
     }
     /**
      * @return list<string>

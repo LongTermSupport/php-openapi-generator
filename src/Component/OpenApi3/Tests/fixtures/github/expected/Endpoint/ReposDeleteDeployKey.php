@@ -52,7 +52,7 @@ class ReposDeleteDeployKey extends \LongTermSupport\OpenApiGenerator\Component\O
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /repos/{owner}/{repo}/keys/{key_id}');
     }
     /**
      * @return list<string>

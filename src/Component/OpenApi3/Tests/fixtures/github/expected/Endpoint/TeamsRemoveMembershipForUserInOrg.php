@@ -62,7 +62,7 @@ class TeamsRemoveMembershipForUserInOrg extends \LongTermSupport\OpenApiGenerato
         if (403 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsRemoveMembershipForUserInOrgForbiddenException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}');
     }
     /**
      * @return list<string>

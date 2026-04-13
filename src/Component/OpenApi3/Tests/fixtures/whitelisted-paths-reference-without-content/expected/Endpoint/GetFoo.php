@@ -48,7 +48,7 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         if (401 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\GetFooUnauthorizedException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\UnexpectedStatusCodeException($status, $body, 'GET /foo');
     }
     /**
      * @return list<string>

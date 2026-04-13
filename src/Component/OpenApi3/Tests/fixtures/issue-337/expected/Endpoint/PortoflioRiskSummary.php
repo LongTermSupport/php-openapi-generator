@@ -82,7 +82,7 @@ class PortoflioRiskSummary extends \LongTermSupport\OpenApiGenerator\Component\O
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PortoflioRiskSummaryNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'GET /monitoring/portfolios/{portfolioId}/riskSummary');
     }
     /**
      * @return list<string>

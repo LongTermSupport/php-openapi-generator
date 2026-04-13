@@ -73,7 +73,7 @@ class ListSponsoredProductsCampaigns extends \LongTermSupport\OpenApiGenerator\C
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/vnd.spcampaign.v3+json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Exception\UnexpectedStatusCodeException($status, $body, 'POST /sp/campaigns/list');
     }
     /**
      * @return list<string>

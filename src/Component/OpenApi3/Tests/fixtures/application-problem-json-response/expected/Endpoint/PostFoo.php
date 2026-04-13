@@ -62,7 +62,7 @@ class PostFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if ($contentType !== null && (500 === $status && str_contains(strtolower($contentType), 'application/problem+json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\PostFooInternalServerErrorException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse500', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse500::class, 'response body'), $response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception\UnexpectedStatusCodeException($status, $body, 'POST /foo');
     }
     /**
      * @return list<string>

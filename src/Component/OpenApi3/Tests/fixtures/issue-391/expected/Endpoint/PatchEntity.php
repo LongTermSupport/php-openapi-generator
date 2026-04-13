@@ -58,7 +58,7 @@ class PatchEntity extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\PatchEntityNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\UnexpectedStatusCodeException($status, $body, 'PATCH /patchable/entity/{id}');
     }
     /**
      * @return list<string>

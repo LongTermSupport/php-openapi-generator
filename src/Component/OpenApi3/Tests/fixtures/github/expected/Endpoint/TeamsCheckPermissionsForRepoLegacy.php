@@ -70,7 +70,7 @@ class TeamsCheckPermissionsForRepoLegacy extends \LongTermSupport\OpenApiGenerat
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsCheckPermissionsForRepoLegacyNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /teams/{team_id}/repos/{owner}/{repo}');
     }
     /**
      * @return list<string>

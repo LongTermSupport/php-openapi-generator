@@ -45,7 +45,7 @@ class TestGetWithUppercasePathParameters extends \LongTermSupport\OpenApiGenerat
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\UppercaseParameter\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\UppercaseParameter\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-uppercase-path-parameters/{TestParameter}');
     }
     /**
      * @return list<string>

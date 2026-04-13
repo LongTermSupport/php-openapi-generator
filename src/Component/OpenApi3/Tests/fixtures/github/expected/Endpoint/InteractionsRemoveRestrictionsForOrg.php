@@ -46,7 +46,7 @@ class InteractionsRemoveRestrictionsForOrg extends \LongTermSupport\OpenApiGener
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /orgs/{org}/interaction-limits');
     }
     /**
      * @return list<string>

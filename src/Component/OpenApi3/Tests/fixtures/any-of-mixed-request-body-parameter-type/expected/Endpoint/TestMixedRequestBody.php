@@ -47,7 +47,7 @@ class TestMixedRequestBody extends \LongTermSupport\OpenApiGenerator\Component\O
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfMixedRequestBodyParameterType\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfMixedRequestBodyParameterType\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-simple');
     }
     /**
      * @return list<string>

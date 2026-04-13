@@ -53,7 +53,7 @@ class AppsRevokeGrantForApplication extends \LongTermSupport\OpenApiGenerator\Co
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /applications/{client_id}/grants/{access_token}');
     }
     /**
      * @return list<string>

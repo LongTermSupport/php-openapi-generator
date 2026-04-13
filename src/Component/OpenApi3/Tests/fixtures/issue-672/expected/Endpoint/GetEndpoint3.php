@@ -44,7 +44,7 @@ class GetEndpoint3 extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint3GetResponse200', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint3GetResponse200::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Exception\UnexpectedStatusCodeException($status, $body, 'GET /endpoint/3');
     }
     /**
      * @return list<string>

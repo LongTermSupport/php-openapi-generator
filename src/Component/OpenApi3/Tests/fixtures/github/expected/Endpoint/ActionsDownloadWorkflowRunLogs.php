@@ -55,7 +55,7 @@ class ActionsDownloadWorkflowRunLogs extends \LongTermSupport\OpenApiGenerator\C
         if (302 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs');
     }
     /**
      * @return list<string>

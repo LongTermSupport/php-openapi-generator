@@ -59,7 +59,7 @@ class TeamsRemoveMembershipForUserLegacy extends \LongTermSupport\OpenApiGenerat
         if (403 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsRemoveMembershipForUserLegacyForbiddenException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /teams/{team_id}/memberships/{username}');
     }
     /**
      * @return list<string>

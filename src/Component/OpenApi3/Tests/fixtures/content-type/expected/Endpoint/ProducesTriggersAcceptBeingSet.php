@@ -37,7 +37,7 @@ class ProducesTriggersAcceptBeingSet extends \LongTermSupport\OpenApiGenerator\C
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-object');
     }
     /**
      * @return list<string>

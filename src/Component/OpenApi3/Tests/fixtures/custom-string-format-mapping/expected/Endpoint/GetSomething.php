@@ -44,7 +44,7 @@ class GetSomething extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Model\Something', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Model\Something::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Exception\UnexpectedStatusCodeException($status, $body, 'GET /some-path');
     }
     /**
      * @return list<string>

@@ -51,7 +51,7 @@ class TestPathParameters extends \LongTermSupport\OpenApiGenerator\Component\Ope
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-path/{testString}/{testInteger}/{testFloat}');
     }
     /**
      * @return list<string>

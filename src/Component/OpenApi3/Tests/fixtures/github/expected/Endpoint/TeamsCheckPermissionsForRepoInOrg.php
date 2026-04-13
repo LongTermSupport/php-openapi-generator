@@ -75,7 +75,7 @@ class TeamsCheckPermissionsForRepoInOrg extends \LongTermSupport\OpenApiGenerato
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsCheckPermissionsForRepoInOrgNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}');
     }
     /**
      * @return list<string>

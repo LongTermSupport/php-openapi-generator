@@ -47,7 +47,7 @@ class BodyParameterTriggersContentTypeBeingSet extends \LongTermSupport\OpenApiG
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-simple');
     }
     /**
      * @return list<string>

@@ -70,7 +70,7 @@ class ReposGetReleaseAsset extends \LongTermSupport\OpenApiGenerator\Component\O
         if (302 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /repos/{owner}/{repo}/releases/assets/{asset_id}');
     }
     /**
      * @return list<string>

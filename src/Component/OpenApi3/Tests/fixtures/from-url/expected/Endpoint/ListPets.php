@@ -67,7 +67,7 @@ class ListPets extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error::class, 'response body');
             }
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException($status, $body, 'GET /pets');
     }
     /**
      * @return list<string>

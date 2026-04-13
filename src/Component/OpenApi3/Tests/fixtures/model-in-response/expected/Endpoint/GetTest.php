@@ -52,7 +52,7 @@ class GetTest extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\GetTestNotFoundException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\Error::class, 'response body'), $response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test');
     }
     /**
      * @return list<string>

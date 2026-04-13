@@ -131,7 +131,7 @@ class ActionsCreateOrUpdateOrgSecret extends \LongTermSupport\OpenApiGenerator\C
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'PUT /orgs/{org}/actions/secrets/{secret_name}');
     }
     /**
      * @return list<string>

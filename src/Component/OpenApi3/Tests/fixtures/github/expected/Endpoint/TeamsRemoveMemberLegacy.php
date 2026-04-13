@@ -61,7 +61,7 @@ class TeamsRemoveMemberLegacy extends \LongTermSupport\OpenApiGenerator\Componen
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsRemoveMemberLegacyNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /teams/{team_id}/members/{username}');
     }
     /**
      * @return list<string>

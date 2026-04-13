@@ -85,7 +85,7 @@ class GetFilteredPortfolioEventRules extends \LongTermSupport\OpenApiGenerator\C
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetFilteredPortfolioEventRulesNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'GET /monitoring/portfolios/{portfolioId}/eventRules/{countryCode}');
     }
     /**
      * @return list<string>

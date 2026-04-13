@@ -52,7 +52,7 @@ class ActionsCancelWorkflowRun extends \LongTermSupport\OpenApiGenerator\Compone
         if (202 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel');
     }
     /**
      * @return list<string>

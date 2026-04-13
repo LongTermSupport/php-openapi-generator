@@ -55,7 +55,7 @@ class TestDictionary extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-dictionary');
     }
     /**
      * @return list<string>

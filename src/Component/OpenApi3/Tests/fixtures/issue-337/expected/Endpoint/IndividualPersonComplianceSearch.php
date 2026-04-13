@@ -105,7 +105,7 @@ class IndividualPersonComplianceSearch extends \LongTermSupport\OpenApiGenerator
         if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualPersonComplianceSearchForbiddenException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'GET /compliancetemp/people/{predefinedSearch}');
     }
     /**
      * @return list<string>

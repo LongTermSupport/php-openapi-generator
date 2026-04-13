@@ -37,7 +37,7 @@ class TestNullableArray extends \LongTermSupport\OpenApiGenerator\Component\Open
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullableArray\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullableArray\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-nullable-array');
     }
     /**
      * @return list<string>

@@ -75,7 +75,7 @@ class HideReplyById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
                 return json_decode($body);
             }
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException($status, $body, 'PUT /labs/1/tweets/{id}/hidden');
     }
     /**
      * @return list<string>

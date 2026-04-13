@@ -44,7 +44,7 @@ class TestRefArray extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Runtime\Model\StringCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Runtime\Normalizer\TypeValidator::assertListOfString(\json_decode($body), 'response body'));
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-array-ref');
     }
     /**
      * @return list<string>

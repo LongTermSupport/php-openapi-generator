@@ -89,7 +89,7 @@ class ApiParchmentsPost extends \LongTermSupport\OpenApiGenerator\Component\Open
         if (422 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsPostUnprocessableEntityException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body, 'POST /parchments');
     }
     /**
      * @return list<string>

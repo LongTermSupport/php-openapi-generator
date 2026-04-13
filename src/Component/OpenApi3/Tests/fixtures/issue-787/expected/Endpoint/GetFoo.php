@@ -55,7 +55,7 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue787\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue787\Exception\UnexpectedStatusCodeException($status, $body, 'GET /foo');
     }
     /**
      * @return list<string>

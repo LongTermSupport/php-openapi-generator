@@ -37,7 +37,7 @@ class TestReferenceResponse extends \LongTermSupport\OpenApiGenerator\Component\
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomEndpointGenerator\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomEndpointGenerator\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-query');
     }
     /**
      * @return list<string>

@@ -49,7 +49,7 @@ class ReposDisableAutomatedSecurityFixes extends \LongTermSupport\OpenApiGenerat
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /repos/{owner}/{repo}/automated-security-fixes');
     }
     /**
      * @return list<string>

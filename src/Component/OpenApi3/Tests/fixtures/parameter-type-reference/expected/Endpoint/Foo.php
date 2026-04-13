@@ -53,7 +53,7 @@ class Foo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Exp
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ParameterTypeReference\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ParameterTypeReference\Exception\UnexpectedStatusCodeException($status, $body, 'GET /foo');
     }
     /**
      * @return list<string>

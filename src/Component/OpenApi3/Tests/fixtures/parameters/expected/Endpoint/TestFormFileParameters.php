@@ -63,7 +63,7 @@ class TestFormFileParameters extends \LongTermSupport\OpenApiGenerator\Component
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-form-file');
     }
     /**
      * @return list<string>

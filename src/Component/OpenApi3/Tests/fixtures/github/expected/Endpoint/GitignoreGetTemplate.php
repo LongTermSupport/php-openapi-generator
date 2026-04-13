@@ -57,7 +57,7 @@ class GitignoreGetTemplate extends \LongTermSupport\OpenApiGenerator\Component\O
         if (304 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /gitignore/templates/{name}');
     }
     /**
      * @return list<string>

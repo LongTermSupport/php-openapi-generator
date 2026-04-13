@@ -63,7 +63,7 @@ class LicensesGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\T
         if (304 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /licenses/{license}');
     }
     /**
      * @return list<string>

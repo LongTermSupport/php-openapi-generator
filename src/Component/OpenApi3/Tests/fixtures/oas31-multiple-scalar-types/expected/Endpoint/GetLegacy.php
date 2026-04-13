@@ -53,7 +53,7 @@ class GetLegacy extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Model\Widget::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31MultipleScalarTypes\Exception\UnexpectedStatusCodeException($status, $body, 'GET /legacy/{legacyId}');
     }
     /**
      * @return list<string>

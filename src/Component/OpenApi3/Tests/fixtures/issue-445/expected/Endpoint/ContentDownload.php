@@ -126,7 +126,7 @@ class ContentDownload extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
         if (412 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadPreconditionFailedException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body, 'GET /v1/Contents/downloads/{contentId}/{outputFormatId}');
     }
     /**
      * @return list<string>

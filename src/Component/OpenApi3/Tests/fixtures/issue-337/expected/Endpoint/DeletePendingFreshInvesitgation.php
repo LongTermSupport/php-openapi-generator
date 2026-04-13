@@ -78,7 +78,7 @@ class DeletePendingFreshInvesitgation extends \LongTermSupport\OpenApiGenerator\
         if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\DeletePendingFreshInvesitgationForbiddenException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /freshInvestigations/{orderId}');
     }
     /**
      * @return list<string>

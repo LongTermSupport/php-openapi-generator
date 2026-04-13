@@ -62,7 +62,7 @@ class MetaGetOctocat extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
         $body = (string) $response->getBody();
         if ($contentType !== null && 200 === $status) {
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /octocat');
     }
     /**
      * @return list<string>

@@ -65,7 +65,7 @@ class MimeTypeGeneratedValidDocBlock extends \LongTermSupport\OpenApiGenerator\C
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return json_decode($body);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-simple');
     }
     /**
      * @return list<string>

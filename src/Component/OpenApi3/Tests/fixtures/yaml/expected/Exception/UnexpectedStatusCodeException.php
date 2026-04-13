@@ -9,8 +9,14 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Yam
 
 final class UnexpectedStatusCodeException extends \RuntimeException implements ClientException
 {
-    public function __construct(int $status, string $message = '')
+    private string $body;
+    public function __construct(int $status, string $body = '', string $endpointHint = '')
     {
-        parent::__construct($message, $status);
+        parent::__construct(\sprintf('Unexpected HTTP %d from %s. This status code is not in the OpenAPI spec. To document it, run: bin/console zoho:sdk:spec:patch-scaffold', $status, $endpointHint), $status);
+        $this->body = $body;
+    }
+    public function getBody(): string
+    {
+        return $this->body;
     }
 }

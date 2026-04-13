@@ -55,7 +55,7 @@ class TestNullableQueryParameters extends \LongTermSupport\OpenApiGenerator\Comp
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullable\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullable\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-nullable-query-parameter');
     }
     /**
      * @return list<string>

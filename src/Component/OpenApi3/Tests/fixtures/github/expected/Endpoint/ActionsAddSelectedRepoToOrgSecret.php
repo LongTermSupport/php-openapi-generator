@@ -56,7 +56,7 @@ class ActionsAddSelectedRepoToOrgSecret extends \LongTermSupport\OpenApiGenerato
         if (409 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActionsAddSelectedRepoToOrgSecretConflictException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}');
     }
     /**
      * @return list<string>

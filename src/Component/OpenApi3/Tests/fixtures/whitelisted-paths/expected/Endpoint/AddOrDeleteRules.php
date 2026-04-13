@@ -85,7 +85,7 @@ class AddOrDeleteRules extends \LongTermSupport\OpenApiGenerator\Component\OpenA
                 return json_decode($body);
             }
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Exception\UnexpectedStatusCodeException($status, $body, 'POST /labs/1/tweets/stream/filter/rules');
     }
     /**
      * @return list<string>

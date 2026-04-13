@@ -52,7 +52,7 @@ class GetAnotherThingsId extends \LongTermSupport\OpenApiGenerator\Component\Ope
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\Thing', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\Thing::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body, 'GET /another-things/{id}');
     }
     /**
      * @return list<string>

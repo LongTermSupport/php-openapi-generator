@@ -44,7 +44,7 @@ class Test extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Ex
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test');
     }
     /**
      * @return list<string>

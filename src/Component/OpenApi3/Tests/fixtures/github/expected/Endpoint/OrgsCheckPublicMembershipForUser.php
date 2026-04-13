@@ -52,7 +52,7 @@ class OrgsCheckPublicMembershipForUser extends \LongTermSupport\OpenApiGenerator
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OrgsCheckPublicMembershipForUserNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /orgs/{org}/public_members/{username}');
     }
     /**
      * @return list<string>

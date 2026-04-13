@@ -54,7 +54,7 @@ class TeamsDeleteDiscussionInOrg extends \LongTermSupport\OpenApiGenerator\Compo
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}');
     }
     /**
      * @return list<string>

@@ -44,7 +44,7 @@ class PostMessageM700 extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Exception\UnexpectedStatusCodeException($status, $body, 'POST /message/M700');
     }
     /**
      * @return list<string>

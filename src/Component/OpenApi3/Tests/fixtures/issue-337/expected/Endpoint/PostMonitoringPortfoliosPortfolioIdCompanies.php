@@ -87,7 +87,7 @@ class PostMonitoringPortfoliosPortfolioIdCompanies extends \LongTermSupport\Open
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\PostMonitoringPortfoliosPortfolioIdCompaniesNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body, 'POST /monitoring/portfolios/{portfolioId}/companies');
     }
     /**
      * @return list<string>

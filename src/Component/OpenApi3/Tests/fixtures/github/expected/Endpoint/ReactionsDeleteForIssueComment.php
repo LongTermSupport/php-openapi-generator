@@ -57,7 +57,7 @@ class ReactionsDeleteForIssueComment extends \LongTermSupport\OpenApiGenerator\C
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}');
     }
     /**
      * @return list<string>

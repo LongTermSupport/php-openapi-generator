@@ -52,7 +52,7 @@ class ActionsDeleteWorkflowRunLogs extends \LongTermSupport\OpenApiGenerator\Com
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs');
     }
     /**
      * @return list<string>

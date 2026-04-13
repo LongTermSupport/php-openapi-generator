@@ -54,7 +54,7 @@ class TeamsDeleteDiscussionCommentLegacy extends \LongTermSupport\OpenApiGenerat
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}');
     }
     /**
      * @return list<string>

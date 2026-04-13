@@ -53,7 +53,7 @@ class TeamsDeleteInOrg extends \LongTermSupport\OpenApiGenerator\Component\OpenA
         if (204 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /orgs/{org}/teams/{team_slug}');
     }
     /**
      * @return list<string>

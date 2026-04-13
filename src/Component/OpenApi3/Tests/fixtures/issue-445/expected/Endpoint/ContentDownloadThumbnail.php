@@ -111,7 +111,7 @@ class ContentDownloadThumbnail extends \LongTermSupport\OpenApiGenerator\Compone
         if (412 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadThumbnailPreconditionFailedException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body, 'GET /v1/Contents/thumbnails/{id}/{size}');
     }
     /**
      * @return list<string>

@@ -47,7 +47,7 @@ class EmojisGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
         if (304 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /emojis');
     }
     /**
      * @return list<string>

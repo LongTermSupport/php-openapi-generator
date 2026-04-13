@@ -67,7 +67,7 @@ class ReposAcceptInvitation extends \LongTermSupport\OpenApiGenerator\Component\
         if (304 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'PATCH /user/repository_invitations/{invitation_id}');
     }
     /**
      * @return list<string>

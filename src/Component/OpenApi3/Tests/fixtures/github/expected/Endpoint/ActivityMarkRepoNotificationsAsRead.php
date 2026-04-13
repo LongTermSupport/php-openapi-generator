@@ -54,7 +54,7 @@ class ActivityMarkRepoNotificationsAsRead extends \LongTermSupport\OpenApiGenera
         if (202 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'PUT /repos/{owner}/{repo}/notifications');
     }
     /**
      * @return list<string>

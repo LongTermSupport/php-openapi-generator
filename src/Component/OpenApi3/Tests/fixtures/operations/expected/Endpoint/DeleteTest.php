@@ -37,7 +37,7 @@ class DeleteTest extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body, 'DELETE /test-get');
     }
     /**
      * @return list<string>

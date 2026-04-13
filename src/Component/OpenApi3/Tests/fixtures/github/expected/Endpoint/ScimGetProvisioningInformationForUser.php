@@ -85,7 +85,7 @@ class ScimGetProvisioningInformationForUser extends \LongTermSupport\OpenApiGene
         if (304 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /scim/v2/organizations/{org}/Users/{scim_user_id}');
     }
     /**
      * @return list<string>

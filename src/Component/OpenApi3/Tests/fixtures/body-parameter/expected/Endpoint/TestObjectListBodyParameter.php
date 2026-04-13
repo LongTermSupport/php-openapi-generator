@@ -47,7 +47,7 @@ class TestObjectListBodyParameter extends \LongTermSupport\OpenApiGenerator\Comp
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-object-list');
     }
     /**
      * @return list<string>

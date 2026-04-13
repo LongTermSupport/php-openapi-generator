@@ -54,7 +54,7 @@ class ChecksRerequestSuite extends \LongTermSupport\OpenApiGenerator\Component\O
         if (201 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest');
     }
     /**
      * @return list<string>

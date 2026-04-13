@@ -53,7 +53,7 @@ class TestNoTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
         if (500 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagInternalServerErrorException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-exception');
     }
     /**
      * @return list<string>

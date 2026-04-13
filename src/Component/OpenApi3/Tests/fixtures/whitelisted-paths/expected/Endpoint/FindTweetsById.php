@@ -90,7 +90,7 @@ class FindTweetsById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
                 return json_decode($body);
             }
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPaths\Exception\UnexpectedStatusCodeException($status, $body, 'GET /labs/1/tweets');
     }
     /**
      * @return list<string>

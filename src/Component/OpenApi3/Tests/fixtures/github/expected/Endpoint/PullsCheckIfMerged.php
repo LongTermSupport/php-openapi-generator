@@ -55,7 +55,7 @@ class PullsCheckIfMerged extends \LongTermSupport\OpenApiGenerator\Component\Ope
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\PullsCheckIfMergedNotFoundException($response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'GET /repos/{owner}/{repo}/pulls/{pull_number}/merge');
     }
     /**
      * @return list<string>

@@ -80,7 +80,7 @@ class GetRules extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
                 return json_decode($body);
             }
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException($status, $body, 'GET /labs/1/tweets/stream/filter/rules');
     }
     /**
      * @return list<string>

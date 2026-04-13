@@ -44,7 +44,7 @@ class GetWidget extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\_Parent', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Model\_Parent::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Exception\UnexpectedStatusCodeException($status, $body, 'GET /widget');
     }
     /**
      * @return list<string>

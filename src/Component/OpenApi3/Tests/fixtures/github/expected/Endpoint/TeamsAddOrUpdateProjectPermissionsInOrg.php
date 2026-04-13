@@ -70,7 +70,7 @@ class TeamsAddOrUpdateProjectPermissionsInOrg extends \LongTermSupport\OpenApiGe
         if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsAddOrUpdateProjectPermissionsInOrgForbiddenException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugProjectsProjectIdPutResponse403', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrgsOrgTeamsTeamSlugProjectsProjectIdPutResponse403::class, 'response body'), $response);
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body, 'PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}');
     }
     /**
      * @return list<string>

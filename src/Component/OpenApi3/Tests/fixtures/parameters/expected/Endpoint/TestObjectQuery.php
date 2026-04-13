@@ -55,7 +55,7 @@ class TestObjectQuery extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-object-query');
     }
     /**
      * @return list<string>

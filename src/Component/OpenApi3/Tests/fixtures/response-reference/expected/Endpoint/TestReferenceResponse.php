@@ -44,7 +44,7 @@ class TestReferenceResponse extends \LongTermSupport\OpenApiGenerator\Component\
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Model\ResponseCommon', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Model\ResponseCommon::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReference\Exception\UnexpectedStatusCodeException($status, $body, 'GET /test-query');
     }
     /**
      * @return list<string>

@@ -55,7 +55,7 @@ class GetParentsParentIdChildChildId extends \LongTermSupport\OpenApiGenerator\C
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child::class, 'response body');
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Exception\UnexpectedStatusCodeException($status, $body, 'GET /parents/{parent_id}/child/child_id/');
     }
     /**
      * @return list<string>

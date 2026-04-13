@@ -47,7 +47,7 @@ class TestSimpleClassArray extends \LongTermSupport\OpenApiGenerator\Component\O
         if (200 === $status) {
             return null;
         }
-        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue828\Exception\UnexpectedStatusCodeException($status, $body);
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue828\Exception\UnexpectedStatusCodeException($status, $body, 'POST /test-simple-array-ref');
     }
     /**
      * @return list<string>

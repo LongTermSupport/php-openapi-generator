@@ -319,6 +319,8 @@ class ExceptionGenerator
         $schema->addFile(new File($schema->getDirectory() . '/Exception/ServerException.php', $serverException, 'Exception'));
 
         if ($registry->getThrowUnexpectedStatusCode()) {
+            $hintMessage = 'Unexpected HTTP %d from %s. This status code is not in the OpenAPI spec. To document it, run: bin/console zoho:sdk:spec:patch-scaffold';
+
             $unexpectedStatusCodeException = new Stmt\Namespace_(new Name($schema->getNamespace() . '\Exception'), [
                 new Stmt\Class_(
                     'UnexpectedStatusCodeException',
@@ -329,18 +331,39 @@ class ExceptionGenerator
                         'extends'    => new Name('\RuntimeException'),
                         'flags'      => Modifiers::FINAL,
                         'stmts'      => [
+                            new Stmt\Property(Modifiers::PRIVATE, [
+                                new Stmt\PropertyProperty('body'),
+                            ], [], new Name('string')),
                             new Stmt\ClassMethod('__construct', [
                                 'flags'  => Modifiers::PUBLIC,
                                 'params' => [
                                     new Param(new Expr\Variable('status'), null, new Name('int')),
-                                    new Param(new Expr\Variable('message'), new Scalar\String_(''), new Name('string')),
+                                    new Param(new Expr\Variable('body'), new Scalar\String_(''), new Name('string')),
+                                    new Param(new Expr\Variable('endpointHint'), new Scalar\String_(''), new Name('string')),
                                 ],
                                 'stmts'  => [
                                     new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [
-                                        new Node\Arg(new Expr\Variable('message')),
+                                        new Node\Arg(new Expr\FuncCall(new Name('\sprintf'), [
+                                            new Node\Arg(new Scalar\String_($hintMessage)),
+                                            new Node\Arg(new Expr\Variable('status')),
+                                            new Node\Arg(new Expr\Variable('endpointHint')),
+                                        ])),
                                         new Node\Arg(new Expr\Variable('status')),
                                     ])),
+                                    new Stmt\Expression(new Expr\Assign(
+                                        new Expr\PropertyFetch(new Expr\Variable('this'), 'body'),
+                                        new Expr\Variable('body'),
+                                    )),
                                 ],
+                            ]),
+                            new Stmt\ClassMethod('getBody', [
+                                'flags'      => Modifiers::PUBLIC,
+                                'stmts'      => [
+                                    new Stmt\Return_(
+                                        new Expr\PropertyFetch(new Expr\Variable('this'), 'body')
+                                    ),
+                                ],
+                                'returnType' => new Name('string'),
                             ]),
                         ],
                     ]

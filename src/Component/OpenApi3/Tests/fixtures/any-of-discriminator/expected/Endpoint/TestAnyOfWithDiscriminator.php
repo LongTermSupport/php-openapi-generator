@@ -36,8 +36,9 @@ class TestAnyOfWithDiscriminator extends \LongTermSupport\OpenApiGenerator\Compo
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\TestAnyOfWithDiscriminatorBadRequestException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBar
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBar
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -47,7 +48,7 @@ class TestAnyOfWithDiscriminator extends \LongTermSupport\OpenApiGenerator\Compo
         if ($contentType !== null && (400 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\TestAnyOfWithDiscriminatorBadRequestException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBarWithMapping', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Model\FooBarWithMapping::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfDiscriminator\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

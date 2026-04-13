@@ -64,6 +64,7 @@ class GetAMonitoredCompanyFromAPortfolio extends \LongTermSupport\OpenApiGenerat
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
@@ -84,7 +85,7 @@ class GetAMonitoredCompanyFromAPortfolio extends \LongTermSupport\OpenApiGenerat
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\GetAMonitoredCompanyFromAPortfolioNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

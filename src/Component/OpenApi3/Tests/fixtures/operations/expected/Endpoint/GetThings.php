@@ -32,14 +32,19 @@ class GetThings extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     {
         return ['Accept' => ['application/json']];
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\ThingCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\ThingCollection
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\ThingCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Runtime\Normalizer\TypeValidator::assertListOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\Thing[]', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Model\Thing::class, 'response body'));
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

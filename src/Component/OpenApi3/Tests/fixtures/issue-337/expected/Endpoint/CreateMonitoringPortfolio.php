@@ -63,6 +63,7 @@ class CreateMonitoringPortfolio extends \LongTermSupport\OpenApiGenerator\Compon
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
@@ -83,7 +84,7 @@ class CreateMonitoringPortfolio extends \LongTermSupport\OpenApiGenerator\Compon
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CreateMonitoringPortfolioNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

@@ -50,7 +50,12 @@ class ListPets extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
         $optionsResolver->addAllowedTypes('limit', ['int']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\PetCollection|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\PetCollection|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -62,7 +67,7 @@ class ListPets extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error::class, 'response body');
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

@@ -63,8 +63,9 @@ class ApiReviewsPost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsPostBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsPostUnprocessableEntityException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -88,7 +89,7 @@ class ApiReviewsPost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi
         if (422 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsPostUnprocessableEntityException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

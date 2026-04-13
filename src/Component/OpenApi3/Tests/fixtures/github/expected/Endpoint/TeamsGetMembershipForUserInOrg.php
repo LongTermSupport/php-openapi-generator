@@ -57,8 +57,9 @@ class TeamsGetMembershipForUserInOrg extends \LongTermSupport\OpenApiGenerator\C
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsGetMembershipForUserInOrgNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamMembership
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamMembership
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -68,7 +69,7 @@ class TeamsGetMembershipForUserInOrg extends \LongTermSupport\OpenApiGenerator\C
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsGetMembershipForUserInOrgNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

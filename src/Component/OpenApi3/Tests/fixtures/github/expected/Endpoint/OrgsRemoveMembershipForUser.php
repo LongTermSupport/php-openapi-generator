@@ -51,6 +51,7 @@ class OrgsRemoveMembershipForUser extends \LongTermSupport\OpenApiGenerator\Comp
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OrgsRemoveMembershipForUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OrgsRemoveMembershipForUserNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
@@ -65,7 +66,7 @@ class OrgsRemoveMembershipForUser extends \LongTermSupport\OpenApiGenerator\Comp
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\OrgsRemoveMembershipForUserNotFoundException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

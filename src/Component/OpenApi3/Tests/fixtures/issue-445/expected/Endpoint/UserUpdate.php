@@ -55,8 +55,9 @@ class UserUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -84,7 +85,7 @@ class UserUpdate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
         if ($contentType !== null && (500 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateInternalServerErrorException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PictureparkException', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PictureparkException::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

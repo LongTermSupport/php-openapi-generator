@@ -12,6 +12,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Model\FilePostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Exception\UnexpectedStatusCodeException
      */
     public function postFile(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Model\FilePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT): mixed
     {

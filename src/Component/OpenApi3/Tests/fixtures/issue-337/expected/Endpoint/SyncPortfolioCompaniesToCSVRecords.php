@@ -66,6 +66,7 @@ class SyncPortfolioCompaniesToCSVRecords extends \LongTermSupport\OpenApiGenerat
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
@@ -86,7 +87,7 @@ class SyncPortfolioCompaniesToCSVRecords extends \LongTermSupport\OpenApiGenerat
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\SyncPortfolioCompaniesToCSVRecordsNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

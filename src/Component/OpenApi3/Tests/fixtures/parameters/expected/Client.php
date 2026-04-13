@@ -18,14 +18,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testHeader"?: string,
      * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
-    public function testGetWithPathParameters(string $testPath, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
+    public function testGetWithPathParameters(string $testPath, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Endpoint\TestGetWithPathParameters($testPath, $queryParameters, $headerParameters), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Endpoint\TestGetWithPathParameters($testPath, $queryParameters, $headerParameters), $fetch);
     }
     /**
      * @param string $testPath
@@ -36,14 +33,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testHeader"?: string,
      * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
-    public function testPostWithPathParameters(string $testPath, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
+    public function testPostWithPathParameters(string $testPath, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Endpoint\TestPostWithPathParameters($testPath, $queryParameters, $headerParameters), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Endpoint\TestPostWithPathParameters($testPath, $queryParameters, $headerParameters), $fetch);
     }
     /**
      * @param array{
@@ -55,6 +49,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testDefault"?: string,
      * } $queryParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testQueryParameters(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -74,6 +69,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testDefault"?: string,
      * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testHeaderParameters(array $headerParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -86,6 +82,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Model\TestFormPostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testFormParameters(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Model\TestFormPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -98,6 +95,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Model\TestFormFilePostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testFormFileParameters(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Model\TestFormFilePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -110,6 +108,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string|resource|\Psr\Http\Message\StreamInterface $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testBinaryBody($requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -124,6 +123,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param int $testInteger
      * @param float $testFloat
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testPathParameters(string $testString, int $testInteger, float $testFloat, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -136,6 +136,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param int $testInteger
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function getTestInteger(int $testInteger, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -150,6 +151,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "input"?: string,
      * } $queryParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testDictionary(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -164,6 +166,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "filter"?: list<mixed>,
      * } $queryParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Exception\UnexpectedStatusCodeException
      */
     public function testObjectQuery(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

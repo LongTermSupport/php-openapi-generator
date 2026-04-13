@@ -21,6 +21,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Exception\UnexpectedStatusCodeException
      */
     public function findTweetsById(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -34,6 +35,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsArrayNotation\Exception\UnexpectedStatusCodeException
      */
     public function addOrDeleteRules($requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {

@@ -87,8 +87,9 @@ class IndividualPersonComplianceSearch extends \LongTermSupport\OpenApiGenerator
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualPersonComplianceSearchBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualPersonComplianceSearchUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualPersonComplianceSearchForbiddenException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResult
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\ComplianceSearchResult
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -104,7 +105,7 @@ class IndividualPersonComplianceSearch extends \LongTermSupport\OpenApiGenerator
         if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\IndividualPersonComplianceSearchForbiddenException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

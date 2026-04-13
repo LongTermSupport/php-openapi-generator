@@ -60,10 +60,12 @@ class CompanyImage extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CompanyImageBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CompanyImageForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CompanyImageNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
         if (200 === $status) {
             return null;
         }
@@ -76,7 +78,7 @@ class CompanyImage extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\CompanyImageNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

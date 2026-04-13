@@ -49,6 +49,7 @@ class UsersCheckBlocked extends \LongTermSupport\OpenApiGenerator\Component\Open
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckBlockedNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckBlockedForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckBlockedUnauthorizedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
@@ -69,7 +70,7 @@ class UsersCheckBlocked extends \LongTermSupport\OpenApiGenerator\Component\Open
         if ($contentType !== null && (401 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UsersCheckBlockedUnauthorizedException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

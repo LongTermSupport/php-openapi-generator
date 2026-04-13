@@ -67,8 +67,9 @@ class ApiParchmentsIdPut extends \LongTermSupport\OpenApiGenerator\Component\Ope
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -95,7 +96,7 @@ class ApiParchmentsIdPut extends \LongTermSupport\OpenApiGenerator\Component\Ope
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

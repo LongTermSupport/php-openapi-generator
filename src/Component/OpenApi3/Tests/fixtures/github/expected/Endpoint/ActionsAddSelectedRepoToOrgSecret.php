@@ -44,17 +44,19 @@ class ActionsAddSelectedRepoToOrgSecret extends \LongTermSupport\OpenApiGenerato
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActionsAddSelectedRepoToOrgSecretConflictException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
         if (204 === $status) {
             return null;
         }
         if (409 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActionsAddSelectedRepoToOrgSecretConflictException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

@@ -57,8 +57,9 @@ class ListOfIndividualsPreDefinedSearches extends \LongTermSupport\OpenApiGenera
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListOfIndividualsPreDefinedSearchesBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListOfIndividualsPreDefinedSearchesUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListOfIndividualsPreDefinedSearchesForbiddenException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompliancePreDefinedSearches
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Model\CompliancePreDefinedSearches
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -74,7 +75,7 @@ class ListOfIndividualsPreDefinedSearches extends \LongTermSupport\OpenApiGenera
         if ($contentType !== null && (403 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\ListOfIndividualsPreDefinedSearchesForbiddenException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

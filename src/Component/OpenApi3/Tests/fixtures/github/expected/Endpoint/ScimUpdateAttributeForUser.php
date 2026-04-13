@@ -80,8 +80,9 @@ class ScimUpdateAttributeForUser extends \LongTermSupport\OpenApiGenerator\Compo
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimUpdateAttributeForUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimUpdateAttributeForUserBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimUpdateAttributeForUserTooManyRequestsException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimUser
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ScimUser|null
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -118,7 +119,7 @@ class ScimUpdateAttributeForUser extends \LongTermSupport\OpenApiGenerator\Compo
         if ($contentType !== null && (429 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ScimUpdateAttributeForUserTooManyRequestsException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

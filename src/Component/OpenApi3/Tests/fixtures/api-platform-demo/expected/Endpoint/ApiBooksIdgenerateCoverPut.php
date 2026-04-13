@@ -67,6 +67,7 @@ class ApiBooksIdgenerateCoverPut extends \LongTermSupport\OpenApiGenerator\Compo
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
@@ -95,7 +96,7 @@ class ApiBooksIdgenerateCoverPut extends \LongTermSupport\OpenApiGenerator\Compo
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

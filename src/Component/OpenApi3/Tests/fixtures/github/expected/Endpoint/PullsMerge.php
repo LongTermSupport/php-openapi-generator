@@ -60,8 +60,9 @@ class PullsMerge extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\PullsMergeUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\PullsMergeForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\PullsMergeNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMergeResult
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\PullRequestMergeResult
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -83,7 +84,7 @@ class PullsMerge extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Te
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\PullsMergeNotFoundException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\BasicError::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

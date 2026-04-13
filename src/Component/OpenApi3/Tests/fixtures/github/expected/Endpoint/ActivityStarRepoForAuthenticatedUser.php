@@ -50,6 +50,7 @@ class ActivityStarRepoForAuthenticatedUser extends \LongTermSupport\OpenApiGener
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityStarRepoForAuthenticatedUserForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityStarRepoForAuthenticatedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\ActivityStarRepoForAuthenticatedUserUnauthorizedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
@@ -70,7 +71,7 @@ class ActivityStarRepoForAuthenticatedUser extends \LongTermSupport\OpenApiGener
         if (304 === $status) {
             return null;
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

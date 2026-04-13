@@ -53,8 +53,9 @@ class MigrationsSetLfsPreference extends \LongTermSupport\OpenApiGenerator\Compo
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsSetLfsPreferenceUnprocessableEntityException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Import
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\Import
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -64,7 +65,7 @@ class MigrationsSetLfsPreference extends \LongTermSupport\OpenApiGenerator\Compo
         if ($contentType !== null && (422 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\MigrationsSetLfsPreferenceUnprocessableEntityException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ValidationError', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ValidationError::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

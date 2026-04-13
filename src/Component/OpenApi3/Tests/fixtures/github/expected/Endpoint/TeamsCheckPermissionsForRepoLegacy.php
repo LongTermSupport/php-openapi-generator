@@ -55,8 +55,9 @@ class TeamsCheckPermissionsForRepoLegacy extends \LongTermSupport\OpenApiGenerat
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsCheckPermissionsForRepoLegacyNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepository
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\TeamRepository|null
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -69,7 +70,7 @@ class TeamsCheckPermissionsForRepoLegacy extends \LongTermSupport\OpenApiGenerat
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\TeamsCheckPermissionsForRepoLegacyNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

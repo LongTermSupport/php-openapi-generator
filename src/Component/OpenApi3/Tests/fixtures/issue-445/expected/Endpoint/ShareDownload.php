@@ -88,8 +88,9 @@ class ShareDownload extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): never
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -121,7 +122,7 @@ class ShareDownload extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
         if (412 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadPreconditionFailedException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

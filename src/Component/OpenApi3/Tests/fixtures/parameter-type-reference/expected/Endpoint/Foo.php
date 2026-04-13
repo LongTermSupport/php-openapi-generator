@@ -44,9 +44,16 @@ class Foo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Exp
         $optionsResolver->addAllowedTypes('bar', ['string']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ParameterTypeReference\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): never
     {
-        return null;
+        $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ParameterTypeReference\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

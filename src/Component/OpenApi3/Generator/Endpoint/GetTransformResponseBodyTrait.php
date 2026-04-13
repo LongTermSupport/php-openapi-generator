@@ -157,6 +157,22 @@ trait GetTransformResponseBodyTrait
         if ($registry->getThrowUnexpectedStatusCode()) {
             $exceptionGenerator->createBaseExceptions($context);
 
+            // Strip any trailing bare `return null` statements that came from
+            // `default` response handlers with no content. Those null fallbacks
+            // are fully superseded by the unconditional throw below, and leaving
+            // them in place causes a PHPStan `deadCode.unreachable` error.
+            while ([] !== $outputStatements) {
+                $last = end($outputStatements);
+                if ($last instanceof Stmt\Return_ && $last->expr instanceof Expr\ConstFetch && 'null' === (string) $last->expr->name) {
+                    array_pop($outputStatements);
+                    // Also remove the corresponding 'null' from outputTypes since
+                    // this null return is no longer emitted.
+                    $outputTypes = array_values(array_filter($outputTypes, static fn (string $t): bool => 'null' !== $t));
+                } else {
+                    break;
+                }
+            }
+
             $throwType        = '\\' . $context->getCurrentSchema()->getNamespace() . '\Exception\UnexpectedStatusCodeException';
             $throwTypes[]     = $throwType;
             $outputStatements = array_merge(
@@ -695,7 +711,8 @@ trait GetTransformResponseBodyTrait
         }
 
         if (0 === \count($phpTypes)) {
-            return [new Node\Identifier('mixed'), 'mixed'];
+            // No return statements — function only throws; PHP return type is `never`.
+            return [new Node\Identifier('never'), 'never'];
         }
 
         if (1 === \count($phpTypes)) {

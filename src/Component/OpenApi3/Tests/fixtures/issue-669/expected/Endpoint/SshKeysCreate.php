@@ -49,8 +49,9 @@ class SshKeysCreate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\SshKeysCreateUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\SshKeysCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\SshKeysCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseSshKeysNew|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseSshKeysNew|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -71,7 +72,7 @@ class SshKeysCreate extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error::class, 'response body');
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

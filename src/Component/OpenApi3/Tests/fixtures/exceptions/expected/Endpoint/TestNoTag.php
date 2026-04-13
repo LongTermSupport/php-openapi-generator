@@ -38,8 +38,9 @@ class TestNoTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): never
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -52,7 +53,7 @@ class TestNoTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
         if (500 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagInternalServerErrorException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

@@ -51,6 +51,7 @@ class JsonSchemaGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\JsonSchemaGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\JsonSchemaGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\JsonSchemaGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
@@ -80,7 +81,7 @@ class JsonSchemaGet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return json_decode($body);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

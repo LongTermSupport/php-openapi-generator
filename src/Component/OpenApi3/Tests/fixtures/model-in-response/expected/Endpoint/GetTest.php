@@ -37,8 +37,9 @@ class GetTest extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\GetTestBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\GetTestNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\Schema
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\Schema
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -51,7 +52,7 @@ class GetTest extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\GetTestNotFoundException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\Error::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

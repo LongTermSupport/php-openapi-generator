@@ -56,14 +56,19 @@ class ActivityListReposWatchedByUser extends \LongTermSupport\OpenApiGenerator\C
         $optionsResolver->addAllowedTypes('page', ['int']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryCollection
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepositoryCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertListOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository[]', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\MinimalRepository::class, 'response body'));
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

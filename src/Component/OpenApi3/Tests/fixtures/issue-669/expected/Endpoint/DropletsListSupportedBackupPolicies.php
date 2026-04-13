@@ -39,8 +39,9 @@ class DropletsListSupportedBackupPolicies extends \LongTermSupport\OpenApiGenera
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsListSupportedBackupPoliciesNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsListSupportedBackupPoliciesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsListSupportedBackupPoliciesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDropletsSupportedBackupPolicies|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ResponseDropletsSupportedBackupPolicies|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -64,7 +65,7 @@ class DropletsListSupportedBackupPolicies extends \LongTermSupport\OpenApiGenera
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error::class, 'response body');
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

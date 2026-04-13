@@ -69,10 +69,12 @@ class UpdateCompanyDetailsInAPortfolio extends \LongTermSupport\OpenApiGenerator
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioUnauthorizedException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioForbiddenException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
         if (204 === $status) {
             return null;
         }
@@ -88,7 +90,7 @@ class UpdateCompanyDetailsInAPortfolio extends \LongTermSupport\OpenApiGenerator
         if ($contentType !== null && (404 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UpdateCompanyDetailsInAPortfolioNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

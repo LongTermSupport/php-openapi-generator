@@ -43,14 +43,19 @@ class ActionsListRunnerApplicationsForOrg extends \LongTermSupport\OpenApiGenera
     {
         return ['Accept' => ['application/json']];
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RunnerApplicationCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RunnerApplicationCollection
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RunnerApplicationCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertListOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RunnerApplication[]', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RunnerApplication::class, 'response body'));
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

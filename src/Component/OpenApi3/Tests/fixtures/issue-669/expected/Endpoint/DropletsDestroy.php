@@ -52,6 +52,7 @@ class DropletsDestroy extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\DropletsDestroyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\UnexpectedStatusCodeException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error
     {
@@ -77,7 +78,7 @@ class DropletsDestroy extends \LongTermSupport\OpenApiGenerator\Component\OpenAp
                 return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error::class, 'response body');
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

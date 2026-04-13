@@ -53,8 +53,9 @@ class ContentGetReferencesMany extends \LongTermSupport\OpenApiGenerator\Compone
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -82,7 +83,7 @@ class ContentGetReferencesMany extends \LongTermSupport\OpenApiGenerator\Compone
         if ($contentType !== null && (500 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyInternalServerErrorException(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PictureparkException', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PictureparkException::class, 'response body'), $response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

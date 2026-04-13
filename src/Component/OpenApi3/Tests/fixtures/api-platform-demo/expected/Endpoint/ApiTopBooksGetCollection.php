@@ -60,7 +60,12 @@ class ApiTopBooksGetCollection extends \LongTermSupport\OpenApiGenerator\Compone
         $optionsResolver->addAllowedTypes('page', ['int']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -78,7 +83,7 @@ class ApiTopBooksGetCollection extends \LongTermSupport\OpenApiGenerator\Compone
                 return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Runtime\Normalizer\TypeValidator::assertListOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBook[]', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBook::class, 'response body'));
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

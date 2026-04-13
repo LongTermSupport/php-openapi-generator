@@ -119,16 +119,22 @@ class ActionsCreateOrUpdateRepoSecret extends \LongTermSupport\OpenApiGenerator\
         }
         return [[], null];
     }
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
+     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
         if (201 === $status) {
             return null;
         }
         if (204 === $status) {
             return null;
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

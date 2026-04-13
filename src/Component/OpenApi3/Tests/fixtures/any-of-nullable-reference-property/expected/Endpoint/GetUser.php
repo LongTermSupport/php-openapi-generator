@@ -36,8 +36,9 @@ class GetUser extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\GetUserNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Account
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Account
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -47,7 +48,7 @@ class GetUser extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests
         if (404 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\GetUserNotFoundException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

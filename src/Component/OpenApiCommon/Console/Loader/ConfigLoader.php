@@ -29,7 +29,7 @@ class ConfigLoader extends BaseConfigLoader implements ConfigLoaderInterface
             'whitelisted-paths'            => null,
             'endpoint-generator'           => null,
             'custom-query-resolver'        => [],
-            'throw-unexpected-status-code' => false,
+            'throw-unexpected-status-code' => true,
         ]);
     }
 }

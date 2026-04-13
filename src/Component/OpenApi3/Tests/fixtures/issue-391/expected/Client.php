@@ -15,6 +15,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\PatchEntityBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\PatchEntityNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Exception\UnexpectedStatusCodeException
      */
     public function patchEntity(int $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue391\Model\PatchableEntity $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

@@ -11,6 +11,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
 {
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiResources\Exception\UnexpectedStatusCodeException
      */
     public function bodyParameterTriggersContentTypeBeingSet(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -22,6 +23,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiResources\Exception\UnexpectedStatusCodeException
      */
     public function producesTriggersAcceptBeingSet(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

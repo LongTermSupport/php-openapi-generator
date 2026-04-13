@@ -14,11 +14,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "limit"?: int,
      * } $queryParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException
      */
-    public function listPets(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\PetCollection|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error|\Psr\Http\Message\ResponseInterface
+    public function listPets(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\PetCollection|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Endpoint\ListPets($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\PetCollection || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\PetCollection || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -26,6 +27,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException
      */
     public function createPets(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error|\Psr\Http\Message\ResponseInterface
     {
@@ -38,11 +40,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string $petId The id of the pet to retrieve
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Exception\UnexpectedStatusCodeException
      */
-    public function showPetById(string $petId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error|\Psr\Http\Message\ResponseInterface
+    public function showPetById(string $petId, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Endpoint\ShowPetById($petId), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Pet || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Model\Error || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));

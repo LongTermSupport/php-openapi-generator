@@ -14,6 +14,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testBoolean"?: bool,
      * } $queryParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue787\Exception\UnexpectedStatusCodeException
      */
     public function getFoo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -26,6 +27,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param mixed $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue787\Exception\UnexpectedStatusCodeException
      */
     public function postFoo($requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

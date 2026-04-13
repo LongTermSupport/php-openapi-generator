@@ -19,11 +19,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function businessProcessGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -38,11 +39,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function businessProcessCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -59,11 +61,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessChangeStateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessChangeStateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessChangeStateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessChangeState(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessStateChangeRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function businessProcessChangeState(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessStateChangeRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessChangeState($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -80,6 +83,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessUpdateNotificationConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessUpdateNotificationTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessUpdateNotificationInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function businessProcessUpdateNotification(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessNotificationUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -100,6 +104,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessCancelConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessCancelTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessCancelInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function businessProcessCancel(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -124,11 +129,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForStatesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForStatesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForStatesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessWaitForStates(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForStateResult|\Psr\Http\Message\ResponseInterface
+    public function businessProcessWaitForStates(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForStateResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessWaitForStates($id, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForStateResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForStateResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -148,11 +154,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForLifeCyclesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForLifeCyclesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForLifeCyclesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessWaitForLifeCycles(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult|\Psr\Http\Message\ResponseInterface
+    public function businessProcessWaitForLifeCycles(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessWaitForLifeCycles($id, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -177,11 +184,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForCompletionConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForCompletionTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessWaitForCompletionInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessWaitForCompletion(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult|\Psr\Http\Message\ResponseInterface
+    public function businessProcessWaitForCompletion(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessWaitForCompletion($id, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessWaitForLifeCycleResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -197,11 +205,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessGetDetailsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessGetDetailsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessGetDetailsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessGetDetails(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetails|\Psr\Http\Message\ResponseInterface
+    public function businessProcessGetDetails(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetails|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessGetDetails($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetails || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessDetails || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -217,11 +226,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessProcessSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessProcessSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessSearchResult|\Psr\Http\Message\ResponseInterface
+    public function businessProcessSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessProcessSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcessSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -235,11 +245,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleGetConfigurationConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleGetConfigurationTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleGetConfigurationInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessRuleGetConfiguration(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfiguration|\Psr\Http\Message\ResponseInterface
+    public function businessRuleGetConfiguration(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfiguration|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessRuleGetConfiguration(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfiguration || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfiguration || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -254,11 +265,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleUpdateConfigurationConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleUpdateConfigurationTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleUpdateConfigurationInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessRuleUpdateConfiguration(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfigurationUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function businessRuleUpdateConfiguration(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleConfigurationUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessRuleUpdateConfiguration($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -273,11 +285,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleSearchTracesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleSearchTracesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\BusinessRuleSearchTracesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function businessRuleSearchTraces(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchResult|\Psr\Http\Message\ResponseInterface
+    public function businessRuleSearchTraces(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\BusinessRuleSearchTraces($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessRuleTraceLogSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -291,11 +304,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelGetAllConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelGetAllTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelGetAllInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function channelGetAll(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelCollection|\Psr\Http\Message\ResponseInterface
+    public function channelGetAll(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ChannelGetAll(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -311,11 +325,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function channelCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel|\Psr\Http\Message\ResponseInterface
+    public function channelCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ChannelCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -331,6 +346,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function channelDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -351,11 +367,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function channelGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel|\Psr\Http\Message\ResponseInterface
+    public function channelGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ChannelGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -372,11 +389,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ChannelUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function channelUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel|\Psr\Http\Message\ResponseInterface
+    public function channelUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ChannelUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ChannelUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Channel || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -392,6 +410,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentPermissionSetDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -412,11 +431,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -433,11 +453,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -455,11 +476,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -475,11 +497,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -496,6 +519,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetTransferOwnershipConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetTransferOwnershipTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetTransferOwnershipInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentPermissionSetTransferOwnership(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetOwnershipTransferRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -516,6 +540,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetPermissionsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetPermissionsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetPermissionsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentPermissionSetGetPermissions(string $id, string $fetch = self::FETCH_OBJECT): mixed
     {
@@ -532,11 +557,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -552,11 +578,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionSetUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -572,11 +599,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -592,6 +620,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetTransferOwnershipManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetTransferOwnershipManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetTransferOwnershipManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentPermissionSetTransferOwnershipMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetOwnershipTransferManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -614,11 +643,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetPermissionsManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetPermissionsManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetGetPermissionsManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetGetPermissionsMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetGetPermissionsMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetGetPermissionsMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -634,11 +664,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentPermissionSetSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentPermissionSetSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult|\Psr\Http\Message\ResponseInterface
+    public function contentPermissionSetSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentPermissionSetSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -659,6 +690,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentDelete(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -682,11 +714,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGet(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
+    public function contentGet(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGet($id, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -712,14 +745,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentDownload(string $contentId, string $outputFormatId, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\Psr\Http\Message\ResponseInterface
+    public function contentDownload(string $contentId, string $outputFormatId, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentDownload($contentId, $outputFormatId, $queryParameters, $headerParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentDownload($contentId, $outputFormatId, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Provides a lightweight endpoint to download content thumbnails.
@@ -739,14 +769,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadThumbnailTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadThumbnailInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDownloadThumbnailPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentDownloadThumbnail(string $id, string $size, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\Psr\Http\Message\ResponseInterface
+    public function contentDownloadThumbnail(string $id, string $size, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentDownloadThumbnail($id, $size, $queryParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentDownloadThumbnail($id, $size, $queryParameters, $accept), $fetch);
     }
     /**
      * Gets multiple content details by IDs.
@@ -763,11 +790,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function contentGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -789,11 +817,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentCreateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
+    public function contentCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentCreateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentCreate($requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -819,11 +848,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateMetadataConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateMetadataTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateMetadataInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentUpdateMetadata(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentMetadataUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
+    public function contentUpdateMetadata(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentMetadataUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentUpdateMetadata($id, $requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -845,11 +875,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdatePermissionsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdatePermissionsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdatePermissionsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentUpdatePermissions(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionsUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
+    public function contentUpdatePermissions(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionsUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentUpdatePermissions($id, $requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -870,6 +901,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentRestoreConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentRestoreTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentRestoreInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentRestore(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -895,6 +927,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentTransferOwnershipConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentTransferOwnershipTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentTransferOwnershipInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function contentTransferOwnership(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentOwnershipTransferRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -917,11 +950,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateFileConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateFileTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateFileInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentUpdateFile(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFileUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentUpdateFile(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFileUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentUpdateFile($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -938,11 +972,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGetReferences(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult|\Psr\Http\Message\ResponseInterface
+    public function contentGetReferences(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGetReferences($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -958,11 +993,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetOutputsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetOutputsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetOutputsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGetOutputs(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection|\Psr\Http\Message\ResponseInterface
+    public function contentGetOutputs(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGetOutputs($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -978,11 +1014,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateDownloadLinkConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateDownloadLinkTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateDownloadLinkInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentCreateDownloadLink(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDownloadLinkCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentCreateDownloadLink(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDownloadLinkCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentCreateDownloadLink($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -997,11 +1034,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetDownloadLinkConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetDownloadLinkTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetDownloadLinkInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGetDownloadLink(string $token, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadLink|\Psr\Http\Message\ResponseInterface
+    public function contentGetDownloadLink(string $token, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadLink|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGetDownloadLink($token), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadLink || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DownloadLink || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1018,11 +1056,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1040,11 +1079,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateMetadataManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateMetadataManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdateMetadataManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentUpdateMetadataMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentMetadataUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentUpdateMetadataMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentMetadataUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentUpdateMetadataMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1061,11 +1101,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdatePermissionsManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdatePermissionsManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentUpdatePermissionsManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentUpdatePermissionsMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionsUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentUpdatePermissionsMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentPermissionsUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentUpdatePermissionsMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1082,11 +1123,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentTransferOwnershipManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentTransferOwnershipManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentTransferOwnershipManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentTransferOwnershipMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentOwnershipTransferManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentTransferOwnershipMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentOwnershipTransferManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentTransferOwnershipMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1103,11 +1145,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1125,11 +1168,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteManyByFilterConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteManyByFilterTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentDeleteManyByFilterInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentDeleteManyByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDeleteManyFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentDeleteManyByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentDeleteManyFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentDeleteManyByFilter($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1146,11 +1190,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentRestoreManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentRestoreManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentRestoreManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentRestoreMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentRestoreManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentRestoreMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentRestoreManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentRestoreMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1166,11 +1211,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetReferencesManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGetReferencesMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentManyReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult|\Psr\Http\Message\ResponseInterface
+    public function contentGetReferencesMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentManyReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGetReferencesMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1187,11 +1233,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetOutputsManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetOutputsManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentGetOutputsManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentGetOutputsMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection|\Psr\Http\Message\ResponseInterface
+    public function contentGetOutputsMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentGetOutputsMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResolveResultCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1210,11 +1257,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentBatchUpdateFieldsByIdsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentBatchUpdateFieldsByIdsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentBatchUpdateFieldsByIdsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentBatchUpdateFieldsByIds(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFieldsBatchUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentBatchUpdateFieldsByIds(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFieldsBatchUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentBatchUpdateFieldsByIds($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1232,11 +1280,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentBatchUpdateFieldsByFilterConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentBatchUpdateFieldsByFilterTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentBatchUpdateFieldsByFilterInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentBatchUpdateFieldsByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFieldsBatchUpdateFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function contentBatchUpdateFieldsByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentFieldsBatchUpdateFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentBatchUpdateFieldsByFilter($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1252,11 +1301,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSearchResult|\Psr\Http\Message\ResponseInterface
+    public function contentSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1272,11 +1322,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentAggregateOnChannelConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentAggregateOnChannelTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentAggregateOnChannelInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentAggregateOnChannel(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentAggregationOnChannelRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
+    public function contentAggregateOnChannel(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentAggregationOnChannelRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentAggregateOnChannel($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1292,11 +1343,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentAggregateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentAggregateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ContentAggregateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function contentAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
+    public function contentAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ContentAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ContentAggregate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1310,11 +1362,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DisplayValueGetStatusConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DisplayValueGetStatusTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DisplayValueGetStatusInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function displayValueGetStatus(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayValueStatus|\Psr\Http\Message\ResponseInterface
+    public function displayValueGetStatus(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayValueStatus|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DisplayValueGetStatus(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayValueStatus || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DisplayValueStatus || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1328,11 +1381,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DisplayValueRerenderConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DisplayValueRerenderTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DisplayValueRerenderInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function displayValueRerender(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function displayValueRerender(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DisplayValueRerender(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1349,11 +1403,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryGetCurrentConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryGetCurrentTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryGetCurrentInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function documentHistoryGetCurrent(string $documentType, string $documentId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory|\Psr\Http\Message\ResponseInterface
+    public function documentHistoryGetCurrent(string $documentType, string $documentId, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DocumentHistoryGetCurrent($documentType, $documentId), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1371,11 +1426,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryGetVersionConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryGetVersionTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryGetVersionInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function documentHistoryGetVersion(string $documentType, string $documentId, int $documentVersion, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory|\Psr\Http\Message\ResponseInterface
+    public function documentHistoryGetVersion(string $documentType, string $documentId, int $documentVersion, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DocumentHistoryGetVersion($documentType, $documentId, $documentVersion), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistory || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1395,11 +1451,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryCompareWithCurrentConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryCompareWithCurrentTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryCompareWithCurrentInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function documentHistoryCompareWithCurrent(string $documentType, string $documentId, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference|\Psr\Http\Message\ResponseInterface
+    public function documentHistoryCompareWithCurrent(string $documentType, string $documentId, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DocumentHistoryCompareWithCurrent($documentType, $documentId, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1420,11 +1477,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryCompareWithVersionConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryCompareWithVersionTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistoryCompareWithVersionInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function documentHistoryCompareWithVersion(string $documentType, string $documentId, int $documentVersion, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference|\Psr\Http\Message\ResponseInterface
+    public function documentHistoryCompareWithVersion(string $documentType, string $documentId, int $documentVersion, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DocumentHistoryCompareWithVersion($documentType, $documentId, $documentVersion, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistoryDifference || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1440,11 +1498,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistorySearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistorySearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\DocumentHistorySearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function documentHistorySearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistorySearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistorySearchResult|\Psr\Http\Message\ResponseInterface
+    public function documentHistorySearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistorySearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistorySearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\DocumentHistorySearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistorySearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\DocumentHistorySearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1458,11 +1517,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetAllConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetAllTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetAllInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function identityProviderGetAll(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderCollection|\Psr\Http\Message\ResponseInterface
+    public function identityProviderGetAll(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\IdentityProviderGetAll(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1476,11 +1536,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetAllBasicInfosConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetAllBasicInfosTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetAllBasicInfosInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function identityProviderGetAllBasicInfos(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderBasicInfoCollection|\Psr\Http\Message\ResponseInterface
+    public function identityProviderGetAllBasicInfos(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderBasicInfoCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\IdentityProviderGetAllBasicInfos(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderBasicInfoCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderBasicInfoCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1495,11 +1556,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function identityProviderGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider|\Psr\Http\Message\ResponseInterface
+    public function identityProviderGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\IdentityProviderGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1516,11 +1578,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function identityProviderUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderEditable $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider|\Psr\Http\Message\ResponseInterface
+    public function identityProviderUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProviderEditable $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\IdentityProviderUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IdentityProvider || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1534,44 +1597,48 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetSynchronizableAttributesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetSynchronizableAttributesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\IdentityProviderGetSynchronizableAttributesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function identityProviderGetSynchronizableAttributes(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Runtime\Model\StringCollection|\Psr\Http\Message\ResponseInterface
+    public function identityProviderGetSynchronizableAttributes(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Runtime\Model\StringCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\IdentityProviderGetSynchronizableAttributes(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Runtime\Model\StringCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Runtime\Model\StringCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function infoGetVersion(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VersionInfo|\Psr\Http\Message\ResponseInterface
+    public function infoGetVersion(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VersionInfo|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\InfoGetVersion(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VersionInfo || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\VersionInfo || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function infoGetInfo(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CustomerInfo|\Psr\Http\Message\ResponseInterface
+    public function infoGetInfo(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CustomerInfo|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\InfoGetInfo(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CustomerInfo || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CustomerInfo || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function infoGetStatus(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SystemStatus|\Psr\Http\Message\ResponseInterface
+    public function infoGetStatus(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SystemStatus|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\InfoGetStatus(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SystemStatus || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SystemStatus || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1587,6 +1654,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\JsonSchemaGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\JsonSchemaGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\JsonSchemaGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function jsonSchemaGet(string $id, string $fetch = self::FETCH_OBJECT): mixed
     {
@@ -1608,6 +1676,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function listItemDelete(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -1631,11 +1700,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemGet(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail|\Psr\Http\Message\ResponseInterface
+    public function listItemGet(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemGet($id, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1658,11 +1728,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail|\Psr\Http\Message\ResponseInterface
+    public function listItemUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemUpdate($id, $requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1683,6 +1754,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemRestoreConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemRestoreTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemRestoreInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function listItemRestore(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -1704,11 +1776,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetReferencesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetReferencesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetReferencesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemGetReferences(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult|\Psr\Http\Message\ResponseInterface
+    public function listItemGetReferences(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemGetReferences($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1728,11 +1801,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function listItemGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1754,11 +1828,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemCreateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail|\Psr\Http\Message\ResponseInterface
+    public function listItemCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemCreateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemCreate($requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1774,11 +1849,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1794,11 +1870,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1815,11 +1892,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1837,11 +1915,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteManyByFilterConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteManyByFilterTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemDeleteManyByFilterInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemDeleteManyByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDeleteManyFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemDeleteManyByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemDeleteManyFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemDeleteManyByFilter($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1858,11 +1937,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemRestoreManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemRestoreManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemRestoreManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemRestoreMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemRestoreManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemRestoreMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemRestoreManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemRestoreMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1878,11 +1958,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetReferencesManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetReferencesManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemGetReferencesManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemGetReferencesMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemManyReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult|\Psr\Http\Message\ResponseInterface
+    public function listItemGetReferencesMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemManyReferencesRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemGetReferencesMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemReferencesResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1900,11 +1981,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemBatchUpdateFieldsByIdsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemBatchUpdateFieldsByIdsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemBatchUpdateFieldsByIdsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemBatchUpdateFieldsByIds(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemFieldsBatchUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemBatchUpdateFieldsByIds(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemFieldsBatchUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemBatchUpdateFieldsByIds($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1922,11 +2004,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemBatchUpdateFieldsByFilterConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemBatchUpdateFieldsByFilterTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemBatchUpdateFieldsByFilterInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemBatchUpdateFieldsByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemFieldsBatchUpdateFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function listItemBatchUpdateFieldsByFilter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemFieldsBatchUpdateFilterRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemBatchUpdateFieldsByFilter($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1942,11 +2025,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemSearchResult|\Psr\Http\Message\ResponseInterface
+    public function listItemSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1962,11 +2046,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemAggregateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemAggregateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ListItemAggregateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function listItemAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
+    public function listItemAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ListItemAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ListItemAggregate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -1982,11 +2067,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\LiveStreamSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\LiveStreamSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\LiveStreamSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function liveStreamSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamSearchResult|\Psr\Http\Message\ResponseInterface
+    public function liveStreamSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\LiveStreamSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\LiveStreamSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2000,11 +2086,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\MetadataGetStatusConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\MetadataGetStatusTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\MetadataGetStatusInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function metadataGetStatus(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataStatus|\Psr\Http\Message\ResponseInterface
+    public function metadataGetStatus(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataStatus|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\MetadataGetStatus(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataStatus || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\MetadataStatus || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2018,11 +2105,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\MetadataUpdateOutdatedConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\MetadataUpdateOutdatedTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\MetadataUpdateOutdatedInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function metadataUpdateOutdated(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function metadataUpdateOutdated(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\MetadataUpdateOutdated(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2039,11 +2127,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetDownloadFileNamePatternsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetDownloadFileNamePatternsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetDownloadFileNamePatternsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatSetDownloadFileNamePatterns(string $id, \stdClass $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatSetDownloadFileNamePatterns(string $id, \stdClass $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatSetDownloadFileNamePatterns($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2059,11 +2148,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetDownloadFileNamePatternsManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetDownloadFileNamePatternsManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetDownloadFileNamePatternsManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatSetDownloadFileNamePatternsMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDownloadFileNamePatternUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatSetDownloadFileNamePatternsMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDownloadFileNamePatternUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatSetDownloadFileNamePatternsMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2081,11 +2171,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackStateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackStateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackStateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatSetXmpWritebackState(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatSetXmpWritebackState(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatSetXmpWritebackState($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2102,11 +2193,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackState2ConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackState2TooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatSetXmpWritebackState2InternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatSetXmpWritebackState2(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatSetXmpWritebackState2(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatSetXmpWritebackStateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatSetXmpWritebackState2($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2124,14 +2216,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatRenderFormatPreview(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatRenderPreviewRequest $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\Psr\Http\Message\ResponseInterface
+    public function outputFormatRenderFormatPreview(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatRenderPreviewRequest $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatRenderFormatPreview($requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatRenderFormatPreview($requestBody, $accept), $fetch);
     }
     /**
      * Gets multiple output format details by the output format IDs. Can fetch maximum of 100 output formats at once.
@@ -2146,11 +2235,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function outputFormatGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2166,11 +2256,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormat $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormat $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2186,11 +2277,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatDelete(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatDelete($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2206,11 +2298,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetail|\Psr\Http\Message\ResponseInterface
+    public function outputFormatGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2227,11 +2320,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatEditable $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatEditable $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2247,11 +2341,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2267,11 +2362,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2287,11 +2383,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputFormatDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputFormatDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputFormatDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputFormatDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2307,11 +2404,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDetail|\Psr\Http\Message\ResponseInterface
+    public function outputGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2327,11 +2425,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputSearchResult|\Psr\Http\Message\ResponseInterface
+    public function outputSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2349,11 +2448,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputResetRetryAttemptsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputResetRetryAttemptsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputResetRetryAttemptsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function outputResetRetryAttempts(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResetRetryAttemptsRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function outputResetRetryAttempts(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\OutputResetRetryAttemptsRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\OutputResetRetryAttempts($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2367,11 +2467,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function profileGet(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile|\Psr\Http\Message\ResponseInterface
+    public function profileGet(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ProfileGet(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2387,11 +2488,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function profileUpdate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfileUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile|\Psr\Http\Message\ResponseInterface
+    public function profileUpdate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfileUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ProfileUpdate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserProfile || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2405,6 +2507,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileRequestDeletionConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileRequestDeletionTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ProfileRequestDeletionInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function profileRequestDeletion(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -2425,6 +2528,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function schemaPermissionSetDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -2445,11 +2549,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2466,11 +2571,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2488,11 +2594,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2508,11 +2615,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2529,6 +2637,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetTransferOwnershipConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetTransferOwnershipTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetTransferOwnershipInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function schemaPermissionSetTransferOwnership(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetOwnershipTransferRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -2549,6 +2658,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetPermissionsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetPermissionsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetPermissionsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function schemaPermissionSetGetPermissions(string $id, string $fetch = self::FETCH_OBJECT): mixed
     {
@@ -2565,11 +2675,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2585,11 +2696,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaPermissionSetUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2605,11 +2717,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2625,6 +2738,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetTransferOwnershipManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetTransferOwnershipManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetTransferOwnershipManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function schemaPermissionSetTransferOwnershipMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetOwnershipTransferManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -2647,11 +2761,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetPermissionsManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetPermissionsManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetGetPermissionsManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetGetPermissionsMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetGetPermissionsMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetGetPermissionsMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetUserPermissionRightsCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2667,11 +2782,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaPermissionSetSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaPermissionSetSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult|\Psr\Http\Message\ResponseInterface
+    public function schemaPermissionSetSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaPermissionSetSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PermissionSetSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2691,6 +2807,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function schemaDelete(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): mixed
     {
@@ -2707,11 +2824,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetail|\Psr\Http\Message\ResponseInterface
+    public function schemaGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2732,11 +2850,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateResult|\Psr\Http\Message\ResponseInterface
+    public function schemaUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaUpdate($id, $requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2752,11 +2871,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaExistsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaExistsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaExistsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaExists(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaExistsResponse|\Psr\Http\Message\ResponseInterface
+    public function schemaExists(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaExistsResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaExists($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaExistsResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaExistsResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2774,11 +2894,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaFieldExistsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaFieldExistsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaFieldExistsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaFieldExists(string $schemaId, string $fieldId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldExistsResponse|\Psr\Http\Message\ResponseInterface
+    public function schemaFieldExists(string $schemaId, string $fieldId, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldExistsResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaFieldExists($schemaId, $fieldId), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldExistsResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FieldExistsResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2794,11 +2915,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetReferencedConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetReferencedTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetReferencedInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaGetReferenced(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function schemaGetReferenced(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaGetReferenced($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2818,6 +2940,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferOwnershipConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferOwnershipTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferOwnershipInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function schemaTransferOwnership(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaOwnershipTransferRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -2841,11 +2964,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function schemaGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2864,11 +2988,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateResult|\Psr\Http\Message\ResponseInterface
+    public function schemaCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateRequest $requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaCreate($requestBody, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2884,11 +3009,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function schemaCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2905,11 +3031,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function schemaUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2926,11 +3053,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetManyReferencedConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetManyReferencedTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetManyReferencedInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaGetManyReferenced(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function schemaGetManyReferenced(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaGetManyReferenced($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2947,11 +3075,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferOwnershipManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferOwnershipManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferOwnershipManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaTransferOwnershipMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaOwnershipTransferManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function schemaTransferOwnershipMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaOwnershipTransferManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaTransferOwnershipMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2967,11 +3096,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaSearchResult|\Psr\Http\Message\ResponseInterface
+    public function schemaSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -2990,11 +3120,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetIndexFieldsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetIndexFieldsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaGetIndexFieldsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaGetIndexFields(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IndexFieldsSearchBySchemaIdsRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IndexFieldCollection|\Psr\Http\Message\ResponseInterface
+    public function schemaGetIndexFields(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IndexFieldsSearchBySchemaIdsRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IndexFieldCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaGetIndexFields($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IndexFieldCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\IndexFieldCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3011,11 +3142,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferImportConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferImportTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\SchemaTransferImportInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function schemaTransferImport(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaImportRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
+    public function schemaTransferImport(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\SchemaImportRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\SchemaTransferImport($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3034,11 +3166,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareGetShareJsonConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareGetShareJsonTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareGetShareJsonInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareGetShareJson(string $token, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail|\Psr\Http\Message\ResponseInterface
+    public function shareGetShareJson(string $token, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareGetShareJson($token, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3062,14 +3195,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareDownload(string $token, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\Psr\Http\Message\ResponseInterface
+    public function shareDownload(string $token, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareDownload($token, $queryParameters, $headerParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareDownload($token, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Download single content in a specific output format (or automatically determined format if none is specified). To resize images on download specify target width &amp; height. To download only a portion of the file, specify the range parameter.
@@ -3093,14 +3223,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDownloadSingleContentPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareDownloadSingleContent(string $token, string $contentId, string $outputFormatId, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\Psr\Http\Message\ResponseInterface
+    public function shareDownloadSingleContent(string $token, string $contentId, string $outputFormatId, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareDownloadSingleContent($token, $contentId, $outputFormatId, $queryParameters, $headerParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareDownloadSingleContent($token, $contentId, $outputFormatId, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Get share by id (basic or embed).
@@ -3116,11 +3243,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareGet(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail|\Psr\Http\Message\ResponseInterface
+    public function shareGet(string $id, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareGet($id, $queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3137,11 +3265,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareBaseUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function shareUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareBaseUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3157,11 +3286,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareBaseCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function shareCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareBaseCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3177,11 +3307,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function shareDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3196,11 +3327,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareRevokeConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareRevokeTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareRevokeInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareRevoke(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareRevokeManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function shareRevoke(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareRevokeManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareRevoke($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3216,11 +3348,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareAggregateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareAggregateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareAggregateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
+    public function shareAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareAggregate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3236,11 +3369,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\ShareSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function shareSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareSearchResult|\Psr\Http\Message\ResponseInterface
+    public function shareSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\ShareSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ShareSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3256,11 +3390,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CreateTransferRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
+    public function transferCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\CreateTransferRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3276,6 +3411,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function transferDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3295,11 +3431,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferDetail|\Psr\Http\Message\ResponseInterface
+    public function transferGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3319,11 +3456,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferImportConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferImportTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferImportInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferImport(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ImportTransferRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
+    public function transferImport(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ImportTransferRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferImport($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3345,11 +3483,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferPartialImportConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferPartialImportTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferPartialImportInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferPartialImport(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ImportTransferPartialRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
+    public function transferPartialImport(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ImportTransferPartialRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferPartialImport($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Transfer || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3366,6 +3505,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCancelConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCancelTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferCancelInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function transferCancel(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3385,11 +3525,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferSearchResult|\Psr\Http\Message\ResponseInterface
+    public function transferSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\TransferSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3404,11 +3545,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetFileConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetFileTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetFileInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferGetFile(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferDetail|\Psr\Http\Message\ResponseInterface
+    public function transferGetFile(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferGetFile($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3423,11 +3565,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferSearchFilesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferSearchFilesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferSearchFilesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferSearchFiles(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferSearchResult|\Psr\Http\Message\ResponseInterface
+    public function transferSearchFiles(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferSearchFiles($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3442,6 +3585,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferDeleteFilesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferDeleteFilesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferDeleteFilesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function transferDeleteFiles(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FileTransferDeleteRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3460,11 +3604,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetBlacklistConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetBlacklistTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferGetBlacklistInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function transferGetBlacklist(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Blacklist|\Psr\Http\Message\ResponseInterface
+    public function transferGetBlacklist(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Blacklist|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\TransferGetBlacklist(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Blacklist || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\Blacklist || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3493,6 +3638,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferUploadFileConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferUploadFileTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\TransferUploadFileInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function transferUploadFile(string $transferId, string $requestId, ?string $requestBody = null, array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3512,11 +3658,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleSearchResult|\Psr\Http\Message\ResponseInterface
+    public function userRoleSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3534,11 +3681,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function userRoleGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3554,11 +3702,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail|\Psr\Http\Message\ResponseInterface
+    public function userRoleCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3574,11 +3723,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function userRoleCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3594,11 +3744,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function userRoleUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3614,11 +3765,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
+    public function userRoleDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BulkResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3634,6 +3786,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userRoleDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3654,11 +3807,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail|\Psr\Http\Message\ResponseInterface
+    public function userRoleGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3675,11 +3829,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRoleUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userRoleUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleEditable $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail|\Psr\Http\Message\ResponseInterface
+    public function userRoleUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleEditable $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserRoleUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3694,11 +3849,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
+    public function userGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3714,11 +3870,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
+    public function userUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserUpdateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3736,6 +3893,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserLockConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserLockTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserLockInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userLock(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserLockRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3757,11 +3915,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserLockManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserLockManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserLockManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userLockMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserLockManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function userLockMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserLockManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserLockMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3778,6 +3937,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReviewConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReviewTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReviewInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userReview(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserReviewRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3798,11 +3958,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReviewManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReviewManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReviewManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userReviewMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserReviewManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function userReviewMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserReviewManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserReviewMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3818,6 +3979,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserInviteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserInviteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserInviteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userInvite(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3838,11 +4000,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserInviteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserInviteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserInviteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userInviteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserInviteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function userInviteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserInviteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserInviteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3858,6 +4021,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReinviteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReinviteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReinviteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userReinvite(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3878,11 +4042,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReInviteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReInviteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserReInviteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userReInviteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserReinviteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function userReInviteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserReinviteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserReInviteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3897,11 +4062,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserAssignUserRolesConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserAssignUserRolesTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserAssignUserRolesInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userAssignUserRoles(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleAssignManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function userAssignUserRoles(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserRoleAssignManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserAssignUserRoles($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3917,6 +4083,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userDelete(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDeleteRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3937,6 +4104,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRestoreConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRestoreTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserRestoreInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userRestore(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3956,6 +4124,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserCancelDeletionRequestConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserCancelDeletionRequestTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserCancelDeletionRequestInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
     public function userCancelDeletionRequest(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -3975,11 +4144,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetByOwnerTokenConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetByOwnerTokenTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetByOwnerTokenInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userGetByOwnerToken(string $tokenId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
+    public function userGetByOwnerToken(string $tokenId, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserGetByOwnerToken($tokenId), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -3995,11 +4165,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
+    public function userCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetail || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4017,11 +4188,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetailCollection|\Psr\Http\Message\ResponseInterface
+    public function userGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetailCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserDetailCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4036,11 +4208,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserSearchResult|\Psr\Http\Message\ResponseInterface
+    public function userSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserSearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserSearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserSearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4055,11 +4228,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserAggregateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserAggregateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserAggregateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
+    public function userAggregate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserAggregationRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserAggregate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\ObjectAggregationResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4074,11 +4248,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateIdentityProviderManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateIdentityProviderManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UserUpdateIdentityProviderManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function userUpdateIdentityProviderMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserUpdateIdentityProviderManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function userUpdateIdentityProviderMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\UserUpdateIdentityProviderManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\UserUpdateIdentityProviderMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4092,11 +4267,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetAvailableTargetsConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetAvailableTargetsTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetAvailableTargetsInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingGetAvailableTargets(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingTargets|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingGetAvailableTargets(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingTargets|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingGetAvailableTargets(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingTargets || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingTargets || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4111,11 +4287,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingSearchConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingSearchTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingSearchInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntrySearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntrySearchResult|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingSearch(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntrySearchRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntrySearchResult|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingSearch($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntrySearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntrySearchResult || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4131,11 +4308,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingDeleteConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingDeleteTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingDeleteInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingDelete(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingDelete($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4151,11 +4329,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingGet(string $id, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntry|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingGet(string $id, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntry|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingGet($id), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntry || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntry || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4172,11 +4351,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingUpdateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingUpdateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingUpdateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntry $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingUpdate(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntry $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingUpdate($id, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4194,11 +4374,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingGetManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCollection|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingGetMany(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingGetMany($queryParameters), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4214,11 +4395,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingCreateConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingCreateTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingCreateInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingCreate(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCreateRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingCreate($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4234,11 +4416,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingCreateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingCreateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingCreateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingCreateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryCreateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingCreateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4254,11 +4437,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingUpdateManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingUpdateManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingUpdateManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingUpdateMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryUpdateManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingUpdateMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -4274,11 +4458,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingDeleteManyConflictException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingDeleteManyTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\XmpMappingDeleteManyInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    public function xmpMappingDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
+    public function xmpMappingDeleteMany(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\XmpMappingEntryDeleteManyRequest $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Endpoint\XmpMappingDeleteMany($requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\BusinessProcess || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));

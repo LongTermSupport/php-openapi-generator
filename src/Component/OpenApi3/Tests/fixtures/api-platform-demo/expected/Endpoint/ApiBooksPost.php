@@ -63,8 +63,9 @@ class ApiBooksPost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksPostBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksPostUnprocessableEntityException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -88,7 +89,7 @@ class ApiBooksPost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\
         if (422 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksPostUnprocessableEntityException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

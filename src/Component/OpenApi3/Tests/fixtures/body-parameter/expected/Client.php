@@ -12,6 +12,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string|resource|\Psr\Http\Message\StreamInterface $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Exception\UnexpectedStatusCodeException
      */
     public function testSimpleBodyParameter($requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -24,6 +25,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Exception\UnexpectedStatusCodeException
      */
     public function testObjectBodyParameter(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -36,6 +38,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Model\Schema[] $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Exception\UnexpectedStatusCodeException
      */
     public function testObjectListBodyParameter(array $requestBody, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

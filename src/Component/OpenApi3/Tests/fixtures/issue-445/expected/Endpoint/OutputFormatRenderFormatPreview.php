@@ -63,8 +63,9 @@ class OutputFormatRenderFormatPreview extends \LongTermSupport\OpenApiGenerator\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewTooManyRequestsException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewInternalServerErrorException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewPreconditionFailedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): never
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -96,7 +97,7 @@ class OutputFormatRenderFormatPreview extends \LongTermSupport\OpenApiGenerator\
         if (412 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\OutputFormatRenderFormatPreviewPreconditionFailedException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

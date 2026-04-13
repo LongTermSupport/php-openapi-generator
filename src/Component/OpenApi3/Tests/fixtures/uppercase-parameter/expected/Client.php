@@ -12,6 +12,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string $testParameter
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\UppercaseParameter\Exception\UnexpectedStatusCodeException
      */
     public function testGetWithUppercasePathParameters(string $testParameter, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

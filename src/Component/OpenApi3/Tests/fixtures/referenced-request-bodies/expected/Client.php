@@ -13,11 +13,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $parentId
      * @param string $childId
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Exception\UnexpectedStatusCodeException
      */
-    public function getParentsParentIdChildChildId(string $parentId, string $childId, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child|\Psr\Http\Message\ResponseInterface
+    public function getParentsParentIdChildChildId(string $parentId, string $childId, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Endpoint\GetParentsParentIdChildChildId($parentId, $childId), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -27,11 +28,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $childId
      * @param \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\ParentsParentIdChildChildIdPatchBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Exception\UnexpectedStatusCodeException
      */
-    public function patchParentsParentIdChildChildId(string $parentId, string $childId, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\ParentsParentIdChildChildIdPatchBody $requestBody, string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child|\Psr\Http\Message\ResponseInterface
+    public function patchParentsParentIdChildChildId(string $parentId, string $childId, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\ParentsParentIdChildChildIdPatchBody $requestBody, string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Endpoint\PatchParentsParentIdChildChildId($parentId, $childId, $requestBody), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\Child || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));

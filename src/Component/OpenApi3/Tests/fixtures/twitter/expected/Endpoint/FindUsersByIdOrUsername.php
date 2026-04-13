@@ -72,6 +72,11 @@ class FindUsersByIdOrUsername extends \LongTermSupport\OpenApiGenerator\Componen
         $optionsResolver->addAllowedTypes('expansions', ['array']);
         return $optionsResolver;
     }
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
+     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): mixed
     {
         $status = $response->getStatusCode();
@@ -87,7 +92,7 @@ class FindUsersByIdOrUsername extends \LongTermSupport\OpenApiGenerator\Componen
                 return json_decode($body);
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

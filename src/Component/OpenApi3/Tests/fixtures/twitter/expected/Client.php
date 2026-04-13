@@ -22,6 +22,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function findUsersByIdOrUsername(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -39,6 +40,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function findTweetsById(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -50,6 +52,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HideReplyRequest $requestBody
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function hideReplyById(string $id, ?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\HideReplyRequest $requestBody = null, string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -62,6 +65,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function findPrivateTweetMetricsById(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -85,6 +89,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function tweetsRecentSearch(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -97,6 +102,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function getRules(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -110,6 +116,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function addOrDeleteRules($requestBody, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -122,6 +129,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function streamFilter(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -134,6 +142,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/json|application/problem+json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function streamSample(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -141,6 +150,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Exception\UnexpectedStatusCodeException
      */
     public function getOpenApiSpec(string $fetch = self::FETCH_OBJECT): mixed
     {

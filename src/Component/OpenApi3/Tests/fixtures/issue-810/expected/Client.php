@@ -13,6 +13,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $requestBody
      * @param list<string> $accept Accept content header *\/*|application/json
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Exception\UnexpectedStatusCodeException
      */
     public function mimeTypeGeneratedValidDocBlock(string $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {

@@ -20,14 +20,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testHeaderSkipped"?: string,
      * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\SkipParameterCheck\Exception\UnexpectedStatusCodeException
      */
-    public function testGetWithPathParameters(string $testPath, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
+    public function testGetWithPathParameters(string $testPath, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\SkipParameterCheck\Endpoint\TestGetWithPathParameters($testPath, $queryParameters, $headerParameters), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\SkipParameterCheck\Endpoint\TestGetWithPathParameters($testPath, $queryParameters, $headerParameters), $fetch);
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

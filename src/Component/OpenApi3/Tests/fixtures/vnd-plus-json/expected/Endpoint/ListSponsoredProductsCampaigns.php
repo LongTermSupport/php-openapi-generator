@@ -61,14 +61,19 @@ class ListSponsoredProductsCampaigns extends \LongTermSupport\OpenApiGenerator\C
         $optionsResolver->addAllowedTypes('Amazon-Advertising-API-Scope', ['string']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/vnd.spcampaign.v3+json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent::class, 'response body');
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

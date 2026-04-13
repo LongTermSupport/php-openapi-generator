@@ -36,8 +36,9 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * {@inheritdoc}
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\GetFooUnauthorizedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Model\Foo
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Model\Foo
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -47,7 +48,7 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         if (401 === $status) {
             throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\GetFooUnauthorizedException($response);
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

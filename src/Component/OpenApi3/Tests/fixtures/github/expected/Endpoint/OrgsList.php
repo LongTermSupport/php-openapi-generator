@@ -55,7 +55,12 @@ class OrgsList extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
         $optionsResolver->addAllowedTypes('per_page', ['int']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimpleCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\OrganizationSimpleCollection|null
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -65,7 +70,7 @@ class OrgsList extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
         if (304 === $status) {
             return null;
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

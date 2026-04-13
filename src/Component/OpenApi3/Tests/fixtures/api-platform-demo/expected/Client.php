@@ -26,11 +26,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiBooksGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookReadCollection|\Psr\Http\Message\ResponseInterface
+    public function apiBooksGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookReadCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiBooksGetCollection($queryParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookReadCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookReadCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -42,11 +43,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksPostBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksPostUnprocessableEntityException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiBooksPost($requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
+    public function apiBooksPost($requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiBooksPost($requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -63,11 +65,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiBooksBookIdreviewsGetCollection(string $bookId, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection|\Psr\Http\Message\ResponseInterface
+    public function apiBooksBookIdreviewsGetCollection(string $bookId, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiBooksBookIdreviewsGetCollection($bookId, $queryParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BooksBookIdReviewsGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -77,6 +80,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $id Book identifier
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdDeleteNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
     public function apiBooksIdDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -92,11 +96,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdGetNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiBooksIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
+    public function apiBooksIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiBooksIdGet($id, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -110,11 +115,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdPatchBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdPatchUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdPatchNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiBooksIdPatch(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Book $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
+    public function apiBooksIdPatch(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Book $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiBooksIdPatch($id, $requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -128,11 +134,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdPutBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdPutUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdPutNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiBooksIdPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
+    public function apiBooksIdPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiBooksIdPut($id, $requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonldBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookJsonhalBookRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\BookBookRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -146,6 +153,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiBooksIdgenerateCoverPutNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
     public function apiBooksIdgenerateCoverPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): mixed
     {
@@ -158,11 +166,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiParchmentsGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentCollection|\Psr\Http\Message\ResponseInterface
+    public function apiParchmentsGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiParchmentsGetCollection($queryParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentsGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -174,11 +183,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsPostBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsPostUnprocessableEntityException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiParchmentsPost($requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
+    public function apiParchmentsPost($requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiParchmentsPost($requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -188,6 +198,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $id Parchment identifier
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdDeleteNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
     public function apiParchmentsIdDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -203,11 +214,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdGetNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiParchmentsIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
+    public function apiParchmentsIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiParchmentsIdGet($id, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -221,11 +233,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPatchBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPatchUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPatchNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiParchmentsIdPatch(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
+    public function apiParchmentsIdPatch(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiParchmentsIdPatch($id, $requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -239,11 +252,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiParchmentsIdPutNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiParchmentsIdPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
+    public function apiParchmentsIdPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiParchmentsIdPut($id, $requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ParchmentJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\Parchment || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -260,11 +274,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiReviewsGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection|\Psr\Http\Message\ResponseInterface
+    public function apiReviewsGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiReviewsGetCollection($queryParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewsGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewReadCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -276,11 +291,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsPostBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsPostUnprocessableEntityException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiReviewsPost($requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
+    public function apiReviewsPost($requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiReviewsPost($requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -290,6 +306,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param string $id Review identifier
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdDeleteNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
     public function apiReviewsIdDelete(string $id, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -305,11 +322,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdGetNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiReviewsIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
+    public function apiReviewsIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiReviewsIdGet($id, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -323,11 +341,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdPatchBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdPatchUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdPatchNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiReviewsIdPatch(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewWrite $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
+    public function apiReviewsIdPatch(string $id, \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewWrite $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiReviewsIdPatch($id, $requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -341,22 +360,24 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdPutBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdPutUnprocessableEntityException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiReviewsIdPutNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiReviewsIdPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
+    public function apiReviewsIdPut(string $id, $requestBody, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiReviewsIdPut($id, $requestBody, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonldReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewJsonhalReviewRead || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\ReviewReviewRead || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiGetStats(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\StatsGetResponse200|\Psr\Http\Message\ResponseInterface
+    public function apiGetStats(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\StatsGetResponse200|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiGetStats(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\StatsGetResponse200 || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\StatsGetResponse200 || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -368,11 +389,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * } $queryParameters
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiTopBooksGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection|\Psr\Http\Message\ResponseInterface
+    public function apiTopBooksGetCollection(array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetLdjsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiTopBooksGetCollection($queryParameters, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetLdjsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200 || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookCollection || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -383,11 +405,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @param list<string> $accept Accept content header application/ld+json|application/hal+json|application/vnd.api+json|application/json|application/xml|text/xml|application/x-yaml|text/csv|text/html
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\ApiTopBooksIdGetNotFoundException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Exception\UnexpectedStatusCodeException
      */
-    public function apiTopBooksIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBook|\Psr\Http\Message\ResponseInterface
+    public function apiTopBooksIdGet(string $id, string $fetch = self::FETCH_OBJECT, array $accept = []): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonld|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonhal|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBook|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Endpoint\ApiTopBooksIdGet($id, $accept), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBook || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonld || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBookJsonhal || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBook || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));

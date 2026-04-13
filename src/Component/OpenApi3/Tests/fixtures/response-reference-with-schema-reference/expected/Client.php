@@ -12,14 +12,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReferenceWithSchemaReference\Exception\TestBadRequestException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReferenceWithSchemaReference\Exception\UnexpectedStatusCodeException
      */
-    public function test(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
+    public function test(string $fetch = self::FETCH_OBJECT): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReferenceWithSchemaReference\Endpoint\Test(), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseReferenceWithSchemaReference\Endpoint\Test(), $fetch);
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

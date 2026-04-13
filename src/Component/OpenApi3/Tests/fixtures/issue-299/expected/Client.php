@@ -16,6 +16,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "userState"?: string,
      * } $queryParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue299\Exception\UnexpectedStatusCodeException
      */
     public function getUsers(array $queryParameters = [], string $fetch = self::FETCH_OBJECT): mixed
     {

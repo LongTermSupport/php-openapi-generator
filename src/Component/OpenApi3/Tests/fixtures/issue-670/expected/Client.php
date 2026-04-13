@@ -11,11 +11,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
 {
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException
      */
-    public function getEndpoint1(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint1GetResponse|\Psr\Http\Message\ResponseInterface
+    public function getEndpoint1(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint1GetResponse|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Endpoint\GetEndpoint1(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint1GetResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint1GetResponse || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -23,6 +24,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint1PostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException
      */
     public function postEndpoint1(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint1PostBody $requestBody = null, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -34,11 +36,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException
      */
-    public function getEndpoint2(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint2GetResponse200|\Psr\Http\Message\ResponseInterface
+    public function getEndpoint2(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint2GetResponse200|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Endpoint\GetEndpoint2(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint2GetResponse200 || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint2GetResponse200 || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -46,6 +49,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint2PostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException
      */
     public function postEndpoint2(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint2PostBody $requestBody = null, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {
@@ -57,11 +61,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException
      */
-    public function getEndpoint3(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200|\Psr\Http\Message\ResponseInterface
+    public function getEndpoint3(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Endpoint\GetEndpoint3(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200 || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3GetResponse200 || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
@@ -69,6 +74,7 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3PostBody $requestBody
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Exception\UnexpectedStatusCodeException
      */
     public function postEndpoint3(?\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Model\Endpoint3PostBody $requestBody = null, string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
     {

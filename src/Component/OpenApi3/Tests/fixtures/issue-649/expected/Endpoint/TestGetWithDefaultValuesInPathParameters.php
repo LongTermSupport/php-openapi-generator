@@ -65,9 +65,16 @@ class TestGetWithDefaultValuesInPathParameters extends \LongTermSupport\OpenApiG
         $optionsResolver->addAllowedTypes('testHeader', ['string']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): never
     {
-        return null;
+        $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

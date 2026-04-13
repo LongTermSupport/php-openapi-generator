@@ -32,14 +32,19 @@ class GetNullableStrings extends \LongTermSupport\OpenApiGenerator\Component\Ope
     {
         return ['Accept' => ['application/json']];
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Model\NullStringCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Model\NullStringCollection
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Model\NullStringCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Normalizer\TypeValidator::assertListOfNullableString(\json_decode($body), 'response body'));
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

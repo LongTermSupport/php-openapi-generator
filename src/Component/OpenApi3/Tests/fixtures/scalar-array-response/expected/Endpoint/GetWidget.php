@@ -32,14 +32,19 @@ class GetWidget extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tes
     {
         return ['Accept' => ['application/json']];
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Model\Widget
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Model\Widget
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if ($contentType !== null && (200 === $status && str_contains(strtolower($contentType), 'application/json'))) {
             return \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Runtime\Normalizer\TypeValidator::assertInstanceOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Model\Widget', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Model\Widget::class, 'response body');
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ScalarArrayResponse\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

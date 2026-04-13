@@ -33,13 +33,19 @@ class GetTestOperationUrlId extends \LongTermSupport\OpenApiGenerator\Component\
     {
         return [[], null];
     }
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException
+     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
         if (200 === $status) {
             return null;
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

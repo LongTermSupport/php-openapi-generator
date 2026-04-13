@@ -67,8 +67,9 @@ class AppsListInstallationReposForAuthenticatedUser extends \LongTermSupport\Ope
      *
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsListInstallationReposForAuthenticatedUserNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\AppsListInstallationReposForAuthenticatedUserForbiddenException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\UserInstallationsInstallationIdRepositoriesGetResponse200
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\UserInstallationsInstallationIdRepositoriesGetResponse200|null
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -84,7 +85,7 @@ class AppsListInstallationReposForAuthenticatedUser extends \LongTermSupport\Ope
         if (304 === $status) {
             return null;
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

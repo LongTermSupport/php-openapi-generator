@@ -20,14 +20,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      *    "testHeader"?: string,
      * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Exception\UnexpectedStatusCodeException
      */
-    public function testGetWithDefaultValuesInPathParameters(string $testPath, string $bar, string $foo = 'foo', array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
+    public function testGetWithDefaultValuesInPathParameters(string $testPath, string $bar, string $foo = 'foo', array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Endpoint\TestGetWithDefaultValuesInPathParameters($testPath, $bar, $foo, $queryParameters, $headerParameters), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue649\Endpoint\TestGetWithDefaultValuesInPathParameters($testPath, $bar, $foo, $queryParameters, $headerParameters), $fetch);
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

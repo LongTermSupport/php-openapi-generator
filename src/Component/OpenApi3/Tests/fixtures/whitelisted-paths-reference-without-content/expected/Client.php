@@ -12,11 +12,12 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\GetFooUnauthorizedException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Exception\UnexpectedStatusCodeException
      */
-    public function getFoo(string $fetch = self::FETCH_OBJECT): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Model\Foo|\Psr\Http\Message\ResponseInterface
+    public function getFoo(string $fetch = self::FETCH_OBJECT): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Model\Foo|\Psr\Http\Message\ResponseInterface
     {
         $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Endpoint\GetFoo(), $fetch);
-        if ($result === null || $result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Model\Foo || $result instanceof \Psr\Http\Message\ResponseInterface) {
+        if ($result instanceof \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsReferenceWithoutContent\Model\Foo || $result instanceof \Psr\Http\Message\ResponseInterface) {
             return $result;
         }
         throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));

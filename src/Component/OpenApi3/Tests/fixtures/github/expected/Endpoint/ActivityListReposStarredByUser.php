@@ -71,7 +71,12 @@ class ActivityListReposStarredByUser extends \LongTermSupport\OpenApiGenerator\C
         $optionsResolver->addAllowedTypes('page', ['int']);
         return $optionsResolver;
     }
-    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryCollection|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StarredRepositoryCollection
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException
+     */
+    protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\RepositoryCollection|\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StarredRepositoryCollection
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
@@ -83,7 +88,7 @@ class ActivityListReposStarredByUser extends \LongTermSupport\OpenApiGenerator\C
                 return new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StarredRepositoryCollection(...\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Normalizer\TypeValidator::assertListOf($serializer->deserialize($body, 'LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StarredRepository[]', 'json'), \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\StarredRepository::class, 'response body'));
             }
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

@@ -43,13 +43,19 @@ class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
         $optionsResolver->addAllowedTypes('testBoolean', ['bool']);
         return $optionsResolver;
     }
+    /**
+     * {@inheritdoc}
+     *
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue787\Exception\UnexpectedStatusCodeException
+     */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null): null
     {
         $status = $response->getStatusCode();
+        $body = (string) $response->getBody();
         if (200 === $status) {
             return null;
         }
-        return null;
+        throw new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue787\Exception\UnexpectedStatusCodeException($status, $body);
     }
     /**
      * @return list<string>

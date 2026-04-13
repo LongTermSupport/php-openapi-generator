@@ -14,14 +14,11 @@ class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagBadRequestException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagNotFoundException
      * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\TestNoTagInternalServerErrorException
+     * @throws \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception\UnexpectedStatusCodeException
      */
-    public function testNoTag(string $fetch = self::FETCH_OBJECT): null|\Psr\Http\Message\ResponseInterface
+    public function testNoTag(string $fetch = self::FETCH_OBJECT): mixed
     {
-        $result = $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Endpoint\TestNoTag(), $fetch);
-        if ($result === null || $result instanceof \Psr\Http\Message\ResponseInterface) {
-            return $result;
-        }
-        throw new \LogicException(\sprintf('Unexpected response type from executeEndpoint: %s', \get_debug_type($result)));
+        return $this->executeEndpoint(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Endpoint\TestNoTag(), $fetch);
     }
     /**
      * @param list<\Http\Client\Common\Plugin> $additionalPlugins

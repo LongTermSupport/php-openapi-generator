@@ -319,7 +319,7 @@ class ExceptionGenerator
         $schema->addFile(new File($schema->getDirectory() . '/Exception/ServerException.php', $serverException, 'Exception'));
 
         if ($registry->getThrowUnexpectedStatusCode()) {
-            $hintMessage = 'Unexpected HTTP %d from %s. This status code is not in the OpenAPI spec. To document it, run: bin/console zoho:sdk:spec:patch-scaffold';
+            $hintMessage = 'Unexpected HTTP %d from %s — body: %s. This status code is not in the OpenAPI spec. To document it, run: bin/console zoho:sdk:spec:patch-scaffold';
 
             $unexpectedStatusCodeException = new Stmt\Namespace_(new Name($schema->getNamespace() . '\Exception'), [
                 new Stmt\Class_(
@@ -347,6 +347,7 @@ class ExceptionGenerator
                                             new Node\Arg(new Scalar\String_($hintMessage)),
                                             new Node\Arg(new Expr\Variable('status')),
                                             new Node\Arg(new Expr\Variable('endpointHint')),
+                                            new Node\Arg(new Expr\Variable('body')),
                                         ])),
                                         new Node\Arg(new Expr\Variable('status')),
                                     ])),

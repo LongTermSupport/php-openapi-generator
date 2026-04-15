@@ -12,7 +12,7 @@ final class UnexpectedStatusCodeException extends \RuntimeException implements C
     private string $body;
     public function __construct(int $status, string $body = '', string $endpointHint = '')
     {
-        parent::__construct(\sprintf('Unexpected HTTP %d from %s. This status code is not in the OpenAPI spec. To document it, run: bin/console zoho:sdk:spec:patch-scaffold', $status, $endpointHint), $status);
+        parent::__construct(\sprintf('Unexpected HTTP %d from %s — body: %s. This status code is not in the OpenAPI spec. To document it, run: bin/console zoho:sdk:spec:patch-scaffold', $status, $endpointHint, $body), $status);
         $this->body = $body;
     }
     public function getBody(): string

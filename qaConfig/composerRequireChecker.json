@@ -23,6 +23,7 @@
     "PHPUnit\\Framework\\Attributes\\DataProvider",
     "PHPUnit\\Framework\\Attributes\\Group",
     "PHPUnit\\Framework\\Attributes\\Large",
+    "PHPUnit\\Framework\\Attributes\\Test",
     "PHPUnit\\Framework\\MockObject\\Stub\\ReturnCallback",
     "PHPUnit\\Framework\\TestCase",
     "Symfony\\Component\\Finder\\Finder",
@@ -40,6 +41,7 @@
   "php-core-extensions": [
     "Core",
     "date",
+    "hash",
     "pcre",
     "Phar",
     "Reflection",

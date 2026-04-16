@@ -129,8 +129,8 @@ class ObjectGuesser implements GuesserInterface, PropertiesGuesserInterface, Typ
                 throw new LogicException('Expected object property, got ' . get_debug_type($property));
             }
 
-            $newProperty = new Property($property, (string)$key, $reference . '/properties/' . $key, $nullable, $required, null, $resolvedSchema->getDescription(), $resolvedSchema->getDefault(), $resolvedSchema->getReadOnly());
-            $newProperty->setDeprecated($resolvedSchema->getDeprecated() ?? false);
+            $newProperty = new Property($property, (string)$key, $reference . '/properties/' . $key, $nullable, $required, null, $resolvedSchema->getDescription(), $resolvedSchema->getDefault(), true === $resolvedSchema->getReadOnly());
+            $newProperty->setDeprecated(true === $resolvedSchema->getDeprecated());
             if (!$this->chainValidator instanceof ValidatorInterface) {
                 throw new LogicException('Expected ValidatorInterface, got ' . get_debug_type($this->chainValidator));
             }
@@ -249,7 +249,7 @@ class ObjectGuesser implements GuesserInterface, PropertiesGuesserInterface, Typ
             throw new LogicException('Expected SchemaInterface, got ' . get_debug_type($object));
         }
 
-        return new ClassGuess($object, $reference, $this->naming->getClassName($name), $extensions, $object->getDeprecated() ?? false);
+        return new ClassGuess($object, $reference, $this->naming->getClassName($name), $extensions, true === $object->getDeprecated());
     }
 
     private function initChainValidator(Registry $registry): void

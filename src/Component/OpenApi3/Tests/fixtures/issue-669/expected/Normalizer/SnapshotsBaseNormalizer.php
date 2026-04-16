@@ -63,7 +63,7 @@ class SnapshotsBaseNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         if (\array_key_exists('min_disk_size', $data)) {

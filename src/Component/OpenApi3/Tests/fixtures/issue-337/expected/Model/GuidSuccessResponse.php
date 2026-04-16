@@ -31,13 +31,10 @@ class GuidSuccessResponse extends \ArrayObject
     {
         return $this->gUIDList;
     }
-    /**
-     * @param list<GuidSuccessResponseGUIDListItem> $gUIDList
-     */
-    public function setGUIDList(array $gUIDList): self
+    public function setGUIDList(GuidSuccessResponseGUIDListItem ...$gUIDList): self
     {
         $this->initialized['gUIDList'] = true;
-        $this->gUIDList = $gUIDList;
+        $this->gUIDList = array_values($gUIDList);
         return $this;
     }
 }

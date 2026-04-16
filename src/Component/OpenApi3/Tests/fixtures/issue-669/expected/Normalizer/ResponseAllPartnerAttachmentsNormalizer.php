@@ -56,7 +56,7 @@ class ResponseAllPartnerAttachmentsNormalizer implements DenormalizerInterface, 
                     $values[] = $value_1;
                 }
             }
-            $object->setPartnerAttachments($values);
+            $object->setPartnerAttachments(...$values);
             unset($data['partner_attachments']);
         }
         if (\array_key_exists('links', $data)) {

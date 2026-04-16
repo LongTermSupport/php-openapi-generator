@@ -37,13 +37,11 @@ class VpcNatGatewayGetEgresses extends \ArrayObject
     }
     /**
      * An array of public gateway IP addresses for the VPC NAT gateway.
-     *
-     * @param list<VpcNatGatewayGetEgressesPublicGatewaysItem> $publicGateways
      */
-    public function setPublicGateways(array $publicGateways): self
+    public function setPublicGateways(VpcNatGatewayGetEgressesPublicGatewaysItem ...$publicGateways): self
     {
         $this->initialized['publicGateways'] = true;
-        $this->publicGateways = $publicGateways;
+        $this->publicGateways = array_values($publicGateways);
         return $this;
     }
 }

@@ -40,12 +40,12 @@ class ResponseVolumes extends \ArrayObject
     /**
      * Array of volumes.
      *
-     * @param list<array<string, mixed>> $volumes
+     * @param array<string, mixed> ...$volumes
      */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(array ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
     public function getLinks(): PageLinks

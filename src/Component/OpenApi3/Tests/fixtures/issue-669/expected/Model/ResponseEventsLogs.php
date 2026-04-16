@@ -31,13 +31,10 @@ class ResponseEventsLogs extends \ArrayObject
     {
         return $this->events;
     }
-    /**
-     * @param list<EventsLogs> $events
-     */
-    public function setEvents(array $events): self
+    public function setEvents(EventsLogs ...$events): self
     {
         $this->initialized['events'] = true;
-        $this->events = $events;
+        $this->events = array_values($events);
         return $this;
     }
 }

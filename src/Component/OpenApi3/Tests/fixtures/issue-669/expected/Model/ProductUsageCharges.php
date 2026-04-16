@@ -77,13 +77,11 @@ class ProductUsageCharges extends \ArrayObject
     }
     /**
      * List of amount, and grouped aggregates by resource type.
-     *
-     * @param list<ProductChargeItem> $items
      */
-    public function setItems(array $items): self
+    public function setItems(ProductChargeItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

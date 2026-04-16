@@ -129,13 +129,11 @@ class VpcNatGatewayCreate extends \ArrayObject
     }
     /**
      * An array of VPCs associated with the VPC NAT gateway.
-     *
-     * @param list<VpcNatGatewayCreateVpcsItem> $vpcs
      */
-    public function setVpcs(array $vpcs): self
+    public function setVpcs(VpcNatGatewayCreateVpcsItem ...$vpcs): self
     {
         $this->initialized['vpcs'] = true;
-        $this->vpcs = $vpcs;
+        $this->vpcs = array_values($vpcs);
         return $this;
     }
     /**

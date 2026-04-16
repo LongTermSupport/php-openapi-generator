@@ -55,7 +55,7 @@ class ApiRunEvaluationTestCaseOutputNormalizer implements DenormalizerInterface,
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setEvaluationRunUuids($values);
+            $object->setEvaluationRunUuids(...$values);
             unset($data['evaluation_run_uuids']);
         }
         foreach ($data as $key => $value_1) {

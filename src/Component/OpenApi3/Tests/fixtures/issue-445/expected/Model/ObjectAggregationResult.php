@@ -68,13 +68,11 @@ class ObjectAggregationResult
     }
     /**
      * Results of the aggregation.
-     *
-     * @param list<AggregationResult> $aggregationResults
      */
-    public function setAggregationResults(array $aggregationResults): self
+    public function setAggregationResults(AggregationResult ...$aggregationResults): self
     {
         $this->initialized['aggregationResults'] = true;
-        $this->aggregationResults = $aggregationResults;
+        $this->aggregationResults = array_values($aggregationResults);
         return $this;
     }
     /**

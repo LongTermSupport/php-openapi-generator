@@ -77,13 +77,11 @@ class SupportedDropletBackupPolicy extends \ArrayObject
      * An array of integers representing the hours of the day that a backup can
      * start.
      * 
-     *
-     * @param list<int> $possibleWindowStarts
      */
-    public function setPossibleWindowStarts(array $possibleWindowStarts): self
+    public function setPossibleWindowStarts(int ...$possibleWindowStarts): self
     {
         $this->initialized['possibleWindowStarts'] = true;
-        $this->possibleWindowStarts = $possibleWindowStarts;
+        $this->possibleWindowStarts = array_values($possibleWindowStarts);
         return $this;
     }
     /**
@@ -129,13 +127,11 @@ class SupportedDropletBackupPolicy extends \ArrayObject
     }
     /**
      * The day of the week the backup will occur.
-     *
-     * @param list<string> $possibleDays
      */
-    public function setPossibleDays(array $possibleDays): self
+    public function setPossibleDays(string ...$possibleDays): self
     {
         $this->initialized['possibleDays'] = true;
-        $this->possibleDays = $possibleDays;
+        $this->possibleDays = array_values($possibleDays);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class ResponseDropletsSupportedBackupPoliciesNormalizer implements DenormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setSupportedPolicies($values);
+            $object->setSupportedPolicies(...$values);
             unset($data['supported_policies']);
         }
         foreach ($data as $key => $value_2) {

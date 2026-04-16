@@ -74,7 +74,7 @@ class ChannelNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = $value_1;
                 }
             }
-            $object->setSort($values);
+            $object->setSort(...$values);
         }
         if (\array_key_exists('sortFields', $data)) {
             $values_1 = [];
@@ -84,7 +84,7 @@ class ChannelNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_1[] = $value_3;
                 }
             }
-            $object->setSortFields($values_1);
+            $object->setSortFields(...$values_1);
         }
         if (\array_key_exists('aggregations', $data)) {
             $values_2 = [];
@@ -94,7 +94,7 @@ class ChannelNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_2[] = $value_5;
                 }
             }
-            $object->setAggregations($values_2);
+            $object->setAggregations(...$values_2);
         }
         if (\array_key_exists('extendedSimpleSearchFields', $data)) {
             $values_3 = [];
@@ -103,7 +103,7 @@ class ChannelNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_3[] = TypeValidator::assertString($value_6, 'value');
                 }
             }
-            $object->setExtendedSimpleSearchFields($values_3);
+            $object->setExtendedSimpleSearchFields(...$values_3);
         }
         if (\array_key_exists('grantedUserRoleIds', $data)) {
             $values_4 = [];
@@ -112,7 +112,7 @@ class ChannelNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_4[] = TypeValidator::assertString($value_7, 'value');
                 }
             }
-            $object->setGrantedUserRoleIds($values_4);
+            $object->setGrantedUserRoleIds(...$values_4);
         }
         if (\array_key_exists('missingResultsDisplayPatterns', $data)) {
             $object->setMissingResultsDisplayPatterns($data['missingResultsDisplayPatterns']);

@@ -56,7 +56,7 @@ class ResponseHistoryEventsNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setHistory($values);
+            $object->setHistory(...$values);
             unset($data['history']);
         }
         if (\array_key_exists('links', $data)) {

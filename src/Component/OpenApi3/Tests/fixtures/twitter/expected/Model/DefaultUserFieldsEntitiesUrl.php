@@ -31,13 +31,10 @@ class DefaultUserFieldsEntitiesUrl extends \ArrayObject
     {
         return $this->urls;
     }
-    /**
-     * @param list<UrlEntity> $urls
-     */
-    public function setUrls(array $urls): self
+    public function setUrls(UrlEntity ...$urls): self
     {
         $this->initialized['urls'] = true;
-        $this->urls = $urls;
+        $this->urls = array_values($urls);
         return $this;
     }
 }

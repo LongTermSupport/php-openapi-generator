@@ -56,7 +56,7 @@ class ResponseTagsAllNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('links', $data)) {

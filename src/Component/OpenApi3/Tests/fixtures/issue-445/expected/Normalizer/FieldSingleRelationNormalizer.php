@@ -117,7 +117,7 @@ class FieldSingleRelationNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setRelationTypes($values);
+            $object->setRelationTypes(...$values);
             unset($data['relationTypes']);
         }
         return $object;

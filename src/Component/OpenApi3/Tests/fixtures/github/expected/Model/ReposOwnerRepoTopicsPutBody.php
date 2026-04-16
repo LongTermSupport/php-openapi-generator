@@ -37,13 +37,11 @@ class ReposOwnerRepoTopicsPutBody extends \ArrayObject
     }
     /**
      * An array of topics to add to the repository. Pass one or more topics to _replace_ the set of existing topics. Send an empty array (`[]`) to clear all topics from the repository. **Note:** Topic `names` cannot contain uppercase letters.
-     *
-     * @param list<string> $names
      */
-    public function setNames(array $names): self
+    public function setNames(string ...$names): self
     {
         $this->initialized['names'] = true;
-        $this->names = $names;
+        $this->names = array_values($names);
         return $this;
     }
 }

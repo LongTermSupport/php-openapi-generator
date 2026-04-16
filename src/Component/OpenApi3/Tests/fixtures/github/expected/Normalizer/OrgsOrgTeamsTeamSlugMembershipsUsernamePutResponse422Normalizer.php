@@ -48,7 +48,7 @@ class OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422Normalizer implements
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422Constraint());
         }
         if (\array_key_exists('message', $data)) {
@@ -63,7 +63,7 @@ class OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422Normalizer implements
                     $values[] = $value_1;
                 }
             }
-            $object->setErrors($values);
+            $object->setErrors(...$values);
             unset($data['errors']);
         }
         foreach ($data as $key => $value_2) {
@@ -98,7 +98,7 @@ class OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422Normalizer implements
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422Constraint());
         }
         return $dataArray;

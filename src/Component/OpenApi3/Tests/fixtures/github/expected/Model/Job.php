@@ -242,13 +242,11 @@ class Job extends \ArrayObject
     }
     /**
      * Steps in this job.
-     *
-     * @param list<JobStepsItem> $steps
      */
-    public function setSteps(array $steps): self
+    public function setSteps(JobStepsItem ...$steps): self
     {
         $this->initialized['steps'] = true;
-        $this->steps = $steps;
+        $this->steps = array_values($steps);
         return $this;
     }
     public function getCheckRunUrl(): string

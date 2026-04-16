@@ -48,7 +48,7 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBodyNormalizer implem
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBodyConstraint());
         }
         if (\array_key_exists('reviewers', $data)) {
@@ -58,7 +58,7 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBodyNormalizer implem
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setReviewers($values);
+            $object->setReviewers(...$values);
             unset($data['reviewers']);
         }
         if (\array_key_exists('team_reviewers', $data)) {
@@ -68,7 +68,7 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBodyNormalizer implem
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTeamReviewers($values_1);
+            $object->setTeamReviewers(...$values_1);
             unset($data['team_reviewers']);
         }
         foreach ($data as $key => $value_2) {
@@ -107,7 +107,7 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBodyNormalizer implem
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBodyConstraint());
         }
         return $dataArray;

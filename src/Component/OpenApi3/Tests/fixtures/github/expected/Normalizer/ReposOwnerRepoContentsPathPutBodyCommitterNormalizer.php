@@ -48,7 +48,7 @@ class ReposOwnerRepoContentsPathPutBodyCommitterNormalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoContentsPathPutBodyCommitterConstraint());
         }
         if (\array_key_exists('name', $data)) {
@@ -90,7 +90,7 @@ class ReposOwnerRepoContentsPathPutBodyCommitterNormalizer implements Denormaliz
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoContentsPathPutBodyCommitterConstraint());
         }
         return $dataArray;

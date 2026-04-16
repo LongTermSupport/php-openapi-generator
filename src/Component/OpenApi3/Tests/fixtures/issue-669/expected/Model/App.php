@@ -89,13 +89,10 @@ class App extends \ArrayObject
     {
         return $this->domains;
     }
-    /**
-     * @param list<AppsDomain> $domains
-     */
-    public function setDomains(array $domains): self
+    public function setDomains(AppsDomain ...$domains): self
     {
         $this->initialized['domains'] = true;
-        $this->domains = $domains;
+        $this->domains = array_values($domains);
         return $this;
     }
     public function getId(): string
@@ -257,13 +254,10 @@ class App extends \ArrayObject
     {
         return $this->dedicatedIps;
     }
-    /**
-     * @param list<AppsDedicatedEgressIp> $dedicatedIps
-     */
-    public function setDedicatedIps(array $dedicatedIps): self
+    public function setDedicatedIps(AppsDedicatedEgressIp ...$dedicatedIps): self
     {
         $this->initialized['dedicatedIps'] = true;
-        $this->dedicatedIps = $dedicatedIps;
+        $this->dedicatedIps = array_values($dedicatedIps);
         return $this;
     }
     public function getVpc(): AppsVpc

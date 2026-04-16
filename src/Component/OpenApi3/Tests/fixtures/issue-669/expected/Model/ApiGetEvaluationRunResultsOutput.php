@@ -88,13 +88,11 @@ class ApiGetEvaluationRunResultsOutput extends \ArrayObject
     }
     /**
      * The prompt level results.
-     *
-     * @param list<ApiPrompt> $prompts
      */
-    public function setPrompts(array $prompts): self
+    public function setPrompts(ApiPrompt ...$prompts): self
     {
         $this->initialized['prompts'] = true;
-        $this->prompts = $prompts;
+        $this->prompts = array_values($prompts);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class MetricsDataNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = $value_1;
                 }
             }
-            $object->setResult($values);
+            $object->setResult(...$values);
             unset($data['result']);
         }
         if (\array_key_exists('resultType', $data)) {

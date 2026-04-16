@@ -61,7 +61,7 @@ class NeighborIdsNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = $values_1;
                 }
             }
-            $object->setNeighborIds($values);
+            $object->setNeighborIds(...$values);
             unset($data['neighbor_ids']);
         }
         foreach ($data as $key => $value_2) {

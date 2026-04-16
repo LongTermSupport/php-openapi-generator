@@ -85,13 +85,11 @@ class UserSearchResult extends \ArrayObject
     }
     /**
      * The matched documents.
-     *
-     * @param list<UserWithRoles> $results
      */
-    public function setResults(array $results): self
+    public function setResults(UserWithRoles ...$results): self
     {
         $this->initialized['results'] = true;
-        $this->results = $results;
+        $this->results = array_values($results);
         return $this;
     }
     /**

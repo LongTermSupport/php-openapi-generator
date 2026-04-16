@@ -31,13 +31,10 @@ class AppsListRegionsResponse extends \ArrayObject
     {
         return $this->regions;
     }
-    /**
-     * @param list<AppsRegion> $regions
-     */
-    public function setRegions(array $regions): self
+    public function setRegions(AppsRegion ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
 }

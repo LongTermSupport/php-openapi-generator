@@ -94,7 +94,7 @@ class ShareAggregationRequestNormalizer implements DenormalizerInterface, Normal
                     $values_2[] = $value_4;
                 }
             }
-            $object->setAggregators($values_2);
+            $object->setAggregators(...$values_2);
             unset($data['aggregators']);
         }
         foreach ($data as $key => $value_5) {

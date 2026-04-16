@@ -56,7 +56,7 @@ class ResponseListNamespacesNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setNamespaces($values);
+            $object->setNamespaces(...$values);
             unset($data['namespaces']);
         }
         foreach ($data as $key => $value_2) {

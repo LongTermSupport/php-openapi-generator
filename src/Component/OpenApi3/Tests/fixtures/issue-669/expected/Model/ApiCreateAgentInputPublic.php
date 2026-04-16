@@ -128,13 +128,11 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Ids of the knowledge base(s) to attach to the agent
-     *
-     * @param list<string> $knowledgeBaseUuid
      */
-    public function setKnowledgeBaseUuid(array $knowledgeBaseUuid): self
+    public function setKnowledgeBaseUuid(string ...$knowledgeBaseUuid): self
     {
         $this->initialized['knowledgeBaseUuid'] = true;
-        $this->knowledgeBaseUuid = $knowledgeBaseUuid;
+        $this->knowledgeBaseUuid = array_values($knowledgeBaseUuid);
         return $this;
     }
     public function getModelProviderKeyUuid(): string
@@ -238,13 +236,11 @@ class ApiCreateAgentInputPublic extends \ArrayObject
     }
     /**
      * Agent tag to organize related resources
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

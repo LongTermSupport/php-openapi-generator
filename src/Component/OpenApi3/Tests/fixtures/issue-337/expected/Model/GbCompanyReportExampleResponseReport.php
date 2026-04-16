@@ -152,13 +152,10 @@ class GbCompanyReportExampleResponseReport extends \ArrayObject
     {
         return $this->extendedGroupStructure;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportExtendedGroupStructureItem> $extendedGroupStructure
-     */
-    public function setExtendedGroupStructure(array $extendedGroupStructure): self
+    public function setExtendedGroupStructure(GbCompanyReportExampleResponseReportExtendedGroupStructureItem ...$extendedGroupStructure): self
     {
         $this->initialized['extendedGroupStructure'] = true;
-        $this->extendedGroupStructure = $extendedGroupStructure;
+        $this->extendedGroupStructure = array_values($extendedGroupStructure);
         return $this;
     }
     /**
@@ -168,13 +165,10 @@ class GbCompanyReportExampleResponseReport extends \ArrayObject
     {
         return $this->financialStatements;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportFinancialStatementsItem> $financialStatements
-     */
-    public function setFinancialStatements(array $financialStatements): self
+    public function setFinancialStatements(GbCompanyReportExampleResponseReportFinancialStatementsItem ...$financialStatements): self
     {
         $this->initialized['financialStatements'] = true;
-        $this->financialStatements = $financialStatements;
+        $this->financialStatements = array_values($financialStatements);
         return $this;
     }
     /**
@@ -184,13 +178,10 @@ class GbCompanyReportExampleResponseReport extends \ArrayObject
     {
         return $this->localFinancialStatements;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportLocalFinancialStatementsItem> $localFinancialStatements
-     */
-    public function setLocalFinancialStatements(array $localFinancialStatements): self
+    public function setLocalFinancialStatements(GbCompanyReportExampleResponseReportLocalFinancialStatementsItem ...$localFinancialStatements): self
     {
         $this->initialized['localFinancialStatements'] = true;
-        $this->localFinancialStatements = $localFinancialStatements;
+        $this->localFinancialStatements = array_values($localFinancialStatements);
         return $this;
     }
     public function getPaymentData(): GbCompanyReportExampleResponseReportPaymentData

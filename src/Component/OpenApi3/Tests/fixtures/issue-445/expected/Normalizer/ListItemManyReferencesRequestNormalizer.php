@@ -55,7 +55,7 @@ class ListItemManyReferencesRequestNormalizer implements DenormalizerInterface, 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setListItemIds($values);
+            $object->setListItemIds(...$values);
         }
         if (\array_key_exists('references', $data) && $data['references'] !== null) {
             $object->setReferences($data['references']);

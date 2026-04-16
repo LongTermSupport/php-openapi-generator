@@ -56,7 +56,7 @@ class ResponseFloatingIpListNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setFloatingIps($values);
+            $object->setFloatingIps(...$values);
             unset($data['floating_ips']);
         }
         if (\array_key_exists('links', $data)) {

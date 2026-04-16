@@ -196,13 +196,10 @@ class IssueSimple extends \ArrayObject
     {
         return $this->labels;
     }
-    /**
-     * @param list<IssueSimpleLabelsItem> $labels
-     */
-    public function setLabels(array $labels): self
+    public function setLabels(IssueSimpleLabelsItem ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     public function getAssignee(): ?IssueSimpleAssignee

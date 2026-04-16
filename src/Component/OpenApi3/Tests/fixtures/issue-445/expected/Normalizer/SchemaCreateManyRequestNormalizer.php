@@ -56,7 +56,7 @@ class SchemaCreateManyRequestNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setSchemas($values);
+            $object->setSchemas(...$values);
         }
         return $object;
     }

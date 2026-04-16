@@ -56,7 +56,7 @@ class AddRulesRequestNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setAdd($values);
+            $object->setAdd(...$values);
             unset($data['add']);
         }
         foreach ($data as $key => $value_2) {

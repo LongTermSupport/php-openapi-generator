@@ -49,13 +49,11 @@ class OptionsOptionsOpensearch extends \ArrayObject
     }
     /**
      * An array of strings containing the names of available regions
-     *
-     * @param list<string> $regions
      */
-    public function setRegions(array $regions): self
+    public function setRegions(string ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
     /**
@@ -69,13 +67,11 @@ class OptionsOptionsOpensearch extends \ArrayObject
     }
     /**
      * An array of strings containing the names of available regions
-     *
-     * @param list<string> $versions
      */
-    public function setVersions(array $versions): self
+    public function setVersions(string ...$versions): self
     {
         $this->initialized['versions'] = true;
-        $this->versions = $versions;
+        $this->versions = array_values($versions);
         return $this;
     }
     /**
@@ -89,13 +85,11 @@ class OptionsOptionsOpensearch extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the node sizes (otherwise referred to as slugs) that are available with various numbers of nodes in the database cluster. Each slugs denotes the node's identifier, CPU, and RAM (in that order).
-     *
-     * @param list<DatabaseLayoutOption> $layouts
      */
-    public function setLayouts(array $layouts): self
+    public function setLayouts(DatabaseLayoutOption ...$layouts): self
     {
         $this->initialized['layouts'] = true;
-        $this->layouts = $layouts;
+        $this->layouts = array_values($layouts);
         return $this;
     }
 }

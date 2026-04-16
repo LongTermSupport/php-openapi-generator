@@ -48,7 +48,7 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\InstallationConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -112,7 +112,7 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -219,7 +219,7 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\InstallationConstraint());
         }
         return $dataArray;

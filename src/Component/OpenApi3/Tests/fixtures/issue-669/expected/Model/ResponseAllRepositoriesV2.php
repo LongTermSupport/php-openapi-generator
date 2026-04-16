@@ -33,13 +33,10 @@ class ResponseAllRepositoriesV2 extends \ArrayObject
     {
         return $this->repositories;
     }
-    /**
-     * @param list<RepositoryV2> $repositories
-     */
-    public function setRepositories(array $repositories): self
+    public function setRepositories(RepositoryV2 ...$repositories): self
     {
         $this->initialized['repositories'] = true;
-        $this->repositories = $repositories;
+        $this->repositories = array_values($repositories);
         return $this;
     }
     public function getLinks(): PageLinks

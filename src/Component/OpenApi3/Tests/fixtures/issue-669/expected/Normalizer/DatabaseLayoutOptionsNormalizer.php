@@ -56,7 +56,7 @@ class DatabaseLayoutOptionsNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setLayouts($values);
+            $object->setLayouts(...$values);
             unset($data['layouts']);
         }
         foreach ($data as $key => $value_2) {

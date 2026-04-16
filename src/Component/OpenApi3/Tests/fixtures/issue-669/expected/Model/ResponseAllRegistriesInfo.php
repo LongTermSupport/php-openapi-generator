@@ -31,13 +31,10 @@ class ResponseAllRegistriesInfo extends \ArrayObject
     {
         return $this->registries;
     }
-    /**
-     * @param list<mixed> $registries
-     */
-    public function setRegistries(array $registries): self
+    public function setRegistries(mixed ...$registries): self
     {
         $this->initialized['registries'] = true;
-        $this->registries = $registries;
+        $this->registries = array_values($registries);
         return $this;
     }
 }

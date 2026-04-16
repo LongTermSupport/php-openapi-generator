@@ -83,7 +83,7 @@ class SizeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         if (\array_key_exists('available', $data)) {
@@ -102,7 +102,7 @@ class SizeNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
                     $values_1[] = $value_2;
                 }
             }
-            $object->setDiskInfo($values_1);
+            $object->setDiskInfo(...$values_1);
             unset($data['disk_info']);
         }
         if (\array_key_exists('gpu_info', $data)) {

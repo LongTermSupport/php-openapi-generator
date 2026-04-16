@@ -54,13 +54,10 @@ class BranchProtectionRequiredStatusChecks extends \ArrayObject
     {
         return $this->contexts;
     }
-    /**
-     * @param list<string> $contexts
-     */
-    public function setContexts(array $contexts): self
+    public function setContexts(string ...$contexts): self
     {
         $this->initialized['contexts'] = true;
-        $this->contexts = $contexts;
+        $this->contexts = array_values($contexts);
         return $this;
     }
     public function getContextsUrl(): string

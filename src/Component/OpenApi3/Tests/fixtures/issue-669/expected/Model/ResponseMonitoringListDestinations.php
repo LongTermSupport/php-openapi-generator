@@ -31,13 +31,10 @@ class ResponseMonitoringListDestinations extends \ArrayObject
     {
         return $this->destinations;
     }
-    /**
-     * @param list<DestinationOmitCredentials> $destinations
-     */
-    public function setDestinations(array $destinations): self
+    public function setDestinations(DestinationOmitCredentials ...$destinations): self
     {
         $this->initialized['destinations'] = true;
-        $this->destinations = $destinations;
+        $this->destinations = array_values($destinations);
         return $this;
     }
 }

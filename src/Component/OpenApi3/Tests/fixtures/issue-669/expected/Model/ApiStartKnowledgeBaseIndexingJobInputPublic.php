@@ -41,13 +41,11 @@ class ApiStartKnowledgeBaseIndexingJobInputPublic extends \ArrayObject
     }
     /**
      * List of data source ids to index, if none are provided, all data sources will be indexed
-     *
-     * @param list<string> $dataSourceUuids
      */
-    public function setDataSourceUuids(array $dataSourceUuids): self
+    public function setDataSourceUuids(string ...$dataSourceUuids): self
     {
         $this->initialized['dataSourceUuids'] = true;
-        $this->dataSourceUuids = $dataSourceUuids;
+        $this->dataSourceUuids = array_values($dataSourceUuids);
         return $this;
     }
     /**

@@ -64,7 +64,7 @@ class SchemaDetailNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTypes($values);
+            $object->setTypes(...$values);
         }
         if (\array_key_exists('names', $data) && $data['names'] !== null) {
             $object->setNames($data['names']);
@@ -98,7 +98,7 @@ class SchemaDetailNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values_2[] = $value_3;
                 }
             }
-            $object->setDisplayPatterns($values_2);
+            $object->setDisplayPatterns(...$values_2);
         }
         if (\array_key_exists('fields', $data) && $data['fields'] !== null) {
             $values_3 = [];

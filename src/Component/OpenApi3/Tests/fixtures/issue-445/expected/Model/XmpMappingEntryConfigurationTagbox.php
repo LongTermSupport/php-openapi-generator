@@ -42,13 +42,11 @@ class XmpMappingEntryConfigurationTagbox extends XmpMappingEntryConfigurationBas
     }
     /**
      * IDs of key fields.
-     *
-     * @param list<string> $keyFieldIds
      */
-    public function setKeyFieldIds(array $keyFieldIds): self
+    public function setKeyFieldIds(string ...$keyFieldIds): self
     {
         $this->initialized['keyFieldIds'] = true;
-        $this->keyFieldIds = $keyFieldIds;
+        $this->keyFieldIds = array_values($keyFieldIds);
         return $this;
     }
     /**

@@ -60,7 +60,7 @@ class GbImageTypesResponseNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setAvailableTypes($values);
+            $object->setAvailableTypes(...$values);
             unset($data['availableTypes']);
         }
         foreach ($data as $key => $value_2) {

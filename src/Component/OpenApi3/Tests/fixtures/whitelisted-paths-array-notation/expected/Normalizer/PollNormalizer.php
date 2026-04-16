@@ -60,7 +60,7 @@ class PollNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
                     $values[] = $value_1;
                 }
             }
-            $object->setOptions($values);
+            $object->setOptions(...$values);
             unset($data['options']);
         }
         if (\array_key_exists('voting_status', $data)) {

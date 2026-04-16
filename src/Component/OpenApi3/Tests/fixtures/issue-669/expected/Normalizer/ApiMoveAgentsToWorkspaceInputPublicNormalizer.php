@@ -55,7 +55,7 @@ class ApiMoveAgentsToWorkspaceInputPublicNormalizer implements DenormalizerInter
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAgentUuids($values);
+            $object->setAgentUuids(...$values);
             unset($data['agent_uuids']);
         }
         if (\array_key_exists('workspace_uuid', $data)) {

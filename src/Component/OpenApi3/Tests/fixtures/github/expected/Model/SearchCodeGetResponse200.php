@@ -53,13 +53,10 @@ class SearchCodeGetResponse200 extends \ArrayObject
     {
         return $this->items;
     }
-    /**
-     * @param list<CodeSearchResultItem> $items
-     */
-    public function setItems(array $items): self
+    public function setItems(CodeSearchResultItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

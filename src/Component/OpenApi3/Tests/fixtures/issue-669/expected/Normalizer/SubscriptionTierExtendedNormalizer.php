@@ -59,7 +59,7 @@ class SubscriptionTierExtendedNormalizer implements DenormalizerInterface, Norma
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setEligibilityReasons($values);
+            $object->setEligibilityReasons(...$values);
             unset($data['eligibility_reasons']);
         }
         foreach ($data as $key => $value_1) {

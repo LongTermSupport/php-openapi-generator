@@ -61,7 +61,7 @@ class ResponseVolumesNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $values_1;
                 }
             }
-            $object->setVolumes($values);
+            $object->setVolumes(...$values);
             unset($data['volumes']);
         }
         if (\array_key_exists('links', $data)) {

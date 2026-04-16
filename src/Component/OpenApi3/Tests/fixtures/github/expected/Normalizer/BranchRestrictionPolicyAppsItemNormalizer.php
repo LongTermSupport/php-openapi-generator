@@ -48,7 +48,7 @@ class BranchRestrictionPolicyAppsItemNormalizer implements DenormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\BranchRestrictionPolicyAppsItemConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -104,7 +104,7 @@ class BranchRestrictionPolicyAppsItemNormalizer implements DenormalizerInterface
                     $values[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         foreach ($data as $key => $value_3) {
@@ -169,7 +169,7 @@ class BranchRestrictionPolicyAppsItemNormalizer implements DenormalizerInterface
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\BranchRestrictionPolicyAppsItemConstraint());
         }
         return $dataArray;

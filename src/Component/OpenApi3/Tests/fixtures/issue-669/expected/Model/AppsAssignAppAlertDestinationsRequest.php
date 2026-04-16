@@ -35,13 +35,10 @@ class AppsAssignAppAlertDestinationsRequest extends \ArrayObject
     {
         return $this->emails;
     }
-    /**
-     * @param list<string> $emails
-     */
-    public function setEmails(array $emails): self
+    public function setEmails(string ...$emails): self
     {
         $this->initialized['emails'] = true;
-        $this->emails = $emails;
+        $this->emails = array_values($emails);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class AppsAssignAppAlertDestinationsRequest extends \ArrayObject
     {
         return $this->slackWebhooks;
     }
-    /**
-     * @param list<AppAlertSlackWebhook> $slackWebhooks
-     */
-    public function setSlackWebhooks(array $slackWebhooks): self
+    public function setSlackWebhooks(AppAlertSlackWebhook ...$slackWebhooks): self
     {
         $this->initialized['slackWebhooks'] = true;
-        $this->slackWebhooks = $slackWebhooks;
+        $this->slackWebhooks = array_values($slackWebhooks);
         return $this;
     }
 }

@@ -33,13 +33,10 @@ class ResponseByoipPrefixList extends \ArrayObject
     {
         return $this->byoipPrefixes;
     }
-    /**
-     * @param list<ByoipPrefix> $byoipPrefixes
-     */
-    public function setByoipPrefixes(array $byoipPrefixes): self
+    public function setByoipPrefixes(ByoipPrefix ...$byoipPrefixes): self
     {
         $this->initialized['byoipPrefixes'] = true;
-        $this->byoipPrefixes = $byoipPrefixes;
+        $this->byoipPrefixes = array_values($byoipPrefixes);
         return $this;
     }
     public function getLinks(): PageLinks

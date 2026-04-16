@@ -55,7 +55,7 @@ class ClusterRegistriesNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setClusterUuids($values);
+            $object->setClusterUuids(...$values);
             unset($data['cluster_uuids']);
         }
         if (\array_key_exists('registries', $data)) {
@@ -65,7 +65,7 @@ class ClusterRegistriesNormalizer implements DenormalizerInterface, NormalizerIn
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setRegistries($values_1);
+            $object->setRegistries(...$values_1);
             unset($data['registries']);
         }
         foreach ($data as $key => $value_2) {

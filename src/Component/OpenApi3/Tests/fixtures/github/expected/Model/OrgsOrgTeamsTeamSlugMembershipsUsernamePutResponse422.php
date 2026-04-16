@@ -42,13 +42,10 @@ class OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422 extends \ArrayObject
     {
         return $this->errors;
     }
-    /**
-     * @param list<OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem> $errors
-     */
-    public function setErrors(array $errors): self
+    public function setErrors(OrgsOrgTeamsTeamSlugMembershipsUsernamePutResponse422ErrorsItem ...$errors): self
     {
         $this->initialized['errors'] = true;
-        $this->errors = $errors;
+        $this->errors = array_values($errors);
         return $this;
     }
 }

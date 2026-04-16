@@ -67,7 +67,7 @@ class DatabaseClusterMaintenanceWindowNormalizer implements DenormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDescription($values);
+            $object->setDescription(...$values);
             unset($data['description']);
         }
         foreach ($data as $key => $value_1) {

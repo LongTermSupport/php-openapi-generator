@@ -163,13 +163,10 @@ class MarketplaceListingPlan extends \ArrayObject
     {
         return $this->bullets;
     }
-    /**
-     * @param list<string> $bullets
-     */
-    public function setBullets(array $bullets): self
+    public function setBullets(string ...$bullets): self
     {
         $this->initialized['bullets'] = true;
-        $this->bullets = $bullets;
+        $this->bullets = array_values($bullets);
         return $this;
     }
 }

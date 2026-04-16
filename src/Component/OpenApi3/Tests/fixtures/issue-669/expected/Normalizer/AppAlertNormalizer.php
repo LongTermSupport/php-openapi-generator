@@ -68,7 +68,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setEmails($values);
+            $object->setEmails(...$values);
             unset($data['emails']);
         }
         if (\array_key_exists('slack_webhooks', $data)) {
@@ -79,7 +79,7 @@ class AppAlertNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_1[] = $value_3;
                 }
             }
-            $object->setSlackWebhooks($values_1);
+            $object->setSlackWebhooks(...$values_1);
             unset($data['slack_webhooks']);
         }
         if (\array_key_exists('phase', $data)) {

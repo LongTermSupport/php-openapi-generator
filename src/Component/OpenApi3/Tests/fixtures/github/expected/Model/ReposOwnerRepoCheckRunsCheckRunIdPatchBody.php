@@ -200,13 +200,11 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBody extends \ArrayObject
     }
     /**
      * Possible further actions the integrator can perform, which a user may trigger. Each action includes a `label`, `identifier` and `description`. A maximum of three actions are accepted. See the [`actions` object](https://developer.github.com/v3/checks/runs/#actions-object) description. To learn more about check runs and requested actions, see "[Check runs and requested actions](https://developer.github.com/v3/checks/runs/#check-runs-and-requested-actions)."
-     *
-     * @param list<ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem> $actions
      */
-    public function setActions(array $actions): self
+    public function setActions(ReposOwnerRepoCheckRunsCheckRunIdPatchBodyActionsItem ...$actions): self
     {
         $this->initialized['actions'] = true;
-        $this->actions = $actions;
+        $this->actions = array_values($actions);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class ApiListWorkspacesOutputNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setWorkspaces($values);
+            $object->setWorkspaces(...$values);
             unset($data['workspaces']);
         }
         foreach ($data as $key => $value_2) {

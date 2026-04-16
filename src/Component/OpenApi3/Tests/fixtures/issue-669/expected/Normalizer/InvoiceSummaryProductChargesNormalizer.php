@@ -64,7 +64,7 @@ class InvoiceSummaryProductChargesNormalizer implements DenormalizerInterface, N
                     $values[] = $value_1;
                 }
             }
-            $object->setItems($values);
+            $object->setItems(...$values);
             unset($data['items']);
         }
         foreach ($data as $key => $value_2) {

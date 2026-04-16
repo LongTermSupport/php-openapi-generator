@@ -81,13 +81,11 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A list of scopes to add to this authorization.
-     *
-     * @param list<string> $addScopes
      */
-    public function setAddScopes(array $addScopes): self
+    public function setAddScopes(string ...$addScopes): self
     {
         $this->initialized['addScopes'] = true;
-        $this->addScopes = $addScopes;
+        $this->addScopes = array_values($addScopes);
         return $this;
     }
     /**
@@ -101,13 +99,11 @@ class AuthorizationsAuthorizationIdPatchBody extends \ArrayObject
     }
     /**
      * A list of scopes to remove from this authorization.
-     *
-     * @param list<string> $removeScopes
      */
-    public function setRemoveScopes(array $removeScopes): self
+    public function setRemoveScopes(string ...$removeScopes): self
     {
         $this->initialized['removeScopes'] = true;
-        $this->removeScopes = $removeScopes;
+        $this->removeScopes = array_values($removeScopes);
         return $this;
     }
     /**

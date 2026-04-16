@@ -35,13 +35,10 @@ class TweetMetricsResponse extends \ArrayObject
     {
         return $this->data;
     }
-    /**
-     * @param list<TweetMetrics> $data
-     */
-    public function setData(array $data): self
+    public function setData(TweetMetrics ...$data): self
     {
         $this->initialized['data'] = true;
-        $this->data = $data;
+        $this->data = array_values($data);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class TweetMetricsResponse extends \ArrayObject
     {
         return $this->errors;
     }
-    /**
-     * @param list<mixed> $errors
-     */
-    public function setErrors(array $errors): self
+    public function setErrors(mixed ...$errors): self
     {
         $this->initialized['errors'] = true;
-        $this->errors = $errors;
+        $this->errors = array_values($errors);
         return $this;
     }
 }

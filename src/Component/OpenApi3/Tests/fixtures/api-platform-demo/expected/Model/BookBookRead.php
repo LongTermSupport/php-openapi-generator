@@ -148,13 +148,11 @@ class BookBookRead extends \ArrayObject
     }
     /**
      * The book's reviews.
-     *
-     * @param list<ReviewBookRead> $reviews
      */
-    public function setReviews(array $reviews): self
+    public function setReviews(ReviewBookRead ...$reviews): self
     {
         $this->initialized['reviews'] = true;
-        $this->reviews = $reviews;
+        $this->reviews = array_values($reviews);
         return $this;
     }
 }

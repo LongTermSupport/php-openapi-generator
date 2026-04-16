@@ -50,13 +50,10 @@ class Geo extends \ArrayObject
     {
         return $this->bbox;
     }
-    /**
-     * @param list<float> $bbox
-     */
-    public function setBbox(array $bbox): self
+    public function setBbox(float ...$bbox): self
     {
         $this->initialized['bbox'] = true;
-        $this->bbox = $bbox;
+        $this->bbox = array_values($bbox);
         return $this;
     }
     /**

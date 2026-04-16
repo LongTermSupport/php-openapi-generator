@@ -67,7 +67,7 @@ class TestFormPostBodyNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value;
                 }
             }
-            $object->setTestArray($values);
+            $object->setTestArray(...$values);
             unset($data['testArray']);
         }
         if (\array_key_exists('testRequired', $data)) {

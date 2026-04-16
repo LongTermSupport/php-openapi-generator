@@ -31,13 +31,10 @@ class AppAlertProgress extends \ArrayObject
     {
         return $this->steps;
     }
-    /**
-     * @param list<AppAlertProgressStep> $steps
-     */
-    public function setSteps(array $steps): self
+    public function setSteps(AppAlertProgressStep ...$steps): self
     {
         $this->initialized['steps'] = true;
-        $this->steps = $steps;
+        $this->steps = array_values($steps);
         return $this;
     }
 }

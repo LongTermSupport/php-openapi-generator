@@ -61,7 +61,7 @@ class ResponseAllAlertsNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $values_1;
                 }
             }
-            $object->setAlerts($values);
+            $object->setAlerts(...$values);
             unset($data['alerts']);
         }
         if (\array_key_exists('links', $data)) {

@@ -55,7 +55,7 @@ class OneClicksCreateNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAddonSlugs($values);
+            $object->setAddonSlugs(...$values);
             unset($data['addon_slugs']);
         }
         if (\array_key_exists('cluster_uuid', $data)) {

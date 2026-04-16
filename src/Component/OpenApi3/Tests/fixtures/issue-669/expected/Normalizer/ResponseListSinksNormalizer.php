@@ -56,7 +56,7 @@ class ResponseListSinksNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setSinks($values);
+            $object->setSinks(...$values);
             unset($data['sinks']);
         }
         foreach ($data as $key => $value_2) {

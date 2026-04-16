@@ -99,13 +99,10 @@ class Feed extends \ArrayObject
     {
         return $this->currentUserOrganizationUrls;
     }
-    /**
-     * @param list<string> $currentUserOrganizationUrls
-     */
-    public function setCurrentUserOrganizationUrls(array $currentUserOrganizationUrls): self
+    public function setCurrentUserOrganizationUrls(string ...$currentUserOrganizationUrls): self
     {
         $this->initialized['currentUserOrganizationUrls'] = true;
-        $this->currentUserOrganizationUrls = $currentUserOrganizationUrls;
+        $this->currentUserOrganizationUrls = array_values($currentUserOrganizationUrls);
         return $this;
     }
     public function getSecurityAdvisoriesUrl(): string

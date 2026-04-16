@@ -56,7 +56,7 @@ class ApiCreateDataSourceFileUploadPresignedUrlsInputPublicNormalizer implements
                     $values[] = $value_1;
                 }
             }
-            $object->setFiles($values);
+            $object->setFiles(...$values);
             unset($data['files']);
         }
         foreach ($data as $key => $value_2) {

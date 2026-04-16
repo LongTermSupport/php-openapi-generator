@@ -36,13 +36,10 @@ class ResponseBillingHistory extends \ArrayObject
     {
         return $this->billingHistory;
     }
-    /**
-     * @param list<BillingHistory> $billingHistory
-     */
-    public function setBillingHistory(array $billingHistory): self
+    public function setBillingHistory(BillingHistory ...$billingHistory): self
     {
         $this->initialized['billingHistory'] = true;
-        $this->billingHistory = $billingHistory;
+        $this->billingHistory = array_values($billingHistory);
         return $this;
     }
     public function getLinks(): PageLinks

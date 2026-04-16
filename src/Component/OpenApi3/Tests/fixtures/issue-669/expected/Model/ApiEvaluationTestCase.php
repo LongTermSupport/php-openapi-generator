@@ -138,13 +138,10 @@ class ApiEvaluationTestCase extends \ArrayObject
     {
         return $this->metrics;
     }
-    /**
-     * @param list<ApiEvaluationMetric> $metrics
-     */
-    public function setMetrics(array $metrics): self
+    public function setMetrics(ApiEvaluationMetric ...$metrics): self
     {
         $this->initialized['metrics'] = true;
-        $this->metrics = $metrics;
+        $this->metrics = array_values($metrics);
         return $this;
     }
     public function getName(): string

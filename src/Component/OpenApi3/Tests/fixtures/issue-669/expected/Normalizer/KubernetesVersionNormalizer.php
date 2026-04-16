@@ -63,7 +63,7 @@ class KubernetesVersionNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setSupportedFeatures($values);
+            $object->setSupportedFeatures(...$values);
             unset($data['supported_features']);
         }
         foreach ($data as $key => $value_1) {

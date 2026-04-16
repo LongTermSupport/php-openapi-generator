@@ -59,7 +59,7 @@ class GeoNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
                     $values[] = TypeValidator::assertFloat($value, 'value');
                 }
             }
-            $object->setBbox($values);
+            $object->setBbox(...$values);
             unset($data['bbox']);
         }
         if (\array_key_exists('geometry', $data)) {

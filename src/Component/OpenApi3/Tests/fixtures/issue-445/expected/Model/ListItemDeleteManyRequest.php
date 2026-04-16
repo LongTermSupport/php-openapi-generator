@@ -42,13 +42,11 @@ class ListItemDeleteManyRequest
     }
     /**
      * IDs of the list items to delete.
-     *
-     * @param list<string> $listItemIds
      */
-    public function setListItemIds(array $listItemIds): self
+    public function setListItemIds(string ...$listItemIds): self
     {
         $this->initialized['listItemIds'] = true;
-        $this->listItemIds = $listItemIds;
+        $this->listItemIds = array_values($listItemIds);
         return $this;
     }
     /**

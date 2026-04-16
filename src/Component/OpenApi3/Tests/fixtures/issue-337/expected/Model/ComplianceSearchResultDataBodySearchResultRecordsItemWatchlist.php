@@ -32,13 +32,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlist extends \Ar
     {
         return $this->matches;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItem> $matches
-     */
-    public function setMatches(array $matches): self
+    public function setMatches(ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItem ...$matches): self
     {
         $this->initialized['matches'] = true;
-        $this->matches = $matches;
+        $this->matches = array_values($matches);
         return $this;
     }
     public function getStatus(): string

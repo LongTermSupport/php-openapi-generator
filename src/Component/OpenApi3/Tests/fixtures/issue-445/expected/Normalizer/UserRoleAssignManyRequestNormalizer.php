@@ -55,7 +55,7 @@ class UserRoleAssignManyRequestNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setUserIds($values);
+            $object->setUserIds(...$values);
             unset($data['userIds']);
         }
         if (\array_key_exists('userRoleIds', $data)) {
@@ -65,7 +65,7 @@ class UserRoleAssignManyRequestNormalizer implements DenormalizerInterface, Norm
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setUserRoleIds($values_1);
+            $object->setUserRoleIds(...$values_1);
             unset($data['userRoleIds']);
         }
         if (\array_key_exists('operation', $data)) {

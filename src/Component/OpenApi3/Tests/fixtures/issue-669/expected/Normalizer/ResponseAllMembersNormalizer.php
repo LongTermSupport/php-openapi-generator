@@ -56,7 +56,7 @@ class ResponseAllMembersNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setDroplets($values);
+            $object->setDroplets(...$values);
             unset($data['droplets']);
         }
         if (\array_key_exists('links', $data)) {

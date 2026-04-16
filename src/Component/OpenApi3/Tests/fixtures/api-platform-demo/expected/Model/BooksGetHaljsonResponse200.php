@@ -34,13 +34,10 @@ class BooksGetHaljsonResponse200 extends \ArrayObject
     {
         return $this->embedded;
     }
-    /**
-     * @param list<BookJsonhalBookRead> $embedded
-     */
-    public function setEmbedded(array $embedded): self
+    public function setEmbedded(BookJsonhalBookRead ...$embedded): self
     {
         $this->initialized['embedded'] = true;
-        $this->embedded = $embedded;
+        $this->embedded = array_values($embedded);
         return $this;
     }
     public function getTotalItems(): int

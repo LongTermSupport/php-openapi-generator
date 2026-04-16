@@ -31,13 +31,10 @@ class ResponseListNamespaces extends \ArrayObject
     {
         return $this->namespaces;
     }
-    /**
-     * @param list<NamespaceInfo> $namespaces
-     */
-    public function setNamespaces(array $namespaces): self
+    public function setNamespaces(NamespaceInfo ...$namespaces): self
     {
         $this->initialized['namespaces'] = true;
-        $this->namespaces = $namespaces;
+        $this->namespaces = array_values($namespaces);
         return $this;
     }
 }

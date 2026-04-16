@@ -56,7 +56,7 @@ class ResponseSnapshotsNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setSnapshots($values);
+            $object->setSnapshots(...$values);
             unset($data['snapshots']);
         }
         if (\array_key_exists('links', $data)) {

@@ -127,12 +127,12 @@ class AppsDeploymentProgressStep extends \ArrayObject
         return $this->steps;
     }
     /**
-     * @param list<array<string, mixed>> $steps
+     * @param array<string, mixed> ...$steps
      */
-    public function setSteps(array $steps): self
+    public function setSteps(array ...$steps): self
     {
         $this->initialized['steps'] = true;
-        $this->steps = $steps;
+        $this->steps = array_values($steps);
         return $this;
     }
 }

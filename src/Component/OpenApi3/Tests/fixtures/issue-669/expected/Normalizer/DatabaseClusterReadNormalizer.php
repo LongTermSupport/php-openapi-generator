@@ -179,7 +179,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
                     $values_3[] = $value_12;
                 }
             }
-            $object->setRules($values_3);
+            $object->setRules(...$values_3);
             unset($data['rules']);
         }
         if (\array_key_exists('version_end_of_life', $data)) {
@@ -202,7 +202,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
                     $values_4[] = $value_14;
                 }
             }
-            $object->setMetricsEndpoints($values_4);
+            $object->setMetricsEndpoints(...$values_4);
             unset($data['metrics_endpoints']);
         }
         foreach ($data as $key => $value_15) {

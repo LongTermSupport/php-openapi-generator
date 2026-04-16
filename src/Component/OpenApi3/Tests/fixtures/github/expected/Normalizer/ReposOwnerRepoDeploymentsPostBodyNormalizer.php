@@ -48,7 +48,7 @@ class ReposOwnerRepoDeploymentsPostBodyNormalizer implements DenormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoDeploymentsPostBodyConstraint());
         }
         if (\array_key_exists('ref', $data)) {
@@ -70,7 +70,7 @@ class ReposOwnerRepoDeploymentsPostBodyNormalizer implements DenormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRequiredContexts($values);
+            $object->setRequiredContexts(...$values);
             unset($data['required_contexts']);
         }
         if (\array_key_exists('payload', $data)) {
@@ -152,7 +152,7 @@ class ReposOwnerRepoDeploymentsPostBodyNormalizer implements DenormalizerInterfa
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoDeploymentsPostBodyConstraint());
         }
         return $dataArray;

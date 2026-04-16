@@ -42,13 +42,10 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200 extends \ArrayOb
     {
         return $this->repositories;
     }
-    /**
-     * @param list<MinimalRepository> $repositories
-     */
-    public function setRepositories(array $repositories): self
+    public function setRepositories(MinimalRepository ...$repositories): self
     {
         $this->initialized['repositories'] = true;
-        $this->repositories = $repositories;
+        $this->repositories = array_values($repositories);
         return $this;
     }
 }

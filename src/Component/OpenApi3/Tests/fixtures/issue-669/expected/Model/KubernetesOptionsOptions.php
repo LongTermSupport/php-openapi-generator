@@ -39,13 +39,10 @@ class KubernetesOptionsOptions extends \ArrayObject
     {
         return $this->regions;
     }
-    /**
-     * @param list<KubernetesRegion> $regions
-     */
-    public function setRegions(array $regions): self
+    public function setRegions(KubernetesRegion ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
     /**
@@ -55,13 +52,10 @@ class KubernetesOptionsOptions extends \ArrayObject
     {
         return $this->versions;
     }
-    /**
-     * @param list<KubernetesVersion> $versions
-     */
-    public function setVersions(array $versions): self
+    public function setVersions(KubernetesVersion ...$versions): self
     {
         $this->initialized['versions'] = true;
-        $this->versions = $versions;
+        $this->versions = array_values($versions);
         return $this;
     }
     /**
@@ -71,13 +65,10 @@ class KubernetesOptionsOptions extends \ArrayObject
     {
         return $this->sizes;
     }
-    /**
-     * @param list<KubernetesSize> $sizes
-     */
-    public function setSizes(array $sizes): self
+    public function setSizes(KubernetesSize ...$sizes): self
     {
         $this->initialized['sizes'] = true;
-        $this->sizes = $sizes;
+        $this->sizes = array_values($sizes);
         return $this;
     }
 }

@@ -43,13 +43,10 @@ class TeamsTeamIdMembersUsernamePutResponse422 extends \ArrayObject
     {
         return $this->errors;
     }
-    /**
-     * @param list<TeamsTeamIdMembersUsernamePutResponse422ErrorsItem> $errors
-     */
-    public function setErrors(array $errors): self
+    public function setErrors(TeamsTeamIdMembersUsernamePutResponse422ErrorsItem ...$errors): self
     {
         $this->initialized['errors'] = true;
-        $this->errors = $errors;
+        $this->errors = array_values($errors);
         return $this;
     }
     public function getDocumentationUrl(): string

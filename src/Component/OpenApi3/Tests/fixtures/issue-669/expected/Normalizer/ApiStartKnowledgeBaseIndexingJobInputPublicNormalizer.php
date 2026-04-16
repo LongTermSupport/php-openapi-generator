@@ -55,7 +55,7 @@ class ApiStartKnowledgeBaseIndexingJobInputPublicNormalizer implements Denormali
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDataSourceUuids($values);
+            $object->setDataSourceUuids(...$values);
             unset($data['data_source_uuids']);
         }
         if (\array_key_exists('knowledge_base_uuid', $data)) {

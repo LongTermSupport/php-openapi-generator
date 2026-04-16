@@ -48,7 +48,7 @@ class ReposOwnerRepoTransferPostBodyNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoTransferPostBodyConstraint());
         }
         if (\array_key_exists('new_owner', $data)) {
@@ -62,7 +62,7 @@ class ReposOwnerRepoTransferPostBodyNormalizer implements DenormalizerInterface,
                     $values[] = TypeValidator::assertInt($value, 'value');
                 }
             }
-            $object->setTeamIds($values);
+            $object->setTeamIds(...$values);
             unset($data['team_ids']);
         }
         foreach ($data as $key => $value_1) {
@@ -97,7 +97,7 @@ class ReposOwnerRepoTransferPostBodyNormalizer implements DenormalizerInterface,
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoTransferPostBodyConstraint());
         }
         return $dataArray;

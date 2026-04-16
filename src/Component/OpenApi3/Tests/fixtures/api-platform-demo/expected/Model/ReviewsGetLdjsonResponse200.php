@@ -34,13 +34,10 @@ class ReviewsGetLdjsonResponse200 extends \ArrayObject
     {
         return $this->hydraMember;
     }
-    /**
-     * @param list<ReviewJsonldReviewRead> $hydraMember
-     */
-    public function setHydraMember(array $hydraMember): self
+    public function setHydraMember(ReviewJsonldReviewRead ...$hydraMember): self
     {
         $this->initialized['hydraMember'] = true;
-        $this->hydraMember = $hydraMember;
+        $this->hydraMember = array_values($hydraMember);
         return $this;
     }
     public function getHydraTotalItems(): int

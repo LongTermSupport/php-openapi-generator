@@ -48,7 +48,7 @@ class HovercardNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\HovercardConstraint());
         }
         if (\array_key_exists('contexts', $data)) {
@@ -59,7 +59,7 @@ class HovercardNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setContexts($values);
+            $object->setContexts(...$values);
             unset($data['contexts']);
         }
         foreach ($data as $key => $value_2) {
@@ -89,7 +89,7 @@ class HovercardNormalizer implements DenormalizerInterface, NormalizerInterface,
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\HovercardConstraint());
         }
         return $dataArray;

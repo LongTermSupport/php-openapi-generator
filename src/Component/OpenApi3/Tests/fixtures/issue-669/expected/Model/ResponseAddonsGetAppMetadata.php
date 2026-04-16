@@ -31,13 +31,10 @@ class ResponseAddonsGetAppMetadata extends \ArrayObject
     {
         return $this->metadata;
     }
-    /**
-     * @param list<AddonsAppMetadata> $metadata
-     */
-    public function setMetadata(array $metadata): self
+    public function setMetadata(AddonsAppMetadata ...$metadata): self
     {
         $this->initialized['metadata'] = true;
-        $this->metadata = $metadata;
+        $this->metadata = array_values($metadata);
         return $this;
     }
 }

@@ -151,13 +151,11 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBody extends \ArrayObject
     }
     /**
      * A flat array of tag names as strings to apply to the read-only replica after it is created. Tag names can either be existing or new tags. <br><br>Requires `tag:create` scope.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

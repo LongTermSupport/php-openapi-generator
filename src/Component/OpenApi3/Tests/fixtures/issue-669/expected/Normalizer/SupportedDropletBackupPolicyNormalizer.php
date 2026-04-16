@@ -59,7 +59,7 @@ class SupportedDropletBackupPolicyNormalizer implements DenormalizerInterface, N
                     $values[] = TypeValidator::assertInt($value, 'value');
                 }
             }
-            $object->setPossibleWindowStarts($values);
+            $object->setPossibleWindowStarts(...$values);
             unset($data['possible_window_starts']);
         }
         if (\array_key_exists('window_length_hours', $data)) {
@@ -77,7 +77,7 @@ class SupportedDropletBackupPolicyNormalizer implements DenormalizerInterface, N
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setPossibleDays($values_1);
+            $object->setPossibleDays(...$values_1);
             unset($data['possible_days']);
         }
         foreach ($data as $key => $value_2) {

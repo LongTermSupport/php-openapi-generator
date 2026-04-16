@@ -45,13 +45,11 @@ class ApiListKnowledgeBaseDataSourcesOutput extends \ArrayObject
     }
     /**
      * The data sources
-     *
-     * @param list<ApiKnowledgeBaseDataSource> $knowledgeBaseDataSources
      */
-    public function setKnowledgeBaseDataSources(array $knowledgeBaseDataSources): self
+    public function setKnowledgeBaseDataSources(ApiKnowledgeBaseDataSource ...$knowledgeBaseDataSources): self
     {
         $this->initialized['knowledgeBaseDataSources'] = true;
-        $this->knowledgeBaseDataSources = $knowledgeBaseDataSources;
+        $this->knowledgeBaseDataSources = array_values($knowledgeBaseDataSources);
         return $this;
     }
     /**

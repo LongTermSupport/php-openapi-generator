@@ -35,13 +35,10 @@ class ResponseFloatingIpCreatedLinks extends \ArrayObject
     {
         return $this->droplets;
     }
-    /**
-     * @param list<ActionLink> $droplets
-     */
-    public function setDroplets(array $droplets): self
+    public function setDroplets(ActionLink ...$droplets): self
     {
         $this->initialized['droplets'] = true;
-        $this->droplets = $droplets;
+        $this->droplets = array_values($droplets);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class ResponseFloatingIpCreatedLinks extends \ArrayObject
     {
         return $this->actions;
     }
-    /**
-     * @param list<ActionLink> $actions
-     */
-    public function setActions(array $actions): self
+    public function setActions(ActionLink ...$actions): self
     {
         $this->initialized['actions'] = true;
-        $this->actions = $actions;
+        $this->actions = array_values($actions);
         return $this;
     }
 }

@@ -79,7 +79,7 @@ class DropletImageNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         if (\array_key_exists('created_at', $data)) {

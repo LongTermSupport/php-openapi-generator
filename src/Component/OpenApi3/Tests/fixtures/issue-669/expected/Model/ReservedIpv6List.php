@@ -31,13 +31,10 @@ class ReservedIpv6List extends \ArrayObject
     {
         return $this->reservedIpv6s;
     }
-    /**
-     * @param list<ReservedIpv6ListReservedIpv6sItem> $reservedIpv6s
-     */
-    public function setReservedIpv6s(array $reservedIpv6s): self
+    public function setReservedIpv6s(ReservedIpv6ListReservedIpv6sItem ...$reservedIpv6s): self
     {
         $this->initialized['reservedIpv6s'] = true;
-        $this->reservedIpv6s = $reservedIpv6s;
+        $this->reservedIpv6s = array_values($reservedIpv6s);
         return $this;
     }
 }

@@ -48,7 +48,7 @@ class ReposOwnerRepoGitTreesPostBodyNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoGitTreesPostBodyConstraint());
         }
         if (\array_key_exists('tree', $data)) {
@@ -59,7 +59,7 @@ class ReposOwnerRepoGitTreesPostBodyNormalizer implements DenormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setTree($values);
+            $object->setTree(...$values);
             unset($data['tree']);
         }
         if (\array_key_exists('base_tree', $data)) {
@@ -96,7 +96,7 @@ class ReposOwnerRepoGitTreesPostBodyNormalizer implements DenormalizerInterface,
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoGitTreesPostBodyConstraint());
         }
         return $dataArray;

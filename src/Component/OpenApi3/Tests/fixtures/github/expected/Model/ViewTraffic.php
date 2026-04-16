@@ -53,13 +53,10 @@ class ViewTraffic extends \ArrayObject
     {
         return $this->views;
     }
-    /**
-     * @param list<Traffic> $views
-     */
-    public function setViews(array $views): self
+    public function setViews(Traffic ...$views): self
     {
         $this->initialized['views'] = true;
-        $this->views = $views;
+        $this->views = array_values($views);
         return $this;
     }
 }

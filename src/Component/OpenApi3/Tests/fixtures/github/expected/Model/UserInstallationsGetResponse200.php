@@ -42,13 +42,10 @@ class UserInstallationsGetResponse200 extends \ArrayObject
     {
         return $this->installations;
     }
-    /**
-     * @param list<Installation> $installations
-     */
-    public function setInstallations(array $installations): self
+    public function setInstallations(Installation ...$installations): self
     {
         $this->initialized['installations'] = true;
-        $this->installations = $installations;
+        $this->installations = array_values($installations);
         return $this;
     }
 }

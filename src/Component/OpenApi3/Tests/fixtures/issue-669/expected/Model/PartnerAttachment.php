@@ -175,13 +175,11 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * An array of VPC network IDs.
-     *
-     * @param list<string> $vpcIds
      */
-    public function setVpcIds(array $vpcIds): self
+    public function setVpcIds(string ...$vpcIds): self
     {
         $this->initialized['vpcIds'] = true;
-        $this->vpcIds = $vpcIds;
+        $this->vpcIds = array_values($vpcIds);
         return $this;
     }
     /**
@@ -243,13 +241,11 @@ class PartnerAttachment extends \ArrayObject
     }
     /**
      * An array of associated partner attachment UUIDs.
-     *
-     * @param list<string> $children
      */
-    public function setChildren(array $children): self
+    public function setChildren(string ...$children): self
     {
         $this->initialized['children'] = true;
-        $this->children = $children;
+        $this->children = array_values($children);
         return $this;
     }
 }

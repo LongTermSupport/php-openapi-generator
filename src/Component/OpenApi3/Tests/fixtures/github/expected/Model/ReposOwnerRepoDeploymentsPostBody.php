@@ -120,13 +120,11 @@ class ReposOwnerRepoDeploymentsPostBody extends \ArrayObject
     }
     /**
      * The [status](https://developer.github.com/v3/repos/statuses/) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
-     *
-     * @param list<string> $requiredContexts
      */
-    public function setRequiredContexts(array $requiredContexts): self
+    public function setRequiredContexts(string ...$requiredContexts): self
     {
         $this->initialized['requiredContexts'] = true;
-        $this->requiredContexts = $requiredContexts;
+        $this->requiredContexts = array_values($requiredContexts);
         return $this;
     }
     /**

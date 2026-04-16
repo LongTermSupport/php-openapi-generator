@@ -56,7 +56,7 @@ class ApiListKnowledgeBasesOutputNormalizer implements DenormalizerInterface, No
                     $values[] = $value_1;
                 }
             }
-            $object->setKnowledgeBases($values);
+            $object->setKnowledgeBases(...$values);
             unset($data['knowledge_bases']);
         }
         if (\array_key_exists('links', $data)) {

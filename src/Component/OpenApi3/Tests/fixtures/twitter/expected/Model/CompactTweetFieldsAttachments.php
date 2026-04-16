@@ -43,13 +43,11 @@ class CompactTweetFieldsAttachments extends \ArrayObject
     }
     /**
      * A list of Media Keys for each one of the media attachments (if media are attached).
-     *
-     * @param list<string> $mediaKeys
      */
-    public function setMediaKeys(array $mediaKeys): self
+    public function setMediaKeys(string ...$mediaKeys): self
     {
         $this->initialized['mediaKeys'] = true;
-        $this->mediaKeys = $mediaKeys;
+        $this->mediaKeys = array_values($mediaKeys);
         return $this;
     }
     /**
@@ -63,13 +61,11 @@ class CompactTweetFieldsAttachments extends \ArrayObject
     }
     /**
      * A list of poll IDs (if polls are attached).
-     *
-     * @param list<string> $pollIds
      */
-    public function setPollIds(array $pollIds): self
+    public function setPollIds(string ...$pollIds): self
     {
         $this->initialized['pollIds'] = true;
-        $this->pollIds = $pollIds;
+        $this->pollIds = array_values($pollIds);
         return $this;
     }
 }

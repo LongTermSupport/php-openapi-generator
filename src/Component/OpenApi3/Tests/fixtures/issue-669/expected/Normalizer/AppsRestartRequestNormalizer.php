@@ -55,7 +55,7 @@ class AppsRestartRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setComponents($values);
+            $object->setComponents(...$values);
             unset($data['components']);
         }
         foreach ($data as $key => $value_1) {

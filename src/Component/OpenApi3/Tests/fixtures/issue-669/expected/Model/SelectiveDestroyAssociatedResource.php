@@ -66,14 +66,12 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
     /**
      * An array of unique identifiers for the floating IPs to be scheduled for deletion.
      *
-     * @param list<string> $floatingIps
-     *
      * @deprecated
      */
-    public function setFloatingIps(array $floatingIps): self
+    public function setFloatingIps(string ...$floatingIps): self
     {
         $this->initialized['floatingIps'] = true;
-        $this->floatingIps = $floatingIps;
+        $this->floatingIps = array_values($floatingIps);
         return $this;
     }
     /**
@@ -87,13 +85,11 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
     }
     /**
      * An array of unique identifiers for the reserved IPs to be scheduled for deletion.
-     *
-     * @param list<string> $reservedIps
      */
-    public function setReservedIps(array $reservedIps): self
+    public function setReservedIps(string ...$reservedIps): self
     {
         $this->initialized['reservedIps'] = true;
-        $this->reservedIps = $reservedIps;
+        $this->reservedIps = array_values($reservedIps);
         return $this;
     }
     /**
@@ -107,13 +103,11 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
     }
     /**
      * An array of unique identifiers for the snapshots to be scheduled for deletion.
-     *
-     * @param list<string> $snapshots
      */
-    public function setSnapshots(array $snapshots): self
+    public function setSnapshots(string ...$snapshots): self
     {
         $this->initialized['snapshots'] = true;
-        $this->snapshots = $snapshots;
+        $this->snapshots = array_values($snapshots);
         return $this;
     }
     /**
@@ -127,13 +121,11 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
     }
     /**
      * An array of unique identifiers for the volumes to be scheduled for deletion.
-     *
-     * @param list<string> $volumes
      */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(string ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
     /**
@@ -147,13 +139,11 @@ class SelectiveDestroyAssociatedResource extends \ArrayObject
     }
     /**
      * An array of unique identifiers for the volume snapshots to be scheduled for deletion.
-     *
-     * @param list<string> $volumeSnapshots
      */
-    public function setVolumeSnapshots(array $volumeSnapshots): self
+    public function setVolumeSnapshots(string ...$volumeSnapshots): self
     {
         $this->initialized['volumeSnapshots'] = true;
-        $this->volumeSnapshots = $volumeSnapshots;
+        $this->volumeSnapshots = array_values($volumeSnapshots);
         return $this;
     }
 }

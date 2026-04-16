@@ -43,13 +43,11 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBody extends \ArrayOb
     }
     /**
      * An array of user `login`s that will be removed.
-     *
-     * @param list<string> $reviewers
      */
-    public function setReviewers(array $reviewers): self
+    public function setReviewers(string ...$reviewers): self
     {
         $this->initialized['reviewers'] = true;
-        $this->reviewers = $reviewers;
+        $this->reviewers = array_values($reviewers);
         return $this;
     }
     /**
@@ -63,13 +61,11 @@ class ReposOwnerRepoPullsPullNumberRequestedReviewersDeleteBody extends \ArrayOb
     }
     /**
      * An array of team `slug`s that will be removed.
-     *
-     * @param list<string> $teamReviewers
      */
-    public function setTeamReviewers(array $teamReviewers): self
+    public function setTeamReviewers(string ...$teamReviewers): self
     {
         $this->initialized['teamReviewers'] = true;
-        $this->teamReviewers = $teamReviewers;
+        $this->teamReviewers = array_values($teamReviewers);
         return $this;
     }
 }

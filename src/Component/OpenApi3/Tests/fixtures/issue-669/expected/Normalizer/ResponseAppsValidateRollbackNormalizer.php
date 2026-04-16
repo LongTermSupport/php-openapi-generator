@@ -65,7 +65,7 @@ class ResponseAppsValidateRollbackNormalizer implements DenormalizerInterface, N
                     $values[] = $value_2;
                 }
             }
-            $object->setWarnings($values);
+            $object->setWarnings(...$values);
             unset($data['warnings']);
         }
         foreach ($data as $key => $value_3) {

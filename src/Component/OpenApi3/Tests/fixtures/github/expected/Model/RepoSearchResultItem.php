@@ -779,13 +779,10 @@ class RepoSearchResultItem extends \ArrayObject
     {
         return $this->topics;
     }
-    /**
-     * @param list<string> $topics
-     */
-    public function setTopics(array $topics): self
+    public function setTopics(string ...$topics): self
     {
         $this->initialized['topics'] = true;
-        $this->topics = $topics;
+        $this->topics = array_values($topics);
         return $this;
     }
     public function getMirrorUrl(): ?string
@@ -901,13 +898,10 @@ class RepoSearchResultItem extends \ArrayObject
     {
         return $this->textMatches;
     }
-    /**
-     * @param list<SearchResultTextMatchesItem> $textMatches
-     */
-    public function setTextMatches(array $textMatches): self
+    public function setTextMatches(SearchResultTextMatchesItem ...$textMatches): self
     {
         $this->initialized['textMatches'] = true;
-        $this->textMatches = $textMatches;
+        $this->textMatches = array_values($textMatches);
         return $this;
     }
     public function getTempCloneToken(): string

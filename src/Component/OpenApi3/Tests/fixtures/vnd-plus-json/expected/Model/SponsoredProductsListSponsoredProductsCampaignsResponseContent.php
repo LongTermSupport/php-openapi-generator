@@ -51,13 +51,10 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContent extends \Ar
     {
         return $this->campaigns;
     }
-    /**
-     * @param list<string> $campaigns
-     */
-    public function setCampaigns(array $campaigns): self
+    public function setCampaigns(string ...$campaigns): self
     {
         $this->initialized['campaigns'] = true;
-        $this->campaigns = $campaigns;
+        $this->campaigns = array_values($campaigns);
         return $this;
     }
 }

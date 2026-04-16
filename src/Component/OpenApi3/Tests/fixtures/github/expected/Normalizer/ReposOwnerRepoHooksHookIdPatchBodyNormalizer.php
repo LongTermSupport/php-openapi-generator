@@ -48,7 +48,7 @@ class ReposOwnerRepoHooksHookIdPatchBodyNormalizer implements DenormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoHooksHookIdPatchBodyConstraint());
         }
         if (\array_key_exists('config', $data)) {
@@ -63,7 +63,7 @@ class ReposOwnerRepoHooksHookIdPatchBodyNormalizer implements DenormalizerInterf
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         if (\array_key_exists('add_events', $data)) {
@@ -73,7 +73,7 @@ class ReposOwnerRepoHooksHookIdPatchBodyNormalizer implements DenormalizerInterf
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setAddEvents($values_1);
+            $object->setAddEvents(...$values_1);
             unset($data['add_events']);
         }
         if (\array_key_exists('remove_events', $data)) {
@@ -83,7 +83,7 @@ class ReposOwnerRepoHooksHookIdPatchBodyNormalizer implements DenormalizerInterf
                     $values_2[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setRemoveEvents($values_2);
+            $object->setRemoveEvents(...$values_2);
             unset($data['remove_events']);
         }
         if (\array_key_exists('active', $data)) {
@@ -139,7 +139,7 @@ class ReposOwnerRepoHooksHookIdPatchBodyNormalizer implements DenormalizerInterf
                 $dataArray[$key] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoHooksHookIdPatchBodyConstraint());
         }
         return $dataArray;

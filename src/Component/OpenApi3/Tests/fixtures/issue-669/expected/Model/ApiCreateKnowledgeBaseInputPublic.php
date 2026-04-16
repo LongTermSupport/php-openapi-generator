@@ -89,13 +89,11 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * The data sources to use for this knowledge base. See [Organize Data Sources](https://docs.digitalocean.com/products/genai-platform/concepts/best-practices/#spaces-buckets) for more information on data sources best practices.
-     *
-     * @param list<ApiKBDataSource> $datasources
      */
-    public function setDatasources(array $datasources): self
+    public function setDatasources(ApiKBDataSource ...$datasources): self
     {
         $this->initialized['datasources'] = true;
-        $this->datasources = $datasources;
+        $this->datasources = array_values($datasources);
         return $this;
     }
     /**
@@ -173,13 +171,11 @@ class ApiCreateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Tags to organize your knowledge base.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

@@ -35,13 +35,10 @@ class DeleteRulesRequest extends \ArrayObject
     {
         return $this->ids;
     }
-    /**
-     * @param list<string> $ids
-     */
-    public function setIds(array $ids): self
+    public function setIds(string ...$ids): self
     {
         $this->initialized['ids'] = true;
-        $this->ids = $ids;
+        $this->ids = array_values($ids);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class DeleteRulesRequest extends \ArrayObject
     {
         return $this->values;
     }
-    /**
-     * @param list<string> $values
-     */
-    public function setValues(array $values): self
+    public function setValues(string ...$values): self
     {
         $this->initialized['values'] = true;
-        $this->values = $values;
+        $this->values = array_values($values);
         return $this;
     }
 }

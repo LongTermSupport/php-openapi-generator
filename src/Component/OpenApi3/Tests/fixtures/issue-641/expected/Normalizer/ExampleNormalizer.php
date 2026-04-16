@@ -48,7 +48,7 @@ class ExampleNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue641\Validator\ExampleConstraint());
         }
         if (\array_key_exists('property1', $data)) {
@@ -83,7 +83,7 @@ class ExampleNormalizer implements DenormalizerInterface, NormalizerInterface, D
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue641\Validator\ExampleConstraint());
         }
         return $dataArray;

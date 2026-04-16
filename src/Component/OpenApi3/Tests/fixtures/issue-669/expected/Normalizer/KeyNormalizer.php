@@ -60,7 +60,7 @@ class KeyNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
                     $values[] = $value_1;
                 }
             }
-            $object->setGrants($values);
+            $object->setGrants(...$values);
             unset($data['grants']);
         }
         if (\array_key_exists('access_key', $data)) {

@@ -63,7 +63,7 @@ class ClusterAutoscalerConfigurationNormalizer implements DenormalizerInterface,
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setExpanders($values);
+            $object->setExpanders(...$values);
             unset($data['expanders']);
         }
         foreach ($data as $key => $value_1) {

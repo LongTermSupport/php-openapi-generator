@@ -86,13 +86,10 @@ class ScimError extends \ArrayObject
     {
         return $this->schemas;
     }
-    /**
-     * @param list<string> $schemas
-     */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(string ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
                     $values[] = $value_1;
                 }
             }
-            $object->setAdditionalInfo($values);
+            $object->setAdditionalInfo(...$values);
             unset($data['additionalInfo']);
         }
         if (\array_key_exists('addresses', $data)) {
@@ -67,7 +67,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
                     $values_1[] = $value_3;
                 }
             }
-            $object->setAddresses($values_1);
+            $object->setAddresses(...$values_1);
             unset($data['addresses']);
         }
         if (\array_key_exists('akAs', $data)) {
@@ -78,7 +78,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
                     $values_2[] = $value_5;
                 }
             }
-            $object->setAkAs($values_2);
+            $object->setAkAs(...$values_2);
             unset($data['akAs']);
         }
         if (\array_key_exists('comments', $data)) {
@@ -101,7 +101,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
                     $values_3[] = $value_7;
                 }
             }
-            $object->setIDs($values_3);
+            $object->setIDs(...$values_3);
             unset($data['iDs']);
         }
         if (\array_key_exists('listReferenceNumber', $data)) {

@@ -824,13 +824,10 @@ class TeamRepository extends \ArrayObject
     {
         return $this->topics;
     }
-    /**
-     * @param list<string> $topics
-     */
-    public function setTopics(array $topics): self
+    public function setTopics(string ...$topics): self
     {
         $this->initialized['topics'] = true;
-        $this->topics = $topics;
+        $this->topics = array_values($topics);
         return $this;
     }
     /**

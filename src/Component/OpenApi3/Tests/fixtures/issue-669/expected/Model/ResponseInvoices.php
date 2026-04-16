@@ -37,13 +37,10 @@ class ResponseInvoices extends \ArrayObject
     {
         return $this->invoices;
     }
-    /**
-     * @param list<InvoicePreview> $invoices
-     */
-    public function setInvoices(array $invoices): self
+    public function setInvoices(InvoicePreview ...$invoices): self
     {
         $this->initialized['invoices'] = true;
-        $this->invoices = $invoices;
+        $this->invoices = array_values($invoices);
         return $this;
     }
     /**

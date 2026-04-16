@@ -56,7 +56,7 @@ class BooksBookIdReviewsGetHaljsonResponse200Normalizer implements DenormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setEmbedded($values);
+            $object->setEmbedded(...$values);
             unset($data['_embedded']);
         }
         if (\array_key_exists('totalItems', $data)) {

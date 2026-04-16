@@ -56,7 +56,7 @@ class ResponseOneClicksAllNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->set1Clicks($values);
+            $object->set1Clicks(...$values);
             unset($data['1_clicks']);
         }
         foreach ($data as $key => $value_2) {

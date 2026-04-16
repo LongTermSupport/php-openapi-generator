@@ -33,13 +33,10 @@ class ResponseAllDroplets extends \ArrayObject
     {
         return $this->droplets;
     }
-    /**
-     * @param list<Droplet> $droplets
-     */
-    public function setDroplets(array $droplets): self
+    public function setDroplets(Droplet ...$droplets): self
     {
         $this->initialized['droplets'] = true;
-        $this->droplets = $droplets;
+        $this->droplets = array_values($droplets);
         return $this;
     }
     public function getLinks(): PageLinks

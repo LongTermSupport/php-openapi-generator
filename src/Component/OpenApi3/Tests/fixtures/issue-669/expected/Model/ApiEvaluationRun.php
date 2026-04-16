@@ -322,13 +322,10 @@ class ApiEvaluationRun extends \ArrayObject
     {
         return $this->runLevelMetricResults;
     }
-    /**
-     * @param list<ApiEvaluationMetricResult> $runLevelMetricResults
-     */
-    public function setRunLevelMetricResults(array $runLevelMetricResults): self
+    public function setRunLevelMetricResults(ApiEvaluationMetricResult ...$runLevelMetricResults): self
     {
         $this->initialized['runLevelMetricResults'] = true;
-        $this->runLevelMetricResults = $runLevelMetricResults;
+        $this->runLevelMetricResults = array_values($runLevelMetricResults);
         return $this;
     }
     /**

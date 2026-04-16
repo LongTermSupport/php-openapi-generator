@@ -61,7 +61,7 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_2;
                 }
             }
-            $object->setRoutes($values);
+            $object->setRoutes(...$values);
             unset($data['routes']);
         }
         if (\array_key_exists('name', $data)) {
@@ -80,7 +80,7 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = $value_4;
                 }
             }
-            $object->setAlerts($values_1);
+            $object->setAlerts(...$values_1);
             unset($data['alerts']);
         }
         if (\array_key_exists('envs', $data)) {
@@ -91,7 +91,7 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_2[] = $value_6;
                 }
             }
-            $object->setEnvs($values_2);
+            $object->setEnvs(...$values_2);
             unset($data['envs']);
         }
         if (\array_key_exists('git', $data)) {
@@ -122,7 +122,7 @@ class AppFunctionsSpecNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_3[] = $value_12;
                 }
             }
-            $object->setLogDestinations($values_3);
+            $object->setLogDestinations(...$values_3);
             unset($data['log_destinations']);
         }
         foreach ($data as $key => $value_13) {

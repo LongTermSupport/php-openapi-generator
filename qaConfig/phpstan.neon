@@ -6,6 +6,7 @@
 
 includes:
     - ../vendor/lts/php-qa-ci/configDefaults/generic/phpstan.neon
+    - ../vendor/lts/php-qa-ci/rules-optional.neon
 
 rules:
     # Project-specific rules
@@ -13,21 +14,6 @@ rules:
     - QaConfig\PHPStan\Rules\ForbidAssertCallRule
     - QaConfig\PHPStan\Rules\ForbidGeneratedAssertRule
     - QaConfig\PHPStan\Rules\RequireStrictComparisonRule
-    # php-qa-ci rules — security
-    - LTS\PHPQA\PHPStan\Rules\ForbidDangerousFunctionsRule
-    # php-qa-ci rules — error handling
-    - LTS\PHPQA\PHPStan\Rules\ForbidEmptyCatchBlockRule
-    - LTS\PHPQA\PHPStan\Rules\ForbidSilentCatchRule
-    # php-qa-ci rules — type safety
-    - LTS\PHPQA\PHPStan\Rules\ForbidEmptyLanguageConstructRule
-    # php-qa-ci rules — PHP 8.4 compatibility
-    - LTS\PHPQA\PHPStan\Rules\ForbidDeprecatedSerializableRule
-    - LTS\PHPQA\PHPStan\Rules\ForbidNewDateTimeRule
-    # php-qa-ci rules — code quality
-    - LTS\PHPQA\PHPStan\Rules\ForbidInlinePhpstanIgnoreRule
-    - LTS\PHPQA\PHPStan\Rules\ForbidNestedTernaryRule
-    - LTS\PHPQA\PHPStan\Rules\RequireDeclareStrictTypesRule
-    - LTS\PHPQA\PHPStan\Rules\RequireTypeSuffixRule
 
 parameters:
     scanDirectories:

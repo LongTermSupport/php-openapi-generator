@@ -48,7 +48,7 @@ class OrgsOrgHooksHookIdPatchBodyNormalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgHooksHookIdPatchBodyConstraint());
         }
         if (\array_key_exists('config', $data)) {
@@ -63,7 +63,7 @@ class OrgsOrgHooksHookIdPatchBodyNormalizer implements DenormalizerInterface, No
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         if (\array_key_exists('active', $data)) {
@@ -112,7 +112,7 @@ class OrgsOrgHooksHookIdPatchBodyNormalizer implements DenormalizerInterface, No
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgHooksHookIdPatchBodyConstraint());
         }
         return $dataArray;

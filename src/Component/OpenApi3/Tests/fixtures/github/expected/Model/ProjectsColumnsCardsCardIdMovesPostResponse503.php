@@ -64,13 +64,10 @@ class ProjectsColumnsCardsCardIdMovesPostResponse503 extends \ArrayObject
     {
         return $this->errors;
     }
-    /**
-     * @param list<ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem> $errors
-     */
-    public function setErrors(array $errors): self
+    public function setErrors(ProjectsColumnsCardsCardIdMovesPostResponse503ErrorsItem ...$errors): self
     {
         $this->initialized['errors'] = true;
-        $this->errors = $errors;
+        $this->errors = array_values($errors);
         return $this;
     }
 }

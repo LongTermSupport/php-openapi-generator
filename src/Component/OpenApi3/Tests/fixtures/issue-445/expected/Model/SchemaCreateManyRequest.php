@@ -37,13 +37,11 @@ class SchemaCreateManyRequest
     /**
      * The schemas to create. Cyclic dependencies between schemas are supported, if they
      * are all in the same request.
-     *
-     * @param list<SchemaCreateRequest> $schemas
      */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(SchemaCreateRequest ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
 }

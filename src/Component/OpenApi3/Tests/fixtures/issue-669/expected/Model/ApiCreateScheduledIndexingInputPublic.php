@@ -45,13 +45,11 @@ class ApiCreateScheduledIndexingInputPublic extends \ArrayObject
     }
     /**
      * Days for execution (day is represented same as in a cron expression, e.g. Monday begins with 1 )
-     *
-     * @param list<int> $days
      */
-    public function setDays(array $days): self
+    public function setDays(int ...$days): self
     {
         $this->initialized['days'] = true;
-        $this->days = $days;
+        $this->days = array_values($days);
         return $this;
     }
     /**

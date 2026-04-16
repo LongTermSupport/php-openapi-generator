@@ -56,7 +56,7 @@ class DefaultUserFieldsEntitiesUrlNormalizer implements DenormalizerInterface, N
                     $values[] = $value_1;
                 }
             }
-            $object->setUrls($values);
+            $object->setUrls(...$values);
             unset($data['urls']);
         }
         foreach ($data as $key => $value_2) {

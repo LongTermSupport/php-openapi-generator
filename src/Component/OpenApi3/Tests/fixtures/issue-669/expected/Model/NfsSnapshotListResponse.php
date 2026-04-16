@@ -31,13 +31,10 @@ class NfsSnapshotListResponse extends \ArrayObject
     {
         return $this->snapshots;
     }
-    /**
-     * @param list<NfsSnapshotResponse> $snapshots
-     */
-    public function setSnapshots(array $snapshots): self
+    public function setSnapshots(NfsSnapshotResponse ...$snapshots): self
     {
         $this->initialized['snapshots'] = true;
-        $this->snapshots = $snapshots;
+        $this->snapshots = array_values($snapshots);
         return $this;
     }
 }

@@ -59,7 +59,7 @@ class ControlPlaneFirewallNormalizer implements DenormalizerInterface, Normalize
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAllowedAddresses($values);
+            $object->setAllowedAddresses(...$values);
             unset($data['allowed_addresses']);
         }
         foreach ($data as $key => $value_1) {

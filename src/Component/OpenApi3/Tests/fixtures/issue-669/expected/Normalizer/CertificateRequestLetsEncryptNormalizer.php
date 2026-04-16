@@ -63,7 +63,7 @@ class CertificateRequestLetsEncryptNormalizer implements DenormalizerInterface, 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDnsNames($values);
+            $object->setDnsNames(...$values);
             unset($data['dns_names']);
         }
         foreach ($data as $key => $value_1) {

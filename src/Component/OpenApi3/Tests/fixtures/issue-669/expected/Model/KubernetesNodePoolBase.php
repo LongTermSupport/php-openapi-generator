@@ -127,13 +127,11 @@ class KubernetesNodePoolBase extends \ArrayObject
     }
     /**
      * An array containing the tags applied to the node pool. All node pools are automatically tagged `k8s`, `k8s-worker`, and `k8s:$K8S_CLUSTER_ID`. <br><br>Requires `tag:read` scope.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**
@@ -167,13 +165,11 @@ class KubernetesNodePoolBase extends \ArrayObject
     }
     /**
      * An array of taints to apply to all nodes in a pool. Taints will automatically be applied to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is deleted from all nodes in the pool.
-     *
-     * @param list<KubernetesNodePoolTaint> $taints
      */
-    public function setTaints(array $taints): self
+    public function setTaints(KubernetesNodePoolTaint ...$taints): self
     {
         $this->initialized['taints'] = true;
-        $this->taints = $taints;
+        $this->taints = array_values($taints);
         return $this;
     }
     /**
@@ -235,13 +231,11 @@ class KubernetesNodePoolBase extends \ArrayObject
     }
     /**
      * An object specifying the details of a specific worker node in a node pool.
-     *
-     * @param list<Node> $nodes
      */
-    public function setNodes(array $nodes): self
+    public function setNodes(Node ...$nodes): self
     {
         $this->initialized['nodes'] = true;
-        $this->nodes = $nodes;
+        $this->nodes = array_values($nodes);
         return $this;
     }
 }

@@ -218,13 +218,10 @@ class IssueSearchResultItem extends \ArrayObject
     {
         return $this->labels;
     }
-    /**
-     * @param list<IssueSearchResultItemLabelsItem> $labels
-     */
-    public function setLabels(array $labels): self
+    public function setLabels(IssueSearchResultItemLabelsItem ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     public function getState(): string
@@ -304,13 +301,10 @@ class IssueSearchResultItem extends \ArrayObject
     {
         return $this->textMatches;
     }
-    /**
-     * @param list<SearchResultTextMatchesItem> $textMatches
-     */
-    public function setTextMatches(array $textMatches): self
+    public function setTextMatches(SearchResultTextMatchesItem ...$textMatches): self
     {
         $this->initialized['textMatches'] = true;
-        $this->textMatches = $textMatches;
+        $this->textMatches = array_values($textMatches);
         return $this;
     }
     public function getPullRequest(): IssueSearchResultItemPullRequest

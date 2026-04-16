@@ -67,7 +67,7 @@ class NfsRequestNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setVpcIds($values);
+            $object->setVpcIds(...$values);
             unset($data['vpc_ids']);
         }
         foreach ($data as $key => $value_1) {

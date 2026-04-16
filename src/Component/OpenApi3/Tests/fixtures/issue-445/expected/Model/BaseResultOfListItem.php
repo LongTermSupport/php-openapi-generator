@@ -62,13 +62,11 @@ class BaseResultOfListItem
     }
     /**
      * The matched documents.
-     *
-     * @param list<ListItem> $results
      */
-    public function setResults(array $results): self
+    public function setResults(ListItem ...$results): self
     {
         $this->initialized['results'] = true;
-        $this->results = $results;
+        $this->results = array_values($results);
         return $this;
     }
     /**

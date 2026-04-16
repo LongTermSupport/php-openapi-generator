@@ -55,7 +55,7 @@ class ProjectAssignmentNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setResources($values);
+            $object->setResources(...$values);
             unset($data['resources']);
         }
         foreach ($data as $key => $value_1) {

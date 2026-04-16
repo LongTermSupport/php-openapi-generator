@@ -59,7 +59,7 @@ class PgbouncerAdvancedConfigNormalizer implements DenormalizerInterface, Normal
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setIgnoreStartupParameters($values);
+            $object->setIgnoreStartupParameters(...$values);
             unset($data['ignore_startup_parameters']);
         }
         if (\array_key_exists('min_pool_size', $data)) {

@@ -34,12 +34,12 @@ class ResponseAllFirewalls extends \ArrayObject
         return $this->firewalls;
     }
     /**
-     * @param list<array<string, mixed>> $firewalls
+     * @param array<string, mixed> ...$firewalls
      */
-    public function setFirewalls(array $firewalls): self
+    public function setFirewalls(array ...$firewalls): self
     {
         $this->initialized['firewalls'] = true;
-        $this->firewalls = $firewalls;
+        $this->firewalls = array_values($firewalls);
         return $this;
     }
     public function getLinks(): PageLinks

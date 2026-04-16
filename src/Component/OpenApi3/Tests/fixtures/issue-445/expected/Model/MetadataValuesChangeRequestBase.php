@@ -43,13 +43,11 @@ class MetadataValuesChangeRequestBase
     }
     /**
      * Changes that need to be applied to the existing content metadata. The same set of changes is applied to all contents.
-     *
-     * @param list<MetadataValuesChangeCommandBase> $changeCommands
      */
-    public function setChangeCommands(array $changeCommands): void
+    public function setChangeCommands(MetadataValuesChangeCommandBase ...$changeCommands): void
     {
         $this->initialized['changeCommands'] = true;
-        $this->changeCommands = $changeCommands;
+        $this->changeCommands = array_values($changeCommands);
     }
     /**
      * Allows updating contents with references to list items or contents that do not exist in the system.

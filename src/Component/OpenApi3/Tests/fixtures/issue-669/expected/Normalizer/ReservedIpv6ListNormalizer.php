@@ -56,7 +56,7 @@ class ReservedIpv6ListNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setReservedIpv6s($values);
+            $object->setReservedIpv6s(...$values);
             unset($data['reserved_ipv6s']);
         }
         foreach ($data as $key => $value_2) {

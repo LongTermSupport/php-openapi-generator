@@ -59,7 +59,7 @@ class XmpMappingEntryConfigurationTagboxNormalizer implements DenormalizerInterf
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setKeyFieldIds($values);
+            $object->setKeyFieldIds(...$values);
             unset($data['keyFieldIds']);
         }
         if (\array_key_exists('caseSensitive', $data)) {

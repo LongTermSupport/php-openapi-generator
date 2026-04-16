@@ -83,7 +83,7 @@ class DetailedPlaceNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContainedWithin($values);
+            $object->setContainedWithin(...$values);
             unset($data['contained_within']);
         }
         if (\array_key_exists('geo', $data)) {

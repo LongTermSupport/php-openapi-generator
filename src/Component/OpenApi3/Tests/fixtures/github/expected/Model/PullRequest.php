@@ -299,13 +299,10 @@ class PullRequest extends \ArrayObject
     {
         return $this->labels;
     }
-    /**
-     * @param list<PullRequestLabelsItem> $labels
-     */
-    public function setLabels(array $labels): self
+    public function setLabels(PullRequestLabelsItem ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     public function getMilestone(): ?PullRequestMilestone

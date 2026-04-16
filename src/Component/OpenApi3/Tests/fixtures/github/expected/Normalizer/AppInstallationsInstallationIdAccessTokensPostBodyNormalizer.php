@@ -48,7 +48,7 @@ class AppInstallationsInstallationIdAccessTokensPostBodyNormalizer implements De
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AppInstallationsInstallationIdAccessTokensPostBodyConstraint());
         }
         if (\array_key_exists('repositories', $data)) {
@@ -58,7 +58,7 @@ class AppInstallationsInstallationIdAccessTokensPostBodyNormalizer implements De
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRepositories($values);
+            $object->setRepositories(...$values);
             unset($data['repositories']);
         }
         if (\array_key_exists('repository_ids', $data)) {
@@ -68,7 +68,7 @@ class AppInstallationsInstallationIdAccessTokensPostBodyNormalizer implements De
                     $values_1[] = TypeValidator::assertInt($value_1, 'value');
                 }
             }
-            $object->setRepositoryIds($values_1);
+            $object->setRepositoryIds(...$values_1);
             unset($data['repository_ids']);
         }
         if (\array_key_exists('permissions', $data)) {
@@ -115,7 +115,7 @@ class AppInstallationsInstallationIdAccessTokensPostBodyNormalizer implements De
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AppInstallationsInstallationIdAccessTokensPostBodyConstraint());
         }
         return $dataArray;

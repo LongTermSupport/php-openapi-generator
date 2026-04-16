@@ -48,7 +48,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\BranchRestrictionPolicyConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -75,7 +75,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setUsers($values);
+            $object->setUsers(...$values);
             unset($data['users']);
         }
         if (\array_key_exists('teams', $data)) {
@@ -86,7 +86,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
                     $values_1[] = $value_3;
                 }
             }
-            $object->setTeams($values_1);
+            $object->setTeams(...$values_1);
             unset($data['teams']);
         }
         if (\array_key_exists('apps', $data)) {
@@ -97,7 +97,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
                     $values_2[] = $value_5;
                 }
             }
-            $object->setApps($values_2);
+            $object->setApps(...$values_2);
             unset($data['apps']);
         }
         foreach ($data as $key => $value_6) {
@@ -141,7 +141,7 @@ class BranchRestrictionPolicyNormalizer implements DenormalizerInterface, Normal
                 $dataArray[$key] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\BranchRestrictionPolicyConstraint());
         }
         return $dataArray;

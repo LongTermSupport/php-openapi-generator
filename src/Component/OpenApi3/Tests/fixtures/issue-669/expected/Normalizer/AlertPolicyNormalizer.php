@@ -72,7 +72,7 @@ class AlertPolicyNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setEntities($values);
+            $object->setEntities(...$values);
             unset($data['entities']);
         }
         if (\array_key_exists('tags', $data)) {
@@ -82,7 +82,7 @@ class AlertPolicyNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setTags($values_1);
+            $object->setTags(...$values_1);
             unset($data['tags']);
         }
         if (\array_key_exists('type', $data)) {

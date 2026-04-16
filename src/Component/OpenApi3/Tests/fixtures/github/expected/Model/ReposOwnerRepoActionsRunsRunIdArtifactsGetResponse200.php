@@ -42,13 +42,10 @@ class ReposOwnerRepoActionsRunsRunIdArtifactsGetResponse200 extends \ArrayObject
     {
         return $this->artifacts;
     }
-    /**
-     * @param list<Artifact> $artifacts
-     */
-    public function setArtifacts(array $artifacts): self
+    public function setArtifacts(Artifact ...$artifacts): self
     {
         $this->initialized['artifacts'] = true;
-        $this->artifacts = $artifacts;
+        $this->artifacts = array_values($artifacts);
         return $this;
     }
 }

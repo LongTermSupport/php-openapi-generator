@@ -68,7 +68,7 @@ class BooksGetLdjsonResponse200HydraSearchNormalizer implements DenormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setHydraMapping($values);
+            $object->setHydraMapping(...$values);
             unset($data['hydra:mapping']);
         }
         foreach ($data as $key => $value_2) {

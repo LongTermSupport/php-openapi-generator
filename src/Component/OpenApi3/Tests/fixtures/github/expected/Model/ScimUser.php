@@ -77,13 +77,11 @@ class ScimUser extends \ArrayObject
     }
     /**
      * SCIM schema used.
-     *
-     * @param list<string> $schemas
      */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(string ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
     /**
@@ -155,13 +153,11 @@ class ScimUser extends \ArrayObject
     }
     /**
      * user emails
-     *
-     * @param list<ScimUserEmailsItem> $emails
      */
-    public function setEmails(array $emails): self
+    public function setEmails(ScimUserEmailsItem ...$emails): self
     {
         $this->initialized['emails'] = true;
-        $this->emails = $emails;
+        $this->emails = array_values($emails);
         return $this;
     }
     /**
@@ -217,13 +213,11 @@ class ScimUser extends \ArrayObject
     }
     /**
      * Set of operations to be performed
-     *
-     * @param list<ScimUserOperationsItem> $operations
      */
-    public function setOperations(array $operations): self
+    public function setOperations(ScimUserOperationsItem ...$operations): self
     {
         $this->initialized['operations'] = true;
-        $this->operations = $operations;
+        $this->operations = array_values($operations);
         return $this;
     }
     /**
@@ -237,13 +231,11 @@ class ScimUser extends \ArrayObject
     }
     /**
      * associated groups
-     *
-     * @param list<ScimUserGroupsItem> $groups
      */
-    public function setGroups(array $groups): self
+    public function setGroups(ScimUserGroupsItem ...$groups): self
     {
         $this->initialized['groups'] = true;
-        $this->groups = $groups;
+        $this->groups = array_values($groups);
         return $this;
     }
 }

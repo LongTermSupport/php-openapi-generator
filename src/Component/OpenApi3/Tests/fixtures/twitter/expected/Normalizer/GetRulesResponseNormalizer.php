@@ -56,7 +56,7 @@ class GetRulesResponseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setData($values);
+            $object->setData(...$values);
             unset($data['data']);
         }
         if (\array_key_exists('meta', $data)) {

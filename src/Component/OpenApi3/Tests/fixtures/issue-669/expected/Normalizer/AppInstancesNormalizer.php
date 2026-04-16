@@ -56,7 +56,7 @@ class AppInstancesNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setInstances($values);
+            $object->setInstances(...$values);
             unset($data['instances']);
         }
         foreach ($data as $key => $value_2) {

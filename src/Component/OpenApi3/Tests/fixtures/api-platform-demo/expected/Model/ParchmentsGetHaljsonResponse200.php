@@ -34,13 +34,10 @@ class ParchmentsGetHaljsonResponse200 extends \ArrayObject
     {
         return $this->embedded;
     }
-    /**
-     * @param list<ParchmentJsonhal> $embedded
-     */
-    public function setEmbedded(array $embedded): self
+    public function setEmbedded(ParchmentJsonhal ...$embedded): self
     {
         $this->initialized['embedded'] = true;
-        $this->embedded = $embedded;
+        $this->embedded = array_values($embedded);
         return $this;
     }
     public function getTotalItems(): int

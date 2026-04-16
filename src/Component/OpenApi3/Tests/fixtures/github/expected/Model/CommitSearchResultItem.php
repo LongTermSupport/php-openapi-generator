@@ -118,13 +118,10 @@ class CommitSearchResultItem extends \ArrayObject
     {
         return $this->parents;
     }
-    /**
-     * @param list<CommitSearchResultItemParentsItem> $parents
-     */
-    public function setParents(array $parents): self
+    public function setParents(CommitSearchResultItemParentsItem ...$parents): self
     {
         $this->initialized['parents'] = true;
-        $this->parents = $parents;
+        $this->parents = array_values($parents);
         return $this;
     }
     /**
@@ -170,13 +167,10 @@ class CommitSearchResultItem extends \ArrayObject
     {
         return $this->textMatches;
     }
-    /**
-     * @param list<SearchResultTextMatchesItem> $textMatches
-     */
-    public function setTextMatches(array $textMatches): self
+    public function setTextMatches(SearchResultTextMatchesItem ...$textMatches): self
     {
         $this->initialized['textMatches'] = true;
-        $this->textMatches = $textMatches;
+        $this->textMatches = array_values($textMatches);
         return $this;
     }
 }

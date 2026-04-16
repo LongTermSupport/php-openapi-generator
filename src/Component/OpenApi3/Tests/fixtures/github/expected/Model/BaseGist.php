@@ -242,13 +242,10 @@ class BaseGist extends \ArrayObject
     {
         return $this->forks;
     }
-    /**
-     * @param list<mixed> $forks
-     */
-    public function setForks(array $forks): self
+    public function setForks(mixed ...$forks): self
     {
         $this->initialized['forks'] = true;
-        $this->forks = $forks;
+        $this->forks = array_values($forks);
         return $this;
     }
     /**
@@ -258,13 +255,10 @@ class BaseGist extends \ArrayObject
     {
         return $this->history;
     }
-    /**
-     * @param list<mixed> $history
-     */
-    public function setHistory(array $history): self
+    public function setHistory(mixed ...$history): self
     {
         $this->initialized['history'] = true;
-        $this->history = $history;
+        $this->history = array_values($history);
         return $this;
     }
 }

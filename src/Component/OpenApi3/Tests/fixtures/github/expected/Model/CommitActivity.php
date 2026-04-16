@@ -33,13 +33,10 @@ class CommitActivity extends \ArrayObject
     {
         return $this->days;
     }
-    /**
-     * @param list<int> $days
-     */
-    public function setDays(array $days): self
+    public function setDays(int ...$days): self
     {
         $this->initialized['days'] = true;
-        $this->days = $days;
+        $this->days = array_values($days);
         return $this;
     }
     public function getTotal(): int

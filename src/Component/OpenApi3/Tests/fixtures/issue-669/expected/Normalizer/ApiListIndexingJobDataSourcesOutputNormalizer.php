@@ -56,7 +56,7 @@ class ApiListIndexingJobDataSourcesOutputNormalizer implements DenormalizerInter
                     $values[] = $value_1;
                 }
             }
-            $object->setIndexedDataSources($values);
+            $object->setIndexedDataSources(...$values);
             unset($data['indexed_data_sources']);
         }
         foreach ($data as $key => $value_2) {

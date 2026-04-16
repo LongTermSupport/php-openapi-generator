@@ -72,7 +72,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setJobs($values);
+            $object->setJobs(...$values);
             unset($data['jobs']);
         }
         if (\array_key_exists('functions', $data)) {
@@ -83,7 +83,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
                     $values_1[] = $value_3;
                 }
             }
-            $object->setFunctions($values_1);
+            $object->setFunctions(...$values_1);
             unset($data['functions']);
         }
         if (\array_key_exists('phase', $data)) {
@@ -107,7 +107,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
                     $values_2[] = $value_6;
                 }
             }
-            $object->setServices($values_2);
+            $object->setServices(...$values_2);
             unset($data['services']);
         }
         if (\array_key_exists('spec', $data)) {
@@ -123,7 +123,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
                     $values_3[] = $value_9;
                 }
             }
-            $object->setStaticSites($values_3);
+            $object->setStaticSites(...$values_3);
             unset($data['static_sites']);
         }
         if (\array_key_exists('tier_slug', $data)) {
@@ -142,7 +142,7 @@ class AppPendingDeploymentNormalizer implements DenormalizerInterface, Normalize
                     $values_4[] = $value_11;
                 }
             }
-            $object->setWorkers($values_4);
+            $object->setWorkers(...$values_4);
             unset($data['workers']);
         }
         foreach ($data as $key => $value_12) {

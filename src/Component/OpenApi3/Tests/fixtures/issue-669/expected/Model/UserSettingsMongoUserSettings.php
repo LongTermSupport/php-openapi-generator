@@ -41,13 +41,11 @@ class UserSettingsMongoUserSettings extends \ArrayObject
     }
     /**
      * A list of databases to which the user should have access. When the database is set to `admin`, the user will have access to all databases based on the user's role i.e. a user with the role `readOnly` assigned to the `admin` database will have read access to all databases.
-     *
-     * @param list<string> $databases
      */
-    public function setDatabases(array $databases): self
+    public function setDatabases(string ...$databases): self
     {
         $this->initialized['databases'] = true;
-        $this->databases = $databases;
+        $this->databases = array_values($databases);
         return $this;
     }
     /**

@@ -4316,12 +4316,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LongTermSupport/php-qa-ci.git",
-                "reference": "d6562e1b512bc54cd687c6d12635d35411c32a6d"
+                "reference": "c35aba7b81ef6877e3861721d69f3a3c4d3ea306"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LongTermSupport/php-qa-ci/zipball/d6562e1b512bc54cd687c6d12635d35411c32a6d",
-                "reference": "d6562e1b512bc54cd687c6d12635d35411c32a6d",
+                "url": "https://api.github.com/repos/LongTermSupport/php-qa-ci/zipball/c35aba7b81ef6877e3861721d69f3a3c4d3ea306",
+                "reference": "c35aba7b81ef6877e3861721d69f3a3c4d3ea306",
                 "shasum": ""
             },
             "require": {
@@ -4398,7 +4398,7 @@
                 "issues": "https://github.com/LongTermSupport/php-qa-ci/issues",
                 "source": "https://github.com/LongTermSupport/php-qa-ci/tree/php8.4"
             },
-            "time": "2026-04-02T15:50:42+00:00"
+            "time": "2026-04-16T10:20:00+00:00"
         },
         {
             "name": "lts/strict-openapi-validator",

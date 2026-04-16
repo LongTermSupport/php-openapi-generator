@@ -31,13 +31,10 @@ class ResponseDatabaseClusters extends \ArrayObject
     {
         return $this->databases;
     }
-    /**
-     * @param list<DatabaseClusterRead> $databases
-     */
-    public function setDatabases(array $databases): self
+    public function setDatabases(DatabaseClusterRead ...$databases): self
     {
         $this->initialized['databases'] = true;
-        $this->databases = $databases;
+        $this->databases = array_values($databases);
         return $this;
     }
 }

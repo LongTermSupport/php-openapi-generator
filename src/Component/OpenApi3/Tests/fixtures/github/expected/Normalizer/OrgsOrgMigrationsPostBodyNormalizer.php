@@ -48,7 +48,7 @@ class OrgsOrgMigrationsPostBodyNormalizer implements DenormalizerInterface, Norm
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgMigrationsPostBodyConstraint());
         }
         if (\array_key_exists('repositories', $data)) {
@@ -58,7 +58,7 @@ class OrgsOrgMigrationsPostBodyNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRepositories($values);
+            $object->setRepositories(...$values);
             unset($data['repositories']);
         }
         if (\array_key_exists('lock_repositories', $data)) {
@@ -76,7 +76,7 @@ class OrgsOrgMigrationsPostBodyNormalizer implements DenormalizerInterface, Norm
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setExclude($values_1);
+            $object->setExclude(...$values_1);
             unset($data['exclude']);
         }
         foreach ($data as $key => $value_2) {
@@ -119,7 +119,7 @@ class OrgsOrgMigrationsPostBodyNormalizer implements DenormalizerInterface, Norm
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgMigrationsPostBodyConstraint());
         }
         return $dataArray;

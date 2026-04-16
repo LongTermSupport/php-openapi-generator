@@ -33,13 +33,10 @@ class ResponseAllDropletBackups extends \ArrayObject
     {
         return $this->backups;
     }
-    /**
-     * @param list<DropletSnapshot> $backups
-     */
-    public function setBackups(array $backups): self
+    public function setBackups(DropletSnapshot ...$backups): self
     {
         $this->initialized['backups'] = true;
-        $this->backups = $backups;
+        $this->backups = array_values($backups);
         return $this;
     }
     public function getLinks(): PageLinks

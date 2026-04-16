@@ -32,12 +32,12 @@ class ResponseOpensearchIndexes extends \ArrayObject
         return $this->indexes;
     }
     /**
-     * @param list<array<string, mixed>> $indexes
+     * @param array<string, mixed> ...$indexes
      */
-    public function setIndexes(array $indexes): self
+    public function setIndexes(array ...$indexes): self
     {
         $this->initialized['indexes'] = true;
-        $this->indexes = $indexes;
+        $this->indexes = array_values($indexes);
         return $this;
     }
 }

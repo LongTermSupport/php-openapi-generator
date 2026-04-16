@@ -55,7 +55,7 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBodyNormalizer implements 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setPortfolios($values);
+            $object->setPortfolios(...$values);
             unset($data['portfolios']);
         }
         if (\array_key_exists('companies', $data)) {
@@ -66,7 +66,7 @@ class MonitoringPortfoliosPortfolioIdCompaniesCopyPostBodyNormalizer implements 
                     $values_1[] = $value_2;
                 }
             }
-            $object->setCompanies($values_1);
+            $object->setCompanies(...$values_1);
             unset($data['companies']);
         }
         foreach ($data as $key => $value_3) {

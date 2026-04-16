@@ -56,7 +56,7 @@ class ApiResourceUsageNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setMeasurements($values);
+            $object->setMeasurements(...$values);
             unset($data['measurements']);
         }
         if (\array_key_exists('resource_uuid', $data)) {

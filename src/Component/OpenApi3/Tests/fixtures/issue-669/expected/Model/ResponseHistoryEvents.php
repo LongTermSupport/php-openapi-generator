@@ -33,13 +33,10 @@ class ResponseHistoryEvents extends \ArrayObject
     {
         return $this->history;
     }
-    /**
-     * @param list<History> $history
-     */
-    public function setHistory(array $history): self
+    public function setHistory(History ...$history): self
     {
         $this->initialized['history'] = true;
-        $this->history = $history;
+        $this->history = array_values($history);
         return $this;
     }
     public function getLinks(): PageLinks

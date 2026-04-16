@@ -105,13 +105,11 @@ class OrgsOrgTeamsPostBody extends \ArrayObject
     }
     /**
      * List GitHub IDs for organization members who will become team maintainers.
-     *
-     * @param list<string> $maintainers
      */
-    public function setMaintainers(array $maintainers): self
+    public function setMaintainers(string ...$maintainers): self
     {
         $this->initialized['maintainers'] = true;
-        $this->maintainers = $maintainers;
+        $this->maintainers = array_values($maintainers);
         return $this;
     }
     /**
@@ -125,13 +123,11 @@ class OrgsOrgTeamsPostBody extends \ArrayObject
     }
     /**
      * The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
-     *
-     * @param list<string> $repoNames
      */
-    public function setRepoNames(array $repoNames): self
+    public function setRepoNames(string ...$repoNames): self
     {
         $this->initialized['repoNames'] = true;
-        $this->repoNames = $repoNames;
+        $this->repoNames = array_values($repoNames);
         return $this;
     }
     /**

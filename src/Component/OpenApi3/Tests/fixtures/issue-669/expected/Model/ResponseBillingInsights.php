@@ -49,13 +49,11 @@ class ResponseBillingInsights extends \ArrayObject
     }
     /**
      * Array of billing data points, which are day-over-day changes in billing resource usage based on nightly invoice item estimates, for the requested period
-     *
-     * @param list<BillingDataPoint> $dataPoints
      */
-    public function setDataPoints(array $dataPoints): self
+    public function setDataPoints(BillingDataPoint ...$dataPoints): self
     {
         $this->initialized['dataPoints'] = true;
-        $this->dataPoints = $dataPoints;
+        $this->dataPoints = array_values($dataPoints);
         return $this;
     }
     /**

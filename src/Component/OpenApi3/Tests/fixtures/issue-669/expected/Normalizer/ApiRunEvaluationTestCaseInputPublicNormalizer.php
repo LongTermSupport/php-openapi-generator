@@ -55,7 +55,7 @@ class ApiRunEvaluationTestCaseInputPublicNormalizer implements DenormalizerInter
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAgentDeploymentNames($values);
+            $object->setAgentDeploymentNames(...$values);
             unset($data['agent_deployment_names']);
         }
         if (\array_key_exists('agent_uuids', $data)) {
@@ -65,7 +65,7 @@ class ApiRunEvaluationTestCaseInputPublicNormalizer implements DenormalizerInter
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setAgentUuids($values_1);
+            $object->setAgentUuids(...$values_1);
             unset($data['agent_uuids']);
         }
         if (\array_key_exists('run_name', $data)) {

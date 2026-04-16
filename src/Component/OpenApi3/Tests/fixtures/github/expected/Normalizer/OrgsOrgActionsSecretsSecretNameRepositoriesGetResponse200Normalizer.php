@@ -48,7 +48,7 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200Normalizer implem
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200Constraint());
         }
         if (\array_key_exists('total_count', $data)) {
@@ -63,7 +63,7 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200Normalizer implem
                     $values[] = $value_1;
                 }
             }
-            $object->setRepositories($values);
+            $object->setRepositories(...$values);
             unset($data['repositories']);
         }
         foreach ($data as $key => $value_2) {
@@ -98,7 +98,7 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200Normalizer implem
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgActionsSecretsSecretNameRepositoriesGetResponse200Constraint());
         }
         return $dataArray;

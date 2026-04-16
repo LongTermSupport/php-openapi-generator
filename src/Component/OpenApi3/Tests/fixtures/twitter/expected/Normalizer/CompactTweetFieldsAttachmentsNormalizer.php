@@ -55,7 +55,7 @@ class CompactTweetFieldsAttachmentsNormalizer implements DenormalizerInterface, 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setMediaKeys($values);
+            $object->setMediaKeys(...$values);
             unset($data['media_keys']);
         }
         if (\array_key_exists('poll_ids', $data)) {
@@ -65,7 +65,7 @@ class CompactTweetFieldsAttachmentsNormalizer implements DenormalizerInterface, 
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setPollIds($values_1);
+            $object->setPollIds(...$values_1);
             unset($data['poll_ids']);
         }
         foreach ($data as $key => $value_2) {

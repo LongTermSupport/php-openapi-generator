@@ -56,7 +56,7 @@ class ResponseDatabaseClustersNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setDatabases($values);
+            $object->setDatabases(...$values);
             unset($data['databases']);
         }
         foreach ($data as $key => $value_2) {

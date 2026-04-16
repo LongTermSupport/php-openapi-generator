@@ -37,13 +37,11 @@ class V2LoadBalancersLbIdDropletsPostBody extends \ArrayObject
     }
     /**
      * An array containing the IDs of the Droplets assigned to the load balancer.
-     *
-     * @param list<int> $dropletIds
      */
-    public function setDropletIds(array $dropletIds): self
+    public function setDropletIds(int ...$dropletIds): self
     {
         $this->initialized['dropletIds'] = true;
-        $this->dropletIds = $dropletIds;
+        $this->dropletIds = array_values($dropletIds);
         return $this;
     }
 }

@@ -71,13 +71,11 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The evaluated trace spans.
-     *
-     * @param list<ApiEvaluationTraceSpan> $evaluationTraceSpans
      */
-    public function setEvaluationTraceSpans(array $evaluationTraceSpans): self
+    public function setEvaluationTraceSpans(ApiEvaluationTraceSpan ...$evaluationTraceSpans): self
     {
         $this->initialized['evaluationTraceSpans'] = true;
-        $this->evaluationTraceSpans = $evaluationTraceSpans;
+        $this->evaluationTraceSpans = array_values($evaluationTraceSpans);
         return $this;
     }
     /**
@@ -159,13 +157,11 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The list of prompt chunks.
-     *
-     * @param list<ApiPromptChunk> $promptChunks
      */
-    public function setPromptChunks(array $promptChunks): self
+    public function setPromptChunks(ApiPromptChunk ...$promptChunks): self
     {
         $this->initialized['promptChunks'] = true;
-        $this->promptChunks = $promptChunks;
+        $this->promptChunks = array_values($promptChunks);
         return $this;
     }
     /**
@@ -195,13 +191,11 @@ class ApiPrompt extends \ArrayObject
     }
     /**
      * The metric results for the prompt.
-     *
-     * @param list<ApiEvaluationMetricResult> $promptLevelMetricResults
      */
-    public function setPromptLevelMetricResults(array $promptLevelMetricResults): self
+    public function setPromptLevelMetricResults(ApiEvaluationMetricResult ...$promptLevelMetricResults): self
     {
         $this->initialized['promptLevelMetricResults'] = true;
-        $this->promptLevelMetricResults = $promptLevelMetricResults;
+        $this->promptLevelMetricResults = array_values($promptLevelMetricResults);
         return $this;
     }
     /**

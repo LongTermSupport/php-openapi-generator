@@ -122,7 +122,7 @@ class ApiModelNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setUsecases($values_1);
+            $object->setUsecases(...$values_1);
             unset($data['usecases']);
         }
         if (\array_key_exists('uuid', $data)) {

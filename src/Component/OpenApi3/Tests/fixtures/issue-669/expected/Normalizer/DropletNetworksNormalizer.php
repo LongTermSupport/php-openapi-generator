@@ -56,7 +56,7 @@ class DropletNetworksNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setV4($values);
+            $object->setV4(...$values);
             unset($data['v4']);
         }
         if (\array_key_exists('v6', $data)) {
@@ -67,7 +67,7 @@ class DropletNetworksNormalizer implements DenormalizerInterface, NormalizerInte
                     $values_1[] = $value_3;
                 }
             }
-            $object->setV6($values_1);
+            $object->setV6(...$values_1);
             unset($data['v6']);
         }
         foreach ($data as $key => $value_4) {

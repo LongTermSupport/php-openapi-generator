@@ -48,7 +48,7 @@ class GpgKeyNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\GpgKeyConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -75,7 +75,7 @@ class GpgKeyNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $values[] = $value_1;
                 }
             }
-            $object->setEmails($values);
+            $object->setEmails(...$values);
             unset($data['emails']);
         }
         if (\array_key_exists('subkeys', $data)) {
@@ -86,7 +86,7 @@ class GpgKeyNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $values_1[] = $value_3;
                 }
             }
-            $object->setSubkeys($values_1);
+            $object->setSubkeys(...$values_1);
             unset($data['subkeys']);
         }
         if (\array_key_exists('can_sign', $data)) {
@@ -178,7 +178,7 @@ class GpgKeyNormalizer implements DenormalizerInterface, NormalizerInterface, De
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\GpgKeyConstraint());
         }
         return $dataArray;

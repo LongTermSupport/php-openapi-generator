@@ -56,7 +56,7 @@ class NfsListResponseNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setShares($values);
+            $object->setShares(...$values);
             unset($data['shares']);
         }
         foreach ($data as $key => $value_2) {

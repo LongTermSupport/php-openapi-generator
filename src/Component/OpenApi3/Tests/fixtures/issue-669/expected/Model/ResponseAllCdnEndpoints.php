@@ -33,13 +33,10 @@ class ResponseAllCdnEndpoints extends \ArrayObject
     {
         return $this->endpoints;
     }
-    /**
-     * @param list<CdnEndpoint> $endpoints
-     */
-    public function setEndpoints(array $endpoints): self
+    public function setEndpoints(CdnEndpoint ...$endpoints): self
     {
         $this->initialized['endpoints'] = true;
-        $this->endpoints = $endpoints;
+        $this->endpoints = array_values($endpoints);
         return $this;
     }
     public function getLinks(): PageLinks

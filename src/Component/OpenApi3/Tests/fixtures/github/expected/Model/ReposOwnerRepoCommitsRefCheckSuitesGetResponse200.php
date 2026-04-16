@@ -42,13 +42,10 @@ class ReposOwnerRepoCommitsRefCheckSuitesGetResponse200 extends \ArrayObject
     {
         return $this->checkSuites;
     }
-    /**
-     * @param list<CheckSuite> $checkSuites
-     */
-    public function setCheckSuites(array $checkSuites): self
+    public function setCheckSuites(CheckSuite ...$checkSuites): self
     {
         $this->initialized['checkSuites'] = true;
-        $this->checkSuites = $checkSuites;
+        $this->checkSuites = array_values($checkSuites);
         return $this;
     }
 }

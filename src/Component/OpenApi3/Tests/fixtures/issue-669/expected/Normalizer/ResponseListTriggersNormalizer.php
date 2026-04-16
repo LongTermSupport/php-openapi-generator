@@ -56,7 +56,7 @@ class ResponseListTriggersNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setTriggers($values);
+            $object->setTriggers(...$values);
             unset($data['triggers']);
         }
         foreach ($data as $key => $value_2) {

@@ -33,13 +33,10 @@ class ResponseAllKernels extends \ArrayObject
     {
         return $this->kernels;
     }
-    /**
-     * @param list<Kernel> $kernels
-     */
-    public function setKernels(array $kernels): self
+    public function setKernels(Kernel ...$kernels): self
     {
         $this->initialized['kernels'] = true;
-        $this->kernels = $kernels;
+        $this->kernels = array_values($kernels);
         return $this;
     }
     public function getLinks(): PageLinks

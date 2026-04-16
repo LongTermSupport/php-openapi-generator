@@ -145,13 +145,11 @@ class Certificate extends \ArrayObject
     }
     /**
      * An array of fully qualified domain names (FQDNs) for which the certificate was issued.
-     *
-     * @param list<string> $dnsNames
      */
-    public function setDnsNames(array $dnsNames): self
+    public function setDnsNames(string ...$dnsNames): self
     {
         $this->initialized['dnsNames'] = true;
-        $this->dnsNames = $dnsNames;
+        $this->dnsNames = array_values($dnsNames);
         return $this;
     }
     /**

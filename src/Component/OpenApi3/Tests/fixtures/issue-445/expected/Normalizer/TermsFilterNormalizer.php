@@ -63,7 +63,7 @@ class TermsFilterNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTerms($values);
+            $object->setTerms(...$values);
             unset($data['terms']);
         }
         return $object;

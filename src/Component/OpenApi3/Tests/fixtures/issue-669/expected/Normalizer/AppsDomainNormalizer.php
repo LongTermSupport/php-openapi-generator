@@ -74,7 +74,7 @@ class AppsDomainNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = $value_3;
                 }
             }
-            $object->setValidations($values);
+            $object->setValidations(...$values);
             unset($data['validations']);
         }
         if (\array_key_exists('rotate_validation_records', $data)) {

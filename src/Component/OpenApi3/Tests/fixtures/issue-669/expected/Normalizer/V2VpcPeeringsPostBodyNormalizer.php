@@ -59,7 +59,7 @@ class V2VpcPeeringsPostBodyNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setVpcIds($values);
+            $object->setVpcIds(...$values);
             unset($data['vpc_ids']);
         }
         foreach ($data as $key => $value_1) {

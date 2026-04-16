@@ -57,13 +57,11 @@ class UserKubernetesClusterUser extends \ArrayObject
     }
     /**
      * A list of in-cluster groups that the user belongs to.
-     *
-     * @param list<string> $groups
      */
-    public function setGroups(array $groups): self
+    public function setGroups(string ...$groups): self
     {
         $this->initialized['groups'] = true;
-        $this->groups = $groups;
+        $this->groups = array_values($groups);
         return $this;
     }
 }

@@ -48,7 +48,7 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputNormalizer implements Deno
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputConstraint());
         }
         if (\array_key_exists('title', $data)) {
@@ -71,7 +71,7 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputNormalizer implements Deno
                     $values[] = $value_1;
                 }
             }
-            $object->setAnnotations($values);
+            $object->setAnnotations(...$values);
             unset($data['annotations']);
         }
         if (\array_key_exists('images', $data)) {
@@ -82,7 +82,7 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputNormalizer implements Deno
                     $values_1[] = $value_3;
                 }
             }
-            $object->setImages($values_1);
+            $object->setImages(...$values_1);
             unset($data['images']);
         }
         foreach ($data as $key => $value_4) {
@@ -128,7 +128,7 @@ class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputNormalizer implements Deno
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputConstraint());
         }
         return $dataArray;

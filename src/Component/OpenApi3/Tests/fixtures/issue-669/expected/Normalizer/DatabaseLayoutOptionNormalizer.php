@@ -59,7 +59,7 @@ class DatabaseLayoutOptionNormalizer implements DenormalizerInterface, Normalize
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setSizes($values);
+            $object->setSizes(...$values);
             unset($data['sizes']);
         }
         foreach ($data as $key => $value_1) {

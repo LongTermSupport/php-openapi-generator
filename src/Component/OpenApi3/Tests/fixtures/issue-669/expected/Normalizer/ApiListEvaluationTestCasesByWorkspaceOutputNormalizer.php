@@ -56,7 +56,7 @@ class ApiListEvaluationTestCasesByWorkspaceOutputNormalizer implements Denormali
                     $values[] = $value_1;
                 }
             }
-            $object->setEvaluationTestCases($values);
+            $object->setEvaluationTestCases(...$values);
             unset($data['evaluation_test_cases']);
         }
         foreach ($data as $key => $value_2) {

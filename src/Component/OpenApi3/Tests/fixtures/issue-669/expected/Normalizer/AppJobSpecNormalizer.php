@@ -101,7 +101,7 @@ class AppJobSpecNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = $value_6;
                 }
             }
-            $object->setEnvs($values);
+            $object->setEnvs(...$values);
             unset($data['envs']);
         }
         if (\array_key_exists('environment_slug', $data)) {
@@ -116,7 +116,7 @@ class AppJobSpecNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_1[] = $value_8;
                 }
             }
-            $object->setLogDestinations($values_1);
+            $object->setLogDestinations(...$values_1);
             unset($data['log_destinations']);
         }
         if (\array_key_exists('instance_count', $data)) {

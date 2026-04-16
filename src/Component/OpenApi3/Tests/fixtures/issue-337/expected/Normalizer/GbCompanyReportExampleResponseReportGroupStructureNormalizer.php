@@ -56,7 +56,7 @@ class GbCompanyReportExampleResponseReportGroupStructureNormalizer implements De
                     $values[] = $value_1;
                 }
             }
-            $object->setSubsidiaryCompanies($values);
+            $object->setSubsidiaryCompanies(...$values);
             unset($data['subsidiaryCompanies']);
         }
         foreach ($data as $key => $value_2) {

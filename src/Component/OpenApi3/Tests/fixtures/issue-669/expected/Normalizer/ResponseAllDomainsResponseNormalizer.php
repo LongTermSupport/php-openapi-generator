@@ -56,7 +56,7 @@ class ResponseAllDomainsResponseNormalizer implements DenormalizerInterface, Nor
                     $values[] = $value_1;
                 }
             }
-            $object->setDomains($values);
+            $object->setDomains(...$values);
             unset($data['domains']);
         }
         if (\array_key_exists('links', $data)) {

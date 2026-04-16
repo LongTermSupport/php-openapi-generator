@@ -69,7 +69,7 @@ class AppNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
                     $values[] = $value_2;
                 }
             }
-            $object->setDomains($values);
+            $object->setDomains(...$values);
             unset($data['domains']);
         }
         if (\array_key_exists('id', $data)) {
@@ -141,7 +141,7 @@ class AppNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
                     $values_1[] = $value_9;
                 }
             }
-            $object->setDedicatedIps($values_1);
+            $object->setDedicatedIps(...$values_1);
             unset($data['dedicated_ips']);
         }
         if (\array_key_exists('vpc', $data)) {

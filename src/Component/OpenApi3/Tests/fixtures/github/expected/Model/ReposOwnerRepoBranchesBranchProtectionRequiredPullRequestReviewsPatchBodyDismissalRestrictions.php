@@ -43,13 +43,11 @@ class ReposOwnerRepoBranchesBranchProtectionRequiredPullRequestReviewsPatchBodyD
     }
     /**
      * The list of user `login`s with dismissal access
-     *
-     * @param list<string> $users
      */
-    public function setUsers(array $users): self
+    public function setUsers(string ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
     /**
@@ -63,13 +61,11 @@ class ReposOwnerRepoBranchesBranchProtectionRequiredPullRequestReviewsPatchBodyD
     }
     /**
      * The list of team `slug`s with dismissal access
-     *
-     * @param list<string> $teams
      */
-    public function setTeams(array $teams): self
+    public function setTeams(string ...$teams): self
     {
         $this->initialized['teams'] = true;
-        $this->teams = $teams;
+        $this->teams = array_values($teams);
         return $this;
     }
 }

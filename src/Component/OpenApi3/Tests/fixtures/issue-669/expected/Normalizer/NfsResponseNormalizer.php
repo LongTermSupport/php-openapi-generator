@@ -79,7 +79,7 @@ class NfsResponseNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setVpcIds($values);
+            $object->setVpcIds(...$values);
             unset($data['vpc_ids']);
         }
         if (\array_key_exists('mount_path', $data)) {

@@ -82,13 +82,10 @@ class EventPayload extends \ArrayObject
     {
         return $this->pages;
     }
-    /**
-     * @param list<EventPayloadPagesItem> $pages
-     */
-    public function setPages(array $pages): self
+    public function setPages(EventPayloadPagesItem ...$pages): self
     {
         $this->initialized['pages'] = true;
-        $this->pages = $pages;
+        $this->pages = array_values($pages);
         return $this;
     }
 }

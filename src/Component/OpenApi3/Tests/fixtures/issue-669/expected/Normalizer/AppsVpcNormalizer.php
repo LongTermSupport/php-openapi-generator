@@ -60,7 +60,7 @@ class AppsVpcNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = $value_1;
                 }
             }
-            $object->setEgressIps($values);
+            $object->setEgressIps(...$values);
             unset($data['egress_ips']);
         }
         foreach ($data as $key => $value_2) {

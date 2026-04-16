@@ -60,7 +60,7 @@ class GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassific
                     $values[] = $value_1;
                 }
             }
-            $object->setActivities($values);
+            $object->setActivities(...$values);
             unset($data['activities']);
         }
         foreach ($data as $key => $value_2) {

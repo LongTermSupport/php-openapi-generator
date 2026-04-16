@@ -42,13 +42,10 @@ class GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassific
     {
         return $this->activities;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassificationsItemActivitiesItem> $activities
-     */
-    public function setActivities(array $activities): self
+    public function setActivities(GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassificationsItemActivitiesItem ...$activities): self
     {
         $this->initialized['activities'] = true;
-        $this->activities = $activities;
+        $this->activities = array_values($activities);
         return $this;
     }
 }

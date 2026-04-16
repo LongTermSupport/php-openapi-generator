@@ -55,7 +55,7 @@ class ApiCreateScheduledIndexingInputPublicNormalizer implements DenormalizerInt
                     $values[] = TypeValidator::assertInt($value, 'value');
                 }
             }
-            $object->setDays($values);
+            $object->setDays(...$values);
             unset($data['days']);
         }
         if (\array_key_exists('knowledge_base_uuid', $data)) {

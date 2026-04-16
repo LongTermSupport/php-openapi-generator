@@ -56,7 +56,7 @@ class ResponseInvoicesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setInvoices($values);
+            $object->setInvoices(...$values);
             unset($data['invoices']);
         }
         if (\array_key_exists('invoice_preview', $data)) {

@@ -34,13 +34,11 @@ class ContentPermissionsUpdateManyRequest
     }
     /**
      * Content permissions update items
-     *
-     * @param list<ContentPermissionsUpdateItem> $items
      */
-    public function setItems(array $items): self
+    public function setItems(ContentPermissionsUpdateItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

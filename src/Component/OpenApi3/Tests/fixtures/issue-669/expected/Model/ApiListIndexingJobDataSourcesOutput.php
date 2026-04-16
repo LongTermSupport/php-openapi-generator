@@ -31,13 +31,10 @@ class ApiListIndexingJobDataSourcesOutput extends \ArrayObject
     {
         return $this->indexedDataSources;
     }
-    /**
-     * @param list<ApiIndexedDataSource> $indexedDataSources
-     */
-    public function setIndexedDataSources(array $indexedDataSources): self
+    public function setIndexedDataSources(ApiIndexedDataSource ...$indexedDataSources): self
     {
         $this->initialized['indexedDataSources'] = true;
-        $this->indexedDataSources = $indexedDataSources;
+        $this->indexedDataSources = array_values($indexedDataSources);
         return $this;
     }
 }

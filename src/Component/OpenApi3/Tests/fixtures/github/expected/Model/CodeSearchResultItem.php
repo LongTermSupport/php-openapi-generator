@@ -165,13 +165,10 @@ class CodeSearchResultItem extends \ArrayObject
     {
         return $this->lineNumbers;
     }
-    /**
-     * @param list<string> $lineNumbers
-     */
-    public function setLineNumbers(array $lineNumbers): self
+    public function setLineNumbers(string ...$lineNumbers): self
     {
         $this->initialized['lineNumbers'] = true;
-        $this->lineNumbers = $lineNumbers;
+        $this->lineNumbers = array_values($lineNumbers);
         return $this;
     }
     /**
@@ -181,13 +178,10 @@ class CodeSearchResultItem extends \ArrayObject
     {
         return $this->textMatches;
     }
-    /**
-     * @param list<SearchResultTextMatchesItem> $textMatches
-     */
-    public function setTextMatches(array $textMatches): self
+    public function setTextMatches(SearchResultTextMatchesItem ...$textMatches): self
     {
         $this->initialized['textMatches'] = true;
-        $this->textMatches = $textMatches;
+        $this->textMatches = array_values($textMatches);
         return $this;
     }
 }

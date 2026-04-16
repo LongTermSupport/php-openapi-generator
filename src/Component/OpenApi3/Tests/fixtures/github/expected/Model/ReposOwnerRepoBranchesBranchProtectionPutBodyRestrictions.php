@@ -49,13 +49,11 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions extends \ArrayOb
     }
     /**
      * The list of user `login`s with push access
-     *
-     * @param list<string> $users
      */
-    public function setUsers(array $users): self
+    public function setUsers(string ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
     /**
@@ -69,13 +67,11 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions extends \ArrayOb
     }
     /**
      * The list of team `slug`s with push access
-     *
-     * @param list<string> $teams
      */
-    public function setTeams(array $teams): self
+    public function setTeams(string ...$teams): self
     {
         $this->initialized['teams'] = true;
-        $this->teams = $teams;
+        $this->teams = array_values($teams);
         return $this;
     }
     /**
@@ -89,13 +85,11 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRestrictions extends \ArrayOb
     }
     /**
      * The list of app `slug`s with push access
-     *
-     * @param list<string> $apps
      */
-    public function setApps(array $apps): self
+    public function setApps(string ...$apps): self
     {
         $this->initialized['apps'] = true;
-        $this->apps = $apps;
+        $this->apps = array_values($apps);
         return $this;
     }
 }

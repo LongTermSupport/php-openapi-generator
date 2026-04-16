@@ -40,13 +40,11 @@ class XmpMappingTargets
     }
     /**
      * Fields in XMP/Exif.
-     *
-     * @param list<XmpField> $xmpFields
      */
-    public function setXmpFields(array $xmpFields): self
+    public function setXmpFields(XmpField ...$xmpFields): self
     {
         $this->initialized['xmpFields'] = true;
-        $this->xmpFields = $xmpFields;
+        $this->xmpFields = array_values($xmpFields);
         return $this;
     }
     /**
@@ -60,13 +58,11 @@ class XmpMappingTargets
     }
     /**
      * Fields in metadata.
-     *
-     * @param list<MetadataField> $metadataFields
      */
-    public function setMetadataFields(array $metadataFields): self
+    public function setMetadataFields(MetadataField ...$metadataFields): self
     {
         $this->initialized['metadataFields'] = true;
-        $this->metadataFields = $metadataFields;
+        $this->metadataFields = array_values($metadataFields);
         return $this;
     }
 }

@@ -37,13 +37,11 @@ class ReposOwnerRepoIssuesIssueNumberLabelsPutBody extends \ArrayObject
     }
     /**
      * The names of the labels to add to the issue. You can pass an empty array to remove all labels. **Note:** Alternatively, you can pass a single label as a `string` or an `array` of labels directly, but GitHub recommends passing an object with the `labels` key.
-     *
-     * @param list<string> $labels
      */
-    public function setLabels(array $labels): self
+    public function setLabels(string ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
 }

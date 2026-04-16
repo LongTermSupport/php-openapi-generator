@@ -35,13 +35,10 @@ class DropletNetworks extends \ArrayObject
     {
         return $this->v4;
     }
-    /**
-     * @param list<NetworkV4> $v4
-     */
-    public function setV4(array $v4): self
+    public function setV4(NetworkV4 ...$v4): self
     {
         $this->initialized['v4'] = true;
-        $this->v4 = $v4;
+        $this->v4 = array_values($v4);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class DropletNetworks extends \ArrayObject
     {
         return $this->v6;
     }
-    /**
-     * @param list<NetworkV6> $v6
-     */
-    public function setV6(array $v6): self
+    public function setV6(NetworkV6 ...$v6): self
     {
         $this->initialized['v6'] = true;
-        $this->v6 = $v6;
+        $this->v6 = array_values($v6);
         return $this;
     }
 }

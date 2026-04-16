@@ -80,7 +80,7 @@ class CompactTweetNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setReferencedTweets($values);
+            $object->setReferencedTweets(...$values);
             unset($data['referenced_tweets']);
         }
         if (\array_key_exists('attachments', $data)) {

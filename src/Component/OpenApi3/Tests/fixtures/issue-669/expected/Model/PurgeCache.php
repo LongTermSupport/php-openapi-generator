@@ -37,13 +37,11 @@ class PurgeCache extends \ArrayObject
     }
     /**
      * An array of strings containing the path to the content to be purged from the CDN cache.
-     *
-     * @param list<string> $files
      */
-    public function setFiles(array $files): self
+    public function setFiles(string ...$files): self
     {
         $this->initialized['files'] = true;
-        $this->files = $files;
+        $this->files = array_values($files);
         return $this;
     }
 }

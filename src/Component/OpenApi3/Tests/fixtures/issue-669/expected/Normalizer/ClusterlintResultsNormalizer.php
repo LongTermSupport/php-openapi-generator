@@ -68,7 +68,7 @@ class ClusterlintResultsNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setDiagnostics($values);
+            $object->setDiagnostics(...$values);
             unset($data['diagnostics']);
         }
         foreach ($data as $key => $value_2) {

@@ -56,7 +56,7 @@ class ResponseAssociatedResourcesListNormalizer implements DenormalizerInterface
                     $values[] = $value_1;
                 }
             }
-            $object->setReservedIps($values);
+            $object->setReservedIps(...$values);
             unset($data['reserved_ips']);
         }
         if (\array_key_exists('floating_ips', $data)) {
@@ -67,7 +67,7 @@ class ResponseAssociatedResourcesListNormalizer implements DenormalizerInterface
                     $values_1[] = $value_3;
                 }
             }
-            $object->setFloatingIps($values_1);
+            $object->setFloatingIps(...$values_1);
             unset($data['floating_ips']);
         }
         if (\array_key_exists('snapshots', $data)) {
@@ -78,7 +78,7 @@ class ResponseAssociatedResourcesListNormalizer implements DenormalizerInterface
                     $values_2[] = $value_5;
                 }
             }
-            $object->setSnapshots($values_2);
+            $object->setSnapshots(...$values_2);
             unset($data['snapshots']);
         }
         if (\array_key_exists('volumes', $data)) {
@@ -89,7 +89,7 @@ class ResponseAssociatedResourcesListNormalizer implements DenormalizerInterface
                     $values_3[] = $value_7;
                 }
             }
-            $object->setVolumes($values_3);
+            $object->setVolumes(...$values_3);
             unset($data['volumes']);
         }
         if (\array_key_exists('volume_snapshots', $data)) {
@@ -100,7 +100,7 @@ class ResponseAssociatedResourcesListNormalizer implements DenormalizerInterface
                     $values_4[] = $value_9;
                 }
             }
-            $object->setVolumeSnapshots($values_4);
+            $object->setVolumeSnapshots(...$values_4);
             unset($data['volume_snapshots']);
         }
         foreach ($data as $key => $value_10) {

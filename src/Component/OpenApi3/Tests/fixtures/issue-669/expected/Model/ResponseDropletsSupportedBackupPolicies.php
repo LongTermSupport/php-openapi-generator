@@ -31,13 +31,10 @@ class ResponseDropletsSupportedBackupPolicies extends \ArrayObject
     {
         return $this->supportedPolicies;
     }
-    /**
-     * @param list<SupportedDropletBackupPolicy> $supportedPolicies
-     */
-    public function setSupportedPolicies(array $supportedPolicies): self
+    public function setSupportedPolicies(SupportedDropletBackupPolicy ...$supportedPolicies): self
     {
         $this->initialized['supportedPolicies'] = true;
-        $this->supportedPolicies = $supportedPolicies;
+        $this->supportedPolicies = array_values($supportedPolicies);
         return $this;
     }
 }

@@ -77,7 +77,7 @@ class CustomerInfoNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setLanguages($values);
+            $object->setLanguages(...$values);
         }
         if (\array_key_exists('outputFormats', $data)) {
             $values_1 = [];
@@ -87,7 +87,7 @@ class CustomerInfoNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values_1[] = $value_3;
                 }
             }
-            $object->setOutputFormats($values_1);
+            $object->setOutputFormats(...$values_1);
         }
         if (\array_key_exists('boostValues', $data)) {
             $values_2 = [];
@@ -96,7 +96,7 @@ class CustomerInfoNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values_2[] = TypeValidator::assertFloat($value_4, 'value');
                 }
             }
-            $object->setBoostValues($values_2);
+            $object->setBoostValues(...$values_2);
         }
         if (\array_key_exists('apps', $data) && $data['apps'] !== null) {
             $values_3 = [];

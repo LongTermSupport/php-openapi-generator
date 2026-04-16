@@ -55,7 +55,7 @@ class UserLookupResponseNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value;
                 }
             }
-            $object->setData($values);
+            $object->setData(...$values);
             unset($data['data']);
         }
         if (\array_key_exists('includes', $data)) {
@@ -70,7 +70,7 @@ class UserLookupResponseNormalizer implements DenormalizerInterface, NormalizerI
                     $values_1[] = $value_2;
                 }
             }
-            $object->setErrors($values_1);
+            $object->setErrors(...$values_1);
             unset($data['errors']);
         }
         foreach ($data as $key => $value_3) {

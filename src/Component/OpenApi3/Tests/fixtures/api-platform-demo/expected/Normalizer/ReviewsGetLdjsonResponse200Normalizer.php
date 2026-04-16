@@ -56,7 +56,7 @@ class ReviewsGetLdjsonResponse200Normalizer implements DenormalizerInterface, No
                     $values[] = $value_1;
                 }
             }
-            $object->setHydraMember($values);
+            $object->setHydraMember(...$values);
             unset($data['hydra:member']);
         }
         if (\array_key_exists('hydra:totalItems', $data)) {

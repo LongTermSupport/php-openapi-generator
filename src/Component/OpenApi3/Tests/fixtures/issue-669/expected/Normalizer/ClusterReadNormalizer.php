@@ -91,7 +91,7 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('node_pools', $data)) {
@@ -107,7 +107,7 @@ class ClusterReadNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_1[] = $values_2;
                 }
             }
-            $object->setNodePools($values_1);
+            $object->setNodePools(...$values_1);
             unset($data['node_pools']);
         }
         if (\array_key_exists('maintenance_policy', $data) && $data['maintenance_policy'] !== null) {

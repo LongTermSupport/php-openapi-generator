@@ -70,7 +70,7 @@ class GbPeopleReportReponseReportNormalizer implements DenormalizerInterface, No
                     $values[] = $value_3;
                 }
             }
-            $object->setOtherAddresses($values);
+            $object->setOtherAddresses(...$values);
             unset($data['otherAddresses']);
         }
         if (\array_key_exists('directorships', $data)) {

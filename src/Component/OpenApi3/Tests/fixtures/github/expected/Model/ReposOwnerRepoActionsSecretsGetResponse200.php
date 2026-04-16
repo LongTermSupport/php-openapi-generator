@@ -42,13 +42,10 @@ class ReposOwnerRepoActionsSecretsGetResponse200 extends \ArrayObject
     {
         return $this->secrets;
     }
-    /**
-     * @param list<ActionsSecret> $secrets
-     */
-    public function setSecrets(array $secrets): self
+    public function setSecrets(ActionsSecret ...$secrets): self
     {
         $this->initialized['secrets'] = true;
-        $this->secrets = $secrets;
+        $this->secrets = array_values($secrets);
         return $this;
     }
 }

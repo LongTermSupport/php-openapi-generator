@@ -62,13 +62,11 @@ class ListItemFieldsBatchUpdateFilterRequest
     }
     /**
      * Changes that need to be applied to the existing list items. The same set of changes is applied to all list items.
-     *
-     * @param list<MetadataValuesChangeCommandBase> $changeCommands
      */
-    public function setChangeCommands(array $changeCommands): self
+    public function setChangeCommands(MetadataValuesChangeCommandBase ...$changeCommands): self
     {
         $this->initialized['changeCommands'] = true;
-        $this->changeCommands = $changeCommands;
+        $this->changeCommands = array_values($changeCommands);
         return $this;
     }
     /**

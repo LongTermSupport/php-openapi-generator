@@ -67,7 +67,7 @@ class V2UptimeChecksPostBodyNormalizer implements DenormalizerInterface, Normali
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         if (\array_key_exists('enabled', $data)) {

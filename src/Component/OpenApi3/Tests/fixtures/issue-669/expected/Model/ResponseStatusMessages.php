@@ -31,13 +31,10 @@ class ResponseStatusMessages extends \ArrayObject
     {
         return $this->messages;
     }
-    /**
-     * @param list<StatusMessages> $messages
-     */
-    public function setMessages(array $messages): self
+    public function setMessages(StatusMessages ...$messages): self
     {
         $this->initialized['messages'] = true;
-        $this->messages = $messages;
+        $this->messages = array_values($messages);
         return $this;
     }
 }

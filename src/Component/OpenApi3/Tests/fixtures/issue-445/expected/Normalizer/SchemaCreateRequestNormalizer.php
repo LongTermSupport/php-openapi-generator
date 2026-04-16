@@ -86,7 +86,7 @@ class SchemaCreateRequestNormalizer implements DenormalizerInterface, Normalizer
                     $values_1[] = $value_2;
                 }
             }
-            $object->setDisplayPatterns($values_1);
+            $object->setDisplayPatterns(...$values_1);
         }
         if (\array_key_exists('fields', $data) && $data['fields'] !== null) {
             $values_2 = [];

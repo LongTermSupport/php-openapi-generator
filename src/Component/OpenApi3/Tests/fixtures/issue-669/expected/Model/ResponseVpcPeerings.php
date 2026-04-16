@@ -34,12 +34,12 @@ class ResponseVpcPeerings extends \ArrayObject
         return $this->peerings;
     }
     /**
-     * @param list<array<string, mixed>> $peerings
+     * @param array<string, mixed> ...$peerings
      */
-    public function setPeerings(array $peerings): self
+    public function setPeerings(array ...$peerings): self
     {
         $this->initialized['peerings'] = true;
-        $this->peerings = $peerings;
+        $this->peerings = array_values($peerings);
         return $this;
     }
     public function getLinks(): PageLinks

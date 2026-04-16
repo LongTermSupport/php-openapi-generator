@@ -44,13 +44,10 @@ class MonitoringPortfoliosPortfolioIdPatchBody extends \ArrayObject
     {
         return $this->emails;
     }
-    /**
-     * @param list<MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem> $emails
-     */
-    public function setEmails(array $emails): self
+    public function setEmails(MonitoringPortfoliosPortfolioIdPatchBodyEmailsItem ...$emails): self
     {
         $this->initialized['emails'] = true;
-        $this->emails = $emails;
+        $this->emails = array_values($emails);
         return $this;
     }
     public function getEmailLanguage(): string

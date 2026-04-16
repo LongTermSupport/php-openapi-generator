@@ -48,7 +48,7 @@ class IssueSimpleNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\IssueSimpleConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -115,7 +115,7 @@ class IssueSimpleNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = $value_2;
                 }
             }
-            $object->setLabels($values);
+            $object->setLabels(...$values);
             unset($data['labels']);
         }
         if (\array_key_exists('assignee', $data) && $data['assignee'] !== null) {
@@ -310,7 +310,7 @@ class IssueSimpleNormalizer implements DenormalizerInterface, NormalizerInterfac
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\IssueSimpleConstraint());
         }
         return $dataArray;

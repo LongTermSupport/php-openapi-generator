@@ -31,13 +31,10 @@ class ResponseListTriggers extends \ArrayObject
     {
         return $this->triggers;
     }
-    /**
-     * @param list<TriggerInfo> $triggers
-     */
-    public function setTriggers(array $triggers): self
+    public function setTriggers(TriggerInfo ...$triggers): self
     {
         $this->initialized['triggers'] = true;
-        $this->triggers = $triggers;
+        $this->triggers = array_values($triggers);
         return $this;
     }
 }

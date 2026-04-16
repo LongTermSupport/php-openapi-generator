@@ -34,12 +34,12 @@ class ResponseAllVpcs extends \ArrayObject
         return $this->vpcs;
     }
     /**
-     * @param list<array<string, mixed>> $vpcs
+     * @param array<string, mixed> ...$vpcs
      */
-    public function setVpcs(array $vpcs): self
+    public function setVpcs(array ...$vpcs): self
     {
         $this->initialized['vpcs'] = true;
-        $this->vpcs = $vpcs;
+        $this->vpcs = array_values($vpcs);
         return $this;
     }
     public function getLinks(): PageLinks

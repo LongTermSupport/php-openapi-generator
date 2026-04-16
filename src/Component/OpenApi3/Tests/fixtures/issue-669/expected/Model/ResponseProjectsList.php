@@ -33,13 +33,10 @@ class ResponseProjectsList extends \ArrayObject
     {
         return $this->projects;
     }
-    /**
-     * @param list<Project> $projects
-     */
-    public function setProjects(array $projects): self
+    public function setProjects(Project ...$projects): self
     {
         $this->initialized['projects'] = true;
-        $this->projects = $projects;
+        $this->projects = array_values($projects);
         return $this;
     }
     public function getLinks(): PageLinks

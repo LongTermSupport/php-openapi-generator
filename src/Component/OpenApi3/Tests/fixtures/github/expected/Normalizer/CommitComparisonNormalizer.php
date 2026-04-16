@@ -48,7 +48,7 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommitComparisonConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -105,7 +105,7 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_3;
                 }
             }
-            $object->setCommits($values);
+            $object->setCommits(...$values);
             unset($data['commits']);
         }
         if (\array_key_exists('files', $data)) {
@@ -116,7 +116,7 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = $value_5;
                 }
             }
-            $object->setFiles($values_1);
+            $object->setFiles(...$values_1);
             unset($data['files']);
         }
         foreach ($data as $key => $value_6) {
@@ -162,7 +162,7 @@ class CommitComparisonNormalizer implements DenormalizerInterface, NormalizerInt
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommitComparisonConstraint());
         }
         return $dataArray;

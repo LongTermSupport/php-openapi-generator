@@ -60,7 +60,7 @@ class ListFreshInvestigationResponseNormalizer implements DenormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setOrders($values);
+            $object->setOrders(...$values);
             unset($data['orders']);
         }
         foreach ($data as $key => $value_2) {

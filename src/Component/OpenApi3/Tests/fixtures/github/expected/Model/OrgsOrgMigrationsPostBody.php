@@ -49,13 +49,11 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     }
     /**
      * A list of arrays indicating which repositories should be migrated.
-     *
-     * @param list<string> $repositories
      */
-    public function setRepositories(array $repositories): self
+    public function setRepositories(string ...$repositories): self
     {
         $this->initialized['repositories'] = true;
-        $this->repositories = $repositories;
+        $this->repositories = array_values($repositories);
         return $this;
     }
     /**
@@ -97,13 +95,10 @@ class OrgsOrgMigrationsPostBody extends \ArrayObject
     {
         return $this->exclude;
     }
-    /**
-     * @param list<string> $exclude
-     */
-    public function setExclude(array $exclude): self
+    public function setExclude(string ...$exclude): self
     {
         $this->initialized['exclude'] = true;
-        $this->exclude = $exclude;
+        $this->exclude = array_values($exclude);
         return $this;
     }
 }

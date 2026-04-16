@@ -76,7 +76,7 @@ class AddonsDimensionWithPriceNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setVolumes($values);
+            $object->setVolumes(...$values);
             unset($data['volumes']);
         }
         foreach ($data as $key => $value_2) {

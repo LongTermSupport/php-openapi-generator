@@ -86,13 +86,10 @@ class GpgKeySubkeysItem extends \ArrayObject
     {
         return $this->emails;
     }
-    /**
-     * @param list<mixed> $emails
-     */
-    public function setEmails(array $emails): self
+    public function setEmails(mixed ...$emails): self
     {
         $this->initialized['emails'] = true;
-        $this->emails = $emails;
+        $this->emails = array_values($emails);
         return $this;
     }
     /**
@@ -102,13 +99,10 @@ class GpgKeySubkeysItem extends \ArrayObject
     {
         return $this->subkeys;
     }
-    /**
-     * @param list<mixed> $subkeys
-     */
-    public function setSubkeys(array $subkeys): self
+    public function setSubkeys(mixed ...$subkeys): self
     {
         $this->initialized['subkeys'] = true;
-        $this->subkeys = $subkeys;
+        $this->subkeys = array_values($subkeys);
         return $this;
     }
     public function getCanSign(): bool

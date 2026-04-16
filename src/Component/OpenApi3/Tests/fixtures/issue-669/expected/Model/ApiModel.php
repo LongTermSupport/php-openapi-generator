@@ -342,13 +342,11 @@ class ApiModel extends \ArrayObject
     }
     /**
      * Usecases of the model
-     *
-     * @param list<string> $usecases
      */
-    public function setUsecases(array $usecases): self
+    public function setUsecases(string ...$usecases): self
     {
         $this->initialized['usecases'] = true;
-        $this->usecases = $usecases;
+        $this->usecases = array_values($usecases);
         return $this;
     }
     /**

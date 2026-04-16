@@ -42,13 +42,10 @@ class PeopleSearchSuccessResult extends \ArrayObject
     {
         return $this->directors;
     }
-    /**
-     * @param list<PeopleSearchSuccessResultDirectorsItem> $directors
-     */
-    public function setDirectors(array $directors): self
+    public function setDirectors(PeopleSearchSuccessResultDirectorsItem ...$directors): self
     {
         $this->initialized['directors'] = true;
-        $this->directors = $directors;
+        $this->directors = array_values($directors);
         return $this;
     }
 }

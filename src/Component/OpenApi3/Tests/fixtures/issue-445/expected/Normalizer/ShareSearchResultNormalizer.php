@@ -60,7 +60,7 @@ class ShareSearchResultNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setResults($values);
+            $object->setResults(...$values);
             unset($data['results']);
         }
         if (\array_key_exists('elapsedMilliseconds', $data)) {

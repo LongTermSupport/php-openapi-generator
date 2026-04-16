@@ -167,13 +167,11 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * Chatbot identifiers
-     *
-     * @param list<ApiAgentChatbotIdentifier> $chatbotIdentifiers
      */
-    public function setChatbotIdentifiers(array $chatbotIdentifiers): self
+    public function setChatbotIdentifiers(ApiAgentChatbotIdentifier ...$chatbotIdentifiers): self
     {
         $this->initialized['chatbotIdentifiers'] = true;
-        $this->chatbotIdentifiers = $chatbotIdentifiers;
+        $this->chatbotIdentifiers = array_values($chatbotIdentifiers);
         return $this;
     }
     /**
@@ -467,13 +465,11 @@ class ApiAgentPublic extends \ArrayObject
     }
     /**
      * A set of abitrary tags to organize your agent
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

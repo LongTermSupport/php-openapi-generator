@@ -57,13 +57,11 @@ class V2MonitoringSinksPostBody extends \ArrayObject
     }
     /**
      * List of resources identified by their URNs.
-     *
-     * @param list<SinkResource> $resources
      */
-    public function setResources(array $resources): self
+    public function setResources(SinkResource ...$resources): self
     {
         $this->initialized['resources'] = true;
-        $this->resources = $resources;
+        $this->resources = array_values($resources);
         return $this;
     }
 }

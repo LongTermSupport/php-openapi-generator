@@ -77,13 +77,11 @@ class ApiListModelsOutputPublic extends \ArrayObject
     }
     /**
      * The models
-     *
-     * @param list<ApiModelPublic> $models
      */
-    public function setModels(array $models): self
+    public function setModels(ApiModelPublic ...$models): self
     {
         $this->initialized['models'] = true;
-        $this->models = $models;
+        $this->models = array_values($models);
         return $this;
     }
 }

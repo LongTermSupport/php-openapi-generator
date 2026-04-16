@@ -146,13 +146,10 @@ class GitCommit extends \ArrayObject
     {
         return $this->parents;
     }
-    /**
-     * @param list<GitCommitParentsItem> $parents
-     */
-    public function setParents(array $parents): self
+    public function setParents(GitCommitParentsItem ...$parents): self
     {
         $this->initialized['parents'] = true;
-        $this->parents = $parents;
+        $this->parents = array_values($parents);
         return $this;
     }
     public function getVerification(): GitCommitVerification

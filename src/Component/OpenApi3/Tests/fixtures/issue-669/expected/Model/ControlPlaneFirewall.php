@@ -57,13 +57,11 @@ class ControlPlaneFirewall extends \ArrayObject
     }
     /**
      * An array of public addresses (IPv4 or CIDR) allowed to access the control plane.
-     *
-     * @param list<string> $allowedAddresses
      */
-    public function setAllowedAddresses(array $allowedAddresses): self
+    public function setAllowedAddresses(string ...$allowedAddresses): self
     {
         $this->initialized['allowedAddresses'] = true;
-        $this->allowedAddresses = $allowedAddresses;
+        $this->allowedAddresses = array_values($allowedAddresses);
         return $this;
     }
 }

@@ -55,7 +55,7 @@ class ListItemRestoreManyRequestNormalizer implements DenormalizerInterface, Nor
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setListItemIds($values);
+            $object->setListItemIds(...$values);
         }
         if (\array_key_exists('allowMissingDependencies', $data)) {
             $object->setAllowMissingDependencies(TypeValidator::assertBool($data['allowMissingDependencies'], 'allowMissingDependencies'));

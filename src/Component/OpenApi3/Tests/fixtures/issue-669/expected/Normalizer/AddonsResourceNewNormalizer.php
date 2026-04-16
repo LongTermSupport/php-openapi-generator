@@ -68,7 +68,7 @@ class AddonsResourceNewNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setMetadata($values);
+            $object->setMetadata(...$values);
             unset($data['metadata']);
         }
         if (\array_key_exists('linked_droplet_id', $data)) {

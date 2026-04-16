@@ -33,13 +33,10 @@ class ResponseRepositoryManifests extends \ArrayObject
     {
         return $this->manifests;
     }
-    /**
-     * @param list<RepositoryManifest> $manifests
-     */
-    public function setManifests(array $manifests): self
+    public function setManifests(RepositoryManifest ...$manifests): self
     {
         $this->initialized['manifests'] = true;
-        $this->manifests = $manifests;
+        $this->manifests = array_values($manifests);
         return $this;
     }
     public function getLinks(): PageLinks

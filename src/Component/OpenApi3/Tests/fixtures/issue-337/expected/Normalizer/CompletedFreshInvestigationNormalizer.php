@@ -85,7 +85,7 @@ class CompletedFreshInvestigationNormalizer implements DenormalizerInterface, No
                     $values[] = $value_2;
                 }
             }
-            $object->setSections($values);
+            $object->setSections(...$values);
             unset($data['sections']);
         }
         if (\array_key_exists('status', $data)) {

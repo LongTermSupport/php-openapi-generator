@@ -51,13 +51,11 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Agent deployment names to run the test case against (ADK agent workspaces).
-     *
-     * @param list<string> $agentDeploymentNames
      */
-    public function setAgentDeploymentNames(array $agentDeploymentNames): self
+    public function setAgentDeploymentNames(string ...$agentDeploymentNames): self
     {
         $this->initialized['agentDeploymentNames'] = true;
-        $this->agentDeploymentNames = $agentDeploymentNames;
+        $this->agentDeploymentNames = array_values($agentDeploymentNames);
         return $this;
     }
     /**
@@ -71,13 +69,11 @@ class ApiRunEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Agent UUIDs to run the test case against (legacy agents).
-     *
-     * @param list<string> $agentUuids
      */
-    public function setAgentUuids(array $agentUuids): self
+    public function setAgentUuids(string ...$agentUuids): self
     {
         $this->initialized['agentUuids'] = true;
-        $this->agentUuids = $agentUuids;
+        $this->agentUuids = array_values($agentUuids);
         return $this;
     }
     /**

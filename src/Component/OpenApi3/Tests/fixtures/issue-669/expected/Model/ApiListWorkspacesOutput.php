@@ -37,13 +37,11 @@ class ApiListWorkspacesOutput extends \ArrayObject
     }
     /**
      * Workspaces
-     *
-     * @param list<ApiWorkspace> $workspaces
      */
-    public function setWorkspaces(array $workspaces): self
+    public function setWorkspaces(ApiWorkspace ...$workspaces): self
     {
         $this->initialized['workspaces'] = true;
-        $this->workspaces = $workspaces;
+        $this->workspaces = array_values($workspaces);
         return $this;
     }
 }

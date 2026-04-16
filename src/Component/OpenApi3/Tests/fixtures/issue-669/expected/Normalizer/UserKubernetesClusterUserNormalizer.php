@@ -59,7 +59,7 @@ class UserKubernetesClusterUserNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setGroups($values);
+            $object->setGroups(...$values);
             unset($data['groups']);
         }
         foreach ($data as $key => $value_1) {

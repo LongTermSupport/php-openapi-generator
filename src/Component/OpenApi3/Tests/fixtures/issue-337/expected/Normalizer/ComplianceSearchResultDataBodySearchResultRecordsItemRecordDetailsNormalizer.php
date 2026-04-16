@@ -88,7 +88,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsNormaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setIDs($values);
+            $object->setIDs(...$values);
             unset($data['iDs']);
         }
         if (\array_key_exists('lastUpdatedDate', $data)) {

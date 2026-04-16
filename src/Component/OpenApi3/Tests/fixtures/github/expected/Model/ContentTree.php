@@ -131,13 +131,10 @@ class ContentTree extends \ArrayObject
     {
         return $this->entries;
     }
-    /**
-     * @param list<ContentTreeEntriesItem> $entries
-     */
-    public function setEntries(array $entries): self
+    public function setEntries(ContentTreeEntriesItem ...$entries): self
     {
         $this->initialized['entries'] = true;
-        $this->entries = $entries;
+        $this->entries = array_values($entries);
         return $this;
     }
     public function getLinks(): ContentTreeLinks

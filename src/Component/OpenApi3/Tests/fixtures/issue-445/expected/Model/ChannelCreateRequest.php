@@ -138,13 +138,11 @@ class ChannelCreateRequest
     }
     /**
      * Fields to be used for sorting in content browser when displaying the channel. The information is only set and consumed by the client, not by the server.
-     *
-     * @param list<SortField> $sortFields
      */
-    public function setSortFields(array $sortFields): self
+    public function setSortFields(SortField ...$sortFields): self
     {
         $this->initialized['sortFields'] = true;
-        $this->sortFields = $sortFields;
+        $this->sortFields = array_values($sortFields);
         return $this;
     }
     /**

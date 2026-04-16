@@ -153,13 +153,11 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * List of child agent relationships
-     *
-     * @param list<ApiAgentChildRelationshipVerion> $attachedChildAgents
      */
-    public function setAttachedChildAgents(array $attachedChildAgents): self
+    public function setAttachedChildAgents(ApiAgentChildRelationshipVerion ...$attachedChildAgents): self
     {
         $this->initialized['attachedChildAgents'] = true;
-        $this->attachedChildAgents = $attachedChildAgents;
+        $this->attachedChildAgents = array_values($attachedChildAgents);
         return $this;
     }
     /**
@@ -173,13 +171,11 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * List of function versions
-     *
-     * @param list<ApiAgentFunctionVersion> $attachedFunctions
      */
-    public function setAttachedFunctions(array $attachedFunctions): self
+    public function setAttachedFunctions(ApiAgentFunctionVersion ...$attachedFunctions): self
     {
         $this->initialized['attachedFunctions'] = true;
-        $this->attachedFunctions = $attachedFunctions;
+        $this->attachedFunctions = array_values($attachedFunctions);
         return $this;
     }
     /**
@@ -193,13 +189,11 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * List of guardrail version
-     *
-     * @param list<ApiAgentGuardrailVersion> $attachedGuardrails
      */
-    public function setAttachedGuardrails(array $attachedGuardrails): self
+    public function setAttachedGuardrails(ApiAgentGuardrailVersion ...$attachedGuardrails): self
     {
         $this->initialized['attachedGuardrails'] = true;
-        $this->attachedGuardrails = $attachedGuardrails;
+        $this->attachedGuardrails = array_values($attachedGuardrails);
         return $this;
     }
     /**
@@ -213,13 +207,11 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * List of knowledge base agent versions
-     *
-     * @param list<ApiAgentKnowledgeBaseVersion> $attachedKnowledgebases
      */
-    public function setAttachedKnowledgebases(array $attachedKnowledgebases): self
+    public function setAttachedKnowledgebases(ApiAgentKnowledgeBaseVersion ...$attachedKnowledgebases): self
     {
         $this->initialized['attachedKnowledgebases'] = true;
-        $this->attachedKnowledgebases = $attachedKnowledgebases;
+        $this->attachedKnowledgebases = array_values($attachedKnowledgebases);
         return $this;
     }
     /**
@@ -449,13 +441,11 @@ class ApiAgentVersion extends \ArrayObject
     }
     /**
      * Tags associated with the agent
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

@@ -65,13 +65,11 @@ class LiveStreamSearchResult extends \ArrayObject
     }
     /**
      * The matched documents.
-     *
-     * @param list<LiveStream> $results
      */
-    public function setResults(array $results): self
+    public function setResults(LiveStream ...$results): self
     {
         $this->initialized['results'] = true;
-        $this->results = $results;
+        $this->results = array_values($results);
         return $this;
     }
     /**

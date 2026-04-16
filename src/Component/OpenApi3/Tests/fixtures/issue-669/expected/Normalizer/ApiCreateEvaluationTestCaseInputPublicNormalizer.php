@@ -67,7 +67,7 @@ class ApiCreateEvaluationTestCaseInputPublicNormalizer implements DenormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setMetrics($values);
+            $object->setMetrics(...$values);
             unset($data['metrics']);
         }
         if (\array_key_exists('name', $data)) {

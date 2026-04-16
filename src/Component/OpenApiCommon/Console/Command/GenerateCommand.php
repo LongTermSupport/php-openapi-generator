@@ -88,7 +88,7 @@ class GenerateCommand extends BaseGenerateCommand
 
         /** @var array<string> $whitelistedPaths */
         $registry->setWhitelistedPaths($whitelistedPaths);
-        $throwUnexpected = $options['throw-unexpected-status-code'] ?? false;
+        $throwUnexpected = \array_key_exists('throw-unexpected-status-code', $options) ? $options['throw-unexpected-status-code'] : null;
         $registry->setThrowUnexpectedStatusCode(\is_bool($throwUnexpected) && $throwUnexpected);
 
         // Two distinct shapes merged into one output array to preserve the

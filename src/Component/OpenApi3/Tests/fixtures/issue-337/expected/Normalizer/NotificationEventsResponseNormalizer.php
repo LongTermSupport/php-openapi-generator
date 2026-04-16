@@ -60,7 +60,7 @@ class NotificationEventsResponseNormalizer implements DenormalizerInterface, Nor
                     $values[] = $value_1;
                 }
             }
-            $object->setData($values);
+            $object->setData(...$values);
             unset($data['data']);
         }
         if (\array_key_exists('paging', $data)) {

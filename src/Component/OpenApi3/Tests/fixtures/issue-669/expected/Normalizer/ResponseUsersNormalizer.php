@@ -56,7 +56,7 @@ class ResponseUsersNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = $value_1;
                 }
             }
-            $object->setUsers($values);
+            $object->setUsers(...$values);
             unset($data['users']);
         }
         foreach ($data as $key => $value_2) {

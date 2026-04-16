@@ -85,7 +85,7 @@ class BookJsonhalBookReadNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_2;
                 }
             }
-            $object->setReviews($values);
+            $object->setReviews(...$values);
             unset($data['reviews']);
         }
         foreach ($data as $key => $value_3) {

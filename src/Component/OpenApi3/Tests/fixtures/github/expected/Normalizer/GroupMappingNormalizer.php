@@ -48,7 +48,7 @@ class GroupMappingNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\GroupMappingConstraint());
         }
         if (\array_key_exists('groups', $data)) {
@@ -59,7 +59,7 @@ class GroupMappingNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setGroups($values);
+            $object->setGroups(...$values);
             unset($data['groups']);
         }
         if (\array_key_exists('group_id', $data)) {
@@ -126,7 +126,7 @@ class GroupMappingNormalizer implements DenormalizerInterface, NormalizerInterfa
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\GroupMappingConstraint());
         }
         return $dataArray;

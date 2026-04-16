@@ -56,7 +56,7 @@ class AppsListRegionsResponseNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         foreach ($data as $key => $value_2) {

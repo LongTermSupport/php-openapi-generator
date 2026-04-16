@@ -84,7 +84,7 @@ class ApiEvaluationTraceSpanNormalizer implements DenormalizerInterface, Normali
                     $values_2[] = $value_3;
                 }
             }
-            $object->setRetrieverChunks($values_2);
+            $object->setRetrieverChunks(...$values_2);
             unset($data['retriever_chunks']);
         }
         if (\array_key_exists('span_level_metric_results', $data)) {
@@ -95,7 +95,7 @@ class ApiEvaluationTraceSpanNormalizer implements DenormalizerInterface, Normali
                     $values_3[] = $value_5;
                 }
             }
-            $object->setSpanLevelMetricResults($values_3);
+            $object->setSpanLevelMetricResults(...$values_3);
             unset($data['span_level_metric_results']);
         }
         if (\array_key_exists('type', $data)) {

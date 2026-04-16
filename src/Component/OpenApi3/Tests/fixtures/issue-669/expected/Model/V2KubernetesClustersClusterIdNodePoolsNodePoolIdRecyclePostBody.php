@@ -31,13 +31,10 @@ class V2KubernetesClustersClusterIdNodePoolsNodePoolIdRecyclePostBody extends \A
     {
         return $this->nodes;
     }
-    /**
-     * @param list<string> $nodes
-     */
-    public function setNodes(array $nodes): self
+    public function setNodes(string ...$nodes): self
     {
         $this->initialized['nodes'] = true;
-        $this->nodes = $nodes;
+        $this->nodes = array_values($nodes);
         return $this;
     }
 }

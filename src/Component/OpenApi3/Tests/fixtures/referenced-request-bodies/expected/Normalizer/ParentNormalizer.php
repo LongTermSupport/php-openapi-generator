@@ -60,7 +60,7 @@ class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $values[] = $value_1;
                 }
             }
-            $object->setChild($values);
+            $object->setChild(...$values);
             unset($data['child']);
         }
         foreach ($data as $key => $value_2) {

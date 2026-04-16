@@ -56,7 +56,7 @@ class ConnectionPoolsNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setPools($values);
+            $object->setPools(...$values);
             unset($data['pools']);
         }
         foreach ($data as $key => $value_2) {

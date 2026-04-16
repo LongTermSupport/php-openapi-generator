@@ -56,7 +56,7 @@ class ResponseKeyListNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setKeys($values);
+            $object->setKeys(...$values);
             unset($data['keys']);
         }
         if (\array_key_exists('links', $data)) {

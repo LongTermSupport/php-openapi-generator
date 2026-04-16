@@ -56,7 +56,7 @@ class ResponseRepositoryManifestsNormalizer implements DenormalizerInterface, No
                     $values[] = $value_1;
                 }
             }
-            $object->setManifests($values);
+            $object->setManifests(...$values);
             unset($data['manifests']);
         }
         if (\array_key_exists('links', $data)) {

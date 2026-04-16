@@ -41,13 +41,11 @@ class ReposOwnerRepoGitTreesPostBody extends \ArrayObject
     }
     /**
      * Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure.
-     *
-     * @param list<ReposOwnerRepoGitTreesPostBodyTreeItem> $tree
      */
-    public function setTree(array $tree): self
+    public function setTree(ReposOwnerRepoGitTreesPostBodyTreeItem ...$tree): self
     {
         $this->initialized['tree'] = true;
-        $this->tree = $tree;
+        $this->tree = array_values($tree);
         return $this;
     }
     /**

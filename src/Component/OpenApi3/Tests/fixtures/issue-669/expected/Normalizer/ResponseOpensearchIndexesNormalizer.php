@@ -61,7 +61,7 @@ class ResponseOpensearchIndexesNormalizer implements DenormalizerInterface, Norm
                     $values[] = $values_1;
                 }
             }
-            $object->setIndexes($values);
+            $object->setIndexes(...$values);
             unset($data['indexes']);
         }
         foreach ($data as $key_1 => $value_2) {

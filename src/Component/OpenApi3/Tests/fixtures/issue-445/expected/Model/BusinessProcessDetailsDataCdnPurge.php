@@ -54,13 +54,11 @@ class BusinessProcessDetailsDataCdnPurge extends BusinessProcessDetailsDataBase
     }
     /**
      * Jobs that were processed in the operation.
-     *
-     * @param list<CdnPurgeJobBase> $jobs
      */
-    public function setJobs(array $jobs): self
+    public function setJobs(CdnPurgeJobBase ...$jobs): self
     {
         $this->initialized['jobs'] = true;
-        $this->jobs = $jobs;
+        $this->jobs = array_values($jobs);
         return $this;
     }
 }

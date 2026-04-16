@@ -34,13 +34,11 @@ class OutputFormatDownloadFileNamePatternUpdateManyRequest
     }
     /**
      * Download file name update requests to be processed.
-     *
-     * @param list<OutputFormatDownloadFileNamePatternUpdateRequestItem> $items
      */
-    public function setItems(array $items): self
+    public function setItems(OutputFormatDownloadFileNamePatternUpdateRequestItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

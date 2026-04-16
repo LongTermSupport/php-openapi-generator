@@ -31,13 +31,10 @@ class ResponseAddonsGetApp extends \ArrayObject
     {
         return $this->apps;
     }
-    /**
-     * @param list<AddonsAppInfo> $apps
-     */
-    public function setApps(array $apps): self
+    public function setApps(AddonsAppInfo ...$apps): self
     {
         $this->initialized['apps'] = true;
-        $this->apps = $apps;
+        $this->apps = array_values($apps);
         return $this;
     }
 }

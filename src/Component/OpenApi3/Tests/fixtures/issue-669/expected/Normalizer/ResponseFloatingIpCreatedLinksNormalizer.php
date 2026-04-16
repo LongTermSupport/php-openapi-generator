@@ -56,7 +56,7 @@ class ResponseFloatingIpCreatedLinksNormalizer implements DenormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setDroplets($values);
+            $object->setDroplets(...$values);
             unset($data['droplets']);
         }
         if (\array_key_exists('actions', $data)) {
@@ -67,7 +67,7 @@ class ResponseFloatingIpCreatedLinksNormalizer implements DenormalizerInterface,
                     $values_1[] = $value_3;
                 }
             }
-            $object->setActions($values_1);
+            $object->setActions(...$values_1);
             unset($data['actions']);
         }
         foreach ($data as $key => $value_4) {

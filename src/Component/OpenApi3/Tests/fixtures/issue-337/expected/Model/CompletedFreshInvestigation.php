@@ -110,13 +110,10 @@ class CompletedFreshInvestigation extends \ArrayObject
     {
         return $this->sections;
     }
-    /**
-     * @param list<mixed> $sections
-     */
-    public function setSections(array $sections): self
+    public function setSections(mixed ...$sections): self
     {
         $this->initialized['sections'] = true;
-        $this->sections = $sections;
+        $this->sections = array_values($sections);
         return $this;
     }
     public function getStatus(): CompletedFreshInvestigationStatus

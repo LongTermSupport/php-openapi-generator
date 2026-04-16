@@ -42,13 +42,11 @@ class ContentManyReferencesRequest
     }
     /**
      * The IDs of the contents whose references need to be retrieved.
-     *
-     * @param list<string> $contentIds
      */
-    public function setContentIds(array $contentIds): self
+    public function setContentIds(string ...$contentIds): self
     {
         $this->initialized['contentIds'] = true;
-        $this->contentIds = $contentIds;
+        $this->contentIds = array_values($contentIds);
         return $this;
     }
     /**

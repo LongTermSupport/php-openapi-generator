@@ -55,7 +55,7 @@ class ApiEvaluationTestCaseMetricListNormalizer implements DenormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setMetricUuids($values);
+            $object->setMetricUuids(...$values);
             unset($data['metric_uuids']);
         }
         foreach ($data as $key => $value_1) {

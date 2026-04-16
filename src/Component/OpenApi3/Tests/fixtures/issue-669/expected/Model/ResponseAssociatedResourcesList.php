@@ -61,13 +61,11 @@ class ResponseAssociatedResourcesList extends \ArrayObject
     }
     /**
      * Reserved IPs that are associated with this Droplet.<br>Requires `reserved_ip:read` scope.
-     *
-     * @param list<AssociatedResource> $reservedIps
      */
-    public function setReservedIps(array $reservedIps): self
+    public function setReservedIps(AssociatedResource ...$reservedIps): self
     {
         $this->initialized['reservedIps'] = true;
-        $this->reservedIps = $reservedIps;
+        $this->reservedIps = array_values($reservedIps);
         return $this;
     }
     /**
@@ -81,13 +79,11 @@ class ResponseAssociatedResourcesList extends \ArrayObject
     }
     /**
      * Floating IPs that are associated with this Droplet.<br>Requires `reserved_ip:read` scope.
-     *
-     * @param list<AssociatedResource> $floatingIps
      */
-    public function setFloatingIps(array $floatingIps): self
+    public function setFloatingIps(AssociatedResource ...$floatingIps): self
     {
         $this->initialized['floatingIps'] = true;
-        $this->floatingIps = $floatingIps;
+        $this->floatingIps = array_values($floatingIps);
         return $this;
     }
     /**
@@ -101,13 +97,11 @@ class ResponseAssociatedResourcesList extends \ArrayObject
     }
     /**
      * Snapshots that are associated with this Droplet.<br>Requires `image:read` scope.
-     *
-     * @param list<AssociatedResource> $snapshots
      */
-    public function setSnapshots(array $snapshots): self
+    public function setSnapshots(AssociatedResource ...$snapshots): self
     {
         $this->initialized['snapshots'] = true;
-        $this->snapshots = $snapshots;
+        $this->snapshots = array_values($snapshots);
         return $this;
     }
     /**
@@ -121,13 +115,11 @@ class ResponseAssociatedResourcesList extends \ArrayObject
     }
     /**
      * Volumes that are associated with this Droplet.<br>Requires `block_storage:read` scope.
-     *
-     * @param list<AssociatedResource> $volumes
      */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(AssociatedResource ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
     /**
@@ -141,13 +133,11 @@ class ResponseAssociatedResourcesList extends \ArrayObject
     }
     /**
      * Volume Snapshots that are associated with this Droplet.<br>Requires `block_storage_snapshot:read` scope.
-     *
-     * @param list<AssociatedResource> $volumeSnapshots
      */
-    public function setVolumeSnapshots(array $volumeSnapshots): self
+    public function setVolumeSnapshots(AssociatedResource ...$volumeSnapshots): self
     {
         $this->initialized['volumeSnapshots'] = true;
-        $this->volumeSnapshots = $volumeSnapshots;
+        $this->volumeSnapshots = array_values($volumeSnapshots);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class ApiPromptNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setEvaluationTraceSpans($values);
+            $object->setEvaluationTraceSpans(...$values);
             unset($data['evaluation_trace_spans']);
         }
         if (\array_key_exists('ground_truth', $data)) {
@@ -87,7 +87,7 @@ class ApiPromptNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values_1[] = $value_3;
                 }
             }
-            $object->setPromptChunks($values_1);
+            $object->setPromptChunks(...$values_1);
             unset($data['prompt_chunks']);
         }
         if (\array_key_exists('prompt_id', $data)) {
@@ -102,7 +102,7 @@ class ApiPromptNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values_2[] = $value_5;
                 }
             }
-            $object->setPromptLevelMetricResults($values_2);
+            $object->setPromptLevelMetricResults(...$values_2);
             unset($data['prompt_level_metric_results']);
         }
         if (\array_key_exists('trace_id', $data)) {

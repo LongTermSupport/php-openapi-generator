@@ -56,7 +56,7 @@ class ListAlertPolicyNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setPolicies($values);
+            $object->setPolicies(...$values);
             unset($data['policies']);
         }
         foreach ($data as $key => $value_2) {

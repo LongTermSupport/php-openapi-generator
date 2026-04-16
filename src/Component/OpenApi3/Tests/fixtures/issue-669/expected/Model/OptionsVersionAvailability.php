@@ -73,13 +73,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $kafka
      */
-    public function setKafka(array $kafka): self
+    public function setKafka(DatabaseVersionAvailability ...$kafka): self
     {
         $this->initialized['kafka'] = true;
-        $this->kafka = $kafka;
+        $this->kafka = array_values($kafka);
         return $this;
     }
     /**
@@ -93,13 +91,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $pg
      */
-    public function setPg(array $pg): self
+    public function setPg(DatabaseVersionAvailability ...$pg): self
     {
         $this->initialized['pg'] = true;
-        $this->pg = $pg;
+        $this->pg = array_values($pg);
         return $this;
     }
     /**
@@ -113,13 +109,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $mysql
      */
-    public function setMysql(array $mysql): self
+    public function setMysql(DatabaseVersionAvailability ...$mysql): self
     {
         $this->initialized['mysql'] = true;
-        $this->mysql = $mysql;
+        $this->mysql = array_values($mysql);
         return $this;
     }
     /**
@@ -133,13 +127,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $redis
      */
-    public function setRedis(array $redis): self
+    public function setRedis(DatabaseVersionAvailability ...$redis): self
     {
         $this->initialized['redis'] = true;
-        $this->redis = $redis;
+        $this->redis = array_values($redis);
         return $this;
     }
     /**
@@ -153,13 +145,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $valkey
      */
-    public function setValkey(array $valkey): self
+    public function setValkey(DatabaseVersionAvailability ...$valkey): self
     {
         $this->initialized['valkey'] = true;
-        $this->valkey = $valkey;
+        $this->valkey = array_values($valkey);
         return $this;
     }
     /**
@@ -173,13 +163,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $mongodb
      */
-    public function setMongodb(array $mongodb): self
+    public function setMongodb(DatabaseVersionAvailability ...$mongodb): self
     {
         $this->initialized['mongodb'] = true;
-        $this->mongodb = $mongodb;
+        $this->mongodb = array_values($mongodb);
         return $this;
     }
     /**
@@ -193,13 +181,11 @@ class OptionsVersionAvailability extends \ArrayObject
     }
     /**
      * An array of objects, each indicating the version end-of-life, end-of-availability for various database engines
-     *
-     * @param list<DatabaseVersionAvailability> $opensearch
      */
-    public function setOpensearch(array $opensearch): self
+    public function setOpensearch(DatabaseVersionAvailability ...$opensearch): self
     {
         $this->initialized['opensearch'] = true;
-        $this->opensearch = $opensearch;
+        $this->opensearch = array_values($opensearch);
         return $this;
     }
 }

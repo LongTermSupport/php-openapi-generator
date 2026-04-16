@@ -257,13 +257,10 @@ class PullRequestSimple extends \ArrayObject
     {
         return $this->labels;
     }
-    /**
-     * @param list<PullRequestSimpleLabelsItem> $labels
-     */
-    public function setLabels(array $labels): self
+    public function setLabels(PullRequestSimpleLabelsItem ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     public function getMilestone(): ?PullRequestSimpleMilestone

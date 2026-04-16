@@ -89,13 +89,11 @@ class ReposOwnerRepoGitCommitsPostBody extends \ArrayObject
     }
     /**
      * The SHAs of the commits that were the parents of this commit. If omitted or empty, the commit will be written as a root commit. For a single parent, an array of one SHA should be provided; for a merge commit, an array of more than one should be provided.
-     *
-     * @param list<string> $parents
      */
-    public function setParents(array $parents): self
+    public function setParents(string ...$parents): self
     {
         $this->initialized['parents'] = true;
-        $this->parents = $parents;
+        $this->parents = array_values($parents);
         return $this;
     }
     /**

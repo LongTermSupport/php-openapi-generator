@@ -33,13 +33,10 @@ class ResponseRepositoryTags extends \ArrayObject
     {
         return $this->tags;
     }
-    /**
-     * @param list<RepositoryTag> $tags
-     */
-    public function setTags(array $tags): self
+    public function setTags(RepositoryTag ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     public function getLinks(): PageLinks

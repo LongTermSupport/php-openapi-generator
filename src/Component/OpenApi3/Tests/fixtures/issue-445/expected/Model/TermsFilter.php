@@ -57,13 +57,11 @@ class TermsFilter extends FilterBase
     }
     /**
      * The list of values to be filtered on. At least one must match to return results.
-     *
-     * @param list<string> $terms
      */
-    public function setTerms(array $terms): self
+    public function setTerms(string ...$terms): self
     {
         $this->initialized['terms'] = true;
-        $this->terms = $terms;
+        $this->terms = array_values($terms);
         return $this;
     }
 }

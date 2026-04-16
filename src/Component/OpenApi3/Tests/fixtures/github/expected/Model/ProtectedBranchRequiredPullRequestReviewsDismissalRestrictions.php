@@ -68,13 +68,10 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions extends \Ar
     {
         return $this->users;
     }
-    /**
-     * @param list<SimpleUser> $users
-     */
-    public function setUsers(array $users): self
+    public function setUsers(SimpleUser ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
     /**
@@ -84,13 +81,10 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions extends \Ar
     {
         return $this->teams;
     }
-    /**
-     * @param list<Team> $teams
-     */
-    public function setTeams(array $teams): self
+    public function setTeams(Team ...$teams): self
     {
         $this->initialized['teams'] = true;
-        $this->teams = $teams;
+        $this->teams = array_values($teams);
         return $this;
     }
 }

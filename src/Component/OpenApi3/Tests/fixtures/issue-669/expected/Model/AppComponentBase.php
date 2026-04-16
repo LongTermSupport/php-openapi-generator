@@ -202,13 +202,11 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * A list of environment variables made available to the component.
-     *
-     * @param list<AppVariableDefinition> $envs
      */
-    public function setEnvs(array $envs): self
+    public function setEnvs(AppVariableDefinition ...$envs): self
     {
         $this->initialized['envs'] = true;
-        $this->envs = $envs;
+        $this->envs = array_values($envs);
         return $this;
     }
     /**
@@ -238,13 +236,11 @@ class AppComponentBase extends \ArrayObject
     }
     /**
      * A list of configured log forwarding destinations.
-     *
-     * @param list<AppLogDestinationDefinition> $logDestinations
      */
-    public function setLogDestinations(array $logDestinations): self
+    public function setLogDestinations(AppLogDestinationDefinition ...$logDestinations): self
     {
         $this->initialized['logDestinations'] = true;
-        $this->logDestinations = $logDestinations;
+        $this->logDestinations = array_values($logDestinations);
         return $this;
     }
 }

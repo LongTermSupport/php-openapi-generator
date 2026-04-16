@@ -56,7 +56,7 @@ class ApiListKnowledgeBaseDataSourcesOutputNormalizer implements DenormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setKnowledgeBaseDataSources($values);
+            $object->setKnowledgeBaseDataSources(...$values);
             unset($data['knowledge_base_data_sources']);
         }
         if (\array_key_exists('links', $data)) {

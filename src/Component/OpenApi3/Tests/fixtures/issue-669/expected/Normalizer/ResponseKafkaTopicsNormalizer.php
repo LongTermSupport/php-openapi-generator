@@ -61,7 +61,7 @@ class ResponseKafkaTopicsNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $values_1;
                 }
             }
-            $object->setTopics($values);
+            $object->setTopics(...$values);
             unset($data['topics']);
         }
         foreach ($data as $key_1 => $value_2) {

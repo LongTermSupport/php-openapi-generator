@@ -54,13 +54,11 @@ class DateRangeAggregator extends AggregatorBase
     }
     /**
      * A list of date time ranges.
-     *
-     * @param list<DateRangeForAggregator> $ranges
      */
-    public function setRanges(array $ranges): self
+    public function setRanges(DateRangeForAggregator ...$ranges): self
     {
         $this->initialized['ranges'] = true;
-        $this->ranges = $ranges;
+        $this->ranges = array_values($ranges);
         return $this;
     }
 }

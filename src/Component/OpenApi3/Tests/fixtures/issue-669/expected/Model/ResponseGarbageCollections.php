@@ -31,13 +31,10 @@ class ResponseGarbageCollections extends \ArrayObject
     {
         return $this->garbageCollections;
     }
-    /**
-     * @param list<GarbageCollection> $garbageCollections
-     */
-    public function setGarbageCollections(array $garbageCollections): self
+    public function setGarbageCollections(GarbageCollection ...$garbageCollections): self
     {
         $this->initialized['garbageCollections'] = true;
-        $this->garbageCollections = $garbageCollections;
+        $this->garbageCollections = array_values($garbageCollections);
         return $this;
     }
 }

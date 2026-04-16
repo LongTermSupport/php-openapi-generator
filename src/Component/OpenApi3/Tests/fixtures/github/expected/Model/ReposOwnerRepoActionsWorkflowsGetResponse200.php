@@ -42,13 +42,10 @@ class ReposOwnerRepoActionsWorkflowsGetResponse200 extends \ArrayObject
     {
         return $this->workflows;
     }
-    /**
-     * @param list<Workflow> $workflows
-     */
-    public function setWorkflows(array $workflows): self
+    public function setWorkflows(Workflow ...$workflows): self
     {
         $this->initialized['workflows'] = true;
-        $this->workflows = $workflows;
+        $this->workflows = array_values($workflows);
         return $this;
     }
 }

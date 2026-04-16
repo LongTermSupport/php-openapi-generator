@@ -60,7 +60,7 @@ class ApiCreateKnowledgeBaseInputPublicNormalizer implements DenormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setDatasources($values);
+            $object->setDatasources(...$values);
             unset($data['datasources']);
         }
         if (\array_key_exists('embedding_model_uuid', $data)) {
@@ -86,7 +86,7 @@ class ApiCreateKnowledgeBaseInputPublicNormalizer implements DenormalizerInterfa
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setTags($values_1);
+            $object->setTags(...$values_1);
             unset($data['tags']);
         }
         if (\array_key_exists('vpc_uuid', $data)) {

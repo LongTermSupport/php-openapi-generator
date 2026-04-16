@@ -212,13 +212,10 @@ class Import extends \ArrayObject
     {
         return $this->projectChoices;
     }
-    /**
-     * @param list<ImportProjectChoicesItem> $projectChoices
-     */
-    public function setProjectChoices(array $projectChoices): self
+    public function setProjectChoices(ImportProjectChoicesItem ...$projectChoices): self
     {
         $this->initialized['projectChoices'] = true;
-        $this->projectChoices = $projectChoices;
+        $this->projectChoices = array_values($projectChoices);
         return $this;
     }
     public function getMessage(): string

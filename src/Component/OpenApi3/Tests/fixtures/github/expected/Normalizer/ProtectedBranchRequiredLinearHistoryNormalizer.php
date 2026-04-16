@@ -48,7 +48,7 @@ class ProtectedBranchRequiredLinearHistoryNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ProtectedBranchRequiredLinearHistoryConstraint());
         }
         if (\array_key_exists('enabled', $data)) {
@@ -67,7 +67,7 @@ class ProtectedBranchRequiredLinearHistoryNormalizer implements DenormalizerInte
         }
         $dataArray = [];
         $dataArray['enabled'] = $data->getEnabled();
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ProtectedBranchRequiredLinearHistoryConstraint());
         }
         return $dataArray;

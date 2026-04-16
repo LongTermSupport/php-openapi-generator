@@ -196,13 +196,11 @@ class AppSpec extends \ArrayObject
     }
     /**
      * A set of hostnames where the application will be available.
-     *
-     * @param list<AppDomainSpec> $domains
      */
-    public function setDomains(array $domains): self
+    public function setDomains(AppDomainSpec ...$domains): self
     {
         $this->initialized['domains'] = true;
-        $this->domains = $domains;
+        $this->domains = array_values($domains);
         return $this;
     }
     /**
@@ -216,13 +214,11 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Workloads which expose publicly-accessible HTTP services.
-     *
-     * @param list<AppServiceSpec> $services
      */
-    public function setServices(array $services): self
+    public function setServices(AppServiceSpec ...$services): self
     {
         $this->initialized['services'] = true;
-        $this->services = $services;
+        $this->services = array_values($services);
         return $this;
     }
     /**
@@ -236,13 +232,11 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Content which can be rendered to static web assets.
-     *
-     * @param list<AppStaticSiteSpec> $staticSites
      */
-    public function setStaticSites(array $staticSites): self
+    public function setStaticSites(AppStaticSiteSpec ...$staticSites): self
     {
         $this->initialized['staticSites'] = true;
-        $this->staticSites = $staticSites;
+        $this->staticSites = array_values($staticSites);
         return $this;
     }
     /**
@@ -256,13 +250,11 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Pre and post deployment workloads which do not expose publicly-accessible HTTP routes.
-     *
-     * @param list<AppJobSpec> $jobs
      */
-    public function setJobs(array $jobs): self
+    public function setJobs(AppJobSpec ...$jobs): self
     {
         $this->initialized['jobs'] = true;
-        $this->jobs = $jobs;
+        $this->jobs = array_values($jobs);
         return $this;
     }
     /**
@@ -276,13 +268,11 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Workloads which do not expose publicly-accessible HTTP services.
-     *
-     * @param list<AppWorkerSpec> $workers
      */
-    public function setWorkers(array $workers): self
+    public function setWorkers(AppWorkerSpec ...$workers): self
     {
         $this->initialized['workers'] = true;
-        $this->workers = $workers;
+        $this->workers = array_values($workers);
         return $this;
     }
     /**
@@ -296,13 +286,11 @@ class AppSpec extends \ArrayObject
     }
     /**
      * Workloads which expose publicly-accessible HTTP services via Functions Components.
-     *
-     * @param list<AppFunctionsSpec> $functions
      */
-    public function setFunctions(array $functions): self
+    public function setFunctions(AppFunctionsSpec ...$functions): self
     {
         $this->initialized['functions'] = true;
-        $this->functions = $functions;
+        $this->functions = array_values($functions);
         return $this;
     }
     /**
@@ -318,13 +306,11 @@ class AppSpec extends \ArrayObject
     /**
      * Database instances which can provide persistence to workloads within the
      * application.
-     *
-     * @param list<AppDatabaseSpec> $databases
      */
-    public function setDatabases(array $databases): self
+    public function setDatabases(AppDatabaseSpec ...$databases): self
     {
         $this->initialized['databases'] = true;
-        $this->databases = $databases;
+        $this->databases = array_values($databases);
         return $this;
     }
     /**

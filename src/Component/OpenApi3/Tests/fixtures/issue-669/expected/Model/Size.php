@@ -195,13 +195,11 @@ class Size extends \ArrayObject
     }
     /**
      * An array containing the region slugs where this size is available for Droplet creates.
-     *
-     * @param list<string> $regions
      */
-    public function setRegions(array $regions): self
+    public function setRegions(string ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
     /**
@@ -247,13 +245,11 @@ class Size extends \ArrayObject
     }
     /**
      * An array of objects containing information about the disks available to Droplets created with this size.
-     *
-     * @param list<DiskInfo> $diskInfo
      */
-    public function setDiskInfo(array $diskInfo): self
+    public function setDiskInfo(DiskInfo ...$diskInfo): self
     {
         $this->initialized['diskInfo'] = true;
-        $this->diskInfo = $diskInfo;
+        $this->diskInfo = array_values($diskInfo);
         return $this;
     }
     /**

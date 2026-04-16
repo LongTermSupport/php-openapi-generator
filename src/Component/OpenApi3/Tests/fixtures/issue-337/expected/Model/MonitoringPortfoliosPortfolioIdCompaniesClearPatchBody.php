@@ -31,13 +31,10 @@ class MonitoringPortfoliosPortfolioIdCompaniesClearPatchBody extends \ArrayObjec
     {
         return $this->companies;
     }
-    /**
-     * @param list<MonitoringPortfoliosPortfolioIdCompaniesClearPatchBodyCompaniesItem> $companies
-     */
-    public function setCompanies(array $companies): self
+    public function setCompanies(MonitoringPortfoliosPortfolioIdCompaniesClearPatchBodyCompaniesItem ...$companies): self
     {
         $this->initialized['companies'] = true;
-        $this->companies = $companies;
+        $this->companies = array_values($companies);
         return $this;
     }
 }

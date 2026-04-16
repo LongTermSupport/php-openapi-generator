@@ -96,7 +96,7 @@ class NumericRangeAggregatorNormalizer implements DenormalizerInterface, Normali
                     $values_1[] = $value_3;
                 }
             }
-            $object->setRanges($values_1);
+            $object->setRanges(...$values_1);
             unset($data['ranges']);
         }
         return $object;

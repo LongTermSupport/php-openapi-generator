@@ -55,7 +55,7 @@ class UserSettingsMongoUserSettingsNormalizer implements DenormalizerInterface, 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDatabases($values);
+            $object->setDatabases(...$values);
             unset($data['databases']);
         }
         if (\array_key_exists('role', $data)) {

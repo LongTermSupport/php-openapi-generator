@@ -68,7 +68,7 @@ class AddonsAppInfoNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = $value_1;
                 }
             }
-            $object->setPlans($values);
+            $object->setPlans(...$values);
             unset($data['plans']);
         }
         foreach ($data as $key => $value_2) {

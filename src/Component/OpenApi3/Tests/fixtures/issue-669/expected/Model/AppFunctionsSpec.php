@@ -81,14 +81,12 @@ class AppFunctionsSpec extends \ArrayObject
     /**
      * (Deprecated - Use Ingress Rules instead). A list of HTTP routes that should be routed to this component.
      *
-     * @param list<AppRouteSpec> $routes
-     *
      * @deprecated
      */
-    public function setRoutes(array $routes): self
+    public function setRoutes(AppRouteSpec ...$routes): self
     {
         $this->initialized['routes'] = true;
-        $this->routes = $routes;
+        $this->routes = array_values($routes);
         return $this;
     }
     /**
@@ -130,13 +128,10 @@ class AppFunctionsSpec extends \ArrayObject
     {
         return $this->alerts;
     }
-    /**
-     * @param list<AppAlertSpec> $alerts
-     */
-    public function setAlerts(array $alerts): self
+    public function setAlerts(AppAlertSpec ...$alerts): self
     {
         $this->initialized['alerts'] = true;
-        $this->alerts = $alerts;
+        $this->alerts = array_values($alerts);
         return $this;
     }
     /**
@@ -150,13 +145,11 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * A list of environment variables made available to the component.
-     *
-     * @param list<AppVariableDefinition> $envs
      */
-    public function setEnvs(array $envs): self
+    public function setEnvs(AppVariableDefinition ...$envs): self
     {
         $this->initialized['envs'] = true;
-        $this->envs = $envs;
+        $this->envs = array_values($envs);
         return $this;
     }
     public function getGit(): AppsGitSourceSpec
@@ -210,13 +203,11 @@ class AppFunctionsSpec extends \ArrayObject
     }
     /**
      * A list of configured log forwarding destinations.
-     *
-     * @param list<AppLogDestinationDefinition> $logDestinations
      */
-    public function setLogDestinations(array $logDestinations): self
+    public function setLogDestinations(AppLogDestinationDefinition ...$logDestinations): self
     {
         $this->initialized['logDestinations'] = true;
-        $this->logDestinations = $logDestinations;
+        $this->logDestinations = array_values($logDestinations);
         return $this;
     }
 }

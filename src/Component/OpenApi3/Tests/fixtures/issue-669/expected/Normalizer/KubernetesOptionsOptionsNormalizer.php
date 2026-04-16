@@ -56,7 +56,7 @@ class KubernetesOptionsOptionsNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         if (\array_key_exists('versions', $data)) {
@@ -67,7 +67,7 @@ class KubernetesOptionsOptionsNormalizer implements DenormalizerInterface, Norma
                     $values_1[] = $value_3;
                 }
             }
-            $object->setVersions($values_1);
+            $object->setVersions(...$values_1);
             unset($data['versions']);
         }
         if (\array_key_exists('sizes', $data)) {
@@ -78,7 +78,7 @@ class KubernetesOptionsOptionsNormalizer implements DenormalizerInterface, Norma
                     $values_2[] = $value_5;
                 }
             }
-            $object->setSizes($values_2);
+            $object->setSizes(...$values_2);
             unset($data['sizes']);
         }
         foreach ($data as $key => $value_6) {

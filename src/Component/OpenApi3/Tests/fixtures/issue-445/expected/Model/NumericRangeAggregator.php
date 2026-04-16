@@ -54,13 +54,11 @@ class NumericRangeAggregator extends AggregatorBase
     }
     /**
      * A list of numeric ranges on which aggregate.
-     *
-     * @param list<NumericRangeForAggregator> $ranges
      */
-    public function setRanges(array $ranges): self
+    public function setRanges(NumericRangeForAggregator ...$ranges): self
     {
         $this->initialized['ranges'] = true;
-        $this->ranges = $ranges;
+        $this->ranges = array_values($ranges);
         return $this;
     }
 }

@@ -48,7 +48,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\RepoSearchResultItemConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -326,7 +326,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTopics($values);
+            $object->setTopics(...$values);
             unset($data['topics']);
         }
         if (\array_key_exists('mirror_url', $data)) {
@@ -382,7 +382,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                     $values_1[] = $value_5;
                 }
             }
-            $object->setTextMatches($values_1);
+            $object->setTextMatches(...$values_1);
             unset($data['text_matches']);
         }
         if (\array_key_exists('temp_clone_token', $data)) {
@@ -566,7 +566,7 @@ class RepoSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\RepoSearchResultItemConstraint());
         }
         return $dataArray;

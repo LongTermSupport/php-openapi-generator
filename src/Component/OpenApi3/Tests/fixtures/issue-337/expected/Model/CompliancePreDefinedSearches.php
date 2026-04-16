@@ -42,13 +42,10 @@ class CompliancePreDefinedSearches extends \ArrayObject
     {
         return $this->predefinedSearches;
     }
-    /**
-     * @param list<CompliancePreDefinedSearchesPredefinedSearchesItem> $predefinedSearches
-     */
-    public function setPredefinedSearches(array $predefinedSearches): self
+    public function setPredefinedSearches(CompliancePreDefinedSearchesPredefinedSearchesItem ...$predefinedSearches): self
     {
         $this->initialized['predefinedSearches'] = true;
-        $this->predefinedSearches = $predefinedSearches;
+        $this->predefinedSearches = array_values($predefinedSearches);
         return $this;
     }
 }

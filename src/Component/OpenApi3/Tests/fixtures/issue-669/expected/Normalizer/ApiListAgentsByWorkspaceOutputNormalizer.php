@@ -56,7 +56,7 @@ class ApiListAgentsByWorkspaceOutputNormalizer implements DenormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setAgents($values);
+            $object->setAgents(...$values);
             unset($data['agents']);
         }
         if (\array_key_exists('links', $data)) {

@@ -56,7 +56,7 @@ class ResponseStatusMessagesNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setMessages($values);
+            $object->setMessages(...$values);
             unset($data['messages']);
         }
         foreach ($data as $key => $value_2) {

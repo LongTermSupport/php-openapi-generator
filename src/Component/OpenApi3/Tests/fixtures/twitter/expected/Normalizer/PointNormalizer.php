@@ -59,7 +59,7 @@ class PointNormalizer implements DenormalizerInterface, NormalizerInterface, Den
                     $values[] = TypeValidator::assertFloat($value, 'value');
                 }
             }
-            $object->setCoordinates($values);
+            $object->setCoordinates(...$values);
             unset($data['coordinates']);
         }
         foreach ($data as $key => $value_1) {

@@ -48,7 +48,7 @@ class IssueMilestoneNormalizer implements DenormalizerInterface, NormalizerInter
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\IssueMilestoneConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -183,7 +183,7 @@ class IssueMilestoneNormalizer implements DenormalizerInterface, NormalizerInter
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\IssueMilestoneConstraint());
         }
         return $dataArray;

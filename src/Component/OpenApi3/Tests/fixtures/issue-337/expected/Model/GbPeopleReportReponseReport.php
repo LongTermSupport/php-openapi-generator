@@ -65,13 +65,10 @@ class GbPeopleReportReponseReport extends \ArrayObject
     {
         return $this->otherAddresses;
     }
-    /**
-     * @param list<GbPeopleReportReponseReportOtherAddressesItem> $otherAddresses
-     */
-    public function setOtherAddresses(array $otherAddresses): self
+    public function setOtherAddresses(GbPeopleReportReponseReportOtherAddressesItem ...$otherAddresses): self
     {
         $this->initialized['otherAddresses'] = true;
-        $this->otherAddresses = $otherAddresses;
+        $this->otherAddresses = array_values($otherAddresses);
         return $this;
     }
     public function getDirectorships(): GbPeopleReportReponseReportDirectorships

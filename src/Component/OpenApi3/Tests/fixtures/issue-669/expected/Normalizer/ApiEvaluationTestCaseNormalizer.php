@@ -93,7 +93,7 @@ class ApiEvaluationTestCaseNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_2;
                 }
             }
-            $object->setMetrics($values);
+            $object->setMetrics(...$values);
             unset($data['metrics']);
         }
         if (\array_key_exists('name', $data)) {

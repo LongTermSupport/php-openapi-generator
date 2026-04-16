@@ -48,13 +48,11 @@ class Point extends \ArrayObject
     }
     /**
      * A [GeoJson Position](https://tools.ietf.org/html/rfc7946#section-3.1.1) in the format `[longitude,latitude]`.
-     *
-     * @param list<float> $coordinates
      */
-    public function setCoordinates(array $coordinates): self
+    public function setCoordinates(float ...$coordinates): self
     {
         $this->initialized['coordinates'] = true;
-        $this->coordinates = $coordinates;
+        $this->coordinates = array_values($coordinates);
         return $this;
     }
 }

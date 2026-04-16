@@ -31,13 +31,10 @@ class ResponseUsers extends \ArrayObject
     {
         return $this->users;
     }
-    /**
-     * @param list<DatabaseUser> $users
-     */
-    public function setUsers(array $users): self
+    public function setUsers(DatabaseUser ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
 }

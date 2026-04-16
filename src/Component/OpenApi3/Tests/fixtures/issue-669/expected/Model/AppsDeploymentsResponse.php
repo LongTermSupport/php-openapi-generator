@@ -33,13 +33,10 @@ class AppsDeploymentsResponse extends \ArrayObject
     {
         return $this->deployments;
     }
-    /**
-     * @param list<AppsDeployment> $deployments
-     */
-    public function setDeployments(array $deployments): self
+    public function setDeployments(AppsDeployment ...$deployments): self
     {
         $this->initialized['deployments'] = true;
-        $this->deployments = $deployments;
+        $this->deployments = array_values($deployments);
         return $this;
     }
     public function getLinks(): PageLinks

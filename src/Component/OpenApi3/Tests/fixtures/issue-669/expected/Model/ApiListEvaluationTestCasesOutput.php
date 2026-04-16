@@ -37,13 +37,11 @@ class ApiListEvaluationTestCasesOutput extends \ArrayObject
     }
     /**
      * Alternative way of authentication for internal usage only - should not be exposed to public api
-     *
-     * @param list<ApiEvaluationTestCase> $evaluationTestCases
      */
-    public function setEvaluationTestCases(array $evaluationTestCases): self
+    public function setEvaluationTestCases(ApiEvaluationTestCase ...$evaluationTestCases): self
     {
         $this->initialized['evaluationTestCases'] = true;
-        $this->evaluationTestCases = $evaluationTestCases;
+        $this->evaluationTestCases = array_values($evaluationTestCases);
         return $this;
     }
 }

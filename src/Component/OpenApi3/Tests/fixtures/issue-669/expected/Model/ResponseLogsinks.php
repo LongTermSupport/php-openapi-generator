@@ -31,13 +31,10 @@ class ResponseLogsinks extends \ArrayObject
     {
         return $this->sinks;
     }
-    /**
-     * @param list<LogsinkSchema> $sinks
-     */
-    public function setSinks(array $sinks): self
+    public function setSinks(LogsinkSchema ...$sinks): self
     {
         $this->initialized['sinks'] = true;
-        $this->sinks = $sinks;
+        $this->sinks = array_values($sinks);
         return $this;
     }
 }

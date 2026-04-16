@@ -37,13 +37,11 @@ class AppIngressSpec extends \ArrayObject
     }
     /**
      * Rules for configuring HTTP ingress for component routes, CORS, rewrites, and redirects.
-     *
-     * @param list<AppIngressSpecRule> $rules
      */
-    public function setRules(array $rules): self
+    public function setRules(AppIngressSpecRule ...$rules): self
     {
         $this->initialized['rules'] = true;
-        $this->rules = $rules;
+        $this->rules = array_values($rules);
         return $this;
     }
 }

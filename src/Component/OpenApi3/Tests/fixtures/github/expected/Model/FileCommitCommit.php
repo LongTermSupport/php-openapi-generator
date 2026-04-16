@@ -120,13 +120,10 @@ class FileCommitCommit extends \ArrayObject
     {
         return $this->parents;
     }
-    /**
-     * @param list<FileCommitCommitParentsItem> $parents
-     */
-    public function setParents(array $parents): self
+    public function setParents(FileCommitCommitParentsItem ...$parents): self
     {
         $this->initialized['parents'] = true;
-        $this->parents = $parents;
+        $this->parents = array_values($parents);
         return $this;
     }
     public function getVerification(): FileCommitCommitVerification

@@ -37,13 +37,11 @@ class ProjectAssignment extends \ArrayObject
     }
     /**
      * A list of uniform resource names (URNs) to be added to a project. Only resources that you are authorized to see will be returned.
-     *
-     * @param list<string> $resources
      */
-    public function setResources(array $resources): self
+    public function setResources(string ...$resources): self
     {
         $this->initialized['resources'] = true;
-        $this->resources = $resources;
+        $this->resources = array_values($resources);
         return $this;
     }
 }

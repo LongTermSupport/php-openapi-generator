@@ -37,13 +37,11 @@ class ApiGetChildrenOutput extends \ArrayObject
     }
     /**
      * Child agents
-     *
-     * @param list<ApiAgent> $children
      */
-    public function setChildren(array $children): self
+    public function setChildren(ApiAgent ...$children): self
     {
         $this->initialized['children'] = true;
-        $this->children = $children;
+        $this->children = array_values($children);
         return $this;
     }
 }

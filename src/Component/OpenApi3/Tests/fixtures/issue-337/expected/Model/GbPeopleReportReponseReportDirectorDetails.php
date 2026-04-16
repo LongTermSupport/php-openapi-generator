@@ -164,13 +164,10 @@ class GbPeopleReportReponseReportDirectorDetails extends \ArrayObject
     {
         return $this->positions;
     }
-    /**
-     * @param list<GbPeopleReportReponseReportDirectorDetailsPositionsItem> $positions
-     */
-    public function setPositions(array $positions): self
+    public function setPositions(GbPeopleReportReponseReportDirectorDetailsPositionsItem ...$positions): self
     {
         $this->initialized['positions'] = true;
-        $this->positions = $positions;
+        $this->positions = array_values($positions);
         return $this;
     }
     public function getAdditionalData(): GbPeopleReportReponseReportDirectorDetailsAdditionalData

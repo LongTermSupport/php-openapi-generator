@@ -60,7 +60,7 @@ class AppFunctionsComponentHealthNormalizer implements DenormalizerInterface, No
                     $values[] = $value_1;
                 }
             }
-            $object->setFunctionsComponentHealthMetrics($values);
+            $object->setFunctionsComponentHealthMetrics(...$values);
             unset($data['functions_component_health_metrics']);
         }
         foreach ($data as $key => $value_2) {

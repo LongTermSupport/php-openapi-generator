@@ -55,7 +55,7 @@ class DeleteRulesRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setIds($values);
+            $object->setIds(...$values);
             unset($data['ids']);
         }
         if (\array_key_exists('values', $data)) {
@@ -65,7 +65,7 @@ class DeleteRulesRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setValues($values_1);
+            $object->setValues(...$values_1);
             unset($data['values']);
         }
         foreach ($data as $key => $value_2) {

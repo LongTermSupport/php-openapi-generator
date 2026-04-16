@@ -56,7 +56,7 @@ class ResponseAllKernelsNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setKernels($values);
+            $object->setKernels(...$values);
             unset($data['kernels']);
         }
         if (\array_key_exists('links', $data)) {

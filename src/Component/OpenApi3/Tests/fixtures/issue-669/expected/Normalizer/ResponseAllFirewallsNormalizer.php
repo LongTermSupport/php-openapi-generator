@@ -61,7 +61,7 @@ class ResponseAllFirewallsNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $values_1;
                 }
             }
-            $object->setFirewalls($values);
+            $object->setFirewalls(...$values);
             unset($data['firewalls']);
         }
         if (\array_key_exists('links', $data)) {

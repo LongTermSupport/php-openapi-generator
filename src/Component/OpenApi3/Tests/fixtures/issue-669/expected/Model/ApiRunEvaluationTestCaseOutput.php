@@ -31,13 +31,10 @@ class ApiRunEvaluationTestCaseOutput extends \ArrayObject
     {
         return $this->evaluationRunUuids;
     }
-    /**
-     * @param list<string> $evaluationRunUuids
-     */
-    public function setEvaluationRunUuids(array $evaluationRunUuids): self
+    public function setEvaluationRunUuids(string ...$evaluationRunUuids): self
     {
         $this->initialized['evaluationRunUuids'] = true;
-        $this->evaluationRunUuids = $evaluationRunUuids;
+        $this->evaluationRunUuids = array_values($evaluationRunUuids);
         return $this;
     }
 }

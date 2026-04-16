@@ -71,7 +71,7 @@ class KubernetesNodePoolNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('labels', $data) && $data['labels'] !== null) {
@@ -95,7 +95,7 @@ class KubernetesNodePoolNormalizer implements DenormalizerInterface, NormalizerI
                     $values_2[] = $value_3;
                 }
             }
-            $object->setTaints($values_2);
+            $object->setTaints(...$values_2);
             unset($data['taints']);
         }
         if (\array_key_exists('auto_scale', $data)) {
@@ -118,7 +118,7 @@ class KubernetesNodePoolNormalizer implements DenormalizerInterface, NormalizerI
                     $values_3[] = $value_5;
                 }
             }
-            $object->setNodes($values_3);
+            $object->setNodes(...$values_3);
             unset($data['nodes']);
         }
         foreach ($data as $key_1 => $value_6) {

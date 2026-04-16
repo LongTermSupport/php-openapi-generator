@@ -61,7 +61,7 @@ class AppsDomainProgressNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $values_1;
                 }
             }
-            $object->setSteps($values);
+            $object->setSteps(...$values);
             unset($data['steps']);
         }
         foreach ($data as $key_1 => $value_2) {

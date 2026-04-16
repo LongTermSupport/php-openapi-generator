@@ -48,7 +48,7 @@ class AuthorizationsAuthorizationIdPatchBodyNormalizer implements DenormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AuthorizationsAuthorizationIdPatchBodyConstraint());
         }
         if (\array_key_exists('scopes', $data) && $data['scopes'] !== null) {
@@ -71,7 +71,7 @@ class AuthorizationsAuthorizationIdPatchBodyNormalizer implements DenormalizerIn
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setAddScopes($values_1);
+            $object->setAddScopes(...$values_1);
             unset($data['add_scopes']);
         }
         if (\array_key_exists('remove_scopes', $data)) {
@@ -81,7 +81,7 @@ class AuthorizationsAuthorizationIdPatchBodyNormalizer implements DenormalizerIn
                     $values_2[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setRemoveScopes($values_2);
+            $object->setRemoveScopes(...$values_2);
             unset($data['remove_scopes']);
         }
         if (\array_key_exists('note', $data)) {
@@ -149,7 +149,7 @@ class AuthorizationsAuthorizationIdPatchBodyNormalizer implements DenormalizerIn
                 $dataArray[$key] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AuthorizationsAuthorizationIdPatchBodyConstraint());
         }
         return $dataArray;

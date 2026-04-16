@@ -102,13 +102,11 @@ class ShareBaseUpdateRequest
     }
     /**
      * List of contents including outputs. Existing items needs to be sent again, otherwise they will be removed.
-     *
-     * @param list<ShareContent> $contents
      */
-    public function setContents(array $contents): void
+    public function setContents(ShareContent ...$contents): void
     {
         $this->initialized['contents'] = true;
-        $this->contents = $contents;
+        $this->contents = array_values($contents);
     }
     /**
      * List of content layers to share.

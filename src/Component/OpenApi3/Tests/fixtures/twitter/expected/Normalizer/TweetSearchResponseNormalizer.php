@@ -55,7 +55,7 @@ class TweetSearchResponseNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value;
                 }
             }
-            $object->setData($values);
+            $object->setData(...$values);
             unset($data['data']);
         }
         if (\array_key_exists('includes', $data)) {
@@ -70,7 +70,7 @@ class TweetSearchResponseNormalizer implements DenormalizerInterface, Normalizer
                     $values_1[] = $value_2;
                 }
             }
-            $object->setErrors($values_1);
+            $object->setErrors(...$values_1);
             unset($data['errors']);
         }
         if (\array_key_exists('meta', $data)) {

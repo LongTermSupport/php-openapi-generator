@@ -31,13 +31,10 @@ class V2LoadBalancersLbIdForwardingRulesPostBody extends \ArrayObject
     {
         return $this->forwardingRules;
     }
-    /**
-     * @param list<ForwardingRule> $forwardingRules
-     */
-    public function setForwardingRules(array $forwardingRules): self
+    public function setForwardingRules(ForwardingRule ...$forwardingRules): self
     {
         $this->initialized['forwardingRules'] = true;
-        $this->forwardingRules = $forwardingRules;
+        $this->forwardingRules = array_values($forwardingRules);
         return $this;
     }
 }

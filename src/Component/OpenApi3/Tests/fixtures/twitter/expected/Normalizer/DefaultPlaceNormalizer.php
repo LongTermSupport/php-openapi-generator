@@ -83,7 +83,7 @@ class DefaultPlaceNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContainedWithin($values);
+            $object->setContainedWithin(...$values);
             unset($data['contained_within']);
         }
         foreach ($data as $key => $value_1) {

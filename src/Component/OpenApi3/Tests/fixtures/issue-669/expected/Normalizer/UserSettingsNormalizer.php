@@ -60,7 +60,7 @@ class UserSettingsNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setOpensearchAcl($values);
+            $object->setOpensearchAcl(...$values);
             unset($data['opensearch_acl']);
         }
         if (\array_key_exists('acl', $data)) {
@@ -71,7 +71,7 @@ class UserSettingsNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values_1[] = $value_3;
                 }
             }
-            $object->setAcl($values_1);
+            $object->setAcl(...$values_1);
             unset($data['acl']);
         }
         if (\array_key_exists('mongo_user_settings', $data)) {

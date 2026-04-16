@@ -76,7 +76,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = $value_1;
                 }
             }
-            $object->setDiskInfo($values);
+            $object->setDiskInfo(...$values);
             unset($data['disk_info']);
         }
         if (\array_key_exists('locked', $data)) {
@@ -106,7 +106,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_1[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setFeatures($values_1);
+            $object->setFeatures(...$values_1);
             unset($data['features']);
         }
         if (\array_key_exists('backup_ids', $data)) {
@@ -116,7 +116,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_2[] = TypeValidator::assertInt($value_4, 'value');
                 }
             }
-            $object->setBackupIds($values_2);
+            $object->setBackupIds(...$values_2);
             unset($data['backup_ids']);
         }
         if (\array_key_exists('next_backup_window', $data)) {
@@ -131,7 +131,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_3[] = TypeValidator::assertInt($value_6, 'value');
                 }
             }
-            $object->setSnapshotIds($values_3);
+            $object->setSnapshotIds(...$values_3);
             unset($data['snapshot_ids']);
         }
         if (\array_key_exists('image', $data)) {
@@ -146,7 +146,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_4[] = TypeValidator::assertString($value_8, 'value');
                 }
             }
-            $object->setVolumeIds($values_4);
+            $object->setVolumeIds(...$values_4);
             unset($data['volume_ids']);
         }
         if (\array_key_exists('size', $data)) {
@@ -175,7 +175,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_5[] = TypeValidator::assertString($value_12, 'value');
                 }
             }
-            $object->setTags($values_5);
+            $object->setTags(...$values_5);
             unset($data['tags']);
         }
         if (\array_key_exists('vpc_uuid', $data)) {

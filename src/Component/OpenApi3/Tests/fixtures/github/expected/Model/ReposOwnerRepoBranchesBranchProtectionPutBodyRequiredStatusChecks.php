@@ -57,13 +57,11 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyRequiredStatusChecks extends 
     }
     /**
      * The list of status checks to require in order to merge into this branch
-     *
-     * @param list<string> $contexts
      */
-    public function setContexts(array $contexts): self
+    public function setContexts(string ...$contexts): self
     {
         $this->initialized['contexts'] = true;
-        $this->contexts = $contexts;
+        $this->contexts = array_values($contexts);
         return $this;
     }
 }

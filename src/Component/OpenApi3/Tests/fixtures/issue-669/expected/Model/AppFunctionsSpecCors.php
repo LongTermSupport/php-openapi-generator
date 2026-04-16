@@ -63,13 +63,11 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * The set of allowed CORS origins.
-     *
-     * @param list<AppsStringMatch> $allowOrigins
      */
-    public function setAllowOrigins(array $allowOrigins): self
+    public function setAllowOrigins(AppsStringMatch ...$allowOrigins): self
     {
         $this->initialized['allowOrigins'] = true;
-        $this->allowOrigins = $allowOrigins;
+        $this->allowOrigins = array_values($allowOrigins);
         return $this;
     }
     /**
@@ -83,13 +81,11 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
-     *
-     * @param list<string> $allowMethods
      */
-    public function setAllowMethods(array $allowMethods): self
+    public function setAllowMethods(string ...$allowMethods): self
     {
         $this->initialized['allowMethods'] = true;
-        $this->allowMethods = $allowMethods;
+        $this->allowMethods = array_values($allowMethods);
         return $this;
     }
     /**
@@ -103,13 +99,11 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
-     *
-     * @param list<string> $allowHeaders
      */
-    public function setAllowHeaders(array $allowHeaders): self
+    public function setAllowHeaders(string ...$allowHeaders): self
     {
         $this->initialized['allowHeaders'] = true;
-        $this->allowHeaders = $allowHeaders;
+        $this->allowHeaders = array_values($allowHeaders);
         return $this;
     }
     /**
@@ -123,13 +117,11 @@ class AppFunctionsSpecCors extends \ArrayObject
     }
     /**
      * The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
-     *
-     * @param list<string> $exposeHeaders
      */
-    public function setExposeHeaders(array $exposeHeaders): self
+    public function setExposeHeaders(string ...$exposeHeaders): self
     {
         $this->initialized['exposeHeaders'] = true;
-        $this->exposeHeaders = $exposeHeaders;
+        $this->exposeHeaders = array_values($exposeHeaders);
         return $this;
     }
     /**

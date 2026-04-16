@@ -60,7 +60,7 @@ class ApiCreateDataSourceFileUploadPresignedUrlsOutputNormalizer implements Deno
                     $values[] = $value_1;
                 }
             }
-            $object->setUploads($values);
+            $object->setUploads(...$values);
             unset($data['uploads']);
         }
         foreach ($data as $key => $value_2) {

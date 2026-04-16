@@ -53,13 +53,10 @@ class SearchIssuesGetResponse200 extends \ArrayObject
     {
         return $this->items;
     }
-    /**
-     * @param list<IssueSearchResultItem> $items
-     */
-    public function setItems(array $items): self
+    public function setItems(IssueSearchResultItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

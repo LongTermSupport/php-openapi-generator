@@ -61,7 +61,7 @@ class ShareNormalizer implements DenormalizerInterface, NormalizerInterface, Den
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContentIds($values);
+            $object->setContentIds(...$values);
         }
         if (\array_key_exists('audit', $data)) {
             $object->setAudit($data['audit']);

@@ -67,7 +67,7 @@ class VpcPeeringNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setVpcIds($values);
+            $object->setVpcIds(...$values);
             unset($data['vpc_ids']);
         }
         if (\array_key_exists('name', $data)) {

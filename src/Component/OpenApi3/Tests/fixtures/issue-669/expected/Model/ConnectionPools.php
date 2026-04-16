@@ -37,13 +37,11 @@ class ConnectionPools extends \ArrayObject
     }
     /**
      * An array of connection pool objects.
-     *
-     * @param list<ConnectionPool> $pools
      */
-    public function setPools(array $pools): self
+    public function setPools(ConnectionPool ...$pools): self
     {
         $this->initialized['pools'] = true;
-        $this->pools = $pools;
+        $this->pools = array_values($pools);
         return $this;
     }
 }

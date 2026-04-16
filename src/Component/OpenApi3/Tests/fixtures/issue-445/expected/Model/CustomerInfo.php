@@ -201,13 +201,11 @@ class CustomerInfo
     }
     /**
      * Languages including translations for the configured system and metadata languages.
-     *
-     * @param list<Language> $languages
      */
-    public function setLanguages(array $languages): self
+    public function setLanguages(Language ...$languages): self
     {
         $this->initialized['languages'] = true;
-        $this->languages = $languages;
+        $this->languages = array_values($languages);
         return $this;
     }
     /**
@@ -221,13 +219,11 @@ class CustomerInfo
     }
     /**
      * Configured rendering outputs including translations for the customer instance.
-     *
-     * @param list<OutputFormatInfo> $outputFormats
      */
-    public function setOutputFormats(array $outputFormats): self
+    public function setOutputFormats(OutputFormatInfo ...$outputFormats): self
     {
         $this->initialized['outputFormats'] = true;
-        $this->outputFormats = $outputFormats;
+        $this->outputFormats = array_values($outputFormats);
         return $this;
     }
     /**
@@ -241,13 +237,11 @@ class CustomerInfo
     }
     /**
      * Boost levels that can be applied to a metadata field to boost the the significance of the field in a search operation.
-     *
-     * @param list<float> $boostValues
      */
-    public function setBoostValues(array $boostValues): self
+    public function setBoostValues(float ...$boostValues): self
     {
         $this->initialized['boostValues'] = true;
-        $this->boostValues = $boostValues;
+        $this->boostValues = array_values($boostValues);
         return $this;
     }
     /**

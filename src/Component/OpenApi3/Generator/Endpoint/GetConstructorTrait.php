@@ -68,7 +68,12 @@ trait GetConstructorTrait
                     $pathParamsWithDefaultValueDoc[] = $nonBodyParameterGenerator->generateMethodDocParameter($parameter, $context, $operation->getReference() . '/parameters/' . $key);
                 }
 
-                $paramName = $parameter->getName() ?? '';
+                $paramNameRaw = $parameter->getName();
+                if (!\is_string($paramNameRaw)) {
+                    throw new LogicException('Expected string parameter name, got ' . get_debug_type($paramNameRaw));
+                }
+
+                $paramName = $paramNameRaw;
 
                 // When anyOf is present or the schema type is an OAS 3.1 array of types,
                 // the constructor parameter will be a union type (e.g. string|int|null).

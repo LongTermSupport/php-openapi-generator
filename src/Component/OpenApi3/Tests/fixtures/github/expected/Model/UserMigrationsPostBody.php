@@ -81,13 +81,11 @@ class UserMigrationsPostBody extends \ArrayObject
     }
     /**
      * Exclude attributes from the API response to improve performance
-     *
-     * @param list<string> $exclude
      */
-    public function setExclude(array $exclude): self
+    public function setExclude(string ...$exclude): self
     {
         $this->initialized['exclude'] = true;
-        $this->exclude = $exclude;
+        $this->exclude = array_values($exclude);
         return $this;
     }
     /**
@@ -97,13 +95,10 @@ class UserMigrationsPostBody extends \ArrayObject
     {
         return $this->repositories;
     }
-    /**
-     * @param list<string> $repositories
-     */
-    public function setRepositories(array $repositories): self
+    public function setRepositories(string ...$repositories): self
     {
         $this->initialized['repositories'] = true;
-        $this->repositories = $repositories;
+        $this->repositories = array_values($repositories);
         return $this;
     }
 }

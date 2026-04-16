@@ -64,7 +64,7 @@ class ApiIndexingJobNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_1;
                 }
             }
-            $object->setDataSourceJobs($values);
+            $object->setDataSourceJobs(...$values);
             unset($data['data_source_jobs']);
         }
         if (\array_key_exists('data_source_uuids', $data)) {
@@ -74,7 +74,7 @@ class ApiIndexingJobNormalizer implements DenormalizerInterface, NormalizerInter
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setDataSourceUuids($values_1);
+            $object->setDataSourceUuids(...$values_1);
             unset($data['data_source_uuids']);
         }
         if (\array_key_exists('finished_at', $data)) {

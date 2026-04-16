@@ -56,7 +56,7 @@ class XmpMappingTargetsNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setXmpFields($values);
+            $object->setXmpFields(...$values);
         }
         if (\array_key_exists('metadataFields', $data)) {
             $values_1 = [];
@@ -66,7 +66,7 @@ class XmpMappingTargetsNormalizer implements DenormalizerInterface, NormalizerIn
                     $values_1[] = $value_3;
                 }
             }
-            $object->setMetadataFields($values_1);
+            $object->setMetadataFields(...$values_1);
         }
         return $object;
     }

@@ -31,13 +31,10 @@ class ResponseFirewallRules extends \ArrayObject
     {
         return $this->rules;
     }
-    /**
-     * @param list<FirewallRule> $rules
-     */
-    public function setRules(array $rules): self
+    public function setRules(FirewallRule ...$rules): self
     {
         $this->initialized['rules'] = true;
-        $this->rules = $rules;
+        $this->rules = array_values($rules);
         return $this;
     }
 }

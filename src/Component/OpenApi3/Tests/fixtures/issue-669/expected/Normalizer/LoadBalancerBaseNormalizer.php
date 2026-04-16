@@ -96,7 +96,7 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setForwardingRules($values);
+            $object->setForwardingRules(...$values);
             unset($data['forwarding_rules']);
         }
         if (\array_key_exists('health_check', $data)) {
@@ -158,7 +158,7 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = $value_6;
                 }
             }
-            $object->setDomains($values_1);
+            $object->setDomains(...$values_1);
             unset($data['domains']);
         }
         if (\array_key_exists('glb_settings', $data)) {
@@ -173,7 +173,7 @@ class LoadBalancerBaseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_2[] = TypeValidator::assertString($value_8, 'value');
                 }
             }
-            $object->setTargetLoadBalancerIds($values_2);
+            $object->setTargetLoadBalancerIds(...$values_2);
             unset($data['target_load_balancer_ids']);
         }
         if (\array_key_exists('tls_cipher_policy', $data)) {

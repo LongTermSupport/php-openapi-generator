@@ -110,13 +110,10 @@ class ResponseAppsValidateRollbackError extends \ArrayObject
     {
         return $this->components;
     }
-    /**
-     * @param list<string> $components
-     */
-    public function setComponents(array $components): self
+    public function setComponents(string ...$components): self
     {
         $this->initialized['components'] = true;
-        $this->components = $components;
+        $this->components = array_values($components);
         return $this;
     }
 }

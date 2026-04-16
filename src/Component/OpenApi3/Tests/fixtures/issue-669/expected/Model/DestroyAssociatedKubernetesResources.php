@@ -49,13 +49,11 @@ class DestroyAssociatedKubernetesResources extends \ArrayObject
     }
     /**
      * A list of IDs for associated load balancers to destroy along with the cluster.
-     *
-     * @param list<string> $loadBalancers
      */
-    public function setLoadBalancers(array $loadBalancers): self
+    public function setLoadBalancers(string ...$loadBalancers): self
     {
         $this->initialized['loadBalancers'] = true;
-        $this->loadBalancers = $loadBalancers;
+        $this->loadBalancers = array_values($loadBalancers);
         return $this;
     }
     /**
@@ -69,13 +67,11 @@ class DestroyAssociatedKubernetesResources extends \ArrayObject
     }
     /**
      * A list of IDs for associated volumes to destroy along with the cluster.
-     *
-     * @param list<string> $volumes
      */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(string ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
     /**
@@ -89,13 +85,11 @@ class DestroyAssociatedKubernetesResources extends \ArrayObject
     }
     /**
      * A list of IDs for associated volume snapshots to destroy along with the cluster.
-     *
-     * @param list<string> $volumeSnapshots
      */
-    public function setVolumeSnapshots(array $volumeSnapshots): self
+    public function setVolumeSnapshots(string ...$volumeSnapshots): self
     {
         $this->initialized['volumeSnapshots'] = true;
-        $this->volumeSnapshots = $volumeSnapshots;
+        $this->volumeSnapshots = array_values($volumeSnapshots);
         return $this;
     }
 }

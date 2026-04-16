@@ -55,7 +55,7 @@ class ClusterlintRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setIncludeGroups($values);
+            $object->setIncludeGroups(...$values);
             unset($data['include_groups']);
         }
         if (\array_key_exists('include_checks', $data)) {
@@ -65,7 +65,7 @@ class ClusterlintRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setIncludeChecks($values_1);
+            $object->setIncludeChecks(...$values_1);
             unset($data['include_checks']);
         }
         if (\array_key_exists('exclude_groups', $data)) {
@@ -75,7 +75,7 @@ class ClusterlintRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values_2[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setExcludeGroups($values_2);
+            $object->setExcludeGroups(...$values_2);
             unset($data['exclude_groups']);
         }
         if (\array_key_exists('exclude_checks', $data)) {
@@ -85,7 +85,7 @@ class ClusterlintRequestNormalizer implements DenormalizerInterface, NormalizerI
                     $values_3[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setExcludeChecks($values_3);
+            $object->setExcludeChecks(...$values_3);
             unset($data['exclude_checks']);
         }
         foreach ($data as $key => $value_4) {

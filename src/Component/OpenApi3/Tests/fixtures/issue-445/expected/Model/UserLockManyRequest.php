@@ -43,13 +43,11 @@ class UserLockManyRequest extends \ArrayObject
     }
     /**
      * User IDs.
-     *
-     * @param list<string> $userIds
      */
-    public function setUserIds(array $userIds): self
+    public function setUserIds(string ...$userIds): self
     {
         $this->initialized['userIds'] = true;
-        $this->userIds = $userIds;
+        $this->userIds = array_values($userIds);
         return $this;
     }
     /**

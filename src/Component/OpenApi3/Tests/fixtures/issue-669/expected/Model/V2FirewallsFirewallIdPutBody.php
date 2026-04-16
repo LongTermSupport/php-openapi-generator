@@ -119,13 +119,11 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     }
     /**
      * An array of objects each containing the fields "droplet_id", "removing", and "status". It is provided to detail exactly which Droplets are having their security policies updated. When empty, all changes have been successfully applied.
-     *
-     * @param list<FirewallpendingChangesItem> $pendingChanges
      */
-    public function setPendingChanges(array $pendingChanges): self
+    public function setPendingChanges(FirewallpendingChangesItem ...$pendingChanges): self
     {
         $this->initialized['pendingChanges'] = true;
-        $this->pendingChanges = $pendingChanges;
+        $this->pendingChanges = array_values($pendingChanges);
         return $this;
     }
     /**
@@ -171,13 +169,10 @@ class V2FirewallsFirewallIdPutBody extends \ArrayObject
     {
         return $this->tags;
     }
-    /**
-     * @param list<string> $tags
-     */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

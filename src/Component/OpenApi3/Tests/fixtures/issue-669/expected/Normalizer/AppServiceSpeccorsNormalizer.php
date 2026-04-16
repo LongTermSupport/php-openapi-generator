@@ -56,7 +56,7 @@ class AppServiceSpeccorsNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setAllowOrigins($values);
+            $object->setAllowOrigins(...$values);
             unset($data['allow_origins']);
         }
         if (\array_key_exists('allow_methods', $data)) {
@@ -66,7 +66,7 @@ class AppServiceSpeccorsNormalizer implements DenormalizerInterface, NormalizerI
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setAllowMethods($values_1);
+            $object->setAllowMethods(...$values_1);
             unset($data['allow_methods']);
         }
         if (\array_key_exists('allow_headers', $data)) {
@@ -76,7 +76,7 @@ class AppServiceSpeccorsNormalizer implements DenormalizerInterface, NormalizerI
                     $values_2[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setAllowHeaders($values_2);
+            $object->setAllowHeaders(...$values_2);
             unset($data['allow_headers']);
         }
         if (\array_key_exists('expose_headers', $data)) {
@@ -86,7 +86,7 @@ class AppServiceSpeccorsNormalizer implements DenormalizerInterface, NormalizerI
                     $values_3[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setExposeHeaders($values_3);
+            $object->setExposeHeaders(...$values_3);
             unset($data['expose_headers']);
         }
         if (\array_key_exists('max_age', $data)) {

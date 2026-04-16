@@ -56,7 +56,7 @@ class ResponseAllLoadBalancersNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setLoadBalancers($values);
+            $object->setLoadBalancers(...$values);
             unset($data['load_balancers']);
         }
         if (\array_key_exists('links', $data)) {

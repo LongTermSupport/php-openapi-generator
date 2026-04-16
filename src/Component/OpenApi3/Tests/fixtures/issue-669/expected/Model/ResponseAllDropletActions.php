@@ -33,13 +33,10 @@ class ResponseAllDropletActions extends \ArrayObject
     {
         return $this->actions;
     }
-    /**
-     * @param list<Action> $actions
-     */
-    public function setActions(array $actions): self
+    public function setActions(Action ...$actions): self
     {
         $this->initialized['actions'] = true;
-        $this->actions = $actions;
+        $this->actions = array_values($actions);
         return $this;
     }
     public function getLinks(): PageLinks

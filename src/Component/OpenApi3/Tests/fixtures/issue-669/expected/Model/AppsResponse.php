@@ -33,13 +33,10 @@ class AppsResponse extends \ArrayObject
     {
         return $this->apps;
     }
-    /**
-     * @param list<App> $apps
-     */
-    public function setApps(array $apps): self
+    public function setApps(App ...$apps): self
     {
         $this->initialized['apps'] = true;
-        $this->apps = $apps;
+        $this->apps = array_values($apps);
         return $this;
     }
     public function getLinks(): PageLinks

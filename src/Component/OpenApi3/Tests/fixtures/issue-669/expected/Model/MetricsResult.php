@@ -64,12 +64,12 @@ class MetricsResult extends \ArrayObject
     /**
      * An array of values for the metric.
      *
-     * @param list<list<mixed>> $values
+     * @param list<mixed> ...$values
      */
-    public function setValues(array $values): self
+    public function setValues(array ...$values): self
     {
         $this->initialized['values'] = true;
-        $this->values = $values;
+        $this->values = array_values($values);
         return $this;
     }
 }

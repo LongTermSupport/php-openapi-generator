@@ -48,7 +48,7 @@ class SearchCommitsGetResponse200Normalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\SearchCommitsGetResponse200Constraint());
         }
         if (\array_key_exists('total_count', $data)) {
@@ -67,7 +67,7 @@ class SearchCommitsGetResponse200Normalizer implements DenormalizerInterface, No
                     $values[] = $value_1;
                 }
             }
-            $object->setItems($values);
+            $object->setItems(...$values);
             unset($data['items']);
         }
         foreach ($data as $key => $value_2) {
@@ -105,7 +105,7 @@ class SearchCommitsGetResponse200Normalizer implements DenormalizerInterface, No
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\SearchCommitsGetResponse200Constraint());
         }
         return $dataArray;

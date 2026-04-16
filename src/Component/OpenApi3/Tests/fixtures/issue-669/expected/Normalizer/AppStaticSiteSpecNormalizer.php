@@ -101,7 +101,7 @@ class AppStaticSiteSpecNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_6;
                 }
             }
-            $object->setEnvs($values);
+            $object->setEnvs(...$values);
             unset($data['envs']);
         }
         if (\array_key_exists('environment_slug', $data)) {
@@ -116,7 +116,7 @@ class AppStaticSiteSpecNormalizer implements DenormalizerInterface, NormalizerIn
                     $values_1[] = $value_8;
                 }
             }
-            $object->setLogDestinations($values_1);
+            $object->setLogDestinations(...$values_1);
             unset($data['log_destinations']);
         }
         if (\array_key_exists('index_document', $data)) {
@@ -148,7 +148,7 @@ class AppStaticSiteSpecNormalizer implements DenormalizerInterface, NormalizerIn
                     $values_2[] = $value_11;
                 }
             }
-            $object->setRoutes($values_2);
+            $object->setRoutes(...$values_2);
             unset($data['routes']);
         }
         foreach ($data as $key => $value_12) {

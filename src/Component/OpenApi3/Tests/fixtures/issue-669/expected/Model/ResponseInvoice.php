@@ -33,13 +33,10 @@ class ResponseInvoice extends \ArrayObject
     {
         return $this->invoiceItems;
     }
-    /**
-     * @param list<InvoiceItem> $invoiceItems
-     */
-    public function setInvoiceItems(array $invoiceItems): self
+    public function setInvoiceItems(InvoiceItem ...$invoiceItems): self
     {
         $this->initialized['invoiceItems'] = true;
-        $this->invoiceItems = $invoiceItems;
+        $this->invoiceItems = array_values($invoiceItems);
         return $this;
     }
     public function getLinks(): PageLinks

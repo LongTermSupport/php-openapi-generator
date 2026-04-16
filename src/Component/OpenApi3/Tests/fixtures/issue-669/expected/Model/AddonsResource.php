@@ -225,13 +225,11 @@ class AddonsResource extends \ArrayObject
     }
     /**
      * Metadata associated with the resource, set by the user.
-     *
-     * @param list<AddonsResourceMetadata> $metadata
      */
-    public function setMetadata(array $metadata): self
+    public function setMetadata(AddonsResourceMetadata ...$metadata): self
     {
         $this->initialized['metadata'] = true;
-        $this->metadata = $metadata;
+        $this->metadata = array_values($metadata);
         return $this;
     }
     /**

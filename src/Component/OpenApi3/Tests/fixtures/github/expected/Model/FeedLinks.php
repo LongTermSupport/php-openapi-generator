@@ -171,13 +171,10 @@ class FeedLinks extends \ArrayObject
     {
         return $this->currentUserOrganizations;
     }
-    /**
-     * @param list<LinkWithType> $currentUserOrganizations
-     */
-    public function setCurrentUserOrganizations(array $currentUserOrganizations): self
+    public function setCurrentUserOrganizations(LinkWithType ...$currentUserOrganizations): self
     {
         $this->initialized['currentUserOrganizations'] = true;
-        $this->currentUserOrganizations = $currentUserOrganizations;
+        $this->currentUserOrganizations = array_values($currentUserOrganizations);
         return $this;
     }
 }

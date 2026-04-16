@@ -45,13 +45,11 @@ class ApiListAgentsOutputPublic extends \ArrayObject
     }
     /**
      * Agents
-     *
-     * @param list<ApiAgentPublic> $agents
      */
-    public function setAgents(array $agents): self
+    public function setAgents(ApiAgentPublic ...$agents): self
     {
         $this->initialized['agents'] = true;
-        $this->agents = $agents;
+        $this->agents = array_values($agents);
         return $this;
     }
     /**

@@ -33,13 +33,10 @@ class ResponseVpcNatGateways extends \ArrayObject
     {
         return $this->vpcNatGateways;
     }
-    /**
-     * @param list<VpcNatGatewayGet> $vpcNatGateways
-     */
-    public function setVpcNatGateways(array $vpcNatGateways): self
+    public function setVpcNatGateways(VpcNatGatewayGet ...$vpcNatGateways): self
     {
         $this->initialized['vpcNatGateways'] = true;
-        $this->vpcNatGateways = $vpcNatGateways;
+        $this->vpcNatGateways = array_values($vpcNatGateways);
         return $this;
     }
     public function getLinks(): PageLinks

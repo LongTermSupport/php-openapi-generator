@@ -61,7 +61,7 @@ class ResponseVpcPeeringsNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $values_1;
                 }
             }
-            $object->setPeerings($values);
+            $object->setPeerings(...$values);
             unset($data['peerings']);
         }
         if (\array_key_exists('links', $data)) {

@@ -41,13 +41,11 @@ class ApiMoveAgentsToWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Agent uuids
-     *
-     * @param list<string> $agentUuids
      */
-    public function setAgentUuids(array $agentUuids): self
+    public function setAgentUuids(string ...$agentUuids): self
     {
         $this->initialized['agentUuids'] = true;
-        $this->agentUuids = $agentUuids;
+        $this->agentUuids = array_values($agentUuids);
         return $this;
     }
     /**

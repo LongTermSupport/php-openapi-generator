@@ -55,7 +55,7 @@ class V2KubernetesClustersClusterIdNodePoolsNodePoolIdRecyclePostBodyNormalizer 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setNodes($values);
+            $object->setNodes(...$values);
             unset($data['nodes']);
         }
         foreach ($data as $key => $value_1) {

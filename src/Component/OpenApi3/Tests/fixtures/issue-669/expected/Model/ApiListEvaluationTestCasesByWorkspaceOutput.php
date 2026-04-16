@@ -31,13 +31,10 @@ class ApiListEvaluationTestCasesByWorkspaceOutput extends \ArrayObject
     {
         return $this->evaluationTestCases;
     }
-    /**
-     * @param list<ApiEvaluationTestCase> $evaluationTestCases
-     */
-    public function setEvaluationTestCases(array $evaluationTestCases): self
+    public function setEvaluationTestCases(ApiEvaluationTestCase ...$evaluationTestCases): self
     {
         $this->initialized['evaluationTestCases'] = true;
-        $this->evaluationTestCases = $evaluationTestCases;
+        $this->evaluationTestCases = array_values($evaluationTestCases);
         return $this;
     }
 }

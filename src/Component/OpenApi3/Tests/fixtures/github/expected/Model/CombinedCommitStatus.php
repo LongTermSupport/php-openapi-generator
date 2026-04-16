@@ -50,13 +50,10 @@ class CombinedCommitStatus extends \ArrayObject
     {
         return $this->statuses;
     }
-    /**
-     * @param list<SimpleCommitStatus> $statuses
-     */
-    public function setStatuses(array $statuses): self
+    public function setStatuses(SimpleCommitStatus ...$statuses): self
     {
         $this->initialized['statuses'] = true;
-        $this->statuses = $statuses;
+        $this->statuses = array_values($statuses);
         return $this;
     }
     public function getSha(): string

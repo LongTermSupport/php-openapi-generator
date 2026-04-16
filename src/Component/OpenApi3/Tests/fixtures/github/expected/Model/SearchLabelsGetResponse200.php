@@ -53,13 +53,10 @@ class SearchLabelsGetResponse200 extends \ArrayObject
     {
         return $this->items;
     }
-    /**
-     * @param list<LabelSearchResultItem> $items
-     */
-    public function setItems(array $items): self
+    public function setItems(LabelSearchResultItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

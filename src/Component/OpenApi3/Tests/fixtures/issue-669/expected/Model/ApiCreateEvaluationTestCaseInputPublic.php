@@ -97,13 +97,11 @@ class ApiCreateEvaluationTestCaseInputPublic extends \ArrayObject
     }
     /**
      * Full metric list to use for evaluation test case.
-     *
-     * @param list<string> $metrics
      */
-    public function setMetrics(array $metrics): self
+    public function setMetrics(string ...$metrics): self
     {
         $this->initialized['metrics'] = true;
-        $this->metrics = $metrics;
+        $this->metrics = array_values($metrics);
         return $this;
     }
     /**

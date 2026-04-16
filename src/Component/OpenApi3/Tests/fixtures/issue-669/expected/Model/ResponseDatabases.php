@@ -31,13 +31,10 @@ class ResponseDatabases extends \ArrayObject
     {
         return $this->dbs;
     }
-    /**
-     * @param list<Database> $dbs
-     */
-    public function setDbs(array $dbs): self
+    public function setDbs(Database ...$dbs): self
     {
         $this->initialized['dbs'] = true;
-        $this->dbs = $dbs;
+        $this->dbs = array_values($dbs);
         return $this;
     }
 }

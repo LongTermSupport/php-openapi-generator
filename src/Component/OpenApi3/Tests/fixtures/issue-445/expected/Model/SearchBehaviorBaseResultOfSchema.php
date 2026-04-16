@@ -79,13 +79,11 @@ class SearchBehaviorBaseResultOfSchema extends \ArrayObject
     }
     /**
      * The matched documents.
-     *
-     * @param list<Schema> $results
      */
-    public function setResults(array $results): self
+    public function setResults(Schema ...$results): self
     {
         $this->initialized['results'] = true;
-        $this->results = $results;
+        $this->results = array_values($results);
         return $this;
     }
     /**

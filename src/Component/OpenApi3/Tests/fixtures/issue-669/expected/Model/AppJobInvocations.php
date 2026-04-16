@@ -32,13 +32,10 @@ class AppJobInvocations extends \ArrayObject
     {
         return $this->jobInvocations;
     }
-    /**
-     * @param list<AppJobInvocation> $jobInvocations
-     */
-    public function setJobInvocations(array $jobInvocations): self
+    public function setJobInvocations(AppJobInvocation ...$jobInvocations): self
     {
         $this->initialized['jobInvocations'] = true;
-        $this->jobInvocations = $jobInvocations;
+        $this->jobInvocations = array_values($jobInvocations);
         return $this;
     }
     public function getLinks(): PageLinks

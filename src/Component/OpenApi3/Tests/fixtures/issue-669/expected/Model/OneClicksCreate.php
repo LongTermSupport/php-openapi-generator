@@ -41,13 +41,11 @@ class OneClicksCreate extends \ArrayObject
     }
     /**
      * An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
-     *
-     * @param list<string> $addonSlugs
      */
-    public function setAddonSlugs(array $addonSlugs): self
+    public function setAddonSlugs(string ...$addonSlugs): self
     {
         $this->initialized['addonSlugs'] = true;
-        $this->addonSlugs = $addonSlugs;
+        $this->addonSlugs = array_values($addonSlugs);
         return $this;
     }
     /**

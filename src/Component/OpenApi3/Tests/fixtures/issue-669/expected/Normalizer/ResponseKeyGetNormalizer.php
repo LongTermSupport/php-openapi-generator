@@ -56,7 +56,7 @@ class ResponseKeyGetNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_1;
                 }
             }
-            $object->setKeys($values);
+            $object->setKeys(...$values);
             unset($data['keys']);
         }
         foreach ($data as $key => $value_2) {

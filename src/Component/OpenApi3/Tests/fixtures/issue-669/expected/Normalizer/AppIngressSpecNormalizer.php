@@ -56,7 +56,7 @@ class AppIngressSpecNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_1;
                 }
             }
-            $object->setRules($values);
+            $object->setRules(...$values);
             unset($data['rules']);
         }
         foreach ($data as $key => $value_2) {

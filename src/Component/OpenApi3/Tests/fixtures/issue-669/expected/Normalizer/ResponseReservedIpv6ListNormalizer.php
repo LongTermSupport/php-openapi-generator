@@ -56,7 +56,7 @@ class ResponseReservedIpv6ListNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setReservedIpv6s($values);
+            $object->setReservedIpv6s(...$values);
             unset($data['reserved_ipv6s']);
         }
         if (\array_key_exists('links', $data)) {

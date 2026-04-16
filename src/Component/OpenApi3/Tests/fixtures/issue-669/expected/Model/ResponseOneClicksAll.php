@@ -31,13 +31,10 @@ class ResponseOneClicksAll extends \ArrayObject
     {
         return $this->n1Clicks;
     }
-    /**
-     * @param list<OneClicks> $n1Clicks
-     */
-    public function set1Clicks(array $n1Clicks): self
+    public function set1Clicks(OneClicks ...$n1Clicks): self
     {
         $this->initialized['n1Clicks'] = true;
-        $this->n1Clicks = $n1Clicks;
+        $this->n1Clicks = array_values($n1Clicks);
         return $this;
     }
 }

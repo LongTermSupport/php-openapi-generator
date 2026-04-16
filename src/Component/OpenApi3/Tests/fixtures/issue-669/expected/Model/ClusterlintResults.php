@@ -97,13 +97,11 @@ class ClusterlintResults extends \ArrayObject
     }
     /**
      * An array of diagnostics reporting potential problems for the given cluster.
-     *
-     * @param list<ClusterlintResultsDiagnosticsItem> $diagnostics
      */
-    public function setDiagnostics(array $diagnostics): self
+    public function setDiagnostics(ClusterlintResultsDiagnosticsItem ...$diagnostics): self
     {
         $this->initialized['diagnostics'] = true;
-        $this->diagnostics = $diagnostics;
+        $this->diagnostics = array_values($diagnostics);
         return $this;
     }
 }

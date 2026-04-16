@@ -59,7 +59,7 @@ class ListItemFieldsBatchUpdateFilterRequestNormalizer implements DenormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setChangeCommands($values);
+            $object->setChangeCommands(...$values);
         }
         if (\array_key_exists('allowMissingDependencies', $data)) {
             $object->setAllowMissingDependencies(TypeValidator::assertBool($data['allowMissingDependencies'], 'allowMissingDependencies'));

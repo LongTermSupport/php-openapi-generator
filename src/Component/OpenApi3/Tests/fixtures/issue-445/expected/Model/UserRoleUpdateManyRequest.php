@@ -34,13 +34,11 @@ class UserRoleUpdateManyRequest
     }
     /**
      * New value for user roles with specified IDs.
-     *
-     * @param list<UserRole> $items
      */
-    public function setItems(array $items): self
+    public function setItems(UserRole ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

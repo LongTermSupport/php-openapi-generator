@@ -35,13 +35,10 @@ class GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgemen
     {
         return $this->exact;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgementsRegisteredExactItem> $exact
-     */
-    public function setExact(array $exact): self
+    public function setExact(GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgementsRegisteredExactItem ...$exact): self
     {
         $this->initialized['exact'] = true;
-        $this->exact = $exact;
+        $this->exact = array_values($exact);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgemen
     {
         return $this->possible;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgementsRegisteredPossibleItem> $possible
-     */
-    public function setPossible(array $possible): self
+    public function setPossible(GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgementsRegisteredPossibleItem ...$possible): self
     {
         $this->initialized['possible'] = true;
-        $this->possible = $possible;
+        $this->possible = array_values($possible);
         return $this;
     }
 }

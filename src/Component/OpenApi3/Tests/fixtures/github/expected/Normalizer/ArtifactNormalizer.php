@@ -48,7 +48,7 @@ class ArtifactNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ArtifactConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -139,7 +139,7 @@ class ArtifactNormalizer implements DenormalizerInterface, NormalizerInterface, 
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ArtifactConstraint());
         }
         return $dataArray;

@@ -48,7 +48,7 @@ class MinimalRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\MinimalRepositoryConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -302,7 +302,7 @@ class MinimalRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTopics($values);
+            $object->setTopics(...$values);
             unset($data['topics']);
         }
         if (\array_key_exists('has_issues', $data)) {
@@ -600,7 +600,7 @@ class MinimalRepositoryNormalizer implements DenormalizerInterface, NormalizerIn
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\MinimalRepositoryConstraint());
         }
         return $dataArray;

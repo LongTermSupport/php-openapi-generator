@@ -64,7 +64,7 @@ class SingleTweetLookupResponseNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value_1;
                 }
             }
-            $object->setErrors($values);
+            $object->setErrors(...$values);
             unset($data['errors']);
         }
         foreach ($data as $key => $value_2) {

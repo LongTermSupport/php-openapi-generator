@@ -68,7 +68,7 @@ class V2FirewallsFirewallIdPutBodyNormalizer implements DenormalizerInterface, N
                     $values[] = $value_1;
                 }
             }
-            $object->setPendingChanges($values);
+            $object->setPendingChanges(...$values);
             unset($data['pending_changes']);
         }
         if (\array_key_exists('name', $data)) {
@@ -95,7 +95,7 @@ class V2FirewallsFirewallIdPutBodyNormalizer implements DenormalizerInterface, N
                     $values_2[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setTags($values_2);
+            $object->setTags(...$values_2);
             unset($data['tags']);
         }
         if (\array_key_exists('inbound_rules', $data) && $data['inbound_rules'] !== null) {

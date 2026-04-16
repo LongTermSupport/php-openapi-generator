@@ -163,13 +163,11 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * All tags associated with this manifest
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**
@@ -183,13 +181,11 @@ class RepositoryManifest extends \ArrayObject
     }
     /**
      * All blobs associated with this manifest
-     *
-     * @param list<RepositoryBlob> $blobs
      */
-    public function setBlobs(array $blobs): self
+    public function setBlobs(RepositoryBlob ...$blobs): self
     {
         $this->initialized['blobs'] = true;
-        $this->blobs = $blobs;
+        $this->blobs = array_values($blobs);
         return $this;
     }
 }

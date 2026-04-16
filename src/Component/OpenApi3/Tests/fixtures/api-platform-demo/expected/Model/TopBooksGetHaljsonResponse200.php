@@ -34,13 +34,10 @@ class TopBooksGetHaljsonResponse200 extends \ArrayObject
     {
         return $this->embedded;
     }
-    /**
-     * @param list<TopBookJsonhal> $embedded
-     */
-    public function setEmbedded(array $embedded): self
+    public function setEmbedded(TopBookJsonhal ...$embedded): self
     {
         $this->initialized['embedded'] = true;
-        $this->embedded = $embedded;
+        $this->embedded = array_values($embedded);
         return $this;
     }
     public function getTotalItems(): int

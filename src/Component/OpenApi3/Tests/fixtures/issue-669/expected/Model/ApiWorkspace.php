@@ -75,13 +75,11 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Agents
-     *
-     * @param list<ApiAgent> $agents
      */
-    public function setAgents(array $agents): self
+    public function setAgents(ApiAgent ...$agents): self
     {
         $this->initialized['agents'] = true;
-        $this->agents = $agents;
+        $this->agents = array_values($agents);
         return $this;
     }
     /**
@@ -175,13 +173,11 @@ class ApiWorkspace extends \ArrayObject
     }
     /**
      * Evaluations
-     *
-     * @param list<ApiEvaluationTestCase> $evaluationTestCases
      */
-    public function setEvaluationTestCases(array $evaluationTestCases): self
+    public function setEvaluationTestCases(ApiEvaluationTestCase ...$evaluationTestCases): self
     {
         $this->initialized['evaluationTestCases'] = true;
-        $this->evaluationTestCases = $evaluationTestCases;
+        $this->evaluationTestCases = array_values($evaluationTestCases);
         return $this;
     }
     /**

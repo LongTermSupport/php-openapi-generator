@@ -74,13 +74,11 @@ class GeoDistanceAggregator extends AggregatorBase
     }
     /**
      * A list of distance ranges.
-     *
-     * @param list<GeoDistance> $ranges
      */
-    public function setRanges(array $ranges): self
+    public function setRanges(GeoDistance ...$ranges): self
     {
         $this->initialized['ranges'] = true;
-        $this->ranges = $ranges;
+        $this->ranges = array_values($ranges);
         return $this;
     }
 }

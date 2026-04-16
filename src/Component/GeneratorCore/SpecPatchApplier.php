@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore;
 
 use InvalidArgumentException;
+use LogicException;
 
 /**
  * Applies RFC 6902 JSON Patch files to OpenAPI spec files.
@@ -22,7 +23,7 @@ use InvalidArgumentException;
  * Supported RFC 6902 operations: add, replace, remove.
  * RFC 6901 pointer escaping: ~1 → /, ~0 → ~.
  */
-final class SpecPatchApplier
+readonly final class SpecPatchApplier
 {
     /**
      * Apply a JSON patch file to an original spec file.
@@ -34,8 +35,8 @@ final class SpecPatchApplier
      *
      * @return array<string, mixed> The patched spec as an associative array
      *
-     * @throws SpecBaseChangedException     When orig spec hash differs from x-base-sha256
-     * @throws InvalidArgumentException     When patch format is invalid or an unknown op is used
+     * @throws SpecBaseChangedException When orig spec hash differs from x-base-sha256
+     * @throws InvalidArgumentException When patch format is invalid or an unknown op is used
      */
     public function apply(string $origPath, string $patchPath): array
     {
@@ -46,14 +47,14 @@ final class SpecPatchApplier
             throw new InvalidArgumentException(\sprintf(
                 'Spec at %s decoded to %s, expected a JSON object',
                 $origPath,
-                \get_debug_type($decoded),
+                get_debug_type($decoded),
             ));
         }
 
         /** @var array<string, mixed> $spec */
         $spec = $decoded;
 
-        if (!\file_exists($patchPath)) {
+        if (!file_exists($patchPath)) {
             return $spec;
         }
 
@@ -63,7 +64,7 @@ final class SpecPatchApplier
             throw new InvalidArgumentException(\sprintf(
                 'Patch at %s decoded to %s, expected a JSON object',
                 $patchPath,
-                \get_debug_type($patchDecoded),
+                get_debug_type($patchDecoded),
             ));
         }
 
@@ -86,10 +87,10 @@ final class SpecPatchApplier
             ));
         }
 
-        $actualHash = \hash('sha256', $origContent);
+        $actualHash = hash('sha256', $origContent);
 
         if ($expectedHash !== $actualHash) {
-            $specName = \basename($origPath);
+            $specName = basename($origPath);
             throw new SpecBaseChangedException(\sprintf(
                 "Spec '%s' has changed since this patch was written.\n"
                 . "Expected SHA-256 (from patch): %s\n"
@@ -98,7 +99,7 @@ final class SpecPatchApplier
                 . "Action required:\n"
                 . "  1. Review what changed: git diff specs/orig/desk/%s\n"
                 . "  2. Update the patch operations in: %s\n"
-                . "  3. Update x-base-sha256 in the patch file to: %s",
+                . '  3. Update x-base-sha256 in the patch file to: %s',
                 $specName,
                 $expectedHash,
                 $actualHash,
@@ -140,7 +141,7 @@ final class SpecPatchApplier
      */
     private function applyOperation(array $spec, array $op): array
     {
-        $opType = $op['op'] ?? null;
+        $opType = $op['op']   ?? null;
         $path   = $op['path'] ?? null;
 
         if (!\is_string($opType)) {
@@ -152,10 +153,10 @@ final class SpecPatchApplier
         }
 
         return match ($opType) {
-            'add'    => $this->applyAtPath($spec, $path, $op['value'] ?? null, 'add'),
+            'add'     => $this->applyAtPath($spec, $path, $op['value'] ?? null, 'add'),
             'replace' => $this->applyAtPath($spec, $path, $op['value'] ?? null, 'replace'),
-            'remove' => $this->applyAtPath($spec, $path, null, 'remove'),
-            default  => throw new InvalidArgumentException(\sprintf(
+            'remove'  => $this->applyAtPath($spec, $path, null, 'remove'),
+            default   => throw new InvalidArgumentException(\sprintf(
                 "Unknown RFC 6902 operation '%s'. Supported operations: add, replace, remove",
                 $opType,
             )),
@@ -178,7 +179,7 @@ final class SpecPatchApplier
             }
 
             if (!\is_array($value)) {
-                throw new InvalidArgumentException("Root replacement requires an array value");
+                throw new InvalidArgumentException('Root replacement requires an array value');
             }
 
             /** @var array<string, mixed> $value */
@@ -198,9 +199,9 @@ final class SpecPatchApplier
      */
     private function applyAtNode(array $spec, array $segments, mixed $value, string $operation): array
     {
-        $segment = \array_shift($segments);
+        $segment = array_shift($segments);
         if (null === $segment) {
-            throw new \LogicException('applyAtNode called with empty segments array; this is a bug');
+            throw new LogicException('applyAtNode called with empty segments array; this is a bug');
         }
 
         $isFinalSegment = [] === $segments;
@@ -221,7 +222,7 @@ final class SpecPatchApplier
         if (!\is_array($child)) {
             throw new InvalidArgumentException(\sprintf(
                 "Cannot navigate into %s at pointer segment '%s'",
-                \get_debug_type($child),
+                get_debug_type($child),
                 $segment,
             ));
         }
@@ -244,7 +245,7 @@ final class SpecPatchApplier
         if ('add' === $operation) {
             if ('-' === $segment) {
                 // RFC 6902: '-' appends to an array
-                if (!\array_is_list($node)) {
+                if (!array_is_list($node)) {
                     throw new InvalidArgumentException(
                         "RFC 6902 'add' with '-' pointer: target is not a list array",
                     );
@@ -309,10 +310,10 @@ final class SpecPatchApplier
             ));
         }
 
-        $parts = \explode('/', \substr($pointer, 1));
+        $parts = explode('/', substr($pointer, 1));
 
-        return \array_map(
-            static fn (string $part): string => \str_replace(['~1', '~0'], ['/', '~'], $part),
+        return array_map(
+            static fn (string $part): string => str_replace(['~1', '~0'], ['/', '~'], $part),
             $parts,
         );
     }

@@ -45,13 +45,11 @@ class ApiCreateWorkspaceInputPublic extends \ArrayObject
     }
     /**
      * Ids of the agents(s) to attach to the workspace
-     *
-     * @param list<string> $agentUuids
      */
-    public function setAgentUuids(array $agentUuids): self
+    public function setAgentUuids(string ...$agentUuids): self
     {
         $this->initialized['agentUuids'] = true;
-        $this->agentUuids = $agentUuids;
+        $this->agentUuids = array_values($agentUuids);
         return $this;
     }
     /**

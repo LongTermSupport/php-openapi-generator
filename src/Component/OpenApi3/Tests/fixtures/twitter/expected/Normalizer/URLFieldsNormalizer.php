@@ -80,7 +80,7 @@ class URLFieldsNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setImages($values);
+            $object->setImages(...$values);
             unset($data['images']);
         }
         foreach ($data as $key => $value_2) {

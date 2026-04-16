@@ -76,7 +76,7 @@ class ByoipPrefixNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = $value_1;
                 }
             }
-            $object->setValidations($values);
+            $object->setValidations(...$values);
             unset($data['validations']);
         }
         if (\array_key_exists('failure_reason', $data)) {

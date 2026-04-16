@@ -107,13 +107,11 @@ class ClusterAutoscalerConfiguration extends \ArrayObject
      * - `priority`: Selects the node group with the highest priority as per [user-provided configuration](https://docs.digitalocean.com/products/kubernetes/how-to/autoscale/#configuring-priority-expander)
      * - `least_waste`: Selects the node group that will result in the least amount of idle resources.
      * 
-     *
-     * @param list<string> $expanders
      */
-    public function setExpanders(array $expanders): self
+    public function setExpanders(string ...$expanders): self
     {
         $this->initialized['expanders'] = true;
-        $this->expanders = $expanders;
+        $this->expanders = array_values($expanders);
         return $this;
     }
 }

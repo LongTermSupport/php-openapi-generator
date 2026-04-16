@@ -35,13 +35,10 @@ class AppHealth extends \ArrayObject
     {
         return $this->components;
     }
-    /**
-     * @param list<AppComponentHealth> $components
-     */
-    public function setComponents(array $components): self
+    public function setComponents(AppComponentHealth ...$components): self
     {
         $this->initialized['components'] = true;
-        $this->components = $components;
+        $this->components = array_values($components);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class AppHealth extends \ArrayObject
     {
         return $this->functionsComponents;
     }
-    /**
-     * @param list<AppFunctionsComponentHealth> $functionsComponents
-     */
-    public function setFunctionsComponents(array $functionsComponents): self
+    public function setFunctionsComponents(AppFunctionsComponentHealth ...$functionsComponents): self
     {
         $this->initialized['functionsComponents'] = true;
-        $this->functionsComponents = $functionsComponents;
+        $this->functionsComponents = array_values($functionsComponents);
         return $this;
     }
 }

@@ -54,13 +54,11 @@ class ListItemCreateManyRequest
     }
     /**
      * Items to be created.
-     *
-     * @param list<ListItemCreateRequest> $items
      */
-    public function setItems(array $items): self
+    public function setItems(ListItemCreateRequest ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

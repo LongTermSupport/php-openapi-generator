@@ -56,7 +56,7 @@ class GbCompanyReportExampleResponseReportOtherInformationNormalizer implements 
                     $values[] = $value_1;
                 }
             }
-            $object->setAdvisors($values);
+            $object->setAdvisors(...$values);
             unset($data['advisors']);
         }
         if (\array_key_exists('employeesInformation', $data)) {
@@ -67,7 +67,7 @@ class GbCompanyReportExampleResponseReportOtherInformationNormalizer implements 
                     $values_1[] = $value_3;
                 }
             }
-            $object->setEmployeesInformation($values_1);
+            $object->setEmployeesInformation(...$values_1);
             unset($data['employeesInformation']);
         }
         foreach ($data as $key => $value_4) {

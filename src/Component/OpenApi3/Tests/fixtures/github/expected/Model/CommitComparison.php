@@ -174,13 +174,10 @@ class CommitComparison extends \ArrayObject
     {
         return $this->commits;
     }
-    /**
-     * @param list<Commit> $commits
-     */
-    public function setCommits(array $commits): self
+    public function setCommits(Commit ...$commits): self
     {
         $this->initialized['commits'] = true;
-        $this->commits = $commits;
+        $this->commits = array_values($commits);
         return $this;
     }
     /**
@@ -190,13 +187,10 @@ class CommitComparison extends \ArrayObject
     {
         return $this->files;
     }
-    /**
-     * @param list<DiffEntry> $files
-     */
-    public function setFiles(array $files): self
+    public function setFiles(DiffEntry ...$files): self
     {
         $this->initialized['files'] = true;
-        $this->files = $files;
+        $this->files = array_values($files);
         return $this;
     }
 }

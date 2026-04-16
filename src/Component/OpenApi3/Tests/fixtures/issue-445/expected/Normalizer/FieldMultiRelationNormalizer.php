@@ -117,7 +117,7 @@ class FieldMultiRelationNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setRelationTypes($values);
+            $object->setRelationTypes(...$values);
             unset($data['relationTypes']);
         }
         if (\array_key_exists('maximumItems', $data)) {

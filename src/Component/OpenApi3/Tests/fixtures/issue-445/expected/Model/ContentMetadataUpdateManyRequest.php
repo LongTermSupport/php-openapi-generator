@@ -54,13 +54,11 @@ class ContentMetadataUpdateManyRequest
     }
     /**
      * Update items
-     *
-     * @param list<ContentMetadataUpdateItem> $items
      */
-    public function setItems(array $items): self
+    public function setItems(ContentMetadataUpdateItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

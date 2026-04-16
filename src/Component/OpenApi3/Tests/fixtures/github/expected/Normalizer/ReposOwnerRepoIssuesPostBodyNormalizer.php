@@ -48,7 +48,7 @@ class ReposOwnerRepoIssuesPostBodyNormalizer implements DenormalizerInterface, N
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoIssuesPostBodyConstraint());
         }
         if (\array_key_exists('title', $data)) {
@@ -74,7 +74,7 @@ class ReposOwnerRepoIssuesPostBodyNormalizer implements DenormalizerInterface, N
                     $values[] = $value;
                 }
             }
-            $object->setLabels($values);
+            $object->setLabels(...$values);
             unset($data['labels']);
         }
         if (\array_key_exists('assignees', $data)) {
@@ -84,7 +84,7 @@ class ReposOwnerRepoIssuesPostBodyNormalizer implements DenormalizerInterface, N
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setAssignees($values_1);
+            $object->setAssignees(...$values_1);
             unset($data['assignees']);
         }
         foreach ($data as $key => $value_2) {
@@ -135,7 +135,7 @@ class ReposOwnerRepoIssuesPostBodyNormalizer implements DenormalizerInterface, N
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoIssuesPostBodyConstraint());
         }
         return $dataArray;

@@ -31,13 +31,10 @@ class AppInstances extends \ArrayObject
     {
         return $this->instances;
     }
-    /**
-     * @param list<AppInstance> $instances
-     */
-    public function setInstances(array $instances): self
+    public function setInstances(AppInstance ...$instances): self
     {
         $this->initialized['instances'] = true;
-        $this->instances = $instances;
+        $this->instances = array_values($instances);
         return $this;
     }
 }

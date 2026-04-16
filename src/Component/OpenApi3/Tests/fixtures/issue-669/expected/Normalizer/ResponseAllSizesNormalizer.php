@@ -56,7 +56,7 @@ class ResponseAllSizesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setSizes($values);
+            $object->setSizes(...$values);
             unset($data['sizes']);
         }
         if (\array_key_exists('links', $data)) {

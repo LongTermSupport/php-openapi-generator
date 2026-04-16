@@ -56,7 +56,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistNormalizer i
                     $values[] = $value_1;
                 }
             }
-            $object->setMatches($values);
+            $object->setMatches(...$values);
             unset($data['matches']);
         }
         if (\array_key_exists('status', $data)) {

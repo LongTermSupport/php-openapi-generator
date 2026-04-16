@@ -55,7 +55,7 @@ class DatabaseRegionOptionsNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         foreach ($data as $key => $value_1) {

@@ -48,7 +48,7 @@ class ReposOwnerRepoIssuesIssueNumberAssigneesDeleteBodyNormalizer implements De
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoIssuesIssueNumberAssigneesDeleteBodyConstraint());
         }
         if (\array_key_exists('assignees', $data)) {
@@ -58,7 +58,7 @@ class ReposOwnerRepoIssuesIssueNumberAssigneesDeleteBodyNormalizer implements De
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAssignees($values);
+            $object->setAssignees(...$values);
             unset($data['assignees']);
         }
         foreach ($data as $key => $value_1) {
@@ -90,7 +90,7 @@ class ReposOwnerRepoIssuesIssueNumberAssigneesDeleteBodyNormalizer implements De
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoIssuesIssueNumberAssigneesDeleteBodyConstraint());
         }
         return $dataArray;

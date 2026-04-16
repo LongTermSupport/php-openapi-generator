@@ -113,13 +113,11 @@ class ApiIndexingJob extends \ArrayObject
     }
     /**
      * Details on Data Sources included in the Indexing Job
-     *
-     * @param list<ApiIndexedDataSource> $dataSourceJobs
      */
-    public function setDataSourceJobs(array $dataSourceJobs): self
+    public function setDataSourceJobs(ApiIndexedDataSource ...$dataSourceJobs): self
     {
         $this->initialized['dataSourceJobs'] = true;
-        $this->dataSourceJobs = $dataSourceJobs;
+        $this->dataSourceJobs = array_values($dataSourceJobs);
         return $this;
     }
     /**
@@ -129,13 +127,10 @@ class ApiIndexingJob extends \ArrayObject
     {
         return $this->dataSourceUuids;
     }
-    /**
-     * @param list<string> $dataSourceUuids
-     */
-    public function setDataSourceUuids(array $dataSourceUuids): self
+    public function setDataSourceUuids(string ...$dataSourceUuids): self
     {
         $this->initialized['dataSourceUuids'] = true;
-        $this->dataSourceUuids = $dataSourceUuids;
+        $this->dataSourceUuids = array_values($dataSourceUuids);
         return $this;
     }
     public function getFinishedAt(): \DateTime

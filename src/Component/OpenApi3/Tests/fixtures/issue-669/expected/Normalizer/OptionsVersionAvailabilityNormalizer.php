@@ -56,7 +56,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values[] = $value_1;
                 }
             }
-            $object->setKafka($values);
+            $object->setKafka(...$values);
             unset($data['kafka']);
         }
         if (\array_key_exists('pg', $data)) {
@@ -67,7 +67,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values_1[] = $value_3;
                 }
             }
-            $object->setPg($values_1);
+            $object->setPg(...$values_1);
             unset($data['pg']);
         }
         if (\array_key_exists('mysql', $data)) {
@@ -78,7 +78,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values_2[] = $value_5;
                 }
             }
-            $object->setMysql($values_2);
+            $object->setMysql(...$values_2);
             unset($data['mysql']);
         }
         if (\array_key_exists('redis', $data)) {
@@ -89,7 +89,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values_3[] = $value_7;
                 }
             }
-            $object->setRedis($values_3);
+            $object->setRedis(...$values_3);
             unset($data['redis']);
         }
         if (\array_key_exists('valkey', $data)) {
@@ -100,7 +100,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values_4[] = $value_9;
                 }
             }
-            $object->setValkey($values_4);
+            $object->setValkey(...$values_4);
             unset($data['valkey']);
         }
         if (\array_key_exists('mongodb', $data)) {
@@ -111,7 +111,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values_5[] = $value_11;
                 }
             }
-            $object->setMongodb($values_5);
+            $object->setMongodb(...$values_5);
             unset($data['mongodb']);
         }
         if (\array_key_exists('opensearch', $data)) {
@@ -122,7 +122,7 @@ class OptionsVersionAvailabilityNormalizer implements DenormalizerInterface, Nor
                     $values_6[] = $value_13;
                 }
             }
-            $object->setOpensearch($values_6);
+            $object->setOpensearch(...$values_6);
             unset($data['opensearch']);
         }
         foreach ($data as $key => $value_14) {

@@ -97,13 +97,11 @@ class ReposOwnerRepoPullsPullNumberReviewsPostBody extends \ArrayObject
     }
     /**
      * Use the following table to specify the location, destination, and contents of the draft review comment.
-     *
-     * @param list<ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem> $comments
      */
-    public function setComments(array $comments): self
+    public function setComments(ReposOwnerRepoPullsPullNumberReviewsPostBodyCommentsItem ...$comments): self
     {
         $this->initialized['comments'] = true;
-        $this->comments = $comments;
+        $this->comments = array_values($comments);
         return $this;
     }
 }

@@ -35,13 +35,10 @@ class MonitoringPortfoliosPortfolioIdCompaniesRemovePostBody extends \ArrayObjec
     {
         return $this->portfolios;
     }
-    /**
-     * @param list<string> $portfolios
-     */
-    public function setPortfolios(array $portfolios): self
+    public function setPortfolios(string ...$portfolios): self
     {
         $this->initialized['portfolios'] = true;
-        $this->portfolios = $portfolios;
+        $this->portfolios = array_values($portfolios);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class MonitoringPortfoliosPortfolioIdCompaniesRemovePostBody extends \ArrayObjec
     {
         return $this->companies;
     }
-    /**
-     * @param list<MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem> $companies
-     */
-    public function setCompanies(array $companies): self
+    public function setCompanies(MonitoringPortfoliosPortfolioIdCompaniesRemovePostBodyCompaniesItem ...$companies): self
     {
         $this->initialized['companies'] = true;
-        $this->companies = $companies;
+        $this->companies = array_values($companies);
         return $this;
     }
 }

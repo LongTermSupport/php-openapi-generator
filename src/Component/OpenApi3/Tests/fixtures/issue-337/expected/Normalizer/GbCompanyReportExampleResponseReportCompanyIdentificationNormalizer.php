@@ -61,7 +61,7 @@ class GbCompanyReportExampleResponseReportCompanyIdentificationNormalizer implem
                     $values[] = $value_2;
                 }
             }
-            $object->setActivityClassifications($values);
+            $object->setActivityClassifications(...$values);
             unset($data['activityClassifications']);
         }
         if (\array_key_exists('previousNames', $data)) {
@@ -72,7 +72,7 @@ class GbCompanyReportExampleResponseReportCompanyIdentificationNormalizer implem
                     $values_1[] = $value_4;
                 }
             }
-            $object->setPreviousNames($values_1);
+            $object->setPreviousNames(...$values_1);
             unset($data['previousNames']);
         }
         foreach ($data as $key => $value_5) {

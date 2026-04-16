@@ -66,7 +66,7 @@ class ApiListModelsOutputPublicNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value_3;
                 }
             }
-            $object->setModels($values);
+            $object->setModels(...$values);
             unset($data['models']);
         }
         foreach ($data as $key => $value_4) {

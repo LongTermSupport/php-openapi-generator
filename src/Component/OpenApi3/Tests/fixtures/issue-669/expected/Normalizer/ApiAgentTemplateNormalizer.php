@@ -64,7 +64,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setGuardrails($values);
+            $object->setGuardrails(...$values);
             unset($data['guardrails']);
         }
         if (\array_key_exists('instruction', $data)) {
@@ -83,7 +83,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = $value_3;
                 }
             }
-            $object->setKnowledgeBases($values_1);
+            $object->setKnowledgeBases(...$values_1);
             unset($data['knowledge_bases']);
         }
         if (\array_key_exists('long_description', $data)) {
@@ -118,7 +118,7 @@ class ApiAgentTemplateNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_2[] = TypeValidator::assertString($value_5, 'value');
                 }
             }
-            $object->setTags($values_2);
+            $object->setTags(...$values_2);
             unset($data['tags']);
         }
         if (\array_key_exists('temperature', $data)) {

@@ -56,7 +56,7 @@ class AssociatedKubernetesResourcesNormalizer implements DenormalizerInterface, 
                     $values[] = $value_1;
                 }
             }
-            $object->setLoadBalancers($values);
+            $object->setLoadBalancers(...$values);
             unset($data['load_balancers']);
         }
         if (\array_key_exists('volumes', $data)) {
@@ -67,7 +67,7 @@ class AssociatedKubernetesResourcesNormalizer implements DenormalizerInterface, 
                     $values_1[] = $value_3;
                 }
             }
-            $object->setVolumes($values_1);
+            $object->setVolumes(...$values_1);
             unset($data['volumes']);
         }
         if (\array_key_exists('volume_snapshots', $data)) {
@@ -78,7 +78,7 @@ class AssociatedKubernetesResourcesNormalizer implements DenormalizerInterface, 
                     $values_2[] = $value_5;
                 }
             }
-            $object->setVolumeSnapshots($values_2);
+            $object->setVolumeSnapshots(...$values_2);
             unset($data['volume_snapshots']);
         }
         foreach ($data as $key => $value_6) {

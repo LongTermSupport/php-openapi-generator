@@ -265,13 +265,10 @@ class Release extends \ArrayObject
     {
         return $this->assets;
     }
-    /**
-     * @param list<ReleaseAsset> $assets
-     */
-    public function setAssets(array $assets): self
+    public function setAssets(ReleaseAsset ...$assets): self
     {
         $this->initialized['assets'] = true;
-        $this->assets = $assets;
+        $this->assets = array_values($assets);
         return $this;
     }
     public function getBodyHtml(): string

@@ -48,7 +48,7 @@ class ApiOverviewSshKeyFingerprintsNormalizer implements DenormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ApiOverviewSshKeyFingerprintsConstraint());
         }
         if (\array_key_exists('MD5_RSA', $data)) {
@@ -101,7 +101,7 @@ class ApiOverviewSshKeyFingerprintsNormalizer implements DenormalizerInterface, 
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ApiOverviewSshKeyFingerprintsConstraint());
         }
         return $dataArray;

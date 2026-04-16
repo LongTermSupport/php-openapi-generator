@@ -34,12 +34,12 @@ class ResponseAllAlerts extends \ArrayObject
         return $this->alerts;
     }
     /**
-     * @param list<array<string, mixed>> $alerts
+     * @param array<string, mixed> ...$alerts
      */
-    public function setAlerts(array $alerts): self
+    public function setAlerts(array ...$alerts): self
     {
         $this->initialized['alerts'] = true;
-        $this->alerts = $alerts;
+        $this->alerts = array_values($alerts);
         return $this;
     }
     public function getLinks(): PageLinks

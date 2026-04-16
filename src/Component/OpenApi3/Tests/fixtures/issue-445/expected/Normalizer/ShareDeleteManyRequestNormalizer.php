@@ -55,7 +55,7 @@ class ShareDeleteManyRequestNormalizer implements DenormalizerInterface, Normali
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setIds($values);
+            $object->setIds(...$values);
         }
         return $object;
     }

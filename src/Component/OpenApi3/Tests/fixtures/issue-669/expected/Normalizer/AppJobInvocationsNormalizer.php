@@ -56,7 +56,7 @@ class AppJobInvocationsNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setJobInvocations($values);
+            $object->setJobInvocations(...$values);
             unset($data['job_invocations']);
         }
         if (\array_key_exists('links', $data)) {

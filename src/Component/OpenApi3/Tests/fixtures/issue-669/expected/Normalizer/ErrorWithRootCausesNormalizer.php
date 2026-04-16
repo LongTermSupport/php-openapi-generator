@@ -72,7 +72,7 @@ class ErrorWithRootCausesNormalizer implements DenormalizerInterface, Normalizer
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setRootCauses($values_1);
+            $object->setRootCauses(...$values_1);
             unset($data['root_causes']);
         }
         foreach ($data as $key => $value_2) {

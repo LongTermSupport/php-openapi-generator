@@ -56,7 +56,7 @@ class ResponseNeighborDropletsNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setDroplets($values);
+            $object->setDroplets(...$values);
             unset($data['droplets']);
         }
         foreach ($data as $key => $value_2) {

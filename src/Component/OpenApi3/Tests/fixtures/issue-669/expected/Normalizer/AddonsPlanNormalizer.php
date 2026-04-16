@@ -88,7 +88,7 @@ class AddonsPlanNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = $value_1;
                 }
             }
-            $object->setFeatures($values);
+            $object->setFeatures(...$values);
             unset($data['features']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -119,7 +119,7 @@ class AddonsPlanNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_1[] = $value_3;
                 }
             }
-            $object->setDimensions($values_1);
+            $object->setDimensions(...$values_1);
             unset($data['dimensions']);
         }
         foreach ($data as $key => $value_4) {

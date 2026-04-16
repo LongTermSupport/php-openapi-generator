@@ -104,7 +104,7 @@ class GbCompanyReportExampleResponseReportNormalizer implements DenormalizerInte
                     $values[] = $value_9;
                 }
             }
-            $object->setExtendedGroupStructure($values);
+            $object->setExtendedGroupStructure(...$values);
             unset($data['extendedGroupStructure']);
         }
         if (\array_key_exists('financialStatements', $data)) {
@@ -115,7 +115,7 @@ class GbCompanyReportExampleResponseReportNormalizer implements DenormalizerInte
                     $values_1[] = $value_11;
                 }
             }
-            $object->setFinancialStatements($values_1);
+            $object->setFinancialStatements(...$values_1);
             unset($data['financialStatements']);
         }
         if (\array_key_exists('localFinancialStatements', $data)) {
@@ -126,7 +126,7 @@ class GbCompanyReportExampleResponseReportNormalizer implements DenormalizerInte
                     $values_2[] = $value_13;
                 }
             }
-            $object->setLocalFinancialStatements($values_2);
+            $object->setLocalFinancialStatements(...$values_2);
             unset($data['localFinancialStatements']);
         }
         if (\array_key_exists('paymentData', $data)) {

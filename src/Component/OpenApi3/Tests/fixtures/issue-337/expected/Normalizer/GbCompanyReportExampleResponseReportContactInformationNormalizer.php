@@ -61,7 +61,7 @@ class GbCompanyReportExampleResponseReportContactInformationNormalizer implement
                     $values[] = $value_2;
                 }
             }
-            $object->setOtherAddresses($values);
+            $object->setOtherAddresses(...$values);
             unset($data['otherAddresses']);
         }
         if (\array_key_exists('websites', $data)) {
@@ -71,7 +71,7 @@ class GbCompanyReportExampleResponseReportContactInformationNormalizer implement
                     $values_1[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setWebsites($values_1);
+            $object->setWebsites(...$values_1);
             unset($data['websites']);
         }
         foreach ($data as $key => $value_4) {

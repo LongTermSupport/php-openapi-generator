@@ -31,13 +31,10 @@ class ApiEvaluationTestCaseMetricList extends \ArrayObject
     {
         return $this->metricUuids;
     }
-    /**
-     * @param list<string> $metricUuids
-     */
-    public function setMetricUuids(array $metricUuids): self
+    public function setMetricUuids(string ...$metricUuids): self
     {
         $this->initialized['metricUuids'] = true;
-        $this->metricUuids = $metricUuids;
+        $this->metricUuids = array_values($metricUuids);
         return $this;
     }
 }

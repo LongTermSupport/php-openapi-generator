@@ -296,7 +296,7 @@ trait NormalizerGenerator
             $contextVariable = new Expr\Variable('context');
             $constraintFqdn  = $schema->getNamespace() . '\Validator\\' . $this->naming->getConstraintName($classGuess->getName());
 
-            $statements[] = new Stmt\If_(new Expr\BooleanNot(new Expr\Cast\Bool_(new Expr\BinaryOp\Coalesce(new Expr\ArrayDimFetch($contextVariable, new Scalar\String_('skip_validation')), new Expr\ConstFetch(new Name('false'))))), ['stmts' => [
+            $statements[] = new Stmt\If_(new Expr\BinaryOp\NotIdentical(new Expr\ConstFetch(new Name('true')), new Expr\BinaryOp\Coalesce(new Expr\ArrayDimFetch($contextVariable, new Scalar\String_('skip_validation')), new Expr\ConstFetch(new Name('null')))), ['stmts' => [
                 new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('this'), 'validate', [
                     new Arg($dataVariable), new Arg(new Expr\New_(new Name('\\' . $constraintFqdn))),
                 ])),

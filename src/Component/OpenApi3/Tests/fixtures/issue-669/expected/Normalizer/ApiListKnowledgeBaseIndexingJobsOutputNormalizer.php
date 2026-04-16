@@ -56,7 +56,7 @@ class ApiListKnowledgeBaseIndexingJobsOutputNormalizer implements DenormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setJobs($values);
+            $object->setJobs(...$values);
             unset($data['jobs']);
         }
         if (\array_key_exists('links', $data)) {

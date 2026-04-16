@@ -34,13 +34,11 @@ class ShareDeleteManyRequest
     }
     /**
      * IDs of shares to delete.
-     *
-     * @param list<string> $ids
      */
-    public function setIds(array $ids): self
+    public function setIds(string ...$ids): self
     {
         $this->initialized['ids'] = true;
-        $this->ids = $ids;
+        $this->ids = array_values($ids);
         return $this;
     }
 }

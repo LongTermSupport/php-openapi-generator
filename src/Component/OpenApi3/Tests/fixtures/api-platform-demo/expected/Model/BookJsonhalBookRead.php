@@ -159,13 +159,11 @@ class BookJsonhalBookRead extends \ArrayObject
     }
     /**
      * The book's reviews.
-     *
-     * @param list<ReviewJsonhalBookRead> $reviews
      */
-    public function setReviews(array $reviews): self
+    public function setReviews(ReviewJsonhalBookRead ...$reviews): self
     {
         $this->initialized['reviews'] = true;
-        $this->reviews = $reviews;
+        $this->reviews = array_values($reviews);
         return $this;
     }
 }

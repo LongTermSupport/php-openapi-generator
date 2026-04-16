@@ -48,7 +48,7 @@ class ProjectsProjectIdPatchResponse403Normalizer implements DenormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ProjectsProjectIdPatchResponse403Constraint());
         }
         if (\array_key_exists('message', $data)) {
@@ -66,7 +66,7 @@ class ProjectsProjectIdPatchResponse403Normalizer implements DenormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setErrors($values);
+            $object->setErrors(...$values);
             unset($data['errors']);
         }
         foreach ($data as $key => $value_1) {
@@ -104,7 +104,7 @@ class ProjectsProjectIdPatchResponse403Normalizer implements DenormalizerInterfa
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ProjectsProjectIdPatchResponse403Constraint());
         }
         return $dataArray;

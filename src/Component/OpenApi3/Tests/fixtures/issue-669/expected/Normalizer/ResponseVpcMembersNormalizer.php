@@ -56,7 +56,7 @@ class ResponseVpcMembersNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setMembers($values);
+            $object->setMembers(...$values);
             unset($data['members']);
         }
         if (\array_key_exists('links', $data)) {

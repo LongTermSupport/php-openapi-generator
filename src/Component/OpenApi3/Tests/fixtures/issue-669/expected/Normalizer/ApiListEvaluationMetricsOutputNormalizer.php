@@ -56,7 +56,7 @@ class ApiListEvaluationMetricsOutputNormalizer implements DenormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setMetrics($values);
+            $object->setMetrics(...$values);
             unset($data['metrics']);
         }
         foreach ($data as $key => $value_2) {

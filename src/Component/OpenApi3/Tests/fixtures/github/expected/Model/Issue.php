@@ -249,13 +249,11 @@ class Issue extends \ArrayObject
     }
     /**
      * Labels to associate with this issue; pass one or more label names to replace the set of labels on this issue; send an empty array to clear all labels from the issue; note that the labels are silently dropped for users without push access to the repository
-     *
-     * @param list<mixed> $labels
      */
-    public function setLabels(array $labels): self
+    public function setLabels(mixed ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     public function getAssignee(): ?IssueAssignee

@@ -61,7 +61,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values[] = $value_2;
                 }
             }
-            $object->setApiKeyInfos($values);
+            $object->setApiKeyInfos(...$values);
             unset($data['api_key_infos']);
         }
         if (\array_key_exists('api_keys', $data)) {
@@ -72,7 +72,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_1[] = $value_4;
                 }
             }
-            $object->setApiKeys($values_1);
+            $object->setApiKeys(...$values_1);
             unset($data['api_keys']);
         }
         if (\array_key_exists('chatbot', $data)) {
@@ -88,7 +88,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_2[] = $value_7;
                 }
             }
-            $object->setChatbotIdentifiers($values_2);
+            $object->setChatbotIdentifiers(...$values_2);
             unset($data['chatbot_identifiers']);
         }
         if (\array_key_exists('child_agents', $data)) {
@@ -99,7 +99,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_3[] = $value_9;
                 }
             }
-            $object->setChildAgents($values_3);
+            $object->setChildAgents(...$values_3);
             unset($data['child_agents']);
         }
         if (\array_key_exists('conversation_logs_enabled', $data)) {
@@ -127,7 +127,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_4[] = $value_12;
                 }
             }
-            $object->setFunctions($values_4);
+            $object->setFunctions(...$values_4);
             unset($data['functions']);
         }
         if (\array_key_exists('guardrails', $data)) {
@@ -138,7 +138,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_5[] = $value_14;
                 }
             }
-            $object->setGuardrails($values_5);
+            $object->setGuardrails(...$values_5);
             unset($data['guardrails']);
         }
         if (\array_key_exists('if_case', $data)) {
@@ -161,7 +161,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_6[] = $value_16;
                 }
             }
-            $object->setKnowledgeBases($values_6);
+            $object->setKnowledgeBases(...$values_6);
             unset($data['knowledge_bases']);
         }
         if (\array_key_exists('logging_config', $data)) {
@@ -200,7 +200,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_7[] = $value_22;
                 }
             }
-            $object->setParentAgents($values_7);
+            $object->setParentAgents(...$values_7);
             unset($data['parent_agents']);
         }
         if (\array_key_exists('project_id', $data)) {
@@ -242,7 +242,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_8[] = TypeValidator::assertString($value_23, 'value');
                 }
             }
-            $object->setTags($values_8);
+            $object->setTags(...$values_8);
             unset($data['tags']);
         }
         if (\array_key_exists('temperature', $data)) {
@@ -285,7 +285,7 @@ class ApiAgentNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_9[] = TypeValidator::assertString($value_25, 'value');
                 }
             }
-            $object->setVpcEgressIps($values_9);
+            $object->setVpcEgressIps(...$values_9);
             unset($data['vpc_egress_ips']);
         }
         if (\array_key_exists('vpc_uuid', $data)) {

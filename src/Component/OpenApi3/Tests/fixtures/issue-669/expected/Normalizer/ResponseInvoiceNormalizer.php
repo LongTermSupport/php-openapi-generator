@@ -56,7 +56,7 @@ class ResponseInvoiceNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setInvoiceItems($values);
+            $object->setInvoiceItems(...$values);
             unset($data['invoice_items']);
         }
         if (\array_key_exists('links', $data)) {

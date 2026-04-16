@@ -46,13 +46,10 @@ class GbCompanyReportExampleResponseReportContactInformation extends \ArrayObjec
     {
         return $this->otherAddresses;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem> $otherAddresses
-     */
-    public function setOtherAddresses(array $otherAddresses): self
+    public function setOtherAddresses(GbCompanyReportExampleResponseReportContactInformationOtherAddressesItem ...$otherAddresses): self
     {
         $this->initialized['otherAddresses'] = true;
-        $this->otherAddresses = $otherAddresses;
+        $this->otherAddresses = array_values($otherAddresses);
         return $this;
     }
     /**
@@ -62,13 +59,10 @@ class GbCompanyReportExampleResponseReportContactInformation extends \ArrayObjec
     {
         return $this->websites;
     }
-    /**
-     * @param list<string> $websites
-     */
-    public function setWebsites(array $websites): self
+    public function setWebsites(string ...$websites): self
     {
         $this->initialized['websites'] = true;
-        $this->websites = $websites;
+        $this->websites = array_values($websites);
         return $this;
     }
 }

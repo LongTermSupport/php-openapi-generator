@@ -46,13 +46,10 @@ class GbCompanyReportExampleResponseReportCompanyIdentification extends \ArrayOb
     {
         return $this->activityClassifications;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassificationsItem> $activityClassifications
-     */
-    public function setActivityClassifications(array $activityClassifications): self
+    public function setActivityClassifications(GbCompanyReportExampleResponseReportCompanyIdentificationActivityClassificationsItem ...$activityClassifications): self
     {
         $this->initialized['activityClassifications'] = true;
-        $this->activityClassifications = $activityClassifications;
+        $this->activityClassifications = array_values($activityClassifications);
         return $this;
     }
     /**
@@ -62,13 +59,10 @@ class GbCompanyReportExampleResponseReportCompanyIdentification extends \ArrayOb
     {
         return $this->previousNames;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportCompanyIdentificationPreviousNamesItem> $previousNames
-     */
-    public function setPreviousNames(array $previousNames): self
+    public function setPreviousNames(GbCompanyReportExampleResponseReportCompanyIdentificationPreviousNamesItem ...$previousNames): self
     {
         $this->initialized['previousNames'] = true;
-        $this->previousNames = $previousNames;
+        $this->previousNames = array_values($previousNames);
         return $this;
     }
 }

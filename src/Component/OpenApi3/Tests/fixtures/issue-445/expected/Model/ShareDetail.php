@@ -166,13 +166,11 @@ class ShareDetail
     }
     /**
      * Detailed information about contents in the share.
-     *
-     * @param list<ShareContentDetail> $contentSelections
      */
-    public function setContentSelections(array $contentSelections): self
+    public function setContentSelections(ShareContentDetail ...$contentSelections): self
     {
         $this->initialized['contentSelections'] = true;
-        $this->contentSelections = $contentSelections;
+        $this->contentSelections = array_values($contentSelections);
         return $this;
     }
     /**

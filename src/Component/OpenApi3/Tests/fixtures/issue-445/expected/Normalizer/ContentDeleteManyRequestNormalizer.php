@@ -55,7 +55,7 @@ class ContentDeleteManyRequestNormalizer implements DenormalizerInterface, Norma
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContentIds($values);
+            $object->setContentIds(...$values);
         }
         if (\array_key_exists('forceReferenceRemoval', $data)) {
             $object->setForceReferenceRemoval(TypeValidator::assertBool($data['forceReferenceRemoval'], 'forceReferenceRemoval'));

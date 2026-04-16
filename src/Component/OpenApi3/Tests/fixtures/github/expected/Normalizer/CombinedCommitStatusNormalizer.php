@@ -48,7 +48,7 @@ class CombinedCommitStatusNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CombinedCommitStatusConstraint());
         }
         if (\array_key_exists('state', $data)) {
@@ -63,7 +63,7 @@ class CombinedCommitStatusNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setStatuses($values);
+            $object->setStatuses(...$values);
             unset($data['statuses']);
         }
         if (\array_key_exists('sha', $data)) {
@@ -120,7 +120,7 @@ class CombinedCommitStatusNormalizer implements DenormalizerInterface, Normalize
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CombinedCommitStatusConstraint());
         }
         return $dataArray;

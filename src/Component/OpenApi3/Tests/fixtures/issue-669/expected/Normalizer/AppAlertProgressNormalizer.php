@@ -56,7 +56,7 @@ class AppAlertProgressNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setSteps($values);
+            $object->setSteps(...$values);
             unset($data['steps']);
         }
         foreach ($data as $key => $value_2) {

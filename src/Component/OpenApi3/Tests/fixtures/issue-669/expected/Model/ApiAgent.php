@@ -205,13 +205,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Api key infos
-     *
-     * @param list<ApiAgentAPIKeyInfo> $apiKeyInfos
      */
-    public function setApiKeyInfos(array $apiKeyInfos): self
+    public function setApiKeyInfos(ApiAgentAPIKeyInfo ...$apiKeyInfos): self
     {
         $this->initialized['apiKeyInfos'] = true;
-        $this->apiKeyInfos = $apiKeyInfos;
+        $this->apiKeyInfos = array_values($apiKeyInfos);
         return $this;
     }
     /**
@@ -225,13 +223,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Api keys
-     *
-     * @param list<ApiAgentAPIKey> $apiKeys
      */
-    public function setApiKeys(array $apiKeys): self
+    public function setApiKeys(ApiAgentAPIKey ...$apiKeys): self
     {
         $this->initialized['apiKeys'] = true;
-        $this->apiKeys = $apiKeys;
+        $this->apiKeys = array_values($apiKeys);
         return $this;
     }
     /**
@@ -261,13 +257,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Chatbot identifiers
-     *
-     * @param list<ApiAgentChatbotIdentifier> $chatbotIdentifiers
      */
-    public function setChatbotIdentifiers(array $chatbotIdentifiers): self
+    public function setChatbotIdentifiers(ApiAgentChatbotIdentifier ...$chatbotIdentifiers): self
     {
         $this->initialized['chatbotIdentifiers'] = true;
-        $this->chatbotIdentifiers = $chatbotIdentifiers;
+        $this->chatbotIdentifiers = array_values($chatbotIdentifiers);
         return $this;
     }
     /**
@@ -281,13 +275,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Child agents
-     *
-     * @param list<ApiAgent> $childAgents
      */
-    public function setChildAgents(array $childAgents): self
+    public function setChildAgents(ApiAgent ...$childAgents): self
     {
         $this->initialized['childAgents'] = true;
-        $this->childAgents = $childAgents;
+        $this->childAgents = array_values($childAgents);
         return $this;
     }
     /**
@@ -361,13 +353,10 @@ class ApiAgent extends \ArrayObject
     {
         return $this->functions;
     }
-    /**
-     * @param list<ApiAgentFunction> $functions
-     */
-    public function setFunctions(array $functions): self
+    public function setFunctions(ApiAgentFunction ...$functions): self
     {
         $this->initialized['functions'] = true;
-        $this->functions = $functions;
+        $this->functions = array_values($functions);
         return $this;
     }
     /**
@@ -381,13 +370,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * The guardrails the agent is attached to
-     *
-     * @param list<ApiAgentGuardrail> $guardrails
      */
-    public function setGuardrails(array $guardrails): self
+    public function setGuardrails(ApiAgentGuardrail ...$guardrails): self
     {
         $this->initialized['guardrails'] = true;
-        $this->guardrails = $guardrails;
+        $this->guardrails = array_values($guardrails);
         return $this;
     }
     public function getIfCase(): string
@@ -437,13 +424,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Knowledge bases
-     *
-     * @param list<ApiKnowledgeBase> $knowledgeBases
      */
-    public function setKnowledgeBases(array $knowledgeBases): self
+    public function setKnowledgeBases(ApiKnowledgeBase ...$knowledgeBases): self
     {
         $this->initialized['knowledgeBases'] = true;
-        $this->knowledgeBases = $knowledgeBases;
+        $this->knowledgeBases = array_values($knowledgeBases);
         return $this;
     }
     public function getLoggingConfig(): ApiAgentLoggingConfig
@@ -535,13 +520,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Parent agents
-     *
-     * @param list<ApiAgent> $parentAgents
      */
-    public function setParentAgents(array $parentAgents): self
+    public function setParentAgents(ApiAgent ...$parentAgents): self
     {
         $this->initialized['parentAgents'] = true;
-        $this->parentAgents = $parentAgents;
+        $this->parentAgents = array_values($parentAgents);
         return $this;
     }
     public function getProjectId(): string
@@ -673,13 +656,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * Agent tag to organize related resources
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     public function getTemperature(): float
@@ -809,13 +790,11 @@ class ApiAgent extends \ArrayObject
     }
     /**
      * VPC Egress IPs
-     *
-     * @param list<string> $vpcEgressIps
      */
-    public function setVpcEgressIps(array $vpcEgressIps): self
+    public function setVpcEgressIps(string ...$vpcEgressIps): self
     {
         $this->initialized['vpcEgressIps'] = true;
-        $this->vpcEgressIps = $vpcEgressIps;
+        $this->vpcEgressIps = array_values($vpcEgressIps);
         return $this;
     }
     public function getVpcUuid(): string

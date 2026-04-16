@@ -43,7 +43,12 @@ trait GetGetUriTrait
                 $schema             = $resolvedSchema instanceof Schema ? $resolvedSchema : null;
             }
 
-            $names[] = $parameter->getName() ?? '';
+            $paramName = $parameter->getName();
+            if (!\is_string($paramName)) {
+                throw new \LogicException('Expected string parameter name, got ' . get_debug_type($paramName));
+            }
+
+            $names[] = $paramName;
             $types[] = $schema instanceof Schema ? $schema->getType() : null;
         }
 

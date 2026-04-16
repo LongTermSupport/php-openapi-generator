@@ -48,7 +48,7 @@ class CloneTrafficNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CloneTrafficConstraint());
         }
         if (\array_key_exists('count', $data)) {
@@ -67,7 +67,7 @@ class CloneTrafficNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setClones($values);
+            $object->setClones(...$values);
             unset($data['clones']);
         }
         foreach ($data as $key => $value_2) {
@@ -99,7 +99,7 @@ class CloneTrafficNormalizer implements DenormalizerInterface, NormalizerInterfa
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CloneTrafficConstraint());
         }
         return $dataArray;

@@ -56,7 +56,7 @@ class ApiListEvaluationRunsByTestCaseOutputNormalizer implements DenormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setEvaluationRuns($values);
+            $object->setEvaluationRuns(...$values);
             unset($data['evaluation_runs']);
         }
         foreach ($data as $key => $value_2) {

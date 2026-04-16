@@ -72,7 +72,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $values[] = $value;
                 }
             }
-            $object->setArrayProperty($values);
+            $object->setArrayProperty(...$values);
             unset($data['arrayProperty']);
         }
         if (\array_key_exists('mapProperty', $data)) {

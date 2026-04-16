@@ -132,7 +132,7 @@ class ListItemAggregationRequestNormalizer implements DenormalizerInterface, Nor
                     $values_4[] = $value_6;
                 }
             }
-            $object->setAggregators($values_4);
+            $object->setAggregators(...$values_4);
             unset($data['aggregators']);
         }
         foreach ($data as $key => $value_7) {

@@ -72,7 +72,7 @@ class ChannelUpdateRequestNormalizer implements DenormalizerInterface, Normalize
                     $values_1[] = $value_3;
                 }
             }
-            $object->setSortFields($values_1);
+            $object->setSortFields(...$values_1);
         }
         if (\array_key_exists('names', $data)) {
             $values_2 = [];

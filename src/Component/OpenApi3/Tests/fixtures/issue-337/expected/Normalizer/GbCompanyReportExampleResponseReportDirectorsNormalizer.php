@@ -56,7 +56,7 @@ class GbCompanyReportExampleResponseReportDirectorsNormalizer implements Denorma
                     $values[] = $value_1;
                 }
             }
-            $object->setCurrentDirectors($values);
+            $object->setCurrentDirectors(...$values);
             unset($data['currentDirectors']);
         }
         if (\array_key_exists('previousDirectors', $data)) {
@@ -67,7 +67,7 @@ class GbCompanyReportExampleResponseReportDirectorsNormalizer implements Denorma
                     $values_1[] = $value_3;
                 }
             }
-            $object->setPreviousDirectors($values_1);
+            $object->setPreviousDirectors(...$values_1);
             unset($data['previousDirectors']);
         }
         foreach ($data as $key => $value_4) {

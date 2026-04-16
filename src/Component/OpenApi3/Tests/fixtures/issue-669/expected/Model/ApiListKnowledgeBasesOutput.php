@@ -45,13 +45,11 @@ class ApiListKnowledgeBasesOutput extends \ArrayObject
     }
     /**
      * The knowledge bases
-     *
-     * @param list<ApiKnowledgeBase> $knowledgeBases
      */
-    public function setKnowledgeBases(array $knowledgeBases): self
+    public function setKnowledgeBases(ApiKnowledgeBase ...$knowledgeBases): self
     {
         $this->initialized['knowledgeBases'] = true;
-        $this->knowledgeBases = $knowledgeBases;
+        $this->knowledgeBases = array_values($knowledgeBases);
         return $this;
     }
     /**

@@ -143,13 +143,11 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * Labels to associate with this issue. Pass one or more Labels to _replace_ the set of Labels on this Issue. Send an empty array (`[]`) to clear all Labels from the Issue. _NOTE: Only users with push access can set labels for issues. Labels are silently dropped otherwise._
-     *
-     * @param list<mixed> $labels
      */
-    public function setLabels(array $labels): self
+    public function setLabels(mixed ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     /**
@@ -163,13 +161,11 @@ class ReposOwnerRepoIssuesIssueNumberPatchBody extends \ArrayObject
     }
     /**
      * Logins for Users to assign to this issue. Pass one or more user logins to _replace_ the set of assignees on this Issue. Send an empty array (`[]`) to clear all assignees from the Issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
-     *
-     * @param list<string> $assignees
      */
-    public function setAssignees(array $assignees): self
+    public function setAssignees(string ...$assignees): self
     {
         $this->initialized['assignees'] = true;
-        $this->assignees = $assignees;
+        $this->assignees = array_values($assignees);
         return $this;
     }
 }

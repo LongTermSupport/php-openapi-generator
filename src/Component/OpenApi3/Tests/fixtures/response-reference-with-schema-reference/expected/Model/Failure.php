@@ -28,13 +28,10 @@ class Failure
     {
         return $this->errors;
     }
-    /**
-     * @param list<Error> $errors
-     */
-    public function setErrors(array $errors): self
+    public function setErrors(Error ...$errors): self
     {
         $this->initialized['errors'] = true;
-        $this->errors = $errors;
+        $this->errors = array_values($errors);
         return $this;
     }
 }

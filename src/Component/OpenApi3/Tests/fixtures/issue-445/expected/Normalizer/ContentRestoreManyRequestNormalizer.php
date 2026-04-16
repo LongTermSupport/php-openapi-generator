@@ -55,7 +55,7 @@ class ContentRestoreManyRequestNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContentIds($values);
+            $object->setContentIds(...$values);
         }
         if (\array_key_exists('allowMissingDependencies', $data)) {
             $object->setAllowMissingDependencies(TypeValidator::assertBool($data['allowMissingDependencies'], 'allowMissingDependencies'));

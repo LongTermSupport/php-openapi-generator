@@ -34,13 +34,10 @@ class ReviewsGetHaljsonResponse200 extends \ArrayObject
     {
         return $this->embedded;
     }
-    /**
-     * @param list<ReviewJsonhalReviewRead> $embedded
-     */
-    public function setEmbedded(array $embedded): self
+    public function setEmbedded(ReviewJsonhalReviewRead ...$embedded): self
     {
         $this->initialized['embedded'] = true;
-        $this->embedded = $embedded;
+        $this->embedded = array_values($embedded);
         return $this;
     }
     public function getTotalItems(): int

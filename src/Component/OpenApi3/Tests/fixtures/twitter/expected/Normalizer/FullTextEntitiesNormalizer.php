@@ -56,7 +56,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setUrls($values);
+            $object->setUrls(...$values);
             unset($data['urls']);
         }
         if (\array_key_exists('hashtags', $data)) {
@@ -67,7 +67,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = $value_3;
                 }
             }
-            $object->setHashtags($values_1);
+            $object->setHashtags(...$values_1);
             unset($data['hashtags']);
         }
         if (\array_key_exists('mentions', $data)) {
@@ -78,7 +78,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_2[] = $value_5;
                 }
             }
-            $object->setMentions($values_2);
+            $object->setMentions(...$values_2);
             unset($data['mentions']);
         }
         if (\array_key_exists('cashtags', $data)) {
@@ -89,7 +89,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_3[] = $value_7;
                 }
             }
-            $object->setCashtags($values_3);
+            $object->setCashtags(...$values_3);
             unset($data['cashtags']);
         }
         if (\array_key_exists('annotations', $data)) {
@@ -100,7 +100,7 @@ class FullTextEntitiesNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_4[] = $value_9;
                 }
             }
-            $object->setAnnotations($values_4);
+            $object->setAnnotations(...$values_4);
             unset($data['annotations']);
         }
         foreach ($data as $key => $value_10) {

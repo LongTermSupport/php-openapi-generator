@@ -33,13 +33,10 @@ class ResponseAllPartnerAttachmentRemoteRoutes extends \ArrayObject
     {
         return $this->remoteRoutes;
     }
-    /**
-     * @param list<PartnerAttachmentRemoteRoute> $remoteRoutes
-     */
-    public function setRemoteRoutes(array $remoteRoutes): self
+    public function setRemoteRoutes(PartnerAttachmentRemoteRoute ...$remoteRoutes): self
     {
         $this->initialized['remoteRoutes'] = true;
-        $this->remoteRoutes = $remoteRoutes;
+        $this->remoteRoutes = array_values($remoteRoutes);
         return $this;
     }
     public function getLinks(): PageLinks

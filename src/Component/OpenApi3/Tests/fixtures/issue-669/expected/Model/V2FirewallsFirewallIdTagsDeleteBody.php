@@ -31,13 +31,10 @@ class V2FirewallsFirewallIdTagsDeleteBody extends \ArrayObject
     {
         return $this->tags;
     }
-    /**
-     * @param list<string> $tags
-     */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
 }

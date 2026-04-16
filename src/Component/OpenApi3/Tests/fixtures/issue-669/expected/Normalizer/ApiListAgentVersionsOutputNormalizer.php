@@ -56,7 +56,7 @@ class ApiListAgentVersionsOutputNormalizer implements DenormalizerInterface, Nor
                     $values[] = $value_1;
                 }
             }
-            $object->setAgentVersions($values);
+            $object->setAgentVersions(...$values);
             unset($data['agent_versions']);
         }
         if (\array_key_exists('links', $data)) {

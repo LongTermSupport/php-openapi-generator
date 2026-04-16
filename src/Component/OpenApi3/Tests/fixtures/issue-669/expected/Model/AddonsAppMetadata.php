@@ -131,13 +131,10 @@ class AddonsAppMetadata extends \ArrayObject
     {
         return $this->options;
     }
-    /**
-     * @param list<string> $options
-     */
-    public function setOptions(array $options): self
+    public function setOptions(string ...$options): self
     {
         $this->initialized['options'] = true;
-        $this->options = $options;
+        $this->options = array_values($options);
         return $this;
     }
 }

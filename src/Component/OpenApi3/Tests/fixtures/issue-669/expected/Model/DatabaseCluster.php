@@ -460,13 +460,10 @@ class DatabaseCluster extends \ArrayObject
     {
         return $this->rules;
     }
-    /**
-     * @param list<FirewallRule> $rules
-     */
-    public function setRules(array $rules): self
+    public function setRules(FirewallRule ...$rules): self
     {
         $this->initialized['rules'] = true;
-        $this->rules = $rules;
+        $this->rules = array_values($rules);
         return $this;
     }
     /**
@@ -528,13 +525,11 @@ class DatabaseCluster extends \ArrayObject
     }
     /**
      * Public hostname and port of the cluster's metrics endpoint(s). Includes one record for the cluster's primary node and a second entry for the cluster's standby node(s).
-     *
-     * @param list<DatabaseServiceEndpoint> $metricsEndpoints
      */
-    public function setMetricsEndpoints(array $metricsEndpoints): self
+    public function setMetricsEndpoints(DatabaseServiceEndpoint ...$metricsEndpoints): self
     {
         $this->initialized['metricsEndpoints'] = true;
-        $this->metricsEndpoints = $metricsEndpoints;
+        $this->metricsEndpoints = array_values($metricsEndpoints);
         return $this;
     }
     /**

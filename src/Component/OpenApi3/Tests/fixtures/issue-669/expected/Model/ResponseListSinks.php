@@ -37,13 +37,11 @@ class ResponseListSinks extends \ArrayObject
     }
     /**
      * List of sinks identified by their URNs.
-     *
-     * @param list<SinksResponse> $sinks
      */
-    public function setSinks(array $sinks): self
+    public function setSinks(SinksResponse ...$sinks): self
     {
         $this->initialized['sinks'] = true;
-        $this->sinks = $sinks;
+        $this->sinks = array_values($sinks);
         return $this;
     }
 }

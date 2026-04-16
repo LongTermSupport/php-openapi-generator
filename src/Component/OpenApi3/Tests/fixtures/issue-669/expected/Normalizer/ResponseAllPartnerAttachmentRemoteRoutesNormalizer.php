@@ -56,7 +56,7 @@ class ResponseAllPartnerAttachmentRemoteRoutesNormalizer implements Denormalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setRemoteRoutes($values);
+            $object->setRemoteRoutes(...$values);
             unset($data['remote_routes']);
         }
         if (\array_key_exists('links', $data)) {

@@ -346,13 +346,11 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An array of objects specifying the forwarding rules for a load balancer.
-     *
-     * @param list<ForwardingRule> $forwardingRules
      */
-    public function setForwardingRules(array $forwardingRules): self
+    public function setForwardingRules(ForwardingRule ...$forwardingRules): self
     {
         $this->initialized['forwardingRules'] = true;
-        $this->forwardingRules = $forwardingRules;
+        $this->forwardingRules = array_values($forwardingRules);
         return $this;
     }
     /**
@@ -558,13 +556,11 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An array of objects specifying the domain configurations for a Global load balancer.
-     *
-     * @param list<Domains> $domains
      */
-    public function setDomains(array $domains): self
+    public function setDomains(Domains ...$domains): self
     {
         $this->initialized['domains'] = true;
-        $this->domains = $domains;
+        $this->domains = array_values($domains);
         return $this;
     }
     /**
@@ -594,13 +590,11 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An array containing the UUIDs of the Regional load balancers to be used as target backends for a Global load balancer.
-     *
-     * @param list<string> $targetLoadBalancerIds
      */
-    public function setTargetLoadBalancerIds(array $targetLoadBalancerIds): self
+    public function setTargetLoadBalancerIds(string ...$targetLoadBalancerIds): self
     {
         $this->initialized['targetLoadBalancerIds'] = true;
-        $this->targetLoadBalancerIds = $targetLoadBalancerIds;
+        $this->targetLoadBalancerIds = array_values($targetLoadBalancerIds);
         return $this;
     }
     /**
@@ -646,13 +640,11 @@ class LoadBalancer extends \ArrayObject
     }
     /**
      * An array containing the IDs of the Droplets assigned to the load balancer.
-     *
-     * @param list<int> $dropletIds
      */
-    public function setDropletIds(array $dropletIds): self
+    public function setDropletIds(int ...$dropletIds): self
     {
         $this->initialized['dropletIds'] = true;
-        $this->dropletIds = $dropletIds;
+        $this->dropletIds = array_values($dropletIds);
         return $this;
     }
     /**

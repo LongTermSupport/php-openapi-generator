@@ -60,7 +60,7 @@ class PeopleSearchSuccessResultNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value_1;
                 }
             }
-            $object->setDirectors($values);
+            $object->setDirectors(...$values);
             unset($data['directors']);
         }
         foreach ($data as $key => $value_2) {

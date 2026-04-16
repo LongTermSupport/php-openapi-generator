@@ -60,7 +60,7 @@ class V2MonitoringSinksPostBodyNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value_1;
                 }
             }
-            $object->setResources($values);
+            $object->setResources(...$values);
             unset($data['resources']);
         }
         foreach ($data as $key => $value_2) {

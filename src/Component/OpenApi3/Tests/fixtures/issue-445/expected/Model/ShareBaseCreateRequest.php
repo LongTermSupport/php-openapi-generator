@@ -102,13 +102,11 @@ class ShareBaseCreateRequest
     }
     /**
      * List of contents including outputs to share.
-     *
-     * @param list<ShareContent> $contents
      */
-    public function setContents(array $contents): void
+    public function setContents(ShareContent ...$contents): void
     {
         $this->initialized['contents'] = true;
-        $this->contents = $contents;
+        $this->contents = array_values($contents);
     }
     /**
      * List of content layers to share.

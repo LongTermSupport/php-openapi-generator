@@ -92,13 +92,10 @@ class KafkaTopicVerbose extends \ArrayObject
     {
         return $this->partitions;
     }
-    /**
-     * @param list<KafkaTopicPartition> $partitions
-     */
-    public function setPartitions(array $partitions): self
+    public function setPartitions(KafkaTopicPartition ...$partitions): self
     {
         $this->initialized['partitions'] = true;
-        $this->partitions = $partitions;
+        $this->partitions = array_values($partitions);
         return $this;
     }
     public function getConfig(): KafkaTopicConfig

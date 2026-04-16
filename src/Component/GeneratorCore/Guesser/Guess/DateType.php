@@ -29,11 +29,11 @@ class DateType extends ObjectType
     public function __construct(
         object $object,
         private string $format = 'Y-m-d',
-        ?bool $preferInterface = null,
+        bool $preferInterface = false,
     ) {
         parent::__construct($object, '\DateTime', '');
 
-        $this->preferInterface = $preferInterface ?? false;
+        $this->preferInterface = $preferInterface;
     }
 
     #[Override]

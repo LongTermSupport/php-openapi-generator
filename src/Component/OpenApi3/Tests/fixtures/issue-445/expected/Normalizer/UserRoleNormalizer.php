@@ -59,7 +59,7 @@ class UserRoleNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setUserRights($values);
+            $object->setUserRights(...$values);
             unset($data['userRights']);
         }
         if (\array_key_exists('id', $data)) {

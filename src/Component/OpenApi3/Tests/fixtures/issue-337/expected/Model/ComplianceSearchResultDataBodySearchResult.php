@@ -32,13 +32,10 @@ class ComplianceSearchResultDataBodySearchResult extends \ArrayObject
     {
         return $this->records;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItem> $records
-     */
-    public function setRecords(array $records): self
+    public function setRecords(ComplianceSearchResultDataBodySearchResultRecordsItem ...$records): self
     {
         $this->initialized['records'] = true;
-        $this->records = $records;
+        $this->records = array_values($records);
         return $this;
     }
     public function getSearchEngineVersion(): string

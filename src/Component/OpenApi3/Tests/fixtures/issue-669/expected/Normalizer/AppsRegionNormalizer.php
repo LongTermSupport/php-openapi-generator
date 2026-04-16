@@ -59,7 +59,7 @@ class AppsRegionNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDataCenters($values);
+            $object->setDataCenters(...$values);
             unset($data['data_centers']);
         }
         if (\array_key_exists('default', $data)) {

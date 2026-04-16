@@ -56,7 +56,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setCreditsafeConnectOnlineReports($values);
+            $object->setCreditsafeConnectOnlineReports(...$values);
             unset($data['creditsafeConnectOnlineReports']);
         }
         if (\array_key_exists('creditsafeConnectOfflineReports', $data)) {
@@ -67,7 +67,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values_1[] = $value_3;
                 }
             }
-            $object->setCreditsafeConnectOfflineReports($values_1);
+            $object->setCreditsafeConnectOfflineReports(...$values_1);
             unset($data['creditsafeConnectOfflineReports']);
         }
         if (\array_key_exists('creditsafeConnectMonitoring', $data)) {
@@ -78,7 +78,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values_2[] = $value_5;
                 }
             }
-            $object->setCreditsafeConnectMonitoring($values_2);
+            $object->setCreditsafeConnectMonitoring(...$values_2);
             unset($data['creditsafeConnectMonitoring']);
         }
         if (\array_key_exists('creditsafeConnectDirectorReports', $data)) {
@@ -89,7 +89,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values_3[] = $value_7;
                 }
             }
-            $object->setCreditsafeConnectDirectorReports($values_3);
+            $object->setCreditsafeConnectDirectorReports(...$values_3);
             unset($data['creditsafeConnectDirectorReports']);
         }
         if (\array_key_exists('creditsafeConnectImageDocuments', $data)) {
@@ -100,7 +100,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values_4[] = $value_9;
                 }
             }
-            $object->setCreditsafeConnectImageDocuments($values_4);
+            $object->setCreditsafeConnectImageDocuments(...$values_4);
             unset($data['creditsafeConnectImageDocuments']);
         }
         if (\array_key_exists('creditsafeConnectBankValidation', $data)) {
@@ -111,7 +111,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values_5[] = $value_11;
                 }
             }
-            $object->setCreditsafeConnectBankValidation($values_5);
+            $object->setCreditsafeConnectBankValidation(...$values_5);
             unset($data['creditsafeConnectBankValidation']);
         }
         if (\array_key_exists('creditsafeConnectBankVerification', $data)) {
@@ -122,7 +122,7 @@ class AccessCountriesResponseCountryAccessItemNormalizer implements Denormalizer
                     $values_6[] = $value_13;
                 }
             }
-            $object->setCreditsafeConnectBankVerification($values_6);
+            $object->setCreditsafeConnectBankVerification(...$values_6);
             unset($data['creditsafeConnectBankVerification']);
         }
         foreach ($data as $key => $value_14) {

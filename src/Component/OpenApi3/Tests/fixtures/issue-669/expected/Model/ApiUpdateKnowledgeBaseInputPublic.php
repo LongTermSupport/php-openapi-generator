@@ -121,13 +121,11 @@ class ApiUpdateKnowledgeBaseInputPublic extends \ArrayObject
     }
     /**
      * Tags to organize your knowledge base.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

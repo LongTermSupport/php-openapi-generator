@@ -61,13 +61,11 @@ class TweetWithheld extends \ArrayObject
     }
     /**
      * Provides a list of countries where this content is not available.
-     *
-     * @param list<string> $countryCodes
      */
-    public function setCountryCodes(array $countryCodes): self
+    public function setCountryCodes(string ...$countryCodes): self
     {
         $this->initialized['countryCodes'] = true;
-        $this->countryCodes = $countryCodes;
+        $this->countryCodes = array_values($countryCodes);
         return $this;
     }
     /**

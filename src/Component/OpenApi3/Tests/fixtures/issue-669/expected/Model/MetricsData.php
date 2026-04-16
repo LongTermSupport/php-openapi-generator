@@ -38,13 +38,11 @@ class MetricsData extends \ArrayObject
     }
     /**
      * Result of query.
-     *
-     * @param list<MetricsResult> $result
      */
-    public function setResult(array $result): self
+    public function setResult(MetricsResult ...$result): self
     {
         $this->initialized['result'] = true;
-        $this->result = $result;
+        $this->result = array_values($result);
         return $this;
     }
     public function getResultType(): string

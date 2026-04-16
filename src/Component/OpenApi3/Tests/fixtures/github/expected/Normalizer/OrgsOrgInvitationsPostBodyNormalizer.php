@@ -48,7 +48,7 @@ class OrgsOrgInvitationsPostBodyNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgInvitationsPostBodyConstraint());
         }
         if (\array_key_exists('invitee_id', $data)) {
@@ -70,7 +70,7 @@ class OrgsOrgInvitationsPostBodyNormalizer implements DenormalizerInterface, Nor
                     $values[] = TypeValidator::assertInt($value, 'value');
                 }
             }
-            $object->setTeamIds($values);
+            $object->setTeamIds(...$values);
             unset($data['team_ids']);
         }
         foreach ($data as $key => $value_1) {
@@ -111,7 +111,7 @@ class OrgsOrgInvitationsPostBodyNormalizer implements DenormalizerInterface, Nor
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgInvitationsPostBodyConstraint());
         }
         return $dataArray;

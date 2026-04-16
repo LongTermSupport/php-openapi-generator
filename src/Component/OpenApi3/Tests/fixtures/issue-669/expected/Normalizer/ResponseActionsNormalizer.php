@@ -56,7 +56,7 @@ class ResponseActionsNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setActions($values);
+            $object->setActions(...$values);
             unset($data['actions']);
         }
         if (\array_key_exists('links', $data)) {

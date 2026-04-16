@@ -60,7 +60,7 @@ class MonitoringPortfoliosPortfolioIdPatchBodyNormalizer implements Denormalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setEmails($values);
+            $object->setEmails(...$values);
             unset($data['emails']);
         }
         if (\array_key_exists('emailLanguage', $data)) {

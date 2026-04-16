@@ -48,7 +48,7 @@ class JobNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\JobConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -110,7 +110,7 @@ class JobNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
                     $values[] = $value_1;
                 }
             }
-            $object->setSteps($values);
+            $object->setSteps(...$values);
             unset($data['steps']);
         }
         if (\array_key_exists('check_run_url', $data)) {
@@ -174,7 +174,7 @@ class JobNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\JobConstraint());
         }
         return $dataArray;

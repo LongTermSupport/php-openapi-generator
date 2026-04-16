@@ -49,7 +49,7 @@ class Reference
         $mergedParts = array_merge($originParts, $referenceParts);
 
         if (\array_key_exists('path', $referenceParts)) {
-            $originPath = $originParts['path'] ?? '';
+            $originPath = \array_key_exists('path', $originParts) ? $originParts['path'] : '';
             if (!\is_string($originPath)) {
                 throw new LogicException('Origin URI path must be string, got ' . get_debug_type($originPath));
             }

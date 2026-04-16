@@ -48,7 +48,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\GistFullConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -142,7 +142,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_1[] = $value_4;
                 }
             }
-            $object->setForks($values_1);
+            $object->setForks(...$values_1);
             unset($data['forks']);
         }
         if (\array_key_exists('history', $data)) {
@@ -153,7 +153,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_2[] = $value_6;
                 }
             }
-            $object->setHistory($values_2);
+            $object->setHistory(...$values_2);
             unset($data['history']);
         }
         if (\array_key_exists('fork_of', $data) && $data['fork_of'] !== null) {
@@ -265,7 +265,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
                 $dataArray[$key_1] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\GistFullConstraint());
         }
         return $dataArray;

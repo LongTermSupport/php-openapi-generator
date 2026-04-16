@@ -31,13 +31,10 @@ class Topic extends \ArrayObject
     {
         return $this->names;
     }
-    /**
-     * @param list<string> $names
-     */
-    public function setNames(array $names): self
+    public function setNames(string ...$names): self
     {
         $this->initialized['names'] = true;
-        $this->names = $names;
+        $this->names = array_values($names);
         return $this;
     }
 }

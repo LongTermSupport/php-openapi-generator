@@ -97,13 +97,11 @@ class AddonsAppInfo extends \ArrayObject
     }
     /**
      * A list of plans available for the resource.
-     *
-     * @param list<AddonsPlan> $plans
      */
-    public function setPlans(array $plans): self
+    public function setPlans(AddonsPlan ...$plans): self
     {
         $this->initialized['plans'] = true;
-        $this->plans = $plans;
+        $this->plans = array_values($plans);
         return $this;
     }
 }

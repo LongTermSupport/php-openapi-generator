@@ -87,13 +87,11 @@ class Region extends \ArrayObject
     }
     /**
      * This attribute is set to an array which contains features available in this region
-     *
-     * @param list<string> $features
      */
-    public function setFeatures(array $features): self
+    public function setFeatures(string ...$features): self
     {
         $this->initialized['features'] = true;
-        $this->features = $features;
+        $this->features = array_values($features);
         return $this;
     }
     /**
@@ -123,13 +121,11 @@ class Region extends \ArrayObject
     }
     /**
      * This attribute is set to an array which contains the identifying slugs for the sizes available in this region. sizes:read is required to view.
-     *
-     * @param list<string> $sizes
      */
-    public function setSizes(array $sizes): self
+    public function setSizes(string ...$sizes): self
     {
         $this->initialized['sizes'] = true;
-        $this->sizes = $sizes;
+        $this->sizes = array_values($sizes);
         return $this;
     }
 }

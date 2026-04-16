@@ -67,7 +67,7 @@ class ApiCreateAgentInputPublicNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setKnowledgeBaseUuid($values);
+            $object->setKnowledgeBaseUuid(...$values);
             unset($data['knowledge_base_uuid']);
         }
         if (\array_key_exists('model_provider_key_uuid', $data)) {
@@ -101,7 +101,7 @@ class ApiCreateAgentInputPublicNormalizer implements DenormalizerInterface, Norm
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTags($values_1);
+            $object->setTags(...$values_1);
             unset($data['tags']);
         }
         if (\array_key_exists('workspace_uuid', $data)) {

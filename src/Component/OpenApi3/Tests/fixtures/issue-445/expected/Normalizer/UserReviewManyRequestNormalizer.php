@@ -55,7 +55,7 @@ class UserReviewManyRequestNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setUserIds($values);
+            $object->setUserIds(...$values);
             unset($data['userIds']);
         }
         if (\array_key_exists('reviewed', $data)) {

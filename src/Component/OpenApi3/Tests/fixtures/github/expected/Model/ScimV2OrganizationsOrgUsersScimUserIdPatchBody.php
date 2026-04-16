@@ -37,13 +37,10 @@ class ScimV2OrganizationsOrgUsersScimUserIdPatchBody extends \ArrayObject
     {
         return $this->schemas;
     }
-    /**
-     * @param list<string> $schemas
-     */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(string ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
     /**
@@ -57,13 +54,11 @@ class ScimV2OrganizationsOrgUsersScimUserIdPatchBody extends \ArrayObject
     }
     /**
      * Set of operations to be performed
-     *
-     * @param list<ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem> $operations
      */
-    public function setOperations(array $operations): self
+    public function setOperations(ScimV2OrganizationsOrgUsersScimUserIdPatchBodyOperationsItem ...$operations): self
     {
         $this->initialized['operations'] = true;
-        $this->operations = $operations;
+        $this->operations = array_values($operations);
         return $this;
     }
 }

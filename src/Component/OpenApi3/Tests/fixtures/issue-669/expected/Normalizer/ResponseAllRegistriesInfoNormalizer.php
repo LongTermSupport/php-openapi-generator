@@ -55,7 +55,7 @@ class ResponseAllRegistriesInfoNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value;
                 }
             }
-            $object->setRegistries($values);
+            $object->setRegistries(...$values);
             unset($data['registries']);
         }
         foreach ($data as $key => $value_1) {

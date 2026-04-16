@@ -56,7 +56,7 @@ class ResponseDatabasesNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setDbs($values);
+            $object->setDbs(...$values);
             unset($data['dbs']);
         }
         foreach ($data as $key => $value_2) {

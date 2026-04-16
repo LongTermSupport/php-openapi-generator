@@ -40,13 +40,10 @@ class ApiChatbot extends \ArrayObject
     {
         return $this->allowedDomains;
     }
-    /**
-     * @param list<string> $allowedDomains
-     */
-    public function setAllowedDomains(array $allowedDomains): self
+    public function setAllowedDomains(string ...$allowedDomains): self
     {
         $this->initialized['allowedDomains'] = true;
-        $this->allowedDomains = $allowedDomains;
+        $this->allowedDomains = array_values($allowedDomains);
         return $this;
     }
     public function getButtonBackgroundColor(): string

@@ -56,7 +56,7 @@ class GuidSuccessResponseNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setGUIDList($values);
+            $object->setGUIDList(...$values);
             unset($data['GUIDList']);
         }
         foreach ($data as $key => $value_2) {

@@ -45,13 +45,11 @@ class ApiListModelAPIKeysOutput extends \ArrayObject
     }
     /**
      * Api key infos
-     *
-     * @param list<ApiModelAPIKeyInfo> $apiKeyInfos
      */
-    public function setApiKeyInfos(array $apiKeyInfos): self
+    public function setApiKeyInfos(ApiModelAPIKeyInfo ...$apiKeyInfos): self
     {
         $this->initialized['apiKeyInfos'] = true;
-        $this->apiKeyInfos = $apiKeyInfos;
+        $this->apiKeyInfos = array_values($apiKeyInfos);
         return $this;
     }
     /**

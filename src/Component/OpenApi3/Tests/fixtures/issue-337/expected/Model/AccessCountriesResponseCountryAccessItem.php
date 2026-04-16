@@ -61,13 +61,11 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     }
     /**
      * Country usage for Company Reports service
-     *
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem> $creditsafeConnectOnlineReports
      */
-    public function setCreditsafeConnectOnlineReports(array $creditsafeConnectOnlineReports): self
+    public function setCreditsafeConnectOnlineReports(AccessCountriesResponseCountryAccessItemCreditsafeConnectOnlineReportsItem ...$creditsafeConnectOnlineReports): self
     {
         $this->initialized['creditsafeConnectOnlineReports'] = true;
-        $this->creditsafeConnectOnlineReports = $creditsafeConnectOnlineReports;
+        $this->creditsafeConnectOnlineReports = array_values($creditsafeConnectOnlineReports);
         return $this;
     }
     /**
@@ -77,13 +75,10 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     {
         return $this->creditsafeConnectOfflineReports;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem> $creditsafeConnectOfflineReports
-     */
-    public function setCreditsafeConnectOfflineReports(array $creditsafeConnectOfflineReports): self
+    public function setCreditsafeConnectOfflineReports(AccessCountriesResponseCountryAccessItemCreditsafeConnectOfflineReportsItem ...$creditsafeConnectOfflineReports): self
     {
         $this->initialized['creditsafeConnectOfflineReports'] = true;
-        $this->creditsafeConnectOfflineReports = $creditsafeConnectOfflineReports;
+        $this->creditsafeConnectOfflineReports = array_values($creditsafeConnectOfflineReports);
         return $this;
     }
     /**
@@ -93,13 +88,10 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     {
         return $this->creditsafeConnectMonitoring;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem> $creditsafeConnectMonitoring
-     */
-    public function setCreditsafeConnectMonitoring(array $creditsafeConnectMonitoring): self
+    public function setCreditsafeConnectMonitoring(AccessCountriesResponseCountryAccessItemCreditsafeConnectMonitoringItem ...$creditsafeConnectMonitoring): self
     {
         $this->initialized['creditsafeConnectMonitoring'] = true;
-        $this->creditsafeConnectMonitoring = $creditsafeConnectMonitoring;
+        $this->creditsafeConnectMonitoring = array_values($creditsafeConnectMonitoring);
         return $this;
     }
     /**
@@ -109,13 +101,10 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     {
         return $this->creditsafeConnectDirectorReports;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem> $creditsafeConnectDirectorReports
-     */
-    public function setCreditsafeConnectDirectorReports(array $creditsafeConnectDirectorReports): self
+    public function setCreditsafeConnectDirectorReports(AccessCountriesResponseCountryAccessItemCreditsafeConnectDirectorReportsItem ...$creditsafeConnectDirectorReports): self
     {
         $this->initialized['creditsafeConnectDirectorReports'] = true;
-        $this->creditsafeConnectDirectorReports = $creditsafeConnectDirectorReports;
+        $this->creditsafeConnectDirectorReports = array_values($creditsafeConnectDirectorReports);
         return $this;
     }
     /**
@@ -125,13 +114,10 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     {
         return $this->creditsafeConnectImageDocuments;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem> $creditsafeConnectImageDocuments
-     */
-    public function setCreditsafeConnectImageDocuments(array $creditsafeConnectImageDocuments): self
+    public function setCreditsafeConnectImageDocuments(AccessCountriesResponseCountryAccessItemCreditsafeConnectImageDocumentsItem ...$creditsafeConnectImageDocuments): self
     {
         $this->initialized['creditsafeConnectImageDocuments'] = true;
-        $this->creditsafeConnectImageDocuments = $creditsafeConnectImageDocuments;
+        $this->creditsafeConnectImageDocuments = array_values($creditsafeConnectImageDocuments);
         return $this;
     }
     /**
@@ -141,13 +127,10 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     {
         return $this->creditsafeConnectBankValidation;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem> $creditsafeConnectBankValidation
-     */
-    public function setCreditsafeConnectBankValidation(array $creditsafeConnectBankValidation): self
+    public function setCreditsafeConnectBankValidation(AccessCountriesResponseCountryAccessItemCreditsafeConnectBankValidationItem ...$creditsafeConnectBankValidation): self
     {
         $this->initialized['creditsafeConnectBankValidation'] = true;
-        $this->creditsafeConnectBankValidation = $creditsafeConnectBankValidation;
+        $this->creditsafeConnectBankValidation = array_values($creditsafeConnectBankValidation);
         return $this;
     }
     /**
@@ -157,13 +140,10 @@ class AccessCountriesResponseCountryAccessItem extends \ArrayObject
     {
         return $this->creditsafeConnectBankVerification;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem> $creditsafeConnectBankVerification
-     */
-    public function setCreditsafeConnectBankVerification(array $creditsafeConnectBankVerification): self
+    public function setCreditsafeConnectBankVerification(AccessCountriesResponseCountryAccessItemCreditsafeConnectBankVerificationItem ...$creditsafeConnectBankVerification): self
     {
         $this->initialized['creditsafeConnectBankVerification'] = true;
-        $this->creditsafeConnectBankVerification = $creditsafeConnectBankVerification;
+        $this->creditsafeConnectBankVerification = array_values($creditsafeConnectBankVerification);
         return $this;
     }
 }

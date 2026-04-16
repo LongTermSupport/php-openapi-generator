@@ -55,7 +55,7 @@ class AppMetricsBandwidthUsageRequestNormalizer implements DenormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAppIds($values);
+            $object->setAppIds(...$values);
             unset($data['app_ids']);
         }
         if (\array_key_exists('date', $data)) {

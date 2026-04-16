@@ -63,7 +63,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAssignedTo($values);
+            $object->setAssignedTo(...$values);
             unset($data['assignedTo']);
         }
         if (\array_key_exists('assignmentType', $data)) {
@@ -82,7 +82,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
                     $values_1[] = $value_2;
                 }
             }
-            $object->setHistory($values_1);
+            $object->setHistory(...$values_1);
             unset($data['history']);
         }
         if (\array_key_exists('matchStates', $data)) {
@@ -93,7 +93,7 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
                     $values_2[] = $value_4;
                 }
             }
-            $object->setMatchStates($values_2);
+            $object->setMatchStates(...$values_2);
             unset($data['matchStates']);
         }
         foreach ($data as $key => $value_5) {

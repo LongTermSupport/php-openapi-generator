@@ -92,7 +92,7 @@ class AddonsResourceNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_1;
                 }
             }
-            $object->setMetadata($values);
+            $object->setMetadata(...$values);
             unset($data['metadata']);
         }
         if (\array_key_exists('sso_url', $data)) {

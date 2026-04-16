@@ -48,7 +48,7 @@ class UserSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\UserSearchResultItemConstraint());
         }
         if (\array_key_exists('login', $data)) {
@@ -179,7 +179,7 @@ class UserSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setTextMatches($values);
+            $object->setTextMatches(...$values);
             unset($data['text_matches']);
         }
         if (\array_key_exists('blog', $data)) {
@@ -300,7 +300,7 @@ class UserSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\UserSearchResultItemConstraint());
         }
         return $dataArray;

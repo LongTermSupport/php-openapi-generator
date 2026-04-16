@@ -47,13 +47,10 @@ class Expansions extends \ArrayObject
     {
         return $this->users;
     }
-    /**
-     * @param list<mixed> $users
-     */
-    public function setUsers(array $users): self
+    public function setUsers(mixed ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
     /**
@@ -63,13 +60,10 @@ class Expansions extends \ArrayObject
     {
         return $this->tweets;
     }
-    /**
-     * @param list<mixed> $tweets
-     */
-    public function setTweets(array $tweets): self
+    public function setTweets(mixed ...$tweets): self
     {
         $this->initialized['tweets'] = true;
-        $this->tweets = $tweets;
+        $this->tweets = array_values($tweets);
         return $this;
     }
     /**
@@ -79,13 +73,10 @@ class Expansions extends \ArrayObject
     {
         return $this->places;
     }
-    /**
-     * @param list<mixed> $places
-     */
-    public function setPlaces(array $places): self
+    public function setPlaces(mixed ...$places): self
     {
         $this->initialized['places'] = true;
-        $this->places = $places;
+        $this->places = array_values($places);
         return $this;
     }
     /**
@@ -95,13 +86,10 @@ class Expansions extends \ArrayObject
     {
         return $this->media;
     }
-    /**
-     * @param list<mixed> $media
-     */
-    public function setMedia(array $media): self
+    public function setMedia(mixed ...$media): self
     {
         $this->initialized['media'] = true;
-        $this->media = $media;
+        $this->media = array_values($media);
         return $this;
     }
     /**
@@ -111,13 +99,10 @@ class Expansions extends \ArrayObject
     {
         return $this->polls;
     }
-    /**
-     * @param list<Poll> $polls
-     */
-    public function setPolls(array $polls): self
+    public function setPolls(Poll ...$polls): self
     {
         $this->initialized['polls'] = true;
-        $this->polls = $polls;
+        $this->polls = array_values($polls);
         return $this;
     }
 }

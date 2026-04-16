@@ -87,13 +87,10 @@ class ApplicationGrant extends \ArrayObject
     {
         return $this->scopes;
     }
-    /**
-     * @param list<string> $scopes
-     */
-    public function setScopes(array $scopes): self
+    public function setScopes(string ...$scopes): self
     {
         $this->initialized['scopes'] = true;
-        $this->scopes = $scopes;
+        $this->scopes = array_values($scopes);
         return $this;
     }
     public function getUser(): ?ApplicationGrantUser

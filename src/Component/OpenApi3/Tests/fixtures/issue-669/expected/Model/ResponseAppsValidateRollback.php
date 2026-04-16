@@ -68,13 +68,11 @@ class ResponseAppsValidateRollback extends \ArrayObject
     }
     /**
      * Contains a list of warnings that may cause the rollback to run under unideal circumstances.
-     *
-     * @param list<AppRollbackValidationCondition> $warnings
      */
-    public function setWarnings(array $warnings): self
+    public function setWarnings(AppRollbackValidationCondition ...$warnings): self
     {
         $this->initialized['warnings'] = true;
-        $this->warnings = $warnings;
+        $this->warnings = array_values($warnings);
         return $this;
     }
 }

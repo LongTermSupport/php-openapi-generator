@@ -34,12 +34,12 @@ class ResponseAllChecks extends \ArrayObject
         return $this->checks;
     }
     /**
-     * @param list<array<string, mixed>> $checks
+     * @param array<string, mixed> ...$checks
      */
-    public function setChecks(array $checks): self
+    public function setChecks(array ...$checks): self
     {
         $this->initialized['checks'] = true;
-        $this->checks = $checks;
+        $this->checks = array_values($checks);
         return $this;
     }
     public function getLinks(): PageLinks

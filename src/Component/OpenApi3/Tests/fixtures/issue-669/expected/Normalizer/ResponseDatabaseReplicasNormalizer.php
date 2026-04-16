@@ -56,7 +56,7 @@ class ResponseDatabaseReplicasNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setReplicas($values);
+            $object->setReplicas(...$values);
             unset($data['replicas']);
         }
         foreach ($data as $key => $value_2) {

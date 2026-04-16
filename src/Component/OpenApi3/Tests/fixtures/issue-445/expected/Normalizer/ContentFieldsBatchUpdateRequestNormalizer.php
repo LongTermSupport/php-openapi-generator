@@ -56,7 +56,7 @@ class ContentFieldsBatchUpdateRequestNormalizer implements DenormalizerInterface
                     $values[] = $value_1;
                 }
             }
-            $object->setChangeCommands($values);
+            $object->setChangeCommands(...$values);
             unset($data['changeCommands']);
         }
         if (\array_key_exists('allowMissingDependencies', $data)) {
@@ -78,7 +78,7 @@ class ContentFieldsBatchUpdateRequestNormalizer implements DenormalizerInterface
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setContentIds($values_1);
+            $object->setContentIds(...$values_1);
             unset($data['contentIds']);
         }
         return $object;

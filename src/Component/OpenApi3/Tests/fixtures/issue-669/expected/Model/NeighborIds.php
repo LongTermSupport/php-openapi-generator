@@ -38,12 +38,12 @@ class NeighborIds extends \ArrayObject
     /**
      * An array of arrays. Each array will contain a set of Droplet IDs for Droplets that share a physical server.
      *
-     * @param list<list<int>> $neighborIds
+     * @param list<int> ...$neighborIds
      */
-    public function setNeighborIds(array $neighborIds): self
+    public function setNeighborIds(array ...$neighborIds): self
     {
         $this->initialized['neighborIds'] = true;
-        $this->neighborIds = $neighborIds;
+        $this->neighborIds = array_values($neighborIds);
         return $this;
     }
 }

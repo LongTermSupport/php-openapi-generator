@@ -60,7 +60,7 @@ class SponsoredProductsListSponsoredProductsCampaignsResponseContentNormalizer i
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setCampaigns($values);
+            $object->setCampaigns(...$values);
             unset($data['campaigns']);
         }
         foreach ($data as $key => $value_1) {

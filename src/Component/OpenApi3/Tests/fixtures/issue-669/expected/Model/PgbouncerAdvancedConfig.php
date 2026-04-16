@@ -85,13 +85,11 @@ class PgbouncerAdvancedConfig extends \ArrayObject
     }
     /**
      * List of parameters to ignore when given in startup packet.
-     *
-     * @param list<string> $ignoreStartupParameters
      */
-    public function setIgnoreStartupParameters(array $ignoreStartupParameters): self
+    public function setIgnoreStartupParameters(string ...$ignoreStartupParameters): self
     {
         $this->initialized['ignoreStartupParameters'] = true;
-        $this->ignoreStartupParameters = $ignoreStartupParameters;
+        $this->ignoreStartupParameters = array_values($ignoreStartupParameters);
         return $this;
     }
     /**

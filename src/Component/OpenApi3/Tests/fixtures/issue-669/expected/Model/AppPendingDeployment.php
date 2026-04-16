@@ -100,13 +100,10 @@ class AppPendingDeployment extends \ArrayObject
     {
         return $this->jobs;
     }
-    /**
-     * @param list<AppsDeploymentJob> $jobs
-     */
-    public function setJobs(array $jobs): self
+    public function setJobs(AppsDeploymentJob ...$jobs): self
     {
         $this->initialized['jobs'] = true;
-        $this->jobs = $jobs;
+        $this->jobs = array_values($jobs);
         return $this;
     }
     /**
@@ -116,13 +113,10 @@ class AppPendingDeployment extends \ArrayObject
     {
         return $this->functions;
     }
-    /**
-     * @param list<AppsDeploymentFunctions> $functions
-     */
-    public function setFunctions(array $functions): self
+    public function setFunctions(AppsDeploymentFunctions ...$functions): self
     {
         $this->initialized['functions'] = true;
-        $this->functions = $functions;
+        $this->functions = array_values($functions);
         return $this;
     }
     public function getPhase(): string
@@ -162,13 +156,10 @@ class AppPendingDeployment extends \ArrayObject
     {
         return $this->services;
     }
-    /**
-     * @param list<AppsDeploymentService> $services
-     */
-    public function setServices(array $services): self
+    public function setServices(AppsDeploymentService ...$services): self
     {
         $this->initialized['services'] = true;
-        $this->services = $services;
+        $this->services = array_values($services);
         return $this;
     }
     /**
@@ -194,13 +185,10 @@ class AppPendingDeployment extends \ArrayObject
     {
         return $this->staticSites;
     }
-    /**
-     * @param list<AppsDeploymentStaticSite> $staticSites
-     */
-    public function setStaticSites(array $staticSites): self
+    public function setStaticSites(AppsDeploymentStaticSite ...$staticSites): self
     {
         $this->initialized['staticSites'] = true;
-        $this->staticSites = $staticSites;
+        $this->staticSites = array_values($staticSites);
         return $this;
     }
     public function getTierSlug(): string
@@ -230,13 +218,10 @@ class AppPendingDeployment extends \ArrayObject
     {
         return $this->workers;
     }
-    /**
-     * @param list<AppsDeploymentWorker> $workers
-     */
-    public function setWorkers(array $workers): self
+    public function setWorkers(AppsDeploymentWorker ...$workers): self
     {
         $this->initialized['workers'] = true;
-        $this->workers = $workers;
+        $this->workers = array_values($workers);
         return $this;
     }
 }

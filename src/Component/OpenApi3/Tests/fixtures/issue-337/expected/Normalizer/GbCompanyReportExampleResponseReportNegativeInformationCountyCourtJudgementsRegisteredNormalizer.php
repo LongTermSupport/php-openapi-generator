@@ -56,7 +56,7 @@ class GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgemen
                     $values[] = $value_1;
                 }
             }
-            $object->setExact($values);
+            $object->setExact(...$values);
             unset($data['exact']);
         }
         if (\array_key_exists('possible', $data)) {
@@ -67,7 +67,7 @@ class GbCompanyReportExampleResponseReportNegativeInformationCountyCourtJudgemen
                     $values_1[] = $value_3;
                 }
             }
-            $object->setPossible($values_1);
+            $object->setPossible(...$values_1);
             unset($data['possible']);
         }
         foreach ($data as $key => $value_4) {

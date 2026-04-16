@@ -55,7 +55,7 @@ class UserRoleDeleteManyRequestNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setIds($values);
+            $object->setIds(...$values);
         }
         return $object;
     }

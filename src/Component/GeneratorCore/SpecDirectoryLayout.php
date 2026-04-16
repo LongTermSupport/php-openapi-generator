@@ -12,7 +12,7 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore;
  *   {projectRoot}/specs/{product}/{PATCHES}/ ← RFC 6902 patch files (.json.patch)
  *   {projectRoot}/specs/{product}/{PATCHED}/ ← patch-applied specs (generator input)
  */
-final class SpecDirectoryLayout
+readonly final class SpecDirectoryLayout
 {
     /** Original (unmodified) OpenAPI spec files synced from the upstream source. */
     public const string ORIG = 'orig';

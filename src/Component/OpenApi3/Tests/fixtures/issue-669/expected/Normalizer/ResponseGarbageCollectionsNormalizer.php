@@ -56,7 +56,7 @@ class ResponseGarbageCollectionsNormalizer implements DenormalizerInterface, Nor
                     $values[] = $value_1;
                 }
             }
-            $object->setGarbageCollections($values);
+            $object->setGarbageCollections(...$values);
             unset($data['garbage_collections']);
         }
         foreach ($data as $key => $value_2) {

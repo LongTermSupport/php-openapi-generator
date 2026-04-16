@@ -39,7 +39,12 @@ class NonBodyParameterGenerator extends ParameterGenerator
             throw new LogicException('Expected Parameter, got ' . get_debug_type($parameter));
         }
 
-        $name            = $this->getInflector()->camelize($parameter->getName() ?? '');
+        $parameterName = $parameter->getName();
+        if (!\is_string($parameterName)) {
+            throw new LogicException('Expected string parameter name, got ' . get_debug_type($parameterName));
+        }
+
+        $name            = $this->getInflector()->camelize($parameterName);
         $methodParameter = new Node\Param(new Expr\Variable($name));
 
         $schema = $parameter->getSchema();
@@ -123,7 +128,12 @@ class NonBodyParameterGenerator extends ParameterGenerator
         $genericResolverKeys = array_keys($genericResolver);
 
         foreach ($parameters as $parameter) {
-            $parameterName = $parameter->getName() ?? '';
+            $parameterNameRaw = $parameter->getName();
+            if (!\is_string($parameterNameRaw)) {
+                throw new LogicException('Expected string parameter name, got ' . get_debug_type($parameterNameRaw));
+            }
+
+            $parameterName = $parameterNameRaw;
             if (str_contains($parameterName, '[]')) {
                 $parameterName = substr($parameterName, 0, -2);
             }
@@ -226,9 +236,15 @@ class NonBodyParameterGenerator extends ParameterGenerator
             }
         }
 
-        $description = $parameter->getDescription() ?? '';
+        $descriptionRaw = $parameter->getDescription();
+        $description    = null !== $descriptionRaw ? $descriptionRaw : '';
 
-        return rtrim(\sprintf(' * @param %s $%s %s', $type, $this->getInflector()->camelize($parameter->getName() ?? ''), $description));
+        $docParamName = $parameter->getName();
+        if (!\is_string($docParamName)) {
+            throw new LogicException('Expected string parameter name, got ' . get_debug_type($docParamName));
+        }
+
+        return rtrim(\sprintf(' * @param %s $%s %s', $type, $this->getInflector()->camelize($docParamName), $description));
     }
 
     public function generateOptionDocParameter(Parameter $parameter): string
@@ -239,9 +255,14 @@ class NonBodyParameterGenerator extends ParameterGenerator
             $type = implode('|', $this->convertParameterTypeForDoc($parameter->getSchema()));
         }
 
+        $optionParamName = $parameter->getName();
+        if (!\is_string($optionParamName)) {
+            throw new LogicException('Expected string parameter name, got ' . get_debug_type($optionParamName));
+        }
+
         return \sprintf(
             ' *    "%s"?: %s,',
-            $parameter->getName() ?? '',
+            $optionParamName,
             $type,
         );
     }

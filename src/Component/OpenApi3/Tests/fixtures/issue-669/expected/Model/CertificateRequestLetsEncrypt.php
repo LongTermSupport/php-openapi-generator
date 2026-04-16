@@ -77,13 +77,11 @@ class CertificateRequestLetsEncrypt extends \ArrayObject
     }
     /**
      * An array of fully qualified domain names (FQDNs) for which the certificate was issued. A certificate covering all subdomains can be issued using a wildcard (e.g. `*.example.com`).
-     *
-     * @param list<string> $dnsNames
      */
-    public function setDnsNames(array $dnsNames): self
+    public function setDnsNames(string ...$dnsNames): self
     {
         $this->initialized['dnsNames'] = true;
-        $this->dnsNames = $dnsNames;
+        $this->dnsNames = array_values($dnsNames);
         return $this;
     }
 }

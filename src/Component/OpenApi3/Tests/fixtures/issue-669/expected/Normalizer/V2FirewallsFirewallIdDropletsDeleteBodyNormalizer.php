@@ -55,7 +55,7 @@ class V2FirewallsFirewallIdDropletsDeleteBodyNormalizer implements DenormalizerI
                     $values[] = TypeValidator::assertInt($value, 'value');
                 }
             }
-            $object->setDropletIds($values);
+            $object->setDropletIds(...$values);
             unset($data['droplet_ids']);
         }
         foreach ($data as $key => $value_1) {

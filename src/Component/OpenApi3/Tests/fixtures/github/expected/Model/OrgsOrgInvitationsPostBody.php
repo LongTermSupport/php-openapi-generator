@@ -106,13 +106,11 @@ class OrgsOrgInvitationsPostBody extends \ArrayObject
     }
     /**
      * Specify IDs for the teams you want to invite new members to.
-     *
-     * @param list<int> $teamIds
      */
-    public function setTeamIds(array $teamIds): self
+    public function setTeamIds(int ...$teamIds): self
     {
         $this->initialized['teamIds'] = true;
-        $this->teamIds = $teamIds;
+        $this->teamIds = array_values($teamIds);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class ResponseAllCertificatesNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setCertificates($values);
+            $object->setCertificates(...$values);
             unset($data['certificates']);
         }
         if (\array_key_exists('links', $data)) {

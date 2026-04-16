@@ -68,7 +68,7 @@ class ApiOpenAIAPIKeyInfoNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setModels($values);
+            $object->setModels(...$values);
             unset($data['models']);
         }
         if (\array_key_exists('name', $data)) {

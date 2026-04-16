@@ -48,7 +48,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ScimV2OrganizationsOrgUsersPostBodyConstraint());
         }
         if (\array_key_exists('userName', $data)) {
@@ -68,7 +68,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
                     $values[] = $value_2;
                 }
             }
-            $object->setEmails($values);
+            $object->setEmails(...$values);
             unset($data['emails']);
         }
         if (\array_key_exists('schemas', $data)) {
@@ -78,7 +78,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
                     $values_1[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setSchemas($values_1);
+            $object->setSchemas(...$values_1);
             unset($data['schemas']);
         }
         if (\array_key_exists('displayName', $data)) {
@@ -96,7 +96,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
                     $values_2[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setGroups($values_2);
+            $object->setGroups(...$values_2);
             unset($data['groups']);
         }
         if (\array_key_exists('active', $data)) {
@@ -155,7 +155,7 @@ class ScimV2OrganizationsOrgUsersPostBodyNormalizer implements DenormalizerInter
                 $dataArray[$key] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ScimV2OrganizationsOrgUsersPostBodyConstraint());
         }
         return $dataArray;

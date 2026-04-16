@@ -211,13 +211,11 @@ class Droplet extends \ArrayObject
     }
     /**
      * An array of objects containing information about the disks available to the Droplet.
-     *
-     * @param list<DiskInfo> $diskInfo
      */
-    public function setDiskInfo(array $diskInfo): self
+    public function setDiskInfo(DiskInfo ...$diskInfo): self
     {
         $this->initialized['diskInfo'] = true;
-        $this->diskInfo = $diskInfo;
+        $this->diskInfo = array_values($diskInfo);
         return $this;
     }
     /**
@@ -311,13 +309,11 @@ class Droplet extends \ArrayObject
     }
     /**
      * An array of features enabled on this Droplet.
-     *
-     * @param list<string> $features
      */
-    public function setFeatures(array $features): self
+    public function setFeatures(string ...$features): self
     {
         $this->initialized['features'] = true;
-        $this->features = $features;
+        $this->features = array_values($features);
         return $this;
     }
     /**
@@ -331,13 +327,11 @@ class Droplet extends \ArrayObject
     }
     /**
      * An array of backup IDs of any backups that have been taken of the Droplet instance.  Droplet backups are enabled at the time of the instance creation.<br>Requires `image:read` scope.
-     *
-     * @param list<int> $backupIds
      */
-    public function setBackupIds(array $backupIds): self
+    public function setBackupIds(int ...$backupIds): self
     {
         $this->initialized['backupIds'] = true;
-        $this->backupIds = $backupIds;
+        $this->backupIds = array_values($backupIds);
         return $this;
     }
     public function getNextBackupWindow(): DropletNextBackupWindow
@@ -361,13 +355,11 @@ class Droplet extends \ArrayObject
     }
     /**
      * An array of snapshot IDs of any snapshots created from the Droplet instance.<br>Requires `image:read` scope.
-     *
-     * @param list<int> $snapshotIds
      */
-    public function setSnapshotIds(array $snapshotIds): self
+    public function setSnapshotIds(int ...$snapshotIds): self
     {
         $this->initialized['snapshotIds'] = true;
-        $this->snapshotIds = $snapshotIds;
+        $this->snapshotIds = array_values($snapshotIds);
         return $this;
     }
     public function getImage(): DropletImage
@@ -391,13 +383,11 @@ class Droplet extends \ArrayObject
     }
     /**
      * A flat array including the unique identifier for each Block Storage volume attached to the Droplet.<br>Requires `block_storage:read` scope.
-     *
-     * @param list<string> $volumeIds
      */
-    public function setVolumeIds(array $volumeIds): self
+    public function setVolumeIds(string ...$volumeIds): self
     {
         $this->initialized['volumeIds'] = true;
-        $this->volumeIds = $volumeIds;
+        $this->volumeIds = array_values($volumeIds);
         return $this;
     }
     public function getSize(): Size
@@ -463,13 +453,11 @@ class Droplet extends \ArrayObject
     }
     /**
      * An array of Tags the Droplet has been tagged with.<br>Requires `tag:read` scope.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

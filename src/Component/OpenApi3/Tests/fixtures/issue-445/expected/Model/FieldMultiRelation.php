@@ -82,13 +82,11 @@ class FieldMultiRelation extends FieldBase
     }
     /**
      * The relation types supported by the field.
-     *
-     * @param list<RelationType> $relationTypes
      */
-    public function setRelationTypes(array $relationTypes): self
+    public function setRelationTypes(RelationType ...$relationTypes): self
     {
         $this->initialized['relationTypes'] = true;
-        $this->relationTypes = $relationTypes;
+        $this->relationTypes = array_values($relationTypes);
         return $this;
     }
     /**

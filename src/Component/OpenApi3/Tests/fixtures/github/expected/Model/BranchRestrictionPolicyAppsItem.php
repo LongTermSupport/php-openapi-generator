@@ -152,13 +152,10 @@ class BranchRestrictionPolicyAppsItem extends \ArrayObject
     {
         return $this->events;
     }
-    /**
-     * @param list<string> $events
-     */
-    public function setEvents(array $events): self
+    public function setEvents(string ...$events): self
     {
         $this->initialized['events'] = true;
-        $this->events = $events;
+        $this->events = array_values($events);
         return $this;
     }
 }

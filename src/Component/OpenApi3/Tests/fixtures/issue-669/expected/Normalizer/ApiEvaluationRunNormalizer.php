@@ -112,7 +112,7 @@ class ApiEvaluationRunNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setRunLevelMetricResults($values);
+            $object->setRunLevelMetricResults(...$values);
             unset($data['run_level_metric_results']);
         }
         if (\array_key_exists('run_name', $data)) {

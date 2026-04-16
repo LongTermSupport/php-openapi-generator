@@ -47,13 +47,10 @@ class AssociatedResourceStatusResources extends \ArrayObject
     {
         return $this->reservedIps;
     }
-    /**
-     * @param list<DestroyedAssociatedResource> $reservedIps
-     */
-    public function setReservedIps(array $reservedIps): self
+    public function setReservedIps(DestroyedAssociatedResource ...$reservedIps): self
     {
         $this->initialized['reservedIps'] = true;
-        $this->reservedIps = $reservedIps;
+        $this->reservedIps = array_values($reservedIps);
         return $this;
     }
     /**
@@ -63,13 +60,10 @@ class AssociatedResourceStatusResources extends \ArrayObject
     {
         return $this->floatingIps;
     }
-    /**
-     * @param list<DestroyedAssociatedResource> $floatingIps
-     */
-    public function setFloatingIps(array $floatingIps): self
+    public function setFloatingIps(DestroyedAssociatedResource ...$floatingIps): self
     {
         $this->initialized['floatingIps'] = true;
-        $this->floatingIps = $floatingIps;
+        $this->floatingIps = array_values($floatingIps);
         return $this;
     }
     /**
@@ -79,13 +73,10 @@ class AssociatedResourceStatusResources extends \ArrayObject
     {
         return $this->snapshots;
     }
-    /**
-     * @param list<DestroyedAssociatedResource> $snapshots
-     */
-    public function setSnapshots(array $snapshots): self
+    public function setSnapshots(DestroyedAssociatedResource ...$snapshots): self
     {
         $this->initialized['snapshots'] = true;
-        $this->snapshots = $snapshots;
+        $this->snapshots = array_values($snapshots);
         return $this;
     }
     /**
@@ -95,13 +86,10 @@ class AssociatedResourceStatusResources extends \ArrayObject
     {
         return $this->volumes;
     }
-    /**
-     * @param list<DestroyedAssociatedResource> $volumes
-     */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(DestroyedAssociatedResource ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
     /**
@@ -111,13 +99,10 @@ class AssociatedResourceStatusResources extends \ArrayObject
     {
         return $this->volumeSnapshots;
     }
-    /**
-     * @param list<DestroyedAssociatedResource> $volumeSnapshots
-     */
-    public function setVolumeSnapshots(array $volumeSnapshots): self
+    public function setVolumeSnapshots(DestroyedAssociatedResource ...$volumeSnapshots): self
     {
         $this->initialized['volumeSnapshots'] = true;
-        $this->volumeSnapshots = $volumeSnapshots;
+        $this->volumeSnapshots = array_values($volumeSnapshots);
         return $this;
     }
 }

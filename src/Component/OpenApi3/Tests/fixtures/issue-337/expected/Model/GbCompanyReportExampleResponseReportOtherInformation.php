@@ -35,13 +35,10 @@ class GbCompanyReportExampleResponseReportOtherInformation extends \ArrayObject
     {
         return $this->advisors;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportOtherInformationAdvisorsItem> $advisors
-     */
-    public function setAdvisors(array $advisors): self
+    public function setAdvisors(GbCompanyReportExampleResponseReportOtherInformationAdvisorsItem ...$advisors): self
     {
         $this->initialized['advisors'] = true;
-        $this->advisors = $advisors;
+        $this->advisors = array_values($advisors);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class GbCompanyReportExampleResponseReportOtherInformation extends \ArrayObject
     {
         return $this->employeesInformation;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportOtherInformationEmployeesInformationItem> $employeesInformation
-     */
-    public function setEmployeesInformation(array $employeesInformation): self
+    public function setEmployeesInformation(GbCompanyReportExampleResponseReportOtherInformationEmployeesInformationItem ...$employeesInformation): self
     {
         $this->initialized['employeesInformation'] = true;
-        $this->employeesInformation = $employeesInformation;
+        $this->employeesInformation = array_values($employeesInformation);
         return $this;
     }
 }

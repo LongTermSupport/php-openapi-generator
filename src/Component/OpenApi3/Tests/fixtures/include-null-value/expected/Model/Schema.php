@@ -136,13 +136,10 @@ class Schema extends \ArrayObject
     {
         return $this->arrayProperty;
     }
-    /**
-     * @param list<mixed> $arrayProperty
-     */
-    public function setArrayProperty(array $arrayProperty): self
+    public function setArrayProperty(mixed ...$arrayProperty): self
     {
         $this->initialized['arrayProperty'] = true;
-        $this->arrayProperty = $arrayProperty;
+        $this->arrayProperty = array_values($arrayProperty);
         return $this;
     }
     /**

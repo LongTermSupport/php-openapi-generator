@@ -72,7 +72,7 @@ class VpcNatGatewayCreateNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setVpcs($values);
+            $object->setVpcs(...$values);
             unset($data['vpcs']);
         }
         if (\array_key_exists('udp_timeout_seconds', $data)) {

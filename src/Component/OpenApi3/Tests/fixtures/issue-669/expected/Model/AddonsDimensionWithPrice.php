@@ -137,13 +137,11 @@ class AddonsDimensionWithPrice extends \ArrayObject
     }
     /**
      * A list of volumes associated with the dimension, each with its own price.
-     *
-     * @param list<AddonsDimensionVolumeWithPrice> $volumes
      */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(AddonsDimensionVolumeWithPrice ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
 }

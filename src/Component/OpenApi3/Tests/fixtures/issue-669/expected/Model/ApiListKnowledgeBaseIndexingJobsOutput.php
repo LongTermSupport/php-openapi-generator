@@ -45,13 +45,11 @@ class ApiListKnowledgeBaseIndexingJobsOutput extends \ArrayObject
     }
     /**
      * The indexing jobs
-     *
-     * @param list<ApiIndexingJob> $jobs
      */
-    public function setJobs(array $jobs): self
+    public function setJobs(ApiIndexingJob ...$jobs): self
     {
         $this->initialized['jobs'] = true;
-        $this->jobs = $jobs;
+        $this->jobs = array_values($jobs);
         return $this;
     }
     /**

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Tests;
 
 use InvalidArgumentException;
+use LogicException;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\SpecBaseChangedException;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\SpecPatchApplier;
 use PHPUnit\Framework\Attributes\Test;
@@ -14,13 +15,14 @@ use PHPUnit\Framework\TestCase;
 final class SpecPatchApplierTest extends TestCase
 {
     private SpecPatchApplier $applier;
+
     private string $tempDir;
 
     protected function setUp(): void
     {
         $this->applier = new SpecPatchApplier();
-        $this->tempDir = \sys_get_temp_dir() . '/spec-patch-applier-test-' . \uniqid('', true);
-        \Safe\mkdir($this->tempDir, 0755, true);
+        $this->tempDir = sys_get_temp_dir() . '/spec-patch-applier-test-' . uniqid('', true);
+        \Safe\mkdir($this->tempDir, 0o755, true);
     }
 
     protected function tearDown(): void
@@ -28,41 +30,13 @@ final class SpecPatchApplierTest extends TestCase
         $files = \Safe\glob($this->tempDir . '/*');
         foreach ($files as $file) {
             if (!\is_string($file)) {
-                throw new \LogicException('Expected string filename from glob');
+                throw new LogicException('Expected string filename from glob');
             }
 
-            \unlink($file);
+            \Safe\unlink($file);
         }
 
-        \rmdir($this->tempDir);
-    }
-
-    // ---------------------------------------------------------------------------
-    // Helper methods
-    // ---------------------------------------------------------------------------
-
-    /** @param array<string, mixed> $spec */
-    private function writeOrigSpec(array $spec): string
-    {
-        $path = $this->tempDir . '/spec.json';
-        \Safe\file_put_contents($path, \Safe\json_encode($spec));
-
-        return $path;
-    }
-
-    /**
-     * @param array<array<string, mixed>> $patches
-     */
-    private function writePatch(string $origPath, array $patches): string
-    {
-        $hash    = \hash('sha256', \Safe\file_get_contents($origPath));
-        $path    = $this->tempDir . '/spec.json.patch';
-        \Safe\file_put_contents($path, \Safe\json_encode([
-            'x-base-sha256' => $hash,
-            'patches'       => $patches,
-        ]));
-
-        return $path;
+        \Safe\rmdir($this->tempDir);
     }
 
     // ---------------------------------------------------------------------------
@@ -137,10 +111,10 @@ final class SpecPatchApplierTest extends TestCase
         try {
             $this->applier->apply($origPath, $patchPath);
             self::fail('Expected SpecBaseChangedException');
-        } catch (SpecBaseChangedException $e) {
-            self::assertStringContainsString('spec.json', $e->getMessage());
-            self::assertStringContainsString('git diff', $e->getMessage());
-            self::assertStringContainsString('x-base-sha256', $e->getMessage());
+        } catch (SpecBaseChangedException $specBaseChangedException) {
+            self::assertStringContainsString('spec.json', $specBaseChangedException->getMessage());
+            self::assertStringContainsString('git diff', $specBaseChangedException->getMessage());
+            self::assertStringContainsString('x-base-sha256', $specBaseChangedException->getMessage());
         }
     }
 
@@ -399,5 +373,33 @@ final class SpecPatchApplierTest extends TestCase
         $this->expectExceptionMessageMatches('/move/');
 
         $this->applier->apply($origPath, $patchPath);
+    }
+
+    // ---------------------------------------------------------------------------
+    // Helper methods
+    // ---------------------------------------------------------------------------
+
+    /** @param array<string, mixed> $spec */
+    private function writeOrigSpec(array $spec): string
+    {
+        $path = $this->tempDir . '/spec.json';
+        \Safe\file_put_contents($path, \Safe\json_encode($spec));
+
+        return $path;
+    }
+
+    /**
+     * @param array<array<string, mixed>> $patches
+     */
+    private function writePatch(string $origPath, array $patches): string
+    {
+        $hash    = hash('sha256', \Safe\file_get_contents($origPath));
+        $path    = $this->tempDir . '/spec.json.patch';
+        \Safe\file_put_contents($path, \Safe\json_encode([
+            'x-base-sha256' => $hash,
+            'patches'       => $patches,
+        ]));
+
+        return $path;
     }
 }

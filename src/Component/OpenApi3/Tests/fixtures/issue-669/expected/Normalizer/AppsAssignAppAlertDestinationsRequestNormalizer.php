@@ -55,7 +55,7 @@ class AppsAssignAppAlertDestinationsRequestNormalizer implements DenormalizerInt
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setEmails($values);
+            $object->setEmails(...$values);
             unset($data['emails']);
         }
         if (\array_key_exists('slack_webhooks', $data)) {
@@ -66,7 +66,7 @@ class AppsAssignAppAlertDestinationsRequestNormalizer implements DenormalizerInt
                     $values_1[] = $value_2;
                 }
             }
-            $object->setSlackWebhooks($values_1);
+            $object->setSlackWebhooks(...$values_1);
             unset($data['slack_webhooks']);
         }
         foreach ($data as $key => $value_3) {

@@ -73,13 +73,11 @@ class UserSettings extends \ArrayObject
     }
     /**
      * ACLs (Access Control Lists) specifying permissions on index within a OpenSearch cluster.
-     *
-     * @param list<UserSettingsOpensearchAclItem> $opensearchAcl
      */
-    public function setOpensearchAcl(array $opensearchAcl): self
+    public function setOpensearchAcl(UserSettingsOpensearchAclItem ...$opensearchAcl): self
     {
         $this->initialized['opensearchAcl'] = true;
-        $this->opensearchAcl = $opensearchAcl;
+        $this->opensearchAcl = array_values($opensearchAcl);
         return $this;
     }
     /**
@@ -93,13 +91,11 @@ class UserSettings extends \ArrayObject
     }
     /**
      * ACLs (Access Control Lists) specifying permissions on topics within a Kafka cluster.
-     *
-     * @param list<UserSettingsAclItem> $acl
      */
-    public function setAcl(array $acl): self
+    public function setAcl(UserSettingsAclItem ...$acl): self
     {
         $this->initialized['acl'] = true;
-        $this->acl = $acl;
+        $this->acl = array_values($acl);
         return $this;
     }
     /**

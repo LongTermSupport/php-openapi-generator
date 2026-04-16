@@ -54,13 +54,10 @@ class Poll extends \ArrayObject
     {
         return $this->options;
     }
-    /**
-     * @param list<PollOption> $options
-     */
-    public function setOptions(array $options): self
+    public function setOptions(PollOption ...$options): self
     {
         $this->initialized['options'] = true;
-        $this->options = $options;
+        $this->options = array_values($options);
         return $this;
     }
     public function getVotingStatus(): string

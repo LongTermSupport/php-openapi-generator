@@ -79,7 +79,7 @@ class BookNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setReviews($values);
+            $object->setReviews(...$values);
             unset($data['reviews']);
         }
         if (\array_key_exists('cover', $data)) {

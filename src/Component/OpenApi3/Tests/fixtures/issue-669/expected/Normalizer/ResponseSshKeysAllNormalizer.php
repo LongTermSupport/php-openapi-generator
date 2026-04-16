@@ -56,7 +56,7 @@ class ResponseSshKeysAllNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setSshKeys($values);
+            $object->setSshKeys(...$values);
             unset($data['ssh_keys']);
         }
         if (\array_key_exists('links', $data)) {

@@ -56,7 +56,7 @@ class ResponseProjectsListNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setProjects($values);
+            $object->setProjects(...$values);
             unset($data['projects']);
         }
         if (\array_key_exists('links', $data)) {

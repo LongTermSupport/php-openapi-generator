@@ -55,7 +55,7 @@ class ResponseRegistryOptionsResponseOptionsNormalizer implements DenormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAvailableRegions($values);
+            $object->setAvailableRegions(...$values);
             unset($data['available_regions']);
         }
         if (\array_key_exists('subscription_tiers', $data)) {
@@ -66,7 +66,7 @@ class ResponseRegistryOptionsResponseOptionsNormalizer implements DenormalizerIn
                     $values_1[] = $value_2;
                 }
             }
-            $object->setSubscriptionTiers($values_1);
+            $object->setSubscriptionTiers(...$values_1);
             unset($data['subscription_tiers']);
         }
         foreach ($data as $key => $value_3) {

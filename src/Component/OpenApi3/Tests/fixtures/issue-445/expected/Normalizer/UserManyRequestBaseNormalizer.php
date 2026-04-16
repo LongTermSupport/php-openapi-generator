@@ -55,7 +55,7 @@ class UserManyRequestBaseNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setUserIds($values);
+            $object->setUserIds(...$values);
         }
         return $object;
     }

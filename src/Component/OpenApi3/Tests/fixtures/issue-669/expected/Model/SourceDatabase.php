@@ -68,13 +68,11 @@ class SourceDatabase extends \ArrayObject
     }
     /**
      * List of databases that should be ignored during migration.
-     *
-     * @param list<string> $ignoreDbs
      */
-    public function setIgnoreDbs(array $ignoreDbs): self
+    public function setIgnoreDbs(string ...$ignoreDbs): self
     {
         $this->initialized['ignoreDbs'] = true;
-        $this->ignoreDbs = $ignoreDbs;
+        $this->ignoreDbs = array_values($ignoreDbs);
         return $this;
     }
 }

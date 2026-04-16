@@ -57,13 +57,11 @@ class GroupMapping extends \ArrayObject
     }
     /**
      * Array of groups to be mapped to this team
-     *
-     * @param list<GroupMappingGroupsItem> $groups
      */
-    public function setGroups(array $groups): self
+    public function setGroups(GroupMappingGroupsItem ...$groups): self
     {
         $this->initialized['groups'] = true;
-        $this->groups = $groups;
+        $this->groups = array_values($groups);
         return $this;
     }
     /**

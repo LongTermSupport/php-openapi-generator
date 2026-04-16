@@ -182,13 +182,10 @@ class TopicSearchResultItem extends \ArrayObject
     {
         return $this->textMatches;
     }
-    /**
-     * @param list<SearchResultTextMatchesItem> $textMatches
-     */
-    public function setTextMatches(array $textMatches): self
+    public function setTextMatches(SearchResultTextMatchesItem ...$textMatches): self
     {
         $this->initialized['textMatches'] = true;
-        $this->textMatches = $textMatches;
+        $this->textMatches = array_values($textMatches);
         return $this;
     }
     /**

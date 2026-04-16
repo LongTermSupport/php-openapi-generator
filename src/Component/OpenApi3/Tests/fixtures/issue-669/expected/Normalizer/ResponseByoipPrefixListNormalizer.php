@@ -56,7 +56,7 @@ class ResponseByoipPrefixListNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setByoipPrefixes($values);
+            $object->setByoipPrefixes(...$values);
             unset($data['byoip_prefixes']);
         }
         if (\array_key_exists('links', $data)) {

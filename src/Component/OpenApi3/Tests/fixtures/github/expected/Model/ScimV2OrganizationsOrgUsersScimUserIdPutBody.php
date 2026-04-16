@@ -49,13 +49,10 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     {
         return $this->schemas;
     }
-    /**
-     * @param list<string> $schemas
-     */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(string ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
     public function getDisplayName(): string
@@ -85,13 +82,10 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     {
         return $this->groups;
     }
-    /**
-     * @param list<string> $groups
-     */
-    public function setGroups(array $groups): self
+    public function setGroups(string ...$groups): self
     {
         $this->initialized['groups'] = true;
-        $this->groups = $groups;
+        $this->groups = array_values($groups);
         return $this;
     }
     public function getActive(): bool
@@ -141,13 +135,11 @@ class ScimV2OrganizationsOrgUsersScimUserIdPutBody extends \ArrayObject
     }
     /**
      * user emails
-     *
-     * @param list<ScimV2OrganizationsOrgUsersScimUserIdPutBodyEmailsItem> $emails
      */
-    public function setEmails(array $emails): self
+    public function setEmails(ScimV2OrganizationsOrgUsersScimUserIdPutBodyEmailsItem ...$emails): self
     {
         $this->initialized['emails'] = true;
-        $this->emails = $emails;
+        $this->emails = array_values($emails);
         return $this;
     }
 }

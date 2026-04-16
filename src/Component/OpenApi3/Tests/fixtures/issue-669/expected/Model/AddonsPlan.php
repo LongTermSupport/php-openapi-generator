@@ -223,13 +223,11 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * List of features included in the plan.
-     *
-     * @param list<AddonsFeature> $features
      */
-    public function setFeatures(array $features): self
+    public function setFeatures(AddonsFeature ...$features): self
     {
         $this->initialized['features'] = true;
-        $this->features = $features;
+        $this->features = array_values($features);
         return $this;
     }
     /**
@@ -323,13 +321,11 @@ class AddonsPlan extends \ArrayObject
     }
     /**
      * List of dimensions associated with the plan, each with its own pricing.
-     *
-     * @param list<AddonsDimensionWithPrice> $dimensions
      */
-    public function setDimensions(array $dimensions): self
+    public function setDimensions(AddonsDimensionWithPrice ...$dimensions): self
     {
         $this->initialized['dimensions'] = true;
-        $this->dimensions = $dimensions;
+        $this->dimensions = array_values($dimensions);
         return $this;
     }
 }

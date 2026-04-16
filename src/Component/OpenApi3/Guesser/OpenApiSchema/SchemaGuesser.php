@@ -32,7 +32,7 @@ class SchemaGuesser extends ObjectGuesser
             return true;
         }
 
-        return $property->getNullable() ?? false;
+        return true === $property->getNullable();
     }
 
     /**
@@ -45,13 +45,17 @@ class SchemaGuesser extends ObjectGuesser
             throw new LogicException('Expected Schema, got ' . get_debug_type($object));
         }
 
-        $classGuess = new ClassGuess($object, $reference, $this->naming->getClassName($name), $extensions, $object->getDeprecated() ?? false);
+        $classGuess = new ClassGuess($object, $reference, $this->naming->getClassName($name), $extensions, true === $object->getDeprecated());
 
         $discriminator = $object->getDiscriminator();
         if ($discriminator instanceof Discriminator
             && is_countable($discriminator->getMapping()) && \count($discriminator->getMapping()) > 0) {
-            $discriminatorPropertyName = $discriminator->getPropertyName() ?? '';
-            $classGuess                = new ParentClass($classGuess, $discriminatorPropertyName);
+            $discriminatorPropertyNameRaw = $discriminator->getPropertyName();
+            if (!\is_string($discriminatorPropertyNameRaw)) {
+                throw new LogicException('Expected string discriminator property name, got ' . get_debug_type($discriminatorPropertyNameRaw));
+            }
+
+            $classGuess = new ParentClass($classGuess, $discriminatorPropertyNameRaw);
 
             foreach ($discriminator->getMapping() as $discriminatorValue => $entryReference) {
                 $subClassName = str_replace('#/components/schemas/', '', (string)$entryReference);
@@ -72,8 +76,12 @@ class SchemaGuesser extends ObjectGuesser
 
         if ($object->getDiscriminator() instanceof Discriminator
             && \is_array($object->getEnum()) && [] !== $object->getEnum()) {
-            $discriminatorPropertyName = $object->getDiscriminator()->getPropertyName() ?? '';
-            $classGuess                = new ParentClass($classGuess, $discriminatorPropertyName);
+            $enumDiscriminatorPropertyName = $object->getDiscriminator()->getPropertyName();
+            if (!\is_string($enumDiscriminatorPropertyName)) {
+                throw new LogicException('Expected string discriminator property name, got ' . get_debug_type($enumDiscriminatorPropertyName));
+            }
+
+            $classGuess = new ParentClass($classGuess, $enumDiscriminatorPropertyName);
 
             foreach ($object->getEnum() as $subClassName) {
                 if (!\is_string($subClassName)) {

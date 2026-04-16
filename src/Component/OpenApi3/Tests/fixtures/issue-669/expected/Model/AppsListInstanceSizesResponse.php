@@ -42,13 +42,10 @@ class AppsListInstanceSizesResponse extends \ArrayObject
     {
         return $this->instanceSizes;
     }
-    /**
-     * @param list<AppsInstanceSize> $instanceSizes
-     */
-    public function setInstanceSizes(array $instanceSizes): self
+    public function setInstanceSizes(AppsInstanceSize ...$instanceSizes): self
     {
         $this->initialized['instanceSizes'] = true;
-        $this->instanceSizes = $instanceSizes;
+        $this->instanceSizes = array_values($instanceSizes);
         return $this;
     }
 }

@@ -37,13 +37,11 @@ class ApiListEvaluationRunsByTestCaseOutput extends \ArrayObject
     }
     /**
      * List of evaluation runs.
-     *
-     * @param list<ApiEvaluationRun> $evaluationRuns
      */
-    public function setEvaluationRuns(array $evaluationRuns): self
+    public function setEvaluationRuns(ApiEvaluationRun ...$evaluationRuns): self
     {
         $this->initialized['evaluationRuns'] = true;
-        $this->evaluationRuns = $evaluationRuns;
+        $this->evaluationRuns = array_values($evaluationRuns);
         return $this;
     }
 }

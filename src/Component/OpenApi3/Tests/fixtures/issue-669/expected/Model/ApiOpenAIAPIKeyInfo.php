@@ -109,13 +109,11 @@ class ApiOpenAIAPIKeyInfo extends \ArrayObject
     }
     /**
      * Models supported by the openAI api key
-     *
-     * @param list<ApiModel> $models
      */
-    public function setModels(array $models): self
+    public function setModels(ApiModel ...$models): self
     {
         $this->initialized['models'] = true;
-        $this->models = $models;
+        $this->models = array_values($models);
         return $this;
     }
     /**

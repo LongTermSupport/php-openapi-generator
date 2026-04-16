@@ -34,13 +34,11 @@ class BatchResponse
     }
     /**
      * Rows in the response.
-     *
-     * @param list<BatchResponseRow> $rows
      */
-    public function setRows(array $rows): self
+    public function setRows(BatchResponseRow ...$rows): self
     {
         $this->initialized['rows'] = true;
-        $this->rows = $rows;
+        $this->rows = array_values($rows);
         return $this;
     }
 }

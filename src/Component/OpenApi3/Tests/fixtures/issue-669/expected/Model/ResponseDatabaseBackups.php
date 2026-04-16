@@ -36,13 +36,10 @@ class ResponseDatabaseBackups extends \ArrayObject
     {
         return $this->backups;
     }
-    /**
-     * @param list<Backup> $backups
-     */
-    public function setBackups(array $backups): self
+    public function setBackups(Backup ...$backups): self
     {
         $this->initialized['backups'] = true;
-        $this->backups = $backups;
+        $this->backups = array_values($backups);
         return $this;
     }
     public function getScheduledBackupTime(): ResponseDatabaseBackupsScheduledBackupTime

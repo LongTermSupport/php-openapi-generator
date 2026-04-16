@@ -42,13 +42,10 @@ class OrgsOrgActionsRunnersGetResponse200 extends \ArrayObject
     {
         return $this->runners;
     }
-    /**
-     * @param list<Runner> $runners
-     */
-    public function setRunners(array $runners): self
+    public function setRunners(Runner ...$runners): self
     {
         $this->initialized['runners'] = true;
-        $this->runners = $runners;
+        $this->runners = array_values($runners);
         return $this;
     }
 }

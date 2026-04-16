@@ -56,7 +56,7 @@ class ResponseReservedIpListNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setReservedIps($values);
+            $object->setReservedIps(...$values);
             unset($data['reserved_ips']);
         }
         if (\array_key_exists('links', $data)) {

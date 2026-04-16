@@ -73,13 +73,11 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines what [events](https://developer.github.com/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
-     *
-     * @param list<string> $events
      */
-    public function setEvents(array $events): self
+    public function setEvents(string ...$events): self
     {
         $this->initialized['events'] = true;
-        $this->events = $events;
+        $this->events = array_values($events);
         return $this;
     }
     /**
@@ -93,13 +91,11 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines a list of events to be added to the list of events that the Hook triggers for.
-     *
-     * @param list<string> $addEvents
      */
-    public function setAddEvents(array $addEvents): self
+    public function setAddEvents(string ...$addEvents): self
     {
         $this->initialized['addEvents'] = true;
-        $this->addEvents = $addEvents;
+        $this->addEvents = array_values($addEvents);
         return $this;
     }
     /**
@@ -113,13 +109,11 @@ class ReposOwnerRepoHooksHookIdPatchBody extends \ArrayObject
     }
     /**
      * Determines a list of events to be removed from the list of events that the Hook triggers for.
-     *
-     * @param list<string> $removeEvents
      */
-    public function setRemoveEvents(array $removeEvents): self
+    public function setRemoveEvents(string ...$removeEvents): self
     {
         $this->initialized['removeEvents'] = true;
-        $this->removeEvents = $removeEvents;
+        $this->removeEvents = array_values($removeEvents);
         return $this;
     }
     /**

@@ -37,13 +37,11 @@ class DatabaseVersionOptions extends \ArrayObject
     }
     /**
      * An array of strings containing the names of available regions
-     *
-     * @param list<string> $versions
      */
-    public function setVersions(array $versions): self
+    public function setVersions(string ...$versions): self
     {
         $this->initialized['versions'] = true;
-        $this->versions = $versions;
+        $this->versions = array_values($versions);
         return $this;
     }
 }

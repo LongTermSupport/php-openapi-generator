@@ -48,7 +48,7 @@ class TeamsTeamIdProjectsProjectIdPutResponse403Normalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TeamsTeamIdProjectsProjectIdPutResponse403Constraint());
         }
         if (\array_key_exists('message', $data)) {
@@ -87,7 +87,7 @@ class TeamsTeamIdProjectsProjectIdPutResponse403Normalizer implements Denormaliz
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TeamsTeamIdProjectsProjectIdPutResponse403Constraint());
         }
         return $dataArray;

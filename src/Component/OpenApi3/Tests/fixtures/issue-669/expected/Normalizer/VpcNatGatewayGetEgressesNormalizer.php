@@ -56,7 +56,7 @@ class VpcNatGatewayGetEgressesNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setPublicGateways($values);
+            $object->setPublicGateways(...$values);
             unset($data['public_gateways']);
         }
         foreach ($data as $key => $value_2) {

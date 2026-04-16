@@ -34,12 +34,12 @@ class ResponseVolumeActions extends \ArrayObject
         return $this->actions;
     }
     /**
-     * @param list<array<string, mixed>> $actions
+     * @param array<string, mixed> ...$actions
      */
-    public function setActions(array $actions): self
+    public function setActions(array ...$actions): self
     {
         $this->initialized['actions'] = true;
-        $this->actions = $actions;
+        $this->actions = array_values($actions);
         return $this;
     }
     public function getLinks(): PageLinks

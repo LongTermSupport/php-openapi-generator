@@ -71,7 +71,7 @@ class ApiUpdateKnowledgeBaseInputPublicNormalizer implements DenormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('uuid', $data)) {

@@ -48,13 +48,11 @@ class DatabaseLayoutOption extends \ArrayObject
     }
     /**
      * An array of objects containing the slugs available with various node counts
-     *
-     * @param list<string> $sizes
      */
-    public function setSizes(array $sizes): self
+    public function setSizes(string ...$sizes): self
     {
         $this->initialized['sizes'] = true;
-        $this->sizes = $sizes;
+        $this->sizes = array_values($sizes);
         return $this;
     }
 }

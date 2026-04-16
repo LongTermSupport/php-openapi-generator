@@ -31,13 +31,10 @@ class ResponseKeyGet extends \ArrayObject
     {
         return $this->keys;
     }
-    /**
-     * @param list<Key> $keys
-     */
-    public function setKeys(array $keys): self
+    public function setKeys(Key ...$keys): self
     {
         $this->initialized['keys'] = true;
-        $this->keys = $keys;
+        $this->keys = array_values($keys);
         return $this;
     }
 }

@@ -53,13 +53,10 @@ class SingleTweetLookupResponse extends \ArrayObject
     {
         return $this->errors;
     }
-    /**
-     * @param list<mixed> $errors
-     */
-    public function setErrors(array $errors): self
+    public function setErrors(mixed ...$errors): self
     {
         $this->initialized['errors'] = true;
-        $this->errors = $errors;
+        $this->errors = array_values($errors);
         return $this;
     }
 }

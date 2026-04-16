@@ -97,13 +97,11 @@ class DatabaseClusterReadMaintenanceWindow extends \ArrayObject
     }
     /**
      * A list of strings, each containing information about a pending maintenance update.
-     *
-     * @param list<string> $description
      */
-    public function setDescription(array $description): self
+    public function setDescription(string ...$description): self
     {
         $this->initialized['description'] = true;
-        $this->description = $description;
+        $this->description = array_values($description);
         return $this;
     }
 }

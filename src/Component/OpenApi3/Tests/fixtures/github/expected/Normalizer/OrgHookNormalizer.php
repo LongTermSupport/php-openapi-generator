@@ -48,7 +48,7 @@ class OrgHookNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgHookConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -74,7 +74,7 @@ class OrgHookNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         if (\array_key_exists('active', $data)) {
@@ -134,7 +134,7 @@ class OrgHookNormalizer implements DenormalizerInterface, NormalizerInterface, D
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgHookConstraint());
         }
         return $dataArray;

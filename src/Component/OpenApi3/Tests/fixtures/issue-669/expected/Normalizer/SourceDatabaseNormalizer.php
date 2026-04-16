@@ -64,7 +64,7 @@ class SourceDatabaseNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setIgnoreDbs($values);
+            $object->setIgnoreDbs(...$values);
             unset($data['ignore_dbs']);
         }
         foreach ($data as $key => $value_2) {

@@ -56,7 +56,7 @@ class ResponseBillingInsightsNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setDataPoints($values);
+            $object->setDataPoints(...$values);
             unset($data['data_points']);
         }
         if (\array_key_exists('total_items', $data)) {

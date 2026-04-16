@@ -56,7 +56,7 @@ class ResponseAddonsGetAppMetadataNormalizer implements DenormalizerInterface, N
                     $values[] = $value_1;
                 }
             }
-            $object->setMetadata($values);
+            $object->setMetadata(...$values);
             unset($data['metadata']);
         }
         foreach ($data as $key => $value_2) {

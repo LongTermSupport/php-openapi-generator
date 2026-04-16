@@ -64,13 +64,10 @@ class GbImageTypesResponseAvailableTypesItem extends \ArrayObject
     {
         return $this->availableFormats;
     }
-    /**
-     * @param list<string> $availableFormats
-     */
-    public function setAvailableFormats(array $availableFormats): self
+    public function setAvailableFormats(string ...$availableFormats): self
     {
         $this->initialized['availableFormats'] = true;
-        $this->availableFormats = $availableFormats;
+        $this->availableFormats = array_values($availableFormats);
         return $this;
     }
 }

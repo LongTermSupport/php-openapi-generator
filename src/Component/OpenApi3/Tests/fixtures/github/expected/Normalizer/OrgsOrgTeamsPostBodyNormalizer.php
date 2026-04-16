@@ -48,7 +48,7 @@ class OrgsOrgTeamsPostBodyNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgTeamsPostBodyConstraint());
         }
         if (\array_key_exists('name', $data)) {
@@ -66,7 +66,7 @@ class OrgsOrgTeamsPostBodyNormalizer implements DenormalizerInterface, Normalize
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setMaintainers($values);
+            $object->setMaintainers(...$values);
             unset($data['maintainers']);
         }
         if (\array_key_exists('repo_names', $data)) {
@@ -76,7 +76,7 @@ class OrgsOrgTeamsPostBodyNormalizer implements DenormalizerInterface, Normalize
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setRepoNames($values_1);
+            $object->setRepoNames(...$values_1);
             unset($data['repo_names']);
         }
         if (\array_key_exists('privacy', $data)) {
@@ -140,7 +140,7 @@ class OrgsOrgTeamsPostBodyNormalizer implements DenormalizerInterface, Normalize
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgTeamsPostBodyConstraint());
         }
         return $dataArray;

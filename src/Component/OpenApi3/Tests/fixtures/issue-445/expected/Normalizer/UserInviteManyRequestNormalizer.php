@@ -55,7 +55,7 @@ class UserInviteManyRequestNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setUserIds($values);
+            $object->setUserIds(...$values);
             unset($data['userIds']);
         }
         foreach ($data as $key => $value_1) {

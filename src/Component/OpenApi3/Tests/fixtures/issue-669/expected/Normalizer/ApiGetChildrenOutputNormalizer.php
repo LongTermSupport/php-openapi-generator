@@ -56,7 +56,7 @@ class ApiGetChildrenOutputNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setChildren($values);
+            $object->setChildren(...$values);
             unset($data['children']);
         }
         foreach ($data as $key => $value_2) {

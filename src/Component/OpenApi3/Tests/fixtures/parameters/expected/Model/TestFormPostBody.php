@@ -66,13 +66,10 @@ class TestFormPostBody extends \ArrayObject
     {
         return $this->testArray;
     }
-    /**
-     * @param list<mixed> $testArray
-     */
-    public function setTestArray(array $testArray): self
+    public function setTestArray(mixed ...$testArray): self
     {
         $this->initialized['testArray'] = true;
-        $this->testArray = $testArray;
+        $this->testArray = array_values($testArray);
         return $this;
     }
     public function getTestRequired(): string

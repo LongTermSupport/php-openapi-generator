@@ -34,13 +34,11 @@ class UserRoleCreateManyRequest
     }
     /**
      * Multiple user creation requests.
-     *
-     * @param list<UserRoleCreateRequest> $items
      */
-    public function setItems(array $items): self
+    public function setItems(UserRoleCreateRequest ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

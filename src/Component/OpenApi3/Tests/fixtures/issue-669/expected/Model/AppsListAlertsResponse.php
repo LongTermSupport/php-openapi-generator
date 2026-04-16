@@ -31,13 +31,10 @@ class AppsListAlertsResponse extends \ArrayObject
     {
         return $this->alerts;
     }
-    /**
-     * @param list<AppAlert> $alerts
-     */
-    public function setAlerts(array $alerts): self
+    public function setAlerts(AppAlert ...$alerts): self
     {
         $this->initialized['alerts'] = true;
-        $this->alerts = $alerts;
+        $this->alerts = array_values($alerts);
         return $this;
     }
 }

@@ -33,13 +33,10 @@ class ResponseVpcMembers extends \ArrayObject
     {
         return $this->members;
     }
-    /**
-     * @param list<VpcMember> $members
-     */
-    public function setMembers(array $members): self
+    public function setMembers(VpcMember ...$members): self
     {
         $this->initialized['members'] = true;
-        $this->members = $members;
+        $this->members = array_values($members);
         return $this;
     }
     public function getLinks(): PageLinks

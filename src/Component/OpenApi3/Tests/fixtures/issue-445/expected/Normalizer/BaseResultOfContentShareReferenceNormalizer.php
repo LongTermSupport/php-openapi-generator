@@ -59,7 +59,7 @@ class BaseResultOfContentShareReferenceNormalizer implements DenormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setResults($values);
+            $object->setResults(...$values);
         }
         if (\array_key_exists('elapsedMilliseconds', $data)) {
             $object->setElapsedMilliseconds(TypeValidator::assertInt($data['elapsedMilliseconds'], 'elapsedMilliseconds'));

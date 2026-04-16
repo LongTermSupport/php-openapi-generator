@@ -75,7 +75,7 @@ class V2DatabasesDatabaseClusterUuidReplicasPostBodyNormalizer implements Denorm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('created_at', $data)) {

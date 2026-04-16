@@ -64,7 +64,7 @@ class ShareDataBasicNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_1;
                 }
             }
-            $object->setMailRecipients($values);
+            $object->setMailRecipients(...$values);
             unset($data['mailRecipients']);
         }
         if (\array_key_exists('internalRecipients', $data)) {
@@ -75,7 +75,7 @@ class ShareDataBasicNormalizer implements DenormalizerInterface, NormalizerInter
                     $values_1[] = $value_3;
                 }
             }
-            $object->setInternalRecipients($values_1);
+            $object->setInternalRecipients(...$values_1);
             unset($data['internalRecipients']);
         }
         if (\array_key_exists('languageCode', $data)) {

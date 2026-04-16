@@ -33,13 +33,10 @@ class ResponseAllAutoscalePools extends \ArrayObject
     {
         return $this->autoscalePools;
     }
-    /**
-     * @param list<AutoscalePool> $autoscalePools
-     */
-    public function setAutoscalePools(array $autoscalePools): self
+    public function setAutoscalePools(AutoscalePool ...$autoscalePools): self
     {
         $this->initialized['autoscalePools'] = true;
-        $this->autoscalePools = $autoscalePools;
+        $this->autoscalePools = array_values($autoscalePools);
         return $this;
     }
     public function getLinks(): PageLinks

@@ -39,13 +39,10 @@ class GbPeopleReportReponseReportDirectorships extends \ArrayObject
     {
         return $this->current;
     }
-    /**
-     * @param list<GbPeopleReportReponseReportDirectorshipsCurrentItem> $current
-     */
-    public function setCurrent(array $current): self
+    public function setCurrent(GbPeopleReportReponseReportDirectorshipsCurrentItem ...$current): self
     {
         $this->initialized['current'] = true;
-        $this->current = $current;
+        $this->current = array_values($current);
         return $this;
     }
     /**
@@ -55,13 +52,10 @@ class GbPeopleReportReponseReportDirectorships extends \ArrayObject
     {
         return $this->inactive;
     }
-    /**
-     * @param list<GbPeopleReportReponseReportDirectorshipsInactiveItem> $inactive
-     */
-    public function setInactive(array $inactive): self
+    public function setInactive(GbPeopleReportReponseReportDirectorshipsInactiveItem ...$inactive): self
     {
         $this->initialized['inactive'] = true;
-        $this->inactive = $inactive;
+        $this->inactive = array_values($inactive);
         return $this;
     }
     /**
@@ -71,13 +65,10 @@ class GbPeopleReportReponseReportDirectorships extends \ArrayObject
     {
         return $this->previous;
     }
-    /**
-     * @param list<GbPeopleReportReponseReportDirectorshipsPreviousItem> $previous
-     */
-    public function setPrevious(array $previous): self
+    public function setPrevious(GbPeopleReportReponseReportDirectorshipsPreviousItem ...$previous): self
     {
         $this->initialized['previous'] = true;
-        $this->previous = $previous;
+        $this->previous = array_values($previous);
         return $this;
     }
 }

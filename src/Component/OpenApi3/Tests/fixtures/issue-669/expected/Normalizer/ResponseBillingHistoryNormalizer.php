@@ -56,7 +56,7 @@ class ResponseBillingHistoryNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setBillingHistory($values);
+            $object->setBillingHistory(...$values);
             unset($data['billing_history']);
         }
         if (\array_key_exists('links', $data)) {

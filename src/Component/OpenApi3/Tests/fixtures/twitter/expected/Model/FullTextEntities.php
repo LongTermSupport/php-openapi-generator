@@ -47,13 +47,10 @@ class FullTextEntities extends \ArrayObject
     {
         return $this->urls;
     }
-    /**
-     * @param list<UrlEntity> $urls
-     */
-    public function setUrls(array $urls): self
+    public function setUrls(UrlEntity ...$urls): self
     {
         $this->initialized['urls'] = true;
-        $this->urls = $urls;
+        $this->urls = array_values($urls);
         return $this;
     }
     /**
@@ -63,13 +60,10 @@ class FullTextEntities extends \ArrayObject
     {
         return $this->hashtags;
     }
-    /**
-     * @param list<HashtagEntity> $hashtags
-     */
-    public function setHashtags(array $hashtags): self
+    public function setHashtags(HashtagEntity ...$hashtags): self
     {
         $this->initialized['hashtags'] = true;
-        $this->hashtags = $hashtags;
+        $this->hashtags = array_values($hashtags);
         return $this;
     }
     /**
@@ -79,13 +73,10 @@ class FullTextEntities extends \ArrayObject
     {
         return $this->mentions;
     }
-    /**
-     * @param list<MentionEntity> $mentions
-     */
-    public function setMentions(array $mentions): self
+    public function setMentions(MentionEntity ...$mentions): self
     {
         $this->initialized['mentions'] = true;
-        $this->mentions = $mentions;
+        $this->mentions = array_values($mentions);
         return $this;
     }
     /**
@@ -95,13 +86,10 @@ class FullTextEntities extends \ArrayObject
     {
         return $this->cashtags;
     }
-    /**
-     * @param list<CashtagEntity> $cashtags
-     */
-    public function setCashtags(array $cashtags): self
+    public function setCashtags(CashtagEntity ...$cashtags): self
     {
         $this->initialized['cashtags'] = true;
-        $this->cashtags = $cashtags;
+        $this->cashtags = array_values($cashtags);
         return $this;
     }
     /**
@@ -111,13 +99,10 @@ class FullTextEntities extends \ArrayObject
     {
         return $this->annotations;
     }
-    /**
-     * @param list<FullTextEntitiesAnnotationsItem> $annotations
-     */
-    public function setAnnotations(array $annotations): self
+    public function setAnnotations(FullTextEntitiesAnnotationsItem ...$annotations): self
     {
         $this->initialized['annotations'] = true;
-        $this->annotations = $annotations;
+        $this->annotations = array_values($annotations);
         return $this;
     }
 }

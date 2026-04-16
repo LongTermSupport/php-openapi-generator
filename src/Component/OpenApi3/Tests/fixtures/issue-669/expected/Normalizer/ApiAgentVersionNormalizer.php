@@ -60,7 +60,7 @@ class ApiAgentVersionNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $value_1;
                 }
             }
-            $object->setAttachedChildAgents($values);
+            $object->setAttachedChildAgents(...$values);
             unset($data['attached_child_agents']);
         }
         if (\array_key_exists('attached_functions', $data)) {
@@ -71,7 +71,7 @@ class ApiAgentVersionNormalizer implements DenormalizerInterface, NormalizerInte
                     $values_1[] = $value_3;
                 }
             }
-            $object->setAttachedFunctions($values_1);
+            $object->setAttachedFunctions(...$values_1);
             unset($data['attached_functions']);
         }
         if (\array_key_exists('attached_guardrails', $data)) {
@@ -82,7 +82,7 @@ class ApiAgentVersionNormalizer implements DenormalizerInterface, NormalizerInte
                     $values_2[] = $value_5;
                 }
             }
-            $object->setAttachedGuardrails($values_2);
+            $object->setAttachedGuardrails(...$values_2);
             unset($data['attached_guardrails']);
         }
         if (\array_key_exists('attached_knowledgebases', $data)) {
@@ -93,7 +93,7 @@ class ApiAgentVersionNormalizer implements DenormalizerInterface, NormalizerInte
                     $values_3[] = $value_7;
                 }
             }
-            $object->setAttachedKnowledgebases($values_3);
+            $object->setAttachedKnowledgebases(...$values_3);
             unset($data['attached_knowledgebases']);
         }
         if (\array_key_exists('can_rollback', $data)) {
@@ -155,7 +155,7 @@ class ApiAgentVersionNormalizer implements DenormalizerInterface, NormalizerInte
                     $values_4[] = TypeValidator::assertString($value_8, 'value');
                 }
             }
-            $object->setTags($values_4);
+            $object->setTags(...$values_4);
             unset($data['tags']);
         }
         if (\array_key_exists('temperature', $data)) {

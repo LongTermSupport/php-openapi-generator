@@ -31,13 +31,10 @@ class ResponseKafkaSchemas extends \ArrayObject
     {
         return $this->subjects;
     }
-    /**
-     * @param list<KafkaSchemaVerbose> $subjects
-     */
-    public function setSubjects(array $subjects): self
+    public function setSubjects(KafkaSchemaVerbose ...$subjects): self
     {
         $this->initialized['subjects'] = true;
-        $this->subjects = $subjects;
+        $this->subjects = array_values($subjects);
         return $this;
     }
 }

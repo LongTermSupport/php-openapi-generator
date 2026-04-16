@@ -71,7 +71,7 @@ class ApiGetEvaluationRunResultsOutputNormalizer implements DenormalizerInterfac
                     $values[] = $value_4;
                 }
             }
-            $object->setPrompts($values);
+            $object->setPrompts(...$values);
             unset($data['prompts']);
         }
         foreach ($data as $key => $value_5) {

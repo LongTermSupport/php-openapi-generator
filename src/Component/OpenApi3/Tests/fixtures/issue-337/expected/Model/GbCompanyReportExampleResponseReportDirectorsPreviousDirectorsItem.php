@@ -75,13 +75,10 @@ class GbCompanyReportExampleResponseReportDirectorsPreviousDirectorsItem extends
     {
         return $this->positions;
     }
-    /**
-     * @param list<string> $positions
-     */
-    public function setPositions(array $positions): self
+    public function setPositions(string ...$positions): self
     {
         $this->initialized['positions'] = true;
-        $this->positions = $positions;
+        $this->positions = array_values($positions);
         return $this;
     }
 }

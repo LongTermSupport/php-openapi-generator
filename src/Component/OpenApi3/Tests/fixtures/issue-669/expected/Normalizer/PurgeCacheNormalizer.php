@@ -55,7 +55,7 @@ class PurgeCacheNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setFiles($values);
+            $object->setFiles(...$values);
             unset($data['files']);
         }
         foreach ($data as $key => $value_1) {

@@ -55,7 +55,7 @@ class ApiChatbotNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAllowedDomains($values);
+            $object->setAllowedDomains(...$values);
             unset($data['allowed_domains']);
         }
         if (\array_key_exists('button_background_color', $data)) {

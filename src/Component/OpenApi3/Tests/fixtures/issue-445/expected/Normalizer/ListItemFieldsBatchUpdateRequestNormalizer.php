@@ -55,7 +55,7 @@ class ListItemFieldsBatchUpdateRequestNormalizer implements DenormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setListItemIds($values);
+            $object->setListItemIds(...$values);
         }
         if (\array_key_exists('changeCommands', $data)) {
             $values_1 = [];
@@ -65,7 +65,7 @@ class ListItemFieldsBatchUpdateRequestNormalizer implements DenormalizerInterfac
                     $values_1[] = $value_2;
                 }
             }
-            $object->setChangeCommands($values_1);
+            $object->setChangeCommands(...$values_1);
         }
         if (\array_key_exists('allowMissingDependencies', $data)) {
             $object->setAllowMissingDependencies(TypeValidator::assertBool($data['allowMissingDependencies'], 'allowMissingDependencies'));

@@ -60,7 +60,7 @@ class InvalidRequestProblemNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setErrors($values);
+            $object->setErrors(...$values);
             unset($data['errors']);
         }
         if (\array_key_exists('title', $data)) {

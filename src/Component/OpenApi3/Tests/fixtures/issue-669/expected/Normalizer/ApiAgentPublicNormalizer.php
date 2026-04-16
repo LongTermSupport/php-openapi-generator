@@ -61,7 +61,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_2;
                 }
             }
-            $object->setChatbotIdentifiers($values);
+            $object->setChatbotIdentifiers(...$values);
             unset($data['chatbot_identifiers']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -141,7 +141,7 @@ class ApiAgentPublicNormalizer implements DenormalizerInterface, NormalizerInter
                     $values_1[] = TypeValidator::assertString($value_5, 'value');
                 }
             }
-            $object->setTags($values_1);
+            $object->setTags(...$values_1);
             unset($data['tags']);
         }
         if (\array_key_exists('temperature', $data)) {

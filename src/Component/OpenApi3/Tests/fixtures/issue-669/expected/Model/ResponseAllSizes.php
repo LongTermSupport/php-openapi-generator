@@ -33,13 +33,10 @@ class ResponseAllSizes extends \ArrayObject
     {
         return $this->sizes;
     }
-    /**
-     * @param list<Size> $sizes
-     */
-    public function setSizes(array $sizes): self
+    public function setSizes(Size ...$sizes): self
     {
         $this->initialized['sizes'] = true;
-        $this->sizes = $sizes;
+        $this->sizes = array_values($sizes);
         return $this;
     }
     public function getLinks(): PageLinks

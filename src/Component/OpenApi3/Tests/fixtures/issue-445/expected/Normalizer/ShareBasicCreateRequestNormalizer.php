@@ -71,7 +71,7 @@ class ShareBasicCreateRequestNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setContents($values);
+            $object->setContents(...$values);
             unset($data['contents']);
         }
         if (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] !== null) {

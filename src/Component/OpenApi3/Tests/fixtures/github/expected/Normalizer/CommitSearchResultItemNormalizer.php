@@ -48,7 +48,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommitSearchResultItemConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -96,7 +96,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_4;
                 }
             }
-            $object->setParents($values);
+            $object->setParents(...$values);
             unset($data['parents']);
         }
         if (\array_key_exists('repository', $data)) {
@@ -120,7 +120,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
                     $values_1[] = $value_7;
                 }
             }
-            $object->setTextMatches($values_1);
+            $object->setTextMatches(...$values_1);
             unset($data['text_matches']);
         }
         foreach ($data as $key => $value_8) {
@@ -177,7 +177,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommitSearchResultItemConstraint());
         }
         return $dataArray;

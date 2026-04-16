@@ -83,13 +83,11 @@ class ErrorWithRootCauses extends \ArrayObject
     }
     /**
      * A list of underlying causes for the error, including details to help  resolve it when possible.
-     *
-     * @param list<string> $rootCauses
      */
-    public function setRootCauses(array $rootCauses): self
+    public function setRootCauses(string ...$rootCauses): self
     {
         $this->initialized['rootCauses'] = true;
-        $this->rootCauses = $rootCauses;
+        $this->rootCauses = array_values($rootCauses);
         return $this;
     }
 }

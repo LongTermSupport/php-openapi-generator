@@ -48,7 +48,7 @@ class CredentialAuthorizationNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CredentialAuthorizationConstraint());
         }
         if (\array_key_exists('login', $data)) {
@@ -78,7 +78,7 @@ class CredentialAuthorizationNormalizer implements DenormalizerInterface, Normal
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setScopes($values);
+            $object->setScopes(...$values);
             unset($data['scopes']);
         }
         if (\array_key_exists('fingerprint', $data)) {
@@ -135,7 +135,7 @@ class CredentialAuthorizationNormalizer implements DenormalizerInterface, Normal
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CredentialAuthorizationConstraint());
         }
         return $dataArray;

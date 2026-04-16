@@ -48,7 +48,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TopicSearchResultItemConstraint());
         }
         if (\array_key_exists('name', $data)) {
@@ -111,7 +111,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setTextMatches($values);
+            $object->setTextMatches(...$values);
             unset($data['text_matches']);
         }
         if (\array_key_exists('related', $data) && $data['related'] !== null) {
@@ -231,7 +231,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
                 $dataArray[$key] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TopicSearchResultItemConstraint());
         }
         return $dataArray;

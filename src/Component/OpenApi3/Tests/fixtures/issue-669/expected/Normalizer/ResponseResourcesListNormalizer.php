@@ -56,7 +56,7 @@ class ResponseResourcesListNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setResources($values);
+            $object->setResources(...$values);
             unset($data['resources']);
         }
         if (\array_key_exists('links', $data)) {

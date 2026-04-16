@@ -119,13 +119,11 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * Optional list of allowed domains for the chatbot - Must use fully qualified domain name (FQDN) such as https://example.com
-     *
-     * @param list<string> $allowedDomains
      */
-    public function setAllowedDomains(array $allowedDomains): self
+    public function setAllowedDomains(string ...$allowedDomains): self
     {
         $this->initialized['allowedDomains'] = true;
-        $this->allowedDomains = $allowedDomains;
+        $this->allowedDomains = array_values($allowedDomains);
         return $this;
     }
     /**
@@ -349,13 +347,11 @@ class ApiUpdateAgentInputPublic extends \ArrayObject
     }
     /**
      * A set of abitrary tags to organize your agent
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

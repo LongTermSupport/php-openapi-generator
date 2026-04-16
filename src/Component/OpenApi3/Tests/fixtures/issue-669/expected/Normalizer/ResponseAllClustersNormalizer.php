@@ -56,7 +56,7 @@ class ResponseAllClustersNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setKubernetesClusters($values);
+            $object->setKubernetesClusters(...$values);
             unset($data['kubernetes_clusters']);
         }
         if (\array_key_exists('links', $data)) {

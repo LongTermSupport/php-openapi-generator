@@ -101,7 +101,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
                     $values[] = $value_6;
                 }
             }
-            $object->setEnvs($values);
+            $object->setEnvs(...$values);
             unset($data['envs']);
         }
         if (\array_key_exists('environment_slug', $data)) {
@@ -116,7 +116,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
                     $values_1[] = $value_8;
                 }
             }
-            $object->setLogDestinations($values_1);
+            $object->setLogDestinations(...$values_1);
             unset($data['log_destinations']);
         }
         if (\array_key_exists('instance_count', $data)) {
@@ -162,7 +162,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
                     $values_2[] = TypeValidator::assertInt($value_13, 'value');
                 }
             }
-            $object->setInternalPorts($values_2);
+            $object->setInternalPorts(...$values_2);
             unset($data['internal_ports']);
         }
         if (\array_key_exists('routes', $data)) {
@@ -173,7 +173,7 @@ class AppServiceSpecNormalizer implements DenormalizerInterface, NormalizerInter
                     $values_3[] = $value_15;
                 }
             }
-            $object->setRoutes($values_3);
+            $object->setRoutes(...$values_3);
             unset($data['routes']);
         }
         if (\array_key_exists('termination', $data)) {

@@ -35,13 +35,10 @@ class ParticipationStats extends \ArrayObject
     {
         return $this->all;
     }
-    /**
-     * @param list<int> $all
-     */
-    public function setAll(array $all): self
+    public function setAll(int ...$all): self
     {
         $this->initialized['all'] = true;
-        $this->all = $all;
+        $this->all = array_values($all);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class ParticipationStats extends \ArrayObject
     {
         return $this->owner;
     }
-    /**
-     * @param list<int> $owner
-     */
-    public function setOwner(array $owner): self
+    public function setOwner(int ...$owner): self
     {
         $this->initialized['owner'] = true;
-        $this->owner = $owner;
+        $this->owner = array_values($owner);
         return $this;
     }
 }

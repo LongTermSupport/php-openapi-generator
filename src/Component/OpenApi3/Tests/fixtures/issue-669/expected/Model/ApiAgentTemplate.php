@@ -142,13 +142,11 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * List of guardrails associated with the agent template
-     *
-     * @param list<ApiAgentTemplateGuardrail> $guardrails
      */
-    public function setGuardrails(array $guardrails): self
+    public function setGuardrails(ApiAgentTemplateGuardrail ...$guardrails): self
     {
         $this->initialized['guardrails'] = true;
-        $this->guardrails = $guardrails;
+        $this->guardrails = array_values($guardrails);
         return $this;
     }
     /**
@@ -194,13 +192,11 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * List of knowledge bases associated with the agent template
-     *
-     * @param list<ApiKnowledgeBase> $knowledgeBases
      */
-    public function setKnowledgeBases(array $knowledgeBases): self
+    public function setKnowledgeBases(ApiKnowledgeBase ...$knowledgeBases): self
     {
         $this->initialized['knowledgeBases'] = true;
-        $this->knowledgeBases = $knowledgeBases;
+        $this->knowledgeBases = array_values($knowledgeBases);
         return $this;
     }
     /**
@@ -310,13 +306,11 @@ class ApiAgentTemplate extends \ArrayObject
     }
     /**
      * List of tags associated with the agent template
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

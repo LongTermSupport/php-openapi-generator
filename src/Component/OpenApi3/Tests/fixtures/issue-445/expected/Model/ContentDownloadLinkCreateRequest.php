@@ -38,13 +38,11 @@ class ContentDownloadLinkCreateRequest
     }
     /**
      * List of content information to generate the download link
-     *
-     * @param list<ContentDownloadRequestItem> $contents
      */
-    public function setContents(array $contents): self
+    public function setContents(ContentDownloadRequestItem ...$contents): self
     {
         $this->initialized['contents'] = true;
-        $this->contents = $contents;
+        $this->contents = array_values($contents);
         return $this;
     }
     /**

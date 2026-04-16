@@ -44,13 +44,11 @@ class AppInstallationsInstallationIdAccessTokensPostBody extends \ArrayObject
     }
     /**
      * List of repository names that the token should have access to
-     *
-     * @param list<string> $repositories
      */
-    public function setRepositories(array $repositories): self
+    public function setRepositories(string ...$repositories): self
     {
         $this->initialized['repositories'] = true;
-        $this->repositories = $repositories;
+        $this->repositories = array_values($repositories);
         return $this;
     }
     /**
@@ -64,13 +62,11 @@ class AppInstallationsInstallationIdAccessTokensPostBody extends \ArrayObject
     }
     /**
      * List of repository IDs that the token should have access to
-     *
-     * @param list<int> $repositoryIds
      */
-    public function setRepositoryIds(array $repositoryIds): self
+    public function setRepositoryIds(int ...$repositoryIds): self
     {
         $this->initialized['repositoryIds'] = true;
-        $this->repositoryIds = $repositoryIds;
+        $this->repositoryIds = array_values($repositoryIds);
         return $this;
     }
     public function getPermissions(): AppInstallationsInstallationIdAccessTokensPostBodyPermissions

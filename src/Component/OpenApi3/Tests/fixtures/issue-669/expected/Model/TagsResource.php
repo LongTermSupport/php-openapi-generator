@@ -52,13 +52,11 @@ class TagsResource extends \ArrayObject
      * This response will only include resources that you are authorized to see.
      * For example, to see Droplets, include the `droplet:read` scope.
      * 
-     *
-     * @param list<TagsResourceResourcesItem> $resources
      */
-    public function setResources(array $resources): self
+    public function setResources(TagsResourceResourcesItem ...$resources): self
     {
         $this->initialized['resources'] = true;
-        $this->resources = $resources;
+        $this->resources = array_values($resources);
         return $this;
     }
 }

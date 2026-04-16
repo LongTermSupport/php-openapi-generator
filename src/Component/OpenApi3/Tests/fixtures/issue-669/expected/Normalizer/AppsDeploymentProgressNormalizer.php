@@ -68,7 +68,7 @@ class AppsDeploymentProgressNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setSteps($values);
+            $object->setSteps(...$values);
             unset($data['steps']);
         }
         if (\array_key_exists('success_steps', $data)) {
@@ -83,7 +83,7 @@ class AppsDeploymentProgressNormalizer implements DenormalizerInterface, Normali
                     $values_1[] = $value_3;
                 }
             }
-            $object->setSummarySteps($values_1);
+            $object->setSummarySteps(...$values_1);
             unset($data['summary_steps']);
         }
         if (\array_key_exists('total_steps', $data)) {

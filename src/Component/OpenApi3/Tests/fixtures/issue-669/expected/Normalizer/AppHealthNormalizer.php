@@ -56,7 +56,7 @@ class AppHealthNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setComponents($values);
+            $object->setComponents(...$values);
             unset($data['components']);
         }
         if (\array_key_exists('functions_components', $data)) {
@@ -67,7 +67,7 @@ class AppHealthNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values_1[] = $value_3;
                 }
             }
-            $object->setFunctionsComponents($values_1);
+            $object->setFunctionsComponents(...$values_1);
             unset($data['functions_components']);
         }
         foreach ($data as $key => $value_4) {

@@ -71,7 +71,7 @@ class GbCompanyReportExampleResponseReportDirectorsPreviousDirectorsItemNormaliz
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setPositions($values);
+            $object->setPositions(...$values);
             unset($data['positions']);
         }
         foreach ($data as $key => $value_1) {

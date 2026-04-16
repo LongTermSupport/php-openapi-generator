@@ -56,7 +56,7 @@ class V2LoadBalancersLbIdForwardingRulesDeleteBodyNormalizer implements Denormal
                     $values[] = $value_1;
                 }
             }
-            $object->setForwardingRules($values);
+            $object->setForwardingRules(...$values);
             unset($data['forwarding_rules']);
         }
         foreach ($data as $key => $value_2) {

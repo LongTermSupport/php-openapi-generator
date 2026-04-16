@@ -56,7 +56,7 @@ class ApiListOpenAIAPIKeysOutputNormalizer implements DenormalizerInterface, Nor
                     $values[] = $value_1;
                 }
             }
-            $object->setApiKeyInfos($values);
+            $object->setApiKeyInfos(...$values);
             unset($data['api_key_infos']);
         }
         if (\array_key_exists('links', $data)) {

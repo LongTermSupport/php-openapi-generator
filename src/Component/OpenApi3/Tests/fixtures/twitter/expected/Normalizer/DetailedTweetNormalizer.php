@@ -80,7 +80,7 @@ class DetailedTweetNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = $value_1;
                 }
             }
-            $object->setReferencedTweets($values);
+            $object->setReferencedTweets(...$values);
             unset($data['referenced_tweets']);
         }
         if (\array_key_exists('attachments', $data)) {
@@ -116,7 +116,7 @@ class DetailedTweetNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values_1[] = $value_8;
                 }
             }
-            $object->setContextAnnotation($values_1);
+            $object->setContextAnnotation(...$values_1);
             unset($data['context_annotation']);
         }
         if (\array_key_exists('possibly_sensitive', $data)) {

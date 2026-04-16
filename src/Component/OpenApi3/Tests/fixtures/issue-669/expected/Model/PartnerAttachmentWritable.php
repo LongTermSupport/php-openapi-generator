@@ -120,13 +120,11 @@ class PartnerAttachmentWritable extends \ArrayObject
     }
     /**
      * An array of VPCs IDs.
-     *
-     * @param list<string> $vpcIds
      */
-    public function setVpcIds(array $vpcIds): self
+    public function setVpcIds(string ...$vpcIds): self
     {
         $this->initialized['vpcIds'] = true;
-        $this->vpcIds = $vpcIds;
+        $this->vpcIds = array_values($vpcIds);
         return $this;
     }
     /**

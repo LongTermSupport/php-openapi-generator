@@ -55,7 +55,7 @@ class ContentManyReferencesRequestNormalizer implements DenormalizerInterface, N
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContentIds($values);
+            $object->setContentIds(...$values);
         }
         if (\array_key_exists('references', $data) && $data['references'] !== null) {
             $object->setReferences($data['references']);

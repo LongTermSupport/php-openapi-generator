@@ -85,13 +85,11 @@ class SnapshotsBase extends \ArrayObject
     }
     /**
      * An array of the regions that the snapshot is available in. The regions are represented by their identifying slug values.
-     *
-     * @param list<string> $regions
      */
-    public function setRegions(array $regions): self
+    public function setRegions(string ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
     /**

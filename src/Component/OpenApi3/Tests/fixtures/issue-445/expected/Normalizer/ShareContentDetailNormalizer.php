@@ -95,7 +95,7 @@ class ShareContentDetailNormalizer implements DenormalizerInterface, NormalizerI
                     $values_3[] = $value_4;
                 }
             }
-            $object->setOutputs($values_3);
+            $object->setOutputs(...$values_3);
         }
         if (\array_key_exists('contentType', $data)) {
             $object->setContentType($data['contentType']);

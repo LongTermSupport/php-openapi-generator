@@ -36,7 +36,7 @@ class DateGuesser implements GuesserInterface, TypeGuesserInterface
             throw new LogicException('Expected SchemaInterface, got ' . get_debug_type($object));
         }
 
-        return new DateType($object, $this->dateFormat, $this->preferInterface);
+        return new DateType($object, $this->dateFormat, true === $this->preferInterface);
     }
 
     protected function getSchemaClass(): string

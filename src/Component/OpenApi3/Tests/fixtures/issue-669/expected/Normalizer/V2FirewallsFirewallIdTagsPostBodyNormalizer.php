@@ -55,7 +55,7 @@ class V2FirewallsFirewallIdTagsPostBodyNormalizer implements DenormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         foreach ($data as $key => $value_1) {

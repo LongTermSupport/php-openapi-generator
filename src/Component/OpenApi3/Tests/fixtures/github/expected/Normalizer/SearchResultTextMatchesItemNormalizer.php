@@ -48,7 +48,7 @@ class SearchResultTextMatchesItemNormalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\SearchResultTextMatchesItemConstraint());
         }
         if (\array_key_exists('object_url', $data)) {
@@ -75,7 +75,7 @@ class SearchResultTextMatchesItemNormalizer implements DenormalizerInterface, No
                     $values[] = $value_1;
                 }
             }
-            $object->setMatches($values);
+            $object->setMatches(...$values);
             unset($data['matches']);
         }
         foreach ($data as $key => $value_2) {
@@ -120,7 +120,7 @@ class SearchResultTextMatchesItemNormalizer implements DenormalizerInterface, No
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\SearchResultTextMatchesItemConstraint());
         }
         return $dataArray;

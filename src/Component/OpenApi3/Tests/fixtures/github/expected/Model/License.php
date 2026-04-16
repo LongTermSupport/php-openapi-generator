@@ -129,13 +129,10 @@ class License extends \ArrayObject
     {
         return $this->permissions;
     }
-    /**
-     * @param list<string> $permissions
-     */
-    public function setPermissions(array $permissions): self
+    public function setPermissions(string ...$permissions): self
     {
         $this->initialized['permissions'] = true;
-        $this->permissions = $permissions;
+        $this->permissions = array_values($permissions);
         return $this;
     }
     /**
@@ -145,13 +142,10 @@ class License extends \ArrayObject
     {
         return $this->conditions;
     }
-    /**
-     * @param list<string> $conditions
-     */
-    public function setConditions(array $conditions): self
+    public function setConditions(string ...$conditions): self
     {
         $this->initialized['conditions'] = true;
-        $this->conditions = $conditions;
+        $this->conditions = array_values($conditions);
         return $this;
     }
     /**
@@ -161,13 +155,10 @@ class License extends \ArrayObject
     {
         return $this->limitations;
     }
-    /**
-     * @param list<string> $limitations
-     */
-    public function setLimitations(array $limitations): self
+    public function setLimitations(string ...$limitations): self
     {
         $this->initialized['limitations'] = true;
-        $this->limitations = $limitations;
+        $this->limitations = array_values($limitations);
         return $this;
     }
     public function getBody(): string

@@ -48,7 +48,7 @@ class AppManifestsCodeConversionsPostResponse201Normalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AppManifestsCodeConversionsPostResponse201Constraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -107,7 +107,7 @@ class AppManifestsCodeConversionsPostResponse201Normalizer implements Denormaliz
                     $values[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         if (\array_key_exists('installations_count', $data)) {
@@ -187,7 +187,7 @@ class AppManifestsCodeConversionsPostResponse201Normalizer implements Denormaliz
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AppManifestsCodeConversionsPostResponse201Constraint());
         }
         return $dataArray;

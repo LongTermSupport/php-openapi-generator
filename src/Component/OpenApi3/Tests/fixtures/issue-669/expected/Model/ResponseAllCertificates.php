@@ -33,13 +33,10 @@ class ResponseAllCertificates extends \ArrayObject
     {
         return $this->certificates;
     }
-    /**
-     * @param list<Certificate> $certificates
-     */
-    public function setCertificates(array $certificates): self
+    public function setCertificates(Certificate ...$certificates): self
     {
         $this->initialized['certificates'] = true;
-        $this->certificates = $certificates;
+        $this->certificates = array_values($certificates);
         return $this;
     }
     public function getLinks(): PageLinks

@@ -65,7 +65,7 @@ class GbCompanyReportExampleResponseReportShareCapitalStructureNormalizer implem
                     $values[] = $value_2;
                 }
             }
-            $object->setShareHolders($values);
+            $object->setShareHolders(...$values);
             unset($data['shareHolders']);
         }
         foreach ($data as $key => $value_3) {

@@ -48,7 +48,7 @@ class LabelSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\LabelSearchResultItemConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -91,7 +91,7 @@ class LabelSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setTextMatches($values);
+            $object->setTextMatches(...$values);
             unset($data['text_matches']);
         }
         foreach ($data as $key => $value_2) {
@@ -136,7 +136,7 @@ class LabelSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\LabelSearchResultItemConstraint());
         }
         return $dataArray;

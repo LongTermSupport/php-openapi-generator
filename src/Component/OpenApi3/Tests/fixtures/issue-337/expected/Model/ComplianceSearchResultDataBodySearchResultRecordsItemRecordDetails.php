@@ -123,13 +123,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetails extends
     {
         return $this->iDs;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem> $iDs
-     */
-    public function setIDs(array $iDs): self
+    public function setIDs(ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsIDsItem ...$iDs): self
     {
         $this->initialized['iDs'] = true;
-        $this->iDs = $iDs;
+        $this->iDs = array_values($iDs);
         return $this;
     }
     public function getLastUpdatedDate(): string

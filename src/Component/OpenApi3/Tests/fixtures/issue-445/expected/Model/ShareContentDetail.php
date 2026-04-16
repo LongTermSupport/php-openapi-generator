@@ -170,13 +170,11 @@ class ShareContentDetail
     }
     /**
      * List of shared outputs for this content.
-     *
-     * @param list<ShareOutputBase> $outputs
      */
-    public function setOutputs(array $outputs): self
+    public function setOutputs(ShareOutputBase ...$outputs): self
     {
         $this->initialized['outputs'] = true;
-        $this->outputs = $outputs;
+        $this->outputs = array_values($outputs);
         return $this;
     }
     /**

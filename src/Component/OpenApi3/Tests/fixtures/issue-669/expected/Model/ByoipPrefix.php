@@ -153,13 +153,11 @@ class ByoipPrefix extends \ArrayObject
     }
     /**
      * List of validation statuses for the BYOIP prefix
-     *
-     * @param list<ByoipPrefixValidationsItem> $validations
      */
-    public function setValidations(array $validations): self
+    public function setValidations(ByoipPrefixValidationsItem ...$validations): self
     {
         $this->initialized['validations'] = true;
-        $this->validations = $validations;
+        $this->validations = array_values($validations);
         return $this;
     }
     /**

@@ -57,13 +57,11 @@ class SubscriptionTierExtended extends \ArrayObject
     }
     /**
      * If your account is not eligible to use a certain subscription tier, this will include a list of reasons that prevent you from using the tier.
-     *
-     * @param list<string> $eligibilityReasons
      */
-    public function setEligibilityReasons(array $eligibilityReasons): self
+    public function setEligibilityReasons(string ...$eligibilityReasons): self
     {
         $this->initialized['eligibilityReasons'] = true;
-        $this->eligibilityReasons = $eligibilityReasons;
+        $this->eligibilityReasons = array_values($eligibilityReasons);
         return $this;
     }
 }

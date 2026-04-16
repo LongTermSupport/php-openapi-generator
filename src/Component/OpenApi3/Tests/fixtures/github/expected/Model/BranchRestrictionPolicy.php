@@ -83,13 +83,10 @@ class BranchRestrictionPolicy extends \ArrayObject
     {
         return $this->users;
     }
-    /**
-     * @param list<BranchRestrictionPolicyUsersItem> $users
-     */
-    public function setUsers(array $users): self
+    public function setUsers(BranchRestrictionPolicyUsersItem ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
     /**
@@ -99,13 +96,10 @@ class BranchRestrictionPolicy extends \ArrayObject
     {
         return $this->teams;
     }
-    /**
-     * @param list<BranchRestrictionPolicyTeamsItem> $teams
-     */
-    public function setTeams(array $teams): self
+    public function setTeams(BranchRestrictionPolicyTeamsItem ...$teams): self
     {
         $this->initialized['teams'] = true;
-        $this->teams = $teams;
+        $this->teams = array_values($teams);
         return $this;
     }
     /**
@@ -115,13 +109,10 @@ class BranchRestrictionPolicy extends \ArrayObject
     {
         return $this->apps;
     }
-    /**
-     * @param list<BranchRestrictionPolicyAppsItem> $apps
-     */
-    public function setApps(array $apps): self
+    public function setApps(BranchRestrictionPolicyAppsItem ...$apps): self
     {
         $this->initialized['apps'] = true;
-        $this->apps = $apps;
+        $this->apps = array_values($apps);
         return $this;
     }
 }

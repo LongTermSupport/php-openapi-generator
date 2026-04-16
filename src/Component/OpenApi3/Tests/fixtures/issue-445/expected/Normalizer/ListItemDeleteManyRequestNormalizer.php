@@ -55,7 +55,7 @@ class ListItemDeleteManyRequestNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setListItemIds($values);
+            $object->setListItemIds(...$values);
         }
         if (\array_key_exists('forceReferenceRemoval', $data)) {
             $object->setForceReferenceRemoval(TypeValidator::assertBool($data['forceReferenceRemoval'], 'forceReferenceRemoval'));

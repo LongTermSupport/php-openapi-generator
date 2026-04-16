@@ -42,13 +42,10 @@ class ListFreshInvestigationResponse extends \ArrayObject
     {
         return $this->orders;
     }
-    /**
-     * @param list<ListFreshInvestigationResponseOrdersItem> $orders
-     */
-    public function setOrders(array $orders): self
+    public function setOrders(ListFreshInvestigationResponseOrdersItem ...$orders): self
     {
         $this->initialized['orders'] = true;
-        $this->orders = $orders;
+        $this->orders = array_values($orders);
         return $this;
     }
 }

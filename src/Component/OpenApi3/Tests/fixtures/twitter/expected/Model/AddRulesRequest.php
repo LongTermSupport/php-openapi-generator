@@ -31,13 +31,10 @@ class AddRulesRequest extends \ArrayObject
     {
         return $this->add;
     }
-    /**
-     * @param list<RuleNoId> $add
-     */
-    public function setAdd(array $add): self
+    public function setAdd(RuleNoId ...$add): self
     {
         $this->initialized['add'] = true;
-        $this->add = $add;
+        $this->add = array_values($add);
         return $this;
     }
 }

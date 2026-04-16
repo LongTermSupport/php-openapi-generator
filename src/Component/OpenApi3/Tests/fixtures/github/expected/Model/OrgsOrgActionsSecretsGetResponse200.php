@@ -42,13 +42,10 @@ class OrgsOrgActionsSecretsGetResponse200 extends \ArrayObject
     {
         return $this->secrets;
     }
-    /**
-     * @param list<OrganizationActionsSecret> $secrets
-     */
-    public function setSecrets(array $secrets): self
+    public function setSecrets(OrganizationActionsSecret ...$secrets): self
     {
         $this->initialized['secrets'] = true;
-        $this->secrets = $secrets;
+        $this->secrets = array_values($secrets);
         return $this;
     }
 }

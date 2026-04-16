@@ -42,13 +42,10 @@ class ReposOwnerRepoActionsRunsRunIdJobsGetResponse200 extends \ArrayObject
     {
         return $this->jobs;
     }
-    /**
-     * @param list<Job> $jobs
-     */
-    public function setJobs(array $jobs): self
+    public function setJobs(Job ...$jobs): self
     {
         $this->initialized['jobs'] = true;
-        $this->jobs = $jobs;
+        $this->jobs = array_values($jobs);
         return $this;
     }
 }

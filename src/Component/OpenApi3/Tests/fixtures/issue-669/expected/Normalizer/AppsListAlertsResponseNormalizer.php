@@ -56,7 +56,7 @@ class AppsListAlertsResponseNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setAlerts($values);
+            $object->setAlerts(...$values);
             unset($data['alerts']);
         }
         foreach ($data as $key => $value_2) {

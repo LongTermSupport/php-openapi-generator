@@ -48,7 +48,7 @@ class ValidationErrorSimpleNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ValidationErrorSimpleConstraint());
         }
         if (\array_key_exists('message', $data)) {
@@ -66,7 +66,7 @@ class ValidationErrorSimpleNormalizer implements DenormalizerInterface, Normaliz
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setErrors($values);
+            $object->setErrors(...$values);
             unset($data['errors']);
         }
         foreach ($data as $key => $value_1) {
@@ -100,7 +100,7 @@ class ValidationErrorSimpleNormalizer implements DenormalizerInterface, Normaliz
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ValidationErrorSimpleConstraint());
         }
         return $dataArray;

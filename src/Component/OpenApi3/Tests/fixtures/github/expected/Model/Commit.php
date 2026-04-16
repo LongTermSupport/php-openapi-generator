@@ -124,13 +124,10 @@ class Commit extends \ArrayObject
     {
         return $this->parents;
     }
-    /**
-     * @param list<CommitParentsItem> $parents
-     */
-    public function setParents(array $parents): self
+    public function setParents(CommitParentsItem ...$parents): self
     {
         $this->initialized['parents'] = true;
-        $this->parents = $parents;
+        $this->parents = array_values($parents);
         return $this;
     }
     public function getStats(): CommitStats
@@ -150,13 +147,10 @@ class Commit extends \ArrayObject
     {
         return $this->files;
     }
-    /**
-     * @param list<CommitFilesItem> $files
-     */
-    public function setFiles(array $files): self
+    public function setFiles(CommitFilesItem ...$files): self
     {
         $this->initialized['files'] = true;
-        $this->files = $files;
+        $this->files = array_values($files);
         return $this;
     }
 }

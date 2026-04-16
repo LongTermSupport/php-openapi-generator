@@ -53,13 +53,10 @@ class ContributorActivity extends \ArrayObject
     {
         return $this->weeks;
     }
-    /**
-     * @param list<ContributorActivityWeeksItem> $weeks
-     */
-    public function setWeeks(array $weeks): self
+    public function setWeeks(ContributorActivityWeeksItem ...$weeks): self
     {
         $this->initialized['weeks'] = true;
-        $this->weeks = $weeks;
+        $this->weeks = array_values($weeks);
         return $this;
     }
 }

@@ -34,13 +34,11 @@ class SchemaUpdateManyRequest
     }
     /**
      * The schemas to update.
-     *
-     * @param list<SchemaUpdateItem> $schemas
      */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(SchemaUpdateItem ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
 }

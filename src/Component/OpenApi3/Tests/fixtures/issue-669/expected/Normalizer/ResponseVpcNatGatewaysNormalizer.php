@@ -56,7 +56,7 @@ class ResponseVpcNatGatewaysNormalizer implements DenormalizerInterface, Normali
                     $values[] = $value_1;
                 }
             }
-            $object->setVpcNatGateways($values);
+            $object->setVpcNatGateways(...$values);
             unset($data['vpc_nat_gateways']);
         }
         if (\array_key_exists('links', $data)) {

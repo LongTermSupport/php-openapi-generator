@@ -56,7 +56,7 @@ class ResponseAllImagesNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setImages($values);
+            $object->setImages(...$values);
             unset($data['images']);
         }
         if (\array_key_exists('links', $data)) {

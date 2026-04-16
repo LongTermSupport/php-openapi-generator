@@ -51,13 +51,10 @@ class MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBody extends \ArrayO
     {
         return $this->companies;
     }
-    /**
-     * @param list<MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem> $companies
-     */
-    public function setCompanies(array $companies): self
+    public function setCompanies(MonitoringPortfoliosPortfolioIdSharingPermissionsPatchBodyCompaniesItem ...$companies): self
     {
         $this->initialized['companies'] = true;
-        $this->companies = $companies;
+        $this->companies = array_values($companies);
         return $this;
     }
 }

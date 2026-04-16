@@ -56,7 +56,7 @@ class ResponseMonitoringListDestinationsNormalizer implements DenormalizerInterf
                     $values[] = $value_1;
                 }
             }
-            $object->setDestinations($values);
+            $object->setDestinations(...$values);
             unset($data['destinations']);
         }
         foreach ($data as $key => $value_2) {

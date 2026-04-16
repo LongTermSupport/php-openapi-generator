@@ -56,7 +56,7 @@ class FailureNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = $value_1;
                 }
             }
-            $object->setErrors($values);
+            $object->setErrors(...$values);
         }
         return $object;
     }

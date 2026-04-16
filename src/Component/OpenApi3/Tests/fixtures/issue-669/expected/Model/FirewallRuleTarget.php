@@ -59,13 +59,11 @@ class FirewallRuleTarget extends \ArrayObject
     }
     /**
      * An array of strings containing the IPv4 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the firewall will allow traffic.
-     *
-     * @param list<string> $addresses
      */
-    public function setAddresses(array $addresses): self
+    public function setAddresses(string ...$addresses): self
     {
         $this->initialized['addresses'] = true;
-        $this->addresses = $addresses;
+        $this->addresses = array_values($addresses);
         return $this;
     }
     /**
@@ -79,13 +77,11 @@ class FirewallRuleTarget extends \ArrayObject
     }
     /**
      * An array containing the IDs of the Droplets to which the firewall will allow traffic.
-     *
-     * @param list<int> $dropletIds
      */
-    public function setDropletIds(array $dropletIds): self
+    public function setDropletIds(int ...$dropletIds): self
     {
         $this->initialized['dropletIds'] = true;
-        $this->dropletIds = $dropletIds;
+        $this->dropletIds = array_values($dropletIds);
         return $this;
     }
     /**
@@ -99,13 +95,11 @@ class FirewallRuleTarget extends \ArrayObject
     }
     /**
      * An array containing the IDs of the load balancers to which the firewall will allow traffic.
-     *
-     * @param list<string> $loadBalancerUids
      */
-    public function setLoadBalancerUids(array $loadBalancerUids): self
+    public function setLoadBalancerUids(string ...$loadBalancerUids): self
     {
         $this->initialized['loadBalancerUids'] = true;
-        $this->loadBalancerUids = $loadBalancerUids;
+        $this->loadBalancerUids = array_values($loadBalancerUids);
         return $this;
     }
     /**
@@ -119,13 +113,11 @@ class FirewallRuleTarget extends \ArrayObject
     }
     /**
      * An array containing the IDs of the Kubernetes clusters to which the firewall will allow traffic.
-     *
-     * @param list<string> $kubernetesIds
      */
-    public function setKubernetesIds(array $kubernetesIds): self
+    public function setKubernetesIds(string ...$kubernetesIds): self
     {
         $this->initialized['kubernetesIds'] = true;
-        $this->kubernetesIds = $kubernetesIds;
+        $this->kubernetesIds = array_values($kubernetesIds);
         return $this;
     }
     /**
@@ -135,13 +127,10 @@ class FirewallRuleTarget extends \ArrayObject
     {
         return $this->tags;
     }
-    /**
-     * @param list<string> $tags
-     */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
 }

@@ -59,7 +59,7 @@ class ClusterUpdateNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('maintenance_policy', $data) && $data['maintenance_policy'] !== null) {

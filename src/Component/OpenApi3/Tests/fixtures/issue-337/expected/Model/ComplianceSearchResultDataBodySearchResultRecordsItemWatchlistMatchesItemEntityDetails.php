@@ -49,13 +49,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     {
         return $this->additionalInfo;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAdditionalInfoItem> $additionalInfo
-     */
-    public function setAdditionalInfo(array $additionalInfo): self
+    public function setAdditionalInfo(ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAdditionalInfoItem ...$additionalInfo): self
     {
         $this->initialized['additionalInfo'] = true;
-        $this->additionalInfo = $additionalInfo;
+        $this->additionalInfo = array_values($additionalInfo);
         return $this;
     }
     /**
@@ -65,13 +62,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     {
         return $this->addresses;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAddressesItem> $addresses
-     */
-    public function setAddresses(array $addresses): self
+    public function setAddresses(ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAddressesItem ...$addresses): self
     {
         $this->initialized['addresses'] = true;
-        $this->addresses = $addresses;
+        $this->addresses = array_values($addresses);
         return $this;
     }
     /**
@@ -81,13 +75,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     {
         return $this->akAs;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAkAsItem> $akAs
-     */
-    public function setAkAs(array $akAs): self
+    public function setAkAs(ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsAkAsItem ...$akAs): self
     {
         $this->initialized['akAs'] = true;
-        $this->akAs = $akAs;
+        $this->akAs = array_values($akAs);
         return $this;
     }
     public function getComments(): string
@@ -127,13 +118,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemE
     {
         return $this->iDs;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsIDsItem> $iDs
-     */
-    public function setIDs(array $iDs): self
+    public function setIDs(ComplianceSearchResultDataBodySearchResultRecordsItemWatchlistMatchesItemEntityDetailsIDsItem ...$iDs): self
     {
         $this->initialized['iDs'] = true;
-        $this->iDs = $iDs;
+        $this->iDs = array_values($iDs);
         return $this;
     }
     public function getListReferenceNumber(): string

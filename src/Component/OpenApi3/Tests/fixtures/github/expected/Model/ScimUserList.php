@@ -44,13 +44,11 @@ class ScimUserList extends \ArrayObject
     }
     /**
      * SCIM schema used.
-     *
-     * @param list<string> $schemas
      */
-    public function setSchemas(array $schemas): self
+    public function setSchemas(string ...$schemas): self
     {
         $this->initialized['schemas'] = true;
-        $this->schemas = $schemas;
+        $this->schemas = array_values($schemas);
         return $this;
     }
     public function getTotalResults(): int
@@ -90,13 +88,10 @@ class ScimUserList extends \ArrayObject
     {
         return $this->resources;
     }
-    /**
-     * @param list<ScimUser> $resources
-     */
-    public function setResources(array $resources): self
+    public function setResources(ScimUser ...$resources): self
     {
         $this->initialized['resources'] = true;
-        $this->resources = $resources;
+        $this->resources = array_values($resources);
         return $this;
     }
 }

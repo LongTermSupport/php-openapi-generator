@@ -289,13 +289,11 @@ class ClusterRead extends \ArrayObject
     }
     /**
      * An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged `k8s` and `k8s:$K8S_CLUSTER_ID`. <br><br>Requires `tag:read` scope.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**
@@ -310,12 +308,12 @@ class ClusterRead extends \ArrayObject
     /**
      * An object specifying the details of the worker nodes available to the Kubernetes cluster.
      *
-     * @param list<array<string, mixed>> $nodePools
+     * @param array<string, mixed> ...$nodePools
      */
-    public function setNodePools(array $nodePools): self
+    public function setNodePools(array ...$nodePools): self
     {
         $this->initialized['nodePools'] = true;
-        $this->nodePools = $nodePools;
+        $this->nodePools = array_values($nodePools);
         return $this;
     }
     /**

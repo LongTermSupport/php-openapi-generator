@@ -93,7 +93,7 @@ class GbCompanyReportExampleResponseReportDirectorsCurrentDirectorsItemNormalize
                     $values[] = $value_2;
                 }
             }
-            $object->setPositions($values);
+            $object->setPositions(...$values);
             unset($data['positions']);
         }
         foreach ($data as $key => $value_3) {

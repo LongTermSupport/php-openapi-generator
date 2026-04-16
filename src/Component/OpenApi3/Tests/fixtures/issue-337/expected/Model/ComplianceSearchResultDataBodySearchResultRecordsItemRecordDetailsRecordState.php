@@ -63,13 +63,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
     {
         return $this->assignedTo;
     }
-    /**
-     * @param list<string> $assignedTo
-     */
-    public function setAssignedTo(array $assignedTo): self
+    public function setAssignedTo(string ...$assignedTo): self
     {
         $this->initialized['assignedTo'] = true;
-        $this->assignedTo = $assignedTo;
+        $this->assignedTo = array_values($assignedTo);
         return $this;
     }
     public function getAssignmentType(): string
@@ -99,13 +96,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
     {
         return $this->history;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordStateHistoryItem> $history
-     */
-    public function setHistory(array $history): self
+    public function setHistory(ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordStateHistoryItem ...$history): self
     {
         $this->initialized['history'] = true;
-        $this->history = $history;
+        $this->history = array_values($history);
         return $this;
     }
     /**
@@ -115,13 +109,10 @@ class ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordSt
     {
         return $this->matchStates;
     }
-    /**
-     * @param list<ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordStateMatchStatesItem> $matchStates
-     */
-    public function setMatchStates(array $matchStates): self
+    public function setMatchStates(ComplianceSearchResultDataBodySearchResultRecordsItemRecordDetailsRecordStateMatchStatesItem ...$matchStates): self
     {
         $this->initialized['matchStates'] = true;
-        $this->matchStates = $matchStates;
+        $this->matchStates = array_values($matchStates);
         return $this;
     }
 }

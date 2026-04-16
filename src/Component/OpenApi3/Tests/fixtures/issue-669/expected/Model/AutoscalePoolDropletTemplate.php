@@ -155,13 +155,11 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The SSH keys to be installed on the Droplets in the autoscale pool. You can either specify the key ID or the fingerprint.
      * Requires `ssh_key:read` scope.
      * 
-     *
-     * @param list<string> $sshKeys
      */
-    public function setSshKeys(array $sshKeys): self
+    public function setSshKeys(string ...$sshKeys): self
     {
         $this->initialized['sshKeys'] = true;
-        $this->sshKeys = $sshKeys;
+        $this->sshKeys = array_values($sshKeys);
         return $this;
     }
     /**
@@ -179,13 +177,11 @@ class AutoscalePoolDropletTemplate extends \ArrayObject
      * The tags to apply to each of the Droplets in the autoscale pool.
      * Requires `tag:read` scope.
      * 
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

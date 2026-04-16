@@ -56,7 +56,7 @@ class ResponseAddonsGetAppNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setApps($values);
+            $object->setApps(...$values);
             unset($data['apps']);
         }
         foreach ($data as $key => $value_2) {

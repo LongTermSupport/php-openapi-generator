@@ -31,13 +31,10 @@ class NfsListResponse extends \ArrayObject
     {
         return $this->shares;
     }
-    /**
-     * @param list<NfsResponse> $shares
-     */
-    public function setShares(array $shares): self
+    public function setShares(NfsResponse ...$shares): self
     {
         $this->initialized['shares'] = true;
-        $this->shares = $shares;
+        $this->shares = array_values($shares);
         return $this;
     }
 }

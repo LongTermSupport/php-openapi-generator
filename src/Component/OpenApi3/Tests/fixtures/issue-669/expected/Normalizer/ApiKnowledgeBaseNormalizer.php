@@ -92,7 +92,7 @@ class ApiKnowledgeBaseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('updated_at', $data)) {

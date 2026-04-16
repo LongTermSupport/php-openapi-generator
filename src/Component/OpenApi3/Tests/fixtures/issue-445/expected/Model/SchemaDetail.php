@@ -180,13 +180,11 @@ class SchemaDetail
     }
     /**
      * List of schema types. Currently only one schema type can be assigned to this list, and it cannot be modified once the schema is created.
-     *
-     * @param list<string> $types
      */
-    public function setTypes(array $types): self
+    public function setTypes(string ...$types): self
     {
         $this->initialized['types'] = true;
-        $this->types = $types;
+        $this->types = array_values($types);
         return $this;
     }
     /**
@@ -252,13 +250,11 @@ class SchemaDetail
     }
     /**
      * Language specific DotLiquid templates. These templates will be resolved into display values in content documents and/or list items.
-     *
-     * @param list<DisplayPattern> $displayPatterns
      */
-    public function setDisplayPatterns(array $displayPatterns): self
+    public function setDisplayPatterns(DisplayPattern ...$displayPatterns): self
     {
         $this->initialized['displayPatterns'] = true;
-        $this->displayPatterns = $displayPatterns;
+        $this->displayPatterns = array_values($displayPatterns);
         return $this;
     }
     /**

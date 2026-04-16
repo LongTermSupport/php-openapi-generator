@@ -773,13 +773,11 @@ class OpensearchAdvancedConfig extends \ArrayObject
     }
     /**
      * Allowlist of remote IP addresses for reindexing. Changing this value will cause all OpenSearch instances to restart.
-     *
-     * @param list<string> $reindexRemoteWhitelist
      */
-    public function setReindexRemoteWhitelist(array $reindexRemoteWhitelist): self
+    public function setReindexRemoteWhitelist(string ...$reindexRemoteWhitelist): self
     {
         $this->initialized['reindexRemoteWhitelist'] = true;
-        $this->reindexRemoteWhitelist = $reindexRemoteWhitelist;
+        $this->reindexRemoteWhitelist = array_values($reindexRemoteWhitelist);
         return $this;
     }
     /**

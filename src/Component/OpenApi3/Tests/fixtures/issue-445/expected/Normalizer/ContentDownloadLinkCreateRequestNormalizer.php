@@ -56,7 +56,7 @@ class ContentDownloadLinkCreateRequestNormalizer implements DenormalizerInterfac
                     $values[] = $value_1;
                 }
             }
-            $object->setContents($values);
+            $object->setContents(...$values);
         }
         if (\array_key_exists('notifyProgress', $data)) {
             $object->setNotifyProgress(TypeValidator::assertBool($data['notifyProgress'], 'notifyProgress'));

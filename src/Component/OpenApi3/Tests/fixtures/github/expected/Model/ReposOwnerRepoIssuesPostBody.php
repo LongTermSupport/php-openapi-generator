@@ -123,13 +123,11 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
-     *
-     * @param list<mixed> $labels
      */
-    public function setLabels(array $labels): self
+    public function setLabels(mixed ...$labels): self
     {
         $this->initialized['labels'] = true;
-        $this->labels = $labels;
+        $this->labels = array_values($labels);
         return $this;
     }
     /**
@@ -143,13 +141,11 @@ class ReposOwnerRepoIssuesPostBody extends \ArrayObject
     }
     /**
      * Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
-     *
-     * @param list<string> $assignees
      */
-    public function setAssignees(array $assignees): self
+    public function setAssignees(string ...$assignees): self
     {
         $this->initialized['assignees'] = true;
-        $this->assignees = $assignees;
+        $this->assignees = array_values($assignees);
         return $this;
     }
 }

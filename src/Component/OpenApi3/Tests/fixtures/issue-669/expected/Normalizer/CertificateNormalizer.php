@@ -75,7 +75,7 @@ class CertificateNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDnsNames($values);
+            $object->setDnsNames(...$values);
             unset($data['dns_names']);
         }
         if (\array_key_exists('state', $data)) {

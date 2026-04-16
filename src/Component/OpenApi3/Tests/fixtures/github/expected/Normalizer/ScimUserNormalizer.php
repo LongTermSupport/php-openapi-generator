@@ -48,7 +48,7 @@ class ScimUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ScimUserConstraint());
         }
         if (\array_key_exists('schemas', $data)) {
@@ -58,7 +58,7 @@ class ScimUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setSchemas($values);
+            $object->setSchemas(...$values);
             unset($data['schemas']);
         }
         if (\array_key_exists('id', $data)) {
@@ -86,7 +86,7 @@ class ScimUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_1[] = $value_3;
                 }
             }
-            $object->setEmails($values_1);
+            $object->setEmails(...$values_1);
             unset($data['emails']);
         }
         if (\array_key_exists('active', $data)) {
@@ -110,7 +110,7 @@ class ScimUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_2[] = $value_6;
                 }
             }
-            $object->setOperations($values_2);
+            $object->setOperations(...$values_2);
             unset($data['operations']);
         }
         if (\array_key_exists('groups', $data)) {
@@ -121,7 +121,7 @@ class ScimUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
                     $values_3[] = $value_8;
                 }
             }
-            $object->setGroups($values_3);
+            $object->setGroups(...$values_3);
             unset($data['groups']);
         }
         foreach ($data as $key => $value_9) {
@@ -189,7 +189,7 @@ class ScimUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
                 $dataArray[$key] = $value_4;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ScimUserConstraint());
         }
         return $dataArray;

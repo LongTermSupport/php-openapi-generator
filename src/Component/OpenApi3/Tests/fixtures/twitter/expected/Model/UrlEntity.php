@@ -191,13 +191,10 @@ class UrlEntity extends \ArrayObject
     {
         return $this->images;
     }
-    /**
-     * @param list<URLImage> $images
-     */
-    public function setImages(array $images): self
+    public function setImages(URLImage ...$images): self
     {
         $this->initialized['images'] = true;
-        $this->images = $images;
+        $this->images = array_values($images);
         return $this;
     }
 }

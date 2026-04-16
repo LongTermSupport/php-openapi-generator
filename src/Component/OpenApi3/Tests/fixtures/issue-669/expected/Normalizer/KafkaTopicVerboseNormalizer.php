@@ -68,7 +68,7 @@ class KafkaTopicVerboseNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setPartitions($values);
+            $object->setPartitions(...$values);
             unset($data['partitions']);
         }
         if (\array_key_exists('config', $data)) {

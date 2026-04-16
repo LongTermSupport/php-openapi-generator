@@ -161,7 +161,7 @@ class ExceptionGenerator
                                     new Param(new Expr\Variable('response'), null, new Name\FullyQualified(\Psr\Http\Message\ResponseInterface::class)),
                                 ],
                                 'stmts'  => [
-                                    new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [new Node\Arg(new Scalar\String_($description ?? ''))])),
+                                    new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [new Node\Arg(new Scalar\String_(null !== $description ? $description : ''))])),
                                     new Stmt\Expression(new Expr\Assign(
                                         new Expr\PropertyFetch(
                                             new Expr\Variable('this'),
@@ -229,7 +229,7 @@ class ExceptionGenerator
                             ],
                             'stmts'  => [
                                 new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [
-                                    new Node\Arg(new Scalar\String_($description ?? '')),
+                                    new Node\Arg(new Scalar\String_(null !== $description ? $description : '')),
                                 ])),
                                 new Stmt\Expression(new Expr\Assign(
                                     new Expr\PropertyFetch(
@@ -271,7 +271,7 @@ class ExceptionGenerator
         }
 
         $unique = $schema->getRootName() . $schema->getDirectory();
-        if (\array_key_exists($unique, $this->initialized) && ($this->initialized[$unique]['base'] ?? false)) {
+        if (\array_key_exists($unique, $this->initialized) && \array_key_exists('base', $this->initialized[$unique]) && $this->initialized[$unique]['base']) {
             return;
         }
 
@@ -381,7 +381,7 @@ class ExceptionGenerator
         $highLevelExceptionName = $this->exceptionNaming->generateExceptionName($code);
         $unique                 = $schema->getRootName() . $schema->getDirectory();
 
-        if (\array_key_exists($unique, $this->initialized) && ($this->initialized[$unique][$code] ?? false)) {
+        if (\array_key_exists($unique, $this->initialized) && \array_key_exists($code, $this->initialized[$unique]) && $this->initialized[$unique][$code]) {
             return $highLevelExceptionName;
         }
 

@@ -58,7 +58,7 @@ class FileTransferDeleteRequestNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setFileTransferIds($values);
+            $object->setFileTransferIds(...$values);
         }
         return $object;
     }

@@ -54,13 +54,11 @@ class FileTransferDeleteRequest
     }
     /**
      * List of IDs of file transfers to delete.
-     *
-     * @param list<string> $fileTransferIds
      */
-    public function setFileTransferIds(array $fileTransferIds): self
+    public function setFileTransferIds(string ...$fileTransferIds): self
     {
         $this->initialized['fileTransferIds'] = true;
-        $this->fileTransferIds = $fileTransferIds;
+        $this->fileTransferIds = array_values($fileTransferIds);
         return $this;
     }
 }

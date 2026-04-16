@@ -56,7 +56,7 @@ class MonitoringPortfoliosPortfolioIdCompaniesClearPatchBodyNormalizer implement
                     $values[] = $value_1;
                 }
             }
-            $object->setCompanies($values);
+            $object->setCompanies(...$values);
             unset($data['companies']);
         }
         foreach ($data as $key => $value_2) {

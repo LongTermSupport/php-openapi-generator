@@ -82,13 +82,10 @@ class AlertPolicyRequest extends \ArrayObject
     {
         return $this->entities;
     }
-    /**
-     * @param list<string> $entities
-     */
-    public function setEntities(array $entities): self
+    public function setEntities(string ...$entities): self
     {
         $this->initialized['entities'] = true;
-        $this->entities = $entities;
+        $this->entities = array_values($entities);
         return $this;
     }
     /**
@@ -98,13 +95,10 @@ class AlertPolicyRequest extends \ArrayObject
     {
         return $this->tags;
     }
-    /**
-     * @param list<string> $tags
-     */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     public function getType(): string

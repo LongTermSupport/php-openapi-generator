@@ -79,7 +79,7 @@ class RepositoryManifestNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setTags($values);
+            $object->setTags(...$values);
             unset($data['tags']);
         }
         if (\array_key_exists('blobs', $data)) {
@@ -90,7 +90,7 @@ class RepositoryManifestNormalizer implements DenormalizerInterface, NormalizerI
                     $values_1[] = $value_2;
                 }
             }
-            $object->setBlobs($values_1);
+            $object->setBlobs(...$values_1);
             unset($data['blobs']);
         }
         foreach ($data as $key => $value_3) {

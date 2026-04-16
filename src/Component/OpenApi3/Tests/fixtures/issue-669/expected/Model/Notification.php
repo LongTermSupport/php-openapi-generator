@@ -43,13 +43,11 @@ class Notification extends \ArrayObject
     }
     /**
      * An email to notify on an alert trigger. The Email has to be one that is verified on that DigitalOcean account.
-     *
-     * @param list<string> $email
      */
-    public function setEmail(array $email): self
+    public function setEmail(string ...$email): self
     {
         $this->initialized['email'] = true;
-        $this->email = $email;
+        $this->email = array_values($email);
         return $this;
     }
     /**
@@ -63,13 +61,11 @@ class Notification extends \ArrayObject
     }
     /**
      * Slack integration details.
-     *
-     * @param list<NotificationSlackItem> $slack
      */
-    public function setSlack(array $slack): self
+    public function setSlack(NotificationSlackItem ...$slack): self
     {
         $this->initialized['slack'] = true;
-        $this->slack = $slack;
+        $this->slack = array_values($slack);
         return $this;
     }
 }

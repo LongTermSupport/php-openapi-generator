@@ -71,7 +71,7 @@ class AutoscalePoolDropletTemplateNormalizer implements DenormalizerInterface, N
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setSshKeys($values);
+            $object->setSshKeys(...$values);
             unset($data['ssh_keys']);
         }
         if (\array_key_exists('tags', $data)) {
@@ -81,7 +81,7 @@ class AutoscalePoolDropletTemplateNormalizer implements DenormalizerInterface, N
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTags($values_1);
+            $object->setTags(...$values_1);
             unset($data['tags']);
         }
         if (\array_key_exists('vpc_uuid', $data)) {

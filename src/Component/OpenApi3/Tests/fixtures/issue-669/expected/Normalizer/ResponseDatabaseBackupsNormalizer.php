@@ -56,7 +56,7 @@ class ResponseDatabaseBackupsNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setBackups($values);
+            $object->setBackups(...$values);
             unset($data['backups']);
         }
         if (\array_key_exists('scheduled_backup_time', $data)) {

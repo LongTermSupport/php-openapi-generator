@@ -55,7 +55,7 @@ class DatabaseVersionOptionsNormalizer implements DenormalizerInterface, Normali
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setVersions($values);
+            $object->setVersions(...$values);
             unset($data['versions']);
         }
         foreach ($data as $key => $value_1) {

@@ -33,13 +33,10 @@ class ResponseAllRegions extends \ArrayObject
     {
         return $this->regions;
     }
-    /**
-     * @param list<Region> $regions
-     */
-    public function setRegions(array $regions): self
+    public function setRegions(Region ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
     public function getLinks(): PageLinks

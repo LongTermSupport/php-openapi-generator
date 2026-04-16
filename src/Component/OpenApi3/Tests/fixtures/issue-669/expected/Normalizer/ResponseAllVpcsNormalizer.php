@@ -61,7 +61,7 @@ class ResponseAllVpcsNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = $values_1;
                 }
             }
-            $object->setVpcs($values);
+            $object->setVpcs(...$values);
             unset($data['vpcs']);
         }
         if (\array_key_exists('links', $data)) {

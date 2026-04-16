@@ -43,13 +43,11 @@ class LbFirewall extends \ArrayObject
     }
     /**
      * the rules for denying traffic to the load balancer (in the form 'ip:1.2.3.4' or 'cidr:1.2.0.0/16')
-     *
-     * @param list<string> $deny
      */
-    public function setDeny(array $deny): self
+    public function setDeny(string ...$deny): self
     {
         $this->initialized['deny'] = true;
-        $this->deny = $deny;
+        $this->deny = array_values($deny);
         return $this;
     }
     /**
@@ -63,13 +61,11 @@ class LbFirewall extends \ArrayObject
     }
     /**
      * the rules for allowing traffic to the load balancer (in the form 'ip:1.2.3.4' or 'cidr:1.2.0.0/16')
-     *
-     * @param list<string> $allow
      */
-    public function setAllow(array $allow): self
+    public function setAllow(string ...$allow): self
     {
         $this->initialized['allow'] = true;
-        $this->allow = $allow;
+        $this->allow = array_values($allow);
         return $this;
     }
 }

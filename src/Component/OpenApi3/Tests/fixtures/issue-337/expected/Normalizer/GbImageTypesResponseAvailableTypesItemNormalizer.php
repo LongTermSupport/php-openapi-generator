@@ -67,7 +67,7 @@ class GbImageTypesResponseAvailableTypesItemNormalizer implements DenormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAvailableFormats($values);
+            $object->setAvailableFormats(...$values);
             unset($data['availableFormats']);
         }
         foreach ($data as $key => $value_1) {

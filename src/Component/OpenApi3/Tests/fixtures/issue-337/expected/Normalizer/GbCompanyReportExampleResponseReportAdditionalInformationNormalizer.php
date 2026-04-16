@@ -56,7 +56,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
                     $values[] = $value_1;
                 }
             }
-            $object->setCompanyHistory($values);
+            $object->setCompanyHistory(...$values);
             unset($data['companyHistory']);
         }
         if (\array_key_exists('mortgageSummary', $data)) {
@@ -72,7 +72,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
                     $values_1[] = $value_4;
                 }
             }
-            $object->setMortgageDetails($values_1);
+            $object->setMortgageDetails(...$values_1);
             unset($data['mortgageDetails']);
         }
         if (\array_key_exists('commentaries', $data)) {
@@ -83,7 +83,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
                     $values_2[] = $value_6;
                 }
             }
-            $object->setCommentaries($values_2);
+            $object->setCommentaries(...$values_2);
             unset($data['commentaries']);
         }
         if (\array_key_exists('ratingHistory', $data)) {
@@ -94,7 +94,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
                     $values_3[] = $value_8;
                 }
             }
-            $object->setRatingHistory($values_3);
+            $object->setRatingHistory(...$values_3);
             unset($data['ratingHistory']);
         }
         if (\array_key_exists('creditLimitHistory', $data)) {
@@ -105,7 +105,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
                     $values_4[] = $value_10;
                 }
             }
-            $object->setCreditLimitHistory($values_4);
+            $object->setCreditLimitHistory(...$values_4);
             unset($data['creditLimitHistory']);
         }
         if (\array_key_exists('badDebtDetails', $data)) {
@@ -116,7 +116,7 @@ class GbCompanyReportExampleResponseReportAdditionalInformationNormalizer implem
                     $values_5[] = $value_12;
                 }
             }
-            $object->setBadDebtDetails($values_5);
+            $object->setBadDebtDetails(...$values_5);
             unset($data['badDebtDetails']);
         }
         foreach ($data as $key => $value_13) {

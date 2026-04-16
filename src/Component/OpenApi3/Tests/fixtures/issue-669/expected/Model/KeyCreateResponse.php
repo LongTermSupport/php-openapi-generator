@@ -85,13 +85,11 @@ class KeyCreateResponse extends \ArrayObject
     }
     /**
      * The list of permissions for the access key.
-     *
-     * @param list<Grant> $grants
      */
-    public function setGrants(array $grants): self
+    public function setGrants(Grant ...$grants): self
     {
         $this->initialized['grants'] = true;
-        $this->grants = $grants;
+        $this->grants = array_values($grants);
         return $this;
     }
     /**

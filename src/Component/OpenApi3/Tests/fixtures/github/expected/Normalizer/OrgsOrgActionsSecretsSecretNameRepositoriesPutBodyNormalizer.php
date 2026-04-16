@@ -48,7 +48,7 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesPutBodyNormalizer implements De
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgActionsSecretsSecretNameRepositoriesPutBodyConstraint());
         }
         if (\array_key_exists('selected_repository_ids', $data)) {
@@ -58,7 +58,7 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesPutBodyNormalizer implements De
                     $values[] = TypeValidator::assertInt($value, 'value');
                 }
             }
-            $object->setSelectedRepositoryIds($values);
+            $object->setSelectedRepositoryIds(...$values);
             unset($data['selected_repository_ids']);
         }
         foreach ($data as $key => $value_1) {
@@ -90,7 +90,7 @@ class OrgsOrgActionsSecretsSecretNameRepositoriesPutBodyNormalizer implements De
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\OrgsOrgActionsSecretsSecretNameRepositoriesPutBodyConstraint());
         }
         return $dataArray;

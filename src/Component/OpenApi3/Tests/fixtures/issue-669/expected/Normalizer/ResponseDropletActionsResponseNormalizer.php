@@ -56,7 +56,7 @@ class ResponseDropletActionsResponseNormalizer implements DenormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setActions($values);
+            $object->setActions(...$values);
             unset($data['actions']);
         }
         foreach ($data as $key => $value_2) {

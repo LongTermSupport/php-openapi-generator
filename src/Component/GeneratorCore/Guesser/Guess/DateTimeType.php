@@ -25,7 +25,7 @@ class DateTimeType extends ObjectType
     private string $inputFormat;
 
     /**
-     * @param bool|null $preferInterface indicator whether to use DateTime or DateTimeInterface as type hint
+     * @param bool $preferInterface indicator whether to use DateTime or DateTimeInterface as type hint
      */
     public function __construct(
         object $object,
@@ -34,11 +34,10 @@ class DateTimeType extends ObjectType
          */
         private string $outputFormat = DateTimeInterface::RFC3339,
         ?string $inputFormat = null,
-        private ?bool $preferInterface = null,
+        private bool $preferInterface = false,
     ) {
         parent::__construct($object, '\DateTime', '');
-        $this->inputFormat     = $inputFormat     ?? $this->outputFormat;
-        $this->preferInterface = $preferInterface ?? false;
+        $this->inputFormat = $inputFormat ?? $this->outputFormat;
     }
 
     #[Override]

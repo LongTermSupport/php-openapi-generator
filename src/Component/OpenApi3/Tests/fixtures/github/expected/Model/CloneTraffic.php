@@ -53,13 +53,10 @@ class CloneTraffic extends \ArrayObject
     {
         return $this->clones;
     }
-    /**
-     * @param list<Traffic> $clones
-     */
-    public function setClones(array $clones): self
+    public function setClones(Traffic ...$clones): self
     {
         $this->initialized['clones'] = true;
-        $this->clones = $clones;
+        $this->clones = array_values($clones);
         return $this;
     }
 }

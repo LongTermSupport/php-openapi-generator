@@ -70,13 +70,10 @@ class AppsDeploymentProgress extends \ArrayObject
     {
         return $this->steps;
     }
-    /**
-     * @param list<AppsDeploymentProgressStep> $steps
-     */
-    public function setSteps(array $steps): self
+    public function setSteps(AppsDeploymentProgressStep ...$steps): self
     {
         $this->initialized['steps'] = true;
-        $this->steps = $steps;
+        $this->steps = array_values($steps);
         return $this;
     }
     public function getSuccessSteps(): int
@@ -96,13 +93,10 @@ class AppsDeploymentProgress extends \ArrayObject
     {
         return $this->summarySteps;
     }
-    /**
-     * @param list<AppsDeploymentProgressStep> $summarySteps
-     */
-    public function setSummarySteps(array $summarySteps): self
+    public function setSummarySteps(AppsDeploymentProgressStep ...$summarySteps): self
     {
         $this->initialized['summarySteps'] = true;
-        $this->summarySteps = $summarySteps;
+        $this->summarySteps = array_values($summarySteps);
         return $this;
     }
     public function getTotalSteps(): int

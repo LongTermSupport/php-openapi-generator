@@ -55,7 +55,7 @@ class ExpansionsNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = $value;
                 }
             }
-            $object->setUsers($values);
+            $object->setUsers(...$values);
             unset($data['users']);
         }
         if (\array_key_exists('tweets', $data)) {
@@ -65,7 +65,7 @@ class ExpansionsNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_1[] = $value_1;
                 }
             }
-            $object->setTweets($values_1);
+            $object->setTweets(...$values_1);
             unset($data['tweets']);
         }
         if (\array_key_exists('places', $data)) {
@@ -75,7 +75,7 @@ class ExpansionsNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_2[] = $value_2;
                 }
             }
-            $object->setPlaces($values_2);
+            $object->setPlaces(...$values_2);
             unset($data['places']);
         }
         if (\array_key_exists('media', $data)) {
@@ -85,7 +85,7 @@ class ExpansionsNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_3[] = $value_3;
                 }
             }
-            $object->setMedia($values_3);
+            $object->setMedia(...$values_3);
             unset($data['media']);
         }
         if (\array_key_exists('polls', $data)) {
@@ -96,7 +96,7 @@ class ExpansionsNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_4[] = $value_5;
                 }
             }
-            $object->setPolls($values_4);
+            $object->setPolls(...$values_4);
             unset($data['polls']);
         }
         foreach ($data as $key => $value_6) {

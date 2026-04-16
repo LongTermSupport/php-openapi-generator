@@ -38,7 +38,7 @@ abstract class BaseEndpoint implements Endpoint
     public function getQueryString(): string
     {
         $optionsResolved = $this->getQueryOptionsResolver()->resolve($this->queryParameters);
-        $optionsResolved = array_map(static fn ($value) => $value ?? '', $optionsResolved);
+        $optionsResolved = array_filter($optionsResolved, static fn (mixed $value): bool => null !== $value);
 
         $allowReserved   = $this->getQueryAllowReserved();
         $queryParameters = [];

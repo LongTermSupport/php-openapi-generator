@@ -42,13 +42,10 @@ class AppsVpc extends \ArrayObject
     {
         return $this->egressIps;
     }
-    /**
-     * @param list<AppsVpcEgressIp> $egressIps
-     */
-    public function setEgressIps(array $egressIps): self
+    public function setEgressIps(AppsVpcEgressIp ...$egressIps): self
     {
         $this->initialized['egressIps'] = true;
-        $this->egressIps = $egressIps;
+        $this->egressIps = array_values($egressIps);
         return $this;
     }
 }

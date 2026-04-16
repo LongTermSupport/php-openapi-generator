@@ -48,7 +48,7 @@ class CheckSuitePreferencePreferencesNormalizer implements DenormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CheckSuitePreferencePreferencesConstraint());
         }
         if (\array_key_exists('auto_trigger_checks', $data)) {
@@ -59,7 +59,7 @@ class CheckSuitePreferencePreferencesNormalizer implements DenormalizerInterface
                     $values[] = $value_1;
                 }
             }
-            $object->setAutoTriggerChecks($values);
+            $object->setAutoTriggerChecks(...$values);
             unset($data['auto_trigger_checks']);
         }
         foreach ($data as $key => $value_2) {
@@ -91,7 +91,7 @@ class CheckSuitePreferencePreferencesNormalizer implements DenormalizerInterface
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CheckSuitePreferencePreferencesConstraint());
         }
         return $dataArray;

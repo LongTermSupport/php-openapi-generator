@@ -55,7 +55,7 @@ class ClusterRegistryNormalizer implements DenormalizerInterface, NormalizerInte
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setClusterUuids($values);
+            $object->setClusterUuids(...$values);
             unset($data['cluster_uuids']);
         }
         foreach ($data as $key => $value_1) {

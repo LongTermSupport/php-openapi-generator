@@ -48,7 +48,7 @@ class ReposOwnerRepoGitCommitsPostBodyNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoGitCommitsPostBodyConstraint());
         }
         if (\array_key_exists('message', $data)) {
@@ -66,7 +66,7 @@ class ReposOwnerRepoGitCommitsPostBodyNormalizer implements DenormalizerInterfac
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setParents($values);
+            $object->setParents(...$values);
             unset($data['parents']);
         }
         if (\array_key_exists('author', $data)) {
@@ -123,7 +123,7 @@ class ReposOwnerRepoGitCommitsPostBodyNormalizer implements DenormalizerInterfac
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReposOwnerRepoGitCommitsPostBodyConstraint());
         }
         return $dataArray;

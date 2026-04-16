@@ -39,13 +39,11 @@ class ResponseAllDomainsResponse extends \ArrayObject
     }
     /**
      * Array of volumes.
-     *
-     * @param list<Domain> $domains
      */
-    public function setDomains(array $domains): self
+    public function setDomains(Domain ...$domains): self
     {
         $this->initialized['domains'] = true;
-        $this->domains = $domains;
+        $this->domains = array_values($domains);
         return $this;
     }
     public function getLinks(): PageLinks

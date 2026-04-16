@@ -56,7 +56,7 @@ class AppMetricsBandwidthUsageNormalizer implements DenormalizerInterface, Norma
                     $values[] = $value_1;
                 }
             }
-            $object->setAppBandwidthUsage($values);
+            $object->setAppBandwidthUsage(...$values);
             unset($data['app_bandwidth_usage']);
         }
         if (\array_key_exists('date', $data)) {

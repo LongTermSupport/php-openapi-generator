@@ -37,13 +37,11 @@ class ApiCreateDataSourceFileUploadPresignedUrlsInputPublic extends \ArrayObject
     }
     /**
      * A list of files to generate presigned URLs for.
-     *
-     * @param list<ApiPresignedUrlFile> $files
      */
-    public function setFiles(array $files): self
+    public function setFiles(ApiPresignedUrlFile ...$files): self
     {
         $this->initialized['files'] = true;
-        $this->files = $files;
+        $this->files = array_values($files);
         return $this;
     }
 }

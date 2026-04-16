@@ -119,7 +119,7 @@ class UserAggregationRequestNormalizer implements DenormalizerInterface, Normali
                     $values_3[] = $value_5;
                 }
             }
-            $object->setAggregators($values_3);
+            $object->setAggregators(...$values_3);
             unset($data['aggregators']);
         }
         foreach ($data as $key => $value_6) {

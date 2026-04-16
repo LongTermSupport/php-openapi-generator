@@ -56,7 +56,7 @@ class ResponseAllRepositoriesNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setRepositories($values);
+            $object->setRepositories(...$values);
             unset($data['repositories']);
         }
         if (\array_key_exists('links', $data)) {

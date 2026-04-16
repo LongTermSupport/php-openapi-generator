@@ -38,7 +38,7 @@ class DateTimeGuesser implements GuesserInterface, TypeGuesserInterface
             throw new LogicException('Expected SchemaInterface, got ' . get_debug_type($object));
         }
 
-        return new DateTimeType($object, $this->outputDateFormat, $this->inputDateFormat, $this->preferInterface);
+        return new DateTimeType($object, $this->outputDateFormat, $this->inputDateFormat, true === $this->preferInterface);
     }
 
     protected function getSchemaClass(): string

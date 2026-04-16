@@ -36,10 +36,12 @@ class SchemaLoader implements SchemaLoaderInterface
             throw new LogicException('Expected string, got ' . get_debug_type($options['directory']));
         }
 
-        $rootClass = $options['root-class'] ?? '';
-        if (!\is_string($rootClass)) {
-            throw new LogicException('Expected string, got ' . get_debug_type($rootClass));
+        $rootClassRaw = $options['root-class'];
+        if (!\is_string($rootClassRaw)) {
+            throw new LogicException('Expected string, got ' . get_debug_type($rootClassRaw));
         }
+
+        $rootClass = $rootClassRaw;
 
         return new Schema($schema, $options['namespace'], $options['directory'], $rootClass);
     }

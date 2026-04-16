@@ -79,7 +79,7 @@ class PartnerAttachmentNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setVpcIds($values);
+            $object->setVpcIds(...$values);
             unset($data['vpc_ids']);
         }
         if (\array_key_exists('bgp', $data)) {
@@ -102,7 +102,7 @@ class PartnerAttachmentNormalizer implements DenormalizerInterface, NormalizerIn
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setChildren($values_1);
+            $object->setChildren(...$values_1);
             unset($data['children']);
         }
         foreach ($data as $key => $value_3) {

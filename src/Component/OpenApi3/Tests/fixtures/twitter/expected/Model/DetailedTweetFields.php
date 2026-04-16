@@ -63,13 +63,10 @@ class DetailedTweetFields extends \ArrayObject
     {
         return $this->contextAnnotation;
     }
-    /**
-     * @param list<ContextAnnotation> $contextAnnotation
-     */
-    public function setContextAnnotation(array $contextAnnotation): self
+    public function setContextAnnotation(ContextAnnotation ...$contextAnnotation): self
     {
         $this->initialized['contextAnnotation'] = true;
-        $this->contextAnnotation = $contextAnnotation;
+        $this->contextAnnotation = array_values($contextAnnotation);
         return $this;
     }
     /**

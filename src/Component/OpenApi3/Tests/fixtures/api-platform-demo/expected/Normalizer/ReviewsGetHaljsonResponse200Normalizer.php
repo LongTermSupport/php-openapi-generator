@@ -56,7 +56,7 @@ class ReviewsGetHaljsonResponse200Normalizer implements DenormalizerInterface, N
                     $values[] = $value_1;
                 }
             }
-            $object->setEmbedded($values);
+            $object->setEmbedded(...$values);
             unset($data['_embedded']);
         }
         if (\array_key_exists('totalItems', $data)) {

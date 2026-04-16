@@ -45,13 +45,11 @@ class ApiListAgentVersionsOutput extends \ArrayObject
     }
     /**
      * Agents
-     *
-     * @param list<ApiAgentVersion> $agentVersions
      */
-    public function setAgentVersions(array $agentVersions): self
+    public function setAgentVersions(ApiAgentVersion ...$agentVersions): self
     {
         $this->initialized['agentVersions'] = true;
-        $this->agentVersions = $agentVersions;
+        $this->agentVersions = array_values($agentVersions);
         return $this;
     }
     /**

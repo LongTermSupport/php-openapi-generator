@@ -75,13 +75,16 @@ trait GetTransformResponseBodyTrait
                     throw new LogicException('Expected Response, got ' . get_debug_type($response));
                 }
 
+                $responseDescriptionRaw = $response->getDescription();
+                $responseDescription    = null !== $responseDescriptionRaw ? $responseDescriptionRaw : '';
+
                 [$newOutputTypes, $newThrowTypes, $ifStatements] = $this->createResponseDenormalizationStatement(
                     $endpointName,
                     $status,
                     $response,
                     $context,
                     $reference,
-                    $response->getDescription() ?? '',
+                    $responseDescription,
                     $guessClass,
                     $exceptionGenerator
                 );
@@ -122,13 +125,16 @@ trait GetTransformResponseBodyTrait
                     throw new LogicException('Expected Response, got ' . get_debug_type($response));
                 }
 
+                $defaultResponseDescriptionRaw = $response->getDescription();
+                $defaultResponseDescription    = null !== $defaultResponseDescriptionRaw ? $defaultResponseDescriptionRaw : '';
+
                 [$newOutputTypes, $newThrowTypes, $ifStatements] = $this->createResponseDenormalizationStatement(
                     $endpointName,
                     'default',
                     $response,
                     $context,
                     $reference,
-                    $response->getDescription() ?? '',
+                    $defaultResponseDescription,
                     $guessClass,
                     $exceptionGenerator
                 );
@@ -163,7 +169,7 @@ trait GetTransformResponseBodyTrait
             // them in place causes a PHPStan `deadCode.unreachable` error.
             while ([] !== $outputStatements) {
                 $last = end($outputStatements);
-                if ($last instanceof Stmt\Return_ && $last->expr instanceof Expr\ConstFetch && 'null' === (string) $last->expr->name) {
+                if ($last instanceof Stmt\Return_ && $last->expr instanceof Expr\ConstFetch && 'null' === (string)$last->expr->name) {
                     array_pop($outputStatements);
                     // Also remove the corresponding 'null' from outputTypes since
                     // this null return is no longer emitted.
@@ -184,7 +190,7 @@ trait GetTransformResponseBodyTrait
                             [
                                 new Node\Arg(new Expr\Variable('status')),
                                 new Node\Arg(new Expr\Variable('body')),
-                                new Node\Arg(new Scalar\String_(\strtoupper($operation->getMethod()) . ' ' . $operation->getPath())),
+                                new Node\Arg(new Scalar\String_(strtoupper($operation->getMethod()) . ' ' . $operation->getPath())),
                             ]
                         )
                     )),

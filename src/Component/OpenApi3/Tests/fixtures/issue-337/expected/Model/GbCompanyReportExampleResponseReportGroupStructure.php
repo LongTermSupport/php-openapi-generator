@@ -31,13 +31,10 @@ class GbCompanyReportExampleResponseReportGroupStructure extends \ArrayObject
     {
         return $this->subsidiaryCompanies;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem> $subsidiaryCompanies
-     */
-    public function setSubsidiaryCompanies(array $subsidiaryCompanies): self
+    public function setSubsidiaryCompanies(GbCompanyReportExampleResponseReportGroupStructureSubsidiaryCompaniesItem ...$subsidiaryCompanies): self
     {
         $this->initialized['subsidiaryCompanies'] = true;
-        $this->subsidiaryCompanies = $subsidiaryCompanies;
+        $this->subsidiaryCompanies = array_values($subsidiaryCompanies);
         return $this;
     }
 }

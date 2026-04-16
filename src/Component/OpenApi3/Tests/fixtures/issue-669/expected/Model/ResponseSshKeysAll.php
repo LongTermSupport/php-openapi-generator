@@ -33,13 +33,10 @@ class ResponseSshKeysAll extends \ArrayObject
     {
         return $this->sshKeys;
     }
-    /**
-     * @param list<SshKeys> $sshKeys
-     */
-    public function setSshKeys(array $sshKeys): self
+    public function setSshKeys(SshKeys ...$sshKeys): self
     {
         $this->initialized['sshKeys'] = true;
-        $this->sshKeys = $sshKeys;
+        $this->sshKeys = array_values($sshKeys);
         return $this;
     }
     public function getLinks(): PageLinks

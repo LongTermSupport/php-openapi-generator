@@ -35,13 +35,10 @@ class ResponseRegistryOptionsResponseOptions extends \ArrayObject
     {
         return $this->availableRegions;
     }
-    /**
-     * @param list<string> $availableRegions
-     */
-    public function setAvailableRegions(array $availableRegions): self
+    public function setAvailableRegions(string ...$availableRegions): self
     {
         $this->initialized['availableRegions'] = true;
-        $this->availableRegions = $availableRegions;
+        $this->availableRegions = array_values($availableRegions);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class ResponseRegistryOptionsResponseOptions extends \ArrayObject
     {
         return $this->subscriptionTiers;
     }
-    /**
-     * @param list<ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem> $subscriptionTiers
-     */
-    public function setSubscriptionTiers(array $subscriptionTiers): self
+    public function setSubscriptionTiers(ResponseRegistryOptionsResponseOptionsSubscriptionTiersItem ...$subscriptionTiers): self
     {
         $this->initialized['subscriptionTiers'] = true;
-        $this->subscriptionTiers = $subscriptionTiers;
+        $this->subscriptionTiers = array_values($subscriptionTiers);
         return $this;
     }
 }

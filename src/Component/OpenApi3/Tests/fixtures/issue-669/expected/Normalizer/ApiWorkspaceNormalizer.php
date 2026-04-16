@@ -56,7 +56,7 @@ class ApiWorkspaceNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setAgents($values);
+            $object->setAgents(...$values);
             unset($data['agents']);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -87,7 +87,7 @@ class ApiWorkspaceNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values_1[] = $value_3;
                 }
             }
-            $object->setEvaluationTestCases($values_1);
+            $object->setEvaluationTestCases(...$values_1);
             unset($data['evaluation_test_cases']);
         }
         if (\array_key_exists('name', $data)) {

@@ -55,7 +55,7 @@ class SelectiveDestroyAssociatedResourceNormalizer implements DenormalizerInterf
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setFloatingIps($values);
+            $object->setFloatingIps(...$values);
             unset($data['floating_ips']);
         }
         if (\array_key_exists('reserved_ips', $data)) {
@@ -65,7 +65,7 @@ class SelectiveDestroyAssociatedResourceNormalizer implements DenormalizerInterf
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setReservedIps($values_1);
+            $object->setReservedIps(...$values_1);
             unset($data['reserved_ips']);
         }
         if (\array_key_exists('snapshots', $data)) {
@@ -75,7 +75,7 @@ class SelectiveDestroyAssociatedResourceNormalizer implements DenormalizerInterf
                     $values_2[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setSnapshots($values_2);
+            $object->setSnapshots(...$values_2);
             unset($data['snapshots']);
         }
         if (\array_key_exists('volumes', $data)) {
@@ -85,7 +85,7 @@ class SelectiveDestroyAssociatedResourceNormalizer implements DenormalizerInterf
                     $values_3[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setVolumes($values_3);
+            $object->setVolumes(...$values_3);
             unset($data['volumes']);
         }
         if (\array_key_exists('volume_snapshots', $data)) {
@@ -95,7 +95,7 @@ class SelectiveDestroyAssociatedResourceNormalizer implements DenormalizerInterf
                     $values_4[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setVolumeSnapshots($values_4);
+            $object->setVolumeSnapshots(...$values_4);
             unset($data['volume_snapshots']);
         }
         foreach ($data as $key => $value_5) {

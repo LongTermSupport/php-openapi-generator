@@ -27,9 +27,9 @@ class Property
         private ?Type $type = null,
         private readonly ?string $description = null,
         private readonly mixed $default = null,
-        ?bool $readOnly = null,
+        bool $readOnly = false,
     ) {
-        $this->readOnly = $readOnly ?? false;
+        $this->readOnly = $readOnly;
     }
 
     public function setPhpName(string $name): void

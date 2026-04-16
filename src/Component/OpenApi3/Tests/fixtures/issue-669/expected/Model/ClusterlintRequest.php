@@ -55,13 +55,11 @@ class ClusterlintRequest extends \ArrayObject
     }
     /**
      * An array of check groups that will be run when clusterlint executes checks.
-     *
-     * @param list<string> $includeGroups
      */
-    public function setIncludeGroups(array $includeGroups): self
+    public function setIncludeGroups(string ...$includeGroups): self
     {
         $this->initialized['includeGroups'] = true;
-        $this->includeGroups = $includeGroups;
+        $this->includeGroups = array_values($includeGroups);
         return $this;
     }
     /**
@@ -75,13 +73,11 @@ class ClusterlintRequest extends \ArrayObject
     }
     /**
      * An array of checks that will be run when clusterlint executes checks.
-     *
-     * @param list<string> $includeChecks
      */
-    public function setIncludeChecks(array $includeChecks): self
+    public function setIncludeChecks(string ...$includeChecks): self
     {
         $this->initialized['includeChecks'] = true;
-        $this->includeChecks = $includeChecks;
+        $this->includeChecks = array_values($includeChecks);
         return $this;
     }
     /**
@@ -95,13 +91,11 @@ class ClusterlintRequest extends \ArrayObject
     }
     /**
      * An array of check groups that will be omitted when clusterlint executes checks.
-     *
-     * @param list<string> $excludeGroups
      */
-    public function setExcludeGroups(array $excludeGroups): self
+    public function setExcludeGroups(string ...$excludeGroups): self
     {
         $this->initialized['excludeGroups'] = true;
-        $this->excludeGroups = $excludeGroups;
+        $this->excludeGroups = array_values($excludeGroups);
         return $this;
     }
     /**
@@ -115,13 +109,11 @@ class ClusterlintRequest extends \ArrayObject
     }
     /**
      * An array of checks that will be run when clusterlint executes checks.
-     *
-     * @param list<string> $excludeChecks
      */
-    public function setExcludeChecks(array $excludeChecks): self
+    public function setExcludeChecks(string ...$excludeChecks): self
     {
         $this->initialized['excludeChecks'] = true;
-        $this->excludeChecks = $excludeChecks;
+        $this->excludeChecks = array_values($excludeChecks);
         return $this;
     }
 }

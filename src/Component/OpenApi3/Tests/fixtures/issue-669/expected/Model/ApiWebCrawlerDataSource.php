@@ -118,13 +118,11 @@ class ApiWebCrawlerDataSource extends \ArrayObject
     }
     /**
      * Declaring which tags to exclude in web pages while webcrawling
-     *
-     * @param list<string> $excludeTags
      */
-    public function setExcludeTags(array $excludeTags): self
+    public function setExcludeTags(string ...$excludeTags): self
     {
         $this->initialized['excludeTags'] = true;
-        $this->excludeTags = $excludeTags;
+        $this->excludeTags = array_values($excludeTags);
         return $this;
     }
 }

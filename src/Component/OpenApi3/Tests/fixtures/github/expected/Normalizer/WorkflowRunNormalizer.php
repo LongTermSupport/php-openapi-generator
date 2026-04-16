@@ -48,7 +48,7 @@ class WorkflowRunNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\WorkflowRunConstraint());
         }
         if (\array_key_exists('id', $data)) {
@@ -248,7 +248,7 @@ class WorkflowRunNormalizer implements DenormalizerInterface, NormalizerInterfac
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\WorkflowRunConstraint());
         }
         return $dataArray;

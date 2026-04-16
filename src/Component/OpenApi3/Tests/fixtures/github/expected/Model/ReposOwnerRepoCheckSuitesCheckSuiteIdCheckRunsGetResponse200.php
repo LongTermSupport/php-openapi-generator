@@ -42,13 +42,10 @@ class ReposOwnerRepoCheckSuitesCheckSuiteIdCheckRunsGetResponse200 extends \Arra
     {
         return $this->checkRuns;
     }
-    /**
-     * @param list<CheckRun> $checkRuns
-     */
-    public function setCheckRuns(array $checkRuns): self
+    public function setCheckRuns(CheckRun ...$checkRuns): self
     {
         $this->initialized['checkRuns'] = true;
-        $this->checkRuns = $checkRuns;
+        $this->checkRuns = array_values($checkRuns);
         return $this;
     }
 }

@@ -67,7 +67,7 @@ class ApiWebCrawlerDataSourceNormalizer implements DenormalizerInterface, Normal
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setExcludeTags($values);
+            $object->setExcludeTags(...$values);
             unset($data['exclude_tags']);
         }
         foreach ($data as $key => $value_1) {

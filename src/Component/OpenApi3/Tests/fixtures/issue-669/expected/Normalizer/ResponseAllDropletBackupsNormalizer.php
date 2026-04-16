@@ -56,7 +56,7 @@ class ResponseAllDropletBackupsNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value_1;
                 }
             }
-            $object->setBackups($values);
+            $object->setBackups(...$values);
             unset($data['backups']);
         }
         if (\array_key_exists('links', $data)) {

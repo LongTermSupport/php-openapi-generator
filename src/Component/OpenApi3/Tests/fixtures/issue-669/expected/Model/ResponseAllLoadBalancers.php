@@ -33,13 +33,10 @@ class ResponseAllLoadBalancers extends \ArrayObject
     {
         return $this->loadBalancers;
     }
-    /**
-     * @param list<LoadBalancer> $loadBalancers
-     */
-    public function setLoadBalancers(array $loadBalancers): self
+    public function setLoadBalancers(LoadBalancer ...$loadBalancers): self
     {
         $this->initialized['loadBalancers'] = true;
-        $this->loadBalancers = $loadBalancers;
+        $this->loadBalancers = array_values($loadBalancers);
         return $this;
     }
     public function getLinks(): PageLinks

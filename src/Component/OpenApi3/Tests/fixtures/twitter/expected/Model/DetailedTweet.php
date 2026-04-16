@@ -181,13 +181,11 @@ class DetailedTweet extends \ArrayObject
     }
     /**
      * A list of Tweets this Tweet refers to. For example, if the parent Tweet is a Retweet, a Quoted Tweet or a Reply, it will include the related Tweet referenced to by its parent.
-     *
-     * @param list<CompactTweetFieldsReferencedTweetsItem> $referencedTweets
      */
-    public function setReferencedTweets(array $referencedTweets): self
+    public function setReferencedTweets(CompactTweetFieldsReferencedTweetsItem ...$referencedTweets): self
     {
         $this->initialized['referencedTweets'] = true;
-        $this->referencedTweets = $referencedTweets;
+        $this->referencedTweets = array_values($referencedTweets);
         return $this;
     }
     /**
@@ -271,13 +269,10 @@ class DetailedTweet extends \ArrayObject
     {
         return $this->contextAnnotation;
     }
-    /**
-     * @param list<ContextAnnotation> $contextAnnotation
-     */
-    public function setContextAnnotation(array $contextAnnotation): self
+    public function setContextAnnotation(ContextAnnotation ...$contextAnnotation): self
     {
         $this->initialized['contextAnnotation'] = true;
-        $this->contextAnnotation = $contextAnnotation;
+        $this->contextAnnotation = array_values($contextAnnotation);
         return $this;
     }
     /**

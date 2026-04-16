@@ -61,7 +61,7 @@ class ResponseAllChecksNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $values_1;
                 }
             }
-            $object->setChecks($values);
+            $object->setChecks(...$values);
             unset($data['checks']);
         }
         if (\array_key_exists('links', $data)) {

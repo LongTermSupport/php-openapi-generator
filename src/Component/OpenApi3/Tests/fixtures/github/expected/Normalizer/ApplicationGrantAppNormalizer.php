@@ -48,7 +48,7 @@ class ApplicationGrantAppNormalizer implements DenormalizerInterface, Normalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ApplicationGrantAppConstraint());
         }
         if (\array_key_exists('client_id', $data)) {
@@ -88,7 +88,7 @@ class ApplicationGrantAppNormalizer implements DenormalizerInterface, Normalizer
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ApplicationGrantAppConstraint());
         }
         return $dataArray;

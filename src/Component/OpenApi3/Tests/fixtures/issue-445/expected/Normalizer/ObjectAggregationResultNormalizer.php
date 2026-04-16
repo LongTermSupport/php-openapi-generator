@@ -59,7 +59,7 @@ class ObjectAggregationResultNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setAggregationResults($values);
+            $object->setAggregationResults(...$values);
         }
         if (\array_key_exists('searchString', $data)) {
             $object->setSearchString(TypeValidator::assertNullableString($data['searchString'], 'searchString'));

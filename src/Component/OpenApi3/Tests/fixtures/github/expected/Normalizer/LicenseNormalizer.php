@@ -48,7 +48,7 @@ class LicenseNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\LicenseConstraint());
         }
         if (\array_key_exists('key', $data)) {
@@ -90,7 +90,7 @@ class LicenseNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setPermissions($values);
+            $object->setPermissions(...$values);
             unset($data['permissions']);
         }
         if (\array_key_exists('conditions', $data)) {
@@ -100,7 +100,7 @@ class LicenseNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setConditions($values_1);
+            $object->setConditions(...$values_1);
             unset($data['conditions']);
         }
         if (\array_key_exists('limitations', $data)) {
@@ -110,7 +110,7 @@ class LicenseNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_2[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setLimitations($values_2);
+            $object->setLimitations(...$values_2);
             unset($data['limitations']);
         }
         if (\array_key_exists('body', $data)) {
@@ -178,7 +178,7 @@ class LicenseNormalizer implements DenormalizerInterface, NormalizerInterface, D
                 $dataArray[$key] = $value_3;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\LicenseConstraint());
         }
         return $dataArray;

@@ -77,13 +77,10 @@ class AppsDomain extends \ArrayObject
     {
         return $this->validations;
     }
-    /**
-     * @param list<AppDomainValidation> $validations
-     */
-    public function setValidations(array $validations): self
+    public function setValidations(AppDomainValidation ...$validations): self
     {
         $this->initialized['validations'] = true;
-        $this->validations = $validations;
+        $this->validations = array_values($validations);
         return $this;
     }
     public function getRotateValidationRecords(): bool

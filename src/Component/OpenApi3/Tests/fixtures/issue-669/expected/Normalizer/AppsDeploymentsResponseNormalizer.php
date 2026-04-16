@@ -56,7 +56,7 @@ class AppsDeploymentsResponseNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setDeployments($values);
+            $object->setDeployments(...$values);
             unset($data['deployments']);
         }
         if (\array_key_exists('links', $data)) {

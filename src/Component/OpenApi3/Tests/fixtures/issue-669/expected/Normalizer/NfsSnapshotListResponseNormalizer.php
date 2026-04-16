@@ -56,7 +56,7 @@ class NfsSnapshotListResponseNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setSnapshots($values);
+            $object->setSnapshots(...$values);
             unset($data['snapshots']);
         }
         foreach ($data as $key => $value_2) {

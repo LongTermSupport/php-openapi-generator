@@ -75,7 +75,7 @@ class AddonsAppMetadataNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setOptions($values);
+            $object->setOptions(...$values);
             unset($data['options']);
         }
         foreach ($data as $key => $value_1) {

@@ -42,13 +42,10 @@ class AppFunctionsComponentHealth extends \ArrayObject
     {
         return $this->functionsComponentHealthMetrics;
     }
-    /**
-     * @param list<AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem> $functionsComponentHealthMetrics
-     */
-    public function setFunctionsComponentHealthMetrics(array $functionsComponentHealthMetrics): self
+    public function setFunctionsComponentHealthMetrics(AppFunctionsComponentHealthFunctionsComponentHealthMetricsItem ...$functionsComponentHealthMetrics): self
     {
         $this->initialized['functionsComponentHealthMetrics'] = true;
-        $this->functionsComponentHealthMetrics = $functionsComponentHealthMetrics;
+        $this->functionsComponentHealthMetrics = array_values($functionsComponentHealthMetrics);
         return $this;
     }
 }

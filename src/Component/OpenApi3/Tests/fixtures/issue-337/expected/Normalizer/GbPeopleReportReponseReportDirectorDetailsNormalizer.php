@@ -105,7 +105,7 @@ class GbPeopleReportReponseReportDirectorDetailsNormalizer implements Denormaliz
                     $values[] = $value_2;
                 }
             }
-            $object->setPositions($values);
+            $object->setPositions(...$values);
             unset($data['positions']);
         }
         if (\array_key_exists('additionalData', $data)) {

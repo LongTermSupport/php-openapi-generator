@@ -151,13 +151,11 @@ class DatabaseReplicaRead extends \ArrayObject
     }
     /**
      * A flat array of tag names as strings applied to the read-only replica.<br><br>Requires `tag:read` scope.
-     *
-     * @param list<string> $tags
      */
-    public function setTags(array $tags): self
+    public function setTags(string ...$tags): self
     {
         $this->initialized['tags'] = true;
-        $this->tags = $tags;
+        $this->tags = array_values($tags);
         return $this;
     }
     /**

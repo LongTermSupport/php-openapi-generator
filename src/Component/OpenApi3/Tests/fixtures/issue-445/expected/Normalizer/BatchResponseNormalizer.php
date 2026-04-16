@@ -56,7 +56,7 @@ class BatchResponseNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = $value_1;
                 }
             }
-            $object->setRows($values);
+            $object->setRows(...$values);
         }
         return $object;
     }

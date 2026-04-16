@@ -48,7 +48,7 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyNormalizer implements Denormalize
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TeamsTeamIdTeamSyncGroupMappingsPatchBodyConstraint());
         }
         if (\array_key_exists('groups', $data)) {
@@ -59,7 +59,7 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyNormalizer implements Denormalize
                     $values[] = $value_1;
                 }
             }
-            $object->setGroups($values);
+            $object->setGroups(...$values);
             unset($data['groups']);
         }
         if (\array_key_exists('synced_at', $data)) {
@@ -96,7 +96,7 @@ class TeamsTeamIdTeamSyncGroupMappingsPatchBodyNormalizer implements Denormalize
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\TeamsTeamIdTeamSyncGroupMappingsPatchBodyConstraint());
         }
         return $dataArray;

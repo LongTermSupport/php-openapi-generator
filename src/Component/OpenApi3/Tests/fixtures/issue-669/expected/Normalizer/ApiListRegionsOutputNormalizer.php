@@ -56,7 +56,7 @@ class ApiListRegionsOutputNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $value_1;
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         foreach ($data as $key => $value_2) {

@@ -61,7 +61,7 @@ class DetailedTweetFieldsNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = $value_2;
                 }
             }
-            $object->setContextAnnotation($values);
+            $object->setContextAnnotation(...$values);
             unset($data['context_annotation']);
         }
         if (\array_key_exists('possibly_sensitive', $data)) {

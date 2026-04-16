@@ -48,7 +48,7 @@ class CommitCommentNormalizer implements DenormalizerInterface, NormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommitCommentConstraint());
         }
         if (\array_key_exists('html_url', $data)) {
@@ -170,7 +170,7 @@ class CommitCommentNormalizer implements DenormalizerInterface, NormalizerInterf
                 $dataArray[$key] = $value;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CommitCommentConstraint());
         }
         return $dataArray;

@@ -42,13 +42,10 @@ class SearchResultTextMatchesItemMatchesItem extends \ArrayObject
     {
         return $this->indices;
     }
-    /**
-     * @param list<int> $indices
-     */
-    public function setIndices(array $indices): self
+    public function setIndices(int ...$indices): self
     {
         $this->initialized['indices'] = true;
-        $this->indices = $indices;
+        $this->indices = array_values($indices);
         return $this;
     }
 }

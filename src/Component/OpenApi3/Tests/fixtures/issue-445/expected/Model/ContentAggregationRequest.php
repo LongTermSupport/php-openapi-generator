@@ -276,13 +276,11 @@ class ContentAggregationRequest extends \ArrayObject
     }
     /**
      * List of aggregators that defines how the items should be aggregated.
-     *
-     * @param list<AggregatorBase> $aggregators
      */
-    public function setAggregators(array $aggregators): self
+    public function setAggregators(AggregatorBase ...$aggregators): self
     {
         $this->initialized['aggregators'] = true;
-        $this->aggregators = $aggregators;
+        $this->aggregators = array_values($aggregators);
         return $this;
     }
 }

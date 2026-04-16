@@ -57,13 +57,11 @@ class ReposOwnerRepoTransferPostBody extends \ArrayObject
     }
     /**
      * ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.
-     *
-     * @param list<int> $teamIds
      */
-    public function setTeamIds(array $teamIds): self
+    public function setTeamIds(int ...$teamIds): self
     {
         $this->initialized['teamIds'] = true;
-        $this->teamIds = $teamIds;
+        $this->teamIds = array_values($teamIds);
         return $this;
     }
 }

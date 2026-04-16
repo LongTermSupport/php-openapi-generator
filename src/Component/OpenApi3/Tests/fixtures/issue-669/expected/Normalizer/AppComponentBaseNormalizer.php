@@ -101,7 +101,7 @@ class AppComponentBaseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_6;
                 }
             }
-            $object->setEnvs($values);
+            $object->setEnvs(...$values);
             unset($data['envs']);
         }
         if (\array_key_exists('environment_slug', $data)) {
@@ -116,7 +116,7 @@ class AppComponentBaseNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = $value_8;
                 }
             }
-            $object->setLogDestinations($values_1);
+            $object->setLogDestinations(...$values_1);
             unset($data['log_destinations']);
         }
         foreach ($data as $key => $value_9) {

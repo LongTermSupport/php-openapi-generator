@@ -32,12 +32,12 @@ class ResponseAllNodePools extends \ArrayObject
         return $this->nodePools;
     }
     /**
-     * @param list<array<string, mixed>> $nodePools
+     * @param array<string, mixed> ...$nodePools
      */
-    public function setNodePools(array $nodePools): self
+    public function setNodePools(array ...$nodePools): self
     {
         $this->initialized['nodePools'] = true;
-        $this->nodePools = $nodePools;
+        $this->nodePools = array_values($nodePools);
         return $this;
     }
 }

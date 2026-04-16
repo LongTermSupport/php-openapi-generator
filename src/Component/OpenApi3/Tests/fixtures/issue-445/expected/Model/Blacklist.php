@@ -34,13 +34,11 @@ class Blacklist
     }
     /**
      * Blacklist entries.
-     *
-     * @param list<BlacklistItem> $items
      */
-    public function setItems(array $items): self
+    public function setItems(BlacklistItem ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

@@ -84,7 +84,7 @@ class BookJsonhalNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setReviews($values);
+            $object->setReviews(...$values);
             unset($data['reviews']);
         }
         if (\array_key_exists('cover', $data)) {

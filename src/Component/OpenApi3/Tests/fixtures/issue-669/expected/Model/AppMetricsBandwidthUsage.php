@@ -41,13 +41,11 @@ class AppMetricsBandwidthUsage extends \ArrayObject
     }
     /**
      * A list of bandwidth usage details by app.
-     *
-     * @param list<AppMetricsBandwidthUsageDetails> $appBandwidthUsage
      */
-    public function setAppBandwidthUsage(array $appBandwidthUsage): self
+    public function setAppBandwidthUsage(AppMetricsBandwidthUsageDetails ...$appBandwidthUsage): self
     {
         $this->initialized['appBandwidthUsage'] = true;
-        $this->appBandwidthUsage = $appBandwidthUsage;
+        $this->appBandwidthUsage = array_values($appBandwidthUsage);
         return $this;
     }
     /**

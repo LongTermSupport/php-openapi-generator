@@ -31,13 +31,10 @@ class Hovercard extends \ArrayObject
     {
         return $this->contexts;
     }
-    /**
-     * @param list<HovercardContextsItem> $contexts
-     */
-    public function setContexts(array $contexts): self
+    public function setContexts(HovercardContextsItem ...$contexts): self
     {
         $this->initialized['contexts'] = true;
-        $this->contexts = $contexts;
+        $this->contexts = array_values($contexts);
         return $this;
     }
 }

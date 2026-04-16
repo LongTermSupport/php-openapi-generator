@@ -33,13 +33,10 @@ class ResponseByoipPrefixListResources extends \ArrayObject
     {
         return $this->ips;
     }
-    /**
-     * @param list<ByoipPrefixResource> $ips
-     */
-    public function setIps(array $ips): self
+    public function setIps(ByoipPrefixResource ...$ips): self
     {
         $this->initialized['ips'] = true;
-        $this->ips = $ips;
+        $this->ips = array_values($ips);
         return $this;
     }
     public function getLinks(): PageLinks

@@ -77,13 +77,11 @@ class KubernetesVersion extends \ArrayObject
     }
     /**
      * The features available with the version of Kubernetes provided by a given slug.
-     *
-     * @param list<string> $supportedFeatures
      */
-    public function setSupportedFeatures(array $supportedFeatures): self
+    public function setSupportedFeatures(string ...$supportedFeatures): self
     {
         $this->initialized['supportedFeatures'] = true;
-        $this->supportedFeatures = $supportedFeatures;
+        $this->supportedFeatures = array_values($supportedFeatures);
         return $this;
     }
 }

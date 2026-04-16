@@ -170,13 +170,11 @@ class Channel
     }
     /**
      * Default sort order specified for the channel to sort the results of a content search.
-     *
-     * @param list<SortInfo> $sort
      */
-    public function setSort(array $sort): self
+    public function setSort(SortInfo ...$sort): self
     {
         $this->initialized['sort'] = true;
-        $this->sort = $sort;
+        $this->sort = array_values($sort);
         return $this;
     }
     /**
@@ -190,13 +188,11 @@ class Channel
     }
     /**
      * Fields to be used for sorting in content browser when displaying the channel. The information is only set and consumed by the client, not by the server.
-     *
-     * @param list<SortField> $sortFields
      */
-    public function setSortFields(array $sortFields): self
+    public function setSortFields(SortField ...$sortFields): self
     {
         $this->initialized['sortFields'] = true;
-        $this->sortFields = $sortFields;
+        $this->sortFields = array_values($sortFields);
         return $this;
     }
     /**
@@ -210,13 +206,11 @@ class Channel
     }
     /**
      * An optional list of aggregators. These aggregations are added by default on each aggregation requests.
-     *
-     * @param list<AggregatorBase> $aggregations
      */
-    public function setAggregations(array $aggregations): self
+    public function setAggregations(AggregatorBase ...$aggregations): self
     {
         $this->initialized['aggregations'] = true;
-        $this->aggregations = $aggregations;
+        $this->aggregations = array_values($aggregations);
         return $this;
     }
     /**
@@ -230,13 +224,11 @@ class Channel
     }
     /**
      * An Optional list of fields. These fields extend the list of simple search fields outside the bounds of any schema field configuration.
-     *
-     * @param list<string> $extendedSimpleSearchFields
      */
-    public function setExtendedSimpleSearchFields(array $extendedSimpleSearchFields): self
+    public function setExtendedSimpleSearchFields(string ...$extendedSimpleSearchFields): self
     {
         $this->initialized['extendedSimpleSearchFields'] = true;
-        $this->extendedSimpleSearchFields = $extendedSimpleSearchFields;
+        $this->extendedSimpleSearchFields = array_values($extendedSimpleSearchFields);
         return $this;
     }
     /**
@@ -250,13 +242,11 @@ class Channel
     }
     /**
      * User roles granted access to the channel.
-     *
-     * @param list<string> $grantedUserRoleIds
      */
-    public function setGrantedUserRoleIds(array $grantedUserRoleIds): self
+    public function setGrantedUserRoleIds(string ...$grantedUserRoleIds): self
     {
         $this->initialized['grantedUserRoleIds'] = true;
-        $this->grantedUserRoleIds = $grantedUserRoleIds;
+        $this->grantedUserRoleIds = array_values($grantedUserRoleIds);
         return $this;
     }
     /**

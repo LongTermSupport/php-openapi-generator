@@ -60,7 +60,7 @@ class AccessCountriesResponseNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setCountryAccess($values);
+            $object->setCountryAccess(...$values);
             unset($data['countryAccess']);
         }
         foreach ($data as $key => $value_2) {

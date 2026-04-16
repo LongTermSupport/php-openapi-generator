@@ -56,7 +56,7 @@ class AppsResponseNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = $value_1;
                 }
             }
-            $object->setApps($values);
+            $object->setApps(...$values);
             unset($data['apps']);
         }
         if (\array_key_exists('links', $data)) {

@@ -48,13 +48,11 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * The ids of the list items whose fields need to be updated.
-     *
-     * @param list<string> $listItemIds
      */
-    public function setListItemIds(array $listItemIds): self
+    public function setListItemIds(string ...$listItemIds): self
     {
         $this->initialized['listItemIds'] = true;
-        $this->listItemIds = $listItemIds;
+        $this->listItemIds = array_values($listItemIds);
         return $this;
     }
     /**
@@ -68,13 +66,11 @@ class ListItemFieldsBatchUpdateRequest
     }
     /**
      * Changes that need to be applied to the existing list items. The same set of changes is applied to all list items.
-     *
-     * @param list<MetadataValuesChangeCommandBase> $changeCommands
      */
-    public function setChangeCommands(array $changeCommands): self
+    public function setChangeCommands(MetadataValuesChangeCommandBase ...$changeCommands): self
     {
         $this->initialized['changeCommands'] = true;
-        $this->changeCommands = $changeCommands;
+        $this->changeCommands = array_values($changeCommands);
         return $this;
     }
     /**

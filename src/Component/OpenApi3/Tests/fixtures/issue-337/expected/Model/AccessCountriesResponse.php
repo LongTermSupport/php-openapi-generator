@@ -42,13 +42,10 @@ class AccessCountriesResponse extends \ArrayObject
     {
         return $this->countryAccess;
     }
-    /**
-     * @param list<AccessCountriesResponseCountryAccessItem> $countryAccess
-     */
-    public function setCountryAccess(array $countryAccess): self
+    public function setCountryAccess(AccessCountriesResponseCountryAccessItem ...$countryAccess): self
     {
         $this->initialized['countryAccess'] = true;
-        $this->countryAccess = $countryAccess;
+        $this->countryAccess = array_values($countryAccess);
         return $this;
     }
 }

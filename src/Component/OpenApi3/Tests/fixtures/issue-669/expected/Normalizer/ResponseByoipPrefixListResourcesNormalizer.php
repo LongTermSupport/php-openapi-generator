@@ -56,7 +56,7 @@ class ResponseByoipPrefixListResourcesNormalizer implements DenormalizerInterfac
                     $values[] = $value_1;
                 }
             }
-            $object->setIps($values);
+            $object->setIps(...$values);
             unset($data['ips']);
         }
         if (\array_key_exists('links', $data)) {

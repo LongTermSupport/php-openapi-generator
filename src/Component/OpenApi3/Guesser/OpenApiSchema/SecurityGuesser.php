@@ -51,7 +51,12 @@ class SecurityGuesser implements GuesserInterface, ClassGuesserInterface
                     throw new LogicException('Expected APIKeySecurityScheme, got ' . get_debug_type($object));
                 }
 
-                $securitySchemeGuess->setIn($object->getIn() ?? '');
+                $apiKeyIn = $object->getIn();
+                if (!\is_string($apiKeyIn)) {
+                    throw new LogicException('Expected string API key "in" value, got ' . get_debug_type($apiKeyIn));
+                }
+
+                $securitySchemeGuess->setIn($apiKeyIn);
                 break;
         }
 

@@ -39,13 +39,10 @@ class ApiListAgentsByWorkspaceOutput extends \ArrayObject
     {
         return $this->agents;
     }
-    /**
-     * @param list<ApiAgent> $agents
-     */
-    public function setAgents(array $agents): self
+    public function setAgents(ApiAgent ...$agents): self
     {
         $this->initialized['agents'] = true;
-        $this->agents = $agents;
+        $this->agents = array_values($agents);
         return $this;
     }
     /**

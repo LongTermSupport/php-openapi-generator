@@ -56,7 +56,7 @@ class ComplianceSearchResultDataBodySearchResultNormalizer implements Denormaliz
                     $values[] = $value_1;
                 }
             }
-            $object->setRecords($values);
+            $object->setRecords(...$values);
             unset($data['records']);
         }
         if (\array_key_exists('searchEngineVersion', $data)) {

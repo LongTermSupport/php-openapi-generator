@@ -32,12 +32,12 @@ class ResponseKafkaTopics extends \ArrayObject
         return $this->topics;
     }
     /**
-     * @param list<array<string, mixed>> $topics
+     * @param array<string, mixed> ...$topics
      */
-    public function setTopics(array $topics): self
+    public function setTopics(array ...$topics): self
     {
         $this->initialized['topics'] = true;
-        $this->topics = $topics;
+        $this->topics = array_values($topics);
         return $this;
     }
 }

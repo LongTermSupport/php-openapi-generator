@@ -252,13 +252,10 @@ class GistFull extends \ArrayObject
     {
         return $this->forks;
     }
-    /**
-     * @param list<GistFullforksItem> $forks
-     */
-    public function setForks(array $forks): self
+    public function setForks(GistFullforksItem ...$forks): self
     {
         $this->initialized['forks'] = true;
-        $this->forks = $forks;
+        $this->forks = array_values($forks);
         return $this;
     }
     /**
@@ -268,13 +265,10 @@ class GistFull extends \ArrayObject
     {
         return $this->history;
     }
-    /**
-     * @param list<GistFullhistoryItem> $history
-     */
-    public function setHistory(array $history): self
+    public function setHistory(GistFullhistoryItem ...$history): self
     {
         $this->initialized['history'] = true;
-        $this->history = $history;
+        $this->history = array_values($history);
         return $this;
     }
     public function getForkOf(): ?GistFullforkOf

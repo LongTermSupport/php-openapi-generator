@@ -139,13 +139,11 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * Any retriever span chunks that were included as part of the span.
-     *
-     * @param list<ApiPromptChunk> $retrieverChunks
      */
-    public function setRetrieverChunks(array $retrieverChunks): self
+    public function setRetrieverChunks(ApiPromptChunk ...$retrieverChunks): self
     {
         $this->initialized['retrieverChunks'] = true;
-        $this->retrieverChunks = $retrieverChunks;
+        $this->retrieverChunks = array_values($retrieverChunks);
         return $this;
     }
     /**
@@ -159,13 +157,11 @@ class ApiEvaluationTraceSpan extends \ArrayObject
     }
     /**
      * The span-level metric results.
-     *
-     * @param list<ApiEvaluationMetricResult> $spanLevelMetricResults
      */
-    public function setSpanLevelMetricResults(array $spanLevelMetricResults): self
+    public function setSpanLevelMetricResults(ApiEvaluationMetricResult ...$spanLevelMetricResults): self
     {
         $this->initialized['spanLevelMetricResults'] = true;
-        $this->spanLevelMetricResults = $spanLevelMetricResults;
+        $this->spanLevelMetricResults = array_values($spanLevelMetricResults);
         return $this;
     }
     /**

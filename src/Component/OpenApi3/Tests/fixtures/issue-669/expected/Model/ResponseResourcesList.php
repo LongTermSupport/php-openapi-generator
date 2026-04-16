@@ -39,13 +39,11 @@ class ResponseResourcesList extends \ArrayObject
     }
     /**
      * The resources that are assigned to this project. Only resources that you are authorized to see will be returned.
-     *
-     * @param list<Resource> $resources
      */
-    public function setResources(array $resources): self
+    public function setResources(Resource ...$resources): self
     {
         $this->initialized['resources'] = true;
-        $this->resources = $resources;
+        $this->resources = array_values($resources);
         return $this;
     }
     public function getLinks(): PageLinks

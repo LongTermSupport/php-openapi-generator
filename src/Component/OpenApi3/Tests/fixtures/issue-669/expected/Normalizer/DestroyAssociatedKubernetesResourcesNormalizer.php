@@ -55,7 +55,7 @@ class DestroyAssociatedKubernetesResourcesNormalizer implements DenormalizerInte
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setLoadBalancers($values);
+            $object->setLoadBalancers(...$values);
             unset($data['load_balancers']);
         }
         if (\array_key_exists('volumes', $data)) {
@@ -65,7 +65,7 @@ class DestroyAssociatedKubernetesResourcesNormalizer implements DenormalizerInte
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setVolumes($values_1);
+            $object->setVolumes(...$values_1);
             unset($data['volumes']);
         }
         if (\array_key_exists('volume_snapshots', $data)) {
@@ -75,7 +75,7 @@ class DestroyAssociatedKubernetesResourcesNormalizer implements DenormalizerInte
                     $values_2[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setVolumeSnapshots($values_2);
+            $object->setVolumeSnapshots(...$values_2);
             unset($data['volume_snapshots']);
         }
         foreach ($data as $key => $value_3) {

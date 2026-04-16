@@ -56,7 +56,7 @@ class ResponseAllCdnEndpointsNormalizer implements DenormalizerInterface, Normal
                     $values[] = $value_1;
                 }
             }
-            $object->setEndpoints($values);
+            $object->setEndpoints(...$values);
             unset($data['endpoints']);
         }
         if (\array_key_exists('links', $data)) {

@@ -51,13 +51,10 @@ class AppsRegion extends \ArrayObject
     {
         return $this->dataCenters;
     }
-    /**
-     * @param list<string> $dataCenters
-     */
-    public function setDataCenters(array $dataCenters): self
+    public function setDataCenters(string ...$dataCenters): self
     {
         $this->initialized['dataCenters'] = true;
-        $this->dataCenters = $dataCenters;
+        $this->dataCenters = array_values($dataCenters);
         return $this;
     }
     /**

@@ -33,13 +33,10 @@ class ResponseAllImages extends \ArrayObject
     {
         return $this->images;
     }
-    /**
-     * @param list<Image> $images
-     */
-    public function setImages(array $images): self
+    public function setImages(Image ...$images): self
     {
         $this->initialized['images'] = true;
-        $this->images = $images;
+        $this->images = array_values($images);
         return $this;
     }
     public function getLinks(): PageLinks

@@ -33,13 +33,10 @@ class ResponseAllPartnerAttachments extends \ArrayObject
     {
         return $this->partnerAttachments;
     }
-    /**
-     * @param list<PartnerAttachment> $partnerAttachments
-     */
-    public function setPartnerAttachments(array $partnerAttachments): self
+    public function setPartnerAttachments(PartnerAttachment ...$partnerAttachments): self
     {
         $this->initialized['partnerAttachments'] = true;
-        $this->partnerAttachments = $partnerAttachments;
+        $this->partnerAttachments = array_values($partnerAttachments);
         return $this;
     }
     public function getLinks(): PageLinks

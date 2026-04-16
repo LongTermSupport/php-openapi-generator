@@ -33,13 +33,10 @@ class ResponseFloatingIpList extends \ArrayObject
     {
         return $this->floatingIps;
     }
-    /**
-     * @param list<FloatingIp> $floatingIps
-     */
-    public function setFloatingIps(array $floatingIps): self
+    public function setFloatingIps(FloatingIp ...$floatingIps): self
     {
         $this->initialized['floatingIps'] = true;
-        $this->floatingIps = $floatingIps;
+        $this->floatingIps = array_values($floatingIps);
         return $this;
     }
     public function getLinks(): PageLinks

@@ -6,7 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Nor
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Naming;
+use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ArrayType;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess;
+use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\MapType;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Type;
 use PhpParser\Comment\Doc;
 use PhpParser\Modifiers;
@@ -136,7 +138,7 @@ trait DenormalizerGenerator
             $contextVariable = new Expr\Variable('context');
             $constraintFqdn  = $schema->getNamespace() . '\Validator\\' . $this->naming->getConstraintName($classGuess->getName());
 
-            $statements[] = new Stmt\If_(new Expr\BooleanNot(new Expr\Cast\Bool_(new Expr\BinaryOp\Coalesce(new Expr\ArrayDimFetch($contextVariable, new Scalar\String_('skip_validation')), new Expr\ConstFetch(new Name('false'))))), ['stmts' => [
+            $statements[] = new Stmt\If_(new Expr\BinaryOp\NotIdentical(new Expr\ConstFetch(new Name('true')), new Expr\BinaryOp\Coalesce(new Expr\ArrayDimFetch($contextVariable, new Scalar\String_('skip_validation')), new Expr\ConstFetch(new Name('null')))), ['stmts' => [
                 new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('this'), 'validate', [
                     new Arg($dataVariable), new Arg(new Expr\New_(new Name('\\' . $constraintFqdn))),
                 ])),
@@ -199,11 +201,19 @@ trait DenormalizerGenerator
 
                 $fullCondition = $baseCondition;
 
+                // For non-nullable list (ArrayType but NOT MapType) properties in strict mode, the
+                // generated setter uses variadic syntax — spread the array into the variadic call.
+                // MapType setters take a plain array parameter (no spread).
+                $propType         = $property->getType();
+                $isVariadicSetter = $propType instanceof ArrayType
+                    && !($propType instanceof MapType)
+                    && $context->isStrict()
+                    && !$property->isNullable();
                 $mutatorStmt = array_merge($denormalizationStatements, [
                     new Stmt\Expression(new Expr\MethodCall(
                         $objectVariable,
                         $setterName,
-                        [new Arg($outputVar)],
+                        [new Arg($outputVar, false, $isVariadicSetter)],
                     )),
                 ], $unset ? [new Stmt\Unset_([$propertyVar])] : []);
 

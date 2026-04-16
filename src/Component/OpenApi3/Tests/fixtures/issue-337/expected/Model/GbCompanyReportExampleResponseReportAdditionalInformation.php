@@ -52,13 +52,10 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     {
         return $this->companyHistory;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem> $companyHistory
-     */
-    public function setCompanyHistory(array $companyHistory): self
+    public function setCompanyHistory(GbCompanyReportExampleResponseReportAdditionalInformationCompanyHistoryItem ...$companyHistory): self
     {
         $this->initialized['companyHistory'] = true;
-        $this->companyHistory = $companyHistory;
+        $this->companyHistory = array_values($companyHistory);
         return $this;
     }
     public function getMortgageSummary(): GbCompanyReportExampleResponseReportAdditionalInformationMortgageSummary
@@ -78,13 +75,10 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     {
         return $this->mortgageDetails;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem> $mortgageDetails
-     */
-    public function setMortgageDetails(array $mortgageDetails): self
+    public function setMortgageDetails(GbCompanyReportExampleResponseReportAdditionalInformationMortgageDetailsItem ...$mortgageDetails): self
     {
         $this->initialized['mortgageDetails'] = true;
-        $this->mortgageDetails = $mortgageDetails;
+        $this->mortgageDetails = array_values($mortgageDetails);
         return $this;
     }
     /**
@@ -94,13 +88,10 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     {
         return $this->commentaries;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem> $commentaries
-     */
-    public function setCommentaries(array $commentaries): self
+    public function setCommentaries(GbCompanyReportExampleResponseReportAdditionalInformationCommentariesItem ...$commentaries): self
     {
         $this->initialized['commentaries'] = true;
-        $this->commentaries = $commentaries;
+        $this->commentaries = array_values($commentaries);
         return $this;
     }
     /**
@@ -110,13 +101,10 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     {
         return $this->ratingHistory;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem> $ratingHistory
-     */
-    public function setRatingHistory(array $ratingHistory): self
+    public function setRatingHistory(GbCompanyReportExampleResponseReportAdditionalInformationRatingHistoryItem ...$ratingHistory): self
     {
         $this->initialized['ratingHistory'] = true;
-        $this->ratingHistory = $ratingHistory;
+        $this->ratingHistory = array_values($ratingHistory);
         return $this;
     }
     /**
@@ -126,13 +114,10 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     {
         return $this->creditLimitHistory;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem> $creditLimitHistory
-     */
-    public function setCreditLimitHistory(array $creditLimitHistory): self
+    public function setCreditLimitHistory(GbCompanyReportExampleResponseReportAdditionalInformationCreditLimitHistoryItem ...$creditLimitHistory): self
     {
         $this->initialized['creditLimitHistory'] = true;
-        $this->creditLimitHistory = $creditLimitHistory;
+        $this->creditLimitHistory = array_values($creditLimitHistory);
         return $this;
     }
     /**
@@ -142,13 +127,10 @@ class GbCompanyReportExampleResponseReportAdditionalInformation extends \ArrayOb
     {
         return $this->badDebtDetails;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem> $badDebtDetails
-     */
-    public function setBadDebtDetails(array $badDebtDetails): self
+    public function setBadDebtDetails(GbCompanyReportExampleResponseReportAdditionalInformationBadDebtDetailsItem ...$badDebtDetails): self
     {
         $this->initialized['badDebtDetails'] = true;
-        $this->badDebtDetails = $badDebtDetails;
+        $this->badDebtDetails = array_values($badDebtDetails);
         return $this;
     }
 }

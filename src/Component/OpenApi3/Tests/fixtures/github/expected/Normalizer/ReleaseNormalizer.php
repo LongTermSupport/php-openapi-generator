@@ -48,7 +48,7 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReleaseConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -134,7 +134,7 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = $value_2;
                 }
             }
-            $object->setAssets($values);
+            $object->setAssets(...$values);
             unset($data['assets']);
         }
         if (\array_key_exists('body_html', $data)) {
@@ -223,7 +223,7 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ReleaseConstraint());
         }
         return $dataArray;

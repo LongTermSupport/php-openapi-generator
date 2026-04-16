@@ -53,13 +53,10 @@ class GbCompanyReportExampleResponseReportShareCapitalStructure extends \ArrayOb
     {
         return $this->shareHolders;
     }
-    /**
-     * @param list<GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem> $shareHolders
-     */
-    public function setShareHolders(array $shareHolders): self
+    public function setShareHolders(GbCompanyReportExampleResponseReportShareCapitalStructureShareHoldersItem ...$shareHolders): self
     {
         $this->initialized['shareHolders'] = true;
-        $this->shareHolders = $shareHolders;
+        $this->shareHolders = array_values($shareHolders);
         return $this;
     }
 }

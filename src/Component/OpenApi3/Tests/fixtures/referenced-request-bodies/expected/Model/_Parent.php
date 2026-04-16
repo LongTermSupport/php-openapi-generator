@@ -42,13 +42,10 @@ class _Parent extends \ArrayObject
     {
         return $this->child;
     }
-    /**
-     * @param list<Child> $child
-     */
-    public function setChild(array $child): self
+    public function setChild(Child ...$child): self
     {
         $this->initialized['child'] = true;
-        $this->child = $child;
+        $this->child = array_values($child);
         return $this;
     }
 }

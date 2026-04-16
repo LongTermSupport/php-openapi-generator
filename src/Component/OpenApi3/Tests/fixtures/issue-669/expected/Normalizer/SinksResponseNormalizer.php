@@ -61,7 +61,7 @@ class SinksResponseNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = $value_2;
                 }
             }
-            $object->setResources($values);
+            $object->setResources(...$values);
             unset($data['resources']);
         }
         foreach ($data as $key => $value_3) {

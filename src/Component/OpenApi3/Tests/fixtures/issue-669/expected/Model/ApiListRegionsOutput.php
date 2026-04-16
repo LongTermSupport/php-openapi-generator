@@ -37,13 +37,11 @@ class ApiListRegionsOutput extends \ArrayObject
     }
     /**
      * Region code
-     *
-     * @param list<GenaiapiRegion> $regions
      */
-    public function setRegions(array $regions): self
+    public function setRegions(GenaiapiRegion ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
 }

@@ -190,13 +190,11 @@ class SchemaCreateRequest
     }
     /**
      * Language specific DotLiquid templates. These templates will be resolved into display values in content documents and/or list items.
-     *
-     * @param list<DisplayPattern> $displayPatterns
      */
-    public function setDisplayPatterns(array $displayPatterns): self
+    public function setDisplayPatterns(DisplayPattern ...$displayPatterns): self
     {
         $this->initialized['displayPatterns'] = true;
-        $this->displayPatterns = $displayPatterns;
+        $this->displayPatterns = array_values($displayPatterns);
         return $this;
     }
     /**

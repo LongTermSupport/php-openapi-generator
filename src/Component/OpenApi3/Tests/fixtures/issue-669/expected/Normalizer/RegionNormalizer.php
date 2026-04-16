@@ -63,7 +63,7 @@ class RegionNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setFeatures($values);
+            $object->setFeatures(...$values);
             unset($data['features']);
         }
         if (\array_key_exists('available', $data)) {
@@ -77,7 +77,7 @@ class RegionNormalizer implements DenormalizerInterface, NormalizerInterface, De
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setSizes($values_1);
+            $object->setSizes(...$values_1);
             unset($data['sizes']);
         }
         foreach ($data as $key => $value_2) {

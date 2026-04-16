@@ -35,13 +35,10 @@ class PullRequestReviewRequest extends \ArrayObject
     {
         return $this->users;
     }
-    /**
-     * @param list<PullRequestReviewRequestUsersItem> $users
-     */
-    public function setUsers(array $users): self
+    public function setUsers(PullRequestReviewRequestUsersItem ...$users): self
     {
         $this->initialized['users'] = true;
-        $this->users = $users;
+        $this->users = array_values($users);
         return $this;
     }
     /**
@@ -51,13 +48,10 @@ class PullRequestReviewRequest extends \ArrayObject
     {
         return $this->teams;
     }
-    /**
-     * @param list<PullRequestReviewRequestTeamsItem> $teams
-     */
-    public function setTeams(array $teams): self
+    public function setTeams(PullRequestReviewRequestTeamsItem ...$teams): self
     {
         $this->initialized['teams'] = true;
-        $this->teams = $teams;
+        $this->teams = array_values($teams);
         return $this;
     }
 }

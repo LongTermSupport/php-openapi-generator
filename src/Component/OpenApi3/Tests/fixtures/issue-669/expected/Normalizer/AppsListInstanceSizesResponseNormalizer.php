@@ -60,7 +60,7 @@ class AppsListInstanceSizesResponseNormalizer implements DenormalizerInterface, 
                     $values[] = $value_1;
                 }
             }
-            $object->setInstanceSizes($values);
+            $object->setInstanceSizes(...$values);
             unset($data['instance_sizes']);
         }
         foreach ($data as $key => $value_2) {

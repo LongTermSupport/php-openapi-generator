@@ -43,13 +43,11 @@ class ClusterRegistries extends \ArrayObject
     }
     /**
      * An array containing the UUIDs of Kubernetes clusters.
-     *
-     * @param list<string> $clusterUuids
      */
-    public function setClusterUuids(array $clusterUuids): self
+    public function setClusterUuids(string ...$clusterUuids): self
     {
         $this->initialized['clusterUuids'] = true;
-        $this->clusterUuids = $clusterUuids;
+        $this->clusterUuids = array_values($clusterUuids);
         return $this;
     }
     /**
@@ -63,13 +61,11 @@ class ClusterRegistries extends \ArrayObject
     }
     /**
      * An array containing the registry names.
-     *
-     * @param list<string> $registries
      */
-    public function setRegistries(array $registries): self
+    public function setRegistries(string ...$registries): self
     {
         $this->initialized['registries'] = true;
-        $this->registries = $registries;
+        $this->registries = array_values($registries);
         return $this;
     }
 }

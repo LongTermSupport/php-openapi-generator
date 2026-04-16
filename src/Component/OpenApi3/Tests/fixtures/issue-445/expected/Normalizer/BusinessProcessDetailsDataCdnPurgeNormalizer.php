@@ -64,7 +64,7 @@ class BusinessProcessDetailsDataCdnPurgeNormalizer implements DenormalizerInterf
                     $values[] = $value_1;
                 }
             }
-            $object->setJobs($values);
+            $object->setJobs(...$values);
             unset($data['jobs']);
         }
         return $object;

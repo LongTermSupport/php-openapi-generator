@@ -58,7 +58,7 @@ class UserRoleEditableNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setUserRights($values);
+            $object->setUserRights(...$values);
         }
         return $object;
     }

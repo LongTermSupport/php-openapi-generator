@@ -55,7 +55,7 @@ class FirewallRulesInboundRulesItemsourcesNormalizer implements DenormalizerInte
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAddresses($values);
+            $object->setAddresses(...$values);
             unset($data['addresses']);
         }
         if (\array_key_exists('droplet_ids', $data)) {
@@ -65,7 +65,7 @@ class FirewallRulesInboundRulesItemsourcesNormalizer implements DenormalizerInte
                     $values_1[] = TypeValidator::assertInt($value_1, 'value');
                 }
             }
-            $object->setDropletIds($values_1);
+            $object->setDropletIds(...$values_1);
             unset($data['droplet_ids']);
         }
         if (\array_key_exists('load_balancer_uids', $data)) {
@@ -75,7 +75,7 @@ class FirewallRulesInboundRulesItemsourcesNormalizer implements DenormalizerInte
                     $values_2[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setLoadBalancerUids($values_2);
+            $object->setLoadBalancerUids(...$values_2);
             unset($data['load_balancer_uids']);
         }
         if (\array_key_exists('kubernetes_ids', $data)) {
@@ -85,7 +85,7 @@ class FirewallRulesInboundRulesItemsourcesNormalizer implements DenormalizerInte
                     $values_3[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setKubernetesIds($values_3);
+            $object->setKubernetesIds(...$values_3);
             unset($data['kubernetes_ids']);
         }
         if (\array_key_exists('tags', $data)) {
@@ -95,7 +95,7 @@ class FirewallRulesInboundRulesItemsourcesNormalizer implements DenormalizerInte
                     $values_4[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setTags($values_4);
+            $object->setTags(...$values_4);
             unset($data['tags']);
         }
         foreach ($data as $key => $value_5) {

@@ -42,13 +42,10 @@ class GbImageTypesResponse extends \ArrayObject
     {
         return $this->availableTypes;
     }
-    /**
-     * @param list<GbImageTypesResponseAvailableTypesItem> $availableTypes
-     */
-    public function setAvailableTypes(array $availableTypes): self
+    public function setAvailableTypes(GbImageTypesResponseAvailableTypesItem ...$availableTypes): self
     {
         $this->initialized['availableTypes'] = true;
-        $this->availableTypes = $availableTypes;
+        $this->availableTypes = array_values($availableTypes);
         return $this;
     }
 }

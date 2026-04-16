@@ -48,7 +48,7 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsNormalizer i
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsConstraint());
         }
         if (\array_key_exists('url', $data)) {
@@ -71,7 +71,7 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsNormalizer i
                     $values[] = $value_1;
                 }
             }
-            $object->setUsers($values);
+            $object->setUsers(...$values);
             unset($data['users']);
         }
         if (\array_key_exists('teams', $data)) {
@@ -82,7 +82,7 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsNormalizer i
                     $values_1[] = $value_3;
                 }
             }
-            $object->setTeams($values_1);
+            $object->setTeams(...$values_1);
             unset($data['teams']);
         }
         foreach ($data as $key => $value_4) {
@@ -120,7 +120,7 @@ class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsNormalizer i
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ProtectedBranchRequiredPullRequestReviewsDismissalRestrictionsConstraint());
         }
         return $dataArray;

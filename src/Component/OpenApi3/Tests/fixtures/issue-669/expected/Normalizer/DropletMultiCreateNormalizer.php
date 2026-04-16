@@ -55,7 +55,7 @@ class DropletMultiCreateNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setNames($values);
+            $object->setNames(...$values);
             unset($data['names']);
         }
         if (\array_key_exists('region', $data)) {
@@ -77,7 +77,7 @@ class DropletMultiCreateNormalizer implements DenormalizerInterface, NormalizerI
                     $values_1[] = $value_1;
                 }
             }
-            $object->setSshKeys($values_1);
+            $object->setSshKeys(...$values_1);
             unset($data['ssh_keys']);
         }
         if (\array_key_exists('backups', $data)) {
@@ -125,7 +125,7 @@ class DropletMultiCreateNormalizer implements DenormalizerInterface, NormalizerI
                     $values_3[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setVolumes($values_3);
+            $object->setVolumes(...$values_3);
             unset($data['volumes']);
         }
         if (\array_key_exists('vpc_uuid', $data)) {

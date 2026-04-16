@@ -54,13 +54,11 @@ class UserRoleEditable
     }
     /**
      * All user rights for this user role.
-     *
-     * @param list<string> $userRights
      */
-    public function setUserRights(array $userRights): self
+    public function setUserRights(string ...$userRights): self
     {
         $this->initialized['userRights'] = true;
-        $this->userRights = $userRights;
+        $this->userRights = array_values($userRights);
         return $this;
     }
 }

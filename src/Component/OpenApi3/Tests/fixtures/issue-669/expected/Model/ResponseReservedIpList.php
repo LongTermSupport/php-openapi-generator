@@ -33,13 +33,10 @@ class ResponseReservedIpList extends \ArrayObject
     {
         return $this->reservedIps;
     }
-    /**
-     * @param list<ReservedIp> $reservedIps
-     */
-    public function setReservedIps(array $reservedIps): self
+    public function setReservedIps(ReservedIp ...$reservedIps): self
     {
         $this->initialized['reservedIps'] = true;
-        $this->reservedIps = $reservedIps;
+        $this->reservedIps = array_values($reservedIps);
         return $this;
     }
     public function getLinks(): PageLinks

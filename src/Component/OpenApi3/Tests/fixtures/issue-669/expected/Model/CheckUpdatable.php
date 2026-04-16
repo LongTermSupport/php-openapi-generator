@@ -101,13 +101,11 @@ class CheckUpdatable extends \ArrayObject
     }
     /**
      * An array containing the selected regions to perform healthchecks from.
-     *
-     * @param list<string> $regions
      */
-    public function setRegions(array $regions): self
+    public function setRegions(string ...$regions): self
     {
         $this->initialized['regions'] = true;
-        $this->regions = $regions;
+        $this->regions = array_values($regions);
         return $this;
     }
     /**

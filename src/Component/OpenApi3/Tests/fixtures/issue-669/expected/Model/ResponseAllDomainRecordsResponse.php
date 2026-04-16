@@ -33,13 +33,10 @@ class ResponseAllDomainRecordsResponse extends \ArrayObject
     {
         return $this->domainRecords;
     }
-    /**
-     * @param list<DomainRecord> $domainRecords
-     */
-    public function setDomainRecords(array $domainRecords): self
+    public function setDomainRecords(DomainRecord ...$domainRecords): self
     {
         $this->initialized['domainRecords'] = true;
-        $this->domainRecords = $domainRecords;
+        $this->domainRecords = array_values($domainRecords);
         return $this;
     }
     public function getLinks(): PageLinks

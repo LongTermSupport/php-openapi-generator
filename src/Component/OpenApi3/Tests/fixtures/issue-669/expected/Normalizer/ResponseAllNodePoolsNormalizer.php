@@ -61,7 +61,7 @@ class ResponseAllNodePoolsNormalizer implements DenormalizerInterface, Normalize
                     $values[] = $values_1;
                 }
             }
-            $object->setNodePools($values);
+            $object->setNodePools(...$values);
             unset($data['node_pools']);
         }
         foreach ($data as $key_1 => $value_2) {

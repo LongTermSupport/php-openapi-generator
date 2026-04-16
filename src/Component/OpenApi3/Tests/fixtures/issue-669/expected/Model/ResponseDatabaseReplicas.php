@@ -31,13 +31,10 @@ class ResponseDatabaseReplicas extends \ArrayObject
     {
         return $this->replicas;
     }
-    /**
-     * @param list<DatabaseReplicaRead> $replicas
-     */
-    public function setReplicas(array $replicas): self
+    public function setReplicas(DatabaseReplicaRead ...$replicas): self
     {
         $this->initialized['replicas'] = true;
-        $this->replicas = $replicas;
+        $this->replicas = array_values($replicas);
         return $this;
     }
 }

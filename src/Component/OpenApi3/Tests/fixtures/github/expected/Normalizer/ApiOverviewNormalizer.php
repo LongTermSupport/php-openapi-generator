@@ -48,7 +48,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ApiOverviewConstraint());
         }
         if (\array_key_exists('verifiable_password_authentication', $data)) {
@@ -67,7 +67,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setHooks($values);
+            $object->setHooks(...$values);
             unset($data['hooks']);
         }
         if (\array_key_exists('web', $data)) {
@@ -77,7 +77,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_1[] = TypeValidator::assertString($value_2, 'value');
                 }
             }
-            $object->setWeb($values_1);
+            $object->setWeb(...$values_1);
             unset($data['web']);
         }
         if (\array_key_exists('api', $data)) {
@@ -87,7 +87,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_2[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setApi($values_2);
+            $object->setApi(...$values_2);
             unset($data['api']);
         }
         if (\array_key_exists('git', $data)) {
@@ -97,7 +97,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_3[] = TypeValidator::assertString($value_4, 'value');
                 }
             }
-            $object->setGit($values_3);
+            $object->setGit(...$values_3);
             unset($data['git']);
         }
         if (\array_key_exists('pages', $data)) {
@@ -107,7 +107,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_4[] = TypeValidator::assertString($value_5, 'value');
                 }
             }
-            $object->setPages($values_4);
+            $object->setPages(...$values_4);
             unset($data['pages']);
         }
         if (\array_key_exists('importer', $data)) {
@@ -117,7 +117,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                     $values_5[] = TypeValidator::assertString($value_6, 'value');
                 }
             }
-            $object->setImporter($values_5);
+            $object->setImporter(...$values_5);
             unset($data['importer']);
         }
         if (\array_key_exists('github_services_sha', $data)) {
@@ -202,7 +202,7 @@ class ApiOverviewNormalizer implements DenormalizerInterface, NormalizerInterfac
                 $dataArray[$key] = $value_6;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\ApiOverviewConstraint());
         }
         return $dataArray;

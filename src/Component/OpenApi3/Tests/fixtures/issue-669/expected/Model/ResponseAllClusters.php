@@ -33,13 +33,10 @@ class ResponseAllClusters extends \ArrayObject
     {
         return $this->kubernetesClusters;
     }
-    /**
-     * @param list<ClusterRead> $kubernetesClusters
-     */
-    public function setKubernetesClusters(array $kubernetesClusters): self
+    public function setKubernetesClusters(ClusterRead ...$kubernetesClusters): self
     {
         $this->initialized['kubernetesClusters'] = true;
-        $this->kubernetesClusters = $kubernetesClusters;
+        $this->kubernetesClusters = array_values($kubernetesClusters);
         return $this;
     }
     public function getLinks(): PageLinks

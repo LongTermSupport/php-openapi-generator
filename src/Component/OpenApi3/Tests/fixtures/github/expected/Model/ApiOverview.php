@@ -75,13 +75,10 @@ class ApiOverview extends \ArrayObject
     {
         return $this->hooks;
     }
-    /**
-     * @param list<string> $hooks
-     */
-    public function setHooks(array $hooks): self
+    public function setHooks(string ...$hooks): self
     {
         $this->initialized['hooks'] = true;
-        $this->hooks = $hooks;
+        $this->hooks = array_values($hooks);
         return $this;
     }
     /**
@@ -91,13 +88,10 @@ class ApiOverview extends \ArrayObject
     {
         return $this->web;
     }
-    /**
-     * @param list<string> $web
-     */
-    public function setWeb(array $web): self
+    public function setWeb(string ...$web): self
     {
         $this->initialized['web'] = true;
-        $this->web = $web;
+        $this->web = array_values($web);
         return $this;
     }
     /**
@@ -107,13 +101,10 @@ class ApiOverview extends \ArrayObject
     {
         return $this->api;
     }
-    /**
-     * @param list<string> $api
-     */
-    public function setApi(array $api): self
+    public function setApi(string ...$api): self
     {
         $this->initialized['api'] = true;
-        $this->api = $api;
+        $this->api = array_values($api);
         return $this;
     }
     /**
@@ -123,13 +114,10 @@ class ApiOverview extends \ArrayObject
     {
         return $this->git;
     }
-    /**
-     * @param list<string> $git
-     */
-    public function setGit(array $git): self
+    public function setGit(string ...$git): self
     {
         $this->initialized['git'] = true;
-        $this->git = $git;
+        $this->git = array_values($git);
         return $this;
     }
     /**
@@ -139,13 +127,10 @@ class ApiOverview extends \ArrayObject
     {
         return $this->pages;
     }
-    /**
-     * @param list<string> $pages
-     */
-    public function setPages(array $pages): self
+    public function setPages(string ...$pages): self
     {
         $this->initialized['pages'] = true;
-        $this->pages = $pages;
+        $this->pages = array_values($pages);
         return $this;
     }
     /**
@@ -155,13 +140,10 @@ class ApiOverview extends \ArrayObject
     {
         return $this->importer;
     }
-    /**
-     * @param list<string> $importer
-     */
-    public function setImporter(array $importer): self
+    public function setImporter(string ...$importer): self
     {
         $this->initialized['importer'] = true;
-        $this->importer = $importer;
+        $this->importer = array_values($importer);
         return $this;
     }
     public function getGithubServicesSha(): string

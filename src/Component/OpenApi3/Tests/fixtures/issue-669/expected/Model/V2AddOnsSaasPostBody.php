@@ -105,13 +105,11 @@ class V2AddOnsSaasPostBody extends \ArrayObject
     }
     /**
      * Metadata associated with the resource, set by the user. Metadata expected varies per app, and can be verified with a GET request to "/v2/add-ons/apps/{app_slug}/metadata"
-     *
-     * @param list<AddonsResourceMetadata> $metadata
      */
-    public function setMetadata(array $metadata): self
+    public function setMetadata(AddonsResourceMetadata ...$metadata): self
     {
         $this->initialized['metadata'] = true;
-        $this->metadata = $metadata;
+        $this->metadata = array_values($metadata);
         return $this;
     }
     /**

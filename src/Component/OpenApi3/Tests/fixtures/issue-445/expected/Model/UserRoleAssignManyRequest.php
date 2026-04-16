@@ -48,13 +48,11 @@ class UserRoleAssignManyRequest extends \ArrayObject
     }
     /**
      * User IDs.
-     *
-     * @param list<string> $userIds
      */
-    public function setUserIds(array $userIds): self
+    public function setUserIds(string ...$userIds): self
     {
         $this->initialized['userIds'] = true;
-        $this->userIds = $userIds;
+        $this->userIds = array_values($userIds);
         return $this;
     }
     /**
@@ -68,13 +66,11 @@ class UserRoleAssignManyRequest extends \ArrayObject
     }
     /**
      * Users roles to modify.
-     *
-     * @param list<string> $userRoleIds
      */
-    public function setUserRoleIds(array $userRoleIds): self
+    public function setUserRoleIds(string ...$userRoleIds): self
     {
         $this->initialized['userRoleIds'] = true;
-        $this->userRoleIds = $userRoleIds;
+        $this->userRoleIds = array_values($userRoleIds);
         return $this;
     }
     /**

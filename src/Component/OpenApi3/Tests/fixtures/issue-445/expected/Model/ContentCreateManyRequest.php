@@ -54,13 +54,11 @@ class ContentCreateManyRequest
     }
     /**
      * Items to be created.
-     *
-     * @param list<ContentCreateRequest> $items
      */
-    public function setItems(array $items): self
+    public function setItems(ContentCreateRequest ...$items): self
     {
         $this->initialized['items'] = true;
-        $this->items = $items;
+        $this->items = array_values($items);
         return $this;
     }
 }

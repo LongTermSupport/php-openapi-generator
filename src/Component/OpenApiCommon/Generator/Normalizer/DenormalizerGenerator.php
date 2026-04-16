@@ -26,6 +26,11 @@ trait DenormalizerGenerator
 
         if ($classGuess instanceof ParentClass) {
             foreach ($classGuess->getChildEntryKeys() as $discriminatorValue) {
+                $childEntryName = $classGuess->getChildEntryClassNameByKey($discriminatorValue);
+                if (null === $childEntryName) {
+                    throw new \LogicException(\sprintf('No child entry class name for discriminator value "%s"', $discriminatorValue));
+                }
+
                 $statements[] = new Stmt\If_(
                     new Expr\BinaryOp\BooleanAnd(
                         new Expr\FuncCall(new Name('array_key_exists'), [
@@ -50,7 +55,7 @@ trait DenormalizerGenerator
                                         'denormalize',
                                         [
                                             new Arg(new Expr\Variable('data')),
-                                            new Arg(new Scalar\String_(\sprintf('%s\Model\%s', $context->getCurrentSchema()->getNamespace(), $this->getNaming()->getClassName($classGuess->getChildEntryClassNameByKey($discriminatorValue) ?? '')))),
+                                            new Arg(new Scalar\String_(\sprintf('%s\Model\%s', $context->getCurrentSchema()->getNamespace(), $this->getNaming()->getClassName($childEntryName)))),
                                             new Arg(new Expr\Variable('format')),
                                             new Arg(new Expr\Variable('context')),
                                         ]

@@ -186,13 +186,11 @@ class BookJsonld extends \ArrayObject
     }
     /**
      * The book's reviews.
-     *
-     * @param list<string> $reviews
      */
-    public function setReviews(array $reviews): self
+    public function setReviews(string ...$reviews): self
     {
         $this->initialized['reviews'] = true;
-        $this->reviews = $reviews;
+        $this->reviews = array_values($reviews);
         return $this;
     }
     /**

@@ -44,13 +44,11 @@ class ShareDataBasic extends ShareDataBase
     }
     /**
      * List of recipients added using email address
-     *
-     * @param list<MailRecipient> $mailRecipients
      */
-    public function setMailRecipients(array $mailRecipients): self
+    public function setMailRecipients(MailRecipient ...$mailRecipients): self
     {
         $this->initialized['mailRecipients'] = true;
-        $this->mailRecipients = $mailRecipients;
+        $this->mailRecipients = array_values($mailRecipients);
         return $this;
     }
     /**
@@ -64,13 +62,11 @@ class ShareDataBasic extends ShareDataBase
     }
     /**
      * List of recipients that exist in Picturepark.
-     *
-     * @param list<InternalRecipient> $internalRecipients
      */
-    public function setInternalRecipients(array $internalRecipients): self
+    public function setInternalRecipients(InternalRecipient ...$internalRecipients): self
     {
         $this->initialized['internalRecipients'] = true;
-        $this->internalRecipients = $internalRecipients;
+        $this->internalRecipients = array_values($internalRecipients);
         return $this;
     }
     /**

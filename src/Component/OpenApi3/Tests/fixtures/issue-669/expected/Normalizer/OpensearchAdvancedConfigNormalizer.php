@@ -199,7 +199,7 @@ class OpensearchAdvancedConfigNormalizer implements DenormalizerInterface, Norma
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setReindexRemoteWhitelist($values);
+            $object->setReindexRemoteWhitelist(...$values);
             unset($data['reindex_remote_whitelist']);
         }
         if (\array_key_exists('plugins_alerting_filter_by_backend_roles_enabled', $data)) {

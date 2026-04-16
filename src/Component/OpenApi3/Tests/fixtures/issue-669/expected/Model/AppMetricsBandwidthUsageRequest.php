@@ -41,13 +41,11 @@ class AppMetricsBandwidthUsageRequest extends \ArrayObject
     }
     /**
      * A list of app IDs to query bandwidth metrics for.
-     *
-     * @param list<string> $appIds
      */
-    public function setAppIds(array $appIds): self
+    public function setAppIds(string ...$appIds): self
     {
         $this->initialized['appIds'] = true;
-        $this->appIds = $appIds;
+        $this->appIds = array_values($appIds);
         return $this;
     }
     /**

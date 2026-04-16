@@ -42,13 +42,10 @@ class ListCompanyImages extends \ArrayObject
     {
         return $this->data;
     }
-    /**
-     * @param list<ListCompanyImagesDataItem> $data
-     */
-    public function setData(array $data): self
+    public function setData(ListCompanyImagesDataItem ...$data): self
     {
         $this->initialized['data'] = true;
-        $this->data = $data;
+        $this->data = array_values($data);
         return $this;
     }
 }

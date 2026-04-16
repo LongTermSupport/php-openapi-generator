@@ -60,7 +60,7 @@ class ListCompanyImagesNormalizer implements DenormalizerInterface, NormalizerIn
                     $values[] = $value_1;
                 }
             }
-            $object->setData($values);
+            $object->setData(...$values);
             unset($data['data']);
         }
         foreach ($data as $key => $value_2) {

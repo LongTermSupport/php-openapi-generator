@@ -63,7 +63,7 @@ class ResponseAppsValidateRollbackErrorNormalizer implements DenormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setComponents($values);
+            $object->setComponents(...$values);
             unset($data['components']);
         }
         foreach ($data as $key => $value_1) {

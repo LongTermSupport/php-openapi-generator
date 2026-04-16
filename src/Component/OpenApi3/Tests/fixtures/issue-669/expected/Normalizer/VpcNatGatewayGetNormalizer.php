@@ -80,7 +80,7 @@ class VpcNatGatewayGetNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setVpcs($values);
+            $object->setVpcs(...$values);
             unset($data['vpcs']);
         }
         if (\array_key_exists('egresses', $data)) {

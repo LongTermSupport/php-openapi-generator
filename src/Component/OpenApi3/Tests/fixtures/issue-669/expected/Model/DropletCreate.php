@@ -140,13 +140,11 @@ class DropletCreate extends \ArrayObject
     }
     /**
      * An array containing the IDs or fingerprints of the SSH keys that you wish to embed in the Droplet's root account upon creation. You must add the keys to your team before they can be embedded on a Droplet.<br>Requires `ssh_key:read` scope.
-     *
-     * @param list<mixed> $sshKeys
      */
-    public function setSshKeys(array $sshKeys): self
+    public function setSshKeys(mixed ...$sshKeys): self
     {
         $this->initialized['sshKeys'] = true;
-        $this->sshKeys = $sshKeys;
+        $this->sshKeys = array_values($sshKeys);
         return $this;
     }
     /**
@@ -274,13 +272,11 @@ class DropletCreate extends \ArrayObject
     }
     /**
      * An array of IDs for block storage volumes that will be attached to the Droplet once created. The volumes must not already be attached to an existing Droplet.<br>Requires `block_storage:read` scpoe.
-     *
-     * @param list<string> $volumes
      */
-    public function setVolumes(array $volumes): self
+    public function setVolumes(string ...$volumes): self
     {
         $this->initialized['volumes'] = true;
-        $this->volumes = $volumes;
+        $this->volumes = array_values($volumes);
         return $this;
     }
     /**

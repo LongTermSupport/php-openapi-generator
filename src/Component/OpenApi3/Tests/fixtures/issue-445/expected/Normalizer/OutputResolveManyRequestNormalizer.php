@@ -55,7 +55,7 @@ class OutputResolveManyRequestNormalizer implements DenormalizerInterface, Norma
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setContentIds($values);
+            $object->setContentIds(...$values);
         }
         return $object;
     }

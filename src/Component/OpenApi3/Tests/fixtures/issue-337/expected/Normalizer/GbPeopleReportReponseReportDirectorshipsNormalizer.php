@@ -56,7 +56,7 @@ class GbPeopleReportReponseReportDirectorshipsNormalizer implements Denormalizer
                     $values[] = $value_1;
                 }
             }
-            $object->setCurrent($values);
+            $object->setCurrent(...$values);
             unset($data['current']);
         }
         if (\array_key_exists('inactive', $data)) {
@@ -67,7 +67,7 @@ class GbPeopleReportReponseReportDirectorshipsNormalizer implements Denormalizer
                     $values_1[] = $value_3;
                 }
             }
-            $object->setInactive($values_1);
+            $object->setInactive(...$values_1);
             unset($data['inactive']);
         }
         if (\array_key_exists('previous', $data)) {
@@ -78,7 +78,7 @@ class GbPeopleReportReponseReportDirectorshipsNormalizer implements Denormalizer
                     $values_2[] = $value_5;
                 }
             }
-            $object->setPrevious($values_2);
+            $object->setPrevious(...$values_2);
             unset($data['previous']);
         }
         foreach ($data as $key => $value_6) {

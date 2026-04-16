@@ -126,13 +126,10 @@ class DefaultPlace extends \ArrayObject
     {
         return $this->containedWithin;
     }
-    /**
-     * @param list<string> $containedWithin
-     */
-    public function setContainedWithin(array $containedWithin): self
+    public function setContainedWithin(string ...$containedWithin): self
     {
         $this->initialized['containedWithin'] = true;
-        $this->containedWithin = $containedWithin;
+        $this->containedWithin = array_values($containedWithin);
         return $this;
     }
 }

@@ -31,13 +31,10 @@ class CheckSuitePreferencePreferences extends \ArrayObject
     {
         return $this->autoTriggerChecks;
     }
-    /**
-     * @param list<CheckSuitePreferencePreferencesAutoTriggerChecksItem> $autoTriggerChecks
-     */
-    public function setAutoTriggerChecks(array $autoTriggerChecks): self
+    public function setAutoTriggerChecks(CheckSuitePreferencePreferencesAutoTriggerChecksItem ...$autoTriggerChecks): self
     {
         $this->initialized['autoTriggerChecks'] = true;
-        $this->autoTriggerChecks = $autoTriggerChecks;
+        $this->autoTriggerChecks = array_values($autoTriggerChecks);
         return $this;
     }
 }

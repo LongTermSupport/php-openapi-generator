@@ -75,13 +75,10 @@ class SearchResultTextMatchesItem extends \ArrayObject
     {
         return $this->matches;
     }
-    /**
-     * @param list<SearchResultTextMatchesItemMatchesItem> $matches
-     */
-    public function setMatches(array $matches): self
+    public function setMatches(SearchResultTextMatchesItemMatchesItem ...$matches): self
     {
         $this->initialized['matches'] = true;
-        $this->matches = $matches;
+        $this->matches = array_values($matches);
         return $this;
     }
 }

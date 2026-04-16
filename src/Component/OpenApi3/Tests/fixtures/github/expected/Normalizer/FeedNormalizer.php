@@ -48,7 +48,7 @@ class FeedNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FeedConstraint());
         }
         if (\array_key_exists('timeline_url', $data)) {
@@ -82,7 +82,7 @@ class FeedNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setCurrentUserOrganizationUrls($values);
+            $object->setCurrentUserOrganizationUrls(...$values);
             unset($data['current_user_organization_urls']);
         }
         if (\array_key_exists('security_advisories_url', $data)) {
@@ -141,7 +141,7 @@ class FeedNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FeedConstraint());
         }
         return $dataArray;

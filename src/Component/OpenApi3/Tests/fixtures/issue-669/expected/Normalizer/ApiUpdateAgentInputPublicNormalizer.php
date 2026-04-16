@@ -59,7 +59,7 @@ class ApiUpdateAgentInputPublicNormalizer implements DenormalizerInterface, Norm
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setAllowedDomains($values);
+            $object->setAllowedDomains(...$values);
             unset($data['allowed_domains']);
         }
         if (\array_key_exists('anthropic_key_uuid', $data)) {
@@ -121,7 +121,7 @@ class ApiUpdateAgentInputPublicNormalizer implements DenormalizerInterface, Norm
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setTags($values_1);
+            $object->setTags(...$values_1);
             unset($data['tags']);
         }
         if (\array_key_exists('temperature', $data)) {

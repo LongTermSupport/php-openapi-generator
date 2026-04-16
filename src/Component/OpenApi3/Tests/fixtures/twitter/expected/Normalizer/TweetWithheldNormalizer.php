@@ -59,7 +59,7 @@ class TweetWithheldNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setCountryCodes($values);
+            $object->setCountryCodes(...$values);
             unset($data['country_codes']);
         }
         if (\array_key_exists('scope', $data)) {

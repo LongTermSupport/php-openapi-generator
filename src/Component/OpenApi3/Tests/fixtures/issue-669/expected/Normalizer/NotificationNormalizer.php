@@ -55,7 +55,7 @@ class NotificationNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setEmail($values);
+            $object->setEmail(...$values);
             unset($data['email']);
         }
         if (\array_key_exists('slack', $data)) {
@@ -66,7 +66,7 @@ class NotificationNormalizer implements DenormalizerInterface, NormalizerInterfa
                     $values_1[] = $value_2;
                 }
             }
-            $object->setSlack($values_1);
+            $object->setSlack(...$values_1);
             unset($data['slack']);
         }
         foreach ($data as $key => $value_3) {

@@ -56,7 +56,7 @@ class ResponseListAlertPolicyResponseNormalizer implements DenormalizerInterface
                     $values[] = $value_1;
                 }
             }
-            $object->setPolicies($values);
+            $object->setPolicies(...$values);
             unset($data['policies']);
         }
         if (\array_key_exists('links', $data)) {

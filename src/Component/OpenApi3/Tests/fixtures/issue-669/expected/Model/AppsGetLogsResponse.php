@@ -35,13 +35,10 @@ class AppsGetLogsResponse extends \ArrayObject
     {
         return $this->historicUrls;
     }
-    /**
-     * @param list<string> $historicUrls
-     */
-    public function setHistoricUrls(array $historicUrls): self
+    public function setHistoricUrls(string ...$historicUrls): self
     {
         $this->initialized['historicUrls'] = true;
-        $this->historicUrls = $historicUrls;
+        $this->historicUrls = array_values($historicUrls);
         return $this;
     }
     /**

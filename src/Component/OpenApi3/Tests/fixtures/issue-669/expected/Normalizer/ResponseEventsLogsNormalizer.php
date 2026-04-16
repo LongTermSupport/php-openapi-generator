@@ -56,7 +56,7 @@ class ResponseEventsLogsNormalizer implements DenormalizerInterface, NormalizerI
                     $values[] = $value_1;
                 }
             }
-            $object->setEvents($values);
+            $object->setEvents(...$values);
             unset($data['events']);
         }
         foreach ($data as $key => $value_2) {

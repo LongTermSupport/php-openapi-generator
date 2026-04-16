@@ -60,7 +60,7 @@ class CompliancePreDefinedSearchesNormalizer implements DenormalizerInterface, N
                     $values[] = $value_1;
                 }
             }
-            $object->setPredefinedSearches($values);
+            $object->setPredefinedSearches(...$values);
             unset($data['predefinedSearches']);
         }
         foreach ($data as $key => $value_2) {

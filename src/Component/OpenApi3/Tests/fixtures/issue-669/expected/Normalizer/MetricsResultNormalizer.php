@@ -71,7 +71,7 @@ class MetricsResultNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values_1[] = $values_2;
                 }
             }
-            $object->setValues($values_1);
+            $object->setValues(...$values_1);
             unset($data['values']);
         }
         foreach ($data as $key_1 => $value_3) {

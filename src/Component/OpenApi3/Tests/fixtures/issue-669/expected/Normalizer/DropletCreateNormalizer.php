@@ -67,7 +67,7 @@ class DropletCreateNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values[] = $value;
                 }
             }
-            $object->setSshKeys($values);
+            $object->setSshKeys(...$values);
             unset($data['ssh_keys']);
         }
         if (\array_key_exists('backups', $data)) {
@@ -115,7 +115,7 @@ class DropletCreateNormalizer implements DenormalizerInterface, NormalizerInterf
                     $values_2[] = TypeValidator::assertString($value_3, 'value');
                 }
             }
-            $object->setVolumes($values_2);
+            $object->setVolumes(...$values_2);
             unset($data['volumes']);
         }
         if (\array_key_exists('vpc_uuid', $data)) {

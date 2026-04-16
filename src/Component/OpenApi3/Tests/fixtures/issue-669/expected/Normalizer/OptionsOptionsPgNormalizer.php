@@ -55,7 +55,7 @@ class OptionsOptionsPgNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setRegions($values);
+            $object->setRegions(...$values);
             unset($data['regions']);
         }
         if (\array_key_exists('versions', $data)) {
@@ -65,7 +65,7 @@ class OptionsOptionsPgNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setVersions($values_1);
+            $object->setVersions(...$values_1);
             unset($data['versions']);
         }
         if (\array_key_exists('layouts', $data)) {
@@ -76,7 +76,7 @@ class OptionsOptionsPgNormalizer implements DenormalizerInterface, NormalizerInt
                     $values_2[] = $value_3;
                 }
             }
-            $object->setLayouts($values_2);
+            $object->setLayouts(...$values_2);
             unset($data['layouts']);
         }
         foreach ($data as $key => $value_4) {

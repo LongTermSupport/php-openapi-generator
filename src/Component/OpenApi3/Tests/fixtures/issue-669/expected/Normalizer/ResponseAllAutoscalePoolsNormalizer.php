@@ -56,7 +56,7 @@ class ResponseAllAutoscalePoolsNormalizer implements DenormalizerInterface, Norm
                     $values[] = $value_1;
                 }
             }
-            $object->setAutoscalePools($values);
+            $object->setAutoscalePools(...$values);
             unset($data['autoscale_pools']);
         }
         if (\array_key_exists('links', $data)) {

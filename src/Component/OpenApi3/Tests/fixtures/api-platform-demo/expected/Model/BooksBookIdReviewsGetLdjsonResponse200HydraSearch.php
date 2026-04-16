@@ -64,13 +64,10 @@ class BooksBookIdReviewsGetLdjsonResponse200HydraSearch extends \ArrayObject
     {
         return $this->hydraMapping;
     }
-    /**
-     * @param list<BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem> $hydraMapping
-     */
-    public function setHydraMapping(array $hydraMapping): self
+    public function setHydraMapping(BooksBookIdReviewsGetLdjsonResponse200HydraSearchHydraMappingItem ...$hydraMapping): self
     {
         $this->initialized['hydraMapping'] = true;
-        $this->hydraMapping = $hydraMapping;
+        $this->hydraMapping = array_values($hydraMapping);
         return $this;
     }
 }

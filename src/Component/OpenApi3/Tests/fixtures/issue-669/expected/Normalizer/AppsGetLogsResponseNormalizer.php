@@ -55,7 +55,7 @@ class AppsGetLogsResponseNormalizer implements DenormalizerInterface, Normalizer
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setHistoricUrls($values);
+            $object->setHistoricUrls(...$values);
             unset($data['historic_urls']);
         }
         if (\array_key_exists('live_url', $data)) {

@@ -70,13 +70,11 @@ class GitTree extends \ArrayObject
     }
     /**
      * Objects specifying a tree structure
-     *
-     * @param list<GitTreeTreeItem> $tree
      */
-    public function setTree(array $tree): self
+    public function setTree(GitTreeTreeItem ...$tree): self
     {
         $this->initialized['tree'] = true;
-        $this->tree = $tree;
+        $this->tree = array_values($tree);
         return $this;
     }
 }

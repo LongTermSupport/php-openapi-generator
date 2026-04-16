@@ -69,13 +69,11 @@ class MetadataReferenceResult extends \ArrayObject
     }
     /**
      * The matched documents.
-     *
-     * @param list<MetadataReference> $results
      */
-    public function setResults(array $results): self
+    public function setResults(MetadataReference ...$results): self
     {
         $this->initialized['results'] = true;
-        $this->results = $results;
+        $this->results = array_values($results);
         return $this;
     }
     /**

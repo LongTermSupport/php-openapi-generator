@@ -34,13 +34,10 @@ class ApiResourceUsage extends \ArrayObject
     {
         return $this->measurements;
     }
-    /**
-     * @param list<ApiUsageMeasurement> $measurements
-     */
-    public function setMeasurements(array $measurements): self
+    public function setMeasurements(ApiUsageMeasurement ...$measurements): self
     {
         $this->initialized['measurements'] = true;
-        $this->measurements = $measurements;
+        $this->measurements = array_values($measurements);
         return $this;
     }
     public function getResourceUuid(): string

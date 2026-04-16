@@ -48,7 +48,7 @@ class AuthenticationTokenNormalizer implements DenormalizerInterface, Normalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AuthenticationTokenConstraint());
         }
         if (\array_key_exists('token', $data)) {
@@ -77,7 +77,7 @@ class AuthenticationTokenNormalizer implements DenormalizerInterface, Normalizer
                     $values_1[] = $value_2;
                 }
             }
-            $object->setRepositories($values_1);
+            $object->setRepositories(...$values_1);
             unset($data['repositories']);
         }
         if (\array_key_exists('single_file', $data)) {
@@ -133,7 +133,7 @@ class AuthenticationTokenNormalizer implements DenormalizerInterface, Normalizer
                 $dataArray[$key_1] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\AuthenticationTokenConstraint());
         }
         return $dataArray;

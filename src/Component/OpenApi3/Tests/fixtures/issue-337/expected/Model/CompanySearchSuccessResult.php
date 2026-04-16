@@ -42,13 +42,10 @@ class CompanySearchSuccessResult extends \ArrayObject
     {
         return $this->companies;
     }
-    /**
-     * @param list<CompanySearchSuccessResultCompaniesItem> $companies
-     */
-    public function setCompanies(array $companies): self
+    public function setCompanies(CompanySearchSuccessResultCompaniesItem ...$companies): self
     {
         $this->initialized['companies'] = true;
-        $this->companies = $companies;
+        $this->companies = array_values($companies);
         return $this;
     }
 }

@@ -56,7 +56,7 @@ class BlacklistNormalizer implements DenormalizerInterface, NormalizerInterface,
                     $values[] = $value_1;
                 }
             }
-            $object->setItems($values);
+            $object->setItems(...$values);
         }
         return $object;
     }

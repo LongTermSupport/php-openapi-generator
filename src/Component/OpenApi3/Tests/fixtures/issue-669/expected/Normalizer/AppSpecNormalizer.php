@@ -76,7 +76,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values[] = $value_1;
                 }
             }
-            $object->setDomains($values);
+            $object->setDomains(...$values);
             unset($data['domains']);
         }
         if (\array_key_exists('services', $data)) {
@@ -87,7 +87,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_1[] = $value_3;
                 }
             }
-            $object->setServices($values_1);
+            $object->setServices(...$values_1);
             unset($data['services']);
         }
         if (\array_key_exists('static_sites', $data)) {
@@ -98,7 +98,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_2[] = $value_5;
                 }
             }
-            $object->setStaticSites($values_2);
+            $object->setStaticSites(...$values_2);
             unset($data['static_sites']);
         }
         if (\array_key_exists('jobs', $data)) {
@@ -109,7 +109,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_3[] = $value_7;
                 }
             }
-            $object->setJobs($values_3);
+            $object->setJobs(...$values_3);
             unset($data['jobs']);
         }
         if (\array_key_exists('workers', $data)) {
@@ -120,7 +120,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_4[] = $value_9;
                 }
             }
-            $object->setWorkers($values_4);
+            $object->setWorkers(...$values_4);
             unset($data['workers']);
         }
         if (\array_key_exists('functions', $data)) {
@@ -131,7 +131,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_5[] = $value_11;
                 }
             }
-            $object->setFunctions($values_5);
+            $object->setFunctions(...$values_5);
             unset($data['functions']);
         }
         if (\array_key_exists('databases', $data)) {
@@ -142,7 +142,7 @@ class AppSpecNormalizer implements DenormalizerInterface, NormalizerInterface, D
                     $values_6[] = $value_13;
                 }
             }
-            $object->setDatabases($values_6);
+            $object->setDatabases(...$values_6);
             unset($data['databases']);
         }
         if (\array_key_exists('ingress', $data)) {

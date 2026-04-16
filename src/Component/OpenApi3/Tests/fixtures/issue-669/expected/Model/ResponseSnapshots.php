@@ -33,13 +33,10 @@ class ResponseSnapshots extends \ArrayObject
     {
         return $this->snapshots;
     }
-    /**
-     * @param list<Snapshots> $snapshots
-     */
-    public function setSnapshots(array $snapshots): self
+    public function setSnapshots(Snapshots ...$snapshots): self
     {
         $this->initialized['snapshots'] = true;
-        $this->snapshots = $snapshots;
+        $this->snapshots = array_values($snapshots);
         return $this;
     }
     public function getLinks(): PageLinks

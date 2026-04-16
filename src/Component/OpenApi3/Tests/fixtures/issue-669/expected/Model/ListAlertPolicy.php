@@ -31,13 +31,10 @@ class ListAlertPolicy extends \ArrayObject
     {
         return $this->policies;
     }
-    /**
-     * @param list<AlertPolicy> $policies
-     */
-    public function setPolicies(array $policies): self
+    public function setPolicies(AlertPolicy ...$policies): self
     {
         $this->initialized['policies'] = true;
-        $this->policies = $policies;
+        $this->policies = array_values($policies);
         return $this;
     }
 }

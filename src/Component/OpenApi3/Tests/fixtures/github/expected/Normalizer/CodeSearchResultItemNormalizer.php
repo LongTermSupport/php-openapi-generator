@@ -48,7 +48,7 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CodeSearchResultItemConstraint());
         }
         if (\array_key_exists('name', $data)) {
@@ -103,7 +103,7 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                     $values[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setLineNumbers($values);
+            $object->setLineNumbers(...$values);
             unset($data['line_numbers']);
         }
         if (\array_key_exists('text_matches', $data)) {
@@ -114,7 +114,7 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                     $values_1[] = $value_3;
                 }
             }
-            $object->setTextMatches($values_1);
+            $object->setTextMatches(...$values_1);
             unset($data['text_matches']);
         }
         foreach ($data as $key => $value_4) {
@@ -171,7 +171,7 @@ class CodeSearchResultItemNormalizer implements DenormalizerInterface, Normalize
                 $dataArray[$key] = $value_2;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\CodeSearchResultItemConstraint());
         }
         return $dataArray;

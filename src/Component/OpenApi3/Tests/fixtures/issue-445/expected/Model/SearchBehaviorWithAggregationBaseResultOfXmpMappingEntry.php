@@ -85,13 +85,11 @@ class SearchBehaviorWithAggregationBaseResultOfXmpMappingEntry extends \ArrayObj
     }
     /**
      * The matched documents.
-     *
-     * @param list<XmpMappingEntry> $results
      */
-    public function setResults(array $results): self
+    public function setResults(XmpMappingEntry ...$results): self
     {
         $this->initialized['results'] = true;
-        $this->results = $results;
+        $this->results = array_values($results);
         return $this;
     }
     /**

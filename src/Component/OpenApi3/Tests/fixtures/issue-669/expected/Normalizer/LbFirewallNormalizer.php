@@ -55,7 +55,7 @@ class LbFirewallNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values[] = TypeValidator::assertString($value, 'value');
                 }
             }
-            $object->setDeny($values);
+            $object->setDeny(...$values);
             unset($data['deny']);
         }
         if (\array_key_exists('allow', $data)) {
@@ -65,7 +65,7 @@ class LbFirewallNormalizer implements DenormalizerInterface, NormalizerInterface
                     $values_1[] = TypeValidator::assertString($value_1, 'value');
                 }
             }
-            $object->setAllow($values_1);
+            $object->setAllow(...$values_1);
             unset($data['allow']);
         }
         foreach ($data as $key => $value_2) {

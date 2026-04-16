@@ -48,7 +48,7 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FileCommitCommitConstraint());
         }
         if (\array_key_exists('sha', $data)) {
@@ -94,7 +94,7 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
                     $values[] = $value_4;
                 }
             }
-            $object->setParents($values);
+            $object->setParents(...$values);
             unset($data['parents']);
         }
         if (\array_key_exists('verification', $data)) {
@@ -158,7 +158,7 @@ class FileCommitCommitNormalizer implements DenormalizerInterface, NormalizerInt
                 $dataArray[$key] = $value_1;
             }
         }
-        if (!(bool) ($context['skip_validation'] ?? false)) {
+        if (true !== ($context['skip_validation'] ?? null)) {
             $this->validate($dataArray, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator\FileCommitCommitConstraint());
         }
         return $dataArray;

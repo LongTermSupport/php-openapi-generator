@@ -56,7 +56,7 @@ class ContentFieldsBatchUpdateFilterRequestNormalizer implements DenormalizerInt
                     $values[] = $value_1;
                 }
             }
-            $object->setChangeCommands($values);
+            $object->setChangeCommands(...$values);
             unset($data['changeCommands']);
         }
         if (\array_key_exists('allowMissingDependencies', $data)) {

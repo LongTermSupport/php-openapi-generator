@@ -7,6 +7,7 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Generator\RequestB
 use Http\Message\MultipartStream\MultipartStreamBuilder;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType;
+use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema;
 use PhpParser\Comment\Doc;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr;
@@ -23,6 +24,46 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
     public function getSerializeStatements(MediaType $content, string $contentType, string $reference, Context $context): array
     {
         if (1 === \Safe\preg_match('/multipart\/form-data/', $contentType)) {
+            $binaryFieldNames = $this->extractBinaryFieldNames($content);
+
+            // Build the addResource call — pass filename option for binary file fields
+            // so the multipart part includes Content-Disposition: ...; filename="<name>"
+            if ([] !== $binaryFieldNames) {
+                $binaryFieldItems = array_map(
+                    static fn (string $name): Expr\ArrayItem => new Expr\ArrayItem(new Scalar\String_($name)),
+                    $binaryFieldNames,
+                );
+                $addResourceStatement = new Stmt\If_(
+                    new Expr\FuncCall(new Name('in_array'), [
+                        new Arg(new Expr\Variable('key')),
+                        new Arg(new Expr\Array_($binaryFieldItems)),
+                        new Arg(new Expr\ConstFetch(new Name('true'))),
+                    ]),
+                    [
+                        'stmts' => [
+                            new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
+                                new Arg(new Expr\Variable('key')),
+                                new Arg(new Expr\Variable('value')),
+                                new Arg(new Expr\Array_([
+                                    new Expr\ArrayItem(new Expr\Variable('key'), new Scalar\String_('filename')),
+                                ])),
+                            ])),
+                        ],
+                        'else' => new Stmt\Else_([
+                            new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
+                                new Arg(new Expr\Variable('key')),
+                                new Arg(new Expr\Variable('value')),
+                            ])),
+                        ]),
+                    ]
+                );
+            } else {
+                $addResourceStatement = new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
+                    new Arg(new Expr\Variable('key')),
+                    new Arg(new Expr\Variable('value')),
+                ]));
+            }
+
             return [
                 new Stmt\Expression(new Expr\Assign(new Expr\Variable('bodyBuilder'), new Expr\New_(new Name('\\' . MultipartStreamBuilder::class), [
                     new Arg(new Expr\Variable('streamFactory')),
@@ -80,10 +121,7 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
                                 ))),
                             ]]
                         ),
-                        new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
-                            new Arg(new Expr\Variable('key')),
-                            new Arg(new Expr\Variable('value')),
-                        ])),
+                        $addResourceStatement,
                     ],
                 ]),
                 new Stmt\Return_(new Expr\Array_([
@@ -153,5 +191,35 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
                 ])),
             ])),
         ];
+    }
+
+    /**
+     * Extract field names that have `format: binary` from the schema properties.
+     *
+     * These fields represent file uploads and need the `filename` option in the
+     * multipart builder so that the Content-Disposition header includes `filename=`.
+     *
+     * @return list<string>
+     */
+    private function extractBinaryFieldNames(MediaType $content): array
+    {
+        $schema = $content->getSchema();
+        if (!$schema instanceof Schema) {
+            return [];
+        }
+
+        $properties = $schema->getProperties();
+        if (null === $properties) {
+            return [];
+        }
+
+        $binaryFields = [];
+        foreach ($properties as $name => $property) {
+            if ($property instanceof Schema && 'binary' === $property->getFormat()) {
+                $binaryFields[] = (string) $name;
+            }
+        }
+
+        return $binaryFields;
     }
 }

@@ -45,7 +45,11 @@ class PostFile extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
                 if (!is_string($value)) {
                     throw new \LogicException('Expected form parameter value to be a string');
                 }
-                $bodyBuilder->addResource($key, $value);
+                if (in_array($key, ['fichier'], true)) {
+                    $bodyBuilder->addResource($key, $value, ['filename' => $key]);
+                } else {
+                    $bodyBuilder->addResource($key, $value);
+                }
             }
             return [['Content-Type' => ['multipart/form-data; boundary="' . ($bodyBuilder->getBoundary() . '"')]], $bodyBuilder->build()];
         }

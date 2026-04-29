@@ -13,6 +13,7 @@ rules:
     - QaConfig\PHPStan\Rules\ForbidInlineVarAnnotationRule
     - QaConfig\PHPStan\Rules\ForbidAssertCallRule
     - QaConfig\PHPStan\Rules\ForbidGeneratedAssertRule
+    - QaConfig\PHPStan\Rules\ForbidGeneratorImportInOutputRule
     - QaConfig\PHPStan\Rules\RequireStrictComparisonRule
 
 parameters:

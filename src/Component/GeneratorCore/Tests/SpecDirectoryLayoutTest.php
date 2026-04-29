@@ -14,18 +14,18 @@ final class SpecDirectoryLayoutTest extends TestCase
     #[Test]
     public function origDirectoryName(): void
     {
-        self::assertSame('orig', constant(SpecDirectoryLayout::class . '::ORIG'));
+        self::assertSame('orig', \constant(SpecDirectoryLayout::class . '::ORIG'));
     }
 
     #[Test]
     public function patchesDirectoryName(): void
     {
-        self::assertSame('patches', constant(SpecDirectoryLayout::class . '::PATCHES'));
+        self::assertSame('patches', \constant(SpecDirectoryLayout::class . '::PATCHES'));
     }
 
     #[Test]
     public function patchedDirectoryName(): void
     {
-        self::assertSame('patched', constant(SpecDirectoryLayout::class . '::PATCHED'));
+        self::assertSame('patched', \constant(SpecDirectoryLayout::class . '::PATCHED'));
     }
 }

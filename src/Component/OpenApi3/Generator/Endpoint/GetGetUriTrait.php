@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Generator\Endpoint;
 
+use LogicException;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Generator\EndpointGenerator;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Guesser\GuessClass;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Parameter;
@@ -45,7 +46,7 @@ trait GetGetUriTrait
 
             $paramName = $parameter->getName();
             if (!\is_string($paramName)) {
-                throw new \LogicException('Expected string parameter name, got ' . get_debug_type($paramName));
+                throw new LogicException('Expected string parameter name, got ' . get_debug_type($paramName));
             }
 
             $names[] = $paramName;

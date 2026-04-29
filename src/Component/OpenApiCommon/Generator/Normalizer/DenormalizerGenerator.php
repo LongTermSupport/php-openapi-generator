@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator\Normalizer;
 
+use LogicException;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Normalizer\DenormalizerGenerator as JsonSchemaDenormalizerGenerator;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess;
@@ -28,7 +29,7 @@ trait DenormalizerGenerator
             foreach ($classGuess->getChildEntryKeys() as $discriminatorValue) {
                 $childEntryName = $classGuess->getChildEntryClassNameByKey($discriminatorValue);
                 if (null === $childEntryName) {
-                    throw new \LogicException(\sprintf('No child entry class name for discriminator value "%s"', $discriminatorValue));
+                    throw new LogicException(\sprintf('No child entry class name for discriminator value "%s"', $discriminatorValue));
                 }
 
                 $statements[] = new Stmt\If_(

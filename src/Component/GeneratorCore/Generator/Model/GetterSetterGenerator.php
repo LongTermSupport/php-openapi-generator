@@ -188,7 +188,7 @@ trait GetterSetterGenerator
         if ($isVariadicList && $propType instanceof ArrayType) {
             $itemType       = $propType->getItemType();
             $itemNativeHint = $itemType->getTypeHint($namespace);
-            $itemDocHint    = (string) $itemType->getDocTypeHint($namespace);
+            $itemDocHint    = (string)$itemType->getDocTypeHint($namespace);
             $itemNativeStr  = Type::typeHintToString($itemNativeHint);
             if ('' !== $itemDocHint && $itemDocHint !== $itemNativeStr) {
                 $variadicItemDocType = $itemDocHint;

@@ -23,7 +23,7 @@ use LogicException;
  * Supported RFC 6902 operations: add, replace, remove.
  * RFC 6901 pointer escaping: ~1 → /, ~0 → ~.
  */
-readonly final class SpecPatchApplier
+final readonly class SpecPatchApplier
 {
     /**
      * Apply a JSON patch file to an original spec file.

@@ -49,7 +49,7 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
                                 ])),
                             ])),
                         ],
-                        'else' => new Stmt\Else_([
+                        'else'  => new Stmt\Else_([
                             new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
                                 new Arg(new Expr\Variable('key')),
                                 new Arg(new Expr\Variable('value')),
@@ -216,7 +216,7 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
         $binaryFields = [];
         foreach ($properties as $name => $property) {
             if ($property instanceof Schema && 'binary' === $property->getFormat()) {
-                $binaryFields[] = (string) $name;
+                $binaryFields[] = (string)$name;
             }
         }
 

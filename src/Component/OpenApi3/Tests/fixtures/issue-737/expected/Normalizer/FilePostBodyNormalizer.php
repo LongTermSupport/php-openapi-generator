@@ -52,7 +52,7 @@ class FilePostBodyNormalizer implements DenormalizerInterface, NormalizerInterfa
             $this->validate($data, new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Validator\FilePostBodyConstraint());
         }
         if (\array_key_exists('fichier', $data)) {
-            $object->setFichier(TypeValidator::assertString($data['fichier'], 'fichier'));
+            $object->setFichier(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Runtime\Client\FileUpload(TypeValidator::assertString($data['fichier'], 'value'), '', ''));
             unset($data['fichier']);
         }
         if (\array_key_exists('valid', $data)) {
@@ -77,7 +77,7 @@ class FilePostBodyNormalizer implements DenormalizerInterface, NormalizerInterfa
         }
         $dataArray = [];
         if ($data->isInitialized('fichier')) {
-            $dataArray['fichier'] = $data->getFichier();
+            $dataArray['fichier'] = $data->getFichier()->contents;
         }
         if ($data->isInitialized('valid')) {
             $dataArray['valid'] = $data->getValid();

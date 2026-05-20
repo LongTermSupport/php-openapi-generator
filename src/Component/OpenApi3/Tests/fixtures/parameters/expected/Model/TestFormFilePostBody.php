@@ -20,12 +20,12 @@ class TestFormFilePostBody extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected string $testFile;
-    public function getTestFile(): string
+    protected \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Runtime\Client\FileUpload $testFile;
+    public function getTestFile(): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Runtime\Client\FileUpload
     {
         return $this->testFile;
     }
-    public function setTestFile(string $testFile): self
+    public function setTestFile(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Runtime\Client\FileUpload $testFile): self
     {
         $this->initialized['testFile'] = true;
         $this->testFile = $testFile;

@@ -11,6 +11,7 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\AdditionalPropertiesGuesser;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\AllOfGuesser;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\ArrayGuesser;
+use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\BinaryFormatGuesser;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\CustomStringFormatGuesser;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\DateGuesser;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\DateTimeGuesser;
@@ -40,6 +41,7 @@ class GuesserFactory
         $chainGuesser->addGuesser(new CustomStringFormatGuesser(Schema::class, $customStringFormatMapping));
         $chainGuesser->addGuesser(new DateGuesser(Schema::class, $dateFormat, $datePreferInterface));
         $chainGuesser->addGuesser(new DateTimeGuesser(Schema::class, $outputDateTimeFormat, $inputDateTimeFormat, $datePreferInterface));
+        $chainGuesser->addGuesser(new BinaryFormatGuesser(Schema::class));
         $chainGuesser->addGuesser(new ReferenceGuesser($denormalizer, Schema::class));
         $chainGuesser->addGuesser(new OpenApiGuesser($denormalizer));
         $chainGuesser->addGuesser(new SchemaGuesser($denormalizer, $naming));

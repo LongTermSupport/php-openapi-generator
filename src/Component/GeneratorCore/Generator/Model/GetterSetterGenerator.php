@@ -70,6 +70,7 @@ trait GetterSetterGenerator
         } elseif (!$strict || $property->isNullable()) {
             $setType = Type::makeNullable($setType);
         }
+
         $param = new Param(new Expr\Variable($property->getPhpName()), null, $setType);
 
         // List type: ArrayType but NOT MapType (map has string keys, must preserve them).

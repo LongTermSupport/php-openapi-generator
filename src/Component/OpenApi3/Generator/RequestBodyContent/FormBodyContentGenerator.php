@@ -11,6 +11,7 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema;
 use PhpParser\Comment\Doc;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr;
+use PhpParser\Node\Identifier;
 use PhpParser\Node\Name;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
@@ -26,45 +27,7 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
         if (1 === \Safe\preg_match('/multipart\/form-data/', $contentType)) {
             $binaryFieldNames = $this->extractBinaryFieldNames($content);
 
-            // Build the addResource call — pass filename option for binary file fields
-            // so the multipart part includes Content-Disposition: ...; filename="<name>"
-            if ([] !== $binaryFieldNames) {
-                $binaryFieldItems = array_map(
-                    static fn (string $name): Expr\ArrayItem => new Expr\ArrayItem(new Scalar\String_($name)),
-                    $binaryFieldNames,
-                );
-                $addResourceStatement = new Stmt\If_(
-                    new Expr\FuncCall(new Name('in_array'), [
-                        new Arg(new Expr\Variable('key')),
-                        new Arg(new Expr\Array_($binaryFieldItems)),
-                        new Arg(new Expr\ConstFetch(new Name('true'))),
-                    ]),
-                    [
-                        'stmts' => [
-                            new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
-                                new Arg(new Expr\Variable('key')),
-                                new Arg(new Expr\Variable('value')),
-                                new Arg(new Expr\Array_([
-                                    new Expr\ArrayItem(new Expr\Variable('key'), new Scalar\String_('filename')),
-                                ])),
-                            ])),
-                        ],
-                        'else'  => new Stmt\Else_([
-                            new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
-                                new Arg(new Expr\Variable('key')),
-                                new Arg(new Expr\Variable('value')),
-                            ])),
-                        ]),
-                    ]
-                );
-            } else {
-                $addResourceStatement = new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
-                    new Arg(new Expr\Variable('key')),
-                    new Arg(new Expr\Variable('value')),
-                ]));
-            }
-
-            return [
+            $statements = [
                 new Stmt\Expression(new Expr\Assign(new Expr\Variable('bodyBuilder'), new Expr\New_(new Name('\\' . MultipartStreamBuilder::class), [
                     new Arg(new Expr\Variable('streamFactory')),
                 ]))),
@@ -81,67 +44,143 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
                         ))),
                     ]]
                 ),
-                new Stmt\Expression(new Expr\Assign(new Expr\Variable('formParameters'), new Expr\MethodCall(new Expr\Variable('serializer'), 'normalize', [
-                    new Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'body')),
-                    new Arg(new Scalar\String_('json')),
-                ])), [
-                    'comments' => [new Doc('/** @var array<string, mixed> $formParameters */')],
-                ]),
-                new Stmt\Foreach_(new Expr\Variable('formParameters'), new Expr\Variable('value'), [
-                    'keyVar' => new Expr\Variable('key'),
-                    'stmts'  => [
+            ];
+
+            // Binary file fields are emitted first as direct addResource calls reading
+            // straight from the body DTO (which holds a typed FileUpload value object).
+            // This is the ONLY way to wire the per-part Content-Type header — running
+            // the field through normalize→serialize would flatten the FileUpload to its
+            // contents string and lose the filename and content type.
+            //
+            // Per RFC 7578 each multipart part SHOULD carry Content-Type and
+            // Content-Disposition with filename when uploading a file.
+            foreach ($binaryFieldNames as $binaryFieldName) {
+                $uploadVarName = $binaryFieldName . 'Upload';
+                $uploadVar     = new Expr\Variable($uploadVarName);
+                $getterName    = 'get' . ucfirst($binaryFieldName);
+
+                $statements[] = new Stmt\Expression(new Expr\Assign(
+                    $uploadVar,
+                    new Expr\MethodCall(new Expr\PropertyFetch(new Expr\Variable('this'), 'body'), $getterName)
+                ));
+
+                $statements[] = new Stmt\Expression(new Expr\MethodCall(
+                    new Expr\Variable('bodyBuilder'),
+                    'addResource',
+                    [
+                        new Arg(new Scalar\String_($binaryFieldName)),
+                        new Arg(new Expr\PropertyFetch($uploadVar, new Identifier('contents'))),
+                        new Arg(new Expr\Array_([
+                            new Expr\ArrayItem(
+                                new Expr\PropertyFetch($uploadVar, new Identifier('filename')),
+                                new Scalar\String_('filename')
+                            ),
+                            new Expr\ArrayItem(
+                                new Expr\Array_([
+                                    new Expr\ArrayItem(
+                                        new Expr\PropertyFetch($uploadVar, new Identifier('contentType')),
+                                        new Scalar\String_('Content-Type')
+                                    ),
+                                ]),
+                                new Scalar\String_('headers')
+                            ),
+                        ])),
+                    ]
+                ));
+            }
+
+            // Normalize the body for the non-binary form fields.
+            $statements[] = new Stmt\Expression(new Expr\Assign(new Expr\Variable('formParameters'), new Expr\MethodCall(new Expr\Variable('serializer'), 'normalize', [
+                new Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'body')),
+                new Arg(new Scalar\String_('json')),
+            ])), [
+                'comments' => [new Doc('/** @var array<string, mixed> $formParameters */')],
+            ]);
+
+            // Foreach body that handles non-binary form fields. Binary fields are
+            // skipped via `continue` because they were emitted above with direct
+            // typed access to the FileUpload value object.
+            $foreachStmts = [];
+
+            if ([] !== $binaryFieldNames) {
+                $binaryFieldItems = array_map(
+                    static fn (string $name): Expr\ArrayItem => new Expr\ArrayItem(new Scalar\String_($name)),
+                    $binaryFieldNames,
+                );
+                $foreachStmts[] = new Stmt\If_(
+                    new Expr\FuncCall(new Name('in_array'), [
+                        new Arg(new Expr\Variable('key')),
+                        new Arg(new Expr\Array_($binaryFieldItems)),
+                        new Arg(new Expr\ConstFetch(new Name('true'))),
+                    ]),
+                    [
+                        'stmts' => [
+                            new Stmt\Continue_(),
+                        ],
+                    ]
+                );
+            }
+
+            $foreachStmts[] = new Stmt\Expression(new Expr\Assign(
+                new Expr\Variable('value'),
+                new Expr\Ternary(
+                    new Expr\FuncCall(new Name('is_int'), [new Arg(new Expr\Variable('value'))]),
+                    new Expr\Cast\String_(new Expr\Variable('value')),
+                    new Expr\Variable('value')
+                )
+            ));
+            $foreachStmts[] = new Stmt\If_(
+                new Expr\FuncCall(new Name('is_array'), [new Arg(new Expr\Variable('value'))]),
+                [
+                    'stmts' => [
                         new Stmt\Expression(new Expr\Assign(
                             new Expr\Variable('value'),
-                            new Expr\Ternary(
-                                new Expr\FuncCall(new Name('is_int'), [new Arg(new Expr\Variable('value'))]),
-                                new Expr\Cast\String_(new Expr\Variable('value')),
-                                new Expr\Variable('value')
-                            )
+                            new Expr\MethodCall(new Expr\Variable('serializer'), 'serialize', [
+                                new Arg(new Expr\Variable('value')),
+                                new Arg(new Scalar\String_('json')),
+                            ])
                         )),
-                        new Stmt\If_(
-                            new Expr\FuncCall(new Name('is_array'), [new Arg(new Expr\Variable('value'))]),
-                            [
-                                'stmts' => [
-                                    new Stmt\Expression(new Expr\Assign(
-                                        new Expr\Variable('value'),
-                                        new Expr\MethodCall(new Expr\Variable('serializer'), 'serialize', [
-                                            new Arg(new Expr\Variable('value')),
-                                            new Arg(new Scalar\String_('json')),
-                                        ])
-                                    )),
-                                ],
-                            ]
-                        ),
-                        new Stmt\If_(
-                            new Expr\BooleanNot(new Expr\FuncCall(new Name('is_string'), [new Arg(new Expr\Variable('value'))])),
-                            ['stmts' => [
-                                new Stmt\Expression(new Expr\Throw_(new Expr\New_(
-                                    new Name\FullyQualified('LogicException'),
-                                    [new Arg(new Scalar\String_('Expected form parameter value to be a string'))]
-                                ))),
-                            ]]
-                        ),
-                        $addResourceStatement,
                     ],
-                ]),
-                new Stmt\Return_(new Expr\Array_([
-                    new Expr\ArrayItem(new Expr\Array_([
-                        new Expr\ArrayItem(
-                            new Expr\Array_([new Expr\ArrayItem(
+                ]
+            );
+            $foreachStmts[] = new Stmt\If_(
+                new Expr\BooleanNot(new Expr\FuncCall(new Name('is_string'), [new Arg(new Expr\Variable('value'))])),
+                ['stmts' => [
+                    new Stmt\Expression(new Expr\Throw_(new Expr\New_(
+                        new Name\FullyQualified('LogicException'),
+                        [new Arg(new Scalar\String_('Expected form parameter value to be a string'))]
+                    ))),
+                ]]
+            );
+            $foreachStmts[] = new Stmt\Expression(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'addResource', [
+                new Arg(new Expr\Variable('key')),
+                new Arg(new Expr\Variable('value')),
+            ]));
+
+            $statements[] = new Stmt\Foreach_(new Expr\Variable('formParameters'), new Expr\Variable('value'), [
+                'keyVar' => new Expr\Variable('key'),
+                'stmts'  => $foreachStmts,
+            ]);
+
+            $statements[] = new Stmt\Return_(new Expr\Array_([
+                new Expr\ArrayItem(new Expr\Array_([
+                    new Expr\ArrayItem(
+                        new Expr\Array_([new Expr\ArrayItem(
+                            new Expr\BinaryOp\Concat(
+                                new Scalar\String_('multipart/form-data; boundary="'),
                                 new Expr\BinaryOp\Concat(
-                                    new Scalar\String_('multipart/form-data; boundary="'),
-                                    new Expr\BinaryOp\Concat(
-                                        new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'getBoundary'),
-                                        new Scalar\String_('"')
-                                    )
+                                    new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'getBoundary'),
+                                    new Scalar\String_('"')
                                 )
-                            )]),
-                            new Scalar\String_('Content-Type')
-                        ),
-                    ])),
-                    new Expr\ArrayItem(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'build')),
+                            )
+                        )]),
+                        new Scalar\String_('Content-Type')
+                    ),
                 ])),
-            ];
+                new Expr\ArrayItem(new Expr\MethodCall(new Expr\Variable('bodyBuilder'), 'build')),
+            ]));
+
+            return $statements;
         }
 
         return [
@@ -196,8 +235,9 @@ class FormBodyContentGenerator extends AbstractBodyContentGenerator
     /**
      * Extract field names that have `format: binary` from the schema properties.
      *
-     * These fields represent file uploads and need the `filename` option in the
-     * multipart builder so that the Content-Disposition header includes `filename=`.
+     * These fields represent file uploads and are emitted as direct
+     * `addResource(name, $upload->contents, ['filename' => ..., 'headers' => ...])`
+     * calls so the multipart part carries the correct Content-Type per RFC 7578.
      *
      * @return list<string>
      */

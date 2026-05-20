@@ -30,7 +30,11 @@ class MultipartNestedObjectRuntimeTest extends TestCase
         $item->setItemType('document');
 
         $body = new Expected\MultipartNestedObject\Model\FilePostBody();
-        $body->setFichier('file-content');
+        $body->setFichier(new Expected\MultipartNestedObject\Runtime\Client\FileUpload(
+            contents: 'file-content',
+            filename: 'report.pdf',
+            contentType: 'application/pdf',
+        ));
         $body->setItem($item);
 
         $normalizers = [
@@ -64,5 +68,11 @@ class MultipartNestedObjectRuntimeTest extends TestCase
         $streamContent = \is_object($result[1]) && method_exists($result[1], '__toString') ? (string)$result[1] : '';
         self::assertStringContainsString('file-content', $streamContent);
         self::assertStringContainsString('{"itemId":42,"itemType":"document"}', $streamContent);
+
+        // Binary parts MUST advertise filename + per-part Content-Type per RFC 7578.
+        // This is the regression fix from issue 18 — the previous emitted code used
+        // the form-field name as filename and set no Content-Type on the part.
+        self::assertStringContainsString('filename="report.pdf"', $streamContent);
+        self::assertStringContainsString('Content-Type: application/pdf', $streamContent);
     }
 }

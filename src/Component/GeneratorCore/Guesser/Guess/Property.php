@@ -12,24 +12,12 @@ class Property
 
     private string $phpName;
 
-    private bool $readOnly;
-
     private bool $deprecated = false;
 
     private string $accessorName;
 
-    public function __construct(
-        private readonly object $object,
-        private readonly string $name,
-        private readonly string $reference,
-        private readonly bool $nullable = false,
-        private readonly bool $required = false,
-        private ?Type $type = null,
-        private readonly ?string $description = null,
-        private readonly mixed $default = null,
-        bool $readOnly = false,
-    ) {
-        $this->readOnly = $readOnly;
+    public function __construct(private readonly object $object, private readonly string $name, private readonly string $reference, private readonly bool $nullable = false, private readonly bool $required = false, private ?Type $type = null, private readonly ?string $description = null, private readonly mixed $default = null, private bool $readOnly = false)
+    {
     }
 
     public function setPhpName(string $name): void

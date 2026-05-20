@@ -35,9 +35,14 @@ class PostFile extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Test
             if (!$serializer instanceof \Symfony\Component\Serializer\Normalizer\NormalizerInterface) {
                 throw new \LogicException('Expected serializer to implement NormalizerInterface');
             }
+            $fichierUpload = $this->body->getFichier();
+            $bodyBuilder->addResource('fichier', $fichierUpload->contents, ['filename' => $fichierUpload->filename, 'headers' => ['Content-Type' => $fichierUpload->contentType]]);
             /** @var array<string, mixed> $formParameters */
             $formParameters = $serializer->normalize($this->body, 'json');
             foreach ($formParameters as $key => $value) {
+                if (in_array($key, ['fichier'], true)) {
+                    continue;
+                }
                 $value = is_int($value) ? (string) $value : $value;
                 if (is_array($value)) {
                     $value = $serializer->serialize($value, 'json');

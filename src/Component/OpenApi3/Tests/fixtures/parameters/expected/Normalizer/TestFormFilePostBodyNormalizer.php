@@ -49,7 +49,7 @@ class TestFormFilePostBodyNormalizer implements DenormalizerInterface, Normalize
             return new Reference(TypeValidator::assertString($data['$recursiveRef'], '$recursiveRef'), TypeValidator::assertString($context['document-origin'], 'context.document-origin'));
         }
         if (\array_key_exists('testFile', $data)) {
-            $object->setTestFile(TypeValidator::assertString($data['testFile'], 'testFile'));
+            $object->setTestFile(new \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Runtime\Client\FileUpload(TypeValidator::assertString($data['testFile'], 'value'), '', ''));
             unset($data['testFile']);
         }
         foreach ($data as $key => $value) {
@@ -70,7 +70,7 @@ class TestFormFilePostBodyNormalizer implements DenormalizerInterface, Normalize
         }
         $dataArray = [];
         if ($data->isInitialized('testFile')) {
-            $dataArray['testFile'] = $data->getTestFile();
+            $dataArray['testFile'] = $data->getTestFile()->contents;
         }
         foreach ($data as $key => $value) {
             if (preg_match('/.*/', strval($key)) === 1) {

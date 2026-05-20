@@ -35,9 +35,14 @@ class TestFormFileParameters extends \LongTermSupport\OpenApiGenerator\Component
             if (!$serializer instanceof \Symfony\Component\Serializer\Normalizer\NormalizerInterface) {
                 throw new \LogicException('Expected serializer to implement NormalizerInterface');
             }
+            $testFileUpload = $this->body->getTestFile();
+            $bodyBuilder->addResource('testFile', $testFileUpload->contents, ['filename' => $testFileUpload->filename, 'headers' => ['Content-Type' => $testFileUpload->contentType]]);
             /** @var array<string, mixed> $formParameters */
             $formParameters = $serializer->normalize($this->body, 'json');
             foreach ($formParameters as $key => $value) {
+                if (in_array($key, ['testFile'], true)) {
+                    continue;
+                }
                 $value = is_int($value) ? (string) $value : $value;
                 if (is_array($value)) {
                     $value = $serializer->serialize($value, 'json');

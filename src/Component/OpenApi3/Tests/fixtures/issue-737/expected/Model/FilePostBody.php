@@ -20,13 +20,13 @@ class FilePostBody extends \ArrayObject
     {
         return array_key_exists($property, $this->initialized);
     }
-    protected string $fichier;
+    protected \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Runtime\Client\FileUpload $fichier;
     protected bool $valid;
-    public function getFichier(): string
+    public function getFichier(): \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Runtime\Client\FileUpload
     {
         return $this->fichier;
     }
-    public function setFichier(string $fichier): self
+    public function setFichier(\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Runtime\Client\FileUpload $fichier): self
     {
         $this->initialized['fichier'] = true;
         $this->fichier = $fichier;

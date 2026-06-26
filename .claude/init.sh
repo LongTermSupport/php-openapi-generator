@@ -63,9 +63,9 @@ emit_hook_error() {
             "ACTION REQUIRED:" \
             "1. STOP all work immediately - do not use any tools" \
             "2. Report to the user: 'Hooks daemon must be installed before running Claude Code agents in this environment'" \
-            "3. Installation guide: CLAUDE/LLM-INSTALL.md" \
+            "3. Use the hooks-daemon skill to install (Skill tool: skill=hooks-daemon, args=install)" \
             "" \
-            "DO NOT attempt to install the daemon yourself. DO NOT continue working without the daemon.")
+            "DO NOT continue working without the daemon.")
     elif [[ "$_HOOKS_DAEMON_NOT_INSTALLED" == "true" ]]; then
         # NOT INSTALLED: Guide to install guide — project was cloned but daemon never set up
         context_msg=$(printf '%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s' \
@@ -76,10 +76,10 @@ emit_hook_error() {
             "" \
             "ALL safety handlers, code quality checks, and workflow enforcement are INACTIVE." \
             "" \
-            "TO INSTALL — read and follow the guide (do not improvise):" \
-            "  CLAUDE/LLM-INSTALL.md" \
+            "TO INSTALL — use the hooks-daemon skill (do not improvise):" \
+            "  Use the hooks-daemon skill to install (Skill tool: skill=hooks-daemon, args=install)" \
             "" \
-            "After installing, the daemon starts automatically on the next hook event.")
+            "After installing, restart your Claude session for hooks to activate.")
     else
         # Standard error message
         # NOTE: Language is intentionally measured to avoid triggering investigation loops
@@ -94,11 +94,11 @@ emit_hook_error() {
             "If you are in the middle of an upgrade, this is expected and temporary." \
             "" \
             "TO FIX (usually takes a few seconds):" \
-            "1. Run: python -m claude_code_hooks_daemon.daemon.cli restart" \
-            "2. Verify: python -m claude_code_hooks_daemon.daemon.cli status" \
+            "Use the hooks-daemon skill to restart the daemon." \
+            "Then use the hooks-daemon skill to verify health." \
+            "Invoke via Skill tool with skill=hooks-daemon and args=restart or args=health." \
             "" \
-            "If restart fails, check logs:" \
-            "  python -m claude_code_hooks_daemon.daemon.cli logs" \
+            "If restart fails, use the hooks-daemon skill to check logs (args=logs)." \
             "Then inform the user if the issue persists.")
     fi
 
@@ -146,10 +146,10 @@ FALLBACK_EOF
     fi
 }
 
-# Detect project path (should be called from .claude/hooks/ directory)
-# Walk up directory tree to find .claude directory
-HOOK_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_PATH="${HOOK_SCRIPT_DIR}"
+# Detect project path by walking up from init.sh's directory.
+# (init.sh lives at .claude/init.sh, so its parent contains the project.)
+_INIT_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_PATH="${_INIT_SCRIPT_DIR}"
 
 # Walk up to find .claude directory
 while [[ "$PROJECT_PATH" != "/" ]]; do
@@ -226,35 +226,96 @@ if [[ -d "$PROJECT_PATH/.git" ]]; then
     fi
 fi
 
-# Venv Python (only needed for daemon startup, NOT for hot path)
-PYTHON_CMD="$HOOKS_DAEMON_ROOT_DIR/untracked/venv/bin/python"
+# Venv Python (only needed for daemon startup, NOT for hot path).
+#
+# Plan 00099: venv is keyed by Python-environment fingerprint so that
+# concurrent containers from the same image share one venv while distinct
+# Pythons (pyenv vs distro, different minor versions, cross-arch) are kept
+# apart. The fingerprint computation invokes Python, so it is deferred to
+# `_resolve_python_cmd()` which is called only from `start_daemon()` /
+# `validate_venv()` — never on the hot path.
+#
+# Precedence (highest first):
+#   1. $HOOKS_DAEMON_VENV_PATH (explicit override)
+#   2. $HOOKS_DAEMON_ROOT_DIR/untracked/venv-{fingerprint}/ (fingerprint-keyed)
+#   3. $HOOKS_DAEMON_ROOT_DIR/untracked/venv-*/ (any existing fingerprint venv)
+#
+# Plan 00103 Decision 2: when none of the above resolve, fail loudly with
+# return 5 + stderr directive. The pre-v3.7.0 unversioned legacy
+# `untracked/venv/bin/python` is no longer accepted as a silent fallback —
+# it hid the v3.9.0 field-bug regression where operators saw "venv not
+# found" while the real cause was a 3.9-vs-3.11 `import tomllib` crash.
+#
+# Plan 00103 Decision 3 Rule A: no `${VAR:-python3}` parameter expansion —
+# the fingerprint helper is invoked under a venv-resident interpreter
+# (HOOKS_DAEMON_PYTHON or a discovered venv-*/bin/python), never bare
+# `python3`. The scan-fallback handles cross-fingerprint resolution.
+PYTHON_CMD=""  # populated lazily by _resolve_python_cmd
+
+# Plan 00104 Phase 4: delegate to canonical library at
+# ${HOOKS_DAEMON_ROOT_DIR}/scripts/lib/resolve_venv.sh. The library invokes
+# paths.py SSOT — including the metadata-authoritative step (Plan 00100
+# Task 3.5) — so init.sh, install/venv_resolver.sh, _resolve-venv.sh, and
+# venv-include.bash all converge on the same venv. This closes the drift
+# the v3.9.x bash scan-fallback created: alphabetic ordering picked the
+# wrong fingerprint when two venvs coexisted, while the SSOT correctly
+# preferred the lock_hash-matching one.
+_resolve_python_cmd() {
+    local lib="${HOOKS_DAEMON_ROOT_DIR}/scripts/lib/resolve_venv.sh"
+    if [ ! -f "$lib" ]; then
+        echo "❌ _resolve_python_cmd: canonical library missing at $lib" >&2
+        echo "   Reinstall the daemon so scripts/lib/resolve_venv.sh is present." >&2
+        PYTHON_CMD=""
+        return 5
+    fi
+
+    # shellcheck disable=SC1090  # path is computed at runtime
+    source "$lib"
+
+    if PYTHON_CMD="$(resolve_venv_python "$HOOKS_DAEMON_ROOT_DIR")"; then
+        return 0
+    fi
+
+    local rv=$?
+    PYTHON_CMD=""
+    return "$rv"
+}
 
 #
 # _get_hostname_suffix() - Get hostname-based suffix for runtime files
 #
-# Uses HOSTNAME environment variable directly to isolate daemon runtime
-# files across different environments (containers, machines).
+# Resolves a STABLE hostname (in series): $HOSTNAME, then the `hostname`
+# command (the OS hostname), then a constant. This MUST agree with the Python
+# side (daemon/paths.py:_resolve_hostname_from_env, which uses
+# socket.gethostname()) so the bash forwarder and the Python daemon compute the
+# SAME socket/PID suffix.
+#
+# NEVER use a time-based hash here: $HOSTNAME is unset on macOS (zsh) and many
+# minimal containers, and a time hash changes on every call — so start/status/
+# stop would each look for a different socket (the macOS daemon-unmanageable
+# bug, Plan 00122 BUG 1).
 #
 # Returns:
-#   "-{sanitized-hostname}" or "-{time-hash}" if no hostname
+#   "-{sanitized-hostname}"
 #
 # Example:
 #   HOSTNAME="laptop" -> "-laptop"
 #   HOSTNAME="506355bfbc76" -> "-506355bfbc76"
 #   HOSTNAME="My-Server" -> "-my-server"
-#   No HOSTNAME -> "-a1b2c3d4" (MD5 of timestamp)
+#   No HOSTNAME -> "-{os-hostname}" (e.g. "-work.local"), or "-localhost"
 #
 _get_hostname_suffix() {
     local hostname="${HOSTNAME:-}"
 
-    # No hostname? Use MD5 of current time for uniqueness
+    # No $HOSTNAME (macOS/zsh, minimal containers)? Use the OS hostname — the
+    # same value Python's socket.gethostname() returns — so both sides agree.
+    if [[ -z "$hostname" ]] && command -v hostname > /dev/null; then
+        hostname="$(hostname)"
+    fi
+
+    # Last resort: a stable constant (matches paths.py _HOSTNAME_FALLBACK).
     if [[ -z "$hostname" ]]; then
-        local timestamp
-        timestamp=$(date +%s.%N)
-        local hash
-        hash=$(echo -n "$timestamp" | md5sum | cut -c1-8)
-        echo "-${hash}"
-        return 0
+        hostname="localhost"
     fi
 
     # Sanitize hostname for filesystem safety: lowercase, no spaces
@@ -263,12 +324,68 @@ _get_hostname_suffix() {
     echo "-${sanitized}"
 }
 
+#
+# _exec_bit_selfheal() - Restore +x on sibling hook scripts (Plan 00102 Phase 3).
+#
+# Defense-in-depth: even though the daemon's invocation form is `bash <abs-path>`
+# (Phase 1, makes the bit irrelevant), defensively restore the executable bit on
+# sibling hook wrappers if it has been dropped by core.fileMode=false, an IDE
+# rewrite, a tarball/ZIP transfer, etc. Throttled once per hour via mtime on a
+# fingerprint file so the cost is amortised across hook invocations.
+#
+# Variables required in scope:
+#   HOOK_SCRIPT_DIR - directory containing hook wrapper scripts
+#   _untracked_dir  - daemon's untracked dir (where the throttle file lives)
+#
+_exec_bit_selfheal() {
+    local throttle="$_untracked_dir/.exec-bit-checked"
+    local now mtime
+    now=$(date +%s)
+
+    if [[ -f "$throttle" ]]; then
+        # Linux: stat -c %Y. macOS/BSD: stat -f %m. If both fail we fall
+        # through to running the chmod (safer than silently skipping).
+        if mtime=$(stat -c %Y "$throttle" 2>/dev/null); then
+            :
+        elif mtime=$(stat -f %m "$throttle" 2>/dev/null); then
+            :
+        else
+            mtime=0
+        fi
+
+        if [[ "$mtime" =~ ^[0-9]+$ ]] && [[ $((now - mtime)) -lt 3600 ]]; then
+            return 0
+        fi
+    fi
+
+    local hooks=(
+        pre-tool-use
+        post-tool-use
+        session-start
+        session-end
+        stop
+        subagent-stop
+        user-prompt-submit
+        notification
+        pre-compact
+        permission-request
+    )
+    local h
+    for h in "${hooks[@]}"; do
+        local p="$HOOK_SCRIPT_DIR/$h"
+        if [[ -f "$p" ]]; then
+            chmod +x "$p"
+        fi
+    done
+
+    touch "$throttle"
+}
+
 # Generate socket and PID paths using pure bash (no Python dependency)
 # SECURITY: Paths stored in daemon's untracked directory, NOT /tmp
 # Pattern: {project}/.claude/hooks-daemon/untracked/daemon.{sock|pid}
 # Container: {project}/.claude/hooks-daemon/untracked/daemon-{hash}.{sock|pid}
 # Must match Python paths module: claude_code_hooks_daemon.daemon.paths
-_abs_project_path=$(realpath "$PROJECT_PATH")
 
 # Determine untracked directory path
 # Must match ProjectContext.daemon_untracked_dir() logic
@@ -277,6 +394,12 @@ _untracked_dir="${HOOKS_DAEMON_ROOT_DIR}/untracked"
 
 # Create untracked directory if it doesn't exist
 mkdir -p "$_untracked_dir"
+
+# Plan 00102 Phase 3 (Tier 3a): defensively restore +x on sibling hook
+# wrappers if dropped (core.fileMode=false, IDE rewrite, tarball transfer).
+# Throttled once per hour via mtime on $_untracked_dir/.exec-bit-checked.
+HOOK_SCRIPT_DIR="$PROJECT_PATH/.claude/hooks"
+_exec_bit_selfheal
 
 # Generate hostname-based suffix for path isolation
 _hostname_suffix=$(_get_hostname_suffix)
@@ -299,8 +422,17 @@ if [[ -z "${CLAUDE_HOOKS_SOCKET_PATH:-}" ]] && [[ ! -S "$SOCKET_PATH" ]]; then
     fi
 fi
 
-# Daemon startup timeout (deciseconds - 1/10th second units)
-DAEMON_STARTUP_TIMEOUT=50
+# Daemon startup timeout (deciseconds - 1/10th second units).
+#
+# 15 seconds matches Timeout.DAEMON_RESTART_VERIFY_TIMEOUT_SEC, the
+# python-side ceiling used by scripts/install/daemon_control.sh::
+# restart_daemon_verified (Plan 00100 Task 0.2). Cold-start Python
+# with 50+ handler imports + config load + asyncio bind can take 5-10s
+# on slow disks (containers, cold caches). The pre-Issue-1 ceiling of
+# 50 deciseconds (5s) produced false `daemon_startup_failed` reports
+# while the daemon was still binding — see Issue 1 in
+# untracked/hooks-daemon-niggles.md (2026-05-14 field report).
+DAEMON_STARTUP_TIMEOUT=150
 
 # Daemon startup check interval (deciseconds)
 DAEMON_STARTUP_CHECK_INTERVAL=1
@@ -325,9 +457,26 @@ export PROJECT_PATH
 validate_venv() {
     VENV_ERROR=""
 
+    # Plan 00099: lazy fingerprint-keyed venv resolution (paid only on daemon
+    # startup, never on hot path). No-op on subsequent calls.
+    #
+    # Plan 00103 Decision 2: _resolve_python_cmd returns 5 + stderr on
+    # failure instead of silently emitting the legacy path. Capture the
+    # return code explicitly — a bare call would propagate via set -e and
+    # kill init.sh sourcing before validate_venv's caller-friendly
+    # VENV_ERROR diagnostic can be reported.
+    if [ -z "$PYTHON_CMD" ]; then
+        local resolve_rv=0
+        _resolve_python_cmd || resolve_rv=$?
+        if [ "$resolve_rv" -ne 0 ]; then
+            VENV_ERROR="Venv Python could not be resolved (exit $resolve_rv). Run: cd $HOOKS_DAEMON_ROOT_DIR && uv sync"
+            return 1
+        fi
+    fi
+
     # Check venv Python binary exists
-    if [[ ! -f "$PYTHON_CMD" ]]; then
-        VENV_ERROR="Venv Python not found at $PYTHON_CMD. Run: cd $HOOKS_DAEMON_ROOT_DIR && uv sync"
+    if [[ -z "$PYTHON_CMD" || ! -f "$PYTHON_CMD" ]]; then
+        VENV_ERROR="Venv Python not found at ${PYTHON_CMD:-<unresolved>}. Run: cd $HOOKS_DAEMON_ROOT_DIR && uv sync"
         return 1
     fi
 
@@ -399,8 +548,13 @@ start_daemon() {
         return 1
     fi
 
-    # Remove stale socket file
-    rm -f "$SOCKET_PATH"
+    # NOTE (Plan 00127): do NOT `rm -f "$SOCKET_PATH"` here. On the
+    # host+container shared-untracked path the socket may be owned by a LIVE
+    # incumbent daemon, and unconditionally deleting it would steal the socket
+    # before the python layer's liveness gate ever runs. Stale-socket cleanup is
+    # now the single responsibility of the python server, which probes socket
+    # liveness before unlinking (reuse on live, unlink on stale). We already
+    # short-circuit via is_daemon_running() above for the healthy-incumbent case.
 
     # Start daemon using CLI (proper daemonization)
     # CRITICAL: Pass --project-root and export env vars so the CLI uses the
@@ -412,11 +566,17 @@ start_daemon() {
         --project-root "$PROJECT_PATH" start \
         > /dev/null 2>&1
 
-    # Wait for socket to be ready (using deciseconds for integer arithmetic)
+    # Wait for daemon to be ready (using deciseconds for integer arithmetic).
+    #
+    # Issue 1 (untracked/hooks-daemon-niggles.md, 2026-05-14): the legacy
+    # check polled socket existence alone. enforce_single_daemon_process can
+    # leave a transient socket file on disk during a kill+respawn cycle, so
+    # the socket file alone is not a reliable readiness signal. Combine with
+    # is_daemon_running (PID alive) to guarantee the daemon we spawned is
+    # the one we see.
     local elapsed=0
     while [[ $elapsed -lt $DAEMON_STARTUP_TIMEOUT ]]; do
-        if [[ -S "$SOCKET_PATH" ]]; then
-            # Socket exists, daemon is ready
+        if is_daemon_running && [[ -S "$SOCKET_PATH" ]]; then
             return 0
         fi
 
@@ -425,9 +585,17 @@ start_daemon() {
         elapsed=$((elapsed + DAEMON_STARTUP_CHECK_INTERVAL))
     done
 
-    # Timeout - daemon failed to create socket
-    echo "ERROR: Daemon startup timeout (socket not created)" >&2
-    rm -f "$PID_PATH"
+    # Final retry: the daemon may have bound the socket on the very tick
+    # the loop's `elapsed < TIMEOUT` check went false. One more probe
+    # before declaring failure closes the boundary race.
+    if is_daemon_running && [[ -S "$SOCKET_PATH" ]]; then
+        return 0
+    fi
+
+    # Genuine timeout. NOTE: do NOT unlink PID_PATH — if the daemon is still
+    # coming up, the PID slot belongs to it. is_daemon_running() cleans
+    # stale PID files on next call when the process is actually dead.
+    echo "ERROR: Daemon startup timeout (daemon not ready after ${DAEMON_STARTUP_TIMEOUT}/10 seconds)" >&2
     return 1
 }
 
@@ -642,11 +810,11 @@ def emit_error_json(event_name, error_type, error_details):
         'If you are in the middle of an upgrade, this is expected and temporary.',
         '',
         'TO FIX (usually takes a few seconds):',
-        '1. Run: python -m claude_code_hooks_daemon.daemon.cli restart',
-        '2. Verify: python -m claude_code_hooks_daemon.daemon.cli status',
+        'Use the hooks-daemon skill to restart the daemon.',
+        'Then use the hooks-daemon skill to verify health.',
+        'Invoke via Skill tool with skill=hooks-daemon and args=restart or args=health.',
         '',
-        'If restart fails, check logs:',
-        '  python -m claude_code_hooks_daemon.daemon.cli logs',
+        'If restart fails, use the hooks-daemon skill to check logs (args=logs).',
         'Then inform the user if the issue persists.',
     ]
     context = chr(10).join(context_lines)
@@ -731,6 +899,67 @@ except Exception as e:
     return $?
 }
 
+#
+# forward_stop_event() - Forward a Stop / SubagentStop event to the daemon
+#                        and translate decision=block into exit-code-2 + stderr
+#
+# Plan 00101 Phase 9: Claude Code v2.1.114 silently demotes JSON-via-stdout
+# `{"decision":"block"}` to `level: suggestion, preventedContinuation: false`,
+# breaking the auto_continue_stop contract. The daemon CANNOT control the
+# hook subprocess exit code from inside its own Python process — only the
+# bash wrapper that Claude Code spawns can set it. This helper centralises
+# the translation so both .claude/hooks/stop and .claude/hooks/subagent-stop
+# stay one-liners and the JSON-to-exit-code mapping lives in one place.
+#
+# Behaviour:
+#   1. Pipe stdin JSON → jq wrap → send_request_stdin
+#   2. Capture daemon response, echo to stdout (back-compat for agent JSON
+#      visibility + existing test invariants).
+#   3. Parse `.decision`:
+#        - "block" → print `.reason` to stderr, exit 2 (hard re-entry).
+#        - other  → exit 0 (allow stop).
+#
+# Args:
+#   $1 - event_name: "Stop" or "SubagentStop"
+#
+# Reads:
+#   stdin: Claude Code hook input JSON
+#
+# Returns:
+#   2 if daemon emits decision=block
+#   0 otherwise (including daemon socket errors — those are handled by
+#     send_request_stdin's emit_error_json which already returns a block
+#     payload and we DO want hard re-entry on daemon-down).
+#
+forward_stop_event() {
+    local event_name="$1"
+    if [ -z "$event_name" ]; then
+        echo '{"error":"forward_stop_event: event_name required"}' >&2
+        return 1
+    fi
+
+    local response_file
+    response_file="$(mktemp)"
+    # shellcheck disable=SC2064  # intentional early-binding of file path
+    trap "rm -f '$response_file'" EXIT
+
+    jq -c --arg event "$event_name" '{event: $event, hook_input: .}' \
+        | send_request_stdin > "$response_file"
+    cat "$response_file"
+
+    local decision
+    decision="$(jq -r '.decision // ""' < "$response_file" 2>/dev/null || echo "")"
+    if [ "$decision" = "block" ]; then
+        local reason
+        reason="$(jq -r '.reason // ""' < "$response_file" 2>/dev/null || echo "")"
+        if [ -n "$reason" ]; then
+            printf '%s\n' "$reason" >&2
+        fi
+        return 2
+    fi
+    return 0
+}
+
 # Export functions for use by forwarder scripts
 export -f emit_hook_error
 export -f validate_venv
@@ -738,3 +967,4 @@ export -f is_daemon_running
 export -f start_daemon
 export -f ensure_daemon
 export -f send_request_stdin
+export -f forward_stop_event

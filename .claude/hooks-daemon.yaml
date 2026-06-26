@@ -148,16 +148,10 @@ handlers:
     version_check:
       enabled: true
       priority: 56
-    workflow_state_restoration:
-      enabled: true
-      priority: 60
   pre_compact:
     transcript_archiver:
       enabled: true
       priority: 10
-    workflow_state_pre_compact:
-      enabled: true
-      priority: 20
   session_end:
     cleanup:
       enabled: true

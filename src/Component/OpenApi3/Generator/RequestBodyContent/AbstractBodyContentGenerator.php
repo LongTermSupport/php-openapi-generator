@@ -18,6 +18,9 @@ use PhpParser\Node\Name;
 use Psr\Http\Message\StreamInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 abstract class AbstractBodyContentGenerator implements RequestBodyContentGeneratorInterface
 {
     public const PHP_TYPE_MIXED = 'mixed';

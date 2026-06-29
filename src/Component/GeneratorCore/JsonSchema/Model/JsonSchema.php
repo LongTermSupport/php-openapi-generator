@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model;
 
+/**
+ * @internal
+ */
 class JsonSchema implements SchemaInterface
 {
     /**

@@ -10,6 +10,8 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Mo
  * Both JsonSchema (GeneratorCore) and Schema (OpenApi3) implement this,
  * enabling static type narrowing via `instanceof SchemaInterface` in base guessers
  * instead of the PHPStan-opaque `instanceof $stringVariable` pattern.
+ *
+ * @internal
  */
 interface SchemaInterface
 {

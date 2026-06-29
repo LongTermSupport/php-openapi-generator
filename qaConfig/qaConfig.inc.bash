@@ -16,3 +16,19 @@ done
 pathsToIgnore+=("$projectRoot/src/Component/GeneratorCore/Generator/Runtime/data")
 pathsToIgnore+=("$projectRoot/src/Component/OpenApiCommon/Generator/Runtime/data")
 unset _fixtureExpectedDir _clientDir
+
+# Mutation testing (Infection) is opted out. The bump turned Infection on by
+# default, but (a) its default source set is `src`, which here includes the
+# ~18k generated fixture snapshots under */Tests/fixtures/*/expected — Infection
+# crashes parsing the runtime-template traits among them (Expected Class_, got
+# Trait_) — and (b) this project has never carried a mutation-testing baseline,
+# so the default 60/80 MSI floor is unmeasured. Adopting mutation testing is a
+# separate quality initiative, out of scope for adopting the php-qa-ci bump.
+export useInfection=0
+
+# This is a code GENERATOR — its own runtime handles no plaintext credentials, so
+# there is (correctly) no #[\SensitiveParameter] anywhere in its src. The always-on
+# sensitiveParameterUsage baseline (which fails when the attribute is used nowhere)
+# is therefore not applicable here; opt out. Credential redaction in the SDKs this
+# tool GENERATES is a separate concern handled in the generated code itself.
+export useSensitiveParameterCheck=0

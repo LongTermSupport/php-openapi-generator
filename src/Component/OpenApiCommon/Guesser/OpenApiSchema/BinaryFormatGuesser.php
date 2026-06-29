@@ -20,6 +20,8 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema;
  *
  * Must be registered BEFORE SimpleTypeGuesser in the chain — SimpleTypeGuesser
  * matches plain `type: string` and would otherwise win first.
+ *
+ * @internal
  */
 class BinaryFormatGuesser implements GuesserInterface, TypeGuesserInterface
 {

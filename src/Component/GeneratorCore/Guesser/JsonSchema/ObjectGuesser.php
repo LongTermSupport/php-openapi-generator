@@ -25,6 +25,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class ObjectGuesser implements GuesserInterface, PropertiesGuesserInterface, TypeGuesserInterface, ChainGuesserAwareInterface, ClassGuesserInterface
 {
     use ChainGuesserAwareTrait;

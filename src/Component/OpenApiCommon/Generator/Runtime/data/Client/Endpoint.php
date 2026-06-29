@@ -6,6 +6,9 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 
+/**
+ * @internal
+ */
 interface Endpoint
 {
     /**

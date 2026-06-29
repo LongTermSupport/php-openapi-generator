@@ -17,6 +17,9 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * @internal
+ */
 class GenerateCommand extends BaseGenerateCommand
 {
     public function __construct(ConfigLoaderInterface $configLoader, SchemaLoaderInterface $schemaLoader, private readonly OpenApiMatcher $matcher)
@@ -108,7 +111,7 @@ class GenerateCommand extends BaseGenerateCommand
 
         /** @var array<string> $whitelistedPaths */
         $registry->setWhitelistedPaths($whitelistedPaths);
-        $throwUnexpected = \array_key_exists('throw-unexpected-status-code', $options) ? $options['throw-unexpected-status-code'] : null;
+        $throwUnexpected = $options['throw-unexpected-status-code'] ?? null;
         $registry->setThrowUnexpectedStatusCode(\is_bool($throwUnexpected) && $throwUnexpected);
 
         // Two distinct shapes merged into one output array to preserve the

@@ -11,6 +11,9 @@ use PhpParser\Node\Expr;
 use PhpParser\Node\Identifier;
 use PhpParser\Node\Name;
 
+/**
+ * @internal
+ */
 class MapType extends ArrayType
 {
     public function __construct(object $object, Type $itemType)

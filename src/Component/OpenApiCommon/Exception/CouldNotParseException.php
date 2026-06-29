@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Exception;
 
 use LogicException;
 
+/**
+ * @internal
+ */
 class CouldNotParseException extends LogicException
 {
 }

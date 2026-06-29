@@ -35,6 +35,7 @@
     "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Expected\\MultipartNestedObject\\Model\\FilePostBody",
     "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Expected\\MultipartNestedObject\\Model\\FilePostBodyItem",
     "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Expected\\MultipartNestedObject\\Normalizer\\JaneObjectNormalizer",
+    "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Expected\\MultipartNestedObject\\Runtime\\Client\\FileUpload",
     "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Expected\\TestNullable\\Model\\Model",
     "LongTermSupport\\OpenApiGenerator\\Component\\OpenApi3\\Tests\\Expected\\TestNullable\\Normalizer\\JaneObjectNormalizer"
   ],

@@ -8,6 +8,8 @@ use ArrayObject;
 
 /**
  * @extends ArrayObject<string, mixed>
+ *
+ * @internal
  */
 class APIKeySecurityScheme extends ArrayObject
 {

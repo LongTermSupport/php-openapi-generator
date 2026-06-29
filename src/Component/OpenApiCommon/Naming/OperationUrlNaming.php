@@ -12,6 +12,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Respons
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema as OA3Schema;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 
+/**
+ * @internal
+ */
 class OperationUrlNaming implements OperationNamingInterface
 {
     use InflectorTrait;

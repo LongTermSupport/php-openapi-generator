@@ -14,6 +14,8 @@ use Throwable;
 
 /**
  * Deal with a JSON Reference.
+ *
+ * @internal
  */
 class Reference
 {

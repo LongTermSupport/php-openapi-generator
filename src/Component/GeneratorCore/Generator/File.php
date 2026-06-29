@@ -10,6 +10,8 @@ use PhpParser\Node;
  * File generated.
  *
  * Simply a correspondence between a filename and a AST
+ *
+ * @internal
  */
 class File
 {

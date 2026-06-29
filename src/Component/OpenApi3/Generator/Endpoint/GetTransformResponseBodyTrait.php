@@ -75,8 +75,7 @@ trait GetTransformResponseBodyTrait
                     throw new LogicException('Expected Response, got ' . get_debug_type($response));
                 }
 
-                $responseDescriptionRaw = $response->getDescription();
-                $responseDescription    = null !== $responseDescriptionRaw ? $responseDescriptionRaw : '';
+                $responseDescription = (string)$response->getDescription();
 
                 [$newOutputTypes, $newThrowTypes, $ifStatements] = $this->createResponseDenormalizationStatement(
                     $endpointName,
@@ -125,8 +124,7 @@ trait GetTransformResponseBodyTrait
                     throw new LogicException('Expected Response, got ' . get_debug_type($response));
                 }
 
-                $defaultResponseDescriptionRaw = $response->getDescription();
-                $defaultResponseDescription    = null !== $defaultResponseDescriptionRaw ? $defaultResponseDescriptionRaw : '';
+                $defaultResponseDescription = (string)$response->getDescription();
 
                 [$newOutputTypes, $newThrowTypes, $ifStatements] = $this->createResponseDenormalizationStatement(
                     $endpointName,

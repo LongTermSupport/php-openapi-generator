@@ -12,6 +12,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\Class
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class AllOfGuesser extends BaseAllOfGuesser
 {
     public function __construct(

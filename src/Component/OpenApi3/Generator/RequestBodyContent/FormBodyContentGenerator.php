@@ -17,6 +17,9 @@ use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
+/**
+ * @internal
+ */
 class FormBodyContentGenerator extends AbstractBodyContentGenerator
 {
     /**

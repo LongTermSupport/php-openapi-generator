@@ -8,6 +8,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\C
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\MediaType;
 use PhpParser\Node;
 
+/**
+ * @internal
+ */
 interface RequestBodyContentGeneratorInterface
 {
     /** @return array<mixed> */

@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Naming;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 use RuntimeException;
 
+/**
+ * @internal
+ */
 class ChainOperationNaming implements OperationNamingInterface
 {
     /**

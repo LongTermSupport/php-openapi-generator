@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Runtime
 
 use UnexpectedValueException;
 
+/**
+ * @internal
+ */
 final class TypeValidator
 {
     public static function assertString(mixed $value, string $field): string

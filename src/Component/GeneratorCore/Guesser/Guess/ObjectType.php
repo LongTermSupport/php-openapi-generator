@@ -15,6 +15,9 @@ use PhpParser\Node\Name\FullyQualified;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class ObjectType extends Type
 {
     /**

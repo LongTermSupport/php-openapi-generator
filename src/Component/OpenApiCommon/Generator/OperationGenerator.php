@@ -18,6 +18,9 @@ use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 use PhpParser\Node\UnionType;
 
+/**
+ * @internal
+ */
 class OperationGenerator
 {
     public function __construct(

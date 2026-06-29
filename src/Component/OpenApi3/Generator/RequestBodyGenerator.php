@@ -14,6 +14,9 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Param;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class RequestBodyGenerator
 {
     /** @var RequestBodyContentGeneratorInterface[] */
@@ -189,6 +192,8 @@ class RequestBodyGenerator
             $types = array_merge($types, $newTypes);
         }
 
-        return [array_unique($types), $onlyArray];
+        // $types is array<mixed> (merged from getTypes()), so dedupe with SORT_REGULAR —
+        // the default SORT_STRING would string-cast values not statically known to be stringable.
+        return [array_unique($types, \SORT_REGULAR), $onlyArray];
     }
 }

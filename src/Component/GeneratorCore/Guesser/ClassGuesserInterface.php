@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser;
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 
+/**
+ * @internal
+ */
 interface ClassGuesserInterface
 {
     /**
@@ -13,8 +16,6 @@ interface ClassGuesserInterface
      *
      * This guesser should create a Model and the associated File
      * The file must be inject into the context
-     *
-     * @internal
      */
     public function guessClass(mixed $object, string $name, string $reference, Registry $registry): void;
 }

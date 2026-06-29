@@ -16,6 +16,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\Js
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\SchemaInterface;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 
+/**
+ * @internal
+ */
 class AdditionalPropertiesGuesser implements GuesserInterface, TypeGuesserInterface, ChainGuesserAwareInterface, ClassGuesserInterface
 {
     use ChainGuesserAwareTrait;

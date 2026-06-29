@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Valid
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Property;
 
+/**
+ * @internal
+ */
 interface ValidatorInterface
 {
     public function supports(mixed $object): bool;

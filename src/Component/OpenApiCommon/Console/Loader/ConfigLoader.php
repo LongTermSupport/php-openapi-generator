@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loade
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader\ConfigLoader as BaseConfigLoader;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader\ConfigLoaderInterface;
 
+/**
+ * @internal
+ */
 class ConfigLoader extends BaseConfigLoader implements ConfigLoaderInterface
 {
     public function fileKey(): string

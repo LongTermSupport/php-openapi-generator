@@ -6,6 +6,8 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Con
 
 /**
  * Allow getting a unique variable name for a scope (like a method).
+ *
+ * @internal
  */
 class UniqueVariableScope
 {

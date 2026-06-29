@@ -22,6 +22,9 @@ use PhpParser\Node\Param;
 use PhpParser\Node\Stmt;
 use PhpParser\Parser;
 
+/**
+ * @internal
+ */
 class ModelGenerator implements GeneratorInterface
 {
     use ClassGenerator;
@@ -147,7 +150,6 @@ class ModelGenerator implements GeneratorInterface
                     'params' => [
                         new Param(
                             var: new Expr\Variable('items'),
-                            default: null,
                             type: $itemFqcn,
                             byRef: false,
                             variadic: true,

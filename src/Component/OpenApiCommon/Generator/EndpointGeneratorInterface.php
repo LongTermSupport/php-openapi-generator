@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 
+/**
+ * @internal
+ */
 interface EndpointGeneratorInterface
 {
     /** @return array<mixed> */

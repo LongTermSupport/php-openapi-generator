@@ -12,6 +12,9 @@ use PhpParser\Node\Stmt\Declare_;
 use PhpParser\Node\Stmt\Namespace_;
 use PhpParser\Parser;
 
+/**
+ * @internal
+ */
 class RuntimeGenerator implements GeneratorInterface
 {
     public const FILE_TYPE_RUNTIME = 'runtime';

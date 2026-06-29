@@ -18,6 +18,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Schema;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class AnyOfReferencefGuesser implements ChainGuesserAwareInterface, GuesserInterface, TypeGuesserInterface
 {
     use ChainGuesserAwareTrait;

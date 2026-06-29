@@ -9,6 +9,9 @@ use LogicException;
 use RuntimeException;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * @internal
+ */
 class ConfigLoader implements ConfigLoaderInterface
 {
     public function fileKey(): string

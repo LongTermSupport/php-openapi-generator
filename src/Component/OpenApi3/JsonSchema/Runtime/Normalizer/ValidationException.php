@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Runtime
 use RuntimeException;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 
+/**
+ * @internal
+ */
 class ValidationException extends RuntimeException
 {
     public function __construct(private readonly ConstraintViolationListInterface $violationList)

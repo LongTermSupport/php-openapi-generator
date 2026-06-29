@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Fixtures\Cus
 
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Generator\EndpointGenerator;
 
+/**
+ * @internal
+ */
 class CustomEndpointGenerator extends EndpointGenerator
 {
     /** @return list<string> */

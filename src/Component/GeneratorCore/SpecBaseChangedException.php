@@ -12,6 +12,8 @@ use RuntimeException;
  *
  * This means the upstream spec changed after the patch was written. The patch
  * must be reviewed and updated before it can be safely applied.
+ *
+ * @internal
  */
 final class SpecBaseChangedException extends RuntimeException
 {

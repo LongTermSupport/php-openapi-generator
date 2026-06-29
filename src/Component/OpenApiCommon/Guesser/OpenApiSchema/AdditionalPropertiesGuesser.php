@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenA
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\JsonSchema\AdditionalPropertiesGuesser as BaseAdditionalPropertiesGuesser;
 
+/**
+ * @internal
+ */
 class AdditionalPropertiesGuesser extends BaseAdditionalPropertiesGuesser
 {
     use SchemaClassTrait;

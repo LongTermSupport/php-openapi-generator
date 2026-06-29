@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Boo
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Client\CustomQueryResolver;
 use Symfony\Component\OptionsResolver\Options;
 
+/**
+ * @internal
+ */
 class BooleanCustomQueryResolver implements CustomQueryResolver
 {
     public function __invoke(Options $options, mixed $value): string

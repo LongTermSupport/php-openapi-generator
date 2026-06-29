@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 
+/**
+ * @internal
+ */
 abstract class ChainGenerator
 {
     /** @var GeneratorInterface[] */

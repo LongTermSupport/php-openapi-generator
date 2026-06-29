@@ -21,6 +21,9 @@ use PhpParser\Parser;
 use Psr\Http\Message\StreamInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class NonBodyParameterGenerator extends ParameterGenerator
 {
     use OptionResolverNormalizationTrait;
@@ -236,8 +239,7 @@ class NonBodyParameterGenerator extends ParameterGenerator
             }
         }
 
-        $descriptionRaw = $parameter->getDescription();
-        $description    = null !== $descriptionRaw ? $descriptionRaw : '';
+        $description = (string)$parameter->getDescription();
 
         $docParamName = $parameter->getName();
         if (!\is_string($docParamName)) {

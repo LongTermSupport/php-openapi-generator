@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Client\Excep
 
 use RuntimeException;
 
+/**
+ * @internal
+ */
 class InvalidFetchModeException extends RuntimeException
 {
 }

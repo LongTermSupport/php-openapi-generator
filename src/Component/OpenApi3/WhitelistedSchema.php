@@ -23,6 +23,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Schema;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class WhitelistedSchema implements WhitelistFetchInterface
 {
     private readonly OperationNamingInterface $naming;

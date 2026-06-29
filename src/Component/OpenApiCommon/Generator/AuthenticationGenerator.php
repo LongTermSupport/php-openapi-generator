@@ -17,6 +17,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Schema;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class AuthenticationGenerator implements GeneratorInterface
 {
     use AuthenticationMethodGenerator;

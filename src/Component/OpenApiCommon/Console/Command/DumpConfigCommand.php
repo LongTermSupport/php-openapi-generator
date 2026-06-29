@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Comma
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Command\DumpConfigCommand as BaseDumpConfigCommand;
 use Symfony\Component\Console\Input\InputOption;
 
+/**
+ * @internal
+ */
 class DumpConfigCommand extends BaseDumpConfigCommand
 {
     protected function configure(): void

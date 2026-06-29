@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+/**
+ * @internal
+ */
 final class IntNullCollection
 {
     /** @var list<int|null> */

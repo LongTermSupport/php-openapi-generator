@@ -9,6 +9,8 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Tools\InflectorTrai
 
 /**
  * Helper to generate name for property / class / ...
+ *
+ * @internal
  */
 class Naming
 {

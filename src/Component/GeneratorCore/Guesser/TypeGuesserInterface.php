@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Type;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 
+/**
+ * @internal
+ */
 interface TypeGuesserInterface
 {
     /**

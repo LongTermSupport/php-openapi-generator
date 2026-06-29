@@ -7,7 +7,11 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model;
 use ArrayObject;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\SchemaInterface;
 
-/** @extends ArrayObject<string, mixed> */
+/**
+ * @extends ArrayObject<string, mixed>
+ *
+ * @internal
+ */
 class Schema extends ArrayObject implements SchemaInterface
 {
     /**

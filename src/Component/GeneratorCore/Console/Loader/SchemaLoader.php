@@ -8,6 +8,9 @@ use LogicException;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * @internal
+ */
 class SchemaLoader implements SchemaLoaderInterface
 {
     /** @param array<string, mixed> $options */

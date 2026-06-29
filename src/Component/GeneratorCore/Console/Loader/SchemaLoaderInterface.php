@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loade
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema;
 
+/**
+ * @internal
+ */
 interface SchemaLoaderInterface
 {
     /** @param array<string, mixed> $options */

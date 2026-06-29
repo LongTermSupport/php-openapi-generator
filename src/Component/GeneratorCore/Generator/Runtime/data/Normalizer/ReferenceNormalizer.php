@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
+/**
+ * @internal
+ */
 class ReferenceNormalizer implements NormalizerInterface
 {
     /**

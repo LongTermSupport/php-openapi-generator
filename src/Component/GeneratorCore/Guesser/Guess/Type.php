@@ -12,6 +12,9 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Scalar;
 use Stringable;
 
+/**
+ * @internal
+ */
 class Type implements Stringable
 {
     public const TYPE_BOOLEAN = 'bool';

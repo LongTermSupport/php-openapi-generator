@@ -9,6 +9,9 @@ use Http\Promise\Promise;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Client\AuthenticationPlugin;
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * @internal
+ */
 class AuthenticationRegistry implements Plugin
 {
     public const SCOPES_HEADER = 'X-OpenAPI-Authentication';

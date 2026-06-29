@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenA
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\ReferenceGuesser as BaseReferenceGuesser;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class ReferenceGuesser extends BaseReferenceGuesser
 {
     use SchemaClassTrait;

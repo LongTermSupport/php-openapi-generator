@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess;
 
+/**
+ * @internal
+ */
 class SecuritySchemeGuess
 {
     public const TYPE_API_KEY = 'apiKey';

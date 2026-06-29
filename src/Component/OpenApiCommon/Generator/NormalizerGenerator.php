@@ -8,6 +8,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Normalize
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator\Normalizer\DenormalizerGenerator as DenormalizerGeneratorTrait;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator\Normalizer\NormalizerGenerator as NormalizerGeneratorTrait;
 
+/**
+ * @internal
+ */
 class NormalizerGenerator extends BaseNormalizerGenerator
 {
     use DenormalizerGeneratorTrait;

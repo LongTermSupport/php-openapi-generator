@@ -9,6 +9,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Tools\InflectorTrai
 use PhpParser\Node;
 use PhpParser\Parser;
 
+/**
+ * @internal
+ */
 abstract class ParameterGenerator
 {
     use InflectorTrait;

@@ -9,6 +9,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\SchemaInte
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\SecuritySchemeGuess;
 
+/**
+ * @internal
+ */
 class Schema extends BaseSchema implements SchemaInterface
 {
     /** @var OperationGuess[] */

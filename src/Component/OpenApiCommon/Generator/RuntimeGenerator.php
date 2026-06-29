@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator;
 use Generator;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\RuntimeGenerator as BaseRuntimeGenerator;
 
+/**
+ * @internal
+ */
 class RuntimeGenerator extends BaseRuntimeGenerator
 {
     protected function directories(): Generator

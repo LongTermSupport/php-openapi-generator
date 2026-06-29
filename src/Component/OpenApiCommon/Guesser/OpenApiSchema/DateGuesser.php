@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenA
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\JsonSchema\DateGuesser as BaseDateGuesser;
 
+/**
+ * @internal
+ */
 class DateGuesser extends BaseDateGuesser
 {
     use SchemaClassTrait;

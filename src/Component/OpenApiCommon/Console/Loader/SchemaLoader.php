@@ -9,6 +9,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader\Sche
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader\SchemaLoaderInterface;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Schema;
 
+/**
+ * @internal
+ */
 class SchemaLoader extends BaseSchemaLoader implements SchemaLoaderInterface
 {
     protected function newSchema(string $schema, array $options): Schema
@@ -48,6 +51,8 @@ class SchemaLoader extends BaseSchemaLoader implements SchemaLoaderInterface
             'throw-unexpected-status-code',
             'custom-string-format-mapping',
             'include-null-value',
+            'api-annotation',
+            'api-annotation-overrides',
         ];
     }
 

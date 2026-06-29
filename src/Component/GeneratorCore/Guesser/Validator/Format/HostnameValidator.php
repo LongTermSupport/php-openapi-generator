@@ -12,6 +12,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Validator\V
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\JsonSchema;
 use Symfony\Component\Validator\Constraints\Hostname;
 
+/**
+ * @internal
+ */
 class HostnameValidator implements ValidatorInterface
 {
     use ObjectCheckTrait;

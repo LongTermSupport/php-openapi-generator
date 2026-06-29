@@ -8,6 +8,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry a
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\RegistryInterface;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\SecuritySchemeGuess;
 
+/**
+ * @internal
+ */
 class Registry extends BaseRegistry implements RegistryInterface
 {
     private string $openApiClass;

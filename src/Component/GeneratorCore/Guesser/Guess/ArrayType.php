@@ -12,6 +12,9 @@ use PhpParser\Node\Expr;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class ArrayType extends Type
 {
     public function __construct(object $object, protected Type $itemType, string $type = 'array')

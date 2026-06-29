@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess
 
 use LogicException;
 
+/**
+ * @internal
+ */
 class OperationGuess
 {
     public const DELETE = 'DELETE';

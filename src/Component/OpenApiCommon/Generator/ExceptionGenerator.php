@@ -19,6 +19,9 @@ use PhpParser\Node\Param;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class ExceptionGenerator
 {
     private const array BANNED_VARIABLES = ['message', 'code', 'file', 'line'];
@@ -161,7 +164,7 @@ class ExceptionGenerator
                                     new Param(new Expr\Variable('response'), null, new Name\FullyQualified(\Psr\Http\Message\ResponseInterface::class)),
                                 ],
                                 'stmts'  => [
-                                    new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [new Node\Arg(new Scalar\String_(null !== $description ? $description : ''))])),
+                                    new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [new Node\Arg(new Scalar\String_((string)$description))])),
                                     new Stmt\Expression(new Expr\Assign(
                                         new Expr\PropertyFetch(
                                             new Expr\Variable('this'),
@@ -229,7 +232,7 @@ class ExceptionGenerator
                             ],
                             'stmts'  => [
                                 new Stmt\Expression(new Expr\StaticCall(new Name('parent'), '__construct', [
-                                    new Node\Arg(new Scalar\String_(null !== $description ? $description : '')),
+                                    new Node\Arg(new Scalar\String_((string)$description)),
                                 ])),
                                 new Stmt\Expression(new Expr\Assign(
                                     new Expr\PropertyFetch(

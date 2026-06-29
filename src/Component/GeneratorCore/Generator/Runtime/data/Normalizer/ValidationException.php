@@ -5,6 +5,9 @@ declare(strict_types=1);
 use RuntimeException;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 
+/**
+ * @internal
+ */
 class ValidationException extends RuntimeException
 {
     public function __construct(

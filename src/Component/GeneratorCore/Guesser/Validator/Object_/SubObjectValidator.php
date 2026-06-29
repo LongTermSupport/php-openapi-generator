@@ -17,6 +17,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class SubObjectValidator implements ValidatorInterface
 {
     use GuesserResolverTrait;

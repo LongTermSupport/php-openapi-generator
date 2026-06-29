@@ -19,6 +19,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Naming\OperationUrl
 use PhpParser\ParserFactory;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class GeneratorFactory
 {
     public static function build(DenormalizerInterface $serializer, string $endpointGeneratorClass): GeneratorInterface

@@ -21,6 +21,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSche
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenApiSchema\SimpleTypeGuesser;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class GuesserFactory
 {
     /**

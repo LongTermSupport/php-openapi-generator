@@ -11,6 +11,8 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore;
  *   {projectRoot}/specs/{product}/{ORIG}/    ← original third-party specs (READ ONLY)
  *   {projectRoot}/specs/{product}/{PATCHES}/ ← RFC 6902 patch files (.json.patch)
  *   {projectRoot}/specs/{product}/{PATCHED}/ ← patch-applied specs (generator input)
+ *
+ * @internal
  */
 final readonly class SpecDirectoryLayout
 {

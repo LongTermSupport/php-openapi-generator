@@ -94,8 +94,7 @@ class AuthenticationRegistryTest extends TestCase
         $request = $this->createMock(RequestInterface::class);
         $request
             ->method('getHeader')
-            ->with(AuthenticationRegistry::SCOPES_HEADER)
-            ->willReturn(['A'])
+            ->willReturnMap([[AuthenticationRegistry::SCOPES_HEADER, ['A']]])
         ;
         $request
             ->method('withHeader')
@@ -124,8 +123,7 @@ class AuthenticationRegistryTest extends TestCase
         $request = $this->createMock(RequestInterface::class);
         $request
             ->method('getHeader')
-            ->with(AuthenticationRegistry::SCOPES_HEADER)
-            ->willReturn(['A', 'C'])
+            ->willReturnMap([[AuthenticationRegistry::SCOPES_HEADER, ['A', 'C']]])
         ;
         $request
             ->method('withHeader')

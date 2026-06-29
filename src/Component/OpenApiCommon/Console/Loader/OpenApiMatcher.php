@@ -10,6 +10,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Exception\CouldNotP
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Exception\OpenApiVersionSupportException;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\SchemaParser\SchemaParser;
 
+/**
+ * @internal
+ */
 class OpenApiMatcher
 {
     /** @var array<class-string, SchemaParser> */

@@ -11,6 +11,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\Conf
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\OpenApiMatcher;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Console\Loader\SchemaLoader;
 
+/**
+ * @internal
+ */
 class Application extends JsonSchemaApplication
 {
     protected function boot(): void

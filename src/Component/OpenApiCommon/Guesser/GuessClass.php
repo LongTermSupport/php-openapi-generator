@@ -9,6 +9,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Registry;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class GuessClass
 {
     public function __construct(

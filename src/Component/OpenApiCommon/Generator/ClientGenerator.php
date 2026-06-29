@@ -16,6 +16,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Schema as 
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 abstract class ClientGenerator implements GeneratorInterface
 {
     use CommonClientGenerator;

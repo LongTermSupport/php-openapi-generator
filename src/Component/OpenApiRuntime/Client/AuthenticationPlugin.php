@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Client;
 
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * @internal
+ */
 interface AuthenticationPlugin
 {
     public function authentication(RequestInterface $request): RequestInterface;

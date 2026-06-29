@@ -16,6 +16,9 @@ use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\Constraints\Optional;
 use Symfony\Component\Validator\Constraints\Required;
 
+/**
+ * @internal
+ */
 class ValidatorGenerator implements GeneratorInterface
 {
     public const FILE_TYPE_VALIDATOR = 'validator';

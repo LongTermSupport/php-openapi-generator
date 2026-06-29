@@ -13,6 +13,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Validator\V
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\JsonSchema;
 use Symfony\Component\Validator\Constraints\GreaterThan;
 
+/**
+ * @internal
+ */
 class ExclusiveMinimumValidator implements ValidatorInterface
 {
     use ObjectCheckTrait;

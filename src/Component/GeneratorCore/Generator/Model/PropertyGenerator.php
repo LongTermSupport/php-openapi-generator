@@ -175,6 +175,6 @@ trait PropertyGenerator
 
     private function unionTypeContainsNull(Node\UnionType $unionType): bool
     {
-        return array_any($unionType->types, static fn ($type): bool => $type instanceof Node\Identifier && 'null' === strtolower($type->toString()));
+        return array_any($unionType->types, static fn (\PhpParser\Node\Identifier|\PhpParser\Node\Name|Node\IntersectionType $type): bool => $type instanceof Node\Identifier && 'null' === strtolower($type->toString()));
     }
 }

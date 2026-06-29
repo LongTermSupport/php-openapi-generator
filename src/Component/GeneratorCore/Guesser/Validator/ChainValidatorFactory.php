@@ -8,6 +8,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Naming;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class ChainValidatorFactory
 {
     public static function create(Naming $naming, Registry $registry, DenormalizerInterface $denormalizer): ValidatorInterface

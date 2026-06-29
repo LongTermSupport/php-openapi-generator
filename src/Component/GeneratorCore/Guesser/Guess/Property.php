@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess
 
 use RuntimeException;
 
+/**
+ * @internal
+ */
 class Property
 {
     use ValidatorGuessTrait;

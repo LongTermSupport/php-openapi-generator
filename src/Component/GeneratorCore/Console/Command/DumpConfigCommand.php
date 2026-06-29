@@ -12,6 +12,9 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\VarDumper\VarDumper;
 
+/**
+ * @internal
+ */
 class DumpConfigCommand extends Command
 {
     public function __construct(

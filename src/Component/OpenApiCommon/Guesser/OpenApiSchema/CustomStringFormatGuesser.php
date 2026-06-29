@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenA
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\JsonSchema\CustomStringFormatGuesser as BaseCustomStringFormatGuesser;
 
+/**
+ * @internal
+ */
 class CustomStringFormatGuesser extends BaseCustomStringFormatGuesser
 {
     use SchemaClassTrait;

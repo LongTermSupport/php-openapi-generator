@@ -10,6 +10,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Array
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ObjectType;
 
+/**
+ * @internal
+ */
 class Schema implements SchemaInterface
 {
     /** @var array<string, list<string>> Relation between models */

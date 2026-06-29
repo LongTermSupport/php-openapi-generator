@@ -13,15 +13,12 @@ use PhpParser\Node\Scalar;
 
 /**
  * Represent a Date type.
+ *
+ * @internal
  */
 class DateType extends ObjectType
 {
     use CheckNullableTrait;
-
-    /**
-     * Indicator whether to use DateTime or DateTimeInterface as type hint.
-     */
-    private bool $preferInterface;
 
     /**
      * @param string $format Format of the date to use
@@ -29,11 +26,12 @@ class DateType extends ObjectType
     public function __construct(
         object $object,
         private string $format = 'Y-m-d',
-        bool $preferInterface = false,
+        /**
+         * Indicator whether to use DateTime or DateTimeInterface as type hint.
+         */
+        private bool $preferInterface = false,
     ) {
         parent::__construct($object, '\DateTime', '');
-
-        $this->preferInterface = $preferInterface;
     }
 
     #[Override]

@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Naming;
 
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 
+/**
+ * @internal
+ */
 interface OperationNamingInterface
 {
     public function getFunctionName(OperationGuess $operation): string;

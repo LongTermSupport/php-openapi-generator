@@ -17,6 +17,9 @@ use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 use PhpParser\PrettyPrinter\Standard;
 
+/**
+ * @internal
+ */
 class MultipleType extends Type
 {
     /**

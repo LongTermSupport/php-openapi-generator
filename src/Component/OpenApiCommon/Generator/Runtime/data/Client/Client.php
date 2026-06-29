@@ -9,6 +9,9 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 
+/**
+ * @internal
+ */
 abstract class Client
 {
     public const FETCH_RESPONSE = 'response';

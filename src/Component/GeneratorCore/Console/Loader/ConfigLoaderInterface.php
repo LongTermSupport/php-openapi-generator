@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader;
 
+/**
+ * @internal
+ */
 interface ConfigLoaderInterface
 {
     public function fileKey(): string;

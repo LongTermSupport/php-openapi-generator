@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenA
 
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\JsonSchema\ArrayGuesser as BaseArrayGuesser;
 
+/**
+ * @internal
+ */
 class ArrayGuesser extends BaseArrayGuesser
 {
     use SchemaClassTrait;

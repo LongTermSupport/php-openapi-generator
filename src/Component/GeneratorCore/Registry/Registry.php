@@ -8,6 +8,9 @@ use Exception;
 use League\Uri\Http;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess;
 
+/**
+ * @internal
+ */
 class Registry implements RegistryInterface
 {
     /** @var array<string> */

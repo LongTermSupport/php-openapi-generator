@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 use Symfony\Component\OptionsResolver\Options;
 
+/**
+ * @internal
+ */
 interface CustomQueryResolver
 {
     public function __invoke(Options $options, mixed $value): mixed;

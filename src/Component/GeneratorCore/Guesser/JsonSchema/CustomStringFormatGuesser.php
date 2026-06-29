@@ -13,6 +13,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\Js
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\SchemaInterface;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 
+/**
+ * @internal
+ */
 class CustomStringFormatGuesser implements GuesserInterface, TypeGuesserInterface
 {
     /**

@@ -11,6 +11,9 @@ use PhpParser\Node\Expr;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class JsonBodyContentGenerator extends AbstractBodyContentGenerator
 {
     public const JSON_TYPES = [

@@ -6,7 +6,11 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model;
 
 use ArrayObject;
 
-/** @extends ArrayObject<string, mixed> */
+/**
+ * @extends ArrayObject<string, mixed>
+ *
+ * @internal
+ */
 class OpenIdConnectSecurityScheme extends ArrayObject
 {
     /**

@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess as BaseClassGuess;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Property;
 
+/**
+ * @internal
+ */
 class ClassGuess extends BaseClassGuess
 {
     private ?ParentClass $parentClass = null;

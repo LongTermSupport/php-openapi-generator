@@ -9,6 +9,8 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema;
 
 /**
  * Context when generating a library base on a Schema.
+ *
+ * @internal
  */
 class Context
 {

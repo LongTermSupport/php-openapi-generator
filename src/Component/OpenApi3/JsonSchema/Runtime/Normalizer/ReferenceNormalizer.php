@@ -9,6 +9,9 @@ use LogicException;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
+/**
+ * @internal
+ */
 class ReferenceNormalizer implements NormalizerInterface
 {
     /**

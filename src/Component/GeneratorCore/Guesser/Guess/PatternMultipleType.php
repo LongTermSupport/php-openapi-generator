@@ -11,6 +11,9 @@ use PhpParser\Node\Expr;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class PatternMultipleType extends Type
 {
     /**

@@ -15,6 +15,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\OpenIdC
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\SecuritySchemeGuess;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Schema;
 
+/**
+ * @internal
+ */
 class SecurityGuesser implements GuesserInterface, ClassGuesserInterface
 {
     public function supportObject(mixed $object): bool

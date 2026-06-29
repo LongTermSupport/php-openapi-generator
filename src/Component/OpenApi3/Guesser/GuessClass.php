@@ -8,6 +8,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApi3\JsonSchema\Model\Paramet
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\GuessClass as BaseGuessClass;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 
+/**
+ * @internal
+ */
 class GuessClass extends BaseGuessClass
 {
     public function resolveParameter(Reference $parameter): mixed

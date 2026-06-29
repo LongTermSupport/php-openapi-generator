@@ -23,6 +23,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Reference;
 use RuntimeException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class AllOfGuesser implements GuesserInterface, TypeGuesserInterface, ChainGuesserAwareInterface, PropertiesGuesserInterface, ClassGuesserInterface
 {
     use ChainGuesserAwareTrait;

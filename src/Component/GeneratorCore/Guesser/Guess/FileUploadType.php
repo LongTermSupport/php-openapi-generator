@@ -28,6 +28,8 @@ use PhpParser\Node\Scalar;
  * they read the FileUpload directly off the body DTO and set the multipart
  * part's filename + Content-Type from the value object. See
  * `FormBodyContentGenerator::getSerializeStatements()`.
+ *
+ * @internal
  */
 class FileUploadType extends Type
 {

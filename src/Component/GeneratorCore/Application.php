@@ -8,6 +8,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Command\Dum
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Console\Loader\ConfigLoader;
 use Symfony\Component\Console\Application as BaseApplication;
 
+/**
+ * @internal
+ */
 class Application extends BaseApplication
 {
     public const VERSION = '6.x-dev';

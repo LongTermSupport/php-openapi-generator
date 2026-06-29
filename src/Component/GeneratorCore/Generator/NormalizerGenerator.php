@@ -20,6 +20,9 @@ use PhpParser\Node\Param;
 use PhpParser\Node\Stmt;
 use PhpParser\Parser;
 
+/**
+ * @internal
+ */
 class NormalizerGenerator implements GeneratorInterface
 {
     use DenormalizerGenerator;

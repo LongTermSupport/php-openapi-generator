@@ -13,6 +13,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\Class
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\ParentClass;
 use Override;
 
+/**
+ * @internal
+ */
 class SchemaGuesser extends ObjectGuesser
 {
     #[Override]

@@ -12,6 +12,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\Class
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\ParentClass;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class ModelGenerator extends BaseModelGenerator
 {
     use ClassGenerator;

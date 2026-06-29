@@ -29,6 +29,9 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Yaml\Dumper;
 use Symfony\Component\Yaml\Parser;
 
+/**
+ * @internal
+ */
 abstract class JaneOpenApi extends ChainGenerator
 {
     protected const OBJECT_NORMALIZER_CLASS = null;

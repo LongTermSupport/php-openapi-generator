@@ -12,6 +12,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Yaml\Exception\ExceptionInterface as YamlException;
 use Symfony\Component\Yaml\Yaml;
 
+/**
+ * @internal
+ */
 abstract class SchemaParser
 {
     protected const OPEN_API_MODEL = null;

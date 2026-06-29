@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Contracts;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Registry\Registry;
 
+/**
+ * @internal
+ */
 interface WhitelistFetchInterface
 {
     public function addOperationRelations(OperationGuess $operationGuess, Registry $registry): void;

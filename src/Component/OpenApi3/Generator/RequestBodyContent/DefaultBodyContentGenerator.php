@@ -10,6 +10,9 @@ use PhpParser\Node\Expr;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 
+/**
+ * @internal
+ */
 class DefaultBodyContentGenerator extends AbstractBodyContentGenerator
 {
     /**

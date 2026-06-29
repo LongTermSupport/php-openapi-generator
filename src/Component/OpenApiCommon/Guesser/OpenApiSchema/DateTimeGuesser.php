@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\OpenA
 use DateTimeInterface;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\JsonSchema\DateTimeGuesser as BaseDateTimeGuesser;
 
+/**
+ * @internal
+ */
 class DateTimeGuesser extends BaseDateTimeGuesser
 {
     use SchemaClassTrait;

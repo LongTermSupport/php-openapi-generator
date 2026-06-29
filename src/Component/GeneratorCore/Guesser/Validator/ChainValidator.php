@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Valid
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\ClassGuess;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess\Property;
 
+/**
+ * @internal
+ */
 class ChainValidator implements ValidatorInterface
 {
     /** @var array<ValidatorInterface> */

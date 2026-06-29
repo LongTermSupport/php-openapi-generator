@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 /**
+ * @internal
  * Lightweight runtime Reference for generated SDK code.
  *
  * Holds a JSON $ref pointer and its origin document — just enough for

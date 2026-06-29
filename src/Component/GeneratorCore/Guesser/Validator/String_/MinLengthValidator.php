@@ -14,6 +14,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\Js
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+/**
+ * @internal
+ */
 class MinLengthValidator implements ValidatorInterface
 {
     use ObjectCheckTrait;

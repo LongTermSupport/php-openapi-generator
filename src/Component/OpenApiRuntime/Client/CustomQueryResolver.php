@@ -6,6 +6,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApiRuntime\Client;
 
 use Symfony\Component\OptionsResolver\Options;
 
+/**
+ * @internal
+ */
 interface CustomQueryResolver
 {
     /** @param bool|int|float|string|array<mixed>|null $value */

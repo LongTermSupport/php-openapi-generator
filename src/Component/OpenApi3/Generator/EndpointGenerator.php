@@ -28,6 +28,9 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
+/**
+ * @internal
+ */
 class EndpointGenerator implements EndpointGeneratorInterface
 {
     use GetAuthenticationScopesTrait;

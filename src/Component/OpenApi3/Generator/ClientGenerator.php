@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Generator;
 use LongTermSupport\OpenApiGenerator\Component\OpenApi3\Generator\Client\ServerPluginGenerator;
 use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Generator\ClientGenerator as BaseClientGenerator;
 
+/**
+ * @internal
+ */
 class ClientGenerator extends BaseClientGenerator
 {
     use ServerPluginGenerator;

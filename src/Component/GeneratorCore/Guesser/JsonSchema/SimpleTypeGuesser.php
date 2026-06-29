@@ -12,6 +12,9 @@ use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\Js
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\JsonSchema\Model\SchemaInterface;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 
+/**
+ * @internal
+ */
 class SimpleTypeGuesser implements GuesserInterface, TypeGuesserInterface
 {
     /** @var array<string> */

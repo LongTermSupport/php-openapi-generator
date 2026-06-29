@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Naming;
 
+/**
+ * @internal
+ */
 class ExceptionNaming
 {
     /** @var array<int, string> */

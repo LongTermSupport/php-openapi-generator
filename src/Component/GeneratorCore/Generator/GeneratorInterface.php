@@ -7,6 +7,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Generator\Context\Context;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Schema;
 
+/**
+ * @internal
+ */
 interface GeneratorInterface
 {
     /**

@@ -14,6 +14,8 @@ use PhpParser\Node\Scalar;
 
 /**
  * Represent a DateTime type.
+ *
+ * @internal
  */
 class DateTimeType extends ObjectType
 {
@@ -73,7 +75,7 @@ class DateTimeType extends ObjectType
     #[Override]
     public function getTypeHint(string $namespace): Name
     {
-        return new Name(true === $this->preferInterface ? '\DateTimeInterface' : '\DateTime');
+        return new Name($this->preferInterface ? '\DateTimeInterface' : '\DateTime');
     }
 
     #[Override]

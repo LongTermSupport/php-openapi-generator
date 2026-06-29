@@ -22,6 +22,8 @@ use LogicException;
  *
  * Supported RFC 6902 operations: add, replace, remove.
  * RFC 6901 pointer escaping: ~1 → /, ~0 → ~.
+ *
+ * @internal
  */
 final readonly class SpecPatchApplier
 {

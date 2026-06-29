@@ -10,6 +10,8 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\SchemaParser\Schema
 /**
  * @method OpenApi parseSchema(string $openApiSpecPath)
  * @method OpenApi denormalize($openApiSpecData, $openApiSpecPath)
+ *
+ * @internal
  */
 class SchemaParser extends CommonSchemaParser
 {

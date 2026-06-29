@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Guesser\Guess;
 
+/**
+ * @internal
+ */
 class ClassGuess
 {
     use ValidatorGuessTrait;
@@ -153,7 +156,7 @@ class ClassGuess
             return true;
         }
 
-        return array_any($this->properties, static fn ($property): bool => \count($property->getValidatorGuesses()) > 0);
+        return array_any($this->properties, static fn (Property $property): bool => [] !== $property->getValidatorGuesses());
     }
 
     /**

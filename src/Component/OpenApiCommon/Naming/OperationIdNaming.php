@@ -9,6 +9,9 @@ use LongTermSupport\OpenApiGenerator\Component\OpenApiCommon\Guesser\Guess\Opera
 use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
+/**
+ * @internal
+ */
 class OperationIdNaming implements OperationNamingInterface
 {
     use InflectorTrait;

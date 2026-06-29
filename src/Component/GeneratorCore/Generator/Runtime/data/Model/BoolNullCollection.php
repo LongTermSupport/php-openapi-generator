@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+/**
+ * @internal
+ */
 final class BoolNullCollection
 {
     /** @var list<bool|null> */

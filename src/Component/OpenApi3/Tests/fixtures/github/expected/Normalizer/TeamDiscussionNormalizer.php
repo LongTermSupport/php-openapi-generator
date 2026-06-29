@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class TeamDiscussionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class TeamDiscussionNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setAuthor($value);
             unset($data['author']);
         }
-        elseif (\array_key_exists('author', $data) && $data['author'] === null) {
+        elseif (\array_key_exists('author', $data)) {
             $object->setAuthor(null);
         }
         if (\array_key_exists('body', $data)) {
@@ -87,7 +90,7 @@ class TeamDiscussionNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setLastEditedAt(TypeValidator::assertDateTime($data['last_edited_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['last_edited_at']);
         }
-        elseif (\array_key_exists('last_edited_at', $data) && $data['last_edited_at'] === null) {
+        elseif (\array_key_exists('last_edited_at', $data)) {
             $object->setLastEditedAt(null);
         }
         if (\array_key_exists('html_url', $data)) {

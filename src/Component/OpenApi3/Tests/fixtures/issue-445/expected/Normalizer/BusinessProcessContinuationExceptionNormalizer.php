@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessContinuationExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -96,7 +99,7 @@ class BusinessProcessContinuationExceptionNormalizer implements DenormalizerInte
             $object->setPrecedingBusinessProcessException($data['precedingBusinessProcessException']);
             unset($data['precedingBusinessProcessException']);
         }
-        elseif (\array_key_exists('precedingBusinessProcessException', $data) && $data['precedingBusinessProcessException'] === null) {
+        elseif (\array_key_exists('precedingBusinessProcessException', $data)) {
             $object->setPrecedingBusinessProcessException(null);
         }
         foreach ($data as $key => $value) {

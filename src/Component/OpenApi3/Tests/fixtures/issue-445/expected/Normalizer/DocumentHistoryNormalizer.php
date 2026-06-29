@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class DocumentHistoryNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -69,7 +72,7 @@ class DocumentHistoryNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('audit', $data) && $data['audit'] !== null) {
             $object->setAudit($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         if (\array_key_exists('deleted', $data)) {

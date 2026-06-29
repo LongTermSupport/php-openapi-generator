@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessStateChangeRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class BusinessProcessStateChangeRequestNormalizer implements DenormalizerInterfa
         if (\array_key_exists('notification', $data) && $data['notification'] !== null) {
             $object->setNotification($data['notification']);
         }
-        elseif (\array_key_exists('notification', $data) && $data['notification'] === null) {
+        elseif (\array_key_exists('notification', $data)) {
             $object->setNotification(null);
         }
         return $object;

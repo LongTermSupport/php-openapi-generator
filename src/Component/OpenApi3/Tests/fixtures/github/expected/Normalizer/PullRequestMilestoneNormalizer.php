@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PullRequestMilestoneNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -92,7 +95,7 @@ class PullRequestMilestoneNormalizer implements DenormalizerInterface, Normalize
             $object->setCreator($value);
             unset($data['creator']);
         }
-        elseif (\array_key_exists('creator', $data) && $data['creator'] === null) {
+        elseif (\array_key_exists('creator', $data)) {
             $object->setCreator(null);
         }
         if (\array_key_exists('open_issues', $data)) {
@@ -115,14 +118,14 @@ class PullRequestMilestoneNormalizer implements DenormalizerInterface, Normalize
             $object->setClosedAt(TypeValidator::assertDateTime($data['closed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['closed_at']);
         }
-        elseif (\array_key_exists('closed_at', $data) && $data['closed_at'] === null) {
+        elseif (\array_key_exists('closed_at', $data)) {
             $object->setClosedAt(null);
         }
         if (\array_key_exists('due_on', $data) && $data['due_on'] !== null) {
             $object->setDueOn(TypeValidator::assertDateTime($data['due_on'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['due_on']);
         }
-        elseif (\array_key_exists('due_on', $data) && $data['due_on'] === null) {
+        elseif (\array_key_exists('due_on', $data)) {
             $object->setDueOn(null);
         }
         foreach ($data as $key => $value_1) {

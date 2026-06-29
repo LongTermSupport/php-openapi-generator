@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class IssueEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -68,7 +71,7 @@ class IssueEventNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setActor($value);
             unset($data['actor']);
         }
-        elseif (\array_key_exists('actor', $data) && $data['actor'] === null) {
+        elseif (\array_key_exists('actor', $data)) {
             $object->setActor(null);
         }
         if (\array_key_exists('event', $data)) {
@@ -102,7 +105,7 @@ class IssueEventNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setAssignee($value_3);
             unset($data['assignee']);
         }
-        elseif (\array_key_exists('assignee', $data) && $data['assignee'] === null) {
+        elseif (\array_key_exists('assignee', $data)) {
             $object->setAssignee(null);
         }
         if (\array_key_exists('assigner', $data) && $data['assigner'] !== null) {
@@ -110,7 +113,7 @@ class IssueEventNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setAssigner($value_4);
             unset($data['assigner']);
         }
-        elseif (\array_key_exists('assigner', $data) && $data['assigner'] === null) {
+        elseif (\array_key_exists('assigner', $data)) {
             $object->setAssigner(null);
         }
         if (\array_key_exists('review_requester', $data) && $data['review_requester'] !== null) {
@@ -118,7 +121,7 @@ class IssueEventNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setReviewRequester($value_5);
             unset($data['review_requester']);
         }
-        elseif (\array_key_exists('review_requester', $data) && $data['review_requester'] === null) {
+        elseif (\array_key_exists('review_requester', $data)) {
             $object->setReviewRequester(null);
         }
         if (\array_key_exists('requested_reviewer', $data) && $data['requested_reviewer'] !== null) {
@@ -126,7 +129,7 @@ class IssueEventNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setRequestedReviewer($value_6);
             unset($data['requested_reviewer']);
         }
-        elseif (\array_key_exists('requested_reviewer', $data) && $data['requested_reviewer'] === null) {
+        elseif (\array_key_exists('requested_reviewer', $data)) {
             $object->setRequestedReviewer(null);
         }
         if (\array_key_exists('requested_team', $data)) {

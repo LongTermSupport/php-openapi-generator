@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentSearchRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,14 +65,14 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setSearchBehaviors($values);
             unset($data['searchBehaviors']);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
             unset($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] !== null) {
@@ -83,7 +86,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setAggregationFilters($values_1);
             unset($data['aggregationFilters']);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         if (\array_key_exists('channelId', $data)) {
@@ -100,7 +103,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setSearchLanguages($values_2);
             unset($data['searchLanguages']);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         if (\array_key_exists('collectionId', $data)) {
@@ -129,7 +132,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setDisplayPatternIds($values_3);
             unset($data['displayPatternIds']);
         }
-        elseif (\array_key_exists('displayPatternIds', $data) && $data['displayPatternIds'] === null) {
+        elseif (\array_key_exists('displayPatternIds', $data)) {
             $object->setDisplayPatternIds(null);
         }
         if (\array_key_exists('sort', $data) && $data['sort'] !== null) {
@@ -143,7 +146,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setSort($values_4);
             unset($data['sort']);
         }
-        elseif (\array_key_exists('sort', $data) && $data['sort'] === null) {
+        elseif (\array_key_exists('sort', $data)) {
             $object->setSort(null);
         }
         if (\array_key_exists('limit', $data)) {
@@ -164,7 +167,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setRightsFilter($values_5);
             unset($data['rightsFilter']);
         }
-        elseif (\array_key_exists('rightsFilter', $data) && $data['rightsFilter'] === null) {
+        elseif (\array_key_exists('rightsFilter', $data)) {
             $object->setRightsFilter(null);
         }
         if (\array_key_exists('rightsAggregations', $data) && $data['rightsAggregations'] !== null) {
@@ -177,7 +180,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setRightsAggregations($values_6);
             unset($data['rightsAggregations']);
         }
-        elseif (\array_key_exists('rightsAggregations', $data) && $data['rightsAggregations'] === null) {
+        elseif (\array_key_exists('rightsAggregations', $data)) {
             $object->setRightsAggregations(null);
         }
         if (\array_key_exists('debugMode', $data)) {
@@ -195,7 +198,7 @@ class ContentSearchRequestNormalizer implements DenormalizerInterface, Normalize
             $object->setAggregators($values_7);
             unset($data['aggregators']);
         }
-        elseif (\array_key_exists('aggregators', $data) && $data['aggregators'] === null) {
+        elseif (\array_key_exists('aggregators', $data)) {
             $object->setAggregators(null);
         }
         foreach ($data as $key => $value_11) {

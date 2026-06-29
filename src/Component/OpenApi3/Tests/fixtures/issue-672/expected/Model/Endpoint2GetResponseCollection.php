@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model;
 
+/**
+ * @internal
+ */
 final class Endpoint2GetResponseCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model\Endpoint2GetResponse> */

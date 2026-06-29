@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ChannelUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -58,7 +61,7 @@ class ChannelUpdateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setSort($values);
         }
-        elseif (\array_key_exists('sort', $data) && $data['sort'] === null) {
+        elseif (\array_key_exists('sort', $data)) {
             $object->setSort(null);
         }
         if (\array_key_exists('sortOrder', $data)) {
@@ -95,7 +98,7 @@ class ChannelUpdateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setGrantedUserRoleIds($values_3);
         }
-        elseif (\array_key_exists('grantedUserRoleIds', $data) && $data['grantedUserRoleIds'] === null) {
+        elseif (\array_key_exists('grantedUserRoleIds', $data)) {
             $object->setGrantedUserRoleIds(null);
         }
         if (\array_key_exists('aggregations', $data) && $data['aggregations'] !== null) {
@@ -108,13 +111,13 @@ class ChannelUpdateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setAggregations($values_4);
         }
-        elseif (\array_key_exists('aggregations', $data) && $data['aggregations'] === null) {
+        elseif (\array_key_exists('aggregations', $data)) {
             $object->setAggregations(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('extendedSimpleSearchFields', $data) && $data['extendedSimpleSearchFields'] !== null) {
@@ -126,13 +129,13 @@ class ChannelUpdateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setExtendedSimpleSearchFields($values_5);
         }
-        elseif (\array_key_exists('extendedSimpleSearchFields', $data) && $data['extendedSimpleSearchFields'] === null) {
+        elseif (\array_key_exists('extendedSimpleSearchFields', $data)) {
             $object->setExtendedSimpleSearchFields(null);
         }
         if (\array_key_exists('missingResultsDisplayPatterns', $data) && $data['missingResultsDisplayPatterns'] !== null) {
             $object->setMissingResultsDisplayPatterns($data['missingResultsDisplayPatterns']);
         }
-        elseif (\array_key_exists('missingResultsDisplayPatterns', $data) && $data['missingResultsDisplayPatterns'] === null) {
+        elseif (\array_key_exists('missingResultsDisplayPatterns', $data)) {
             $object->setMissingResultsDisplayPatterns(null);
         }
         if (\array_key_exists('viewForAll', $data)) {

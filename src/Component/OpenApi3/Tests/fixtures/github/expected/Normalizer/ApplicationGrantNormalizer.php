@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ApplicationGrantNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -87,7 +90,7 @@ class ApplicationGrantNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setUser($value_2);
             unset($data['user']);
         }
-        elseif (\array_key_exists('user', $data) && $data['user'] === null) {
+        elseif (\array_key_exists('user', $data)) {
             $object->setUser(null);
         }
         foreach ($data as $key => $value_3) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AggregationFilterNotSupportedExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -102,7 +105,7 @@ class AggregationFilterNotSupportedExceptionNormalizer implements DenormalizerIn
             $object->setSupportedFilterTypes($values);
             unset($data['supportedFilterTypes']);
         }
-        elseif (\array_key_exists('supportedFilterTypes', $data) && $data['supportedFilterTypes'] === null) {
+        elseif (\array_key_exists('supportedFilterTypes', $data)) {
             $object->setSupportedFilterTypes(null);
         }
         foreach ($data as $key => $value_1) {

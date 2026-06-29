@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class XmpMappingEntryDeleteManyRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class XmpMappingEntryDeleteManyRequestNormalizer implements DenormalizerInterfac
             }
             $object->setIds($values);
         }
-        elseif (\array_key_exists('ids', $data) && $data['ids'] === null) {
+        elseif (\array_key_exists('ids', $data)) {
             $object->setIds(null);
         }
         return $object;

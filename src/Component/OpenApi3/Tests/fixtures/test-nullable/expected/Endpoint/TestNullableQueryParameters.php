@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullable\Endpoint;
 
+/**
+ * @internal
+ */
 class TestNullableQueryParameters extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullable\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullable\Runtime\Client\Endpoint
 {
     /**

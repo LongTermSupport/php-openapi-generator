@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model;
 
+/**
+ * @internal
+ */
 final class EmptySpaceCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ModelInResponse\Model\EmptySpace> */

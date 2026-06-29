@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AuthorizationsPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -61,7 +64,7 @@ class AuthorizationsPostBodyNormalizer implements DenormalizerInterface, Normali
             $object->setScopes($values);
             unset($data['scopes']);
         }
-        elseif (\array_key_exists('scopes', $data) && $data['scopes'] === null) {
+        elseif (\array_key_exists('scopes', $data)) {
             $object->setScopes(null);
         }
         if (\array_key_exists('note', $data)) {

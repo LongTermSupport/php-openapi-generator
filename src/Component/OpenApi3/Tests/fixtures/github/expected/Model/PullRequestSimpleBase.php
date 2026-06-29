@@ -8,6 +8,7 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model;
 
 /**
+ * @internal
  * @extends \ArrayObject<string, mixed>
  */
 class PullRequestSimpleBase extends \ArrayObject

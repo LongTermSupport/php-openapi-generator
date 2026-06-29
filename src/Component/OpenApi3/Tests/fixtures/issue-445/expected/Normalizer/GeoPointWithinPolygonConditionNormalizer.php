@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class GeoPointWithinPolygonConditionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -71,7 +74,7 @@ class GeoPointWithinPolygonConditionNormalizer implements DenormalizerInterface,
             $object->setPolygon($values);
             unset($data['polygon']);
         }
-        elseif (\array_key_exists('polygon', $data) && $data['polygon'] === null) {
+        elseif (\array_key_exists('polygon', $data)) {
             $object->setPolygon(null);
         }
         return $object;

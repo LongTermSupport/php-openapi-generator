@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleConditionInvalidTriggerPointDocumentTypeExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -94,7 +97,7 @@ class BusinessRuleConditionInvalidTriggerPointDocumentTypeExceptionNormalizer im
             $object->setAllowedDocumentTypes($values);
             unset($data['allowedDocumentTypes']);
         }
-        elseif (\array_key_exists('allowedDocumentTypes', $data) && $data['allowedDocumentTypes'] === null) {
+        elseif (\array_key_exists('allowedDocumentTypes', $data)) {
             $object->setAllowedDocumentTypes(null);
         }
         foreach ($data as $key => $value_1) {

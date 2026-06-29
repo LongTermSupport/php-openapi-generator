@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception;
 
+/**
+ * @internal
+ */
 class DirectorReportUnauthorizedException extends UnauthorizedException
 {
     private ?\Psr\Http\Message\ResponseInterface $response;

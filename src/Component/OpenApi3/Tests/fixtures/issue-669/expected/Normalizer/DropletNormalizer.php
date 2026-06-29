@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -92,7 +95,7 @@ class DropletNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setKernel($value_2);
             unset($data['kernel']);
         }
-        elseif (\array_key_exists('kernel', $data) && $data['kernel'] === null) {
+        elseif (\array_key_exists('kernel', $data)) {
             $object->setKernel(null);
         }
         if (\array_key_exists('created_at', $data)) {

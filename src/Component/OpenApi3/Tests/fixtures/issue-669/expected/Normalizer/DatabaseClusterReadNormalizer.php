@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class DatabaseClusterReadNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -102,7 +105,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $object->setTags($values);
             unset($data['tags']);
         }
-        elseif (\array_key_exists('tags', $data) && $data['tags'] === null) {
+        elseif (\array_key_exists('tags', $data)) {
             $object->setTags(null);
         }
         if (\array_key_exists('db_names', $data) && $data['db_names'] !== null) {
@@ -115,7 +118,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $object->setDbNames($values_1);
             unset($data['db_names']);
         }
-        elseif (\array_key_exists('db_names', $data) && $data['db_names'] === null) {
+        elseif (\array_key_exists('db_names', $data)) {
             $object->setDbNames(null);
         }
         if (\array_key_exists('ui_connection', $data)) {
@@ -159,7 +162,7 @@ class DatabaseClusterReadNormalizer implements DenormalizerInterface, Normalizer
             $object->setUsers($values_2);
             unset($data['users']);
         }
-        elseif (\array_key_exists('users', $data) && $data['users'] === null) {
+        elseif (\array_key_exists('users', $data)) {
             $object->setUsers(null);
         }
         if (\array_key_exists('maintenance_window', $data)) {

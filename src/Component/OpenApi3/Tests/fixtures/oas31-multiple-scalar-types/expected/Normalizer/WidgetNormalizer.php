@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class WidgetNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,7 +67,7 @@ class WidgetNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setEmployeeCount($value);
             unset($data['employeeCount']);
         }
-        elseif (\array_key_exists('employeeCount', $data) && $data['employeeCount'] === null) {
+        elseif (\array_key_exists('employeeCount', $data)) {
             $object->setEmployeeCount(null);
         }
         foreach ($data as $key => $value_1) {

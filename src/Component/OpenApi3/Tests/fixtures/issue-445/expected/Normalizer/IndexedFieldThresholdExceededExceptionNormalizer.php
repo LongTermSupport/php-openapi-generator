@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class IndexedFieldThresholdExceededExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -94,7 +97,7 @@ class IndexedFieldThresholdExceededExceptionNormalizer implements DenormalizerIn
             $object->setSchemaIds($values);
             unset($data['schemaIds']);
         }
-        elseif (\array_key_exists('schemaIds', $data) && $data['schemaIds'] === null) {
+        elseif (\array_key_exists('schemaIds', $data)) {
             $object->setSchemaIds(null);
         }
         if (\array_key_exists('indexedFieldCount', $data)) {

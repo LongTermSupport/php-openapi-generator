@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class MetadataStatusNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class MetadataStatusNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setContentOrLayerSchemaIds($values);
         }
-        elseif (\array_key_exists('contentOrLayerSchemaIds', $data) && $data['contentOrLayerSchemaIds'] === null) {
+        elseif (\array_key_exists('contentOrLayerSchemaIds', $data)) {
             $object->setContentOrLayerSchemaIds(null);
         }
         if (\array_key_exists('listSchemaIds', $data) && $data['listSchemaIds'] !== null) {
@@ -69,7 +72,7 @@ class MetadataStatusNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setListSchemaIds($values_1);
         }
-        elseif (\array_key_exists('listSchemaIds', $data) && $data['listSchemaIds'] === null) {
+        elseif (\array_key_exists('listSchemaIds', $data)) {
             $object->setListSchemaIds(null);
         }
         if (\array_key_exists('state', $data)) {
@@ -90,7 +93,7 @@ class MetadataStatusNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setFieldIdsToCleanup($values_2);
         }
-        elseif (\array_key_exists('fieldIdsToCleanup', $data) && $data['fieldIdsToCleanup'] === null) {
+        elseif (\array_key_exists('fieldIdsToCleanup', $data)) {
             $object->setFieldIdsToCleanup(null);
         }
         return $object;

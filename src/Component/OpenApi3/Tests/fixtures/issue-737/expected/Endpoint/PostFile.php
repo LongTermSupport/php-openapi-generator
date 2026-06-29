@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Endpoint;
 
+/**
+ * @internal
+ */
 class PostFile extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue737\Runtime\Client\Endpoint
 {
     /**

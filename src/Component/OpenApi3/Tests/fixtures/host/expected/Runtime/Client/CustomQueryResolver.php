@@ -8,6 +8,9 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Runtime\Client;
 
 use Symfony\Component\OptionsResolver\Options;
+/**
+ * @internal
+ */
 interface CustomQueryResolver
 {
     public function __invoke(Options $options, mixed $value): mixed;

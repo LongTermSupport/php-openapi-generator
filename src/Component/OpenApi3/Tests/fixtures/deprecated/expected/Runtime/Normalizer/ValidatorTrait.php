@@ -9,6 +9,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Dep
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Validation;
+/**
+ * @internal
+ */
 trait ValidatorTrait
 {
     /** @param array<array-key, mixed> $data */

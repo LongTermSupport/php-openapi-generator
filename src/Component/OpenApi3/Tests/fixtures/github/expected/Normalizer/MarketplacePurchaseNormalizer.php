@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class MarketplacePurchaseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -76,7 +79,7 @@ class MarketplacePurchaseNormalizer implements DenormalizerInterface, Normalizer
             $object->setMarketplacePendingChange($value);
             unset($data['marketplace_pending_change']);
         }
-        elseif (\array_key_exists('marketplace_pending_change', $data) && $data['marketplace_pending_change'] === null) {
+        elseif (\array_key_exists('marketplace_pending_change', $data)) {
             $object->setMarketplacePendingChange(null);
         }
         if (\array_key_exists('marketplace_purchase', $data)) {

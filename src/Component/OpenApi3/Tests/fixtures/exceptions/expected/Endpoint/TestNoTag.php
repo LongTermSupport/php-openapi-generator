@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Endpoint;
 
+/**
+ * @internal
+ */
 class TestNoTag extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Runtime\Client\EndpointTrait;

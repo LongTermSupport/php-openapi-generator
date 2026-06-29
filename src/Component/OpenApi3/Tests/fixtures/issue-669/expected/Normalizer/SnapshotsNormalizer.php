@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SnapshotsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -96,7 +99,7 @@ class SnapshotsNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setTags($values_1);
             unset($data['tags']);
         }
-        elseif (\array_key_exists('tags', $data) && $data['tags'] === null) {
+        elseif (\array_key_exists('tags', $data)) {
             $object->setTags(null);
         }
         foreach ($data as $key => $value_2) {

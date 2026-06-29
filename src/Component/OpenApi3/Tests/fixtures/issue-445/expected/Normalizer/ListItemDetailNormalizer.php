@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -63,13 +66,13 @@ class ListItemDetailNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setContent($values);
         }
-        elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+        elseif (\array_key_exists('content', $data)) {
             $object->setContent(null);
         }
         if (\array_key_exists('displayValues', $data) && $data['displayValues'] !== null) {
             $object->setDisplayValues($data['displayValues']);
         }
-        elseif (\array_key_exists('displayValues', $data) && $data['displayValues'] === null) {
+        elseif (\array_key_exists('displayValues', $data)) {
             $object->setDisplayValues(null);
         }
         if (\array_key_exists('brokenReferenceIds', $data) && $data['brokenReferenceIds'] !== null) {
@@ -81,7 +84,7 @@ class ListItemDetailNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setBrokenReferenceIds($values_1);
         }
-        elseif (\array_key_exists('brokenReferenceIds', $data) && $data['brokenReferenceIds'] === null) {
+        elseif (\array_key_exists('brokenReferenceIds', $data)) {
             $object->setBrokenReferenceIds(null);
         }
         if (\array_key_exists('brokenRelationTargetIds', $data) && $data['brokenRelationTargetIds'] !== null) {
@@ -93,7 +96,7 @@ class ListItemDetailNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setBrokenRelationTargetIds($values_2);
         }
-        elseif (\array_key_exists('brokenRelationTargetIds', $data) && $data['brokenRelationTargetIds'] === null) {
+        elseif (\array_key_exists('brokenRelationTargetIds', $data)) {
             $object->setBrokenRelationTargetIds(null);
         }
         if (\array_key_exists('brokenIndirectReferenceIds', $data) && $data['brokenIndirectReferenceIds'] !== null) {
@@ -105,19 +108,19 @@ class ListItemDetailNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setBrokenIndirectReferenceIds($values_3);
         }
-        elseif (\array_key_exists('brokenIndirectReferenceIds', $data) && $data['brokenIndirectReferenceIds'] === null) {
+        elseif (\array_key_exists('brokenIndirectReferenceIds', $data)) {
             $object->setBrokenIndirectReferenceIds(null);
         }
         if (\array_key_exists('audit', $data) && $data['audit'] !== null) {
             $object->setAudit($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         if (\array_key_exists('activity', $data) && $data['activity'] !== null) {
             $object->setActivity($data['activity']);
         }
-        elseif (\array_key_exists('activity', $data) && $data['activity'] === null) {
+        elseif (\array_key_exists('activity', $data)) {
             $object->setActivity(null);
         }
         return $object;

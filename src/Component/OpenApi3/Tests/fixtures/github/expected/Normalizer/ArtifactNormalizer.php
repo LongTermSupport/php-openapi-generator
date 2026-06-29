@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ArtifactNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -83,7 +86,7 @@ class ArtifactNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setCreatedAt(TypeValidator::assertDateTime($data['created_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['created_at']);
         }
-        elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+        elseif (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt(null);
         }
         if (\array_key_exists('expires_at', $data)) {
@@ -94,7 +97,7 @@ class ArtifactNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setUpdatedAt(TypeValidator::assertDateTime($data['updated_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['updated_at']);
         }
-        elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+        elseif (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt(null);
         }
         foreach ($data as $key => $value) {

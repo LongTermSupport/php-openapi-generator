@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Endpoint;
 
+/**
+ * @internal
+ */
 class GetEndpoint1 extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue670\Runtime\Client\EndpointTrait;

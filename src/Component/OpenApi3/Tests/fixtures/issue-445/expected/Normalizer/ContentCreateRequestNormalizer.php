@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentCreateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class ContentCreateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setLayerSchemaIds($values);
         }
-        elseif (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] === null) {
+        elseif (\array_key_exists('layerSchemaIds', $data)) {
             $object->setLayerSchemaIds(null);
         }
         if (\array_key_exists('content', $data) && $data['content'] !== null) {
@@ -72,7 +75,7 @@ class ContentCreateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setContent($values_1);
         }
-        elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+        elseif (\array_key_exists('content', $data)) {
             $object->setContent(null);
         }
         if (\array_key_exists('metadata', $data) && $data['metadata'] !== null) {
@@ -84,7 +87,7 @@ class ContentCreateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setMetadata($values_2);
         }
-        elseif (\array_key_exists('metadata', $data) && $data['metadata'] === null) {
+        elseif (\array_key_exists('metadata', $data)) {
             $object->setMetadata(null);
         }
         if (\array_key_exists('contentPermissionSetIds', $data) && $data['contentPermissionSetIds'] !== null) {
@@ -96,7 +99,7 @@ class ContentCreateRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setContentPermissionSetIds($values_3);
         }
-        elseif (\array_key_exists('contentPermissionSetIds', $data) && $data['contentPermissionSetIds'] === null) {
+        elseif (\array_key_exists('contentPermissionSetIds', $data)) {
             $object->setContentPermissionSetIds(null);
         }
         if (\array_key_exists('requestId', $data)) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -92,7 +95,7 @@ class BusinessProcessNormalizer implements DenormalizerInterface, NormalizerInte
             }
             $object->setStateHistory($values);
         }
-        elseif (\array_key_exists('stateHistory', $data) && $data['stateHistory'] === null) {
+        elseif (\array_key_exists('stateHistory', $data)) {
             $object->setStateHistory(null);
         }
         if (\array_key_exists('currentState', $data)) {
@@ -101,7 +104,7 @@ class BusinessProcessNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('lastReportedProgress', $data) && $data['lastReportedProgress'] !== null) {
             $object->setLastReportedProgress(TypeValidator::assertDateTime($data['lastReportedProgress'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('lastReportedProgress', $data) && $data['lastReportedProgress'] === null) {
+        elseif (\array_key_exists('lastReportedProgress', $data)) {
             $object->setLastReportedProgress(null);
         }
         if (\array_key_exists('continuationBusinessProcessId', $data)) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ModelNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class ModelNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             $object->setDate(TypeValidator::assertDateTime($data['date'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['date']);
         }
-        elseif (\array_key_exists('date', $data) && $data['date'] === null) {
+        elseif (\array_key_exists('date', $data)) {
             $object->setDate(null);
         }
         foreach ($data as $key => $value) {

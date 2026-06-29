@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OrganizationInvitationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -76,7 +79,7 @@ class OrganizationInvitationNormalizer implements DenormalizerInterface, Normali
             $object->setInviter($value);
             unset($data['inviter']);
         }
-        elseif (\array_key_exists('inviter', $data) && $data['inviter'] === null) {
+        elseif (\array_key_exists('inviter', $data)) {
             $object->setInviter(null);
         }
         if (\array_key_exists('team_count', $data)) {

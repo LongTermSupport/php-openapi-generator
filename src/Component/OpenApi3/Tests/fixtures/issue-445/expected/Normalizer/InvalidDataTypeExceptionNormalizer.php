@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class InvalidDataTypeExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -88,7 +91,7 @@ class InvalidDataTypeExceptionNormalizer implements DenormalizerInterface, Norma
             $object->setValue($data['value']);
             unset($data['value']);
         }
-        elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+        elseif (\array_key_exists('value', $data)) {
             $object->setValue(null);
         }
         foreach ($data as $key => $value) {

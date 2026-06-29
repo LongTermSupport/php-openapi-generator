@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleTraceLogNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class BusinessRuleTraceLogNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setRuleIds($values);
         }
-        elseif (\array_key_exists('ruleIds', $data) && $data['ruleIds'] === null) {
+        elseif (\array_key_exists('ruleIds', $data)) {
             $object->setRuleIds(null);
         }
         if (\array_key_exists('rules', $data) && $data['rules'] !== null) {
@@ -79,7 +82,7 @@ class BusinessRuleTraceLogNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setRules($values_1);
         }
-        elseif (\array_key_exists('rules', $data) && $data['rules'] === null) {
+        elseif (\array_key_exists('rules', $data)) {
             $object->setRules(null);
         }
         if (\array_key_exists('validationErrors', $data) && $data['validationErrors'] !== null) {
@@ -92,7 +95,7 @@ class BusinessRuleTraceLogNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setValidationErrors($values_2);
         }
-        elseif (\array_key_exists('validationErrors', $data) && $data['validationErrors'] === null) {
+        elseif (\array_key_exists('validationErrors', $data)) {
             $object->setValidationErrors(null);
         }
         if (\array_key_exists('generalErrors', $data) && $data['generalErrors'] !== null) {
@@ -105,13 +108,13 @@ class BusinessRuleTraceLogNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setGeneralErrors($values_3);
         }
-        elseif (\array_key_exists('generalErrors', $data) && $data['generalErrors'] === null) {
+        elseif (\array_key_exists('generalErrors', $data)) {
             $object->setGeneralErrors(null);
         }
         if (\array_key_exists('audit', $data) && $data['audit'] !== null) {
             $object->setAudit($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         return $object;

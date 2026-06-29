@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserProfileUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class UserProfileUpdateRequestNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('address', $data) && $data['address'] !== null) {
             $object->setAddress($data['address']);
         }
-        elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+        elseif (\array_key_exists('address', $data)) {
             $object->setAddress(null);
         }
         return $object;

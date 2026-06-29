@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SystemStatusNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -58,7 +61,7 @@ class SystemStatusNormalizer implements DenormalizerInterface, NormalizerInterfa
             }
             $object->setSearchIndicesStatus($values);
         }
-        elseif (\array_key_exists('searchIndicesStatus', $data) && $data['searchIndicesStatus'] === null) {
+        elseif (\array_key_exists('searchIndicesStatus', $data)) {
             $object->setSearchIndicesStatus(null);
         }
         if (\array_key_exists('displayValuesStatus', $data) && $data['displayValuesStatus'] !== null) {
@@ -71,7 +74,7 @@ class SystemStatusNormalizer implements DenormalizerInterface, NormalizerInterfa
             }
             $object->setDisplayValuesStatus($values_1);
         }
-        elseif (\array_key_exists('displayValuesStatus', $data) && $data['displayValuesStatus'] === null) {
+        elseif (\array_key_exists('displayValuesStatus', $data)) {
             $object->setDisplayValuesStatus(null);
         }
         if (\array_key_exists('metadataStatus', $data) && $data['metadataStatus'] !== null) {
@@ -84,7 +87,7 @@ class SystemStatusNormalizer implements DenormalizerInterface, NormalizerInterfa
             }
             $object->setMetadataStatus($values_2);
         }
-        elseif (\array_key_exists('metadataStatus', $data) && $data['metadataStatus'] === null) {
+        elseif (\array_key_exists('metadataStatus', $data)) {
             $object->setMetadataStatus(null);
         }
         return $object;

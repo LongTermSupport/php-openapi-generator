@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaMultipleTypesExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class SchemaMultipleTypesExceptionNormalizer implements DenormalizerInterface, N
             $object->setSchemaTypes($values);
             unset($data['schemaTypes']);
         }
-        elseif (\array_key_exists('schemaTypes', $data) && $data['schemaTypes'] === null) {
+        elseif (\array_key_exists('schemaTypes', $data)) {
             $object->setSchemaTypes(null);
         }
         foreach ($data as $key => $value_1) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaValidationExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -99,7 +102,7 @@ class SchemaValidationExceptionNormalizer implements DenormalizerInterface, Norm
             $object->setExceptions($values);
             unset($data['exceptions']);
         }
-        elseif (\array_key_exists('exceptions', $data) && $data['exceptions'] === null) {
+        elseif (\array_key_exists('exceptions', $data)) {
             $object->setExceptions(null);
         }
         foreach ($data as $key => $value_2) {

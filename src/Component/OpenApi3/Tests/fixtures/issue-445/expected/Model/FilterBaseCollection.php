@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model;
 
+/**
+ * @internal
+ */
 final class FilterBaseCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\FilterBase> */

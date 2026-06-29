@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ActivityNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,13 +54,13 @@ class ActivityNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('creationDate', $data) && $data['creationDate'] !== null) {
             $object->setCreationDate(TypeValidator::assertDateTime($data['creationDate'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('creationDate', $data) && $data['creationDate'] === null) {
+        elseif (\array_key_exists('creationDate', $data)) {
             $object->setCreationDate(null);
         }
         if (\array_key_exists('modificationDate', $data) && $data['modificationDate'] !== null) {
             $object->setModificationDate(TypeValidator::assertDateTime($data['modificationDate'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('modificationDate', $data) && $data['modificationDate'] === null) {
+        elseif (\array_key_exists('modificationDate', $data)) {
             $object->setModificationDate(null);
         }
         return $object;

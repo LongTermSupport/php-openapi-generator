@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception;
 
+/**
+ * @internal
+ */
 class TestNoTagBadRequestException extends BadRequestException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Model\Message $messageObject;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ImageFormatBaseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class ImageFormatBaseNormalizer implements DenormalizerInterface, NormalizerInte
             $object->setColorProfile($data['colorProfile']);
             unset($data['colorProfile']);
         }
-        elseif (\array_key_exists('colorProfile', $data) && $data['colorProfile'] === null) {
+        elseif (\array_key_exists('colorProfile', $data)) {
             $object->setColorProfile(null);
         }
         if (\array_key_exists('colorTransformationIntent', $data)) {
@@ -79,7 +82,7 @@ class ImageFormatBaseNormalizer implements DenormalizerInterface, NormalizerInte
             $object->setResizeAction($data['resizeAction']);
             unset($data['resizeAction']);
         }
-        elseif (\array_key_exists('resizeAction', $data) && $data['resizeAction'] === null) {
+        elseif (\array_key_exists('resizeAction', $data)) {
             $object->setResizeAction(null);
         }
         if (\array_key_exists('actions', $data) && $data['actions'] !== null) {
@@ -93,7 +96,7 @@ class ImageFormatBaseNormalizer implements DenormalizerInterface, NormalizerInte
             $object->setActions($values);
             unset($data['actions']);
         }
-        elseif (\array_key_exists('actions', $data) && $data['actions'] === null) {
+        elseif (\array_key_exists('actions', $data)) {
             $object->setActions(null);
         }
         return $object;

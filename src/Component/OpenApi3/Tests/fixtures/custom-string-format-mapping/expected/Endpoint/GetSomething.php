@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Endpoint;
 
+/**
+ * @internal
+ */
 class GetSomething extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\CustomStringFormatMapping\Runtime\Client\EndpointTrait;

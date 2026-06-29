@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ApiStatisticsEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class ApiStatisticsEventNormalizer implements DenormalizerInterface, NormalizerI
             $object->setRequestsPerClient($values);
             unset($data['requestsPerClient']);
         }
-        elseif (\array_key_exists('requestsPerClient', $data) && $data['requestsPerClient'] === null) {
+        elseif (\array_key_exists('requestsPerClient', $data)) {
             $object->setRequestsPerClient(null);
         }
         return $object;

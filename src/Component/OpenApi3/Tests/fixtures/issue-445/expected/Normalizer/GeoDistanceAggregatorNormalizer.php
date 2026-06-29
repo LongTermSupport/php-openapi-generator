@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class GeoDistanceAggregatorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class GeoDistanceAggregatorNormalizer implements DenormalizerInterface, Normaliz
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('aggregators', $data) && $data['aggregators'] !== null) {
@@ -70,14 +73,14 @@ class GeoDistanceAggregatorNormalizer implements DenormalizerInterface, Normaliz
             $object->setAggregators($values);
             unset($data['aggregators']);
         }
-        elseif (\array_key_exists('aggregators', $data) && $data['aggregators'] === null) {
+        elseif (\array_key_exists('aggregators', $data)) {
             $object->setAggregators(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
             unset($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('kind', $data)) {

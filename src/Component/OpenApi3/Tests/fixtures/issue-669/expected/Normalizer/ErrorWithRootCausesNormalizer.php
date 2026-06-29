@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ErrorWithRootCausesNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,7 +65,7 @@ class ErrorWithRootCausesNormalizer implements DenormalizerInterface, Normalizer
             $object->setMessages($values);
             unset($data['messages']);
         }
-        elseif (\array_key_exists('messages', $data) && $data['messages'] === null) {
+        elseif (\array_key_exists('messages', $data)) {
             $object->setMessages(null);
         }
         if (\array_key_exists('root_causes', $data)) {

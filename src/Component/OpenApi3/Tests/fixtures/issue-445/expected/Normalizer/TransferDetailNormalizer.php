@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class TransferDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -108,14 +111,14 @@ class TransferDetailNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setLastDataExtractionProgressTimeStamp(TypeValidator::assertDateTime($data['lastDataExtractionProgressTimeStamp'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['lastDataExtractionProgressTimeStamp']);
         }
-        elseif (\array_key_exists('lastDataExtractionProgressTimeStamp', $data) && $data['lastDataExtractionProgressTimeStamp'] === null) {
+        elseif (\array_key_exists('lastDataExtractionProgressTimeStamp', $data)) {
             $object->setLastDataExtractionProgressTimeStamp(null);
         }
         if (\array_key_exists('lastFileUploadProgressTimeStamp', $data) && $data['lastFileUploadProgressTimeStamp'] !== null) {
             $object->setLastFileUploadProgressTimeStamp(TypeValidator::assertDateTime($data['lastFileUploadProgressTimeStamp'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['lastFileUploadProgressTimeStamp']);
         }
-        elseif (\array_key_exists('lastFileUploadProgressTimeStamp', $data) && $data['lastFileUploadProgressTimeStamp'] === null) {
+        elseif (\array_key_exists('lastFileUploadProgressTimeStamp', $data)) {
             $object->setLastFileUploadProgressTimeStamp(null);
         }
         foreach ($data as $key => $value) {

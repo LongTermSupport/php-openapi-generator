@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Endpoint;
 
+/**
+ * @internal
+ */
 class GetBaz extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationMultipleSecurityLayers\Runtime\Client\EndpointTrait;

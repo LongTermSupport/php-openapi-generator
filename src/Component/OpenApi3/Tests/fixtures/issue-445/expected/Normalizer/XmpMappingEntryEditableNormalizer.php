@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class XmpMappingEntryEditableNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class XmpMappingEntryEditableNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('configuration', $data) && $data['configuration'] !== null) {
             $object->setConfiguration($data['configuration']);
         }
-        elseif (\array_key_exists('configuration', $data) && $data['configuration'] === null) {
+        elseif (\array_key_exists('configuration', $data)) {
             $object->setConfiguration(null);
         }
         return $object;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleTracedRuleNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,7 +54,7 @@ class BusinessRuleTracedRuleNormalizer implements DenormalizerInterface, Normali
         if (\array_key_exists('configuration', $data) && $data['configuration'] !== null) {
             $object->setConfiguration($data['configuration']);
         }
-        elseif (\array_key_exists('configuration', $data) && $data['configuration'] === null) {
+        elseif (\array_key_exists('configuration', $data)) {
             $object->setConfiguration(null);
         }
         if (\array_key_exists('evaluations', $data) && $data['evaluations'] !== null) {
@@ -64,7 +67,7 @@ class BusinessRuleTracedRuleNormalizer implements DenormalizerInterface, Normali
             }
             $object->setEvaluations($values);
         }
-        elseif (\array_key_exists('evaluations', $data) && $data['evaluations'] === null) {
+        elseif (\array_key_exists('evaluations', $data)) {
             $object->setEvaluations(null);
         }
         return $object;

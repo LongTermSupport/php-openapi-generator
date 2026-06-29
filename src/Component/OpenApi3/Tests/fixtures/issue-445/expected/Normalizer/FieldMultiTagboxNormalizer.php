@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class FieldMultiTagboxNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,14 +67,14 @@ class FieldMultiTagboxNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('descriptions', $data) && $data['descriptions'] !== null) {
             $object->setDescriptions($data['descriptions']);
             unset($data['descriptions']);
         }
-        elseif (\array_key_exists('descriptions', $data) && $data['descriptions'] === null) {
+        elseif (\array_key_exists('descriptions', $data)) {
             $object->setDescriptions(null);
         }
         if (\array_key_exists('required', $data)) {
@@ -106,7 +109,7 @@ class FieldMultiTagboxNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setSchemaIndexingInfo($data['schemaIndexingInfo']);
             unset($data['schemaIndexingInfo']);
         }
-        elseif (\array_key_exists('schemaIndexingInfo', $data) && $data['schemaIndexingInfo'] === null) {
+        elseif (\array_key_exists('schemaIndexingInfo', $data)) {
             $object->setSchemaIndexingInfo(null);
         }
         if (\array_key_exists('maximumItems', $data)) {
@@ -121,7 +124,7 @@ class FieldMultiTagboxNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setFilter($data['filter']);
             unset($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('listItemCreateTemplate', $data)) {

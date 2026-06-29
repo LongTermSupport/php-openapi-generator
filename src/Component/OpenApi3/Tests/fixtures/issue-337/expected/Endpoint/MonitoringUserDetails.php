@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Endpoint;
 
+/**
+ * @internal
+ */
 class MonitoringUserDetails extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Runtime\Client\Endpoint
 {
     /**

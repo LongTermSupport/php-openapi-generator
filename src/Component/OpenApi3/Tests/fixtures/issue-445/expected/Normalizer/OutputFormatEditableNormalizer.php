@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputFormatEditableNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -52,14 +55,14 @@ class OutputFormatEditableNormalizer implements DenormalizerInterface, Normalize
             $object->setSourceOutputFormats($data['sourceOutputFormats']);
             unset($data['sourceOutputFormats']);
         }
-        elseif (\array_key_exists('sourceOutputFormats', $data) && $data['sourceOutputFormats'] === null) {
+        elseif (\array_key_exists('sourceOutputFormats', $data)) {
             $object->setSourceOutputFormats(null);
         }
         if (\array_key_exists('format', $data) && $data['format'] !== null) {
             $object->setFormat($data['format']);
             unset($data['format']);
         }
-        elseif (\array_key_exists('format', $data) && $data['format'] === null) {
+        elseif (\array_key_exists('format', $data)) {
             $object->setFormat(null);
         }
         if (\array_key_exists('names', $data)) {
@@ -74,7 +77,7 @@ class OutputFormatEditableNormalizer implements DenormalizerInterface, Normalize
             $object->setDownloadFileNamePatterns($data['downloadFileNamePatterns']);
             unset($data['downloadFileNamePatterns']);
         }
-        elseif (\array_key_exists('downloadFileNamePatterns', $data) && $data['downloadFileNamePatterns'] === null) {
+        elseif (\array_key_exists('downloadFileNamePatterns', $data)) {
             $object->setDownloadFileNamePatterns(null);
         }
         if (\array_key_exists('viewForAll', $data)) {

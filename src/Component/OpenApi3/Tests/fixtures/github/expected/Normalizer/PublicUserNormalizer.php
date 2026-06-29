@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PublicUserNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -154,7 +157,7 @@ class PublicUserNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('suspended_at', $data) && $data['suspended_at'] !== null) {
             $object->setSuspendedAt(TypeValidator::assertDateTime($data['suspended_at'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('suspended_at', $data) && $data['suspended_at'] === null) {
+        elseif (\array_key_exists('suspended_at', $data)) {
             $object->setSuspendedAt(null);
         }
         if (\array_key_exists('private_gists', $data)) {

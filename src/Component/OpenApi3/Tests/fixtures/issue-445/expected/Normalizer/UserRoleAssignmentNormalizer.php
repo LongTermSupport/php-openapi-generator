@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserRoleAssignmentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,7 +54,7 @@ class UserRoleAssignmentNormalizer implements DenormalizerInterface, NormalizerI
         if (\array_key_exists('userRole', $data) && $data['userRole'] !== null) {
             $object->setUserRole($data['userRole']);
         }
-        elseif (\array_key_exists('userRole', $data) && $data['userRole'] === null) {
+        elseif (\array_key_exists('userRole', $data)) {
             $object->setUserRole(null);
         }
         if (\array_key_exists('isFederated', $data)) {

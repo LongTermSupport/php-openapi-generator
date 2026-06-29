@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserProfileNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class UserProfileNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('address', $data) && $data['address'] !== null) {
             $object->setAddress($data['address']);
         }
-        elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+        elseif (\array_key_exists('address', $data)) {
             $object->setAddress(null);
         }
         if (\array_key_exists('authorizationState', $data)) {
@@ -84,7 +87,7 @@ class UserProfileNormalizer implements DenormalizerInterface, NormalizerInterfac
             }
             $object->setUserRights($values);
         }
-        elseif (\array_key_exists('userRights', $data) && $data['userRights'] === null) {
+        elseif (\array_key_exists('userRights', $data)) {
             $object->setUserRights(null);
         }
         if (\array_key_exists('userRoleIds', $data) && $data['userRoleIds'] !== null) {
@@ -96,7 +99,7 @@ class UserProfileNormalizer implements DenormalizerInterface, NormalizerInterfac
             }
             $object->setUserRoleIds($values_1);
         }
-        elseif (\array_key_exists('userRoleIds', $data) && $data['userRoleIds'] === null) {
+        elseif (\array_key_exists('userRoleIds', $data)) {
             $object->setUserRoleIds(null);
         }
         if (\array_key_exists('termsConsentExpired', $data)) {
@@ -111,7 +114,7 @@ class UserProfileNormalizer implements DenormalizerInterface, NormalizerInterfac
             }
             $object->setSystemUserRoles($values_2);
         }
-        elseif (\array_key_exists('systemUserRoles', $data) && $data['systemUserRoles'] === null) {
+        elseif (\array_key_exists('systemUserRoles', $data)) {
             $object->setSystemUserRoles(null);
         }
         if (\array_key_exists('isDeveloper', $data)) {

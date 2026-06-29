@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleScriptNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class BusinessRuleScriptNormalizer implements DenormalizerInterface, NormalizerI
             $object->setTriggerPoint($data['triggerPoint']);
             unset($data['triggerPoint']);
         }
-        elseif (\array_key_exists('triggerPoint', $data) && $data['triggerPoint'] === null) {
+        elseif (\array_key_exists('triggerPoint', $data)) {
             $object->setTriggerPoint(null);
         }
         if (\array_key_exists('isEnabled', $data)) {
@@ -67,14 +70,14 @@ class BusinessRuleScriptNormalizer implements DenormalizerInterface, NormalizerI
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
             unset($data['description']);
         }
-        elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+        elseif (\array_key_exists('description', $data)) {
             $object->setDescription(null);
         }
         if (\array_key_exists('enableTracing', $data)) {

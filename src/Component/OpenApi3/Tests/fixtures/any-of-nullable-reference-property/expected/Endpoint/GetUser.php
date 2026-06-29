@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Endpoint;
 
+/**
+ * @internal
+ */
 class GetUser extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Runtime\Client\EndpointTrait;

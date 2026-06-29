@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Endpoint;
 
+/**
+ * @internal
+ */
 class GetThingsId extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Runtime\Client\Endpoint
 {
     protected string $id;

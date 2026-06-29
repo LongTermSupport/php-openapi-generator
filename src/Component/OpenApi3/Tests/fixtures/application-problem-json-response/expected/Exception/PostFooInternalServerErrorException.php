@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception;
 
+/**
+ * @internal
+ */
 class PostFooInternalServerErrorException extends InternalServerErrorException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse500 $responseProblemDetailsResponse500;

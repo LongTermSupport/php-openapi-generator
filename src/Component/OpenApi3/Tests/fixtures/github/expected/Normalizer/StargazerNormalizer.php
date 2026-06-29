@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class StargazerNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class StargazerNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setUser($value);
             unset($data['user']);
         }
-        elseif (\array_key_exists('user', $data) && $data['user'] === null) {
+        elseif (\array_key_exists('user', $data)) {
             $object->setUser(null);
         }
         foreach ($data as $key => $value_1) {

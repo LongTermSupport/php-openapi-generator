@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentImportResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -63,7 +66,7 @@ class ContentImportResultNormalizer implements DenormalizerInterface, Normalizer
         if (\array_key_exists('error', $data) && $data['error'] !== null) {
             $object->setError($data['error']);
         }
-        elseif (\array_key_exists('error', $data) && $data['error'] === null) {
+        elseif (\array_key_exists('error', $data)) {
             $object->setError(null);
         }
         return $object;

@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception;
 
+/**
+ * @internal
+ */
 class TeamsCheckPermissionsForRepoLegacyNotFoundException extends NotFoundException
 {
     private ?\Psr\Http\Message\ResponseInterface $response;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PermissionSetSearchRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class PermissionSetSearchRequestNormalizer implements DenormalizerInterface, Nor
             }
             $object->setSearchBehaviors($values);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('sort', $data) && $data['sort'] !== null) {
@@ -73,7 +76,7 @@ class PermissionSetSearchRequestNormalizer implements DenormalizerInterface, Nor
             }
             $object->setSort($values_1);
         }
-        elseif (\array_key_exists('sort', $data) && $data['sort'] === null) {
+        elseif (\array_key_exists('sort', $data)) {
             $object->setSort(null);
         }
         if (\array_key_exists('limit', $data)) {
@@ -85,13 +88,13 @@ class PermissionSetSearchRequestNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('rightFilter', $data) && $data['rightFilter'] !== null) {
             $object->setRightFilter($data['rightFilter']);
         }
-        elseif (\array_key_exists('rightFilter', $data) && $data['rightFilter'] === null) {
+        elseif (\array_key_exists('rightFilter', $data)) {
             $object->setRightFilter(null);
         }
         if (\array_key_exists('debugMode', $data)) {
@@ -106,7 +109,7 @@ class PermissionSetSearchRequestNormalizer implements DenormalizerInterface, Nor
             }
             $object->setSearchLanguages($values_2);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         return $object;

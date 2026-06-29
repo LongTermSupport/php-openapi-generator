@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ConsoleMessageNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -83,7 +86,7 @@ class ConsoleMessageNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setArguments($values);
             unset($data['arguments']);
         }
-        elseif (\array_key_exists('arguments', $data) && $data['arguments'] === null) {
+        elseif (\array_key_exists('arguments', $data)) {
             $object->setArguments(null);
         }
         if (\array_key_exists('targetQueue', $data)) {

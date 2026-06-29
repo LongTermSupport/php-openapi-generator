@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Operations\Runtime\Normalizer;
 
+/**
+ * @internal
+ */
 trait CheckArray
 {
     /** @param array<mixed> $array */

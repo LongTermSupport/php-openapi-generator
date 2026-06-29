@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -85,7 +88,7 @@ class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $object->setDropletIds($values_1);
             unset($data['droplet_ids']);
         }
-        elseif (\array_key_exists('droplet_ids', $data) && $data['droplet_ids'] === null) {
+        elseif (\array_key_exists('droplet_ids', $data)) {
             $object->setDropletIds(null);
         }
         if (\array_key_exists('tags', $data)) {
@@ -109,7 +112,7 @@ class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $object->setInboundRules($values_3);
             unset($data['inbound_rules']);
         }
-        elseif (\array_key_exists('inbound_rules', $data) && $data['inbound_rules'] === null) {
+        elseif (\array_key_exists('inbound_rules', $data)) {
             $object->setInboundRules(null);
         }
         if (\array_key_exists('outbound_rules', $data) && $data['outbound_rules'] !== null) {
@@ -123,7 +126,7 @@ class V2FirewallsPostBodyNormalizer implements DenormalizerInterface, Normalizer
             $object->setOutboundRules($values_4);
             unset($data['outbound_rules']);
         }
-        elseif (\array_key_exists('outbound_rules', $data) && $data['outbound_rules'] === null) {
+        elseif (\array_key_exists('outbound_rules', $data)) {
             $object->setOutboundRules(null);
         }
         foreach ($data as $key => $value_8) {

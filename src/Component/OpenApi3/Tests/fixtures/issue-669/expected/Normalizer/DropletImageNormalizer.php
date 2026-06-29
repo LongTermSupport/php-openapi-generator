@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class DropletImageNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -108,7 +111,7 @@ class DropletImageNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setTags($values_1);
             unset($data['tags']);
         }
-        elseif (\array_key_exists('tags', $data) && $data['tags'] === null) {
+        elseif (\array_key_exists('tags', $data)) {
             $object->setTags(null);
         }
         if (\array_key_exists('status', $data)) {

@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model;
 
+/**
+ * @internal
+ */
 final class UrlEntityCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\UrlEntity> */

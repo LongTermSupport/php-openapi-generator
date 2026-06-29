@@ -7,6 +7,7 @@ namespace LongTermSupport\OpenApiGenerator\Component\GeneratorCore;
 use LongTermSupport\OpenApiGenerator\Component\GeneratorCore\Registry\Registry;
 use PhpCsFixer\Console\Command\FixCommand;
 use PhpCsFixer\ToolInfo;
+use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Stmt;
 use PhpParser\PrettyPrinterAbstract;
@@ -56,7 +57,10 @@ class Printer
                     \Safe\mkdir(\dirname($file->getFilename()), 0o755, true);
                 }
 
-                $stmts = [$declareStrictTypes, $file->getNode()];
+                $node = $file->getNode();
+                $this->ensureInternalAnnotation($node);
+
+                $stmts = [$declareStrictTypes, $node];
 
                 \Safe\file_put_contents(
                     $file->getFilename(),
@@ -70,6 +74,46 @@ class Printer
                 $this->fix($directory);
             }
         }
+    }
+
+    /**
+     * Stamp `@internal` onto every generated class-like.
+     *
+     * Generated SDK code is regenerated wholesale and is never part of any
+     * consumer's supported contract, so each emitted class/interface/enum/trait
+     * declares itself internal — the marker RequireApiOrInternalTagRule (and
+     * PHPStan/Psalm/IDEs) key on. Done here, at the single print chokepoint, it
+     * covers every generator (models, normalizers, endpoints, exceptions,
+     * clients, runtime templates) and survives regeneration. Idempotent: a
+     * class-like that already carries the tag is left untouched.
+     */
+    private function ensureInternalAnnotation(Node $node): void
+    {
+        if ($node instanceof Stmt\Namespace_) {
+            foreach ($node->stmts as $stmt) {
+                $this->ensureInternalAnnotation($stmt);
+            }
+
+            return;
+        }
+
+        if (!$node instanceof Stmt\ClassLike) {
+            return;
+        }
+
+        $doc = $node->getDocComment();
+
+        if (null === $doc) {
+            $node->setDocComment(new Doc("/**\n * @internal\n */"));
+
+            return;
+        }
+
+        if (str_contains($doc->getText(), '@internal')) {
+            return;
+        }
+
+        $node->setDocComment(new Doc(\Safe\preg_replace('#^/\*\*#', "/**\n * @internal", $doc->getText(), 1)));
     }
 
     protected function getDefaultRules(): string

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class LiveStreamMessageNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -88,14 +91,14 @@ class LiveStreamMessageNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setDocumentChange($data['documentChange']);
             unset($data['documentChange']);
         }
-        elseif (\array_key_exists('documentChange', $data) && $data['documentChange'] === null) {
+        elseif (\array_key_exists('documentChange', $data)) {
             $object->setDocumentChange(null);
         }
         if (\array_key_exists('applicationEvent', $data) && $data['applicationEvent'] !== null) {
             $object->setApplicationEvent($data['applicationEvent']);
             unset($data['applicationEvent']);
         }
-        elseif (\array_key_exists('applicationEvent', $data) && $data['applicationEvent'] === null) {
+        elseif (\array_key_exists('applicationEvent', $data)) {
             $object->setApplicationEvent(null);
         }
         return $object;

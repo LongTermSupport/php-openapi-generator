@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class KafkaTopicPartitionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -75,7 +78,7 @@ class KafkaTopicPartitionNormalizer implements DenormalizerInterface, Normalizer
             $object->setConsumerGroups($values);
             unset($data['consumer_groups']);
         }
-        elseif (\array_key_exists('consumer_groups', $data) && $data['consumer_groups'] === null) {
+        elseif (\array_key_exists('consumer_groups', $data)) {
             $object->setConsumerGroups(null);
         }
         foreach ($data as $key => $value_2) {

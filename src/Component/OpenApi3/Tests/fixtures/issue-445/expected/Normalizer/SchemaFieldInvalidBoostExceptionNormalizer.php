@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaFieldInvalidBoostExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -106,7 +109,7 @@ class SchemaFieldInvalidBoostExceptionNormalizer implements DenormalizerInterfac
             $object->setAllowedBoostValues($values);
             unset($data['allowedBoostValues']);
         }
-        elseif (\array_key_exists('allowedBoostValues', $data) && $data['allowedBoostValues'] === null) {
+        elseif (\array_key_exists('allowedBoostValues', $data)) {
             $object->setAllowedBoostValues(null);
         }
         foreach ($data as $key => $value_1) {

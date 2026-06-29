@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemImportResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class ListItemImportResultNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setSkippedListItemIds($values);
         }
-        elseif (\array_key_exists('skippedListItemIds', $data) && $data['skippedListItemIds'] === null) {
+        elseif (\array_key_exists('skippedListItemIds', $data)) {
             $object->setSkippedListItemIds(null);
         }
         if (\array_key_exists('importedListItemIds', $data) && $data['importedListItemIds'] !== null) {
@@ -78,7 +81,7 @@ class ListItemImportResultNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setImportedListItemIds($values_1);
         }
-        elseif (\array_key_exists('importedListItemIds', $data) && $data['importedListItemIds'] === null) {
+        elseif (\array_key_exists('importedListItemIds', $data)) {
             $object->setImportedListItemIds(null);
         }
         return $object;

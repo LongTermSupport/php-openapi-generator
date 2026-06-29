@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaFieldSortableInUseExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -102,7 +105,7 @@ class SchemaFieldSortableInUseExceptionNormalizer implements DenormalizerInterfa
             $object->setChannelIds($values);
             unset($data['channelIds']);
         }
-        elseif (\array_key_exists('channelIds', $data) && $data['channelIds'] === null) {
+        elseif (\array_key_exists('channelIds', $data)) {
             $object->setChannelIds(null);
         }
         foreach ($data as $key => $value_1) {

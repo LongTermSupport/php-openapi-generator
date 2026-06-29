@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class LayerAssignmentInUseWithContentsExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class LayerAssignmentInUseWithContentsExceptionNormalizer implements Denormalize
             $object->setUsedAssignmentSchemaIds($values);
             unset($data['usedAssignmentSchemaIds']);
         }
-        elseif (\array_key_exists('usedAssignmentSchemaIds', $data) && $data['usedAssignmentSchemaIds'] === null) {
+        elseif (\array_key_exists('usedAssignmentSchemaIds', $data)) {
             $object->setUsedAssignmentSchemaIds(null);
         }
         foreach ($data as $key => $value_1) {

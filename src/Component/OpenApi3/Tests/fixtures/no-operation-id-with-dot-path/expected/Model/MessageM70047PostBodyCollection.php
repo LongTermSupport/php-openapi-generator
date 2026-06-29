@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model;
 
+/**
+ * @internal
+ */
 final class MessageM70047PostBodyCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Model\MessageM70047PostBody> */

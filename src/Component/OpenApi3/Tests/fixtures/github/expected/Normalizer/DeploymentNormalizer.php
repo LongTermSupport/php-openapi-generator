@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class DeploymentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -97,7 +100,7 @@ class DeploymentNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setCreator($value_1);
             unset($data['creator']);
         }
-        elseif (\array_key_exists('creator', $data) && $data['creator'] === null) {
+        elseif (\array_key_exists('creator', $data)) {
             $object->setCreator(null);
         }
         if (\array_key_exists('created_at', $data)) {
@@ -129,7 +132,7 @@ class DeploymentNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setPerformedViaGithubApp($value_2);
             unset($data['performed_via_github_app']);
         }
-        elseif (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] === null) {
+        elseif (\array_key_exists('performed_via_github_app', $data)) {
             $object->setPerformedViaGithubApp(null);
         }
         foreach ($data as $key => $value_3) {

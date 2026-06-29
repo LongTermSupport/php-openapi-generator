@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Exception;
 
+/**
+ * @internal
+ */
 class PostFooBadRequestException extends BadRequestException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApplicationProblemJsonResponse\Model\ResponseProblemDetailsResponse400 $responseProblemDetailsResponse400;

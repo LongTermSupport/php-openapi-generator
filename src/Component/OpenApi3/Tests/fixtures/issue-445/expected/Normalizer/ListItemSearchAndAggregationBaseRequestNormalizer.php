@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemSearchAndAggregationBaseRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,13 +63,13 @@ class ListItemSearchAndAggregationBaseRequestNormalizer implements DenormalizerI
             }
             $object->setSearchBehaviors($values);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] !== null) {
@@ -79,7 +82,7 @@ class ListItemSearchAndAggregationBaseRequestNormalizer implements DenormalizerI
             }
             $object->setAggregationFilters($values_1);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         if (\array_key_exists('includeAllSchemaChildren', $data)) {
@@ -97,7 +100,7 @@ class ListItemSearchAndAggregationBaseRequestNormalizer implements DenormalizerI
             }
             $object->setSchemaIds($values_2);
         }
-        elseif (\array_key_exists('schemaIds', $data) && $data['schemaIds'] === null) {
+        elseif (\array_key_exists('schemaIds', $data)) {
             $object->setSchemaIds(null);
         }
         if (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] !== null) {
@@ -109,7 +112,7 @@ class ListItemSearchAndAggregationBaseRequestNormalizer implements DenormalizerI
             }
             $object->setSearchLanguages($values_3);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         if (\array_key_exists('lifeCycleFilter', $data)) {

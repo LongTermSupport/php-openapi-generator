@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaUpdateResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,7 +54,7 @@ class SchemaUpdateResultNormalizer implements DenormalizerInterface, NormalizerI
         if (\array_key_exists('schema', $data) && $data['schema'] !== null) {
             $object->setSchema($data['schema']);
         }
-        elseif (\array_key_exists('schema', $data) && $data['schema'] === null) {
+        elseif (\array_key_exists('schema', $data)) {
             $object->setSchema(null);
         }
         return $object;

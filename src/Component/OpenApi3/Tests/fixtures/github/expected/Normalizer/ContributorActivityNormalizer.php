@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContributorActivityNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class ContributorActivityNormalizer implements DenormalizerInterface, Normalizer
             $object->setAuthor($value);
             unset($data['author']);
         }
-        elseif (\array_key_exists('author', $data) && $data['author'] === null) {
+        elseif (\array_key_exists('author', $data)) {
             $object->setAuthor(null);
         }
         if (\array_key_exists('total', $data)) {

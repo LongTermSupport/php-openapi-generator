@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ShareSearchAndAggregationBaseRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,13 +63,13 @@ class ShareSearchAndAggregationBaseRequestNormalizer implements DenormalizerInte
             }
             $object->setSearchBehaviors($values);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] !== null) {
@@ -79,7 +82,7 @@ class ShareSearchAndAggregationBaseRequestNormalizer implements DenormalizerInte
             }
             $object->setAggregationFilters($values_1);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         return $object;

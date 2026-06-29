@@ -12,6 +12,9 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Serializer\SerializerInterface;
+/**
+ * @internal
+ */
 abstract class BaseEndpoint implements Endpoint
 {
     /** @var array<string, mixed> */

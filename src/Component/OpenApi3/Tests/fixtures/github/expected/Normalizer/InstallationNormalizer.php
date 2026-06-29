@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class InstallationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -69,7 +72,7 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setAccount($value);
             unset($data['account']);
         }
-        elseif (\array_key_exists('account', $data) && $data['account'] === null) {
+        elseif (\array_key_exists('account', $data)) {
             $object->setAccount(null);
         }
         if (\array_key_exists('repository_selection', $data)) {
@@ -136,14 +139,14 @@ class InstallationNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setSuspendedBy($value_5);
             unset($data['suspended_by']);
         }
-        elseif (\array_key_exists('suspended_by', $data) && $data['suspended_by'] === null) {
+        elseif (\array_key_exists('suspended_by', $data)) {
             $object->setSuspendedBy(null);
         }
         if (\array_key_exists('suspended_at', $data) && $data['suspended_at'] !== null) {
             $object->setSuspendedAt(TypeValidator::assertDateTime($data['suspended_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['suspended_at']);
         }
-        elseif (\array_key_exists('suspended_at', $data) && $data['suspended_at'] === null) {
+        elseif (\array_key_exists('suspended_at', $data)) {
             $object->setSuspendedAt(null);
         }
         if (\array_key_exists('contact_email', $data)) {

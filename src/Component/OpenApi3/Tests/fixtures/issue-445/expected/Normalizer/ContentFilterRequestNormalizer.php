@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentFilterRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class ContentFilterRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setSearchLanguages($values);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         if (\array_key_exists('searchString', $data)) {
@@ -75,7 +78,7 @@ class ContentFilterRequestNormalizer implements DenormalizerInterface, Normalize
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('lifeCycleFilter', $data)) {
@@ -93,7 +96,7 @@ class ContentFilterRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setRightsFilter($values_1);
         }
-        elseif (\array_key_exists('rightsFilter', $data) && $data['rightsFilter'] === null) {
+        elseif (\array_key_exists('rightsFilter', $data)) {
             $object->setRightsFilter(null);
         }
         return $object;

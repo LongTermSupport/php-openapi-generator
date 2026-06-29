@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BaseGistNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -119,7 +122,7 @@ class BaseGistNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setUser($value_2);
             unset($data['user']);
         }
-        elseif (\array_key_exists('user', $data) && $data['user'] === null) {
+        elseif (\array_key_exists('user', $data)) {
             $object->setUser(null);
         }
         if (\array_key_exists('comments_url', $data)) {
@@ -131,7 +134,7 @@ class BaseGistNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setOwner($value_3);
             unset($data['owner']);
         }
-        elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
+        elseif (\array_key_exists('owner', $data)) {
             $object->setOwner(null);
         }
         if (\array_key_exists('truncated', $data)) {

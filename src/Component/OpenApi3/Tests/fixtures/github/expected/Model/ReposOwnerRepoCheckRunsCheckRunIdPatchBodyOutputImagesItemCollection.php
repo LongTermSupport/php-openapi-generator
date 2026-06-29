@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model;
 
+/**
+ * @internal
+ */
 final class ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItemCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ReposOwnerRepoCheckRunsCheckRunIdPatchBodyOutputImagesItem> */

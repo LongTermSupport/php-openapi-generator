@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaInUseContentSchemaExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class SchemaInUseContentSchemaExceptionNormalizer implements DenormalizerInterfa
             $object->setContentSchemaIds($values);
             unset($data['contentSchemaIds']);
         }
-        elseif (\array_key_exists('contentSchemaIds', $data) && $data['contentSchemaIds'] === null) {
+        elseif (\array_key_exists('contentSchemaIds', $data)) {
             $object->setContentSchemaIds(null);
         }
         foreach ($data as $key => $value_1) {

@@ -8,6 +8,7 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\VndPlusJson\Model;
 
 /**
+ * @internal
  * @extends \ArrayObject<string, mixed>
  */
 class SponsoredProductsListSponsoredProductsCampaignsRequestContent extends \ArrayObject

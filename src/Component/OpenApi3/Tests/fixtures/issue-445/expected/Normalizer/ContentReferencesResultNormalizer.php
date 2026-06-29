@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentReferencesResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,13 +54,13 @@ class ContentReferencesResultNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('metadataReferences', $data) && $data['metadataReferences'] !== null) {
             $object->setMetadataReferences($data['metadataReferences']);
         }
-        elseif (\array_key_exists('metadataReferences', $data) && $data['metadataReferences'] === null) {
+        elseif (\array_key_exists('metadataReferences', $data)) {
             $object->setMetadataReferences(null);
         }
         if (\array_key_exists('shareReferences', $data) && $data['shareReferences'] !== null) {
             $object->setShareReferences($data['shareReferences']);
         }
-        elseif (\array_key_exists('shareReferences', $data) && $data['shareReferences'] === null) {
+        elseif (\array_key_exists('shareReferences', $data)) {
             $object->setShareReferences(null);
         }
         return $object;

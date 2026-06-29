@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue299\Runtime\Normalizer;
 
+/**
+ * @internal
+ */
 final class TypeValidator
 {
     public static function assertString(mixed $value, string $field): string

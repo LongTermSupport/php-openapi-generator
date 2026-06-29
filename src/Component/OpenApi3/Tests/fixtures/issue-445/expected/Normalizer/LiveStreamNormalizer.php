@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class LiveStreamNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -63,13 +66,13 @@ class LiveStreamNormalizer implements DenormalizerInterface, NormalizerInterface
         if (\array_key_exists('traceJob', $data) && $data['traceJob'] !== null) {
             $object->setTraceJob($data['traceJob']);
         }
-        elseif (\array_key_exists('traceJob', $data) && $data['traceJob'] === null) {
+        elseif (\array_key_exists('traceJob', $data)) {
             $object->setTraceJob(null);
         }
         if (\array_key_exists('audit', $data) && $data['audit'] !== null) {
             $object->setAudit($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         return $object;

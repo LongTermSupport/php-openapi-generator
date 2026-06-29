@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Exception;
 
+/**
+ * @internal
+ */
 class ProjectsCreateCardServiceUnavailableException extends ServiceUnavailableException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Model\ProjectsColumnsColumnIdCardsPostResponse503 $projectsColumnsColumnIdCardsPostResponse503;

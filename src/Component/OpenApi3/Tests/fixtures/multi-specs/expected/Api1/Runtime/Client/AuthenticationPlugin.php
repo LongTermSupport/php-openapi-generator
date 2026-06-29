@@ -8,6 +8,9 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Runtime\Client;
 
 use Psr\Http\Message\RequestInterface;
+/**
+ * @internal
+ */
 interface AuthenticationPlugin
 {
     public function authentication(RequestInterface $request): RequestInterface;

@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullableArray\Endpoint;
 
+/**
+ * @internal
+ */
 class TestNullableArray extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullableArray\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullableArray\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\TestNullableArray\Runtime\Client\EndpointTrait;

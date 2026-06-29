@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleTransformationGroupNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class BusinessRuleTransformationGroupNormalizer implements DenormalizerInterface
             }
             $object->setInputs($values);
         }
-        elseif (\array_key_exists('inputs', $data) && $data['inputs'] === null) {
+        elseif (\array_key_exists('inputs', $data)) {
             $object->setInputs(null);
         }
         if (\array_key_exists('transformations', $data) && $data['transformations'] !== null) {
@@ -70,7 +73,7 @@ class BusinessRuleTransformationGroupNormalizer implements DenormalizerInterface
             }
             $object->setTransformations($values_1);
         }
-        elseif (\array_key_exists('transformations', $data) && $data['transformations'] === null) {
+        elseif (\array_key_exists('transformations', $data)) {
             $object->setTransformations(null);
         }
         if (\array_key_exists('storeIn', $data)) {

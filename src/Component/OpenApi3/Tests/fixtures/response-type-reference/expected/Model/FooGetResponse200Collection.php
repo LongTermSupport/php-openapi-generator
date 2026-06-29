@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseTypeReference\Model;
 
+/**
+ * @internal
+ */
 final class FooGetResponse200Collection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ResponseTypeReference\Model\FooGetResponse200> */

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentMetadataUpdateItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -58,7 +61,7 @@ class ContentMetadataUpdateItemNormalizer implements DenormalizerInterface, Norm
             $object->setLayerSchemaIds($values);
             unset($data['layerSchemaIds']);
         }
-        elseif (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] === null) {
+        elseif (\array_key_exists('layerSchemaIds', $data)) {
             $object->setLayerSchemaIds(null);
         }
         if (\array_key_exists('content', $data) && $data['content'] !== null) {
@@ -71,7 +74,7 @@ class ContentMetadataUpdateItemNormalizer implements DenormalizerInterface, Norm
             $object->setContent($values_1);
             unset($data['content']);
         }
-        elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+        elseif (\array_key_exists('content', $data)) {
             $object->setContent(null);
         }
         if (\array_key_exists('metadata', $data) && $data['metadata'] !== null) {
@@ -84,7 +87,7 @@ class ContentMetadataUpdateItemNormalizer implements DenormalizerInterface, Norm
             $object->setMetadata($values_2);
             unset($data['metadata']);
         }
-        elseif (\array_key_exists('metadata', $data) && $data['metadata'] === null) {
+        elseif (\array_key_exists('metadata', $data)) {
             $object->setMetadata(null);
         }
         if (\array_key_exists('layerSchemasUpdateOptions', $data)) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CommitSearchResultItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -77,7 +80,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             $object->setAuthor($value_1);
             unset($data['author']);
         }
-        elseif (\array_key_exists('author', $data) && $data['author'] === null) {
+        elseif (\array_key_exists('author', $data)) {
             $object->setAuthor(null);
         }
         if (\array_key_exists('committer', $data) && $data['committer'] !== null) {
@@ -85,7 +88,7 @@ class CommitSearchResultItemNormalizer implements DenormalizerInterface, Normali
             $object->setCommitter($value_2);
             unset($data['committer']);
         }
-        elseif (\array_key_exists('committer', $data) && $data['committer'] === null) {
+        elseif (\array_key_exists('committer', $data)) {
             $object->setCommitter(null);
         }
         if (\array_key_exists('parents', $data)) {

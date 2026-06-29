@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ReviewJsonldReviewReadNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -89,7 +92,7 @@ class ReviewJsonldReviewReadNormalizer implements DenormalizerInterface, Normali
             $object->setPublicationDate(TypeValidator::assertDateTime($data['publicationDate'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['publicationDate']);
         }
-        elseif (\array_key_exists('publicationDate', $data) && $data['publicationDate'] === null) {
+        elseif (\array_key_exists('publicationDate', $data)) {
             $object->setPublicationDate(null);
         }
         foreach ($data as $key => $value_1) {

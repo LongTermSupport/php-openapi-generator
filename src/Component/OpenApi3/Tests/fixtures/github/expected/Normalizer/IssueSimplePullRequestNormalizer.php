@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class IssueSimplePullRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -55,7 +58,7 @@ class IssueSimplePullRequestNormalizer implements DenormalizerInterface, Normali
             $object->setMergedAt(TypeValidator::assertDateTime($data['merged_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['merged_at']);
         }
-        elseif (\array_key_exists('merged_at', $data) && $data['merged_at'] === null) {
+        elseif (\array_key_exists('merged_at', $data)) {
             $object->setMergedAt(null);
         }
         if (\array_key_exists('diff_url', $data)) {

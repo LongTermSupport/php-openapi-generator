@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ProjectionTransformationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -67,7 +70,7 @@ class ProjectionTransformationNormalizer implements DenormalizerInterface, Norma
             $object->setTransformations($values);
             unset($data['transformations']);
         }
-        elseif (\array_key_exists('transformations', $data) && $data['transformations'] === null) {
+        elseif (\array_key_exists('transformations', $data)) {
             $object->setTransformations(null);
         }
         return $object;

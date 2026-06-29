@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentAggregationRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,14 +65,14 @@ class ContentAggregationRequestNormalizer implements DenormalizerInterface, Norm
             $object->setSearchBehaviors($values);
             unset($data['searchBehaviors']);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
             unset($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] !== null) {
@@ -83,7 +86,7 @@ class ContentAggregationRequestNormalizer implements DenormalizerInterface, Norm
             $object->setAggregationFilters($values_1);
             unset($data['aggregationFilters']);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         if (\array_key_exists('channelId', $data)) {
@@ -100,7 +103,7 @@ class ContentAggregationRequestNormalizer implements DenormalizerInterface, Norm
             $object->setSearchLanguages($values_2);
             unset($data['searchLanguages']);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         if (\array_key_exists('collectionId', $data)) {

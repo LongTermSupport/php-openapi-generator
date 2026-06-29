@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Validator;
 
+/**
+ * @internal
+ */
 class AppManifestsCodeConversionsPostResponse201Constraint extends \Symfony\Component\Validator\Constraints\Compound
 {
     protected function getConstraints($options): array

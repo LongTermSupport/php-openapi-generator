@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model;
 
+/**
+ * @internal
+ */
 final class TopBooksGetHaljsonResponse200LinksLastCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ApiPlatformDemo\Model\TopBooksGetHaljsonResponse200LinksLast> */

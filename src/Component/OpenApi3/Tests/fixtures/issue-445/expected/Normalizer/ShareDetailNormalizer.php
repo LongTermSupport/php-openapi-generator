@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ShareDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -82,19 +85,19 @@ class ShareDetailNormalizer implements DenormalizerInterface, NormalizerInterfac
             }
             $object->setLayerSchemaIds($values_1);
         }
-        elseif (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] === null) {
+        elseif (\array_key_exists('layerSchemaIds', $data)) {
             $object->setLayerSchemaIds(null);
         }
         if (\array_key_exists('data', $data) && $data['data'] !== null) {
             $object->setData($data['data']);
         }
-        elseif (\array_key_exists('data', $data) && $data['data'] === null) {
+        elseif (\array_key_exists('data', $data)) {
             $object->setData(null);
         }
         if (\array_key_exists('expirationDate', $data) && $data['expirationDate'] !== null) {
             $object->setExpirationDate(TypeValidator::assertDateTime($data['expirationDate'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('expirationDate', $data) && $data['expirationDate'] === null) {
+        elseif (\array_key_exists('expirationDate', $data)) {
             $object->setExpirationDate(null);
         }
         if (\array_key_exists('expired', $data)) {
@@ -116,7 +119,7 @@ class ShareDetailNormalizer implements DenormalizerInterface, NormalizerInterfac
             }
             $object->setSchemas($values_2);
         }
-        elseif (\array_key_exists('schemas', $data) && $data['schemas'] === null) {
+        elseif (\array_key_exists('schemas', $data)) {
             $object->setSchemas(null);
         }
         return $object;

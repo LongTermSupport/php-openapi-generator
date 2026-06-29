@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Runtime\Model;
 
+/**
+ * @internal
+ */
 final class IntCollection
 {
     /** @var list<int> */

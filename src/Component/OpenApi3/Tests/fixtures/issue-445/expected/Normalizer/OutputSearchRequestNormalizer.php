@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputSearchRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -63,7 +66,7 @@ class OutputSearchRequestNormalizer implements DenormalizerInterface, Normalizer
             }
             $object->setContentIds($values);
         }
-        elseif (\array_key_exists('contentIds', $data) && $data['contentIds'] === null) {
+        elseif (\array_key_exists('contentIds', $data)) {
             $object->setContentIds(null);
         }
         if (\array_key_exists('renderingStates', $data) && $data['renderingStates'] !== null) {
@@ -75,7 +78,7 @@ class OutputSearchRequestNormalizer implements DenormalizerInterface, Normalizer
             }
             $object->setRenderingStates($values_1);
         }
-        elseif (\array_key_exists('renderingStates', $data) && $data['renderingStates'] === null) {
+        elseif (\array_key_exists('renderingStates', $data)) {
             $object->setRenderingStates(null);
         }
         if (\array_key_exists('fileExtensions', $data) && $data['fileExtensions'] !== null) {
@@ -87,7 +90,7 @@ class OutputSearchRequestNormalizer implements DenormalizerInterface, Normalizer
             }
             $object->setFileExtensions($values_2);
         }
-        elseif (\array_key_exists('fileExtensions', $data) && $data['fileExtensions'] === null) {
+        elseif (\array_key_exists('fileExtensions', $data)) {
             $object->setFileExtensions(null);
         }
         if (\array_key_exists('outputFormatIds', $data) && $data['outputFormatIds'] !== null) {
@@ -99,7 +102,7 @@ class OutputSearchRequestNormalizer implements DenormalizerInterface, Normalizer
             }
             $object->setOutputFormatIds($values_3);
         }
-        elseif (\array_key_exists('outputFormatIds', $data) && $data['outputFormatIds'] === null) {
+        elseif (\array_key_exists('outputFormatIds', $data)) {
             $object->setOutputFormatIds(null);
         }
         return $object;

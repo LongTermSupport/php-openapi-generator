@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessStateNotHitExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class BusinessProcessStateNotHitExceptionNormalizer implements DenormalizerInter
             $object->setExpected($values);
             unset($data['expected']);
         }
-        elseif (\array_key_exists('expected', $data) && $data['expected'] === null) {
+        elseif (\array_key_exists('expected', $data)) {
             $object->setExpected(null);
         }
         if (\array_key_exists('actual', $data)) {

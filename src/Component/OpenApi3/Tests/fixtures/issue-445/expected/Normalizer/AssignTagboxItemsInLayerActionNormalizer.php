@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AssignTagboxItemsInLayerActionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,7 +67,7 @@ class AssignTagboxItemsInLayerActionNormalizer implements DenormalizerInterface,
             $object->setRefIds($data['refIds']);
             unset($data['refIds']);
         }
-        elseif (\array_key_exists('refIds', $data) && $data['refIds'] === null) {
+        elseif (\array_key_exists('refIds', $data)) {
             $object->setRefIds(null);
         }
         if (\array_key_exists('replace', $data)) {

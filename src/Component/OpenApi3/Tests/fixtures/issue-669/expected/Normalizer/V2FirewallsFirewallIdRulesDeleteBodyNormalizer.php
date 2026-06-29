@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class V2FirewallsFirewallIdRulesDeleteBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -59,7 +62,7 @@ class V2FirewallsFirewallIdRulesDeleteBodyNormalizer implements DenormalizerInte
             $object->setInboundRules($values);
             unset($data['inbound_rules']);
         }
-        elseif (\array_key_exists('inbound_rules', $data) && $data['inbound_rules'] === null) {
+        elseif (\array_key_exists('inbound_rules', $data)) {
             $object->setInboundRules(null);
         }
         if (\array_key_exists('outbound_rules', $data) && $data['outbound_rules'] !== null) {
@@ -73,7 +76,7 @@ class V2FirewallsFirewallIdRulesDeleteBodyNormalizer implements DenormalizerInte
             $object->setOutboundRules($values_1);
             unset($data['outbound_rules']);
         }
-        elseif (\array_key_exists('outbound_rules', $data) && $data['outbound_rules'] === null) {
+        elseif (\array_key_exists('outbound_rules', $data)) {
             $object->setOutboundRules(null);
         }
         foreach ($data as $key => $value_4) {

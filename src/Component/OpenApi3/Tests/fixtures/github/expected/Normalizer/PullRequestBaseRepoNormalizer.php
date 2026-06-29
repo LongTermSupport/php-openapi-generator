@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PullRequestBaseRepoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -334,7 +337,7 @@ class PullRequestBaseRepoNormalizer implements DenormalizerInterface, Normalizer
             $object->setLicense($value_2);
             unset($data['license']);
         }
-        elseif (\array_key_exists('license', $data) && $data['license'] === null) {
+        elseif (\array_key_exists('license', $data)) {
             $object->setLicense(null);
         }
         if (\array_key_exists('pushed_at', $data)) {

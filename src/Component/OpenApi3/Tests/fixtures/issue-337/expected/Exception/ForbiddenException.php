@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue337\Exception;
 
+/**
+ * @internal
+ */
 class ForbiddenException extends \RuntimeException implements ClientException
 {
     public function __construct(string $message)

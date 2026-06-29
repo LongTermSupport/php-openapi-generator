@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PermissionSetNotFoundExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class PermissionSetNotFoundExceptionNormalizer implements DenormalizerInterface,
             $object->setPermissionSetIds($values);
             unset($data['permissionSetIds']);
         }
-        elseif (\array_key_exists('permissionSetIds', $data) && $data['permissionSetIds'] === null) {
+        elseif (\array_key_exists('permissionSetIds', $data)) {
             $object->setPermissionSetIds(null);
         }
         foreach ($data as $key => $value_1) {

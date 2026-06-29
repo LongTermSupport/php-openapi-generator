@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -79,7 +82,7 @@ class UserDetailNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setUserRoles($values);
             unset($data['userRoles']);
         }
-        elseif (\array_key_exists('userRoles', $data) && $data['userRoles'] === null) {
+        elseif (\array_key_exists('userRoles', $data)) {
             $object->setUserRoles(null);
         }
         if (\array_key_exists('comment', $data)) {
@@ -94,7 +97,7 @@ class UserDetailNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setAddress($data['address']);
             unset($data['address']);
         }
-        elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+        elseif (\array_key_exists('address', $data)) {
             $object->setAddress(null);
         }
         if (\array_key_exists('identityProviderId', $data)) {
@@ -112,7 +115,7 @@ class UserDetailNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setOwnerTokens($values_1);
             unset($data['ownerTokens']);
         }
-        elseif (\array_key_exists('ownerTokens', $data) && $data['ownerTokens'] === null) {
+        elseif (\array_key_exists('ownerTokens', $data)) {
             $object->setOwnerTokens(null);
         }
         if (\array_key_exists('authorizationState', $data)) {
@@ -143,7 +146,7 @@ class UserDetailNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setAudit($data['audit']);
             unset($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         foreach ($data as $key => $value_4) {

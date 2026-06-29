@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AssignValueActionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -68,7 +71,7 @@ class AssignValueActionNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setValue($data['value']);
             unset($data['value']);
         }
-        elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+        elseif (\array_key_exists('value', $data)) {
             $object->setValue(null);
         }
         if (\array_key_exists('replace', $data)) {

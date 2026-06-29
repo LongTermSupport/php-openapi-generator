@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class VectorStillFormatNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class VectorStillFormatNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setResizeAction($data['resizeAction']);
             unset($data['resizeAction']);
         }
-        elseif (\array_key_exists('resizeAction', $data) && $data['resizeAction'] === null) {
+        elseif (\array_key_exists('resizeAction', $data)) {
             $object->setResizeAction(null);
         }
         return $object;

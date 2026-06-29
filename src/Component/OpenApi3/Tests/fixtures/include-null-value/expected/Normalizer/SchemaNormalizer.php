@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -76,7 +79,7 @@ class SchemaNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setDateNullableProperty(TypeValidator::assertDateTime($data['dateNullableProperty'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['dateNullableProperty']);
         }
-        elseif (\array_key_exists('dateNullableProperty', $data) && $data['dateNullableProperty'] === null) {
+        elseif (\array_key_exists('dateNullableProperty', $data)) {
             $object->setDateNullableProperty(null);
         }
         if (\array_key_exists('integerProperty', $data)) {

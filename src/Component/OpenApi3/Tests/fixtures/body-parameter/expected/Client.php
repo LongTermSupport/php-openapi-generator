@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter;
 
+/**
+ * @internal
+ */
 class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Runtime\Client\Client
 {
     /**

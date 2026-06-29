@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class InvalidMetadataExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -95,7 +98,7 @@ class InvalidMetadataExceptionNormalizer implements DenormalizerInterface, Norma
             $object->setMetadataErrors($values);
             unset($data['metadataErrors']);
         }
-        elseif (\array_key_exists('metadataErrors', $data) && $data['metadataErrors'] === null) {
+        elseif (\array_key_exists('metadataErrors', $data)) {
             $object->setMetadataErrors(null);
         }
         if (\array_key_exists('validationErrors', $data) && $data['validationErrors'] !== null) {
@@ -109,7 +112,7 @@ class InvalidMetadataExceptionNormalizer implements DenormalizerInterface, Norma
             $object->setValidationErrors($values_1);
             unset($data['validationErrors']);
         }
-        elseif (\array_key_exists('validationErrors', $data) && $data['validationErrors'] === null) {
+        elseif (\array_key_exists('validationErrors', $data)) {
             $object->setValidationErrors(null);
         }
         foreach ($data as $key => $value_4) {

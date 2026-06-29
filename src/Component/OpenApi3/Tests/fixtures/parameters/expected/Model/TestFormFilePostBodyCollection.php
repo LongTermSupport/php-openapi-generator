@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Model;
 
+/**
+ * @internal
+ */
 final class TestFormFilePostBodyCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Parameters\Model\TestFormFilePostBody> */

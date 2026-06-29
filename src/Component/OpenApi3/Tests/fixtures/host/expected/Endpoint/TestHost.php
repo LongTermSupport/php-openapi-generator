@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Endpoint;
 
+/**
+ * @internal
+ */
 class TestHost extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Host\Runtime\Client\EndpointTrait;

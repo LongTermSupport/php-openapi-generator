@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserMarketplacePurchaseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -59,7 +62,7 @@ class UserMarketplacePurchaseNormalizer implements DenormalizerInterface, Normal
             $object->setNextBillingDate(TypeValidator::assertDateTime($data['next_billing_date'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['next_billing_date']);
         }
-        elseif (\array_key_exists('next_billing_date', $data) && $data['next_billing_date'] === null) {
+        elseif (\array_key_exists('next_billing_date', $data)) {
             $object->setNextBillingDate(null);
         }
         if (\array_key_exists('unit_count', $data)) {
@@ -74,14 +77,14 @@ class UserMarketplacePurchaseNormalizer implements DenormalizerInterface, Normal
             $object->setFreeTrialEndsOn(TypeValidator::assertDateTime($data['free_trial_ends_on'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['free_trial_ends_on']);
         }
-        elseif (\array_key_exists('free_trial_ends_on', $data) && $data['free_trial_ends_on'] === null) {
+        elseif (\array_key_exists('free_trial_ends_on', $data)) {
             $object->setFreeTrialEndsOn(null);
         }
         if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt(TypeValidator::assertDateTime($data['updated_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['updated_at']);
         }
-        elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+        elseif (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('account', $data)) {

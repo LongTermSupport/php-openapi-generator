@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ShareBaseUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,7 +65,7 @@ class ShareBaseUpdateRequestNormalizer implements DenormalizerInterface, Normali
         if (\array_key_exists('expirationDate', $data) && $data['expirationDate'] !== null) {
             $object->setExpirationDate(TypeValidator::assertDateTime($data['expirationDate'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('expirationDate', $data) && $data['expirationDate'] === null) {
+        elseif (\array_key_exists('expirationDate', $data)) {
             $object->setExpirationDate(null);
         }
         if (\array_key_exists('description', $data)) {
@@ -87,7 +90,7 @@ class ShareBaseUpdateRequestNormalizer implements DenormalizerInterface, Normali
             }
             $object->setLayerSchemaIds($values_1);
         }
-        elseif (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] === null) {
+        elseif (\array_key_exists('layerSchemaIds', $data)) {
             $object->setLayerSchemaIds(null);
         }
         if (\array_key_exists('outputAccess', $data)) {

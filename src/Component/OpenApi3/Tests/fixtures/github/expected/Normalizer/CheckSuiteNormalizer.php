@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setPullRequests($values);
             unset($data['pull_requests']);
         }
-        elseif (\array_key_exists('pull_requests', $data) && $data['pull_requests'] === null) {
+        elseif (\array_key_exists('pull_requests', $data)) {
             $object->setPullRequests(null);
         }
         if (\array_key_exists('app', $data) && $data['app'] !== null) {
@@ -106,7 +109,7 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setApp($value_2);
             unset($data['app']);
         }
-        elseif (\array_key_exists('app', $data) && $data['app'] === null) {
+        elseif (\array_key_exists('app', $data)) {
             $object->setApp(null);
         }
         if (\array_key_exists('repository', $data)) {
@@ -118,14 +121,14 @@ class CheckSuiteNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setCreatedAt(TypeValidator::assertDateTime($data['created_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['created_at']);
         }
-        elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+        elseif (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt(null);
         }
         if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt(TypeValidator::assertDateTime($data['updated_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['updated_at']);
         }
-        elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+        elseif (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('head_commit', $data)) {

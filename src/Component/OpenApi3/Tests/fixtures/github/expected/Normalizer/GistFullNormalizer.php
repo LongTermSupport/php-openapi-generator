@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -127,7 +130,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setOwner($value_2);
             unset($data['owner']);
         }
-        elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
+        elseif (\array_key_exists('owner', $data)) {
             $object->setOwner(null);
         }
         if (\array_key_exists('truncated', $data)) {
@@ -161,7 +164,7 @@ class GistFullNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setForkOf($value_7);
             unset($data['fork_of']);
         }
-        elseif (\array_key_exists('fork_of', $data) && $data['fork_of'] === null) {
+        elseif (\array_key_exists('fork_of', $data)) {
             $object->setForkOf(null);
         }
         foreach ($data as $key_1 => $value_8) {

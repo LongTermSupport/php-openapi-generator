@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception;
 
+/**
+ * @internal
+ */
 class BusinessRuleSearchTracesNotFoundException extends NotFoundException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\PictureparkNotFoundException $pictureparkNotFoundException;

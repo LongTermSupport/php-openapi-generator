@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BookJsonldNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -102,7 +105,7 @@ class BookJsonldNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setArchivedAt(TypeValidator::assertDateTime($data['archivedAt'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['archivedAt']);
         }
-        elseif (\array_key_exists('archivedAt', $data) && $data['archivedAt'] === null) {
+        elseif (\array_key_exists('archivedAt', $data)) {
             $object->setArchivedAt(null);
         }
         foreach ($data as $key => $value_1) {

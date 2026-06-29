@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -67,13 +70,13 @@ class OutputNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('detail', $data) && $data['detail'] !== null) {
             $object->setDetail($data['detail']);
         }
-        elseif (\array_key_exists('detail', $data) && $data['detail'] === null) {
+        elseif (\array_key_exists('detail', $data)) {
             $object->setDetail(null);
         }
         if (\array_key_exists('backupTimestamp', $data) && $data['backupTimestamp'] !== null) {
             $object->setBackupTimestamp(TypeValidator::assertDateTime($data['backupTimestamp'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('backupTimestamp', $data) && $data['backupTimestamp'] === null) {
+        elseif (\array_key_exists('backupTimestamp', $data)) {
             $object->setBackupTimestamp(null);
         }
         if (\array_key_exists('attemptsLeft', $data)) {

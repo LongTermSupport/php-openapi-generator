@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputResetRetryAttemptsRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class OutputResetRetryAttemptsRequestNormalizer implements DenormalizerInterface
             }
             $object->setOutputIds($values);
         }
-        elseif (\array_key_exists('outputIds', $data) && $data['outputIds'] === null) {
+        elseif (\array_key_exists('outputIds', $data)) {
             $object->setOutputIds(null);
         }
         if (\array_key_exists('contentIds', $data) && $data['contentIds'] !== null) {
@@ -69,7 +72,7 @@ class OutputResetRetryAttemptsRequestNormalizer implements DenormalizerInterface
             }
             $object->setContentIds($values_1);
         }
-        elseif (\array_key_exists('contentIds', $data) && $data['contentIds'] === null) {
+        elseif (\array_key_exists('contentIds', $data)) {
             $object->setContentIds(null);
         }
         if (\array_key_exists('fileExtensions', $data) && $data['fileExtensions'] !== null) {
@@ -81,7 +84,7 @@ class OutputResetRetryAttemptsRequestNormalizer implements DenormalizerInterface
             }
             $object->setFileExtensions($values_2);
         }
-        elseif (\array_key_exists('fileExtensions', $data) && $data['fileExtensions'] === null) {
+        elseif (\array_key_exists('fileExtensions', $data)) {
             $object->setFileExtensions(null);
         }
         if (\array_key_exists('outputFormatIds', $data) && $data['outputFormatIds'] !== null) {
@@ -93,7 +96,7 @@ class OutputResetRetryAttemptsRequestNormalizer implements DenormalizerInterface
             }
             $object->setOutputFormatIds($values_3);
         }
-        elseif (\array_key_exists('outputFormatIds', $data) && $data['outputFormatIds'] === null) {
+        elseif (\array_key_exists('outputFormatIds', $data)) {
             $object->setOutputFormatIds(null);
         }
         if (\array_key_exists('includeCompleted', $data)) {

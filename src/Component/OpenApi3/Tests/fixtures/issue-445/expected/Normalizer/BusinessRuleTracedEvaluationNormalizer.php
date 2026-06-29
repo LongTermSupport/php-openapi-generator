@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -61,7 +64,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             }
             $object->setConditions($values);
         }
-        elseif (\array_key_exists('conditions', $data) && $data['conditions'] === null) {
+        elseif (\array_key_exists('conditions', $data)) {
             $object->setConditions(null);
         }
         if (\array_key_exists('transformationGroups', $data) && $data['transformationGroups'] !== null) {
@@ -74,7 +77,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             }
             $object->setTransformationGroups($values_1);
         }
-        elseif (\array_key_exists('transformationGroups', $data) && $data['transformationGroups'] === null) {
+        elseif (\array_key_exists('transformationGroups', $data)) {
             $object->setTransformationGroups(null);
         }
         if (\array_key_exists('actions', $data) && $data['actions'] !== null) {
@@ -87,7 +90,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             }
             $object->setActions($values_2);
         }
-        elseif (\array_key_exists('actions', $data) && $data['actions'] === null) {
+        elseif (\array_key_exists('actions', $data)) {
             $object->setActions(null);
         }
         if (\array_key_exists('variables', $data) && $data['variables'] !== null) {
@@ -99,7 +102,7 @@ class BusinessRuleTracedEvaluationNormalizer implements DenormalizerInterface, N
             }
             $object->setVariables($values_3);
         }
-        elseif (\array_key_exists('variables', $data) && $data['variables'] === null) {
+        elseif (\array_key_exists('variables', $data)) {
             $object->setVariables(null);
         }
         return $object;

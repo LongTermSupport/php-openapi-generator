@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -115,7 +118,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setMaintenancePolicy($value_3);
             unset($data['maintenance_policy']);
         }
-        elseif (\array_key_exists('maintenance_policy', $data) && $data['maintenance_policy'] === null) {
+        elseif (\array_key_exists('maintenance_policy', $data)) {
             $object->setMaintenancePolicy(null);
         }
         if (\array_key_exists('auto_upgrade', $data)) {
@@ -152,7 +155,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setControlPlaneFirewall($value_5);
             unset($data['control_plane_firewall']);
         }
-        elseif (\array_key_exists('control_plane_firewall', $data) && $data['control_plane_firewall'] === null) {
+        elseif (\array_key_exists('control_plane_firewall', $data)) {
             $object->setControlPlaneFirewall(null);
         }
         if (\array_key_exists('cluster_autoscaler_configuration', $data) && $data['cluster_autoscaler_configuration'] !== null) {
@@ -160,7 +163,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setClusterAutoscalerConfiguration($value_6);
             unset($data['cluster_autoscaler_configuration']);
         }
-        elseif (\array_key_exists('cluster_autoscaler_configuration', $data) && $data['cluster_autoscaler_configuration'] === null) {
+        elseif (\array_key_exists('cluster_autoscaler_configuration', $data)) {
             $object->setClusterAutoscalerConfiguration(null);
         }
         if (\array_key_exists('routing_agent', $data) && $data['routing_agent'] !== null) {
@@ -168,7 +171,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setRoutingAgent($value_7);
             unset($data['routing_agent']);
         }
-        elseif (\array_key_exists('routing_agent', $data) && $data['routing_agent'] === null) {
+        elseif (\array_key_exists('routing_agent', $data)) {
             $object->setRoutingAgent(null);
         }
         if (\array_key_exists('amd_gpu_device_plugin', $data) && $data['amd_gpu_device_plugin'] !== null) {
@@ -176,7 +179,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setAmdGpuDevicePlugin($value_8);
             unset($data['amd_gpu_device_plugin']);
         }
-        elseif (\array_key_exists('amd_gpu_device_plugin', $data) && $data['amd_gpu_device_plugin'] === null) {
+        elseif (\array_key_exists('amd_gpu_device_plugin', $data)) {
             $object->setAmdGpuDevicePlugin(null);
         }
         if (\array_key_exists('amd_gpu_device_metrics_exporter_plugin', $data) && $data['amd_gpu_device_metrics_exporter_plugin'] !== null) {
@@ -184,7 +187,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setAmdGpuDeviceMetricsExporterPlugin($value_9);
             unset($data['amd_gpu_device_metrics_exporter_plugin']);
         }
-        elseif (\array_key_exists('amd_gpu_device_metrics_exporter_plugin', $data) && $data['amd_gpu_device_metrics_exporter_plugin'] === null) {
+        elseif (\array_key_exists('amd_gpu_device_metrics_exporter_plugin', $data)) {
             $object->setAmdGpuDeviceMetricsExporterPlugin(null);
         }
         if (\array_key_exists('nvidia_gpu_device_plugin', $data) && $data['nvidia_gpu_device_plugin'] !== null) {
@@ -192,7 +195,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setNvidiaGpuDevicePlugin($value_10);
             unset($data['nvidia_gpu_device_plugin']);
         }
-        elseif (\array_key_exists('nvidia_gpu_device_plugin', $data) && $data['nvidia_gpu_device_plugin'] === null) {
+        elseif (\array_key_exists('nvidia_gpu_device_plugin', $data)) {
             $object->setNvidiaGpuDevicePlugin(null);
         }
         if (\array_key_exists('rdma_shared_dev_plugin', $data) && $data['rdma_shared_dev_plugin'] !== null) {
@@ -200,7 +203,7 @@ class ClusterNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setRdmaSharedDevPlugin($value_11);
             unset($data['rdma_shared_dev_plugin']);
         }
-        elseif (\array_key_exists('rdma_shared_dev_plugin', $data) && $data['rdma_shared_dev_plugin'] === null) {
+        elseif (\array_key_exists('rdma_shared_dev_plugin', $data)) {
             $object->setRdmaSharedDevPlugin(null);
         }
         foreach ($data as $key_1 => $value_12) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class KubernetesNodePoolNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -84,7 +87,7 @@ class KubernetesNodePoolNormalizer implements DenormalizerInterface, NormalizerI
             $object->setLabels($values_1);
             unset($data['labels']);
         }
-        elseif (\array_key_exists('labels', $data) && $data['labels'] === null) {
+        elseif (\array_key_exists('labels', $data)) {
             $object->setLabels(null);
         }
         if (\array_key_exists('taints', $data)) {

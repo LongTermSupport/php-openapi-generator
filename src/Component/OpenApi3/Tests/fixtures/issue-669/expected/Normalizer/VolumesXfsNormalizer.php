@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class VolumesXfsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,7 +65,7 @@ class VolumesXfsNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setDropletIds($values);
             unset($data['droplet_ids']);
         }
-        elseif (\array_key_exists('droplet_ids', $data) && $data['droplet_ids'] === null) {
+        elseif (\array_key_exists('droplet_ids', $data)) {
             $object->setDropletIds(null);
         }
         if (\array_key_exists('name', $data)) {
@@ -91,7 +94,7 @@ class VolumesXfsNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setTags($values_1);
             unset($data['tags']);
         }
-        elseif (\array_key_exists('tags', $data) && $data['tags'] === null) {
+        elseif (\array_key_exists('tags', $data)) {
             $object->setTags(null);
         }
         if (\array_key_exists('snapshot_id', $data)) {

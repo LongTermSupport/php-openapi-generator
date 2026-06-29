@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PermissionSetDeleteManyRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class PermissionSetDeleteManyRequestNormalizer implements DenormalizerInterface,
             }
             $object->setPermissionSetIds($values);
         }
-        elseif (\array_key_exists('permissionSetIds', $data) && $data['permissionSetIds'] === null) {
+        elseif (\array_key_exists('permissionSetIds', $data)) {
             $object->setPermissionSetIds(null);
         }
         return $object;

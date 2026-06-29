@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\WhitelistedPathsRequestBodyReference\Exception;
 
+/**
+ * @internal
+ */
 final class UnexpectedStatusCodeException extends \RuntimeException implements ClientException
 {
     private string $body;

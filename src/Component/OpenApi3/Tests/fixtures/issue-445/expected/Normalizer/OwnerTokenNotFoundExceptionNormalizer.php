@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OwnerTokenNotFoundExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class OwnerTokenNotFoundExceptionNormalizer implements DenormalizerInterface, No
             $object->setOwnerTokenUserIds($values);
             unset($data['ownerTokenUserIds']);
         }
-        elseif (\array_key_exists('ownerTokenUserIds', $data) && $data['ownerTokenUserIds'] === null) {
+        elseif (\array_key_exists('ownerTokenUserIds', $data)) {
             $object->setOwnerTokenUserIds(null);
         }
         foreach ($data as $key => $value_1) {

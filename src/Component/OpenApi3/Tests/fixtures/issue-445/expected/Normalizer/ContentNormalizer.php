@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,7 +54,7 @@ class ContentNormalizer implements DenormalizerInterface, NormalizerInterface, D
         if (\array_key_exists('audit', $data) && $data['audit'] !== null) {
             $object->setAudit($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         if (\array_key_exists('contentSchemaId', $data)) {
@@ -69,7 +72,7 @@ class ContentNormalizer implements DenormalizerInterface, NormalizerInterface, D
             }
             $object->setLayerSchemaIds($values);
         }
-        elseif (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] === null) {
+        elseif (\array_key_exists('layerSchemaIds', $data)) {
             $object->setLayerSchemaIds(null);
         }
         if (\array_key_exists('displayValues', $data)) {
@@ -93,7 +96,7 @@ class ContentNormalizer implements DenormalizerInterface, NormalizerInterface, D
             }
             $object->setBrokenReferenceIds($values_2);
         }
-        elseif (\array_key_exists('brokenReferenceIds', $data) && $data['brokenReferenceIds'] === null) {
+        elseif (\array_key_exists('brokenReferenceIds', $data)) {
             $object->setBrokenReferenceIds(null);
         }
         if (\array_key_exists('brokenIndirectReferenceIds', $data) && $data['brokenIndirectReferenceIds'] !== null) {
@@ -105,7 +108,7 @@ class ContentNormalizer implements DenormalizerInterface, NormalizerInterface, D
             }
             $object->setBrokenIndirectReferenceIds($values_3);
         }
-        elseif (\array_key_exists('brokenIndirectReferenceIds', $data) && $data['brokenIndirectReferenceIds'] === null) {
+        elseif (\array_key_exists('brokenIndirectReferenceIds', $data)) {
             $object->setBrokenIndirectReferenceIds(null);
         }
         if (\array_key_exists('brokenRelationTargetIds', $data) && $data['brokenRelationTargetIds'] !== null) {
@@ -117,7 +120,7 @@ class ContentNormalizer implements DenormalizerInterface, NormalizerInterface, D
             }
             $object->setBrokenRelationTargetIds($values_4);
         }
-        elseif (\array_key_exists('brokenRelationTargetIds', $data) && $data['brokenRelationTargetIds'] === null) {
+        elseif (\array_key_exists('brokenRelationTargetIds', $data)) {
             $object->setBrokenRelationTargetIds(null);
         }
         if (\array_key_exists('lifeCycle', $data)) {

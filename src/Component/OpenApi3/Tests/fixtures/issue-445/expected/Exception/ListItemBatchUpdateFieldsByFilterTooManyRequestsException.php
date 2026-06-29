@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception;
 
+/**
+ * @internal
+ */
 class ListItemBatchUpdateFieldsByFilterTooManyRequestsException extends TooManyRequestsException
 {
     private ?\Psr\Http\Message\ResponseInterface $response;

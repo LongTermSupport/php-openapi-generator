@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Endpoint;
 
+/**
+ * @internal
+ */
 class TestSimple extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ArrayDefinition\Runtime\Client\EndpointTrait;

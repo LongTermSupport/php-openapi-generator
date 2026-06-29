@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Endpoint;
 
+/**
+ * @internal
+ */
 class ProducesTriggersAcceptBeingSet extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ContentType\Runtime\Client\EndpointTrait;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -115,7 +118,7 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setPublishedAt(TypeValidator::assertDateTime($data['published_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['published_at']);
         }
-        elseif (\array_key_exists('published_at', $data) && $data['published_at'] === null) {
+        elseif (\array_key_exists('published_at', $data)) {
             $object->setPublishedAt(null);
         }
         if (\array_key_exists('author', $data) && $data['author'] !== null) {
@@ -123,7 +126,7 @@ class ReleaseNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setAuthor($value);
             unset($data['author']);
         }
-        elseif (\array_key_exists('author', $data) && $data['author'] === null) {
+        elseif (\array_key_exists('author', $data)) {
             $object->setAuthor(null);
         }
         if (\array_key_exists('assets', $data)) {

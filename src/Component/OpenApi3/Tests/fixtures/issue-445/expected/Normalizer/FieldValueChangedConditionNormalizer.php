@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class FieldValueChangedConditionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,7 +67,7 @@ class FieldValueChangedConditionNormalizer implements DenormalizerInterface, Nor
             $object->setExpectedValue($data['expectedValue']);
             unset($data['expectedValue']);
         }
-        elseif (\array_key_exists('expectedValue', $data) && $data['expectedValue'] === null) {
+        elseif (\array_key_exists('expectedValue', $data)) {
             $object->setExpectedValue(null);
         }
         return $object;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentDownloadEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -67,7 +70,7 @@ class ContentDownloadEventNormalizer implements DenormalizerInterface, Normalize
             $object->setDownloadInfos($values);
             unset($data['downloadInfos']);
         }
-        elseif (\array_key_exists('downloadInfos', $data) && $data['downloadInfos'] === null) {
+        elseif (\array_key_exists('downloadInfos', $data)) {
             $object->setDownloadInfos(null);
         }
         if (\array_key_exists('fileSize', $data)) {

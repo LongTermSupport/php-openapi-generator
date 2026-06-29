@@ -232,15 +232,12 @@ trait DenormalizerGenerator
                 ]);
 
                 if (!$context->isStrict() || $property->isNullable()) {
-                    $invertCondition = new Expr\BinaryOp\BooleanAnd(
-                        $baseCondition,
-                        new Expr\BinaryOp\Identical(
-                            $propertyVar,
-                            new Expr\ConstFetch(new Name('null'))
-                        )
-                    );
-
-                    $statements[] = new Stmt\ElseIf_($invertCondition, [
+                    // The matching `if` above is `$baseCondition && $propertyVar !== null`. This elseif is
+                    // only reached when that was false, so $baseCondition (key presence) still being true
+                    // here already guarantees $propertyVar is null. Re-testing `$propertyVar === null` would
+                    // be a tautology PHPStan rejects as identical.alwaysTrue, so the elseif carries only
+                    // $baseCondition — the emitted branch is semantically unchanged.
+                    $statements[] = new Stmt\ElseIf_($baseCondition, [
                         new Stmt\Expression(new Expr\MethodCall(
                             $objectVariable,
                             $setterName,

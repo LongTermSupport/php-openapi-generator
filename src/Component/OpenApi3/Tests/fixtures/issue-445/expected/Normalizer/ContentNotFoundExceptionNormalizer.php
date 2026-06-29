@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentNotFoundExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class ContentNotFoundExceptionNormalizer implements DenormalizerInterface, Norma
             $object->setContentIds($values);
             unset($data['contentIds']);
         }
-        elseif (\array_key_exists('contentIds', $data) && $data['contentIds'] === null) {
+        elseif (\array_key_exists('contentIds', $data)) {
             $object->setContentIds(null);
         }
         foreach ($data as $key => $value_1) {

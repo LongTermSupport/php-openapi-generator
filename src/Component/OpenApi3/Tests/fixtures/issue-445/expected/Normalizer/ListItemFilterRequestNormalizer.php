@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemFilterRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -54,7 +57,7 @@ class ListItemFilterRequestNormalizer implements DenormalizerInterface, Normaliz
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('includeAllSchemaChildren', $data)) {
@@ -69,7 +72,7 @@ class ListItemFilterRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setSchemaIds($values);
         }
-        elseif (\array_key_exists('schemaIds', $data) && $data['schemaIds'] === null) {
+        elseif (\array_key_exists('schemaIds', $data)) {
             $object->setSchemaIds(null);
         }
         if (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] !== null) {
@@ -81,7 +84,7 @@ class ListItemFilterRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setSearchLanguages($values_1);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         if (\array_key_exists('brokenDependenciesFilter', $data)) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PageBuildNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -69,7 +72,7 @@ class PageBuildNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setPusher($value_1);
             unset($data['pusher']);
         }
-        elseif (\array_key_exists('pusher', $data) && $data['pusher'] === null) {
+        elseif (\array_key_exists('pusher', $data)) {
             $object->setPusher(null);
         }
         if (\array_key_exists('commit', $data)) {

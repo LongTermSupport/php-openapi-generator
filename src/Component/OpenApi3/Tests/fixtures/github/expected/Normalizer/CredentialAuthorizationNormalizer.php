@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CredentialAuthorizationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -89,7 +92,7 @@ class CredentialAuthorizationNormalizer implements DenormalizerInterface, Normal
             $object->setCredentialAccessedAt(TypeValidator::assertDateTime($data['credential_accessed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['credential_accessed_at']);
         }
-        elseif (\array_key_exists('credential_accessed_at', $data) && $data['credential_accessed_at'] === null) {
+        elseif (\array_key_exists('credential_accessed_at', $data)) {
             $object->setCredentialAccessedAt(null);
         }
         foreach ($data as $key => $value_1) {

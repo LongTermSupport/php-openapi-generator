@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class JobStepsItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -71,14 +74,14 @@ class JobStepsItemNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setStartedAt(TypeValidator::assertDateTime($data['started_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['started_at']);
         }
-        elseif (\array_key_exists('started_at', $data) && $data['started_at'] === null) {
+        elseif (\array_key_exists('started_at', $data)) {
             $object->setStartedAt(null);
         }
         if (\array_key_exists('completed_at', $data) && $data['completed_at'] !== null) {
             $object->setCompletedAt(TypeValidator::assertDateTime($data['completed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['completed_at']);
         }
-        elseif (\array_key_exists('completed_at', $data) && $data['completed_at'] === null) {
+        elseif (\array_key_exists('completed_at', $data)) {
             $object->setCompletedAt(null);
         }
         foreach ($data as $key => $value) {

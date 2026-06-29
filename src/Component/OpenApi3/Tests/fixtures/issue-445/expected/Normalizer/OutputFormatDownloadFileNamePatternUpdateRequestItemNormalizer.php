@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputFormatDownloadFileNamePatternUpdateRequestItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -54,7 +57,7 @@ class OutputFormatDownloadFileNamePatternUpdateRequestItemNormalizer implements 
         if (\array_key_exists('patterns', $data) && $data['patterns'] !== null) {
             $object->setPatterns($data['patterns']);
         }
-        elseif (\array_key_exists('patterns', $data) && $data['patterns'] === null) {
+        elseif (\array_key_exists('patterns', $data)) {
             $object->setPatterns(null);
         }
         return $object;

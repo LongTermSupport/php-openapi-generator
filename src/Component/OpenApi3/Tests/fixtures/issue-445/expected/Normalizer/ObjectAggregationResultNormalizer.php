@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ObjectAggregationResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -77,7 +80,7 @@ class ObjectAggregationResultNormalizer implements DenormalizerInterface, Normal
             }
             $object->setQueryDebugInformation($values_1);
         }
-        elseif (\array_key_exists('queryDebugInformation', $data) && $data['queryDebugInformation'] === null) {
+        elseif (\array_key_exists('queryDebugInformation', $data)) {
             $object->setQueryDebugInformation(null);
         }
         return $object;

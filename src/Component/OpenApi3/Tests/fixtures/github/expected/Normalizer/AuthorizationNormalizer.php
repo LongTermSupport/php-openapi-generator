@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -69,7 +72,7 @@ class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setScopes($values);
             unset($data['scopes']);
         }
-        elseif (\array_key_exists('scopes', $data) && $data['scopes'] === null) {
+        elseif (\array_key_exists('scopes', $data)) {
             $object->setScopes(null);
         }
         if (\array_key_exists('token', $data)) {
@@ -114,7 +117,7 @@ class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setUser($value_2);
             unset($data['user']);
         }
-        elseif (\array_key_exists('user', $data) && $data['user'] === null) {
+        elseif (\array_key_exists('user', $data)) {
             $object->setUser(null);
         }
         if (\array_key_exists('installation', $data) && $data['installation'] !== null) {
@@ -122,7 +125,7 @@ class AuthorizationNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setInstallation($value_3);
             unset($data['installation']);
         }
-        elseif (\array_key_exists('installation', $data) && $data['installation'] === null) {
+        elseif (\array_key_exists('installation', $data)) {
             $object->setInstallation(null);
         }
         foreach ($data as $key => $value_4) {

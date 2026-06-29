@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleFiredEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -67,7 +70,7 @@ class BusinessRuleFiredEventNormalizer implements DenormalizerInterface, Normali
             $object->setDetails($values);
             unset($data['details']);
         }
-        elseif (\array_key_exists('details', $data) && $data['details'] === null) {
+        elseif (\array_key_exists('details', $data)) {
             $object->setDetails(null);
         }
         return $object;

@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies;
 
+/**
+ * @internal
+ */
 class Client extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Runtime\Client\Client
 {
     /**

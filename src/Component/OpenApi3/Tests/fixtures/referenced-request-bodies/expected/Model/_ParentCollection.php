@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model;
 
+/**
+ * @internal
+ */
 final class _ParentCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReferencedRequestBodies\Model\_Parent> */

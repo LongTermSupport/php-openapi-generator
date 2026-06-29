@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ScheduledDetailsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class ScheduledDetailsNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setBody($value);
             unset($data['body']);
         }
-        elseif (\array_key_exists('body', $data) && $data['body'] === null) {
+        elseif (\array_key_exists('body', $data)) {
             $object->setBody(null);
         }
         foreach ($data as $key => $value_1) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaImportResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class SchemaImportResultNormalizer implements DenormalizerInterface, NormalizerI
             }
             $object->setSkippedSchemaIds($values);
         }
-        elseif (\array_key_exists('skippedSchemaIds', $data) && $data['skippedSchemaIds'] === null) {
+        elseif (\array_key_exists('skippedSchemaIds', $data)) {
             $object->setSkippedSchemaIds(null);
         }
         if (\array_key_exists('importedSchemaIds', $data) && $data['importedSchemaIds'] !== null) {
@@ -78,7 +81,7 @@ class SchemaImportResultNormalizer implements DenormalizerInterface, NormalizerI
             }
             $object->setImportedSchemaIds($values_1);
         }
-        elseif (\array_key_exists('importedSchemaIds', $data) && $data['importedSchemaIds'] === null) {
+        elseif (\array_key_exists('importedSchemaIds', $data)) {
             $object->setImportedSchemaIds(null);
         }
         return $object;

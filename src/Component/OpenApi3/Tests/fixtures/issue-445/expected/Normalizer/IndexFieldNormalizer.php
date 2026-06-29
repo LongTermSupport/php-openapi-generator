@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class IndexFieldNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class IndexFieldNormalizer implements DenormalizerInterface, NormalizerInterface
             }
             $object->setIndexFields($values);
         }
-        elseif (\array_key_exists('indexFields', $data) && $data['indexFields'] === null) {
+        elseif (\array_key_exists('indexFields', $data)) {
             $object->setIndexFields(null);
         }
         if (\array_key_exists('simpleSearchFields', $data) && $data['simpleSearchFields'] !== null) {
@@ -78,7 +81,7 @@ class IndexFieldNormalizer implements DenormalizerInterface, NormalizerInterface
             }
             $object->setSimpleSearchFields($values_1);
         }
-        elseif (\array_key_exists('simpleSearchFields', $data) && $data['simpleSearchFields'] === null) {
+        elseif (\array_key_exists('simpleSearchFields', $data)) {
             $object->setSimpleSearchFields(null);
         }
         if (\array_key_exists('boost', $data)) {

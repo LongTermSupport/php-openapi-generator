@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ReleaseAssetNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -104,7 +107,7 @@ class ReleaseAssetNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setUploader($value);
             unset($data['uploader']);
         }
-        elseif (\array_key_exists('uploader', $data) && $data['uploader'] === null) {
+        elseif (\array_key_exists('uploader', $data)) {
             $object->setUploader(null);
         }
         foreach ($data as $key => $value_1) {

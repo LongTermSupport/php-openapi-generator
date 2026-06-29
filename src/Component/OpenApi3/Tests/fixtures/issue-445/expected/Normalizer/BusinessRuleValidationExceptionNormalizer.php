@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleValidationExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -99,7 +102,7 @@ class BusinessRuleValidationExceptionNormalizer implements DenormalizerInterface
             $object->setInnerExceptions($values);
             unset($data['innerExceptions']);
         }
-        elseif (\array_key_exists('innerExceptions', $data) && $data['innerExceptions'] === null) {
+        elseif (\array_key_exists('innerExceptions', $data)) {
             $object->setInnerExceptions(null);
         }
         foreach ($data as $key => $value_2) {

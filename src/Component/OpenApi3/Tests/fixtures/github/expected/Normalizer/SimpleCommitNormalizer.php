@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SimpleCommitNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -72,7 +75,7 @@ class SimpleCommitNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setAuthor($value);
             unset($data['author']);
         }
-        elseif (\array_key_exists('author', $data) && $data['author'] === null) {
+        elseif (\array_key_exists('author', $data)) {
             $object->setAuthor(null);
         }
         if (\array_key_exists('committer', $data) && $data['committer'] !== null) {
@@ -80,7 +83,7 @@ class SimpleCommitNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setCommitter($value_1);
             unset($data['committer']);
         }
-        elseif (\array_key_exists('committer', $data) && $data['committer'] === null) {
+        elseif (\array_key_exists('committer', $data)) {
             $object->setCommitter(null);
         }
         foreach ($data as $key => $value_2) {

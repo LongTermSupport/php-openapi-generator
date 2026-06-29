@@ -8,6 +8,7 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue672\Model;
 
 /**
+ * @internal
  * @extends \ArrayObject<string, mixed>
  */
 class Endpoint2GetResponse extends \ArrayObject

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CustomerAppNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -54,13 +57,13 @@ class CustomerAppNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
         }
-        elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+        elseif (\array_key_exists('name', $data)) {
             $object->setName(null);
         }
         if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
         }
-        elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+        elseif (\array_key_exists('description', $data)) {
             $object->setDescription(null);
         }
         if (\array_key_exists('icon', $data)) {

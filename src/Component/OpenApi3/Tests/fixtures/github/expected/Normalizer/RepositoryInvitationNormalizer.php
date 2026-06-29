@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class RepositoryInvitationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -65,7 +68,7 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
             $object->setInvitee($value_1);
             unset($data['invitee']);
         }
-        elseif (\array_key_exists('invitee', $data) && $data['invitee'] === null) {
+        elseif (\array_key_exists('invitee', $data)) {
             $object->setInvitee(null);
         }
         if (\array_key_exists('inviter', $data) && $data['inviter'] !== null) {
@@ -73,7 +76,7 @@ class RepositoryInvitationNormalizer implements DenormalizerInterface, Normalize
             $object->setInviter($value_2);
             unset($data['inviter']);
         }
-        elseif (\array_key_exists('inviter', $data) && $data['inviter'] === null) {
+        elseif (\array_key_exists('inviter', $data)) {
             $object->setInviter(null);
         }
         if (\array_key_exists('permissions', $data)) {

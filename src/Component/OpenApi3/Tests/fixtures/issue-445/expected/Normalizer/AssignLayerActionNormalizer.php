@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AssignLayerActionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -70,7 +73,7 @@ class AssignLayerActionNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setDefaultValues($values);
             unset($data['defaultValues']);
         }
-        elseif (\array_key_exists('defaultValues', $data) && $data['defaultValues'] === null) {
+        elseif (\array_key_exists('defaultValues', $data)) {
             $object->setDefaultValues(null);
         }
         return $object;

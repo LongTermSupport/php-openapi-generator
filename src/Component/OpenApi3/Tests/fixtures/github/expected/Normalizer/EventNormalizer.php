@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class EventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -87,7 +90,7 @@ class EventNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             $object->setCreatedAt(TypeValidator::assertDateTime($data['created_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['created_at']);
         }
-        elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+        elseif (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt(null);
         }
         foreach ($data as $key => $value_4) {

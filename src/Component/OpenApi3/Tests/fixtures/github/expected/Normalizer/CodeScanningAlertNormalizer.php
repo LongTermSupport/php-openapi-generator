@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CodeScanningAlertNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -84,14 +87,14 @@ class CodeScanningAlertNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setClosedBy($value);
             unset($data['closed_by']);
         }
-        elseif (\array_key_exists('closed_by', $data) && $data['closed_by'] === null) {
+        elseif (\array_key_exists('closed_by', $data)) {
             $object->setClosedBy(null);
         }
         if (\array_key_exists('closed_at', $data) && $data['closed_at'] !== null) {
             $object->setClosedAt(TypeValidator::assertDateTime($data['closed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['closed_at']);
         }
-        elseif (\array_key_exists('closed_at', $data) && $data['closed_at'] === null) {
+        elseif (\array_key_exists('closed_at', $data)) {
             $object->setClosedAt(null);
         }
         if (\array_key_exists('url', $data)) {

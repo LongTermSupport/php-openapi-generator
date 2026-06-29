@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationHttpBasic\Endpoint;
 
+/**
+ * @internal
+ */
 class GetFoo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationHttpBasic\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationHttpBasic\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AuthenticationHttpBasic\Runtime\Client\EndpointTrait;

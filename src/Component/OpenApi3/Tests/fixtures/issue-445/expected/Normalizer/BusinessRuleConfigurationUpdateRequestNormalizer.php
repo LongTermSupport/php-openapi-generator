@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleConfigurationUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -61,7 +64,7 @@ class BusinessRuleConfigurationUpdateRequestNormalizer implements DenormalizerIn
             }
             $object->setRules($values);
         }
-        elseif (\array_key_exists('rules', $data) && $data['rules'] === null) {
+        elseif (\array_key_exists('rules', $data)) {
             $object->setRules(null);
         }
         if (\array_key_exists('caches', $data) && $data['caches'] !== null) {
@@ -74,7 +77,7 @@ class BusinessRuleConfigurationUpdateRequestNormalizer implements DenormalizerIn
             }
             $object->setCaches($values_1);
         }
-        elseif (\array_key_exists('caches', $data) && $data['caches'] === null) {
+        elseif (\array_key_exists('caches', $data)) {
             $object->setCaches(null);
         }
         return $object;

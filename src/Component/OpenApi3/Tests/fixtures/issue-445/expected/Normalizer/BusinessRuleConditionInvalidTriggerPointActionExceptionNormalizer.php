@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleConditionInvalidTriggerPointActionExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -94,7 +97,7 @@ class BusinessRuleConditionInvalidTriggerPointActionExceptionNormalizer implemen
             $object->setAllowedActions($values);
             unset($data['allowedActions']);
         }
-        elseif (\array_key_exists('allowedActions', $data) && $data['allowedActions'] === null) {
+        elseif (\array_key_exists('allowedActions', $data)) {
             $object->setAllowedActions(null);
         }
         foreach ($data as $key => $value_1) {

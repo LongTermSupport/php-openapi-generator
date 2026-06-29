@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class VideoSpriteFormatNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class VideoSpriteFormatNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setSpriteResizeAction($data['spriteResizeAction']);
             unset($data['spriteResizeAction']);
         }
-        elseif (\array_key_exists('spriteResizeAction', $data) && $data['spriteResizeAction'] === null) {
+        elseif (\array_key_exists('spriteResizeAction', $data)) {
             $object->setSpriteResizeAction(null);
         }
         if (\array_key_exists('maxNumberOfSprites', $data)) {

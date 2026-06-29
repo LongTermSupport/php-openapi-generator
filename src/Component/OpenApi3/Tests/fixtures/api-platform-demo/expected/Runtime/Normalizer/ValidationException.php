@@ -9,6 +9,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Api
 
 use RuntimeException;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
+/**
+ * @internal
+ */
 class ValidationException extends RuntimeException
 {
     public function __construct(private readonly ConstraintViolationListInterface $violationList)

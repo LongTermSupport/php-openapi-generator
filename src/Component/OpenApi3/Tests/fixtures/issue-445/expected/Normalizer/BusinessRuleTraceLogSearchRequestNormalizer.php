@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleTraceLogSearchRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -61,7 +64,7 @@ class BusinessRuleTraceLogSearchRequestNormalizer implements DenormalizerInterfa
             }
             $object->setAggregationFilters($values);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         if (\array_key_exists('aggregators', $data) && $data['aggregators'] !== null) {
@@ -74,13 +77,13 @@ class BusinessRuleTraceLogSearchRequestNormalizer implements DenormalizerInterfa
             }
             $object->setAggregators($values_1);
         }
-        elseif (\array_key_exists('aggregators', $data) && $data['aggregators'] === null) {
+        elseif (\array_key_exists('aggregators', $data)) {
             $object->setAggregators(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('limit', $data)) {
@@ -101,7 +104,7 @@ class BusinessRuleTraceLogSearchRequestNormalizer implements DenormalizerInterfa
             }
             $object->setSearchBehaviors($values_2);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('sort', $data) && $data['sort'] !== null) {
@@ -114,7 +117,7 @@ class BusinessRuleTraceLogSearchRequestNormalizer implements DenormalizerInterfa
             }
             $object->setSort($values_3);
         }
-        elseif (\array_key_exists('sort', $data) && $data['sort'] === null) {
+        elseif (\array_key_exists('sort', $data)) {
             $object->setSort(null);
         }
         return $object;

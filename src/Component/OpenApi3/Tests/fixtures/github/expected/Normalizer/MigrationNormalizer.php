@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class MigrationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class MigrationNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setOwner($value);
             unset($data['owner']);
         }
-        elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
+        elseif (\array_key_exists('owner', $data)) {
             $object->setOwner(null);
         }
         if (\array_key_exists('guid', $data)) {

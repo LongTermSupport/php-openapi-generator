@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class LanguageConfigurationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class LanguageConfigurationNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setSystemLanguages($values);
         }
-        elseif (\array_key_exists('systemLanguages', $data) && $data['systemLanguages'] === null) {
+        elseif (\array_key_exists('systemLanguages', $data)) {
             $object->setSystemLanguages(null);
         }
         if (\array_key_exists('metadataLanguages', $data) && $data['metadataLanguages'] !== null) {
@@ -69,7 +72,7 @@ class LanguageConfigurationNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setMetadataLanguages($values_1);
         }
-        elseif (\array_key_exists('metadataLanguages', $data) && $data['metadataLanguages'] === null) {
+        elseif (\array_key_exists('metadataLanguages', $data)) {
             $object->setMetadataLanguages(null);
         }
         if (\array_key_exists('defaultLanguage', $data)) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentPermissionSetDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -67,7 +70,7 @@ class ContentPermissionSetDetailNormalizer implements DenormalizerInterface, Nor
             $object->setUserRolesRights($values);
             unset($data['userRolesRights']);
         }
-        elseif (\array_key_exists('userRolesRights', $data) && $data['userRolesRights'] === null) {
+        elseif (\array_key_exists('userRolesRights', $data)) {
             $object->setUserRolesRights(null);
         }
         if (\array_key_exists('userRolesPermissionSetRights', $data) && $data['userRolesPermissionSetRights'] !== null) {
@@ -81,7 +84,7 @@ class ContentPermissionSetDetailNormalizer implements DenormalizerInterface, Nor
             $object->setUserRolesPermissionSetRights($values_1);
             unset($data['userRolesPermissionSetRights']);
         }
-        elseif (\array_key_exists('userRolesPermissionSetRights', $data) && $data['userRolesPermissionSetRights'] === null) {
+        elseif (\array_key_exists('userRolesPermissionSetRights', $data)) {
             $object->setUserRolesPermissionSetRights(null);
         }
         if (\array_key_exists('exclusive', $data)) {
@@ -96,7 +99,7 @@ class ContentPermissionSetDetailNormalizer implements DenormalizerInterface, Nor
             $object->setAudit($data['audit']);
             unset($data['audit']);
         }
-        elseif (\array_key_exists('audit', $data) && $data['audit'] === null) {
+        elseif (\array_key_exists('audit', $data)) {
             $object->setAudit(null);
         }
         foreach ($data as $key => $value_4) {

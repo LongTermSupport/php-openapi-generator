@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Endpoint;
 
+/**
+ * @internal
+ */
 class TestObjectListBodyParameter extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\BodyParameter\Runtime\Client\Endpoint
 {
     /**

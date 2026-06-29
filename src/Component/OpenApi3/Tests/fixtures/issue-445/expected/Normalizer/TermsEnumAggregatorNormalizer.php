@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class TermsEnumAggregatorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class TermsEnumAggregatorNormalizer implements DenormalizerInterface, Normalizer
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('aggregators', $data) && $data['aggregators'] !== null) {
@@ -70,14 +73,14 @@ class TermsEnumAggregatorNormalizer implements DenormalizerInterface, Normalizer
             $object->setAggregators($values);
             unset($data['aggregators']);
         }
-        elseif (\array_key_exists('aggregators', $data) && $data['aggregators'] === null) {
+        elseif (\array_key_exists('aggregators', $data)) {
             $object->setAggregators(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
             unset($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('kind', $data)) {
@@ -102,7 +105,7 @@ class TermsEnumAggregatorNormalizer implements DenormalizerInterface, Normalizer
             $object->setIncludes($values_1);
             unset($data['includes']);
         }
-        elseif (\array_key_exists('includes', $data) && $data['includes'] === null) {
+        elseif (\array_key_exists('includes', $data)) {
             $object->setIncludes(null);
         }
         if (\array_key_exists('excludes', $data) && $data['excludes'] !== null) {
@@ -115,7 +118,7 @@ class TermsEnumAggregatorNormalizer implements DenormalizerInterface, Normalizer
             $object->setExcludes($values_2);
             unset($data['excludes']);
         }
-        elseif (\array_key_exists('excludes', $data) && $data['excludes'] === null) {
+        elseif (\array_key_exists('excludes', $data)) {
             $object->setExcludes(null);
         }
         if (\array_key_exists('searchString', $data)) {
@@ -132,7 +135,7 @@ class TermsEnumAggregatorNormalizer implements DenormalizerInterface, Normalizer
             $object->setSearchFields($values_3);
             unset($data['searchFields']);
         }
-        elseif (\array_key_exists('searchFields', $data) && $data['searchFields'] === null) {
+        elseif (\array_key_exists('searchFields', $data)) {
             $object->setSearchFields(null);
         }
         if (\array_key_exists('enumType', $data)) {

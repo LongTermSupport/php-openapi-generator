@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Authentication;
 
+/**
+ * @internal
+ */
 class BearerAuthAuthentication implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Runtime\Client\AuthenticationPlugin
 {
     private string $token;

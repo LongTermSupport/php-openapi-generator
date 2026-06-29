@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class GistsPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -70,7 +73,7 @@ class GistsPostBodyNormalizer implements DenormalizerInterface, NormalizerInterf
             $object->setPublic($data['public']);
             unset($data['public']);
         }
-        elseif (\array_key_exists('public', $data) && $data['public'] === null) {
+        elseif (\array_key_exists('public', $data)) {
             $object->setPublic(null);
         }
         foreach ($data as $key_1 => $value_2) {

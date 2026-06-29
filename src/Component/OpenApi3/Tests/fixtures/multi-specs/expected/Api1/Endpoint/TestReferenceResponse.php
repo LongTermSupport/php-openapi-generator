@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Endpoint;
 
+/**
+ * @internal
+ */
 class TestReferenceResponse extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Runtime\Client\EndpointTrait;

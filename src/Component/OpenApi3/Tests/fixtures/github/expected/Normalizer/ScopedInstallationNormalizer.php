@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ScopedInstallationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -78,7 +81,7 @@ class ScopedInstallationNormalizer implements DenormalizerInterface, NormalizerI
             $object->setAccount($value_1);
             unset($data['account']);
         }
-        elseif (\array_key_exists('account', $data) && $data['account'] === null) {
+        elseif (\array_key_exists('account', $data)) {
             $object->setAccount(null);
         }
         foreach ($data as $key_1 => $value_2) {

@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Exception;
 
+/**
+ * @internal
+ */
 class RegistryDeleteUnauthorizedException extends UnauthorizedException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\Error $error;

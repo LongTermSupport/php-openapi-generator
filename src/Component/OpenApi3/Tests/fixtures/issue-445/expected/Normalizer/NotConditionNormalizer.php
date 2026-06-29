@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class NotConditionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class NotConditionNormalizer implements DenormalizerInterface, NormalizerInterfa
             $object->setCondition($data['condition']);
             unset($data['condition']);
         }
-        elseif (\array_key_exists('condition', $data) && $data['condition'] === null) {
+        elseif (\array_key_exists('condition', $data)) {
             $object->setCondition(null);
         }
         return $object;

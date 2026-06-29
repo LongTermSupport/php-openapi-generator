@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class WorkflowRunNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -106,21 +109,21 @@ class WorkflowRunNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setPullRequests($values);
             unset($data['pull_requests']);
         }
-        elseif (\array_key_exists('pull_requests', $data) && $data['pull_requests'] === null) {
+        elseif (\array_key_exists('pull_requests', $data)) {
             $object->setPullRequests(null);
         }
         if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt(TypeValidator::assertDateTime($data['created_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['created_at']);
         }
-        elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+        elseif (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt(null);
         }
         if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt(TypeValidator::assertDateTime($data['updated_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['updated_at']);
         }
-        elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+        elseif (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('jobs_url', $data)) {

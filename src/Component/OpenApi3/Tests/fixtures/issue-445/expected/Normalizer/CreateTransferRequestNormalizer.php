@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CreateTransferRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,7 +67,7 @@ class CreateTransferRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setFiles($values);
         }
-        elseif (\array_key_exists('files', $data) && $data['files'] === null) {
+        elseif (\array_key_exists('files', $data)) {
             $object->setFiles(null);
         }
         if (\array_key_exists('webLinks', $data) && $data['webLinks'] !== null) {
@@ -77,7 +80,7 @@ class CreateTransferRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setWebLinks($values_1);
         }
-        elseif (\array_key_exists('webLinks', $data) && $data['webLinks'] === null) {
+        elseif (\array_key_exists('webLinks', $data)) {
             $object->setWebLinks(null);
         }
         if (\array_key_exists('collectionName', $data)) {

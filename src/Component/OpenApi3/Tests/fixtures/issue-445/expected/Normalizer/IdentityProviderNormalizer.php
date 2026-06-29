@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class IdentityProviderNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -59,7 +62,7 @@ class IdentityProviderNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setClaimMapping($values);
             unset($data['claimMapping']);
         }
-        elseif (\array_key_exists('claimMapping', $data) && $data['claimMapping'] === null) {
+        elseif (\array_key_exists('claimMapping', $data)) {
             $object->setClaimMapping(null);
         }
         if (\array_key_exists('groupClaimType', $data)) {
@@ -77,7 +80,7 @@ class IdentityProviderNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setGroupMapping($values_1);
             unset($data['groupMapping']);
         }
-        elseif (\array_key_exists('groupMapping', $data) && $data['groupMapping'] === null) {
+        elseif (\array_key_exists('groupMapping', $data)) {
             $object->setGroupMapping(null);
         }
         if (\array_key_exists('fallbackUserRoleId', $data)) {

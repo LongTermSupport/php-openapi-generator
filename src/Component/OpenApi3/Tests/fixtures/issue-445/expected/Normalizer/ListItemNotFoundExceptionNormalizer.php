@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemNotFoundExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class ListItemNotFoundExceptionNormalizer implements DenormalizerInterface, Norm
             $object->setListItemIds($values);
             unset($data['listItemIds']);
         }
-        elseif (\array_key_exists('listItemIds', $data) && $data['listItemIds'] === null) {
+        elseif (\array_key_exists('listItemIds', $data)) {
             $object->setListItemIds(null);
         }
         foreach ($data as $key => $value_1) {

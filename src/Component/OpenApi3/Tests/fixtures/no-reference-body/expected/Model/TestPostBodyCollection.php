@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model;
 
+/**
+ * @internal
+ */
 final class TestPostBodyCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoReferenceBody\Model\TestPostBody> */

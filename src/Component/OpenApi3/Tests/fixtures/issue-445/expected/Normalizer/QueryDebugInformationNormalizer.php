@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class QueryDebugInformationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,13 +60,13 @@ class QueryDebugInformationNormalizer implements DenormalizerInterface, Normaliz
         if (\array_key_exists('request', $data) && $data['request'] !== null) {
             $object->setRequest($data['request']);
         }
-        elseif (\array_key_exists('request', $data) && $data['request'] === null) {
+        elseif (\array_key_exists('request', $data)) {
             $object->setRequest(null);
         }
         if (\array_key_exists('response', $data) && $data['response'] !== null) {
             $object->setResponse($data['response']);
         }
-        elseif (\array_key_exists('response', $data) && $data['response'] === null) {
+        elseif (\array_key_exists('response', $data)) {
             $object->setResponse(null);
         }
         return $object;

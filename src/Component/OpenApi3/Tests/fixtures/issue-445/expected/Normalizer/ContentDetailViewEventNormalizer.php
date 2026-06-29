@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentDetailViewEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class ContentDetailViewEventNormalizer implements DenormalizerInterface, Normali
             $object->setContentIds($values);
             unset($data['contentIds']);
         }
-        elseif (\array_key_exists('contentIds', $data) && $data['contentIds'] === null) {
+        elseif (\array_key_exists('contentIds', $data)) {
             $object->setContentIds(null);
         }
         return $object;

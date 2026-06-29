@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CommunityProfileFilesNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setCodeOfConduct($value);
             unset($data['code_of_conduct']);
         }
-        elseif (\array_key_exists('code_of_conduct', $data) && $data['code_of_conduct'] === null) {
+        elseif (\array_key_exists('code_of_conduct', $data)) {
             $object->setCodeOfConduct(null);
         }
         if (\array_key_exists('license', $data) && $data['license'] !== null) {
@@ -64,7 +67,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setLicense($value_1);
             unset($data['license']);
         }
-        elseif (\array_key_exists('license', $data) && $data['license'] === null) {
+        elseif (\array_key_exists('license', $data)) {
             $object->setLicense(null);
         }
         if (\array_key_exists('contributing', $data) && $data['contributing'] !== null) {
@@ -72,7 +75,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setContributing($value_2);
             unset($data['contributing']);
         }
-        elseif (\array_key_exists('contributing', $data) && $data['contributing'] === null) {
+        elseif (\array_key_exists('contributing', $data)) {
             $object->setContributing(null);
         }
         if (\array_key_exists('readme', $data) && $data['readme'] !== null) {
@@ -80,7 +83,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setReadme($value_3);
             unset($data['readme']);
         }
-        elseif (\array_key_exists('readme', $data) && $data['readme'] === null) {
+        elseif (\array_key_exists('readme', $data)) {
             $object->setReadme(null);
         }
         if (\array_key_exists('issue_template', $data) && $data['issue_template'] !== null) {
@@ -88,7 +91,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setIssueTemplate($value_4);
             unset($data['issue_template']);
         }
-        elseif (\array_key_exists('issue_template', $data) && $data['issue_template'] === null) {
+        elseif (\array_key_exists('issue_template', $data)) {
             $object->setIssueTemplate(null);
         }
         if (\array_key_exists('pull_request_template', $data) && $data['pull_request_template'] !== null) {
@@ -96,7 +99,7 @@ class CommunityProfileFilesNormalizer implements DenormalizerInterface, Normaliz
             $object->setPullRequestTemplate($value_5);
             unset($data['pull_request_template']);
         }
-        elseif (\array_key_exists('pull_request_template', $data) && $data['pull_request_template'] === null) {
+        elseif (\array_key_exists('pull_request_template', $data)) {
             $object->setPullRequestTemplate(null);
         }
         foreach ($data as $key => $value_6) {

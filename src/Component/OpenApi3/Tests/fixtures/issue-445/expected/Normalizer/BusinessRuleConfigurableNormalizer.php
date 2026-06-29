@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleConfigurableNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class BusinessRuleConfigurableNormalizer implements DenormalizerInterface, Norma
             $object->setTriggerPoint($data['triggerPoint']);
             unset($data['triggerPoint']);
         }
-        elseif (\array_key_exists('triggerPoint', $data) && $data['triggerPoint'] === null) {
+        elseif (\array_key_exists('triggerPoint', $data)) {
             $object->setTriggerPoint(null);
         }
         if (\array_key_exists('isEnabled', $data)) {
@@ -67,14 +70,14 @@ class BusinessRuleConfigurableNormalizer implements DenormalizerInterface, Norma
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
             unset($data['description']);
         }
-        elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+        elseif (\array_key_exists('description', $data)) {
             $object->setDescription(null);
         }
         if (\array_key_exists('enableTracing', $data)) {
@@ -89,7 +92,7 @@ class BusinessRuleConfigurableNormalizer implements DenormalizerInterface, Norma
             $object->setCondition($data['condition']);
             unset($data['condition']);
         }
-        elseif (\array_key_exists('condition', $data) && $data['condition'] === null) {
+        elseif (\array_key_exists('condition', $data)) {
             $object->setCondition(null);
         }
         if (\array_key_exists('transformationGroups', $data) && $data['transformationGroups'] !== null) {
@@ -103,7 +106,7 @@ class BusinessRuleConfigurableNormalizer implements DenormalizerInterface, Norma
             $object->setTransformationGroups($values);
             unset($data['transformationGroups']);
         }
-        elseif (\array_key_exists('transformationGroups', $data) && $data['transformationGroups'] === null) {
+        elseif (\array_key_exists('transformationGroups', $data)) {
             $object->setTransformationGroups(null);
         }
         if (\array_key_exists('actions', $data) && $data['actions'] !== null) {
@@ -117,7 +120,7 @@ class BusinessRuleConfigurableNormalizer implements DenormalizerInterface, Norma
             $object->setActions($values_1);
             unset($data['actions']);
         }
-        elseif (\array_key_exists('actions', $data) && $data['actions'] === null) {
+        elseif (\array_key_exists('actions', $data)) {
             $object->setActions(null);
         }
         return $object;

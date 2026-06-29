@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class FieldSingleRelationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,14 +67,14 @@ class FieldSingleRelationNormalizer implements DenormalizerInterface, Normalizer
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('descriptions', $data) && $data['descriptions'] !== null) {
             $object->setDescriptions($data['descriptions']);
             unset($data['descriptions']);
         }
-        elseif (\array_key_exists('descriptions', $data) && $data['descriptions'] === null) {
+        elseif (\array_key_exists('descriptions', $data)) {
             $object->setDescriptions(null);
         }
         if (\array_key_exists('required', $data)) {
@@ -106,7 +109,7 @@ class FieldSingleRelationNormalizer implements DenormalizerInterface, Normalizer
             $object->setSchemaIndexingInfo($data['schemaIndexingInfo']);
             unset($data['schemaIndexingInfo']);
         }
-        elseif (\array_key_exists('schemaIndexingInfo', $data) && $data['schemaIndexingInfo'] === null) {
+        elseif (\array_key_exists('schemaIndexingInfo', $data)) {
             $object->setSchemaIndexingInfo(null);
         }
         if (\array_key_exists('relationTypes', $data)) {

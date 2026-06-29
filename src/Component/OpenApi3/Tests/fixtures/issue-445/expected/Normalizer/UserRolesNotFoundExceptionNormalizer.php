@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserRolesNotFoundExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class UserRolesNotFoundExceptionNormalizer implements DenormalizerInterface, Nor
             $object->setUserRoleIds($values);
             unset($data['userRoleIds']);
         }
-        elseif (\array_key_exists('userRoleIds', $data) && $data['userRoleIds'] === null) {
+        elseif (\array_key_exists('userRoleIds', $data)) {
             $object->setUserRoleIds(null);
         }
         foreach ($data as $key => $value_1) {

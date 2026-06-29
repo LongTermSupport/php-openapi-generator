@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class LicenseContentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -105,7 +108,7 @@ class LicenseContentNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setLicense($value_1);
             unset($data['license']);
         }
-        elseif (\array_key_exists('license', $data) && $data['license'] === null) {
+        elseif (\array_key_exists('license', $data)) {
             $object->setLicense(null);
         }
         foreach ($data as $key => $value_2) {

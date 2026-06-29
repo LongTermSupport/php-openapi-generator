@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ShareOutputBaseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -71,7 +74,7 @@ class ShareOutputBaseNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('detail', $data) && $data['detail'] !== null) {
             $object->setDetail($data['detail']);
         }
-        elseif (\array_key_exists('detail', $data) && $data['detail'] === null) {
+        elseif (\array_key_exists('detail', $data)) {
             $object->setDetail(null);
         }
         if (\array_key_exists('dynamicRendering', $data)) {

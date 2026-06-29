@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -72,7 +75,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setOwner($value);
             unset($data['owner']);
         }
-        elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
+        elseif (\array_key_exists('owner', $data)) {
             $object->setOwner(null);
         }
         if (\array_key_exists('private', $data)) {
@@ -363,7 +366,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setTemplateRepository($value_3);
             unset($data['template_repository']);
         }
-        elseif (\array_key_exists('template_repository', $data) && $data['template_repository'] === null) {
+        elseif (\array_key_exists('template_repository', $data)) {
             $object->setTemplateRepository(null);
         }
         if (\array_key_exists('temp_clone_token', $data)) {
@@ -395,7 +398,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setLicense($value_4);
             unset($data['license']);
         }
-        elseif (\array_key_exists('license', $data) && $data['license'] === null) {
+        elseif (\array_key_exists('license', $data)) {
             $object->setLicense(null);
         }
         if (\array_key_exists('organization', $data) && $data['organization'] !== null) {
@@ -403,7 +406,7 @@ class FullRepositoryNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setOrganization($value_5);
             unset($data['organization']);
         }
-        elseif (\array_key_exists('organization', $data) && $data['organization'] === null) {
+        elseif (\array_key_exists('organization', $data)) {
             $object->setOrganization(null);
         }
         if (\array_key_exists('parent', $data)) {

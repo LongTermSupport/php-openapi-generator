@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class TeamNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -100,7 +103,7 @@ class TeamNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             $object->setParent($value);
             unset($data['parent']);
         }
-        elseif (\array_key_exists('parent', $data) && $data['parent'] === null) {
+        elseif (\array_key_exists('parent', $data)) {
             $object->setParent(null);
         }
         foreach ($data as $key => $value_1) {

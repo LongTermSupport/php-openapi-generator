@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PermissionSetSearchResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -90,7 +93,7 @@ class PermissionSetSearchResultNormalizer implements DenormalizerInterface, Norm
             $object->setQueryDebugInformation($values_1);
             unset($data['queryDebugInformation']);
         }
-        elseif (\array_key_exists('queryDebugInformation', $data) && $data['queryDebugInformation'] === null) {
+        elseif (\array_key_exists('queryDebugInformation', $data)) {
             $object->setQueryDebugInformation(null);
         }
         foreach ($data as $key => $value_4) {

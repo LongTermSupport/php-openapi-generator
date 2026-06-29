@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaIndexingInfoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -58,7 +61,7 @@ class SchemaIndexingInfoNormalizer implements DenormalizerInterface, NormalizerI
             }
             $object->setFields($values);
         }
-        elseif (\array_key_exists('fields', $data) && $data['fields'] === null) {
+        elseif (\array_key_exists('fields', $data)) {
             $object->setFields(null);
         }
         return $object;

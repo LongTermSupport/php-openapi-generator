@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue299\Endpoint;
 
+/**
+ * @internal
+ */
 class GetUsers extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue299\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue299\Runtime\Client\Endpoint
 {
     /**

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,7 +67,7 @@ class BusinessProcessEventNormalizer implements DenormalizerInterface, Normalize
             $object->setLifeCycle($data['lifeCycle']);
             unset($data['lifeCycle']);
         }
-        elseif (\array_key_exists('lifeCycle', $data) && $data['lifeCycle'] === null) {
+        elseif (\array_key_exists('lifeCycle', $data)) {
             $object->setLifeCycle(null);
         }
         if (\array_key_exists('state', $data)) {

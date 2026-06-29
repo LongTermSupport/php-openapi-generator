@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemCreateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class ListItemCreateRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setContent($values);
         }
-        elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+        elseif (\array_key_exists('content', $data)) {
             $object->setContent(null);
         }
         if (\array_key_exists('requestId', $data)) {

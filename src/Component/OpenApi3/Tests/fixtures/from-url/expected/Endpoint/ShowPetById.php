@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Endpoint;
 
+/**
+ * @internal
+ */
 class ShowPetById extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\FromUrl\Runtime\Client\Endpoint
 {
     protected string $petId;

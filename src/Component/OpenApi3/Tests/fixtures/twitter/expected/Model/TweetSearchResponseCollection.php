@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model;
 
+/**
+ * @internal
+ */
 final class TweetSearchResponseCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Twitter\Model\TweetSearchResponse> */

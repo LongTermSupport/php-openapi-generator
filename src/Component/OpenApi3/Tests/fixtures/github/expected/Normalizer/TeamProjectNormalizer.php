@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class TeamProjectNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -96,7 +99,7 @@ class TeamProjectNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setCreator($value);
             unset($data['creator']);
         }
-        elseif (\array_key_exists('creator', $data) && $data['creator'] === null) {
+        elseif (\array_key_exists('creator', $data)) {
             $object->setCreator(null);
         }
         if (\array_key_exists('created_at', $data)) {

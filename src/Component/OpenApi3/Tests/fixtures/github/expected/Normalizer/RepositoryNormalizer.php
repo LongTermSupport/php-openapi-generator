@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -72,7 +75,7 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setLicense($value);
             unset($data['license']);
         }
-        elseif (\array_key_exists('license', $data) && $data['license'] === null) {
+        elseif (\array_key_exists('license', $data)) {
             $object->setLicense(null);
         }
         if (\array_key_exists('forks', $data)) {
@@ -89,7 +92,7 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setOwner($value_2);
             unset($data['owner']);
         }
-        elseif (\array_key_exists('owner', $data) && $data['owner'] === null) {
+        elseif (\array_key_exists('owner', $data)) {
             $object->setOwner(null);
         }
         if (\array_key_exists('private', $data)) {
@@ -358,21 +361,21 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setPushedAt(TypeValidator::assertDateTime($data['pushed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['pushed_at']);
         }
-        elseif (\array_key_exists('pushed_at', $data) && $data['pushed_at'] === null) {
+        elseif (\array_key_exists('pushed_at', $data)) {
             $object->setPushedAt(null);
         }
         if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt(TypeValidator::assertDateTime($data['created_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['created_at']);
         }
-        elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+        elseif (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt(null);
         }
         if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt(TypeValidator::assertDateTime($data['updated_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['updated_at']);
         }
-        elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+        elseif (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt(null);
         }
         if (\array_key_exists('allow_rebase_merge', $data)) {
@@ -384,7 +387,7 @@ class RepositoryNormalizer implements DenormalizerInterface, NormalizerInterface
             $object->setTemplateRepository($value_4);
             unset($data['template_repository']);
         }
-        elseif (\array_key_exists('template_repository', $data) && $data['template_repository'] === null) {
+        elseif (\array_key_exists('template_repository', $data)) {
             $object->setTemplateRepository(null);
         }
         if (\array_key_exists('temp_clone_token', $data)) {

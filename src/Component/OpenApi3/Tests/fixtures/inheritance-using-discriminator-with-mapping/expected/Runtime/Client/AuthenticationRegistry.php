@@ -10,6 +10,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Inh
 use Http\Client\Common\Plugin;
 use Http\Promise\Promise;
 use Psr\Http\Message\RequestInterface;
+/**
+ * @internal
+ */
 class AuthenticationRegistry implements Plugin
 {
     public const SCOPES_HEADER = 'X-OpenAPI-Authentication';

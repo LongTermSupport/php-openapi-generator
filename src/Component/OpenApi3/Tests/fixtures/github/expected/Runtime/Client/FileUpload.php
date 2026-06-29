@@ -8,6 +8,7 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Github\Runtime\Client;
 
 /**
+ * @internal
  * Value object for multipart/form-data binary file uploads.
  *
  * Carries the raw bytes alongside the filename and content type so the

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -53,7 +56,7 @@ class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setChild($value);
             unset($data['child']);
         }
-        elseif (\array_key_exists('child', $data) && $data['child'] === null) {
+        elseif (\array_key_exists('child', $data)) {
             $object->setChild(null);
         }
         if (\array_key_exists('inlineNullableChild', $data) && $data['inlineNullableChild'] !== null) {
@@ -61,7 +64,7 @@ class ParentNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setInlineNullableChild($value_1);
             unset($data['inlineNullableChild']);
         }
-        elseif (\array_key_exists('inlineNullableChild', $data) && $data['inlineNullableChild'] === null) {
+        elseif (\array_key_exists('inlineNullableChild', $data)) {
             $object->setInlineNullableChild(null);
         }
         foreach ($data as $key => $value_2) {

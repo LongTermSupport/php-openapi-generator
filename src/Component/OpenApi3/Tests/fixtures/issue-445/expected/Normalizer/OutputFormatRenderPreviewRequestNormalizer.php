@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputFormatRenderPreviewRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -54,7 +57,7 @@ class OutputFormatRenderPreviewRequestNormalizer implements DenormalizerInterfac
         if (\array_key_exists('outputFormat', $data) && $data['outputFormat'] !== null) {
             $object->setOutputFormat($data['outputFormat']);
         }
-        elseif (\array_key_exists('outputFormat', $data) && $data['outputFormat'] === null) {
+        elseif (\array_key_exists('outputFormat', $data)) {
             $object->setOutputFormat(null);
         }
         return $object;

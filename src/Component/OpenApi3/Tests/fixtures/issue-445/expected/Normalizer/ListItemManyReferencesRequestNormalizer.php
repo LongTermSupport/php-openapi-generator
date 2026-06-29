@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemManyReferencesRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class ListItemManyReferencesRequestNormalizer implements DenormalizerInterface, 
         if (\array_key_exists('references', $data) && $data['references'] !== null) {
             $object->setReferences($data['references']);
         }
-        elseif (\array_key_exists('references', $data) && $data['references'] === null) {
+        elseif (\array_key_exists('references', $data)) {
             $object->setReferences(null);
         }
         return $object;

@@ -9,6 +9,9 @@ namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Upp
 
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Serializer\SerializerInterface;
+/**
+ * @internal
+ */
 trait EndpointTrait
 {
     public function parseResponse(ResponseInterface $response, SerializerInterface $serializer, string $fetchMode = Client::FETCH_OBJECT): mixed

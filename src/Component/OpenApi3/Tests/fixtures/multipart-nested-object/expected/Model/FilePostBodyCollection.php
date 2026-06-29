@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model;
 
+/**
+ * @internal
+ */
 final class FilePostBodyCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultipartNestedObject\Model\FilePostBody> */

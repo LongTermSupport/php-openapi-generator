@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model;
 
+/**
+ * @internal
+ */
 final class AccountCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\AnyOfNullableReferenceProperty\Model\Account> */

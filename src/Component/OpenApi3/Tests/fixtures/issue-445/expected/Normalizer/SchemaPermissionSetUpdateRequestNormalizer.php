@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaPermissionSetUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -63,7 +66,7 @@ class SchemaPermissionSetUpdateRequestNormalizer implements DenormalizerInterfac
             $object->setUserRolesRights($values);
             unset($data['userRolesRights']);
         }
-        elseif (\array_key_exists('userRolesRights', $data) && $data['userRolesRights'] === null) {
+        elseif (\array_key_exists('userRolesRights', $data)) {
             $object->setUserRolesRights(null);
         }
         if (\array_key_exists('userRolesPermissionSetRights', $data) && $data['userRolesPermissionSetRights'] !== null) {
@@ -77,7 +80,7 @@ class SchemaPermissionSetUpdateRequestNormalizer implements DenormalizerInterfac
             $object->setUserRolesPermissionSetRights($values_1);
             unset($data['userRolesPermissionSetRights']);
         }
-        elseif (\array_key_exists('userRolesPermissionSetRights', $data) && $data['userRolesPermissionSetRights'] === null) {
+        elseif (\array_key_exists('userRolesPermissionSetRights', $data)) {
             $object->setUserRolesPermissionSetRights(null);
         }
         foreach ($data as $key => $value_4) {

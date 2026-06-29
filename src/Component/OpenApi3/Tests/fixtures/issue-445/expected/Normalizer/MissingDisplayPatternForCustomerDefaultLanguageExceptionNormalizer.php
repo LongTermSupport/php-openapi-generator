@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class MissingDisplayPatternForCustomerDefaultLanguageExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class MissingDisplayPatternForCustomerDefaultLanguageExceptionNormalizer impleme
             $object->setMissingTypes($values);
             unset($data['missingTypes']);
         }
-        elseif (\array_key_exists('missingTypes', $data) && $data['missingTypes'] === null) {
+        elseif (\array_key_exists('missingTypes', $data)) {
             $object->setMissingTypes(null);
         }
         foreach ($data as $key => $value_1) {

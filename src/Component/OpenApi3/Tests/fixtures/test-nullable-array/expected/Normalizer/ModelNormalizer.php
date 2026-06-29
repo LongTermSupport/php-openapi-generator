@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ModelNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,7 +65,7 @@ class ModelNormalizer implements DenormalizerInterface, NormalizerInterface, Den
             $object->setBar($values);
             unset($data['bar']);
         }
-        elseif (\array_key_exists('bar', $data) && $data['bar'] === null) {
+        elseif (\array_key_exists('bar', $data)) {
             $object->setBar(null);
         }
         foreach ($data as $key => $value_1) {

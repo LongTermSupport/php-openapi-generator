@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserSearchAndAggregationBaseRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,13 +63,13 @@ class UserSearchAndAggregationBaseRequestNormalizer implements DenormalizerInter
             }
             $object->setSearchBehaviors($values);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('lifeCycleFilter', $data)) {
@@ -81,7 +84,7 @@ class UserSearchAndAggregationBaseRequestNormalizer implements DenormalizerInter
             }
             $object->setUserRightsFilter($values_1);
         }
-        elseif (\array_key_exists('userRightsFilter', $data) && $data['userRightsFilter'] === null) {
+        elseif (\array_key_exists('userRightsFilter', $data)) {
             $object->setUserRightsFilter(null);
         }
         if (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] !== null) {
@@ -94,7 +97,7 @@ class UserSearchAndAggregationBaseRequestNormalizer implements DenormalizerInter
             }
             $object->setAggregationFilters($values_2);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         if (\array_key_exists('includeServiceUser', $data)) {

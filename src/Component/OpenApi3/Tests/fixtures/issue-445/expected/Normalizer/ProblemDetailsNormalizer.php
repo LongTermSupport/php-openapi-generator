@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ProblemDetailsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -72,7 +75,7 @@ class ProblemDetailsNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setExtensions($values);
         }
-        elseif (\array_key_exists('extensions', $data) && $data['extensions'] === null) {
+        elseif (\array_key_exists('extensions', $data)) {
             $object->setExtensions(null);
         }
         return $object;

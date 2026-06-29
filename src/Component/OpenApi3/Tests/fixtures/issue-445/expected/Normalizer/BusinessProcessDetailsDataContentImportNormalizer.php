@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessDetailsDataContentImportNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -63,7 +66,7 @@ class BusinessProcessDetailsDataContentImportNormalizer implements DenormalizerI
             $object->setItems($values);
             unset($data['items']);
         }
-        elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+        elseif (\array_key_exists('items', $data)) {
             $object->setItems(null);
         }
         return $object;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentPermissionExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class ContentPermissionExceptionNormalizer implements DenormalizerInterface, Nor
             $object->setContentRights($values);
             unset($data['contentRights']);
         }
-        elseif (\array_key_exists('contentRights', $data) && $data['contentRights'] === null) {
+        elseif (\array_key_exists('contentRights', $data)) {
             $object->setContentRights(null);
         }
         foreach ($data as $key => $value_1) {

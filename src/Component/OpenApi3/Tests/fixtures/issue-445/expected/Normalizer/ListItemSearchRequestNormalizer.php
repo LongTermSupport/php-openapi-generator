@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemSearchRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -62,14 +65,14 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setSearchBehaviors($values);
             unset($data['searchBehaviors']);
         }
-        elseif (\array_key_exists('searchBehaviors', $data) && $data['searchBehaviors'] === null) {
+        elseif (\array_key_exists('searchBehaviors', $data)) {
             $object->setSearchBehaviors(null);
         }
         if (\array_key_exists('filter', $data) && $data['filter'] !== null) {
             $object->setFilter($data['filter']);
             unset($data['filter']);
         }
-        elseif (\array_key_exists('filter', $data) && $data['filter'] === null) {
+        elseif (\array_key_exists('filter', $data)) {
             $object->setFilter(null);
         }
         if (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] !== null) {
@@ -83,7 +86,7 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setAggregationFilters($values_1);
             unset($data['aggregationFilters']);
         }
-        elseif (\array_key_exists('aggregationFilters', $data) && $data['aggregationFilters'] === null) {
+        elseif (\array_key_exists('aggregationFilters', $data)) {
             $object->setAggregationFilters(null);
         }
         if (\array_key_exists('includeAllSchemaChildren', $data)) {
@@ -104,7 +107,7 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setSchemaIds($values_2);
             unset($data['schemaIds']);
         }
-        elseif (\array_key_exists('schemaIds', $data) && $data['schemaIds'] === null) {
+        elseif (\array_key_exists('schemaIds', $data)) {
             $object->setSchemaIds(null);
         }
         if (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] !== null) {
@@ -117,7 +120,7 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setSearchLanguages($values_3);
             unset($data['searchLanguages']);
         }
-        elseif (\array_key_exists('searchLanguages', $data) && $data['searchLanguages'] === null) {
+        elseif (\array_key_exists('searchLanguages', $data)) {
             $object->setSearchLanguages(null);
         }
         if (\array_key_exists('lifeCycleFilter', $data)) {
@@ -135,7 +138,7 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setSort($values_4);
             unset($data['sort']);
         }
-        elseif (\array_key_exists('sort', $data) && $data['sort'] === null) {
+        elseif (\array_key_exists('sort', $data)) {
             $object->setSort(null);
         }
         if (\array_key_exists('limit', $data)) {
@@ -160,7 +163,7 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setResolveBehaviors($values_5);
             unset($data['resolveBehaviors']);
         }
-        elseif (\array_key_exists('resolveBehaviors', $data) && $data['resolveBehaviors'] === null) {
+        elseif (\array_key_exists('resolveBehaviors', $data)) {
             $object->setResolveBehaviors(null);
         }
         if (\array_key_exists('aggregators', $data) && $data['aggregators'] !== null) {
@@ -174,7 +177,7 @@ class ListItemSearchRequestNormalizer implements DenormalizerInterface, Normaliz
             $object->setAggregators($values_6);
             unset($data['aggregators']);
         }
-        elseif (\array_key_exists('aggregators', $data) && $data['aggregators'] === null) {
+        elseif (\array_key_exists('aggregators', $data)) {
             $object->setAggregators(null);
         }
         foreach ($data as $key => $value_10) {

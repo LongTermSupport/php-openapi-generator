@@ -8,6 +8,7 @@ declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ThrowUnexceptedStatusCode\Model;
 
 /**
+ * @internal
  * @extends \ArrayObject<string, mixed>
  */
 class FooPayload extends \ArrayObject

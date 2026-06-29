@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class TopicSearchResultItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -125,7 +128,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setRelated($values_1);
             unset($data['related']);
         }
-        elseif (\array_key_exists('related', $data) && $data['related'] === null) {
+        elseif (\array_key_exists('related', $data)) {
             $object->setRelated(null);
         }
         if (\array_key_exists('aliases', $data) && $data['aliases'] !== null) {
@@ -139,7 +142,7 @@ class TopicSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setAliases($values_2);
             unset($data['aliases']);
         }
-        elseif (\array_key_exists('aliases', $data) && $data['aliases'] === null) {
+        elseif (\array_key_exists('aliases', $data)) {
             $object->setAliases(null);
         }
         foreach ($data as $key => $value_6) {

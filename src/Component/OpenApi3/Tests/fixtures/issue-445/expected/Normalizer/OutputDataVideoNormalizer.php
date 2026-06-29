@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class OutputDataVideoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -95,7 +98,7 @@ class OutputDataVideoNormalizer implements DenormalizerInterface, NormalizerInte
             $object->setSprites($values);
             unset($data['sprites']);
         }
-        elseif (\array_key_exists('sprites', $data) && $data['sprites'] === null) {
+        elseif (\array_key_exists('sprites', $data)) {
             $object->setSprites(null);
         }
         return $object;

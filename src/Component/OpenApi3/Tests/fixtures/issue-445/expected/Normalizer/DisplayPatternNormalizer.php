@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class DisplayPatternNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class DisplayPatternNormalizer implements DenormalizerInterface, NormalizerInter
         if (\array_key_exists('templates', $data) && $data['templates'] !== null) {
             $object->setTemplates($data['templates']);
         }
-        elseif (\array_key_exists('templates', $data) && $data['templates'] === null) {
+        elseif (\array_key_exists('templates', $data)) {
             $object->setTemplates(null);
         }
         return $object;

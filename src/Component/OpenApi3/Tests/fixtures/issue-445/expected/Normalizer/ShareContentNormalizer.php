@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ShareContentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class ShareContentNormalizer implements DenormalizerInterface, NormalizerInterfa
             }
             $object->setOutputFormatIds($values);
         }
-        elseif (\array_key_exists('outputFormatIds', $data) && $data['outputFormatIds'] === null) {
+        elseif (\array_key_exists('outputFormatIds', $data)) {
             $object->setOutputFormatIds(null);
         }
         return $object;

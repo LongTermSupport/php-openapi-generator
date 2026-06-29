@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class IssueSearchResultItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -110,7 +113,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setAssignees($values);
             unset($data['assignees']);
         }
-        elseif (\array_key_exists('assignees', $data) && $data['assignees'] === null) {
+        elseif (\array_key_exists('assignees', $data)) {
             $object->setAssignees(null);
         }
         if (\array_key_exists('user', $data) && $data['user'] !== null) {
@@ -118,7 +121,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setUser($value_2);
             unset($data['user']);
         }
-        elseif (\array_key_exists('user', $data) && $data['user'] === null) {
+        elseif (\array_key_exists('user', $data)) {
             $object->setUser(null);
         }
         if (\array_key_exists('labels', $data)) {
@@ -141,7 +144,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setAssignee($value_5);
             unset($data['assignee']);
         }
-        elseif (\array_key_exists('assignee', $data) && $data['assignee'] === null) {
+        elseif (\array_key_exists('assignee', $data)) {
             $object->setAssignee(null);
         }
         if (\array_key_exists('milestone', $data) && $data['milestone'] !== null) {
@@ -149,7 +152,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setMilestone($value_6);
             unset($data['milestone']);
         }
-        elseif (\array_key_exists('milestone', $data) && $data['milestone'] === null) {
+        elseif (\array_key_exists('milestone', $data)) {
             $object->setMilestone(null);
         }
         if (\array_key_exists('comments', $data)) {
@@ -168,7 +171,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setClosedAt(TypeValidator::assertDateTime($data['closed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['closed_at']);
         }
-        elseif (\array_key_exists('closed_at', $data) && $data['closed_at'] === null) {
+        elseif (\array_key_exists('closed_at', $data)) {
             $object->setClosedAt(null);
         }
         if (\array_key_exists('text_matches', $data)) {
@@ -225,7 +228,7 @@ class IssueSearchResultItemNormalizer implements DenormalizerInterface, Normaliz
             $object->setPerformedViaGithubApp($value_11);
             unset($data['performed_via_github_app']);
         }
-        elseif (\array_key_exists('performed_via_github_app', $data) && $data['performed_via_github_app'] === null) {
+        elseif (\array_key_exists('performed_via_github_app', $data)) {
             $object->setPerformedViaGithubApp(null);
         }
         foreach ($data as $key => $value_12) {

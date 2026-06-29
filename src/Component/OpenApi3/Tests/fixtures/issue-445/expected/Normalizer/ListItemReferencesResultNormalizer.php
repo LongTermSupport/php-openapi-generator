@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ListItemReferencesResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -51,7 +54,7 @@ class ListItemReferencesResultNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('metadataReferences', $data) && $data['metadataReferences'] !== null) {
             $object->setMetadataReferences($data['metadataReferences']);
         }
-        elseif (\array_key_exists('metadataReferences', $data) && $data['metadataReferences'] === null) {
+        elseif (\array_key_exists('metadataReferences', $data)) {
             $object->setMetadataReferences(null);
         }
         return $object;

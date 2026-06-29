@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Model;
 
+/**
+ * @internal
+ */
 final class BodyCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\MultiSpecs\Api1\Model\Body> */

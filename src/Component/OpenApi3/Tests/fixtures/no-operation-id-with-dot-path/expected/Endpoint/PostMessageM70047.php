@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Endpoint;
 
+/**
+ * @internal
+ */
 class PostMessageM70047 extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\NoOperationIdWithDotPath\Runtime\Client\Endpoint
 {
     /**

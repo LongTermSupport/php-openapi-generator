@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Exception;
 
+/**
+ * @internal
+ */
 class UserRoleGetManyBadRequestException extends BadRequestException
 {
     private \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue445\Model\RequestSizeLimitExceededException $requestSizeLimitExceededException;

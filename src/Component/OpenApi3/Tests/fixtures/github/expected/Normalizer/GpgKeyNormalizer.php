@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class GpgKeyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -113,7 +116,7 @@ class GpgKeyNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setExpiresAt(TypeValidator::assertDateTime($data['expires_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['expires_at']);
         }
-        elseif (\array_key_exists('expires_at', $data) && $data['expires_at'] === null) {
+        elseif (\array_key_exists('expires_at', $data)) {
             $object->setExpiresAt(null);
         }
         if (\array_key_exists('raw_key', $data)) {

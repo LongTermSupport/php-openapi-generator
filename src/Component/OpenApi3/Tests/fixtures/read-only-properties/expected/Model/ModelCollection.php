@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReadOnlyProperties\Model;
 
+/**
+ * @internal
+ */
 final class ModelCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ReadOnlyProperties\Model\Model> */

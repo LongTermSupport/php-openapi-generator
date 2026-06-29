@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class JobNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -95,7 +98,7 @@ class JobNormalizer implements DenormalizerInterface, NormalizerInterface, Denor
             $object->setCompletedAt(TypeValidator::assertDateTime($data['completed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['completed_at']);
         }
-        elseif (\array_key_exists('completed_at', $data) && $data['completed_at'] === null) {
+        elseif (\array_key_exists('completed_at', $data)) {
             $object->setCompletedAt(null);
         }
         if (\array_key_exists('name', $data)) {

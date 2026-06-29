@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessProcessDefinitionCreateExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -94,7 +97,7 @@ class BusinessProcessDefinitionCreateExceptionNormalizer implements Denormalizer
             $object->setProcessDefinitionIds($values);
             unset($data['processDefinitionIds']);
         }
-        elseif (\array_key_exists('processDefinitionIds', $data) && $data['processDefinitionIds'] === null) {
+        elseif (\array_key_exists('processDefinitionIds', $data)) {
             $object->setProcessDefinitionIds(null);
         }
         foreach ($data as $key => $value_1) {

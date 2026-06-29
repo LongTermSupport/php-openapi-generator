@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class CustomerInfoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -108,7 +111,7 @@ class CustomerInfoNormalizer implements DenormalizerInterface, NormalizerInterfa
             }
             $object->setApps($values_3);
         }
-        elseif (\array_key_exists('apps', $data) && $data['apps'] === null) {
+        elseif (\array_key_exists('apps', $data)) {
             $object->setApps(null);
         }
         if (\array_key_exists('modificationDate', $data)) {

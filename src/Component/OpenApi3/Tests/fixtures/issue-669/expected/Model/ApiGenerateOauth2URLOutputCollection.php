@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model;
 
+/**
+ * @internal
+ */
 final class ApiGenerateOauth2URLOutputCollection
 {
     /** @var list<\LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue669\Model\ApiGenerateOauth2URLOutput> */

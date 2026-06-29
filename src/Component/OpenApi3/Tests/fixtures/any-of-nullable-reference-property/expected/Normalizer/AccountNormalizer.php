@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -71,7 +74,7 @@ class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setCountryOfBirth($value);
             unset($data['countryOfBirth']);
         }
-        elseif (\array_key_exists('countryOfBirth', $data) && $data['countryOfBirth'] === null) {
+        elseif (\array_key_exists('countryOfBirth', $data)) {
             $object->setCountryOfBirth(null);
         }
         if (\array_key_exists('country', $data)) {
@@ -99,7 +102,7 @@ class AccountNormalizer implements DenormalizerInterface, NormalizerInterface, D
             $object->setNationality($value_3);
             unset($data['nationality']);
         }
-        elseif (\array_key_exists('nationality', $data) && $data['nationality'] === null) {
+        elseif (\array_key_exists('nationality', $data)) {
             $object->setNationality(null);
         }
         foreach ($data as $key => $value_7) {

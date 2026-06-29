@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UnableToDeleteUserRoleReferencedInIdentityProviderGroupMappingExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -98,7 +101,7 @@ class UnableToDeleteUserRoleReferencedInIdentityProviderGroupMappingExceptionNor
             $object->setIdentityProviderIds($values);
             unset($data['identityProviderIds']);
         }
-        elseif (\array_key_exists('identityProviderIds', $data) && $data['identityProviderIds'] === null) {
+        elseif (\array_key_exists('identityProviderIds', $data)) {
             $object->setIdentityProviderIds(null);
         }
         foreach ($data as $key => $value_1) {

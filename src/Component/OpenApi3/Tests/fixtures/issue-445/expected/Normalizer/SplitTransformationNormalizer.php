@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SplitTransformationNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class SplitTransformationNormalizer implements DenormalizerInterface, Normalizer
             $object->setSeparators($data['separators']);
             unset($data['separators']);
         }
-        elseif (\array_key_exists('separators', $data) && $data['separators'] === null) {
+        elseif (\array_key_exists('separators', $data)) {
             $object->setSeparators(null);
         }
         if (\array_key_exists('keepEmpty', $data)) {

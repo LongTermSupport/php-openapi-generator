@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Oas31NullableObjectProperty\Exception;
 
+/**
+ * @internal
+ */
 interface ClientException extends ApiException
 {
 }

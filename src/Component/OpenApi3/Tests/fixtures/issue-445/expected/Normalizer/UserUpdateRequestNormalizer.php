@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -79,7 +82,7 @@ class UserUpdateRequestNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setUserRoles($values);
             unset($data['userRoles']);
         }
-        elseif (\array_key_exists('userRoles', $data) && $data['userRoles'] === null) {
+        elseif (\array_key_exists('userRoles', $data)) {
             $object->setUserRoles(null);
         }
         if (\array_key_exists('comment', $data)) {
@@ -94,7 +97,7 @@ class UserUpdateRequestNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setAddress($data['address']);
             unset($data['address']);
         }
-        elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+        elseif (\array_key_exists('address', $data)) {
             $object->setAddress(null);
         }
         if (\array_key_exists('identityProviderId', $data)) {

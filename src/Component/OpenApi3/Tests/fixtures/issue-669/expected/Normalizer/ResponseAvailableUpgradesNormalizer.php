@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ResponseAvailableUpgradesNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -59,7 +62,7 @@ class ResponseAvailableUpgradesNormalizer implements DenormalizerInterface, Norm
             $object->setAvailableUpgradeVersions($values);
             unset($data['available_upgrade_versions']);
         }
-        elseif (\array_key_exists('available_upgrade_versions', $data) && $data['available_upgrade_versions'] === null) {
+        elseif (\array_key_exists('available_upgrade_versions', $data)) {
             $object->setAvailableUpgradeVersions(null);
         }
         foreach ($data as $key => $value_2) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaFieldAnalyzerInvalidExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -102,7 +105,7 @@ class SchemaFieldAnalyzerInvalidExceptionNormalizer implements DenormalizerInter
             $object->setAnalyzers($values);
             unset($data['analyzers']);
         }
-        elseif (\array_key_exists('analyzers', $data) && $data['analyzers'] === null) {
+        elseif (\array_key_exists('analyzers', $data)) {
             $object->setAnalyzers(null);
         }
         if (\array_key_exists('allowedAnalyzers', $data) && $data['allowedAnalyzers'] !== null) {
@@ -115,7 +118,7 @@ class SchemaFieldAnalyzerInvalidExceptionNormalizer implements DenormalizerInter
             $object->setAllowedAnalyzers($values_1);
             unset($data['allowedAnalyzers']);
         }
-        elseif (\array_key_exists('allowedAnalyzers', $data) && $data['allowedAnalyzers'] === null) {
+        elseif (\array_key_exists('allowedAnalyzers', $data)) {
             $object->setAllowedAnalyzers(null);
         }
         foreach ($data as $key => $value_2) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ImportTransferRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,7 +60,7 @@ class ImportTransferRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setLayerSchemaIds($values);
         }
-        elseif (\array_key_exists('layerSchemaIds', $data) && $data['layerSchemaIds'] === null) {
+        elseif (\array_key_exists('layerSchemaIds', $data)) {
             $object->setLayerSchemaIds(null);
         }
         if (\array_key_exists('metadata', $data) && $data['metadata'] !== null) {
@@ -69,7 +72,7 @@ class ImportTransferRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setMetadata($values_1);
         }
-        elseif (\array_key_exists('metadata', $data) && $data['metadata'] === null) {
+        elseif (\array_key_exists('metadata', $data)) {
             $object->setMetadata(null);
         }
         if (\array_key_exists('contentPermissionSetIds', $data) && $data['contentPermissionSetIds'] !== null) {
@@ -81,7 +84,7 @@ class ImportTransferRequestNormalizer implements DenormalizerInterface, Normaliz
             }
             $object->setContentPermissionSetIds($values_2);
         }
-        elseif (\array_key_exists('contentPermissionSetIds', $data) && $data['contentPermissionSetIds'] === null) {
+        elseif (\array_key_exists('contentPermissionSetIds', $data)) {
             $object->setContentPermissionSetIds(null);
         }
         return $object;

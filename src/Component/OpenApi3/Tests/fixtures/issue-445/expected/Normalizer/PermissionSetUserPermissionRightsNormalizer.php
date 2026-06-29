@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PermissionSetUserPermissionRightsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -60,7 +63,7 @@ class PermissionSetUserPermissionRightsNormalizer implements DenormalizerInterfa
             }
             $object->setPermissionSetRights($values);
         }
-        elseif (\array_key_exists('permissionSetRights', $data) && $data['permissionSetRights'] === null) {
+        elseif (\array_key_exists('permissionSetRights', $data)) {
             $object->setPermissionSetRights(null);
         }
         return $object;

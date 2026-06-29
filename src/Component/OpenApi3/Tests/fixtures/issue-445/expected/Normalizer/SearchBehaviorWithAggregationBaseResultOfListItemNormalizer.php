@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SearchBehaviorWithAggregationBaseResultOfListItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -90,7 +93,7 @@ class SearchBehaviorWithAggregationBaseResultOfListItemNormalizer implements Den
             $object->setQueryDebugInformation($values_1);
             unset($data['queryDebugInformation']);
         }
-        elseif (\array_key_exists('queryDebugInformation', $data) && $data['queryDebugInformation'] === null) {
+        elseif (\array_key_exists('queryDebugInformation', $data)) {
             $object->setQueryDebugInformation(null);
         }
         if (\array_key_exists('aggregationResults', $data) && $data['aggregationResults'] !== null) {
@@ -104,7 +107,7 @@ class SearchBehaviorWithAggregationBaseResultOfListItemNormalizer implements Den
             $object->setAggregationResults($values_2);
             unset($data['aggregationResults']);
         }
-        elseif (\array_key_exists('aggregationResults', $data) && $data['aggregationResults'] === null) {
+        elseif (\array_key_exists('aggregationResults', $data)) {
             $object->setAggregationResults(null);
         }
         foreach ($data as $key => $value_6) {

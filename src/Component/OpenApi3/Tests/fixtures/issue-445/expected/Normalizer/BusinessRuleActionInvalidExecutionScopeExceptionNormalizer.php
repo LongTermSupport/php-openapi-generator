@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BusinessRuleActionInvalidExecutionScopeExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -94,7 +97,7 @@ class BusinessRuleActionInvalidExecutionScopeExceptionNormalizer implements Deno
             $object->setAllowedScopes($values);
             unset($data['allowedScopes']);
         }
-        elseif (\array_key_exists('allowedScopes', $data) && $data['allowedScopes'] === null) {
+        elseif (\array_key_exists('allowedScopes', $data)) {
             $object->setAllowedScopes(null);
         }
         foreach ($data as $key => $value_1) {

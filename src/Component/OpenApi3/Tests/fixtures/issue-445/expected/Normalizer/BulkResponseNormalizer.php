@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class BulkResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -58,7 +61,7 @@ class BulkResponseNormalizer implements DenormalizerInterface, NormalizerInterfa
             }
             $object->setRows($values);
         }
-        elseif (\array_key_exists('rows', $data) && $data['rows'] === null) {
+        elseif (\array_key_exists('rows', $data)) {
             $object->setRows(null);
         }
         return $object;

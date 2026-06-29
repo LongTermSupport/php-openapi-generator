@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class SchemaFieldDisplayPatternTypeNotSupportedExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -102,7 +105,7 @@ class SchemaFieldDisplayPatternTypeNotSupportedExceptionNormalizer implements De
             $object->setSupportedDisplayPatternTypes($values);
             unset($data['supportedDisplayPatternTypes']);
         }
-        elseif (\array_key_exists('supportedDisplayPatternTypes', $data) && $data['supportedDisplayPatternTypes'] === null) {
+        elseif (\array_key_exists('supportedDisplayPatternTypes', $data)) {
             $object->setSupportedDisplayPatternTypes(null);
         }
         foreach ($data as $key => $value_1) {

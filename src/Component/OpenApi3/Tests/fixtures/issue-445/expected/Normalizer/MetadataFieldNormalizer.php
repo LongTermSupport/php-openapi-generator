@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class MetadataFieldNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -66,7 +69,7 @@ class MetadataFieldNormalizer implements DenormalizerInterface, NormalizerInterf
             }
             $object->setAvailableKeyFields($values);
         }
-        elseif (\array_key_exists('availableKeyFields', $data) && $data['availableKeyFields'] === null) {
+        elseif (\array_key_exists('availableKeyFields', $data)) {
             $object->setAvailableKeyFields(null);
         }
         return $object;

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,7 +59,7 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements Denorma
             $object->setRequiredStatusChecks($value);
             unset($data['required_status_checks']);
         }
-        elseif (\array_key_exists('required_status_checks', $data) && $data['required_status_checks'] === null) {
+        elseif (\array_key_exists('required_status_checks', $data)) {
             $object->setRequiredStatusChecks(null);
         }
         if (\array_key_exists('enforce_admins', $data)) {
@@ -68,7 +71,7 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements Denorma
             $object->setRequiredPullRequestReviews($value_1);
             unset($data['required_pull_request_reviews']);
         }
-        elseif (\array_key_exists('required_pull_request_reviews', $data) && $data['required_pull_request_reviews'] === null) {
+        elseif (\array_key_exists('required_pull_request_reviews', $data)) {
             $object->setRequiredPullRequestReviews(null);
         }
         if (\array_key_exists('restrictions', $data) && $data['restrictions'] !== null) {
@@ -76,7 +79,7 @@ class ReposOwnerRepoBranchesBranchProtectionPutBodyNormalizer implements Denorma
             $object->setRestrictions($value_2);
             unset($data['restrictions']);
         }
-        elseif (\array_key_exists('restrictions', $data) && $data['restrictions'] === null) {
+        elseif (\array_key_exists('restrictions', $data)) {
             $object->setRestrictions(null);
         }
         if (\array_key_exists('required_linear_history', $data)) {

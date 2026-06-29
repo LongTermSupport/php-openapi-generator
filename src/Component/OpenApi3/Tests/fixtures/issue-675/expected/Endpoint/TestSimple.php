@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue675\Endpoint;
 
+/**
+ * @internal
+ */
 class TestSimple extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue675\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue675\Runtime\Client\Endpoint
 {
     /**

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class AggregationResultNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,7 +67,7 @@ class AggregationResultNormalizer implements DenormalizerInterface, NormalizerIn
             }
             $object->setAggregationResultItems($values);
         }
-        elseif (\array_key_exists('aggregationResultItems', $data) && $data['aggregationResultItems'] === null) {
+        elseif (\array_key_exists('aggregationResultItems', $data)) {
             $object->setAggregationResultItems(null);
         }
         return $object;

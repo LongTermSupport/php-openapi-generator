@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Endpoint;
 
+/**
+ * @internal
+ */
 class MimeTypeGeneratedValidDocBlock extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Issue810\Runtime\Client\Endpoint
 {
     /**

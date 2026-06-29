@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ShareNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -69,7 +72,7 @@ class ShareNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (\array_key_exists('expirationDate', $data) && $data['expirationDate'] !== null) {
             $object->setExpirationDate(TypeValidator::assertDateTime($data['expirationDate'], 'Y-m-d\TH:i:sP', 'datetime'));
         }
-        elseif (\array_key_exists('expirationDate', $data) && $data['expirationDate'] === null) {
+        elseif (\array_key_exists('expirationDate', $data)) {
             $object->setExpirationDate(null);
         }
         if (\array_key_exists('shareType', $data)) {

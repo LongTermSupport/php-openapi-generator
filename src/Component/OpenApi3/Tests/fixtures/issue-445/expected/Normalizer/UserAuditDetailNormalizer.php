@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class UserAuditDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -57,13 +60,13 @@ class UserAuditDetailNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('createdByUser', $data) && $data['createdByUser'] !== null) {
             $object->setCreatedByUser($data['createdByUser']);
         }
-        elseif (\array_key_exists('createdByUser', $data) && $data['createdByUser'] === null) {
+        elseif (\array_key_exists('createdByUser', $data)) {
             $object->setCreatedByUser(null);
         }
         if (\array_key_exists('modifiedByUser', $data) && $data['modifiedByUser'] !== null) {
             $object->setModifiedByUser($data['modifiedByUser']);
         }
-        elseif (\array_key_exists('modifiedByUser', $data) && $data['modifiedByUser'] === null) {
+        elseif (\array_key_exists('modifiedByUser', $data)) {
             $object->setModifiedByUser(null);
         }
         return $object;

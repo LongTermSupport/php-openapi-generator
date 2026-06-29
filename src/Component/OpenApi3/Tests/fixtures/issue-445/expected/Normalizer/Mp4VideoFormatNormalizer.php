@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class Mp4VideoFormatNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -56,14 +59,14 @@ class Mp4VideoFormatNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setResizeAction($data['resizeAction']);
             unset($data['resizeAction']);
         }
-        elseif (\array_key_exists('resizeAction', $data) && $data['resizeAction'] === null) {
+        elseif (\array_key_exists('resizeAction', $data)) {
             $object->setResizeAction(null);
         }
         if (\array_key_exists('audioCodec', $data) && $data['audioCodec'] !== null) {
             $object->setAudioCodec($data['audioCodec']);
             unset($data['audioCodec']);
         }
-        elseif (\array_key_exists('audioCodec', $data) && $data['audioCodec'] === null) {
+        elseif (\array_key_exists('audioCodec', $data)) {
             $object->setAudioCodec(null);
         }
         if (\array_key_exists('preset', $data)) {

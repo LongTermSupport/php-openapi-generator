@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class FileTransferDetailNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -84,7 +87,7 @@ class FileTransferDetailNormalizer implements DenormalizerInterface, NormalizerI
             $object->setFileMetadata($data['fileMetadata']);
             unset($data['fileMetadata']);
         }
-        elseif (\array_key_exists('fileMetadata', $data) && $data['fileMetadata'] === null) {
+        elseif (\array_key_exists('fileMetadata', $data)) {
             $object->setFileMetadata(null);
         }
         if (\array_key_exists('outputItems', $data) && $data['outputItems'] !== null) {
@@ -98,7 +101,7 @@ class FileTransferDetailNormalizer implements DenormalizerInterface, NormalizerI
             $object->setOutputItems($values);
             unset($data['outputItems']);
         }
-        elseif (\array_key_exists('outputItems', $data) && $data['outputItems'] === null) {
+        elseif (\array_key_exists('outputItems', $data)) {
             $object->setOutputItems(null);
         }
         foreach ($data as $key => $value_2) {

@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class ContentLayerSameRootExceptionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -99,7 +102,7 @@ class ContentLayerSameRootExceptionNormalizer implements DenormalizerInterface, 
             $object->setLayerIdsByRootSchema($values);
             unset($data['layerIdsByRootSchema']);
         }
-        elseif (\array_key_exists('layerIdsByRootSchema', $data) && $data['layerIdsByRootSchema'] === null) {
+        elseif (\array_key_exists('layerIdsByRootSchema', $data)) {
             $object->setLayerIdsByRootSchema(null);
         }
         foreach ($data as $key => $value_2) {

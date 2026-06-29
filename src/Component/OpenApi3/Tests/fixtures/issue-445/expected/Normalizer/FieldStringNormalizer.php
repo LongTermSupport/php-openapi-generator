@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class FieldStringNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -64,14 +67,14 @@ class FieldStringNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setNames($data['names']);
             unset($data['names']);
         }
-        elseif (\array_key_exists('names', $data) && $data['names'] === null) {
+        elseif (\array_key_exists('names', $data)) {
             $object->setNames(null);
         }
         if (\array_key_exists('descriptions', $data) && $data['descriptions'] !== null) {
             $object->setDescriptions($data['descriptions']);
             unset($data['descriptions']);
         }
-        elseif (\array_key_exists('descriptions', $data) && $data['descriptions'] === null) {
+        elseif (\array_key_exists('descriptions', $data)) {
             $object->setDescriptions(null);
         }
         if (\array_key_exists('required', $data)) {
@@ -125,7 +128,7 @@ class FieldStringNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setIndexAnalyzers($values);
             unset($data['indexAnalyzers']);
         }
-        elseif (\array_key_exists('indexAnalyzers', $data) && $data['indexAnalyzers'] === null) {
+        elseif (\array_key_exists('indexAnalyzers', $data)) {
             $object->setIndexAnalyzers(null);
         }
         if (\array_key_exists('simpleSearchAnalyzers', $data) && $data['simpleSearchAnalyzers'] !== null) {
@@ -139,7 +142,7 @@ class FieldStringNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setSimpleSearchAnalyzers($values_1);
             unset($data['simpleSearchAnalyzers']);
         }
-        elseif (\array_key_exists('simpleSearchAnalyzers', $data) && $data['simpleSearchAnalyzers'] === null) {
+        elseif (\array_key_exists('simpleSearchAnalyzers', $data)) {
             $object->setSimpleSearchAnalyzers(null);
         }
         if (\array_key_exists('multiLine', $data)) {
@@ -156,7 +159,7 @@ class FieldStringNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setGrantedValues($values_2);
             unset($data['grantedValues']);
         }
-        elseif (\array_key_exists('grantedValues', $data) && $data['grantedValues'] === null) {
+        elseif (\array_key_exists('grantedValues', $data)) {
             $object->setGrantedValues(null);
         }
         if (\array_key_exists('boost', $data)) {

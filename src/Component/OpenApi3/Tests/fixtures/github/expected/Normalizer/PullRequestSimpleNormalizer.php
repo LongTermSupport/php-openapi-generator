@@ -17,6 +17,9 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+/**
+ * @internal
+ */
 class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
@@ -120,7 +123,7 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setUser($value);
             unset($data['user']);
         }
-        elseif (\array_key_exists('user', $data) && $data['user'] === null) {
+        elseif (\array_key_exists('user', $data)) {
             $object->setUser(null);
         }
         if (\array_key_exists('body', $data)) {
@@ -143,7 +146,7 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setMilestone($value_3);
             unset($data['milestone']);
         }
-        elseif (\array_key_exists('milestone', $data) && $data['milestone'] === null) {
+        elseif (\array_key_exists('milestone', $data)) {
             $object->setMilestone(null);
         }
         if (\array_key_exists('active_lock_reason', $data)) {
@@ -162,14 +165,14 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setClosedAt(TypeValidator::assertDateTime($data['closed_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['closed_at']);
         }
-        elseif (\array_key_exists('closed_at', $data) && $data['closed_at'] === null) {
+        elseif (\array_key_exists('closed_at', $data)) {
             $object->setClosedAt(null);
         }
         if (\array_key_exists('merged_at', $data) && $data['merged_at'] !== null) {
             $object->setMergedAt(TypeValidator::assertDateTime($data['merged_at'], 'Y-m-d\TH:i:sP', 'datetime'));
             unset($data['merged_at']);
         }
-        elseif (\array_key_exists('merged_at', $data) && $data['merged_at'] === null) {
+        elseif (\array_key_exists('merged_at', $data)) {
             $object->setMergedAt(null);
         }
         if (\array_key_exists('merge_commit_sha', $data)) {
@@ -181,7 +184,7 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setAssignee($value_4);
             unset($data['assignee']);
         }
-        elseif (\array_key_exists('assignee', $data) && $data['assignee'] === null) {
+        elseif (\array_key_exists('assignee', $data)) {
             $object->setAssignee(null);
         }
         if (\array_key_exists('assignees', $data) && $data['assignees'] !== null) {
@@ -195,7 +198,7 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setAssignees($values_1);
             unset($data['assignees']);
         }
-        elseif (\array_key_exists('assignees', $data) && $data['assignees'] === null) {
+        elseif (\array_key_exists('assignees', $data)) {
             $object->setAssignees(null);
         }
         if (\array_key_exists('requested_reviewers', $data) && $data['requested_reviewers'] !== null) {
@@ -209,7 +212,7 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setRequestedReviewers($values_2);
             unset($data['requested_reviewers']);
         }
-        elseif (\array_key_exists('requested_reviewers', $data) && $data['requested_reviewers'] === null) {
+        elseif (\array_key_exists('requested_reviewers', $data)) {
             $object->setRequestedReviewers(null);
         }
         if (\array_key_exists('requested_teams', $data) && $data['requested_teams'] !== null) {
@@ -223,7 +226,7 @@ class PullRequestSimpleNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setRequestedTeams($values_3);
             unset($data['requested_teams']);
         }
-        elseif (\array_key_exists('requested_teams', $data) && $data['requested_teams'] === null) {
+        elseif (\array_key_exists('requested_teams', $data)) {
             $object->setRequestedTeams(null);
         }
         if (\array_key_exists('head', $data)) {

@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\Exceptions\Exception;
 
+/**
+ * @internal
+ */
 class TestNoTagInternalServerErrorException extends InternalServerErrorException
 {
     private ?\Psr\Http\Message\ResponseInterface $response;

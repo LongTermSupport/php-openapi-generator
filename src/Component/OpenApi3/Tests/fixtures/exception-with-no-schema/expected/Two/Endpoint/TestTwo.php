@@ -7,6 +7,9 @@
 declare (strict_types=1);
 namespace LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\Two\Endpoint;
 
+/**
+ * @internal
+ */
 class TestTwo extends \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\Two\Runtime\Client\BaseEndpoint implements \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\Two\Runtime\Client\Endpoint
 {
     use \LongTermSupport\OpenApiGenerator\Component\OpenApi3\Tests\Expected\ExceptionWithNoSchema\Two\Runtime\Client\EndpointTrait;

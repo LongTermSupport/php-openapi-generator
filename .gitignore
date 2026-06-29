@@ -27,3 +27,11 @@ qaConfig/.qa-lock/
 **/.rector.cache/
 **/phpstan-result.json
 # END php-qa-ci managed QA runtime excludes
+
+# ClaudeMdInjector backup (session artifact, never commit)
+.CLAUDE.md.pre-inject
+
+# Harness session artifacts (runtime state, never commit)
+.claude/scheduled_tasks.lock
+.claude/scheduled_tasks.json
+.claude/background-processes.jsonl

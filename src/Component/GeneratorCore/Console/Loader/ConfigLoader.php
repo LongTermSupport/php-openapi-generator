@@ -97,6 +97,8 @@ class ConfigLoader implements ConfigLoaderInterface
             'custom-string-format-mapping'  => [],
             'validation'                    => false,
             'include-null-value'            => true,
+            'api-annotation'                => 'internal',
+            'api-annotation-overrides'      => [],
         ];
     }
 }

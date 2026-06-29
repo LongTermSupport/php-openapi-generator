@@ -21,10 +21,29 @@ class Printer
 
     private bool $cleanGenerated = true;
 
+    /**
+     * @param string       $apiAnnotation         Default visibility docblock tag stamped on every generated
+     *                                             class-like: 'internal' (default), 'api', or 'none' (stamp
+     *                                             nothing). A library publishing generated SDK code keeps the
+     *                                             safe 'internal' default; a project that ships the generated
+     *                                             code AS its public surface sets 'api'.
+     * @param list<string> $apiAnnotationOverrides PCRE patterns matched against each generated class's FQCN;
+     *                                             a class matching ANY pattern is stamped '@api' regardless of
+     *                                             $apiAnnotation. Lets a project keep the 'internal' default
+     *                                             but promote SOME generated classes (e.g. a specific model
+     *                                             namespace) to the public API surface.
+     */
     public function __construct(
         private readonly PrettyPrinterAbstract $prettyPrinter,
         private readonly string $fixerConfig = '',
+        private readonly string $apiAnnotation = 'internal',
+        private readonly array $apiAnnotationOverrides = [],
     ) {
+        if (!\in_array($this->apiAnnotation, ['internal', 'api', 'none'], true)) {
+            throw new \InvalidArgumentException(
+                \sprintf("api-annotation must be 'internal', 'api' or 'none'; got '%s'", $this->apiAnnotation),
+            );
+        }
     }
 
     public function setUseFixer(bool $useFixer): void
@@ -58,7 +77,7 @@ class Printer
                 }
 
                 $node = $file->getNode();
-                $this->ensureInternalAnnotation($node);
+                $this->ensureApiAnnotation($node);
 
                 $stmts = [$declareStrictTypes, $node];
 
@@ -77,21 +96,28 @@ class Printer
     }
 
     /**
-     * Stamp `@internal` onto every generated class-like.
+     * Stamp a visibility docblock tag (`@internal` / `@api`) onto every generated
+     * class-like, per the configured policy ($apiAnnotation + $apiAnnotationOverrides).
      *
-     * Generated SDK code is regenerated wholesale and is never part of any
-     * consumer's supported contract, so each emitted class/interface/enum/trait
-     * declares itself internal — the marker RequireApiOrInternalTagRule (and
-     * PHPStan/Psalm/IDEs) key on. Done here, at the single print chokepoint, it
-     * covers every generator (models, normalizers, endpoints, exceptions,
-     * clients, runtime templates) and survives regeneration. Idempotent: a
-     * class-like that already carries the tag is left untouched.
+     * Generated SDK code is regenerated wholesale, so the marker that
+     * RequireApiOrInternalTagRule (and PHPStan/Psalm/IDEs) key on must be emitted by
+     * the generator to survive regeneration. The DEFAULT is `@internal` — the safe
+     * choice for a library that publishes generated SDK code it does not want to
+     * guarantee — but a consuming project controls this: set `api-annotation: api`
+     * to mark ALL generated code public, or keep the default and list
+     * `api-annotation-overrides` patterns to promote SOME classes to `@api`. With
+     * `api-annotation: none` nothing is stamped (the project owns the policy itself).
+     *
+     * Done here, at the single print chokepoint, it covers every generator (models,
+     * normalizers, endpoints, exceptions, clients, runtime templates). Idempotent: a
+     * class-like that already carries `@api` or `@internal` is left untouched.
      */
-    private function ensureInternalAnnotation(Node $node): void
+    private function ensureApiAnnotation(Node $node, string $namespace = ''): void
     {
         if ($node instanceof Stmt\Namespace_) {
+            $childNamespace = null !== $node->name ? $node->name->toString() : '';
             foreach ($node->stmts as $stmt) {
-                $this->ensureInternalAnnotation($stmt);
+                $this->ensureApiAnnotation($stmt, $childNamespace);
             }
 
             return;
@@ -101,19 +127,44 @@ class Printer
             return;
         }
 
+        $tag = $this->resolveApiAnnotation($node, $namespace);
+
+        if (null === $tag) {
+            return;
+        }
+
         $doc = $node->getDocComment();
 
         if (null === $doc) {
-            $node->setDocComment(new Doc("/**\n * @internal\n */"));
+            $node->setDocComment(new Doc("/**\n * @" . $tag . "\n */"));
 
             return;
         }
 
-        if (str_contains($doc->getText(), '@internal')) {
+        if (str_contains($doc->getText(), '@internal') || str_contains($doc->getText(), '@api')) {
             return;
         }
 
-        $node->setDocComment(new Doc(\Safe\preg_replace('#^/\*\*#', "/**\n * @internal", $doc->getText(), 1)));
+        $node->setDocComment(new Doc(\Safe\preg_replace('#^/\*\*#', "/**\n * @" . $tag, $doc->getText(), 1)));
+    }
+
+    /**
+     * Resolve which tag a generated class-like should carry: an override pattern
+     * matching its FQCN forces `api`; otherwise the configured default applies.
+     * Returns null when nothing should be stamped (default `none` and no override).
+     */
+    private function resolveApiAnnotation(Stmt\ClassLike $node, string $namespace): ?string
+    {
+        $shortName = null !== $node->name ? $node->name->toString() : '';
+        $fqcn      = '' !== $namespace ? $namespace . '\\' . $shortName : $shortName;
+
+        foreach ($this->apiAnnotationOverrides as $pattern) {
+            if (1 === \Safe\preg_match($pattern, $fqcn)) {
+                return 'api';
+            }
+        }
+
+        return 'none' === $this->apiAnnotation ? null : $this->apiAnnotation;
     }
 
     protected function getDefaultRules(): string

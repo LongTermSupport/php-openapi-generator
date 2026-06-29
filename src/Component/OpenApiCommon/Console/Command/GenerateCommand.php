@@ -58,7 +58,27 @@ class GenerateCommand extends BaseGenerateCommand
                 $fixerConfigFile = $options['fixer-config-file'];
             }
 
-            $printer = new Printer(new Standard(['shortArraySyntax' => true]), $fixerConfigFile);
+            // Visibility-annotation policy for generated class-likes (default '@internal').
+            $apiAnnotation = 'internal';
+            if (\array_key_exists('api-annotation', $options) && \is_string($options['api-annotation'])) {
+                $apiAnnotation = $options['api-annotation'];
+            }
+
+            $apiAnnotationOverrides = [];
+            if (\array_key_exists('api-annotation-overrides', $options) && \is_array($options['api-annotation-overrides'])) {
+                foreach ($options['api-annotation-overrides'] as $pattern) {
+                    if (\is_string($pattern)) {
+                        $apiAnnotationOverrides[] = $pattern;
+                    }
+                }
+            }
+
+            $printer = new Printer(
+                new Standard(['shortArraySyntax' => true]),
+                $fixerConfigFile,
+                $apiAnnotation,
+                $apiAnnotationOverrides,
+            );
 
             if (\array_key_exists('use-fixer', $options) && \is_bool($options['use-fixer'])) {
                 $printer->setUseFixer($options['use-fixer']);

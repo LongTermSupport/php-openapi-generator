@@ -45,6 +45,42 @@ return [
 ];
 ```
 
+### Generated-code visibility (`@api` / `@internal`)
+
+The generator stamps a visibility docblock tag on **every** generated class-like
+(models, normalizers, endpoints, exceptions, clients, runtime templates) so that
+tools enforcing an `@api`/`@internal` split (e.g. PHPStan rules, Psalm, IDEs) have
+a marker that survives regeneration.
+
+The **default is `@internal`** — the safe choice for a library that publishes
+generated SDK code without guaranteeing its stability. **The consuming project
+controls this**, two config keys:
+
+| Key                        | Type           | Default      | Effect                                                                                              |
+| -------------------------- | -------------- | ------------ | --------------------------------------------------------------------------------------------------- |
+| `api-annotation`           | `string`       | `'internal'` | Default tag for all generated class-likes: `'internal'`, `'api'`, or `'none'` (stamp nothing).      |
+| `api-annotation-overrides` | `list<string>` | `[]`         | PCRE patterns matched against each class FQCN; a match is stamped `@api` regardless of the default. |
+
+```php
+return [
+    'openapi-file' => __DIR__ . '/openapi.yaml',
+    'namespace'    => 'MyApp\Client',
+    'directory'    => __DIR__ . '/generated',
+
+    // Mark ALL generated code as public API:
+    'api-annotation' => 'api',
+
+    // …or keep the @internal default but expose SOME classes as @api:
+    // 'api-annotation'           => 'internal',
+    // 'api-annotation-overrides' => ['#^MyApp\\\\Client\\\\Model\\\\#'],
+
+    // …or stamp nothing and own the policy yourself:
+    // 'api-annotation' => 'none',
+];
+```
+
+A class that already carries `@api` or `@internal` is left untouched (idempotent).
+
 ## Symfony Integration
 
 To register the generate command in a Symfony application, add it as a console command in your services config:

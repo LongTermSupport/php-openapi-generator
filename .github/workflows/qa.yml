@@ -1,0 +1,89 @@
+# PHP QA pipeline for lts/php-openapi-generator.
+#
+# Runs the full php-qa-ci suite (vendor/bin/qa) — PHPStan, PHPUnit, PHP CS
+# Fixer, Rector, PHPArkitect, composer-require-checker and the rest — on every
+# push to main and every pull request. The same `vendor/bin/qa` that must pass
+# locally before any generator change ships.
+#
+# PHP is pinned to 8.4 (the sole supported version: composer.json requires
+# "php": "^8.4"). Mutation testing (Infection) and the sensitiveParameterUsage
+# baseline are opted out in qaConfig/qaConfig.inc.bash, so no per-tool env
+# overrides are needed here.
+#
+# Adapted from vendor/lts/php-qa-ci/templates/github-actions/php-qa-ci.yml.
+
+name: PHP QA Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+env:
+  # Tell the QA tools they are running in CI.
+  CI: true
+  # The CI checkout is always clean; the uncommitted-changes guard does not apply.
+  skipUncommittedChangesCheck: 1
+
+jobs:
+  qa:
+    name: PHP QA (8.4)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 8.4
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: xdebug
+          extensions: mbstring, intl, json, zip, dom, curl, libxml, xmlwriter, xmlreader, xml, simplexml, iconv, tokenizer
+          ini-values: |
+            memory_limit=4G
+            xdebug.mode=coverage
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
+
+      - name: Verify php-qa-ci installation
+        run: test -f vendor/bin/qa
+
+      - name: Cache QA tools
+        uses: actions/cache@v4
+        with:
+          path: |
+            var/qa/cache
+            vendor/lts/php-qa-ci/vendor-phar
+          key: ${{ runner.os }}-qa-tools-8.4-${{ hashFiles('**/phive.xml', '**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-qa-tools-8.4-
+            ${{ runner.os }}-qa-tools-
+
+      - name: Run QA pipeline
+        run: vendor/bin/qa
+
+      - name: Upload QA logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-logs
+          path: var/qa/
+          retention-days: 7
+          if-no-files-found: ignore

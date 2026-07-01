@@ -71,6 +71,12 @@ class MapType extends ArrayType
             throw new LogicException('MapType requires a loop key expression');
         }
 
-        return new Expr\ArrayDimFetch($valuesVar, new Expr\Cast\String_($loopKeyVar));
+        // Unlike createLoopOutputAssignement() (denormalization, where the source is
+        // raw mixed-typed external data and the key's runtime type isn't statically
+        // known), normalization always iterates a getter whose declared return type
+        // is this very MapType's own array<string, ...> (see getDocTypeHint() above)
+        // -- so $loopKeyVar is already provably `string` and casting it is dead code
+        // PHPStan correctly flags as cast.useless.
+        return new Expr\ArrayDimFetch($valuesVar, $loopKeyVar);
     }
 }

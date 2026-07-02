@@ -1,0 +1,56 @@
+{
+    "openapi": "3.1.0",
+    "paths": {
+        "/test-one-of-string-path-parameter/{identifier}/{mixedIdentifier}": {
+            "parameters": [
+                {
+                    "name": "identifier",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "int64"
+                            },
+                            {
+                                "type": "string",
+                                "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "mixedIdentifier",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "get": {
+                "operationId": "testOneOfStringPathParameter",
+                "responses": {
+                    "default": {
+                        "description": "Default response"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "version": "",
+        "title": ""
+    },
+    "components": {
+        "schemas": {}
+    }
+}

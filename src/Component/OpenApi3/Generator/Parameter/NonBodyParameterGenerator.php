@@ -63,41 +63,16 @@ class NonBodyParameterGenerator extends ParameterGenerator
             $methodParameter->default = $this->getDefaultAsExpr($parameter);
         }
 
-        $anyOf = $schema->getAnyOf();
-        if (null !== $anyOf && [] !== $anyOf) {
-            // Resolve anyOf types to build a union type (e.g., int|string)
-            $anyOfTypes = [];
-            foreach ($anyOf as $anyOfSchema) {
-                if ($anyOfSchema instanceof Reference) {
-                    [, $anyOfSchema] = $this->guessClass->resolve($anyOfSchema, Schema::class);
-                }
+        $branches = $schema->getAnyOf();
+        if (null === $branches || [] === $branches) {
+            // oneOf is semantically "exactly one" rather than anyOf's "at least one", but for
+            // native-PHP-type-resolution purposes both are a set of candidate branch schemas —
+            // resolved identically here.
+            $branches = $schema->getOneOf();
+        }
 
-                if ($anyOfSchema instanceof Schema) {
-                    foreach ($this->convertParameterType($anyOfSchema) as $t) {
-                        $anyOfTypes[$t] = true;
-                    }
-                }
-            }
-
-            $uniqueTypes = array_keys($anyOfTypes);
-
-            // If any type is 'mixed' or no types resolved, leave parameter untyped
-            if ([] === $uniqueTypes || isset($anyOfTypes['mixed'])) {
-                return $methodParameter;
-            }
-
-            if (1 === \count($uniqueTypes)) {
-                $methodParameter->type = new Node\Name($uniqueTypes[0]);
-            } else {
-                $methodParameter->type = new Node\UnionType(array_map(
-                    static fn (string $t): Node\Identifier|Node\Name => \in_array($t, ['int', 'float', 'bool', 'string', 'array', 'null'], true)
-                        ? new Node\Identifier($t)
-                        : new Node\Name($t),
-                    $uniqueTypes
-                ));
-            }
-
-            return $methodParameter;
+        if (null !== $branches && [] !== $branches) {
+            return $this->resolveBranchTypedParameter($branches, $methodParameter);
         }
 
         $types = $this->convertParameterType($schema);
@@ -112,6 +87,49 @@ class NonBodyParameterGenerator extends ParameterGenerator
                 $types
             ));
         }
+
+        return $methodParameter;
+    }
+
+    /**
+     * Resolves a set of anyOf/oneOf branch schemas to a native PHP type on the given
+     * parameter — a union type if the branches resolve to more than one distinct type
+     * (e.g. int|string), or that single type if every branch resolves to the same one
+     * (e.g. a oneOf of two differently-formatted strings collapses to plain `string`).
+     * Leaves the parameter untyped if any branch is unresolvable ('mixed').
+     *
+     * @param array<Reference|Schema> $branches
+     */
+    private function resolveBranchTypedParameter(array $branches, Node\Param $methodParameter): Node\Param
+    {
+        $branchTypes = [];
+        foreach ($branches as $branchSchema) {
+            if ($branchSchema instanceof Reference) {
+                [, $branchSchema] = $this->guessClass->resolve($branchSchema, Schema::class);
+            }
+
+            if ($branchSchema instanceof Schema) {
+                foreach ($this->convertParameterType($branchSchema) as $t) {
+                    $branchTypes[$t] = true;
+                }
+            }
+        }
+
+        $uniqueTypes = array_keys($branchTypes);
+
+        // If any type is 'mixed' or no types resolved, leave parameter untyped
+        if ([] === $uniqueTypes || isset($branchTypes['mixed'])) {
+            return $methodParameter;
+        }
+
+        $methodParameter->type = 1 === \count($uniqueTypes)
+            ? new Node\Name($uniqueTypes[0])
+            : new Node\UnionType(array_map(
+                static fn (string $t): Node\Identifier|Node\Name => \in_array($t, ['int', 'float', 'bool', 'string', 'array', 'null'], true)
+                    ? new Node\Identifier($t)
+                    : new Node\Name($t),
+                $uniqueTypes
+            ));
 
         return $methodParameter;
     }
@@ -214,26 +232,31 @@ class NonBodyParameterGenerator extends ParameterGenerator
 
         $schema = $parameter->getSchema();
         if ($schema instanceof Schema) {
-            $anyOf = $schema->getAnyOf();
-            if (null === $anyOf || [] === $anyOf) {
+            $branches = $schema->getAnyOf();
+            if (null === $branches || [] === $branches) {
+                $branches = $schema->getOneOf();
+            }
+
+            if (null === $branches || [] === $branches) {
                 $type = implode('|', $this->convertParameterTypeForDoc($schema));
             } else {
-                // Resolve anyOf types for PHPDoc (must match native union type)
-                $anyOfTypes = [];
-                foreach ($anyOf as $anyOfSchema) {
-                    if ($anyOfSchema instanceof Reference) {
-                        [, $anyOfSchema] = $this->guessClass->resolve($anyOfSchema, Schema::class);
+                // Resolve anyOf/oneOf types for PHPDoc (must match native union type
+                // resolved by resolveBranchTypedParameter())
+                $branchTypes = [];
+                foreach ($branches as $branchSchema) {
+                    if ($branchSchema instanceof Reference) {
+                        [, $branchSchema] = $this->guessClass->resolve($branchSchema, Schema::class);
                     }
 
-                    if ($anyOfSchema instanceof Schema) {
-                        foreach ($this->convertParameterType($anyOfSchema) as $t) {
-                            $anyOfTypes[$t] = true;
+                    if ($branchSchema instanceof Schema) {
+                        foreach ($this->convertParameterType($branchSchema) as $t) {
+                            $branchTypes[$t] = true;
                         }
                     }
                 }
 
-                $uniqueTypes = array_keys($anyOfTypes);
-                if ([] !== $uniqueTypes && !isset($anyOfTypes['mixed'])) {
+                $uniqueTypes = array_keys($branchTypes);
+                if ([] !== $uniqueTypes && !isset($branchTypes['mixed'])) {
                     $type = implode('|', $uniqueTypes);
                 }
             }

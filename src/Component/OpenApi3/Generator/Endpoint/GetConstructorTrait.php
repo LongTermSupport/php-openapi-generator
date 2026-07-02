@@ -75,16 +75,21 @@ trait GetConstructorTrait
 
                 $paramName = $paramNameRaw;
 
-                // When anyOf is present or the schema type is an OAS 3.1 array of types,
-                // the constructor parameter will be a union type (e.g. string|int|null).
-                // Path parameters always become URL strings, so use strval() to safely
-                // convert to string, avoiding assign.propertyType errors.
+                // When anyOf/oneOf is present or the schema type is an OAS 3.1 array of
+                // types, the constructor parameter will be a union type (e.g. string|int|null)
+                // — or, if every branch resolves to the same PHP type (e.g. a oneOf of two
+                // differently-formatted strings), the resolved type on its own. Either way
+                // the assigned property below is always declared `string` (path parameters
+                // always become URL strings), so use strval() to safely convert, avoiding
+                // assign.propertyType errors.
                 $schemaAnyOf  = $paramSchema instanceof Schema ? $paramSchema->getAnyOf() : null;
                 $hasAnyOf     = null !== $schemaAnyOf && [] !== $schemaAnyOf;
+                $schemaOneOf  = $paramSchema instanceof Schema ? $paramSchema->getOneOf() : null;
+                $hasOneOf     = null !== $schemaOneOf && [] !== $schemaOneOf;
                 $schemaType   = $paramSchema instanceof Schema ? $paramSchema->getType() : null;
                 $hasMultiType = \is_array($schemaType);
 
-                $assignValue = ($hasAnyOf || $hasMultiType)
+                $assignValue = ($hasAnyOf || $hasOneOf || $hasMultiType)
                     ? new Expr\FuncCall(new Name('strval'), [new Node\Arg(new Expr\Variable($this->getInflector()->camelize($paramName)))])
                     : new Expr\Variable($this->getInflector()->camelize($paramName));
 

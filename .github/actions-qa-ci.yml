@@ -1,0 +1,7 @@
+version: 1
+analyse:
+  unanalysed:
+    - path: src/Component/*/.github/workflows/**
+      justification:
+        hazard: "Workflows inherited from the upstream split packages, which close pull requests opened against a read-only mirror"
+        scope: "Only the copies under src/Component, which GitHub never runs here because it reads the root .github/workflows alone"
